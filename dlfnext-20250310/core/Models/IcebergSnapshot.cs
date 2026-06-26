@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class IcebergSnapshot : TeaModel {
         /// <summary>
+        /// <para>Number of added rows.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public long? AddedRows { get; set; }
 
         /// <summary>
-        /// <para>id</para>
+        /// <para>The snapshot ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2443368274334000657</para>
@@ -32,6 +34,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string IdString { get; set; }
 
         /// <summary>
+        /// <para>The operation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>append</para>
         /// </summary>
@@ -40,6 +44,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string Operation { get; set; }
 
         /// <summary>
+        /// <para>Parent ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -52,6 +58,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string ParentIdString { get; set; }
 
         /// <summary>
+        /// <para>The schema ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -60,6 +68,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public long? SchemaId { get; set; }
 
         /// <summary>
+        /// <para>The sequence number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -67,11 +77,16 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public long? SequenceNumber { get; set; }
 
+        /// <summary>
+        /// <para>The summary.</para>
+        /// </summary>
         [NameInMap("summary")]
         [Validation(Required=false)]
         public Dictionary<string, string> Summary { get; set; }
 
         /// <summary>
+        /// <para>The timestamp.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1750313724369</para>
         /// </summary>

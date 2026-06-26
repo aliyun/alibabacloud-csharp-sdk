@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class ListIcebergSnapshotsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The pagination token for the next page of results. If this parameter is null, all results have been returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>E8ABEB1C3DB893D16576269017992F57</para>
         /// </summary>
@@ -17,6 +19,9 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public string NextPageToken { get; set; }
 
+        /// <summary>
+        /// <para>The list of snapshots.</para>
+        /// </summary>
         [NameInMap("snapshots")]
         [Validation(Required=false)]
         public List<IcebergSnapshot> Snapshots { get; set; }

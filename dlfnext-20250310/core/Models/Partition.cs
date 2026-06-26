@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class Partition : TeaModel {
         /// <summary>
+        /// <para>The time when the partition was created.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1747120676378</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public long? CreatedAt { get; set; }
 
         /// <summary>
+        /// <para>The creator of the partition.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>acs:ram::[accountId]:root</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string CreatedBy { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the process is complete.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public bool? Done { get; set; }
 
         /// <summary>
+        /// <para>The number of files.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public long? FileCount { get; set; }
 
         /// <summary>
+        /// <para>The file size.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public long? FileSizeInBytes { get; set; }
 
         /// <summary>
+        /// <para>The time when the latest file was created.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1741701564261</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public long? LastFileCreationTime { get; set; }
 
         /// <summary>
+        /// <para>The number of records.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public long? RecordCount { get; set; }
 
         /// <summary>
+        /// <para>The key-value pairs of the partition values.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;year&quot;:&quot;2025&quot;}</para>
         /// </summary>
@@ -74,6 +90,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public Dictionary<string, object> Spec { get; set; }
 
         /// <summary>
+        /// <para>The status of the storage class conversion.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>COMPLETE</para>
         /// </summary>
@@ -82,6 +100,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string StorageAction { get; set; }
 
         /// <summary>
+        /// <para>The storage class conversion time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1758189669915</para>
         /// </summary>
@@ -90,6 +110,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public long? StorageActionTimestamp { get; set; }
 
         /// <summary>
+        /// <para>The storage class.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>STANDARD</para>
         /// </summary>
@@ -97,11 +119,19 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public string StorageClass { get; set; }
 
+        /// <summary>
+        /// <para>The total number of buckets.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("totalBuckets")]
         [Validation(Required=false)]
         public int? TotalBuckets { get; set; }
 
         /// <summary>
+        /// <para>The time when the partition was last updated.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1744970111419</para>
         /// </summary>
@@ -110,6 +140,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public long? UpdatedAt { get; set; }
 
         /// <summary>
+        /// <para>The user who last updated the partition.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>acs:ram::[accountId]:root</para>
         /// </summary>

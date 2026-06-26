@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class ListIcebergTableDetailsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The token to retrieve the next page of results. If this parameter is null, all results have been returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
         /// </summary>
@@ -17,6 +19,9 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public string NextPageToken { get; set; }
 
+        /// <summary>
+        /// <para>A list of data tables.</para>
+        /// </summary>
         [NameInMap("tableDetails")]
         [Validation(Required=false)]
         public List<IcebergTable> TableDetails { get; set; }

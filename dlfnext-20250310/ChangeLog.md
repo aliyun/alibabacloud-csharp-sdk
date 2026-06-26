@@ -1,3 +1,8 @@
+2026-06-26 Version: 1.9.0
+- Support API AlterTableSchema.
+- Support API ListPartitionsByNames.
+
+
 2026-04-01 Version: 1.8.2
 - Generated csharp 2025-03-10 for DlfNext.
 

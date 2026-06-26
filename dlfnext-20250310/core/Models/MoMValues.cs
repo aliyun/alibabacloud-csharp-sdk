@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class MoMValues : TeaModel {
         /// <summary>
-        /// <para>total</para>
+        /// <para>The current value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public long? CurrentValue { get; set; }
 
         /// <summary>
-        /// <para>daily addition</para>
+        /// <para>The value of the previous day.</para>
         /// 
         /// <b>Example:</b>
         /// <para>800</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public long? LastDayValue { get; set; }
 
         /// <summary>
-        /// <para>monthly addition</para>
+        /// <para>The value of the previous month.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

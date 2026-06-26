@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class ListShareReceiversResponseBody : TeaModel {
         /// <summary>
+        /// <para>The token to retrieve the next page of results. If this parameter is null, it indicates that this is the last page of results.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>“”</para>
         /// </summary>
@@ -17,6 +19,9 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public string NextPageToken { get; set; }
 
+        /// <summary>
+        /// <para>The receivers.</para>
+        /// </summary>
         [NameInMap("receivers")]
         [Validation(Required=false)]
         public List<Receiver> Receivers { get; set; }

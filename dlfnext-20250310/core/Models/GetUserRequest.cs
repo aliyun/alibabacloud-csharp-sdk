@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class GetUserRequest : TeaModel {
         /// <summary>
+        /// <para>The resource descriptor of the user.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>acs:ram::[accountId]:user/user_name</para>
         /// </summary>

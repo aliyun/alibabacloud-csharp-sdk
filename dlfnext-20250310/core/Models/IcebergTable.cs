@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class IcebergTable : TeaModel {
         /// <summary>
+        /// <para>The table creation time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1747120676378</para>
         /// </summary>
@@ -18,26 +20,35 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public long? CreatedAt { get; set; }
 
         /// <summary>
+        /// <para>The table creator.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>acs:ram::1045689747920334:root</para>
+        /// <para>acs:ram::[accountId]:root</para>
         /// </summary>
         [NameInMap("createdBy")]
         [Validation(Required=false)]
         public string CreatedBy { get; set; }
 
+        /// <summary>
+        /// <para>The metadata of the table.</para>
+        /// </summary>
         [NameInMap("icebergTableMetadata")]
         [Validation(Required=false)]
         public IcebergTableMetadata IcebergTableMetadata { get; set; }
 
         /// <summary>
+        /// <para>The table UUID.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>tbl-424fc31c-4876-4df5-97a5-c78f3046e739</para>
+        /// <para>tbl-xxxx</para>
         /// </summary>
         [NameInMap("id")]
         [Validation(Required=false)]
         public string Id { get; set; }
 
         /// <summary>
+        /// <para>The table name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>table1</para>
         /// </summary>
@@ -46,22 +57,28 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The owner of the table.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>acs:ram::1045689747920334:root</para>
+        /// <para>acs:ram::[accountId]:root</para>
         /// </summary>
         [NameInMap("owner")]
         [Validation(Required=false)]
         public string Owner { get; set; }
 
         /// <summary>
+        /// <para>The table URI.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>oss://clg-iceberg-bcc387be9d24490da5f194bbaf990906/ns-b314a3c3-dff5-4e30-8ba2-0493a60566c7.db/iceberg-tbl-56539259-1879-4d6d-bd6e-d1ddb3364cc9</para>
+        /// <para>oss://clg-iceberg-xxxx/ns-xxxx/table-xxxx</para>
         /// </summary>
         [NameInMap("path")]
         [Validation(Required=false)]
         public string Path { get; set; }
 
         /// <summary>
+        /// <para>The time when the table was last updated.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1744970111419</para>
         /// </summary>
@@ -70,14 +87,18 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public long? UpdatedAt { get; set; }
 
         /// <summary>
+        /// <para>The user who last updated the table.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>acs:ram::1045689747920334:root</para>
+        /// <para>acs:ram::[accountId]:root</para>
         /// </summary>
         [NameInMap("updatedBy")]
         [Validation(Required=false)]
         public string UpdatedBy { get; set; }
 
         /// <summary>
+        /// <para>The version of the table.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>

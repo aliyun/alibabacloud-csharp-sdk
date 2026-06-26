@@ -8,13 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
-    public class RollbackTableRequest : TeaModel {
+    public class ListPartitionsByNamesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the instance.</para>
+        /// <para>分区。</para>
         /// </summary>
-        [NameInMap("instant")]
+        [NameInMap("partitions")]
         [Validation(Required=false)]
-        public FullInstant Instant { get; set; }
+        public List<Partition> Partitions { get; set; }
 
     }
 

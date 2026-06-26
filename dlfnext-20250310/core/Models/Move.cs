@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class Move : TeaModel {
         /// <summary>
+        /// <para>The name of the column.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>other_col_test</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string FieldName { get; set; }
 
         /// <summary>
+        /// <para>The name of the reference column.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>col_test</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string ReferenceFieldName { get; set; }
 
         /// <summary>
+        /// <para>The move type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>FIRST</para>
         /// </summary>

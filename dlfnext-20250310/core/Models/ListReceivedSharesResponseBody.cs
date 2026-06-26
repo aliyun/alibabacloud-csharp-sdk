@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class ListReceivedSharesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The token to retrieve the next page of results. If this parameter is null, all results have been returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
         /// </summary>
@@ -17,6 +19,9 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public string NextPageToken { get; set; }
 
+        /// <summary>
+        /// <para>The received shares.</para>
+        /// </summary>
         [NameInMap("shares")]
         [Validation(Required=false)]
         public List<ReceivedShare> Shares { get; set; }

@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class AlterDatabaseResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The items that remain unchanged.</para>
+        /// </summary>
         [NameInMap("missing")]
         [Validation(Required=false)]
         public List<string> Missing { get; set; }
 
+        /// <summary>
+        /// <para>The deleted items.</para>
+        /// </summary>
         [NameInMap("removed")]
         [Validation(Required=false)]
         public List<string> Removed { get; set; }
 
+        /// <summary>
+        /// <para>The updated items.</para>
+        /// </summary>
         [NameInMap("updated")]
         [Validation(Required=false)]
         public List<string> Updated { get; set; }

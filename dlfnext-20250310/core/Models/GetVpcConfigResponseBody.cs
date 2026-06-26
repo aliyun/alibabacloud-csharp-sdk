@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class GetVpcConfigResponseBody : TeaModel {
+        /// <summary>
+        /// <para>List of trusted VPCs.</para>
+        /// </summary>
         [NameInMap("trustedVpcs")]
         [Validation(Required=false)]
         public List<GetVpcConfigResponseBodyTrustedVpcs> TrustedVpcs { get; set; }
         public class GetVpcConfigResponseBodyTrustedVpcs : TeaModel {
             /// <summary>
+            /// <para>The time when the VPC was created, in UNIX timestamp milliseconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1744970111419</para>
             /// </summary>
@@ -21,12 +26,15 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
             [Validation(Required=false)]
             public long? CreatedAt { get; set; }
 
+            /// <summary>
+            /// <para>List of configuration items.</para>
+            /// </summary>
             [NameInMap("extendedOptions")]
             [Validation(Required=false)]
             public Dictionary<string, string> ExtendedOptions { get; set; }
 
             /// <summary>
-            /// <para>VPC ID。</para>
+            /// <para>The ID of the VPC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-uf67xxxx</para>

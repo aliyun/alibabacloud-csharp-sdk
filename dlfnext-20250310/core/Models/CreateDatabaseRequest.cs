@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class CreateDatabaseRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the database.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>database_name</para>
         /// </summary>
@@ -17,6 +19,9 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// <para>The configuration options.</para>
+        /// </summary>
         [NameInMap("options")]
         [Validation(Required=false)]
         public Dictionary<string, string> Options { get; set; }

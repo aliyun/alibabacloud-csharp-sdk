@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class BatchGrantPermissionsRequest : TeaModel {
+        /// <summary>
+        /// <para>The permissions to grant.</para>
+        /// </summary>
         [NameInMap("permissions")]
         [Validation(Required=false)]
         public List<Permission> Permissions { get; set; }

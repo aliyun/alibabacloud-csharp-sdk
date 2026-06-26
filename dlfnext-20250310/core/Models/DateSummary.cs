@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class DateSummary : TeaModel {
         /// <summary>
+        /// <para>The date.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2025-06-01</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string Date { get; set; }
 
         /// <summary>
-        /// <para>Metric value at corresponding date</para>
+        /// <para>The value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

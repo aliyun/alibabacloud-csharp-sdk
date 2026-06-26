@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class GrantRoleToUsersRequest : TeaModel {
         /// <summary>
+        /// <para>The resource descriptor for a role.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>acs:dlf::[accountId]:role/role_name</para>
         /// </summary>
@@ -17,6 +19,9 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public string RolePrincipal { get; set; }
 
+        /// <summary>
+        /// <para>The resource descriptors for users.</para>
+        /// </summary>
         [NameInMap("userPrincipals")]
         [Validation(Required=false)]
         public List<string> UserPrincipals { get; set; }

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class ListUsersRequest : TeaModel {
         /// <summary>
+        /// <para>The number of entries to return on each page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The pagination token used to retrieve the next page of results. If this parameter is not returned in the response, pass an empty string (&quot;&quot;).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string PageToken { get; set; }
 
         /// <summary>
+        /// <para>The type of the user.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>RAM_USER</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string Type { get; set; }
 
         /// <summary>
+        /// <para>The user name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>user_name</para>
         /// </summary>

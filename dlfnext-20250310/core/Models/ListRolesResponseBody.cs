@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class ListRolesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The token used to retrieve the next page of results. If a null value is returned, the current page is the last page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>E8ABEB1C3DB893D16576269017992F57</para>
         /// </summary>
@@ -17,6 +19,9 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public string NextPageToken { get; set; }
 
+        /// <summary>
+        /// <para>The roles.</para>
+        /// </summary>
         [NameInMap("roles")]
         [Validation(Required=false)]
         public List<Role> Roles { get; set; }

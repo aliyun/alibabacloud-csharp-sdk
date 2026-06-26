@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class GetCatalogTokenResponseBody : TeaModel {
         /// <summary>
+        /// <para>The token expiration time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1749160909000</para>
         /// </summary>
@@ -17,6 +19,9 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public long? ExpiresAtMillis { get; set; }
 
+        /// <summary>
+        /// <para>The token for the catalog.</para>
+        /// </summary>
         [NameInMap("token")]
         [Validation(Required=false)]
         public Dictionary<string, string> Token { get; set; }

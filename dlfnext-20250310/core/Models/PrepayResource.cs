@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class PrepayResource : TeaModel {
         /// <summary>
+        /// <para>The catalog ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>clg-xxxx</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string CatalogId { get; set; }
 
         /// <summary>
+        /// <para>The catalog name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test_catalog</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string CatalogName { get; set; }
 
         /// <summary>
+        /// <para>The number of CUs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public int? Cu { get; set; }
 
         /// <summary>
+        /// <para>The time when the subscription expires.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1769356800000</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public long? ExpireTime { get; set; }
 
         /// <summary>
+        /// <para>The time when the resources are purchased.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1764070447351</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public long? GmtCreate { get; set; }
 
         /// <summary>
+        /// <para>The instance ID of computing resource.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>dlf-cu-quota-xxxx</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The status of the computing resource.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>RUNNING
         /// UPGRADING

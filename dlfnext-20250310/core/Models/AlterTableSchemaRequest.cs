@@ -8,13 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
-    public class RollbackTableRequest : TeaModel {
+    public class AlterTableSchemaRequest : TeaModel {
         /// <summary>
-        /// <para>The details of the instance.</para>
+        /// <para>The table schema.</para>
         /// </summary>
-        [NameInMap("instant")]
+        [NameInMap("schema")]
         [Validation(Required=false)]
-        public FullInstant Instant { get; set; }
+        public Schema Schema { get; set; }
 
     }
 

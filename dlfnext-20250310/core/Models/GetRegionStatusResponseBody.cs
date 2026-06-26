@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class GetRegionStatusResponseBody : TeaModel {
         /// <summary>
+        /// <para>Indicates whether DLF\&quot;s service-linked role has been created.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public bool? ServiceRoleExists { get; set; }
 
         /// <summary>
+        /// <para>The status.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>READY</para>
         /// </summary>

@@ -18,7 +18,22 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"us-west-1", "dlfnext.us-west-1.aliyuncs.com"},
+                {"us-east-1", "dlfnext.us-east-1.aliyuncs.com"},
+                {"eu-central-1", "dlfnext.eu-central-1.aliyuncs.com"},
+                {"cn-wulanchabu", "dlfnext.cn-wulanchabu.aliyuncs.com"},
+                {"cn-shenzhen", "dlfnext.cn-shenzhen.aliyuncs.com"},
+                {"cn-shanghai", "dlfnext.cn-shanghai.aliyuncs.com"},
+                {"cn-hongkong", "dlfnext.cn-hongkong.aliyuncs.com"},
+                {"cn-hangzhou", "dlfnext.cn-hangzhou.aliyuncs.com"},
+                {"cn-beijing", "dlfnext.cn-beijing.aliyuncs.com"},
+                {"ap-southeast-5", "dlfnext.ap-southeast-5.aliyuncs.com"},
+                {"ap-southeast-1", "dlfnext.ap-southeast-1.aliyuncs.com"},
+                {"ap-northeast-1", "dlfnext.ap-northeast-1.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("dlfnext", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -39,7 +54,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据目录</para>
+        /// <para>Updates a catalog.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -89,7 +104,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据目录</para>
+        /// <para>Updates a catalog.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -139,7 +154,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据目录</para>
+        /// <para>Updates a catalog.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -158,7 +173,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据目录</para>
+        /// <para>Updates a catalog.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -177,7 +192,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据库</para>
+        /// <para>Updates a database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -227,7 +242,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据库</para>
+        /// <para>Updates a database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -277,7 +292,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据库</para>
+        /// <para>Updates a database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -296,7 +311,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据库</para>
+        /// <para>Updates a database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -315,7 +330,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新接收者</para>
+        /// <para>Updates a sink.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -365,7 +380,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新接收者</para>
+        /// <para>Updates a sink.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -415,7 +430,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新接收者</para>
+        /// <para>Updates a sink.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -434,7 +449,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新接收者</para>
+        /// <para>Updates a sink.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -453,7 +468,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新共享</para>
+        /// <para>Updates a share.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -507,7 +522,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新共享</para>
+        /// <para>Updates a share.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -561,7 +576,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新共享</para>
+        /// <para>Updates a share.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -580,7 +595,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新共享</para>
+        /// <para>Updates a share.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -599,7 +614,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新共享中的接收者</para>
+        /// <para>Updates the receivers of a share.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -649,7 +664,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新共享中的接收者</para>
+        /// <para>Updates the receivers of a share.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -699,7 +714,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新共享中的接收者</para>
+        /// <para>Updates the receivers of a share.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -718,7 +733,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新共享中的接收者</para>
+        /// <para>Updates the receivers of a share.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -737,7 +752,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更改共享资源</para>
+        /// <para>Modifies shared resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -787,7 +802,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更改共享资源</para>
+        /// <para>Modifies shared resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -837,7 +852,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更改共享资源</para>
+        /// <para>Modifies shared resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -856,7 +871,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更改共享资源</para>
+        /// <para>Modifies shared resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -875,7 +890,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更改Table</para>
+        /// <para>Updates a table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -921,7 +936,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更改Table</para>
+        /// <para>Updates a table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -967,7 +982,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更改Table</para>
+        /// <para>Updates a table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -986,7 +1001,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更改Table</para>
+        /// <para>Updates a table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1005,7 +1020,137 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量授权</para>
+        /// <para>Changes the table schema.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AlterTableSchemaRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AlterTableSchemaResponse
+        /// </returns>
+        public AlterTableSchemaResponse AlterTableSchemaWithOptions(string catalogId, string database, string table, AlterTableSchemaRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Schema))
+            {
+                body["schema"] = request.Schema;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AlterTableSchema",
+                Version = "2025-03-10",
+                Protocol = "HTTPS",
+                Pathname = "/dlf/v1/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(catalogId) + "/databases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(database) + "/tables/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(table) + "/schema",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<AlterTableSchemaResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the table schema.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AlterTableSchemaRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AlterTableSchemaResponse
+        /// </returns>
+        public async Task<AlterTableSchemaResponse> AlterTableSchemaWithOptionsAsync(string catalogId, string database, string table, AlterTableSchemaRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Schema))
+            {
+                body["schema"] = request.Schema;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AlterTableSchema",
+                Version = "2025-03-10",
+                Protocol = "HTTPS",
+                Pathname = "/dlf/v1/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(catalogId) + "/databases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(database) + "/tables/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(table) + "/schema",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<AlterTableSchemaResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the table schema.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AlterTableSchemaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AlterTableSchemaResponse
+        /// </returns>
+        public AlterTableSchemaResponse AlterTableSchema(string catalogId, string database, string table, AlterTableSchemaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return AlterTableSchemaWithOptions(catalogId, database, table, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the table schema.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AlterTableSchemaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AlterTableSchemaResponse
+        /// </returns>
+        public async Task<AlterTableSchemaResponse> AlterTableSchemaAsync(string catalogId, string database, string table, AlterTableSchemaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await AlterTableSchemaWithOptionsAsync(catalogId, database, table, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Grants permissions to one or more DLF users or roles.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1051,7 +1196,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量授权</para>
+        /// <para>Grants permissions to one or more DLF users or roles.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1097,7 +1242,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量授权</para>
+        /// <para>Grants permissions to one or more DLF users or roles.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1116,7 +1261,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量授权</para>
+        /// <para>Grants permissions to one or more DLF users or roles.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1135,7 +1280,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量取消授权</para>
+        /// <para>Revokes permissions in a batch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1181,7 +1326,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量取消授权</para>
+        /// <para>Revokes permissions in a batch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1227,7 +1372,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量取消授权</para>
+        /// <para>Revokes permissions in a batch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1246,7 +1391,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量取消授权</para>
+        /// <para>Revokes permissions in a batch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1265,7 +1410,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据目录</para>
+        /// <para>Creates a catalog.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1327,7 +1472,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据目录</para>
+        /// <para>Creates a catalog.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1389,7 +1534,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据目录</para>
+        /// <para>Creates a catalog.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1408,7 +1553,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据目录</para>
+        /// <para>Creates a catalog.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1427,7 +1572,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据库</para>
+        /// <para>Creates a database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1477,7 +1622,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据库</para>
+        /// <para>Creates a database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1527,7 +1672,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据库</para>
+        /// <para>Creates a database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1546,7 +1691,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据库</para>
+        /// <para>Creates a database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1565,7 +1710,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建接收者</para>
+        /// <para>Creates a receiver.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1619,7 +1764,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建接收者</para>
+        /// <para>Creates a receiver.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1673,7 +1818,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建接收者</para>
+        /// <para>Creates a receiver.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1692,7 +1837,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建接收者</para>
+        /// <para>Creates a receiver.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1711,7 +1856,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建角色</para>
+        /// <para>Creates a DLF role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1765,7 +1910,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建角色</para>
+        /// <para>Creates a DLF role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1819,7 +1964,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建角色</para>
+        /// <para>Creates a DLF role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1838,7 +1983,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建角色</para>
+        /// <para>Creates a DLF role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1857,7 +2002,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建共享</para>
+        /// <para>Creates a share.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1911,7 +2056,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建共享</para>
+        /// <para>Creates a share.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1965,7 +2110,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建共享</para>
+        /// <para>Creates a share.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1984,7 +2129,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建共享</para>
+        /// <para>Creates a share.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2003,7 +2148,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建表</para>
+        /// <para>Creates a table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2053,7 +2198,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建表</para>
+        /// <para>Creates a table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2103,7 +2248,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建表</para>
+        /// <para>Creates a table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2122,7 +2267,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建表</para>
+        /// <para>Creates a table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2141,7 +2286,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除角色</para>
+        /// <para>Deletes a DLF role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2187,7 +2332,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除角色</para>
+        /// <para>Deletes a DLF role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2233,7 +2378,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除角色</para>
+        /// <para>Deletes a DLF role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2252,7 +2397,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除角色</para>
+        /// <para>Deletes a DLF role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2271,7 +2416,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 DLF 开通地域</para>
+        /// <para>Retrieves the regions where DLF is activated.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2307,7 +2452,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 DLF 开通地域</para>
+        /// <para>Retrieves the regions where DLF is activated.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2343,7 +2488,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 DLF 开通地域</para>
+        /// <para>Retrieves the regions where DLF is activated.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2358,7 +2503,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 DLF 开通地域</para>
+        /// <para>Retrieves the regions where DLF is activated.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2373,7 +2518,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据湖Catalog</para>
+        /// <para>Deletes a data lake data catalog. The following conditions must be met, otherwise the deletion will fail: all tables and user-created databases under the catalog have been deleted; the databases and tables have been deleted for at least 24 hours.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2409,7 +2554,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据湖Catalog</para>
+        /// <para>Deletes a data lake data catalog. The following conditions must be met, otherwise the deletion will fail: all tables and user-created databases under the catalog have been deleted; the databases and tables have been deleted for at least 24 hours.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2445,7 +2590,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据湖Catalog</para>
+        /// <para>Deletes a data lake data catalog. The following conditions must be met, otherwise the deletion will fail: all tables and user-created databases under the catalog have been deleted; the databases and tables have been deleted for at least 24 hours.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2460,7 +2605,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据湖Catalog</para>
+        /// <para>Deletes a data lake data catalog. The following conditions must be met, otherwise the deletion will fail: all tables and user-created databases under the catalog have been deleted; the databases and tables have been deleted for at least 24 hours.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2475,7 +2620,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据库</para>
+        /// <para>Drops a database.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2511,7 +2656,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据库</para>
+        /// <para>Drops a database.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2547,7 +2692,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据库</para>
+        /// <para>Drops a database.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2562,7 +2707,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据库</para>
+        /// <para>Drops a database.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2577,7 +2722,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除接收者</para>
+        /// <para>Removes a receiver.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2613,7 +2758,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除接收者</para>
+        /// <para>Removes a receiver.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2649,7 +2794,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除接收者</para>
+        /// <para>Removes a receiver.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2664,7 +2809,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除接收者</para>
+        /// <para>Removes a receiver.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2679,7 +2824,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除共享</para>
+        /// <para>Deletes a share.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2715,7 +2860,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除共享</para>
+        /// <para>Deletes a share.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2751,7 +2896,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除共享</para>
+        /// <para>Deletes a share.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2766,7 +2911,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除共享</para>
+        /// <para>Deletes a share.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2781,7 +2926,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除表</para>
+        /// <para>Drops a table.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2817,7 +2962,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除表</para>
+        /// <para>Drops a table.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2853,7 +2998,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除表</para>
+        /// <para>Drops a table.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2868,7 +3013,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除表</para>
+        /// <para>Drops a table.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2883,7 +3028,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看数据湖Catalog</para>
+        /// <para>Retrieves the details of a catalog.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2919,7 +3064,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看数据湖Catalog</para>
+        /// <para>Retrieves the details of a catalog.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2955,7 +3100,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看数据湖Catalog</para>
+        /// <para>Retrieves the details of a catalog.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2970,7 +3115,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看数据湖Catalog</para>
+        /// <para>Retrieves the details of a catalog.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2985,7 +3130,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看数据湖Catalog</para>
+        /// <para>Retrieves the details of a catalog.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3021,7 +3166,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看数据湖Catalog</para>
+        /// <para>Retrieves the details of a catalog.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3057,7 +3202,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看数据湖Catalog</para>
+        /// <para>Retrieves the details of a catalog.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3072,7 +3217,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看数据湖Catalog</para>
+        /// <para>Retrieves the details of a catalog.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3087,7 +3232,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看表</para>
+        /// <para>Retrieves the storage overview of a data catalog.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3133,7 +3278,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看表</para>
+        /// <para>Retrieves the storage overview of a data catalog.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3179,7 +3324,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看表</para>
+        /// <para>Retrieves the storage overview of a data catalog.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3198,7 +3343,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看表</para>
+        /// <para>Retrieves the storage overview of a data catalog.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3217,7 +3362,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看表</para>
+        /// <para>Retrieves the storage overview trend for a catalog.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3267,7 +3412,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看表</para>
+        /// <para>Retrieves the storage overview trend for a catalog.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3317,7 +3462,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看表</para>
+        /// <para>Retrieves the storage overview trend for a catalog.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3336,7 +3481,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看表</para>
+        /// <para>Retrieves the storage overview trend for a catalog.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3355,7 +3500,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据湖Catalog的临时访问凭证</para>
+        /// <para>Obtains a temporary access credential (token) for a catalog.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3391,7 +3536,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据湖Catalog的临时访问凭证</para>
+        /// <para>Obtains a temporary access credential (token) for a catalog.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3427,7 +3572,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据湖Catalog的临时访问凭证</para>
+        /// <para>Obtains a temporary access credential (token) for a catalog.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3442,7 +3587,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据湖Catalog的临时访问凭证</para>
+        /// <para>Obtains a temporary access credential (token) for a catalog.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3457,7 +3602,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看数据库</para>
+        /// <para>Retrieves the details of a database.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3493,7 +3638,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看数据库</para>
+        /// <para>Retrieves the details of a database.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3529,7 +3674,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看数据库</para>
+        /// <para>Retrieves the details of a database.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3544,7 +3689,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看数据库</para>
+        /// <para>Retrieves the details of a database.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3559,7 +3704,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看表</para>
+        /// <para>You can view an inventory overview.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3605,7 +3750,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看表</para>
+        /// <para>You can view an inventory overview.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3651,7 +3796,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看表</para>
+        /// <para>You can view an inventory overview.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3670,7 +3815,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看表</para>
+        /// <para>You can view an inventory overview.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3689,7 +3834,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看iceberg数据库</para>
+        /// <para>Retrieves information about an Iceberg namespace.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3725,7 +3870,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看iceberg数据库</para>
+        /// <para>Retrieves information about an Iceberg namespace.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3761,7 +3906,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看iceberg数据库</para>
+        /// <para>Retrieves information about an Iceberg namespace.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3776,7 +3921,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看iceberg数据库</para>
+        /// <para>Retrieves information about an Iceberg namespace.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3791,7 +3936,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看表</para>
+        /// <para>Retrieves the details of a table.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3827,7 +3972,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看表</para>
+        /// <para>Retrieves the details of a table.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3863,7 +4008,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看表</para>
+        /// <para>Retrieves the details of a table.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3878,7 +4023,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看表</para>
+        /// <para>Retrieves the details of a table.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3893,7 +4038,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取接收者</para>
+        /// <para>Retrieves a receiver.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3929,7 +4074,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取接收者</para>
+        /// <para>Retrieves a receiver.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3965,7 +4110,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取接收者</para>
+        /// <para>Retrieves a receiver.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3980,7 +4125,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取接收者</para>
+        /// <para>Retrieves a receiver.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3995,7 +4140,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 DLF 当前地域开通状态</para>
+        /// <para>Queries the DLF activation status of in a region.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -4031,7 +4176,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 DLF 当前地域开通状态</para>
+        /// <para>Queries the DLF activation status of in a region.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -4067,7 +4212,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 DLF 当前地域开通状态</para>
+        /// <para>Queries the DLF activation status of in a region.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4082,7 +4227,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 DLF 当前地域开通状态</para>
+        /// <para>Queries the DLF activation status of in a region.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4097,7 +4242,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取角色</para>
+        /// <para>Retrieves a role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4143,7 +4288,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取角色</para>
+        /// <para>Retrieves a role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4189,7 +4334,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取角色</para>
+        /// <para>Retrieves a role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4208,7 +4353,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取角色</para>
+        /// <para>Retrieves a role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4227,7 +4372,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取共享</para>
+        /// <para>Retrieves the details of a share.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -4263,7 +4408,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取共享</para>
+        /// <para>Retrieves the details of a share.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -4299,7 +4444,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取共享</para>
+        /// <para>Retrieves the details of a share.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4314,7 +4459,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取共享</para>
+        /// <para>Retrieves the details of a share.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4329,7 +4474,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看表</para>
+        /// <para>Retrieves the details of a table in a data lake.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -4365,7 +4510,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看表</para>
+        /// <para>Retrieves the details of a table in a data lake.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -4401,7 +4546,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看表</para>
+        /// <para>Retrieves the details of a table in a data lake.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4416,7 +4561,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看表</para>
+        /// <para>Retrieves the details of a table in a data lake.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4431,7 +4576,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看表Compaction详情</para>
+        /// <para>Retrieves the compaction details of a table.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -4467,7 +4612,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看表Compaction详情</para>
+        /// <para>Retrieves the compaction details of a table.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -4503,7 +4648,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看表Compaction详情</para>
+        /// <para>Retrieves the compaction details of a table.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4518,7 +4663,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看表Compaction详情</para>
+        /// <para>Retrieves the compaction details of a table.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4533,7 +4678,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看表快照</para>
+        /// <para>Queries a table snapshot.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -4569,7 +4714,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看表快照</para>
+        /// <para>Queries a table snapshot.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -4605,7 +4750,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看表快照</para>
+        /// <para>Queries a table snapshot.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4620,7 +4765,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看表快照</para>
+        /// <para>Queries a table snapshot.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4635,7 +4780,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看表</para>
+        /// <para>Retrieves the storage summary for a table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4681,7 +4826,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看表</para>
+        /// <para>Retrieves the storage summary for a table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4727,7 +4872,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看表</para>
+        /// <para>Retrieves the storage summary for a table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4746,7 +4891,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看表</para>
+        /// <para>Retrieves the storage summary for a table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4765,7 +4910,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据湖表的临时访问凭证</para>
+        /// <para>Obtains a temporary access credential for a data lake table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4811,7 +4956,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据湖表的临时访问凭证</para>
+        /// <para>Obtains a temporary access credential for a data lake table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4857,7 +5002,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据湖表的临时访问凭证</para>
+        /// <para>Obtains a temporary access credential for a data lake table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4876,7 +5021,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据湖表的临时访问凭证</para>
+        /// <para>Obtains a temporary access credential for a data lake table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4895,7 +5040,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户</para>
+        /// <para>Retrieves a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4941,7 +5086,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户</para>
+        /// <para>Retrieves a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4987,7 +5132,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户</para>
+        /// <para>Retrieves a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5006,7 +5151,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户</para>
+        /// <para>Retrieves a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5025,7 +5170,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取可信 VPC 配置</para>
+        /// <para>Obtain the VPC configuration.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -5061,7 +5206,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取可信 VPC 配置</para>
+        /// <para>Obtain the VPC configuration.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -5097,7 +5242,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取可信 VPC 配置</para>
+        /// <para>Obtain the VPC configuration.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -5112,7 +5257,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取可信 VPC 配置</para>
+        /// <para>Obtain the VPC configuration.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -5127,7 +5272,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量授予角色权限给用户</para>
+        /// <para>Grants a role to one or more users.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5177,7 +5322,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量授予角色权限给用户</para>
+        /// <para>Grants a role to one or more users.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5227,7 +5372,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量授予角色权限给用户</para>
+        /// <para>Grants a role to one or more users.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5246,7 +5391,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量授予角色权限给用户</para>
+        /// <para>Grants a role to one or more users.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5265,7 +5410,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看数据目录列表</para>
+        /// <para>Lists catalogs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5319,7 +5464,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看数据目录列表</para>
+        /// <para>Lists catalogs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5373,7 +5518,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看数据目录列表</para>
+        /// <para>Lists catalogs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5392,7 +5537,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看数据目录列表</para>
+        /// <para>Lists catalogs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5411,7 +5556,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看数据库列表</para>
+        /// <para>Retrieves database details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5465,7 +5610,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看数据库列表</para>
+        /// <para>Retrieves database details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5519,7 +5664,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看数据库列表</para>
+        /// <para>Retrieves database details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5538,7 +5683,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看数据库列表</para>
+        /// <para>Retrieves database details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5557,7 +5702,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看数据库列表</para>
+        /// <para>Retrieves databases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5611,7 +5756,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看数据库列表</para>
+        /// <para>Retrieves databases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5665,7 +5810,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看数据库列表</para>
+        /// <para>Retrieves databases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5684,7 +5829,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看数据库列表</para>
+        /// <para>Retrieves databases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5703,7 +5848,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看函数列表</para>
+        /// <para>Lists functions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5757,7 +5902,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看函数列表</para>
+        /// <para>Lists functions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5811,7 +5956,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看函数列表</para>
+        /// <para>Lists functions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5830,7 +5975,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看函数列表</para>
+        /// <para>Lists functions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5849,7 +5994,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看iceberg数据库列表</para>
+        /// <para>Lists Iceberg namespaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5903,7 +6048,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看iceberg数据库列表</para>
+        /// <para>Lists Iceberg namespaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5957,7 +6102,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看iceberg数据库列表</para>
+        /// <para>Lists Iceberg namespaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5976,7 +6121,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看iceberg数据库列表</para>
+        /// <para>Lists Iceberg namespaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5995,7 +6140,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看iceberg表快照列表</para>
+        /// <para>Lists the snapshots of an Iceberg table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6045,7 +6190,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看iceberg表快照列表</para>
+        /// <para>Lists the snapshots of an Iceberg table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6095,7 +6240,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看iceberg表快照列表</para>
+        /// <para>Lists the snapshots of an Iceberg table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6114,7 +6259,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看iceberg表快照列表</para>
+        /// <para>Lists the snapshots of an Iceberg table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6133,7 +6278,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看iceberg表详情列表</para>
+        /// <para>Lists the details of Iceberg tables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6187,7 +6332,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看iceberg表详情列表</para>
+        /// <para>Lists the details of Iceberg tables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6241,7 +6386,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看iceberg表详情列表</para>
+        /// <para>Lists the details of Iceberg tables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6260,7 +6405,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看iceberg表详情列表</para>
+        /// <para>Lists the details of Iceberg tables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6279,7 +6424,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看表</para>
+        /// <para>Retrieves storage overview for partitions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6333,7 +6478,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看表</para>
+        /// <para>Retrieves storage overview for partitions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6387,7 +6532,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看表</para>
+        /// <para>Retrieves storage overview for partitions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6406,7 +6551,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看表</para>
+        /// <para>Retrieves storage overview for partitions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6425,7 +6570,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>listPartitions</para>
+        /// <para>Lists partitions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6479,7 +6624,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>listPartitions</para>
+        /// <para>Lists partitions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6533,7 +6678,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>listPartitions</para>
+        /// <para>Lists partitions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6552,7 +6697,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>listPartitions</para>
+        /// <para>Lists partitions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6571,7 +6716,137 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定资源或指定Principal的权限信息</para>
+        /// <para>Retrieves a list of partitions by their names.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPartitionsByNamesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPartitionsByNamesResponse
+        /// </returns>
+        public ListPartitionsByNamesResponse ListPartitionsByNamesWithOptions(string catalogId, string database, string table, ListPartitionsByNamesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Specs))
+            {
+                body["specs"] = request.Specs;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListPartitionsByNames",
+                Version = "2025-03-10",
+                Protocol = "HTTPS",
+                Pathname = "/dlf/v1/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(catalogId) + "/databases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(database) + "/tables/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(table) + "/partitions/list-by-names",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListPartitionsByNamesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of partitions by their names.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPartitionsByNamesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPartitionsByNamesResponse
+        /// </returns>
+        public async Task<ListPartitionsByNamesResponse> ListPartitionsByNamesWithOptionsAsync(string catalogId, string database, string table, ListPartitionsByNamesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Specs))
+            {
+                body["specs"] = request.Specs;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListPartitionsByNames",
+                Version = "2025-03-10",
+                Protocol = "HTTPS",
+                Pathname = "/dlf/v1/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(catalogId) + "/databases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(database) + "/tables/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(table) + "/partitions/list-by-names",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListPartitionsByNamesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of partitions by their names.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPartitionsByNamesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPartitionsByNamesResponse
+        /// </returns>
+        public ListPartitionsByNamesResponse ListPartitionsByNames(string catalogId, string database, string table, ListPartitionsByNamesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListPartitionsByNamesWithOptions(catalogId, database, table, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of partitions by their names.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPartitionsByNamesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPartitionsByNamesResponse
+        /// </returns>
+        public async Task<ListPartitionsByNamesResponse> ListPartitionsByNamesAsync(string catalogId, string database, string table, ListPartitionsByNamesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListPartitionsByNamesWithOptionsAsync(catalogId, database, table, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the permissions for a resource or principal.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6645,7 +6920,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定资源或指定Principal的权限信息</para>
+        /// <para>Retrieves the permissions for a resource or principal.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6719,7 +6994,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定资源或指定Principal的权限信息</para>
+        /// <para>Retrieves the permissions for a resource or principal.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6738,7 +7013,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定资源或指定Principal的权限信息</para>
+        /// <para>Retrieves the permissions for a resource or principal.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6757,7 +7032,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取提供的共享列表</para>
+        /// <para>Retrieves shares.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6807,7 +7082,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取提供的共享列表</para>
+        /// <para>Retrieves shares.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6857,7 +7132,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取提供的共享列表</para>
+        /// <para>Retrieves shares.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6876,7 +7151,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取提供的共享列表</para>
+        /// <para>Retrieves shares.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6895,7 +7170,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取接收的共享列表</para>
+        /// <para>Retrieves received shares.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6945,7 +7220,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取接收的共享列表</para>
+        /// <para>Retrieves received shares.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6995,7 +7270,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取接收的共享列表</para>
+        /// <para>Retrieves received shares.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7014,7 +7289,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取接收的共享列表</para>
+        /// <para>Retrieves received shares.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7033,7 +7308,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取接收者列表</para>
+        /// <para>Queries a list of receivers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7087,7 +7362,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取接收者列表</para>
+        /// <para>Queries a list of receivers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7141,7 +7416,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取接收者列表</para>
+        /// <para>Queries a list of receivers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7160,7 +7435,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取接收者列表</para>
+        /// <para>Queries a list of receivers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7179,7 +7454,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取角色用户列表</para>
+        /// <para>Retrieves the users for a role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7233,7 +7508,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取角色用户列表</para>
+        /// <para>Retrieves the users for a role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7287,7 +7562,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取角色用户列表</para>
+        /// <para>Retrieves the users for a role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7306,7 +7581,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取角色用户列表</para>
+        /// <para>Retrieves the users for a role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7325,7 +7600,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取角色列表</para>
+        /// <para>Retrieves roles.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7379,7 +7654,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取角色列表</para>
+        /// <para>Retrieves roles.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7433,7 +7708,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取角色列表</para>
+        /// <para>Retrieves roles.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7452,7 +7727,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取角色列表</para>
+        /// <para>Retrieves roles.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7471,7 +7746,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取共享中的接收者列表</para>
+        /// <para>Gets the receivers of a share.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7521,7 +7796,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取共享中的接收者列表</para>
+        /// <para>Gets the receivers of a share.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7571,7 +7846,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取共享中的接收者列表</para>
+        /// <para>Gets the receivers of a share.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7590,7 +7865,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取共享中的接收者列表</para>
+        /// <para>Gets the receivers of a share.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7609,7 +7884,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取共享资源列表</para>
+        /// <para>Retrieves shared resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7659,7 +7934,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取共享资源列表</para>
+        /// <para>Retrieves shared resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7709,7 +7984,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取共享资源列表</para>
+        /// <para>Retrieves shared resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7728,7 +8003,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取共享资源列表</para>
+        /// <para>Retrieves shared resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7747,7 +8022,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看表快照列表</para>
+        /// <para>Returns a list of table snapshots.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7797,7 +8072,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看表快照列表</para>
+        /// <para>Returns a list of table snapshots.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7847,7 +8122,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看表快照列表</para>
+        /// <para>Returns a list of table snapshots.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7866,7 +8141,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看表快照列表</para>
+        /// <para>Returns a list of table snapshots.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7885,7 +8160,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看表详情列表</para>
+        /// <para>Lists the details of one or more tables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7943,7 +8218,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看表详情列表</para>
+        /// <para>Lists the details of one or more tables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8001,7 +8276,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看表详情列表</para>
+        /// <para>Lists the details of one or more tables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8020,7 +8295,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看表详情列表</para>
+        /// <para>Lists the details of one or more tables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8039,7 +8314,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看表详情列表</para>
+        /// <para>Retrieves a list of tables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8093,7 +8368,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看表详情列表</para>
+        /// <para>Retrieves a list of tables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8147,7 +8422,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看表详情列表</para>
+        /// <para>Retrieves a list of tables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8166,7 +8441,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看表详情列表</para>
+        /// <para>Retrieves a list of tables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8185,7 +8460,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户角色列表</para>
+        /// <para>Retrieves the roles assigned to a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8239,7 +8514,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户角色列表</para>
+        /// <para>Retrieves the roles assigned to a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8293,7 +8568,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户角色列表</para>
+        /// <para>Retrieves the roles assigned to a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8312,7 +8587,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户角色列表</para>
+        /// <para>Retrieves the roles assigned to a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8331,7 +8606,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户列表</para>
+        /// <para>Retrieves a list of users.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8389,7 +8664,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户列表</para>
+        /// <para>Retrieves a list of users.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8447,7 +8722,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户列表</para>
+        /// <para>Retrieves a list of users.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8466,7 +8741,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户列表</para>
+        /// <para>Retrieves a list of users.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8485,7 +8760,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看视图详情列表</para>
+        /// <para>Lists the details of one or more views.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8539,7 +8814,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看视图详情列表</para>
+        /// <para>Lists the details of one or more views.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8593,7 +8868,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看视图详情列表</para>
+        /// <para>Lists the details of one or more views.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8612,7 +8887,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看视图详情列表</para>
+        /// <para>Lists the details of one or more views.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8631,7 +8906,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看视图详情列表</para>
+        /// <para>Returns the names of views.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8685,7 +8960,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看视图详情列表</para>
+        /// <para>Returns the names of views.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8739,7 +9014,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看视图详情列表</para>
+        /// <para>Returns the names of views.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8758,7 +9033,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看视图详情列表</para>
+        /// <para>Returns the names of views.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8777,7 +9052,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>刷新用户同步</para>
+        /// <para>Syncs users.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -8813,7 +9088,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>刷新用户同步</para>
+        /// <para>Syncs users.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -8849,7 +9124,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>刷新用户同步</para>
+        /// <para>Syncs users.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -8864,7 +9139,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>刷新用户同步</para>
+        /// <para>Syncs users.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -8879,7 +9154,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量取消授予角色权限给用户</para>
+        /// <para>Revokes a role from one or more users.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8929,7 +9204,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量取消授予角色权限给用户</para>
+        /// <para>Revokes a role from one or more users.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8979,7 +9254,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量取消授予角色权限给用户</para>
+        /// <para>Revokes a role from one or more users.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8998,7 +9273,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量取消授予角色权限给用户</para>
+        /// <para>Revokes a role from one or more users.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9017,7 +9292,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>回滚表</para>
+        /// <para>Rolls back a table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9063,7 +9338,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>回滚表</para>
+        /// <para>Rolls back a table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9109,7 +9384,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>回滚表</para>
+        /// <para>Rolls back a table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9128,7 +9403,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>回滚表</para>
+        /// <para>Rolls back a table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9147,7 +9422,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>订阅当前地域的 DLF</para>
+        /// <para>Subscribes to DLF in the current region.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -9183,7 +9458,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>订阅当前地域的 DLF</para>
+        /// <para>Subscribes to DLF in the current region.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -9219,7 +9494,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>订阅当前地域的 DLF</para>
+        /// <para>Subscribes to DLF in the current region.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -9234,7 +9509,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>订阅当前地域的 DLF</para>
+        /// <para>Subscribes to DLF in the current region.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -9249,7 +9524,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新角色</para>
+        /// <para>Updates a DLF role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9303,7 +9578,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新角色</para>
+        /// <para>Updates a DLF role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9357,7 +9632,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新角色</para>
+        /// <para>Updates a DLF role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9376,7 +9651,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新角色</para>
+        /// <para>Updates a DLF role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9395,7 +9670,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新角色用户</para>
+        /// <para>Updates the users for a role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9445,7 +9720,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新角色用户</para>
+        /// <para>Updates the users for a role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9495,7 +9770,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新角色用户</para>
+        /// <para>Updates the users for a role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9514,7 +9789,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新角色用户</para>
+        /// <para>Updates the users for a role.</para>
         /// </summary>
         /// 
         /// <param name="request">

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class View : TeaModel {
         /// <summary>
+        /// <para>The creation time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1744970111419</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public long? CreatedAt { get; set; }
 
         /// <summary>
+        /// <para>The creator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>acs:ram::[accountId]:root</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string CreatedBy { get; set; }
 
         /// <summary>
+        /// <para>The UUID of the view.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string Id { get; set; }
 
         /// <summary>
+        /// <para>The name of the view.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>view_test</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The owner of the view.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>acs:ram::[accountId]:root</para>
         /// </summary>
@@ -49,11 +59,16 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public string Owner { get; set; }
 
+        /// <summary>
+        /// <para>The view schema.</para>
+        /// </summary>
         [NameInMap("schema")]
         [Validation(Required=false)]
         public ViewSchema Schema { get; set; }
 
         /// <summary>
+        /// <para>The time of the last update.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1744970111419</para>
         /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public long? UpdatedAt { get; set; }
 
         /// <summary>
+        /// <para>The user who last updated the view.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>acs:ram::[accountId]:root</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class CacheCluster : TeaModel {
         /// <summary>
+        /// <para>Cluster ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>dc-wqewqr*****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>Cluster name</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cluster_name</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string ClusterName { get; set; }
 
         /// <summary>
+        /// <para>Creation time</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1744970111419</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public long? CreatedAt { get; set; }
 
         /// <summary>
+        /// <para>Creator name</para>
+        /// 
         /// <b>Example:</b>
         /// <para>acs:ram::[accountId]:root</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string CreatedBy { get; set; }
 
         /// <summary>
+        /// <para>Version of the deployed instance</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1.0.0</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string DeployInstanceVersion { get; set; }
 
         /// <summary>
+        /// <para>Deployed options version</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1.0.0</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public long? DeployOptionsVersion { get; set; }
 
         /// <summary>
+        /// <para>Milvus Version</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1.0.0</para>
         /// </summary>
@@ -65,11 +79,16 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public string InstanceVersion { get; set; }
 
+        /// <summary>
+        /// <para>Cache cluster configuration</para>
+        /// </summary>
         [NameInMap("options")]
         [Validation(Required=false)]
         public Dictionary<string, string> Options { get; set; }
 
         /// <summary>
+        /// <para>Options version</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1.0.0</para>
         /// </summary>
@@ -78,6 +97,17 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public long? OptionsVersion { get; set; }
 
         /// <summary>
+        /// <para>Cache cluster status. Valid values:
+        /// ● NEW: Newly created and not started.
+        /// ● STARTING: Starting.
+        /// ● START_FAILED: Start failed.
+        /// ● RUNNING: Running.
+        /// ● PENDING_RESTART: Pending restart.
+        /// ● PENDING_TERMINATE: Pending termination.
+        /// ● TERMINATING: Terminating.
+        /// ● TERMINATE_FAILED: Termination failed.
+        /// ● TERMINATED: Terminated.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>RUNNING</para>
         /// </summary>
@@ -86,6 +116,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string Status { get; set; }
 
         /// <summary>
+        /// <para>Update time</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1764555848748</para>
         /// </summary>
@@ -94,6 +126,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public long? UpdatedAt { get; set; }
 
         /// <summary>
+        /// <para>Updater name</para>
+        /// 
         /// <b>Example:</b>
         /// <para>acs:ram::[accountId]:root</para>
         /// </summary>
@@ -101,11 +135,16 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public string UpdatedBy { get; set; }
 
+        /// <summary>
+        /// <para>vSwitch list</para>
+        /// </summary>
         [NameInMap("vSwitches")]
         [Validation(Required=false)]
         public List<CacheClusterVSwitches> VSwitches { get; set; }
         public class CacheClusterVSwitches : TeaModel {
             /// <summary>
+            /// <para>vSwitch ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>vsw-bp1thxw8sgypzj2j*****</para>
             /// </summary>
@@ -114,6 +153,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
             public string VSwitchId { get; set; }
 
             /// <summary>
+            /// <para>Instance zone</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-e</para>
             /// </summary>

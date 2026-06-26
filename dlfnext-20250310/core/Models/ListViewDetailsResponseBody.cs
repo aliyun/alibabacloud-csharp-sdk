@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class ListViewDetailsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The token for the next page of results. If null is returned, all results have been retrieved.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>“”</para>
         /// </summary>
@@ -17,6 +19,9 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public string NextPageToken { get; set; }
 
+        /// <summary>
+        /// <para>A list of views.</para>
+        /// </summary>
         [NameInMap("viewDetails")]
         [Validation(Required=false)]
         public List<View> ViewDetails { get; set; }

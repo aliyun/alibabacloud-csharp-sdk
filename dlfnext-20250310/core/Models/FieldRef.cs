@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class FieldRef : TeaModel {
         /// <summary>
+        /// <para>Text sequence</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public int? Index { get; set; }
 
         /// <summary>
+        /// <para>Table name</para>
+        /// 
         /// <b>Example:</b>
         /// <para>name</para>
         /// </summary>
@@ -25,6 +29,9 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// <para>File type</para>
+        /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]
         public FullDataType Type { get; set; }

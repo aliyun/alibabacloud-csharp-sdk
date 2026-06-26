@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class ListDatabasesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The databases.</para>
+        /// </summary>
         [NameInMap("databases")]
         [Validation(Required=false)]
         public List<string> Databases { get; set; }
 
         /// <summary>
+        /// <para>The token for the next page of results. A null value indicates that this is the last page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>E8ABEB1C3DB893D16576269017992F57</para>
         /// </summary>

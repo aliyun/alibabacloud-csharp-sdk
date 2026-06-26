@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class ListReceivedSharesRequest : TeaModel {
         /// <summary>
+        /// <para>The maximum number of records to return for this request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1000</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The token to retrieve the next page of results. If the response does not include this token, pass an empty string (&quot;&quot;).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
         /// </summary>

@@ -9,11 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class CreateReceiverRequest : TeaModel {
+        /// <summary>
+        /// <para>The comment.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Customer A.</para>
+        /// </summary>
         [NameInMap("comment")]
         [Validation(Required=false)]
         public string Comment { get; set; }
 
         /// <summary>
+        /// <para>The name of the receiver.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>receiver_name</para>
         /// </summary>
@@ -22,6 +30,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string ReceiverName { get; set; }
 
         /// <summary>
+        /// <para>The ID of the receiver\&quot;s account.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1111</para>
         /// </summary>

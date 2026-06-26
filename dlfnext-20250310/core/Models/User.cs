@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class User : TeaModel {
         /// <summary>
+        /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1744970111419</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public long? CreatedAt { get; set; }
 
         /// <summary>
+        /// <para>The name of the creator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>acs:ram::[accountId]:root</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string CreatedBy { get; set; }
 
         /// <summary>
+        /// <para>The display name of the user.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>user_display_name</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string DisplayName { get; set; }
 
         /// <summary>
+        /// <para>The type of the user.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>RAM_USER</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string Type { get; set; }
 
         /// <summary>
+        /// <para>The time of the last update. The value is a UNIX timestamp in milliseconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1744970111419</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public long? UpdatedAt { get; set; }
 
         /// <summary>
+        /// <para>The name of the updater.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>acs:ram::[accountId]:root</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string UpdatedBy { get; set; }
 
         /// <summary>
+        /// <para>The ID of the user.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>222748924538****</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string UserId { get; set; }
 
         /// <summary>
+        /// <para>The username.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>user_name</para>
         /// </summary>
@@ -74,6 +90,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string UserName { get; set; }
 
         /// <summary>
+        /// <para>The resource descriptor of the user.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>acs:ram::[accountId]:user/user_name</para>
         /// </summary>

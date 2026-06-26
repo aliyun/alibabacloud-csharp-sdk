@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class IcebergNestedField : TeaModel {
         /// <summary>
+        /// <para>The comment for the field.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>desc1</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string Doc { get; set; }
 
         /// <summary>
-        /// <para>id</para>
+        /// <para>The field ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public long? Id { get; set; }
 
         /// <summary>
+        /// <para>The field name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>col1</para>
         /// </summary>
@@ -36,6 +40,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the field is optional.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -44,6 +50,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public bool? Optional { get; set; }
 
         /// <summary>
+        /// <para>The field type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>string</para>
         /// </summary>

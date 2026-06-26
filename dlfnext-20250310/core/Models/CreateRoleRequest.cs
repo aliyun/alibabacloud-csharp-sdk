@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class CreateRoleRequest : TeaModel {
         /// <summary>
+        /// <para>The role description.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>role_description</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The role display name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>role_display_name</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string DisplayName { get; set; }
 
         /// <summary>
+        /// <para>The role name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>role_name</para>
         /// </summary>

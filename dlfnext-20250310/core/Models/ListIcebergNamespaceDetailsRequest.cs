@@ -10,6 +10,10 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class ListIcebergNamespaceDetailsRequest : TeaModel {
         /// <summary>
+        /// <para>The number of entries to return on each page.
+        /// Default value: 1000.
+        /// Maximum value: 1000.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1000</para>
         /// </summary>
@@ -18,6 +22,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The namespace name pattern. Supports right-hand fuzzy matching with the percent sign (%).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>namespace%</para>
         /// </summary>
@@ -26,6 +32,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string NamespaceNamePattern { get; set; }
 
         /// <summary>
+        /// <para>The token for the next page of results. If the response does not include this token, pass an empty string (&quot;&quot;).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
         /// </summary>

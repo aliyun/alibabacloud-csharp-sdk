@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class FullSchemaChange : TeaModel {
         /// <summary>
+        /// <para>The type of change.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>setOption</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string Action { get; set; }
 
         /// <summary>
-        /// <para>required in UpdateComment/AddColumn</para>
+        /// <para>The description. This parameter is required when <c>action</c> is <c>UpdateComment</c> or <c>AddColumn</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>col_comment</para>
@@ -27,19 +29,22 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public string Comment { get; set; }
 
+        /// <summary>
+        /// <para>The column type. This parameter is required when <c>action</c> is <c>AddColumn</c>.</para>
+        /// </summary>
         [NameInMap("dataType")]
         [Validation(Required=false)]
         public FullDataType DataType { get; set; }
 
         /// <summary>
-        /// <para>required in AddColumn/RenameColumn/DropColumn/UpdateColumnComment/UpdateColumnType/UpdateColumnNullability</para>
+        /// <para>The table column names. This parameter is required when <c>action</c> is <c>AddColumn</c>, <c>RenameColumn</c>, <c>DropColumn</c>, <c>UpdateColumnComment</c>, <c>UpdateColumnType</c>, or <c>UpdateColumnNullability</c>.</para>
         /// </summary>
         [NameInMap("fieldNames")]
         [Validation(Required=false)]
         public List<string> FieldNames { get; set; }
 
         /// <summary>
-        /// <para>required in UpdateColumnType</para>
+        /// <para>Specifies whether the column is nullable. This parameter is required when the <c>action</c> is <c>UpdateColumnType</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -49,7 +54,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public bool? KeepNullability { get; set; }
 
         /// <summary>
-        /// <para>required in SetOption/RemoveOption</para>
+        /// <para>The key for the configuration. This parameter is required when <c>action</c> is <c>SetOption</c> or <c>RemoveOption</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>\&quot;true\&quot;</para>
@@ -58,12 +63,15 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public string Key { get; set; }
 
+        /// <summary>
+        /// <para>The column to move. This parameter is required when <c>action</c> is <c>AddColumn</c> or <c>UpdateColumnPosition</c>.</para>
+        /// </summary>
         [NameInMap("move")]
         [Validation(Required=false)]
         public Move Move { get; set; }
 
         /// <summary>
-        /// <para>required in UpdateColumnComment</para>
+        /// <para>The new description for the column. This parameter is required when <c>action</c> is <c>UpdateColumnComment</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>col_comment_test</para>
@@ -72,12 +80,15 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public string NewComment { get; set; }
 
+        /// <summary>
+        /// <para>The new column type. This parameter is required when <c>action</c> is <c>UpdateColumnType</c>.</para>
+        /// </summary>
         [NameInMap("newDataType")]
         [Validation(Required=false)]
         public FullDataType NewDataType { get; set; }
 
         /// <summary>
-        /// <para>required in RenameColumn</para>
+        /// <para>The new name of the column. This parameter is required when <c>action</c> is <c>RenameColumn</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>new_col_test</para>
@@ -87,7 +98,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string NewName { get; set; }
 
         /// <summary>
-        /// <para>required in UpdateColumnNullability</para>
+        /// <para>Specifies whether the new column is nullable. This parameter is required when <c>action</c> is <c>UpdateColumnType</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -97,7 +108,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public bool? NewNullability { get; set; }
 
         /// <summary>
-        /// <para>required in SetOption</para>
+        /// <para>The value of the configuration. This parameter is required when <c>action</c> is <c>SetOption</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>\&quot;manifest.delete-file-drop-stats\&quot;</para>

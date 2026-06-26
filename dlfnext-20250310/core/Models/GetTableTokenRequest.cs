@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class GetTableTokenRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether the access is from a VPC.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

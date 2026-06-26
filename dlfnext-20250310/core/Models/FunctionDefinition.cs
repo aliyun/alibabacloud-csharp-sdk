@@ -10,35 +10,35 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class FunctionDefinition : TeaModel {
         /// <summary>
-        /// <para>required in FileFunctionDefinition</para>
+        /// <para>Required in FileFunctionDefinition.</para>
         /// </summary>
         [NameInMap("className")]
         [Validation(Required=false)]
         public string ClassName { get; set; }
 
         /// <summary>
-        /// <para>required in SQLFunctionDefinition/LambdaFunctionDefinition</para>
+        /// <para>Required in SQLFunctionDefinition and LambdaFunctionDefinition.</para>
         /// </summary>
         [NameInMap("definition")]
         [Validation(Required=false)]
         public string Definition { get; set; }
 
         /// <summary>
-        /// <para>required in FileFunctionDefinition</para>
+        /// <para>Required in FileFunctionDefinition.</para>
         /// </summary>
         [NameInMap("fileResources")]
         [Validation(Required=false)]
         public List<FunctionFileResource> FileResources { get; set; }
 
         /// <summary>
-        /// <para>required in FileFunctionDefinition</para>
+        /// <para>Required in FileFunctionDefinition.</para>
         /// </summary>
         [NameInMap("functionName")]
         [Validation(Required=false)]
         public string FunctionName { get; set; }
 
         /// <summary>
-        /// <para>required in LambdaFunctionDefinition/FileFunctionDefinition</para>
+        /// <para>Required in LambdaFunctionDefinition and FileFunctionDefinition.</para>
         /// </summary>
         [NameInMap("language")]
         [Validation(Required=false)]

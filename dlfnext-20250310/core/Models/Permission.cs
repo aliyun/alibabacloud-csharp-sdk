@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class Permission : TeaModel {
         /// <summary>
+        /// <para>The access type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>DROP</para>
         /// </summary>
@@ -32,6 +34,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         }
 
         /// <summary>
+        /// <para>The name of the database.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>database_name</para>
         /// </summary>
@@ -48,6 +52,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string Function { get; set; }
 
         /// <summary>
+        /// <para>The user resource descriptor.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>acs:ram::[accountId]:user/user_name</para>
         /// </summary>
@@ -56,6 +62,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string Principal { get; set; }
 
         /// <summary>
+        /// <para>The resource type of the permission.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CATALOG</para>
         /// </summary>
@@ -68,6 +76,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public RowFilter RowFilter { get; set; }
 
         /// <summary>
+        /// <para>The name of the data table.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>table_name</para>
         /// </summary>

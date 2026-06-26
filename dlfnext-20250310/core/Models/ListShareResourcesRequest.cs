@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class ListShareResourcesRequest : TeaModel {
         /// <summary>
+        /// <para>The maximum number of records to return.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1000</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The token used to page through results. If this parameter is not returned, pass an empty string (&quot;&quot;).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
         /// </summary>

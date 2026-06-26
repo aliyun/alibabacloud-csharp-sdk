@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class ListIcebergTableDetailsRequest : TeaModel {
         /// <summary>
+        /// <para>The maximum number of records to return in a single request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1000</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The token to retrieve the next page of results. If this parameter is not returned in the response, pass an empty string (&quot;&quot;).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string PageToken { get; set; }
 
         /// <summary>
+        /// <para>The pattern to filter table names.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>table%</para>
         /// </summary>

@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class GetCatalogSummaryRequest : TeaModel {
+        /// <summary>
+        /// <para>The date of the storage overview.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2025-09-18</para>
+        /// </summary>
         [NameInMap("date")]
         [Validation(Required=false)]
         public string Date { get; set; }

@@ -10,42 +10,42 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class CatalogSummaryTrend : TeaModel {
         /// <summary>
-        /// <para>API visit count trends</para>
+        /// <para>The trend of total metadata requests.</para>
         /// </summary>
         [NameInMap("apiVisitCount")]
         [Validation(Required=false)]
         public List<DateSummary> ApiVisitCount { get; set; }
 
         /// <summary>
-        /// <para>file access count trends</para>
+        /// <para>The trend of file access count.</para>
         /// </summary>
         [NameInMap("fileAccessCount")]
         [Validation(Required=false)]
         public List<DateSummary> FileAccessCount { get; set; }
 
         /// <summary>
-        /// <para>Table count trends</para>
+        /// <para>The data access traffic trend.</para>
         /// </summary>
         [NameInMap("throughput")]
         [Validation(Required=false)]
         public List<DateSummary> Throughput { get; set; }
 
         /// <summary>
-        /// <para>Historical total file count</para>
+        /// <para>The trend of total file count.</para>
         /// </summary>
         [NameInMap("totalFileCount")]
         [Validation(Required=false)]
         public List<DateSummary> TotalFileCount { get; set; }
 
         /// <summary>
-        /// <para>Database count trends</para>
+        /// <para>The trend of total storage capacity.</para>
         /// </summary>
         [NameInMap("totalFileSizeInBytes")]
         [Validation(Required=false)]
         public List<DateSummary> TotalFileSizeInBytes { get; set; }
 
         /// <summary>
-        /// <para>Latest snapshot file count</para>
+        /// <para>The trend of total metadata object count.</para>
         /// </summary>
         [NameInMap("totalMetaCount")]
         [Validation(Required=false)]

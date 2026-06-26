@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class GetRoleRequest : TeaModel {
         /// <summary>
+        /// <para>The resource descriptor of the role.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>acs:dlf::[accountId]:role/role_name</para>
         /// </summary>

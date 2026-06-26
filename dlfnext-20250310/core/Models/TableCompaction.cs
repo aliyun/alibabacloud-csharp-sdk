@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class TableCompaction : TeaModel {
         /// <summary>
+        /// <para>The catalog ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>clg-paimon-xxx</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string CatalogId { get; set; }
 
         /// <summary>
+        /// <para>The total CU usage.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -28,6 +32,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
+        /// <para>The time when the last file was compacted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1759111660075</para>
@@ -41,6 +46,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public long? LastCompactedFileTime { get; set; }
 
         /// <summary>
+        /// <para>The earliest creation time of uncompacted files.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1760321763633</para>
         /// </summary>
@@ -51,6 +58,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
+        /// <para>The number of Level 0 files.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -64,6 +72,8 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string MaxLevel0FileCount { get; set; }
 
         /// <summary>
+        /// <para>The table ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>tbl-xxx</para>
         /// </summary>
