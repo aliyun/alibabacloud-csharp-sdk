@@ -9,8 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class CreateResourceGroupRequest : TeaModel {
+        [NameInMap("AgentType")]
+        [Validation(Required=false)]
+        public string AgentType { get; set; }
+
         /// <summary>
-        /// <para>The business channel.</para>
+        /// <para>The channel.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>
@@ -25,7 +29,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is for internal use only.</para>
+        /// <para>This parameter is not publicly available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -36,7 +40,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public long? IsResourceGroupWithOfficeSite { get; set; }
 
         /// <summary>
-        /// <para>Set this parameter to <c>AliyunConsole</c> for Wuying Workspace Enterprise Edition.</para>
+        /// <para>For WUYING Workspace Enterprise Edition, set this parameter to <c>AliyunConsole</c>. Other platforms are not supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AliyunConsole</para>

@@ -20,12 +20,16 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>A list of resource groups.</para>
+        /// <para>The list of resource groups.</para>
         /// </summary>
         [NameInMap("ResourceGroup")]
         [Validation(Required=false)]
         public List<DescribeResourceGroupsResponseBodyResourceGroup> ResourceGroup { get; set; }
         public class DescribeResourceGroupsResponseBodyResourceGroup : TeaModel {
+            [NameInMap("AgentType")]
+            [Validation(Required=false)]
+            public string AgentType { get; set; }
+
             /// <summary>
             /// <para>The Alibaba Cloud resource group ID.</para>
             /// 
@@ -65,7 +69,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public string AuthCount { get; set; }
 
             /// <summary>
-            /// <para>The time the resource group was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-11-29T17:25:40.000000000Z</para>
@@ -78,10 +82,8 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             /// <remarks>
             /// <para>The policies associated with the resource group.</para>
             /// <list type="bullet">
-            /// <item><description><para>These policies apply to the cloud computers in the resource group. If multiple policies are associated, they are applied in order of priority.</para>
-            /// </description></item>
-            /// <item><description><para>Policies associated with the resource group take precedence over policies assigned to individual cloud computers.</para>
-            /// </description></item>
+            /// <item><description>Associated policies take effect on cloud desktops in the resource group. If multiple policies are associated, they take effect based on policy priority.</description></item>
+            /// <item><description>If a cloud desktop in the resource group already has other policies specified, the policies associated with the resource group take precedence.</description></item>
             /// </list>
             /// </remarks>
             /// </summary>
@@ -100,7 +102,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether this is the default policy.</para>
+                /// <para>Indicates whether the policy is the default policy.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>False</para>
@@ -122,7 +124,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             }
 
             /// <summary>
-            /// <para>The number of resources in the resource group.</para>
+            /// <para>The resource count in the resource group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>119</para>
@@ -153,9 +155,9 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 
             /// <summary>
             /// <remarks>
-            /// <para>The scheduled tasks associated with the resource group.</para>
+            /// <para>The associated scheduled tasks.</para>
             /// <list type="bullet">
-            /// <item><description>These scheduled tasks apply to cloud computers in the resource group and take precedence over any tasks associated with individual cloud computers.</description></item>
+            /// <item><description>Associated scheduled tasks take effect on cloud desktops in the resource group. If a cloud desktop in the resource group already has other scheduled tasks associated, the tasks associated with the resource group take precedence.</description></item>
             /// </list>
             /// </remarks>
             /// </summary>

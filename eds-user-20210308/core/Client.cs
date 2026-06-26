@@ -1081,6 +1081,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentType))
+            {
+                query["AgentType"] = request.AgentType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessChannel))
             {
                 query["BusinessChannel"] = request.BusinessChannel;
@@ -1143,6 +1147,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentType))
+            {
+                query["AgentType"] = request.AgentType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessChannel))
             {
                 query["BusinessChannel"] = request.BusinessChannel;
@@ -2572,7 +2580,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View resource groups.</para>
+        /// <para>Queries resource groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2589,6 +2597,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentType))
+            {
+                query["AgentType"] = request.AgentType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunResourceGroupIds))
             {
                 query["AliyunResourceGroupIds"] = request.AliyunResourceGroupIds;
@@ -2646,7 +2658,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View resource groups.</para>
+        /// <para>Queries resource groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2663,6 +2675,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentType))
+            {
+                query["AgentType"] = request.AgentType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunResourceGroupIds))
             {
                 query["AliyunResourceGroupIds"] = request.AliyunResourceGroupIds;
@@ -2720,7 +2736,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View resource groups.</para>
+        /// <para>Queries resource groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2738,7 +2754,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View resource groups.</para>
+        /// <para>Queries resource groups.</para>
         /// </summary>
         /// 
         /// <param name="request">

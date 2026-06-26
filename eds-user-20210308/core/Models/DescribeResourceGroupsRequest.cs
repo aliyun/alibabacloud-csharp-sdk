@@ -9,15 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class DescribeResourceGroupsRequest : TeaModel {
+        [NameInMap("AgentType")]
+        [Validation(Required=false)]
+        public string AgentType { get; set; }
+
         /// <summary>
-        /// <para>A list of Aliyun resource group IDs.</para>
+        /// <para>The cloud platform resource group ID.</para>
         /// </summary>
         [NameInMap("AliyunResourceGroupIds")]
         [Validation(Required=false)]
         public List<string> AliyunResourceGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The business channel.</para>
+        /// <para>The channel tag.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>
@@ -49,7 +53,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -60,9 +64,9 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>The cloud platform.</para>
+        /// <para>Fixed value: AliyunConsole.</para>
         /// <list type="bullet">
-        /// <item><description>For Elastic Desktop Service (EDS) Enterprise Edition, this parameter must be set to AliyunConsole.</description></item>
+        /// <item><description>For Elastic Desktop Service Enterprise Edition, set this parameter to AliyunConsole. Other platforms are not publicly available.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -78,7 +82,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string ResourceClassification { get; set; }
 
         /// <summary>
-        /// <para>A list of resource group IDs.</para>
+        /// <para>The list of resource group IDs.</para>
         /// </summary>
         [NameInMap("ResourceGroupIds")]
         [Validation(Required=false)]
