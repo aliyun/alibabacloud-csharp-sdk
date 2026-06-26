@@ -1,3 +1,8 @@
+2026-06-26 Version: 4.25.1
+- Update API RunAgentTask: add request parameters ScheduleId.
+- Update API RunAgentTask: add request parameters TaskConfigId.
+
+
 2026-06-25 Version: 4.25.0
 - Support API DeleteMobileAgentPackage.
 - Update API DescribeAndroidInstanceGroups: add response parameters Body.InstanceGroupModel.$.Channel.

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class RunAgentTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response status code. A value of <c>200</c> indicates that the request was successful.</para>
+        /// <para>The status code of the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>For example, &quot;200&quot; indicates success.</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The unique request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6C8439B9-7DBF-57F4-92AE-55A9B9D3****</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>A list of tasks.</para>
+        /// <para>The list of tasks.</para>
         /// </summary>
         [NameInMap("Tasks")]
         [Validation(Required=false)]
@@ -58,11 +58,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public class RunAgentTaskResponseBodyTasks : TeaModel {
             /// <summary>
             /// <para>The current status of the task. Valid values:</para>
-            /// <para><c>PENDING</c>: The task is being created.</para>
-            /// <para><c>RUNNING</c>: The task is running.</para>
-            /// <para><c>COMPLETED</c>: The task completed successfully.</para>
-            /// <para><c>FAILED</c>: The task failed.</para>
-            /// <para><c>TIMEOUT</c>: The task timed out.</para>
+            /// <list type="bullet">
+            /// <item><description>PENDING: The task is being created.</description></item>
+            /// <item><description>RUNNING: The task is running.</description></item>
+            /// <item><description>COMPLETED: The task is completed.</description></item>
+            /// <item><description>FAILED: The task failed.</description></item>
+            /// <item><description>TIMEOUT: The task execution timed out.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>COMPLETED</para>
@@ -72,7 +74,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string CurrentStatus { get; set; }
 
             /// <summary>
-            /// <para>The mobile node ID.</para>
+            /// <para>The Mobile node ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acp-ek65k51zoxia3x8xz</para>
@@ -82,7 +84,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The time when the task started running, in ISO 8601 format.</para>
+            /// <para>The time when the task was created, in ISO 8601 format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-04-13T17:42:19Z</para>
@@ -92,7 +94,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string RunningAt { get; set; }
 
             /// <summary>
-            /// <para>The globally unique task ID.</para>
+            /// <para>The task ID, which is globally unique.</para>
             /// 
             /// <b>Example:</b>
             /// <para>t-imr0fufqd7cle****</para>
@@ -102,7 +104,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>The user prompt that the Agent used to perform the task.</para>
+            /// <para>The user instruction in natural language. The Agent performs operations based on this instruction.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Download DingTalk from App Store</para>

@@ -15208,7 +15208,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Triggers an Agent on a mobile node to run an AI-powered automation task.</para>
+        /// <para>Triggers an Agent on Mobile nodes to execute an AI automation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15236,6 +15236,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxSteps))
             {
                 query["MaxSteps"] = request.MaxSteps;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduleId))
+            {
+                query["ScheduleId"] = request.ScheduleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskConfigId))
+            {
+                query["TaskConfigId"] = request.TaskConfigId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeoutSeconds))
             {
@@ -15266,7 +15274,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Triggers an Agent on a mobile node to run an AI-powered automation task.</para>
+        /// <para>Triggers an Agent on Mobile nodes to execute an AI automation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15294,6 +15302,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxSteps))
             {
                 query["MaxSteps"] = request.MaxSteps;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduleId))
+            {
+                query["ScheduleId"] = request.ScheduleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskConfigId))
+            {
+                query["TaskConfigId"] = request.TaskConfigId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeoutSeconds))
             {
@@ -15324,7 +15340,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Triggers an Agent on a mobile node to run an AI-powered automation task.</para>
+        /// <para>Triggers an Agent on Mobile nodes to execute an AI automation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15342,7 +15358,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Triggers an Agent on a mobile node to run an AI-powered automation task.</para>
+        /// <para>Triggers an Agent on Mobile nodes to execute an AI automation task.</para>
         /// </summary>
         /// 
         /// <param name="request">

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class RunAgentTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The region ID of the mobile node.</para>
+        /// <para>The region ID of the Mobile node.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string BizRegionId { get; set; }
 
         /// <summary>
-        /// <para>An array of mobile node IDs. Specify a maximum of 100 IDs per request.</para>
+        /// <para>The list of Mobile node IDs. A maximum of 100 nodes are supported per request.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of steps the task can execute. This limit prevents infinite loops. Valid values: 30–1000. Default: 1000.</para>
+        /// <para>The maximum number of execution steps for the task to prevent infinite loops. Valid values: 30 to 1000. Default value: 1000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -37,8 +37,16 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public int? MaxSteps { get; set; }
 
+        [NameInMap("ScheduleId")]
+        [Validation(Required=false)]
+        public string ScheduleId { get; set; }
+
+        [NameInMap("TaskConfigId")]
+        [Validation(Required=false)]
+        public string TaskConfigId { get; set; }
+
         /// <summary>
-        /// <para>The task timeout in seconds. Valid values: 300–3600. Default: 3600.</para>
+        /// <para>The task timeout period in seconds. Valid values: 300 to 3600. Default value: 3600.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3600</para>
@@ -48,8 +56,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? TimeoutSeconds { get; set; }
 
         /// <summary>
-        /// <para>The user prompt in natural language. The Agent completes the task based on this prompt.</para>
-        /// <para>This parameter is required.</para>
+        /// <para>The user instruction in natural language. The Agent performs operations based on this instruction.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Download DingTalk from App Store</para>
