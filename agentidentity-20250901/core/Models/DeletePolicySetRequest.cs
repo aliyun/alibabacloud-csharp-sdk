@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentIdentity20250901.Models
 {
     public class DeletePolicySetRequest : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>default-policy-set</para>
-        /// </summary>
         [NameInMap("PolicySetName")]
         [Validation(Required=false)]
         public string PolicySetName { get; set; }

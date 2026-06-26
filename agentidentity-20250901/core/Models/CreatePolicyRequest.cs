@@ -13,26 +13,14 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901.Models
         [Validation(Required=false)]
         public Definition Definition { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>example description</para>
-        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>rate-limit-policy</para>
-        /// </summary>
         [NameInMap("PolicyName")]
         [Validation(Required=false)]
         public string PolicyName { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>default-policy-set</para>
-        /// </summary>
         [NameInMap("PolicySetName")]
         [Validation(Required=false)]
         public string PolicySetName { get; set; }

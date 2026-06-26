@@ -9,26 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentIdentity20250901.Models
 {
     public class CreateClientSecretRequest : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>client_xxxxxxxxxxxxxxxxxxxx</para>
-        /// </summary>
         [NameInMap("ClientId")]
         [Validation(Required=false)]
         public string ClientId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>my-web-app</para>
-        /// </summary>
         [NameInMap("ClientName")]
         [Validation(Required=false)]
         public string ClientName { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>my-agent-userpool</para>
-        /// </summary>
         [NameInMap("UserPoolName")]
         [Validation(Required=false)]
         public string UserPoolName { get; set; }

@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentIdentity20250901.Models
 {
     public class DetachPolicySetFromGatewayRequest : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>acs:agentidentity:cn-beijing:123456:gateway/my-gateway</para>
-        /// </summary>
         [NameInMap("GatewayArn")]
         [Validation(Required=false)]
         public string GatewayArn { get; set; }
@@ -21,10 +17,6 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901.Models
         [Validation(Required=false)]
         public string GatewayType { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>default-policy-set</para>
-        /// </summary>
         [NameInMap("PolicySetName")]
         [Validation(Required=false)]
         public string PolicySetName { get; set; }

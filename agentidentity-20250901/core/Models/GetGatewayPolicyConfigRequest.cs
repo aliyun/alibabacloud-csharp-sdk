@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentIdentity20250901.Models
 {
     public class GetGatewayPolicyConfigRequest : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>acs:agentidentity:cn-beijing:123456:gateway/my-gateway</para>
-        /// </summary>
         [NameInMap("GatewayArn")]
         [Validation(Required=false)]
         public string GatewayArn { get; set; }

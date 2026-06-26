@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentIdentity20250901.Models
 {
     public class DeleteOAuth2CredentialProviderRequest : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>oauth2-provider-aliyun</para>
-        /// </summary>
         [NameInMap("OAuth2CredentialProviderName")]
         [Validation(Required=false)]
         public string OAuth2CredentialProviderName { get; set; }

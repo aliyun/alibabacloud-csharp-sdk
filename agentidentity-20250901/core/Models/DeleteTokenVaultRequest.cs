@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentIdentity20250901.Models
 {
     public class DeleteTokenVaultRequest : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>default</para>
-        /// </summary>
         [NameInMap("TokenVaultName")]
         [Validation(Required=false)]
         public string TokenVaultName { get; set; }

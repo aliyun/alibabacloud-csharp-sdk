@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentIdentity20250901.Models
 {
     public class CreateTokenVaultShrinkRequest : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>example description</para>
-        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
@@ -21,18 +17,10 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901.Models
         [Validation(Required=false)]
         public string EncryptionConfigShrink { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>acs:ram::123456:role/AliyunAgentIdentityVaultRole</para>
-        /// </summary>
         [NameInMap("RoleArn")]
         [Validation(Required=false)]
         public string RoleArn { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>default</para>
-        /// </summary>
         [NameInMap("TokenVaultName")]
         [Validation(Required=false)]
         public string TokenVaultName { get; set; }

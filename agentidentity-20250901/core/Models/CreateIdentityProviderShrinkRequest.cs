@@ -13,26 +13,14 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901.Models
         [Validation(Required=false)]
         public string AllowedAudienceShrink { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>example agent</para>
-        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para><a href="https://oauth.aliyun.com/.well-known/openid-configuration">https://oauth.aliyun.com/.well-known/openid-configuration</a></para>
-        /// </summary>
         [NameInMap("DiscoveryURL")]
         [Validation(Required=false)]
         public string DiscoveryURL { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>identity-provider-okta</para>
-        /// </summary>
         [NameInMap("IdentityProviderName")]
         [Validation(Required=false)]
         public string IdentityProviderName { get; set; }
