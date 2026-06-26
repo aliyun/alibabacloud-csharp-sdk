@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class QueryKnowledgeBasesContentShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The text content to search for.</para>
+        /// <para>The text content used for retrieval.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to view the details of all AnalyticDB for PostgreSQL instances in a specific region, including their instance IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a region, including instance IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -35,12 +35,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The method for merging results from multiple knowledge bases. The default value is <c>RRF</c>. Valid values:</para>
+        /// <para>The method used to merge results from multiple knowledge bases. Default value: RRF. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>RRF</para>
-        /// </description></item>
-        /// <item><description><para>Weight</para>
-        /// </description></item>
+        /// <item><description>RRF</description></item>
+        /// <item><description>Weight.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -51,7 +49,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string MergeMethod { get; set; }
 
         /// <summary>
-        /// <para>The arguments for the specified <c>MergeMethod</c>.</para>
+        /// <para>The parameters for the merge method of each SourceCollection.</para>
         /// </summary>
         [NameInMap("MergeMethodArgs")]
         [Validation(Required=false)]
@@ -73,13 +71,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The reranking factor. If specified, the system reranks the final merged results. Valid values: 1 &lt; RerankFactor &lt;= 5.</para>
+        /// <para>The reranking factor. If this parameter is not empty, the vector retrieval results are reranked. Valid values: 1 &lt; RerankFactor &lt;= 5.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>Sparse document chunking reduces reranking efficiency.</para>
-        /// </description></item>
-        /// <item><description><para>We recommend that the number of items to rerank (TopK × Factor, rounded up) does not exceed 50.</para>
-        /// </description></item>
+        /// <item><description>Reranking is slow when document chunks are sparse.</description></item>
+        /// <item><description>The recommended reranking count (TopK × Factor, rounded up) should not exceed 50.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -91,14 +87,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public double? RerankFactor { get; set; }
 
         /// <summary>
-        /// <para>Parameters for the rerank model applied to the final merged results.</para>
+        /// <para>The reranking model parameters for performing an additional reranking on the overall results after multi-channel merging.</para>
         /// </summary>
         [NameInMap("RerankModel")]
         [Validation(Required=false)]
         public string RerankModelShrink { get; set; }
 
         /// <summary>
-        /// <para>The source collections to search.</para>
+        /// <para>The information about the multiple collections to retrieve.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("SourceCollection")]
@@ -106,7 +102,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string SourceCollectionShrink { get; set; }
 
         /// <summary>
-        /// <para>The number of top results to return after the results from all recall paths are merged.</para>
+        /// <para>The number of top results to return after multi-channel recall merging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to view the details of all instances in a target region, including their instance IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to query the details of all instances in the target region, including the instance ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Whether to include the raw retrieval results from the knowledge base in the response. Default: <c>false</c>.</para>
+        /// <para>Specifies whether to return the recall results. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public bool? IncludeKnowledgeBaseResults { get; set; }
 
         /// <summary>
-        /// <para>Parameters for knowledge retrieval. If omitted, the operation performs a standard chat without retrieving from a knowledge base.</para>
+        /// <para>The knowledge retrieval parameter object. If not specified, only chat is performed.</para>
         /// </summary>
         [NameInMap("KnowledgeParams")]
         [Validation(Required=false)]
         public string KnowledgeParamsShrink { get; set; }
 
         /// <summary>
-        /// <para>The parameters for calling the large language model (LLM).</para>
+        /// <para>The large language model (LLM) invocation parameter object.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ModelParams")]
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>A custom system prompt template. If specified, it overrides the default prompt. The template must include the {{ text_chunks }}, {{ user_system_prompt }}, {{ graph_entities }}, and {{ graph_relations }} placeholders.</para>
+        /// <para>The system prompt template, which must include {{ text_chunks }}, {{ user_system_prompt }}, {{ graph_entities }}, and {{ graph_relations }}. If not specified, this part does not take effect.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;参考以下知识回答问题:{{ text_chunks }}&quot;</para>

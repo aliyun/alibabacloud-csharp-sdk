@@ -1389,17 +1389,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Combines a knowledge base with a large language model for intelligent Q&amp;A.</para>
+        /// <para>Provides intelligent Q&amp;A services by combining knowledge bases with large models.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API lets you interact with a large language model using specific knowledge base collections to ensure responses are grounded in their content. You can customize requests by configuring parameters, including the database instance ID, knowledge retrieval parameters, and model inference parameters. The API provides a default system prompt template and supports custom system prompts.</para>
+        /// <para>This API allows users to interact with a large model through specified knowledge base collections to obtain answers based on knowledge base content. It supports configuring various parameters to customize requests, including but not limited to database instance ID, knowledge retrieval parameters, model inference parameters, etc. Additionally, it provides a default system prompt template and allows users to customize system prompts.</para>
         /// <list type="bullet">
-        /// <item><description><b>DBInstanceId</b>: Required. Specifies the ID of the database instance.</description></item>
-        /// <item><description><b>KnowledgeParams</b>: Optional. Contains parameters for knowledge retrieval, such as retrieval content and merge policies.</description></item>
-        /// <item><description><b>ModelParams</b>: Required. Contains parameters for model inference, such as the message list and the model name.</description></item>
-        /// <item><description><b>PromptTemplate</b>: Optional. Specifies a custom system prompt template.</description></item>
+        /// <item><description><b>DBInstanceId</b>: Required. Specifies the database instance ID.</description></item>
+        /// <item><description><b>KnowledgeParams</b>: Optional. Contains parameters related to knowledge retrieval, such as retrieval content, merge strategies, etc.</description></item>
+        /// <item><description><b>ModelParams</b>: Required. Contains parameters related to model inference, such as message list, model name, etc.</description></item>
+        /// <item><description><b>PromptTemplate</b>: Optional. Used to customize the system prompt template.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1476,17 +1476,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Combines a knowledge base with a large language model for intelligent Q&amp;A.</para>
+        /// <para>Provides intelligent Q&amp;A services by combining knowledge bases with large models.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API lets you interact with a large language model using specific knowledge base collections to ensure responses are grounded in their content. You can customize requests by configuring parameters, including the database instance ID, knowledge retrieval parameters, and model inference parameters. The API provides a default system prompt template and supports custom system prompts.</para>
+        /// <para>This API allows users to interact with a large model through specified knowledge base collections to obtain answers based on knowledge base content. It supports configuring various parameters to customize requests, including but not limited to database instance ID, knowledge retrieval parameters, model inference parameters, etc. Additionally, it provides a default system prompt template and allows users to customize system prompts.</para>
         /// <list type="bullet">
-        /// <item><description><b>DBInstanceId</b>: Required. Specifies the ID of the database instance.</description></item>
-        /// <item><description><b>KnowledgeParams</b>: Optional. Contains parameters for knowledge retrieval, such as retrieval content and merge policies.</description></item>
-        /// <item><description><b>ModelParams</b>: Required. Contains parameters for model inference, such as the message list and the model name.</description></item>
-        /// <item><description><b>PromptTemplate</b>: Optional. Specifies a custom system prompt template.</description></item>
+        /// <item><description><b>DBInstanceId</b>: Required. Specifies the database instance ID.</description></item>
+        /// <item><description><b>KnowledgeParams</b>: Optional. Contains parameters related to knowledge retrieval, such as retrieval content, merge strategies, etc.</description></item>
+        /// <item><description><b>ModelParams</b>: Required. Contains parameters related to model inference, such as message list, model name, etc.</description></item>
+        /// <item><description><b>PromptTemplate</b>: Optional. Used to customize the system prompt template.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1563,17 +1563,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Combines a knowledge base with a large language model for intelligent Q&amp;A.</para>
+        /// <para>Provides intelligent Q&amp;A services by combining knowledge bases with large models.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API lets you interact with a large language model using specific knowledge base collections to ensure responses are grounded in their content. You can customize requests by configuring parameters, including the database instance ID, knowledge retrieval parameters, and model inference parameters. The API provides a default system prompt template and supports custom system prompts.</para>
+        /// <para>This API allows users to interact with a large model through specified knowledge base collections to obtain answers based on knowledge base content. It supports configuring various parameters to customize requests, including but not limited to database instance ID, knowledge retrieval parameters, model inference parameters, etc. Additionally, it provides a default system prompt template and allows users to customize system prompts.</para>
         /// <list type="bullet">
-        /// <item><description><b>DBInstanceId</b>: Required. Specifies the ID of the database instance.</description></item>
-        /// <item><description><b>KnowledgeParams</b>: Optional. Contains parameters for knowledge retrieval, such as retrieval content and merge policies.</description></item>
-        /// <item><description><b>ModelParams</b>: Required. Contains parameters for model inference, such as the message list and the model name.</description></item>
-        /// <item><description><b>PromptTemplate</b>: Optional. Specifies a custom system prompt template.</description></item>
+        /// <item><description><b>DBInstanceId</b>: Required. Specifies the database instance ID.</description></item>
+        /// <item><description><b>KnowledgeParams</b>: Optional. Contains parameters related to knowledge retrieval, such as retrieval content, merge strategies, etc.</description></item>
+        /// <item><description><b>ModelParams</b>: Required. Contains parameters related to model inference, such as message list, model name, etc.</description></item>
+        /// <item><description><b>PromptTemplate</b>: Optional. Used to customize the system prompt template.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1592,17 +1592,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Combines a knowledge base with a large language model for intelligent Q&amp;A.</para>
+        /// <para>Provides intelligent Q&amp;A services by combining knowledge bases with large models.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API lets you interact with a large language model using specific knowledge base collections to ensure responses are grounded in their content. You can customize requests by configuring parameters, including the database instance ID, knowledge retrieval parameters, and model inference parameters. The API provides a default system prompt template and supports custom system prompts.</para>
+        /// <para>This API allows users to interact with a large model through specified knowledge base collections to obtain answers based on knowledge base content. It supports configuring various parameters to customize requests, including but not limited to database instance ID, knowledge retrieval parameters, model inference parameters, etc. Additionally, it provides a default system prompt template and allows users to customize system prompts.</para>
         /// <list type="bullet">
-        /// <item><description><b>DBInstanceId</b>: Required. Specifies the ID of the database instance.</description></item>
-        /// <item><description><b>KnowledgeParams</b>: Optional. Contains parameters for knowledge retrieval, such as retrieval content and merge policies.</description></item>
-        /// <item><description><b>ModelParams</b>: Required. Contains parameters for model inference, such as the message list and the model name.</description></item>
-        /// <item><description><b>PromptTemplate</b>: Optional. Specifies a custom system prompt template.</description></item>
+        /// <item><description><b>DBInstanceId</b>: Required. Specifies the database instance ID.</description></item>
+        /// <item><description><b>KnowledgeParams</b>: Optional. Contains parameters related to knowledge retrieval, such as retrieval content, merge strategies, etc.</description></item>
+        /// <item><description><b>ModelParams</b>: Required. Contains parameters related to model inference, such as message list, model name, etc.</description></item>
+        /// <item><description><b>PromptTemplate</b>: Optional. Used to customize the system prompt template.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1621,17 +1621,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This service combines a knowledge base with a large model to provide intelligent Q&amp;A. You can access the streaming interface using Server-Sent Events (SSE) or the Java asynchronous SDK.</para>
+        /// <para>Provides AI chat services by combining knowledge bases with large language models. This is a streaming API called through SSE or the Java asynchronous SDK.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Use this API to retrieve answers from a large language model based on content from a specified knowledge base. You can customize the request by configuring various parameters, including the database instance ID, knowledge retrieval parameters, and model inference parameters. The API includes a default system prompt template, and you can also specify a custom one.</para>
+        /// <para>This API allows you to interact with a large language model by using specified knowledge base collections to obtain answers based on knowledge base content. You can configure various parameters to customize requests, including but not limited to the database instance ID, knowledge retrieval parameters, and model inference parameters. A default system prompt template is provided, and you can also customize the system prompt.</para>
         /// <list type="bullet">
-        /// <item><description>DBInstanceId: Required. The ID of the database instance.</description></item>
-        /// <item><description>KnowledgeParams: Optional. Parameters for knowledge retrieval, such as retrieval content and the merge policy.</description></item>
-        /// <item><description>ModelParams: Required. Parameters for model inference, such as the message list and the model name.</description></item>
-        /// <item><description>PromptTemplate: Optional. A custom system prompt template.</description></item>
+        /// <item><description>DBInstanceId: Required. Specifies the database instance ID.</description></item>
+        /// <item><description>KnowledgeParams: Optional. Contains knowledge retrieval parameters such as retrieval content and merge strategy.</description></item>
+        /// <item><description>ModelParams: Required. Contains model inference parameters such as the message list and model name.</description></item>
+        /// <item><description>PromptTemplate: Optional. Specifies a custom system prompt template.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1708,17 +1708,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This service combines a knowledge base with a large model to provide intelligent Q&amp;A. You can access the streaming interface using Server-Sent Events (SSE) or the Java asynchronous SDK.</para>
+        /// <para>Provides AI chat services by combining knowledge bases with large language models. This is a streaming API called through SSE or the Java asynchronous SDK.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Use this API to retrieve answers from a large language model based on content from a specified knowledge base. You can customize the request by configuring various parameters, including the database instance ID, knowledge retrieval parameters, and model inference parameters. The API includes a default system prompt template, and you can also specify a custom one.</para>
+        /// <para>This API allows you to interact with a large language model by using specified knowledge base collections to obtain answers based on knowledge base content. You can configure various parameters to customize requests, including but not limited to the database instance ID, knowledge retrieval parameters, and model inference parameters. A default system prompt template is provided, and you can also customize the system prompt.</para>
         /// <list type="bullet">
-        /// <item><description>DBInstanceId: Required. The ID of the database instance.</description></item>
-        /// <item><description>KnowledgeParams: Optional. Parameters for knowledge retrieval, such as retrieval content and the merge policy.</description></item>
-        /// <item><description>ModelParams: Required. Parameters for model inference, such as the message list and the model name.</description></item>
-        /// <item><description>PromptTemplate: Optional. A custom system prompt template.</description></item>
+        /// <item><description>DBInstanceId: Required. Specifies the database instance ID.</description></item>
+        /// <item><description>KnowledgeParams: Optional. Contains knowledge retrieval parameters such as retrieval content and merge strategy.</description></item>
+        /// <item><description>ModelParams: Required. Contains model inference parameters such as the message list and model name.</description></item>
+        /// <item><description>PromptTemplate: Optional. Specifies a custom system prompt template.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1795,17 +1795,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This service combines a knowledge base with a large model to provide intelligent Q&amp;A. You can access the streaming interface using Server-Sent Events (SSE) or the Java asynchronous SDK.</para>
+        /// <para>Provides AI chat services by combining knowledge bases with large language models. This is a streaming API called through SSE or the Java asynchronous SDK.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Use this API to retrieve answers from a large language model based on content from a specified knowledge base. You can customize the request by configuring various parameters, including the database instance ID, knowledge retrieval parameters, and model inference parameters. The API includes a default system prompt template, and you can also specify a custom one.</para>
+        /// <para>This API allows you to interact with a large language model by using specified knowledge base collections to obtain answers based on knowledge base content. You can configure various parameters to customize requests, including but not limited to the database instance ID, knowledge retrieval parameters, and model inference parameters. A default system prompt template is provided, and you can also customize the system prompt.</para>
         /// <list type="bullet">
-        /// <item><description>DBInstanceId: Required. The ID of the database instance.</description></item>
-        /// <item><description>KnowledgeParams: Optional. Parameters for knowledge retrieval, such as retrieval content and the merge policy.</description></item>
-        /// <item><description>ModelParams: Required. Parameters for model inference, such as the message list and the model name.</description></item>
-        /// <item><description>PromptTemplate: Optional. A custom system prompt template.</description></item>
+        /// <item><description>DBInstanceId: Required. Specifies the database instance ID.</description></item>
+        /// <item><description>KnowledgeParams: Optional. Contains knowledge retrieval parameters such as retrieval content and merge strategy.</description></item>
+        /// <item><description>ModelParams: Required. Contains model inference parameters such as the message list and model name.</description></item>
+        /// <item><description>PromptTemplate: Optional. Specifies a custom system prompt template.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1824,17 +1824,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This service combines a knowledge base with a large model to provide intelligent Q&amp;A. You can access the streaming interface using Server-Sent Events (SSE) or the Java asynchronous SDK.</para>
+        /// <para>Provides AI chat services by combining knowledge bases with large language models. This is a streaming API called through SSE or the Java asynchronous SDK.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Use this API to retrieve answers from a large language model based on content from a specified knowledge base. You can customize the request by configuring various parameters, including the database instance ID, knowledge retrieval parameters, and model inference parameters. The API includes a default system prompt template, and you can also specify a custom one.</para>
+        /// <para>This API allows you to interact with a large language model by using specified knowledge base collections to obtain answers based on knowledge base content. You can configure various parameters to customize requests, including but not limited to the database instance ID, knowledge retrieval parameters, and model inference parameters. A default system prompt template is provided, and you can also customize the system prompt.</para>
         /// <list type="bullet">
-        /// <item><description>DBInstanceId: Required. The ID of the database instance.</description></item>
-        /// <item><description>KnowledgeParams: Optional. Parameters for knowledge retrieval, such as retrieval content and the merge policy.</description></item>
-        /// <item><description>ModelParams: Required. Parameters for model inference, such as the message list and the model name.</description></item>
-        /// <item><description>PromptTemplate: Optional. A custom system prompt template.</description></item>
+        /// <item><description>DBInstanceId: Required. Specifies the database instance ID.</description></item>
+        /// <item><description>KnowledgeParams: Optional. Contains knowledge retrieval parameters such as retrieval content and merge strategy.</description></item>
+        /// <item><description>ModelParams: Required. Contains model inference parameters such as the message list and model name.</description></item>
+        /// <item><description>PromptTemplate: Optional. Specifies a custom system prompt template.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -39957,6 +39957,154 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>暂停SaaS服务</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>删除模型服务。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PauseSaasServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PauseSaasServiceResponse
+        /// </returns>
+        public PauseSaasServiceResponse PauseSaasServiceWithOptions(PauseSaasServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceId))
+            {
+                query["ServiceId"] = request.ServiceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PauseSaasService",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PauseSaasServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>暂停SaaS服务</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>删除模型服务。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PauseSaasServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PauseSaasServiceResponse
+        /// </returns>
+        public async Task<PauseSaasServiceResponse> PauseSaasServiceWithOptionsAsync(PauseSaasServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceId))
+            {
+                query["ServiceId"] = request.ServiceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PauseSaasService",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PauseSaasServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>暂停SaaS服务</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>删除模型服务。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PauseSaasServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PauseSaasServiceResponse
+        /// </returns>
+        public PauseSaasServiceResponse PauseSaasService(PauseSaasServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return PauseSaasServiceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>暂停SaaS服务</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>删除模型服务。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PauseSaasServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PauseSaasServiceResponse
+        /// </returns>
+        public async Task<PauseSaasServiceResponse> PauseSaasServiceAsync(PauseSaasServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await PauseSaasServiceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Pauses a Supabase instance.</para>
         /// </summary>
         /// 
@@ -40425,7 +40573,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query a document collection with natural language to retrieve vectors and metadata.</para>
+        /// <para>Retrieves vectors and metadata from a specified document collection using natural language queries.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -40587,7 +40735,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query a document collection with natural language to retrieve vectors and metadata.</para>
+        /// <para>Retrieves vectors and metadata from a specified document collection using natural language queries.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -40749,7 +40897,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query a document collection with natural language to retrieve vectors and metadata.</para>
+        /// <para>Retrieves vectors and metadata from a specified document collection using natural language queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40767,7 +40915,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query a document collection with natural language to retrieve vectors and metadata.</para>
+        /// <para>Retrieves vectors and metadata from a specified document collection using natural language queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40977,7 +41125,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve vectors and metadata from specified knowledge bases using a natural-language query, returning the merged results from a multi-channel recall.</para>
+        /// <para>Retrieves vectors and metadata from multiple specified document collections by using natural language statements, merges multi-channel recall results, and returns the combined results.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -41069,7 +41217,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve vectors and metadata from specified knowledge bases using a natural-language query, returning the merged results from a multi-channel recall.</para>
+        /// <para>Retrieves vectors and metadata from multiple specified document collections by using natural language statements, merges multi-channel recall results, and returns the combined results.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -41161,7 +41309,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve vectors and metadata from specified knowledge bases using a natural-language query, returning the merged results from a multi-channel recall.</para>
+        /// <para>Retrieves vectors and metadata from multiple specified document collections by using natural language statements, merges multi-channel recall results, and returns the combined results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41179,7 +41327,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve vectors and metadata from specified knowledge bases using a natural-language query, returning the merged results from a multi-channel recall.</para>
+        /// <para>Retrieves vectors and metadata from multiple specified document collections by using natural language statements, merges multi-channel recall results, and returns the combined results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42877,6 +43025,154 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ResumeInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>恢复SaaS服务</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>删除模型服务。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ResumeSaasServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResumeSaasServiceResponse
+        /// </returns>
+        public ResumeSaasServiceResponse ResumeSaasServiceWithOptions(ResumeSaasServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceId))
+            {
+                query["ServiceId"] = request.ServiceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ResumeSaasService",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ResumeSaasServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>恢复SaaS服务</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>删除模型服务。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ResumeSaasServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResumeSaasServiceResponse
+        /// </returns>
+        public async Task<ResumeSaasServiceResponse> ResumeSaasServiceWithOptionsAsync(ResumeSaasServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceId))
+            {
+                query["ServiceId"] = request.ServiceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ResumeSaasService",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ResumeSaasServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>恢复SaaS服务</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>删除模型服务。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ResumeSaasServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResumeSaasServiceResponse
+        /// </returns>
+        public ResumeSaasServiceResponse ResumeSaasService(ResumeSaasServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ResumeSaasServiceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>恢复SaaS服务</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>删除模型服务。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ResumeSaasServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResumeSaasServiceResponse
+        /// </returns>
+        public async Task<ResumeSaasServiceResponse> ResumeSaasServiceAsync(ResumeSaasServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ResumeSaasServiceWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class QueryContentResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of tokens used for vectorization.</para>
+        /// <para>The number of tokens used during vectorization.</para>
         /// <remarks>
-        /// <para>A token is the smallest unit into which the input text is divided. A token can be a word, a phrase, a punctuation mark, or a character.</para>
+        /// <para>A token is the smallest unit into which the input text is split. A token can be a word, a phrase, a punctuation mark, or a character.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -167,10 +167,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>success</b>: The operation was successful.</para>
-        /// </description></item>
-        /// <item><description><para><b>fail</b>: The operation failed.</para>
-        /// </description></item>
+        /// <item><description><b>success</b>: Succeeded.</description></item>
+        /// <item><description><b>fail</b>: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -181,16 +179,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The resource usage for the query.</para>
+        /// <para>The resource usage of this query.</para>
         /// </summary>
         [NameInMap("Usage")]
         [Validation(Required=false)]
         public QueryContentResponseBodyUsage Usage { get; set; }
         public class QueryContentResponseBodyUsage : TeaModel {
             /// <summary>
-            /// <para>The number of entries used for vectorization.</para>
+            /// <para>The number of entries used during vectorization.</para>
             /// <remarks>
-            /// <para>An entry is the number of operations during vectorization for text or images. For example, processing text once counts as 1 entry, and processing an image once counts as 2 entries.</para>
+            /// <para>An entry refers to the number of items processed during vectorization of text or images. For example, processing text once counts as 1 entry, and processing an image once counts as 2 entries.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -201,9 +199,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string EmbeddingEntries { get; set; }
 
             /// <summary>
-            /// <para>The number of tokens used for vectorization.</para>
+            /// <para>The number of tokens used during vectorization.</para>
             /// <remarks>
-            /// <para>A token is the smallest unit into which the input text is divided. A token can be a word, a phrase, a punctuation mark, or a character.</para>
+            /// <para>A token is the smallest unit into which the input text is split. A token can be a word, a phrase, a punctuation mark, or a character.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

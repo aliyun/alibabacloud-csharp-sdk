@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The name of the document collection.</para>
         /// <remarks>
-        /// <para>A document collection is created by calling the <a href="https://help.aliyun.com/document_detail/2618448.html">CreateDocumentCollection</a> operation. Call the <a href="https://help.aliyun.com/document_detail/2618452.html">ListDocumentCollections</a> operation to list your document collections.</para>
+        /// <para>The document collection is created by calling the <a href="https://help.aliyun.com/document_detail/2618448.html">CreateDocumentCollection</a> operation. You can call the <a href="https://help.aliyun.com/document_detail/2618452.html">ListDocumentCollections</a> operation to query existing document collections.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Collection { get; set; }
 
         /// <summary>
-        /// <para>The text to use for retrieval.</para>
+        /// <para>The text content used for retrieval.</para>
         /// 
         /// <b>Example:</b>
         /// <para>What is AnalyticDB for PostgreSQL?</para>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to find the IDs of all AnalyticDB for PostgreSQL instances in a region.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a region, including instance IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -48,9 +48,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The filename of the source image for a search-by-image query.</para>
+        /// <para>The name of the source image file to search in image-to-image search scenarios.</para>
         /// <remarks>
-        /// <para>The image file must have a file extension. The supported extensions are bmp, jpg, jpeg, png, and tiff.</para>
+        /// <para>The image file must have a file extension. Supported image extensions: bmp, jpg, jpeg, png, and tiff.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -61,9 +61,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string FileName { get; set; }
 
         /// <summary>
-        /// <para>The publicly accessible URL of the image file for a search-by-image query.</para>
+        /// <para>The publicly accessible URL of the image file in image-to-image search scenarios.</para>
         /// <remarks>
-        /// <para>The image file must have a file extension. The supported extensions are bmp, jpg, jpeg, png, and tiff.</para>
+        /// <para>The image file must have a file extension. Supported image extensions: bmp, jpg, jpeg, png, and tiff.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -74,10 +74,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string FileUrl { get; set; }
 
         /// <summary>
-        /// <para>A filter condition for the query, specified as a SQL <c>WHERE</c> clause that returns a boolean value. The clause can use comparison operators (such as <c>=</c>, <c>&lt;&gt;</c>, <c>!=</c>, <c>&gt;</c>, <c>&lt;</c>, <c>&gt;=</c>, and <c>&lt;=</c>), logical operators (<c>AND</c>, <c>OR</c>, and <c>NOT</c>), and keywords such as <c>IN</c>, <c>BETWEEN</c>, and <c>LIKE</c>.</para>
+        /// <para>The filter condition for the data to query, in SQL WHERE clause format. The filter is an expression that returns a Boolean value (true or false). Conditions can be simple comparison operators such as equal to (=), not equal to (&lt;&gt; or !=), greater than (&gt;), less than (&lt;), greater than or equal to (&gt;=), and less than or equal to (&lt;=). Conditions can also be more complex expressions combined with logical operators (AND, OR, NOT), as well as conditions using the IN, BETWEEN, and LIKE keywords.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>For details about the syntax, see https\://www\.postgresqltutorial.com/postgresql-tutorial/postgresql-where/.</description></item>
+        /// <item><description>For detailed syntax, refer to: <a href="https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-where/">https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-where/</a>.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Filter { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable knowledge graph enhancement. The default value is <c>false</c>.</para>
+        /// <para>Specifies whether to enable knowledge graph enhancement. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -99,14 +99,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public bool? GraphEnhance { get; set; }
 
         /// <summary>
-        /// <para>The parameters for knowledge graph retrieval.</para>
+        /// <para>The knowledge graph retrieval parameters.</para>
         /// </summary>
         [NameInMap("GraphSearchArgs")]
         [Validation(Required=false)]
         public QueryContentRequestGraphSearchArgs GraphSearchArgs { get; set; }
         public class QueryContentRequestGraphSearchArgs : TeaModel {
             /// <summary>
-            /// <para>The number of top entities and relationship edges to return. The default value is <c>60</c>.</para>
+            /// <para>The number of top entities and relationship edges to return. Default value: 60.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>
@@ -118,15 +118,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// <para>Specifies the hybrid search algorithm. If this parameter is not specified, the system directly compares and sorts the scores from dense vector retrieval and full-text search.</para>
+        /// <para>The multi-channel recall algorithm. Default value: empty, which indicates that the dense vector and full-text index scores are directly compared and sorted.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>RRF: reciprocal rank fusion. This method uses a <c>k</c> parameter to control the fusion effect. For more information, see the <c>HybridSearchArgs</c> parameter.</para>
-        /// </description></item>
-        /// <item><description><para>Weight: A weighted sorting method. This method uses parameters to control the score weights of vector retrieval and full-text search before sorting. For more information, see the <c>HybridSearchArgs</c> parameter.</para>
-        /// </description></item>
-        /// <item><description><para>Cascaded: Performs full-text search first, and then performs vector retrieval on the results.</para>
-        /// </description></item>
+        /// <item><description>RRF: Reciprocal Rank Fusion. A parameter k controls the fusion effect. For more information, see the HybridSearchArgs configuration.</description></item>
+        /// <item><description>Weight: Weighted sorting. Parameters control the score weights of AISearch retrieve and full-text index results before sorting. For more information, see the HybridSearchArgs configuration.</description></item>
+        /// <item><description>Cascaded: Full-text index retrieve is performed first, followed by AISearch retrieve based on the full-text index results.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -137,9 +134,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string HybridSearch { get; set; }
 
         /// <summary>
-        /// <para>Parameters for the multi-channel recall algorithm. Currently, <c>RRF</c> and <c>Weight</c> are supported. <c>HybridPathsSetting</c> can be used to specify the recall paths, including dense vector search (<c>dense</c>), sparse vector search (<c>sparse</c>), and full-text search (<c>fulltext</c>). If this parameter is not specified, the system recalls dense vectors and full-text search results by default.</para>
+        /// <para>The algorithm parameters for multi-channel recall. RRF and Weight are supported. HybridPathsSetting specifies the recall paths: dense vectors (dense), sparse vectors (sparse), and full-text index (fulltext). If this value is empty, dense vectors (dense) and full-text index (fulltext) are used by default.</para>
         /// <list type="bullet">
-        /// <item><description>RRF: Specifies the constant <c>k</c> in the scoring formula <c>1/(k+rank_i)</c>. The value must be an integer greater than 1. Example:</description></item>
+        /// <item><description>RRF: Specifies the constant k in the score calculation formula <c>1/(k+rank_i)</c>. The value must be a positive integer greater than 1. Format:</description></item>
         /// </list>
         /// <pre><c>{
         ///   &quot;HybridPathsSetting&quot;: {
@@ -151,11 +148,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// }
         /// </c></pre>
         /// <list type="bullet">
-        /// <item><description><para>Weight:</para>
-        /// <list type="bullet">
-        /// <item><description><para>For dual-channel recall (if <c>HybridPathsSetting</c> is not specified, only <c>alpha</c> is configured):</para>
-        /// <list type="bullet">
-        /// <item><description>The score is calculated using the formula: <c>alpha * dense_score + (1-alpha) * fulltext_score</c>. The <c>alpha</c> parameter represents the score weight of dense vector retrieval relative to full-text search. The value must be in the range of 0 to 1. A value of 0 indicates that only full-text search is used, and a value of 1 indicates that only dense vector retrieval is used.</description></item>
+        /// <item><description>Weight: <list type="bullet">
+        /// <item><description>Dual-path recall (without specifying HybridPathsSetting, only specifying alpha):<list type="bullet">
+        /// <item><description>Formula: alpha * dense_score + (1-alpha) * fulltext_score. The alpha parameter specifies the score weight between dense vectors and full-text index retrieve. Valid values: 0 to 1, where 0 indicates full-text index only and 1 indicates dense vector only:</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -168,9 +163,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// }
         /// </c></pre>
         /// <list type="bullet">
-        /// <item><description><para>For three-channel recall:</para>
-        /// <list type="bullet">
-        /// <item><description>The score is calculated using the formula: <c>normalized_dense * dense_score + normalized_sparse * sparse_score + normalized_fulltext * fulltext_score</c>. The <c>dense</c>, <c>sparse</c>, and <c>fulltext</c> parameters represent the weights for the dense vector, sparse vector, and full-text search results, respectively. Their values must be greater than or equal to 0. The system automatically normalizes the weights to a sum of 1 (for example, <c>normalized_x = x / (dense + sparse + fulltext)</c>).</description></item>
+        /// <item><description>Three-path recall pattern:<list type="bullet">
+        /// <item><description>Formula: normalized_dense * dense_score + normalized_sparse * sparse_score + normalized_fulltext * fulltext_score. The dense, sparse, and fulltext values represent the weights for dense vectors, sparse vectors, and full-text index retrieve respectively. Valid values: greater than or equal to 0. The system automatically performs normalization of the weights to 0 to 1 (normalized_x = x / (dense + sparse + fulltext)).</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -191,7 +185,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public Dictionary<string, Dictionary<string, object>> HybridSearchArgs { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return the URL of the document. The default value is <c>false</c>.</para>
+        /// <para>Specifies whether to synchronously return the URL of the document. By default, the URL is not returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -201,7 +195,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public bool? IncludeFileUrl { get; set; }
 
         /// <summary>
-        /// <para>The metadata fields to include in the response. If left empty, no metadata is returned. To specify multiple fields, use a comma-separated list.</para>
+        /// <para>The metadata fields to return. Default value: empty. Separate multiple fields with commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>title,page</para>
@@ -211,13 +205,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string IncludeMetadataFields { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to include the vector in the results. The default value is <c>false</c>.</para>
+        /// <para>Specifies whether to return vectors. Default value: false.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para><b>false</b>: The vector is not returned.</para>
-        /// </description></item>
-        /// <item><description><para><b>true</b>: The vector is returned.</para>
-        /// </description></item>
+        /// <item><description><b>false</b>: Does not return vectors.</description></item>
+        /// <item><description><b>true</b>: Returns vectors.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -229,16 +221,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public bool? IncludeVector { get; set; }
 
         /// <summary>
-        /// <para>The similarity algorithm used for retrieval. If this parameter is not specified, the algorithm that was specified when the document collection was created is used. We recommend that you do not set this parameter unless you have specific requirements.</para>
+        /// <para>The similarity algorithm used for retrieval. If this value is empty, the algorithm specified when the knowledge base was created is used. Leave this parameter empty unless you have specific requirements.</para>
         /// <remarks>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>l2</b>: Euclidean distance.</para>
-        /// </description></item>
-        /// <item><description><para><b>ip</b>: dot product (inner product) distance.</para>
-        /// </description></item>
-        /// <item><description><para><b>cosine</b>: cosine similarity.</para>
-        /// </description></item>
+        /// <item><description><b>l2</b>: Euclidean distance.</description></item>
+        /// <item><description><b>ip</b>: inner product distance.</description></item>
+        /// <item><description><b>cosine</b>: cosine similarity.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -250,9 +239,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Metrics { get; set; }
 
         /// <summary>
-        /// <para>The namespace. The default value is <c>public</c>.</para>
+        /// <para>The namespace. Default value: public.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation to create a namespace and the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to list existing namespaces.</para>
+        /// <para>You can create a namespace by calling the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation and query namespaces by calling the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -263,9 +252,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The password for the namespace.</para>
+        /// <para>The password of the namespace.</para>
         /// <remarks>
-        /// <para>This password is set when you call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation.</para>
+        /// <para>This value is specified by the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -277,7 +266,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string NamespacePassword { get; set; }
 
         /// <summary>
-        /// <para>The offset for paginated queries.</para>
+        /// <para>The offset for paged query. Used for paging through results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -287,8 +276,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? Offset { get; set; }
 
         /// <summary>
-        /// <para>The field to sort the results by. By default, this parameter is empty.</para>
-        /// <para>The field must be a metadata field or a default field from the table, such as <c>id</c>. Supported formats include single fields (e.g., <c>chunk_id</c>), multiple comma-separated fields (e.g., <c>block_id, chunk_id</c>), and fields with a sort direction (e.g., <c>block_id DESC, chunk_id DESC</c>).</para>
+        /// <para>The field used for sorting. Default value: empty.</para>
+        /// <para>The field must belong to metadata or a default field in the table, such as id. Supported formats:</para>
+        /// <para>A single field, such as chunk_id.
+        /// Multiple fields separated by commas, such as block_id, chunk_id.
+        /// Descending order, such as block_id DESC, chunk_id DESC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>created_at</para>
@@ -302,13 +294,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The recall window. If this parameter is specified, additional context is returned with the retrieval results. The value must be a two-element array, <c>[A, B]</c>, where <c>-10 &lt;= A &lt;= 0</c> and <c>0 &lt;= B &lt;= 10</c>.</para>
+        /// <para>The recall window. When this value is not empty, additional context around the retrieval results is returned. The format is a two-element array: List&lt;A, B&gt;, where -10&lt;=A&lt;=0 and 0&lt;=B&lt;=10.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>Use this parameter when documents are finely chunked and retrieval might otherwise lose contextual information.</para>
-        /// </description></item>
-        /// <item><description><para>Reranking is prioritized over windowing. The system first applies reranking and then processes the window.</para>
-        /// </description></item>
+        /// <item><description>Use this parameter when documents are split into overly small chunks and retrieval may lose contextual information.</description></item>
+        /// <item><description>Reranking takes priority over windowing. Reranking is performed first, followed by windowing.</description></item>
         /// </list>
         /// </remarks>
         /// </summary>
@@ -328,13 +318,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The factor for reranking vector retrieval results. The value must be greater than 1 and less than or equal to 5.</para>
+        /// <para>The reranking factor. When this value is not empty, the AISearch retrieve results are reranked. Valid values: 1 &lt; RerankFactor &lt;= 5.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>Reranking may be slower if document chunks are sparse.</para>
-        /// </description></item>
-        /// <item><description><para>For best performance, the number of items to be reranked (<c>TopK</c> \* <c>RerankFactor</c>, rounded up) should not exceed 50.</para>
-        /// </description></item>
+        /// <item><description>Reranking is slow when documents are sparsely chunked.</description></item>
+        /// <item><description>The total number of reranked results (TopK × Factor, rounded up) should not exceed 50.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -346,15 +334,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public double? RerankFactor { get; set; }
 
         /// <summary>
-        /// <para>The parameters for the reranking model.</para>
+        /// <para>The rerank model parameters.</para>
         /// </summary>
         [NameInMap("RerankModel")]
         [Validation(Required=false)]
         public QueryContentRequestRerankModel RerankModel { get; set; }
         public class QueryContentRequestRerankModel : TeaModel {
             /// <summary>
-            /// <para>This parameter is available only when <c>RerankModel.Name</c> is set to <c>qwen3-rerank</c>.
-            /// You can add a custom task description to guide the model\&quot;s sorting strategy.</para>
+            /// <para>This parameter can be set when RerankModel.Name is qwen3-rerank.
+            /// Adds a custom sorting task type description. This parameter guides the model to adopt different sorting strategies.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Given a web search query, retrieve relevant passages that answer the query</para>
@@ -364,7 +352,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Instruct { get; set; }
 
             /// <summary>
-            /// <para>The name of the reranking model. Valid values: <c>qwen3-rerank</c>, <c>gte-rerank-v2</c>.</para>
+            /// <para>The name of the rerank model. Valid values: qwen3-rerank, gte-rerank-v2.</para>
             /// 
             /// <b>Example:</b>
             /// <para>qwen3-rerank</para>
@@ -372,6 +360,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+
+            [NameInMap("RerankMetadataFields")]
+            [Validation(Required=false)]
+            public string RerankMetadataFields { get; set; }
 
         }
 
@@ -388,13 +380,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The validity period of the returned image URL.</para>
         /// <remarks>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>The value can be specified in seconds (s) or days (d). For example, <c>300s</c> indicates that the link is valid for 300 seconds, and <c>60d</c> indicates that the link is valid for 60 days.</para>
-        /// </description></item>
-        /// <item><description><para>The value must be in the range of <c>60s</c> to <c>365d</c>.</para>
-        /// </description></item>
-        /// <item><description><para>Default value: <c>7200s</c> (2 hours).</para>
-        /// </description></item>
+        /// <item><description>Supports seconds (s) and days (d) as units. For example, 300s indicates a validity period of 300 seconds, and 60d indicates a validity period of 60 days.</description></item>
+        /// <item><description>Valid values: 60s to 365d.</description></item>
+        /// <item><description>Default value: 7200s (2 hours).</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -406,7 +396,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string UrlExpiration { get; set; }
 
         /// <summary>
-        /// <para>(Deprecated) Specifies whether to use full-text search (dual-channel recall). The default value is <c>false</c>, which means only vector retrieval is used.</para>
+        /// <para>(Deprecated) Specifies whether to use full-text retrieval (dual-path recall). Default value: false, which indicates that only vector retrieval is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
