@@ -143,8 +143,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     /// <summary>
                     /// <para>The action to be performed after the dry run. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Create: create.</description></item>
-                    /// <item><description>Update: update.</description></item>
+                    /// <item><description>Create: Create.</description></item>
+                    /// <item><description>Update: Update.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -176,8 +176,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     /// <summary>
                     /// <para>The action to be performed after the dry run. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Create: create.</description></item>
-                    /// <item><description>Update: update.</description></item>
+                    /// <item><description>Create: Create.</description></item>
+                    /// <item><description>Update: Update.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>

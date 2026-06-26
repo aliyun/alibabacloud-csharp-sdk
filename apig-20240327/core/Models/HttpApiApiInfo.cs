@@ -64,15 +64,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
-        /// <summary>
-        /// <para>Specifies whether to enable authentication.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>true</para>
-        /// </summary>
-        [NameInMap("enabelAuth")]
+        [NameInMap("enableAuth")]
         [Validation(Required=false)]
-        public bool? EnabelAuth { get; set; }
+        public bool? EnableAuth { get; set; }
 
         /// <summary>
         /// <para>The API environment information.</para>

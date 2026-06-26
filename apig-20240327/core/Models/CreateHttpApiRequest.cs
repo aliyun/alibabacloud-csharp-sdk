@@ -10,28 +10,31 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class CreateHttpApiRequest : TeaModel {
         /// <summary>
-        /// <para>Agent protocols</para>
+        /// <para>The list of protocols supported by the agent.</para>
         /// </summary>
         [NameInMap("agentProtocols")]
         [Validation(Required=false)]
         public List<string> AgentProtocols { get; set; }
 
         /// <summary>
-        /// <para>$.parameters[0].schema.properties.authConfig.enumValueTitles</para>
+        /// <para>The AI API protocols. The following protocols are supported:</para>
+        /// <list type="bullet">
+        /// <item><description>OpenAI/v1.</description></item>
+        /// </list>
         /// </summary>
         [NameInMap("aiProtocols")]
         [Validation(Required=false)]
         public List<string> AiProtocols { get; set; }
 
         /// <summary>
-        /// <para>The request parameters for API creation.</para>
+        /// <para>The authentication configuration.</para>
         /// </summary>
         [NameInMap("authConfig")]
         [Validation(Required=false)]
         public AuthConfig AuthConfig { get; set; }
 
         /// <summary>
-        /// <para>$.parameters[0].schema.properties.deployConfigs.items.example</para>
+        /// <para>The base path of the API. The value must start with a forward slash (/).</para>
         /// 
         /// <b>Example:</b>
         /// <para>/v1</para>
@@ -41,7 +44,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string BasePath { get; set; }
 
         /// <summary>
-        /// <para>ID of the gateway to which the API belongs.</para>
+        /// <para>The ID of the gateway to which the API belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gw-abc123xyz789</para>
@@ -51,14 +54,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string BelongGatewayId { get; set; }
 
         /// <summary>
-        /// <para>$.parameters[0].schema.example</para>
+        /// <para>The API deployment configurations. Currently, only AI APIs support deployment configurations, and only a single deployment configuration can be specified.</para>
         /// </summary>
         [NameInMap("deployConfigs")]
         [Validation(Required=false)]
         public List<HttpApiDeployConfig> DeployConfigs { get; set; }
 
         /// <summary>
-        /// <para>$.parameters[0].schema.properties.aiProtocols.items.description</para>
+        /// <para>The API description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>测试专用API。</para>
@@ -70,7 +73,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>Whether to preview without execution.</para>
+        /// <para>Specifies whether to perform a dry run without executing the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -81,7 +84,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>Create an API of HTTP type</para>
+        /// <para>Specifies whether to enable authentication.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -91,7 +94,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? EnableAuth { get; set; }
 
         /// <summary>
-        /// <para>First byte timeout</para>
+        /// <para>The timeout period for waiting for the first byte from the backend.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -101,14 +104,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? FirstByteTimeout { get; set; }
 
         /// <summary>
-        /// <para>$.parameters[0].schema.properties.deployConfigs.example</para>
+        /// <para>The HTTP Ingress API configuration.</para>
         /// </summary>
         [NameInMap("ingressConfig")]
         [Validation(Required=false)]
         public CreateHttpApiRequestIngressConfig IngressConfig { get; set; }
         public class CreateHttpApiRequestIngressConfig : TeaModel {
             /// <summary>
-            /// <para>Cluster ID.</para>
+            /// <para>The cluster ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>k7v5eobfzttudni2pw***</para>
@@ -118,7 +121,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>$.parameters[0].schema.properties.deployConfigs.enumValueTitles</para>
+            /// <para>The environment ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>env-cq146allhtgk***</para>
@@ -128,7 +131,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string EnvironmentId { get; set; }
 
             /// <summary>
-            /// <para>$.parameters[0].schema.properties.enableAuth.example</para>
+            /// <para>The Ingress class to listen on.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mse</para>
@@ -138,7 +141,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string IngressClass { get; set; }
 
             /// <summary>
-            /// <para>$.parameters[0].schema.properties.authConfig.description</para>
+            /// <para>Specifies whether to update the address in the Ingress status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -150,7 +153,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>$.parameters[0].schema.properties.enableAuth.description</para>
+            /// <para>The source ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>src-crdddallhtgtr***</para>
@@ -161,7 +164,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string SourceId { get; set; }
 
             /// <summary>
-            /// <para>$.parameters[0].schema.properties.enableAuth.enumValueTitles</para>
+            /// <para>The namespace to listen on.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default</para>
@@ -173,7 +176,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>Model category</para>
+        /// <para>The model category.</para>
         /// 
         /// <b>Example:</b>
         /// <para>llm/text-to-image</para>
@@ -183,7 +186,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ModelCategory { get; set; }
 
         /// <summary>
-        /// <para>$.parameters[0].schema.example</para>
+        /// <para>The API name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -194,14 +197,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>$.parameters[0].schema.properties.aiProtocols.description</para>
+        /// <para>The list of API access protocols.</para>
         /// </summary>
         [NameInMap("protocols")]
         [Validation(Required=false)]
         public List<string> Protocols { get; set; }
 
         /// <summary>
-        /// <para>Whether to remove base path when forwarding</para>
+        /// <para>Specifies whether to remove the base path when forwarding requests.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -211,7 +214,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? RemoveBasePathOnForward { get; set; }
 
         /// <summary>
-        /// <para>$.parameters[0].schema.properties.authConfig.example</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-xxx</para>
@@ -221,7 +224,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The conflict merge strategy for import.</para>
+        /// <para>The conflict merge strategy for the import.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ExistFirst</para>
@@ -231,7 +234,15 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Strategy { get; set; }
 
         /// <summary>
-        /// <para>$.parameters[0].schema.properties.deployConfigs.description</para>
+        /// <para>The type of the HTTP API. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Http</description></item>
+        /// <item><description>Rest</description></item>
+        /// <item><description>WebSocket</description></item>
+        /// <item><description>HttpIngress</description></item>
+        /// <item><description>LLM</description></item>
+        /// <item><description>Agent.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Http</para>
@@ -241,7 +252,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>$.parameters[0].schema.properties.deployConfigs.items.enumValueTitles</para>
+        /// <para>The API versioning configuration.</para>
         /// </summary>
         [NameInMap("versionConfig")]
         [Validation(Required=false)]

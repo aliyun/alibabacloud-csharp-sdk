@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class AddGatewaySecurityGroupRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The description of security group rule N.</para>
+        /// <para>The description of the security group rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>商品中心访问安全组</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The port ranges.</para>
+        /// <para>The port range.</para>
         /// </summary>
         [NameInMap("portRanges")]
         [Validation(Required=false)]

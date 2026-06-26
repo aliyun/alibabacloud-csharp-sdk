@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class BatchDeleteConsumerAuthorizationRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The rule IDs.</para>
+        /// <para>The list of API consumer authorization rule IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>car-cus2d1em1hkg7732kuk0</para>

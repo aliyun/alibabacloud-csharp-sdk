@@ -28,7 +28,11 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The gateway type used for filtering. Valid values: <b>AI</b> and <b>API</b>.</para>
+        /// <para>The gateway type used for filtering. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>AI</b></description></item>
+        /// <item><description><b>API</b>.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>API</para>

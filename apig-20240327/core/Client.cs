@@ -397,7 +397,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a security group that authorizes an instance to access services.</para>
+        /// <para>Authorizes a security group to allow gateway access to services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -451,7 +451,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a security group that authorizes an instance to access services.</para>
+        /// <para>Authorizes a security group to allow gateway access to services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -505,7 +505,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a security group that authorizes an instance to access services.</para>
+        /// <para>Authorizes a security group to allow gateway access to services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -524,7 +524,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a security group that authorizes an instance to access services.</para>
+        /// <para>Authorizes a security group to allow gateway access to services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -543,7 +543,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes consumer authentication rules.</para>
+        /// <para>Revokes API consumer authorization rules in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -589,7 +589,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes consumer authentication rules.</para>
+        /// <para>Revokes API consumer authorization rules in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -635,7 +635,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes consumer authentication rules.</para>
+        /// <para>Revokes API consumer authorization rules in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -654,7 +654,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes consumer authentication rules.</para>
+        /// <para>Revokes API consumer authorization rules in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2113,7 +2113,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>$.parameters[0].schema.properties.ingressConfig.example</para>
+        /// <para>Creates an HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2231,7 +2231,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>$.parameters[0].schema.properties.ingressConfig.example</para>
+        /// <para>Creates an HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2349,7 +2349,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>$.parameters[0].schema.properties.ingressConfig.example</para>
+        /// <para>Creates an HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2368,7 +2368,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>$.parameters[0].schema.properties.ingressConfig.example</para>
+        /// <para>Creates an HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9003,7 +9003,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tracing configurations of a Cloud-native API Gateway instance.</para>
+        /// <para>Retrieves the Tracing Analysis configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9049,7 +9049,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tracing configurations of a Cloud-native API Gateway instance.</para>
+        /// <para>Retrieves the Tracing Analysis configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9095,7 +9095,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tracing configurations of a Cloud-native API Gateway instance.</para>
+        /// <para>Retrieves the Tracing Analysis configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9114,7 +9114,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tracing configurations of a Cloud-native API Gateway instance.</para>
+        /// <para>Retrieves the Tracing Analysis configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
