@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class DebugBeginDialogueRequest : TeaModel {
         /// <summary>
+        /// <para>The called number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10086</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string CalledNumber { get; set; }
 
         /// <summary>
+        /// <para>The calling number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string CallingNumber { get; set; }
 
         /// <summary>
+        /// <para>The unique ID of the conversation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string ConversationId { get; set; }
 
         /// <summary>
+        /// <para>The initial context of the conversation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>
@@ -46,6 +52,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string InitialContext { get; set; }
 
         /// <summary>
+        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

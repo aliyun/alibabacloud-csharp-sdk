@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class DescribeStatisticalDataResponseBody : TeaModel {
         /// <summary>
+        /// <para>The total number of conversations.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public long? ConversationTotalNum { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>14C39896-AE6D-4643-9C9A-E0566B2C2DDD</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of resolved questions.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>80</para>
         /// </summary>
@@ -33,11 +39,16 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         [Validation(Required=false)]
         public long? ResolvedQuestionTotalNum { get; set; }
 
+        /// <summary>
+        /// <para>The array of statistical data over time.</para>
+        /// </summary>
         [NameInMap("StatisticalDataReports")]
         [Validation(Required=false)]
         public List<DescribeStatisticalDataResponseBodyStatisticalDataReports> StatisticalDataReports { get; set; }
         public class DescribeStatisticalDataResponseBodyStatisticalDataReports : TeaModel {
             /// <summary>
+            /// <para>The pass rate of multi-turn dialogues.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>80.00%</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public string DialoguePassRate { get; set; }
 
             /// <summary>
+            /// <para>The knowledge base hit rate.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>80.00%</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public string KnowledgeHitRate { get; set; }
 
             /// <summary>
+            /// <para>The resolution rate.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>80.00%</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public string ResolutionRate { get; set; }
 
             /// <summary>
+            /// <para>The number of resolved questions.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>80</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public int? ResolvedQuestionNum { get; set; }
 
             /// <summary>
+            /// <para>The date of the statistics.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>19:00:00</para>
             /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public string StatisticalDate { get; set; }
 
             /// <summary>
+            /// <para>The total number of conversations.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -86,6 +107,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public int? TotalConversationNum { get; set; }
 
             /// <summary>
+            /// <para>The valid answer rate.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>80.0</para>
             /// </summary>
@@ -96,6 +119,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         }
 
         /// <summary>
+        /// <para>The total pass rate of multi-turn dialogues.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>80.00%</para>
         /// </summary>
@@ -104,6 +129,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string TotalDialoguePassRate { get; set; }
 
         /// <summary>
+        /// <para>The total knowledge base hit rate.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>80.00%</para>
         /// </summary>
@@ -112,6 +139,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string TotalKnowledgeHitRate { get; set; }
 
         /// <summary>
+        /// <para>The total resolution rate.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>80.00%</para>
         /// </summary>
@@ -120,6 +149,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string TotalResolutionRate { get; set; }
 
         /// <summary>
+        /// <para>The total valid answer rate.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>80.00%</para>
         /// </summary>

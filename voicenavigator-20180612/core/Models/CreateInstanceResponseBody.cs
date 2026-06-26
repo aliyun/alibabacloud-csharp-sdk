@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class CreateInstanceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>c28fc549-d88f-4f6e-85ad-a0806e5e39c0</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9ab43460-c0b9-40e2-8447-48d82c97fc67</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class EndDialogueResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>e48e45dd-e47a-4744-a063-f08cbebb1c5a</para>
         /// </summary>

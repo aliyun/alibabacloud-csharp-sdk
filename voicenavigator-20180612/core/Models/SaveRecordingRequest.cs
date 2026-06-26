@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class SaveRecordingRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the conversation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string ConversationId { get; set; }
 
         /// <summary>
+        /// <para>The duration of the recording, in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string Duration { get; set; }
 
         /// <summary>
+        /// <para>The name of the recording file.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string FileName { get; set; }
 
         /// <summary>
+        /// <para>The storage path of the recording file, such as a path in Object Storage Service (OSS).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,6 +54,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string FilePath { get; set; }
 
         /// <summary>
+        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -60,6 +65,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the account that owns the instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1971226538081821</para>
         /// </summary>
@@ -68,6 +75,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public long? InstanceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The Unix timestamp, in milliseconds, when the recording started.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -78,6 +86,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public long? StartTime { get; set; }
 
         /// <summary>
+        /// <para>The type of the recording file. Example: Source.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

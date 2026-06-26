@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class EndDialogueRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the conversation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string ConversationId { get; set; }
 
         /// <summary>
+        /// <para>The hang-up parameters, in a JSON string.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{\&quot;duration\&quot;:40,\&quot;endTime\&quot;:1645082505345,\&quot;hangUpDirection\&quot;:\&quot;ivr\&quot;,\&quot;hasLastPlaybackCompleted\&quot;:true,\&quot;startTime\&quot;:1645082505305}</para>
         /// </summary>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string HangUpParams { get; set; }
 
         /// <summary>
+        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the instance owner.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1399572315967217</para>
         /// </summary>

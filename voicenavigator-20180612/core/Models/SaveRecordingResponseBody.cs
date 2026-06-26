@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class SaveRecordingResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</para>
         /// </summary>

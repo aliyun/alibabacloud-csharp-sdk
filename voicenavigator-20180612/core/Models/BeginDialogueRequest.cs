@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class BeginDialogueRequest : TeaModel {
         /// <summary>
+        /// <para>The called number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10086</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string CalledNumber { get; set; }
 
         /// <summary>
+        /// <para>The calling number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string CallingNumber { get; set; }
 
         /// <summary>
+        /// <para>The conversation ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string ConversationId { get; set; }
 
         /// <summary>
+        /// <para>The conversation context.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{\&quot;channelId\&quot;:\&quot;fe2559d3-5fc9-4fa5-8314-32b9f762791d\&quot;}</para>
         /// </summary>
@@ -46,6 +52,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string InitialContext { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,6 +63,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The instance owner ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1231639035307976</para>
         /// </summary>

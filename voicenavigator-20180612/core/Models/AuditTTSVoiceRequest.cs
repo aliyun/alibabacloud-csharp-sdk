@@ -21,7 +21,12 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         [Validation(Required=false)]
         public string Engine { get; set; }
 
+        [NameInMap("ExtParams")]
+        [Validation(Required=false)]
+        public string ExtParams { get; set; }
+
         /// <summary>
+        /// <para>The instance ID of the navigation instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +45,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string SecretKey { get; set; }
 
         /// <summary>
+        /// <para>The speech rate.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,13 +56,18 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string SpeechRate { get; set; }
 
         /// <summary>
+        /// <para>The text to preview.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>你好</para>
         /// </summary>
         [NameInMap("Text")]
         [Validation(Required=false)]
         public string Text { get; set; }
 
         /// <summary>
+        /// <para>The voice.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -67,6 +78,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string Voice { get; set; }
 
         /// <summary>
+        /// <para>The volume.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

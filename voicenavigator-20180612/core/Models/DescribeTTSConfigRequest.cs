@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class DescribeTTSConfigRequest : TeaModel {
         /// <summary>
+        /// <para>The scenario ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the instance owner.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1971226538081821</para>
         /// </summary>

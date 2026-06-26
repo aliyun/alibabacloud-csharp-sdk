@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class AssociateChatbotInstanceRequest : TeaModel {
         /// <summary>
+        /// <para>The chatbot ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>chatbot-720edd02b66a</para>
         /// </summary>
@@ -17,11 +19,18 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         [Validation(Required=false)]
         public string ChatbotInstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The name of the chatbot.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>客服机器人</para>
+        /// </summary>
         [NameInMap("ChatbotName")]
         [Validation(Required=false)]
         public string ChatbotName { get; set; }
 
         /// <summary>
+        /// <para>The navigation instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

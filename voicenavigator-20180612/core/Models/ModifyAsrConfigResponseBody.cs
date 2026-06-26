@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class ModifyAsrConfigResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,10 +19,16 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The result of the modification.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ModifyAsrConfigResponseBodyData Data { get; set; }
         public class ModifyAsrConfigResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The number of affected rows.</para>
+            /// </summary>
             [NameInMap("AffectedRows")]
             [Validation(Required=false)]
             public int? AffectedRows { get; set; }
@@ -28,6 +36,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Not Found</para>
         /// </summary>
@@ -36,6 +46,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string ErrorMsg { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -44,6 +56,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>da37319b-6c83-4268-9f19-814aed62e401</para>
         /// </summary>
@@ -52,6 +66,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>True</para>
         /// </summary>

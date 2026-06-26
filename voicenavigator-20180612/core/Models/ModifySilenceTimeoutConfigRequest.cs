@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class ModifySilenceTimeoutConfigRequest : TeaModel {
         /// <summary>
+        /// <para>Action After Prompt</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string FinalAction { get; set; }
 
         /// <summary>
+        /// <para>Parameters for the post-prompt action, specified in a JSON string.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>
@@ -28,13 +31,18 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string FinalActionParams { get; set; }
 
         /// <summary>
+        /// <para>The prompt that plays after the silence timeout threshold is reached.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>再见</para>
         /// </summary>
         [NameInMap("FinalPrompt")]
         [Validation(Required=false)]
         public string FinalPrompt { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -45,6 +53,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The intent trigger for the silence timeout.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Timeout</para>
         /// </summary>
@@ -53,13 +63,18 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string IntentTrigger { get; set; }
 
         /// <summary>
+        /// <para>The prompt that plays when the system detects no user input during the specified timeout period.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>不好意思，听不见您说什么</para>
         /// </summary>
         [NameInMap("Prompt")]
         [Validation(Required=false)]
         public string Prompt { get; set; }
 
         /// <summary>
+        /// <para>The type of source that triggers the action.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -70,6 +85,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string SourceType { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of times the system plays the silence timeout prompt before it performs the post-prompt action.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -80,6 +96,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public int? Threshold { get; set; }
 
         /// <summary>
+        /// <para>The duration of the silence timeout, in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

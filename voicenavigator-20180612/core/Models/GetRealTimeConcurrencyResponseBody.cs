@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class GetRealTimeConcurrencyResponseBody : TeaModel {
         /// <summary>
+        /// <para>The maximum concurrency.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public long? MaxConcurrency { get; set; }
 
         /// <summary>
+        /// <para>The real-time concurrency.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public long? RealTimeConcurrency { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>E6E61E1A-D2DC-5ACF-AED4-A115B6691F98</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The timestamp of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1661584255029</para>
         /// </summary>

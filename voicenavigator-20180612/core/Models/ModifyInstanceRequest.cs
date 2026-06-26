@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class ModifyInstanceRequest : TeaModel {
         /// <summary>
+        /// <para>The maximum number of concurrent conversations for the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -19,11 +20,18 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         [Validation(Required=false)]
         public long? Concurrency { get; set; }
 
+        /// <summary>
+        /// <para>The description of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>描述</para>
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

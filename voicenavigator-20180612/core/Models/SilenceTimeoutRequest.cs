@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class SilenceTimeoutRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the conversation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string ConversationId { get; set; }
 
         /// <summary>
+        /// <para>The context of the conversation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string InitialContext { get; set; }
 
         /// <summary>
+        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the instance owner.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1231639035307976</para>
         /// </summary>

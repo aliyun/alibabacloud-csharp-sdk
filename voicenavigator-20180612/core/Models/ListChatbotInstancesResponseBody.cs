@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class ListChatbotInstancesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of chatbot instances.</para>
+        /// </summary>
         [NameInMap("Bots")]
         [Validation(Required=false)]
         public List<ListChatbotInstancesResponseBodyBots> Bots { get; set; }
         public class ListChatbotInstancesResponseBodyBots : TeaModel {
             /// <summary>
+            /// <para>The avatar of the chatbot instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="https://dss0.ali.com/70cFuHS.jpg">https://dss0.ali.com/70cFuHS.jpg</a></para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public string Avatar { get; set; }
 
             /// <summary>
+            /// <para>The creation time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1582266750353</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>af81a389-91f0-4157-8d82-720edd02b66a</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public string InstanceId { get; set; }
 
             /// <summary>
+            /// <para>The description of the chatbot instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>‘’</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public string Introduction { get; set; }
 
             /// <summary>
+            /// <para>The language code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>zh-cn</para>
             /// </summary>
@@ -53,11 +66,19 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             [Validation(Required=false)]
             public string LanguageCode { get; set; }
 
+            /// <summary>
+            /// <para>The name of the chatbot instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>测试机器人</para>
+            /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The time zone.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>UTC+8</para>
             /// </summary>
@@ -68,6 +89,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -76,6 +99,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The page size.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -84,6 +109,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public long? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>da37319b-6c83-4268-9f19-814aed62e401</para>
         /// </summary>
@@ -92,6 +119,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of chatbot instances.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

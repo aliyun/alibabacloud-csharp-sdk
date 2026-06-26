@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class DescribeConversationResponseBody : TeaModel {
         /// <summary>
+        /// <para>The time when the conversation started. This value is a UNIX timestamp in milliseconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1582103260434</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public long? BeginTime { get; set; }
 
         /// <summary>
+        /// <para>The calling number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>138106*****</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string CallingNumber { get; set; }
 
         /// <summary>
+        /// <para>The ID of the conversation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2d5aa451-661f-4f08-b0c4-28eec78decc4</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string ConversationId { get; set; }
 
         /// <summary>
+        /// <para>The number of effective answers.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public int? EffectiveAnswerCount { get; set; }
 
         /// <summary>
+        /// <para>The time when the conversation ended. This value is a UNIX timestamp in milliseconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1582103299434</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public long? EndTime { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>14C39896-AE6D-4643-9C9A-E0566B2C2DDD</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the skill group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ABABCBAC</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string SkillGroupId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether an agent transfer occurred.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -74,6 +90,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public bool? TransferredToAgent { get; set; }
 
         /// <summary>
+        /// <para>The number of user utterances.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

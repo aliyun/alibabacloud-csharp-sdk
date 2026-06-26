@@ -19,6 +19,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"cn-shanghai", "voicenavigator.cn-shanghai.aliyuncs.com"},
+                {"cn-hangzhou", "voicenavigator.cn-hangzhou.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("voicenavigator", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -37,6 +42,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates a chatbot with a navigation instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AssociateChatbotInstanceRequest
         /// </param>
@@ -94,6 +104,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<AssociateChatbotInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates a chatbot with a navigation instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AssociateChatbotInstanceRequest
         /// </param>
@@ -151,6 +166,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<AssociateChatbotInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates a chatbot with a navigation instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AssociateChatbotInstanceRequest
         /// </param>
@@ -164,6 +184,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return AssociateChatbotInstanceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates a chatbot with a navigation instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AssociateChatbotInstanceRequest
         /// </param>
@@ -179,7 +204,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AuditTTSVoice</para>
+        /// <para>Previews a text-to-speech (TTS) voice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -207,6 +232,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Engine))
             {
                 query["Engine"] = request.Engine;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtParams))
+            {
+                query["ExtParams"] = request.ExtParams;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -257,7 +286,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AuditTTSVoice</para>
+        /// <para>Previews a text-to-speech (TTS) voice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -285,6 +314,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Engine))
             {
                 query["Engine"] = request.Engine;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtParams))
+            {
+                query["ExtParams"] = request.ExtParams;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -335,7 +368,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AuditTTSVoice</para>
+        /// <para>Previews a text-to-speech (TTS) voice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -353,7 +386,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AuditTTSVoice</para>
+        /// <para>Previews a text-to-speech (TTS) voice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -371,7 +404,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启会话</para>
+        /// <para>Starts a conversation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -433,7 +466,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启会话</para>
+        /// <para>Starts a conversation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -495,7 +528,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启会话</para>
+        /// <para>Starts a conversation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -513,7 +546,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启会话</para>
+        /// <para>Starts a conversation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -529,6 +562,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return await BeginDialogueWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Collects a number entered by a user during a call.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CollectedNumberRequest
         /// </param>
@@ -582,6 +620,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<CollectedNumberResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Collects a number entered by a user during a call.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CollectedNumberRequest
         /// </param>
@@ -635,6 +678,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<CollectedNumberResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Collects a number entered by a user during a call.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CollectedNumberRequest
         /// </param>
@@ -648,6 +696,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return CollectedNumberWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Collects a number entered by a user during a call.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CollectedNumberRequest
         /// </param>
@@ -663,7 +716,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateDownloadUrl</para>
+        /// <para>Generates a temporary URL to download a file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -701,7 +754,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateDownloadUrl</para>
+        /// <para>Generates a temporary URL to download a file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -739,7 +792,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateDownloadUrl</para>
+        /// <para>Generates a temporary URL to download a file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -757,7 +810,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateDownloadUrl</para>
+        /// <para>Generates a temporary URL to download a file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -773,6 +826,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return await CreateDownloadUrlWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Voice Navigator instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateInstanceRequest
         /// </param>
@@ -830,6 +888,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<CreateInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Voice Navigator instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateInstanceRequest
         /// </param>
@@ -887,6 +950,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<CreateInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Voice Navigator instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateInstanceRequest
         /// </param>
@@ -900,6 +968,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return CreateInstanceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Voice Navigator instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateInstanceRequest
         /// </param>
@@ -915,7 +988,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>测试窗开启文本对话</para>
+        /// <para>Starts a conversation in a debugging environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -977,7 +1050,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>测试窗开启文本对话</para>
+        /// <para>Starts a conversation in a debugging environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1039,7 +1112,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>测试窗开启文本对话</para>
+        /// <para>Starts a conversation in a debugging environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1057,7 +1130,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>测试窗开启文本对话</para>
+        /// <para>Starts a conversation in a debugging environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1075,7 +1148,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DebugCollectedNumber</para>
+        /// <para>Debugs the number collection process.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1125,7 +1198,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DebugCollectedNumber</para>
+        /// <para>Debugs the number collection process.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1175,7 +1248,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DebugCollectedNumber</para>
+        /// <para>Debugs the number collection process.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1193,7 +1266,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DebugCollectedNumber</para>
+        /// <para>Debugs the number collection process.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1209,6 +1282,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return await DebugCollectedNumberWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends a user utterance to the dialogue engine to debug a conversation flow.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DebugDialogueRequest
         /// </param>
@@ -1258,6 +1336,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<DebugDialogueResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends a user utterance to the dialogue engine to debug a conversation flow.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DebugDialogueRequest
         /// </param>
@@ -1307,6 +1390,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<DebugDialogueResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends a user utterance to the dialogue engine to debug a conversation flow.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DebugDialogueRequest
         /// </param>
@@ -1320,6 +1408,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return DebugDialogueWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends a user utterance to the dialogue engine to debug a conversation flow.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DebugDialogueRequest
         /// </param>
@@ -1333,6 +1426,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return await DebugDialogueWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a navigation instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteInstanceRequest
         /// </param>
@@ -1370,6 +1468,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<DeleteInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a navigation instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteInstanceRequest
         /// </param>
@@ -1407,6 +1510,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<DeleteInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a navigation instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteInstanceRequest
         /// </param>
@@ -1420,6 +1528,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return DeleteInstanceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a navigation instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteInstanceRequest
         /// </param>
@@ -1433,6 +1546,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return await DeleteInstanceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves information about a conversation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeConversationRequest
         /// </param>
@@ -1466,6 +1584,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<DescribeConversationResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves information about a conversation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeConversationRequest
         /// </param>
@@ -1499,6 +1622,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<DescribeConversationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves information about a conversation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeConversationRequest
         /// </param>
@@ -1512,6 +1640,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return DescribeConversationWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves information about a conversation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeConversationRequest
         /// </param>
@@ -1527,7 +1660,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeConversationContext</para>
+        /// <para>Queries the context of a specified conversation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1565,7 +1698,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeConversationContext</para>
+        /// <para>Queries the context of a specified conversation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1603,7 +1736,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeConversationContext</para>
+        /// <para>Queries the context of a specified conversation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1621,7 +1754,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeConversationContext</para>
+        /// <para>Queries the context of a specified conversation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1639,7 +1772,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeExportProgress</para>
+        /// <para>Queries the status of an export task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1677,7 +1810,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeExportProgress</para>
+        /// <para>Queries the status of an export task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1715,7 +1848,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeExportProgress</para>
+        /// <para>Queries the status of an export task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1733,7 +1866,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeExportProgress</para>
+        /// <para>Queries the status of an export task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1749,6 +1882,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return await DescribeExportProgressWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves details for a specified instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInstanceRequest
         /// </param>
@@ -1782,6 +1920,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<DescribeInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves details for a specified instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInstanceRequest
         /// </param>
@@ -1815,6 +1958,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<DescribeInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves details for a specified instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInstanceRequest
         /// </param>
@@ -1828,6 +1976,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return DescribeInstanceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves details for a specified instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInstanceRequest
         /// </param>
@@ -1841,6 +1994,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return await DescribeInstanceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>View the instance IVR configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeNavigationConfigRequest
         /// </param>
@@ -1874,6 +2032,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<DescribeNavigationConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>View the instance IVR configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeNavigationConfigRequest
         /// </param>
@@ -1907,6 +2070,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<DescribeNavigationConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>View the instance IVR configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeNavigationConfigRequest
         /// </param>
@@ -1920,6 +2088,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return DescribeNavigationConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>View the instance IVR configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeNavigationConfigRequest
         /// </param>
@@ -1933,6 +2106,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return await DescribeNavigationConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a conversation recording.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeRecordingRequest
         /// </param>
@@ -1966,6 +2144,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<DescribeRecordingResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a conversation recording.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeRecordingRequest
         /// </param>
@@ -1999,6 +2182,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<DescribeRecordingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a conversation recording.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeRecordingRequest
         /// </param>
@@ -2012,6 +2200,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return DescribeRecordingWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a conversation recording.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeRecordingRequest
         /// </param>
@@ -2025,6 +2218,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return await DescribeRecordingWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>View the current instance\&quot;s statistics.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeStatisticalDataRequest
         /// </param>
@@ -2058,6 +2256,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<DescribeStatisticalDataResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>View the current instance\&quot;s statistics.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeStatisticalDataRequest
         /// </param>
@@ -2091,6 +2294,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<DescribeStatisticalDataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>View the current instance\&quot;s statistics.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeStatisticalDataRequest
         /// </param>
@@ -2104,6 +2312,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return DescribeStatisticalDataWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>View the current instance\&quot;s statistics.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeStatisticalDataRequest
         /// </param>
@@ -2119,7 +2332,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取TTS配置</para>
+        /// <para>Queries the TTS configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2157,7 +2370,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取TTS配置</para>
+        /// <para>Queries the TTS configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2195,7 +2408,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取TTS配置</para>
+        /// <para>Queries the TTS configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2213,7 +2426,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取TTS配置</para>
+        /// <para>Queries the TTS configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2229,6 +2442,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return await DescribeTTSConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Use this API to continue a conversation with an intelligent assistant by processing a user\&quot;s utterance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DialogueRequest
         /// </param>
@@ -2294,6 +2512,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<DialogueResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Use this API to continue a conversation with an intelligent assistant by processing a user\&quot;s utterance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DialogueRequest
         /// </param>
@@ -2359,6 +2582,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<DialogueResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Use this API to continue a conversation with an intelligent assistant by processing a user\&quot;s utterance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DialogueRequest
         /// </param>
@@ -2372,6 +2600,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return DialogueWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Use this API to continue a conversation with an intelligent assistant by processing a user\&quot;s utterance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DialogueRequest
         /// </param>
@@ -2385,6 +2618,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return await DialogueWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables a Voice Navigator instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableInstanceRequest
         /// </param>
@@ -2422,6 +2660,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<DisableInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables a Voice Navigator instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableInstanceRequest
         /// </param>
@@ -2459,6 +2702,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<DisableInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables a Voice Navigator instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableInstanceRequest
         /// </param>
@@ -2472,6 +2720,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return DisableInstanceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables a Voice Navigator instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableInstanceRequest
         /// </param>
@@ -2485,6 +2738,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return await DisableInstanceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a Voice Navigator instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableInstanceRequest
         /// </param>
@@ -2522,6 +2780,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<EnableInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a Voice Navigator instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableInstanceRequest
         /// </param>
@@ -2559,6 +2822,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<EnableInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a Voice Navigator instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableInstanceRequest
         /// </param>
@@ -2572,6 +2840,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return EnableInstanceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a Voice Navigator instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableInstanceRequest
         /// </param>
@@ -2585,6 +2858,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return await EnableInstanceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Ends an ongoing dialogue.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EndDialogueRequest
         /// </param>
@@ -2634,6 +2912,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<EndDialogueResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Ends an ongoing dialogue.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EndDialogueRequest
         /// </param>
@@ -2683,6 +2966,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<EndDialogueResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Ends an ongoing dialogue.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EndDialogueRequest
         /// </param>
@@ -2696,6 +2984,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return EndDialogueWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Ends an ongoing dialogue.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EndDialogueRequest
         /// </param>
@@ -2711,7 +3004,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ExportConversationDetails</para>
+        /// <para>Exports conversation details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2785,7 +3078,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ExportConversationDetails</para>
+        /// <para>Exports conversation details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2859,7 +3152,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ExportConversationDetails</para>
+        /// <para>Exports conversation details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2877,7 +3170,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ExportConversationDetails</para>
+        /// <para>Exports conversation details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2893,6 +3186,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return await ExportConversationDetailsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Exports statistical data.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ExportStatisticalDataRequest
         /// </param>
@@ -2946,6 +3244,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<ExportStatisticalDataResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Exports statistical data.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ExportStatisticalDataRequest
         /// </param>
@@ -2999,6 +3302,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<ExportStatisticalDataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Exports statistical data.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ExportStatisticalDataRequest
         /// </param>
@@ -3012,6 +3320,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return ExportStatisticalDataWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Exports statistical data.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ExportStatisticalDataRequest
         /// </param>
@@ -3027,7 +3340,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Asr配置</para>
+        /// <para>Retrieves the ASR configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3073,7 +3386,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Asr配置</para>
+        /// <para>Retrieves the ASR configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3119,7 +3432,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Asr配置</para>
+        /// <para>Retrieves the ASR configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3137,7 +3450,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Asr配置</para>
+        /// <para>Retrieves the ASR configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3155,7 +3468,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetRealTimeConcurrency</para>
+        /// <para>Retrieves the real-time concurrency of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3193,7 +3506,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetRealTimeConcurrency</para>
+        /// <para>Retrieves the real-time concurrency of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3231,7 +3544,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetRealTimeConcurrency</para>
+        /// <para>Retrieves the real-time concurrency of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3249,7 +3562,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetRealTimeConcurrency</para>
+        /// <para>Retrieves the real-time concurrency of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3265,6 +3578,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return await GetRealTimeConcurrencyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a paginated list of chatbot instances.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListChatbotInstancesRequest
         /// </param>
@@ -3298,6 +3616,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<ListChatbotInstancesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a paginated list of chatbot instances.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListChatbotInstancesRequest
         /// </param>
@@ -3331,6 +3654,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<ListChatbotInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a paginated list of chatbot instances.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListChatbotInstancesRequest
         /// </param>
@@ -3344,6 +3672,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return ListChatbotInstancesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a paginated list of chatbot instances.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListChatbotInstancesRequest
         /// </param>
@@ -3357,6 +3690,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return await ListChatbotInstancesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the conversation details for a specific conversation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListConversationDetailsRequest
         /// </param>
@@ -3390,6 +3728,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<ListConversationDetailsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the conversation details for a specific conversation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListConversationDetailsRequest
         /// </param>
@@ -3423,6 +3766,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<ListConversationDetailsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the conversation details for a specific conversation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListConversationDetailsRequest
         /// </param>
@@ -3436,6 +3784,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return ListConversationDetailsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the conversation details for a specific conversation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListConversationDetailsRequest
         /// </param>
@@ -3451,7 +3804,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询会话列表</para>
+        /// <para>Returns the session list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3489,7 +3842,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询会话列表</para>
+        /// <para>Returns the session list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3527,7 +3880,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询会话列表</para>
+        /// <para>Returns the session list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3545,7 +3898,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询会话列表</para>
+        /// <para>Returns the session list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3563,7 +3916,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下载列表</para>
+        /// <para>Download list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3609,7 +3962,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下载列表</para>
+        /// <para>Download list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3655,7 +4008,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下载列表</para>
+        /// <para>Download list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3673,7 +4026,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下载列表</para>
+        /// <para>Download list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3689,6 +4042,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return await ListDownloadTasksWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a paginated list of intelligent navigation instances for the current tenant.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListInstancesRequest
         /// </param>
@@ -3722,6 +4080,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<ListInstancesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a paginated list of intelligent navigation instances for the current tenant.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListInstancesRequest
         /// </param>
@@ -3755,6 +4118,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<ListInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a paginated list of intelligent navigation instances for the current tenant.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListInstancesRequest
         /// </param>
@@ -3768,6 +4136,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return ListInstancesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a paginated list of intelligent navigation instances for the current tenant.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListInstancesRequest
         /// </param>
@@ -3783,7 +4156,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改Asr配置</para>
+        /// <para>Modifies an ASR configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3861,7 +4234,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改Asr配置</para>
+        /// <para>Modifies an ASR configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3939,7 +4312,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改Asr配置</para>
+        /// <para>Modifies an ASR configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3957,7 +4330,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改Asr配置</para>
+        /// <para>Modifies an ASR configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3973,6 +4346,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return await ModifyAsrConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the greeting configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyGreetingConfigRequest
         /// </param>
@@ -4022,6 +4400,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<ModifyGreetingConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the greeting configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyGreetingConfigRequest
         /// </param>
@@ -4071,6 +4454,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<ModifyGreetingConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the greeting configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyGreetingConfigRequest
         /// </param>
@@ -4084,6 +4472,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return ModifyGreetingConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the greeting configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyGreetingConfigRequest
         /// </param>
@@ -4097,6 +4490,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return await ModifyGreetingConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modify an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyInstanceRequest
         /// </param>
@@ -4146,6 +4544,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<ModifyInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modify an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyInstanceRequest
         /// </param>
@@ -4195,6 +4598,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<ModifyInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modify an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyInstanceRequest
         /// </param>
@@ -4208,6 +4616,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return ModifyInstanceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modify an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyInstanceRequest
         /// </param>
@@ -4221,6 +4634,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return await ModifyInstanceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the silence timeout configuration for a voice bot instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifySilenceTimeoutConfigRequest
         /// </param>
@@ -4290,6 +4708,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<ModifySilenceTimeoutConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the silence timeout configuration for a voice bot instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifySilenceTimeoutConfigRequest
         /// </param>
@@ -4359,6 +4782,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<ModifySilenceTimeoutConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the silence timeout configuration for a voice bot instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifySilenceTimeoutConfigRequest
         /// </param>
@@ -4372,6 +4800,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return ModifySilenceTimeoutConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the silence timeout configuration for a voice bot instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifySilenceTimeoutConfigRequest
         /// </param>
@@ -4387,7 +4820,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改TTS配置</para>
+        /// <para>Modifies the TTS configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4419,6 +4852,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineXunfei))
             {
                 query["EngineXunfei"] = request.EngineXunfei;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtParams))
+            {
+                query["ExtParams"] = request.ExtParams;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -4469,7 +4906,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改TTS配置</para>
+        /// <para>Modifies the TTS configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4501,6 +4938,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineXunfei))
             {
                 query["EngineXunfei"] = request.EngineXunfei;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtParams))
+            {
+                query["ExtParams"] = request.ExtParams;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -4551,7 +4992,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改TTS配置</para>
+        /// <para>Modifies the TTS configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4569,7 +5010,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改TTS配置</para>
+        /// <para>Modifies the TTS configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4585,6 +5026,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return await ModifyTTSConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the rejection configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyUnrecognizingConfigRequest
         /// </param>
@@ -4642,6 +5088,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<ModifyUnrecognizingConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the rejection configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyUnrecognizingConfigRequest
         /// </param>
@@ -4699,6 +5150,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<ModifyUnrecognizingConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the rejection configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyUnrecognizingConfigRequest
         /// </param>
@@ -4712,6 +5168,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return ModifyUnrecognizingConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the rejection configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyUnrecognizingConfigRequest
         /// </param>
@@ -4725,6 +5186,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return await ModifyUnrecognizingConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of conversation records.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryConversationsRequest
         /// </param>
@@ -4758,6 +5224,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<QueryConversationsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of conversation records.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryConversationsRequest
         /// </param>
@@ -4791,6 +5262,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<QueryConversationsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of conversation records.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryConversationsRequest
         /// </param>
@@ -4804,6 +5280,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return QueryConversationsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of conversation records.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryConversationsRequest
         /// </param>
@@ -4817,6 +5298,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return await QueryConversationsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Saves a recording.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveRecordingRequest
         /// </param>
@@ -4886,6 +5372,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<SaveRecordingResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Saves a recording.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveRecordingRequest
         /// </param>
@@ -4955,6 +5446,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<SaveRecordingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Saves a recording.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveRecordingRequest
         /// </param>
@@ -4968,6 +5464,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return SaveRecordingWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Saves a recording.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveRecordingRequest
         /// </param>
@@ -4981,6 +5482,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return await SaveRecordingWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Handles the silence timeout event in a conversation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SilenceTimeoutRequest
         /// </param>
@@ -5030,6 +5536,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<SilenceTimeoutResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Handles the silence timeout event in a conversation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SilenceTimeoutRequest
         /// </param>
@@ -5079,6 +5590,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<SilenceTimeoutResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Handles the silence timeout event in a conversation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SilenceTimeoutRequest
         /// </param>
@@ -5092,6 +5608,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return SilenceTimeoutWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Handles the silence timeout event in a conversation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SilenceTimeoutRequest
         /// </param>

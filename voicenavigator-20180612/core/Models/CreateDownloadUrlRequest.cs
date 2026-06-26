@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class CreateDownloadUrlRequest : TeaModel {
         /// <summary>
+        /// <para>The task ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string DownloadTaskId { get; set; }
 
         /// <summary>
+        /// <para>The file ID. Call the <a href="https://help.aliyun.com/document_detail/173942.html">ListFiles</a> operation to obtain it.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

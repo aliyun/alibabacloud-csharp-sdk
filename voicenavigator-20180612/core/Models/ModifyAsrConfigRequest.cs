@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class ModifyAsrConfigRequest : TeaModel {
         /// <summary>
+        /// <para>The AppKey for the engine.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>your_app_key</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string AppKey { get; set; }
 
         /// <summary>
+        /// <para>The ID of the ASR acoustic model.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6cc9f5ca-2cb6-4cc7-a46b-2bbfd3e61b22</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string AsrAcousticModelId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the ASR class-based vocabulary.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6cc9f5ca-2cb6-4cc7-a46b-2bbfd3e61b22</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string AsrClassVocabularyId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the dataset.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6cc9f5ca-2cb6-4cc7-a46b-2bbfd3e61b22</para>
         /// </summary>
@@ -46,6 +54,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string AsrOverrides { get; set; }
 
         /// <summary>
+        /// <para>The ID of the hotword. You can find this ID on the <a href="https://aiccs.console.aliyun.com/sentence/vocab?spm=a2c4g.11186623.0.0.7f9bf965IKBpsi">ASR Hotword Management</a> page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6cc9f5ca-2cb6-4cc7-a46b-2bbfd3e61b22</para>
         /// </summary>
@@ -54,6 +64,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string AsrVocabularyId { get; set; }
 
         /// <summary>
+        /// <para>The policy level. Valid values: <c>0</c> (system), <c>1</c> (tenant), and <c>2</c> (instance).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -66,6 +78,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string Engine { get; set; }
 
         /// <summary>
+        /// <para>The entity ID for the specified <c>ConfigLevel</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6cc9f5ca-2cb6-4cc7-a46b-2bbfd3e61b22</para>
         /// </summary>
@@ -74,6 +88,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string EntryId { get; set; }
 
         /// <summary>
+        /// <para>The service type of Intelligent Speech Interaction.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>语音识别</para>
         /// </summary>

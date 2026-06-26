@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class DescribeRecordingResponseBody : TeaModel {
         /// <summary>
+        /// <para>The file name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2019080913202222.wav</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string FileName { get; set; }
 
         /// <summary>
+        /// <para>The file download URL.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>url</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string FilePath { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>14C39896-AE6D-4643-9C9A-E0566B2C2DDD</para>
         /// </summary>

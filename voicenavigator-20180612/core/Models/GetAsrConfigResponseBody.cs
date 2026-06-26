@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class GetAsrConfigResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetAsrConfigResponseBodyData Data { get; set; }
         public class GetAsrConfigResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The application key.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>your-app-key</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public string AppKey { get; set; }
 
             /// <summary>
+            /// <para>The acoustic model ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3b1d3031-8b6e-460a-8640-d330f2ca50b8</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public string AsrAcousticModelId { get; set; }
 
             /// <summary>
+            /// <para>The ASR class vocabulary ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3b1d3031-8b6e-460a-8640-d330f2ca50b8</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public string AsrClassVocabularyId { get; set; }
 
             /// <summary>
+            /// <para>The customization ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3b1d3031-8b6e-460a-8640-d330f2ca50b8</para>
             /// </summary>
@@ -58,6 +71,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public string AsrOverrides { get; set; }
 
             /// <summary>
+            /// <para>The vocabulary ID. You can view the ID on the <a href="https://aiccs.console.aliyun.com/sentence/vocab?spm=a2c4g.11186623.0.0.7f9bf965IKBpsi">ASR Vocabulary Management page</a>.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3b1d3031-8b6e-460a-8640-d330f2ca50b8</para>
             /// </summary>
@@ -66,6 +81,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public string AsrVocabularyId { get; set; }
 
             /// <summary>
+            /// <para>The speech engine.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ali</para>
             /// </summary>
@@ -74,6 +91,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public string Engine { get; set; }
 
             /// <summary>
+            /// <para>Parameters for the iFLYTEK engine.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>EngineXufei</para>
             /// </summary>
@@ -82,6 +101,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public string EngineXufei { get; set; }
 
             /// <summary>
+            /// <para>The NLS service type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Authorized</para>
             /// </summary>
@@ -92,6 +113,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Not Found</para>
         /// </summary>
@@ -100,6 +123,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string ErrorMsg { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -108,6 +133,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>14C39896-AE6D-4643-9C9A-E0566B2C2DDD</para>
         /// </summary>
@@ -116,6 +143,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>True</para>
         /// </summary>

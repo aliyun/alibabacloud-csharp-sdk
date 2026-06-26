@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class DialogueRequest : TeaModel {
         /// <summary>
+        /// <para>The conversation context.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string AdditionalContext { get; set; }
 
         /// <summary>
+        /// <para>The called number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10086</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string CalledNumber { get; set; }
 
         /// <summary>
+        /// <para>The calling number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>18851708605</para>
         /// </summary>
@@ -34,6 +40,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string CallingNumber { get; set; }
 
         /// <summary>
+        /// <para>The ID of the conversation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,6 +55,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string Emotion { get; set; }
 
         /// <summary>
+        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,6 +66,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the Alibaba Cloud account that owns the instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1426738157626835</para>
         /// </summary>
@@ -66,7 +76,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public long? InstanceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The user\&quot;s input.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>行吧，那我就不打扰您了，再见。</para>
         /// </summary>
         [NameInMap("Utterance")]
         [Validation(Required=false)]

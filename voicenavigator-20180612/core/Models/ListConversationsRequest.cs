@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class ListConversationsRequest : TeaModel {
         /// <summary>
+        /// <para>The start of the time range to query. This value is a UNIX timestamp in milliseconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1638288000000</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public long? BeginTimeLeftRange { get; set; }
 
         /// <summary>
+        /// <para>The end of the time range to query. This value is a UNIX timestamp in milliseconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1637547875311</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public long? BeginTimeRightRange { get; set; }
 
         /// <summary>
+        /// <para>The calling number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>138106*****</para>
         /// </summary>
@@ -38,6 +44,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public int? DebugConversation { get; set; }
 
         /// <summary>
+        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,6 +55,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether the conversation is in a sandbox environment. Valid values: <c>true</c> and <c>false</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -56,6 +65,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string IsSandBox { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,6 +76,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries to return on each page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -76,6 +87,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The search query for filtering conversations.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>13788914724</para>
         /// </summary>
@@ -84,6 +97,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string Query { get; set; }
 
         /// <summary>
+        /// <para>The result of the conversation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -91,10 +106,22 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         [Validation(Required=false)]
         public long? Result { get; set; }
 
+        /// <summary>
+        /// <para>The minimum number of rounds in the conversation.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("RoundsLeftRange")]
         [Validation(Required=false)]
         public int? RoundsLeftRange { get; set; }
 
+        /// <summary>
+        /// <para>The maximum number of rounds in the conversation.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
         [NameInMap("RoundsRightRange")]
         [Validation(Required=false)]
         public int? RoundsRightRange { get; set; }

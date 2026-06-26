@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class ExportConversationDetailsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the asynchronous export task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6203fc87271a420c98eab6c2bbc2d856</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string ExportTaskId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>75BAAB9B-40B2-5FF5-A59A-7BCF8154C6EE</para>
         /// </summary>

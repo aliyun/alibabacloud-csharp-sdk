@@ -10,13 +10,18 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class ModifyGreetingConfigRequest : TeaModel {
         /// <summary>
+        /// <para>The greeting words.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>你好，欢迎使用智能导航。</para>
         /// </summary>
         [NameInMap("GreetingWords")]
         [Validation(Required=false)]
         public string GreetingWords { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -26,11 +31,18 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The intent trigger.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>开始</para>
+        /// </summary>
         [NameInMap("IntentTrigger")]
         [Validation(Required=false)]
         public string IntentTrigger { get; set; }
 
         /// <summary>
+        /// <para>The type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

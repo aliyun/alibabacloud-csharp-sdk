@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class DialogueResponseBody : TeaModel {
         /// <summary>
+        /// <para>The action to be performed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Broadcast</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string Action { get; set; }
 
         /// <summary>
+        /// <para>The action parameters.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{\&quot;duration\&quot;:2420,\&quot;endTime\&quot;:1651717326805,\&quot;hangUpDirection\&quot;:\&quot;client\&quot;,\&quot;hasLastPlaybackCompleted\&quot;:true,\&quot;startTime\&quot;:1651717324385}</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string ActionParams { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the IVR greeting can be interrupted.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public bool? Interruptible { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9DB8BA95-4513-54B9-9C67-A28909CFB4AD</para>
         /// </summary>
@@ -41,6 +49,12 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The text to be broadcasted.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>您好，欢迎致电智能助手</para>
+        /// </summary>
         [NameInMap("TextResponse")]
         [Validation(Required=false)]
         public string TextResponse { get; set; }

@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class QueryConversationsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The conversation list.</para>
+        /// </summary>
         [NameInMap("Conversations")]
         [Validation(Required=false)]
         public List<QueryConversationsResponseBodyConversations> Conversations { get; set; }
         public class QueryConversationsResponseBodyConversations : TeaModel {
             /// <summary>
+            /// <para>The start time. This value is a Unix timestamp in milliseconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1582183381000</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public long? BeginTime { get; set; }
 
             /// <summary>
+            /// <para>The calling number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>02811111111</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public string CallingNumber { get; set; }
 
             /// <summary>
+            /// <para>The conversation ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>af81a389-91f0-4157-8d82-720edd02b66a</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public string ConversationId { get; set; }
 
             /// <summary>
+            /// <para>The effective answer count.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>8</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public int? EffectiveAnswerCount { get; set; }
 
             /// <summary>
+            /// <para>The end time. This value is a Unix timestamp in milliseconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1582183481000</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public long? EndTime { get; set; }
 
             /// <summary>
+            /// <para>The ID of the skill group.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>AAA</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public string SkillGroupId { get; set; }
 
             /// <summary>
+            /// <para>Whether the conversation was transferred to an agent.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public bool? TransferredToAgent { get; set; }
 
             /// <summary>
+            /// <para>The user utterance count.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -80,6 +99,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -88,6 +109,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -96,6 +119,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>14C39896-AE6D-4643-9C9A-E0566B2C2DDD</para>
         /// </summary>
@@ -104,6 +129,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total count of conversation records.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
