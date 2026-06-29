@@ -1,3 +1,10 @@
+2026-06-29 Version: 3.9.0
+- Support API ResetBranch.
+- Support API RestoreBranch.
+- Support API SetAsDefaultBranch.
+- Support API UpdateBranch.
+
+
 2026-06-26 Version: 3.8.0
 - Support API PauseSaasService.
 - Support API ResumeSaasService.
