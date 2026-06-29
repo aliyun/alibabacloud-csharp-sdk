@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetLatestSubmitDetailRequest : TeaModel {
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The pending submit query request.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("SubmitDetailQuery")]
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public GetLatestSubmitDetailRequestSubmitDetailQuery SubmitDetailQuery { get; set; }
         public class GetLatestSubmitDetailRequestSubmitDetailQuery : TeaModel {
             /// <summary>
+            /// <para>The object ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -37,6 +40,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ObjectId { get; set; }
 
             /// <summary>
+            /// <para>The object type.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

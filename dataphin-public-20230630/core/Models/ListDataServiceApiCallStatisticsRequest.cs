@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListDataServiceApiCallStatisticsRequest : TeaModel {
         /// <summary>
+        /// <para>Search conditions.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ListQuery")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public ListDataServiceApiCallStatisticsRequestListQuery ListQuery { get; set; }
         public class ListDataServiceApiCallStatisticsRequestListQuery : TeaModel {
             /// <summary>
+            /// <para>End time. Format: yyyy-MM-dd HH:mm:ss.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -27,6 +29,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string EndTime { get; set; }
 
             /// <summary>
+            /// <para>Search keyword.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -35,6 +39,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Keyword { get; set; }
 
             /// <summary>
+            /// <para>Sort column. Valid values: CALL_COUNT (call count), ERROR_COUNT (error count), ERROR_RATE (error rate), AVG_RESPONSE_TIME (average response time), and OFFLINE_RATE (offline percentage). Default value: CALL_COUNT.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>CALL_COUNT</para>
             /// </summary>
@@ -43,6 +49,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string OrderColumn { get; set; }
 
             /// <summary>
+            /// <para>Sort order. Valid values: 1 (ascending) and 2 (descending). Default value: 1.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -51,6 +59,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? OrderType { get; set; }
 
             /// <summary>
+            /// <para>Page number. Default value: 1.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -59,6 +69,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? PageNo { get; set; }
 
             /// <summary>
+            /// <para>Number of entries per page. Default value: 20.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>20</para>
             /// </summary>
@@ -67,6 +79,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? PageSize { get; set; }
 
             /// <summary>
+            /// <para>Start time. Format: yyyy-MM-dd HH:mm:ss.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -79,6 +92,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>Tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -89,6 +103,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>Data service project ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class UpdateResourceRequest : TeaModel {
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The edit command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UpdateCommand")]
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public UpdateResourceRequestUpdateCommand UpdateCommand { get; set; }
         public class UpdateResourceRequestUpdateCommand : TeaModel {
             /// <summary>
+            /// <para>The commit remarks.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -37,6 +40,11 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Comment { get; set; }
 
             /// <summary>
+            /// <para>The compute engine type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>MAX_COMPUTE</description></item>
+            /// <item><description>HADOOP.</description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -47,6 +55,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ComputeEngineType { get; set; }
 
             /// <summary>
+            /// <para>The resource description.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -57,6 +66,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The resource ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -67,6 +77,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? Id { get; set; }
 
             /// <summary>
+            /// <para>The resource name.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -77,6 +88,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The project ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -87,6 +99,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? ProjectId { get; set; }
 
             /// <summary>
+            /// <para>The storage address of the resource.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

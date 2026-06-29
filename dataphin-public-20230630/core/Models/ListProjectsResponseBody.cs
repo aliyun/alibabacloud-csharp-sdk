@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListProjectsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The backend response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The details of the backend exception.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
         /// </summary>
@@ -33,15 +39,23 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>The paging query result.</para>
+        /// </summary>
         [NameInMap("PageResult")]
         [Validation(Required=false)]
         public ListProjectsResponseBodyPageResult PageResult { get; set; }
         public class ListProjectsResponseBodyPageResult : TeaModel {
+            /// <summary>
+            /// <para>The paginated list of projects.</para>
+            /// </summary>
             [NameInMap("ProjectList")]
             [Validation(Required=false)]
             public List<ListProjectsResponseBodyPageResultProjectList> ProjectList { get; set; }
             public class ListProjectsResponseBodyPageResultProjectList : TeaModel {
                 /// <summary>
+                /// <para>The business unit ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>162112</para>
                 /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? BizUnitId { get; set; }
 
                 /// <summary>
+                /// <para>The compute source ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1121</para>
                 /// </summary>
@@ -58,6 +74,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? DataSourceId { get; set; }
 
                 /// <summary>
+                /// <para>The name of the compute source.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>ds1</para>
                 /// </summary>
@@ -66,6 +84,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string DataSourceName { get; set; }
 
                 /// <summary>
+                /// <para>The description.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>测试</para>
                 /// </summary>
@@ -74,6 +94,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Description { get; set; }
 
                 /// <summary>
+                /// <para>The display name of the project.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>测试</para>
                 /// </summary>
@@ -82,6 +104,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string DisplayName { get; set; }
 
                 /// <summary>
+                /// <para>The environment identifier.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>DEV</para>
                 /// </summary>
@@ -90,6 +114,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Env { get; set; }
 
                 /// <summary>
+                /// <para>The time when the project was created, in the yyyy-MM-dd HH:mm:ss format.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2025-06-10 10:01:01</para>
                 /// </summary>
@@ -98,6 +124,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string GmtCreate { get; set; }
 
                 /// <summary>
+                /// <para>The time when the project was last modified, in the yyyy-MM-dd HH:mm:ss format.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2025-06-10 10:01:01</para>
                 /// </summary>
@@ -106,6 +134,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
+                /// <para>The project ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1030111021</para>
                 /// </summary>
@@ -114,6 +144,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? Id { get; set; }
 
                 /// <summary>
+                /// <para>The project mode.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>BASIC</para>
                 /// </summary>
@@ -122,6 +154,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Mode { get; set; }
 
                 /// <summary>
+                /// <para>The project name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>demo</para>
                 /// </summary>
@@ -130,6 +164,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Name { get; set; }
 
                 /// <summary>
+                /// <para>The project owner.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>30012112</para>
                 /// </summary>
@@ -138,6 +174,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Owner { get; set; }
 
                 /// <summary>
+                /// <para>The project owner.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>张三</para>
                 /// </summary>
@@ -146,6 +184,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string OwnerName { get; set; }
 
                 /// <summary>
+                /// <para>The real-time compute source ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1122</para>
                 /// </summary>
@@ -154,6 +194,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? RealtimeDataSourceId { get; set; }
 
                 /// <summary>
+                /// <para>The name of the real-time compute source.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>ds2</para>
                 /// </summary>
@@ -162,6 +204,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string RealtimeDataSourceName { get; set; }
 
                 /// <summary>
+                /// <para>The project type.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>GENERAL</para>
                 /// </summary>
@@ -172,6 +216,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
+            /// <para>The total number of records.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>68</para>
             /// </summary>
@@ -191,6 +237,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

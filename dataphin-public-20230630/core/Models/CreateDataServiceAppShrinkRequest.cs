@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class CreateDataServiceAppShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The command to create a data service application.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CreateCommand")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string CreateCommandShrink { get; set; }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

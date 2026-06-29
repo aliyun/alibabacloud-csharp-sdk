@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class CreateDataServiceAppGroupRequest : TeaModel {
         /// <summary>
+        /// <para>The group name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string GroupName { get; set; }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

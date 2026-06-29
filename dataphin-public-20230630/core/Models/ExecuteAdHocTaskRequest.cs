@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ExecuteAdHocTaskRequest : TeaModel {
         /// <summary>
+        /// <para>The execution command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ExecuteCommand")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public ExecuteAdHocTaskRequestExecuteCommand ExecuteCommand { get; set; }
         public class ExecuteAdHocTaskRequestExecuteCommand : TeaModel {
             /// <summary>
+            /// <para>The node script.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -27,6 +29,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Code { get; set; }
 
             /// <summary>
+            /// <para>The catalog for a database SQL task. This parameter takes effect only for data source types that require a catalog, such as Presto.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>mysql_catalog</para>
             /// </summary>
@@ -35,6 +39,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DataSourceCatalog { get; set; }
 
             /// <summary>
+            /// <para>The data source ID for a database SQL task.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>12131111</para>
             /// </summary>
@@ -43,6 +49,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? DataSourceId { get; set; }
 
             /// <summary>
+            /// <para>The schema for a database SQL task. This parameter takes effect only for data source types that require a schema, such as Oracle.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>erp</para>
             /// </summary>
@@ -51,6 +59,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DataSourceSchema { get; set; }
 
             /// <summary>
+            /// <para>The node type.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -60,11 +69,15 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             [Validation(Required=false)]
             public string OperatorType { get; set; }
 
+            /// <summary>
+            /// <para>The runtime parameters.</para>
+            /// </summary>
             [NameInMap("ParamList")]
             [Validation(Required=false)]
             public List<ExecuteAdHocTaskRequestExecuteCommandParamList> ParamList { get; set; }
             public class ExecuteAdHocTaskRequestExecuteCommandParamList : TeaModel {
                 /// <summary>
+                /// <para>The parameter.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -75,6 +88,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Key { get; set; }
 
                 /// <summary>
+                /// <para>The parameter value.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -87,6 +101,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
+            /// <para>The project ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -99,6 +114,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

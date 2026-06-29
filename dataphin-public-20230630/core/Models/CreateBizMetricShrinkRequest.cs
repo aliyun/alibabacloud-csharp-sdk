@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class CreateBizMetricShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The create request.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CreateBizMetricCommand")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string CreateBizMetricCommandShrink { get; set; }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

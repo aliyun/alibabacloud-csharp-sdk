@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class AddDataServiceProjectMemberRequest : TeaModel {
         /// <summary>
+        /// <para>The command to add project members.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AddCommand")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public AddDataServiceProjectMemberRequestAddCommand AddCommand { get; set; }
         public class AddDataServiceProjectMemberRequestAddCommand : TeaModel {
             /// <summary>
+            /// <para>The list of project members to add.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("ProjectMemberList")]
@@ -24,6 +26,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<AddDataServiceProjectMemberRequestAddCommandProjectMemberList> ProjectMemberList { get; set; }
             public class AddDataServiceProjectMemberRequestAddCommandProjectMemberList : TeaModel {
                 /// <summary>
+                /// <para>The username of the user.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -34,6 +37,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string AccountName { get; set; }
 
                 /// <summary>
+                /// <para>The nickname of the user.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -44,6 +48,13 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string DisplayName { get; set; }
 
                 /// <summary>
+                /// <para>The role of the user. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>2: development user</description></item>
+                /// <item><description>3: application member</description></item>
+                /// <item><description>4: service project administrator</description></item>
+                /// <item><description>5: O&amp;M user.</description></item>
+                /// </list>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -54,6 +65,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public int? Role { get; set; }
 
                 /// <summary>
+                /// <para>The user ID.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -68,6 +80,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -78,6 +91,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The data service project ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

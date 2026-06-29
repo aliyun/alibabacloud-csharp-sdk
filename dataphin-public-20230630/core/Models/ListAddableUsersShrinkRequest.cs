@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListAddableUsersShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The request object.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ListQuery")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string ListQueryShrink { get; set; }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

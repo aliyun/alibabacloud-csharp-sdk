@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetResourceByVersionRequest : TeaModel {
         /// <summary>
+        /// <para>Resource file name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>Tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>Project ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
+        /// <para>Version ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetDataDomainInfoResponseBody : TeaModel {
         /// <summary>
+        /// <para>The error code. A value of OK indicates that the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The data domain details.</para>
+        /// </summary>
         [NameInMap("DataDomainInfo")]
         [Validation(Required=false)]
         public GetDataDomainInfoResponseBodyDataDomainInfo DataDomainInfo { get; set; }
         public class GetDataDomainInfoResponseBodyDataDomainInfo : TeaModel {
             /// <summary>
+            /// <para>The abbreviation of the data domain.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>dm_code_name</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Abbreviation { get; set; }
 
             /// <summary>
+            /// <para>The ID of the business unit to which the data domain belongs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>545844456</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? BizUnitId { get; set; }
 
             /// <summary>
+            /// <para>The description of the business object.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The display name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>测试</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DisplayName { get; set; }
 
             /// <summary>
+            /// <para>The creation time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-10-10 10:00:00</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
+            /// <para>The update time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-10-10 10:00:00</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string GmtModified { get; set; }
 
             /// <summary>
+            /// <para>The data domain ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1241844456</para>
             /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? Id { get; set; }
 
             /// <summary>
+            /// <para>The ID of the user who last modified the data domain.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>30010010</para>
             /// </summary>
@@ -86,6 +107,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string LastModifier { get; set; }
 
             /// <summary>
+            /// <para>The name of the user who last modified the data domain.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>张三</para>
             /// </summary>
@@ -94,6 +117,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string LastModifierName { get; set; }
 
             /// <summary>
+            /// <para>The name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>dm_code_name</para>
             /// </summary>
@@ -102,6 +127,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The ID of the business object owner.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>张三</para>
             /// </summary>
@@ -110,6 +137,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string OwnerName { get; set; }
 
             /// <summary>
+            /// <para>The ID of the business object owner.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>30010010</para>
             /// </summary>
@@ -118,6 +147,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string OwnerUserId { get; set; }
 
             /// <summary>
+            /// <para>The ID of the parent data domain.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10232311</para>
             /// </summary>
@@ -128,6 +159,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code returned by the backend.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -136,6 +169,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -144,6 +179,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</para>
         /// </summary>
@@ -151,6 +188,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

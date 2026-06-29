@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListResourcePermissionsRequest : TeaModel {
         /// <summary>
+        /// <para>Paginated request.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ListQuery")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public ListResourcePermissionsRequestListQuery ListQuery { get; set; }
         public class ListResourcePermissionsRequestListQuery : TeaModel {
             /// <summary>
+            /// <para>Page number.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? Page { get; set; }
 
             /// <summary>
+            /// <para>Number of records per page.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -37,6 +40,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? PageSize { get; set; }
 
             /// <summary>
+            /// <para>Search keyword.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xx测试</para>
             /// </summary>
@@ -45,6 +50,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string SearchText { get; set; }
 
             /// <summary>
+            /// <para>Tab name. Table: TABLE. Data source: DATASOURCE.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -57,6 +63,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>Tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

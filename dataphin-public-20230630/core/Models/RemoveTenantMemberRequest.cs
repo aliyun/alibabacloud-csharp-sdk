@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class RemoveTenantMemberRequest : TeaModel {
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The request command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RemoveCommand")]
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public RemoveTenantMemberRequestRemoveCommand RemoveCommand { get; set; }
         public class RemoveTenantMemberRequestRemoveCommand : TeaModel {
             /// <summary>
+            /// <para>The source ID of the user.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

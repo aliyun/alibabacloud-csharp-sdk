@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class CreateStandardLookupTableRequest : TeaModel {
         /// <summary>
+        /// <para>The create command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CreateCommand")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public CreateStandardLookupTableRequestCreateCommand CreateCommand { get; set; }
         public class CreateStandardLookupTableRequestCreateCommand : TeaModel {
             /// <summary>
+            /// <para>The code of the lookup table.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -27,6 +29,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Code { get; set; }
 
             /// <summary>
+            /// <para>The description of the lookup table.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -34,11 +38,15 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            /// <summary>
+            /// <para>The directory to which the lookup table belongs.</para>
+            /// </summary>
             [NameInMap("DirectoryReference")]
             [Validation(Required=false)]
             public CreateStandardLookupTableRequestCreateCommandDirectoryReference DirectoryReference { get; set; }
             public class CreateStandardLookupTableRequestCreateCommandDirectoryReference : TeaModel {
                 /// <summary>
+                /// <para>The directory to which the lookup table belongs.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -50,11 +58,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 
             }
 
+            /// <summary>
+            /// <para>The list of lookup table values.</para>
+            /// </summary>
             [NameInMap("LookupTableValueList")]
             [Validation(Required=false)]
             public List<CreateStandardLookupTableRequestCreateCommandLookupTableValueList> LookupTableValueList { get; set; }
             public class CreateStandardLookupTableRequestCreateCommandLookupTableValueList : TeaModel {
                 /// <summary>
+                /// <para>The description of the code.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
                 /// </summary>
@@ -63,6 +76,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Description { get; set; }
 
                 /// <summary>
+                /// <para>The English name of the code.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>HZ</para>
                 /// </summary>
@@ -71,6 +86,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string EnglishName { get; set; }
 
                 /// <summary>
+                /// <para>The code name.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -81,6 +97,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Name { get; set; }
 
                 /// <summary>
+                /// <para>The code value.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -93,6 +110,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
+            /// <para>The name of the lookup table.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -103,6 +121,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The ID of the lookup table owner. Default value: the user ID of the caller.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>30012021</para>
             /// </summary>
@@ -113,6 +133,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

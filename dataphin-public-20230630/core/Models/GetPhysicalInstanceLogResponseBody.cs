@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetPhysicalInstanceLogResponseBody : TeaModel {
         /// <summary>
+        /// <para>The error code. A value of OK indicates that the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code returned by the backend.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -49,11 +59,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
+        /// <summary>
+        /// <para>All execution logs of the instance, including logs from multiple reruns.</para>
+        /// </summary>
         [NameInMap("TaskrunLogList")]
         [Validation(Required=false)]
         public List<GetPhysicalInstanceLogResponseBodyTaskrunLogList> TaskrunLogList { get; set; }
         public class GetPhysicalInstanceLogResponseBodyTaskrunLogList : TeaModel {
             /// <summary>
+            /// <para>The execution duration of the task. Unit: seconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>60s</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Duration { get; set; }
 
             /// <summary>
+            /// <para>The time when the task finished running.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-05-30 16:48:13</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string EndTime { get; set; }
 
             /// <summary>
+            /// <para>The execution log content. This value is empty if the task has not been run.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xx</para>
             /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string LogContent { get; set; }
 
             /// <summary>
+            /// <para>The time when the task started running.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-05-30 16:47:13</para>
             /// </summary>
@@ -86,6 +107,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string StartTime { get; set; }
 
             /// <summary>
+            /// <para>The execution status.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>SUCCESS</para>
             /// </summary>
@@ -94,6 +117,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>The task ID for each run.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>tr_23231</para>
             /// </summary>

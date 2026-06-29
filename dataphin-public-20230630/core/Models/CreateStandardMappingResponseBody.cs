@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class CreateStandardMappingResponseBody : TeaModel {
         /// <summary>
+        /// <para>The backend response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,15 +19,23 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The creation result.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateStandardMappingResponseBodyData Data { get; set; }
         public class CreateStandardMappingResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The list of asset GUIDs that failed to be created.</para>
+            /// </summary>
             [NameInMap("FailedGuidList")]
             [Validation(Required=false)]
             public List<string> FailedGuidList { get; set; }
 
             /// <summary>
+            /// <para>The number of successfully added mappings.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -36,6 +46,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -44,6 +56,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The details of the backend exception.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
         /// </summary>
@@ -61,6 +75,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

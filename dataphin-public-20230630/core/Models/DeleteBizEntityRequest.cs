@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class DeleteBizEntityRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the business unit to which the entity belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? BizUnitId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the business entity.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? Id { get; set; }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The type of the business entity. For more information, refer to the create business entity operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

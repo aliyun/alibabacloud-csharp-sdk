@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class CheckDataSourceConnectivityRequest : TeaModel {
         /// <summary>
+        /// <para>The object to check.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CheckCommand")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public CheckDataSourceConnectivityRequestCheckCommand CheckCommand { get; set; }
         public class CheckDataSourceConnectivityRequestCheckCommand : TeaModel {
             /// <summary>
+            /// <para>The connection configuration items.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("ConfigItemList")]
@@ -24,6 +26,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<CheckDataSourceConnectivityRequestCheckCommandConfigItemList> ConfigItemList { get; set; }
             public class CheckDataSourceConnectivityRequestCheckCommandConfigItemList : TeaModel {
                 /// <summary>
+                /// <para>The configuration item.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -34,6 +37,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Key { get; set; }
 
                 /// <summary>
+                /// <para>The configuration value.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -46,6 +50,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
+            /// <para>The data source type. For supported data source types, see the documentation for creating a data source.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -58,6 +63,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,12 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetProjectRequest : TeaModel {
         /// <summary>
+        /// <para>Project environment. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>DEV: development environment.</description></item>
+        /// <item><description>PROD: production environment.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>DEV</para>
         /// </summary>
@@ -18,6 +24,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Env { get; set; }
 
         /// <summary>
+        /// <para>Project ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +35,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? Id { get; set; }
 
         /// <summary>
+        /// <para>Tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

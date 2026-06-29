@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class UpdateBizUnitRequest : TeaModel {
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The update request.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UpdateCommand")]
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public UpdateBizUnitRequestUpdateCommand UpdateCommand { get; set; }
         public class UpdateBizUnitRequestUpdateCommand : TeaModel {
             /// <summary>
+            /// <para>The domain architects.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("BizUnitAccountList")]
@@ -34,6 +37,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<UpdateBizUnitRequestUpdateCommandBizUnitAccountList> BizUnitAccountList { get; set; }
             public class UpdateBizUnitRequestUpdateCommandBizUnitAccountList : TeaModel {
                 /// <summary>
+                /// <para>The user ID.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -46,6 +50,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
+            /// <para>The data domain ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -56,6 +61,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? BizUnitId { get; set; }
 
             /// <summary>
+            /// <para>The description.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -64,6 +71,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The display name of the data domain.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -74,6 +82,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DisplayName { get; set; }
 
             /// <summary>
+            /// <para>The preset icon. For more information, refer to the create data domain operation.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -84,6 +93,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Icon { get; set; }
 
             /// <summary>
+            /// <para>The data domain code.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

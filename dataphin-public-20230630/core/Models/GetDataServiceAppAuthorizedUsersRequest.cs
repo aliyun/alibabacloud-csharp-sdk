@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetDataServiceAppAuthorizedUsersRequest : TeaModel {
         /// <summary>
-        /// <para>AppId</para>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,6 +21,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? AppId { get; set; }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,6 +32,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The data service project ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

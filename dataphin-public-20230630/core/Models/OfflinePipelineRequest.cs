@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class OfflinePipelineRequest : TeaModel {
         /// <summary>
+        /// <para>The request context information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Context")]
@@ -17,6 +18,11 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public OfflinePipelineRequestContext Context { get; set; }
         public class OfflinePipelineRequestContext : TeaModel {
             /// <summary>
+            /// <para>The current operating environment. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>DEV: the development environment.</description></item>
+            /// <item><description>PROD: the production environment.</description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -27,6 +33,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Env { get; set; }
 
             /// <summary>
+            /// <para>The ID of the project to which the integration pipeline node belongs.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -39,6 +46,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The offline command for the pipeline node.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("OfflineCommand")]
@@ -46,6 +54,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public OfflinePipelineRequestOfflineCommand OfflineCommand { get; set; }
         public class OfflinePipelineRequestOfflineCommand : TeaModel {
             /// <summary>
+            /// <para>The remarks.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>comment</para>
             /// </summary>
@@ -54,6 +64,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Comment { get; set; }
 
             /// <summary>
+            /// <para>Specifies whether to delete the node.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("Delete")]
@@ -61,6 +72,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public bool? Delete { get; set; }
 
             /// <summary>
+            /// <para>The file ID of the integration node. You can specify any one of PipelineId, FileId, or NodeId.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123</para>
             /// </summary>
@@ -69,6 +82,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? FileId { get; set; }
 
             /// <summary>
+            /// <para>The scheduling node ID of the integration node. You can specify any one of PipelineId, FileId, or NodeId.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>n_123</para>
             /// </summary>
@@ -77,6 +92,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string NodeId { get; set; }
 
             /// <summary>
+            /// <para>The primary key of the integration pipeline. You can specify any one of PipelineId, FileId, or NodeId.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123</para>
             /// </summary>
@@ -87,6 +104,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

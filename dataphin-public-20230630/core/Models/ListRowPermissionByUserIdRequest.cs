@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListRowPermissionByUserIdRequest : TeaModel {
         /// <summary>
+        /// <para>The request command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ListRowPermissionByUserIdQuery")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public ListRowPermissionByUserIdRequestListRowPermissionByUserIdQuery ListRowPermissionByUserIdQuery { get; set; }
         public class ListRowPermissionByUserIdRequestListRowPermissionByUserIdQuery : TeaModel {
             /// <summary>
+            /// <para>The specified operator.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Operator { get; set; }
 
             /// <summary>
+            /// <para>The page number.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -37,6 +40,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? PageNum { get; set; }
 
             /// <summary>
+            /// <para>The page size.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -49,6 +53,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -9,11 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetTableColumnLineagesShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The filter conditions.</para>
+        /// </summary>
         [NameInMap("FilterQuery")]
         [Validation(Required=false)]
         public string FilterQueryShrink { get; set; }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +28,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The GUID of the table, which is the unique identifier of the asset.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

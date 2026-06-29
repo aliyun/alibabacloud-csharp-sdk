@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class UpdateDataServiceAppGroupRequest : TeaModel {
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The update command for the data service application group.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UpdateCommand")]
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public UpdateDataServiceAppGroupRequestUpdateCommand UpdateCommand { get; set; }
         public class UpdateDataServiceAppGroupRequestUpdateCommand : TeaModel {
             /// <summary>
+            /// <para>The group ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -37,6 +40,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? GroupId { get; set; }
 
             /// <summary>
+            /// <para>The group name.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

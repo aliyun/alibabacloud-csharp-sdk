@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class PublishDataServiceApiRequest : TeaModel {
         /// <summary>
+        /// <para>The API ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? ApiId { get; set; }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The data service project ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? ProjectId { get; set; }
 
         /// <summary>
+        /// <para>The API version number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

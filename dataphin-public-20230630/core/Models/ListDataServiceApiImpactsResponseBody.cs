@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListDataServiceApiImpactsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The backend response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The details of the backend exception.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
         /// </summary>
@@ -33,10 +39,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>The paged query result.</para>
+        /// </summary>
         [NameInMap("PageResult")]
         [Validation(Required=false)]
         public ListDataServiceApiImpactsResponseBodyPageResult PageResult { get; set; }
         public class ListDataServiceApiImpactsResponseBodyPageResult : TeaModel {
+            /// <summary>
+            /// <para>The list of API impact analysis results.</para>
+            /// </summary>
             [NameInMap("ImpactList")]
             [Validation(Required=false)]
             public List<ListDataServiceApiImpactsResponseBodyPageResultImpactList> ImpactList { get; set; }
@@ -62,6 +74,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? AppKey { get; set; }
 
                 /// <summary>
+                /// <para>The application name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
                 /// </summary>
@@ -70,6 +84,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string AppName { get; set; }
 
                 /// <summary>
+                /// <para>The number of calls.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>11</para>
                 /// </summary>
@@ -78,6 +94,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? CallCount { get; set; }
 
                 /// <summary>
+                /// <para>The number of client failures.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
                 /// </summary>
@@ -86,6 +104,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? ClientFailCount { get; set; }
 
                 /// <summary>
+                /// <para>The source IP address of the access request.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>192.168.1.1</para>
                 /// </summary>
@@ -94,6 +114,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ClientIp { get; set; }
 
                 /// <summary>
+                /// <para>The number of abnormal API calls.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -102,6 +124,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? ErrorApiCount { get; set; }
 
                 /// <summary>
+                /// <para>The number of errors.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -110,6 +134,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? ErrorCount { get; set; }
 
                 /// <summary>
+                /// <para>The error rate.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>10.0</para>
                 /// </summary>
@@ -118,6 +144,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ErrorRate { get; set; }
 
                 /// <summary>
+                /// <para>The most recent call time. Format: yyyy-MM-dd HH:mm:ss.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2025-06-30 08:00:00</para>
                 /// </summary>
@@ -126,6 +154,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string LastCallTime { get; set; }
 
                 /// <summary>
+                /// <para>The gateway statistics time. Format: yyyy_MMdd_HHmm.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2025_0611_1011</para>
                 /// </summary>
@@ -134,6 +164,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Minute { get; set; }
 
                 /// <summary>
+                /// <para>The number of offline instances.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -142,6 +174,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? OfflineCount { get; set; }
 
                 /// <summary>
+                /// <para>The total time consumed by successful calls.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>99</para>
                 /// </summary>
@@ -150,6 +184,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string SuccessTimeCost { get; set; }
 
                 /// <summary>
+                /// <para>The total number of calls.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>88</para>
                 /// </summary>
@@ -158,6 +194,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? TotalCount { get; set; }
 
                 /// <summary>
+                /// <para>The total time consumed by the API, including failed calls.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>231</para>
                 /// </summary>
@@ -168,6 +206,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
+            /// <para>The total number of records.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>68</para>
             /// </summary>
@@ -187,6 +227,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

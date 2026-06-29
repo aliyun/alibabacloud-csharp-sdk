@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class SubmitQualityRuleTasksShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>Tenant ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>Submit command</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("SubmitCommand")]

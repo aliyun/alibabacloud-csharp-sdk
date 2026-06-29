@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class CheckComputeSourceConnectivityShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The check command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CheckCommand")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string CheckCommandShrink { get; set; }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

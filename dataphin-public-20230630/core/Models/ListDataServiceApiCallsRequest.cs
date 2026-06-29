@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListDataServiceApiCallsRequest : TeaModel {
         /// <summary>
+        /// <para>The query conditions.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ListQuery")]
@@ -17,6 +18,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public ListDataServiceApiCallsRequestListQuery ListQuery { get; set; }
         public class ListDataServiceApiCallsRequestListQuery : TeaModel {
             /// <summary>
+            /// <para>The ID of the API.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>20122</para>
             /// </summary>
@@ -25,6 +28,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? ApiId { get; set; }
 
             /// <summary>
+            /// <para>The name of the API.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -35,10 +40,13 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>appKey</para>
+            /// <para>The application key.</para>
+            /// <remarks>
+            /// <para>Notice: This parameter is deprecated. Use AppKeyStr instead.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>1021</para>
+            /// <para>12345</para>
             /// </summary>
             [NameInMap("AppKey")]
             [Validation(Required=false)]
@@ -46,6 +54,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? AppKey { get; set; }
 
             /// <summary>
+            /// <para>The application key.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>app12345</para>
             /// </summary>
@@ -54,6 +64,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string AppKeyStr { get; set; }
 
             /// <summary>
+            /// <para>The IP address.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>192.168.1.1</para>
             /// </summary>
@@ -62,6 +74,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ClientIp { get; set; }
 
             /// <summary>
+            /// <para>The end time. Format: yyyy-MM-dd HH:mm:ss.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -72,6 +85,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string EndTime { get; set; }
 
             /// <summary>
+            /// <para>The page number. Default value: 1.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -80,6 +95,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? PageNo { get; set; }
 
             /// <summary>
+            /// <para>The number of entries per page. Default value: 20.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>20</para>
             /// </summary>
@@ -88,6 +105,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? PageSize { get; set; }
 
             /// <summary>
+            /// <para>The start time. Format: yyyy-MM-dd HH:mm:ss.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -97,6 +115,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             [Validation(Required=false)]
             public string StartTime { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether the call was successful.</para>
+            /// </summary>
             [NameInMap("Successful")]
             [Validation(Required=false)]
             public bool? Successful { get; set; }
@@ -104,6 +125,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The ID of the tenant.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -114,6 +136,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the data service project.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetDataServiceAppMembersResponseBody : TeaModel {
         /// <summary>
+        /// <para>The backend response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,15 +19,23 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The member list of the data service application.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetDataServiceAppMembersResponseBodyData Data { get; set; }
         public class GetDataServiceAppMembersResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The application member list.</para>
+            /// </summary>
             [NameInMap("MemberList")]
             [Validation(Required=false)]
             public List<GetDataServiceAppMembersResponseBodyDataMemberList> MemberList { get; set; }
             public class GetDataServiceAppMembersResponseBodyDataMemberList : TeaModel {
                 /// <summary>
+                /// <para>The authorization expiration time.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2026-12-12</para>
                 /// </summary>
@@ -34,6 +44,12 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string EffectiveEnd { get; set; }
 
                 /// <summary>
+                /// <para>The role of the user. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>general: regular member.</description></item>
+                /// <item><description>owner: application owner.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>general</para>
                 /// </summary>
@@ -42,6 +58,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Role { get; set; }
 
                 /// <summary>
+                /// <para>The user ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>200000245</para>
                 /// </summary>
@@ -54,6 +72,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -62,6 +82,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The error message returned from the backend.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
         /// </summary>
@@ -79,6 +101,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

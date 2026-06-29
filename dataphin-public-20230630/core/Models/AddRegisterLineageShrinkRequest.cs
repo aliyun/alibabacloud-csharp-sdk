@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class AddRegisterLineageShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The command for registering and adding data lineage.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AddRegisterLineageCommand")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string AddRegisterLineageCommandShrink { get; set; }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

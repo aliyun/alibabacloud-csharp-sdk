@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListDataServiceMyAppPermissionsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The backend response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The details of the backend exception.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
         /// </summary>
@@ -33,10 +39,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>The paging query result.</para>
+        /// </summary>
         [NameInMap("PageResult")]
         [Validation(Required=false)]
         public ListDataServiceMyAppPermissionsResponseBodyPageResult PageResult { get; set; }
         public class ListDataServiceMyAppPermissionsResponseBodyPageResult : TeaModel {
+            /// <summary>
+            /// <para>The paginated permission list.</para>
+            /// </summary>
             [NameInMap("PermissionList")]
             [Validation(Required=false)]
             public List<ListDataServiceMyAppPermissionsResponseBodyPageResultPermissionList> PermissionList { get; set; }
@@ -52,6 +64,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public int? AppId { get; set; }
 
                 /// <summary>
+                /// <para>The application name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
                 /// </summary>
@@ -60,6 +74,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string AppName { get; set; }
 
                 /// <summary>
+                /// <para>The name of the creator.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
                 /// </summary>
@@ -68,6 +84,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string CreateUserName { get; set; }
 
                 /// <summary>
+                /// <para>The ID of the creator.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1121</para>
                 /// </summary>
@@ -76,6 +94,13 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Creator { get; set; }
 
                 /// <summary>
+                /// <para>The role of the current logon user relative to this record. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>SuperAdmin: the current user is a super administrator.</description></item>
+                /// <item><description>ProjMan: the current user is a project administrator for this record.</description></item>
+                /// <item><description>NormalUser: the current user is a regular user for this record, meaning the user is neither a super administrator nor a project administrator.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>NormalUser</para>
                 /// </summary>
@@ -84,6 +109,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string CurrentUserRole { get; set; }
 
                 /// <summary>
+                /// <para>The ID of the owner.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1121</para>
                 /// </summary>
@@ -92,6 +119,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Owner { get; set; }
 
                 /// <summary>
+                /// <para>The name of the owner.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
                 /// </summary>
@@ -100,6 +129,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string OwnerUserName { get; set; }
 
                 /// <summary>
+                /// <para>The user to whom the permission belongs.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1121</para>
                 /// </summary>
@@ -108,6 +139,11 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string PrivilegeBelongTo { get; set; }
 
                 /// <summary>
+                /// <para>The source of the authorization. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>0: owner.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
@@ -116,6 +152,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public int? PrivilegeFrom { get; set; }
 
                 /// <summary>
+                /// <para>The project ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>112101</para>
                 /// </summary>
@@ -124,6 +162,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public int? ProjectId { get; set; }
 
                 /// <summary>
+                /// <para>The project name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
                 /// </summary>
@@ -131,11 +171,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 [Validation(Required=false)]
                 public string ProjectName { get; set; }
 
+                /// <summary>
+                /// <para>The description, used for troubleshooting.</para>
+                /// </summary>
                 [NameInMap("RemarkForDebugList")]
                 [Validation(Required=false)]
                 public List<ListDataServiceMyAppPermissionsResponseBodyPageResultPermissionListRemarkForDebugList> RemarkForDebugList { get; set; }
                 public class ListDataServiceMyAppPermissionsResponseBodyPageResultPermissionListRemarkForDebugList : TeaModel {
                     /// <summary>
+                    /// <para>The configuration item.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>k1</para>
                     /// </summary>
@@ -144,6 +189,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Key { get; set; }
 
                     /// <summary>
+                    /// <para>The configuration item value.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>v1</para>
                     /// </summary>
@@ -154,6 +201,11 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 }
 
                 /// <summary>
+                /// <para>The role. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>0: owner.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
@@ -164,6 +216,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
+            /// <para>The total number of records.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>68</para>
             /// </summary>
@@ -183,6 +237,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

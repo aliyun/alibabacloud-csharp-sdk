@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetBizMetricByNameRequest : TeaModel {
         /// <summary>
+        /// <para>Query request.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("BizMetricByNameQuery")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public GetBizMetricByNameRequestBizMetricByNameQuery BizMetricByNameQuery { get; set; }
         public class GetBizMetricByNameRequestBizMetricByNameQuery : TeaModel {
             /// <summary>
+            /// <para>Specifies whether to query draft or published asset details. Set this parameter to True to query draft details, or False to query published details.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public bool? Draft { get; set; }
 
             /// <summary>
+            /// <para>The name of the business metric.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -39,6 +42,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>Tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

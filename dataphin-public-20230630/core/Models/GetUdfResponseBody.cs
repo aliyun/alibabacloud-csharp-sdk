@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetUdfResponseBody : TeaModel {
         /// <summary>
+        /// <para>The backend response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The details of the backend exception.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
         /// </summary>
@@ -43,15 +49,35 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
+        /// <summary>
+        /// <para>The details of the user-defined function.</para>
+        /// </summary>
         [NameInMap("UdfInfo")]
         [Validation(Required=false)]
         public GetUdfResponseBodyUdfInfo UdfInfo { get; set; }
         public class GetUdfResponseBodyUdfInfo : TeaModel {
             /// <summary>
+            /// <para>The category. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>1: window function.</description></item>
+            /// <item><description>2: aggregate function.</description></item>
+            /// <item><description>3: numeric function.</description></item>
+            /// <item><description>4: string function.</description></item>
+            /// <item><description>5: time function.</description></item>
+            /// <item><description>6: IP address utility function.</description></item>
+            /// <item><description>7: URL-related function.</description></item>
+            /// <item><description>8: encoding and decoding function.</description></item>
+            /// <item><description>9: business-related function.</description></item>
+            /// <item><description>10: other.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -60,6 +86,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? Category { get; set; }
 
             /// <summary>
+            /// <para>The registered class name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>com.lydaas.dataphin.UdfTest</para>
             /// </summary>
@@ -68,6 +96,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ClassName { get; set; }
 
             /// <summary>
+            /// <para>The command help information.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>udf_to_lower(char x)</para>
             /// </summary>
@@ -76,6 +106,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string CommandHelp { get; set; }
 
             /// <summary>
+            /// <para>The compute engine. Valid values: HADOOP, MAX_COMPUTE, and FLINK.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>HADOOP</para>
             /// </summary>
@@ -84,6 +116,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ComputeEngineType { get; set; }
 
             /// <summary>
+            /// <para>The creator.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>30012110</para>
             /// </summary>
@@ -92,6 +126,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Creator { get; set; }
 
             /// <summary>
+            /// <para>The description.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -100,6 +136,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The directory where the function is stored.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>/</para>
             /// </summary>
@@ -108,6 +146,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Directory { get; set; }
 
             /// <summary>
+            /// <para>The creation time, in the yyyy-MM-d HH:mm:ss format.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2025-06-10 10:01:01</para>
             /// </summary>
@@ -116,6 +156,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
+            /// <para>The last modification time, in the yyyy-MM-d HH:mm:ss format.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2025-06-10 10:01:01</para>
             /// </summary>
@@ -124,6 +166,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string GmtModified { get; set; }
 
             /// <summary>
+            /// <para>The user-defined function ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1030111021</para>
             /// </summary>
@@ -132,6 +176,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? Id { get; set; }
 
             /// <summary>
+            /// <para>The last modifier.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>30012110</para>
             /// </summary>
@@ -140,6 +186,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string LastModifier { get; set; }
 
             /// <summary>
+            /// <para>The function name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>udf_to_lower</para>
             /// </summary>

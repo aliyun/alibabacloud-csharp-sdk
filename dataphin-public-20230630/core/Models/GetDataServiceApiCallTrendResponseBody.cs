@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetDataServiceApiCallTrendResponseBody : TeaModel {
         /// <summary>
+        /// <para>The backend response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,19 +19,30 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The access trend data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetDataServiceApiCallTrendResponseBodyData Data { get; set; }
         public class GetDataServiceApiCallTrendResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The call error impact trends, sorted by minute in ascending order.</para>
+            /// </summary>
             [NameInMap("CallErrorImpactTrendList")]
             [Validation(Required=false)]
             public List<GetDataServiceApiCallTrendResponseBodyDataCallErrorImpactTrendList> CallErrorImpactTrendList { get; set; }
             public class GetDataServiceApiCallTrendResponseBodyDataCallErrorImpactTrendList : TeaModel {
+                /// <summary>
+                /// <para>The API IDs.</para>
+                /// </summary>
                 [NameInMap("ApiIdList")]
                 [Validation(Required=false)]
                 public List<long?> ApiIdList { get; set; }
 
                 /// <summary>
+                /// <para>The number of APIs with call errors.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>5</para>
                 /// </summary>
@@ -38,6 +51,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public int? ErrorApiCount { get; set; }
 
                 /// <summary>
+                /// <para>The number of affected applications.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -46,6 +61,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public int? ErrorAppCount { get; set; }
 
                 /// <summary>
+                /// <para>The time scale in minutes, in the format of yyyy-MM-dd HH:mm.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2025-06-30 08:00</para>
                 /// </summary>
@@ -55,11 +72,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 
             }
 
+            /// <summary>
+            /// <para>The call error trends, sorted by minute in ascending order.</para>
+            /// </summary>
             [NameInMap("CallErrorTrendList")]
             [Validation(Required=false)]
             public List<GetDataServiceApiCallTrendResponseBodyDataCallErrorTrendList> CallErrorTrendList { get; set; }
             public class GetDataServiceApiCallTrendResponseBodyDataCallErrorTrendList : TeaModel {
                 /// <summary>
+                /// <para>The number of calls.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1021</para>
                 /// </summary>
@@ -68,6 +90,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? CallCount { get; set; }
 
                 /// <summary>
+                /// <para>The number of call errors.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>102</para>
                 /// </summary>
@@ -76,6 +100,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? ErrorCount { get; set; }
 
                 /// <summary>
+                /// <para>The minute in the format of yyyy_MMdd_HHmm.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
                 /// </summary>
@@ -88,6 +114,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -96,6 +124,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The details of the backend exception.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
         /// </summary>
@@ -113,6 +143,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

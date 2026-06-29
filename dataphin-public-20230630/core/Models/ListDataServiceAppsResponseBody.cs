@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListDataServiceAppsResponseBody : TeaModel {
         /// <summary>
+        /// <para>Backend response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,15 +19,23 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The list of all applications under the tenant.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListDataServiceAppsResponseBodyData Data { get; set; }
         public class ListDataServiceAppsResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>Application list.</para>
+            /// </summary>
             [NameInMap("AppList")]
             [Validation(Required=false)]
             public List<ListDataServiceAppsResponseBodyDataAppList> AppList { get; set; }
             public class ListDataServiceAppsResponseBodyDataAppList : TeaModel {
                 /// <summary>
+                /// <para>Application group name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>默认分组</para>
                 /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string AppGroup { get; set; }
 
                 /// <summary>
+                /// <para>Application ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>12345</para>
                 /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public int? AppId { get; set; }
 
                 /// <summary>
+                /// <para>Application name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>默认应用</para>
                 /// </summary>
@@ -49,15 +63,23 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 [Validation(Required=false)]
                 public string AppName { get; set; }
 
+                /// <summary>
+                /// <para>Indicates whether the current user has joined the application.</para>
+                /// </summary>
                 [NameInMap("IsMember")]
                 [Validation(Required=false)]
                 public bool? IsMember { get; set; }
 
+                /// <summary>
+                /// <para>Owner list.</para>
+                /// </summary>
                 [NameInMap("OwnerList")]
                 [Validation(Required=false)]
                 public List<ListDataServiceAppsResponseBodyDataAppListOwnerList> OwnerList { get; set; }
                 public class ListDataServiceAppsResponseBodyDataAppListOwnerList : TeaModel {
                     /// <summary>
+                    /// <para>User ID.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>12345</para>
                     /// </summary>
@@ -66,6 +88,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Id { get; set; }
 
                     /// <summary>
+                    /// <para>Username.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>张三</para>
                     /// </summary>
@@ -78,6 +102,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
+            /// <para>Total number of records.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>68</para>
             /// </summary>
@@ -88,6 +114,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -96,6 +124,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Details of the backend exception.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
         /// </summary>
@@ -113,6 +143,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

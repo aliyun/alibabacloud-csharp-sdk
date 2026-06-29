@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class RemoveProjectMemberRequest : TeaModel {
         /// <summary>
+        /// <para>The project ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? Id { get; set; }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The command to remove a member.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RemoveCommand")]
@@ -37,6 +40,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public RemoveProjectMemberRequestRemoveCommand RemoveCommand { get; set; }
         public class RemoveProjectMemberRequestRemoveCommand : TeaModel {
             /// <summary>
+            /// <para>The environment identifier. Valid values: DEV and PROD.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -46,6 +50,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             [Validation(Required=false)]
             public string Env { get; set; }
 
+            /// <summary>
+            /// <para>The user IDs.</para>
+            /// </summary>
             [NameInMap("UserIdList")]
             [Validation(Required=false)]
             public List<string> UserIdList { get; set; }

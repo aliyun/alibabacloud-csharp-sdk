@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetAccountByRowPermissionIdRequest : TeaModel {
         /// <summary>
+        /// <para>The request command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("GetAccountByRowPermissionIdQuery")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public GetAccountByRowPermissionIdRequestGetAccountByRowPermissionIdQuery GetAccountByRowPermissionIdQuery { get; set; }
         public class GetAccountByRowPermissionIdRequestGetAccountByRowPermissionIdQuery : TeaModel {
             /// <summary>
+            /// <para>The row-level permission ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? RowPermissionId { get; set; }
 
             /// <summary>
+            /// <para>The row-level permission rule IDs.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("RuleIds")]
@@ -36,6 +39,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

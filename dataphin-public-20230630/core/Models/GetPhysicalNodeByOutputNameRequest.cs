@@ -10,6 +10,12 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetPhysicalNodeByOutputNameRequest : TeaModel {
         /// <summary>
+        /// <para>Environment identifier</para>
+        /// <list type="bullet">
+        /// <item><description>DEV: Development environment</description></item>
+        /// <item><description>PROD (default): Production environment</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>PROD</para>
         /// </summary>
@@ -18,6 +24,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Env { get; set; }
 
         /// <summary>
+        /// <para>Tenant ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +35,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>Node output name</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

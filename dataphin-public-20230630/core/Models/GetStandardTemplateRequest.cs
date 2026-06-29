@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetStandardTemplateRequest : TeaModel {
+        /// <summary>
+        /// <para>The filter condition.</para>
+        /// </summary>
         [NameInMap("FilterQuery")]
         [Validation(Required=false)]
         public GetStandardTemplateRequestFilterQuery FilterQuery { get; set; }
         public class GetStandardTemplateRequestFilterQuery : TeaModel {
             /// <summary>
+            /// <para>The version number. If this parameter is left empty or set to -1, the latest version is used.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -24,6 +29,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The standard template ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -33,11 +39,15 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public long? Id { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to allow a null value to be returned when the template does not exist. If set to false, an exception is thrown. Default value: true.</para>
+        /// </summary>
         [NameInMap("Nullable")]
         [Validation(Required=false)]
         public bool? Nullable { get; set; }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

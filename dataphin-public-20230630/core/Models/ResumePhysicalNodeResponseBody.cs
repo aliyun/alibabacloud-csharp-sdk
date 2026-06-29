@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ResumePhysicalNodeResponseBody : TeaModel {
         /// <summary>
+        /// <para>Error code. A value of OK indicates a successful request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>HTTP status code returned by the backend.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -33,11 +39,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>Results of the node resume scheduling operation.</para>
+        /// </summary>
         [NameInMap("NodeOperateResultList")]
         [Validation(Required=false)]
         public List<ResumePhysicalNodeResponseBodyNodeOperateResultList> NodeOperateResultList { get; set; }
         public class ResumePhysicalNodeResponseBodyNodeOperateResultList : TeaModel {
             /// <summary>
+            /// <para>Error message returned when the operation fails.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xx</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
+            /// <para>Node ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>n_123456</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string NodeId { get; set; }
 
             /// <summary>
+            /// <para>Operation result.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>SUCCESS</para>
             /// </summary>
@@ -64,6 +79,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</para>
         /// </summary>
@@ -72,6 +89,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

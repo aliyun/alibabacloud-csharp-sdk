@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetResourceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The backend response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The details of the backend exception.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
         /// </summary>
@@ -43,11 +49,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The resource file details.</para>
+        /// </summary>
         [NameInMap("ResourceInfo")]
         [Validation(Required=false)]
         public GetResourceResponseBodyResourceInfo ResourceInfo { get; set; }
         public class GetResourceResponseBodyResourceInfo : TeaModel {
             /// <summary>
+            /// <para>The compute engine type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>MAX_COMPUTE</para>
             /// </summary>
@@ -56,6 +67,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ComputeEngineType { get; set; }
 
             /// <summary>
+            /// <para>The creator.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>30011021</para>
             /// </summary>
@@ -64,6 +77,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Creator { get; set; }
 
             /// <summary>
+            /// <para>The description.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>测试</para>
             /// </summary>
@@ -72,6 +87,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The directory where the resource is stored.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>/</para>
             /// </summary>
@@ -80,6 +97,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Directory { get; set; }
 
             /// <summary>
+            /// <para>The creation time, in the yyyy-MM-dd HH:mm:ss format.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2025-06-10 10:01:01</para>
             /// </summary>
@@ -88,6 +107,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
+            /// <para>The last modification time, in the yyyy-MM-dd HH:mm:ss format.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2025-06-10 10:01:01</para>
             /// </summary>
@@ -96,6 +117,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string GmtModified { get; set; }
 
             /// <summary>
+            /// <para>The resource ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10200121011</para>
             /// </summary>
@@ -104,6 +127,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? Id { get; set; }
 
             /// <summary>
+            /// <para>The last modifier.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>30011021</para>
             /// </summary>
@@ -112,6 +137,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string LastModifier { get; set; }
 
             /// <summary>
+            /// <para>The name of the resource file.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>udf_sleep.jar</para>
             /// </summary>
@@ -120,6 +147,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The project ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1030111021</para>
             /// </summary>
@@ -128,6 +157,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? ProjectId { get; set; }
 
             /// <summary>
+            /// <para>The resource type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>JAR</para>
             /// </summary>
@@ -136,6 +167,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ResourceType { get; set; }
 
             /// <summary>
+            /// <para>The size of the resource, in bytes.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>102400</para>
             /// </summary>
@@ -144,6 +177,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? Size { get; set; }
 
             /// <summary>
+            /// <para>The storage address of the resource.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>300011448/711833/cdcd1c44-f1ee-46bb-b318-1d123dbabf6c</para>
             /// </summary>
@@ -153,6 +188,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 
         }
 
+        /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

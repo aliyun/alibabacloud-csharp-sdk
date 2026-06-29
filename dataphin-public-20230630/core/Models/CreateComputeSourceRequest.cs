@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class CreateComputeSourceRequest : TeaModel {
         /// <summary>
+        /// <para>The create command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CreateCommand")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public CreateComputeSourceRequestCreateCommand CreateCommand { get; set; }
         public class CreateComputeSourceRequestCreateCommand : TeaModel {
             /// <summary>
+            /// <para>The connection configuration items.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("ConfigList")]
@@ -24,6 +26,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<CreateComputeSourceRequestCreateCommandConfigList> ConfigList { get; set; }
             public class CreateComputeSourceRequestCreateCommandConfigList : TeaModel {
                 /// <summary>
+                /// <para>The configuration item.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -34,6 +37,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Key { get; set; }
 
                 /// <summary>
+                /// <para>The value of the configuration item.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -46,6 +50,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
+            /// <para>The description.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -54,6 +60,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The name of the compute source.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -64,6 +71,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The type of the compute source.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -76,6 +84,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

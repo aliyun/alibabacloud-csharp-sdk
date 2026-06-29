@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetRowPermissionByTableGuidsRequest : TeaModel {
         /// <summary>
+        /// <para>Request command</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("GetRowPermissionByTableGuidsQuery")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public GetRowPermissionByTableGuidsRequestGetRowPermissionByTableGuidsQuery GetRowPermissionByTableGuidsQuery { get; set; }
         public class GetRowPermissionByTableGuidsRequestGetRowPermissionByTableGuidsQuery : TeaModel {
             /// <summary>
+            /// <para>List of table GUIDs</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("TableGuids")]
@@ -26,6 +28,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>Tenant ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

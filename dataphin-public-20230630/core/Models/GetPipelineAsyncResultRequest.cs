@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetPipelineAsyncResultRequest : TeaModel {
         /// <summary>
+        /// <para>The asynchronous execution ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? AsyncId { get; set; }
 
         /// <summary>
+        /// <para>The request context information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Context")]
@@ -27,6 +29,11 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public GetPipelineAsyncResultRequestContext Context { get; set; }
         public class GetPipelineAsyncResultRequestContext : TeaModel {
             /// <summary>
+            /// <para>The current operation environment. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>DEV: development environment.</description></item>
+            /// <item><description>PROD: production environment.</description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -37,6 +44,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Env { get; set; }
 
             /// <summary>
+            /// <para>The ID of the project to which the integration pipeline task belongs.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -49,6 +57,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

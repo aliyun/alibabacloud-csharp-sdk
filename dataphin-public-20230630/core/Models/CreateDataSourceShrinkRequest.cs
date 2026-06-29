@@ -9,11 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class CreateDataSourceShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>Request object</para>
+        /// </summary>
         [NameInMap("CreateCommand")]
         [Validation(Required=false)]
         public string CreateCommandShrink { get; set; }
 
         /// <summary>
+        /// <para>Tenant ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

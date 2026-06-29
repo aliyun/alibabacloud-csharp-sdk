@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListAddableUsersRequest : TeaModel {
         /// <summary>
+        /// <para>The request object.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ListQuery")]
@@ -17,6 +18,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public ListAddableUsersRequestListQuery ListQuery { get; set; }
         public class ListAddableUsersRequestListQuery : TeaModel {
             /// <summary>
+            /// <para>The page number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -25,6 +28,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? Page { get; set; }
 
             /// <summary>
+            /// <para>The number of records per page.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -33,6 +38,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? PageSize { get; set; }
 
             /// <summary>
+            /// <para>The search keyword.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xx</para>
             /// </summary>
@@ -43,6 +50,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

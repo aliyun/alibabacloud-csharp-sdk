@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class CreateSecurityClassifyCatalogRequest : TeaModel {
         /// <summary>
+        /// <para>The create command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CreateCommand")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public CreateSecurityClassifyCatalogRequestCreateCommand CreateCommand { get; set; }
         public class CreateSecurityClassifyCatalogRequestCreateCommand : TeaModel {
             /// <summary>
+            /// <para>The name of the classification folder.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -26,11 +28,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// <para>The list of administrator IDs. This parameter takes effect only when the parent folder is the root folder.</para>
+            /// </summary>
             [NameInMap("OwnerList")]
             [Validation(Required=false)]
             public List<string> OwnerList { get; set; }
 
             /// <summary>
+            /// <para>The full path of the parent folder. Default value: /.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>/d1/</para>
             /// </summary>
@@ -39,6 +46,13 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ParentPath { get; set; }
 
             /// <summary>
+            /// <para>The visibility scope of the classification folder. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>PUBLIC: visible to all users.</description></item>
+            /// <item><description>PRIVATE: visible only to administrators.
+            /// Default value: PUBLIC. This parameter takes effect only when the parent folder is the root folder.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>PUBLIC</para>
             /// </summary>
@@ -49,6 +63,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

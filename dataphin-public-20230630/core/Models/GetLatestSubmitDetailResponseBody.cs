@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetLatestSubmitDetailResponseBody : TeaModel {
         /// <summary>
+        /// <para>The error code. A value of OK indicates that the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code returned by the backend.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</para>
         /// </summary>
@@ -41,11 +49,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The pending submit details.</para>
+        /// </summary>
         [NameInMap("SubmitDetailResult")]
         [Validation(Required=false)]
         public GetLatestSubmitDetailResponseBodySubmitDetailResult SubmitDetailResult { get; set; }
         public class GetLatestSubmitDetailResponseBodySubmitDetailResult : TeaModel {
             /// <summary>
+            /// <para>The submit record ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1234</para>
             /// </summary>
@@ -54,6 +67,21 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? Id { get; set; }
 
             /// <summary>
+            /// <para>The publish status. Valid values: </para>
+            /// <list type="bullet">
+            /// <item><description>NOT_VERIFIED: not verified.</description></item>
+            /// <item><description>APPROVING: approval in progress.</description></item>
+            /// <item><description>APPROVE_FAILED: approval failed.</description></item>
+            /// <item><description>APPROVE_SUCCESS: approval succeeded.</description></item>
+            /// <item><description>APPROVE_REVOKED: approval revoked.</description></item>
+            /// <item><description>CHECKING: publish verification in progress.</description></item>
+            /// <item><description>CHECK_FAILED: publish verification failed.</description></item>
+            /// <item><description>CHECK_SUCCESS: publish verification succeeded.</description></item>
+            /// <item><description>PUBLISHING: publishing in progress.</description></item>
+            /// <item><description>FAILED: publish failed.</description></item>
+            /// <item><description>SUCCESS: publish succeeded.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>SUCCESS</para>
             /// </summary>
@@ -61,11 +89,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             [Validation(Required=false)]
             public string PublishStatus { get; set; }
 
+            /// <summary>
+            /// <para>The pending submit record object.</para>
+            /// </summary>
             [NameInMap("ReleaseObject")]
             [Validation(Required=false)]
             public GetLatestSubmitDetailResponseBodySubmitDetailResultReleaseObject ReleaseObject { get; set; }
             public class GetLatestSubmitDetailResponseBodySubmitDetailResultReleaseObject : TeaModel {
                 /// <summary>
+                /// <para>The change type. Valid values: CREATE, UPDATE, and DELETE.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>DELETE</para>
                 /// </summary>
@@ -74,6 +107,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ChangeType { get; set; }
 
                 /// <summary>
+                /// <para>The node ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>n_1234</para>
                 /// </summary>
@@ -82,6 +117,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string NodeId { get; set; }
 
                 /// <summary>
+                /// <para>The object version.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -90,6 +127,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ObjectVersion { get; set; }
 
                 /// <summary>
+                /// <para>The project ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1234</para>
                 /// </summary>
@@ -98,6 +137,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? ProjectId { get; set; }
 
                 /// <summary>
+                /// <para>The submit comment.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>提交说明</para>
                 /// </summary>
@@ -105,11 +146,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 [Validation(Required=false)]
                 public string SubmitComment { get; set; }
 
+                /// <summary>
+                /// <para>The submit object.</para>
+                /// </summary>
                 [NameInMap("SubmitObject")]
                 [Validation(Required=false)]
                 public GetLatestSubmitDetailResponseBodySubmitDetailResultReleaseObjectSubmitObject SubmitObject { get; set; }
                 public class GetLatestSubmitDetailResponseBodySubmitDetailResultReleaseObjectSubmitObject : TeaModel {
                     /// <summary>
+                    /// <para>The object ID.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1234</para>
                     /// </summary>
@@ -118,6 +164,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string ObjectId { get; set; }
 
                     /// <summary>
+                    /// <para>The object name.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>abc</para>
                     /// </summary>
@@ -126,6 +174,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string ObjectName { get; set; }
 
                     /// <summary>
+                    /// <para>The object type.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>MAX_COMPUTE_SQL</para>
                     /// </summary>
@@ -138,6 +188,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
+            /// <para>The submit status. Valid values: </para>
+            /// <list type="bullet">
+            /// <item><description><para>TO_BE_PUBLISHED: pending.</para>
+            /// </description></item>
+            /// <item><description><para>PUBLISHED: published.</para>
+            /// </description></item>
+            /// <item><description><para>PUBLISHING: publishing.</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>TO_BE_PUBLISHED</para>
             /// </summary>
@@ -146,6 +206,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string SubmitStatus { get; set; }
 
             /// <summary>
+            /// <para>The record tag.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>tag</para>
             /// </summary>
@@ -155,6 +217,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 
         }
 
+        /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

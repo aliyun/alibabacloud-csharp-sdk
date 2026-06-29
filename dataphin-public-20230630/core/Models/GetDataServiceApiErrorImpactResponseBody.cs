@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetDataServiceApiErrorImpactResponseBody : TeaModel {
         /// <summary>
+        /// <para>The backend response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,15 +19,23 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The summary of call exception impacts.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetDataServiceApiErrorImpactResponseBodyData Data { get; set; }
         public class GetDataServiceApiErrorImpactResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The list of APIs affected by exceptions.</para>
+            /// </summary>
             [NameInMap("ErrorApiList")]
             [Validation(Required=false)]
             public List<GetDataServiceApiErrorImpactResponseBodyDataErrorApiList> ErrorApiList { get; set; }
             public class GetDataServiceApiErrorImpactResponseBodyDataErrorApiList : TeaModel {
                 /// <summary>
+                /// <para>The API name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
                 /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ApiName { get; set; }
 
                 /// <summary>
+                /// <para>The API ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2012</para>
                 /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? AppId { get; set; }
 
                 /// <summary>
+                /// <para>The number of exceptions for the API.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
                 /// </summary>
@@ -51,6 +65,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 
             }
 
+            /// <summary>
+            /// <para>The list of apps affected by exceptions.</para>
+            /// </summary>
             [NameInMap("ErrorAppList")]
             [Validation(Required=false)]
             public List<GetDataServiceApiErrorImpactResponseBodyDataErrorAppList> ErrorAppList { get; set; }
@@ -76,6 +93,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? AppKey { get; set; }
 
                 /// <summary>
+                /// <para>The app name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>app1</para>
                 /// </summary>
@@ -84,6 +103,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string AppName { get; set; }
 
                 /// <summary>
+                /// <para>The number of exceptions for the app.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
                 /// </summary>
@@ -96,6 +117,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -104,6 +127,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The backend exception details.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
         /// </summary>
@@ -121,6 +146,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class UpdateDataServiceAppMemberRequest : TeaModel {
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The command to update regular members of a data service application.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UpdateCommand")]
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public UpdateDataServiceAppMemberRequestUpdateCommand UpdateCommand { get; set; }
         public class UpdateDataServiceAppMemberRequestUpdateCommand : TeaModel {
             /// <summary>
+            /// <para>The application ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -37,6 +40,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? AppId { get; set; }
 
             /// <summary>
+            /// <para>The list of members.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("MemberList")]
@@ -44,6 +48,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<UpdateDataServiceAppMemberRequestUpdateCommandMemberList> MemberList { get; set; }
             public class UpdateDataServiceAppMemberRequestUpdateCommandMemberList : TeaModel {
                 /// <summary>
+                /// <para>The authorization expiration time.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -54,6 +59,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string EffectiveEnd { get; set; }
 
                 /// <summary>
+                /// <para>The user ID.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>

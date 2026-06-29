@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListAuthorizedDataServiceApiDetailsRequest : TeaModel {
         /// <summary>
+        /// <para>The query request.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30001011</para>
         /// </summary>
         [NameInMap("ListQuery")]
         [Validation(Required=false)]
@@ -19,7 +23,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>AppKey</para>
+            /// <para>The application key.</para>
+            /// <remarks>
+            /// <para>Notice: Deprecated. Use AppKeyStr instead.</notice>.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>200000000</para>
@@ -30,14 +37,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? AppKey { get; set; }
 
             /// <summary>
+            /// <para>The application key.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>app12345</para>
+            /// <para>APP_200000000</para>
             /// </summary>
             [NameInMap("AppKeyStr")]
             [Validation(Required=false)]
             public string AppKeyStr { get; set; }
 
             /// <summary>
+            /// <para>The page number, starting from 1.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -48,6 +58,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? Page { get; set; }
 
             /// <summary>
+            /// <para>The number of entries per page. Maximum value: 100.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -60,6 +71,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class CreateDataServiceAppRequest : TeaModel {
         /// <summary>
+        /// <para>The command to create a data service application.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CreateCommand")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public CreateDataServiceAppRequestCreateCommand CreateCommand { get; set; }
         public class CreateDataServiceAppRequestCreateCommand : TeaModel {
             /// <summary>
+            /// <para>The application group ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -27,6 +29,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? AppGroupId { get; set; }
 
             /// <summary>
+            /// <para>The application key, which must be globally unique and is used when calling APIs.
+            /// The key must be 8 to 128 characters in length and can contain letters, digits, underscores (_), and hyphens (-).
+            /// This parameter can be customized only when using Alibaba Cloud API Gateway or the built-in gateway. This parameter is ignored when using a dedicated cloud gateway.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>200000001</para>
             /// </summary>
@@ -35,6 +41,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string AppKey { get; set; }
 
             /// <summary>
+            /// <para>The application name.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -45,6 +52,11 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string AppName { get; set; }
 
             /// <summary>
+            /// <para>The app secret.
+            /// If this parameter is not specified, the system automatically generates a new AppSecret value.
+            /// The secret must be 8 to 127 characters in length and can contain letters, digits, underscores (_), and hyphens (-).
+            /// This parameter can be customized only when using Alibaba Cloud API Gateway or the built-in gateway. This parameter is ignored when using a dedicated cloud gateway.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>abc123456789</para>
             /// </summary>
@@ -53,6 +65,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string AppSecret { get; set; }
 
             /// <summary>
+            /// <para>The list of owner IDs.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("OwnerIds")]
@@ -60,6 +73,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<string> OwnerIds { get; set; }
 
             /// <summary>
+            /// <para>Common scenarios.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -72,6 +86,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

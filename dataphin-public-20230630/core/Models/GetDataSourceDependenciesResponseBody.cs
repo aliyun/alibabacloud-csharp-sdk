@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetDataSourceDependenciesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The backend response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The dependency records.</para>
+        /// </summary>
         [NameInMap("DependencyList")]
         [Validation(Required=false)]
         public List<GetDataSourceDependenciesResponseBodyDependencyList> DependencyList { get; set; }
         public class GetDataSourceDependenciesResponseBodyDependencyList : TeaModel {
             /// <summary>
+            /// <para>The ID of the dependency record.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Id { get; set; }
 
             /// <summary>
+            /// <para>The name of the dependency record.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>jytest</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The type of the dependency record.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>pipeline</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Type { get; set; }
 
             /// <summary>
+            /// <para>The type code of the dependency record.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>pipeline</para>
             /// </summary>
@@ -56,6 +69,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -64,6 +79,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The details of the backend exception.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
         /// </summary>
@@ -81,6 +98,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

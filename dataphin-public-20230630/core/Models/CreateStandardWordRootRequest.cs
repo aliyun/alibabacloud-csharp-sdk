@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class CreateStandardWordRootRequest : TeaModel {
         /// <summary>
+        /// <para>The create instruction.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CreateCommand")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public CreateStandardWordRootRequestCreateCommand CreateCommand { get; set; }
         public class CreateStandardWordRootRequestCreateCommand : TeaModel {
             /// <summary>
+            /// <para>The abbreviation of the root word.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -27,6 +29,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Abbreviation { get; set; }
 
             /// <summary>
+            /// <para>The description of the root word.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -35,6 +39,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The full name of the root word.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -45,6 +50,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string FullName { get; set; }
 
             /// <summary>
+            /// <para>The name of the root word.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -57,6 +63,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

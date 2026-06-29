@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class UpdatePipelineResponseBody : TeaModel {
         /// <summary>
+        /// <para>The backend response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The update result of the pipeline or workflow node.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public UpdatePipelineResponseBodyData Data { get; set; }
         public class UpdatePipelineResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The name and IP address of the server that executed the request.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>hostName:hostIp</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string HostMachine { get; set; }
 
             /// <summary>
+            /// <para>The scheduling node ID of the pipeline or workflow node.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string NodeId { get; set; }
 
             /// <summary>
+            /// <para>The pipeline or workflow ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? PipelineId { get; set; }
 
             /// <summary>
+            /// <para>The submit ID generated upon successful submission of the pipeline or workflow, which is added to the pending publish list and can be published through the publish domain. This value is not returned for workflow nodes because they only support PROD.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? SubmitId { get; set; }
 
             /// <summary>
+            /// <para>The version number pending publish. This value is not returned for workflow nodes because they only support PROD.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -64,6 +79,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -72,6 +89,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The error details returned by the backend.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
         /// </summary>
@@ -89,6 +108,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

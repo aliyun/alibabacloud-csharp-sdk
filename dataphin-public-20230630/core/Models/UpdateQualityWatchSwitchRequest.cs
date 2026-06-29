@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class UpdateQualityWatchSwitchRequest : TeaModel {
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The update instruction.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UpdateCommand")]
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public UpdateQualityWatchSwitchRequestUpdateCommand UpdateCommand { get; set; }
         public class UpdateQualityWatchSwitchRequestUpdateCommand : TeaModel {
             /// <summary>
+            /// <para>Specifies whether to enable the monitored object.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("Open")]
@@ -34,6 +37,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public bool? Open { get; set; }
 
             /// <summary>
+            /// <para>The list of monitoring IDs.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("WatchIdList")]

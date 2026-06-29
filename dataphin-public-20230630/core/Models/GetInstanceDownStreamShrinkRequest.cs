@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetInstanceDownStreamShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>Number of levels to expand downstream in the DAG query. Valid values: 1 to 6.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,12 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? DownStreamDepth { get; set; }
 
         /// <summary>
+        /// <para>Environment identifier.</para>
+        /// <list type="bullet">
+        /// <item><description>DEV: Development environment.</description></item>
+        /// <item><description>PROD (default): Production environment.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>PROD</para>
         /// </summary>
@@ -28,6 +35,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Env { get; set; }
 
         /// <summary>
+        /// <para>The request body.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("InstanceGet")]
@@ -35,6 +43,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string InstanceGetShrink { get; set; }
 
         /// <summary>
+        /// <para>Tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -45,6 +54,15 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>Run status of the instance.</para>
+        /// <list type="bullet">
+        /// <item><description>INIT</description></item>
+        /// <item><description>WATING</description></item>
+        /// <item><description>RUNNING</description></item>
+        /// <item><description>SUCCESS</description></item>
+        /// <item><description>FAILED</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
         /// </summary>

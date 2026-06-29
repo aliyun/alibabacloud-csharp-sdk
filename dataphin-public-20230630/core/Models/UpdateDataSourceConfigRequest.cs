@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class UpdateDataSourceConfigRequest : TeaModel {
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The data source configuration item change.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UpdateCommand")]
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public UpdateDataSourceConfigRequestUpdateCommand UpdateCommand { get; set; }
         public class UpdateDataSourceConfigRequestUpdateCommand : TeaModel {
             /// <summary>
+            /// <para>The connection configuration items.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("ConfigItemList")]
@@ -34,6 +37,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<UpdateDataSourceConfigRequestUpdateCommandConfigItemList> ConfigItemList { get; set; }
             public class UpdateDataSourceConfigRequestUpdateCommandConfigItemList : TeaModel {
                 /// <summary>
+                /// <para>The key ID of the configuration item.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -44,6 +48,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Key { get; set; }
 
                 /// <summary>
+                /// <para>The configuration value.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -56,6 +61,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
+            /// <para>The data source ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

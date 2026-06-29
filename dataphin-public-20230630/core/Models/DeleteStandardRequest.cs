@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class DeleteStandardRequest : TeaModel {
         /// <summary>
+        /// <para>The delete command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DeleteCommand")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public DeleteStandardRequestDeleteCommand DeleteCommand { get; set; }
         public class DeleteStandardRequestDeleteCommand : TeaModel {
             /// <summary>
+            /// <para>The standard ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -29,6 +31,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

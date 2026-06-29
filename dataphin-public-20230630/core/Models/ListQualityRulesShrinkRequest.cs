@@ -9,11 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListQualityRulesShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The paged query conditions.</para>
+        /// </summary>
         [NameInMap("ListQuery")]
         [Validation(Required=false)]
         public string ListQueryShrink { get; set; }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetDataServiceAppGroupsRequest : TeaModel {
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,6 +23,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
+        /// <para>The data service project ID.</para>
+        /// <remarks>
+        /// <para>Notice: This field is deprecated.</notice>.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>102102</para>

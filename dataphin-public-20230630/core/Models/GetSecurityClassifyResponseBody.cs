@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetSecurityClassifyResponseBody : TeaModel {
         /// <summary>
+        /// <para>The backend response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The details of the backend exception.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
         /// </summary>
@@ -43,11 +49,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The data classification details.</para>
+        /// </summary>
         [NameInMap("SecurityClassifyInfo")]
         [Validation(Required=false)]
         public GetSecurityClassifyResponseBodySecurityClassifyInfo SecurityClassifyInfo { get; set; }
         public class GetSecurityClassifyResponseBodySecurityClassifyInfo : TeaModel {
             /// <summary>
+            /// <para>The classification abbreviation.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -56,6 +67,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Abbreviation { get; set; }
 
             /// <summary>
+            /// <para>The data classification ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -64,6 +77,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? Id { get; set; }
 
             /// <summary>
+            /// <para>The security level abbreviation.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>lv_test</para>
             /// </summary>
@@ -72,6 +87,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string LevelAbbreviation { get; set; }
 
             /// <summary>
+            /// <para>The security level index.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -80,6 +97,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? LevelIndex { get; set; }
 
             /// <summary>
+            /// <para>The security level name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>lv_teat</para>
             /// </summary>
@@ -88,6 +107,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string LevelName { get; set; }
 
             /// <summary>
+            /// <para>The classification name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -96,6 +117,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The classification path.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>/a/b/c</para>
             /// </summary>
@@ -105,6 +128,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 
         }
 
+        /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

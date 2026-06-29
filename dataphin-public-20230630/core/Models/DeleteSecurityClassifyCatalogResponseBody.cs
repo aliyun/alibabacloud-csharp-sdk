@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class DeleteSecurityClassifyCatalogResponseBody : TeaModel {
         /// <summary>
+        /// <para>The backend response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,18 +19,30 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The deletion result details.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DeleteSecurityClassifyCatalogResponseBodyData Data { get; set; }
         public class DeleteSecurityClassifyCatalogResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The list of full paths of child catalogs that were also deleted.</para>
+            /// </summary>
             [NameInMap("ChildCatalogFullPathList")]
             [Validation(Required=false)]
             public List<string> ChildCatalogFullPathList { get; set; }
 
+            /// <summary>
+            /// <para>The list of classification IDs that were also deleted.</para>
+            /// </summary>
             [NameInMap("ClassifyIdList")]
             [Validation(Required=false)]
             public List<long?> ClassifyIdList { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether the deletion was successful.</para>
+            /// </summary>
             [NameInMap("Success")]
             [Validation(Required=false)]
             public bool? Success { get; set; }
@@ -36,6 +50,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -44,6 +60,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The details of the backend exception.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
         /// </summary>
@@ -61,6 +79,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

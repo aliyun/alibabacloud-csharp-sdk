@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class CreatePipelineShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>Request context information</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Context")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string ContextShrink { get; set; }
 
         /// <summary>
+        /// <para>Pipeline/workflow task creation configuration</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CreateCommand")]
@@ -24,6 +26,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string CreateCommandShrink { get; set; }
 
         /// <summary>
+        /// <para>Tenant ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

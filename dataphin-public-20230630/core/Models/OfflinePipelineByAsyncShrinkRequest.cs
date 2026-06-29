@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class OfflinePipelineByAsyncShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The request context information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Context")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string ContextShrink { get; set; }
 
         /// <summary>
+        /// <para>The offline pipeline node command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("OfflineCommand")]
@@ -24,6 +26,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string OfflineCommandShrink { get; set; }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

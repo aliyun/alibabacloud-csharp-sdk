@@ -9,11 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetAssetMappingRelationsShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The query instruction.</para>
+        /// </summary>
         [NameInMap("AssetMappingQuery")]
         [Validation(Required=false)]
         public string AssetMappingQueryShrink { get; set; }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

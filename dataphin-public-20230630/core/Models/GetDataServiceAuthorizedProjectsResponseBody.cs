@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetDataServiceAuthorizedProjectsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The backend response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The details of the backend exception.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
         /// </summary>
@@ -33,11 +39,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>The list of projects.</para>
+        /// </summary>
         [NameInMap("ProjectList")]
         [Validation(Required=false)]
         public List<GetDataServiceAuthorizedProjectsResponseBodyProjectList> ProjectList { get; set; }
         public class GetDataServiceAuthorizedProjectsResponseBodyProjectList : TeaModel {
             /// <summary>
+            /// <para>The project ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1011</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? ProjectId { get; set; }
 
             /// <summary>
+            /// <para>The project name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -54,6 +67,15 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ProjectName { get; set; }
 
             /// <summary>
+            /// <para>The role of the user. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>1: super administrator</description></item>
+            /// <item><description>2: developer</description></item>
+            /// <item><description>3: application member</description></item>
+            /// <item><description>4: service project administrator</description></item>
+            /// <item><description>5: O&amp;M user.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -73,6 +95,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

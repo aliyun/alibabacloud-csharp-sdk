@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetMyTenantsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The error code. A value of OK indicates that the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code returned by the backend.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -49,11 +59,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
+        /// <summary>
+        /// <para>The list of tenants.</para>
+        /// </summary>
         [NameInMap("TenantList")]
         [Validation(Required=false)]
         public List<GetMyTenantsResponseBodyTenantList> TenantList { get; set; }
         public class GetMyTenantsResponseBodyTenantList : TeaModel {
             /// <summary>
+            /// <para>The time when the tenant was deleted.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1717343597000</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? DeleteTime { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the tenant is deleted.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>
@@ -69,11 +86,19 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             [Validation(Required=false)]
             public bool? Deleted { get; set; }
 
+            /// <summary>
+            /// <para>The tenant description.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>xx 测试</para>
+            /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The tenant ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>132311</para>
             /// </summary>
@@ -81,11 +106,19 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             [Validation(Required=false)]
             public long? Id { get; set; }
 
+            /// <summary>
+            /// <para>The tenant name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>xx测试</para>
+            /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the tenant is an O&amp;M tenant.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>
@@ -94,6 +127,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public bool? OpsTenant { get; set; }
 
             /// <summary>
+            /// <para>The ID of the user to whom the tenant belongs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>21323231</para>
             /// </summary>
@@ -102,6 +137,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string OwnerId { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether resource quota calculation is performed.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>
@@ -109,11 +146,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             [Validation(Required=false)]
             public bool? ResourceLimited { get; set; }
 
+            /// <summary>
+            /// <para>The tenant types.</para>
+            /// </summary>
             [NameInMap("TenantTypeList")]
             [Validation(Required=false)]
             public List<string> TenantTypeList { get; set; }
 
             /// <summary>
+            /// <para>The title type of the tenant.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>icon</para>
             /// </summary>
@@ -122,6 +164,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string TitleType { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the tenant is visible.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>

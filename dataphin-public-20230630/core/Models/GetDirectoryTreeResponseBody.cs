@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetDirectoryTreeResponseBody : TeaModel {
         /// <summary>
+        /// <para>Error code. OK indicates a successful request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,15 +19,23 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Directory tree information. Returns the directory tree with all edge information, traversed level by level from the root node.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<GetDirectoryTreeResponseBodyData> Data { get; set; }
         public class GetDirectoryTreeResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>Child node.</para>
+            /// </summary>
             [NameInMap("Children")]
             [Validation(Required=false)]
             public GetDirectoryTreeResponseBodyDataChildren Children { get; set; }
             public class GetDirectoryTreeResponseBodyDataChildren : TeaModel {
                 /// <summary>
+                /// <para>Directory type.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>codeManage</para>
                 /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string CategoryType { get; set; }
 
                 /// <summary>
+                /// <para>Creator ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>300000907</para>
                 /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Creator { get; set; }
 
                 /// <summary>
+                /// <para>Creator name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>John</para>
                 /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string CreatorName { get; set; }
 
                 /// <summary>
+                /// <para>Data cell ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>41342</para>
                 /// </summary>
@@ -58,6 +74,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? DataCellId { get; set; }
 
                 /// <summary>
+                /// <para>Directory path. Valid only for file or resource nodes.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>/</para>
                 /// </summary>
@@ -66,6 +84,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string DirName { get; set; }
 
                 /// <summary>
+                /// <para>Creation time. Empty for non-entity object nodes.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2024-11-01 18:08:17</para>
                 /// </summary>
@@ -74,6 +94,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string GmtCreate { get; set; }
 
                 /// <summary>
+                /// <para>Modification time. Empty for non-entity object nodes.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2024-11-01 18:08:17</para>
                 /// </summary>
@@ -82,6 +104,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
+                /// <para>Directory ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
                 /// </summary>
@@ -90,6 +114,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? Id { get; set; }
 
                 /// <summary>
+                /// <para>Last modifier ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>300000907</para>
                 /// </summary>
@@ -98,6 +124,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string LastModifier { get; set; }
 
                 /// <summary>
+                /// <para>Last modifier name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>John</para>
                 /// </summary>
@@ -106,6 +134,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string LastModifierName { get; set; }
 
                 /// <summary>
+                /// <para>Display name of the object.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>代码管理</para>
                 /// </summary>
@@ -114,6 +144,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Name { get; set; }
 
                 /// <summary>
+                /// <para>Project ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>7081229106458752</para>
                 /// </summary>
@@ -122,6 +154,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? ProjectId { get; set; }
 
                 /// <summary>
+                /// <para>Directory string ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
                 /// </summary>
@@ -130,6 +164,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string StringId { get; set; }
 
                 /// <summary>
+                /// <para>Object type.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>codeManage</para>
                 /// </summary>
@@ -139,11 +175,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 
             }
 
+            /// <summary>
+            /// <para>Parent node.</para>
+            /// </summary>
             [NameInMap("Parent")]
             [Validation(Required=false)]
             public GetDirectoryTreeResponseBodyDataParent Parent { get; set; }
             public class GetDirectoryTreeResponseBodyDataParent : TeaModel {
                 /// <summary>
+                /// <para>Directory type.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>codeManage</para>
                 /// </summary>
@@ -152,6 +193,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string CategoryType { get; set; }
 
                 /// <summary>
+                /// <para>Creator ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>300000907</para>
                 /// </summary>
@@ -160,6 +203,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Creator { get; set; }
 
                 /// <summary>
+                /// <para>Creator name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>John</para>
                 /// </summary>
@@ -168,6 +213,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string CreatorName { get; set; }
 
                 /// <summary>
+                /// <para>Data cell ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>3213</para>
                 /// </summary>
@@ -176,6 +223,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? DataCellId { get; set; }
 
                 /// <summary>
+                /// <para>Directory path. Valid only for file or resource nodes.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>/</para>
                 /// </summary>
@@ -184,6 +233,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string DirName { get; set; }
 
                 /// <summary>
+                /// <para>Creation time. Empty for non-entity object nodes.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2024-11-01 18:08:17</para>
                 /// </summary>
@@ -192,6 +243,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string GmtCreate { get; set; }
 
                 /// <summary>
+                /// <para>Modification time. Empty for non-entity object nodes.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2024-11-01 18:08:17</para>
                 /// </summary>
@@ -200,6 +253,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
+                /// <para>Directory ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
                 /// </summary>
@@ -208,6 +263,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? Id { get; set; }
 
                 /// <summary>
+                /// <para>Last modifier ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>300000907</para>
                 /// </summary>
@@ -216,6 +273,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string LastModifier { get; set; }
 
                 /// <summary>
+                /// <para>Last modifier name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>John</para>
                 /// </summary>
@@ -224,6 +283,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string LastModifierName { get; set; }
 
                 /// <summary>
+                /// <para>Display name of the object.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>代码管理</para>
                 /// </summary>
@@ -232,6 +293,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Name { get; set; }
 
                 /// <summary>
+                /// <para>Project ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>7081229106458752</para>
                 /// </summary>
@@ -240,6 +303,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? ProjectId { get; set; }
 
                 /// <summary>
+                /// <para>Directory string ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
                 /// </summary>
@@ -248,6 +313,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string StringId { get; set; }
 
                 /// <summary>
+                /// <para>Object type.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>codeManage</para>
                 /// </summary>
@@ -260,6 +327,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -268,6 +337,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -276,6 +347,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</para>
         /// </summary>
@@ -283,6 +356,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether the request is successful.</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

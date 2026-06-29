@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListFilesResponseBody : TeaModel {
         /// <summary>
+        /// <para>Request error code. OK indicates a normal request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>File list</para>
+        /// </summary>
         [NameInMap("FileList")]
         [Validation(Required=false)]
         public List<ListFilesResponseBodyFileList> FileList { get; set; }
         public class ListFilesResponseBodyFileList : TeaModel {
             /// <summary>
+            /// <para>File category</para>
+            /// 
             /// <b>Example:</b>
             /// <para>tempCode</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Category { get; set; }
 
             /// <summary>
+            /// <para>File content</para>
+            /// 
             /// <b>Example:</b>
             /// <para>select 1;</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Content { get; set; }
 
             /// <summary>
+            /// <para>Creator</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1212111</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Creator { get; set; }
 
             /// <summary>
+            /// <para>File directory</para>
+            /// 
             /// <b>Example:</b>
             /// <para>/xx/x</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Directory { get; set; }
 
             /// <summary>
+            /// <para>File type, such as directory</para>
+            /// 
             /// <b>Example:</b>
             /// <para>directory</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string FileType { get; set; }
 
             /// <summary>
+            /// <para>Creation time</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1717483193830</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? GmtCreate { get; set; }
 
             /// <summary>
+            /// <para>Modification time</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1717483193830</para>
             /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? GmtModified { get; set; }
 
             /// <summary>
+            /// <para>File ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>111231112</para>
             /// </summary>
@@ -86,6 +107,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? Id { get; set; }
 
             /// <summary>
+            /// <para>Last modifier</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1212111</para>
             /// </summary>
@@ -94,6 +117,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string LastModifier { get; set; }
 
             /// <summary>
+            /// <para>File name</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xx测试</para>
             /// </summary>
@@ -102,6 +127,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>Project ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>312112121</para>
             /// </summary>
@@ -112,6 +139,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>Backend response HTTP code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -120,6 +149,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Request error message</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -128,6 +159,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</para>
         /// </summary>
@@ -136,6 +169,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Whether the request was successful</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

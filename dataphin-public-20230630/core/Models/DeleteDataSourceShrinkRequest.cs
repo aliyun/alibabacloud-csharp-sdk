@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class DeleteDataSourceShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The request for deleting a data source.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DeleteCommand")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string DeleteCommandShrink { get; set; }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

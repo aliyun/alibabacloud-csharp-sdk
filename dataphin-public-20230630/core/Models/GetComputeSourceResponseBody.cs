@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetComputeSourceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The error code. A value of OK indicates that the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The compute source details.</para>
+        /// </summary>
         [NameInMap("ComputeSourceInfo")]
         [Validation(Required=false)]
         public GetComputeSourceResponseBodyComputeSourceInfo ComputeSourceInfo { get; set; }
         public class GetComputeSourceResponseBodyComputeSourceInfo : TeaModel {
             /// <summary>
+            /// <para>Indicates whether a project is associated.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public bool? BindProject { get; set; }
 
             /// <summary>
+            /// <para>The ID of the associated project.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10101101</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? BindProjectId { get; set; }
 
             /// <summary>
+            /// <para>The name of the associated project.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>dp_mctest</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string BindProjectName { get; set; }
 
             /// <summary>
+            /// <para>The ID of the compute source creator.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>101101</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Creator { get; set; }
 
             /// <summary>
+            /// <para>The name of the compute source creator.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string CreatorName { get; set; }
 
             /// <summary>
+            /// <para>The description.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>compute source for xxx.</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The display name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>dp_test</para>
             /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DisplayName { get; set; }
 
             /// <summary>
+            /// <para>The creation timestamp.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1681881607000</para>
             /// </summary>
@@ -86,6 +107,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
+            /// <para>The last modification timestamp.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1711881607000</para>
             /// </summary>
@@ -94,6 +117,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string GmtModified { get; set; }
 
             /// <summary>
+            /// <para>The compute source ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>12356</para>
             /// </summary>
@@ -102,6 +127,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? Id { get; set; }
 
             /// <summary>
+            /// <para>The name of the compute source.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>dp_test</para>
             /// </summary>
@@ -110,6 +137,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The ID of the compute source owner.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>101101</para>
             /// </summary>
@@ -118,6 +147,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Owner { get; set; }
 
             /// <summary>
+            /// <para>The name of the compute source owner.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -126,6 +157,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string OwnerName { get; set; }
 
             /// <summary>
+            /// <para>The type of the compute source.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>MAX_COMPUTE</para>
             /// </summary>
@@ -136,6 +169,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code returned by the backend.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -144,6 +179,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -152,6 +189,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</para>
         /// </summary>
@@ -160,6 +199,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

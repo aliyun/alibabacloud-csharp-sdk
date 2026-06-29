@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class DeleteBizMetricResponseBody : TeaModel {
         /// <summary>
+        /// <para>The error code. A value of OK indicates that the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The deletion result.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DeleteBizMetricResponseBodyData Data { get; set; }
         public class DeleteBizMetricResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The exception information.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>success</para>
             /// </summary>
@@ -30,6 +37,12 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Message { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the deletion was successful. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true: Succeeded.</description></item>
+            /// <item><description>false: Failed.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -40,6 +53,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code returned by the backend.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -48,6 +63,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -56,6 +73,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</para>
         /// </summary>
@@ -64,6 +83,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

@@ -9,11 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListSecurityIdentifyResultsShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>Query conditions.</para>
+        /// </summary>
         [NameInMap("ListQuery")]
         [Validation(Required=false)]
         public string ListQueryShrink { get; set; }
 
         /// <summary>
+        /// <para>Tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class CreateResourceRequest : TeaModel {
         /// <summary>
+        /// <para>The create command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CreateCommand")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public CreateResourceRequestCreateCommand CreateCommand { get; set; }
         public class CreateResourceRequestCreateCommand : TeaModel {
             /// <summary>
+            /// <para>The commit remarks.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -27,6 +29,12 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Comment { get; set; }
 
             /// <summary>
+            /// <para>The compute engine type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>MAX_COMPUTE</description></item>
+            /// <item><description>HADOOP</description></item>
+            /// <item><description>NONE.</description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -37,6 +45,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ComputeEngineType { get; set; }
 
             /// <summary>
+            /// <para>The description of the resource file.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -47,6 +56,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The folder in which the resource file is stored.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -57,6 +67,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Directory { get; set; }
 
             /// <summary>
+            /// <para>The resource name.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -67,6 +78,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The project ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -77,6 +89,13 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? ProjectId { get; set; }
 
             /// <summary>
+            /// <para>The type of the resource file. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>FILE: common file.</description></item>
+            /// <item><description>JAR: JAR file.</description></item>
+            /// <item><description>PYTHON: Python file.</description></item>
+            /// <item><description>OTHERS: other type of file.</description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -87,6 +106,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ResourceType { get; set; }
 
             /// <summary>
+            /// <para>The storage address of the resource file.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -99,6 +119,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

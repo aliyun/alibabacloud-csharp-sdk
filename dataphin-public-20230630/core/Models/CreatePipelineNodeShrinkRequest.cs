@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class CreatePipelineNodeShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The command to create a pipeline. Both offline and real-time pipelines are supported.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CreatePipelineNodeCommand")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string CreatePipelineNodeCommandShrink { get; set; }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

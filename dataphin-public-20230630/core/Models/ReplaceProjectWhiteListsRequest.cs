@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ReplaceProjectWhiteListsRequest : TeaModel {
         /// <summary>
+        /// <para>The project ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? Id { get; set; }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The edit command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ReplaceCommand")]
@@ -37,6 +40,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public ReplaceProjectWhiteListsRequestReplaceCommand ReplaceCommand { get; set; }
         public class ReplaceProjectWhiteListsRequestReplaceCommand : TeaModel {
             /// <summary>
+            /// <para>The project whitelist.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("WhiteLists")]
@@ -44,6 +48,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<ReplaceProjectWhiteListsRequestReplaceCommandWhiteLists> WhiteLists { get; set; }
             public class ReplaceProjectWhiteListsRequestReplaceCommandWhiteLists : TeaModel {
                 /// <summary>
+                /// <para>The description.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>测试</para>
                 /// </summary>
@@ -63,6 +69,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Ip { get; set; }
 
                 /// <summary>
+                /// <para>The port.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>

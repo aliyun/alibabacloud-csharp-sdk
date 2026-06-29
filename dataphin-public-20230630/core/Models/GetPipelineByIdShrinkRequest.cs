@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetPipelineByIdShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The request context information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Context")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string ContextShrink { get; set; }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID used to query the pipeline task.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("QueryId")]

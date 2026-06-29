@@ -9,11 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetAssetMappingRelationsRequest : TeaModel {
+        /// <summary>
+        /// <para>The query instruction.</para>
+        /// </summary>
         [NameInMap("AssetMappingQuery")]
         [Validation(Required=false)]
         public GetAssetMappingRelationsRequestAssetMappingQuery AssetMappingQuery { get; set; }
         public class GetAssetMappingRelationsRequestAssetMappingQuery : TeaModel {
             /// <summary>
+            /// <para>The object type of the asset. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>COLUMN: field.</description></item>
+            /// <item><description>INDEX: metric.</description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -24,6 +32,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string AssetType { get; set; }
 
             /// <summary>
+            /// <para>The GUID of the asset object.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -34,6 +43,11 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Guid { get; set; }
 
             /// <summary>
+            /// <para>The type of the mapping relationship. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>VALID: mapped.</description></item>
+            /// <item><description>INVALID: invalid mapping.</description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -46,6 +60,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

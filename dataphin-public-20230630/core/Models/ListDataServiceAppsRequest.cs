@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListDataServiceAppsRequest : TeaModel {
         /// <summary>
+        /// <para>Query the list of all applications under the tenant.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ListQuery")]
@@ -17,6 +18,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public ListDataServiceAppsRequestListQuery ListQuery { get; set; }
         public class ListDataServiceAppsRequestListQuery : TeaModel {
             /// <summary>
+            /// <para>Application group ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>12345</para>
             /// </summary>
@@ -25,6 +28,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? AppGroupId { get; set; }
 
             /// <summary>
+            /// <para>Application name search keyword.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>营销看板</para>
             /// </summary>
@@ -33,6 +38,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Keyword { get; set; }
 
             /// <summary>
+            /// <para>Page number. Default value: 1.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -41,6 +48,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? PageNo { get; set; }
 
             /// <summary>
+            /// <para>Number of records per page. Default value: 20.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>20</para>
             /// </summary>
@@ -51,6 +60,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>Tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

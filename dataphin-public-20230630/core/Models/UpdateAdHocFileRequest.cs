@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class UpdateAdHocFileRequest : TeaModel {
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The update request.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UpdateCommand")]
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public UpdateAdHocFileRequestUpdateCommand UpdateCommand { get; set; }
         public class UpdateAdHocFileRequestUpdateCommand : TeaModel {
             /// <summary>
+            /// <para>The file content.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -37,6 +40,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Content { get; set; }
 
             /// <summary>
+            /// <para>The file ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -47,6 +51,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? FileId { get; set; }
 
             /// <summary>
+            /// <para>The project ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListProjectsRequest : TeaModel {
         /// <summary>
+        /// <para>The query conditions.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ListQuery")]
@@ -17,6 +18,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public ListProjectsRequestListQuery ListQuery { get; set; }
         public class ListProjectsRequestListQuery : TeaModel {
             /// <summary>
+            /// <para>The environment identifier.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>DEV</para>
             /// </summary>
@@ -25,6 +28,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Env { get; set; }
 
             /// <summary>
+            /// <para>The keyword for fuzzy match.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -33,6 +38,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Keyword { get; set; }
 
             /// <summary>
+            /// <para>The project mode.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>BASIC</para>
             /// </summary>
@@ -41,6 +48,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Mode { get; set; }
 
             /// <summary>
+            /// <para>The page number. Default value: 1.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -49,6 +58,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? PageNo { get; set; }
 
             /// <summary>
+            /// <para>The number of records per page. Default value: 20.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>20</para>
             /// </summary>
@@ -56,6 +67,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
+            /// <summary>
+            /// <para>The project tags.</para>
+            /// </summary>
             [NameInMap("TagList")]
             [Validation(Required=false)]
             public List<string> TagList { get; set; }
@@ -63,6 +77,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

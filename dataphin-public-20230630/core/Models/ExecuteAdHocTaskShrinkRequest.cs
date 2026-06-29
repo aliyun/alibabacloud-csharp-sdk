@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ExecuteAdHocTaskShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The execution command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ExecuteCommand")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string ExecuteCommandShrink { get; set; }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

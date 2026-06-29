@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class RevokeDataServiceApiRequest : TeaModel {
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The data service project ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? ProjectId { get; set; }
 
         /// <summary>
+        /// <para>The revoke instruction.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RevokeCommand")]
@@ -37,6 +40,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public RevokeDataServiceApiRequestRevokeCommand RevokeCommand { get; set; }
         public class RevokeDataServiceApiRequestRevokeCommand : TeaModel {
             /// <summary>
+            /// <para>The API ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -47,6 +51,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? ApiId { get; set; }
 
             /// <summary>
+            /// <para>The ID of the application.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1203</para>
             /// </summary>
@@ -55,6 +61,12 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? AppId { get; set; }
 
             /// <summary>
+            /// <para>The permission type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>USE: use permission</description></item>
+            /// <item><description>DELEGATION: delegation permission.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>USE</para>
             /// </summary>
@@ -63,14 +75,26 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string AuthType { get; set; }
 
             /// <summary>
+            /// <para>The API environment. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>DEV: development environment</description></item>
+            /// <item><description>PROD: production environment.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
-            /// <para>DEV</para>
+            /// <para>PROD</para>
             /// </summary>
             [NameInMap("Env")]
             [Validation(Required=false)]
             public string Env { get; set; }
 
             /// <summary>
+            /// <para>The authorization object type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>APP: application</description></item>
+            /// <item><description>USER: user.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>APP</para>
             /// </summary>
@@ -79,6 +103,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string GranteeType { get; set; }
 
             /// <summary>
+            /// <para>The reason for the request.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -89,6 +114,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Reason { get; set; }
 
             /// <summary>
+            /// <para>The user ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>12345</para>
             /// </summary>

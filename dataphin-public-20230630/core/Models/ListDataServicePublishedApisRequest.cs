@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListDataServicePublishedApisRequest : TeaModel {
+        /// <summary>
+        /// <para>Search conditions.</para>
+        /// </summary>
         [NameInMap("ListQuery")]
         [Validation(Required=false)]
         public ListDataServicePublishedApisRequestListQuery ListQuery { get; set; }
         public class ListDataServicePublishedApisRequestListQuery : TeaModel {
             /// <summary>
+            /// <para>API name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ApiName { get; set; }
 
             /// <summary>
+            /// <para>Group ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>102113</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? GroupId { get; set; }
 
             /// <summary>
+            /// <para>Page number. Default value: 1.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? PageNo { get; set; }
 
             /// <summary>
+            /// <para>Number of records per page. Default value: 20.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>20</para>
             /// </summary>
@@ -48,6 +59,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>Tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,6 +70,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>Data service project ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

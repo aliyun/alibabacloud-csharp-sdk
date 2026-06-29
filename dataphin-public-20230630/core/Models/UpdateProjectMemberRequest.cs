@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class UpdateProjectMemberRequest : TeaModel {
         /// <summary>
+        /// <para>The project ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? Id { get; set; }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The update command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UpdateCommand")]
@@ -37,6 +40,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public UpdateProjectMemberRequestUpdateCommand UpdateCommand { get; set; }
         public class UpdateProjectMemberRequestUpdateCommand : TeaModel {
             /// <summary>
+            /// <para>The environment identifier.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -47,6 +51,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Env { get; set; }
 
             /// <summary>
+            /// <para>The list of user members.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("UserList")]
@@ -54,6 +59,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<UpdateProjectMemberRequestUpdateCommandUserList> UserList { get; set; }
             public class UpdateProjectMemberRequestUpdateCommandUserList : TeaModel {
                 /// <summary>
+                /// <para>The member role. Valid values: 1: project administrator. 2: developer. 3: visitor. 4: analyst. 5: O&amp;M engineer.</para>
                 /// <para>This parameter is required.</para>
                 /// </summary>
                 [NameInMap("RoleList")]
@@ -61,6 +67,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public List<int?> RoleList { get; set; }
 
                 /// <summary>
+                /// <para>The user ID.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>

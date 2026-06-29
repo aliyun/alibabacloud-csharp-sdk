@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class DeleteQualitySchedulesRequest : TeaModel {
         /// <summary>
+        /// <para>The delete instruction.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DeleteCommand")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public DeleteQualitySchedulesRequestDeleteCommand DeleteCommand { get; set; }
         public class DeleteQualitySchedulesRequestDeleteCommand : TeaModel {
             /// <summary>
+            /// <para>The IDs of the scheduling objects.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("ScheduleIdList")]
@@ -26,6 +28,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

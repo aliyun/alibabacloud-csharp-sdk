@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetRowPermissionByTableGuidsShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>Request command</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("GetRowPermissionByTableGuidsQuery")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string GetRowPermissionByTableGuidsQueryShrink { get; set; }
 
         /// <summary>
+        /// <para>Tenant ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

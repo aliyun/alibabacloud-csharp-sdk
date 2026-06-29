@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetCheckConnectivityJobsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The response code returned by the backend.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public List<GetCheckConnectivityJobsResponseBodyData> Data { get; set; }
         public class GetCheckConnectivityJobsResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The data source ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>192</para>
             /// </summary>
@@ -33,6 +37,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DataSourceId { get; set; }
 
             /// <summary>
+            /// <para>The error message that provides a detailed error description when the task fails.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>notFoundIp</para>
             /// </summary>
@@ -41,6 +47,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ErrorMsg { get; set; }
 
             /// <summary>
+            /// <para>The task ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123123</para>
             /// </summary>
@@ -49,6 +57,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string JobId { get; set; }
 
             /// <summary>
+            /// <para>The task type, such as application-level or cluster-level.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>application/cluster</para>
             /// </summary>
@@ -57,6 +67,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string JobType { get; set; }
 
             /// <summary>
+            /// <para>The task status.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>SUCCESS</para>
             /// </summary>
@@ -65,6 +77,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>The tenant ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>30001011</para>
             /// </summary>
@@ -73,6 +87,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string TenantId { get; set; }
 
             /// <summary>
+            /// <para>The Voldemort task ID, which is used to associate with the underlying execution task.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>t_7572319950395080706_20251225_7572319950395080707</para>
             /// </summary>
@@ -83,6 +99,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -91,6 +109,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The error details returned by the backend.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
         /// </summary>
@@ -109,6 +129,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

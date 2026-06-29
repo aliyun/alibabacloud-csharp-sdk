@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class AssignQualityRuleOfAllRuleScopeSchedulesRequest : TeaModel {
         /// <summary>
+        /// <para>The assignment binding instruction.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AssignCommand")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public AssignQualityRuleOfAllRuleScopeSchedulesRequestAssignCommand AssignCommand { get; set; }
         public class AssignQualityRuleOfAllRuleScopeSchedulesRequestAssignCommand : TeaModel {
             /// <summary>
+            /// <para>The rule IDs.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("RuleIdList")]
@@ -24,6 +26,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<long?> RuleIdList { get; set; }
 
             /// <summary>
+            /// <para>The schedule IDs.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("ScheduleIdList")]
@@ -31,6 +34,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<long?> ScheduleIdList { get; set; }
 
             /// <summary>
+            /// <para>The ID of the monitored object.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -43,6 +47,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

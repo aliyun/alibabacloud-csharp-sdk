@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class PublishObjectListRequest : TeaModel {
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The publish command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("PublishCommand")]
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public PublishObjectListRequestPublishCommand PublishCommand { get; set; }
         public class PublishObjectListRequestPublishCommand : TeaModel {
             /// <summary>
+            /// <para>The publish comment. The string can be up to 1024 characters in length.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -37,6 +40,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Comment { get; set; }
 
             /// <summary>
+            /// <para>The project ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -47,6 +51,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? ProjectId { get; set; }
 
             /// <summary>
+            /// <para>The list of pending publish record IDs to be published. A maximum of 50 submit IDs can be specified.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("SubmitIdList")]

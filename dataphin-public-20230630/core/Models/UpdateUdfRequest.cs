@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class UpdateUdfRequest : TeaModel {
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The update command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UpdateCommand")]
@@ -27,6 +29,19 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public UpdateUdfRequestUpdateCommand UpdateCommand { get; set; }
         public class UpdateUdfRequestUpdateCommand : TeaModel {
             /// <summary>
+            /// <para>The category. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>1: window function</description></item>
+            /// <item><description>2: aggregate function</description></item>
+            /// <item><description>3: numerical function</description></item>
+            /// <item><description>4: string function</description></item>
+            /// <item><description>5: time function</description></item>
+            /// <item><description>6: IP address utility function</description></item>
+            /// <item><description>7: URL-related function</description></item>
+            /// <item><description>8: encoding and decoding function</description></item>
+            /// <item><description>9: business-related function</description></item>
+            /// <item><description>10: other.</description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -37,6 +52,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? Category { get; set; }
 
             /// <summary>
+            /// <para>The class name that implements the function in the resource.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -47,6 +63,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ClassName { get; set; }
 
             /// <summary>
+            /// <para>The command format for function calling to invoke.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -57,6 +74,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string CommandHelp { get; set; }
 
             /// <summary>
+            /// <para>The commit remarks.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -67,6 +85,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Comment { get; set; }
 
             /// <summary>
+            /// <para>The description.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -77,6 +96,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The ID of the user-defined function.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -87,6 +107,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? Id { get; set; }
 
             /// <summary>
+            /// <para>The project ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -97,6 +118,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? ProjectId { get; set; }
 
             /// <summary>
+            /// <para>The IDs of the referenced resources.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("RefResourceIdList")]

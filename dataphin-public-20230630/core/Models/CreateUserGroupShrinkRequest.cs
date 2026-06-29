@@ -9,11 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class CreateUserGroupShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The creation request.</para>
+        /// </summary>
         [NameInMap("CreateCommand")]
         [Validation(Required=false)]
         public string CreateCommandShrink { get; set; }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

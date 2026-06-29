@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetStandardWordRootResponseBody : TeaModel {
         /// <summary>
+        /// <para>The backend response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The details of the backend exception.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
         /// </summary>
@@ -43,15 +49,23 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
+        /// <summary>
+        /// <para>The word root details.</para>
+        /// </summary>
         [NameInMap("WordRootInfo")]
         [Validation(Required=false)]
         public GetStandardWordRootResponseBodyWordRootInfo WordRootInfo { get; set; }
         public class GetStandardWordRootResponseBodyWordRootInfo : TeaModel {
             /// <summary>
+            /// <para>The abbreviation of the word root.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>avg</para>
             /// </summary>
@@ -60,6 +74,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Abbreviation { get; set; }
 
             /// <summary>
+            /// <para>The creation time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2025-06-30 00:00:00</para>
             /// </summary>
@@ -68,6 +84,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The user ID of the creator.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>30012021</para>
             /// </summary>
@@ -76,6 +94,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Creator { get; set; }
 
             /// <summary>
+            /// <para>The username of the creator.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -84,6 +104,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string CreatorName { get; set; }
 
             /// <summary>
+            /// <para>The description of the word root.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -92,6 +114,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The full name of the word root.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>average</para>
             /// </summary>
@@ -100,6 +124,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string FullName { get; set; }
 
             /// <summary>
+            /// <para>The user ID of the last modifier.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>30012021</para>
             /// </summary>
@@ -108,6 +134,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string LastModifier { get; set; }
 
             /// <summary>
+            /// <para>The username of the last modifier.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -116,6 +144,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string LastModifierName { get; set; }
 
             /// <summary>
+            /// <para>The modification time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2025-06-30 00:00:00</para>
             /// </summary>
@@ -124,6 +154,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ModifyTime { get; set; }
 
             /// <summary>
+            /// <para>The name of the word root.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>平均值</para>
             /// </summary>

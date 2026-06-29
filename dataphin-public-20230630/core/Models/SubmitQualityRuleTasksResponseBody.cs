@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class SubmitQualityRuleTasksResponseBody : TeaModel {
         /// <summary>
+        /// <para>Backend response code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>HTTP response code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Details of the backend response exception</para>
+        /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
         /// </summary>
@@ -43,20 +49,32 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Execution result</para>
+        /// </summary>
         [NameInMap("SubmitResult")]
         [Validation(Required=false)]
         public SubmitQualityRuleTasksResponseBodySubmitResult SubmitResult { get; set; }
         public class SubmitQualityRuleTasksResponseBodySubmitResult : TeaModel {
+            /// <summary>
+            /// <para>Rule task IDs, returned in the test run scenario</para>
+            /// </summary>
             [NameInMap("RuleTaskIdList")]
             [Validation(Required=false)]
             public List<long?> RuleTaskIdList { get; set; }
 
+            /// <summary>
+            /// <para>Monitoring object task IDs, returned in non-test run scenarios</para>
+            /// </summary>
             [NameInMap("WatchTaskIdList")]
             [Validation(Required=false)]
             public List<long?> WatchTaskIdList { get; set; }
 
         }
 
+        /// <summary>
+        /// <para>Whether the request was successful</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class DeleteSecurityLevelRequest : TeaModel {
         /// <summary>
+        /// <para>The delete instruction.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DeleteCommand")]
@@ -17,6 +18,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public DeleteSecurityLevelRequestDeleteCommand DeleteCommand { get; set; }
         public class DeleteSecurityLevelRequestDeleteCommand : TeaModel {
             /// <summary>
+            /// <para>The sensitivity level of the classification level. If this parameter is not specified, the classification level is deleted based on an exact match of the classification level name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -25,6 +28,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? Index { get; set; }
 
             /// <summary>
+            /// <para>The classification level name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -35,6 +40,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetAssetMappingRelationsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The backend response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -25,11 +29,20 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
+        /// <summary>
+        /// <para>The list of mapping relationships.</para>
+        /// </summary>
         [NameInMap("MappingRelationList")]
         [Validation(Required=false)]
         public List<GetAssetMappingRelationsResponseBodyMappingRelationList> MappingRelationList { get; set; }
         public class GetAssetMappingRelationsResponseBodyMappingRelationList : TeaModel {
             /// <summary>
+            /// <para>The Asset Type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>COLUMN: field.</description></item>
+            /// <item><description>INDEX: metric.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>COLUMN</para>
             /// </summary>
@@ -38,6 +51,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string AssetType { get; set; }
 
             /// <summary>
+            /// <para>The GUID of the asset.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1122</para>
             /// </summary>
@@ -46,6 +61,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Guid { get; set; }
 
             /// <summary>
+            /// <para>The update time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2025-06-30 00:00:00</para>
             /// </summary>
@@ -54,6 +71,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ModifyTime { get; set; }
 
             /// <summary>
+            /// <para>The name of the asset.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -62,6 +81,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The code of the standard.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cc</para>
             /// </summary>
@@ -70,6 +91,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string StandardCode { get; set; }
 
             /// <summary>
+            /// <para>The ID of the standard.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -78,6 +101,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? StandardId { get; set; }
 
             /// <summary>
+            /// <para>The name of the standard.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -86,6 +111,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string StandardName { get; set; }
 
             /// <summary>
+            /// <para>The folder in which the standard set resides.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>/dir1</para>
             /// </summary>
@@ -94,6 +121,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string StandardSetDirectory { get; set; }
 
             /// <summary>
+            /// <para>The ID of the standard set.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -102,6 +131,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? StandardSetId { get; set; }
 
             /// <summary>
+            /// <para>The name of the standard set.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -110,6 +141,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string StandardSetName { get; set; }
 
             /// <summary>
+            /// <para>The stage of the standard.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>PROD</para>
             /// </summary>
@@ -120,6 +153,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The error details from the backend response.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
         /// </summary>
@@ -137,6 +172,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

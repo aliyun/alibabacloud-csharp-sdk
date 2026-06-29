@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetPipelineByIdRequest : TeaModel {
         /// <summary>
+        /// <para>The request context information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Context")]
@@ -17,6 +18,11 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public GetPipelineByIdRequestContext Context { get; set; }
         public class GetPipelineByIdRequestContext : TeaModel {
             /// <summary>
+            /// <para>The current operating environment. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>DEV: the development environment.</description></item>
+            /// <item><description>PROD: the production environment.</description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -27,6 +33,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Env { get; set; }
 
             /// <summary>
+            /// <para>The ID of the project to which the integration pipeline task belongs.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -39,6 +46,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,6 +57,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID used to query the pipeline task.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("QueryId")]
@@ -56,6 +65,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public GetPipelineByIdRequestQueryId QueryId { get; set; }
         public class GetPipelineByIdRequestQueryId : TeaModel {
             /// <summary>
+            /// <para>Supports querying by the integration task file ID (fileId).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123</para>
             /// </summary>
@@ -64,6 +75,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? FileId { get; set; }
 
             /// <summary>
+            /// <para>Supports querying by the integration task scheduling node ID (nodeId).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>n_123</para>
             /// </summary>
@@ -72,6 +85,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string NodeId { get; set; }
 
             /// <summary>
+            /// <para>Supports querying by the integration pipeline primary key (pipelineId).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123</para>
             /// </summary>

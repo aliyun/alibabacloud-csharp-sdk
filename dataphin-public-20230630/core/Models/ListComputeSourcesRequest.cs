@@ -10,17 +10,23 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListComputeSourcesRequest : TeaModel {
         /// <summary>
+        /// <para>The query conditions.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ListQuery")]
         [Validation(Required=false)]
         public ListComputeSourcesRequestListQuery ListQuery { get; set; }
         public class ListComputeSourcesRequestListQuery : TeaModel {
+            /// <summary>
+            /// <para>Specifies whether the compute source is bound to a project.</para>
+            /// </summary>
             [NameInMap("BindProject")]
             [Validation(Required=false)]
             public bool? BindProject { get; set; }
 
             /// <summary>
+            /// <para>The keyword used for filtering.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -29,6 +35,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Keyword { get; set; }
 
             /// <summary>
+            /// <para>The page number. Default value: 1.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -37,6 +45,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? PageNo { get; set; }
 
             /// <summary>
+            /// <para>The number of records per page. Default value: 20.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>20</para>
             /// </summary>
@@ -45,6 +55,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? PageSize { get; set; }
 
             /// <summary>
+            /// <para>The type of the compute source.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>MaxCompute</para>
             /// </summary>
@@ -55,6 +67,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>Tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetPipelineAsyncResultResponseBody : TeaModel {
         /// <summary>
+        /// <para>The backend response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The asynchronous execution result.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetPipelineAsyncResultResponseBodyData Data { get; set; }
         public class GetPipelineAsyncResultResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The asynchronous execution query ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? AsyncId { get; set; }
 
             /// <summary>
+            /// <para>The error code returned when the execution fails.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>DPN.Pipeline.InnerError</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ErrorCode { get; set; }
 
             /// <summary>
+            /// <para>The error message returned when the execution fails.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>NullPointException</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
+            /// <para>The information about the server host that processes the execution request.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>hostName:hostIp</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string HostMachine { get; set; }
 
             /// <summary>
+            /// <para>The scheduling node ID of the pipeline task.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>n_123</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string NodeId { get; set; }
 
             /// <summary>
+            /// <para>The primary key ID of the pipeline.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123</para>
             /// </summary>
@@ -70,6 +87,13 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? PipelineId { get; set; }
 
             /// <summary>
+            /// <para>The current execution status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>SUCCESS: execution succeeded.</description></item>
+            /// <item><description>FAILED: execution failed.</description></item>
+            /// <item><description>RUNNING: execution in progress.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>SUCCESS</para>
             /// </summary>
@@ -78,6 +102,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>The publish ID generated after the pipeline task is submitted. You can use this ID to publish the task through the publish domain.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123</para>
             /// </summary>
@@ -86,6 +112,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? SubmitId { get; set; }
 
             /// <summary>
+            /// <para>The version number generated when the pipeline task is submitted.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -96,6 +124,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -104,6 +134,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The error details returned by the backend.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
         /// </summary>
@@ -121,6 +153,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether the request is successful.</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

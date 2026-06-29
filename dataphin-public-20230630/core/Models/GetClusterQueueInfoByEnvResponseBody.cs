@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetClusterQueueInfoByEnvResponseBody : TeaModel {
         /// <summary>
+        /// <para>The error code. A value of OK indicates that the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<GetClusterQueueInfoByEnvResponseBodyData> Data { get; set; }
         public class GetClusterQueueInfoByEnvResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The annotations.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{  &quot;creator&quot;: &quot;<a href="mailto:new_datasource@test.aliyunid.com">new_datasource@test.aliyunid.com</a>&quot;,  &quot;modifier&quot;: &quot;<a href="mailto:new_datasource@test.aliyunid.com">new_datasource@test.aliyunid.com</a>&quot; }</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Annotations { get; set; }
 
             /// <summary>
+            /// <para>The cluster ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>61187014-a3ba-4cdd-8609-1f0aa3df4a3d</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ClusterId { get; set; }
 
             /// <summary>
+            /// <para>The creation time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-10-31 10:29:17</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string CreateAt { get; set; }
 
             /// <summary>
+            /// <para>The Flink image registry address.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxxx-registry-vpc.cn-shanghai.cr.aliyuncs.com/xxxx/flink:1.15.4-scala_2.12</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string FlinkImageRegistry { get; set; }
 
             /// <summary>
+            /// <para>The Flink image repository.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxxx-registry-vpc.cn-shanghai.cr.aliyuncs.com</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string FlinkImageRepository { get; set; }
 
             /// <summary>
+            /// <para>The Flink image tag.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1.15.4</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string FlinkImageTag { get; set; }
 
             /// <summary>
+            /// <para>The Flink version.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1.15</para>
             /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string FlinkVersion { get; set; }
 
             /// <summary>
+            /// <para>The labels.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cdh</para>
             /// </summary>
@@ -86,6 +107,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Labels { get; set; }
 
             /// <summary>
+            /// <para>The maximum number of vCores provided by each queue.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -94,6 +117,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string MaxVcore { get; set; }
 
             /// <summary>
+            /// <para>The modification time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-10-31 10:29:17</para>
             /// </summary>
@@ -102,6 +127,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ModifiedAt { get; set; }
 
             /// <summary>
+            /// <para>The namespace.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>dataphinv45prod</para>
             /// </summary>
@@ -110,6 +137,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Namespace { get; set; }
 
             /// <summary>
+            /// <para>The queue name, which serves as a unique identifier. For Kubernetes, this is the resource group name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>default-queue</para>
             /// </summary>
@@ -118,6 +147,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string QueueName { get; set; }
 
             /// <summary>
+            /// <para>The resource version.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -126,6 +157,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ResourceVersion { get; set; }
 
             /// <summary>
+            /// <para>The resource specification.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{\n  \&quot;kind\&quot; : \&quot;kubernetes\&quot;,\n  \&quot;kubernetes\{&quot;namespace&quot; : &quot;n1730341728989z7&quot;,    &quot;clusterName&quot; : &quot;a51578bdcce145&quot;  },  &quot;state&quot; : &quot;ONLINE&quot;}</para>
             /// </summary>
@@ -134,6 +167,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Spec { get; set; }
 
             /// <summary>
+            /// <para>The VVP cluster type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>PREJOB</para>
             /// </summary>
@@ -144,6 +179,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code returned by the backend.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -152,6 +189,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -160,6 +199,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</para>
         /// </summary>
@@ -167,6 +208,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

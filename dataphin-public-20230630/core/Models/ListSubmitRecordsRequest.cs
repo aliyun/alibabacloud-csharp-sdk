@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListSubmitRecordsRequest : TeaModel {
         /// <summary>
+        /// <para>Query command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ListQuery")]
@@ -17,6 +18,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public ListSubmitRecordsRequestListQuery ListQuery { get; set; }
         public class ListSubmitRecordsRequestListQuery : TeaModel {
             /// <summary>
+            /// <para>Search keyword.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>abc</para>
             /// </summary>
@@ -25,17 +28,22 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Keyword { get; set; }
 
             /// <summary>
+            /// <para>Pending deployment record filter.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("SearchFilter")]
             [Validation(Required=false)]
             public ListSubmitRecordsRequestListQuerySearchFilter SearchFilter { get; set; }
             public class ListSubmitRecordsRequestListQuerySearchFilter : TeaModel {
+                /// <summary>
+                /// <para>List of change types (0: Create / 1: Update / 2: Delete).</para>
+                /// </summary>
                 [NameInMap("ChangeTypeList")]
                 [Validation(Required=false)]
                 public List<int?> ChangeTypeList { get; set; }
 
                 /// <summary>
+                /// <para>Page number.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -46,6 +54,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public int? Page { get; set; }
 
                 /// <summary>
+                /// <para>Page size.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -56,6 +65,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public int? PageSize { get; set; }
 
                 /// <summary>
+                /// <para>Project ID.</para>
                 /// <para>This parameter is required.</para>
                 /// </summary>
                 [NameInMap("ProjectIdList")]
@@ -63,6 +73,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public List<long?> ProjectIdList { get; set; }
 
                 /// <summary>
+                /// <para>Submission end time in the yyyy-MM-dd HH:mm:ss format.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2024-10-10 10:00:00</para>
                 /// </summary>
@@ -71,6 +83,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string SubmitEndTime { get; set; }
 
                 /// <summary>
+                /// <para>Submission start time in the yyyy-MM-dd HH:mm:ss format.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2024-10-10 10:00:00</para>
                 /// </summary>
@@ -78,6 +92,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 [Validation(Required=false)]
                 public string SubmitStartTime { get; set; }
 
+                /// <summary>
+                /// <para>Submitter.</para>
+                /// </summary>
                 [NameInMap("SubmitterList")]
                 [Validation(Required=false)]
                 public List<string> SubmitterList { get; set; }
@@ -87,6 +104,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>Tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class CreateStandardRelationsRequest : TeaModel {
         /// <summary>
+        /// <para>The create command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CreateCommand")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public CreateStandardRelationsRequestCreateCommand CreateCommand { get; set; }
         public class CreateStandardRelationsRequestCreateCommand : TeaModel {
             /// <summary>
+            /// <para>The standard association type: RELATIVE.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string RelationType { get; set; }
 
             /// <summary>
+            /// <para>The standard ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -37,6 +40,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? StandardId { get; set; }
 
             /// <summary>
+            /// <para>The list of referenced standards.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("StandardRefList")]
@@ -44,6 +48,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<CreateStandardRelationsRequestCreateCommandStandardRefList> StandardRefList { get; set; }
             public class CreateStandardRelationsRequestCreateCommandStandardRefList : TeaModel {
                 /// <summary>
+                /// <para>The standard ID.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -58,6 +63,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

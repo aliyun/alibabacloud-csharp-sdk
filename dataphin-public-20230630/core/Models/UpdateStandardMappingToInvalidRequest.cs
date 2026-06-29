@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class UpdateStandardMappingToInvalidRequest : TeaModel {
         /// <summary>
+        /// <para>Tenant ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,21 +21,29 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>Update Command</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UpdateCommand")]
         [Validation(Required=false)]
         public UpdateStandardMappingToInvalidRequestUpdateCommand UpdateCommand { get; set; }
         public class UpdateStandardMappingToInvalidRequestUpdateCommand : TeaModel {
+            /// <summary>
+            /// <para>Belonging GUID list, with an upper limit of 1000</para>
+            /// </summary>
             [NameInMap("BelongGuidList")]
             [Validation(Required=false)]
             public List<string> BelongGuidList { get; set; }
 
+            /// <summary>
+            /// <para>GUID list, with an upper limit of 1000</para>
+            /// </summary>
             [NameInMap("GuidList")]
             [Validation(Required=false)]
             public List<string> GuidList { get; set; }
 
             /// <summary>
+            /// <para>Standard ID</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

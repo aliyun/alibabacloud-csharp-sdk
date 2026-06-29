@@ -9,11 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetMyTenantsShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The feature codes owned by the tenant.</para>
+        /// </summary>
         [NameInMap("FeatureCodeList")]
         [Validation(Required=false)]
         public string FeatureCodeListShrink { get; set; }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

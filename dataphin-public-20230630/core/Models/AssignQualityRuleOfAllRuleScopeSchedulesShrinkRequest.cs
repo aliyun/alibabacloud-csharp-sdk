@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class AssignQualityRuleOfAllRuleScopeSchedulesShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The assignment binding instruction.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AssignCommand")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string AssignCommandShrink { get; set; }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

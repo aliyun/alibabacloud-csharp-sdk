@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class UpdateUserGroupShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -19,6 +20,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public long? OpTenantId { get; set; }
 
+        /// <summary>
+        /// <para>The command to edit the user group.</para>
+        /// </summary>
         [NameInMap("UpdateCommand")]
         [Validation(Required=false)]
         public string UpdateCommandShrink { get; set; }

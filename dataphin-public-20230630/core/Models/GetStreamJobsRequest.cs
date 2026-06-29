@@ -10,6 +10,11 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetStreamJobsRequest : TeaModel {
         /// <summary>
+        /// <para>The Dataphin environment. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>DEV</description></item>
+        /// <item><description>PROD.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +25,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Env { get; set; }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +36,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The Dataphin project ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class OfflineBizEntityRequest : TeaModel {
         /// <summary>
+        /// <para>Offline request</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("OfflineCommand")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public OfflineBizEntityRequestOfflineCommand OfflineCommand { get; set; }
         public class OfflineBizEntityRequestOfflineCommand : TeaModel {
             /// <summary>
+            /// <para>Business unit ID</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? BizUnitId { get; set; }
 
             /// <summary>
+            /// <para>Offline comment</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -37,6 +40,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Comment { get; set; }
 
             /// <summary>
+            /// <para>Business entity ID</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -47,6 +51,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? Id { get; set; }
 
             /// <summary>
+            /// <para>Business entity type. For more information, see the &quot;CreateBizEntity&quot; operation.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -59,6 +64,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>Tenant ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

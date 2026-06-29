@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GrantResourcePermissionShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The grant request.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("GrantCommand")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string GrantCommandShrink { get; set; }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

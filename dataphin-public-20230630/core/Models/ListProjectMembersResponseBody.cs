@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListProjectMembersResponseBody : TeaModel {
         /// <summary>
+        /// <para>The error code. A value of OK indicates that the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code returned by the backend.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -33,15 +39,23 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>The paging query result.</para>
+        /// </summary>
         [NameInMap("PageResult")]
         [Validation(Required=false)]
         public ListProjectMembersResponseBodyPageResult PageResult { get; set; }
         public class ListProjectMembersResponseBodyPageResult : TeaModel {
+            /// <summary>
+            /// <para>The list of project members.</para>
+            /// </summary>
             [NameInMap("ProjectMemberList")]
             [Validation(Required=false)]
             public List<ListProjectMembersResponseBodyPageResultProjectMemberList> ProjectMemberList { get; set; }
             public class ListProjectMembersResponseBodyPageResultProjectMemberList : TeaModel {
                 /// <summary>
+                /// <para>The creation timestamp.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1702692675000</para>
                 /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string GmtCreate { get; set; }
 
                 /// <summary>
+                /// <para>The last modified timestamp.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1721720955000</para>
                 /// </summary>
@@ -58,6 +74,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
+                /// <para>The project ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>12356</para>
                 /// </summary>
@@ -66,6 +84,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? Id { get; set; }
 
                 /// <summary>
+                /// <para>The ID of the user who last modified the record.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>101111</para>
                 /// </summary>
@@ -74,18 +94,25 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string LastModifier { get; set; }
 
                 /// <summary>
+                /// <para>The name of the user who last modified the record.</para>
+                /// 
                 /// <b>Example:</b>
-                /// <para>test</para>
+                /// <para>测试用户</para>
                 /// </summary>
                 [NameInMap("LastModifierName")]
                 [Validation(Required=false)]
                 public string LastModifierName { get; set; }
 
+                /// <summary>
+                /// <para>The roles.</para>
+                /// </summary>
                 [NameInMap("RoleIdList")]
                 [Validation(Required=false)]
                 public List<int?> RoleIdList { get; set; }
 
                 /// <summary>
+                /// <para>The user ID of the member.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>101111</para>
                 /// </summary>
@@ -94,8 +121,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string UserId { get; set; }
 
                 /// <summary>
+                /// <para>The username of the member.</para>
+                /// 
                 /// <b>Example:</b>
-                /// <para>张三</para>
+                /// <para>测试用户</para>
                 /// </summary>
                 [NameInMap("UserName")]
                 [Validation(Required=false)]
@@ -104,6 +133,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
+            /// <para>The total number of project members.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>101</para>
             /// </summary>
@@ -114,6 +145,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</para>
         /// </summary>
@@ -122,6 +155,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class UpdateTenantComputeEngineRequest : TeaModel {
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The update command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UpdateCommand")]
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public UpdateTenantComputeEngineRequestUpdateCommand UpdateCommand { get; set; }
         public class UpdateTenantComputeEngineRequestUpdateCommand : TeaModel {
             /// <summary>
+            /// <para>The list of cluster node endpoints.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("ClusterUrlList")]
@@ -34,6 +37,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<string> ClusterUrlList { get; set; }
 
             /// <summary>
+            /// <para>The compute source type.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -44,6 +48,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Type { get; set; }
 
             /// <summary>
+            /// <para>The version number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1.0</para>
             /// </summary>

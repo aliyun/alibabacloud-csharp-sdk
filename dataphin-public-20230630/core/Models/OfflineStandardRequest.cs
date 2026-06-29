@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class OfflineStandardRequest : TeaModel {
         /// <summary>
+        /// <para>The offline instruction.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("OfflineCommand")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public OfflineStandardRequestOfflineCommand OfflineCommand { get; set; }
         public class OfflineStandardRequestOfflineCommand : TeaModel {
             /// <summary>
+            /// <para>The review remarks. The value can be up to 128 characters in length.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Comment { get; set; }
 
             /// <summary>
+            /// <para>The standard ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -39,6 +42,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

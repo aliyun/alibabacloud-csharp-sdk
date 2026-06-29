@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class DeleteBizMetricRequest : TeaModel {
         /// <summary>
+        /// <para>The delete request.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DeleteBizMetricCommand")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public DeleteBizMetricRequestDeleteBizMetricCommand DeleteBizMetricCommand { get; set; }
         public class DeleteBizMetricRequestDeleteBizMetricCommand : TeaModel {
             /// <summary>
+            /// <para>The name of the business metric to delete.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -29,6 +31,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetBatchTaskInfoByVersionResponseBody : TeaModel {
         /// <summary>
+        /// <para>The error code. A value of OK indicates that the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code returned by the backend.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</para>
         /// </summary>
@@ -41,15 +49,23 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
+        /// <summary>
+        /// <para>The node details.</para>
+        /// </summary>
         [NameInMap("TaskInfo")]
         [Validation(Required=false)]
         public GetBatchTaskInfoByVersionResponseBodyTaskInfo TaskInfo { get; set; }
         public class GetBatchTaskInfoByVersionResponseBodyTaskInfo : TeaModel {
             /// <summary>
+            /// <para>The node code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>show tables;</para>
             /// </summary>
@@ -58,6 +74,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Code { get; set; }
 
             /// <summary>
+            /// <para>The cron expression for automatic scheduling. For more information, refer to the Linux cron expression syntax.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0 0 1 * * ?</para>
             /// </summary>
@@ -65,11 +83,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             [Validation(Required=false)]
             public string CronExpression { get; set; }
 
+            /// <summary>
+            /// <para>The custom scheduling interval configuration.</para>
+            /// </summary>
             [NameInMap("CustomScheduleConfig")]
             [Validation(Required=false)]
             public GetBatchTaskInfoByVersionResponseBodyTaskInfoCustomScheduleConfig CustomScheduleConfig { get; set; }
             public class GetBatchTaskInfoByVersionResponseBodyTaskInfoCustomScheduleConfig : TeaModel {
                 /// <summary>
+                /// <para>The end time in the format of HH:mm.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>20:59</para>
                 /// </summary>
@@ -78,6 +101,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string EndTime { get; set; }
 
                 /// <summary>
+                /// <para>The custom interval.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -86,6 +111,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public int? Interval { get; set; }
 
                 /// <summary>
+                /// <para>The interval unit. Valid values: MINUTE, HOUR.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>HOUR</para>
                 /// </summary>
@@ -94,6 +121,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string IntervalUnit { get; set; }
 
                 /// <summary>
+                /// <para>The scheduling period.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>DAILY</para>
                 /// </summary>
@@ -102,6 +131,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string SchedulePeriod { get; set; }
 
                 /// <summary>
+                /// <para>The start time in the format of HH:mm.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>08:00</para>
                 /// </summary>
@@ -112,6 +143,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
+            /// <para>The ID of the DAG to which the node belongs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>dag_102121211</para>
             /// </summary>
@@ -120,6 +153,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DagId { get; set; }
 
             /// <summary>
+            /// <para>The catalog for database SQL nodes. This parameter takes effect only for data source types that require a catalog, such as Presto.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>mysql_catalog</para>
             /// </summary>
@@ -128,6 +163,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DataSourceCatalog { get; set; }
 
             /// <summary>
+            /// <para>The data source ID for database SQL nodes.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>12131111</para>
             /// </summary>
@@ -136,6 +173,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DataSourceId { get; set; }
 
             /// <summary>
+            /// <para>The schema for database SQL nodes. This parameter takes effect only for data source types that require a schema, such as Oracle.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>erp</para>
             /// </summary>
@@ -144,6 +183,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DataSourceSchema { get; set; }
 
             /// <summary>
+            /// <para>The node ID in the node directory tree.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>12113111</para>
             /// </summary>
@@ -151,11 +192,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             [Validation(Required=false)]
             public long? FileId { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether the node has a development environment node.</para>
+            /// </summary>
             [NameInMap("HasDevNode")]
             [Validation(Required=false)]
             public bool? HasDevNode { get; set; }
 
             /// <summary>
+            /// <para>The node name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>测试任务1</para>
             /// </summary>
@@ -163,11 +209,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether the node needs to be published.</para>
+            /// </summary>
             [NameInMap("NeedPublish")]
             [Validation(Required=false)]
             public bool? NeedPublish { get; set; }
 
             /// <summary>
+            /// <para>The node description.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xx测试</para>
             /// </summary>
@@ -176,6 +227,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string NodeDescription { get; set; }
 
             /// <summary>
+            /// <para>The source of the node, indicating the organization or application that created the node.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>openapi</para>
             /// </summary>
@@ -184,6 +237,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string NodeFrom { get; set; }
 
             /// <summary>
+            /// <para>The node ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>n_1011_21232132322</para>
             /// </summary>
@@ -192,6 +247,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string NodeId { get; set; }
 
             /// <summary>
+            /// <para>The node name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>测试任务1</para>
             /// </summary>
@@ -199,11 +256,21 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             [Validation(Required=false)]
             public string NodeName { get; set; }
 
+            /// <summary>
+            /// <para>The list of node output names.</para>
+            /// </summary>
             [NameInMap("NodeOutputNameList")]
             [Validation(Required=false)]
             public List<string> NodeOutputNameList { get; set; }
 
             /// <summary>
+            /// <para>The node status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>1: Normal.</description></item>
+            /// <item><description>2: Paused.</description></item>
+            /// <item><description>3: Dry run.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -212,6 +279,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? NodeStatus { get; set; }
 
             /// <summary>
+            /// <para>The user ID of the current operator.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>30231123</para>
             /// </summary>
@@ -220,6 +289,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string OperatorUserId { get; set; }
 
             /// <summary>
+            /// <para>The name of the node owner.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>张三</para>
             /// </summary>
@@ -228,6 +299,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string OwnerName { get; set; }
 
             /// <summary>
+            /// <para>The user ID of the node owner.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>30231123</para>
             /// </summary>
@@ -235,11 +308,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             [Validation(Required=false)]
             public string OwnerUserId { get; set; }
 
+            /// <summary>
+            /// <para>The list of custom node parameters.</para>
+            /// </summary>
             [NameInMap("ParamList")]
             [Validation(Required=false)]
             public List<GetBatchTaskInfoByVersionResponseBodyTaskInfoParamList> ParamList { get; set; }
             public class GetBatchTaskInfoByVersionResponseBodyTaskInfoParamList : TeaModel {
                 /// <summary>
+                /// <para>The parameter name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>key</para>
                 /// </summary>
@@ -248,6 +326,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Key { get; set; }
 
                 /// <summary>
+                /// <para>The parameter value.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Value</para>
                 /// </summary>
@@ -257,11 +337,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 
             }
 
+            /// <summary>
+            /// <para>Indicates whether the node scheduling is paused.</para>
+            /// </summary>
             [NameInMap("Paused")]
             [Validation(Required=false)]
             public bool? Paused { get; set; }
 
             /// <summary>
+            /// <para>The scheduling priority of the node. Valid values: 1 to 9. A larger value indicates a lower priority.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -270,6 +355,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? Priority { get; set; }
 
             /// <summary>
+            /// <para>The project ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>131211211</para>
             /// </summary>
@@ -277,11 +364,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             [Validation(Required=false)]
             public long? ProjectId { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether the node has been published.</para>
+            /// </summary>
             [NameInMap("Published")]
             [Validation(Required=false)]
             public bool? Published { get; set; }
 
             /// <summary>
+            /// <para>The remarks.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test xx</para>
             /// </summary>
@@ -289,11 +381,24 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             [Validation(Required=false)]
             public string Remark { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether the node can be rerun.</para>
+            /// </summary>
             [NameInMap("Rerunable")]
             [Validation(Required=false)]
             public bool? Rerunable { get; set; }
 
             /// <summary>
+            /// <para>The scheduling period. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>YEARLY</description></item>
+            /// <item><description>MONTHLY</description></item>
+            /// <item><description>WEEKLY</description></item>
+            /// <item><description>DAILY</description></item>
+            /// <item><description>HOURLY</description></item>
+            /// <item><description>MINUTELY.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>DAILY</para>
             /// </summary>
@@ -302,6 +407,12 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string SchedulePeriod { get; set; }
 
             /// <summary>
+            /// <para>The scheduling type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>1: periodic node.</description></item>
+            /// <item><description>3: manual node.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>3</para>
             /// </summary>
@@ -309,11 +420,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             [Validation(Required=false)]
             public int? ScheduleType { get; set; }
 
+            /// <summary>
+            /// <para>The Spark client information.</para>
+            /// </summary>
             [NameInMap("SparkClientInfo")]
             [Validation(Required=false)]
             public GetBatchTaskInfoByVersionResponseBodyTaskInfoSparkClientInfo SparkClientInfo { get; set; }
             public class GetBatchTaskInfoByVersionResponseBodyTaskInfoSparkClientInfo : TeaModel {
                 /// <summary>
+                /// <para>The Spark client version.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>abc</para>
                 /// </summary>
@@ -324,6 +440,13 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
+            /// <para>The publish status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: draft.</description></item>
+            /// <item><description>1: submitted.</description></item>
+            /// <item><description>100: in development.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>测试任务1</para>
             /// </summary>
@@ -332,6 +455,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>The node type. For more information, see the API operation for creating a batch task.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>21</para>
             /// </summary>
@@ -339,15 +464,23 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             [Validation(Required=false)]
             public int? TaskType { get; set; }
 
+            /// <summary>
+            /// <para>The upstream dependencies.</para>
+            /// </summary>
             [NameInMap("UpStreamList")]
             [Validation(Required=false)]
             public List<GetBatchTaskInfoByVersionResponseBodyTaskInfoUpStreamList> UpStreamList { get; set; }
             public class GetBatchTaskInfoByVersionResponseBodyTaskInfoUpStreamList : TeaModel {
+                /// <summary>
+                /// <para>The dependency period.</para>
+                /// </summary>
                 [NameInMap("DependPeriod")]
                 [Validation(Required=false)]
                 public GetBatchTaskInfoByVersionResponseBodyTaskInfoUpStreamListDependPeriod DependPeriod { get; set; }
                 public class GetBatchTaskInfoByVersionResponseBodyTaskInfoUpStreamListDependPeriod : TeaModel {
                     /// <summary>
+                    /// <para>The period offset. This parameter is required when PeriodType is set to LAST_N_PERIOD.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
                     /// </summary>
@@ -356,6 +489,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public int? PeriodOffset { get; set; }
 
                     /// <summary>
+                    /// <para>The dependency period type. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>CURRENT_PERIOD</description></item>
+                    /// <item><description>LAST_PERIOD</description></item>
+                    /// <item><description>LAST_N_PERIOD</description></item>
+                    /// <item><description>LAST_24_HOUR.</description></item>
+                    /// </list>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>CURRENT_PERIOD</para>
                     /// </summary>
@@ -366,6 +507,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 }
 
                 /// <summary>
+                /// <para>The dependency strategy. Valid values: ALL, FIRST, LAST, NEAR.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>LAST</para>
                 /// </summary>
@@ -373,11 +516,20 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 [Validation(Required=false)]
                 public string DependStrategy { get; set; }
 
+                /// <summary>
+                /// <para>The fields of the dependent logical table.</para>
+                /// </summary>
                 [NameInMap("FieldList")]
                 [Validation(Required=false)]
                 public List<string> FieldList { get; set; }
 
                 /// <summary>
+                /// <para>The type of the upstream dependency node. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>PHYSICAL: physical node.</description></item>
+                /// <item><description>LOGICAL: logical table dependency.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>PHYSICAL</para>
                 /// </summary>
@@ -386,6 +538,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string NodeType { get; set; }
 
                 /// <summary>
+                /// <para>The period difference. A value of 0 indicates a same-period dependency. A positive number indicates a dependency on the previous N periods.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -393,11 +547,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 [Validation(Required=false)]
                 public int? PeriodDiff { get; set; }
 
+                /// <summary>
+                /// <para>Indicates whether the upstream node is enabled.</para>
+                /// </summary>
                 [NameInMap("SourceNodeEnabled")]
                 [Validation(Required=false)]
                 public bool? SourceNodeEnabled { get; set; }
 
                 /// <summary>
+                /// <para>The upstream node ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>n_2001</para>
                 /// </summary>
@@ -406,6 +565,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string SourceNodeId { get; set; }
 
                 /// <summary>
+                /// <para>The upstream node name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>t_input1</para>
                 /// </summary>
@@ -414,6 +575,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string SourceNodeName { get; set; }
 
                 /// <summary>
+                /// <para>The output name of the upstream node.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>t_input1</para>
                 /// </summary>
@@ -422,6 +585,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string SourceNodeOutputName { get; set; }
 
                 /// <summary>
+                /// <para>The username of the upstream node owner.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>张三</para>
                 /// </summary>
@@ -430,6 +595,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string SourceNodeUserName { get; set; }
 
                 /// <summary>
+                /// <para>The input table name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>t_input1</para>
                 /// </summary>

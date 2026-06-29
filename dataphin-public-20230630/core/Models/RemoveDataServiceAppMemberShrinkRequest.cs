@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class RemoveDataServiceAppMemberShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>Tenant ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>Remove regular members from a data service application</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RemoveCommand")]

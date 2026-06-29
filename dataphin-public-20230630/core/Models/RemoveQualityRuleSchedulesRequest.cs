@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class RemoveQualityRuleSchedulesRequest : TeaModel {
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The unbinding instruction.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RemoveCommand")]
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public RemoveQualityRuleSchedulesRequestRemoveCommand RemoveCommand { get; set; }
         public class RemoveQualityRuleSchedulesRequestRemoveCommand : TeaModel {
             /// <summary>
+            /// <para>The rule ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -37,6 +40,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? RuleId { get; set; }
 
             /// <summary>
+            /// <para>The schedule IDs.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("ScheduleIdList")]
@@ -44,6 +48,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<long?> ScheduleIdList { get; set; }
 
             /// <summary>
+            /// <para>The ID of the monitored object.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

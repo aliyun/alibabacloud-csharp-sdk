@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class AddDataServiceAppMemberRequest : TeaModel {
         /// <summary>
+        /// <para>The regular member to add to the data service application.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AddCommand")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public AddDataServiceAppMemberRequestAddCommand AddCommand { get; set; }
         public class AddDataServiceAppMemberRequestAddCommand : TeaModel {
             /// <summary>
+            /// <para>The application ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? AppId { get; set; }
 
             /// <summary>
+            /// <para>The list of members.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("MemberList")]
@@ -34,6 +37,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<AddDataServiceAppMemberRequestAddCommandMemberList> MemberList { get; set; }
             public class AddDataServiceAppMemberRequestAddCommandMemberList : TeaModel {
                 /// <summary>
+                /// <para>The authorization expiration time.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -44,6 +48,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string EffectiveEnd { get; set; }
 
                 /// <summary>
+                /// <para>The user ID.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -58,6 +63,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

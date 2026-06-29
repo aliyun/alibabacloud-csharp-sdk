@@ -10,6 +10,12 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ExecuteManualNodeRequest : TeaModel {
         /// <summary>
+        /// <para>The environment identifier. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>DEV: development environment </description></item>
+        /// <item><description>PROD (default): production environment.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>PROD</para>
         /// </summary>
@@ -18,6 +24,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Env { get; set; }
 
         /// <summary>
+        /// <para>The request for running a manual task.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ExecuteCommand")]
@@ -25,6 +32,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public ExecuteManualNodeRequestExecuteCommand ExecuteCommand { get; set; }
         public class ExecuteManualNodeRequestExecuteCommand : TeaModel {
             /// <summary>
+            /// <para>The end business date.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -35,6 +43,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string EndBizDate { get; set; }
 
             /// <summary>
+            /// <para>The workflow name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xx测试</para>
             /// </summary>
@@ -43,6 +53,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string FlowName { get; set; }
 
             /// <summary>
+            /// <para>The node ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -52,11 +63,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             [Validation(Required=false)]
             public string NodeId { get; set; }
 
+            /// <summary>
+            /// <para>The runtime parameters.</para>
+            /// </summary>
             [NameInMap("ParamList")]
             [Validation(Required=false)]
             public List<ExecuteManualNodeRequestExecuteCommandParamList> ParamList { get; set; }
             public class ExecuteManualNodeRequestExecuteCommandParamList : TeaModel {
                 /// <summary>
+                /// <para>The parameter.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>param1</para>
                 /// </summary>
@@ -65,6 +81,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Key { get; set; }
 
                 /// <summary>
+                /// <para>The parameter value.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -75,6 +93,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
+            /// <para>The project ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -85,6 +104,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? ProjectId { get; set; }
 
             /// <summary>
+            /// <para>The start business date.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -97,6 +117,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

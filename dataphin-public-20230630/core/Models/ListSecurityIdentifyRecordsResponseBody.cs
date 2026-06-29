@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListSecurityIdentifyRecordsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The backend response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The backend exception details.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
         /// </summary>
@@ -33,15 +39,23 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>The paging query result.</para>
+        /// </summary>
         [NameInMap("PageResult")]
         [Validation(Required=false)]
         public ListSecurityIdentifyRecordsResponseBodyPageResult PageResult { get; set; }
         public class ListSecurityIdentifyRecordsResponseBodyPageResult : TeaModel {
+            /// <summary>
+            /// <para>The list of identification records.</para>
+            /// </summary>
             [NameInMap("IdentifyRecordList")]
             [Validation(Required=false)]
             public List<ListSecurityIdentifyRecordsResponseBodyPageResultIdentifyRecordList> IdentifyRecordList { get; set; }
             public class ListSecurityIdentifyRecordsResponseBodyPageResultIdentifyRecordList : TeaModel {
                 /// <summary>
+                /// <para>The actual match rate.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0.1</para>
                 /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public double? ActualIdentifyRate { get; set; }
 
                 /// <summary>
+                /// <para>The business date.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2025-06-30</para>
                 /// </summary>
@@ -58,6 +74,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string BizDate { get; set; }
 
                 /// <summary>
+                /// <para>The display name of the business unit.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>test_abc</para>
                 /// </summary>
@@ -66,6 +84,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string BizUnitDisplayName { get; set; }
 
                 /// <summary>
+                /// <para>The business unit ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>11</para>
                 /// </summary>
@@ -74,6 +94,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? BizUnitId { get; set; }
 
                 /// <summary>
+                /// <para>The business unit name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
                 /// </summary>
@@ -82,6 +104,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string BizUnitName { get; set; }
 
                 /// <summary>
+                /// <para>The classification abbreviation.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
                 /// </summary>
@@ -90,6 +114,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ClassifyAbbreviation { get; set; }
 
                 /// <summary>
+                /// <para>The classification ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -98,6 +124,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? ClassifyId { get; set; }
 
                 /// <summary>
+                /// <para>The classification name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
                 /// </summary>
@@ -106,6 +134,12 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ClassifyName { get; set; }
 
                 /// <summary>
+                /// <para>The classification effective status. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>ENABLE: enabled.</description></item>
+                /// <item><description>DISABLE: disabled.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>ENABLE</para>
                 /// </summary>
@@ -114,6 +148,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ClassifyStatus { get; set; }
 
                 /// <summary>
+                /// <para>The datasource ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -122,6 +158,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? DatasourceId { get; set; }
 
                 /// <summary>
+                /// <para>The datasource name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
                 /// </summary>
@@ -130,6 +168,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string DatasourceName { get; set; }
 
                 /// <summary>
+                /// <para>The field description.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
                 /// </summary>
@@ -138,6 +178,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string FieldDescription { get; set; }
 
                 /// <summary>
+                /// <para>The field ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>t_test.col1</para>
                 /// </summary>
@@ -146,6 +188,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string FieldId { get; set; }
 
                 /// <summary>
+                /// <para>The field name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>col1</para>
                 /// </summary>
@@ -154,6 +198,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string FieldName { get; set; }
 
                 /// <summary>
+                /// <para>The identification record ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>22</para>
                 /// </summary>
@@ -161,19 +207,30 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 [Validation(Required=false)]
                 public long? Id { get; set; }
 
+                /// <summary>
+                /// <para>Indicates whether this is a better match.</para>
+                /// </summary>
                 [NameInMap("IsBetterMatch")]
                 [Validation(Required=false)]
                 public bool? IsBetterMatch { get; set; }
 
+                /// <summary>
+                /// <para>Indicates whether a custom tagging rule is used.</para>
+                /// </summary>
                 [NameInMap("IsCustomIdentify")]
                 [Validation(Required=false)]
                 public bool? IsCustomIdentify { get; set; }
 
+                /// <summary>
+                /// <para>Indicates whether the record is locked.</para>
+                /// </summary>
                 [NameInMap("IsLocked")]
                 [Validation(Required=false)]
                 public bool? IsLocked { get; set; }
 
                 /// <summary>
+                /// <para>The classification level abbreviation.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
                 /// </summary>
@@ -182,6 +239,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string LevelAbbreviation { get; set; }
 
                 /// <summary>
+                /// <para>The classification level index.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -190,6 +249,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? LevelIndex { get; set; }
 
                 /// <summary>
+                /// <para>The classification level name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
                 /// </summary>
@@ -198,6 +259,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string LevelName { get; set; }
 
                 /// <summary>
+                /// <para>The display name of the project.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>test_abc</para>
                 /// </summary>
@@ -206,6 +269,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ProjectDisplayName { get; set; }
 
                 /// <summary>
+                /// <para>The project ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1001</para>
                 /// </summary>
@@ -214,6 +279,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? ProjectId { get; set; }
 
                 /// <summary>
+                /// <para>The project name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
                 /// </summary>
@@ -222,6 +289,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ProjectName { get; set; }
 
                 /// <summary>
+                /// <para>The table description.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
                 /// </summary>
@@ -230,6 +299,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string TableDescription { get; set; }
 
                 /// <summary>
+                /// <para>The table environment.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>DEV</para>
                 /// </summary>
@@ -238,6 +309,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string TableEnv { get; set; }
 
                 /// <summary>
+                /// <para>The table ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -246,6 +319,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string TableId { get; set; }
 
                 /// <summary>
+                /// <para>The table name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>t_test</para>
                 /// </summary>
@@ -254,6 +329,18 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string TableName { get; set; }
 
                 /// <summary>
+                /// <para>The table type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>LOGIC_TABLE: logical table.</description></item>
+                /// <item><description>LOGIC_DIM_TABLE: logical dimension table.</description></item>
+                /// <item><description>LOGIC_FACT_TABLE: logical fact table.</description></item>
+                /// <item><description>LOGIC_SUM_TABLE: logical aggregate table.</description></item>
+                /// <item><description>LOGIC_ODM_SOURCE: source table.</description></item>
+                /// <item><description>LOGIC_LABEL_TABLE: logical label table.</description></item>
+                /// <item><description>PHYSICAL_TABLE: physical table.</description></item>
+                /// <item><description>REAL_TIME_LOGIC_TABLE: real-time configured logical table.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>LOGIC_TABLE</para>
                 /// </summary>
@@ -264,6 +351,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
+            /// <para>The total number of records.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>68</para>
             /// </summary>
@@ -283,6 +372,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

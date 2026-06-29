@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class CreateBizMetricResponseBody : TeaModel {
         /// <summary>
+        /// <para>The backend response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The operation result.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateBizMetricResponseBodyData Data { get; set; }
         public class CreateBizMetricResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The error message.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>success</para>
             /// </summary>
@@ -30,6 +37,12 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Message { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the creation was successful. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true: Succeeded.</description></item>
+            /// <item><description>false: Failed.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -40,6 +53,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -48,6 +63,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The error details from the backend.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
         /// </summary>
@@ -66,6 +83,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class UpdateStandardWordRootRequest : TeaModel {
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The update instruction.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UpdateCommand")]
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public UpdateStandardWordRootRequestUpdateCommand UpdateCommand { get; set; }
         public class UpdateStandardWordRootRequestUpdateCommand : TeaModel {
             /// <summary>
+            /// <para>The abbreviation of the root word.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -37,6 +40,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Abbreviation { get; set; }
 
             /// <summary>
+            /// <para>The description of the root word.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -45,6 +50,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The full name of the root word.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -55,6 +61,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string FullName { get; set; }
 
             /// <summary>
+            /// <para>The name of the root word.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -65,6 +72,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The name of the root word before the update.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

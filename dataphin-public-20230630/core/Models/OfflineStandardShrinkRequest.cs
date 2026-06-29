@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class OfflineStandardShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The offline instruction.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("OfflineCommand")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string OfflineCommandShrink { get; set; }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

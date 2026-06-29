@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class DeleteSecurityClassifyCatalogRequest : TeaModel {
         /// <summary>
+        /// <para>The delete instruction.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DeleteCommand")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public DeleteSecurityClassifyCatalogRequestDeleteCommand DeleteCommand { get; set; }
         public class DeleteSecurityClassifyCatalogRequestDeleteCommand : TeaModel {
             /// <summary>
+            /// <para>The full path of the original catalog.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -26,6 +28,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             [Validation(Required=false)]
             public string Path { get; set; }
 
+            /// <summary>
+            /// <para>Specifies whether to return deletion details. Default value: true.</para>
+            /// </summary>
             [NameInMap("ReturnRemovedDetails")]
             [Validation(Required=false)]
             public bool? ReturnRemovedDetails { get; set; }
@@ -33,6 +38,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

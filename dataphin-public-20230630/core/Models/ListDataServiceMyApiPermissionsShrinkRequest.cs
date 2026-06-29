@@ -9,11 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListDataServiceMyApiPermissionsShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>Search conditions.</para>
+        /// </summary>
         [NameInMap("ListQuery")]
         [Validation(Required=false)]
         public string ListQueryShrink { get; set; }
 
         /// <summary>
+        /// <para>Tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +28,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>Data service project ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetStreamJobsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The backend response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,11 +19,20 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<GetStreamJobsResponseBodyData> Data { get; set; }
         public class GetStreamJobsResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The environment identifier. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>DEV: development.</description></item>
+            /// <item><description>PROD: production.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>DEV</para>
             /// </summary>
@@ -30,6 +41,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Env { get; set; }
 
             /// <summary>
+            /// <para>The mapping ID of the real-time node.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>716555</para>
             /// </summary>
@@ -38,6 +51,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? Id { get; set; }
 
             /// <summary>
+            /// <para>The name of the real-time node.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>flink_order_detail</para>
             /// </summary>
@@ -46,6 +61,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string JobName { get; set; }
 
             /// <summary>
+            /// <para>The ID of the user who last modified the node.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>300006788</para>
             /// </summary>
@@ -54,6 +71,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ModifierId { get; set; }
 
             /// <summary>
+            /// <para>The ID of the creator.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>300006788</para>
             /// </summary>
@@ -62,6 +81,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string OwnerId { get; set; }
 
             /// <summary>
+            /// <para>The Dataphin project ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>7162269257990111</para>
             /// </summary>
@@ -70,6 +91,15 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ProjectId { get; set; }
 
             /// <summary>
+            /// <para>The node status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: draft.</description></item>
+            /// <item><description>1: submitting.</description></item>
+            /// <item><description>2: submitted.</description></item>
+            /// <item><description>3: published.</description></item>
+            /// <item><description>100: in development.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -78,6 +108,12 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>The node type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>FLINK_SQL</description></item>
+            /// <item><description>FLINK_DATASTREAM.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>FLINK_SQL</para>
             /// </summary>
@@ -88,6 +124,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -96,6 +134,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The details of the backend exception.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
         /// </summary>
@@ -114,6 +154,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

@@ -10,13 +10,18 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListAuthorizedDataServiceApiDetailsShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The query request.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30001011</para>
         /// </summary>
         [NameInMap("ListQuery")]
         [Validation(Required=false)]
         public string ListQueryShrink { get; set; }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

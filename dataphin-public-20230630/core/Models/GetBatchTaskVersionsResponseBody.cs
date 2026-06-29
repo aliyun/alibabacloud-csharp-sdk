@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetBatchTaskVersionsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The error code. A value of OK indicates that the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,15 +19,23 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The request result.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetBatchTaskVersionsResponseBodyData Data { get; set; }
         public class GetBatchTaskVersionsResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The list of batch task versions.</para>
+            /// </summary>
             [NameInMap("BatchTaskVersionList")]
             [Validation(Required=false)]
             public List<GetBatchTaskVersionsResponseBodyDataBatchTaskVersionList> BatchTaskVersionList { get; set; }
             public class GetBatchTaskVersionsResponseBodyDataBatchTaskVersionList : TeaModel {
                 /// <summary>
+                /// <para>The comment for the submission.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
                 /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Comment { get; set; }
 
                 /// <summary>
+                /// <para>The creation time.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2024-10-10 10:10:10</para>
                 /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string GmtCreate { get; set; }
 
                 /// <summary>
+                /// <para>The update time.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2024-10-10 10:10:10</para>
                 /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
+                /// <para>The node ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>n_10231001</para>
                 /// </summary>
@@ -58,6 +74,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string NodeId { get; set; }
 
                 /// <summary>
+                /// <para>The project ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>10232111011</para>
                 /// </summary>
@@ -65,11 +83,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 [Validation(Required=false)]
                 public long? ProjectId { get; set; }
 
+                /// <summary>
+                /// <para>Indicates whether the version has been published to the production environment.</para>
+                /// </summary>
                 [NameInMap("Published")]
                 [Validation(Required=false)]
                 public bool? Published { get; set; }
 
                 /// <summary>
+                /// <para>The ID of the user who submitted the version.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>20110110</para>
                 /// </summary>
@@ -78,6 +101,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string UserId { get; set; }
 
                 /// <summary>
+                /// <para>The ID of the user who submitted the version.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>张三</para>
                 /// </summary>
@@ -86,6 +111,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string UserName { get; set; }
 
                 /// <summary>
+                /// <para>The version number.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -98,6 +125,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code returned by the backend.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -106,6 +135,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -114,6 +145,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</para>
         /// </summary>
@@ -121,6 +154,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

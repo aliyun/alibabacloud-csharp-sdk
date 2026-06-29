@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListDataServiceAuthorizedAppsRequest : TeaModel {
+        /// <summary>
+        /// <para>The query conditions.</para>
+        /// </summary>
         [NameInMap("ListQuery")]
         [Validation(Required=false)]
         public ListDataServiceAuthorizedAppsRequestListQuery ListQuery { get; set; }
         public class ListDataServiceAuthorizedAppsRequestListQuery : TeaModel {
             /// <summary>
+            /// <para>The search keyword.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Keyword { get; set; }
 
             /// <summary>
+            /// <para>The page number. Default value: 1.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? PageNo { get; set; }
 
             /// <summary>
+            /// <para>The number of records per page. Default value: 20.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>20</para>
             /// </summary>
@@ -40,6 +49,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,6 +60,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the data service project.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

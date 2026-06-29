@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetBizMetricByNameShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>Query request.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("BizMetricByNameQuery")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string BizMetricByNameQueryShrink { get; set; }
 
         /// <summary>
+        /// <para>Tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

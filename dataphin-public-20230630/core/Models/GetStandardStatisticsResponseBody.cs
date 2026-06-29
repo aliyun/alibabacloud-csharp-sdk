@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetStandardStatisticsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The backend response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,15 +19,23 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The statistical results.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetStandardStatisticsResponseBodyData Data { get; set; }
         public class GetStandardStatisticsResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The mapping between standard types and the number of standards for each type. If the standard type is empty, the key is EMPTY.</para>
+            /// </summary>
             [NameInMap("StandardTypeCountList")]
             [Validation(Required=false)]
             public List<GetStandardStatisticsResponseBodyDataStandardTypeCountList> StandardTypeCountList { get; set; }
             public class GetStandardStatisticsResponseBodyDataStandardTypeCountList : TeaModel {
                 /// <summary>
+                /// <para>The number of standards.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>11</para>
                 /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public int? Count { get; set; }
 
                 /// <summary>
+                /// <para>The standard type.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
                 /// </summary>
@@ -44,6 +56,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
+            /// <para>The total number of standards.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>101</para>
             /// </summary>
@@ -54,6 +68,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -62,6 +78,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The details of the backend exception.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
         /// </summary>
@@ -79,6 +97,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class SyncDepartmentRequest : TeaModel {
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The request command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("SyncDepartmentCommand")]
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public SyncDepartmentRequestSyncDepartmentCommand SyncDepartmentCommand { get; set; }
         public class SyncDepartmentRequestSyncDepartmentCommand : TeaModel {
             /// <summary>
+            /// <para>The department list (full organization tree).</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("DepartmentList")]
@@ -34,6 +37,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<SyncDepartmentRequestSyncDepartmentCommandDepartmentList> DepartmentList { get; set; }
             public class SyncDepartmentRequestSyncDepartmentCommandDepartmentList : TeaModel {
                 /// <summary>
+                /// <para>The department ID (unique identifier of the department).</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -44,6 +48,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string DepartmentId { get; set; }
 
                 /// <summary>
+                /// <para>The display name of the department.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -54,6 +59,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string DepartmentName { get; set; }
 
                 /// <summary>
+                /// <para>The parent department ID (unique identifier of the parent department). Set to null if no parent department exists.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>10001</para>
                 /// </summary>

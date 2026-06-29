@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetNodeUpDownStreamShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The downstream depth. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,12 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? DownStreamDepth { get; set; }
 
         /// <summary>
+        /// <para>The environment identifier. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>DEV: development environment. </description></item>
+        /// <item><description>PROD (default): production environment.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>DEV</para>
         /// </summary>
@@ -26,6 +34,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Env { get; set; }
 
         /// <summary>
+        /// <para>The node ID.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("NodeId")]
@@ -33,6 +42,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string NodeIdShrink { get; set; }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,6 +53,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The project ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>113123</para>
         /// </summary>
@@ -51,6 +63,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
+        /// <para>The upstream depth. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

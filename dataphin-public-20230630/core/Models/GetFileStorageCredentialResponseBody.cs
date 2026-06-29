@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetFileStorageCredentialResponseBody : TeaModel {
         /// <summary>
+        /// <para>The backend response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The details of the backend exception.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
         /// </summary>
@@ -43,11 +49,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The details of the temporary read/write authorization.</para>
+        /// </summary>
         [NameInMap("StorageCredential")]
         [Validation(Required=false)]
         public GetFileStorageCredentialResponseBodyStorageCredential StorageCredential { get; set; }
         public class GetFileStorageCredentialResponseBodyStorageCredential : TeaModel {
             /// <summary>
+            /// <para>The temporary AccessKey ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>temp.akId</para>
             /// </summary>
@@ -56,6 +67,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string AccessId { get; set; }
 
             /// <summary>
+            /// <para>The temporary AccessKey ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>temp.akKey</para>
             /// </summary>
@@ -64,6 +77,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string AccessKey { get; set; }
 
             /// <summary>
+            /// <para>The file storage bucket.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>dataphin</para>
             /// </summary>
@@ -72,6 +87,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Bucket { get; set; }
 
             /// <summary>
+            /// <para>The endpoint.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>oss-cn-shanghai.aliyuncs.com</para>
             /// </summary>
@@ -80,6 +97,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Endpoint { get; set; }
 
             /// <summary>
+            /// <para>The expiration time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>17343434343434</para>
             /// </summary>
@@ -88,6 +107,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? Expiration { get; set; }
 
             /// <summary>
+            /// <para>The storage object.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1023231111/abc</para>
             /// </summary>
@@ -106,6 +127,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Region { get; set; }
 
             /// <summary>
+            /// <para>The temporary security token.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>temp.token</para>
             /// </summary>
@@ -114,6 +137,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string SecurityToken { get; set; }
 
             /// <summary>
+            /// <para>The storage cluster type. Valid values: oss and ceph.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>oss</para>
             /// </summary>
@@ -123,6 +148,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 
         }
 
+        /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

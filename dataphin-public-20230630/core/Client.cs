@@ -18,7 +18,15 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"cn-shenzhen", "dataphin-public.cn-shenzhen.aliyuncs.com"},
+                {"cn-shanghai", "dataphin-public.cn-shanghai.aliyuncs.com"},
+                {"cn-hangzhou", "dataphin-public.cn-hangzhou.aliyuncs.com"},
+                {"cn-chengdu", "dataphin-public.cn-chengdu.aliyuncs.com"},
+                {"cn-beijing", "dataphin-public.cn-beijing.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("dataphin-public", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -39,7 +47,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增数据服务应用的普通成员。</para>
+        /// <para>Adds a regular member to a data service application. Only the application owner can perform this operation.
+        /// Online version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -93,7 +102,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增数据服务应用的普通成员。</para>
+        /// <para>Adds a regular member to a data service application. Only the application owner can perform this operation.
+        /// Online version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -147,7 +157,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增数据服务应用的普通成员。</para>
+        /// <para>Adds a regular member to a data service application. Only the application owner can perform this operation.
+        /// Online version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -165,7 +176,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增数据服务应用的普通成员。</para>
+        /// <para>Adds a regular member to a data service application. Only the application owner can perform this operation.
+        /// Online version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -183,7 +195,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加数据服务项目用户并设置角色。</para>
+        /// <para>Adds users to a data service project and assigns roles to them.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -241,7 +253,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加数据服务项目用户并设置角色。</para>
+        /// <para>Adds users to a data service project and assigns roles to them.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -299,7 +311,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加数据服务项目用户并设置角色。</para>
+        /// <para>Adds users to a data service project and assigns roles to them.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -317,7 +329,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加数据服务项目用户并设置角色。</para>
+        /// <para>Adds users to a data service project and assigns roles to them.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -335,7 +347,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>增加项目成员。</para>
+        /// <para>Adds members to a project.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -393,7 +405,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>增加项目成员。</para>
+        /// <para>Adds members to a project.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -451,7 +463,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>增加项目成员。</para>
+        /// <para>Adds members to a project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -469,7 +481,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>增加项目成员。</para>
+        /// <para>Adds members to a project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -487,7 +499,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增注册血缘。</para>
+        /// <para>Registers data lineage. Available since version v5.4.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -541,7 +553,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增注册血缘。</para>
+        /// <para>Registers data lineage. Available since version v5.4.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -595,7 +607,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增注册血缘。</para>
+        /// <para>Registers data lineage. Available since version v5.4.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -613,7 +625,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增注册血缘。</para>
+        /// <para>Registers data lineage. Available since version v5.4.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -631,7 +643,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增租户成员</para>
+        /// <para>Adds users to a tenant in batches. Only super administrators (SuperAdmin) and system administrators can invoke this API operation.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -685,7 +697,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增租户成员</para>
+        /// <para>Adds users to a tenant in batches. Only super administrators (SuperAdmin) and system administrators can invoke this API operation.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -739,7 +751,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增租户成员</para>
+        /// <para>Adds users to a tenant in batches. Only super administrators (SuperAdmin) and system administrators can invoke this API operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -757,7 +769,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增租户成员</para>
+        /// <para>Adds users to a tenant in batches. Only super administrators (SuperAdmin) and system administrators can invoke this API operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -775,7 +787,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过原始用户添加租户成员.</para>
+        /// <para>Adds tenant members by using original user identities.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -829,7 +841,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过原始用户添加租户成员.</para>
+        /// <para>Adds tenant members by using original user identities.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -883,7 +895,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过原始用户添加租户成员.</para>
+        /// <para>Adds tenant members by using original user identities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -901,7 +913,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过原始用户添加租户成员.</para>
+        /// <para>Adds tenant members by using original user identities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -919,7 +931,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加用户组成员.</para>
+        /// <para>Adds members to a user group.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -973,7 +985,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加用户组成员.</para>
+        /// <para>Adds members to a user group.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1027,7 +1039,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加用户组成员.</para>
+        /// <para>Adds members to a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1045,7 +1057,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加用户组成员.</para>
+        /// <para>Adds members to a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1063,7 +1075,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>申请API权限。</para>
+        /// <para>Applies for API permissions.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1121,7 +1133,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>申请API权限。</para>
+        /// <para>Applies for API permissions.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1179,7 +1191,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>申请API权限。</para>
+        /// <para>Applies for API permissions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1197,7 +1209,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>申请API权限。</para>
+        /// <para>Applies for API permissions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1215,7 +1227,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>申请应用权限。</para>
+        /// <para>Applies for application permissions.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1273,7 +1285,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>申请应用权限。</para>
+        /// <para>Applies for application permissions.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1331,7 +1343,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>申请应用权限。</para>
+        /// <para>Applies for application permissions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1349,7 +1361,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>申请应用权限。</para>
+        /// <para>Applies for application permissions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1367,7 +1379,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>指定质量规则和调度设置进行绑定。</para>
+        /// <para>Binds specified quality rules to schedule settings.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1421,7 +1434,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>指定质量规则和调度设置进行绑定。</para>
+        /// <para>Binds specified quality rules to schedule settings.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1475,7 +1489,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>指定质量规则和调度设置进行绑定。</para>
+        /// <para>Binds specified quality rules to schedule settings.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1493,7 +1508,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>指定质量规则和调度设置进行绑定。</para>
+        /// <para>Binds specified quality rules to schedule settings.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1511,7 +1527,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>项目计算源连通性检查。</para>
+        /// <para>Checks the connectivity of a compute source.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1565,7 +1581,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>项目计算源连通性检查。</para>
+        /// <para>Checks the connectivity of a compute source.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1619,7 +1635,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>项目计算源连通性检查。</para>
+        /// <para>Checks the connectivity of a compute source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1637,7 +1653,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>项目计算源连通性检查。</para>
+        /// <para>Checks the connectivity of a compute source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1655,7 +1671,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>计算源连通性检查。</para>
+        /// <para>Checks the connectivity of an existing compute source by compute source ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1701,7 +1717,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>计算源连通性检查。</para>
+        /// <para>Checks the connectivity of an existing compute source by compute source ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1747,7 +1763,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>计算源连通性检查。</para>
+        /// <para>Checks the connectivity of an existing compute source by compute source ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1765,7 +1781,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>计算源连通性检查。</para>
+        /// <para>Checks the connectivity of an existing compute source by compute source ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1783,7 +1799,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查数据源连通性</para>
+        /// <para>Checks the connectivity of a data source.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1837,7 +1853,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查数据源连通性</para>
+        /// <para>Checks the connectivity of a data source.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1891,7 +1907,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查数据源连通性</para>
+        /// <para>Checks the connectivity of a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1909,7 +1925,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查数据源连通性</para>
+        /// <para>Checks the connectivity of a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1927,7 +1943,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查已创建的数据源是否正常连通</para>
+        /// <para>Checks the connectivity of a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1973,7 +1989,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查已创建的数据源是否正常连通</para>
+        /// <para>Checks the connectivity of a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2019,7 +2035,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查已创建的数据源是否正常连通</para>
+        /// <para>Checks the connectivity of a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2037,7 +2053,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查已创建的数据源是否正常连通</para>
+        /// <para>Checks the connectivity of a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2055,7 +2071,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查项目是否存在依赖。</para>
+        /// <para>Checks whether a project has data dependencies such as tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2101,7 +2117,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查项目是否存在依赖。</para>
+        /// <para>Checks whether a project has data dependencies such as tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2147,7 +2163,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查项目是否存在依赖。</para>
+        /// <para>Checks whether a project has data dependencies such as tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2165,7 +2181,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查项目是否存在依赖。</para>
+        /// <para>Checks whether a project has data dependencies such as tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2183,7 +2199,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>校验用户是否有指定资源权限点.</para>
+        /// <para>Checks whether a user has the permission on a specified resource.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2237,7 +2253,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>校验用户是否有指定资源权限点.</para>
+        /// <para>Checks whether a user has the permission on a specified resource.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2291,7 +2307,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>校验用户是否有指定资源权限点.</para>
+        /// <para>Checks whether a user has the permission on a specified resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2309,7 +2325,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>校验用户是否有指定资源权限点.</para>
+        /// <para>Checks whether a user has the permission on a specified resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2327,7 +2343,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建即席查询文件</para>
+        /// <para>Creates an ad hoc query file.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2381,7 +2397,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建即席查询文件</para>
+        /// <para>Creates an ad hoc query file.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2435,7 +2451,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建即席查询文件</para>
+        /// <para>Creates an ad hoc query file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2453,7 +2469,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建即席查询文件</para>
+        /// <para>Creates an ad hoc query file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2471,7 +2487,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建离线计算任务。</para>
+        /// <para>Creates a batch task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2525,7 +2541,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建离线计算任务。</para>
+        /// <para>Creates a batch task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2579,7 +2595,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建离线计算任务。</para>
+        /// <para>Creates a batch task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2597,7 +2613,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建离线计算任务。</para>
+        /// <para>Creates a batch task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2615,7 +2631,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建业务实体。</para>
+        /// <para>Creates a business entity.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2669,7 +2685,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建业务实体。</para>
+        /// <para>Creates a business entity.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2723,7 +2739,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建业务实体。</para>
+        /// <para>Creates a business entity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2741,7 +2757,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建业务实体。</para>
+        /// <para>Creates a business entity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2759,7 +2775,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建业务指标</para>
+        /// <para>Creates a business metric.
+        /// Release version: v5.5.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2813,7 +2830,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建业务指标</para>
+        /// <para>Creates a business metric.
+        /// Release version: v5.5.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2867,7 +2885,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建业务指标</para>
+        /// <para>Creates a business metric.
+        /// Release version: v5.5.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2885,7 +2904,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建业务指标</para>
+        /// <para>Creates a business metric.
+        /// Release version: v5.5.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2903,7 +2923,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据板块。</para>
+        /// <para>Creates a data domain.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2957,7 +2977,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据板块。</para>
+        /// <para>Creates a data domain.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3011,7 +3031,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据板块。</para>
+        /// <para>Creates a data domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3029,7 +3049,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据板块。</para>
+        /// <para>Creates a data domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3047,7 +3067,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建计算源。</para>
+        /// <para>Creates a compute source. Business unit administrators and project administrators have permissions to perform this operation.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3101,7 +3121,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建计算源。</para>
+        /// <para>Creates a compute source. Business unit administrators and project administrators have permissions to perform this operation.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3155,7 +3175,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建计算源。</para>
+        /// <para>Creates a compute source. Business unit administrators and project administrators have permissions to perform this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3173,7 +3193,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建计算源。</para>
+        /// <para>Creates a compute source. Business unit administrators and project administrators have permissions to perform this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3191,7 +3211,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建主题域。</para>
+        /// <para>Creates a data domain.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3245,7 +3265,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建主题域。</para>
+        /// <para>Creates a data domain.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3299,7 +3319,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建主题域。</para>
+        /// <para>Creates a data domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3317,7 +3337,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建主题域。</para>
+        /// <para>Creates a data domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3335,7 +3355,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建新的数据服务API并提交。</para>
+        /// <para>Creates a data service API and submits it.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3389,7 +3409,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建新的数据服务API并提交。</para>
+        /// <para>Creates a data service API and submits it.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3443,7 +3463,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建新的数据服务API并提交。</para>
+        /// <para>Creates a data service API and submits it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3461,7 +3481,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建新的数据服务API并提交。</para>
+        /// <para>Creates a data service API and submits it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3479,7 +3499,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据服务应用。</para>
+        /// <para>Creates a data service application. Only super administrators or system administrators can perform this operation.
+        /// Online version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3533,7 +3554,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据服务应用。</para>
+        /// <para>Creates a data service application. Only super administrators or system administrators can perform this operation.
+        /// Online version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3587,7 +3609,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据服务应用。</para>
+        /// <para>Creates a data service application. Only super administrators or system administrators can perform this operation.
+        /// Online version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3605,7 +3628,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据服务应用。</para>
+        /// <para>Creates a data service application. Only super administrators or system administrators can perform this operation.
+        /// Online version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3623,7 +3647,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据服务应用分组。</para>
+        /// <para>Creates a data service application group. Only superusers and system administrators can perform this operation.
+        /// Online version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3669,7 +3694,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据服务应用分组。</para>
+        /// <para>Creates a data service application group. Only superusers and system administrators can perform this operation.
+        /// Online version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3715,7 +3741,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据服务应用分组。</para>
+        /// <para>Creates a data service application group. Only superusers and system administrators can perform this operation.
+        /// Online version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3733,7 +3760,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据服务应用分组。</para>
+        /// <para>Creates a data service application group. Only superusers and system administrators can perform this operation.
+        /// Online version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3751,7 +3779,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建数据源</para>
+        /// <para>Create Data Source: Tenant administrators, data administrators, business unit administrators, project administrators, and operations administrators have permission to perform this operation.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3805,7 +3833,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建数据源</para>
+        /// <para>Create Data Source: Tenant administrators, data administrators, business unit administrators, project administrators, and operations administrators have permission to perform this operation.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3859,7 +3887,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建数据源</para>
+        /// <para>Create Data Source: Tenant administrators, data administrators, business unit administrators, project administrators, and operations administrators have permission to perform this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3877,7 +3905,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建数据源</para>
+        /// <para>Create Data Source: Tenant administrators, data administrators, business unit administrators, project administrators, and operations administrators have permission to perform this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3895,7 +3923,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建菜单树文件目录</para>
+        /// <para>Creates a menu tree directory. This operation supports features such as compute nodes, data integration, and synchronization tasks.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3949,7 +3977,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建菜单树文件目录</para>
+        /// <para>Creates a menu tree directory. This operation supports features such as compute nodes, data integration, and synchronization tasks.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4003,7 +4031,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建菜单树文件目录</para>
+        /// <para>Creates a menu tree directory. This operation supports features such as compute nodes, data integration, and synchronization tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4021,7 +4049,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建菜单树文件目录</para>
+        /// <para>Creates a menu tree directory. This operation supports features such as compute nodes, data integration, and synchronization tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4039,7 +4067,11 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通用补数据接口 1.会生成补数据实例运行：影响相关产产出表数据 2.会进行任务运行：造成计算的费用以及存储的费用</para>
+        /// <para>General-purpose backfill API that supports both list-mode and bulk-mode backfill:</para>
+        /// <ol>
+        /// <item><description>Backfill instances will be generated and executed, affecting the data output of related tables.</description></item>
+        /// <item><description>Task execution will incur computing costs and storage costs.</description></item>
+        /// </ol>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4097,7 +4129,11 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通用补数据接口 1.会生成补数据实例运行：影响相关产产出表数据 2.会进行任务运行：造成计算的费用以及存储的费用</para>
+        /// <para>General-purpose backfill API that supports both list-mode and bulk-mode backfill:</para>
+        /// <ol>
+        /// <item><description>Backfill instances will be generated and executed, affecting the data output of related tables.</description></item>
+        /// <item><description>Task execution will incur computing costs and storage costs.</description></item>
+        /// </ol>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4155,7 +4191,11 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通用补数据接口 1.会生成补数据实例运行：影响相关产产出表数据 2.会进行任务运行：造成计算的费用以及存储的费用</para>
+        /// <para>General-purpose backfill API that supports both list-mode and bulk-mode backfill:</para>
+        /// <ol>
+        /// <item><description>Backfill instances will be generated and executed, affecting the data output of related tables.</description></item>
+        /// <item><description>Task execution will incur computing costs and storage costs.</description></item>
+        /// </ol>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4173,7 +4213,11 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通用补数据接口 1.会生成补数据实例运行：影响相关产产出表数据 2.会进行任务运行：造成计算的费用以及存储的费用</para>
+        /// <para>General-purpose backfill API that supports both list-mode and bulk-mode backfill:</para>
+        /// <ol>
+        /// <item><description>Backfill instances will be generated and executed, affecting the data output of related tables.</description></item>
+        /// <item><description>Task execution will incur computing costs and storage costs.</description></item>
+        /// </ol>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4191,7 +4235,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建集成管道任务。</para>
+        /// <para>Create an integration pipeline/unstructured workflow task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4253,7 +4297,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建集成管道任务。</para>
+        /// <para>Create an integration pipeline/unstructured workflow task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4315,7 +4359,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建集成管道任务。</para>
+        /// <para>Create an integration pipeline/unstructured workflow task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4333,7 +4377,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建集成管道任务。</para>
+        /// <para>Create an integration pipeline/unstructured workflow task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4351,7 +4395,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>异步创建集成管道任务。</para>
+        /// <para>Asynchronously create a pipeline/unstructured workflow.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4413,7 +4457,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>异步创建集成管道任务。</para>
+        /// <para>Asynchronously create a pipeline/unstructured workflow.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4475,7 +4519,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>异步创建集成管道任务。</para>
+        /// <para>Asynchronously create a pipeline/unstructured workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4493,7 +4537,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>异步创建集成管道任务。</para>
+        /// <para>Asynchronously create a pipeline/unstructured workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4511,7 +4555,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据集成任务。</para>
+        /// <para>Creates a data integration task. Note: This operation is deprecated starting from Dataphin v5.3.1. Use CreatePipeline instead.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4565,7 +4609,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据集成任务。</para>
+        /// <para>Creates a data integration task. Note: This operation is deprecated starting from Dataphin v5.3.1. Use CreatePipeline instead.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4619,7 +4663,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据集成任务。</para>
+        /// <para>Creates a data integration task. Note: This operation is deprecated starting from Dataphin v5.3.1. Use CreatePipeline instead.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4637,7 +4681,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据集成任务。</para>
+        /// <para>Creates a data integration task. Note: This operation is deprecated starting from Dataphin v5.3.1. Use CreatePipeline instead.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4655,7 +4699,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建资源文件。</para>
+        /// <para>Creates a resource file.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4709,7 +4753,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建资源文件。</para>
+        /// <para>Creates a resource file.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4763,7 +4807,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建资源文件。</para>
+        /// <para>Creates a resource file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4781,7 +4825,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建资源文件。</para>
+        /// <para>Creates a resource file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4799,8 +4843,13 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建行级权限</para>
+        /// <para>Creates a row-level permission.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query detailed information about published APIs based on the appKey.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateRowPermissionRequest
@@ -4853,8 +4902,13 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建行级权限</para>
+        /// <para>Creates a row-level permission.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query detailed information about published APIs based on the appKey.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateRowPermissionRequest
@@ -4907,8 +4961,13 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建行级权限</para>
+        /// <para>Creates a row-level permission.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query detailed information about published APIs based on the appKey.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateRowPermissionRequest
@@ -4925,8 +4984,13 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建行级权限</para>
+        /// <para>Creates a row-level permission.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query detailed information about published APIs based on the appKey.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateRowPermissionRequest
@@ -4943,7 +5007,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建数据分类。</para>
+        /// <para>Creates a data classification. Available since v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4997,7 +5061,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建数据分类。</para>
+        /// <para>Creates a data classification. Available since v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5051,7 +5115,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建数据分类。</para>
+        /// <para>Creates a data classification. Available since v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5069,7 +5133,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建数据分类。</para>
+        /// <para>Creates a data classification. Available since v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5087,7 +5151,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建数据分类目录。</para>
+        /// <para>Creates a data classification folder. Available since v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5141,7 +5205,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建数据分类目录。</para>
+        /// <para>Creates a data classification folder. Available since v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5195,7 +5259,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建数据分类目录。</para>
+        /// <para>Creates a data classification folder. Available since v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5213,7 +5277,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建数据分类目录。</para>
+        /// <para>Creates a data classification folder. Available since v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5231,7 +5295,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建安全识别结果。</para>
+        /// <para>Creates a security identification result.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5285,7 +5350,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建安全识别结果。</para>
+        /// <para>Creates a security identification result.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5339,7 +5405,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建安全识别结果。</para>
+        /// <para>Creates a security identification result.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5357,7 +5424,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建安全识别结果。</para>
+        /// <para>Creates a security identification result.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5375,7 +5443,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建数据分级。</para>
+        /// <para>Creates a data classification level. Available since v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5429,7 +5497,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建数据分级。</para>
+        /// <para>Creates a data classification level. Available since v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5483,7 +5551,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建数据分级。</para>
+        /// <para>Creates a data classification level. Available since v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5501,7 +5569,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建数据分级。</para>
+        /// <para>Creates a data classification level. Available since v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5519,7 +5587,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建标准。</para>
+        /// <para>Creates a standard.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5573,7 +5642,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建标准。</para>
+        /// <para>Creates a standard.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5627,7 +5697,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建标准。</para>
+        /// <para>Creates a standard.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5645,7 +5716,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建标准。</para>
+        /// <para>Creates a standard.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5663,7 +5735,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据标准码表。</para>
+        /// <para>Creates a data standard lookup table.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5717,7 +5790,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据标准码表。</para>
+        /// <para>Creates a data standard lookup table.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5771,7 +5845,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据标准码表。</para>
+        /// <para>Creates a data standard lookup table.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5789,7 +5864,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据标准码表。</para>
+        /// <para>Creates a data standard lookup table.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5807,7 +5883,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建标准映射关系, 包括有效映射和无效映射。</para>
+        /// <para>Creates standard mapping relationships, including valid mappings and invalid mappings.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5861,7 +5938,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建标准映射关系, 包括有效映射和无效映射。</para>
+        /// <para>Creates standard mapping relationships, including valid mappings and invalid mappings.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5915,7 +5993,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建标准映射关系, 包括有效映射和无效映射。</para>
+        /// <para>Creates standard mapping relationships, including valid mappings and invalid mappings.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5933,7 +6012,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建标准映射关系, 包括有效映射和无效映射。</para>
+        /// <para>Creates standard mapping relationships, including valid mappings and invalid mappings.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5951,7 +6031,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建标准关联关系。</para>
+        /// <para>Creates a standard association. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6005,7 +6085,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建标准关联关系。</para>
+        /// <para>Creates a standard association. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6059,7 +6139,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建标准关联关系。</para>
+        /// <para>Creates a standard association. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6077,7 +6157,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建标准关联关系。</para>
+        /// <para>Creates a standard association. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6095,7 +6175,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建标准集。</para>
+        /// <para>Creates a standard set.
+        /// Available since: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6149,7 +6230,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建标准集。</para>
+        /// <para>Creates a standard set.
+        /// Available since: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6203,7 +6285,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建标准集。</para>
+        /// <para>Creates a standard set.
+        /// Available since: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6221,7 +6304,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建标准集。</para>
+        /// <para>Creates a standard set.
+        /// Available since: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6239,7 +6323,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据标准模板。</para>
+        /// <para>Create a data standard template.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6293,7 +6378,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据标准模板。</para>
+        /// <para>Create a data standard template.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6347,7 +6433,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据标准模板。</para>
+        /// <para>Create a data standard template.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6365,7 +6452,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据标准模板。</para>
+        /// <para>Create a data standard template.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6383,7 +6471,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据标准词根。</para>
+        /// <para>Creates a data standard root word.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6437,7 +6526,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据标准词根。</para>
+        /// <para>Creates a data standard root word.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6491,7 +6581,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据标准词根。</para>
+        /// <para>Creates a data standard root word.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6509,7 +6600,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据标准词根。</para>
+        /// <para>Creates a data standard root word.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6527,7 +6619,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建流批一体任务</para>
+        /// <para>Creates a stream-batch integrated node.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6581,7 +6673,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建流批一体任务</para>
+        /// <para>Creates a stream-batch integrated node.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6635,7 +6727,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建流批一体任务</para>
+        /// <para>Creates a stream-batch integrated node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6653,7 +6745,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建流批一体任务</para>
+        /// <para>Creates a stream-batch integrated node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6671,7 +6763,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义函数。</para>
+        /// <para>Creates a user-defined function.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6725,7 +6817,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义函数。</para>
+        /// <para>Creates a user-defined function.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6779,7 +6871,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义函数。</para>
+        /// <para>Creates a user-defined function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6797,7 +6889,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义函数。</para>
+        /// <para>Creates a user-defined function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6815,7 +6907,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建用户组.</para>
+        /// <para>Creates a user group.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6869,7 +6961,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建用户组.</para>
+        /// <para>Creates a user group.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6923,7 +7015,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建用户组.</para>
+        /// <para>Creates a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6941,7 +7033,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建用户组.</para>
+        /// <para>Creates a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6959,7 +7051,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除菜单树即席查询文件</para>
+        /// <para>Deletes an ad hoc query file from the menu tree.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7009,7 +7101,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除菜单树即席查询文件</para>
+        /// <para>Deletes an ad hoc query file from the menu tree.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7059,7 +7151,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除菜单树即席查询文件</para>
+        /// <para>Deletes an ad hoc query file from the menu tree.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7077,7 +7169,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除菜单树即席查询文件</para>
+        /// <para>Deletes an ad hoc query file from the menu tree.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7095,7 +7187,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除离线计算任务，如果任务还没下线需要先下线再删除。</para>
+        /// <para>Deletes a batch task. If the node has not been offlined, you must offline it before deleting it.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7149,7 +7241,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除离线计算任务，如果任务还没下线需要先下线再删除。</para>
+        /// <para>Deletes a batch task. If the node has not been offlined, you must offline it before deleting it.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7203,7 +7295,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除离线计算任务，如果任务还没下线需要先下线再删除。</para>
+        /// <para>Deletes a batch task. If the node has not been offlined, you must offline it before deleting it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7221,7 +7313,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除离线计算任务，如果任务还没下线需要先下线再删除。</para>
+        /// <para>Deletes a batch task. If the node has not been offlined, you must offline it before deleting it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7239,7 +7331,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除业务实体。</para>
+        /// <para>Deletes a business entity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7293,7 +7385,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除业务实体。</para>
+        /// <para>Deletes a business entity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7347,7 +7439,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除业务实体。</para>
+        /// <para>Deletes a business entity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7365,7 +7457,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除业务实体。</para>
+        /// <para>Deletes a business entity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7383,7 +7475,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除业务指标</para>
+        /// <para>Deletes a business metric.
+        /// Release version: v5.5.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7437,7 +7530,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除业务指标</para>
+        /// <para>Deletes a business metric.
+        /// Release version: v5.5.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7491,7 +7585,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除业务指标</para>
+        /// <para>Deletes a business metric.
+        /// Release version: v5.5.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7509,7 +7604,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除业务指标</para>
+        /// <para>Deletes a business metric.
+        /// Release version: v5.5.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7527,7 +7623,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据板块。</para>
+        /// <para>Deletes a data domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7573,7 +7669,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据板块。</para>
+        /// <para>Deletes a data domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7619,7 +7715,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据板块。</para>
+        /// <para>Deletes a data domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7637,7 +7733,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据板块。</para>
+        /// <para>Deletes a data domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7655,7 +7751,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除计算源。</para>
+        /// <para>Deletes a compute source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7701,7 +7797,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除计算源。</para>
+        /// <para>Deletes a compute source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7747,7 +7843,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除计算源。</para>
+        /// <para>Deletes a compute source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7765,7 +7861,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除计算源。</para>
+        /// <para>Deletes a compute source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7783,7 +7879,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除主题域。</para>
+        /// <para>Deletes a subject domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7833,7 +7929,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除主题域。</para>
+        /// <para>Deletes a subject domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7883,7 +7979,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除主题域。</para>
+        /// <para>Deletes a subject domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7901,7 +7997,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除主题域。</para>
+        /// <para>Deletes a subject domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7919,7 +8015,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据服务应用。</para>
+        /// <para>Deletes a data service application. Only superusers, system administrators, or application owners can perform this operation.
+        /// Online version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7965,7 +8062,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据服务应用。</para>
+        /// <para>Deletes a data service application. Only superusers, system administrators, or application owners can perform this operation.
+        /// Online version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8011,7 +8109,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据服务应用。</para>
+        /// <para>Deletes a data service application. Only superusers, system administrators, or application owners can perform this operation.
+        /// Online version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8029,7 +8128,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据服务应用。</para>
+        /// <para>Deletes a data service application. Only superusers, system administrators, or application owners can perform this operation.
+        /// Online version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8047,7 +8147,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据服务应用分组。</para>
+        /// <para>Deletes a data service application group. Only superusers and system administrators can perform this operation.
+        /// Online version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8093,7 +8194,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据服务应用分组。</para>
+        /// <para>Deletes a data service application group. Only superusers and system administrators can perform this operation.
+        /// Online version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8139,7 +8241,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据服务应用分组。</para>
+        /// <para>Deletes a data service application group. Only superusers and system administrators can perform this operation.
+        /// Online version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8157,7 +8260,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据服务应用分组。</para>
+        /// <para>Deletes a data service application group. Only superusers and system administrators can perform this operation.
+        /// Online version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8175,7 +8279,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据源</para>
+        /// <para>Deletes a data source.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8229,7 +8333,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据源</para>
+        /// <para>Deletes a data source.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8283,7 +8387,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据源</para>
+        /// <para>Deletes a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8301,7 +8405,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据源</para>
+        /// <para>Deletes a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8319,7 +8423,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除菜单树文件目录</para>
+        /// <para>Deletes a file directory from the menu tree.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8369,7 +8473,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除菜单树文件目录</para>
+        /// <para>Deletes a file directory from the menu tree.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8419,7 +8523,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除菜单树文件目录</para>
+        /// <para>Deletes a file directory from the menu tree.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8437,7 +8541,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除菜单树文件目录</para>
+        /// <para>Deletes a file directory from the menu tree.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8455,7 +8559,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除质量规则对象。</para>
+        /// <para>Deletes quality rule objects in batches.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8509,7 +8614,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除质量规则对象。</para>
+        /// <para>Deletes quality rule objects in batches.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8563,7 +8669,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除质量规则对象。</para>
+        /// <para>Deletes quality rule objects in batches.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8581,7 +8688,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除质量规则对象。</para>
+        /// <para>Deletes quality rule objects in batches.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8599,7 +8707,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除质量调度对象。</para>
+        /// <para>Deletes quality scheduling objects in batches.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8653,7 +8762,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除质量调度对象。</para>
+        /// <para>Deletes quality scheduling objects in batches.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8707,7 +8817,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除质量调度对象。</para>
+        /// <para>Deletes quality scheduling objects in batches.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8725,7 +8836,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除质量调度对象。</para>
+        /// <para>Deletes quality scheduling objects in batches.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8743,7 +8855,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除质量模板对象。</para>
+        /// <para>Deletes quality template objects in batches.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8797,7 +8910,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除质量模板对象。</para>
+        /// <para>Deletes quality template objects in batches.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8851,7 +8965,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除质量模板对象。</para>
+        /// <para>Deletes quality template objects in batches.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8869,7 +8984,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除质量模板对象。</para>
+        /// <para>Deletes quality template objects in batches.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8887,7 +9003,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除质量监控对象。</para>
+        /// <para>Deletes monitored objects in batches.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8941,7 +9058,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除质量监控对象。</para>
+        /// <para>Deletes monitored objects in batches.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8995,7 +9113,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除质量监控对象。</para>
+        /// <para>Deletes monitored objects in batches.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9013,7 +9132,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除质量监控对象。</para>
+        /// <para>Deletes monitored objects in batches.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9031,7 +9151,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除注册血缘。</para>
+        /// <para>Deletes registered lineage. Available since version v5.4.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9085,7 +9205,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除注册血缘。</para>
+        /// <para>Deletes registered lineage. Available since version v5.4.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9139,7 +9259,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除注册血缘。</para>
+        /// <para>Deletes registered lineage. Available since version v5.4.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9157,7 +9277,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除注册血缘。</para>
+        /// <para>Deletes registered lineage. Available since version v5.4.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9175,7 +9295,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除资源文件。</para>
+        /// <para>Delete a resource file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9229,7 +9349,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除资源文件。</para>
+        /// <para>Delete a resource file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9283,7 +9403,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除资源文件。</para>
+        /// <para>Delete a resource file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9301,7 +9421,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除资源文件。</para>
+        /// <para>Delete a resource file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9319,7 +9439,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除行级权限</para>
+        /// <para>Deletes a row-level permission.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9373,7 +9493,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除行级权限</para>
+        /// <para>Deletes a row-level permission.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9427,7 +9547,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除行级权限</para>
+        /// <para>Deletes a row-level permission.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9445,7 +9565,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除行级权限</para>
+        /// <para>Deletes a row-level permission.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9463,7 +9583,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据分类。</para>
+        /// <para>Deletes a data categorization. Available since v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9517,7 +9637,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据分类。</para>
+        /// <para>Deletes a data categorization. Available since v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9571,7 +9691,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据分类。</para>
+        /// <para>Deletes a data categorization. Available since v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9589,7 +9709,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据分类。</para>
+        /// <para>Deletes a data categorization. Available since v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9607,7 +9727,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据分类目录。</para>
+        /// <para>Deletes a data classification catalog. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9661,7 +9781,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据分类目录。</para>
+        /// <para>Deletes a data classification catalog. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9715,7 +9835,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据分类目录。</para>
+        /// <para>Deletes a data classification catalog. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9733,7 +9853,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据分类目录。</para>
+        /// <para>Deletes a data classification catalog. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9751,7 +9871,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除安全识别结果。</para>
+        /// <para>Deletes security identification results in batches. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9805,7 +9925,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除安全识别结果。</para>
+        /// <para>Deletes security identification results in batches. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9859,7 +9979,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除安全识别结果。</para>
+        /// <para>Deletes security identification results in batches. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9877,7 +9997,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除安全识别结果。</para>
+        /// <para>Deletes security identification results in batches. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9895,7 +10015,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据分级。</para>
+        /// <para>Deletes a data classification level. Available since v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9949,7 +10069,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据分级。</para>
+        /// <para>Deletes a data classification level. Available since v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -10003,7 +10123,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据分级。</para>
+        /// <para>Deletes a data classification level. Available since v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10021,7 +10141,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据分级。</para>
+        /// <para>Deletes a data classification level. Available since v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10039,7 +10159,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除标准。</para>
+        /// <para>Deletes a standard.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -10093,7 +10214,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除标准。</para>
+        /// <para>Deletes a standard.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -10147,7 +10269,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除标准。</para>
+        /// <para>Deletes a standard.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10165,7 +10288,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除标准。</para>
+        /// <para>Deletes a standard.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10183,7 +10307,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除无效映射关系。</para>
+        /// <para>Deletes invalid mapping relationships.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -10237,7 +10362,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除无效映射关系。</para>
+        /// <para>Deletes invalid mapping relationships.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -10291,7 +10417,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除无效映射关系。</para>
+        /// <para>Deletes invalid mapping relationships.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10309,7 +10436,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除无效映射关系。</para>
+        /// <para>Deletes invalid mapping relationships.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10327,7 +10455,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据标准码表。</para>
+        /// <para>Deletes a data standard lookup table. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10373,7 +10501,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据标准码表。</para>
+        /// <para>Deletes a data standard lookup table. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10419,7 +10547,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据标准码表。</para>
+        /// <para>Deletes a data standard lookup table. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10437,7 +10565,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据标准码表。</para>
+        /// <para>Deletes a data standard lookup table. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10455,7 +10583,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除标准关联关系。</para>
+        /// <para>Deletes standard associations in batches.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -10509,7 +10638,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除标准关联关系。</para>
+        /// <para>Deletes standard associations in batches.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -10563,7 +10693,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除标准关联关系。</para>
+        /// <para>Deletes standard associations in batches.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10581,7 +10712,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除标准关联关系。</para>
+        /// <para>Deletes standard associations in batches.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10599,7 +10731,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除标准集。</para>
+        /// <para>Deletes a standard set.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10645,7 +10778,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除标准集。</para>
+        /// <para>Deletes a standard set.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10691,7 +10825,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除标准集。</para>
+        /// <para>Deletes a standard set.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10709,7 +10844,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除标准集。</para>
+        /// <para>Deletes a standard set.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10727,7 +10863,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除有效映射关系。</para>
+        /// <para>Deletes valid mapping relationships.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -10781,7 +10918,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除有效映射关系。</para>
+        /// <para>Deletes valid mapping relationships.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -10835,7 +10973,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除有效映射关系。</para>
+        /// <para>Deletes valid mapping relationships.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10853,7 +10992,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除有效映射关系。</para>
+        /// <para>Deletes valid mapping relationships.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10871,7 +11011,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据标准词根。</para>
+        /// <para>Deletes a data standard root word.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10917,7 +11058,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据标准词根。</para>
+        /// <para>Deletes a data standard root word.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10963,7 +11105,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据标准词根。</para>
+        /// <para>Deletes a data standard root word.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10981,7 +11124,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据标准词根。</para>
+        /// <para>Deletes a data standard root word.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10999,7 +11143,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义函数。</para>
+        /// <para>Deletes a user-defined function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11053,7 +11197,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义函数。</para>
+        /// <para>Deletes a user-defined function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11107,7 +11251,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义函数。</para>
+        /// <para>Deletes a user-defined function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11125,7 +11269,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义函数。</para>
+        /// <para>Deletes a user-defined function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11143,7 +11287,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除用户组.</para>
+        /// <para>Deletes a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11189,7 +11333,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除用户组.</para>
+        /// <para>Deletes a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11235,7 +11379,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除用户组.</para>
+        /// <para>Deletes a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11253,7 +11397,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除用户组.</para>
+        /// <para>Deletes a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11271,7 +11415,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>执行即席查询任务。</para>
+        /// <para>Executes an ad hoc query task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11325,7 +11469,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>执行即席查询任务。</para>
+        /// <para>Executes an ad hoc query task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11379,7 +11523,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>执行即席查询任务。</para>
+        /// <para>Executes an ad hoc query task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11397,7 +11541,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>执行即席查询任务。</para>
+        /// <para>Executes an ad hoc query task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11415,7 +11559,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>运行手动调度节点。</para>
+        /// <para>Runs a manually scheduled node.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11473,7 +11617,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>运行手动调度节点。</para>
+        /// <para>Runs a manually scheduled node.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11531,7 +11675,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>运行手动调度节点。</para>
+        /// <para>Runs a manually scheduled node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11549,7 +11693,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>运行手动调度节点。</para>
+        /// <para>Runs a manually scheduled node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11567,7 +11711,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>运行触发式节点。</para>
+        /// <para>Runs a trigger-based node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11629,7 +11773,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>运行触发式节点。</para>
+        /// <para>Runs a trigger-based node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11691,7 +11835,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>运行触发式节点。</para>
+        /// <para>Runs a trigger-based node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11709,7 +11853,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>运行触发式节点。</para>
+        /// <para>Runs a trigger-based node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11727,7 +11871,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重跑下游(修复链路数据), 支持强制重跑下游。影响范围: 1. 会产生计算成本；2. 会影响数据产出</para>
+        /// <para>Reruns downstream nodes to fix data link issues. Supports forced rerun of downstream nodes. Impact: incurs compute costs and affects data output.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11785,7 +11929,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重跑下游(修复链路数据), 支持强制重跑下游。影响范围: 1. 会产生计算成本；2. 会影响数据产出</para>
+        /// <para>Reruns downstream nodes to fix data link issues. Supports forced rerun of downstream nodes. Impact: incurs compute costs and affects data output.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11843,7 +11987,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重跑下游(修复链路数据), 支持强制重跑下游。影响范围: 1. 会产生计算成本；2. 会影响数据产出</para>
+        /// <para>Reruns downstream nodes to fix data link issues. Supports forced rerun of downstream nodes. Impact: incurs compute costs and affects data output.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11861,7 +12005,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重跑下游(修复链路数据), 支持强制重跑下游。影响范围: 1. 会产生计算成本；2. 会影响数据产出</para>
+        /// <para>Reruns downstream nodes to fix data link issues. Supports forced rerun of downstream nodes. Impact: incurs compute costs and affects data output.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11879,7 +12023,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据行级权限ID获取某一行级权限下的所有授权账号</para>
+        /// <para>Retrieves all authorized accounts under a specific row-level permission by row-level permission ID.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11933,7 +12077,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据行级权限ID获取某一行级权限下的所有授权账号</para>
+        /// <para>Retrieves all authorized accounts under a specific row-level permission by row-level permission ID.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11987,7 +12131,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据行级权限ID获取某一行级权限下的所有授权账号</para>
+        /// <para>Retrieves all authorized accounts under a specific row-level permission by row-level permission ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12005,7 +12149,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据行级权限ID获取某一行级权限下的所有授权账号</para>
+        /// <para>Retrieves all authorized accounts under a specific row-level permission by row-level permission ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12023,7 +12167,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询即席查询文件。</para>
+        /// <para>Queries a custom query file in the directory tree.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12073,7 +12217,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询即席查询文件。</para>
+        /// <para>Queries a custom query file in the directory tree.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12123,7 +12267,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询即席查询文件。</para>
+        /// <para>Queries a custom query file in the directory tree.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12141,7 +12285,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询即席查询文件。</para>
+        /// <para>Queries a custom query file in the directory tree.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12159,7 +12303,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取即席查询任务运行日志。</para>
+        /// <para>Retrieves the runtime logs of an ad hoc query task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12217,7 +12361,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取即席查询任务运行日志。</para>
+        /// <para>Retrieves the runtime logs of an ad hoc query task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12275,7 +12419,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取即席查询任务运行日志。</para>
+        /// <para>Retrieves the runtime logs of an ad hoc query task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12293,7 +12437,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取即席查询任务运行日志。</para>
+        /// <para>Retrieves the runtime logs of an ad hoc query task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12311,7 +12455,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取即席查询的任务运行结果。</para>
+        /// <para>Retrieves the task execution result of an ad hoc query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12365,7 +12509,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取即席查询的任务运行结果。</para>
+        /// <para>Retrieves the task execution result of an ad hoc query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12419,7 +12563,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取即席查询的任务运行结果。</para>
+        /// <para>Retrieves the task execution result of an ad hoc query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12437,7 +12581,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取即席查询的任务运行结果。</para>
+        /// <para>Retrieves the task execution result of an ad hoc query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12455,7 +12599,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取告警事件详情</para>
+        /// <para>Retrieves the details of an alert event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12501,7 +12645,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取告警事件详情</para>
+        /// <para>Retrieves the details of an alert event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12547,7 +12691,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取告警事件详情</para>
+        /// <para>Retrieves the details of an alert event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12565,7 +12709,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取告警事件详情</para>
+        /// <para>Retrieves the details of an alert event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12583,7 +12727,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据资产对象GUID查询映射关系。</para>
+        /// <para>Queries mapping relationships by asset object GUID.
+        /// Available since: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12637,7 +12782,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据资产对象GUID查询映射关系。</para>
+        /// <para>Queries mapping relationships by asset object GUID.
+        /// Available since: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12691,7 +12837,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据资产对象GUID查询映射关系。</para>
+        /// <para>Queries mapping relationships by asset object GUID.
+        /// Available since: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12709,7 +12856,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据资产对象GUID查询映射关系。</para>
+        /// <para>Queries mapping relationships by asset object GUID.
+        /// Available since: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12727,7 +12875,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取离线计算任务详情。</para>
+        /// <para>Retrieves the details of an offline compute node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12785,7 +12933,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取离线计算任务详情。</para>
+        /// <para>Retrieves the details of an offline compute node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12843,7 +12991,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取离线计算任务详情。</para>
+        /// <para>Retrieves the details of an offline compute node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12861,7 +13009,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取离线计算任务详情。</para>
+        /// <para>Retrieves the details of an offline compute node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12879,7 +13027,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取离线计算任务指定版本任务详情。</para>
+        /// <para>Retrieves the details of a specified version of a batch task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12933,7 +13081,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取离线计算任务指定版本任务详情。</para>
+        /// <para>Retrieves the details of a specified version of a batch task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12987,7 +13135,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取离线计算任务指定版本任务详情。</para>
+        /// <para>Retrieves the details of a specified version of a batch task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13005,7 +13153,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取离线计算任务指定版本任务详情。</para>
+        /// <para>Retrieves the details of a specified version of a batch task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13023,7 +13171,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取离线任务自定义血缘。</para>
+        /// <para>Obtains the custom lineage of an offline task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13073,7 +13221,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取离线任务自定义血缘。</para>
+        /// <para>Obtains the custom lineage of an offline task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13123,7 +13271,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取离线任务自定义血缘。</para>
+        /// <para>Obtains the custom lineage of an offline task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13141,7 +13289,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取离线任务自定义血缘。</para>
+        /// <para>Obtains the custom lineage of an offline task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13159,7 +13307,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取离线计算任务版本列表。</para>
+        /// <para>Retrieves the version list of a batch task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13209,7 +13357,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取离线计算任务版本列表。</para>
+        /// <para>Retrieves the version list of a batch task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13259,7 +13407,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取离线计算任务版本列表。</para>
+        /// <para>Retrieves the version list of a batch task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13277,7 +13425,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取离线计算任务版本列表。</para>
+        /// <para>Retrieves the version list of a batch task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13295,7 +13443,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据归属资产GUID查询映射关系。</para>
+        /// <para>Query mapping relationships by belonging asset GUID.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13349,7 +13498,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据归属资产GUID查询映射关系。</para>
+        /// <para>Query mapping relationships by belonging asset GUID.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13403,7 +13553,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据归属资产GUID查询映射关系。</para>
+        /// <para>Query mapping relationships by belonging asset GUID.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13421,7 +13572,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据归属资产GUID查询映射关系。</para>
+        /// <para>Query mapping relationships by belonging asset GUID.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13439,7 +13591,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取业务实体详情。</para>
+        /// <para>Retrieves the details of a business entity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13489,7 +13641,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取业务实体详情。</para>
+        /// <para>Retrieves the details of a business entity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13539,7 +13691,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取业务实体详情。</para>
+        /// <para>Retrieves the details of a business entity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13557,7 +13709,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取业务实体详情。</para>
+        /// <para>Retrieves the details of a business entity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13575,7 +13727,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定版本的业务实体的详情。</para>
+        /// <para>Queries the details of a business entity of a specified version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13629,7 +13781,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定版本的业务实体的详情。</para>
+        /// <para>Queries the details of a business entity of a specified version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13683,7 +13835,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定版本的业务实体的详情。</para>
+        /// <para>Queries the details of a business entity of a specified version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13701,7 +13853,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定版本的业务实体的详情。</para>
+        /// <para>Queries the details of a business entity of a specified version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13719,7 +13871,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询业务指标详情</para>
+        /// <para>Query business metric details by name.
+        /// Release version: v5.5.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13773,7 +13926,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询业务指标详情</para>
+        /// <para>Query business metric details by name.
+        /// Release version: v5.5.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13827,7 +13981,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询业务指标详情</para>
+        /// <para>Query business metric details by name.
+        /// Release version: v5.5.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13845,7 +14000,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询业务指标详情</para>
+        /// <para>Query business metric details by name.
+        /// Release version: v5.5.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13863,7 +14019,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据板块详情。</para>
+        /// <para>Retrieves the details of a data domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13909,7 +14065,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据板块详情。</para>
+        /// <para>Retrieves the details of a data domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13955,7 +14111,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据板块详情。</para>
+        /// <para>Retrieves the details of a data domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13973,7 +14129,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据板块详情。</para>
+        /// <para>Retrieves the details of a data domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13991,7 +14147,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据目录资产详情。</para>
+        /// <para>Queries asset details. Release version: v6.1.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -14045,7 +14201,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据目录资产详情。</para>
+        /// <para>Queries asset details. Release version: v6.1.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -14099,7 +14255,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据目录资产详情。</para>
+        /// <para>Queries asset details. Release version: v6.1.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14117,7 +14273,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据目录资产详情。</para>
+        /// <para>Queries asset details. Release version: v6.1.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14135,8 +14291,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据源连通性检查任务。</para>
+        /// <para>Queries the list of connectivity check tasks for a specified data source ID. This operation includes null value validation and tenant permission verification to prevent cross-tenant access.
+        /// Release version: v5.5.0.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of connectivity tasks that have been tested for a specified data source ID.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetCheckConnectivityJobsRequest
@@ -14181,8 +14343,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据源连通性检查任务。</para>
+        /// <para>Queries the list of connectivity check tasks for a specified data source ID. This operation includes null value validation and tenant permission verification to prevent cross-tenant access.
+        /// Release version: v5.5.0.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of connectivity tasks that have been tested for a specified data source ID.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetCheckConnectivityJobsRequest
@@ -14227,8 +14395,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据源连通性检查任务。</para>
+        /// <para>Queries the list of connectivity check tasks for a specified data source ID. This operation includes null value validation and tenant permission verification to prevent cross-tenant access.
+        /// Release version: v5.5.0.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of connectivity tasks that have been tested for a specified data source ID.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetCheckConnectivityJobsRequest
@@ -14245,8 +14419,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据源连通性检查任务。</para>
+        /// <para>Queries the list of connectivity check tasks for a specified data source ID. This operation includes null value validation and tenant permission verification to prevent cross-tenant access.
+        /// Release version: v5.5.0.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of connectivity tasks that have been tested for a specified data source ID.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetCheckConnectivityJobsRequest
@@ -14263,7 +14443,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据环境获取集群信息</para>
+        /// <para>Retrieves cluster information based on the environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14317,7 +14497,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据环境获取集群信息</para>
+        /// <para>Retrieves cluster information based on the environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14371,7 +14551,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据环境获取集群信息</para>
+        /// <para>Retrieves cluster information based on the environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14389,7 +14569,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据环境获取集群信息</para>
+        /// <para>Retrieves cluster information based on the environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14407,7 +14587,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取计算源详情。</para>
+        /// <para>Retrieves the details of a compute source by compute source ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14453,7 +14633,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取计算源详情。</para>
+        /// <para>Retrieves the details of a compute source by compute source ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14499,7 +14679,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取计算源详情。</para>
+        /// <para>Retrieves the details of a compute source by compute source ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14517,7 +14697,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取计算源详情。</para>
+        /// <para>Retrieves the details of a compute source by compute source ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14535,7 +14715,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取主题域详情。</para>
+        /// <para>Retrieves the details of a data domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14581,7 +14761,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取主题域详情。</para>
+        /// <para>Retrieves the details of a data domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14627,7 +14807,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取主题域详情。</para>
+        /// <para>Retrieves the details of a data domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14645,7 +14825,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取主题域详情。</para>
+        /// <para>Retrieves the details of a data domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14663,7 +14843,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>运维监控Api调用汇总统计。</para>
+        /// <para>Service Monitoring: Retrieves the aggregate statistics of API calls.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14717,7 +14897,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>运维监控Api调用汇总统计。</para>
+        /// <para>Service Monitoring: Retrieves the aggregate statistics of API calls.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14771,7 +14951,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>运维监控Api调用汇总统计。</para>
+        /// <para>Service Monitoring: Retrieves the aggregate statistics of API calls.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14789,7 +14969,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>运维监控Api调用汇总统计。</para>
+        /// <para>Service Monitoring: Retrieves the aggregate statistics of API calls.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14807,7 +14987,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>运维监控Api访问趋势分析。</para>
+        /// <para>Service Monitoring: Analyzes API access trends.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14861,7 +15041,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>运维监控Api访问趋势分析。</para>
+        /// <para>Service Monitoring: Analyzes API access trends.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14915,7 +15095,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>运维监控Api访问趋势分析。</para>
+        /// <para>Service Monitoring: Analyzes API access trends.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14933,7 +15113,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>运维监控Api访问趋势分析。</para>
+        /// <para>Service Monitoring: Analyzes API access trends.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14951,7 +15131,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取API文档。</para>
+        /// <para>Retrieves API documentation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15001,7 +15181,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取API文档。</para>
+        /// <para>Retrieves API documentation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15051,7 +15231,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取API文档。</para>
+        /// <para>Retrieves API documentation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15069,7 +15249,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取API文档。</para>
+        /// <para>Retrieves API documentation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15087,7 +15267,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取API异常影响汇总。</para>
+        /// <para>Retrieves the summary of API exception impacts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15141,7 +15321,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取API异常影响汇总。</para>
+        /// <para>Retrieves the summary of API exception impacts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15195,7 +15375,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取API异常影响汇总。</para>
+        /// <para>Retrieves the summary of API exception impacts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15213,7 +15393,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取API异常影响汇总。</para>
+        /// <para>Retrieves the summary of API exception impacts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15231,7 +15411,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据服务API分组列表。</para>
+        /// <para>Queries the list of API groups in Data Service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15277,7 +15457,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据服务API分组列表。</para>
+        /// <para>Queries the list of API groups in Data Service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15323,7 +15503,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据服务API分组列表。</para>
+        /// <para>Queries the list of API groups in Data Service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15341,7 +15521,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据服务API分组列表。</para>
+        /// <para>Queries the list of API groups in Data Service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15359,7 +15539,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据服务应用详情。</para>
+        /// <para>Queries the details of a data service application, including the project, application name, authentication information, and IP whitelist. Only application members can view the details.
+        /// Release version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15405,7 +15586,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据服务应用详情。</para>
+        /// <para>Queries the details of a data service application, including the project, application name, authentication information, and IP whitelist. Only application members can view the details.
+        /// Release version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15451,7 +15633,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据服务应用详情。</para>
+        /// <para>Queries the details of a data service application, including the project, application name, authentication information, and IP whitelist. Only application members can view the details.
+        /// Release version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15469,7 +15652,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据服务应用详情。</para>
+        /// <para>Queries the details of a data service application, including the project, application name, authentication information, and IP whitelist. Only application members can view the details.
+        /// Release version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15487,7 +15671,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取应用有权限的用户列表。</para>
+        /// <para>Retrieves the list of users who have permissions on an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15537,7 +15721,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取应用有权限的用户列表。</para>
+        /// <para>Retrieves the list of users who have permissions on an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15587,7 +15771,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取应用有权限的用户列表。</para>
+        /// <para>Retrieves the list of users who have permissions on an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15605,7 +15789,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取应用有权限的用户列表。</para>
+        /// <para>Retrieves the list of users who have permissions on an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15623,7 +15807,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据服务项目的应用分组列表。</para>
+        /// <para>Queries the list of application groups for a data service project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15669,7 +15853,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据服务项目的应用分组列表。</para>
+        /// <para>Queries the list of application groups for a data service project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15715,7 +15899,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据服务项目的应用分组列表。</para>
+        /// <para>Queries the list of application groups for a data service project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15733,7 +15917,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据服务项目的应用分组列表。</para>
+        /// <para>Queries the list of application groups for a data service project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15751,7 +15935,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据服务应用的成员列表。</para>
+        /// <para>Queries the member list of a data service application, including regular members and owners. Only application owners can call this operation.
+        /// Online version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15797,7 +15982,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据服务应用的成员列表。</para>
+        /// <para>Queries the member list of a data service application, including regular members and owners. Only application owners can call this operation.
+        /// Online version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15843,7 +16029,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据服务应用的成员列表。</para>
+        /// <para>Queries the member list of a data service application, including regular members and owners. Only application owners can call this operation.
+        /// Online version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15861,7 +16048,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据服务应用的成员列表。</para>
+        /// <para>Queries the member list of a data service application, including regular members and owners. Only application owners can call this operation.
+        /// Online version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15879,7 +16067,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询分组下应用列表。</para>
+        /// <para>Queries the list of applications in a group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15929,7 +16117,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询分组下应用列表。</para>
+        /// <para>Queries the list of applications in a group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15979,7 +16167,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询分组下应用列表。</para>
+        /// <para>Queries the list of applications in a group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15997,7 +16185,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询分组下应用列表。</para>
+        /// <para>Queries the list of applications in a group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16015,7 +16203,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据App分组Id查询账号有权限的应用列表。</para>
+        /// <para>Queries the list of applications that the account has permissions to access based on the app group ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16065,7 +16253,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据App分组Id查询账号有权限的应用列表。</para>
+        /// <para>Queries the list of applications that the account has permissions to access based on the app group ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16115,7 +16303,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据App分组Id查询账号有权限的应用列表。</para>
+        /// <para>Queries the list of applications that the account has permissions to access based on the app group ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16133,7 +16321,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据App分组Id查询账号有权限的应用列表。</para>
+        /// <para>Queries the list of applications that the account has permissions to access based on the app group ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16151,7 +16339,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询有权限的项目列表。</para>
+        /// <para>Queries the list of projects that the current user has permissions to access.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16193,7 +16381,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询有权限的项目列表。</para>
+        /// <para>Queries the list of projects that the current user has permissions to access.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16235,7 +16423,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询有权限的项目列表。</para>
+        /// <para>Queries the list of projects that the current user has permissions to access.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16253,7 +16441,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询有权限的项目列表。</para>
+        /// <para>Queries the list of projects that the current user has permissions to access.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16271,7 +16459,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>当前登录当前用户作为负责人的项目列表。</para>
+        /// <para>Retrieves the list of projects for which the current user is the owner.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16313,7 +16501,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>当前登录当前用户作为负责人的项目列表。</para>
+        /// <para>Retrieves the list of projects for which the current user is the owner.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16355,7 +16543,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>当前登录当前用户作为负责人的项目列表。</para>
+        /// <para>Retrieves the list of projects for which the current user is the owner.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16373,7 +16561,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>当前登录当前用户作为负责人的项目列表。</para>
+        /// <para>Retrieves the list of projects for which the current user is the owner.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16391,7 +16579,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取可添加到项目成员的用户列表。</para>
+        /// <para>Retrieves the list of users who can be added as project members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16437,7 +16625,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取可添加到项目成员的用户列表。</para>
+        /// <para>Retrieves the list of users who can be added as project members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16483,7 +16671,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取可添加到项目成员的用户列表。</para>
+        /// <para>Retrieves the list of users who can be added as project members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16501,7 +16689,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取可添加到项目成员的用户列表。</para>
+        /// <para>Retrieves the list of users who can be added as project members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16519,7 +16707,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据源变更影响的集成任务及数据库SQL任务。</para>
+        /// <para>Queries the integration tasks and database SQL tasks affected by data source changes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16565,7 +16753,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据源变更影响的集成任务及数据库SQL任务。</para>
+        /// <para>Queries the integration tasks and database SQL tasks affected by data source changes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16611,7 +16799,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据源变更影响的集成任务及数据库SQL任务。</para>
+        /// <para>Queries the integration tasks and database SQL tasks affected by data source changes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16629,7 +16817,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据源变更影响的集成任务及数据库SQL任务。</para>
+        /// <para>Queries the integration tasks and database SQL tasks affected by data source changes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16647,7 +16835,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询开发态对象上游依赖。</para>
+        /// <para>Query upstream dependencies of development objects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16705,7 +16893,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询开发态对象上游依赖。</para>
+        /// <para>Query upstream dependencies of development objects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16763,7 +16951,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询开发态对象上游依赖。</para>
+        /// <para>Query upstream dependencies of development objects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16781,7 +16969,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询开发态对象上游依赖。</para>
+        /// <para>Query upstream dependencies of development objects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16799,7 +16987,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取文件夹目录树</para>
+        /// <para>Retrieves the folder directory tree.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16849,7 +17037,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取文件夹目录树</para>
+        /// <para>Retrieves the folder directory tree.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16899,7 +17087,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取文件夹目录树</para>
+        /// <para>Retrieves the folder directory tree.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16917,7 +17105,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取文件夹目录树</para>
+        /// <para>Retrieves the folder directory tree.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16935,7 +17123,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取文件存储临时读写授权。</para>
+        /// <para>Obtains temporary read/write authorization for file storage.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16989,7 +17177,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取文件存储临时读写授权。</para>
+        /// <para>Obtains temporary read/write authorization for file storage.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17043,7 +17231,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取文件存储临时读写授权。</para>
+        /// <para>Obtains temporary read/write authorization for file storage.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17061,7 +17249,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取文件存储临时读写授权。</para>
+        /// <para>Obtains temporary read/write authorization for file storage.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17079,7 +17267,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据起始的实例查询该实例的下游</para>
+        /// <para>Queries the downstream instances of a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -17145,7 +17333,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据起始的实例查询该实例的下游</para>
+        /// <para>Queries the downstream instances of a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -17211,7 +17399,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据起始的实例查询该实例的下游</para>
+        /// <para>Queries the downstream instances of a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17229,7 +17417,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据起始的实例查询该实例的下游</para>
+        /// <para>Queries the downstream instances of a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17247,7 +17435,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例的上下游，支持逻辑表和代码任务。</para>
+        /// <para>Queries the dag of an instance. Logical tables and code nodes are supported.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -17317,7 +17505,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例的上下游，支持逻辑表和代码任务。</para>
+        /// <para>Queries the dag of an instance. Logical tables and code nodes are supported.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -17387,7 +17575,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例的上下游，支持逻辑表和代码任务。</para>
+        /// <para>Queries the dag of an instance. Logical tables and code nodes are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17405,7 +17593,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例的上下游，支持逻辑表和代码任务。</para>
+        /// <para>Queries the dag of an instance. Logical tables and code nodes are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17423,7 +17611,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取最新的待发布记录详情</para>
+        /// <para>Retrieves the details of the latest pending submit record.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -17477,7 +17665,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取最新的待发布记录详情</para>
+        /// <para>Retrieves the details of the latest pending submit record.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -17531,7 +17719,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取最新的待发布记录详情</para>
+        /// <para>Retrieves the details of the latest pending submit record.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17549,7 +17737,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取最新的待发布记录详情</para>
+        /// <para>Retrieves the details of the latest pending submit record.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17567,7 +17755,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户角色列表</para>
+        /// <para>Retrieves the list of roles for the current user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17609,7 +17797,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户角色列表</para>
+        /// <para>Retrieves the list of roles for the current user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17651,7 +17839,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户角色列表</para>
+        /// <para>Retrieves the list of roles for the current user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17669,7 +17857,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户角色列表</para>
+        /// <para>Retrieves the list of roles for the current user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17687,7 +17875,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取当前用户归属租户.</para>
+        /// <para>Retrieves the tenants to which the current user belongs.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -17741,7 +17929,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取当前用户归属租户.</para>
+        /// <para>Retrieves the tenants to which the current user belongs.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -17795,7 +17983,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取当前用户归属租户.</para>
+        /// <para>Retrieves the tenants to which the current user belongs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17813,7 +18001,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取当前用户归属租户.</para>
+        /// <para>Retrieves the tenants to which the current user belongs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17831,7 +18019,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通用查询节点上下游接口</para>
+        /// <para>Queries the dag of a node. This is a general-purpose operation.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -17901,7 +18089,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通用查询节点上下游接口</para>
+        /// <para>Queries the dag of a node. This is a general-purpose operation.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -17971,7 +18159,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通用查询节点上下游接口</para>
+        /// <para>Queries the dag of a node. This is a general-purpose operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17989,7 +18177,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通用查询节点上下游接口</para>
+        /// <para>Queries the dag of a node. This is a general-purpose operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18007,7 +18195,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询补数据提交的状态</para>
+        /// <para>Queries the submit status of a data backfill request.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18057,7 +18245,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询补数据提交的状态</para>
+        /// <para>Queries the submit status of a data backfill request.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18107,7 +18295,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询补数据提交的状态</para>
+        /// <para>Queries the submit status of a data backfill request.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18125,7 +18313,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询补数据提交的状态</para>
+        /// <para>Queries the submit status of a data backfill request.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18143,7 +18331,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询脚本的实例信息, 包括实例状态、运行时间等信息.</para>
+        /// <para>Gets instance information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18197,7 +18385,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询脚本的实例信息, 包括实例状态、运行时间等信息.</para>
+        /// <para>Gets instance information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18251,7 +18439,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询脚本的实例信息, 包括实例状态、运行时间等信息.</para>
+        /// <para>Gets instance information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18269,7 +18457,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询脚本的实例信息, 包括实例状态、运行时间等信息.</para>
+        /// <para>Gets instance information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18287,7 +18475,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例执行的日志，如果实例重跑了多次，则会有多条日志</para>
+        /// <para>Retrieves the execution logs of an instance. If the instance has been rerun multiple times, multiple log entries are returned.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18341,7 +18529,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例执行的日志，如果实例重跑了多次，则会有多条日志</para>
+        /// <para>Retrieves the execution logs of an instance. If the instance has been rerun multiple times, multiple log entries are returned.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18395,7 +18583,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例执行的日志，如果实例重跑了多次，则会有多条日志</para>
+        /// <para>Retrieves the execution logs of an instance. If the instance has been rerun multiple times, multiple log entries are returned.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18413,7 +18601,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例执行的日志，如果实例重跑了多次，则会有多条日志</para>
+        /// <para>Retrieves the execution logs of an instance. If the instance has been rerun multiple times, multiple log entries are returned.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18431,7 +18619,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询物理调度节点。</para>
+        /// <para>Queries a physical schedule resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18481,7 +18669,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询物理调度节点。</para>
+        /// <para>Queries a physical schedule resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18531,7 +18719,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询物理调度节点。</para>
+        /// <para>Queries a physical schedule resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18549,7 +18737,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询物理调度节点。</para>
+        /// <para>Queries a physical schedule resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18567,7 +18755,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据输出名查询对应的物理节点。</para>
+        /// <para>Queries a physical node by output name. Only offline code nodes and integration task nodes are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18617,7 +18805,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据输出名查询对应的物理节点。</para>
+        /// <para>Queries a physical node by output name. Only offline code nodes and integration task nodes are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18667,7 +18855,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据输出名查询对应的物理节点。</para>
+        /// <para>Queries a physical node by output name. Only offline code nodes and integration task nodes are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18685,7 +18873,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据输出名查询对应的物理节点。</para>
+        /// <para>Queries a physical node by output name. Only offline code nodes and integration task nodes are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18703,7 +18891,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询调度节点代码内容。</para>
+        /// <para>Queries the code content of a schedule resource node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18753,7 +18941,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询调度节点代码内容。</para>
+        /// <para>Queries the code content of a schedule resource node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18803,7 +18991,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询调度节点代码内容。</para>
+        /// <para>Queries the code content of a schedule resource node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18821,7 +19009,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询调度节点代码内容。</para>
+        /// <para>Queries the code content of a schedule resource node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18839,7 +19027,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询节点的操作日志。</para>
+        /// <para>Queries the operation logs of a node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18889,7 +19077,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询节点的操作日志。</para>
+        /// <para>Queries the operation logs of a node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18939,7 +19127,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询节点的操作日志。</para>
+        /// <para>Queries the operation logs of a node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18957,7 +19145,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询节点的操作日志。</para>
+        /// <para>Queries the operation logs of a node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18975,7 +19163,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询异步操作管道任务的执行结果。</para>
+        /// <para>Queries the execution result of an asynchronous pipeline task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -19033,7 +19221,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询异步操作管道任务的执行结果。</para>
+        /// <para>Queries the execution result of an asynchronous pipeline task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -19091,7 +19279,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询异步操作管道任务的执行结果。</para>
+        /// <para>Queries the execution result of an asynchronous pipeline task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19109,7 +19297,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询异步操作管道任务的执行结果。</para>
+        /// <para>Queries the execution result of an asynchronous pipeline task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19127,7 +19315,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据管道任务id查询管道任务。</para>
+        /// <para>Queries a pipeline task by pipeline task ID.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -19189,7 +19377,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据管道任务id查询管道任务。</para>
+        /// <para>Queries a pipeline task by pipeline task ID.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -19251,7 +19439,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据管道任务id查询管道任务。</para>
+        /// <para>Queries a pipeline task by pipeline task ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19269,7 +19457,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据管道任务id查询管道任务。</para>
+        /// <para>Queries a pipeline task by pipeline task ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19287,7 +19475,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取项目详情。</para>
+        /// <para>Get project details by project ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19337,7 +19525,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取项目详情。</para>
+        /// <para>Get project details by project ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19387,7 +19575,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取项目详情。</para>
+        /// <para>Get project details by project ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19405,7 +19593,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取项目详情。</para>
+        /// <para>Get project details by project ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19423,7 +19611,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过项目名获取项目详情。</para>
+        /// <para>Retrieves project details by project name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19469,7 +19657,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过项目名获取项目详情。</para>
+        /// <para>Retrieves project details by project name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19515,7 +19703,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过项目名获取项目详情。</para>
+        /// <para>Retrieves project details by project name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19533,7 +19721,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过项目名获取项目详情。</para>
+        /// <para>Retrieves project details by project name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19551,7 +19739,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取项目生产账号</para>
+        /// <para>Retrieves the production account of a project. Only a super administrator (SuperAdmin) can call this API operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19597,7 +19785,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取项目生产账号</para>
+        /// <para>Retrieves the production account of a project. Only a super administrator (SuperAdmin) can call this API operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19643,7 +19831,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取项目生产账号</para>
+        /// <para>Retrieves the production account of a project. Only a super administrator (SuperAdmin) can call this API operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19661,7 +19849,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取项目生产账号</para>
+        /// <para>Retrieves the production account of a project. Only a super administrator (SuperAdmin) can call this API operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19679,7 +19867,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取项目白名单。</para>
+        /// <para>Retrieves the whitelist of a project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19725,7 +19913,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取项目白名单。</para>
+        /// <para>Retrieves the whitelist of a project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19771,7 +19959,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取项目白名单。</para>
+        /// <para>Retrieves the whitelist of a project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19789,7 +19977,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取项目白名单。</para>
+        /// <para>Retrieves the whitelist of a project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19807,7 +19995,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过监控对象ID获取告警设置。</para>
+        /// <para>Retrieves alert settings by monitored object ID. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19853,7 +20041,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过监控对象ID获取告警设置。</para>
+        /// <para>Retrieves alert settings by monitored object ID. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19899,7 +20087,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过监控对象ID获取告警设置。</para>
+        /// <para>Retrieves alert settings by monitored object ID. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19917,7 +20105,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过监控对象ID获取告警设置。</para>
+        /// <para>Retrieves alert settings by monitored object ID. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19935,7 +20123,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质量规则对象。</para>
+        /// <para>Retrieves a quality rule object.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19981,7 +20170,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质量规则对象。</para>
+        /// <para>Retrieves a quality rule object.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20027,7 +20217,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质量规则对象。</para>
+        /// <para>Retrieves a quality rule object.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20045,7 +20236,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质量规则对象。</para>
+        /// <para>Retrieves a quality rule object.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20063,7 +20255,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质量任务对象详情。</para>
+        /// <para>Retrieves the details of a quality node task object. Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20109,7 +20301,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质量任务对象详情。</para>
+        /// <para>Retrieves the details of a quality node task object. Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20155,7 +20347,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质量任务对象详情。</para>
+        /// <para>Retrieves the details of a quality node task object. Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20173,7 +20365,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质量任务对象详情。</para>
+        /// <para>Retrieves the details of a quality node task object. Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20191,7 +20383,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质量任务对象日志内容。</para>
+        /// <para>Retrieves the log content of a quality node task object.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20237,7 +20430,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质量任务对象日志内容。</para>
+        /// <para>Retrieves the log content of a quality node task object.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20283,7 +20477,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质量任务对象日志内容。</para>
+        /// <para>Retrieves the log content of a quality node task object.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20301,7 +20496,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质量任务对象日志内容。</para>
+        /// <para>Retrieves the log content of a quality node task object.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20319,7 +20515,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质量调度对象。</para>
+        /// <para>Retrieves a quality schedule object.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20365,7 +20562,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质量调度对象。</para>
+        /// <para>Retrieves a quality schedule object.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20411,7 +20609,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质量调度对象。</para>
+        /// <para>Retrieves a quality schedule object.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20429,7 +20628,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质量调度对象。</para>
+        /// <para>Retrieves a quality schedule object.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20447,7 +20647,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过监控对象ID获取调度设置列表。</para>
+        /// <para>Retrieves a list of schedule settings by monitored object ID.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20493,7 +20694,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过监控对象ID获取调度设置列表。</para>
+        /// <para>Retrieves a list of schedule settings by monitored object ID.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20539,7 +20741,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过监控对象ID获取调度设置列表。</para>
+        /// <para>Retrieves a list of schedule settings by monitored object ID.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20557,7 +20760,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过监控对象ID获取调度设置列表。</para>
+        /// <para>Retrieves a list of schedule settings by monitored object ID.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20575,7 +20779,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质量模板对象。</para>
+        /// <para>Retrieves a quality template object.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20621,7 +20826,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质量模板对象。</para>
+        /// <para>Retrieves a quality template object.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20667,7 +20873,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质量模板对象。</para>
+        /// <para>Retrieves a quality template object.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20685,7 +20892,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质量模板对象。</para>
+        /// <para>Retrieves a quality template object.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20703,7 +20911,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质量监控对象。</para>
+        /// <para>Retrieves a quality monitored object.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20749,7 +20958,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质量监控对象。</para>
+        /// <para>Retrieves a quality monitored object.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20795,7 +21005,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质量监控对象。</para>
+        /// <para>Retrieves a quality monitored object.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20813,7 +21024,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质量监控对象。</para>
+        /// <para>Retrieves a quality monitored object.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20831,7 +21043,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过监控对象原始ID获取监控对象记录，例如：数据源、表、指标等的ID。</para>
+        /// <para>Retrieves a quality watchtask record by the original ID of the monitored object, such as the ID of a datasource, table, or metric.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20881,7 +21094,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过监控对象原始ID获取监控对象记录，例如：数据源、表、指标等的ID。</para>
+        /// <para>Retrieves a quality watchtask record by the original ID of the monitored object, such as the ID of a datasource, table, or metric.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20931,7 +21145,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过监控对象原始ID获取监控对象记录，例如：数据源、表、指标等的ID。</para>
+        /// <para>Retrieves a quality watchtask record by the original ID of the monitored object, such as the ID of a datasource, table, or metric.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20949,7 +21164,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过监控对象原始ID获取监控对象记录，例如：数据源、表、指标等的ID。</para>
+        /// <para>Retrieves a quality watchtask record by the original ID of the monitored object, such as the ID of a datasource, table, or metric.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20967,7 +21183,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取监控任务对象。</para>
+        /// <para>Retrieves a monitoring node task object.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21013,7 +21230,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取监控任务对象。</para>
+        /// <para>Retrieves a monitoring node task object.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21059,7 +21277,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取监控任务对象。</para>
+        /// <para>Retrieves a monitoring node task object.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21077,7 +21296,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取监控任务对象。</para>
+        /// <para>Retrieves a monitoring node task object.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21095,7 +21315,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取监控任务对象的日志内容。</para>
+        /// <para>Retrieves the log content of a monitoring task object.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21141,7 +21362,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取监控任务对象的日志内容。</para>
+        /// <para>Retrieves the log content of a monitoring task object.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21187,7 +21409,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取监控任务对象的日志内容。</para>
+        /// <para>Retrieves the log content of a monitoring task object.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21205,7 +21428,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取监控任务对象的日志内容。</para>
+        /// <para>Retrieves the log content of a monitoring task object.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21223,7 +21447,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据集群ID获取集群版本</para>
+        /// <para>Retrieves the cluster version based on the cluster ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21285,7 +21509,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据集群ID获取集群版本</para>
+        /// <para>Retrieves the cluster version based on the cluster ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21347,7 +21571,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据集群ID获取集群版本</para>
+        /// <para>Retrieves the cluster version based on the cluster ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21365,7 +21589,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据集群ID获取集群版本</para>
+        /// <para>Retrieves the cluster version based on the cluster ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21383,7 +21607,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取资源文件详情。</para>
+        /// <para>Retrieves the details of a resource file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21433,7 +21657,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取资源文件详情。</para>
+        /// <para>Retrieves the details of a resource file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21483,7 +21707,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取资源文件详情。</para>
+        /// <para>Retrieves the details of a resource file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21501,7 +21725,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取资源文件详情。</para>
+        /// <para>Retrieves the details of a resource file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21519,7 +21743,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取资源文件指定版本详情。</para>
+        /// <para>Gets the details of a specified version of a resource file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21573,7 +21797,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取资源文件指定版本详情。</para>
+        /// <para>Gets the details of a specified version of a resource file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21627,7 +21851,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取资源文件指定版本详情。</para>
+        /// <para>Gets the details of a specified version of a resource file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21645,7 +21869,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取资源文件指定版本详情。</para>
+        /// <para>Gets the details of a specified version of a resource file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21663,7 +21887,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据表Guid检索行级权限</para>
+        /// <para>Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -21717,7 +21941,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据表Guid检索行级权限</para>
+        /// <para>Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -21771,7 +21995,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据表Guid检索行级权限</para>
+        /// <para>Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21789,7 +22013,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据表Guid检索行级权限</para>
+        /// <para>Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21807,7 +22031,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据分类详情。</para>
+        /// <para>Retrieves the details of a data classification. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21853,7 +22077,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据分类详情。</para>
+        /// <para>Retrieves the details of a data classification. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21899,7 +22123,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据分类详情。</para>
+        /// <para>Retrieves the details of a data classification. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21917,7 +22141,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据分类详情。</para>
+        /// <para>Retrieves the details of a data classification. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21935,7 +22159,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取识别结果详情。</para>
+        /// <para>Retrieves the details of an identification result.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21981,7 +22206,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取识别结果详情。</para>
+        /// <para>Retrieves the details of an identification result.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22027,7 +22253,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取识别结果详情。</para>
+        /// <para>Retrieves the details of an identification result.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22045,7 +22272,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取识别结果详情。</para>
+        /// <para>Retrieves the details of an identification result.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22063,7 +22291,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据分级详情。</para>
+        /// <para>Retrieves the details of a data classification level. Available since v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22109,7 +22337,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据分级详情。</para>
+        /// <para>Retrieves the details of a data classification level. Available since v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22155,7 +22383,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据分级详情。</para>
+        /// <para>Retrieves the details of a data classification level. Available since v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22173,7 +22401,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据分级详情。</para>
+        /// <para>Retrieves the details of a data classification level. Available since v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22191,7 +22419,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过密钥名称获取密钥值。</para>
+        /// <para>Retrieves a key value by key name. Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22237,7 +22465,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过密钥名称获取密钥值。</para>
+        /// <para>Retrieves a key value by key name. Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22283,7 +22511,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过密钥名称获取密钥值。</para>
+        /// <para>Retrieves a key value by key name. Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22301,7 +22529,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过密钥名称获取密钥值。</para>
+        /// <para>Retrieves a key value by key name. Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22319,7 +22547,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取计算源对应集群的spark客户信息</para>
+        /// <para>Retrieves the Spark client information of the cluster associated with a compute source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22369,7 +22597,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取计算源对应集群的spark客户信息</para>
+        /// <para>Retrieves the Spark client information of the cluster associated with a compute source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22419,7 +22647,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取计算源对应集群的spark客户信息</para>
+        /// <para>Retrieves the Spark client information of the cluster associated with a compute source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22437,7 +22665,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取计算源对应集群的spark客户信息</para>
+        /// <para>Retrieves the Spark client information of the cluster associated with a compute source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22455,7 +22683,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取标准详情。</para>
+        /// <para>Retrieves the details of a standard.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -22509,7 +22738,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取标准详情。</para>
+        /// <para>Retrieves the details of a standard.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -22563,7 +22793,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取标准详情。</para>
+        /// <para>Retrieves the details of a standard.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22581,7 +22812,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取标准详情。</para>
+        /// <para>Retrieves the details of a standard.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22599,7 +22831,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据标准码表详情。</para>
+        /// <para>Retrieves the details of a data standard lookup table.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22649,7 +22882,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据标准码表详情。</para>
+        /// <para>Retrieves the details of a data standard lookup table.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22699,7 +22933,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据标准码表详情。</para>
+        /// <para>Retrieves the details of a data standard lookup table.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22717,7 +22952,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据标准码表详情。</para>
+        /// <para>Retrieves the details of a data standard lookup table.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22735,7 +22971,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取标准集详情。</para>
+        /// <para>Retrieves the details of a standard set.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22785,7 +23022,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取标准集详情。</para>
+        /// <para>Retrieves the details of a standard set.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22835,7 +23073,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取标准集详情。</para>
+        /// <para>Retrieves the details of a standard set.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22853,7 +23092,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取标准集详情。</para>
+        /// <para>Retrieves the details of a standard set.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22871,7 +23111,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询目录下按照标准类型统计标准数目。</para>
+        /// <para>Queries the number of standards grouped by standard type under a specified folder.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -22925,7 +23166,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询目录下按照标准类型统计标准数目。</para>
+        /// <para>Queries the number of standards grouped by standard type under a specified folder.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -22979,7 +23221,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询目录下按照标准类型统计标准数目。</para>
+        /// <para>Queries the number of standards grouped by standard type under a specified folder.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22997,7 +23240,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询目录下按照标准类型统计标准数目。</para>
+        /// <para>Queries the number of standards grouped by standard type under a specified folder.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23015,7 +23259,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据标准模板详情。</para>
+        /// <para>Retrieves the details of a data standard template.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -23077,7 +23322,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据标准模板详情。</para>
+        /// <para>Retrieves the details of a data standard template.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -23139,7 +23385,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据标准模板详情。</para>
+        /// <para>Retrieves the details of a data standard template.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23157,7 +23404,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据标准模板详情。</para>
+        /// <para>Retrieves the details of a data standard template.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23175,7 +23423,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据标准词根详情。</para>
+        /// <para>Retrieves the details of a data standard word root.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23225,7 +23474,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据标准词根详情。</para>
+        /// <para>Retrieves the details of a data standard word root.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23275,7 +23525,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据标准词根详情。</para>
+        /// <para>Retrieves the details of a data standard word root.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23293,7 +23544,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据标准词根详情。</para>
+        /// <para>Retrieves the details of a data standard word root.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23311,7 +23563,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取dataphin实时研发任务集合</para>
+        /// <para>Retrieves the list of real-time development nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23361,7 +23613,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取dataphin实时研发任务集合</para>
+        /// <para>Retrieves the list of real-time development nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23411,7 +23663,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取dataphin实时研发任务集合</para>
+        /// <para>Retrieves the list of real-time development nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23429,7 +23681,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取dataphin实时研发任务集合</para>
+        /// <para>Retrieves the list of real-time development nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23447,7 +23699,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取补数据工作流所有业务日期的Dagrun信息。</para>
+        /// <para>Retrieves dagrun information for all business dates of a data backfill instance workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23497,7 +23749,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取补数据工作流所有业务日期的Dagrun信息。</para>
+        /// <para>Retrieves dagrun information for all business dates of a data backfill instance workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23547,7 +23799,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取补数据工作流所有业务日期的Dagrun信息。</para>
+        /// <para>Retrieves dagrun information for all business dates of a data backfill instance workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23565,7 +23817,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取补数据工作流所有业务日期的Dagrun信息。</para>
+        /// <para>Retrieves dagrun information for all business dates of a data backfill instance workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23583,7 +23835,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出补数据工作流下具体一个业务日期的所有节点的实例。</para>
+        /// <para>Lists the instances of all nodes for a specific business date in a data backfill workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23633,7 +23885,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出补数据工作流下具体一个业务日期的所有节点的实例。</para>
+        /// <para>Lists the instances of all nodes for a specific business date in a data backfill workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23683,7 +23935,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出补数据工作流下具体一个业务日期的所有节点的实例。</para>
+        /// <para>Lists the instances of all nodes for a specific business date in a data backfill workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23701,7 +23953,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出补数据工作流下具体一个业务日期的所有节点的实例。</para>
+        /// <para>Lists the instances of all nodes for a specific business date in a data backfill workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23719,7 +23971,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询表字段血缘信息</para>
+        /// <para>Queries table column lineage information.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -23773,7 +24025,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询表字段血缘信息</para>
+        /// <para>Queries table column lineage information.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -23827,7 +24079,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询表字段血缘信息</para>
+        /// <para>Queries table column lineage information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23845,7 +24097,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询表字段血缘信息</para>
+        /// <para>Queries table column lineage information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23863,7 +24115,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资产表字段血缘信息。</para>
+        /// <para>Queries the column-level data lineage of an asset table.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -23921,7 +24174,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资产表字段血缘信息。</para>
+        /// <para>Queries the column-level data lineage of an asset table.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -23979,7 +24233,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资产表字段血缘信息。</para>
+        /// <para>Queries the column-level data lineage of an asset table.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23997,7 +24252,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资产表字段血缘信息。</para>
+        /// <para>Queries the column-level data lineage of an asset table.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24015,7 +24271,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资产清单中Dataphin表的字段。</para>
+        /// <para>Queries columns of a Dataphin table in the asset inventory. Supported table types: dimension logical table, fact logical table, aggregate logical table, tag logical table, logical table view, physical table, physical view, and materialized view.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24065,7 +24322,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资产清单中Dataphin表的字段。</para>
+        /// <para>Queries columns of a Dataphin table in the asset inventory. Supported table types: dimension logical table, fact logical table, aggregate logical table, tag logical table, logical table view, physical table, physical view, and materialized view.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24115,7 +24373,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资产清单中Dataphin表的字段。</para>
+        /// <para>Queries columns of a Dataphin table in the asset inventory. Supported table types: dimension logical table, fact logical table, aggregate logical table, tag logical table, logical table view, physical table, physical view, and materialized view.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24133,7 +24392,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资产清单中Dataphin表的字段。</para>
+        /// <para>Queries columns of a Dataphin table in the asset inventory. Supported table types: dimension logical table, fact logical table, aggregate logical table, tag logical table, logical table view, physical table, physical view, and materialized view.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24151,7 +24411,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询表血缘信息</para>
+        /// <para>Queries table lineage information.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -24205,7 +24465,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询表血缘信息</para>
+        /// <para>Queries table lineage information.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -24259,7 +24519,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询表血缘信息</para>
+        /// <para>Queries table lineage information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24277,7 +24537,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询表血缘信息</para>
+        /// <para>Queries table lineage information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24295,7 +24555,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资产表血缘信息。</para>
+        /// <para>Queries lineage information of an asset table.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -24353,7 +24614,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资产表血缘信息。</para>
+        /// <para>Queries lineage information of an asset table.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -24411,7 +24673,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资产表血缘信息。</para>
+        /// <para>Queries lineage information of an asset table.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24429,7 +24692,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资产表血缘信息。</para>
+        /// <para>Queries lineage information of an asset table.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24447,7 +24711,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据转交任务ID查询转交任务的进度</para>
+        /// <para>Queries the progress of a transfer task by transfer task ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24493,7 +24757,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据转交任务ID查询转交任务的进度</para>
+        /// <para>Queries the progress of a transfer task by transfer task ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24539,7 +24803,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据转交任务ID查询转交任务的进度</para>
+        /// <para>Queries the progress of a transfer task by transfer task ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24557,7 +24821,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据转交任务ID查询转交任务的进度</para>
+        /// <para>Queries the progress of a transfer task by transfer task ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24575,7 +24839,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取自定义函数详情。</para>
+        /// <para>Retrieves the details of a user-defined function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24625,7 +24889,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取自定义函数详情。</para>
+        /// <para>Retrieves the details of a user-defined function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24675,7 +24939,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取自定义函数详情。</para>
+        /// <para>Retrieves the details of a user-defined function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24693,7 +24957,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取自定义函数详情。</para>
+        /// <para>Retrieves the details of a user-defined function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24711,7 +24975,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自定义函数版本详情。</para>
+        /// <para>Queries the details of a specific version of a user-defined function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24765,7 +25029,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自定义函数版本详情。</para>
+        /// <para>Queries the details of a specific version of a user-defined function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24819,7 +25083,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自定义函数版本详情。</para>
+        /// <para>Queries the details of a specific version of a user-defined function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24837,7 +25101,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自定义函数版本详情。</para>
+        /// <para>Queries the details of a specific version of a user-defined function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24855,7 +25119,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过用户原始Id（如阿里云Id）获取用户详情</para>
+        /// <para>Retrieves user details by original user ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24901,7 +25165,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过用户原始Id（如阿里云Id）获取用户详情</para>
+        /// <para>Retrieves user details by original user ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24947,7 +25211,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过用户原始Id（如阿里云Id）获取用户详情</para>
+        /// <para>Retrieves user details by original user ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24965,7 +25229,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过用户原始Id（如阿里云Id）获取用户详情</para>
+        /// <para>Retrieves user details by original user ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24983,7 +25247,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户组详情.</para>
+        /// <para>Retrieves the details of a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25029,7 +25293,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户组详情.</para>
+        /// <para>Retrieves the details of a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25075,7 +25339,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户组详情.</para>
+        /// <para>Retrieves the details of a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25093,7 +25357,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户组详情.</para>
+        /// <para>Retrieves the details of a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25111,7 +25375,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户详情</para>
+        /// <para>Retrieves user information in batches by user ID.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -25165,7 +25429,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户详情</para>
+        /// <para>Retrieves user information in batches by user ID.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -25219,7 +25483,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户详情</para>
+        /// <para>Retrieves user information in batches by user ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25237,7 +25501,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户详情</para>
+        /// <para>Retrieves user information in batches by user ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25255,7 +25519,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>API授权。</para>
+        /// <para>Grants API authorization.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -25313,7 +25577,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>API授权。</para>
+        /// <para>Grants API authorization.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -25371,7 +25635,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>API授权。</para>
+        /// <para>Grants API authorization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25389,7 +25653,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>API授权。</para>
+        /// <para>Grants API authorization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25407,7 +25671,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过资源点对用户授权</para>
+        /// <para>Grants permissions on resources to users by resource point.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -25461,7 +25725,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过资源点对用户授权</para>
+        /// <para>Grants permissions on resources to users by resource point.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -25515,7 +25779,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过资源点对用户授权</para>
+        /// <para>Grants permissions on resources to users by resource point.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25533,7 +25797,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过资源点对用户授权</para>
+        /// <para>Grants permissions on resources to users by resource point.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25551,7 +25815,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户角色列表</para>
+        /// <para>Retrieves the global roles that can be assigned to tenant members. Only built-in global roles are supported. Custom global roles are not supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25593,7 +25857,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户角色列表</para>
+        /// <para>Retrieves the global roles that can be assigned to tenant members. Only built-in global roles are supported. Custom global roles are not supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25635,7 +25899,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户角色列表</para>
+        /// <para>Retrieves the global roles that can be assigned to tenant members. Only built-in global roles are supported. Custom global roles are not supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25653,7 +25917,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户角色列表</para>
+        /// <para>Retrieves the global roles that can be assigned to tenant members. Only built-in global roles are supported. Custom global roles are not supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25671,7 +25935,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取可加入租户成员列表的用户</para>
+        /// <para>Queries users that can be added to a tenant. Only the super administrator (SuperAdmin) and system administrator can call this operation. The users must already exist in the Dataphin instance member list but have not yet been added to the tenant member list.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -25725,7 +25989,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取可加入租户成员列表的用户</para>
+        /// <para>Queries users that can be added to a tenant. Only the super administrator (SuperAdmin) and system administrator can call this operation. The users must already exist in the Dataphin instance member list but have not yet been added to the tenant member list.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -25779,7 +26043,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取可加入租户成员列表的用户</para>
+        /// <para>Queries users that can be added to a tenant. Only the super administrator (SuperAdmin) and system administrator can call this operation. The users must already exist in the Dataphin instance member list but have not yet been added to the tenant member list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25797,7 +26061,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取可加入租户成员列表的用户</para>
+        /// <para>Queries users that can be added to a tenant. Only the super administrator (SuperAdmin) and system administrator can call this operation. The users must already exist in the Dataphin instance member list but have not yet been added to the tenant member list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25815,7 +26079,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据条件查询多个告警事件</para>
+        /// <para>Performs a conditional query to list multiple alerting events.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -25869,7 +26133,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据条件查询多个告警事件</para>
+        /// <para>Performs a conditional query to list multiple alerting events.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -25923,7 +26187,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据条件查询多个告警事件</para>
+        /// <para>Performs a conditional query to list multiple alerting events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25941,7 +26205,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据条件查询多个告警事件</para>
+        /// <para>Performs a conditional query to list multiple alerting events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25959,7 +26223,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据条件查询多个推送记录</para>
+        /// <para>Performs a conditional query to list multiple push records.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -26013,7 +26277,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据条件查询多个推送记录</para>
+        /// <para>Performs a conditional query to list multiple push records.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -26067,7 +26331,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据条件查询多个推送记录</para>
+        /// <para>Performs a conditional query to list multiple push records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26085,7 +26349,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据条件查询多个推送记录</para>
+        /// <para>Performs a conditional query to list multiple push records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26103,8 +26367,13 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据app查询api列表</para>
+        /// <para>Queries the list of APIs by application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the detailed information of published APIs by appKey.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ListApiByAppRequest
@@ -26157,8 +26426,13 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据app查询api列表</para>
+        /// <para>Queries the list of APIs by application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the detailed information of published APIs by appKey.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ListApiByAppRequest
@@ -26211,8 +26485,13 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据app查询api列表</para>
+        /// <para>Queries the list of APIs by application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the detailed information of published APIs by appKey.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListApiByAppRequest
@@ -26229,8 +26508,13 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据app查询api列表</para>
+        /// <para>Queries the list of APIs by application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the detailed information of published APIs by appKey.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListApiByAppRequest
@@ -26247,7 +26531,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询应用已申请的API的具体的字段列表</para>
+        /// <para>Queries the list of specific fields for APIs that an application has requested.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -26301,7 +26585,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询应用已申请的API的具体的字段列表</para>
+        /// <para>Queries the list of specific fields for APIs that an application has requested.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -26355,7 +26639,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询应用已申请的API的具体的字段列表</para>
+        /// <para>Queries the list of specific fields for APIs that an application has requested.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26373,7 +26657,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询应用已申请的API的具体的字段列表</para>
+        /// <para>Queries the list of specific fields for APIs that an application has requested.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26391,7 +26675,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询业务实体列表。</para>
+        /// <para>Queries a list of business entities.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -26445,7 +26729,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询业务实体列表。</para>
+        /// <para>Queries a list of business entities.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -26499,7 +26783,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询业务实体列表。</para>
+        /// <para>Queries a list of business entities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26517,7 +26801,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询业务实体列表。</para>
+        /// <para>Queries a list of business entities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26535,7 +26819,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取当前租户下的所有数据板块</para>
+        /// <para>Retrieves all business units under the current tenant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26577,7 +26861,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取当前租户下的所有数据板块</para>
+        /// <para>Retrieves all business units under the current tenant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26619,7 +26903,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取当前租户下的所有数据板块</para>
+        /// <para>Retrieves all business units under the current tenant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26637,7 +26921,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取当前租户下的所有数据板块</para>
+        /// <para>Retrieves all business units under the current tenant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26655,7 +26939,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据目录资产列表。</para>
+        /// <para>Queries the list of asset catalog entries. Online version: v6.1.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -26709,7 +26993,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据目录资产列表。</para>
+        /// <para>Queries the list of asset catalog entries. Online version: v6.1.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -26763,7 +27047,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据目录资产列表。</para>
+        /// <para>Queries the list of asset catalog entries. Online version: v6.1.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26781,7 +27065,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据目录资产列表。</para>
+        /// <para>Queries the list of asset catalog entries. Online version: v6.1.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26799,7 +27083,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询计算源列表。</para>
+        /// <para>Query the list of compute sources.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -26853,7 +27137,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询计算源列表。</para>
+        /// <para>Query the list of compute sources.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -26907,7 +27191,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询计算源列表。</para>
+        /// <para>Query the list of compute sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26925,7 +27209,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询计算源列表。</para>
+        /// <para>Query the list of compute sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26943,7 +27227,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取主题域列表。</para>
+        /// <para>Retrieves a list of data domains.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -26997,7 +27281,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取主题域列表。</para>
+        /// <para>Retrieves a list of data domains.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -27051,7 +27335,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取主题域列表。</para>
+        /// <para>Retrieves a list of data domains.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27069,7 +27353,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取主题域列表。</para>
+        /// <para>Retrieves a list of data domains.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27087,7 +27371,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询API运维统计信息。</para>
+        /// <para>O&amp;M analysis: API call statistics.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -27145,7 +27429,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询API运维统计信息。</para>
+        /// <para>O&amp;M analysis: API call statistics.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -27203,7 +27487,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询API运维统计信息。</para>
+        /// <para>O&amp;M analysis: API call statistics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27221,7 +27505,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询API运维统计信息。</para>
+        /// <para>O&amp;M analysis: API call statistics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27239,7 +27523,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询数据服务调用日志。</para>
+        /// <para>Queries data service call logs with pagination.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -27297,7 +27581,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询数据服务调用日志。</para>
+        /// <para>Queries data service call logs with pagination.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -27355,7 +27639,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询数据服务调用日志。</para>
+        /// <para>Queries data service call logs with pagination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27373,7 +27657,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询数据服务调用日志。</para>
+        /// <para>Queries data service call logs with pagination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27391,7 +27675,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>API影响分析列表。</para>
+        /// <para>Operations analysis: analyzes the impact of abnormal API calls.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -27449,7 +27733,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>API影响分析列表。</para>
+        /// <para>Operations analysis: analyzes the impact of abnormal API calls.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -27507,7 +27791,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>API影响分析列表。</para>
+        /// <para>Operations analysis: analyzes the impact of abnormal API calls.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27525,7 +27809,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>API影响分析列表。</para>
+        /// <para>Operations analysis: analyzes the impact of abnormal API calls.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27543,7 +27827,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询租户下所有的应用列表。</para>
+        /// <para>Queries the list of all applications under a data service tenant. All tenant members can perform this operation.
+        /// Release version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -27597,7 +27882,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询租户下所有的应用列表。</para>
+        /// <para>Queries the list of all applications under a data service tenant. All tenant members can perform this operation.
+        /// Release version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -27651,7 +27937,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询租户下所有的应用列表。</para>
+        /// <para>Queries the list of all applications under a data service tenant. All tenant members can perform this operation.
+        /// Release version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27669,7 +27956,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询租户下所有的应用列表。</para>
+        /// <para>Queries the list of all applications under a data service tenant. All tenant members can perform this operation.
+        /// Release version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27687,7 +27975,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询当前用户有权限的应用列表。</para>
+        /// <para>Queries the list of applications that the current user has permissions to access.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -27745,7 +28033,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询当前用户有权限的应用列表。</para>
+        /// <para>Queries the list of applications that the current user has permissions to access.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -27803,7 +28091,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询当前用户有权限的应用列表。</para>
+        /// <para>Queries the list of applications that the current user has permissions to access.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27821,7 +28109,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询当前用户有权限的应用列表。</para>
+        /// <para>Queries the list of applications that the current user has permissions to access.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27839,7 +28127,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取我管理的API权限列表。</para>
+        /// <para>Obtain the list of API permissions managed by me.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -27897,7 +28185,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取我管理的API权限列表。</para>
+        /// <para>Obtain the list of API permissions managed by me.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -27955,7 +28243,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取我管理的API权限列表。</para>
+        /// <para>Obtain the list of API permissions managed by me.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27973,7 +28261,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取我管理的API权限列表。</para>
+        /// <para>Obtain the list of API permissions managed by me.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27991,7 +28279,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询当前用户有权限的应用。</para>
+        /// <para>Queries the applications that the current user has permissions to access.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -28049,7 +28337,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询当前用户有权限的应用。</para>
+        /// <para>Queries the applications that the current user has permissions to access.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -28107,7 +28395,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询当前用户有权限的应用。</para>
+        /// <para>Queries the applications that the current user has permissions to access.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28125,7 +28413,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询当前用户有权限的应用。</para>
+        /// <para>Queries the applications that the current user has permissions to access.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28143,7 +28431,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询已发布的API列表。</para>
+        /// <para>Queries the list of published APIs by page.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -28201,7 +28489,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询已发布的API列表。</para>
+        /// <para>Queries the list of published APIs by page.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -28259,7 +28547,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询已发布的API列表。</para>
+        /// <para>Queries the list of published APIs by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28277,7 +28565,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询已发布的API列表。</para>
+        /// <para>Queries the list of published APIs by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28295,7 +28583,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>搜索数据源，所属结果包含数据源配置项</para>
+        /// <para>Search for data sources. The results include data source configuration items.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -28349,7 +28637,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>搜索数据源，所属结果包含数据源配置项</para>
+        /// <para>Search for data sources. The results include data source configuration items.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -28403,7 +28691,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>搜索数据源，所属结果包含数据源配置项</para>
+        /// <para>Search for data sources. The results include data source configuration items.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28421,7 +28709,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>搜索数据源，所属结果包含数据源配置项</para>
+        /// <para>Search for data sources. The results include data source configuration items.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28439,7 +28727,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>遍历菜单树目录文件。</para>
+        /// <para>Query the directory tree file list.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -28493,7 +28781,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>遍历菜单树目录文件。</para>
+        /// <para>Query the directory tree file list.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -28547,7 +28835,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>遍历菜单树目录文件。</para>
+        /// <para>Query the directory tree file list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28565,7 +28853,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>遍历菜单树目录文件。</para>
+        /// <para>Query the directory tree file list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28583,7 +28871,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询实例。</para>
+        /// <para>Paginate and query instances.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -28641,7 +28929,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询实例。</para>
+        /// <para>Paginate and query instances.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -28699,7 +28987,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询实例。</para>
+        /// <para>Paginate and query instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28717,7 +29005,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询实例。</para>
+        /// <para>Paginate and query instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28735,7 +29023,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询节点下游，创建补数据工作流时可以作为数据参考</para>
+        /// <para>Queries the downstream nodes of a node. The query results can be used as a data reference when you create a data backfill workflow.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -28793,7 +29081,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询节点下游，创建补数据工作流时可以作为数据参考</para>
+        /// <para>Queries the downstream nodes of a node. The query results can be used as a data reference when you create a data backfill workflow.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -28851,7 +29139,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询节点下游，创建补数据工作流时可以作为数据参考</para>
+        /// <para>Queries the downstream nodes of a node. The query results can be used as a data reference when you create a data backfill workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28869,7 +29157,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询节点下游，创建补数据工作流时可以作为数据参考</para>
+        /// <para>Queries the downstream nodes of a node. The query results can be used as a data reference when you create a data backfill workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28887,7 +29175,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询调度节点列表。</para>
+        /// <para>Retrieves a list of scheduling nodes.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -28945,7 +29233,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询调度节点列表。</para>
+        /// <para>Retrieves a list of scheduling nodes.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -29003,7 +29291,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询调度节点列表。</para>
+        /// <para>Retrieves a list of scheduling nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29021,7 +29309,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询调度节点列表。</para>
+        /// <para>Retrieves a list of scheduling nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29039,7 +29327,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取项目成员列表。</para>
+        /// <para>Queries the list of project members.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -29097,7 +29385,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取项目成员列表。</para>
+        /// <para>Queries the list of project members.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -29155,7 +29443,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取项目成员列表。</para>
+        /// <para>Queries the list of project members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29173,7 +29461,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取项目成员列表。</para>
+        /// <para>Queries the list of project members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29191,7 +29479,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取项目列表。</para>
+        /// <para>Retrieves a list of projects.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -29245,7 +29533,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取项目列表。</para>
+        /// <para>Retrieves a list of projects.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -29299,7 +29587,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取项目列表。</para>
+        /// <para>Retrieves a list of projects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29317,7 +29605,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取项目列表。</para>
+        /// <para>Retrieves a list of projects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29335,7 +29623,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页获取发布记录列表</para>
+        /// <para>Retrieves a paginated list of publish records.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -29389,7 +29677,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页获取发布记录列表</para>
+        /// <para>Retrieves a paginated list of publish records.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -29443,7 +29731,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页获取发布记录列表</para>
+        /// <para>Retrieves a paginated list of publish records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29461,7 +29749,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页获取发布记录列表</para>
+        /// <para>Retrieves a paginated list of publish records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29479,7 +29767,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询质量规则任务。</para>
+        /// <para>Queries quality rule tasks by paging.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -29533,7 +29822,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询质量规则任务。</para>
+        /// <para>Queries quality rule tasks by paging.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -29587,7 +29877,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询质量规则任务。</para>
+        /// <para>Queries quality rule tasks by paging.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29605,7 +29896,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询质量规则任务。</para>
+        /// <para>Queries quality rule tasks by paging.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29623,7 +29915,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询质量规则。</para>
+        /// <para>Queries quality rules by paging.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -29677,7 +29970,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询质量规则。</para>
+        /// <para>Queries quality rules by paging.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -29731,7 +30025,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询质量规则。</para>
+        /// <para>Queries quality rules by paging.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29749,7 +30044,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询质量规则。</para>
+        /// <para>Queries quality rules by paging.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29767,7 +30063,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询质量模板。</para>
+        /// <para>Queries quality templates by paging.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -29821,7 +30118,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询质量模板。</para>
+        /// <para>Queries quality templates by paging.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -29875,7 +30173,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询质量模板。</para>
+        /// <para>Queries quality templates by paging.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29893,7 +30192,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询质量模板。</para>
+        /// <para>Queries quality templates by paging.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29911,7 +30211,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询质量监控任务。</para>
+        /// <para>Queries quality monitoring nodes by paged query.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -29965,7 +30266,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询质量监控任务。</para>
+        /// <para>Queries quality monitoring nodes by paged query.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -30019,7 +30321,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询质量监控任务。</para>
+        /// <para>Queries quality monitoring nodes by paged query.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30037,7 +30340,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询质量监控任务。</para>
+        /// <para>Queries quality monitoring nodes by paged query.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30055,7 +30359,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询质量监控对象。</para>
+        /// <para>Performs a paged query of quality monitored objects.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -30109,7 +30414,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询质量监控对象。</para>
+        /// <para>Performs a paged query of quality monitored objects.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -30163,7 +30469,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询质量监控对象。</para>
+        /// <para>Performs a paged query of quality monitored objects.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30181,7 +30488,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询质量监控对象。</para>
+        /// <para>Performs a paged query of quality monitored objects.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30199,7 +30507,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页获取权限操作列表</para>
+        /// <para>Retrieves a paginated list of permission operation logs.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -30253,7 +30561,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页获取权限操作列表</para>
+        /// <para>Retrieves a paginated list of permission operation logs.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -30307,7 +30615,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页获取权限操作列表</para>
+        /// <para>Retrieves a paginated list of permission operation logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30325,7 +30633,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页获取权限操作列表</para>
+        /// <para>Retrieves a paginated list of permission operation logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30343,7 +30651,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页获取权限记录列表</para>
+        /// <para>Retrieves permission authorization records with pagination.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -30397,7 +30705,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页获取权限记录列表</para>
+        /// <para>Retrieves permission authorization records with pagination.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -30451,7 +30759,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页获取权限记录列表</para>
+        /// <para>Retrieves permission authorization records with pagination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30469,7 +30777,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页获取权限记录列表</para>
+        /// <para>Retrieves permission authorization records with pagination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30487,7 +30795,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询行级权限</para>
+        /// <para>Performs a paged query of row-level permissions.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -30541,7 +30849,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询行级权限</para>
+        /// <para>Performs a paged query of row-level permissions.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -30595,7 +30903,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询行级权限</para>
+        /// <para>Performs a paged query of row-level permissions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30613,7 +30921,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询行级权限</para>
+        /// <para>Performs a paged query of row-level permissions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30631,7 +30939,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询指定用户行级权限</para>
+        /// <para>Queries row-level permissions of a specified user by paging.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -30685,7 +30993,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询指定用户行级权限</para>
+        /// <para>Queries row-level permissions of a specified user by paging.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -30739,7 +31047,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询指定用户行级权限</para>
+        /// <para>Queries row-level permissions of a specified user by paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30757,7 +31065,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询指定用户行级权限</para>
+        /// <para>Queries row-level permissions of a specified user by paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30775,7 +31083,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询安全识别结果的识别记录。</para>
+        /// <para>Queries identification records of security identification results by paging.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -30829,7 +31138,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询安全识别结果的识别记录。</para>
+        /// <para>Queries identification records of security identification results by paging.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -30883,7 +31193,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询安全识别结果的识别记录。</para>
+        /// <para>Queries identification records of security identification results by paging.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30901,7 +31212,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询安全识别结果的识别记录。</para>
+        /// <para>Queries identification records of security identification results by paging.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30919,7 +31231,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询安全识别结果。</para>
+        /// <para>Query security identification results by page.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -30973,7 +31286,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询安全识别结果。</para>
+        /// <para>Query security identification results by page.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -31027,7 +31341,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询安全识别结果。</para>
+        /// <para>Query security identification results by page.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31045,7 +31360,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询安全识别结果。</para>
+        /// <para>Query security identification results by page.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31063,7 +31379,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询标准列表。</para>
+        /// <para>Query the standard list by page.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -31117,7 +31434,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询标准列表。</para>
+        /// <para>Query the standard list by page.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -31171,7 +31489,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询标准列表。</para>
+        /// <para>Query the standard list by page.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31189,7 +31508,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询标准列表。</para>
+        /// <para>Query the standard list by page.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31207,7 +31527,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页获取待发布记录列表</para>
+        /// <para>Paginate and retrieve the list of pending deployment records.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -31261,7 +31581,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页获取待发布记录列表</para>
+        /// <para>Paginate and retrieve the list of pending deployment records.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -31315,7 +31635,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页获取待发布记录列表</para>
+        /// <para>Paginate and retrieve the list of pending deployment records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31333,7 +31653,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页获取待发布记录列表</para>
+        /// <para>Paginate and retrieve the list of pending deployment records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31351,7 +31671,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询查询资产表元数据。</para>
+        /// <para>Performs a paged query to retrieve asset table metadata.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -31405,7 +31726,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询查询资产表元数据。</para>
+        /// <para>Performs a paged query to retrieve asset table metadata.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -31459,7 +31781,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询查询资产表元数据。</para>
+        /// <para>Performs a paged query to retrieve asset table metadata.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31477,7 +31800,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询查询资产表元数据。</para>
+        /// <para>Performs a paged query to retrieve asset table metadata.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31495,7 +31819,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询租户成员列表</para>
+        /// <para>Queries the list of tenant members.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -31549,7 +31873,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询租户成员列表</para>
+        /// <para>Queries the list of tenant members.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -31603,7 +31927,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询租户成员列表</para>
+        /// <para>Queries the list of tenant members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31621,7 +31945,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询租户成员列表</para>
+        /// <para>Queries the list of tenant members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31639,7 +31963,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户组成员列表分页查询.</para>
+        /// <para>Performs a paging query of user group members.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -31693,7 +32017,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户组成员列表分页查询.</para>
+        /// <para>Performs a paging query of user group members.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -31747,7 +32071,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户组成员列表分页查询.</para>
+        /// <para>Performs a paging query of user group members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31765,7 +32089,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户组成员列表分页查询.</para>
+        /// <para>Performs a paging query of user group members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31783,7 +32107,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户组列表分页查询.</para>
+        /// <para>Queries user groups by paging.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -31837,7 +32161,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户组列表分页查询.</para>
+        /// <para>Queries user groups by paging.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -31891,7 +32215,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户组列表分页查询.</para>
+        /// <para>Queries user groups by paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31909,7 +32233,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户组列表分页查询.</para>
+        /// <para>Queries user groups by paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31927,7 +32251,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下线离线计算任务。</para>
+        /// <para>Offlines a batch task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31981,7 +32305,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下线离线计算任务。</para>
+        /// <para>Offlines a batch task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32035,7 +32359,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下线离线计算任务。</para>
+        /// <para>Offlines a batch task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32053,7 +32377,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下线离线计算任务。</para>
+        /// <para>Offlines a batch task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32071,7 +32395,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下线业务实体、</para>
+        /// <para>Offline a business entity.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -32125,7 +32449,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下线业务实体、</para>
+        /// <para>Offline a business entity.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -32179,7 +32503,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下线业务实体、</para>
+        /// <para>Offline a business entity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32197,7 +32521,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下线业务实体、</para>
+        /// <para>Offline a business entity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32215,7 +32539,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下线集成管道任务。</para>
+        /// <para>Offlines an integration pipeline node.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -32277,7 +32601,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下线集成管道任务。</para>
+        /// <para>Offlines an integration pipeline node.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -32339,7 +32663,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下线集成管道任务。</para>
+        /// <para>Offlines an integration pipeline node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32357,7 +32681,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下线集成管道任务。</para>
+        /// <para>Offlines an integration pipeline node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32375,7 +32699,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>异步下线集成管道任务。</para>
+        /// <para>Asynchronously offlines an integration pipeline node.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -32437,7 +32761,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>异步下线集成管道任务。</para>
+        /// <para>Asynchronously offlines an integration pipeline node.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -32499,7 +32823,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>异步下线集成管道任务。</para>
+        /// <para>Asynchronously offlines an integration pipeline node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32517,7 +32841,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>异步下线集成管道任务。</para>
+        /// <para>Asynchronously offlines an integration pipeline node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32535,7 +32859,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下线标准。</para>
+        /// <para>Offlines a standard.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -32589,7 +32914,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下线标准。</para>
+        /// <para>Offlines a standard.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -32643,7 +32969,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下线标准。</para>
+        /// <para>Offlines a standard.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32661,7 +32988,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下线标准。</para>
+        /// <para>Offlines a standard.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32679,7 +33007,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上线业务实体。</para>
+        /// <para>Brings a business entity online.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -32733,7 +33061,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上线业务实体。</para>
+        /// <para>Brings a business entity online.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -32787,7 +33115,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上线业务实体。</para>
+        /// <para>Brings a business entity online.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32805,7 +33133,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上线业务实体。</para>
+        /// <para>Brings a business entity online.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32823,7 +33151,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>运维实例。</para>
+        /// <para>Performs batch O&amp;M operations on instances. Both physical instances and logical table instances are supported.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -32881,7 +33209,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>运维实例。</para>
+        /// <para>Performs batch O&amp;M operations on instances. Both physical instances and logical table instances are supported.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -32939,7 +33267,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>运维实例。</para>
+        /// <para>Performs batch O&amp;M operations on instances. Both physical instances and logical table instances are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32957,7 +33285,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>运维实例。</para>
+        /// <para>Performs batch O&amp;M operations on instances. Both physical instances and logical table instances are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32975,7 +33303,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解析离线计算任务的逻辑表依赖，注意解析结果上游依赖信息中可能包含自依赖节点（上游节点ID和解析代码的任务节点ID相同）需要用户自己进行处理。</para>
+        /// <para>Parses the logical table dependencies of an offline compute node. The parsing result may contain self-dependent nodes in the upstream dependency information, where the upstream node ID is the same as the node ID of the parsed code. You must handle such cases on your own.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -33029,7 +33357,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解析离线计算任务的逻辑表依赖，注意解析结果上游依赖信息中可能包含自依赖节点（上游节点ID和解析代码的任务节点ID相同）需要用户自己进行处理。</para>
+        /// <para>Parses the logical table dependencies of an offline compute node. The parsing result may contain self-dependent nodes in the upstream dependency information, where the upstream node ID is the same as the node ID of the parsed code. You must handle such cases on your own.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -33083,7 +33411,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解析离线计算任务的逻辑表依赖，注意解析结果上游依赖信息中可能包含自依赖节点（上游节点ID和解析代码的任务节点ID相同）需要用户自己进行处理。</para>
+        /// <para>Parses the logical table dependencies of an offline compute node. The parsing result may contain self-dependent nodes in the upstream dependency information, where the upstream node ID is the same as the node ID of the parsed code. You must handle such cases on your own.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33101,7 +33429,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解析离线计算任务的逻辑表依赖，注意解析结果上游依赖信息中可能包含自依赖节点（上游节点ID和解析代码的任务节点ID相同）需要用户自己进行处理。</para>
+        /// <para>Parses the logical table dependencies of an offline compute node. The parsing result may contain self-dependent nodes in the upstream dependency information, where the upstream node ID is the same as the node ID of the parsed code. You must handle such cases on your own.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33119,7 +33447,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停物理节点调度。</para>
+        /// <para>Pauses the scheduling of physical nodes. This stops the scheduling of nodes, and downstream nodes cannot be triggered. Currently, only offline code nodes and integration nodes are supported.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -33177,7 +33505,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停物理节点调度。</para>
+        /// <para>Pauses the scheduling of physical nodes. This stops the scheduling of nodes, and downstream nodes cannot be triggered. Currently, only offline code nodes and integration nodes are supported.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -33235,7 +33563,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停物理节点调度。</para>
+        /// <para>Pauses the scheduling of physical nodes. This stops the scheduling of nodes, and downstream nodes cannot be triggered. Currently, only offline code nodes and integration nodes are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33253,7 +33581,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停物理节点调度。</para>
+        /// <para>Pauses the scheduling of physical nodes. This stops the scheduling of nodes, and downstream nodes cannot be triggered. Currently, only offline code nodes and integration nodes are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33271,7 +33599,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布数据服务API到生产环境。</para>
+        /// <para>Publishes a data service API to the production environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33325,7 +33653,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布数据服务API到生产环境。</para>
+        /// <para>Publishes a data service API to the production environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33379,7 +33707,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布数据服务API到生产环境。</para>
+        /// <para>Publishes a data service API to the production environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33397,7 +33725,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布数据服务API到生产环境。</para>
+        /// <para>Publishes a data service API to the production environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33415,7 +33743,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量发布对象</para>
+        /// <para>Publishes objects in batches.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -33469,7 +33797,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量发布对象</para>
+        /// <para>Publishes objects in batches.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -33523,7 +33851,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量发布对象</para>
+        /// <para>Publishes objects in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33541,7 +33869,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量发布对象</para>
+        /// <para>Publishes objects in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33559,7 +33887,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布标准。</para>
+        /// <para>Publishes a standard.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -33613,7 +33942,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布标准。</para>
+        /// <para>Publishes a standard.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -33667,7 +33997,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布标准。</para>
+        /// <para>Publishes a standard.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33685,7 +34016,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布标准。</para>
+        /// <para>Publishes a standard.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33703,7 +34035,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据服务应用的普通成员。</para>
+        /// <para>Remove regular members from a data service application. Only the application owner can perform this operation.
+        /// Released version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -33757,7 +34090,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据服务应用的普通成员。</para>
+        /// <para>Remove regular members from a data service application. Only the application owner can perform this operation.
+        /// Released version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -33811,7 +34145,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据服务应用的普通成员。</para>
+        /// <para>Remove regular members from a data service application. Only the application owner can perform this operation.
+        /// Released version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33829,7 +34164,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据服务应用的普通成员。</para>
+        /// <para>Remove regular members from a data service application. Only the application owner can perform this operation.
+        /// Released version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33847,7 +34183,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除项目成员。</para>
+        /// <para>Deletes a project member.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -33905,7 +34241,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除项目成员。</para>
+        /// <para>Deletes a project member.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -33963,7 +34299,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除项目成员。</para>
+        /// <para>Deletes a project member.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33981,7 +34317,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除项目成员。</para>
+        /// <para>Deletes a project member.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33999,7 +34335,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除质量规则和调度的绑定关系。</para>
+        /// <para>Deletes the bindings between quality rules and schedules in batches.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -34053,7 +34390,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除质量规则和调度的绑定关系。</para>
+        /// <para>Deletes the bindings between quality rules and schedules in batches.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -34107,7 +34445,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除质量规则和调度的绑定关系。</para>
+        /// <para>Deletes the bindings between quality rules and schedules in batches.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34125,7 +34464,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除质量规则和调度的绑定关系。</para>
+        /// <para>Deletes the bindings between quality rules and schedules in batches.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34143,7 +34483,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除租户成员</para>
+        /// <para>Removes a tenant member. Only superusers and system administrators can call this API operation.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -34197,7 +34537,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除租户成员</para>
+        /// <para>Removes a tenant member. Only superusers and system administrators can call this API operation.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -34251,7 +34591,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除租户成员</para>
+        /// <para>Removes a tenant member. Only superusers and system administrators can call this API operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34269,7 +34609,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除租户成员</para>
+        /// <para>Removes a tenant member. Only superusers and system administrators can call this API operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34287,7 +34627,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移除用户组成员.</para>
+        /// <para>Removes members from a user group.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -34341,7 +34681,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移除用户组成员.</para>
+        /// <para>Removes members from a user group.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -34395,7 +34735,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移除用户组成员.</para>
+        /// <para>Removes members from a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34413,7 +34753,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移除用户组成员.</para>
+        /// <para>Removes members from a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34431,7 +34771,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新项目白名单。</para>
+        /// <para>Updates the whitelist of a project.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -34489,7 +34829,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新项目白名单。</para>
+        /// <para>Updates the whitelist of a project.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -34547,7 +34887,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新项目白名单。</para>
+        /// <para>Updates the whitelist of a project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34565,7 +34905,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新项目白名单。</para>
+        /// <para>Updates the whitelist of a project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34583,7 +34923,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置数据服务应用密钥。</para>
+        /// <para>Reset the Data Service application key. Only the application owner can perform this operation.
+        /// Release version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -34637,7 +34978,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置数据服务应用密钥。</para>
+        /// <para>Reset the Data Service application key. Only the application owner can perform this operation.
+        /// Release version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -34691,7 +35033,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置数据服务应用密钥。</para>
+        /// <para>Reset the Data Service application key. Only the application owner can perform this operation.
+        /// Release version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34709,7 +35052,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置数据服务应用密钥。</para>
+        /// <para>Reset the Data Service application key. Only the application owner can perform this operation.
+        /// Release version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34727,7 +35071,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复物理节点调度。</para>
+        /// <para>Resume physical node scheduling.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -34785,7 +35129,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复物理节点调度。</para>
+        /// <para>Resume physical node scheduling.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -34843,7 +35187,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复物理节点调度。</para>
+        /// <para>Resume physical node scheduling.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34861,7 +35205,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复物理节点调度。</para>
+        /// <para>Resume physical node scheduling.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34879,7 +35223,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重新转交运行失败的转交任务</para>
+        /// <para>Retransfers a failed transfer task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -34933,7 +35277,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重新转交运行失败的转交任务</para>
+        /// <para>Retransfers a failed transfer task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -34987,7 +35331,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重新转交运行失败的转交任务</para>
+        /// <para>Retransfers a failed transfer task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35005,7 +35349,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重新转交运行失败的转交任务</para>
+        /// <para>Retransfers a failed transfer task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35023,7 +35367,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>回收API授权。</para>
+        /// <para>Revokes API authorization.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -35081,7 +35425,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>回收API授权。</para>
+        /// <para>Revokes API authorization.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -35139,7 +35483,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>回收API授权。</para>
+        /// <para>Revokes API authorization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35157,7 +35501,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>回收API授权。</para>
+        /// <para>Revokes API authorization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35175,7 +35519,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>回收用户资源授权</para>
+        /// <para>Revokes resource authorization from a user.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -35229,7 +35573,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>回收用户资源授权</para>
+        /// <para>Revokes resource authorization from a user.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -35283,7 +35627,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>回收用户资源授权</para>
+        /// <para>Revokes resource authorization from a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35301,7 +35645,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>回收用户资源授权</para>
+        /// <para>Revokes resource authorization from a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35319,7 +35663,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>终止即席查询任务。</para>
+        /// <para>Stops an ad hoc query task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35369,7 +35713,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>终止即席查询任务。</para>
+        /// <para>Stops an ad hoc query task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35419,7 +35763,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>终止即席查询任务。</para>
+        /// <para>Stops an ad hoc query task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35437,7 +35781,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>终止即席查询任务。</para>
+        /// <para>Stops an ad hoc query task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35455,7 +35799,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交离线计算任务。</para>
+        /// <para>Submits a batch task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -35509,7 +35853,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交离线计算任务。</para>
+        /// <para>Submits a batch task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -35563,7 +35907,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交离线计算任务。</para>
+        /// <para>Submits a batch task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35581,7 +35925,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交离线计算任务。</para>
+        /// <para>Submits a batch task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35599,7 +35943,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量提交规则任务,支持试跑。</para>
+        /// <para>Batch submit rule tasks with support for test runs.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -35653,7 +35998,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量提交规则任务,支持试跑。</para>
+        /// <para>Batch submit rule tasks with support for test runs.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -35707,7 +36053,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量提交规则任务,支持试跑。</para>
+        /// <para>Batch submit rule tasks with support for test runs.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35725,7 +36072,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量提交规则任务,支持试跑。</para>
+        /// <para>Batch submit rule tasks with support for test runs.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35743,7 +36091,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量提交监控对象校验任务。</para>
+        /// <para>Submits quality watchtask check tasks in batches.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -35797,7 +36146,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量提交监控对象校验任务。</para>
+        /// <para>Submits quality watchtask check tasks in batches.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -35851,7 +36201,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量提交监控对象校验任务。</para>
+        /// <para>Submits quality watchtask check tasks in batches.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35869,7 +36220,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量提交监控对象校验任务。</para>
+        /// <para>Submits quality watchtask check tasks in batches.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35887,8 +36239,13 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>同步部门信息。</para>
+        /// <para>Synchronizes department information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of a published API operation by AppKey.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// SyncDepartmentRequest
@@ -35941,8 +36298,13 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>同步部门信息。</para>
+        /// <para>Synchronizes department information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of a published API operation by AppKey.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// SyncDepartmentRequest
@@ -35995,8 +36357,13 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>同步部门信息。</para>
+        /// <para>Synchronizes department information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of a published API operation by AppKey.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SyncDepartmentRequest
@@ -36013,8 +36380,13 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>同步部门信息。</para>
+        /// <para>Synchronizes department information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of a published API operation by AppKey.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SyncDepartmentRequest
@@ -36031,7 +36403,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>同步部门成员信息</para>
+        /// <para>Synchronizes department member information.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -36085,7 +36457,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>同步部门成员信息</para>
+        /// <para>Synchronizes department member information.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -36139,7 +36511,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>同步部门成员信息</para>
+        /// <para>Synchronizes department member information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36157,7 +36529,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>同步部门成员信息</para>
+        /// <para>Synchronizes department member information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36175,7 +36547,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>一键转交负责人</para>
+        /// <para>Transfers ownership to a new owner in one click.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -36229,7 +36601,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>一键转交负责人</para>
+        /// <para>Transfers ownership to a new owner in one click.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -36283,7 +36655,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>一键转交负责人</para>
+        /// <para>Transfers ownership to a new owner in one click.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36301,7 +36673,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>一键转交负责人</para>
+        /// <para>Transfers ownership to a new owner in one click.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36319,7 +36691,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑即席查询文件。</para>
+        /// <para>Modifies an ad hoc query file.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -36373,7 +36745,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑即席查询文件。</para>
+        /// <para>Modifies an ad hoc query file.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -36427,7 +36799,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑即席查询文件。</para>
+        /// <para>Modifies an ad hoc query file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36445,7 +36817,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑即席查询文件。</para>
+        /// <para>Modifies an ad hoc query file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36463,7 +36835,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑离线计算任务。</para>
+        /// <para>Updates an offline compute node.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -36517,7 +36889,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑离线计算任务。</para>
+        /// <para>Updates an offline compute node.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -36571,7 +36943,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑离线计算任务。</para>
+        /// <para>Updates an offline compute node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36589,7 +36961,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑离线计算任务。</para>
+        /// <para>Updates an offline compute node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36607,7 +36979,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑离线计算任务自定义血缘。</para>
+        /// <para>Edits the custom data lineage of a batch task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -36661,7 +37033,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑离线计算任务自定义血缘。</para>
+        /// <para>Edits the custom data lineage of a batch task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -36715,7 +37087,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑离线计算任务自定义血缘。</para>
+        /// <para>Edits the custom data lineage of a batch task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36733,7 +37105,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑离线计算任务自定义血缘。</para>
+        /// <para>Edits the custom data lineage of a batch task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36751,7 +37123,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新业务实体、</para>
+        /// <para>Updates a business entity.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -36805,7 +37177,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新业务实体、</para>
+        /// <para>Updates a business entity.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -36859,7 +37231,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新业务实体、</para>
+        /// <para>Updates a business entity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36877,7 +37249,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新业务实体、</para>
+        /// <para>Updates a business entity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36895,7 +37267,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新业务指标</para>
+        /// <para>Update a business metric.
+        /// Release version: v5.5.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -36949,7 +37322,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新业务指标</para>
+        /// <para>Update a business metric.
+        /// Release version: v5.5.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -37003,7 +37377,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新业务指标</para>
+        /// <para>Update a business metric.
+        /// Release version: v5.5.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37021,7 +37396,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新业务指标</para>
+        /// <para>Update a business metric.
+        /// Release version: v5.5.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37039,7 +37415,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据板块。</para>
+        /// <para>Updates a data domain.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -37093,7 +37469,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据板块。</para>
+        /// <para>Updates a data domain.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -37147,7 +37523,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据板块。</para>
+        /// <para>Updates a data domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37165,7 +37541,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据板块。</para>
+        /// <para>Updates a data domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37183,7 +37559,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改计算源。</para>
+        /// <para>Edits a compute source. Business unit administrators and project administrators have permissions to perform this operation.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -37237,7 +37613,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改计算源。</para>
+        /// <para>Edits a compute source. Business unit administrators and project administrators have permissions to perform this operation.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -37291,7 +37667,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改计算源。</para>
+        /// <para>Edits a compute source. Business unit administrators and project administrators have permissions to perform this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37309,7 +37685,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改计算源。</para>
+        /// <para>Edits a compute source. Business unit administrators and project administrators have permissions to perform this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37327,7 +37703,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新主题域。</para>
+        /// <para>Updates a data domain.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -37381,7 +37757,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新主题域。</para>
+        /// <para>Updates a data domain.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -37435,7 +37811,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新主题域。</para>
+        /// <para>Updates a data domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37453,7 +37829,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新主题域。</para>
+        /// <para>Updates a data domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37471,7 +37847,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据服务应用。</para>
+        /// <para>Updates a data service application. Only super administrators, system administrators, and application owners can perform this operation.
+        /// Release version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -37525,7 +37902,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据服务应用。</para>
+        /// <para>Updates a data service application. Only super administrators, system administrators, and application owners can perform this operation.
+        /// Release version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -37579,7 +37957,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据服务应用。</para>
+        /// <para>Updates a data service application. Only super administrators, system administrators, and application owners can perform this operation.
+        /// Release version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37597,7 +37976,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据服务应用。</para>
+        /// <para>Updates a data service application. Only super administrators, system administrators, and application owners can perform this operation.
+        /// Release version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37615,7 +37995,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据服务应用分组。</para>
+        /// <para>Updates a data service application group. Only superusers and system administrators can perform this operation.
+        /// Online version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -37669,7 +38050,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据服务应用分组。</para>
+        /// <para>Updates a data service application group. Only superusers and system administrators can perform this operation.
+        /// Online version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -37723,7 +38105,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据服务应用分组。</para>
+        /// <para>Updates a data service application group. Only superusers and system administrators can perform this operation.
+        /// Online version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37741,7 +38124,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据服务应用分组。</para>
+        /// <para>Updates a data service application group. Only superusers and system administrators can perform this operation.
+        /// Online version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37759,7 +38143,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据服务应用的普通成员。</para>
+        /// <para>Updates the regular members of a data service application. Only the application owner can perform this operation.
+        /// Online version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -37813,7 +38198,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据服务应用的普通成员。</para>
+        /// <para>Updates the regular members of a data service application. Only the application owner can perform this operation.
+        /// Online version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -37867,7 +38253,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据服务应用的普通成员。</para>
+        /// <para>Updates the regular members of a data service application. Only the application owner can perform this operation.
+        /// Online version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37885,7 +38272,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据服务应用的普通成员。</para>
+        /// <para>Updates the regular members of a data service application. Only the application owner can perform this operation.
+        /// Online version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37903,7 +38291,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑数据源基本信息</para>
+        /// <para>Edits the basic information of a data source. Tenant administrators, data administrators, business segment administrators, project administrators, and operations administrators have permissions to perform this operation.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -37957,7 +38345,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑数据源基本信息</para>
+        /// <para>Edits the basic information of a data source. Tenant administrators, data administrators, business segment administrators, project administrators, and operations administrators have permissions to perform this operation.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -38011,7 +38399,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑数据源基本信息</para>
+        /// <para>Edits the basic information of a data source. Tenant administrators, data administrators, business segment administrators, project administrators, and operations administrators have permissions to perform this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38029,7 +38417,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑数据源基本信息</para>
+        /// <para>Edits the basic information of a data source. Tenant administrators, data administrators, business segment administrators, project administrators, and operations administrators have permissions to perform this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38047,7 +38435,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑数据源连接配置项</para>
+        /// <para>Edits the connection configuration items of a data source. Tenant administrators, data administrators, business unit administrators, project administrators, and operations administrators have permissions to perform this operation.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -38101,7 +38489,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑数据源连接配置项</para>
+        /// <para>Edits the connection configuration items of a data source. Tenant administrators, data administrators, business unit administrators, project administrators, and operations administrators have permissions to perform this operation.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -38155,7 +38543,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑数据源连接配置项</para>
+        /// <para>Edits the connection configuration items of a data source. Tenant administrators, data administrators, business unit administrators, project administrators, and operations administrators have permissions to perform this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38173,7 +38561,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑数据源连接配置项</para>
+        /// <para>Edits the connection configuration items of a data source. Tenant administrators, data administrators, business unit administrators, project administrators, and operations administrators have permissions to perform this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38191,7 +38579,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改菜单树文件所在目录</para>
+        /// <para>Moves the file position in the menu tree.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38245,7 +38633,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改菜单树文件所在目录</para>
+        /// <para>Moves the file position in the menu tree.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38299,7 +38687,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改菜单树文件所在目录</para>
+        /// <para>Moves the file position in the menu tree.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38317,7 +38705,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改菜单树文件所在目录</para>
+        /// <para>Moves the file position in the menu tree.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38335,7 +38723,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改菜单树文件名称</para>
+        /// <para>Updates a file name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38389,7 +38777,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改菜单树文件名称</para>
+        /// <para>Updates a file name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38443,7 +38831,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改菜单树文件名称</para>
+        /// <para>Updates a file name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38461,7 +38849,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改菜单树文件名称</para>
+        /// <para>Updates a file name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38479,7 +38867,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新集成管道任务。</para>
+        /// <para>Updates an integration pipeline or unstructured workflow node.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -38541,7 +38929,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新集成管道任务。</para>
+        /// <para>Updates an integration pipeline or unstructured workflow node.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -38603,7 +38991,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新集成管道任务。</para>
+        /// <para>Updates an integration pipeline or unstructured workflow node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38621,7 +39009,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新集成管道任务。</para>
+        /// <para>Updates an integration pipeline or unstructured workflow node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38639,7 +39027,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>异步更新集成管道任务。</para>
+        /// <para>Asynchronously updates a pipeline or unstructured workflow node.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -38701,7 +39089,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>异步更新集成管道任务。</para>
+        /// <para>Asynchronously updates a pipeline or unstructured workflow node.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -38763,7 +39151,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>异步更新集成管道任务。</para>
+        /// <para>Asynchronously updates a pipeline or unstructured workflow node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38781,7 +39169,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>异步更新集成管道任务。</para>
+        /// <para>Asynchronously updates a pipeline or unstructured workflow node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38799,7 +39187,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>增加项目成员。</para>
+        /// <para>Edits project members.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -38857,7 +39245,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>增加项目成员。</para>
+        /// <para>Edits project members.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -38915,7 +39303,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>增加项目成员。</para>
+        /// <para>Edits project members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38933,7 +39321,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>增加项目成员。</para>
+        /// <para>Edits project members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38951,7 +39339,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量开启或关闭质量规则。</para>
+        /// <para>Enables or disables quality rules in batches.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -39005,7 +39394,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量开启或关闭质量规则。</para>
+        /// <para>Enables or disables quality rules in batches.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -39059,7 +39449,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量开启或关闭质量规则。</para>
+        /// <para>Enables or disables quality rules in batches.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39077,7 +39468,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量开启或关闭质量规则。</para>
+        /// <para>Enables or disables quality rules in batches.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39095,7 +39487,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量开启或关闭质量监控对象。</para>
+        /// <para>Starts or stops quality monitored objects in batches.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -39149,7 +39542,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量开启或关闭质量监控对象。</para>
+        /// <para>Starts or stops quality monitored objects in batches.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -39203,7 +39597,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量开启或关闭质量监控对象。</para>
+        /// <para>Starts or stops quality monitored objects in batches.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39221,7 +39616,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量开启或关闭质量监控对象。</para>
+        /// <para>Starts or stops quality monitored objects in batches.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39239,7 +39635,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑资源文件。</para>
+        /// <para>Edits a resource file.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -39293,7 +39689,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑资源文件。</para>
+        /// <para>Edits a resource file.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -39347,7 +39743,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑资源文件。</para>
+        /// <para>Edits a resource file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39365,7 +39761,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑资源文件。</para>
+        /// <para>Edits a resource file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39383,7 +39779,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新行级权限</para>
+        /// <para>Updates a row-level permission.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -39437,7 +39833,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新行级权限</para>
+        /// <para>Updates a row-level permission.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -39491,7 +39887,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新行级权限</para>
+        /// <para>Updates a row-level permission.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39509,7 +39905,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新行级权限</para>
+        /// <para>Updates a row-level permission.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39527,7 +39923,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据分类。</para>
+        /// <para>Updates a data classification.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -39581,7 +39978,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据分类。</para>
+        /// <para>Updates a data classification.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -39635,7 +40033,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据分类。</para>
+        /// <para>Updates a data classification.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39653,7 +40052,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据分类。</para>
+        /// <para>Updates a data classification.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39671,7 +40071,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据分类目录。</para>
+        /// <para>Updates a data classification folder. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -39725,7 +40125,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据分类目录。</para>
+        /// <para>Updates a data classification folder. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -39779,7 +40179,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据分类目录。</para>
+        /// <para>Updates a data classification folder. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39797,7 +40197,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据分类目录。</para>
+        /// <para>Updates a data classification folder. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39815,7 +40215,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新安全识别结果的生效状态。</para>
+        /// <para>Updates the effective status of security identification results.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -39869,7 +40270,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新安全识别结果的生效状态。</para>
+        /// <para>Updates the effective status of security identification results.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -39923,7 +40325,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新安全识别结果的生效状态。</para>
+        /// <para>Updates the effective status of security identification results.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39941,7 +40344,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新安全识别结果的生效状态。</para>
+        /// <para>Updates the effective status of security identification results.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39959,7 +40363,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过分级顺序更新数据分级。</para>
+        /// <para>Updates data classification.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -40013,7 +40418,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过分级顺序更新数据分级。</para>
+        /// <para>Updates data classification.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -40067,7 +40473,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过分级顺序更新数据分级。</para>
+        /// <para>Updates data classification.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40085,7 +40492,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过分级顺序更新数据分级。</para>
+        /// <para>Updates data classification.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40103,7 +40511,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新标准。</para>
+        /// <para>Updates a standard.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -40157,7 +40566,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新标准。</para>
+        /// <para>Updates a standard.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -40211,7 +40621,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新标准。</para>
+        /// <para>Updates a standard.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40229,7 +40640,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新标准。</para>
+        /// <para>Updates a standard.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40247,7 +40659,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据标准码表。</para>
+        /// <para>Updates a data standard lookup table.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -40301,7 +40714,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据标准码表。</para>
+        /// <para>Updates a data standard lookup table.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -40355,7 +40769,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据标准码表。</para>
+        /// <para>Updates a data standard lookup table.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40373,7 +40788,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据标准码表。</para>
+        /// <para>Updates a data standard lookup table.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40391,7 +40807,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将标准映射关系置为无效映射。</para>
+        /// <para>Sets the standard mapping relationship to invalid mapping.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -40445,7 +40862,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将标准映射关系置为无效映射。</para>
+        /// <para>Sets the standard mapping relationship to invalid mapping.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -40499,7 +40917,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将标准映射关系置为无效映射。</para>
+        /// <para>Sets the standard mapping relationship to invalid mapping.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40517,7 +40936,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将标准映射关系置为无效映射。</para>
+        /// <para>Sets the standard mapping relationship to invalid mapping.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40535,7 +40955,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新标准集。</para>
+        /// <para>Update standard set.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -40589,7 +41010,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新标准集。</para>
+        /// <para>Update standard set.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -40643,7 +41065,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新标准集。</para>
+        /// <para>Update standard set.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40661,7 +41084,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新标准集。</para>
+        /// <para>Update standard set.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40679,7 +41103,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据标准模板。</para>
+        /// <para>Updates a data standard template.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -40733,7 +41158,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据标准模板。</para>
+        /// <para>Updates a data standard template.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -40787,7 +41213,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据标准模板。</para>
+        /// <para>Updates a data standard template.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40805,7 +41232,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据标准模板。</para>
+        /// <para>Updates a data standard template.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40823,7 +41251,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据标准词根。</para>
+        /// <para>Updates a data standard root word.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -40877,7 +41306,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据标准词根。</para>
+        /// <para>Updates a data standard root word.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -40931,7 +41361,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据标准词根。</para>
+        /// <para>Updates a data standard root word.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40949,7 +41380,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据标准词根。</para>
+        /// <para>Updates a data standard root word.
+        /// Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40967,7 +41399,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改租户计算设置。</para>
+        /// <para>Modifies the compute settings of a tenant.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -41021,7 +41453,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改租户计算设置。</para>
+        /// <para>Modifies the compute settings of a tenant.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -41075,7 +41507,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改租户计算设置。</para>
+        /// <para>Modifies the compute settings of a tenant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41093,7 +41525,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改租户计算设置。</para>
+        /// <para>Modifies the compute settings of a tenant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41111,7 +41543,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑租户成员</para>
+        /// <para>Edits tenant members.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -41165,7 +41597,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑租户成员</para>
+        /// <para>Edits tenant members.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -41219,7 +41651,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑租户成员</para>
+        /// <para>Edits tenant members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41237,7 +41669,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑租户成员</para>
+        /// <para>Edits tenant members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41255,7 +41687,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑自定义函数。</para>
+        /// <para>Edits a user-defined function.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -41309,7 +41741,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑自定义函数。</para>
+        /// <para>Edits a user-defined function.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -41363,7 +41795,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑自定义函数。</para>
+        /// <para>Edits a user-defined function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41381,7 +41813,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑自定义函数。</para>
+        /// <para>Edits a user-defined function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41399,7 +41831,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑用户组.</para>
+        /// <para>Edits a user group.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -41453,7 +41885,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑用户组.</para>
+        /// <para>Edits a user group.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -41507,7 +41939,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑用户组.</para>
+        /// <para>Edits a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41525,7 +41957,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑用户组.</para>
+        /// <para>Edits a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41543,7 +41975,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑用户组启用开关.</para>
+        /// <para>Modifies the enabled status of a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41593,7 +42025,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑用户组启用开关.</para>
+        /// <para>Modifies the enabled status of a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41643,7 +42075,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑用户组启用开关.</para>
+        /// <para>Modifies the enabled status of a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41661,7 +42093,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑用户组启用开关.</para>
+        /// <para>Modifies the enabled status of a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41679,7 +42111,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建或者修改质量规则。</para>
+        /// <para>Create or modify a quality rule.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -41733,7 +42166,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建或者修改质量规则。</para>
+        /// <para>Create or modify a quality rule.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -41787,7 +42221,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建或者修改质量规则。</para>
+        /// <para>Create or modify a quality rule.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41805,7 +42240,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建或者修改质量规则。</para>
+        /// <para>Create or modify a quality rule.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41823,7 +42259,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建或者修改调度设置。</para>
+        /// <para>Creates or updates scheduling settings.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -41877,7 +42314,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建或者修改调度设置。</para>
+        /// <para>Creates or updates scheduling settings.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -41931,7 +42369,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建或者修改调度设置。</para>
+        /// <para>Creates or updates scheduling settings.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41949,7 +42388,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建或者修改调度设置。</para>
+        /// <para>Creates or updates scheduling settings.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41967,7 +42407,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建或者修改质量模板。</para>
+        /// <para>Creates or updates a quality template.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -42021,7 +42462,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建或者修改质量模板。</para>
+        /// <para>Creates or updates a quality template.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -42075,7 +42517,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建或者修改质量模板。</para>
+        /// <para>Creates or updates a quality template.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42093,7 +42536,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建或者修改质量模板。</para>
+        /// <para>Creates or updates a quality template.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42111,7 +42555,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建或更改质量监控对象, 支持添加多种类型的质量监控对象，包括：Dataphin表，全域表，数据源，指标，实时元表。</para>
+        /// <para>Creates or updates a quality monitored object. You can add multiple types of quality monitored objects, including Dataphin tables, global tables, data sources, metrics, and real-time meta tables.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -42165,7 +42610,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建或更改质量监控对象, 支持添加多种类型的质量监控对象，包括：Dataphin表，全域表，数据源，指标，实时元表。</para>
+        /// <para>Creates or updates a quality monitored object. You can add multiple types of quality monitored objects, including Dataphin tables, global tables, data sources, metrics, and real-time meta tables.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -42219,7 +42665,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建或更改质量监控对象, 支持添加多种类型的质量监控对象，包括：Dataphin表，全域表，数据源，指标，实时元表。</para>
+        /// <para>Creates or updates a quality monitored object. You can add multiple types of quality monitored objects, including Dataphin tables, global tables, data sources, metrics, and real-time meta tables.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42237,7 +42684,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建或更改质量监控对象, 支持添加多种类型的质量监控对象，包括：Dataphin表，全域表，数据源，指标，实时元表。</para>
+        /// <para>Creates or updates a quality monitored object. You can add multiple types of quality monitored objects, including Dataphin tables, global tables, data sources, metrics, and real-time meta tables.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42255,7 +42703,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建或者修改监控对象告警设置。</para>
+        /// <para>Creates or updates alert settings for a monitored object.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -42309,7 +42758,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建或者修改监控对象告警设置。</para>
+        /// <para>Creates or updates alert settings for a monitored object.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -42363,7 +42813,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建或者修改监控对象告警设置。</para>
+        /// <para>Creates or updates alert settings for a monitored object.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42381,7 +42832,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建或者修改监控对象告警设置。</para>
+        /// <para>Creates or updates alert settings for a monitored object.
+        /// Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">

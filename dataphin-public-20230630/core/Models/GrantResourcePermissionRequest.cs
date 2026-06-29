@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GrantResourcePermissionRequest : TeaModel {
         /// <summary>
+        /// <para>The grant request.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("GrantCommand")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public GrantResourcePermissionRequestGrantCommand GrantCommand { get; set; }
         public class GrantResourcePermissionRequestGrantCommand : TeaModel {
             /// <summary>
+            /// <para>The expiration timestamp, in milliseconds.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string EffectiveEnd { get; set; }
 
             /// <summary>
+            /// <para>The operation types.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("OperateList")]
@@ -34,6 +37,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<string> OperateList { get; set; }
 
             /// <summary>
+            /// <para>The reason for the authorization.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xx</para>
             /// </summary>
@@ -42,6 +47,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Reason { get; set; }
 
             /// <summary>
+            /// <para>The list of resources.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("ResourceList")]
@@ -49,6 +55,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<GrantResourcePermissionRequestGrantCommandResourceList> ResourceList { get; set; }
             public class GrantResourcePermissionRequestGrantCommandResourceList : TeaModel {
                 /// <summary>
+                /// <para>The resource ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>hadoop.300000806.data_distill.behavior_gameinfor_01</para>
                 /// </summary>
@@ -59,6 +67,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
+            /// <para>The resource type.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -69,6 +78,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ResourceType { get; set; }
 
             /// <summary>
+            /// <para>The authorized users pending authorization.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("UserIdList")]
@@ -78,6 +88,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ResetDataServiceAppSecretResponseBody : TeaModel {
         /// <summary>
+        /// <para>Backend response code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Reset Data Service application key result</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ResetDataServiceAppSecretResponseBodyData Data { get; set; }
         public class ResetDataServiceAppSecretResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The new application key</para>
+            /// 
             /// <b>Example:</b>
             /// <para>200000001</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string AppKey { get; set; }
 
             /// <summary>
+            /// <para>The new application secret</para>
+            /// 
             /// <b>Example:</b>
             /// <para>abc123456789</para>
             /// </summary>
@@ -40,6 +49,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>HTTP status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -48,6 +59,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Backend exception details</para>
+        /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
         /// </summary>
@@ -65,6 +78,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether the request was successful</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

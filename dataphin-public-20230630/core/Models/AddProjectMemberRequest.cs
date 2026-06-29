@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class AddProjectMemberRequest : TeaModel {
         /// <summary>
+        /// <para>The command to add members.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AddCommand")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public AddProjectMemberRequestAddCommand AddCommand { get; set; }
         public class AddProjectMemberRequestAddCommand : TeaModel {
             /// <summary>
+            /// <para>The environment identifier. Valid values: DEV and PROD.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Env { get; set; }
 
             /// <summary>
+            /// <para>The list of user members.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("UserList")]
@@ -34,6 +37,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<AddProjectMemberRequestAddCommandUserList> UserList { get; set; }
             public class AddProjectMemberRequestAddCommandUserList : TeaModel {
                 /// <summary>
+                /// <para>The member role. Valid values: 1: project administrator. 2: developer. 3: visitor. 4: analyst. 5: O&amp;M engineer.</para>
                 /// <para>This parameter is required.</para>
                 /// </summary>
                 [NameInMap("RoleList")]
@@ -41,6 +45,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public List<int?> RoleList { get; set; }
 
                 /// <summary>
+                /// <para>The user ID.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -55,6 +60,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The project ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,6 +71,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? Id { get; set; }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

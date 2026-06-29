@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class UpdateSecurityIdentifyResultStatusRequest : TeaModel {
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The update instruction.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UpdateCommand")]
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public UpdateSecurityIdentifyResultStatusRequestUpdateCommand UpdateCommand { get; set; }
         public class UpdateSecurityIdentifyResultStatusRequestUpdateCommand : TeaModel {
             /// <summary>
+            /// <para>Specifies whether the result is effective.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("Enable")]
@@ -34,6 +37,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public bool? Enable { get; set; }
 
             /// <summary>
+            /// <para>The list of identification result IDs.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("IdentifyResultIdList")]

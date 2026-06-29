@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class RemoveUserGroupMemberRequest : TeaModel {
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The command to remove user group members.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RemoveCommand")]
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public RemoveUserGroupMemberRequestRemoveCommand RemoveCommand { get; set; }
         public class RemoveUserGroupMemberRequestRemoveCommand : TeaModel {
             /// <summary>
+            /// <para>The user group ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -37,6 +40,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string UserGroupId { get; set; }
 
             /// <summary>
+            /// <para>The list of user IDs.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("UserIdList")]

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetTableLineagesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
         /// </summary>
@@ -43,15 +49,23 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
+        /// <summary>
+        /// <para>The table lineage list.</para>
+        /// </summary>
         [NameInMap("TableLineageList")]
         [Validation(Required=false)]
         public List<GetTableLineagesResponseBodyTableLineageList> TableLineageList { get; set; }
         public class GetTableLineagesResponseBodyTableLineageList : TeaModel {
             /// <summary>
+            /// <para>The ID of the business unit to which the input table belongs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -60,6 +74,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? InputBizUnitId { get; set; }
 
             /// <summary>
+            /// <para>The ID of the data source to which the input table belongs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -68,6 +84,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? InputDataSourceId { get; set; }
 
             /// <summary>
+            /// <para>The type of the data source to which the input table belongs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>MAX_COMPUTE</para>
             /// </summary>
@@ -76,6 +94,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string InputDataSourceType { get; set; }
 
             /// <summary>
+            /// <para>The ID of the project to which the input table belongs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1233</para>
             /// </summary>
@@ -83,11 +103,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             [Validation(Required=false)]
             public long? InputProjectId { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether the input table has been deleted.</para>
+            /// </summary>
             [NameInMap("InputTableDeleted")]
             [Validation(Required=false)]
             public bool? InputTableDeleted { get; set; }
 
             /// <summary>
+            /// <para>The environment to which the input table belongs. Valid values: dev and prod.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>dev</para>
             /// </summary>
@@ -96,6 +121,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string InputTableEnv { get; set; }
 
             /// <summary>
+            /// <para>The GUID of the input table. Each asset has a unique identifier.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123211</para>
             /// </summary>
@@ -104,6 +131,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string InputTableGuid { get; set; }
 
             /// <summary>
+            /// <para>The name of the input table.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>t_input</para>
             /// </summary>
@@ -112,6 +141,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string InputTableName { get; set; }
 
             /// <summary>
+            /// <para>The environment to which the task belongs. Valid values: dev and prod.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>dev</para>
             /// </summary>
@@ -120,6 +151,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string NodeEnv { get; set; }
 
             /// <summary>
+            /// <para>The task ID associated with the lineage.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>110021</para>
             /// </summary>
@@ -128,6 +161,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string NodeId { get; set; }
 
             /// <summary>
+            /// <para>The ID of the business unit to which the output table belongs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -136,6 +171,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? OutputBizUnitId { get; set; }
 
             /// <summary>
+            /// <para>The ID of the data source to which the output table belongs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -144,6 +181,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? OutputDataSourceId { get; set; }
 
             /// <summary>
+            /// <para>The type of the data source to which the output table belongs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>MAX_COMPUTE</para>
             /// </summary>
@@ -152,6 +191,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string OutputDataSourceType { get; set; }
 
             /// <summary>
+            /// <para>The ID of the project to which the output table belongs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1233</para>
             /// </summary>
@@ -159,11 +200,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             [Validation(Required=false)]
             public long? OutputProjectId { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether the output table has been deleted.</para>
+            /// </summary>
             [NameInMap("OutputTableDeleted")]
             [Validation(Required=false)]
             public bool? OutputTableDeleted { get; set; }
 
             /// <summary>
+            /// <para>The environment to which the output table belongs. Valid values: dev and prod.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>dev</para>
             /// </summary>
@@ -172,6 +218,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string OutputTableEnv { get; set; }
 
             /// <summary>
+            /// <para>The GUID of the output table. Each asset has a unique identifier.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2231</para>
             /// </summary>
@@ -180,6 +228,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string OutputTableGuid { get; set; }
 
             /// <summary>
+            /// <para>The name of the output table.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>t_output</para>
             /// </summary>

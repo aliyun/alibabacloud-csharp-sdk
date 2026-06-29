@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class CreateStreamBatchJobMappingRequest : TeaModel {
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The stream-batch integrated node information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("StreamBatchJobMappingCreateCommand")]
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public CreateStreamBatchJobMappingRequestStreamBatchJobMappingCreateCommand StreamBatchJobMappingCreateCommand { get; set; }
         public class CreateStreamBatchJobMappingRequestStreamBatchJobMappingCreateCommand : TeaModel {
             /// <summary>
+            /// <para>The cluster ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -37,6 +40,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ClusterId { get; set; }
 
             /// <summary>
+            /// <para>The description.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>这是一段任务的描述信息</para>
             /// </summary>
@@ -45,6 +50,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The folder in which the node is generated.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -55,6 +61,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Directory { get; set; }
 
             /// <summary>
+            /// <para>The Flink DPI engine version.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -65,6 +72,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string EngineVersion { get; set; }
 
             /// <summary>
+            /// <para>The environment.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -75,6 +83,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Env { get; set; }
 
             /// <summary>
+            /// <para>The file name.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -85,6 +94,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string FileName { get; set; }
 
             /// <summary>
+            /// <para>The file type.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -95,6 +105,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string FileType { get; set; }
 
             /// <summary>
+            /// <para>The project ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -105,6 +116,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? ProjectId { get; set; }
 
             /// <summary>
+            /// <para>The queue name.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -115,6 +127,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string QueueName { get; set; }
 
             /// <summary>
+            /// <para>The VVP cluster type. Valid values: SESSION and PREJOB. This parameter is specific to VVP. If not applicable, leave this parameter empty or do not pass it.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

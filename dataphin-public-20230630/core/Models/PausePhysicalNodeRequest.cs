@@ -10,6 +10,12 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class PausePhysicalNodeRequest : TeaModel {
         /// <summary>
+        /// <para>The environment identifier. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>DEV: development environment </description></item>
+        /// <item><description>PROD (default): production environment.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>PROD</para>
         /// </summary>
@@ -18,6 +24,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Env { get; set; }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +35,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The pause scheduling request.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("PauseCommand")]
@@ -35,6 +43,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public PausePhysicalNodeRequestPauseCommand PauseCommand { get; set; }
         public class PausePhysicalNodeRequestPauseCommand : TeaModel {
             /// <summary>
+            /// <para>The list of node IDs.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("NodeIdList")]
@@ -42,6 +51,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<string> NodeIdList { get; set; }
 
             /// <summary>
+            /// <para>The project ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

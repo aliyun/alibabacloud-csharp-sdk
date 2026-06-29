@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class CheckResourcePermissionShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>Check user resource permission</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CheckCommand")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string CheckCommandShrink { get; set; }
 
         /// <summary>
+        /// <para>Tenant ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

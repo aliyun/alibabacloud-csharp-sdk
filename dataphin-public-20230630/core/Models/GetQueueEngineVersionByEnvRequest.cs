@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetQueueEngineVersionByEnvRequest : TeaModel {
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>The environment.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Env { get; set; }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The project ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,6 +54,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
+        /// <para>The queue name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -60,6 +65,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string QueueName { get; set; }
 
         /// <summary>
+        /// <para>The stream-batch mode.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

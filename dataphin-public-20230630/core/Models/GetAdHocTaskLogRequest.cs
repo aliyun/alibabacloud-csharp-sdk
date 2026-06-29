@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetAdHocTaskLogRequest : TeaModel {
         /// <summary>
+        /// <para>The offset for querying logs. Increment the value based on the returned result. Set the initial value to 0.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? Offset { get; set; }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The project ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
+        /// <para>The subtask ID. The value starts from 0.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,6 +54,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? SubTaskId { get; set; }
 
         /// <summary>
+        /// <para>The task ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

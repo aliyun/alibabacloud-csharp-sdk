@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class CreateSecurityLevelRequest : TeaModel {
         /// <summary>
+        /// <para>The create command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CreateCommand")]
@@ -17,6 +18,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public CreateSecurityLevelRequestCreateCommand CreateCommand { get; set; }
         public class CreateSecurityLevelRequestCreateCommand : TeaModel {
             /// <summary>
+            /// <para>The abbreviation of the classification level.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -25,6 +28,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Abbreviation { get; set; }
 
             /// <summary>
+            /// <para>The description of the classification level.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -33,6 +38,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The sort order of the classification level. If this parameter is not specified, the current maximum order ID is used by default.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -41,6 +48,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? Index { get; set; }
 
             /// <summary>
+            /// <para>The name of the classification level.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -53,6 +61,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

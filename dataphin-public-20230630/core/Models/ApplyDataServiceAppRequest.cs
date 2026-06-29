@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ApplyDataServiceAppRequest : TeaModel {
         /// <summary>
+        /// <para>The apply command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ApplyCommand")]
@@ -28,6 +29,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? AppId { get; set; }
 
             /// <summary>
+            /// <para>The expiration date in the format of yyyy-MM-dd.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -38,6 +40,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ExpireDate { get; set; }
 
             /// <summary>
+            /// <para>The reason for the application.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -50,6 +53,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -60,6 +64,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The data service project ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
