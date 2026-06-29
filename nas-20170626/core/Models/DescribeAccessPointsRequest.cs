@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeAccessPointsRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the permission group.</para>
-        /// <para>This parameter is required for a General-purpose NAS file system.</para>
-        /// <para>The default permission group for virtual private clouds (VPCs) is named DEFAULT_VPC_GROUP_NAME.</para>
+        /// <para>The permission group name.</para>
+        /// <para>This parameter is required if the file system is a General-purpose NAS file system.</para>
+        /// <para>Default permission group: DEFAULT_VPC_GROUP_NAME (the default VPC permission group).</para>
         /// 
         /// <b>Example:</b>
         /// <para>DEFAULT_VPC_GROUP_NAME</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string AccessGroup { get; set; }
 
         /// <summary>
-        /// <para>The ID of the file system.</para>
+        /// <para>The file system ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>174494****</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token used to retrieve the next page of results. Do not specify this parameter for the first request. For subsequent requests, set this value to the NextToken returned in the previous response.</para>
+        /// <para>The query token. Set the value to the NextToken value returned in the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MTY4NzcxOTcwMjAzMDk2Nzc0MyM4MDM4****</para>
@@ -53,20 +53,20 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The tags of the access point.</para>
+        /// <para>The list of access point tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeAccessPointsRequestTag> Tag { get; set; }
         public class DescribeAccessPointsRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the tag.</para>
+            /// <para>The tag key.</para>
             /// <para>Limits:</para>
             /// <list type="bullet">
             /// <item><description>Valid values of N: 1 to 20.</description></item>
-            /// <item><description>Maximum length is 128 characters.</description></item>
-            /// <item><description>Cannot start with aliyun or acs:.</description></item>
-            /// <item><description>Cannot contain http:// or https://.</description></item>
+            /// <item><description>The tag key can be up to 128 characters in length.</description></item>
+            /// <item><description>The tag key cannot start with aliyun or acs:.</description></item>
+            /// <item><description>The tag key cannot contain http:// or https://.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -77,13 +77,13 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag.</para>
+            /// <para>The tag value.</para>
             /// <para>Limits:</para>
             /// <list type="bullet">
             /// <item><description>Valid values of N: 1 to 20.</description></item>
-            /// <item><description>Maximum length is 128 characters.</description></item>
-            /// <item><description>Cannot start with aliyun or acs:.</description></item>
-            /// <item><description>Cannot contain http:// or https://.</description></item>
+            /// <item><description>The tag value can be up to 128 characters in length.</description></item>
+            /// <item><description>The tag value cannot start with aliyun or acs:.</description></item>
+            /// <item><description>The tag value cannot contain http:// or https://.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

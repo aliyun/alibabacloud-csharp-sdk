@@ -11,8 +11,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
     public class CreateMountTargetRequest : TeaModel {
         /// <summary>
         /// <para>The name of the permission group.</para>
-        /// <para>This parameter is required if you create a mount target for a General-purpose NAS file system or an Extreme NAS file system.</para>
-        /// <para>The default permission group for virtual private clouds (VPCs) is named DEFAULT_VPC_GROUP_NAME.</para>
+        /// <para>This parameter is required if the file system is a General-purpose NAS or Extreme NAS file system.</para>
+        /// <para>Default permission group: DEFAULT_VPC_GROUP_NAME (the default permission group for VPCs).</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-test</para>
@@ -22,11 +22,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string AccessGroupName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run to check for existing mount targets. This parameter is valid only for CPFS file systems.</para>
-        /// <para>If you set this parameter to true, the system checks whether the request parameters are valid and whether the requested resources are available. In this case, no mount target is created and no fee is incurred.</para>
+        /// <para>Specifies whether to check for existing mount targets. Only CPFS file systems are supported.</para>
+        /// <para>A dry run checks parameter validity and inventory without actually creating a mount target or incurring fees.</para>
         /// <list type="bullet">
-        /// <item><description>true: performs a dry run but does not create a mount target. In the dry run, the system checks the request format, service limits, available CPFS resources, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the HTTP status code <c>200</c> is returned. No value is returned for the <c>MountTargetDomain</c> parameter.</description></item>
-        /// <item><description>false (default): sends the request. If the request passes the dry run, a mount target is created.</description></item>
+        /// <item><description>true: sends a dry run request without creating a mount target. The check items include required parameters, request format, business limits, and CPFS inventory. If the check fails, the corresponding error is returned. If the check passes, <c>200 HttpCode</c> is returned, but <c>MountTargetDomain</c> is empty.</description></item>
+        /// <item><description>false (default): sends a normal request. After the check passes, a mount target is created.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to create an IPv6 domain name for the mount target.</para>
+        /// <para>Specifies whether to create an IPv6 mount target.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: An IPv6 domain name is created for the mount target.</description></item>
-        /// <item><description>false (default): No IPv6 domain name is created for the mount target.</description></item>
+        /// <item><description>true: creates an IPv6 mount target.</description></item>
+        /// <item><description>false (default): does not create an IPv6 mount target.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>Only Extreme NAS file systems that reside in the Chinese mainland support IPv6. If you want to create an IPv6 domain name for the mount target, you must enable IPv6 for the file system.</para>
+        /// <para>IPv6 is supported only by Extreme NAS file systems in all regions in the Chinese mainland. The file system must have IPv6 enabled.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -55,11 +55,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public bool? EnableIpv6 { get; set; }
 
         /// <summary>
-        /// <para>The ID of the file system.</para>
+        /// <para>The file system ID.</para>
         /// <list type="bullet">
-        /// <item><description>Sample ID of a General-purpose NAS file system: 31a8e4\<em>\</em>\<em>\</em>.</description></item>
-        /// <item><description>The IDs of Extreme NAS file systems must start with <c>extreme-</c>, for example, extreme-0015\<em>\</em>\<em>\</em>.</description></item>
-        /// <item><description>The IDs of CPFS file systems must start with <c>cpfs-</c>. Example: cpfs-125487\<em>\</em>\<em>\</em>.</description></item>
+        /// <item><description><para>General-purpose NAS: 31a8e4\<em>\</em>\<em>\</em>.</para>
+        /// </description></item>
+        /// <item><description><para>Extreme NAS: The ID must start with <c>extreme-</c>, such as extreme-0015\<em>\</em>\<em>\</em>.</para>
+        /// </description></item>
+        /// <item><description><para>Cloud Parallel File Storage (CPFS): The ID must start with <c>cpfs-</c>, such as cpfs-125487\<em>\</em>\<em>\</em>.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -71,7 +74,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>The network type of the mount target. Valid value: <b>Vpc</b>.</para>
+        /// <para>The network type of the mount target. Set the value to <b>Vpc</b>, which indicates a virtual private cloud (VPC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -82,7 +85,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string NetworkType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the security group.</para>
+        /// <para>The security group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sg-bp1fg655nh68xyz9****</para>
@@ -92,8 +95,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch.</para>
-        /// <para>This parameter is valid and required if the mount target resides in a VPC. Example: If you set the NetworkType parameter to VPC, you must specify the VSwitchId parameter.</para>
+        /// <para>The vSwitch ID.</para>
+        /// <para>This parameter is required and valid only when the network type is VPC.
+        /// For example:
+        /// If NetworkType is set to VPC, VSwitchId is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-2zevmwkwyztjuoffg****</para>
@@ -103,8 +108,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC.</para>
-        /// <para>This parameter is valid and required if the mount target resides in a VPC. Example: If you set the NetworkType parameter to VPC, you must specify the VpcId parameter.</para>
+        /// <para>The VPC ID.</para>
+        /// <para>This parameter is required and valid only when the network type is VPC.
+        /// For example:
+        /// If NetworkType is set to VPC, VpcId is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-2zesj9afh3y518k9o****</para>

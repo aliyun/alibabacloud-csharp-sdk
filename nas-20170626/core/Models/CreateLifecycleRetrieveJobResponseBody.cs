@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class CreateLifecycleRetrieveJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the data retrieval task.</para>
+        /// <para>The data retrieval task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>lrj-nfstest-ia-160****853-hshvw</para>

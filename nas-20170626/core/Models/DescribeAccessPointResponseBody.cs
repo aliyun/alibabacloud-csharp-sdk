@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeAccessPointResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the access point.</para>
+        /// <para>The access point information.</para>
         /// </summary>
         [NameInMap("AccessPoint")]
         [Validation(Required=false)]
         public DescribeAccessPointResponseBodyAccessPoint AccessPoint { get; set; }
         public class DescribeAccessPointResponseBodyAccessPoint : TeaModel {
             /// <summary>
-            /// <para>The Alibaba Cloud Resource Name (ARN) of the access point.</para>
+            /// <para>The access point ARN.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acs:nas:cn-hangzhou:178321033379****:accesspoint/ap-ie15yd****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string ARN { get; set; }
 
             /// <summary>
-            /// <para>The name of the permission group.</para>
+            /// <para>The permission group name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string AccessGroup { get; set; }
 
             /// <summary>
-            /// <para>The ID of the access point.</para>
+            /// <para>The access point ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ap-ie15yd****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string AccessPointId { get; set; }
 
             /// <summary>
-            /// <para>The name of the access point.</para>
+            /// <para>The access point name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -55,6 +55,16 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             [NameInMap("AccessPointName")]
             [Validation(Required=false)]
             public string AccessPointName { get; set; }
+
+            /// <summary>
+            /// <para>AgenticSpace Id。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>agentic-229oypxjgpau2****</para>
+            /// </summary>
+            [NameInMap("AgenticSpaceId")]
+            [Validation(Required=false)]
+            public string AgenticSpaceId { get; set; }
 
             /// <summary>
             /// <para>The time when the access point was created.</para>
@@ -67,7 +77,17 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The domain name of the access point.</para>
+            /// <para>The time when the AgenticSpace was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2026-06-10T10:08:08Z</para>
+            /// </summary>
+            [NameInMap("CreateTimeUtc")]
+            [Validation(Required=false)]
+            public string CreateTimeUtc { get; set; }
+
+            /// <summary>
+            /// <para>The access point domain name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ap-ie15ydanoz.001014****-w****.cn-hangzhou.nas.aliyuncs.com</para>
@@ -87,7 +107,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public bool? EnabledRam { get; set; }
 
             /// <summary>
-            /// <para>The ID of the file system.</para>
+            /// <para>The file system ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>31a8e4****</para>
@@ -97,7 +117,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string FileSystemId { get; set; }
 
             /// <summary>
-            /// <para>The time when the access point was modified.</para>
+            /// <para>The time when the access point was last modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1709619668276167</para>
@@ -107,6 +127,16 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string ModifyTime { get; set; }
 
             /// <summary>
+            /// <para>The time when the AgenticSpace was last modified. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2026-06-10T10:08:08Z</para>
+            /// </summary>
+            [NameInMap("ModifyTimeUtc")]
+            [Validation(Required=false)]
+            public string ModifyTimeUtc { get; set; }
+
+            /// <summary>
             /// <para>The POSIX user.</para>
             /// </summary>
             [NameInMap("PosixUser")]
@@ -114,7 +144,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public DescribeAccessPointResponseBodyAccessPointPosixUser PosixUser { get; set; }
             public class DescribeAccessPointResponseBodyAccessPointPosixUser : TeaModel {
                 /// <summary>
-                /// <para>The ID of the POSIX user group.</para>
+                /// <para>The POSIX user group ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12</para>
@@ -124,14 +154,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public int? PosixGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The IDs of the secondary user groups.</para>
+                /// <para>The secondary user group ID.</para>
                 /// </summary>
                 [NameInMap("PosixSecondaryGroupIds")]
                 [Validation(Required=false)]
                 public List<int?> PosixSecondaryGroupIds { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the POSIX user.</para>
+                /// <para>The POSIX user ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123</para>
@@ -163,14 +193,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string RootPath { get; set; }
 
             /// <summary>
-            /// <para>The permissions to create the root directory.</para>
+            /// <para>The permissions for creating the root directory.</para>
             /// </summary>
             [NameInMap("RootPathPermission")]
             [Validation(Required=false)]
             public DescribeAccessPointResponseBodyAccessPointRootPathPermission RootPathPermission { get; set; }
             public class DescribeAccessPointResponseBodyAccessPointRootPathPermission : TeaModel {
                 /// <summary>
-                /// <para>The ID of the owner group.</para>
+                /// <para>The file group ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123</para>
@@ -180,7 +210,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public int? OwnerGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The owner ID.</para>
+                /// <para>The file owner ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -190,7 +220,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public int? OwnerUserId { get; set; }
 
                 /// <summary>
-                /// <para>The POSIX permission.</para>
+                /// <para>The POSIX permissions.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0755</para>
@@ -202,12 +232,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             }
 
             /// <summary>
-            /// <para>The status of the root directory.</para>
+            /// <para>The current root directory status.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: The rootpath status is unknown.</description></item>
-            /// <item><description>1: The rootpath does not exist and may be deleted.</description></item>
-            /// <item><description>2: The rootpath is normal.</description></item>
+            /// <item><description>0: The root path status is unknown.</description></item>
+            /// <item><description>1: The root path does not exist. It may have been deleted by the user.</description></item>
+            /// <item><description>2: The root path status is normal.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -218,13 +248,13 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string RootPathStatus { get; set; }
 
             /// <summary>
-            /// <para>The status of the access point.</para>
+            /// <para>The current access point status.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Active: The access point is available.</description></item>
-            /// <item><description>Inactive: The access point is unavailable.</description></item>
-            /// <item><description>Pending: The access point is being created.</description></item>
-            /// <item><description>Deleting: The access point is being deleted.</description></item>
+            /// <item><description>Active: active</description></item>
+            /// <item><description>Inactive: inactive</description></item>
+            /// <item><description>Pending: being created</description></item>
+            /// <item><description>Deleting: being deleted</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -235,14 +265,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The tags of the access point.</para>
+            /// <para>The list of access point tags.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<DescribeAccessPointResponseBodyAccessPointTags> Tags { get; set; }
             public class DescribeAccessPointResponseBodyAccessPointTags : TeaModel {
                 /// <summary>
-                /// <para>The key of a tag.</para>
+                /// <para>The tag key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TestKey</para>
@@ -252,7 +282,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The value of a tag.</para>
+                /// <para>The tag value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TestValue</para>
@@ -274,8 +304,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the virtual private cloud (VPC).</para>
-            /// <para>You must select the VPC of the Elastic Compute Service (ECS) instance on which you want to mount the file system.</para>
+            /// <para>The VPC ID.</para>
+            /// <para>The VPC must be the same as the VPC of the Elastic Computing Service (ECS) server to which you want to mount the file system.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-2zesj9afh3y518k9o****</para>

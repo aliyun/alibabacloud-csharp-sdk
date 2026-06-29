@@ -13,8 +13,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>The name of the permission group.</para>
         /// <para>Limits:</para>
         /// <list type="bullet">
-        /// <item><description>The name must be 3 to 64 characters in length.</description></item>
-        /// <item><description>The name must start with a letter and can contain letters, digits, underscores (_), and hyphens (-).</description></item>
+        /// <item><description><para>The name must be 3 to 64 characters in length.</para>
+        /// </description></item>
+        /// <item><description><para>The name must start with a letter and can contain letters, digits, underscores (_), or hyphens (-).</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -28,9 +30,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>The type of the file system.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>standard: General-purpose NAS</description></item>
-        /// <item><description>extreme: Extreme NAS</description></item>
-        /// <item><description>cpfs: CPFS</description></item>
+        /// <item><description>standard (default): General-purpose NAS.</description></item>
+        /// <item><description>extreme: Extreme NAS.</description></item>
+        /// <item><description>cpfs: Cloud Parallel File Storage (CPFS).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -41,8 +43,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemType { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
-        /// <para>Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number of the list.</para>
+        /// <para>Start value (default value): 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -52,7 +54,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of permission groups returned per page.</para>
+        /// <para>The number of permission groups on each page.</para>
         /// <para>Valid values: 1 to 100.</para>
         /// <para>Default value: 10.</para>
         /// 
@@ -64,11 +66,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the time to return is displayed in UTC.</para>
+        /// <para>Specifies whether the returned time is displayed in UTC.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true (default): The time is displayed in UTC.</description></item>
-        /// <item><description>false: The time is not displayed in UTC.</description></item>
+        /// <item><description>true (default): The returned time is displayed in UTC.</description></item>
+        /// <item><description>false: The returned time is not displayed in UTC.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

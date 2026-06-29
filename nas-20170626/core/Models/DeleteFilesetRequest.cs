@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DeleteFilesetRequest : TeaModel {
         /// <summary>
-        /// <para>A client-generated token that you can use to ensure the idempotence of the request. The ClientToken must be unique across requests.</para>
-        /// <para>The ClientToken can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests.</para>
+        /// <para>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the request ID as the ClientToken. The request ID is unique for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may differ for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,13 +24,13 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run for the request.</para>
-        /// <para>A dry run checks for issues such as parameter validity and resource availability, but does not delete the fileset.</para>
+        /// <para>Specifies whether to perform a dry run for this deletion request.</para>
+        /// <para>A dry run checks parameter validity and resource availability without actually deleting the instance.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: Sends a check request and does not delete the fileset. The system checks for required parameters, request format, and business limits. If the check fails, an error is returned. If the check passes, an HTTP 200 OK status code is returned.</para>
+        /// <item><description><para>true: Sends a check request without deleting the instance. The check items include whether required parameters are specified, the request format, and business limitations. If the check fails, the corresponding error is returned. If the check passes, HTTP status code 200 is returned.</para>
         /// </description></item>
-        /// <item><description><para>false (Default): Sends a normal request and deletes the fileset after the check passes.</para>
+        /// <item><description><para>false (default): Sends a normal request. After the check passes, the instance is directly deleted.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -44,9 +44,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <summary>
         /// <para>The file system ID.</para>
         /// <list type="bullet">
-        /// <item><description><para>CPFS: The ID must start with <c>cpfs-</c>, such as cpfs-099394bd928c\<em>\</em>\<em>\</em>.</para>
+        /// <item><description><para>CPFS: The ID must start with <c>cpfs-</c>, such as cpfs-099394bd928c****.</para>
         /// </description></item>
-        /// <item><description><para>CPFS for AI and HPC: The ID must start with <c>bmcpfs-</c>, such as bmcpfs-290w65p03ok64ya\<em>\</em>\<em>\</em>.</para>
+        /// <item><description><para>CPFS for Lingjun: The ID must start with <c>bmcpfs-</c>, such as bmcpfs-290w65p03ok64ya****.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>

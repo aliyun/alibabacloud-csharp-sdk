@@ -10,16 +10,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeFileSystemsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the file system.</para>
+        /// <para>The file system ID.</para>
         /// <list type="bullet">
-        /// <item><description><para>For General-purpose NAS file systems, the ID is a string of characters, such as <c>31a8e4****</c>.</para>
-        /// </description></item>
-        /// <item><description><para>For Extreme NAS file systems, the ID must start with <c>extreme-</c>, such as <c>extreme-0015****</c>.</para>
-        /// </description></item>
-        /// <item><description><para>For Cloud Parallel File System (CPFS) file systems, the ID must start with <c>cpfs-</c>, such as <c>cpfs-125487****</c>.</para>
-        /// </description></item>
-        /// <item><description><para>For Cloud Parallel File System SE (CPFS SE) file systems, the ID must start with <c>cpfsse-</c>, such as <c>cpfsse-022c71b134****</c>.</para>
-        /// </description></item>
+        /// <item><description>General-purpose NAS: 31a8e4****.</description></item>
+        /// <item><description>Extreme NAS: Must start with extreme-, such as extreme-0015****.</description></item>
+        /// <item><description>CPFS (locally redundant): Must start with cpfs-, such as cpfs-125487****.</description></item>
+        /// <item><description>CPFS SE (zone-redundant): Must start with cpfsse-, such as cpfsse-022c71b134****.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -33,19 +29,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>The file system type.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>all</c> (default): all file system types.</para>
-        /// </description></item>
-        /// <item><description><para><c>standard</c>: General-purpose NAS.</para>
-        /// </description></item>
-        /// <item><description><para><c>extreme</c>: Extreme NAS.</para>
-        /// </description></item>
-        /// <item><description><para><c>cpfs</c>: Cloud Parallel File System (CPFS).</para>
-        /// </description></item>
-        /// <item><description><para><c>cpfsse</c>: Cloud Parallel File System SE (CPFS SE).</para>
-        /// </description></item>
+        /// <item><description>all (default): queries all types.</description></item>
+        /// <item><description>standard: General-purpose NAS.</description></item>
+        /// <item><description>extreme: Extreme NAS.</description></item>
+        /// <item><description>cpfs: Cloud Parallel File Storage (CPFS) (locally redundant).</description></item>
+        /// <item><description>cpfsse: CPFS SE (zone-redundant).</description></item>
         /// </list>
         /// <remarks>
-        /// <para>Separate multiple types with commas.</para>
+        /// <para>To query multiple types, separate them with commas (,).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -57,7 +48,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// <para>The page number of the file system list.</para>
-        /// <para>The page number starts at 1. The default value is 1.</para>
+        /// <para>Start value (default value): 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -67,8 +58,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of file systems to return on each page.</para>
-        /// <para>Value range: 1 to 100.</para>
+        /// <para>The number of file systems on each page in a paging query.</para>
+        /// <para>Valid values: 1 to 100.</para>
         /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -79,8 +70,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
-        /// <para>You can view this ID in the <a href="https://resourcemanager.console.aliyun.com/resource-groups?">Resource Management console</a>.</para>
+        /// <para>The resource group ID.</para>
+        /// <para>You can view the resource group ID in the <a href="https://resourcemanager.console.aliyun.com/resource-groups?">Resource Management console</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmwavnfef****</para>
@@ -90,7 +81,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The tags used to filter file systems. You can specify 1 to 20 tags.</para>
+        /// <para>The tag information.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -100,13 +91,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <para>The tag key.</para>
             /// <para>Limits:</para>
             /// <list type="bullet">
-            /// <item><description></description></item>
-            /// <item><description><para>The tag key can be up to 128 characters long.</para>
-            /// </description></item>
-            /// <item><description><para>It cannot start with <c>aliyun</c> or <c>acs:</c>.</para>
-            /// </description></item>
-            /// <item><description><para>It cannot contain <c>http://</c> or <c>https://</c>.</para>
-            /// </description></item>
+            /// <item><description>Valid values of N: 1 to 20.</description></item>
+            /// <item><description>The tag key can be up to 128 characters in length.</description></item>
+            /// <item><description>The tag key cannot start with <c>aliyun</c> or <c>acs:</c>.</description></item>
+            /// <item><description>The tag key cannot contain <c>http://</c> or <c>https://</c>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -120,13 +108,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <para>The tag value.</para>
             /// <para>Limits:</para>
             /// <list type="bullet">
-            /// <item><description></description></item>
-            /// <item><description><para>The tag value can be up to 128 characters long.</para>
-            /// </description></item>
-            /// <item><description><para>It cannot start with <c>aliyun</c> or <c>acs:</c>.</para>
-            /// </description></item>
-            /// <item><description><para>It cannot contain <c>http://</c> or <c>https://</c>.</para>
-            /// </description></item>
+            /// <item><description>Valid values of N: 1 to 20.</description></item>
+            /// <item><description>The tag value can be up to 128 characters in length.</description></item>
+            /// <item><description>The tag value cannot start with <c>aliyun</c> or <c>acs:</c>.</description></item>
+            /// <item><description>The tag value cannot contain <c>http://</c> or <c>https://</c>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -139,8 +124,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         }
 
         /// <summary>
-        /// <para>The ID of the VPC.</para>
-        /// <para>The file system and the ECS instance used for mounting must be in the same VPC.</para>
+        /// <para>The virtual private cloud (VPC) ID.</para>
+        /// <para>The VPC must be the same as the VPC of the Elastic Computing Service (ECS) server to which you want to mount the file system.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp1sevsgtqvk5gxbl****</para>

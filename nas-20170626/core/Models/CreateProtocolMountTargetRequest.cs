@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string AccessGroupName { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</para>
-        /// <para>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How do I ensure the idempotence?</a></para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests.</para>
+        /// <para>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may differ for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -35,12 +35,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The description of the export directory for the protocol service. The <b>name of the export directory</b> appears in the console.</para>
+        /// <para>The description of the protocol service export directory. This parameter is displayed as <b>Export Directory Name</b> in the console.</para>
         /// <para>Limits:</para>
         /// <list type="bullet">
-        /// <item><description>The description must be 2 to 128 characters in length.</description></item>
-        /// <item><description>The description must start with a letter but cannot start with <c>http://</c> or <c>https://</c>.</description></item>
-        /// <item><description>The description can contain letters, digits, colons (:), underscores (_), and hyphens (-).</description></item>
+        /// <item><description>The description must be 2 to 128 characters in length and can contain letters and Chinese characters.</description></item>
+        /// <item><description>The description must start with a letter or a Chinese character and cannot start with <c>http://</c> or <c>https://</c>.</description></item>
+        /// <item><description>The description can contain digits, colons (:), underscores (_), and hyphens (-).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -51,11 +51,13 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. The dry run checks parameter validity and prerequisites. The dry run does not create an export directory or incur fees.</para>
+        /// <para>Specifies whether to perform a dry run for this request. A dry run checks parameter validity, dependencies, and other conditions without actually creating the instance or incurring charges.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: performs a dry run. The system checks the request format, service limits, prerequisites, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the HTTP status code 200 is returned. No value is returned for the ExportId parameter.</description></item>
-        /// <item><description>false (default): performs a dry run and sends the request. If the request passes the dry run, an export directory is created.</description></item>
+        /// <item><description><para>true: sends a dry run request without creating the export directory. The dry run checks whether required parameters are specified, whether the request format is valid, and whether business limit dependencies are met. If the check fails, the corresponding error is returned. If the check succeeds, HTTP status code 200 is returned, but ExportId is empty.</para>
+        /// </description></item>
+        /// <item><description><para>false (default): sends a normal request. After the check succeeds, the instance is created.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -77,12 +79,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the fileset that you want to export.</para>
+        /// <para>The ID of the fileset to export.</para>
         /// <para>Limits:</para>
         /// <list type="bullet">
-        /// <item><description>The fileset already exists.</description></item>
-        /// <item><description>You can create only one export directory for a fileset.</description></item>
-        /// <item><description>You can specify either a fileset or a path.</description></item>
+        /// <item><description>The fileset must already exist.</description></item>
+        /// <item><description>Only one export directory can be created for each fileset.</description></item>
+        /// <item><description>You must specify one and only one of FsetId and Path.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -93,12 +95,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FsetId { get; set; }
 
         /// <summary>
-        /// <para>The path of the CPFS directory that you want to export.</para>
+        /// <para>The path of the CPFS directory to export.</para>
         /// <para>Limits:</para>
         /// <list type="bullet">
-        /// <item><description>The directory already exists in the CPFS file system.</description></item>
-        /// <item><description>You can create only one export directory for a directory.</description></item>
-        /// <item><description>You can specify either a fileset or a path.</description></item>
+        /// <item><description>The directory must already exist on the CPFS file system.</description></item>
+        /// <item><description>Only one export can be created for each directory.</description></item>
+        /// <item><description>You must specify one and only one of FsetId and Path.</description></item>
         /// </list>
         /// <para>Format:</para>
         /// <list type="bullet">
@@ -126,8 +128,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string ProtocolServiceId { get; set; }
 
         /// <summary>
-        /// <para>The vSwitch ID of the export directory.</para>
-        /// <para>If the storage redundancy type of the file system is not zone-redundant (ZRS) and the VpcId is set, this field is required.</para>
+        /// <para>The ID of the vSwitch for the protocol service export.</para>
+        /// <para>If the storage redundancy type of the file system is not zone-redundant storage (ZRS), this parameter is required when VpcId is specified.</para>
+        /// <remarks>
+        /// <para> The vSwitch must be in the same zone as the target CPFS file system.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-2vc3c2lybvdllxyq4****</para>
@@ -140,7 +145,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The list of vSwitch IDs of the export directory.</para>
+        /// <para>The list of vSwitch IDs for the protocol service export.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -150,7 +155,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public List<string> VSwitchIds { get; set; }
 
         /// <summary>
-        /// <para>The VPC ID of the export directory.</para>
+        /// <para>The ID of the VPC for the protocol service export.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-2vct297b8157bth9z****</para>

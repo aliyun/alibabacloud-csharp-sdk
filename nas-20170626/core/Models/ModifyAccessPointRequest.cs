@@ -10,9 +10,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class ModifyAccessPointRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the permission group.</para>
-        /// <para>This parameter is required for a General-purpose File Storage NAS (NAS) file system.</para>
-        /// <para>The default permission group for virtual private clouds (VPCs) is named DEFAULT_VPC_GROUP_NAME.</para>
+        /// <para>The permission group name.</para>
+        /// <para>This parameter is required when the file system is a General-purpose NAS file system.</para>
+        /// <para>Default permission group: DEFAULT_VPC_GROUP_NAME (the default VPC permission group).</para>
+        /// <remarks>
+        /// <para>Agentic file systems do not support this parameter.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>DEFAULT_VPC_GROUP_NAME</para>
@@ -22,7 +25,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string AccessGroup { get; set; }
 
         /// <summary>
-        /// <para>The ID of the access point.</para>
+        /// <para>The access point ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -33,7 +36,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string AccessPointId { get; set; }
 
         /// <summary>
-        /// <para>The name of the access point.</para>
+        /// <para>The access point name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -43,13 +46,16 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string AccessPointName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the Resource Access Management (RAM) policy. Valid values:</para>
+        /// <para>Specifies whether to enable the RAM policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The RAM policy is enabled.</description></item>
-        /// <item><description>false (default): The RAM policy is disabled.</description></item>
+        /// <item><description>true: Enabled.</description></item>
+        /// <item><description>false (default): Not enabled.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> After the RAM policy is enabled for access points, no RAM user is allowed to use access points to mount and access data by default. To use access points to mount and access data as a RAM user, you must grant the related access permissions to the RAM user. If the RAM policy is disabled, access points can be anonymously mounted.</para>
+        /// <para>After you enable the access point RAM policy, all Resource Access Management (RAM) users are denied access to mount and access data through the access point by default. You must grant the corresponding access permissions through authorization and mount and access data through the access point. After you disable the RAM policy, the access point allows anonymity mounting.</para>
+        /// </remarks>
+        /// <remarks>
+        /// <para>Agentic file systems do not support this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -60,7 +66,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public bool? EnabledRam { get; set; }
 
         /// <summary>
-        /// <para>The ID of the file system.</para>
+        /// <para>The file system ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

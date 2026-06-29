@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class ApplyDataFlowAutoRefreshRequest : TeaModel {
         /// <summary>
-        /// <para>The automatic update interval. CPFS checks whether data is updated in the directory at the interval specified by this parameter. If data is updated, CPFS starts an automatic update task. Unit: minute.</para>
+        /// <para>The auto-refresh interval. CPFS checks the directory for data updates at this interval. If data updates exist, an auto-refresh task is started. Unit: minutes.</para>
         /// <para>Valid values: 10 to 525600. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public long? AutoRefreshInterval { get; set; }
 
         /// <summary>
-        /// <para>The automatic update policy. The updated data in the source storage is imported into the CPFS file system based on the policy. Valid values:</para>
+        /// <para>The auto-refresh policy. This policy determines how data updates from the source are imported to CPFS. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>None (default): Updated data in the source storage is not automatically imported into the CPFS file system. You can run a dataflow task to import the updated data from the source storage.</description></item>
-        /// <item><description>ImportChanged: Updated data in the source storage is automatically imported into the CPFS file system.</description></item>
+        /// <item><description>None: Data updates from the source are not automatically imported to CPFS. You can use a data flow task to import data updates from the source.</description></item>
+        /// <item><description>ImportChanged: Data updates from the source are automatically imported to CPFS.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string AutoRefreshPolicy { get; set; }
 
         /// <summary>
-        /// <para>The automatic update configurations.</para>
+        /// <para>The collection of auto-refresh configurations.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AutoRefreshs")]
@@ -43,15 +43,15 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public List<ApplyDataFlowAutoRefreshRequestAutoRefreshs> AutoRefreshs { get; set; }
         public class ApplyDataFlowAutoRefreshRequestAutoRefreshs : TeaModel {
             /// <summary>
-            /// <para>The automatic update directory. CPFS automatically checks whether the source data only in the directory is updated and imports the updated data.</para>
+            /// <para>The auto-refresh directory. CPFS automatically checks whether data in this directory on the source has been updated and imports the updated data.</para>
             /// <para>Limits:</para>
             /// <list type="bullet">
-            /// <item><description>The directory must be 2 to 1,024 characters in length.</description></item>
-            /// <item><description>The directory must be encoded in UTF-8.</description></item>
-            /// <item><description>The directory must start and end with a forward slash (/).</description></item>
+            /// <item><description>The path must be 2 to 1,024 characters in length.</description></item>
+            /// <item><description>The path must be encoded in UTF-8.</description></item>
+            /// <item><description>The path must start and end with a forward slash (/).</description></item>
             /// </list>
             /// <remarks>
-            /// <para> The directory must be an existing directory in the CPFS file system and must be in a fileset where the dataflow is enabled.</para>
+            /// <para>The directory must already exist in CPFS and must be in a fileset that has data flow enabled.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -65,10 +65,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</para>
-        /// <para>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How do I ensure the idempotence?</a></para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests.</para>
+        /// <para>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the request ID as the client token. The value of RequestId may be different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may differ for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the dataflow.</para>
+        /// <para>The ID of the data flow.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -90,12 +90,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string DataFlowId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run.</para>
-        /// <para>During the dry run, the system checks whether the request parameters are valid and whether the requested resources are available. During the dry run, no file system is created and no fee is incurred.</para>
+        /// <para>Specifies whether to perform a dry run for this request.</para>
+        /// <para>A dry run checks parameter validity and resource availability without actually creating an instance or incurring charges.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: performs a dry run. The system checks the required parameters, request syntax, limits, and available NAS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the HTTP status code 200 is returned. No value is returned for the FileSystemId parameter.</description></item>
-        /// <item><description>false (default): performs a dry run and sends the request. If the request passes the dry run, a file system is created.</description></item>
+        /// <item><description>true: Sends a dry run request without creating an instance. The check items include required parameters, request format, business limits, and NAS inventory. If the check fails, the corresponding error is returned. If the check succeeds, HTTP status code 200 is returned, but FileSystemId is empty.</description></item>
+        /// <item><description>false (default): Sends a normal request. After the check succeeds, the instance is created.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

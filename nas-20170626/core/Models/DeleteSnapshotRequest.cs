@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DeleteSnapshotRequest : TeaModel {
         /// <summary>
-        /// <para>The snapshot ID.</para>
+        /// <para>The snapshot ID. Set this parameter to the snapshot ID obtained after a snapshot is successfully created for an Advanced Extreme NAS file system.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

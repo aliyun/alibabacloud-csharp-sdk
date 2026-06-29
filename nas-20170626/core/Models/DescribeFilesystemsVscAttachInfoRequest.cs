@@ -11,7 +11,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
     public class DescribeFilesystemsVscAttachInfoRequest : TeaModel {
         /// <summary>
         /// <para>The number of results for each query.</para>
-        /// <para>Valid values: 10 to 100. Default value: 10.</para>
+        /// <para>Valid values: 10 to 100.
+        /// Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -21,7 +22,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Query token, which is the NextToken value returned from the previous API call.</para>
+        /// <para>The query token. Set the value to the NextToken value returned in the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TGlzdFJlc291cmNlU****mVzJjE1MTI2NjY4NzY5MTAzOTEmMiZORnI4NDhVeEtrUT0=</para>
@@ -31,7 +32,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID information of the file system and virtual storage channel. Each batch can contain up to 10 IDs.</para>
+        /// <para>The ID information of file systems and virtual storage channels. A maximum of 10 entries can be specified per batch.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceIds")]
@@ -39,7 +40,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public List<DescribeFilesystemsVscAttachInfoRequestResourceIds> ResourceIds { get; set; }
         public class DescribeFilesystemsVscAttachInfoRequestResourceIds : TeaModel {
             /// <summary>
-            /// <para>The ID of the file system.</para>
+            /// <para>The file system ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>bmcpfs-290t15yn4uo8lid****</para>
@@ -49,7 +50,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string FileSystemId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the virtual storage channel.</para>
+            /// <para>The virtual storage channel ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsc-8vb864o3ppwfvh****</para>

@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeLifecyclePoliciesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The queried lifecycle policies.</para>
+        /// <para>The collection of lifecycle management policy information.</para>
         /// </summary>
         [NameInMap("LifecyclePolicies")]
         [Validation(Required=false)]
         public List<DescribeLifecyclePoliciesResponseBodyLifecyclePolicies> LifecyclePolicies { get; set; }
         public class DescribeLifecyclePoliciesResponseBodyLifecyclePolicies : TeaModel {
             /// <summary>
-            /// <para>The time when the lifecycle policy was created.</para>
-            /// <para>The time follows the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format.</para>
+            /// <para>The time when the lifecycle management policy was created.</para>
+            /// <para>The time follows the ISO 8601 standard in the format: <c>yyyy-MM-ddTHH:mm:ssZ</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-10-30T10:08:08Z</para>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>Description</para>
+            /// <para>The description of the policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>描述</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the file system.</para>
+            /// <para>The file system ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>31a8e4****</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string LifecyclePolicyId { get; set; }
 
             /// <summary>
-            /// <para>The name of the lifecycle policy.</para>
+            /// <para>The lifecycle management policy name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>lifecyclepolicy_01</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string LifecyclePolicyName { get; set; }
 
             /// <summary>
-            /// <para>The type of the lifecycle policy.</para>
+            /// <para>The policy type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Auto</para>
@@ -78,13 +78,13 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string LifecyclePolicyType { get; set; }
 
             /// <summary>
-            /// <para>The management rule that is associated with the lifecycle policy.</para>
+            /// <para>The management rule associated with the lifecycle management policy.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>DEFAULT_ATIME_14: Files that are not accessed in the last 14 days.</description></item>
-            /// <item><description>DEFAULT_ATIME_30: Files that are not accessed in the last 30 days.</description></item>
-            /// <item><description>DEFAULT_ATIME_60: Files that are not accessed in the last 60 days.</description></item>
-            /// <item><description>DEFAULT_ATIME_90: Files that are not accessed in the last 90 days.</description></item>
+            /// <item><description>DEFAULT_ATIME_14: files not accessed in the last 14 days</description></item>
+            /// <item><description>DEFAULT_ATIME_30: files not accessed in the last 30 days</description></item>
+            /// <item><description>DEFAULT_ATIME_60: files not accessed in the last 60 days</description></item>
+            /// <item><description>DEFAULT_ATIME_90: files not accessed in the last 90 days.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string LifecycleRuleName { get; set; }
 
             /// <summary>
-            /// <para>The absolute path of a directory with which the lifecycle policy is associated.</para>
+            /// <para>The absolute path of the single directory configured in the lifecycle management policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/pathway/to/folder</para>
@@ -105,21 +105,21 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Path { get; set; }
 
             /// <summary>
-            /// <para>The absolute paths of directories with which the lifecycle policy is associated.</para>
+            /// <para>The list of absolute paths of multiple directories configured in the lifecycle management policy.</para>
             /// </summary>
             [NameInMap("Paths")]
             [Validation(Required=false)]
             public List<string> Paths { get; set; }
 
             /// <summary>
-            /// <para>File data retrieval rules.</para>
+            /// <para>The data retrieval rules for files.</para>
             /// </summary>
             [NameInMap("RetrieveRules")]
             [Validation(Required=false)]
             public List<DescribeLifecyclePoliciesResponseBodyLifecyclePoliciesRetrieveRules> RetrieveRules { get; set; }
             public class DescribeLifecyclePoliciesResponseBodyLifecyclePoliciesRetrieveRules : TeaModel {
                 /// <summary>
-                /// <para>Attribute of the rule.</para>
+                /// <para>The attribute of the retrieval rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>RetrieveType</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public string Attribute { get; set; }
 
                 /// <summary>
-                /// <para>Threshold for the rule.</para>
+                /// <para>The threshold of the retrieval rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>All</para>
@@ -141,10 +141,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             }
 
             /// <summary>
-            /// <para>The storage class.</para>
+            /// <para>The storage class type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>InfrequentAccess: the IA storage class.</description></item>
-            /// <item><description>Archive: the Archive storage class.</description></item>
+            /// <item><description>InfrequentAccess: IA storage class.</description></item>
+            /// <item><description>Archive: Archive storage class.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -155,14 +155,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string StorageType { get; set; }
 
             /// <summary>
-            /// <para>Data transition rules.</para>
+            /// <para>The data transit rules for files.</para>
             /// </summary>
             [NameInMap("TransitRules")]
             [Validation(Required=false)]
             public List<DescribeLifecyclePoliciesResponseBodyLifecyclePoliciesTransitRules> TransitRules { get; set; }
             public class DescribeLifecyclePoliciesResponseBodyLifecyclePoliciesTransitRules : TeaModel {
                 /// <summary>
-                /// <para>Attribute of the rule.</para>
+                /// <para>The attribute of the transit rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Atime</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public string Attribute { get; set; }
 
                 /// <summary>
-                /// <para>Threshold for the rule.</para>
+                /// <para>The threshold of the transit rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of lifecycle management policies on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of lifecycle policies.</para>
+        /// <para>The total number of lifecycle management policies.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

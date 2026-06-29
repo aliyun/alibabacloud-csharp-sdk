@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string AccessPointDomain { get; set; }
 
             /// <summary>
-            /// <para>The ID of the access point.</para>
+            /// <para>The access point ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ap-ie15yd****</para>

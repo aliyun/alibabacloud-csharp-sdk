@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class CreateProtocolServiceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the protocol service.</para>
+        /// <para>The protocol service cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ptc-197ed6a00f2b****</para>

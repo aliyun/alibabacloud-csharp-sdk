@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class CreateMountTargetResponseBody : TeaModel {
         /// <summary>
-        /// <para>The IPv4 domain name of the mount target.</para>
+        /// <para>The IPv4 mount target.</para>
         /// 
         /// <b>Example:</b>
         /// <para>174494b666-x****.cn-hangzhou.nas.aliyuncs.com</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string MountTargetDomain { get; set; }
 
         /// <summary>
-        /// <para>The information about the mount target.</para>
+        /// <para>The mount target information.</para>
         /// </summary>
         [NameInMap("MountTargetExtra")]
         [Validation(Required=false)]
         public CreateMountTargetResponseBodyMountTargetExtra MountTargetExtra { get; set; }
         public class CreateMountTargetResponseBodyMountTargetExtra : TeaModel {
             /// <summary>
-            /// <para>The dual-stack (IPv4 and IPv6) domain name of the mount target.</para>
+            /// <para>The dual-stack mount target that supports both IPv4 and IPv6.</para>
             /// 
             /// <b>Example:</b>
             /// <para>174494b666-x****.dualstack.cn-hangzhou.nas.aliyuncs.com</para>

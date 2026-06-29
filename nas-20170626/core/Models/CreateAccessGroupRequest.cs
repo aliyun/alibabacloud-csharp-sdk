@@ -14,10 +14,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>Limits:</para>
         /// <list type="bullet">
         /// <item><description>The name must be 3 to 64 characters in length.</description></item>
-        /// <item><description>The name must start with a letter and can contain letters, digits, underscores (_), and hyphens (-).</description></item>
-        /// <item><description>The name must be different from the name of the default permission group.</description></item>
+        /// <item><description>The name must start with a letter and can contain letters, digits, underscores (_), or hyphens (-).</description></item>
+        /// <item><description>The name of the new permission group cannot be the same as the name of the default permission group.</description></item>
         /// </list>
-        /// <para>The default permission group for virtual private clouds (VPCs) is named DEFAULT_VPC_GROUP_NAME.</para>
+        /// <para>Default permission group: DEFAULT_VPC_GROUP_NAME (default VPC permission group).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string AccessGroupName { get; set; }
 
         /// <summary>
-        /// <para>The network type of the permission group. Valid value: <b>Vpc</b>.</para>
+        /// <para>The type of the permission group. Set the value to <b>Vpc</b>, which indicates VPC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,9 +42,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>The description of the permission group.</para>
         /// <para>Limits:</para>
         /// <list type="bullet">
-        /// <item><description>By default, the description of a permission group is the same as the name of the permission group. The description must be 2 to 128 characters in length.</description></item>
-        /// <item><description>The name must start with a letter and cannot start with <c>http://</c> or <c>https://</c>.</description></item>
-        /// <item><description>The description can contain digits, colons (:), underscores (_), and hyphens (-).</description></item>
+        /// <item><description>The description defaults to the permission group name and must be 2 to 128 characters in length.</description></item>
+        /// <item><description>The description must start with a letter and cannot start with <c>http://</c> or <c>https://</c>.</description></item>
+        /// <item><description>The description can contain digits, colons (:), underscores (_), or hyphens (-).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,8 +58,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>The type of the file system.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>standard: General-purpose Apsara File Storage NAS (NAS) file system</description></item>
-        /// <item><description>extreme: Extreme NAS file system.</description></item>
+        /// <item><description>standard (default): General-purpose NAS.</description></item>
+        /// <item><description>extreme: Extreme NAS.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

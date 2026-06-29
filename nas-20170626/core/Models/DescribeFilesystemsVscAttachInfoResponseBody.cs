@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeFilesystemsVscAttachInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of directories to return for each query.</para>
+        /// <para>The number of entries returned per query.</para>
         /// <para>Valid values: 10 to 1000.</para>
         /// <para>Default value: 10.</para>
         /// 
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Query token, which is the NextToken value returned from the previous API call.</para>
+        /// <para>The query token. Set the value to the NextToken value returned in the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TGlzdFJlc291cmNlU****mVzJjE1MTI2NjY4NzY5MTAzOTEmMiZORnI4NDhVeEtrUT0=</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of associated information.</para>
+        /// <para>The total number of association entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

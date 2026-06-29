@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class CreateAccessRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The rule ID.</para>
+        /// <para>The ID of the permission rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

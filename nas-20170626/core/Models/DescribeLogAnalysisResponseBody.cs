@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the log analysis entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of log dump entries returned per page.</para>
+        /// <para>The number of log analysis entries on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of log dump entries in the region.</para>
+        /// <para>The total number of log analysis entries in the region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

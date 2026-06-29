@@ -24,8 +24,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>The type of the file system.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>standard: General-purpose Apsara File Storage NAS (NAS) file system</description></item>
-        /// <item><description>extreme: Extreme NAS file system.</description></item>
+        /// <item><description>standard (default): General-purpose NAS.</description></item>
+        /// <item><description>extreme: Extreme NAS.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,13 +36,13 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemType { get; set; }
 
         /// <summary>
-        /// <para>The IPv6 address or CIDR block of the authorized object.</para>
-        /// <para>You must set this parameter to an IPv6 address or CIDR block.</para>
+        /// <para>The source IPv6 CIDR block.</para>
+        /// <para>The value supports CIDR format and IPv6 format address range.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Only Extreme NAS file systems that reside in the Chinese mainland support IPv6. If you specify this parameter, you must enable IPv6 for the file system.</description></item>
-        /// <item><description>Only permission groups that reside in virtual private clouds (VPCs) support IPv6.</description></item>
-        /// <item><description>You cannot specify an IPv4 address and an IPv6 address at the same time.</description></item>
+        /// <item><description>The IPv6 feature is supported only by Extreme NAS file systems in regions in the Chinese mainland, and IPv6 must be enabled for the file system.</description></item>
+        /// <item><description>Only VPC networks are supported.</description></item>
+        /// <item><description>IPv4 and IPv6 are mutually exclusive.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -54,8 +54,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string Ipv6SourceCidrIp { get; set; }
 
         /// <summary>
-        /// <para>The priority of the rule.</para>
-        /// <para>The rule with the highest priority takes effect if multiple rules are attached to the authorized object.</para>
+        /// <para>The priority of the permission rule.</para>
+        /// <para>If an authorized address matches multiple rules, the rule with the highest priority takes effect.</para>
         /// <para>Valid values: 1 to 100. The value 1 indicates the highest priority.</para>
         /// 
         /// <b>Example:</b>
@@ -66,11 +66,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? Priority { get; set; }
 
         /// <summary>
-        /// <para>The access permissions of the authorized object on the file system.</para>
+        /// <para>The read and write permissions of the authorized address on the file system.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>RDWR (default): the read and write permissions.</description></item>
-        /// <item><description>RDONLY: the read-only permission.</description></item>
+        /// <item><description>RDWR (default): read and write.</description></item>
+        /// <item><description>RDONLY: read-only.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -81,10 +81,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string RWAccessType { get; set; }
 
         /// <summary>
-        /// <para>The IP address or CIDR block of the authorized object.</para>
-        /// <para>You must set this parameter to an IP address or CIDR block.</para>
+        /// <para>The IP address or CIDR block of the authorized address.</para>
+        /// <para>The value must be a single IP address or a CIDR block.</para>
         /// <remarks>
-        /// <para>If the permission group resides in the classic network, you must set this parameter to an IP address.</para>
+        /// <para>Permission groups of the classic network type support only IP addresses.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -95,14 +95,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string SourceCidrIp { get; set; }
 
         /// <summary>
-        /// <para>The access permissions for different types of users in the authorized object.</para>
+        /// <para>The access permissions of the system user of the authorized address on the file system.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>no_squash (default): grants root users the permissions to access the file system.</description></item>
-        /// <item><description>root_squash: grants root users the least permissions as the nobody user.</description></item>
-        /// <item><description>all_squash: grants all users the least permissions as the nobody user.</description></item>
+        /// <item><description>no_squash (default): allows access to the file system as the root user.</description></item>
+        /// <item><description>root_squash: maps the root user to the nobody user when the root user accesses the file system.</description></item>
+        /// <item><description>all_squash: maps all users to the nobody user regardless of the user identity.</description></item>
         /// </list>
-        /// <para>The nobody user has the least permissions in Linux and can access only the public content of the file system. This ensures the security of the file system.</para>
+        /// <para>The nobody user is a default user in Linux. The nobody user can access only public content on the server and has low privileges and high security. Authorization is required for the system user to access the file system.</para>
         /// 
         /// <b>Example:</b>
         /// <para>no_squash</para>

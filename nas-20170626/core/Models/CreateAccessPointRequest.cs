@@ -11,9 +11,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
     public class CreateAccessPointRequest : TeaModel {
         /// <summary>
         /// <para>The name of the permission group.</para>
-        /// <para>This parameter is required for a General-purpose File Storage NAS (NAS) file system.</para>
-        /// <para>The default permission group for virtual private clouds (VPCs) is named DEFAULT_VPC_GROUP_NAME.</para>
-        /// <para>This parameter is required.</para>
+        /// <para>This parameter is required if the file system is a General-purpose NAS file system.</para>
+        /// <para>Default permission group: DEFAULT_VPC_GROUP_NAME (the default permission group for VPCs).</para>
+        /// <remarks>
+        /// <para>Not supported for Agentic file systems.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>DEFAULT_VPC_GROUP_NAME</para>
@@ -33,13 +35,30 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string AccessPointName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the RAM policy. Valid values:</para>
+        /// <para>The AgenticSpace ID.</para>
+        /// <remarks>
+        /// <para>This parameter is required for Agentic file systems.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>agentic-229oypxjgpau2****</para>
+        /// </summary>
+        [NameInMap("AgenticSpaceId")]
+        [Validation(Required=false)]
+        public string AgenticSpaceId { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to enable access point policy.
+        /// Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The RAM policy is enabled.</description></item>
-        /// <item><description>false (default): The RAM policy is disabled.</description></item>
+        /// <item><description>true: enabled.</description></item>
+        /// <item><description>false (default): not enabled.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> After the RAM policy is enabled for access points, no RAM user is allowed to use access points to mount and access data by default. To use access points to mount and access data as a RAM user, you must grant the related access permissions to the RAM user. If the RAM policy is disabled, access points can be anonymously mounted. For more information about how to configure permissions on access points, see <a href="https://help.aliyun.com/document_detail/2545998.html">Configure a policy for the access point</a>.</para>
+        /// <para>After you enable access point policy for the access point, all Resource Access Management (RAM) users are denied access to mount and access data through the access point by default. You must grant the corresponding access permissions through authorization and then mount and access the file system through the access point. After you disable access point policy, the access point allows anonymity mounting. For more information about how to configure access point permissions, see <a href="https://help.aliyun.com/document_detail/2545998.html">Configure access point policies</a>.</para>
+        /// </remarks>
+        /// <remarks>
+        /// <para>For Agentic file systems, this parameter must be set to true.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -50,7 +69,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public bool? EnabledRam { get; set; }
 
         /// <summary>
-        /// <para>The ID of the file system.</para>
+        /// <para>The file system ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -61,8 +80,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the owner group.</para>
+        /// <para>The owner group ID.</para>
         /// <para>This parameter is required if the RootDirectory directory does not exist.</para>
+        /// <remarks>
+        /// <para>Not supported for Agentic file systems.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -72,8 +94,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? OwnerGroupId { get; set; }
 
         /// <summary>
-        /// <para>The owner ID.</para>
+        /// <para>The owner user ID.</para>
         /// <para>This parameter is required if the RootDirectory directory does not exist.</para>
+        /// <remarks>
+        /// <para>Not supported for Agentic file systems.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -83,8 +108,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? OwnerUserId { get; set; }
 
         /// <summary>
-        /// <para>The Portable Operating System Interface for UNIX (POSIX) permission. Default value: 0777.</para>
-        /// <para>This field takes effect only if you specify the OwnerUserId and OwnerGroupId parameters.</para>
+        /// <para>The POSIX permission. Default value: &quot;0755&quot;. The value must be a four-digit octal number that starts with 0.</para>
+        /// <para>This parameter takes effect only after you specify the OwnerUserId and OwnerGroupId parameters.</para>
+        /// <remarks>
+        /// <para>Not supported for Agentic file systems.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>0755</para>
@@ -94,7 +122,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string Permission { get; set; }
 
         /// <summary>
-        /// <para>The ID of the POSIX user group.</para>
+        /// <para>The POSIX group ID.</para>
+        /// <remarks>
+        /// <para>Not supported for Agentic file systems.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>123</para>
@@ -104,7 +135,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? PosixGroupId { get; set; }
 
         /// <summary>
-        /// <para>The secondary user group. Separate multiple user group IDs with commas (,).</para>
+        /// <para>The secondary group IDs. Separate multiple group IDs with commas (,).</para>
+        /// <remarks>
+        /// <para>Not supported for Agentic file systems.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>123,345</para>
@@ -114,7 +148,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string PosixSecondaryGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the POSIX user.</para>
+        /// <para>The POSIX user ID.</para>
+        /// <remarks>
+        /// <para>Not supported for Agentic file systems.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>123</para>
@@ -124,7 +161,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? PosixUserId { get; set; }
 
         /// <summary>
-        /// <para>The root directory of the access point. The default value is /. If the directory does not exist, you must also specify the OwnerUserId and OwnerGroupId parameters.</para>
+        /// <para>The root directory of the access point.
+        /// Default value: &quot;/&quot;. If the access point directory does not exist, you must also specify the OwnerUserId and OwnerGroupId parameters.</para>
+        /// <remarks>
+        /// <para>Supported only for Agentic file systems.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>/</para>
@@ -134,16 +175,17 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string RootDirectory { get; set; }
 
         /// <summary>
-        /// <para>The tags of the access point.</para>
+        /// <para>The list of access point tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateAccessPointRequestTag> Tag { get; set; }
         public class CreateAccessPointRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of a tag. Limits:</para>
+            /// <para>The tag key.
+            /// Limits:</para>
             /// <list type="bullet">
-            /// <item><description>Cannot be null or an empty string.</description></item>
+            /// <item><description>Cannot be empty or an empty string.</description></item>
             /// <item><description>Can be up to 128 characters in length.</description></item>
             /// <item><description>Cannot start with aliyun or acs:.</description></item>
             /// <item><description>Cannot contain http:// or https://.</description></item>
@@ -157,9 +199,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of a tag. Limits:</para>
+            /// <para>The tag value.
+            /// Limits:</para>
             /// <list type="bullet">
-            /// <item><description>Cannot be null or an empty string.</description></item>
+            /// <item><description>Cannot be empty or an empty string.</description></item>
             /// <item><description>Can be up to 128 characters in length.</description></item>
             /// <item><description>Cannot contain http:// or https://.</description></item>
             /// </list>
@@ -174,7 +217,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         }
 
         /// <summary>
-        /// <para>The VPC ID.</para>
+        /// <para>The virtual private cloud (VPC) ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

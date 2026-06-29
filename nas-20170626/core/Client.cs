@@ -53,6 +53,36 @@ namespace AlibabaCloud.SDK.NAS20170626
                 {"cn-zhengzhou-nebula-1", "nas.aliyuncs.com"},
                 {"eu-west-1-oxs", "nas.aliyuncs.com"},
                 {"rus-west-1-pop", "nas.aliyuncs.com"},
+                {"us-west-1", "nas.us-west-1.aliyuncs.com"},
+                {"us-east-1", "nas.us-east-1.aliyuncs.com"},
+                {"me-east-1", "nas.me-east-1.aliyuncs.com"},
+                {"me-central-1", "nas.me-central-1.aliyuncs.com"},
+                {"eu-west-1", "nas.eu-west-1.aliyuncs.com"},
+                {"eu-central-1", "nas.eu-central-1.aliyuncs.com"},
+                {"cn-zhengzhou-jva", "nas.cn-zhengzhou-jva.aliyuncs.com"},
+                {"cn-zhangjiakou", "nas.cn-zhangjiakou.aliyuncs.com"},
+                {"cn-wulanchabu", "nas.cn-wulanchabu.aliyuncs.com"},
+                {"cn-shenzhen-finance-1", "nas.cn-shenzhen-finance-1.aliyuncs.com"},
+                {"cn-shenzhen", "nas.cn-shenzhen.aliyuncs.com"},
+                {"cn-shanghai-finance-1", "nas.cn-shanghai-finance-1.aliyuncs.com"},
+                {"cn-shanghai", "nas.cn-shanghai.aliyuncs.com"},
+                {"cn-qingdao", "nas.cn-qingdao.aliyuncs.com"},
+                {"cn-huhehaote", "nas.cn-huhehaote.aliyuncs.com"},
+                {"cn-hongkong", "nas.cn-hongkong.aliyuncs.com"},
+                {"cn-heyuan", "nas.cn-heyuan.aliyuncs.com"},
+                {"cn-hangzhou", "nas.cn-hangzhou.aliyuncs.com"},
+                {"cn-guangzhou", "nas.cn-guangzhou.aliyuncs.com"},
+                {"cn-chengdu", "nas.cn-chengdu.aliyuncs.com"},
+                {"cn-beijing-finance-1", "nas.cn-beijing-finance-1.aliyuncs.com"},
+                {"cn-beijing", "nas.cn-beijing.aliyuncs.com"},
+                {"ap-southeast-7", "nas.ap-southeast-7.aliyuncs.com"},
+                {"ap-southeast-6", "nas.ap-southeast-6.aliyuncs.com"},
+                {"ap-southeast-5", "nas.ap-southeast-5.aliyuncs.com"},
+                {"ap-southeast-3", "nas.ap-southeast-3.aliyuncs.com"},
+                {"ap-southeast-1", "nas.ap-southeast-1.aliyuncs.com"},
+                {"ap-south-1", "nas.ap-south-1.aliyuncs.com"},
+                {"ap-northeast-2", "nas.ap-northeast-2.aliyuncs.com"},
+                {"ap-northeast-1", "nas.ap-northeast-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("nas", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -434,24 +464,24 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds AutoRefresh configurations to a dataflow.</para>
+        /// <para>Configures automatic updates for a specified data flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>该接口仅适用于CPFS文件系统。</description></item>
-        /// <item><description>仅CPFS 2.2.0及以上版本支持数据流动。您可以在控制台文件系统详情页面查看版本信息。</description></item>
-        /// <item><description>仅支持状态为<c>Running（正常）</c>状态的数据流动添加自动更新配置。</description></item>
-        /// <item><description>一个数据流动最多可以添加5个自动更新配置。</description></item>
-        /// <item><description>创建自动更新配置一般耗时2～5分钟，您可以通过<a href="https://help.aliyun.com/document_detail/336901.html">DescribeDataFlows</a>查询数据流动状态。</description></item>
-        /// <item><description>自动更新依赖EventBridge收集源端OSS存储的对象修改事件。需要先<a href="https://help.aliyun.com/document_detail/182246.html">开通EventBridge服务</a>。<remarks>
-        /// <para>CPFS在EventBridge创建的事件总线、事件规则带有<c>Create for cpfs auto refresh</c>的描述，事件总线、事件规则都不能修改和删除，否则自动更新无法正常工作。</para>
+        /// <item><description>This operation applies only to Cloud Parallel File Storage (CPFS) file systems.</description></item>
+        /// <item><description>Only CPFS 2.2.0 and later support data flows. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>You can add auto-refresh configurations only for data flows in the <c>Running</c> state.</description></item>
+        /// <item><description>You can add up to five auto-refresh configurations for a data flow.</description></item>
+        /// <item><description>It takes 2 to 5 minutes to create an auto-refresh configuration. You can call <a href="https://help.aliyun.com/document_detail/336901.html">DescribeDataFlows</a> to query the data flow status.</description></item>
+        /// <item><description>Auto-refresh relies on EventBridge to collect object modification events from the source OSS storage. <a href="https://help.aliyun.com/document_detail/182246.html">Activate EventBridge</a> before you proceed.<remarks>
+        /// <para>The event buses and event rules that CPFS creates in EventBridge contain the description <c>Create for cpfs auto refresh</c>. Do not modify or delete these event buses or event rules. Otherwise, auto-refresh cannot work properly.</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description>自动更新的作用对象是prefix，由参数RefreshPath指定。在CPFS数据流动对prefix配置自动更新时，会在用户侧创建事件总线，并创建源端OSS Bucket的prefix的事件规则。当源端OSS Bucket的prefix内发生对象修改后，会在EventBridge中产生OSS事件，由CPFS数据流动处理。</description></item>
-        /// <item><description>配置自动更新（AutoRefresh）后，当源端存储数据发生变化时，变化的元数据会自动同步到CPFS文件系统，变化的数据会在用户访问文件时按需加载，或者启动数据流动任务加载数据。</description></item>
-        /// <item><description>自动更新间隔（AutoRefreshInterval）指CPFS每隔该时间间隔，检查源端OSS Bucket该prefix内是否存在数据更新，如果有数据更新则启动自动更新任务。当OSS源端的对象修改事件频率超过CPFS数据流动处理能力时，自动更新任务会堆积，元数据更新会延迟，数据流动的状态为Misconfigured，您可以提升数据流动规格，或者降低OSS修改频率来解决。</description></item>
+        /// <item><description>Auto-refresh targets a prefix specified by the RefreshPath parameter. When you configure auto-refresh for a prefix in a CPFS data flow, an event bus is created on the user side, and an event rule is created for the prefix of the source OSS bucket. When objects within the prefix of the source OSS bucket are modified, OSS events are generated in EventBridge and processed by the CPFS data flow.</description></item>
+        /// <item><description>After you configure auto-refresh (AutoRefresh), when data changes in the source storage, the changed metadata is automatically synchronized to the CPFS file system. The changed data is loaded on demand when a user accesses the file, or loaded by starting a data flow node to load data.</description></item>
+        /// <item><description>The auto-refresh interval (AutoRefreshInterval) specifies the interval at which CPFS checks whether data updates exist in the prefix of the source OSS bucket. If data updates exist, an auto-refresh node is started. When the frequency of object modification events in the source OSS bucket exceeds the processing capacity of the CPFS data flow, automatic synchronization nodes accumulate, metadata updates are delayed, and the data stream status changes to Misconfigured. To resolve this issue, upgrade the data stream specifications or reduce the modification frequency in OSS.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -518,24 +548,24 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds AutoRefresh configurations to a dataflow.</para>
+        /// <para>Configures automatic updates for a specified data flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>该接口仅适用于CPFS文件系统。</description></item>
-        /// <item><description>仅CPFS 2.2.0及以上版本支持数据流动。您可以在控制台文件系统详情页面查看版本信息。</description></item>
-        /// <item><description>仅支持状态为<c>Running（正常）</c>状态的数据流动添加自动更新配置。</description></item>
-        /// <item><description>一个数据流动最多可以添加5个自动更新配置。</description></item>
-        /// <item><description>创建自动更新配置一般耗时2～5分钟，您可以通过<a href="https://help.aliyun.com/document_detail/336901.html">DescribeDataFlows</a>查询数据流动状态。</description></item>
-        /// <item><description>自动更新依赖EventBridge收集源端OSS存储的对象修改事件。需要先<a href="https://help.aliyun.com/document_detail/182246.html">开通EventBridge服务</a>。<remarks>
-        /// <para>CPFS在EventBridge创建的事件总线、事件规则带有<c>Create for cpfs auto refresh</c>的描述，事件总线、事件规则都不能修改和删除，否则自动更新无法正常工作。</para>
+        /// <item><description>This operation applies only to Cloud Parallel File Storage (CPFS) file systems.</description></item>
+        /// <item><description>Only CPFS 2.2.0 and later support data flows. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>You can add auto-refresh configurations only for data flows in the <c>Running</c> state.</description></item>
+        /// <item><description>You can add up to five auto-refresh configurations for a data flow.</description></item>
+        /// <item><description>It takes 2 to 5 minutes to create an auto-refresh configuration. You can call <a href="https://help.aliyun.com/document_detail/336901.html">DescribeDataFlows</a> to query the data flow status.</description></item>
+        /// <item><description>Auto-refresh relies on EventBridge to collect object modification events from the source OSS storage. <a href="https://help.aliyun.com/document_detail/182246.html">Activate EventBridge</a> before you proceed.<remarks>
+        /// <para>The event buses and event rules that CPFS creates in EventBridge contain the description <c>Create for cpfs auto refresh</c>. Do not modify or delete these event buses or event rules. Otherwise, auto-refresh cannot work properly.</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description>自动更新的作用对象是prefix，由参数RefreshPath指定。在CPFS数据流动对prefix配置自动更新时，会在用户侧创建事件总线，并创建源端OSS Bucket的prefix的事件规则。当源端OSS Bucket的prefix内发生对象修改后，会在EventBridge中产生OSS事件，由CPFS数据流动处理。</description></item>
-        /// <item><description>配置自动更新（AutoRefresh）后，当源端存储数据发生变化时，变化的元数据会自动同步到CPFS文件系统，变化的数据会在用户访问文件时按需加载，或者启动数据流动任务加载数据。</description></item>
-        /// <item><description>自动更新间隔（AutoRefreshInterval）指CPFS每隔该时间间隔，检查源端OSS Bucket该prefix内是否存在数据更新，如果有数据更新则启动自动更新任务。当OSS源端的对象修改事件频率超过CPFS数据流动处理能力时，自动更新任务会堆积，元数据更新会延迟，数据流动的状态为Misconfigured，您可以提升数据流动规格，或者降低OSS修改频率来解决。</description></item>
+        /// <item><description>Auto-refresh targets a prefix specified by the RefreshPath parameter. When you configure auto-refresh for a prefix in a CPFS data flow, an event bus is created on the user side, and an event rule is created for the prefix of the source OSS bucket. When objects within the prefix of the source OSS bucket are modified, OSS events are generated in EventBridge and processed by the CPFS data flow.</description></item>
+        /// <item><description>After you configure auto-refresh (AutoRefresh), when data changes in the source storage, the changed metadata is automatically synchronized to the CPFS file system. The changed data is loaded on demand when a user accesses the file, or loaded by starting a data flow node to load data.</description></item>
+        /// <item><description>The auto-refresh interval (AutoRefreshInterval) specifies the interval at which CPFS checks whether data updates exist in the prefix of the source OSS bucket. If data updates exist, an auto-refresh node is started. When the frequency of object modification events in the source OSS bucket exceeds the processing capacity of the CPFS data flow, automatic synchronization nodes accumulate, metadata updates are delayed, and the data stream status changes to Misconfigured. To resolve this issue, upgrade the data stream specifications or reduce the modification frequency in OSS.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -602,24 +632,24 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds AutoRefresh configurations to a dataflow.</para>
+        /// <para>Configures automatic updates for a specified data flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>该接口仅适用于CPFS文件系统。</description></item>
-        /// <item><description>仅CPFS 2.2.0及以上版本支持数据流动。您可以在控制台文件系统详情页面查看版本信息。</description></item>
-        /// <item><description>仅支持状态为<c>Running（正常）</c>状态的数据流动添加自动更新配置。</description></item>
-        /// <item><description>一个数据流动最多可以添加5个自动更新配置。</description></item>
-        /// <item><description>创建自动更新配置一般耗时2～5分钟，您可以通过<a href="https://help.aliyun.com/document_detail/336901.html">DescribeDataFlows</a>查询数据流动状态。</description></item>
-        /// <item><description>自动更新依赖EventBridge收集源端OSS存储的对象修改事件。需要先<a href="https://help.aliyun.com/document_detail/182246.html">开通EventBridge服务</a>。<remarks>
-        /// <para>CPFS在EventBridge创建的事件总线、事件规则带有<c>Create for cpfs auto refresh</c>的描述，事件总线、事件规则都不能修改和删除，否则自动更新无法正常工作。</para>
+        /// <item><description>This operation applies only to Cloud Parallel File Storage (CPFS) file systems.</description></item>
+        /// <item><description>Only CPFS 2.2.0 and later support data flows. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>You can add auto-refresh configurations only for data flows in the <c>Running</c> state.</description></item>
+        /// <item><description>You can add up to five auto-refresh configurations for a data flow.</description></item>
+        /// <item><description>It takes 2 to 5 minutes to create an auto-refresh configuration. You can call <a href="https://help.aliyun.com/document_detail/336901.html">DescribeDataFlows</a> to query the data flow status.</description></item>
+        /// <item><description>Auto-refresh relies on EventBridge to collect object modification events from the source OSS storage. <a href="https://help.aliyun.com/document_detail/182246.html">Activate EventBridge</a> before you proceed.<remarks>
+        /// <para>The event buses and event rules that CPFS creates in EventBridge contain the description <c>Create for cpfs auto refresh</c>. Do not modify or delete these event buses or event rules. Otherwise, auto-refresh cannot work properly.</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description>自动更新的作用对象是prefix，由参数RefreshPath指定。在CPFS数据流动对prefix配置自动更新时，会在用户侧创建事件总线，并创建源端OSS Bucket的prefix的事件规则。当源端OSS Bucket的prefix内发生对象修改后，会在EventBridge中产生OSS事件，由CPFS数据流动处理。</description></item>
-        /// <item><description>配置自动更新（AutoRefresh）后，当源端存储数据发生变化时，变化的元数据会自动同步到CPFS文件系统，变化的数据会在用户访问文件时按需加载，或者启动数据流动任务加载数据。</description></item>
-        /// <item><description>自动更新间隔（AutoRefreshInterval）指CPFS每隔该时间间隔，检查源端OSS Bucket该prefix内是否存在数据更新，如果有数据更新则启动自动更新任务。当OSS源端的对象修改事件频率超过CPFS数据流动处理能力时，自动更新任务会堆积，元数据更新会延迟，数据流动的状态为Misconfigured，您可以提升数据流动规格，或者降低OSS修改频率来解决。</description></item>
+        /// <item><description>Auto-refresh targets a prefix specified by the RefreshPath parameter. When you configure auto-refresh for a prefix in a CPFS data flow, an event bus is created on the user side, and an event rule is created for the prefix of the source OSS bucket. When objects within the prefix of the source OSS bucket are modified, OSS events are generated in EventBridge and processed by the CPFS data flow.</description></item>
+        /// <item><description>After you configure auto-refresh (AutoRefresh), when data changes in the source storage, the changed metadata is automatically synchronized to the CPFS file system. The changed data is loaded on demand when a user accesses the file, or loaded by starting a data flow node to load data.</description></item>
+        /// <item><description>The auto-refresh interval (AutoRefreshInterval) specifies the interval at which CPFS checks whether data updates exist in the prefix of the source OSS bucket. If data updates exist, an auto-refresh node is started. When the frequency of object modification events in the source OSS bucket exceeds the processing capacity of the CPFS data flow, automatic synchronization nodes accumulate, metadata updates are delayed, and the data stream status changes to Misconfigured. To resolve this issue, upgrade the data stream specifications or reduce the modification frequency in OSS.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -638,24 +668,24 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds AutoRefresh configurations to a dataflow.</para>
+        /// <para>Configures automatic updates for a specified data flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>该接口仅适用于CPFS文件系统。</description></item>
-        /// <item><description>仅CPFS 2.2.0及以上版本支持数据流动。您可以在控制台文件系统详情页面查看版本信息。</description></item>
-        /// <item><description>仅支持状态为<c>Running（正常）</c>状态的数据流动添加自动更新配置。</description></item>
-        /// <item><description>一个数据流动最多可以添加5个自动更新配置。</description></item>
-        /// <item><description>创建自动更新配置一般耗时2～5分钟，您可以通过<a href="https://help.aliyun.com/document_detail/336901.html">DescribeDataFlows</a>查询数据流动状态。</description></item>
-        /// <item><description>自动更新依赖EventBridge收集源端OSS存储的对象修改事件。需要先<a href="https://help.aliyun.com/document_detail/182246.html">开通EventBridge服务</a>。<remarks>
-        /// <para>CPFS在EventBridge创建的事件总线、事件规则带有<c>Create for cpfs auto refresh</c>的描述，事件总线、事件规则都不能修改和删除，否则自动更新无法正常工作。</para>
+        /// <item><description>This operation applies only to Cloud Parallel File Storage (CPFS) file systems.</description></item>
+        /// <item><description>Only CPFS 2.2.0 and later support data flows. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>You can add auto-refresh configurations only for data flows in the <c>Running</c> state.</description></item>
+        /// <item><description>You can add up to five auto-refresh configurations for a data flow.</description></item>
+        /// <item><description>It takes 2 to 5 minutes to create an auto-refresh configuration. You can call <a href="https://help.aliyun.com/document_detail/336901.html">DescribeDataFlows</a> to query the data flow status.</description></item>
+        /// <item><description>Auto-refresh relies on EventBridge to collect object modification events from the source OSS storage. <a href="https://help.aliyun.com/document_detail/182246.html">Activate EventBridge</a> before you proceed.<remarks>
+        /// <para>The event buses and event rules that CPFS creates in EventBridge contain the description <c>Create for cpfs auto refresh</c>. Do not modify or delete these event buses or event rules. Otherwise, auto-refresh cannot work properly.</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description>自动更新的作用对象是prefix，由参数RefreshPath指定。在CPFS数据流动对prefix配置自动更新时，会在用户侧创建事件总线，并创建源端OSS Bucket的prefix的事件规则。当源端OSS Bucket的prefix内发生对象修改后，会在EventBridge中产生OSS事件，由CPFS数据流动处理。</description></item>
-        /// <item><description>配置自动更新（AutoRefresh）后，当源端存储数据发生变化时，变化的元数据会自动同步到CPFS文件系统，变化的数据会在用户访问文件时按需加载，或者启动数据流动任务加载数据。</description></item>
-        /// <item><description>自动更新间隔（AutoRefreshInterval）指CPFS每隔该时间间隔，检查源端OSS Bucket该prefix内是否存在数据更新，如果有数据更新则启动自动更新任务。当OSS源端的对象修改事件频率超过CPFS数据流动处理能力时，自动更新任务会堆积，元数据更新会延迟，数据流动的状态为Misconfigured，您可以提升数据流动规格，或者降低OSS修改频率来解决。</description></item>
+        /// <item><description>Auto-refresh targets a prefix specified by the RefreshPath parameter. When you configure auto-refresh for a prefix in a CPFS data flow, an event bus is created on the user side, and an event rule is created for the prefix of the source OSS bucket. When objects within the prefix of the source OSS bucket are modified, OSS events are generated in EventBridge and processed by the CPFS data flow.</description></item>
+        /// <item><description>After you configure auto-refresh (AutoRefresh), when data changes in the source storage, the changed metadata is automatically synchronized to the CPFS file system. The changed data is loaded on demand when a user accesses the file, or loaded by starting a data flow node to load data.</description></item>
+        /// <item><description>The auto-refresh interval (AutoRefreshInterval) specifies the interval at which CPFS checks whether data updates exist in the prefix of the source OSS bucket. If data updates exist, an auto-refresh node is started. When the frequency of object modification events in the source OSS bucket exceeds the processing capacity of the CPFS data flow, automatic synchronization nodes accumulate, metadata updates are delayed, and the data stream status changes to Misconfigured. To resolve this issue, upgrade the data stream specifications or reduce the modification frequency in OSS.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -674,14 +704,14 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates the VSC device with the file system.</para>
+        /// <para>Associates a VSC device with a file system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>仅CPFS智算版支持该功能。</description></item>
-        /// <item><description>支持批量执行，批量执行情况下，目前仅支持1个VscId关联到多个FileSystemId，即ResourceIds.VscId需相等。</description></item>
+        /// <item><description>Only CPFS for Lingjun supports this feature.</description></item>
+        /// <item><description>Batch operations are supported. In batch mode, only one VscId can be associated with multiple file system IDs (FileSystemId). This means the ResourceIds.VscId values must be the same.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -732,14 +762,14 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates the VSC device with the file system.</para>
+        /// <para>Associates a VSC device with a file system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>仅CPFS智算版支持该功能。</description></item>
-        /// <item><description>支持批量执行，批量执行情况下，目前仅支持1个VscId关联到多个FileSystemId，即ResourceIds.VscId需相等。</description></item>
+        /// <item><description>Only CPFS for Lingjun supports this feature.</description></item>
+        /// <item><description>Batch operations are supported. In batch mode, only one VscId can be associated with multiple file system IDs (FileSystemId). This means the ResourceIds.VscId values must be the same.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -790,14 +820,14 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates the VSC device with the file system.</para>
+        /// <para>Associates a VSC device with a file system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>仅CPFS智算版支持该功能。</description></item>
-        /// <item><description>支持批量执行，批量执行情况下，目前仅支持1个VscId关联到多个FileSystemId，即ResourceIds.VscId需相等。</description></item>
+        /// <item><description>Only CPFS for Lingjun supports this feature.</description></item>
+        /// <item><description>Batch operations are supported. In batch mode, only one VscId can be associated with multiple file system IDs (FileSystemId). This means the ResourceIds.VscId values must be the same.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -816,14 +846,14 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates the VSC device with the file system.</para>
+        /// <para>Associates a VSC device with a file system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>仅CPFS智算版支持该功能。</description></item>
-        /// <item><description>支持批量执行，批量执行情况下，目前仅支持1个VscId关联到多个FileSystemId，即ResourceIds.VscId需相等。</description></item>
+        /// <item><description>Only CPFS for Lingjun supports this feature.</description></item>
+        /// <item><description>Batch operations are supported. In batch mode, only one VscId can be associated with multiple file system IDs (FileSystemId). This means the ResourceIds.VscId values must be the same.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -842,14 +872,20 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes automatic snapshot policies from one or more file systems.</para>
+        /// <para>Cancels the automatic snapshot policy that is created for a file system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;.</para>
         /// <list type="bullet">
-        /// <item><description>Only advanced Extreme NAS file systems support this feature.</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS supports this feature.
+        /// .
+        /// &lt;props=&quot;intl&quot;&gt;.</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS supports this feature.
+        /// .</description></item>
         /// </list>
         /// </description>
         /// 
@@ -892,14 +928,20 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes automatic snapshot policies from one or more file systems.</para>
+        /// <para>Cancels the automatic snapshot policy that is created for a file system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;.</para>
         /// <list type="bullet">
-        /// <item><description>Only advanced Extreme NAS file systems support this feature.</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS supports this feature.
+        /// .
+        /// &lt;props=&quot;intl&quot;&gt;.</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS supports this feature.
+        /// .</description></item>
         /// </list>
         /// </description>
         /// 
@@ -942,14 +984,20 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes automatic snapshot policies from one or more file systems.</para>
+        /// <para>Cancels the automatic snapshot policy that is created for a file system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;.</para>
         /// <list type="bullet">
-        /// <item><description>Only advanced Extreme NAS file systems support this feature.</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS supports this feature.
+        /// .
+        /// &lt;props=&quot;intl&quot;&gt;.</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS supports this feature.
+        /// .</description></item>
         /// </list>
         /// </description>
         /// 
@@ -968,14 +1016,20 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes automatic snapshot policies from one or more file systems.</para>
+        /// <para>Cancels the automatic snapshot policy that is created for a file system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;.</para>
         /// <list type="bullet">
-        /// <item><description>Only advanced Extreme NAS file systems support this feature.</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS supports this feature.
+        /// .
+        /// &lt;props=&quot;intl&quot;&gt;.</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS supports this feature.
+        /// .</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1574,12 +1628,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels the directory quota of a file system.</para>
+        /// <para>Cancels a directory quota for a file system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only General-purpose file systems support the directory quota feature.</para>
+        /// <para>Only General-purpose NAS NFS file systems support the directory quota feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1633,12 +1687,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels the directory quota of a file system.</para>
+        /// <para>Cancels a directory quota for a file system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only General-purpose file systems support the directory quota feature.</para>
+        /// <para>Only General-purpose NAS NFS file systems support the directory quota feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1692,12 +1746,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels the directory quota of a file system.</para>
+        /// <para>Cancels a directory quota for a file system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only General-purpose file systems support the directory quota feature.</para>
+        /// <para>Only General-purpose NAS NFS file systems support the directory quota feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1715,12 +1769,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels the directory quota of a file system.</para>
+        /// <para>Cancels a directory quota for a file system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only General-purpose file systems support the directory quota feature.</para>
+        /// <para>Only General-purpose NAS NFS file systems support the directory quota feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2194,7 +2248,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the resource group to which a file system belongs.</para>
+        /// <para>Changes the resource group to which a file system instance belongs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2248,7 +2302,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the resource group to which a file system belongs.</para>
+        /// <para>Changes the resource group to which a file system instance belongs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2302,7 +2356,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the resource group to which a file system belongs.</para>
+        /// <para>Changes the resource group to which a file system instance belongs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2320,7 +2374,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the resource group to which a file system belongs.</para>
+        /// <para>Changes the resource group to which a file system instance belongs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2344,9 +2398,9 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>一个阿里云账号在单个地域内最多可以创建20个权限组。</description></item>
-        /// <item><description>一个权限组最多支持添加300个规则。</description></item>
-        /// <item><description>仅支持创建专有网络类型的权限组。</description></item>
+        /// <item><description>You can create up to 20 permission groups in a single region within an Alibaba Cloud account.</description></item>
+        /// <item><description>A permission group supports up to 300 rules.</description></item>
+        /// <item><description>Only permission groups of the VPC network type can be created.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2407,9 +2461,9 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>一个阿里云账号在单个地域内最多可以创建20个权限组。</description></item>
-        /// <item><description>一个权限组最多支持添加300个规则。</description></item>
-        /// <item><description>仅支持创建专有网络类型的权限组。</description></item>
+        /// <item><description>You can create up to 20 permission groups in a single region within an Alibaba Cloud account.</description></item>
+        /// <item><description>A permission group supports up to 300 rules.</description></item>
+        /// <item><description>Only permission groups of the VPC network type can be created.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2470,9 +2524,9 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>一个阿里云账号在单个地域内最多可以创建20个权限组。</description></item>
-        /// <item><description>一个权限组最多支持添加300个规则。</description></item>
-        /// <item><description>仅支持创建专有网络类型的权限组。</description></item>
+        /// <item><description>You can create up to 20 permission groups in a single region within an Alibaba Cloud account.</description></item>
+        /// <item><description>A permission group supports up to 300 rules.</description></item>
+        /// <item><description>Only permission groups of the VPC network type can be created.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2497,9 +2551,9 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>一个阿里云账号在单个地域内最多可以创建20个权限组。</description></item>
-        /// <item><description>一个权限组最多支持添加300个规则。</description></item>
-        /// <item><description>仅支持创建专有网络类型的权限组。</description></item>
+        /// <item><description>You can create up to 20 permission groups in a single region within an Alibaba Cloud account.</description></item>
+        /// <item><description>A permission group supports up to 300 rules.</description></item>
+        /// <item><description>Only permission groups of the VPC network type can be created.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2524,9 +2578,9 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>在使用CreateAccessPoint接口创建接入点时部分资源的生成是异步完成的。因此在执行CreateAccessPoint接口成功后，请先调用<a href="https://help.aliyun.com/document_detail/2712239.html">DescribeAccessPoints</a>或者<a href="https://help.aliyun.com/document_detail/2712240.html">DescribeAccessPoint</a>接口查询接入点状态，当接入点状态为<b>Active</b>后再执行挂载文件系统操作，否则可能会挂载失败。</description></item>
-        /// <item><description>仅通用型NAS NFS协议文件系统支持该功能。</description></item>
-        /// <item><description>如果开启RAM策略（EnabledRam），需要配置对应的RAM权限，具体请参考<a href="https://help.aliyun.com/document_detail/2545998.html">管理接入点</a>。</description></item>
+        /// <item><description>When you invoke the CreateAccessPoint operation to create an access point, some resources are generated asynchronously. After the CreateAccessPoint operation succeeds, execute the <a href="https://help.aliyun.com/document_detail/2712239.html">DescribeAccessPoints</a> or <a href="https://help.aliyun.com/document_detail/2712240.html">DescribeAccessPoint</a> operation to query the access point status. Mount the file system only after the access point status becomes <b>Active</b>. Otherwise, the mount operation may fail.</description></item>
+        /// <item><description>Only General-purpose NAS NFS file systems support this feature.</description></item>
+        /// <item><description>If you enable the RAM policy (EnabledRam), configure the corresponding RAM permissions. For more information, see <a href="https://help.aliyun.com/document_detail/2545998.html">Manage access points</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2551,6 +2605,10 @@ namespace AlibabaCloud.SDK.NAS20170626
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessPointName))
             {
                 query["AccessPointName"] = request.AccessPointName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgenticSpaceId))
+            {
+                query["AgenticSpaceId"] = request.AgenticSpaceId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnabledRam))
             {
@@ -2627,9 +2685,9 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>在使用CreateAccessPoint接口创建接入点时部分资源的生成是异步完成的。因此在执行CreateAccessPoint接口成功后，请先调用<a href="https://help.aliyun.com/document_detail/2712239.html">DescribeAccessPoints</a>或者<a href="https://help.aliyun.com/document_detail/2712240.html">DescribeAccessPoint</a>接口查询接入点状态，当接入点状态为<b>Active</b>后再执行挂载文件系统操作，否则可能会挂载失败。</description></item>
-        /// <item><description>仅通用型NAS NFS协议文件系统支持该功能。</description></item>
-        /// <item><description>如果开启RAM策略（EnabledRam），需要配置对应的RAM权限，具体请参考<a href="https://help.aliyun.com/document_detail/2545998.html">管理接入点</a>。</description></item>
+        /// <item><description>When you invoke the CreateAccessPoint operation to create an access point, some resources are generated asynchronously. After the CreateAccessPoint operation succeeds, execute the <a href="https://help.aliyun.com/document_detail/2712239.html">DescribeAccessPoints</a> or <a href="https://help.aliyun.com/document_detail/2712240.html">DescribeAccessPoint</a> operation to query the access point status. Mount the file system only after the access point status becomes <b>Active</b>. Otherwise, the mount operation may fail.</description></item>
+        /// <item><description>Only General-purpose NAS NFS file systems support this feature.</description></item>
+        /// <item><description>If you enable the RAM policy (EnabledRam), configure the corresponding RAM permissions. For more information, see <a href="https://help.aliyun.com/document_detail/2545998.html">Manage access points</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2654,6 +2712,10 @@ namespace AlibabaCloud.SDK.NAS20170626
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessPointName))
             {
                 query["AccessPointName"] = request.AccessPointName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgenticSpaceId))
+            {
+                query["AgenticSpaceId"] = request.AgenticSpaceId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnabledRam))
             {
@@ -2730,9 +2792,9 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>在使用CreateAccessPoint接口创建接入点时部分资源的生成是异步完成的。因此在执行CreateAccessPoint接口成功后，请先调用<a href="https://help.aliyun.com/document_detail/2712239.html">DescribeAccessPoints</a>或者<a href="https://help.aliyun.com/document_detail/2712240.html">DescribeAccessPoint</a>接口查询接入点状态，当接入点状态为<b>Active</b>后再执行挂载文件系统操作，否则可能会挂载失败。</description></item>
-        /// <item><description>仅通用型NAS NFS协议文件系统支持该功能。</description></item>
-        /// <item><description>如果开启RAM策略（EnabledRam），需要配置对应的RAM权限，具体请参考<a href="https://help.aliyun.com/document_detail/2545998.html">管理接入点</a>。</description></item>
+        /// <item><description>When you invoke the CreateAccessPoint operation to create an access point, some resources are generated asynchronously. After the CreateAccessPoint operation succeeds, execute the <a href="https://help.aliyun.com/document_detail/2712239.html">DescribeAccessPoints</a> or <a href="https://help.aliyun.com/document_detail/2712240.html">DescribeAccessPoint</a> operation to query the access point status. Mount the file system only after the access point status becomes <b>Active</b>. Otherwise, the mount operation may fail.</description></item>
+        /// <item><description>Only General-purpose NAS NFS file systems support this feature.</description></item>
+        /// <item><description>If you enable the RAM policy (EnabledRam), configure the corresponding RAM permissions. For more information, see <a href="https://help.aliyun.com/document_detail/2545998.html">Manage access points</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2757,9 +2819,9 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>在使用CreateAccessPoint接口创建接入点时部分资源的生成是异步完成的。因此在执行CreateAccessPoint接口成功后，请先调用<a href="https://help.aliyun.com/document_detail/2712239.html">DescribeAccessPoints</a>或者<a href="https://help.aliyun.com/document_detail/2712240.html">DescribeAccessPoint</a>接口查询接入点状态，当接入点状态为<b>Active</b>后再执行挂载文件系统操作，否则可能会挂载失败。</description></item>
-        /// <item><description>仅通用型NAS NFS协议文件系统支持该功能。</description></item>
-        /// <item><description>如果开启RAM策略（EnabledRam），需要配置对应的RAM权限，具体请参考<a href="https://help.aliyun.com/document_detail/2545998.html">管理接入点</a>。</description></item>
+        /// <item><description>When you invoke the CreateAccessPoint operation to create an access point, some resources are generated asynchronously. After the CreateAccessPoint operation succeeds, execute the <a href="https://help.aliyun.com/document_detail/2712239.html">DescribeAccessPoints</a> or <a href="https://help.aliyun.com/document_detail/2712240.html">DescribeAccessPoint</a> operation to query the access point status. Mount the file system only after the access point status becomes <b>Active</b>. Otherwise, the mount operation may fail.</description></item>
+        /// <item><description>Only General-purpose NAS NFS file systems support this feature.</description></item>
+        /// <item><description>If you enable the RAM policy (EnabledRam), configure the corresponding RAM permissions. For more information, see <a href="https://help.aliyun.com/document_detail/2545998.html">Manage access points</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2778,12 +2840,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a rule for a permission group.</para>
+        /// <para>Creates a permission rule for a permission group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>一个权限组最多支持添加300个规则。</para>
+        /// <para>A maximum of 300 rules can be added to a permission group.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2849,12 +2911,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a rule for a permission group.</para>
+        /// <para>Creates a permission rule for a permission group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>一个权限组最多支持添加300个规则。</para>
+        /// <para>A maximum of 300 rules can be added to a permission group.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2920,12 +2982,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a rule for a permission group.</para>
+        /// <para>Creates a permission rule for a permission group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>一个权限组最多支持添加300个规则。</para>
+        /// <para>A maximum of 300 rules can be added to a permission group.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2943,12 +3005,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a rule for a permission group.</para>
+        /// <para>Creates a permission rule for a permission group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>一个权限组最多支持添加300个规则。</para>
+        /// <para>A maximum of 300 rules can be added to a permission group.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2966,22 +3028,224 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建Agentic空间</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>适用agentic类型文件系统。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateAgenticSpaceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAgenticSpaceResponse
+        /// </returns>
+        public CreateAgenticSpaceResponse CreateAgenticSpaceWithOptions(CreateAgenticSpaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Azone))
+            {
+                query["Azone"] = request.Azone;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemId))
+            {
+                query["FileSystemId"] = request.FileSystemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemPath))
+            {
+                query["FileSystemPath"] = request.FileSystemPath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Quota))
+            {
+                query["Quota"] = request.Quota;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAgenticSpace",
+                Version = "2017-06-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAgenticSpaceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建Agentic空间</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>适用agentic类型文件系统。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateAgenticSpaceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAgenticSpaceResponse
+        /// </returns>
+        public async Task<CreateAgenticSpaceResponse> CreateAgenticSpaceWithOptionsAsync(CreateAgenticSpaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Azone))
+            {
+                query["Azone"] = request.Azone;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemId))
+            {
+                query["FileSystemId"] = request.FileSystemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemPath))
+            {
+                query["FileSystemPath"] = request.FileSystemPath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Quota))
+            {
+                query["Quota"] = request.Quota;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAgenticSpace",
+                Version = "2017-06-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAgenticSpaceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建Agentic空间</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>适用agentic类型文件系统。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateAgenticSpaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAgenticSpaceResponse
+        /// </returns>
+        public CreateAgenticSpaceResponse CreateAgenticSpace(CreateAgenticSpaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateAgenticSpaceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建Agentic空间</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>适用agentic类型文件系统。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateAgenticSpaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAgenticSpaceResponse
+        /// </returns>
+        public async Task<CreateAgenticSpaceResponse> CreateAgenticSpaceAsync(CreateAgenticSpaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateAgenticSpaceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates an automatic snapshot policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;.</para>
         /// <list type="bullet">
-        /// <item><description>Only advanced Extreme NAS file systems support the snapshot feature.</description></item>
-        /// <item><description>You can create a maximum of 100 automatic snapshot policies in each region for an Alibaba Cloud account.</description></item>
-        /// <item><description>If an auto snapshot is being created when the scheduled time for a new auto snapshot arrives, the creation of the new snapshot is skipped. This occurs if the file system stores a large volume of data. For example, you have scheduled auto snapshots to be created at 09:00:00, 10:00:00, 11:00:00, and 12:00:00 for a file system. The system starts to create an auto snapshot at 09:00:00 and does not complete the process until 10:20:00. The process takes 80 minutes because the file system has a large volume of data. In this case, the system does not create an auto snapshot at 10:00:00, but creates an auto snapshot at 11:00:00.</description></item>
-        /// <item><description>A maximum of 128 auto snapshots can be created for a file system. If the upper limit is reached, the earliest auto snapshot is deleted. This rule does not apply to manual snapshots.</description></item>
-        /// <item><description>If you modify the retention period of an automatic snapshot policy, the modification applies only to subsequent snapshots, but not to the existing snapshots.</description></item>
-        /// <item><description>If an auto snapshot is being created for a file system, you cannot create a manual snapshot for the file system. You must wait after the auto snapshot is created.</description></item>
-        /// <item><description>You can only apply automatic snapshot policies to a file system that is in the Running state.</description></item>
-        /// <item><description>All auto snapshots are named in the <c>auto_yyyyMMdd_X</c> format, where: <c>auto</c> indicates that the snapshot is created based on an automatic snapshot policy. <c>yyyyMMdd</c> indicates the date on which the snapshot is created. <c>y</c> indicates the year. <c>M</c> indicates the month. <c>d</c> indicates the day. <c>X</c> indicates the ordinal number of the snapshot on the current day. For example, <c>auto_20201018_1</c> indicates the first auto snapshot that was created on October 18, 2020.</description></item>
-        /// <item><description>After an automatic snapshot policy is created, you can call the ApplyAutoSnapshotPolicy operation to apply the policy to a file system and call the ModifyAutoSnapshotPolicy operation to modify the policy.</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS supports this feature.</description></item>
+        /// <item><description>You can create a maximum of 100 automatic snapshot policies per Alibaba Cloud account in each region.</description></item>
+        /// <item><description>If a file system contains a large amount of data and the time required to create an automatic snapshot exceeds the interval between two scheduled time points, the next time point is automatically skipped. For example, you set 09:00, 10:00, 11:00, and 12:00 as automatic snapshot time points. Because the file system contains a large amount of data, snapshot creation starts at 09:00 and completes at 10:20, taking 80 minutes. The system skips the 10:00 time point and creates the next automatic snapshot at 11:00.</description></item>
+        /// <item><description>Each file system supports a maximum of 128 automatic snapshots. After the snapshot quota is reached, the system automatically deletes the earliest automatic snapshots. Manual snapshots are not affected.</description></item>
+        /// <item><description>When you modify the retention period of an automatic snapshot policy, the change takes effect only for new snapshots. Existing snapshots retain their original retention period.</description></item>
+        /// <item><description>If an automatic snapshot is being created for a file system, you must wait until the automatic snapshot is complete before you can manually create a snapshot.</description></item>
+        /// <item><description>Automatic snapshot policies cannot be executed on file systems that are not in the Normal state.</description></item>
+        /// <item><description>Automatic snapshots follow a unified naming format: <c>auto_yyyyMMdd_X</c>. In this format, <c>auto</c> indicates an automatic snapshot, distinguishing it from manual snapshots. <c>yyyyMMdd</c> indicates the date when the snapshot is created, where <c>y</c> represents the year, <c>M</c> represents the month, and <c>d</c> represents the day. <c>X</c> indicates the sequence number of the automatic snapshot created on that day. For example, <c>auto_20201018_1</c> indicates the first automatic snapshot created on October 18, 2020.</description></item>
+        /// <item><description>A created automatic snapshot policy can be applied to any file system by calling ApplyAutoSnapshotPolicy, and the policy content can be modified by calling ModifyAutoSnapshotPolicy.
+        /// .
+        /// &lt;props=&quot;intl&quot;&gt;.</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS supports this feature.</description></item>
+        /// <item><description>You can create a maximum of 100 automatic snapshot policies per Alibaba Cloud account in each region.</description></item>
+        /// <item><description>If a file system contains a large amount of data and the time required to create an automatic snapshot exceeds the interval between two scheduled time points, the next time point is automatically skipped. For example, you set 09:00, 10:00, 11:00, and 12:00 as automatic snapshot time points. Because the file system contains a large amount of data, snapshot creation starts at 09:00 and completes at 10:20, taking 80 minutes. The system skips the 10:00 time point and creates the next automatic snapshot at 11:00.</description></item>
+        /// <item><description>Each file system supports a maximum of 128 automatic snapshots. After the snapshot quota is reached, the system automatically deletes the earliest automatic snapshots. Manual snapshots are not affected.</description></item>
+        /// <item><description>When you modify the retention period of an automatic snapshot policy, the change takes effect only for new snapshots. Existing snapshots retain their original retention period.</description></item>
+        /// <item><description>If an automatic snapshot is being created for a file system, you must wait until the automatic snapshot is complete before you can manually create a snapshot.</description></item>
+        /// <item><description>Automatic snapshot policies cannot be executed on file systems that are not in the Normal state.</description></item>
+        /// <item><description>Automatic snapshots follow a unified naming format: <c>auto_yyyyMMdd_X</c>. In this format, <c>auto</c> indicates an automatic snapshot, distinguishing it from manual snapshots. <c>yyyyMMdd</c> indicates the date when the snapshot is created, where <c>y</c> represents the year, <c>M</c> represents the month, and <c>d</c> represents the day. <c>X</c> indicates the sequence number of the automatic snapshot created on that day. For example, <c>auto_20201018_1</c> indicates the first automatic snapshot created on October 18, 2020.</description></item>
+        /// <item><description>A created automatic snapshot policy can be applied to any file system by calling ApplyAutoSnapshotPolicy, and the policy content can be modified by calling ModifyAutoSnapshotPolicy.
+        /// .</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3045,17 +3309,31 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;.</para>
         /// <list type="bullet">
-        /// <item><description>Only advanced Extreme NAS file systems support the snapshot feature.</description></item>
-        /// <item><description>You can create a maximum of 100 automatic snapshot policies in each region for an Alibaba Cloud account.</description></item>
-        /// <item><description>If an auto snapshot is being created when the scheduled time for a new auto snapshot arrives, the creation of the new snapshot is skipped. This occurs if the file system stores a large volume of data. For example, you have scheduled auto snapshots to be created at 09:00:00, 10:00:00, 11:00:00, and 12:00:00 for a file system. The system starts to create an auto snapshot at 09:00:00 and does not complete the process until 10:20:00. The process takes 80 minutes because the file system has a large volume of data. In this case, the system does not create an auto snapshot at 10:00:00, but creates an auto snapshot at 11:00:00.</description></item>
-        /// <item><description>A maximum of 128 auto snapshots can be created for a file system. If the upper limit is reached, the earliest auto snapshot is deleted. This rule does not apply to manual snapshots.</description></item>
-        /// <item><description>If you modify the retention period of an automatic snapshot policy, the modification applies only to subsequent snapshots, but not to the existing snapshots.</description></item>
-        /// <item><description>If an auto snapshot is being created for a file system, you cannot create a manual snapshot for the file system. You must wait after the auto snapshot is created.</description></item>
-        /// <item><description>You can only apply automatic snapshot policies to a file system that is in the Running state.</description></item>
-        /// <item><description>All auto snapshots are named in the <c>auto_yyyyMMdd_X</c> format, where: <c>auto</c> indicates that the snapshot is created based on an automatic snapshot policy. <c>yyyyMMdd</c> indicates the date on which the snapshot is created. <c>y</c> indicates the year. <c>M</c> indicates the month. <c>d</c> indicates the day. <c>X</c> indicates the ordinal number of the snapshot on the current day. For example, <c>auto_20201018_1</c> indicates the first auto snapshot that was created on October 18, 2020.</description></item>
-        /// <item><description>After an automatic snapshot policy is created, you can call the ApplyAutoSnapshotPolicy operation to apply the policy to a file system and call the ModifyAutoSnapshotPolicy operation to modify the policy.</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS supports this feature.</description></item>
+        /// <item><description>You can create a maximum of 100 automatic snapshot policies per Alibaba Cloud account in each region.</description></item>
+        /// <item><description>If a file system contains a large amount of data and the time required to create an automatic snapshot exceeds the interval between two scheduled time points, the next time point is automatically skipped. For example, you set 09:00, 10:00, 11:00, and 12:00 as automatic snapshot time points. Because the file system contains a large amount of data, snapshot creation starts at 09:00 and completes at 10:20, taking 80 minutes. The system skips the 10:00 time point and creates the next automatic snapshot at 11:00.</description></item>
+        /// <item><description>Each file system supports a maximum of 128 automatic snapshots. After the snapshot quota is reached, the system automatically deletes the earliest automatic snapshots. Manual snapshots are not affected.</description></item>
+        /// <item><description>When you modify the retention period of an automatic snapshot policy, the change takes effect only for new snapshots. Existing snapshots retain their original retention period.</description></item>
+        /// <item><description>If an automatic snapshot is being created for a file system, you must wait until the automatic snapshot is complete before you can manually create a snapshot.</description></item>
+        /// <item><description>Automatic snapshot policies cannot be executed on file systems that are not in the Normal state.</description></item>
+        /// <item><description>Automatic snapshots follow a unified naming format: <c>auto_yyyyMMdd_X</c>. In this format, <c>auto</c> indicates an automatic snapshot, distinguishing it from manual snapshots. <c>yyyyMMdd</c> indicates the date when the snapshot is created, where <c>y</c> represents the year, <c>M</c> represents the month, and <c>d</c> represents the day. <c>X</c> indicates the sequence number of the automatic snapshot created on that day. For example, <c>auto_20201018_1</c> indicates the first automatic snapshot created on October 18, 2020.</description></item>
+        /// <item><description>A created automatic snapshot policy can be applied to any file system by calling ApplyAutoSnapshotPolicy, and the policy content can be modified by calling ModifyAutoSnapshotPolicy.
+        /// .
+        /// &lt;props=&quot;intl&quot;&gt;.</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS supports this feature.</description></item>
+        /// <item><description>You can create a maximum of 100 automatic snapshot policies per Alibaba Cloud account in each region.</description></item>
+        /// <item><description>If a file system contains a large amount of data and the time required to create an automatic snapshot exceeds the interval between two scheduled time points, the next time point is automatically skipped. For example, you set 09:00, 10:00, 11:00, and 12:00 as automatic snapshot time points. Because the file system contains a large amount of data, snapshot creation starts at 09:00 and completes at 10:20, taking 80 minutes. The system skips the 10:00 time point and creates the next automatic snapshot at 11:00.</description></item>
+        /// <item><description>Each file system supports a maximum of 128 automatic snapshots. After the snapshot quota is reached, the system automatically deletes the earliest automatic snapshots. Manual snapshots are not affected.</description></item>
+        /// <item><description>When you modify the retention period of an automatic snapshot policy, the change takes effect only for new snapshots. Existing snapshots retain their original retention period.</description></item>
+        /// <item><description>If an automatic snapshot is being created for a file system, you must wait until the automatic snapshot is complete before you can manually create a snapshot.</description></item>
+        /// <item><description>Automatic snapshot policies cannot be executed on file systems that are not in the Normal state.</description></item>
+        /// <item><description>Automatic snapshots follow a unified naming format: <c>auto_yyyyMMdd_X</c>. In this format, <c>auto</c> indicates an automatic snapshot, distinguishing it from manual snapshots. <c>yyyyMMdd</c> indicates the date when the snapshot is created, where <c>y</c> represents the year, <c>M</c> represents the month, and <c>d</c> represents the day. <c>X</c> indicates the sequence number of the automatic snapshot created on that day. For example, <c>auto_20201018_1</c> indicates the first automatic snapshot created on October 18, 2020.</description></item>
+        /// <item><description>A created automatic snapshot policy can be applied to any file system by calling ApplyAutoSnapshotPolicy, and the policy content can be modified by calling ModifyAutoSnapshotPolicy.
+        /// .</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3119,17 +3397,31 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;.</para>
         /// <list type="bullet">
-        /// <item><description>Only advanced Extreme NAS file systems support the snapshot feature.</description></item>
-        /// <item><description>You can create a maximum of 100 automatic snapshot policies in each region for an Alibaba Cloud account.</description></item>
-        /// <item><description>If an auto snapshot is being created when the scheduled time for a new auto snapshot arrives, the creation of the new snapshot is skipped. This occurs if the file system stores a large volume of data. For example, you have scheduled auto snapshots to be created at 09:00:00, 10:00:00, 11:00:00, and 12:00:00 for a file system. The system starts to create an auto snapshot at 09:00:00 and does not complete the process until 10:20:00. The process takes 80 minutes because the file system has a large volume of data. In this case, the system does not create an auto snapshot at 10:00:00, but creates an auto snapshot at 11:00:00.</description></item>
-        /// <item><description>A maximum of 128 auto snapshots can be created for a file system. If the upper limit is reached, the earliest auto snapshot is deleted. This rule does not apply to manual snapshots.</description></item>
-        /// <item><description>If you modify the retention period of an automatic snapshot policy, the modification applies only to subsequent snapshots, but not to the existing snapshots.</description></item>
-        /// <item><description>If an auto snapshot is being created for a file system, you cannot create a manual snapshot for the file system. You must wait after the auto snapshot is created.</description></item>
-        /// <item><description>You can only apply automatic snapshot policies to a file system that is in the Running state.</description></item>
-        /// <item><description>All auto snapshots are named in the <c>auto_yyyyMMdd_X</c> format, where: <c>auto</c> indicates that the snapshot is created based on an automatic snapshot policy. <c>yyyyMMdd</c> indicates the date on which the snapshot is created. <c>y</c> indicates the year. <c>M</c> indicates the month. <c>d</c> indicates the day. <c>X</c> indicates the ordinal number of the snapshot on the current day. For example, <c>auto_20201018_1</c> indicates the first auto snapshot that was created on October 18, 2020.</description></item>
-        /// <item><description>After an automatic snapshot policy is created, you can call the ApplyAutoSnapshotPolicy operation to apply the policy to a file system and call the ModifyAutoSnapshotPolicy operation to modify the policy.</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS supports this feature.</description></item>
+        /// <item><description>You can create a maximum of 100 automatic snapshot policies per Alibaba Cloud account in each region.</description></item>
+        /// <item><description>If a file system contains a large amount of data and the time required to create an automatic snapshot exceeds the interval between two scheduled time points, the next time point is automatically skipped. For example, you set 09:00, 10:00, 11:00, and 12:00 as automatic snapshot time points. Because the file system contains a large amount of data, snapshot creation starts at 09:00 and completes at 10:20, taking 80 minutes. The system skips the 10:00 time point and creates the next automatic snapshot at 11:00.</description></item>
+        /// <item><description>Each file system supports a maximum of 128 automatic snapshots. After the snapshot quota is reached, the system automatically deletes the earliest automatic snapshots. Manual snapshots are not affected.</description></item>
+        /// <item><description>When you modify the retention period of an automatic snapshot policy, the change takes effect only for new snapshots. Existing snapshots retain their original retention period.</description></item>
+        /// <item><description>If an automatic snapshot is being created for a file system, you must wait until the automatic snapshot is complete before you can manually create a snapshot.</description></item>
+        /// <item><description>Automatic snapshot policies cannot be executed on file systems that are not in the Normal state.</description></item>
+        /// <item><description>Automatic snapshots follow a unified naming format: <c>auto_yyyyMMdd_X</c>. In this format, <c>auto</c> indicates an automatic snapshot, distinguishing it from manual snapshots. <c>yyyyMMdd</c> indicates the date when the snapshot is created, where <c>y</c> represents the year, <c>M</c> represents the month, and <c>d</c> represents the day. <c>X</c> indicates the sequence number of the automatic snapshot created on that day. For example, <c>auto_20201018_1</c> indicates the first automatic snapshot created on October 18, 2020.</description></item>
+        /// <item><description>A created automatic snapshot policy can be applied to any file system by calling ApplyAutoSnapshotPolicy, and the policy content can be modified by calling ModifyAutoSnapshotPolicy.
+        /// .
+        /// &lt;props=&quot;intl&quot;&gt;.</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS supports this feature.</description></item>
+        /// <item><description>You can create a maximum of 100 automatic snapshot policies per Alibaba Cloud account in each region.</description></item>
+        /// <item><description>If a file system contains a large amount of data and the time required to create an automatic snapshot exceeds the interval between two scheduled time points, the next time point is automatically skipped. For example, you set 09:00, 10:00, 11:00, and 12:00 as automatic snapshot time points. Because the file system contains a large amount of data, snapshot creation starts at 09:00 and completes at 10:20, taking 80 minutes. The system skips the 10:00 time point and creates the next automatic snapshot at 11:00.</description></item>
+        /// <item><description>Each file system supports a maximum of 128 automatic snapshots. After the snapshot quota is reached, the system automatically deletes the earliest automatic snapshots. Manual snapshots are not affected.</description></item>
+        /// <item><description>When you modify the retention period of an automatic snapshot policy, the change takes effect only for new snapshots. Existing snapshots retain their original retention period.</description></item>
+        /// <item><description>If an automatic snapshot is being created for a file system, you must wait until the automatic snapshot is complete before you can manually create a snapshot.</description></item>
+        /// <item><description>Automatic snapshot policies cannot be executed on file systems that are not in the Normal state.</description></item>
+        /// <item><description>Automatic snapshots follow a unified naming format: <c>auto_yyyyMMdd_X</c>. In this format, <c>auto</c> indicates an automatic snapshot, distinguishing it from manual snapshots. <c>yyyyMMdd</c> indicates the date when the snapshot is created, where <c>y</c> represents the year, <c>M</c> represents the month, and <c>d</c> represents the day. <c>X</c> indicates the sequence number of the automatic snapshot created on that day. For example, <c>auto_20201018_1</c> indicates the first automatic snapshot created on October 18, 2020.</description></item>
+        /// <item><description>A created automatic snapshot policy can be applied to any file system by calling ApplyAutoSnapshotPolicy, and the policy content can be modified by calling ModifyAutoSnapshotPolicy.
+        /// .</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3153,17 +3445,31 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;.</para>
         /// <list type="bullet">
-        /// <item><description>Only advanced Extreme NAS file systems support the snapshot feature.</description></item>
-        /// <item><description>You can create a maximum of 100 automatic snapshot policies in each region for an Alibaba Cloud account.</description></item>
-        /// <item><description>If an auto snapshot is being created when the scheduled time for a new auto snapshot arrives, the creation of the new snapshot is skipped. This occurs if the file system stores a large volume of data. For example, you have scheduled auto snapshots to be created at 09:00:00, 10:00:00, 11:00:00, and 12:00:00 for a file system. The system starts to create an auto snapshot at 09:00:00 and does not complete the process until 10:20:00. The process takes 80 minutes because the file system has a large volume of data. In this case, the system does not create an auto snapshot at 10:00:00, but creates an auto snapshot at 11:00:00.</description></item>
-        /// <item><description>A maximum of 128 auto snapshots can be created for a file system. If the upper limit is reached, the earliest auto snapshot is deleted. This rule does not apply to manual snapshots.</description></item>
-        /// <item><description>If you modify the retention period of an automatic snapshot policy, the modification applies only to subsequent snapshots, but not to the existing snapshots.</description></item>
-        /// <item><description>If an auto snapshot is being created for a file system, you cannot create a manual snapshot for the file system. You must wait after the auto snapshot is created.</description></item>
-        /// <item><description>You can only apply automatic snapshot policies to a file system that is in the Running state.</description></item>
-        /// <item><description>All auto snapshots are named in the <c>auto_yyyyMMdd_X</c> format, where: <c>auto</c> indicates that the snapshot is created based on an automatic snapshot policy. <c>yyyyMMdd</c> indicates the date on which the snapshot is created. <c>y</c> indicates the year. <c>M</c> indicates the month. <c>d</c> indicates the day. <c>X</c> indicates the ordinal number of the snapshot on the current day. For example, <c>auto_20201018_1</c> indicates the first auto snapshot that was created on October 18, 2020.</description></item>
-        /// <item><description>After an automatic snapshot policy is created, you can call the ApplyAutoSnapshotPolicy operation to apply the policy to a file system and call the ModifyAutoSnapshotPolicy operation to modify the policy.</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS supports this feature.</description></item>
+        /// <item><description>You can create a maximum of 100 automatic snapshot policies per Alibaba Cloud account in each region.</description></item>
+        /// <item><description>If a file system contains a large amount of data and the time required to create an automatic snapshot exceeds the interval between two scheduled time points, the next time point is automatically skipped. For example, you set 09:00, 10:00, 11:00, and 12:00 as automatic snapshot time points. Because the file system contains a large amount of data, snapshot creation starts at 09:00 and completes at 10:20, taking 80 minutes. The system skips the 10:00 time point and creates the next automatic snapshot at 11:00.</description></item>
+        /// <item><description>Each file system supports a maximum of 128 automatic snapshots. After the snapshot quota is reached, the system automatically deletes the earliest automatic snapshots. Manual snapshots are not affected.</description></item>
+        /// <item><description>When you modify the retention period of an automatic snapshot policy, the change takes effect only for new snapshots. Existing snapshots retain their original retention period.</description></item>
+        /// <item><description>If an automatic snapshot is being created for a file system, you must wait until the automatic snapshot is complete before you can manually create a snapshot.</description></item>
+        /// <item><description>Automatic snapshot policies cannot be executed on file systems that are not in the Normal state.</description></item>
+        /// <item><description>Automatic snapshots follow a unified naming format: <c>auto_yyyyMMdd_X</c>. In this format, <c>auto</c> indicates an automatic snapshot, distinguishing it from manual snapshots. <c>yyyyMMdd</c> indicates the date when the snapshot is created, where <c>y</c> represents the year, <c>M</c> represents the month, and <c>d</c> represents the day. <c>X</c> indicates the sequence number of the automatic snapshot created on that day. For example, <c>auto_20201018_1</c> indicates the first automatic snapshot created on October 18, 2020.</description></item>
+        /// <item><description>A created automatic snapshot policy can be applied to any file system by calling ApplyAutoSnapshotPolicy, and the policy content can be modified by calling ModifyAutoSnapshotPolicy.
+        /// .
+        /// &lt;props=&quot;intl&quot;&gt;.</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS supports this feature.</description></item>
+        /// <item><description>You can create a maximum of 100 automatic snapshot policies per Alibaba Cloud account in each region.</description></item>
+        /// <item><description>If a file system contains a large amount of data and the time required to create an automatic snapshot exceeds the interval between two scheduled time points, the next time point is automatically skipped. For example, you set 09:00, 10:00, 11:00, and 12:00 as automatic snapshot time points. Because the file system contains a large amount of data, snapshot creation starts at 09:00 and completes at 10:20, taking 80 minutes. The system skips the 10:00 time point and creates the next automatic snapshot at 11:00.</description></item>
+        /// <item><description>Each file system supports a maximum of 128 automatic snapshots. After the snapshot quota is reached, the system automatically deletes the earliest automatic snapshots. Manual snapshots are not affected.</description></item>
+        /// <item><description>When you modify the retention period of an automatic snapshot policy, the change takes effect only for new snapshots. Existing snapshots retain their original retention period.</description></item>
+        /// <item><description>If an automatic snapshot is being created for a file system, you must wait until the automatic snapshot is complete before you can manually create a snapshot.</description></item>
+        /// <item><description>Automatic snapshot policies cannot be executed on file systems that are not in the Normal state.</description></item>
+        /// <item><description>Automatic snapshots follow a unified naming format: <c>auto_yyyyMMdd_X</c>. In this format, <c>auto</c> indicates an automatic snapshot, distinguishing it from manual snapshots. <c>yyyyMMdd</c> indicates the date when the snapshot is created, where <c>y</c> represents the year, <c>M</c> represents the month, and <c>d</c> represents the day. <c>X</c> indicates the sequence number of the automatic snapshot created on that day. For example, <c>auto_20201018_1</c> indicates the first automatic snapshot created on October 18, 2020.</description></item>
+        /// <item><description>A created automatic snapshot policy can be applied to any file system by calling ApplyAutoSnapshotPolicy, and the policy content can be modified by calling ModifyAutoSnapshotPolicy.
+        /// .</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5751,9 +6057,9 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Only General-purpose NAS file systems support this operation.</para>
         /// <list type="bullet">
-        /// <item><description>You can run a maximum of 20 data retrieval tasks in each region within an Alibaba Cloud account.</description></item>
+        /// <item><description>Only General-purpose NAS file systems support this feature.</description></item>
+        /// <item><description>Each Alibaba Cloud account can have up to 20 running data retrieval tasks in the same region.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5809,9 +6115,9 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Only General-purpose NAS file systems support this operation.</para>
         /// <list type="bullet">
-        /// <item><description>You can run a maximum of 20 data retrieval tasks in each region within an Alibaba Cloud account.</description></item>
+        /// <item><description>Only General-purpose NAS file systems support this feature.</description></item>
+        /// <item><description>Each Alibaba Cloud account can have up to 20 running data retrieval tasks in the same region.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5867,9 +6173,9 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Only General-purpose NAS file systems support this operation.</para>
         /// <list type="bullet">
-        /// <item><description>You can run a maximum of 20 data retrieval tasks in each region within an Alibaba Cloud account.</description></item>
+        /// <item><description>Only General-purpose NAS file systems support this feature.</description></item>
+        /// <item><description>Each Alibaba Cloud account can have up to 20 running data retrieval tasks in the same region.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5893,9 +6199,9 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Only General-purpose NAS file systems support this operation.</para>
         /// <list type="bullet">
-        /// <item><description>You can run a maximum of 20 data retrieval tasks in each region within an Alibaba Cloud account.</description></item>
+        /// <item><description>Only General-purpose NAS file systems support this feature.</description></item>
+        /// <item><description>Each Alibaba Cloud account can have up to 20 running data retrieval tasks in the same region.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6048,8 +6354,8 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>在使用CreateMountTarget接口创建挂载点时部分资源的生成是异步完成的。因此在执行CreateMountTarget接口成功后，请先调用DescribeMountTargets接口查询挂载点状态，当挂载点状态为<b>Active</b>后再执行挂载文件系统操作，否则可能会挂载失败。</description></item>
-        /// <item><description>调用此接口将自动创建操作所需的NAS服务关联角色。更多信息，请参见<a href="https://help.aliyun.com/document_detail/208530.html">管理NAS服务关联角色</a>。</description></item>
+        /// <item><description>When you call the CreateMountTarget operation to create a mount target, some resources are generated asynchronously. After the CreateMountTarget operation succeeds, first invoke the DescribeMountTargets operation to query the mount target status. Execute the file system mount operation only after the mount target status changes to <b>Active</b>. Otherwise, the mount operation may fail.</description></item>
+        /// <item><description>Invoking this operation triggers the automatic creation of the service-linked role required for the operation. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked role for NAS</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6126,8 +6432,8 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>在使用CreateMountTarget接口创建挂载点时部分资源的生成是异步完成的。因此在执行CreateMountTarget接口成功后，请先调用DescribeMountTargets接口查询挂载点状态，当挂载点状态为<b>Active</b>后再执行挂载文件系统操作，否则可能会挂载失败。</description></item>
-        /// <item><description>调用此接口将自动创建操作所需的NAS服务关联角色。更多信息，请参见<a href="https://help.aliyun.com/document_detail/208530.html">管理NAS服务关联角色</a>。</description></item>
+        /// <item><description>When you call the CreateMountTarget operation to create a mount target, some resources are generated asynchronously. After the CreateMountTarget operation succeeds, first invoke the DescribeMountTargets operation to query the mount target status. Execute the file system mount operation only after the mount target status changes to <b>Active</b>. Otherwise, the mount operation may fail.</description></item>
+        /// <item><description>Invoking this operation triggers the automatic creation of the service-linked role required for the operation. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked role for NAS</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6204,8 +6510,8 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>在使用CreateMountTarget接口创建挂载点时部分资源的生成是异步完成的。因此在执行CreateMountTarget接口成功后，请先调用DescribeMountTargets接口查询挂载点状态，当挂载点状态为<b>Active</b>后再执行挂载文件系统操作，否则可能会挂载失败。</description></item>
-        /// <item><description>调用此接口将自动创建操作所需的NAS服务关联角色。更多信息，请参见<a href="https://help.aliyun.com/document_detail/208530.html">管理NAS服务关联角色</a>。</description></item>
+        /// <item><description>When you call the CreateMountTarget operation to create a mount target, some resources are generated asynchronously. After the CreateMountTarget operation succeeds, first invoke the DescribeMountTargets operation to query the mount target status. Execute the file system mount operation only after the mount target status changes to <b>Active</b>. Otherwise, the mount operation may fail.</description></item>
+        /// <item><description>Invoking this operation triggers the automatic creation of the service-linked role required for the operation. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked role for NAS</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6230,8 +6536,8 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>在使用CreateMountTarget接口创建挂载点时部分资源的生成是异步完成的。因此在执行CreateMountTarget接口成功后，请先调用DescribeMountTargets接口查询挂载点状态，当挂载点状态为<b>Active</b>后再执行挂载文件系统操作，否则可能会挂载失败。</description></item>
-        /// <item><description>调用此接口将自动创建操作所需的NAS服务关联角色。更多信息，请参见<a href="https://help.aliyun.com/document_detail/208530.html">管理NAS服务关联角色</a>。</description></item>
+        /// <item><description>When you call the CreateMountTarget operation to create a mount target, some resources are generated asynchronously. After the CreateMountTarget operation succeeds, first invoke the DescribeMountTargets operation to query the mount target status. Execute the file system mount operation only after the mount target status changes to <b>Active</b>. Otherwise, the mount operation may fail.</description></item>
+        /// <item><description>Invoking this operation triggers the automatic creation of the service-linked role required for the operation. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked role for NAS</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6256,17 +6562,17 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><para>该接口仅适用于CPFS文件系统。</para>
+        /// <item><description><para>This operation is applicable only to Cloud Parallel File Storage (CPFS) file systems.</para>
         /// </description></item>
-        /// <item><description><para>前提条件</para>
-        /// <para>已创建协议服务。</para>
+        /// <item><description><para>Before you begin</para>
+        /// <para>The CPFS file system must be in the Running state and a protocol service must be created.</para>
         /// </description></item>
-        /// <item><description><para>其它</para>
+        /// <item><description><para>Other information</para>
         /// <list type="bullet">
-        /// <item><description>协议服务的导出VPC网段不可与文件系统VPC网段重叠。</description></item>
-        /// <item><description>一个协议服务上的多个导出VPC之间网段不可重叠。</description></item>
-        /// <item><description>同一个协议服务最多可以创建10个导出目录。</description></item>
-        /// <item><description>创建协议服务导出目录会消耗指定vSwitch上的IP地址（最多消耗32个IP地址），请确保目标vSwitch IP资源充足。</description></item>
+        /// <item><description>The VPC CIDR block of the protocol service export cannot overlap with the VPC CIDR block of the file system.</description></item>
+        /// <item><description>The VPC CIDR blocks of multiple exports on the same protocol service cannot overlap with each other.</description></item>
+        /// <item><description>You can create up to 10 export directories for a single protocol service.</description></item>
+        /// <item><description>Creating a protocol service export directory consumes IP addresses from the specified vSwitch (up to 32 IP addresses). Make sure that the target vSwitch has sufficient IP address resources.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -6357,17 +6663,17 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><para>该接口仅适用于CPFS文件系统。</para>
+        /// <item><description><para>This operation is applicable only to Cloud Parallel File Storage (CPFS) file systems.</para>
         /// </description></item>
-        /// <item><description><para>前提条件</para>
-        /// <para>已创建协议服务。</para>
+        /// <item><description><para>Before you begin</para>
+        /// <para>The CPFS file system must be in the Running state and a protocol service must be created.</para>
         /// </description></item>
-        /// <item><description><para>其它</para>
+        /// <item><description><para>Other information</para>
         /// <list type="bullet">
-        /// <item><description>协议服务的导出VPC网段不可与文件系统VPC网段重叠。</description></item>
-        /// <item><description>一个协议服务上的多个导出VPC之间网段不可重叠。</description></item>
-        /// <item><description>同一个协议服务最多可以创建10个导出目录。</description></item>
-        /// <item><description>创建协议服务导出目录会消耗指定vSwitch上的IP地址（最多消耗32个IP地址），请确保目标vSwitch IP资源充足。</description></item>
+        /// <item><description>The VPC CIDR block of the protocol service export cannot overlap with the VPC CIDR block of the file system.</description></item>
+        /// <item><description>The VPC CIDR blocks of multiple exports on the same protocol service cannot overlap with each other.</description></item>
+        /// <item><description>You can create up to 10 export directories for a single protocol service.</description></item>
+        /// <item><description>Creating a protocol service export directory consumes IP addresses from the specified vSwitch (up to 32 IP addresses). Make sure that the target vSwitch has sufficient IP address resources.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -6458,17 +6764,17 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><para>该接口仅适用于CPFS文件系统。</para>
+        /// <item><description><para>This operation is applicable only to Cloud Parallel File Storage (CPFS) file systems.</para>
         /// </description></item>
-        /// <item><description><para>前提条件</para>
-        /// <para>已创建协议服务。</para>
+        /// <item><description><para>Before you begin</para>
+        /// <para>The CPFS file system must be in the Running state and a protocol service must be created.</para>
         /// </description></item>
-        /// <item><description><para>其它</para>
+        /// <item><description><para>Other information</para>
         /// <list type="bullet">
-        /// <item><description>协议服务的导出VPC网段不可与文件系统VPC网段重叠。</description></item>
-        /// <item><description>一个协议服务上的多个导出VPC之间网段不可重叠。</description></item>
-        /// <item><description>同一个协议服务最多可以创建10个导出目录。</description></item>
-        /// <item><description>创建协议服务导出目录会消耗指定vSwitch上的IP地址（最多消耗32个IP地址），请确保目标vSwitch IP资源充足。</description></item>
+        /// <item><description>The VPC CIDR block of the protocol service export cannot overlap with the VPC CIDR block of the file system.</description></item>
+        /// <item><description>The VPC CIDR blocks of multiple exports on the same protocol service cannot overlap with each other.</description></item>
+        /// <item><description>You can create up to 10 export directories for a single protocol service.</description></item>
+        /// <item><description>Creating a protocol service export directory consumes IP addresses from the specified vSwitch (up to 32 IP addresses). Make sure that the target vSwitch has sufficient IP address resources.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -6495,17 +6801,17 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><para>该接口仅适用于CPFS文件系统。</para>
+        /// <item><description><para>This operation is applicable only to Cloud Parallel File Storage (CPFS) file systems.</para>
         /// </description></item>
-        /// <item><description><para>前提条件</para>
-        /// <para>已创建协议服务。</para>
+        /// <item><description><para>Before you begin</para>
+        /// <para>The CPFS file system must be in the Running state and a protocol service must be created.</para>
         /// </description></item>
-        /// <item><description><para>其它</para>
+        /// <item><description><para>Other information</para>
         /// <list type="bullet">
-        /// <item><description>协议服务的导出VPC网段不可与文件系统VPC网段重叠。</description></item>
-        /// <item><description>一个协议服务上的多个导出VPC之间网段不可重叠。</description></item>
-        /// <item><description>同一个协议服务最多可以创建10个导出目录。</description></item>
-        /// <item><description>创建协议服务导出目录会消耗指定vSwitch上的IP地址（最多消耗32个IP地址），请确保目标vSwitch IP资源充足。</description></item>
+        /// <item><description>The VPC CIDR block of the protocol service export cannot overlap with the VPC CIDR block of the file system.</description></item>
+        /// <item><description>The VPC CIDR blocks of multiple exports on the same protocol service cannot overlap with each other.</description></item>
+        /// <item><description>You can create up to 10 export directories for a single protocol service.</description></item>
+        /// <item><description>Creating a protocol service export directory consumes IP addresses from the specified vSwitch (up to 32 IP addresses). Make sure that the target vSwitch has sufficient IP address resources.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -6526,33 +6832,36 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a protocol service for a Cloud Parallel File Storage (CPFS) file system. The creation takes about 5 to 10 minutes.</para>
+        /// <para>Creates a protocol service for a Cloud Parallel File Storage (CPFS) file system. The creation process takes approximately 5 to 10 minutes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><para>该接口仅适用于CPFS文件系统。</para>
+        /// <item><description><para>This operation is applicable only to CPFS file systems.</para>
         /// </description></item>
-        /// <item><description><para>仅CPFS 2.3.0及以上版本支持协议服务。您可以通过调用<a href="https://help.aliyun.com/document_detail/163314.html">DescribeFileSystems</a>接口查询目标文件系统的版本号。</para>
+        /// <item><description><para>Only CPFS 2.3.0 and later support protocol services. You can call the <a href="https://help.aliyun.com/document_detail/163314.html">DescribeFileSystems</a> operation to query the version of the file system.</para>
         /// </description></item>
-        /// <item><description><para>协议服务规格
-        /// 协议服务包括两种协议类型：通用型和缓存型。缓存型相比通用型，提供热点数据缓存能力。在命中缓存的情况下，缓存型协议服务的带宽可超过CPFS文件系统的带宽，达到协议服务设定的最大带宽值。</para>
+        /// <item><description><para>Protocol service specifications.
+        /// Protocol services include two Protocol Types: General and Cache. Compared with the General type, the Cache type provides hot spot data caching. When the cache is hit, the bandwidth of the Cache type protocol service can exceed the bandwidth of the CPFS file system and reach the maximum bandwidth configured for the protocol service.</para>
         /// <list type="bullet">
-        /// <item><description>通用型：为CPFS提供NFS协议访问能力和<a href="https://help.aliyun.com/document_detail/427175.html">目录级挂载点</a>，用户无需配置POSIX客户端管理集群。该功能免费。</description></item>
-        /// <item><description>缓存型：在通用型基础上提供基于LRU策略的服务端内存缓存。当数据缓存于内存中时，CPFS可提供更高的内网带宽。缓存型协议服务分为缓存1型和缓存2型两种协议服务规格，差异点为内网带宽大小和内存缓存大小。<remarks>
-        /// <para> 缓存型协议服务为收费服务，正在邀测。有关缓存型协议服务的付费方式，请参见<a href="https://help.aliyun.com/document_detail/111858.html">计费项</a>。如果您有任何反馈或疑问，欢迎加入钉钉用户群（钉钉群号：31045006299）与CPFS工程师进行交流讨论。</para>
+        /// <item><description>General: Provides NFS protocol access and <a href="https://help.aliyun.com/document_detail/427175.html">folder-level mount targets</a> for CPFS. You do not need to configure a POSIX client cluster management. This feature is free of charge.</description></item>
+        /// <item><description>Cache: Provides server-side in-memory caching based on the LRU policy in addition to the General type capabilities. When data is cached in memory, CPFS can provide higher internal network bandwidth. The Cache type protocol service is available in two specifications: Cache L1 and Cache L2, which differ in internal network bandwidth and memory cache size.<remarks>
+        /// <para> The Cache type protocol service is a paid service and is in invitational preview. For information about the billing of the Cache type protocol service, see <a href="https://help.aliyun.com/document_detail/111858.html">Billable items</a>. If you have any feedback or questions, join the DingTalk user group (group ID: 31045006299) to communicate with CPFS engineers.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>协议类型
-        /// 仅支持NFSv3协议。</para>
+        /// <item><description><para>Protocol type.
+        /// Only NFSv3 is supported.</para>
         /// </description></item>
-        /// <item><description><para>其它</para>
+        /// <item><description><para>Prerequisites.
+        /// The CPFS file system must be created and in the Running state.</para>
+        /// </description></item>
+        /// <item><description><para>Other information.</para>
         /// <list type="bullet">
-        /// <item><description>一个CPFS文件系统只能创建一个协议服务。</description></item>
-        /// <item><description>创建协议服务会消耗指定vSwitch上的IP地址（最多消耗32个IP地址），请确保目标vSwitch IP资源充足。</description></item>
+        /// <item><description>Only one protocol service can be created for each CPFS file system.</description></item>
+        /// <item><description>Creating a protocol service consumes IP addresses on the specified vSwitch (up to 32 IP addresses). Make sure that the target vSwitch has sufficient IP address resources.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -6629,33 +6938,36 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a protocol service for a Cloud Parallel File Storage (CPFS) file system. The creation takes about 5 to 10 minutes.</para>
+        /// <para>Creates a protocol service for a Cloud Parallel File Storage (CPFS) file system. The creation process takes approximately 5 to 10 minutes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><para>该接口仅适用于CPFS文件系统。</para>
+        /// <item><description><para>This operation is applicable only to CPFS file systems.</para>
         /// </description></item>
-        /// <item><description><para>仅CPFS 2.3.0及以上版本支持协议服务。您可以通过调用<a href="https://help.aliyun.com/document_detail/163314.html">DescribeFileSystems</a>接口查询目标文件系统的版本号。</para>
+        /// <item><description><para>Only CPFS 2.3.0 and later support protocol services. You can call the <a href="https://help.aliyun.com/document_detail/163314.html">DescribeFileSystems</a> operation to query the version of the file system.</para>
         /// </description></item>
-        /// <item><description><para>协议服务规格
-        /// 协议服务包括两种协议类型：通用型和缓存型。缓存型相比通用型，提供热点数据缓存能力。在命中缓存的情况下，缓存型协议服务的带宽可超过CPFS文件系统的带宽，达到协议服务设定的最大带宽值。</para>
+        /// <item><description><para>Protocol service specifications.
+        /// Protocol services include two Protocol Types: General and Cache. Compared with the General type, the Cache type provides hot spot data caching. When the cache is hit, the bandwidth of the Cache type protocol service can exceed the bandwidth of the CPFS file system and reach the maximum bandwidth configured for the protocol service.</para>
         /// <list type="bullet">
-        /// <item><description>通用型：为CPFS提供NFS协议访问能力和<a href="https://help.aliyun.com/document_detail/427175.html">目录级挂载点</a>，用户无需配置POSIX客户端管理集群。该功能免费。</description></item>
-        /// <item><description>缓存型：在通用型基础上提供基于LRU策略的服务端内存缓存。当数据缓存于内存中时，CPFS可提供更高的内网带宽。缓存型协议服务分为缓存1型和缓存2型两种协议服务规格，差异点为内网带宽大小和内存缓存大小。<remarks>
-        /// <para> 缓存型协议服务为收费服务，正在邀测。有关缓存型协议服务的付费方式，请参见<a href="https://help.aliyun.com/document_detail/111858.html">计费项</a>。如果您有任何反馈或疑问，欢迎加入钉钉用户群（钉钉群号：31045006299）与CPFS工程师进行交流讨论。</para>
+        /// <item><description>General: Provides NFS protocol access and <a href="https://help.aliyun.com/document_detail/427175.html">folder-level mount targets</a> for CPFS. You do not need to configure a POSIX client cluster management. This feature is free of charge.</description></item>
+        /// <item><description>Cache: Provides server-side in-memory caching based on the LRU policy in addition to the General type capabilities. When data is cached in memory, CPFS can provide higher internal network bandwidth. The Cache type protocol service is available in two specifications: Cache L1 and Cache L2, which differ in internal network bandwidth and memory cache size.<remarks>
+        /// <para> The Cache type protocol service is a paid service and is in invitational preview. For information about the billing of the Cache type protocol service, see <a href="https://help.aliyun.com/document_detail/111858.html">Billable items</a>. If you have any feedback or questions, join the DingTalk user group (group ID: 31045006299) to communicate with CPFS engineers.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>协议类型
-        /// 仅支持NFSv3协议。</para>
+        /// <item><description><para>Protocol type.
+        /// Only NFSv3 is supported.</para>
         /// </description></item>
-        /// <item><description><para>其它</para>
+        /// <item><description><para>Prerequisites.
+        /// The CPFS file system must be created and in the Running state.</para>
+        /// </description></item>
+        /// <item><description><para>Other information.</para>
         /// <list type="bullet">
-        /// <item><description>一个CPFS文件系统只能创建一个协议服务。</description></item>
-        /// <item><description>创建协议服务会消耗指定vSwitch上的IP地址（最多消耗32个IP地址），请确保目标vSwitch IP资源充足。</description></item>
+        /// <item><description>Only one protocol service can be created for each CPFS file system.</description></item>
+        /// <item><description>Creating a protocol service consumes IP addresses on the specified vSwitch (up to 32 IP addresses). Make sure that the target vSwitch has sufficient IP address resources.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -6732,33 +7044,36 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a protocol service for a Cloud Parallel File Storage (CPFS) file system. The creation takes about 5 to 10 minutes.</para>
+        /// <para>Creates a protocol service for a Cloud Parallel File Storage (CPFS) file system. The creation process takes approximately 5 to 10 minutes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><para>该接口仅适用于CPFS文件系统。</para>
+        /// <item><description><para>This operation is applicable only to CPFS file systems.</para>
         /// </description></item>
-        /// <item><description><para>仅CPFS 2.3.0及以上版本支持协议服务。您可以通过调用<a href="https://help.aliyun.com/document_detail/163314.html">DescribeFileSystems</a>接口查询目标文件系统的版本号。</para>
+        /// <item><description><para>Only CPFS 2.3.0 and later support protocol services. You can call the <a href="https://help.aliyun.com/document_detail/163314.html">DescribeFileSystems</a> operation to query the version of the file system.</para>
         /// </description></item>
-        /// <item><description><para>协议服务规格
-        /// 协议服务包括两种协议类型：通用型和缓存型。缓存型相比通用型，提供热点数据缓存能力。在命中缓存的情况下，缓存型协议服务的带宽可超过CPFS文件系统的带宽，达到协议服务设定的最大带宽值。</para>
+        /// <item><description><para>Protocol service specifications.
+        /// Protocol services include two Protocol Types: General and Cache. Compared with the General type, the Cache type provides hot spot data caching. When the cache is hit, the bandwidth of the Cache type protocol service can exceed the bandwidth of the CPFS file system and reach the maximum bandwidth configured for the protocol service.</para>
         /// <list type="bullet">
-        /// <item><description>通用型：为CPFS提供NFS协议访问能力和<a href="https://help.aliyun.com/document_detail/427175.html">目录级挂载点</a>，用户无需配置POSIX客户端管理集群。该功能免费。</description></item>
-        /// <item><description>缓存型：在通用型基础上提供基于LRU策略的服务端内存缓存。当数据缓存于内存中时，CPFS可提供更高的内网带宽。缓存型协议服务分为缓存1型和缓存2型两种协议服务规格，差异点为内网带宽大小和内存缓存大小。<remarks>
-        /// <para> 缓存型协议服务为收费服务，正在邀测。有关缓存型协议服务的付费方式，请参见<a href="https://help.aliyun.com/document_detail/111858.html">计费项</a>。如果您有任何反馈或疑问，欢迎加入钉钉用户群（钉钉群号：31045006299）与CPFS工程师进行交流讨论。</para>
+        /// <item><description>General: Provides NFS protocol access and <a href="https://help.aliyun.com/document_detail/427175.html">folder-level mount targets</a> for CPFS. You do not need to configure a POSIX client cluster management. This feature is free of charge.</description></item>
+        /// <item><description>Cache: Provides server-side in-memory caching based on the LRU policy in addition to the General type capabilities. When data is cached in memory, CPFS can provide higher internal network bandwidth. The Cache type protocol service is available in two specifications: Cache L1 and Cache L2, which differ in internal network bandwidth and memory cache size.<remarks>
+        /// <para> The Cache type protocol service is a paid service and is in invitational preview. For information about the billing of the Cache type protocol service, see <a href="https://help.aliyun.com/document_detail/111858.html">Billable items</a>. If you have any feedback or questions, join the DingTalk user group (group ID: 31045006299) to communicate with CPFS engineers.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>协议类型
-        /// 仅支持NFSv3协议。</para>
+        /// <item><description><para>Protocol type.
+        /// Only NFSv3 is supported.</para>
         /// </description></item>
-        /// <item><description><para>其它</para>
+        /// <item><description><para>Prerequisites.
+        /// The CPFS file system must be created and in the Running state.</para>
+        /// </description></item>
+        /// <item><description><para>Other information.</para>
         /// <list type="bullet">
-        /// <item><description>一个CPFS文件系统只能创建一个协议服务。</description></item>
-        /// <item><description>创建协议服务会消耗指定vSwitch上的IP地址（最多消耗32个IP地址），请确保目标vSwitch IP资源充足。</description></item>
+        /// <item><description>Only one protocol service can be created for each CPFS file system.</description></item>
+        /// <item><description>Creating a protocol service consumes IP addresses on the specified vSwitch (up to 32 IP addresses). Make sure that the target vSwitch has sufficient IP address resources.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -6779,33 +7094,36 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a protocol service for a Cloud Parallel File Storage (CPFS) file system. The creation takes about 5 to 10 minutes.</para>
+        /// <para>Creates a protocol service for a Cloud Parallel File Storage (CPFS) file system. The creation process takes approximately 5 to 10 minutes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><para>该接口仅适用于CPFS文件系统。</para>
+        /// <item><description><para>This operation is applicable only to CPFS file systems.</para>
         /// </description></item>
-        /// <item><description><para>仅CPFS 2.3.0及以上版本支持协议服务。您可以通过调用<a href="https://help.aliyun.com/document_detail/163314.html">DescribeFileSystems</a>接口查询目标文件系统的版本号。</para>
+        /// <item><description><para>Only CPFS 2.3.0 and later support protocol services. You can call the <a href="https://help.aliyun.com/document_detail/163314.html">DescribeFileSystems</a> operation to query the version of the file system.</para>
         /// </description></item>
-        /// <item><description><para>协议服务规格
-        /// 协议服务包括两种协议类型：通用型和缓存型。缓存型相比通用型，提供热点数据缓存能力。在命中缓存的情况下，缓存型协议服务的带宽可超过CPFS文件系统的带宽，达到协议服务设定的最大带宽值。</para>
+        /// <item><description><para>Protocol service specifications.
+        /// Protocol services include two Protocol Types: General and Cache. Compared with the General type, the Cache type provides hot spot data caching. When the cache is hit, the bandwidth of the Cache type protocol service can exceed the bandwidth of the CPFS file system and reach the maximum bandwidth configured for the protocol service.</para>
         /// <list type="bullet">
-        /// <item><description>通用型：为CPFS提供NFS协议访问能力和<a href="https://help.aliyun.com/document_detail/427175.html">目录级挂载点</a>，用户无需配置POSIX客户端管理集群。该功能免费。</description></item>
-        /// <item><description>缓存型：在通用型基础上提供基于LRU策略的服务端内存缓存。当数据缓存于内存中时，CPFS可提供更高的内网带宽。缓存型协议服务分为缓存1型和缓存2型两种协议服务规格，差异点为内网带宽大小和内存缓存大小。<remarks>
-        /// <para> 缓存型协议服务为收费服务，正在邀测。有关缓存型协议服务的付费方式，请参见<a href="https://help.aliyun.com/document_detail/111858.html">计费项</a>。如果您有任何反馈或疑问，欢迎加入钉钉用户群（钉钉群号：31045006299）与CPFS工程师进行交流讨论。</para>
+        /// <item><description>General: Provides NFS protocol access and <a href="https://help.aliyun.com/document_detail/427175.html">folder-level mount targets</a> for CPFS. You do not need to configure a POSIX client cluster management. This feature is free of charge.</description></item>
+        /// <item><description>Cache: Provides server-side in-memory caching based on the LRU policy in addition to the General type capabilities. When data is cached in memory, CPFS can provide higher internal network bandwidth. The Cache type protocol service is available in two specifications: Cache L1 and Cache L2, which differ in internal network bandwidth and memory cache size.<remarks>
+        /// <para> The Cache type protocol service is a paid service and is in invitational preview. For information about the billing of the Cache type protocol service, see <a href="https://help.aliyun.com/document_detail/111858.html">Billable items</a>. If you have any feedback or questions, join the DingTalk user group (group ID: 31045006299) to communicate with CPFS engineers.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>协议类型
-        /// 仅支持NFSv3协议。</para>
+        /// <item><description><para>Protocol type.
+        /// Only NFSv3 is supported.</para>
         /// </description></item>
-        /// <item><description><para>其它</para>
+        /// <item><description><para>Prerequisites.
+        /// The CPFS file system must be created and in the Running state.</para>
+        /// </description></item>
+        /// <item><description><para>Other information.</para>
         /// <list type="bullet">
-        /// <item><description>一个CPFS文件系统只能创建一个协议服务。</description></item>
-        /// <item><description>创建协议服务会消耗指定vSwitch上的IP地址（最多消耗32个IP地址），请确保目标vSwitch IP资源充足。</description></item>
+        /// <item><description>Only one protocol service can be created for each CPFS file system.</description></item>
+        /// <item><description>Creating a protocol service consumes IP addresses on the specified vSwitch (up to 32 IP addresses). Make sure that the target vSwitch has sufficient IP address resources.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -7330,12 +7648,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a permission group.</para>
+        /// <para>Delete an existing access group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>默认权限组（DEFAULT_VPC_GROUP_NAME）不支持删除。</para>
+        /// <para>The default access group (DEFAULT_VPC_GROUP_NAME) cannot be deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7381,12 +7699,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a permission group.</para>
+        /// <para>Delete an existing access group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>默认权限组（DEFAULT_VPC_GROUP_NAME）不支持删除。</para>
+        /// <para>The default access group (DEFAULT_VPC_GROUP_NAME) cannot be deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7432,12 +7750,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a permission group.</para>
+        /// <para>Delete an existing access group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>默认权限组（DEFAULT_VPC_GROUP_NAME）不支持删除。</para>
+        /// <para>The default access group (DEFAULT_VPC_GROUP_NAME) cannot be deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7455,12 +7773,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a permission group.</para>
+        /// <para>Delete an existing access group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>默认权限组（DEFAULT_VPC_GROUP_NAME）不支持删除。</para>
+        /// <para>The default access group (DEFAULT_VPC_GROUP_NAME) cannot be deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7638,12 +7956,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a rule from a permission group.</para>
+        /// <para>Deletes a permission rule from a permission group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>默认权限组（DEFAULT_VPC_GROUP_NAME）中的规则不支持删除。</para>
+        /// <para>Rules in the default permission group (DEFAULT_VPC_GROUP_NAME) cannot be deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7693,12 +8011,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a rule from a permission group.</para>
+        /// <para>Deletes a permission rule from a permission group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>默认权限组（DEFAULT_VPC_GROUP_NAME）中的规则不支持删除。</para>
+        /// <para>Rules in the default permission group (DEFAULT_VPC_GROUP_NAME) cannot be deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7748,12 +8066,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a rule from a permission group.</para>
+        /// <para>Deletes a permission rule from a permission group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>默认权限组（DEFAULT_VPC_GROUP_NAME）中的规则不支持删除。</para>
+        /// <para>Rules in the default permission group (DEFAULT_VPC_GROUP_NAME) cannot be deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7771,12 +8089,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a rule from a permission group.</para>
+        /// <para>Deletes a permission rule from a permission group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>默认权限组（DEFAULT_VPC_GROUP_NAME）中的规则不支持删除。</para>
+        /// <para>Rules in the default permission group (DEFAULT_VPC_GROUP_NAME) cannot be deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7790,6 +8108,170 @@ namespace AlibabaCloud.SDK.NAS20170626
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteAccessRuleWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除Agentic空间</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>适用agentic类型文件系统。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAgenticSpaceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgenticSpaceResponse
+        /// </returns>
+        public DeleteAgenticSpaceResponse DeleteAgenticSpaceWithOptions(DeleteAgenticSpaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgenticSpaceId))
+            {
+                query["AgenticSpaceId"] = request.AgenticSpaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemId))
+            {
+                query["FileSystemId"] = request.FileSystemId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAgenticSpace",
+                Version = "2017-06-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAgenticSpaceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除Agentic空间</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>适用agentic类型文件系统。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAgenticSpaceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgenticSpaceResponse
+        /// </returns>
+        public async Task<DeleteAgenticSpaceResponse> DeleteAgenticSpaceWithOptionsAsync(DeleteAgenticSpaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgenticSpaceId))
+            {
+                query["AgenticSpaceId"] = request.AgenticSpaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemId))
+            {
+                query["FileSystemId"] = request.FileSystemId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAgenticSpace",
+                Version = "2017-06-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAgenticSpaceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除Agentic空间</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>适用agentic类型文件系统。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAgenticSpaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgenticSpaceResponse
+        /// </returns>
+        public DeleteAgenticSpaceResponse DeleteAgenticSpace(DeleteAgenticSpaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteAgenticSpaceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除Agentic空间</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>适用agentic类型文件系统。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAgenticSpaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgenticSpaceResponse
+        /// </returns>
+        public async Task<DeleteAgenticSpaceResponse> DeleteAgenticSpaceAsync(DeleteAgenticSpaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteAgenticSpaceWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -8292,9 +8774,10 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation is supported only for CPFS file systems of version 2.2.0 or later and CPFS for AI and HPC file systems of version 2.7.0 or later. Deleting a fileset permanently removes all data in the associated directory. Use this operation with caution.</description></item>
-        /// <item><description>If deletion protection is enabled, you must disable it before you can delete the fileset.</description></item>
-        /// <item><description>When you delete a fileset from a CPFS file system, the disk space is released immediately. When you delete a fileset from a CPFS for AI and HPC file system, the disk space is released gradually.</description></item>
+        /// <item><description>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.7.0 and later support fileset deletion. After a fileset is deleted, all data in the directory is permanently deleted and cannot be recovered. Proceed with caution.</description></item>
+        /// <item><description>If deletion protection is enabled, disable it before you delete the fileset.</description></item>
+        /// <item><description>All filesets on the target file system must be in the CREATED desired state before you can perform the deletion.</description></item>
+        /// <item><description>Deleting a CPFS general-purpose fileset immediately releases disk space. Deleting a CPFS for Lingjun fileset gradually releases disk space. Deleted data cannot be recovered. Proceed with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8355,9 +8838,10 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation is supported only for CPFS file systems of version 2.2.0 or later and CPFS for AI and HPC file systems of version 2.7.0 or later. Deleting a fileset permanently removes all data in the associated directory. Use this operation with caution.</description></item>
-        /// <item><description>If deletion protection is enabled, you must disable it before you can delete the fileset.</description></item>
-        /// <item><description>When you delete a fileset from a CPFS file system, the disk space is released immediately. When you delete a fileset from a CPFS for AI and HPC file system, the disk space is released gradually.</description></item>
+        /// <item><description>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.7.0 and later support fileset deletion. After a fileset is deleted, all data in the directory is permanently deleted and cannot be recovered. Proceed with caution.</description></item>
+        /// <item><description>If deletion protection is enabled, disable it before you delete the fileset.</description></item>
+        /// <item><description>All filesets on the target file system must be in the CREATED desired state before you can perform the deletion.</description></item>
+        /// <item><description>Deleting a CPFS general-purpose fileset immediately releases disk space. Deleting a CPFS for Lingjun fileset gradually releases disk space. Deleted data cannot be recovered. Proceed with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8418,9 +8902,10 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation is supported only for CPFS file systems of version 2.2.0 or later and CPFS for AI and HPC file systems of version 2.7.0 or later. Deleting a fileset permanently removes all data in the associated directory. Use this operation with caution.</description></item>
-        /// <item><description>If deletion protection is enabled, you must disable it before you can delete the fileset.</description></item>
-        /// <item><description>When you delete a fileset from a CPFS file system, the disk space is released immediately. When you delete a fileset from a CPFS for AI and HPC file system, the disk space is released gradually.</description></item>
+        /// <item><description>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.7.0 and later support fileset deletion. After a fileset is deleted, all data in the directory is permanently deleted and cannot be recovered. Proceed with caution.</description></item>
+        /// <item><description>If deletion protection is enabled, disable it before you delete the fileset.</description></item>
+        /// <item><description>All filesets on the target file system must be in the CREATED desired state before you can perform the deletion.</description></item>
+        /// <item><description>Deleting a CPFS general-purpose fileset immediately releases disk space. Deleting a CPFS for Lingjun fileset gradually releases disk space. Deleted data cannot be recovered. Proceed with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8445,9 +8930,10 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation is supported only for CPFS file systems of version 2.2.0 or later and CPFS for AI and HPC file systems of version 2.7.0 or later. Deleting a fileset permanently removes all data in the associated directory. Use this operation with caution.</description></item>
-        /// <item><description>If deletion protection is enabled, you must disable it before you can delete the fileset.</description></item>
-        /// <item><description>When you delete a fileset from a CPFS file system, the disk space is released immediately. When you delete a fileset from a CPFS for AI and HPC file system, the disk space is released gradually.</description></item>
+        /// <item><description>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.7.0 and later support fileset deletion. After a fileset is deleted, all data in the directory is permanently deleted and cannot be recovered. Proceed with caution.</description></item>
+        /// <item><description>If deletion protection is enabled, disable it before you delete the fileset.</description></item>
+        /// <item><description>All filesets on the target file system must be in the CREATED desired state before you can perform the deletion.</description></item>
+        /// <item><description>Deleting a CPFS general-purpose fileset immediately releases disk space. Deleting a CPFS for Lingjun fileset gradually releases disk space. Deleted data cannot be recovered. Proceed with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -9414,14 +9900,19 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a snapshot or cancels a snapshot that is being created.</para>
+        /// <para>Deletes a specified snapshot or cancels a snapshot task that is being created.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;.</para>
         /// <list type="bullet">
-        /// <item><description>Only advanced Extreme NAS file systems support this feature.</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS file systems support this feature.
+        /// &lt;props=&quot;intl&quot;&gt;.</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS file systems support this feature.
+        /// .</description></item>
         /// </list>
         /// </description>
         /// 
@@ -9464,14 +9955,19 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a snapshot or cancels a snapshot that is being created.</para>
+        /// <para>Deletes a specified snapshot or cancels a snapshot task that is being created.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;.</para>
         /// <list type="bullet">
-        /// <item><description>Only advanced Extreme NAS file systems support this feature.</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS file systems support this feature.
+        /// &lt;props=&quot;intl&quot;&gt;.</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS file systems support this feature.
+        /// .</description></item>
         /// </list>
         /// </description>
         /// 
@@ -9514,14 +10010,19 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a snapshot or cancels a snapshot that is being created.</para>
+        /// <para>Deletes a specified snapshot or cancels a snapshot task that is being created.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;.</para>
         /// <list type="bullet">
-        /// <item><description>Only advanced Extreme NAS file systems support this feature.</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS file systems support this feature.
+        /// &lt;props=&quot;intl&quot;&gt;.</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS file systems support this feature.
+        /// .</description></item>
         /// </list>
         /// </description>
         /// 
@@ -9540,14 +10041,19 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a snapshot or cancels a snapshot that is being created.</para>
+        /// <para>Deletes a specified snapshot or cancels a snapshot task that is being created.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;.</para>
         /// <list type="bullet">
-        /// <item><description>Only advanced Extreme NAS file systems support this feature.</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS file systems support this feature.
+        /// &lt;props=&quot;intl&quot;&gt;.</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS file systems support this feature.
+        /// .</description></item>
         /// </list>
         /// </description>
         /// 
@@ -9566,7 +10072,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries permission groups.</para>
+        /// <para>Queries permission group information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9624,7 +10130,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries permission groups.</para>
+        /// <para>Queries permission group information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9682,7 +10188,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries permission groups.</para>
+        /// <para>Queries permission group information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9700,7 +10206,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries permission groups.</para>
+        /// <para>Queries permission group information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9723,7 +10229,7 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>仅通用型NAS NFS协议文件系统支持该功能。</para>
+        /// <para>Only General-purpose NAS NFS file systems support this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9774,7 +10280,7 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>仅通用型NAS NFS协议文件系统支持该功能。</para>
+        /// <para>Only General-purpose NAS NFS file systems support this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9825,7 +10331,7 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>仅通用型NAS NFS协议文件系统支持该功能。</para>
+        /// <para>Only General-purpose NAS NFS file systems support this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9848,7 +10354,7 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>仅通用型NAS NFS协议文件系统支持该功能。</para>
+        /// <para>Only General-purpose NAS NFS file systems support this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9864,14 +10370,18 @@ namespace AlibabaCloud.SDK.NAS20170626
             return await DescribeAccessPointWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DescribeAccessPoints is deprecated, please use NAS::2017-06-26::ListAccessPoints instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of access points.</para>
+        /// <para>Queries access point information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>仅通用型NAS NFS协议文件系统支持该功能。</para>
+        /// <para>Only General-purpose NAS NFS file systems support this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9884,6 +10394,8 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <returns>
         /// DescribeAccessPointsResponse
         /// </returns>
+        [Obsolete("OpenAPI DescribeAccessPoints is deprecated, please use NAS::2017-06-26::ListAccessPoints instead.")]
+        // Deprecated
         public DescribeAccessPointsResponse DescribeAccessPointsWithOptions(DescribeAccessPointsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9927,14 +10439,18 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeAccessPointsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DescribeAccessPoints is deprecated, please use NAS::2017-06-26::ListAccessPoints instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of access points.</para>
+        /// <para>Queries access point information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>仅通用型NAS NFS协议文件系统支持该功能。</para>
+        /// <para>Only General-purpose NAS NFS file systems support this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9947,6 +10463,8 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <returns>
         /// DescribeAccessPointsResponse
         /// </returns>
+        [Obsolete("OpenAPI DescribeAccessPoints is deprecated, please use NAS::2017-06-26::ListAccessPoints instead.")]
+        // Deprecated
         public async Task<DescribeAccessPointsResponse> DescribeAccessPointsWithOptionsAsync(DescribeAccessPointsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9990,14 +10508,18 @@ namespace AlibabaCloud.SDK.NAS20170626
             return TeaModel.ToObject<DescribeAccessPointsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DescribeAccessPoints is deprecated, please use NAS::2017-06-26::ListAccessPoints instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of access points.</para>
+        /// <para>Queries access point information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>仅通用型NAS NFS协议文件系统支持该功能。</para>
+        /// <para>Only General-purpose NAS NFS file systems support this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10007,20 +10529,26 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <returns>
         /// DescribeAccessPointsResponse
         /// </returns>
+        [Obsolete("OpenAPI DescribeAccessPoints is deprecated, please use NAS::2017-06-26::ListAccessPoints instead.")]
+        // Deprecated
         public DescribeAccessPointsResponse DescribeAccessPoints(DescribeAccessPointsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeAccessPointsWithOptions(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DescribeAccessPoints is deprecated, please use NAS::2017-06-26::ListAccessPoints instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of access points.</para>
+        /// <para>Queries access point information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>仅通用型NAS NFS协议文件系统支持该功能。</para>
+        /// <para>Only General-purpose NAS NFS file systems support this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10030,6 +10558,8 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <returns>
         /// DescribeAccessPointsResponse
         /// </returns>
+        [Obsolete("OpenAPI DescribeAccessPoints is deprecated, please use NAS::2017-06-26::ListAccessPoints instead.")]
+        // Deprecated
         public async Task<DescribeAccessPointsResponse> DescribeAccessPointsAsync(DescribeAccessPointsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10186,6 +10716,170 @@ namespace AlibabaCloud.SDK.NAS20170626
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeAccessRulesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询Agentic空间</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>适用 agentic 类型文件系统。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAgenticSpacesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAgenticSpacesResponse
+        /// </returns>
+        public DescribeAgenticSpacesResponse DescribeAgenticSpacesWithOptions(DescribeAgenticSpacesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemId))
+            {
+                query["FileSystemId"] = request.FileSystemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filters))
+            {
+                query["Filters"] = request.Filters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAgenticSpaces",
+                Version = "2017-06-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAgenticSpacesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询Agentic空间</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>适用 agentic 类型文件系统。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAgenticSpacesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAgenticSpacesResponse
+        /// </returns>
+        public async Task<DescribeAgenticSpacesResponse> DescribeAgenticSpacesWithOptionsAsync(DescribeAgenticSpacesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemId))
+            {
+                query["FileSystemId"] = request.FileSystemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filters))
+            {
+                query["Filters"] = request.Filters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAgenticSpaces",
+                Version = "2017-06-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAgenticSpacesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询Agentic空间</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>适用 agentic 类型文件系统。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAgenticSpacesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAgenticSpacesResponse
+        /// </returns>
+        public DescribeAgenticSpacesResponse DescribeAgenticSpaces(DescribeAgenticSpacesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeAgenticSpacesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询Agentic空间</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>适用 agentic 类型文件系统。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAgenticSpacesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAgenticSpacesResponse
+        /// </returns>
+        public async Task<DescribeAgenticSpacesResponse> DescribeAgenticSpacesAsync(DescribeAgenticSpacesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeAgenticSpacesWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -11562,7 +12256,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation retrieves information about file systems.</para>
+        /// <para>Queries file system information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11628,7 +12322,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation retrieves information about file systems.</para>
+        /// <para>Queries file system information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11694,7 +12388,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation retrieves information about file systems.</para>
+        /// <para>Queries file system information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11712,7 +12406,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation retrieves information about file systems.</para>
+        /// <para>Queries file system information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11730,15 +12424,15 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about created filesets.</para>
+        /// <para>Queries the list of created filesets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>仅CPFS 2.2.0和CPFS智算版2.7.0及以上版本支持Fileset。您可以在控制台文件系统详情页面查看版本信息。</description></item>
-        /// <item><description>筛选键（Filters）中，FsetIds需要做全字匹配，FileSystemPath、Description支持模糊匹配。</description></item>
-        /// <item><description>支持组合查询。</description></item>
+        /// <item><description>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.7.0 and later support filesets. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>In the filter keys (Filters), FsetIds requires an exact match, while FileSystemPath and Description support fuzzy match.</description></item>
+        /// <item><description>Combination queries are supported.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11801,15 +12495,15 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about created filesets.</para>
+        /// <para>Queries the list of created filesets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>仅CPFS 2.2.0和CPFS智算版2.7.0及以上版本支持Fileset。您可以在控制台文件系统详情页面查看版本信息。</description></item>
-        /// <item><description>筛选键（Filters）中，FsetIds需要做全字匹配，FileSystemPath、Description支持模糊匹配。</description></item>
-        /// <item><description>支持组合查询。</description></item>
+        /// <item><description>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.7.0 and later support filesets. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>In the filter keys (Filters), FsetIds requires an exact match, while FileSystemPath and Description support fuzzy match.</description></item>
+        /// <item><description>Combination queries are supported.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11872,15 +12566,15 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about created filesets.</para>
+        /// <para>Queries the list of created filesets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>仅CPFS 2.2.0和CPFS智算版2.7.0及以上版本支持Fileset。您可以在控制台文件系统详情页面查看版本信息。</description></item>
-        /// <item><description>筛选键（Filters）中，FsetIds需要做全字匹配，FileSystemPath、Description支持模糊匹配。</description></item>
-        /// <item><description>支持组合查询。</description></item>
+        /// <item><description>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.7.0 and later support filesets. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>In the filter keys (Filters), FsetIds requires an exact match, while FileSystemPath and Description support fuzzy match.</description></item>
+        /// <item><description>Combination queries are supported.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11899,15 +12593,15 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about created filesets.</para>
+        /// <para>Queries the list of created filesets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>仅CPFS 2.2.0和CPFS智算版2.7.0及以上版本支持Fileset。您可以在控制台文件系统详情页面查看版本信息。</description></item>
-        /// <item><description>筛选键（Filters）中，FsetIds需要做全字匹配，FileSystemPath、Description支持模糊匹配。</description></item>
-        /// <item><description>支持组合查询。</description></item>
+        /// <item><description>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.7.0 and later support filesets. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>In the filter keys (Filters), FsetIds requires an exact match, while FileSystemPath and Description support fuzzy match.</description></item>
+        /// <item><description>Combination queries are supported.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12098,14 +12792,14 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about virtual storage channels associated with a file system.</para>
+        /// <para>Queries the information about virtual storage channels associated with a file system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>仅CPFS智算版支持该功能。</description></item>
-        /// <item><description>支持批量执行，批量执行情况下，目前仅支持1个VscId关联到多个FileSystemId，即ResourceIds.VscId需相等。</description></item>
+        /// <item><description>Only CPFS for Lingjun supports this feature.</description></item>
+        /// <item><description>Batch execution is supported. In batch execution mode, only one VscId can be associated with multiple FileSystemIds, which means the values of ResourceIds.VscId must be the same.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12160,14 +12854,14 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about virtual storage channels associated with a file system.</para>
+        /// <para>Queries the information about virtual storage channels associated with a file system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>仅CPFS智算版支持该功能。</description></item>
-        /// <item><description>支持批量执行，批量执行情况下，目前仅支持1个VscId关联到多个FileSystemId，即ResourceIds.VscId需相等。</description></item>
+        /// <item><description>Only CPFS for Lingjun supports this feature.</description></item>
+        /// <item><description>Batch execution is supported. In batch execution mode, only one VscId can be associated with multiple FileSystemIds, which means the values of ResourceIds.VscId must be the same.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12222,14 +12916,14 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about virtual storage channels associated with a file system.</para>
+        /// <para>Queries the information about virtual storage channels associated with a file system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>仅CPFS智算版支持该功能。</description></item>
-        /// <item><description>支持批量执行，批量执行情况下，目前仅支持1个VscId关联到多个FileSystemId，即ResourceIds.VscId需相等。</description></item>
+        /// <item><description>Only CPFS for Lingjun supports this feature.</description></item>
+        /// <item><description>Batch execution is supported. In batch execution mode, only one VscId can be associated with multiple FileSystemIds, which means the values of ResourceIds.VscId must be the same.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12248,14 +12942,14 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about virtual storage channels associated with a file system.</para>
+        /// <para>Queries the information about virtual storage channels associated with a file system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>仅CPFS智算版支持该功能。</description></item>
-        /// <item><description>支持批量执行，批量执行情况下，目前仅支持1个VscId关联到多个FileSystemId，即ResourceIds.VscId需相等。</description></item>
+        /// <item><description>Only CPFS for Lingjun supports this feature.</description></item>
+        /// <item><description>Batch execution is supported. In batch execution mode, only one VscId can be associated with multiple FileSystemIds, which means the values of ResourceIds.VscId must be the same.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12274,12 +12968,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries lifecycle policies.</para>
+        /// <para>Retrieves a list of lifecycle management policies.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>仅通用型NAS文件系统和 CPFS 智算版支持该功能。</para>
+        /// <para>Only General-purpose NAS file systems and CPFS for Lingjun support this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12317,12 +13011,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries lifecycle policies.</para>
+        /// <para>Retrieves a list of lifecycle management policies.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>仅通用型NAS文件系统和 CPFS 智算版支持该功能。</para>
+        /// <para>Only General-purpose NAS file systems and CPFS for Lingjun support this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12360,12 +13054,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries lifecycle policies.</para>
+        /// <para>Retrieves a list of lifecycle management policies.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>仅通用型NAS文件系统和 CPFS 智算版支持该功能。</para>
+        /// <para>Only General-purpose NAS file systems and CPFS for Lingjun support this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12383,12 +13077,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries lifecycle policies.</para>
+        /// <para>Retrieves a list of lifecycle management policies.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>仅通用型NAS文件系统和 CPFS 智算版支持该功能。</para>
+        /// <para>Only General-purpose NAS file systems and CPFS for Lingjun support this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12570,7 +13264,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the log dump information configured in log analysis.</para>
+        /// <para>Lists the log analysis configurations in log analysis.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12624,7 +13318,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the log dump information configured in log analysis.</para>
+        /// <para>Lists the log analysis configurations in log analysis.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12678,7 +13372,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the log dump information configured in log analysis.</para>
+        /// <para>Lists the log analysis configurations in log analysis.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12696,7 +13390,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the log dump information configured in log analysis.</para>
+        /// <para>Lists the log analysis configurations in log analysis.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14302,14 +14996,14 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unassociates a VSC device from a file system.</para>
+        /// <para>Dissociates a VSC device from a file system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>仅CPFS智算版支持该功能。</description></item>
-        /// <item><description>支持批量执行，批量执行情况下，目前仅支持1个VscId关联到多个FileSystemId，即ResourceIds.VscId需相等。</description></item>
+        /// <item><description>Only CPFS for Lingjun supports this feature.</description></item>
+        /// <item><description>Batch operations are supported. For batch operations, only one VscId can be associated with multiple FileSystemIds. This means the ResourceIds.VscId values must be the same.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14360,14 +15054,14 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unassociates a VSC device from a file system.</para>
+        /// <para>Dissociates a VSC device from a file system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>仅CPFS智算版支持该功能。</description></item>
-        /// <item><description>支持批量执行，批量执行情况下，目前仅支持1个VscId关联到多个FileSystemId，即ResourceIds.VscId需相等。</description></item>
+        /// <item><description>Only CPFS for Lingjun supports this feature.</description></item>
+        /// <item><description>Batch operations are supported. For batch operations, only one VscId can be associated with multiple FileSystemIds. This means the ResourceIds.VscId values must be the same.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14418,14 +15112,14 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unassociates a VSC device from a file system.</para>
+        /// <para>Dissociates a VSC device from a file system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>仅CPFS智算版支持该功能。</description></item>
-        /// <item><description>支持批量执行，批量执行情况下，目前仅支持1个VscId关联到多个FileSystemId，即ResourceIds.VscId需相等。</description></item>
+        /// <item><description>Only CPFS for Lingjun supports this feature.</description></item>
+        /// <item><description>Batch operations are supported. For batch operations, only one VscId can be associated with multiple FileSystemIds. This means the ResourceIds.VscId values must be the same.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14444,14 +15138,14 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unassociates a VSC device from a file system.</para>
+        /// <para>Dissociates a VSC device from a file system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>仅CPFS智算版支持该功能。</description></item>
-        /// <item><description>支持批量执行，批量执行情况下，目前仅支持1个VscId关联到多个FileSystemId，即ResourceIds.VscId需相等。</description></item>
+        /// <item><description>Only CPFS for Lingjun supports this feature.</description></item>
+        /// <item><description>Batch operations are supported. For batch operations, only one VscId can be associated with multiple FileSystemIds. This means the ResourceIds.VscId values must be the same.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15302,6 +15996,154 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询Agentic空间</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>适用 agentic 类型文件系统。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAgenticSpaceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgenticSpaceResponse
+        /// </returns>
+        public GetAgenticSpaceResponse GetAgenticSpaceWithOptions(GetAgenticSpaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgenticSpaceId))
+            {
+                query["AgenticSpaceId"] = request.AgenticSpaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemId))
+            {
+                query["FileSystemId"] = request.FileSystemId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgenticSpace",
+                Version = "2017-06-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgenticSpaceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询Agentic空间</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>适用 agentic 类型文件系统。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAgenticSpaceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgenticSpaceResponse
+        /// </returns>
+        public async Task<GetAgenticSpaceResponse> GetAgenticSpaceWithOptionsAsync(GetAgenticSpaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgenticSpaceId))
+            {
+                query["AgenticSpaceId"] = request.AgenticSpaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemId))
+            {
+                query["FileSystemId"] = request.FileSystemId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgenticSpace",
+                Version = "2017-06-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgenticSpaceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询Agentic空间</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>适用 agentic 类型文件系统。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAgenticSpaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgenticSpaceResponse
+        /// </returns>
+        public GetAgenticSpaceResponse GetAgenticSpace(GetAgenticSpaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAgenticSpaceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询Agentic空间</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>适用 agentic 类型文件系统。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAgenticSpaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgenticSpaceResponse
+        /// </returns>
+        public async Task<GetAgenticSpaceResponse> GetAgenticSpaceAsync(GetAgenticSpaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAgenticSpaceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Checks if a specified directory contains infrequent access or archive storage files, or if a specified file is an infrequent access or archive storage file.</para>
         /// </summary>
         /// 
@@ -15886,6 +16728,170 @@ namespace AlibabaCloud.SDK.NAS20170626
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetRecycleBinAttributeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询接入点信息</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>仅通用型 NAS NFS 协议文件系统支持。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAccessPointsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAccessPointsResponse
+        /// </returns>
+        public ListAccessPointsResponse ListAccessPointsWithOptions(ListAccessPointsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemId))
+            {
+                query["FileSystemId"] = request.FileSystemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filters))
+            {
+                query["Filters"] = request.Filters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAccessPoints",
+                Version = "2017-06-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAccessPointsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询接入点信息</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>仅通用型 NAS NFS 协议文件系统支持。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAccessPointsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAccessPointsResponse
+        /// </returns>
+        public async Task<ListAccessPointsResponse> ListAccessPointsWithOptionsAsync(ListAccessPointsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemId))
+            {
+                query["FileSystemId"] = request.FileSystemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filters))
+            {
+                query["Filters"] = request.Filters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAccessPoints",
+                Version = "2017-06-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAccessPointsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询接入点信息</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>仅通用型 NAS NFS 协议文件系统支持。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAccessPointsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAccessPointsResponse
+        /// </returns>
+        public ListAccessPointsResponse ListAccessPoints(ListAccessPointsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListAccessPointsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询接入点信息</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>仅通用型 NAS NFS 协议文件系统支持。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAccessPointsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAccessPointsResponse
+        /// </returns>
+        public async Task<ListAccessPointsResponse> ListAccessPointsAsync(ListAccessPointsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListAccessPointsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -16950,12 +17956,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about an access point.</para>
+        /// <para>Modifies access point information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only General-purpose Network File System (NFS) file systems support this operation.</para>
+        /// <para>Only General-purpose NAS NFS file systems support this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17013,12 +18019,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about an access point.</para>
+        /// <para>Modifies access point information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only General-purpose Network File System (NFS) file systems support this operation.</para>
+        /// <para>Only General-purpose NAS NFS file systems support this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17076,12 +18082,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about an access point.</para>
+        /// <para>Modifies access point information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only General-purpose Network File System (NFS) file systems support this operation.</para>
+        /// <para>Only General-purpose NAS NFS file systems support this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17099,12 +18105,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about an access point.</para>
+        /// <para>Modifies access point information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only General-purpose Network File System (NFS) file systems support this operation.</para>
+        /// <para>Only General-purpose NAS NFS file systems support this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17314,6 +18320,178 @@ namespace AlibabaCloud.SDK.NAS20170626
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyAccessRuleWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改Agentic空间</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>适用agentic类型文件系统。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyAgenticSpaceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAgenticSpaceResponse
+        /// </returns>
+        public ModifyAgenticSpaceResponse ModifyAgenticSpaceWithOptions(ModifyAgenticSpaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgenticSpaceId))
+            {
+                query["AgenticSpaceId"] = request.AgenticSpaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemId))
+            {
+                query["FileSystemId"] = request.FileSystemId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyAgenticSpace",
+                Version = "2017-06-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyAgenticSpaceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改Agentic空间</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>适用agentic类型文件系统。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyAgenticSpaceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAgenticSpaceResponse
+        /// </returns>
+        public async Task<ModifyAgenticSpaceResponse> ModifyAgenticSpaceWithOptionsAsync(ModifyAgenticSpaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgenticSpaceId))
+            {
+                query["AgenticSpaceId"] = request.AgenticSpaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemId))
+            {
+                query["FileSystemId"] = request.FileSystemId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyAgenticSpace",
+                Version = "2017-06-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyAgenticSpaceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改Agentic空间</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>适用agentic类型文件系统。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyAgenticSpaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAgenticSpaceResponse
+        /// </returns>
+        public ModifyAgenticSpaceResponse ModifyAgenticSpace(ModifyAgenticSpaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyAgenticSpaceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改Agentic空间</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>适用agentic类型文件系统。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyAgenticSpaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAgenticSpaceResponse
+        /// </returns>
+        public async Task<ModifyAgenticSpaceResponse> ModifyAgenticSpaceAsync(ModifyAgenticSpaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyAgenticSpaceWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -19910,6 +21088,186 @@ namespace AlibabaCloud.SDK.NAS20170626
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RetryLifecycleRetrieveJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置Agentic空间配额</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>适用agentic类型文件系统。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SetAgenticSpaceQuotaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetAgenticSpaceQuotaResponse
+        /// </returns>
+        public SetAgenticSpaceQuotaResponse SetAgenticSpaceQuotaWithOptions(SetAgenticSpaceQuotaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgenticSpaceId))
+            {
+                query["AgenticSpaceId"] = request.AgenticSpaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileCountLimit))
+            {
+                query["FileCountLimit"] = request.FileCountLimit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemId))
+            {
+                query["FileSystemId"] = request.FileSystemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SizeLimit))
+            {
+                query["SizeLimit"] = request.SizeLimit;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetAgenticSpaceQuota",
+                Version = "2017-06-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetAgenticSpaceQuotaResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置Agentic空间配额</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>适用agentic类型文件系统。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SetAgenticSpaceQuotaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetAgenticSpaceQuotaResponse
+        /// </returns>
+        public async Task<SetAgenticSpaceQuotaResponse> SetAgenticSpaceQuotaWithOptionsAsync(SetAgenticSpaceQuotaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgenticSpaceId))
+            {
+                query["AgenticSpaceId"] = request.AgenticSpaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileCountLimit))
+            {
+                query["FileCountLimit"] = request.FileCountLimit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemId))
+            {
+                query["FileSystemId"] = request.FileSystemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SizeLimit))
+            {
+                query["SizeLimit"] = request.SizeLimit;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetAgenticSpaceQuota",
+                Version = "2017-06-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetAgenticSpaceQuotaResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置Agentic空间配额</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>适用agentic类型文件系统。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SetAgenticSpaceQuotaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetAgenticSpaceQuotaResponse
+        /// </returns>
+        public SetAgenticSpaceQuotaResponse SetAgenticSpaceQuota(SetAgenticSpaceQuotaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SetAgenticSpaceQuotaWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置Agentic空间配额</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>适用agentic类型文件系统。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SetAgenticSpaceQuotaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetAgenticSpaceQuotaResponse
+        /// </returns>
+        public async Task<SetAgenticSpaceQuotaResponse> SetAgenticSpaceQuotaAsync(SetAgenticSpaceQuotaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SetAgenticSpaceQuotaWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class CreateProtocolServiceRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</para>
-        /// <para>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How do I ensure the idempotence?</a></para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests.</para>
+        /// <para>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may differ for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,12 +24,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The description of the protocol service. The name of the protocol service appears in the console.</para>
+        /// <para>The description of the protocol service. This value is displayed as &quot;Protocol service name&quot; in the console.</para>
         /// <para>Limits:</para>
         /// <list type="bullet">
         /// <item><description>The description must be 2 to 128 characters in length.</description></item>
-        /// <item><description>The description must start with a letter and cannot start with <c>http://</c> or <c>https://</c>.</description></item>
-        /// <item><description>The description can contain letters, digits, colons (:), underscores (_), and hyphens (-).</description></item>
+        /// <item><description>The description must start with a letter or Chinese character and cannot start with <c>http://</c> or <c>https://</c>.</description></item>
+        /// <item><description>The description can contain digits, colons (:), underscores (_), and hyphens (-).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -40,12 +40,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run.</para>
-        /// <para>The dry run checks parameter validity and prerequisites. The dry run does not create a protocol service or incur fees.</para>
+        /// <para>Specifies whether to perform a dry run for this request.</para>
+        /// <para>A dry run checks parameter validity and dependencies without actually creating the instance or incurring charges.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: performs only a dry run and does not create the protocol service. The system checks the request format, service limits, prerequisites, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the HTTP status code 200 is returned. No value is returned for the ProtocolServiceId parameter.</description></item>
-        /// <item><description>false (default): performs a dry run and sends the request. If the request passes the dry run, a protocol service is created.</description></item>
+        /// <item><description>true: Sends a check request without creating the protocol service. The check items include whether required parameters are specified, the request format, and business limit dependencies. If the check fails, the corresponding error is returned. If the check passes, HTTP status code 200 is returned, but ProtocolServiceId is empty.</description></item>
+        /// <item><description>false (default): Sends a normal request. After the check passes, the instance is directly created.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The ID of the file system.</para>
+        /// <para>The file system ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -68,13 +68,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// <para>The specification of the protocol service.</para>
-        /// <para>Set the value to General (default).</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>CL2</description></item>
-        /// <item><description>General</description></item>
-        /// <item><description>CL1</description></item>
-        /// </list>
+        /// <para>Valid values: General (default).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -86,7 +80,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// <para>The protocol type of the protocol service.</para>
-        /// <para>Valid value: NFS (default). Only NFSv3 is supported.</para>
+        /// <para>Valid values: NFS (default). Only NFSv3 access is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -97,7 +91,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string ProtocolType { get; set; }
 
         /// <summary>
-        /// <para>The throughput of the protocol service.</para>
+        /// <para>The bandwidth of the protocol service.</para>
         /// <para>Unit: MB/s.</para>
         /// 
         /// <b>Example:</b>
@@ -109,6 +103,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// <para>The vSwitch ID of the protocol service.</para>
+        /// <para>If the storage redundancy type of the file system is zone-redundant storage (ZRS), do not set this parameter. Otherwise, this parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-2vc3c2lybvdllxyq4****</para>
@@ -121,7 +116,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The virtual private cloud (VPC) ID of the protocol service. The VPC ID of the protocol service must be the same as the VPC ID of the file system.</para>
+        /// <para>The VPC ID of the protocol service. The VPC must be the same as the VPC of the file system.</para>
+        /// <para>If the storage redundancy type of the file system is zone-redundant storage (ZRS), do not set this parameter. Otherwise, this parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-2vct297b8157bth9z****</para>

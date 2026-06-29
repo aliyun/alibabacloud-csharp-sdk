@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeFilesetsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the file system.</para>
+        /// <para>The file system ID.</para>
         /// <list type="bullet">
-        /// <item><description>The IDs of CPFS file systems must start with <c>cpfs-</c>. Example: cpfs-099394bd928c\<em>\</em>\<em>\</em>.</description></item>
-        /// <item><description>The IDs of CPFS for LINGJUN file systems must start with <c>bmcpfs-</c>. Example: bmcpfs-290w65p03ok64ya\<em>\</em>\<em>\</em>.</description></item>
+        /// <item><description><para>CPFS: The ID must start with <c>cpfs-</c>, such as cpfs-099394bd928c****.</para>
+        /// </description></item>
+        /// <item><description><para>CPFS for Lingjun: The ID must start with <c>bmcpfs-</c>, such as bmcpfs-290w65p03ok64ya****.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,23 +27,23 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>The filter that is used to query filesets.</para>
+        /// <para>The filter key information for the filesets to query.</para>
         /// </summary>
         [NameInMap("Filters")]
         [Validation(Required=false)]
         public List<DescribeFilesetsRequestFilters> Filters { get; set; }
         public class DescribeFilesetsRequestFilters : TeaModel {
             /// <summary>
-            /// <para>The filter name. Valid values:</para>
+            /// <para>The name of the filter key. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>FsetIds: filters filesets by fileset ID.</description></item>
-            /// <item><description>FileSystemPath: filters filesets based on the path of a fileset in a CPFS file system.</description></item>
-            /// <item><description>Description: filters filesets based on the fileset description.</description></item>
-            /// <item><description>QuotaExists: filters filesets based on whether quotas exist.</description></item>
-            /// </list>
-            /// <remarks>
-            /// <para> Only CPFS for LINGJUN V2.7.0 and later support the QuotaExists parameter.</para>
+            /// <item><description>FsetIds: filters by fileset ID.</description></item>
+            /// <item><description>FileSystemPath: filters by the path of the fileset in the CPFS file system.</description></item>
+            /// <item><description>Description: filters by the description of the fileset.</description></item>
+            /// <item><description>QuotaExists: filters by whether a quota exists.<remarks>
+            /// <para>Only CPFS for Lingjun 2.7.0 and later support filtering by the QuotaExists parameter.</para>
             /// </remarks>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>FsetIds</para>
@@ -51,12 +53,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The filter value. This parameter does not support wildcards.</para>
+            /// <para>The value of the filter key. Wildcards are not supported for this parameter.</para>
             /// <list type="bullet">
-            /// <item><description>If Key is set to FsetIds, set Value to a fileset ID or a part of the fileset ID. You can specify a fileset ID or a group of fileset IDs. You can specify a maximum of 10 fileset IDs. Example: <c>fset-1902718ea0ae****</c> or <c>fset-1902718ea0ae****,fset-3212718ea0ae****</c>.</description></item>
-            /// <item><description>If Key is set to FileSystemPath, set Value to the path or a part of the path of a fileset in a CPFS file system. The value must be 2 to 1024 characters in length. The value must be encoded in UTF-8.</description></item>
-            /// <item><description>If Key is set to Description, set Value to a fileset description or a part of the fileset description.</description></item>
-            /// <item><description>If Key is set to QuotaExists, set Value to true or false. If you do not specify the parameter, all filesets are returned.</description></item>
+            /// <item><description>If Key is set to FsetIds, Value is set to a fileset ID. You can specify one or more fileset IDs, up to 10. Separate multiple values with commas (,). Example: <c>fset-1902718ea0ae****</c> or <c>fset-1902718ea0ae****,fset-3212718ea0ae****</c>.</description></item>
+            /// <item><description>If Key is set to FileSystemPath, Value is set to the full path or a partial path of the fileset in the CPFS file system. The value must be 2 to 1,024 characters in length and encoded in UTF-8.</description></item>
+            /// <item><description>If Key is set to Description, Value is set to the full description or a partial description of the fileset.</description></item>
+            /// <item><description>If Key is set to QuotaExists, Value is set to true or false. If you leave this parameter empty, all filesets are returned.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -69,7 +71,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         }
 
         /// <summary>
-        /// <para>The number of results for each query.</para>
+        /// <para>The number of results per query.</para>
         /// <para>Valid values: 10 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
@@ -80,7 +82,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. If the response is truncated, you can use this token in the next request to retrieve the remaining results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TGlzdFJlc291cmNlU****mVzJjE1MTI2NjY4NzY5MTAzOTEmMiZORnI4NDhVeEtrUT0=</para>
@@ -90,12 +92,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The condition by which the results are sorted. Valid values:</para>
+        /// <para>The field by which to sort the results.</para>
         /// <list type="bullet">
-        /// <item><description>FileCountLimit: the file quantity quota</description></item>
-        /// <item><description>SizeLimit: the capacity quota</description></item>
-        /// <item><description>FileCountUsage: the usage of the file quantity quota</description></item>
-        /// <item><description>SpaceUsage: the capacity usage</description></item>
+        /// <item><description>FileCountLimit: the quota file count limit.</description></item>
+        /// <item><description>SizeLimit: the quota capacity limit.</description></item>
+        /// <item><description>FileCountUsage: the file count usage.</description></item>
+        /// <item><description>SpaceUsage: the capacity usage.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -106,14 +108,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string OrderByField { get; set; }
 
         /// <summary>
-        /// <para>The order in which you want to sort the results. Valid values:</para>
+        /// <para>The sort order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>asc (default): ascending order</description></item>
-        /// <item><description>desc: descending order</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para> This parameter takes effect only if you specify the OrderByField parameter.</para>
+        /// <item><description>asc (default): ascending order, which sorts results from smallest to largest.</description></item>
+        /// <item><description>desc: descending order, which sorts results from largest to smallest.<remarks>
+        /// <para>This parameter takes effect only when the OrderByField parameter is specified.</para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>asc</para>

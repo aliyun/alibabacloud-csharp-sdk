@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class CreateProtocolMountTargetResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the export directory for the protocol service.</para>
+        /// <para>The ID of the protocol service export directory.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exp-19abf5beab8d****</para>
