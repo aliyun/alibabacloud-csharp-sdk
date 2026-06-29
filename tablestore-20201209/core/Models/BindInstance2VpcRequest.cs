@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
 {
     public class BindInstance2VpcRequest : TeaModel {
         /// <summary>
+        /// <para>The instance name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
         public string InstanceName { get; set; }
 
         /// <summary>
+        /// <para>The VPC name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
         public string InstanceVpcName { get; set; }
 
         /// <summary>
+        /// <para>The virtual switch ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,7 +43,7 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
         public string VirtualSwitchId { get; set; }
 
         /// <summary>
-        /// <para>VPC ID</para>
+        /// <para>The VPC ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

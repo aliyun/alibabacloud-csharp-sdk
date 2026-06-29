@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
 {
     public class ListVpcInfoByVpcResponseBody : TeaModel {
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
         public long? PageNum { get; set; }
 
         /// <summary>
+        /// <para>The number of entries returned per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
         public long? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4141784E-91FF-56E3-9371-FD011FF876F4</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of VPCs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -42,7 +50,7 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
         public long? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>VPC ID</para>
+        /// <para>The ID of the VPC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp1***********0mh8</para>
@@ -51,11 +59,16 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
         [Validation(Required=false)]
         public string VpcId { get; set; }
 
+        /// <summary>
+        /// <para>The details of the VPCs.</para>
+        /// </summary>
         [NameInMap("VpcInfos")]
         [Validation(Required=false)]
         public List<ListVpcInfoByVpcResponseBodyVpcInfos> VpcInfos { get; set; }
         public class ListVpcInfoByVpcResponseBodyVpcInfos : TeaModel {
             /// <summary>
+            /// <para>The VPC endpoint.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="http://xu6666-mkdd-test.cn-hangzhou.vpc.ots.aliyuncs.com">http://xu6666-mkdd-test.cn-hangzhou.vpc.ots.aliyuncs.com</a></para>
             /// </summary>
@@ -64,6 +77,8 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
             public string Domain { get; set; }
 
             /// <summary>
+            /// <para>The endpoint of the instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="http://172.**.***.34:80/">http://172.**.***.34:80/</a></para>
             /// </summary>
@@ -72,6 +87,8 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
             public string Endpoint { get; set; }
 
             /// <summary>
+            /// <para>The name of the instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>mkdd-test</para>
             /// </summary>
@@ -80,6 +97,8 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
             public string InstanceName { get; set; }
 
             /// <summary>
+            /// <para>The name of the VPC.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xu6666</para>
             /// </summary>
@@ -88,6 +107,8 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
             public string InstanceVpcName { get; set; }
 
             /// <summary>
+            /// <para>The region ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
             /// </summary>

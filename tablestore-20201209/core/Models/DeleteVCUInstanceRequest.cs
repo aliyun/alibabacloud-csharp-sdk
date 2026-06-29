@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
 {
     public class DeleteVCUInstanceRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

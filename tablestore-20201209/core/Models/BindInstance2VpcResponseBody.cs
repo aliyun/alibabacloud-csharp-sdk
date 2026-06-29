@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
 {
     public class BindInstance2VpcResponseBody : TeaModel {
         /// <summary>
+        /// <para>The domain name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xu6666-mkdd-test.cn-hangzhou.vpc.ots.aliyuncs.com</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
         public string Domain { get; set; }
 
         /// <summary>
+        /// <para>The connection endpoint for the instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>172.<b>.</b>*.34</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
         public string Endpoint { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request. Use this ID to troubleshoot issues.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>E734979F-5A44-5993-9CE5-C23103576923</para>
         /// </summary>

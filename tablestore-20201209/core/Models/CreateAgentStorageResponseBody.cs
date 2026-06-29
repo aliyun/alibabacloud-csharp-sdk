@@ -8,29 +8,19 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Tablestore20201209.Models
 {
-    public class CreateVCUInstanceResponseBody : TeaModel {
+    public class CreateAgentStorageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code of the response.</para>
+        /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>200</para>
+        /// <para>OK</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The name of the created instance.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>instance-test</para>
-        /// </summary>
-        [NameInMap("InstanceName")]
-        [Validation(Required=false)]
-        public string InstanceName { get; set; }
-
-        /// <summary>
-        /// <para>The description of the response message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -40,10 +30,10 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>request id</para>
         /// 
         /// <b>Example:</b>
-        /// <para>39871ED2-62C0-578F-A32E-B88072D5582F</para>
+        /// <para>18DD77BF-F967-576D-80D1-79121399AB53</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

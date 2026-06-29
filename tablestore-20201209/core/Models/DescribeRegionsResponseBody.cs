@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
 {
     public class DescribeRegionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The regions.</para>
+        /// <para>A list of regions.</para>
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
         public List<DescribeRegionsResponseBodyRegions> Regions { get; set; }
         public class DescribeRegionsResponseBodyRegions : TeaModel {
             /// <summary>
-            /// <para>The key of the region.</para>
+            /// <para>The region key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>yunjiankong.cloud.region.cn-hangzhou</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
             public string I18nKey { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -38,6 +38,12 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
 
         }
 
+        /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>39871ED2-62C0-578F-A32E-B88072D5582F</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

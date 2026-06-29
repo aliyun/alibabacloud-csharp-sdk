@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
 {
     public class ListVpcInfoByInstanceRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
         public string InstanceName { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
         public long? PageNum { get; set; }
 
         /// <summary>
+        /// <para>The number of VPCs to return on each page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8</para>
         /// </summary>

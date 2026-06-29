@@ -61,9 +61,12 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
         /// <summary>
         /// <para>The new types of the network from which access is allowed. By default, all types of networks are allowed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>INTERNET: the Internet</description></item>
-        /// <item><description>VPC: VPCs</description></item>
-        /// <item><description>CLASSIC: the classic network</description></item>
+        /// <item><description><para>INTERNET: the Internet</para>
+        /// </description></item>
+        /// <item><description><para>VPC: VPCs</para>
+        /// </description></item>
+        /// <item><description><para>CLASSIC: the classic network</para>
+        /// </description></item>
         /// </list>
         /// </summary>
         [NameInMap("NetworkTypeACL")]

@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
         /// <summary>
         /// <para>The upper limit for the VCUs of the instance.</para>
         /// <remarks>
-        /// <para> Valid values of the upper limit for the VCUs of an instance: <b>Number of reserved VCUs+0.1 to 2000</b>. You can upgrade or downgrade configurations to modify the number of reserved VCUs by increments or decrements of 1. You can dynamically modify the upper limit for the VCUs of an instance by increments or decrements of 0.1</para>
+        /// <para>Valid values of the upper limit for the VCUs of an instance: <b>Number of reserved VCUs+0.1 to 2000</b>. You can upgrade or downgrade configurations to modify the number of reserved VCUs by increments or decrements of 1. You can dynamically modify the upper limit for the VCUs of an instance by increments or decrements of 0.1</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

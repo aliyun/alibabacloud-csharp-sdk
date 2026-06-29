@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
 {
     public class UnbindInstance2VpcResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>18DD77BF-F967-576D-80D1-79121399AB53</para>
         /// </summary>

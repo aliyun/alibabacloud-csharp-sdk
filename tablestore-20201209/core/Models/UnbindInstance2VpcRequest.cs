@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
 {
     public class UnbindInstance2VpcRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
         public string InstanceName { get; set; }
 
         /// <summary>
+        /// <para>The name of the VPC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
