@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ModelStudio20260210.Models
 {
-    public class GetSubscriptionSeatDetailsResponseBody : TeaModel {
+    public class ListSubscriptionSharedPackagesResponseBody : TeaModel {
         /// <summary>
         /// <para>The response status code.</para>
         /// 
@@ -24,88 +24,34 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public GetSubscriptionSeatDetailsResponseBodyData Data { get; set; }
-        public class GetSubscriptionSeatDetailsResponseBodyData : TeaModel {
+        public ListSubscriptionSharedPackagesResponseBodyData Data { get; set; }
+        public class ListSubscriptionSharedPackagesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The data items.</para>
+            /// <para>The data entries.</para>
             /// </summary>
             [NameInMap("Items")]
             [Validation(Required=false)]
-            public List<GetSubscriptionSeatDetailsResponseBodyDataItems> Items { get; set; }
-            public class GetSubscriptionSeatDetailsResponseBodyDataItems : TeaModel {
+            public List<ListSubscriptionSharedPackagesResponseBodyDataItems> Items { get; set; }
+            public class ListSubscriptionSharedPackagesResponseBodyDataItems : TeaModel {
                 /// <summary>
-                /// <para>The mailbox of the member accounts.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para><a href="mailto:test@email.com">test@email.com</a></para>
-                /// </summary>
-                [NameInMap("AccountEmail")]
-                [Validation(Required=false)]
-                public string AccountEmail { get; set; }
-
-                /// <summary>
-                /// <para>The ID of the attached member accounts.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>acc_123456789</para>
-                /// </summary>
-                [NameInMap("AccountId")]
-                [Validation(Required=false)]
-                public string AccountId { get; set; }
-
-                /// <summary>
-                /// <para>The name of the member accounts.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>ExampleName</para>
-                /// </summary>
-                [NameInMap("AccountName")]
-                [Validation(Required=false)]
-                public string AccountName { get; set; }
-
-                /// <summary>
-                /// <para>The assignment status. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>ASSIGNED</description></item>
-                /// <item><description>UNASSIGNED</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>ASSIGNED</para>
-                /// </summary>
-                [NameInMap("AssignedStatus")]
-                [Validation(Required=false)]
-                public string AssignedStatus { get; set; }
-
-                /// <summary>
-                /// <para>The expiration time of the seat.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1781422733</para>
-                /// </summary>
-                [NameInMap("EndTime")]
-                [Validation(Required=false)]
-                public long? EndTime { get; set; }
-
-                /// <summary>
-                /// <para>The currently active equity instances. For TokenPlan products, this list contains only one active equity instance.</para>
+                /// <para>The currently active equity instances.</para>
                 /// </summary>
                 [NameInMap("EquityList")]
                 [Validation(Required=false)]
-                public List<GetSubscriptionSeatDetailsResponseBodyDataItemsEquityList> EquityList { get; set; }
-                public class GetSubscriptionSeatDetailsResponseBodyDataItemsEquityList : TeaModel {
+                public List<ListSubscriptionSharedPackagesResponseBodyDataItemsEquityList> EquityList { get; set; }
+                public class ListSubscriptionSharedPackagesResponseBodyDataItemsEquityList : TeaModel {
                     /// <summary>
                     /// <para>The end time of the current cycle, in milliseconds.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>1755273600</para>
+                    /// <para>1756310400</para>
                     /// </summary>
                     [NameInMap("CycleEndTime")]
                     [Validation(Required=false)]
                     public long? CycleEndTime { get; set; }
 
                     /// <summary>
-                    /// <para>The equity code (subscription code). This does not need to be consumed in CREDITS scenarios.</para>
+                    /// <para>The equity code (subscription code). This is not required for consumption in the credits scenario.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>123456</para>
@@ -145,7 +91,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                     public double? CycleTotalValue { get; set; }
 
                     /// <summary>
-                    /// <para>The time-series version of the current cycle.</para>
+                    /// <para>The sequential version of the current cycle.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -177,41 +123,6 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                 public string InstanceCode { get; set; }
 
                 /// <summary>
-                /// <para>The seat ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>seat_123456</para>
-                /// </summary>
-                [NameInMap("SeatId")]
-                [Validation(Required=false)]
-                public string SeatId { get; set; }
-
-                /// <summary>
-                /// <para>The seat type. Valid values: </para>
-                /// <list type="bullet">
-                /// <item><description>standard: standard seat.</description></item>
-                /// <item><description>pro: pro seat.</description></item>
-                /// <item><description>max: premium seat.</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>standard</para>
-                /// </summary>
-                [NameInMap("SpecType")]
-                [Validation(Required=false)]
-                public string SpecType { get; set; }
-
-                /// <summary>
-                /// <para>The start time of the seat.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1781422733</para>
-                /// </summary>
-                [NameInMap("StartTime")]
-                [Validation(Required=false)]
-                public long? StartTime { get; set; }
-
-                /// <summary>
                 /// <para>The seat status. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>CREATING: being created.</description></item>
@@ -232,7 +143,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             }
 
             /// <summary>
-            /// <para>The page number. The value is greater than 0 and does not exceed the maximum value of the Integer data type.</para>
+            /// <para>The page number. The value must be greater than 0 and cannot exceed the maximum value of the Integer data type. Default value: 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -267,17 +178,17 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>OK</para>
+        /// <para>Successful</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. Valid values:</para>
+        /// <para>Indicates whether the API call is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Successful.</description></item>
-        /// <item><description>false: Failed.</description></item>
+        /// <item><description>true: The call is successful.</description></item>
+        /// <item><description>false: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

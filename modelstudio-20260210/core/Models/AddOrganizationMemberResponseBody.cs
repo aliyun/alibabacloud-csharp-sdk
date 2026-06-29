@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
 {
     public class AddOrganizationMemberResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. This parameter is empty if the request is successful.</para>
+        /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public string AccountId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the seat was successfully assigned.</para>
+            /// <para>Indicates whether the seat was assigned successfully.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error message. This parameter is empty if the request is successful.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success.</para>

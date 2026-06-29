@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ModelStudio20260210.Models
 {
-    public class BatchAssignSeatsResponseBody : TeaModel {
+    public class RevokeTokenPlanInviteLinkResponseBody : TeaModel {
         /// <summary>
         /// <para>The response status code.</para>
         /// 
@@ -23,17 +23,21 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>None</para>
+        /// <para>Successful</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the API call is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Successful.</description></item>
+        /// <item><description>false: Failed.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>True</para>
+        /// <para>False</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

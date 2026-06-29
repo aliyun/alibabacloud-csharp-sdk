@@ -8,10 +8,8 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ModelStudio20260210.Models
 {
-    public class BatchAssignSeatsResponseBody : TeaModel {
+    public class UpdateOrganizationMemberResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response status code.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -20,18 +18,30 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response message.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>None</para>
+        /// </summary>
+        [NameInMap("HttpStatusCode")]
+        [Validation(Required=false)]
+        public int? HttpStatusCode { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Successful</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
-        /// 
+        /// <b>Example:</b>
+        /// <para>9531C132-DF05-5C7F-8BB0-96EA8C4D00D7</para>
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        /// <summary>
         /// <b>Example:</b>
         /// <para>True</para>
         /// </summary>

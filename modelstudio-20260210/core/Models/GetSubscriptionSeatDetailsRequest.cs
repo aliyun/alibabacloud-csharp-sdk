@@ -10,26 +10,6 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
 {
     public class GetSubscriptionSeatDetailsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the caller account that initiates this call.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>acc_123456789</para>
-        /// </summary>
-        [NameInMap("CallerUacAccountId")]
-        [Validation(Required=false)]
-        public string CallerUacAccountId { get; set; }
-
-        /// <summary>
-        /// <para>The product namespace ID. For the TokenPlan product, this field is fixed to namespace-1.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>namespace-1</para>
-        /// </summary>
-        [NameInMap("NamespaceId")]
-        [Validation(Required=false)]
-        public string NamespaceId { get; set; }
-
-        /// <summary>
         /// <para>The page number. Default value: 1. Valid values: positive integers.</para>
         /// 
         /// <b>Example:</b>
@@ -72,9 +52,9 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         /// <summary>
         /// <para>The seat type (specType). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>standard</description></item>
-        /// <item><description>pro</description></item>
-        /// <item><description>max.</description></item>
+        /// <item><description>standard: standard seat.</description></item>
+        /// <item><description>pro: pro seat.</description></item>
+        /// <item><description>max: premium seat.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -90,16 +70,6 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         [NameInMap("StatusList")]
         [Validation(Required=false)]
         public List<string> StatusList { get; set; }
-
-        /// <summary>
-        /// <para>The string form of StatusList.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>[\&quot;CREATING\&quot;,\&quot;NORMAL\&quot;]</para>
-        /// </summary>
-        [NameInMap("StatusListStr")]
-        [Validation(Required=false)]
-        public string StatusListStr { get; set; }
 
     }
 

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
 {
     public class ListApiKeysResponseBody : TeaModel {
         /// <summary>
-        /// <para>List of API Keys.</para>
+        /// <para>The list of API keys.</para>
         /// </summary>
         [NameInMap("apiKeys")]
         [Validation(Required=false)]
         public List<ListApiKeysResponseBodyApiKeys> ApiKeys { get; set; }
         public class ListApiKeysResponseBodyApiKeys : TeaModel {
             /// <summary>
-            /// <para>API Key ID.</para>
+            /// <para>API Key ID。</para>
             /// 
             /// <b>Example:</b>
             /// <para>2965964</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public long? ApiKeyId { get; set; }
 
             /// <summary>
-            /// <para>Value of the API Key.</para>
+            /// <para>The value of the API key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sk-ws-djI.8O7d*****2aICctnid4u4</para>
@@ -37,21 +37,21 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public string ApiKeyValue { get; set; }
 
             /// <summary>
-            /// <para>Permission settings.</para>
+            /// <para>The permission settings.</para>
             /// </summary>
             [NameInMap("auth")]
             [Validation(Required=false)]
             public ListApiKeysResponseBodyApiKeysAuth Auth { get; set; }
             public class ListApiKeysResponseBodyApiKeysAuth : TeaModel {
                 /// <summary>
-                /// <para>IP access whitelist.</para>
+                /// <para>The IP address whitelist.</para>
                 /// </summary>
                 [NameInMap("accessIps")]
                 [Validation(Required=false)]
                 public List<string> AccessIps { get; set; }
 
                 /// <summary>
-                /// <para>All: All permissions; Custom: Custom permissions.</para>
+                /// <para>All: all permissions. Custom: custom permissions.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Custom</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             }
 
             /// <summary>
-            /// <para>Creator.</para>
+            /// <para>The creator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1378030599924858</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public string CreatedBy { get; set; }
 
             /// <summary>
-            /// <para>Description.</para>
+            /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Whether the API Key is disabled.</para>
+            /// <para>Indicates whether the API key is disabled. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>0</b>: Active.</description></item>
             /// <item><description><b>1</b>: Disabled.</description></item>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public int? Disabled { get; set; }
 
             /// <summary>
-            /// <para>Creation time.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1774338222000</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public long? GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>Workspace ID.</para>
+            /// <para>The workspace ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ws-950f9aca7e76c816</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         }
 
         /// <summary>
-        /// <para>Response status code.</para>
+        /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>HTTP status code.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Page size.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Response message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Used to return more results. This parameter is not required for the first query. The token required for subsequent queries can be obtained from the returned results.</para>
+        /// <para>The token used to retrieve more results. You do not need to provide this parameter for the first query. For subsequent queries, use the token obtained from the previous response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>lwytFRtLdNk=</para>
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Whether the API call is successful:</para>
+        /// <para>Indicates whether the API call was successful. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: Successful.</description></item>
         /// <item><description>false: Failed.</description></item>
@@ -193,7 +193,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>Total number of records.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
