@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.OpenITag20220616.Models
 {
     public class AppendAllDataToTaskRequest : TeaModel {
+        /// <summary>
+        /// <para>Parameters.</para>
+        /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public OpenDatasetProxyAppendDataRequest Body { get; set; }

@@ -9,10 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.OpenITag20220616.Models
 {
     public class ListTenantsRequest : TeaModel {
+        /// <summary>
+        /// <para>Page number of the tenant list. The starting value is 1. Default value: 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        /// <summary>
+        /// <para>Number of tenants displayed per page in a paged query. Default value: 20.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }

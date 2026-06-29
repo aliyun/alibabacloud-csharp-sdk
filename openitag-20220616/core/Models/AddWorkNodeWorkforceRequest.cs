@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.OpenITag20220616.Models
 {
     public class AddWorkNodeWorkforceRequest : TeaModel {
+        /// <summary>
+        /// <para>User List.</para>
+        /// </summary>
         [NameInMap("UserIds")]
         [Validation(Required=false)]
         public List<long?> UserIds { get; set; }

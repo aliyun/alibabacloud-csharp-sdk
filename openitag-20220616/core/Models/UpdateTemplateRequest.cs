@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.OpenITag20220616.Models
 {
     public class UpdateTemplateRequest : TeaModel {
+        /// <summary>
+        /// <para>template</para>
+        /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public TemplateDTO Body { get; set; }

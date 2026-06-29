@@ -10,14 +10,27 @@ namespace AlibabaCloud.SDK.OpenITag20220616.Models
 {
     public class UpdateUserRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>Role. Possible values:</para>
+        /// <list type="bullet">
+        /// <item><description>OPERATOR: Annotator.</description></item>
+        /// <item><description>ADMIN: Administrator.</description></item>
+        /// <item><description>LEADER: Annotation team leader.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ADMIN</para>
         /// </summary>
         [NameInMap("Role")]
         [Validation(Required=false)]
         public string Role { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>Username.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>user1</para>
         /// </summary>
         [NameInMap("UserName")]
         [Validation(Required=false)]

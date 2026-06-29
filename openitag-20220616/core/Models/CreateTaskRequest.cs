@@ -10,7 +10,8 @@ namespace AlibabaCloud.SDK.OpenITag20220616.Models
 {
     public class CreateTaskRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>Job details</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
