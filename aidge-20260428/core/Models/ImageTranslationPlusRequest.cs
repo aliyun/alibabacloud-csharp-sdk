@@ -8,34 +8,30 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class ImageTranslationProRequest : TeaModel {
-        [NameInMap("Async")]
-        [Validation(Required=false)]
-        public bool? Async { get; set; }
-
+    public class ImageTranslationPlusRequest : TeaModel {
         /// <summary>
-        /// <para>Glossary ID, optional. You need to create a glossary separately in the console and provide its ID. If the provided glossary ID is empty, the translation results will not be modified.</para>
+        /// <para>The ID of the intervention glossary. This parameter is optional.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>glossary_1</para>
+        /// <para>glossary-001</para>
         /// </summary>
         [NameInMap("Glossary")]
         [Validation(Required=false)]
         public string Glossary { get; set; }
 
         /// <summary>
-        /// <para>Original image URL, required. Image requirements: width and height must not exceed 4000×4000; size must not exceed 10MB; supported formats include png, jpeg, jpg, bmp, and webp.</para>
+        /// <para>The URL of the original image. This parameter is required.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para><a href="https://img.alicdn.com/imgextra/i3/O1CN01HTDhDi28Fd85ZYs7H_!!6000000007903-0-tps-800-800.jpg">https://img.alicdn.com/imgextra/i3/O1CN01HTDhDi28Fd85ZYs7H_!!6000000007903-0-tps-800-800.jpg</a></para>
+        /// <para><a href="https://img.alicdn.com/example.png">https://img.alicdn.com/example.png</a></para>
         /// </summary>
         [NameInMap("ImageUrl")]
         [Validation(Required=false)]
         public string ImageUrl { get; set; }
 
         /// <summary>
-        /// <para>Choose whether to translate text on the image subject, optional, default false. This helps you protect information by avoiding translation of embedded content such as product names.</para>
+        /// <para>Specifies whether to translate text on the product body. This parameter is optional. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -45,29 +41,29 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public bool? IncludingProductArea { get; set; }
 
         /// <summary>
-        /// <para>Source language code, required. See the supported language pairs list for available translation directions.</para>
+        /// <para>The source language. This parameter is required.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>en</para>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("SourceLanguage")]
         [Validation(Required=false)]
         public string SourceLanguage { get; set; }
 
         /// <summary>
-        /// <para>Target language code, required. See the supported language pairs list for available translation directions.</para>
+        /// <para>The target language. This parameter is required.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ko</para>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("TargetLanguage")]
         [Validation(Required=false)]
         public string TargetLanguage { get; set; }
 
         /// <summary>
-        /// <para>Choose whether to translate brand names on the image, optional, default false. This helps you protect brand name information from being translated.</para>
+        /// <para>Specifies whether to translate brand text on the product. This parameter is optional. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -77,7 +73,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public bool? TranslatingBrandInTheProduct { get; set; }
 
         /// <summary>
-        /// <para>Whether to return layout information such as text position, font, and color, optional, default false. This can be used for secondary editing when integrating with an image editor.</para>
+        /// <para>Specifies whether to use the image translation editor protocol. This parameter is optional.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
