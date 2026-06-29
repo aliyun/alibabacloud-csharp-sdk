@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateRedirectRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The config ID.</para>
+        /// <para>The configuration ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>35281609698****</para>

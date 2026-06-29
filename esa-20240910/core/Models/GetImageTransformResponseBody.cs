@@ -10,6 +10,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetImageTransformResponseBody : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to enable adaptive AVIF. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>on: Enabled.</description></item>
+        /// <item><description>off: Disabled.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>on</para>
         /// </summary>
@@ -18,6 +24,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string AutoAvif { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable adaptive WebP. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>on: Enabled.</description></item>
+        /// <item><description>off: Disabled.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>on</para>
         /// </summary>
@@ -26,7 +38,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string AutoWebp { get; set; }
 
         /// <summary>
-        /// <para>The config ID.</para>
+        /// <para>The configuration ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>352816096987136</para>
@@ -38,10 +50,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The configuration type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>global: The global configuration.</para>
-        /// </description></item>
-        /// <item><description><para>rule: A rule configuration.</para>
-        /// </description></item>
+        /// <item><description>global: global configuration.</description></item>
+        /// <item><description>rule: rule configuration.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,12 +62,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string ConfigType { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether image transformation is enabled. Valid values:</para>
+        /// <para>Specifies whether to enable image transformation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>on: Enabled.</para>
-        /// </description></item>
-        /// <item><description><para>off: Disabled.</para>
-        /// </description></item>
+        /// <item><description>on: Enabled.</description></item>
+        /// <item><description>off: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -78,12 +86,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The conditional expression of the rule, used to match user requests. This parameter is relevant only for a rule configuration.</para>
+        /// <para>The rule content, which uses a conditional expression to match user requests. This parameter does not need to be set when you add a global configuration. Two scenarios are supported:</para>
         /// <list type="bullet">
-        /// <item><description><para>A value of true matches all incoming requests.</para>
-        /// </description></item>
-        /// <item><description><para>A custom expression, such as (http.host eq &quot;video.example.com&quot;), matches specific requests.</para>
-        /// </description></item>
+        /// <item><description>Match all incoming requests: Set the value to true.</description></item>
+        /// <item><description>Match specified requests: Set the value to a custom expression, such as (http.host eq \&quot;video.example.com\&quot;).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -94,12 +100,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Rule { get; set; }
 
         /// <summary>
-        /// <para>The status of the rule. This parameter is relevant only for a rule configuration. Valid values:</para>
+        /// <para>The rule switch. This parameter does not need to be set when you add a global configuration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>on: Enabled.</para>
-        /// </description></item>
-        /// <item><description><para>off: Disabled.</para>
-        /// </description></item>
+        /// <item><description>on: Enabled.</description></item>
+        /// <item><description>off: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -110,7 +114,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleEnable { get; set; }
 
         /// <summary>
-        /// <para>The rule name. This parameter is relevant only for a rule configuration.</para>
+        /// <para>The rule name. This parameter does not need to be set when you add a global configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -120,7 +124,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>The execution sequence of the rule. A smaller value indicates a higher execution priority.</para>
+        /// <para>The rule execution order. A smaller value indicates a higher priority.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -130,7 +134,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? Sequence { get; set; }
 
         /// <summary>
-        /// <para>The version number of the site configuration. For a site that has configuration versioning enabled, this value indicates the version to which the configuration applies. The default value is 0.</para>
+        /// <para>The version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the site version for which the configuration takes effect. The default value is version 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

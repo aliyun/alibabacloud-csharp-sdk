@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListUserRoutinesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of functions supported by the billing plan.</para>
+        /// <para>The Routine quota for the current plan.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The functions.</para>
+        /// <para>The list of Routines.</para>
         /// </summary>
         [NameInMap("Routines")]
         [Validation(Required=false)]
         public List<ListUserRoutinesResponseBodyRoutines> Routines { get; set; }
         public class ListUserRoutinesResponseBodyRoutines : TeaModel {
             /// <summary>
-            /// <para>The time when the function was created.</para>
+            /// <para>The time when the Edge Routine was created. The time follows the RFC 3339 standard in the UTC time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-03-11T01:23:02.883361712Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The default record name to access.</para>
+            /// <para>The default access record associated with the Routine.</para>
             /// 
             /// <b>Example:</b>
             /// <para>serverless-test-2.154edaf6.er.aliyun-esa.net</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string DefaultRelatedRecord { get; set; }
 
             /// <summary>
-            /// <para>The function description.</para>
+            /// <para>The Routine description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ZWRpdCByb3V0aW5lIGNvbmZpZyBkZXNjcmlwdGlvbg==</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to include the Assets file tag.</para>
+            /// <para>Indicates whether the Routine contains asset files.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public bool? HasAssets { get; set; }
 
             /// <summary>
-            /// <para>The function name.</para>
+            /// <para>The Routine name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hello</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The total count.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The number of functions that were already created.</para>
+        /// <para>The number of Routines already created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

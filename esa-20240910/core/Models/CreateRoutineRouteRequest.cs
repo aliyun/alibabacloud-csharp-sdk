@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The bypass mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on: enabled.</description></item>
+        /// <item><description>on: enabled</description></item>
         /// <item><description>off: disabled.</description></item>
         /// </list>
         /// 
@@ -26,8 +26,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The fallback-to-origin switch. When enabled, if the function encounters an exception such as CPU usage exceeding the limit, the request is forwarded to the origin server. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on: enabled.</description></item>
-        /// <item><description>off: disabled.</description></item>
+        /// <item><description>on: Enabled.</description></item>
+        /// <item><description>off: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -40,9 +40,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The route switch. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on: enabled.</description></item>
+        /// <item><description>on: enabled</description></item>
         /// <item><description>off: disabled.</description></item>
         /// </list>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>on</para>
@@ -53,6 +54,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         /// <summary>
         /// <para>The route name.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_route</para>
@@ -62,7 +64,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RouteName { get; set; }
 
         /// <summary>
-        /// <para>The name of the edge function routine.</para>
+        /// <para>The Edge Routine name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -74,6 +76,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         /// <summary>
         /// <para>The rule content.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>(http.host eq \&quot;video.example.com\&quot;)</para>
@@ -83,7 +86,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Rule { get; set; }
 
         /// <summary>
-        /// <para>The rule execution sequence.</para>
+        /// <para>The rule execution order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -93,7 +96,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? Sequence { get; set; }
 
         /// <summary>
-        /// <para>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</para>
+        /// <para>The site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -104,7 +107,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The edge routine timeout period. Valid values: 5 to 60. Unit: seconds.</para>
+        /// <para>The Edge Routine timeout period. Valid values: 5 to 60.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

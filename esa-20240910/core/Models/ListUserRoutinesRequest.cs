@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListUserRoutinesRequest : TeaModel {
         /// <summary>
-        /// <para>The page number of the returned page. Default value: 1. Valid values: 1 to 10.</para>
+        /// <para>The page number. Default value: 1. Maximum value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The keyword used for fuzzy search.</para>
+        /// <para>The keyword for fuzzy match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hello</para>

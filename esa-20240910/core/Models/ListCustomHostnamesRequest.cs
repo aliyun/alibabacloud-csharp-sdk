@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string NameMatchType { get; set; }
 
         /// <summary>
-        /// <para>The page number, starting from 1. Default value: 1.</para>
+        /// <para>The page number for a paged query. The value must be greater than or equal to 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -46,10 +46,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 100. Maximum value: 500.</para>
+        /// <para>The number of entries per page for a paged query. Valid values: 1 to 500.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>100</para>
+        /// <para>500</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateRoutineCodeDeploymentResponseBody : TeaModel {
         /// <summary>
-        /// <para>The configuration list of the phased release version number.</para>
+        /// <para>The list of percentage-based canary release code version configurations.</para>
         /// </summary>
         [NameInMap("CodeVersions")]
         [Validation(Required=false)]
         public List<CreateRoutineCodeDeploymentResponseBodyCodeVersions> CodeVersions { get; set; }
         public class CreateRoutineCodeDeploymentResponseBodyCodeVersions : TeaModel {
             /// <summary>
-            /// <para>The version of the code.</para>
+            /// <para>The code version number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1723599747213377175</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CodeVersion { get; set; }
 
             /// <summary>
-            /// <para>The phased release ratio.</para>
+            /// <para>The canary release percentage for the code version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The phased release policy. The constant string is &quot;percentage&quot;.</para>
+        /// <para>The canary release strategy. Fixed value: percentage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>percentage</para>

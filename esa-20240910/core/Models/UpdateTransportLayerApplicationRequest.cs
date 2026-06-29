@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateTransportLayerApplicationRequest : TeaModel {
         /// <summary>
-        /// <para>The transport layer application ID. You can obtain this ID by calling the <a href="~~ListTransportLayerApplications~~">ListTransportLayerApplications</a> operation.</para>
+        /// <para>The Layer 4 application ID. You can call the <a href="~~ListTransportLayerApplications~~">ListTransportLayerApplications</a> operation to obtain the application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,12 +21,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable cross-border optimization for network access from the Chinese mainland. This feature is disabled by default. Valid values:</para>
+        /// <para>Specifies whether to enable network access optimization for the Chinese mainland. This feature is disabled by default. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>on: Enables the feature.</para>
-        /// </description></item>
-        /// <item><description><para>off: Disables the feature.</para>
-        /// </description></item>
+        /// <item><description>on: enabled.</description></item>
+        /// <item><description>off: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -37,12 +35,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CrossBorderOptimization { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable IP access rules. If enabled, the IP access rules in WAF apply to the transport layer application. Valid values:</para>
+        /// <para>The IP access rule switch. When enabled, WAF IP access rules take effect for the Layer 4 application. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>on: Enables the feature.</para>
-        /// </description></item>
-        /// <item><description><para>off: Disables the feature.</para>
-        /// </description></item>
+        /// <item><description>on: enabled.</description></item>
+        /// <item><description>off: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -53,7 +49,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string IpAccessRule { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable IPv6. Valid values: <c>on</c> and <c>off</c>.</para>
+        /// <para>The IPv6 switch. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>on: enabled.</description></item>
+        /// <item><description>off: disabled.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>on</para>
@@ -62,28 +62,34 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string Ipv6 { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to enable keep-alive protection. This feature is disabled by default. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>on: enabled.</description></item>
+        /// <item><description>off: disabled.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>off</para>
+        /// </summary>
         [NameInMap("KeepAliveProtection")]
         [Validation(Required=false)]
         public string KeepAliveProtection { get; set; }
 
         /// <summary>
-        /// <para>A list of forwarding rules. For each rule, all parameters are required except for <c>Comment</c>.</para>
+        /// <para>The list of forwarding rules. For each rule, all parameters except the comment are required.</para>
         /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]
         public List<UpdateTransportLayerApplicationRequestRules> Rules { get; set; }
         public class UpdateTransportLayerApplicationRequestRules : TeaModel {
             /// <summary>
-            /// <para>Specifies the protocol for client IP pass-through. Valid values:</para>
+            /// <para>The client IP pass-through protocol. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>off</b>: Disables client IP pass-through.</para>
-            /// </description></item>
-            /// <item><description><para><b>PPv1</b>: PROXY Protocol v1. Supports client IP pass-through for the TCP protocol.</para>
-            /// </description></item>
-            /// <item><description><para><b>PPv2</b>: PROXY Protocol v2. Supports client IP pass-through for both TCP and UDP protocols.</para>
-            /// </description></item>
-            /// <item><description><para><b>SPP</b>: Simple Proxy Protocol. Supports client IP pass-through for the UDP protocol.</para>
-            /// </description></item>
+            /// <item><description><b>off</b>: disabled.</description></item>
+            /// <item><description><b>PPv1</b>: PROXY Protocol v1, which supports client IP pass-through for TCP.</description></item>
+            /// <item><description><b>PPv2</b>: PROXY Protocol v2, which supports client IP pass-through for TCP and UDP.</description></item>
+            /// <item><description><b>SPP</b>: Simple Proxy Protocol, which supports client IP pass-through for UDP.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -94,7 +100,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string ClientIPPassThroughMode { get; set; }
 
             /// <summary>
-            /// <para>An optional comment for the forwarding rule.</para>
+            /// <para>The comment for the rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -104,16 +110,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Comment { get; set; }
 
             /// <summary>
-            /// <para>The edge port. The following formats are supported:</para>
+            /// <para>The edge port. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>A single port, for example, <c>80</c>.</para>
-            /// </description></item>
-            /// <item><description><para>A port range, for example, <c>81-85</c>. This range includes ports 81, 82, 83, 84, and 85.</para>
-            /// </description></item>
-            /// <item><description><para>A combination of ports and port ranges separated by commas, for example, <c>80,81-85,90</c>. This includes ports 80, 81, 82, 83, 84, 85, and 90.</para>
-            /// </description></item>
-            /// <item><description><para>Edge ports cannot overlap within a single rule or across multiple rules.</para>
-            /// </description></item>
+            /// <item><description>A single port, such as 80.</description></item>
+            /// <item><description>A port range, such as 81-85, which represents ports 81, 82, 83, 84, and 85.</description></item>
+            /// <item><description>A combination of ports and port ranges separated by commas, such as 80,81-85,90, which represents ports 80, 81, 82, 83, 84, 85, and 90.</description></item>
+            /// <item><description>Edge ports within a single rule and across multiple rules cannot overlap.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -124,12 +126,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string EdgePort { get; set; }
 
             /// <summary>
-            /// <para>The forwarding protocol. Valid values:</para>
+            /// <para>The forwarding rule protocol. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>TCP: Transmission Control Protocol.</para>
-            /// </description></item>
-            /// <item><description><para>UDP: User Datagram Protocol.</para>
-            /// </description></item>
+            /// <item><description>TCP: TCP protocol.</description></item>
+            /// <item><description>UDP: UDP protocol.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Protocol { get; set; }
 
             /// <summary>
-            /// <para>The source, which must correspond to the specified <c>SourceType</c>. For example, if <c>SourceType</c> is <c>ip</c>, this parameter must be an IP address.</para>
+            /// <para>The specific value of the origin.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.1.1.1</para>
@@ -150,12 +150,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The source port. The following formats are supported:</para>
+            /// <para>Origin Server Port. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>A single port. When a single source port is used, any valid format can be used for the edge port.</para>
-            /// </description></item>
-            /// <item><description><para>A port range. You can specify a port range for the source port only if the edge port is also a port range, and their sizes must match. For example, if <c>EdgePort</c> is <c>90-93</c>, you cannot set <c>SourcePort</c> to <c>81-85</c> because their sizes (4 and 5 ports, respectively) do not match.</para>
-            /// </description></item>
+            /// <item><description>A single port. When Origin Server Port is a single port, any valid edge port combination is supported.</description></item>
+            /// <item><description>A port range. Origin Server Port can be set to a port range only when the edge port is a port range, and the range size must match the edge port range. For example, if the edge port is 90-93, you cannot set Origin Server Port to 81-85 because Origin Server Port range is 5 while the edge port range is 4, which are inconsistent.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -166,16 +164,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string SourcePort { get; set; }
 
             /// <summary>
-            /// <para>The type of the source. Valid values:</para>
+            /// <para>The origin type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>ip</b>: An IP address.</para>
-            /// </description></item>
-            /// <item><description><para><b>domain</b>: A domain name.</para>
-            /// </description></item>
-            /// <item><description><para><b>OP</b>: An origin pool.</para>
-            /// </description></item>
-            /// <item><description><para><b>LB</b>: A load balancer.</para>
-            /// </description></item>
+            /// <item><description><b>ip</b>: IP address.</description></item>
+            /// <item><description><b>domain</b>: domain name.</description></item>
+            /// <item><description><b>OP</b>: origin IPAM pool.</description></item>
+            /// <item><description><b>LB</b>: load balancing.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -188,7 +182,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The site ID. You can obtain this ID by calling the <a href="~~ListSites~~">ListSites</a> operation.</para>
+        /// <para>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -198,6 +192,16 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public long? SiteId { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to enable static IP. This feature is disabled by default. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>on: enabled.</description></item>
+        /// <item><description>off: disabled.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>off</para>
+        /// </summary>
         [NameInMap("StaticIp")]
         [Validation(Required=false)]
         public string StaticIp { get; set; }

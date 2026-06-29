@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListTransportLayerApplicationsResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of transport layer applications.</para>
+        /// <para>The list of Layer 4 applications.</para>
         /// </summary>
         [NameInMap("Applications")]
         [Validation(Required=false)]
         public List<ListTransportLayerApplicationsResponseBodyApplications> Applications { get; set; }
         public class ListTransportLayerApplicationsResponseBodyApplications : TeaModel {
             /// <summary>
-            /// <para>The transport layer application ID.</para>
+            /// <para>The Layer 4 application ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>170997271816****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? ApplicationId { get; set; }
 
             /// <summary>
-            /// <para>The CNAME for the transport layer application. This parameter is returned only when the site is onboarded by using a CNAME record.</para>
+            /// <para>The CNAME domain name corresponding to the Layer 4 acceleration application. This field is non-empty only when the site is connected via the CNAME method.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example.com.ialicdn.com</para>
@@ -37,12 +37,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Cname { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether cross-border optimization is enabled for Chinese mainland network access. By default, this feature is disabled. Valid values:</para>
+            /// <para>Indicates whether mainland China network access optimization is enabled. Disabled by default. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>on: Enabled.</para>
-            /// </description></item>
-            /// <item><description><para>off: Disabled.</para>
-            /// </description></item>
+            /// <item><description>on: Enabled.</description></item>
+            /// <item><description>off: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -53,12 +51,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CrossBorderOptimization { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the IP access rule feature is enabled. When enabled, the IP access rules in WAF apply to this transport layer application.</para>
+            /// <para>The IP access rule switch. When enabled, the IP access rules in WAF take effect for the Layer 4 application.</para>
             /// <list type="bullet">
-            /// <item><description><para>on: Enabled.</para>
-            /// </description></item>
-            /// <item><description><para>off: Disabled.</para>
-            /// </description></item>
+            /// <item><description>on: Enabled.</description></item>
+            /// <item><description>off: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -69,7 +65,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string IpAccessRule { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether IPv6 is enabled.</para>
+            /// <para>The IPv6 switch. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>on: Enabled.</description></item>
+            /// <item><description>off: Disabled.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>on</para>
@@ -79,14 +79,21 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Ipv6 { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether keep-alive protection is enabled.</para>
+            /// <para>Indicates whether keep-alive protection is enabled. Disabled by default. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>on: Enabled.</description></item>
+            /// <item><description>off: Disabled.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>off</para>
             /// </summary>
             [NameInMap("KeepAliveProtection")]
             [Validation(Required=false)]
             public string KeepAliveProtection { get; set; }
 
             /// <summary>
-            /// <para>The domain name of the transport layer application.</para>
+            /// <para>The domain name of the Layer 4 application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test.example.com</para>
@@ -96,23 +103,19 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RecordName { get; set; }
 
             /// <summary>
-            /// <para>A list of forwarding rules.</para>
+            /// <para>The list of forwarding rules.</para>
             /// </summary>
             [NameInMap("Rules")]
             [Validation(Required=false)]
             public List<ListTransportLayerApplicationsResponseBodyApplicationsRules> Rules { get; set; }
             public class ListTransportLayerApplicationsResponseBodyApplicationsRules : TeaModel {
                 /// <summary>
-                /// <para>Specifies whether and how to pass the client\&quot;s IP address to the origin server. Valid values:</para>
+                /// <para>The client IP pass-through protocol. Supported values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>off</b>: Disables client IP pass-through.</para>
-                /// </description></item>
-                /// <item><description><para><b>PPv1</b>: The PROXY Protocol v1, which supports client IP pass-through for TCP traffic.</para>
-                /// </description></item>
-                /// <item><description><para><b>PPv2</b>: The PROXY Protocol v2, which supports client IP pass-through for both TCP and UDP traffic.</para>
-                /// </description></item>
-                /// <item><description><para><b>SPP</b>: The Simple Proxy Protocol, which supports client IP pass-through for UDP traffic.</para>
-                /// </description></item>
+                /// <item><description><b>off</b>: Disabled.</description></item>
+                /// <item><description><b>PPv1</b>: PROXY Protocol v1, which supports client IP pass-through for TCP protocol.</description></item>
+                /// <item><description><b>PPv2</b>: PROXY Protocol v2, which supports client IP pass-through for TCP and UDP protocols.</description></item>
+                /// <item><description><b>SPP</b>: Simple Proxy Protocol, which supports client IP pass-through for UDP protocol.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -133,14 +136,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Comment { get; set; }
 
                 /// <summary>
-                /// <para>The edge port. The following formats are supported:</para>
+                /// <para>The edge port. Supported formats:</para>
                 /// <list type="bullet">
-                /// <item><description><para>A single port, for example, <c>80</c>.</para>
-                /// </description></item>
-                /// <item><description><para>A port range, for example, <c>81-85</c>, which includes ports 81, 82, 83, 84, and 85.</para>
-                /// </description></item>
-                /// <item><description><para>A combination of ports and port ranges separated by commas, for example, <c>80,81-85,90</c>, which includes ports 80, 81, 82, 83, 84, 85, and 90.</para>
-                /// </description></item>
+                /// <item><description>A single port, such as 80.</description></item>
+                /// <item><description>A port range, such as 81-85, which represents ports 81, 82, 83, 84, and 85.</description></item>
+                /// <item><description>A combination of ports and port ranges separated by commas, such as 80,81-85,90, which represents ports 80, 81, 82, 83, 84, 85, and 90.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -153,10 +153,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 /// <summary>
                 /// <para>The protocol of the forwarding rule. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>TCP</b>: The TCP protocol.</para>
-                /// </description></item>
-                /// <item><description><para><b>UDP</b>: The UDP protocol.</para>
-                /// </description></item>
+                /// <item><description>TCP: TCP protocol.</description></item>
+                /// <item><description>UDP: UDP protocol.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -167,7 +165,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Protocol { get; set; }
 
                 /// <summary>
-                /// <para>The unique ID of the forwarding rule.</para>
+                /// <para>The Layer 4 acceleration rule ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20258028****</para>
@@ -177,7 +175,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public long? RuleId { get; set; }
 
                 /// <summary>
-                /// <para>The origin address. The value of this parameter must match the <c>SourceType</c>.</para>
+                /// <para>The specific value of the origin, which must match the origin type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1.1.1.1</para>
@@ -187,12 +185,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Source { get; set; }
 
                 /// <summary>
-                /// <para>The origin port. The following formats are supported:</para>
+                /// <para>The origin port. Supported formats:</para>
                 /// <list type="bullet">
-                /// <item><description><para>A single port. If you specify a single origin port, you can use any valid combination of edge ports.</para>
-                /// </description></item>
-                /// <item><description><para>A port range. The origin port can be a port range only if the edge port is also a port range. The number of ports in the origin port range must be the same as that in the edge port range. For example, if the edge port range is <c>90-93</c> (which contains 4 ports), you cannot set the origin port range to <c>81-85</c> (which contains 5 ports) because their sizes do not match.</para>
-                /// </description></item>
+                /// <item><description>A single port. When the origin port is a single port, any valid combination of edge ports is supported.</description></item>
+                /// <item><description>A port range. The origin port can be set to a port range only when the edge port is a port range, and the range size must be the same as that of the edge port. For example, if the edge port is 90-93, the origin port cannot be set to 81-85, because the origin port range size is 5 while the edge port range size is 3, which are inconsistent.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -203,16 +199,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string SourcePort { get; set; }
 
                 /// <summary>
-                /// <para>The origin type. Valid values:</para>
+                /// <para>The origin type. Supported values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>ip</b>: An IP address.</para>
-                /// </description></item>
-                /// <item><description><para><b>domain</b>: A domain name.</para>
-                /// </description></item>
-                /// <item><description><para><b>OP</b>: An origin pool.</para>
-                /// </description></item>
-                /// <item><description><para><b>LB</b>: A load balancer.</para>
-                /// </description></item>
+                /// <item><description><b>ip</b>: IP address.</description></item>
+                /// <item><description><b>domain</b>: Domain name.</description></item>
+                /// <item><description><b>OP</b>: Origin pool.</description></item>
+                /// <item><description><b>LB</b>: Load balancer.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -225,7 +217,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             }
 
             /// <summary>
-            /// <para>The number of forwarding rules in the transport layer application.</para>
+            /// <para>The number of forwarding rules contained in the Layer 4 acceleration application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -245,12 +237,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? SiteId { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the static IP feature is enabled. By default, this feature is disabled. Valid values:</para>
+            /// <para>Indicates whether static IP is enabled. Disabled by default. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>on: Enabled.</para>
-            /// </description></item>
-            /// <item><description><para>off: Disabled.</para>
-            /// </description></item>
+            /// <item><description>on: Enabled.</description></item>
+            /// <item><description>off: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -261,7 +251,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string StaticIp { get; set; }
 
             /// <summary>
-            /// <para>A list of static IPv4 addresses assigned to the application when the static IP feature is enabled.</para>
+            /// <para>The list of static IPv4 addresses assigned to this Layer 4 application after the static IP feature is enabled.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("StaticIpV4List")]
@@ -279,14 +269,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Address { get; set; }
 
                 /// <summary>
-                /// <para>The health status of the IP address. Valid values:</para>
+                /// <para>The status of the IP address. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>healthy: The IP address is passing health checks.</para>
-                /// </description></item>
-                /// <item><description><para>unhealthy: The IP address is failing health checks.</para>
-                /// </description></item>
-                /// <item><description><para>unknown: The IP address is being provisioned.</para>
-                /// </description></item>
+                /// <item><description>healthy: Healthy.</description></item>
+                /// <item><description>unhealthy: Unhealthy.</description></item>
+                /// <item><description>unknown: IP address is being prepared.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -299,12 +286,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             }
 
             /// <summary>
-            /// <para>The status of the transport layer application. Valid values:</para>
+            /// <para>The status of the Layer 4 application.</para>
             /// <list type="bullet">
-            /// <item><description><para><b>deploying</b>: The application is being deployed. You cannot modify or delete the application in this state.</para>
-            /// </description></item>
-            /// <item><description><para><b>active</b>: The application is running.</para>
-            /// </description></item>
+            /// <item><description><b>deploying</b>: Deploying. Modification and deletion are not allowed in this state.</description></item>
+            /// <item><description><b>active</b>: Active.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -317,7 +302,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The current page number.</para>
+        /// <para>The current page number, same as the PageNumber request parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -347,7 +332,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of transport layer applications.</para>
+        /// <para>The total number of Layer 4 applications.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

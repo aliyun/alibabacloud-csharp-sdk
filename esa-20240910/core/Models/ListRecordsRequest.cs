@@ -10,14 +10,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListRecordsRequest : TeaModel {
         /// <summary>
-        /// <para>The business scenario for acceleration. Use this parameter to filter results. Valid values:</para>
+        /// <para>The business scenario for record acceleration. Used as a filter condition for queries. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>image_video</b>: Images and videos.</para>
-        /// </description></item>
-        /// <item><description><para><b>api</b>: API.</para>
-        /// </description></item>
-        /// <item><description><para><b>web</b>: Web page.</para>
-        /// </description></item>
+        /// <item><description><b>image_video</b>: Image and video.</description></item>
+        /// <item><description><b>api</b>: API.</description></item>
+        /// <item><description><b>web</b>: Web page.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -32,7 +29,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CustomPort { get; set; }
 
         /// <summary>
-        /// <para>The page number. Defaults to <b>1</b>.</para>
+        /// <para>The page number for paginated queries. The value must be greater than or equal to 1. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -42,7 +39,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page size. Defaults to <b>500</b>.</para>
+        /// <para>The number of entries per page for paginated queries. Valid values: 1 to 500. Default value: <b>500</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -52,12 +49,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Filters the results based on whether the record is proxied. Valid values:</para>
+        /// <para>Specifies whether proxy acceleration is enabled for the record. Used as a filter condition for queries. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The record is proxied.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The record is not proxied.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: Proxy enabled.</description></item>
+        /// <item><description><b>false</b>: Proxy acceleration disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -68,16 +63,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public bool? Proxied { get; set; }
 
         /// <summary>
-        /// <para>The match type for the record name search. Defaults to <b>exact</b>. Valid values:</para>
+        /// <para>The search matching mode for record names. Defaults to exact match. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>prefix</b>: Prefix match.</para>
-        /// </description></item>
-        /// <item><description><para><b>suffix</b>: Suffix match.</para>
-        /// </description></item>
-        /// <item><description><para><b>exact</b>: Exact match.</para>
-        /// </description></item>
-        /// <item><description><para><b>fuzzy</b>: Fuzzy match.</para>
-        /// </description></item>
+        /// <item><description><b>prefix</b>: Prefix match.</description></item>
+        /// <item><description><b>suffix</b>: Suffix match.</description></item>
+        /// <item><description><b>exact</b>: Exact match.</description></item>
+        /// <item><description><b>fuzzy</b>: Fuzzy match.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -88,7 +79,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RecordMatchType { get; set; }
 
         /// <summary>
-        /// <para>The record name. Use this parameter to filter query results.</para>
+        /// <para>Record name. Used as a filter condition for queries.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://www.example.com">www.example.com</a></para>
@@ -98,7 +89,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RecordName { get; set; }
 
         /// <summary>
-        /// <para>The site ID. You can get this ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
+        /// <para>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -109,18 +100,13 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>Filters the results by the record\&quot;s origin type. This filter applies only to CNAME records. Valid values:</para>
+        /// <para>The origin type of the record. Used as a filter condition for queries (only CNAME records can be filtered by this field). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>OSS</b>: OSS origin.</para>
-        /// </description></item>
-        /// <item><description><para><b>S3</b>: S3 origin.</para>
-        /// </description></item>
-        /// <item><description><para><b>LB</b>: Load balancer origin.</para>
-        /// </description></item>
-        /// <item><description><para><b>OP</b>: Origin pool.</para>
-        /// </description></item>
-        /// <item><description><para><b>Domain</b>: Domain origin.</para>
-        /// </description></item>
+        /// <item><description><b>OSS</b>: OSS origin.</description></item>
+        /// <item><description><b>S3</b>: S3 origin.</description></item>
+        /// <item><description><b>LB</b>: Load balancer origin.</description></item>
+        /// <item><description><b>OP</b>: Origin pool.</description></item>
+        /// <item><description><b>Domain</b>: Standard domain origin.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -131,7 +117,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SourceType { get; set; }
 
         /// <summary>
-        /// <para>The DNS record type. Use this parameter to filter results.</para>
+        /// <para>The DNS record type of the record. Used as a filter condition for queries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CNAME</para>

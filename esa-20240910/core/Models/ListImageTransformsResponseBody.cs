@@ -10,13 +10,15 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListImageTransformsResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of configurations.</para>
+        /// <para>The list of configurations.</para>
         /// </summary>
         [NameInMap("Configs")]
         [Validation(Required=false)]
         public List<ListImageTransformsResponseBodyConfigs> Configs { get; set; }
         public class ListImageTransformsResponseBodyConfigs : TeaModel {
             /// <summary>
+            /// <para>The adaptive AVIF setting.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>on</para>
             /// </summary>
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string AutoAvif { get; set; }
 
             /// <summary>
+            /// <para>The adaptive WebP setting.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>on</para>
             /// </summary>
@@ -33,7 +37,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string AutoWebp { get; set; }
 
             /// <summary>
-            /// <para>The ID of the configuration.</para>
+            /// <para>The configuration ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>395386449776640</para>
@@ -43,12 +47,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? ConfigId { get; set; }
 
             /// <summary>
-            /// <para>The type of the configuration. Valid values:</para>
+            /// <para>The configuration type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>global</c>: A global configuration.</para>
-            /// </description></item>
-            /// <item><description><para><c>rule</c>: A rule-based configuration.</para>
-            /// </description></item>
+            /// <item><description>global: global configuration.</description></item>
+            /// <item><description>rule: rule configuration.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -59,12 +61,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string ConfigType { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the configuration is enabled. Valid values:</para>
+            /// <para>The switch status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>on</b>: Enabled.</para>
-            /// </description></item>
-            /// <item><description><para><b>off</b>: Disabled.</para>
-            /// </description></item>
+            /// <item><description><b>on</b>: enabled.</description></item>
+            /// <item><description><b>off</b>: disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -75,12 +75,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Enable { get; set; }
 
             /// <summary>
-            /// <para>The conditional expression that defines the rule used to match user requests. This parameter is not applicable to global configurations.</para>
+            /// <para>The rule content, which uses conditional expressions to match user requests. This parameter is not required when you add a global configuration. Two scenarios are supported:</para>
             /// <list type="bullet">
-            /// <item><description><para>A value of <c>true</c> matches all incoming requests.</para>
-            /// </description></item>
-            /// <item><description><para>A custom expression, such as <c>(http.host eq &quot;video.example.com&quot;)</c>, matches specific requests.</para>
-            /// </description></item>
+            /// <item><description>Match all incoming requests: set the value to true.</description></item>
+            /// <item><description>Match specified requests: set the value to a custom expression, such as (http.host eq \&quot;video.example.com\&quot;).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -91,12 +89,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Rule { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the rule is enabled. This parameter is not applicable to global configurations. Valid values:</para>
+            /// <para>The rule switch. This parameter is not required when you add a global configuration. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>on</b>: Enabled.</para>
-            /// </description></item>
-            /// <item><description><para><b>off</b>: Disabled.</para>
-            /// </description></item>
+            /// <item><description>on: enabled.</description></item>
+            /// <item><description>off: disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -107,7 +103,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RuleEnable { get; set; }
 
             /// <summary>
-            /// <para>The name of the rule. This parameter is not applicable to global configurations.</para>
+            /// <para>The rule name. This parameter is not required when you add a global configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -127,7 +123,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public int? Sequence { get; set; }
 
             /// <summary>
-            /// <para>The version of the site configuration. For a site with version management enabled, this parameter specifies the site version to which the configuration applies. The default is 0.</para>
+            /// <para>The version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the site version for which the configuration takes effect. Default value: 0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -139,7 +135,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The current page number.</para>
+        /// <para>The current page number, which is the same as the PageNumber request parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -149,7 +145,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page, ranging from <b>1 to 500</b>. The default is <b>500</b>.</para>
+        /// <para>The number of entries per page. Valid values: <b>1 to 500</b>. Default value: <b>500</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -169,7 +165,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>16</para>

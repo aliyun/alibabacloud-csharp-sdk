@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The waiting room bypass rule ID.</para>
+        /// <para>The ID of the waiting room bypass rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>420072638347264</para>

@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateIPv6Request : TeaModel {
         /// <summary>
-        /// <para>Whether to enable IPv6. Valid values:</para>
+        /// <para>The switch. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>on</b>: Enables IPv6.</para>
-        /// </description></item>
-        /// <item><description><para><b>off</b>: Disables IPv6.</para>
-        /// </description></item>
+        /// <item><description><b>on</b>: enabled.</description></item>
+        /// <item><description><b>off</b>: disabled.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -27,12 +25,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Enable { get; set; }
 
         /// <summary>
-        /// <para>The region in which to enable IPv6. The default value is x.x.</para>
+        /// <para>The region in which IPv6 is enabled. Default value: x.x.</para>
         /// <list type="bullet">
-        /// <item><description><para>x.x: global</para>
-        /// </description></item>
-        /// <item><description><para>cn.cn: Chinese mainland</para>
-        /// </description></item>
+        /// <item><description>x.x: global.</description></item>
+        /// <item><description>cn.cn: Chinese mainland.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -43,7 +39,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The site ID. You can get this ID by calling <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a>.</para>
+        /// <para>The website ID, which can be obtained by calling <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

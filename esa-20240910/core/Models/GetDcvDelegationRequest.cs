@@ -8,17 +8,17 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ESA20240910.Models
 {
-    public class GetRoutineRequest : TeaModel {
+    public class GetDcvDelegationRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the Edge Routine.</para>
+        /// <para>The site ID. You can obtain the site ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test-routine1</para>
+        /// <para>123456****</para>
         /// </summary>
-        [NameInMap("Name")]
+        [NameInMap("SiteId")]
         [Validation(Required=false)]
-        public string Name { get; set; }
+        public long? SiteId { get; set; }
 
     }
 

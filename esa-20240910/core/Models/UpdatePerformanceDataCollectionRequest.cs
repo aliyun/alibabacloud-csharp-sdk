@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdatePerformanceDataCollectionRequest : TeaModel {
         /// <summary>
-        /// <para>Enables or disables Performance Data Collection. Valid values:</para>
+        /// <para>Specifies whether to enable quality data collection. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>on</c>: Enables the Feature.</para>
-        /// </description></item>
-        /// <item><description><para><c>off</c>: Disables the Feature.</para>
-        /// </description></item>
+        /// <item><description>on: Enabled.</description></item>
+        /// <item><description>off: Disabled.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -27,7 +25,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Enable { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Site. You can get this ID by calling the <a href="~~ListSites~~">ListSites</a> API.</para>
+        /// <para>The site ID. You can obtain the ID by calling the <a href="~~ListSites~~">ListSites</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

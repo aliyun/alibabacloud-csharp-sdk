@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateUrlObservationRequest : TeaModel {
         /// <summary>
-        /// <para>SDK integration. Supported</para>
+        /// <para>The SDK integration method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>automatic</b></description></item>
-        /// <item><description><b>manual</b></description></item>
+        /// <item><description><b>automatic</b>: automatic integration.</description></item>
+        /// <item><description><b>manual</b>: manual integration.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SdkType { get; set; }
 
         /// <summary>
-        /// <para>The website ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> operation.</para>
+        /// <para>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The URL of the web page to monitor.</para>
+        /// <para>The URL of the web page to monitor. If the site name is example.com, set Url to example.com/test or site DNS record name/path.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

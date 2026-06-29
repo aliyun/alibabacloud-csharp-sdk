@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateCustomHostnameRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud Security certificate. This parameter is required when CertType is set to cas.</para>
+        /// <para>The ID of the SSL Certificates Service certificate. This parameter is required when CertType is set to cas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30000478</para>
@@ -20,12 +20,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? CasId { get; set; }
 
         /// <summary>
-        /// <para>The region of the Alibaba Cloud Security certificate. This parameter is required when CertType is set to cas.</para>
+        /// <para>The region of the SSL Certificates Service certificate. This parameter is required when CertType is set to cas. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>cn-hangzhou: The value for accounts on the Alibaba Cloud China Website (www\.aliyun.com).</para>
-        /// </description></item>
-        /// <item><description><para>ap-southeast-1: The value for accounts on the Alibaba Cloud International Website (www\.alibabacloud.com).</para>
-        /// </description></item>
+        /// <item><description>Chinese mainland accounts: cn-hangzhou.</description></item>
+        /// <item><description>International accounts: ap-southeast-1.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,14 +34,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CasRegion { get; set; }
 
         /// <summary>
-        /// <para>The certificate type. This parameter is required when SslFlag is set to on.</para>
+        /// <para>The certificate type. This parameter is required when SslFlag is set to on. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>free</b>: Free certificate.</para>
-        /// </description></item>
-        /// <item><description><para><b>upload</b>: Uploaded certificate.</para>
-        /// </description></item>
-        /// <item><description><para><b>cas</b>: Alibaba Cloud Security certificate.</para>
-        /// </description></item>
+        /// <item><description><b>free</b>: free certificate.</description></item>
+        /// <item><description><b>upload</b>: uploaded certificate.</description></item>
+        /// <item><description><b>cas</b>: SSL Certificates Service certificate.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -54,7 +49,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CertType { get; set; }
 
         /// <summary>
-        /// <para>The content of the certificate. This parameter is required when CertType is set to upload.</para>
+        /// <para>The certificate content. This parameter is required when CertType is set to upload.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN CERTIFICATE-----</para>
@@ -75,7 +70,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? HostnameId { get; set; }
 
         /// <summary>
-        /// <para>The private key of the certificate. This parameter is required when CertType is set to upload.</para>
+        /// <para>The certificate private key. This parameter is required when CertType is set to upload.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN PRIVATE KEY-----</para>
@@ -85,7 +80,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string PrivateKey { get; set; }
 
         /// <summary>
-        /// <para>The ID of the record to attach. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/2850265.html">ListRecords</a> operation.</para>
+        /// <para>The ID of the record to bind. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/2850265.html">ListRecords</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567890123</para>
@@ -95,12 +90,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? RecordId { get; set; }
 
         /// <summary>
-        /// <para>The SSL switch.</para>
+        /// <para>The SSL switch. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>on</b>: Enables SSL.</para>
-        /// </description></item>
-        /// <item><description><para><b>off</b>: Disables SSL.</para>
-        /// </description></item>
+        /// <item><description><b>on</b>: Enables SSL.</description></item>
+        /// <item><description><b>off</b>: Disables SSL.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

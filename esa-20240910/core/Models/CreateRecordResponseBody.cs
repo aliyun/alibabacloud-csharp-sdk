@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateRecordResponseBody : TeaModel {
         /// <summary>
-        /// <para>The record ID.</para>
+        /// <para>The ID of the created record.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567890123</para>

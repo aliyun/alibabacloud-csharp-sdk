@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetRecordRequest : TeaModel {
         /// <summary>
-        /// <para>The record ID. Obtain it by calling <a href="https://help.aliyun.com/document_detail/2850265.html">ListRecords</a>.</para>
+        /// <para>The ID of the record. You can obtain this value by calling <a href="https://help.aliyun.com/document_detail/2850265.html">ListRecords</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

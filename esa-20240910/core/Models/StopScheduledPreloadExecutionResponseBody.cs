@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string AliUid { get; set; }
 
         /// <summary>
-        /// <para>The end time of the scheduled prefetch plan, in ISO 8601 format (such as 2024-01-01T00:00:00+Z).</para>
+        /// <para>The end time of the scheduled preload plan, in ISO 8601 format (e.g., 2024-01-01T00:00:00+Z).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-05-31T18:10:48.849+08:00</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The prefetch plan ID.</para>
+        /// <para>The preload plan ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>66599bd7397885b43804901c</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The interval between each batch execution of the scheduled prefetch plan, in seconds.</para>
+        /// <para>The execution interval between batches in the scheduled preload plan, in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? Interval { get; set; }
 
         /// <summary>
-        /// <para>The prefetch job ID.</para>
+        /// <para>The preload task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>665d3af3621bccf3fe29e1a4</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of URLs prefetched per batch.</para>
+        /// <para>The number of URLs per batch in the scheduled preload.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? SliceLen { get; set; }
 
         /// <summary>
-        /// <para>The start time of the scheduled prefetch plan, in ISO 8601 format (such as 2024-01-01T00:00:00+Z).</para>
+        /// <para>The start time of the scheduled preload plan, in ISO 8601 format (e.g., 2024-01-01T00:00:00+Z).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-05-31T17:10:48.849+08:00</para>
@@ -90,13 +90,13 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The status of the scheduled prefetch plan. Valid values:</para>
+        /// <para>The status of the scheduled preload plan. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>waiting</b>: waiting to be executed.</description></item>
-        /// <item><description><b>running</b>: being executed.</description></item>
-        /// <item><description><b>finished</b>: execution completed.</description></item>
-        /// <item><description><b>failed</b>: execution failed.</description></item>
-        /// <item><description><b>stopped</b>: execution paused.</description></item>
+        /// <item><description><b>waiting</b>: Waiting to be executed.</description></item>
+        /// <item><description><b>running</b>: Being executed.</description></item>
+        /// <item><description><b>finished</b>: Execution completed.</description></item>
+        /// <item><description><b>failed</b>: Execution failed.</description></item>
+        /// <item><description><b>stopped</b>: Execution paused.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

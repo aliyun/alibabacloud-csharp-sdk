@@ -10,16 +10,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListTransportLayerApplicationsRequest : TeaModel {
         /// <summary>
-        /// <para>The match type for the host record of the Layer 4 application. The default is an exact search. Valid values:</para>
+        /// <para>The query type for the host record of Layer 4 applications. The following four types are supported, and the default is exact match.</para>
         /// <list type="bullet">
-        /// <item><description><para>fuzzy: fuzzy search.</para>
-        /// </description></item>
-        /// <item><description><para>exact: exact search.</para>
-        /// </description></item>
-        /// <item><description><para>prefix: prefix search.</para>
-        /// </description></item>
-        /// <item><description><para>suffix: suffix search.</para>
-        /// </description></item>
+        /// <item><description>fuzzy: Fuzzy match.</description></item>
+        /// <item><description>exact: Exact match.</description></item>
+        /// <item><description>prefix: Prefix match.</description></item>
+        /// <item><description>suffix: Suffix match.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -30,7 +26,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string MatchType { get; set; }
 
         /// <summary>
-        /// <para>The page number. The minimum value is 1. The default value is 1.</para>
+        /// <para>The page number for paginated queries. The value must be greater than or equal to 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +36,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. The maximum value is 500.</para>
+        /// <para>The number of entries per page for paginated queries. Valid values: 1-500.</para>
         /// 
         /// <b>Example:</b>
         /// <para>500</para>
@@ -60,7 +56,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RecordName { get; set; }
 
         /// <summary>
-        /// <para>The site ID. Call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain it.</para>
+        /// <para>Site ID. You can obtain it by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

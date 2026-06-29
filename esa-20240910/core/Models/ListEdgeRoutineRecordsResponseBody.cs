@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListEdgeRoutineRecordsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The total number of pages returned.</para>
+        /// <para>The current page number, which is the same as the PageNumber request parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of records displayed per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public List<ListEdgeRoutineRecordsResponseBodyRecords> Records { get; set; }
         public class ListEdgeRoutineRecordsResponseBodyRecords : TeaModel {
             /// <summary>
-            /// <para>The time when the record was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The creation time of the record. The time is in ISO 8601 format and displayed in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-12-24T02:01:11Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The CNAME. If you use CNAME setup when you add your website to ESA, the value is the CNAME that you configured then.</para>
+            /// <para>The CNAME of the record. When the site uses CNAME access, this is the CNAME value that needs to be configured for the record.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a.example.com.cnamezone.com</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RecordName { get; set; }
 
             /// <summary>
-            /// <para>The website ID.</para>
+            /// <para>The site ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5407498413****</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? SiteId { get; set; }
 
             /// <summary>
-            /// <para>The website name.</para>
+            /// <para>The name of the site to which the record belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example.com</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string SiteName { get; set; }
 
             /// <summary>
-            /// <para>The time when the record was updated. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The update time of the record. The time is in ISO 8601 format and displayed in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-12-22T08:32:02Z</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of records returned.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>121</para>

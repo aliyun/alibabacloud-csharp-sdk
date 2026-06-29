@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateOriginPoolShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable the origin pool:</para>
+        /// <para>Specifies whether the origin address pool is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: Enables the origin pool.</para>
-        /// </description></item>
-        /// <item><description><para>false: Disables the origin pool.</para>
-        /// </description></item>
+        /// <item><description>true: Enabled.</description></item>
+        /// <item><description>false: Not enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +24,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public bool? Enabled { get; set; }
 
         /// <summary>
-        /// <para>The origin pool ID. Get this ID by calling the <a href="~~ListOriginPools~~">ListOriginPools</a> operation.</para>
+        /// <para>The origin address pool ID. You can call the <a href="~~ListOriginPools~~">ListOriginPools</a> operation to obtain the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,14 +35,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>An array of origin configurations.</para>
+        /// <para>The origin server information added to the origin address pool. Use an array to pass multiple origin servers.</para>
         /// </summary>
         [NameInMap("Origins")]
         [Validation(Required=false)]
         public string OriginsShrink { get; set; }
 
         /// <summary>
-        /// <para>The site ID. Get this ID by calling the <a href="~~ListSites~~">ListSites</a> operation.</para>
+        /// <para>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

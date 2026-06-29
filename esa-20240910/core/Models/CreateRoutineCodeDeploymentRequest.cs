@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateRoutineCodeDeploymentRequest : TeaModel {
         /// <summary>
-        /// <para>The configuration list of phased release version numbers. A maximum of two versions are supported, and the sum of the total proportions is equal to 100.</para>
+        /// <para>The list of percentage-based canary release version configurations. A maximum of two versions are supported, and the total percentage must equal 100.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CodeVersions")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public List<CreateRoutineCodeDeploymentRequestCodeVersions> CodeVersions { get; set; }
         public class CreateRoutineCodeDeploymentRequestCodeVersions : TeaModel {
             /// <summary>
-            /// <para>The version of the code.</para>
+            /// <para>The code version number.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CodeVersion { get; set; }
 
             /// <summary>
-            /// <para>The phased release ratio of the code version. Valid values: 1 to 100.</para>
+            /// <para>The canary release percentage for the code version. Valid values: 1 to 100.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -42,7 +42,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The name of the environment. Only supports test environment <c>staging</c> or production environment <c>production</c>.</para>
+        /// <para>The environment name.<br>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>staging</c>: staging environment </description></item>
+        /// <item><description><c>production</c>: production environment</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,7 +57,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Env { get; set; }
 
         /// <summary>
-        /// <para>The function name.</para>
+        /// <para>The name of the Edge Function Routine.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,7 +68,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The deployment policy. Valid value: percentage.</para>
+        /// <para>The deployment strategy.<br>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>percentage</c>: percentage mode</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

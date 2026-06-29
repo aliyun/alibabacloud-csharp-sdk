@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetRoutineResponseBody : TeaModel {
         /// <summary>
-        /// <para>The creation time of the edge function Routine.</para>
+        /// <para>The time when the Edge Routine was created. The time follows the RFC 3339 standard in the UTC time zone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-03-11T01:23:21Z</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The default domain name for accessing the Routine.</para>
+        /// <para>The default access record.</para>
         /// 
         /// <b>Example:</b>
         /// <para>routine1.example.com</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string DefaultRelatedRecord { get; set; }
 
         /// <summary>
-        /// <para>The description of the edge function Routine.</para>
+        /// <para>The description of the Edge Routine.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ZWRpdCByb3V0aW5lIGNvbmZpZyBkZXNjcmlwdGlvbg</para>
@@ -40,28 +40,28 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>A list of environments.</para>
+        /// <para>The list of environment context.</para>
         /// </summary>
         [NameInMap("Envs")]
         [Validation(Required=false)]
         public List<GetRoutineResponseBodyEnvs> Envs { get; set; }
         public class GetRoutineResponseBodyEnvs : TeaModel {
             /// <summary>
-            /// <para>Details of the canary release for a code version.</para>
+            /// <para>The percentage-based canary release deployment information.</para>
             /// </summary>
             [NameInMap("CodeDeploy")]
             [Validation(Required=false)]
             public GetRoutineResponseBodyEnvsCodeDeploy CodeDeploy { get; set; }
             public class GetRoutineResponseBodyEnvsCodeDeploy : TeaModel {
                 /// <summary>
-                /// <para>A list of deployed code versions.</para>
+                /// <para>The list of deployed code version numbers.</para>
                 /// </summary>
                 [NameInMap("CodeVersions")]
                 [Validation(Required=false)]
                 public List<GetRoutineResponseBodyEnvsCodeDeployCodeVersions> CodeVersions { get; set; }
                 public class GetRoutineResponseBodyEnvsCodeDeployCodeVersions : TeaModel {
                     /// <summary>
-                    /// <para>The code version ID.</para>
+                    /// <para>The code version number.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1746583193971399525</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                     public string CodeVersion { get; set; }
 
                     /// <summary>
-                    /// <para>The creation time of the code version.</para>
+                    /// <para>The time when the code version was created. The time follows the RFC 3339 standard in the UTC time zone.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2025-07-23T09:01:40Z</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// <para>The percentage of traffic routed to this code version.</para>
+                    /// <para>The canary release percentage of the code version.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>100</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 }
 
                 /// <summary>
-                /// <para>The time the deployment was created.</para>
+                /// <para>The time when the deployment was created. The time follows the RFC 3339 standard in the UTC time zone.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-05-11T09:21:36Z</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// <para>The deployment ID.</para>
+                /// <para>The deployment record ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>589267</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string DeployId { get; set; }
 
                 /// <summary>
-                /// <para>The deployment strategy. The default value is <c>percentage</c>.</para>
+                /// <para>The deployment strategy. Default value: percentage.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>percentage</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the Routine includes Assets.</para>
+        /// <para>Indicates whether the Routine has the Assets tag.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

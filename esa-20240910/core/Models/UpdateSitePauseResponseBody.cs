@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateSitePauseResponseBody : TeaModel {
         /// <summary>
-        /// <para>The unique ID for the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6abd807e-ed2a-44de-ac54-ac38a62472e6</para>

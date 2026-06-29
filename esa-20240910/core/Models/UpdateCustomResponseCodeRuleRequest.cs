@@ -41,12 +41,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string ReturnCode { get; set; }
 
         /// <summary>
-        /// <para>The rule content. Use a conditional expression to match user requests. Do not set this parameter when adding a global configuration. There are two scenarios:</para>
+        /// <para>The rule content, which uses a conditional expression to match user requests. You do not need to set this parameter when adding a global configuration. Two scenarios are supported:</para>
         /// <list type="bullet">
-        /// <item><description><para>Match all incoming requests: Set the value to \<c>true\\</c>.</para>
-        /// </description></item>
-        /// <item><description><para>Match specific requests: Set the value to a custom expression, such as: \<c>(http.host eq &quot;video.example.com&quot;)\\</c>.</para>
-        /// </description></item>
+        /// <item><description>Match all incoming requests: Set the value to true.</description></item>
+        /// <item><description>Match specified requests: Set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -57,12 +55,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Rule { get; set; }
 
         /// <summary>
-        /// <para>The rule switch. Do not set this parameter when adding a global configuration. Valid values:</para>
+        /// <para>The rule switch. You do not need to set this parameter when adding a global configuration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>on: Enable the rule.</para>
-        /// </description></item>
-        /// <item><description><para>off: Disable the rule.</para>
-        /// </description></item>
+        /// <item><description>on: Enabled.</description></item>
+        /// <item><description>off: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -73,7 +69,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleEnable { get; set; }
 
         /// <summary>
-        /// <para>The rule name. Do not set this parameter when adding a global configuration.</para>
+        /// <para>The rule name. You do not need to set this parameter when adding a global configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rule_example</para>
@@ -83,7 +79,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>The rule execution order. A smaller value indicates higher priority.</para>
+        /// <para>The rule execution order. A smaller value indicates a higher priority.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -93,7 +89,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? Sequence { get; set; }
 
         /// <summary>
-        /// <para>The site ID. Get it by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</para>
+        /// <para>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListVideoProcessingsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The configurations.</para>
+        /// <para>The list of configurations.</para>
         /// </summary>
         [NameInMap("Configs")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? ConfigId { get; set; }
 
             /// <summary>
-            /// <para>The type of the configuration. Valid values:</para>
+            /// <para>The configuration type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>global: global configuration.</description></item>
             /// <item><description>rule: rule configuration.</description></item>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string ConfigType { get; set; }
 
             /// <summary>
-            /// <para>The custom end parameter for FLV files.</para>
+            /// <para>The custom FLV end parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>end</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string FlvSeekEnd { get; set; }
 
             /// <summary>
-            /// <para>The custom start parameter for FLV files.</para>
+            /// <para>The custom FLV start parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>start</para>
@@ -61,10 +61,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string FlvSeekStart { get; set; }
 
             /// <summary>
-            /// <para>FLV seeking. Valid values:</para>
+            /// <para>The FLV seeking mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>by_byte: Seek by byte.</description></item>
-            /// <item><description>by_time: Seek by time.</description></item>
+            /// <item><description>by_byte: seek by byte.</description></item>
+            /// <item><description>by_time: seek by time.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string FlvVideoSeekMode { get; set; }
 
             /// <summary>
-            /// <para>Customize the mp4 end parameter.</para>
+            /// <para>The custom MP4 end parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>end</para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Mp4SeekEnd { get; set; }
 
             /// <summary>
-            /// <para>Customize the mp4 start parameter.</para>
+            /// <para>The custom MP4 start parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>start</para>
@@ -105,10 +105,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Rule { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the rule is enabled. Valid values:</para>
+            /// <para>The rule switch. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>on</description></item>
-            /// <item><description>off</description></item>
+            /// <item><description>on: enabled.</description></item>
+            /// <item><description>off: disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RuleName { get; set; }
 
             /// <summary>
-            /// <para>The order in which the rule is executed. The smaller the value, the higher the priority.</para>
+            /// <para>The execution order of the rule. A smaller value indicates a higher priority.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public int? Sequence { get; set; }
 
             /// <summary>
-            /// <para>The version number of the website configurations.</para>
+            /// <para>The version number of the site configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -149,10 +149,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public int? SiteVersion { get; set; }
 
             /// <summary>
-            /// <para>Video seeking. Valid values:</para>
+            /// <para>The audio seeking switch. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>on</description></item>
-            /// <item><description>off</description></item>
+            /// <item><description><para>on: enabled.</para>
+            /// </description></item>
+            /// <item><description><para>off: disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -165,7 +167,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The current page number, which is the same as the PageNumber request parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -195,7 +197,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>55</para>
@@ -205,7 +207,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The total number of pages returned.</para>
+        /// <para>The total number of pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public List<PurgeCachesRequestContentCacheKeys> CacheKeys { get; set; }
             public class PurgeCachesRequestContentCacheKeys : TeaModel {
                 /// <summary>
-                /// <para>The header information corresponding to the cache key specified during the refresh. When the custom cache key feature is enabled, the cache key is generated based on the specified headers for the refresh.</para>
+                /// <para>The header information corresponding to the cache key for the refresh. When the custom cache key feature is enabled, the cache key is generated based on the specified headers for the refresh.</para>
                 /// <para><b>UserGeo: country/region</b></para>
                 /// <list type="bullet">
                 /// <item><description>Country/region codes follow the ISO 3166-2 standard.</description></item>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public List<string> IgnoreParams { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to refresh the entire site. Default value: false. Set this parameter to true when Type is set to purgeall.</para>
+            /// <para>Specifies whether to refresh all cached content under the site. Default value: false. Set this parameter to true when Type is set to purgeall.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to refresh edge computing cached resources. For example, this allows you to refresh content cached by the Edge Routine CacheAPI API operation using the edge function.</para>
+        /// <para>Specifies whether to refresh edge computing cached resources. For example, this allows refreshing content cached by the Edge Routine Cache API operation function.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <item><description><b>false</b>: Refreshes only the changed resources under the corresponding directory.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter takes effect for directory refresh, cache tag refresh, parameter-ignored refresh, hostname refresh, and full site refresh.</para>
+        /// <para> This parameter takes effect for directory refresh, cache tag refresh, parameter-ignored refresh, hostname refresh, and full site cache refresh.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <item><description><b>cachekey</b>: cache key refresh.</description></item>
         /// <item><description><b>cachetag</b>: cache label refresh.</description></item>
         /// <item><description><b>directory</b>: folder refresh.</description></item>
-        /// <item><description><b>ignoreParams</b>: parameter-ignored refresh. This refers to removing the question mark (?) and all parameters after it from the request URL. When you commit a parameter-stripped URL through this API operation, the committed URL is matched against cached resource URLs after their parameters are also stripped. If a cached resource URL matches the committed URL after parameter stripping, the point of presence executes the refresh on the cached resource.</description></item>
+        /// <item><description><b>ignoreParams</b>: parameter-ignored refresh. This refers to removing the question mark (?) and all parameters after it from the request URL. When you commit a parameter-stripped URL through this API operation, the submitted URL is matched against cached resource URLs after their parameters are also stripped. If a cached resource URL matches the submitted URL after parameter stripping, the point of presence executes the refresh on the cached resource.</description></item>
         /// <item><description><b>hostname</b>: hostname refresh.</description></item>
         /// <item><description><b>purgeall</b>: refreshes all cached content under the site.</description></item>
         /// </list>

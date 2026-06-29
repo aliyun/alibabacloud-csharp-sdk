@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? CertApplyCode { get; set; }
 
             /// <summary>
-            /// <para>The error description for the free certificate application.</para>
+            /// <para>The error message for the free certificate application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>canceled</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CertApplyMessage { get; set; }
 
             /// <summary>
-            /// <para>The certificate verification HTTP address.</para>
+            /// <para>The HTTP address for certificate verification.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://custom.site.com/.well-known/acme-challenge/jLmMHlEaZ3jb352Qo3ciaSoAC8KZ5Hk0F-4_1xLQtgc">http://custom.site.com/.well-known/acme-challenge/jLmMHlEaZ3jb352Qo3ciaSoAC8KZ5Hk0F-4_1xLQtgc</a></para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CertHttpKey { get; set; }
 
             /// <summary>
-            /// <para>The certificate verification HTTP content.</para>
+            /// <para>The HTTP content for certificate verification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>jLmMHlEaZ3jb352Qo3ciaSoAC8KZ5Hk0F-4_1xLQtgc.GridYdfJJB5PgFEL-t89XfaFvMPB4f2-I9fwLpKl6e0</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CertId { get; set; }
 
             /// <summary>
-            /// <para>The certificate expiration time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The certificate expiration time, in ISO 8601 format with UTC time. The format is yyyy-MM-ddTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-04-19T11:15:20Z</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CertStatus { get; set; }
 
             /// <summary>
-            /// <para>The certificate verification TXT name.</para>
+            /// <para>The TXT name for certificate verification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>_acme-challenge.custom.site.com</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CertTxtKey { get; set; }
 
             /// <summary>
-            /// <para>The certificate verification TXT content.</para>
+            /// <para>The TXT content for certificate verification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>lcKYad3UQXgrZLvMm_6TBUYKK4xTkGmninV0Mzx4gjM</para>
@@ -155,6 +155,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <item><description><b>existing_record</b>: Conflicts with an existing site record.</description></item>
             /// <item><description><b>existing_load_balancer</b>: Conflicts with an existing load balancing instance.</description></item>
             /// <item><description><b>existing_origin_pool</b>: Conflicts with an existing origin IPAM pool.</description></item>
+            /// <item><description><b>existing_site</b>: Conflicts with an existing site.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -165,7 +166,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string ConflictWith { get; set; }
 
             /// <summary>
-            /// <para>The time when the SaaS domain name was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The time when the SaaS domain name was created, in ISO 8601 format with UTC time. The format is yyyy-MM-ddTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-04-19T11:15:20Z</para>
@@ -201,7 +202,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <item><description><b>internally_disabled</b>: Disabled by the system.</description></item>
             /// <item><description><b>missing_icp</b>: The domain name does not have an ICP filing.</description></item>
             /// <item><description><b>content_violation</b>: Content violation.</description></item>
-            /// <item><description><b>proactively_disabled</b>: You proactively disabled the domain name or the usage cap that you configured was reached.</description></item>
+            /// <item><description><b>proactively_disabled</b>: You proactively disabled the domain name or the usage cap you configured was reached.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -293,7 +294,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The time when the SaaS domain name was last updated. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The time when the SaaS domain name was last updated, in ISO 8601 format with UTC time. The format is yyyy-MM-ddTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-04-19T11:15:20Z</para>
@@ -303,7 +304,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The domain verification TXT content.</para>
+            /// <para>The TXT content for domain verification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>verify_16ab7f4d389d4dff6655f995c6a997bd</para>
@@ -313,7 +314,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string VerifyCode { get; set; }
 
             /// <summary>
-            /// <para>The domain verification TXT name.</para>
+            /// <para>The TXT name for domain verification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>_esa_custom_hostname.custom.site.com</para>

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateCrossBorderOptimizationRequest : TeaModel {
         /// <summary>
-        /// <para>Whether to enable Chinese mainland network access optimization. By default, it is disabled. Valid values:</para>
+        /// <para>Specifies whether to enable China mainland network access optimization. This feature is disabled by default. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on</description></item>
-        /// <item><description>off</description></item>
+        /// <item><description>on: Enabled.</description></item>
+        /// <item><description>off: Disabled.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Enable { get; set; }
 
         /// <summary>
-        /// <para>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
+        /// <para>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

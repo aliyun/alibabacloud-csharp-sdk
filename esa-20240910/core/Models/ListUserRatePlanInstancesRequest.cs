@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListUserRatePlanInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to filter for rate plan instances that have a remaining site quota. Valid values:</para>
+        /// <para>Specifies whether to filter plan instances that have remaining site quota. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Returns only rate plan instances that have a remaining site quota.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: Returns all rate plan instances for the user.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: Filters plan instances that have remaining site quota.</description></item>
+        /// <item><description><b>false</b>: Queries all plan instances under the user.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +24,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CheckRemainingSiteQuota { get; set; }
 
         /// <summary>
-        /// <para>The ID of the rate plan instance to query.</para>
+        /// <para>The plan instance ID. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sp-xcdn-96wblslz****</para>
@@ -36,7 +34,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The page number. The default value is <b>1</b>. The value must be in the range of <b>1 to 100,000</b>.</para>
+        /// <para>The page number to return in a paged query. Default value: <b>1</b>. Valid values: <b>1</b> to <b>100000</b>. Settings for paging take effect only when this parameter is specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -46,7 +44,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries per page in a paged query. Valid values: 1 to 500. This parameter is used for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>500</para>
@@ -55,25 +53,45 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The plan name in English.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>entranceplan</para>
+        /// </summary>
         [NameInMap("PlanNameEn")]
         [Validation(Required=false)]
         public string PlanNameEn { get; set; }
 
+        /// <summary>
+        /// <para>The plan type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>normal: fixed-version plan</description></item>
+        /// <item><description>enterprise: Enterprise Edition plan.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>enterprise</para>
+        /// </summary>
         [NameInMap("PlanType")]
         [Validation(Required=false)]
         public string PlanType { get; set; }
 
+        /// <summary>
+        /// <para>Queries plan instances whose remaining validity period is within the specified number of days. The value must be a positive integer. Unit: days.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30</para>
+        /// </summary>
         [NameInMap("RemainingExpireDays")]
         [Validation(Required=false)]
         public int? RemainingExpireDays { get; set; }
 
         /// <summary>
-        /// <para>The sort field. By default, results are sorted by creation time. Valid values:</para>
+        /// <para>The field by which to sort the results. By default, results are sorted by purchase time. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>CreateTime</b>: Sorts by creation time.</para>
-        /// </description></item>
-        /// <item><description><para><b>ExpireTime</b>: Sorts by expiration time.</para>
-        /// </description></item>
+        /// <item><description><b>CreateTime</b>: purchase time.</description></item>
+        /// <item><description><b>ExpireTime</b>: expiration time.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -84,12 +102,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The sort order. The default is descending. Valid values:</para>
+        /// <para>The sort order. Default value: desc. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>asc</b>: Sorts in ascending order.</para>
-        /// </description></item>
-        /// <item><description><para><b>desc</b>: Sorts in descending order.</para>
-        /// </description></item>
+        /// <item><description><b>asc</b>: ascending order.</description></item>
+        /// <item><description><b>desc</b>: descending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -100,16 +116,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SortOrder { get; set; }
 
         /// <summary>
-        /// <para>The status of the rate plan instance. Valid values:</para>
+        /// <para>The instance status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>online</b>: The instance is in service.</para>
-        /// </description></item>
-        /// <item><description><para><b>offline</b>: The instance has expired and is unavailable.</para>
-        /// </description></item>
-        /// <item><description><para><b>disable</b>: The instance is released.</para>
-        /// </description></item>
-        /// <item><description><para><b>overdue</b>: The instance is overdue.</para>
-        /// </description></item>
+        /// <item><description><b>online</b>: The plan instance is in normal service.</description></item>
+        /// <item><description><b>offline</b>: The plan instance has expired but has not exceeded the grace period and is not active.</description></item>
+        /// <item><description><b>disable</b>: The plan instance has been released.</description></item>
+        /// <item><description><b>overdue</b>: The plan instance has an overdue payment.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -122,6 +134,20 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        /// <summary>
+        /// <para>The plan subscription type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>entranceplan: Free Edition (Chinese mainland)</description></item>
+        /// <item><description>entranceplan_intl: Free Edition (International)</description></item>
+        /// <item><description>basicplan: Basic Edition</description></item>
+        /// <item><description>standardplan: Standard Edition</description></item>
+        /// <item><description>advancedplan: Premium Edition</description></item>
+        /// <item><description>enterpriseplan: Enterprise Edition.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>basicplan</para>
+        /// </summary>
         [NameInMap("SubscribeType")]
         [Validation(Required=false)]
         public string SubscribeType { get; set; }

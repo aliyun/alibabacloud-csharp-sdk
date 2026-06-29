@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateRoutineRouteRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable bypass mode. Valid values:</para>
+        /// <para>The bypass mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>on: Enabled</para>
-        /// </description></item>
-        /// <item><description><para>off: Disabled</para>
-        /// </description></item>
+        /// <item><description>on: enabled</description></item>
+        /// <item><description>off: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -37,12 +35,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? ConfigId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable fallback. If enabled, requests fall back to the origin server if the function encounters an exception, such as exceeding the CPU usage limit. Valid values:</para>
+        /// <para>The fallback-to-origin switch. When enabled, if the function encounters an exception such as CPU usage exceeding the limit, the request falls back to the origin server. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>on: Enabled</para>
-        /// </description></item>
-        /// <item><description><para>off: Disabled</para>
-        /// </description></item>
+        /// <item><description>on: Enabled.</description></item>
+        /// <item><description>off: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -53,12 +49,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Fallback { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the route. Valid values:</para>
+        /// <para>The route switch. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>on: Enabled</para>
-        /// </description></item>
-        /// <item><description><para>off: Disabled</para>
-        /// </description></item>
+        /// <item><description>on: enabled</description></item>
+        /// <item><description>off: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -79,7 +73,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RouteName { get; set; }
 
         /// <summary>
-        /// <para>The name of the Routine.</para>
+        /// <para>The name of the Edge Routine.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-routine1</para>
@@ -89,7 +83,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RoutineName { get; set; }
 
         /// <summary>
-        /// <para>The content of the rule.</para>
+        /// <para>The rule content.</para>
         /// 
         /// <b>Example:</b>
         /// <para>(http.host eq \&quot;video.example.com\&quot;)</para>
@@ -99,7 +93,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Rule { get; set; }
 
         /// <summary>
-        /// <para>The execution sequence of the rule.</para>
+        /// <para>The execution order of the rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -109,7 +103,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? Sequence { get; set; }
 
         /// <summary>
-        /// <para>The ID of the site. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
+        /// <para>The site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -120,6 +114,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
+        /// <para>The Edge Routine timeout period. Valid values: 5 to 60.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5</para>
         /// </summary>

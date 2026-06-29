@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateSiteRequest : TeaModel {
         /// <summary>
-        /// <para>The access type for the site. Valid values:</para>
+        /// <para>The access type of the site. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>NS</b>: NS-based access.</para>
-        /// </description></item>
-        /// <item><description><para><b>CNAME</b>: CNAME-based access.</para>
-        /// </description></item>
+        /// <item><description><b>NS</b>: access by using managed NS.</description></item>
+        /// <item><description><b>CNAME</b>: access by configuring a CNAME record.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -27,14 +25,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string AccessType { get; set; }
 
         /// <summary>
-        /// <para>The acceleration region. Valid values are:</para>
+        /// <para>The acceleration region. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>domestic</b>: Chinese mainland only.</para>
-        /// </description></item>
-        /// <item><description><para><b>global</b>: Global.</para>
-        /// </description></item>
-        /// <item><description><para><b>overseas</b>: Global (excluding the Chinese mainland).</para>
-        /// </description></item>
+        /// <item><description><b>domestic</b>: the Chinese mainland only.</description></item>
+        /// <item><description><b>global</b>: global.</description></item>
+        /// <item><description><b>overseas</b>: global (excluding the Chinese mainland).</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -46,7 +41,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Coverage { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance. You can obtain the instance ID by calling the <a href="https://help.aliyun.com/document_detail/2852398.html">ListUserRatePlanInstances</a> operation. You must specify either the instance ID or the site ID. If you specify both, the instance ID takes precedence.</para>
+        /// <para>The instance ID. You can obtain the instance ID by calling the <a href="https://help.aliyun.com/document_detail/2852398.html">ListUserRatePlanInstances</a> operation. You must specify at least one of the instance ID and site ID. If both are specified, the instance ID takes precedence.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -57,7 +52,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group. If you do not specify this parameter, the system automatically uses the ID of the default resource group.</para>
+        /// <para>The resource group ID. If you do not specify this parameter, the system automatically uses the default resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmw4znnok****</para>
@@ -67,7 +62,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The name of the site.</para>
+        /// <para>The site name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

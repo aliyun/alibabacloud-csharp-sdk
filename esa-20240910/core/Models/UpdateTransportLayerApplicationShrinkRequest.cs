@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateTransportLayerApplicationShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The transport layer application ID. You can obtain this ID by calling the <a href="~~ListTransportLayerApplications~~">ListTransportLayerApplications</a> operation.</para>
+        /// <para>The Layer 4 application ID. You can call the <a href="~~ListTransportLayerApplications~~">ListTransportLayerApplications</a> operation to obtain the application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,12 +21,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable cross-border optimization for network access from the Chinese mainland. This feature is disabled by default. Valid values:</para>
+        /// <para>Specifies whether to enable network access optimization for the Chinese mainland. This feature is disabled by default. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>on: Enables the feature.</para>
-        /// </description></item>
-        /// <item><description><para>off: Disables the feature.</para>
-        /// </description></item>
+        /// <item><description>on: enabled.</description></item>
+        /// <item><description>off: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -37,12 +35,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CrossBorderOptimization { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable IP access rules. If enabled, the IP access rules in WAF apply to the transport layer application. Valid values:</para>
+        /// <para>The IP access rule switch. When enabled, WAF IP access rules take effect for the Layer 4 application. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>on: Enables the feature.</para>
-        /// </description></item>
-        /// <item><description><para>off: Disables the feature.</para>
-        /// </description></item>
+        /// <item><description>on: enabled.</description></item>
+        /// <item><description>off: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -53,7 +49,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string IpAccessRule { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable IPv6. Valid values: <c>on</c> and <c>off</c>.</para>
+        /// <para>The IPv6 switch. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>on: enabled.</description></item>
+        /// <item><description>off: disabled.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>on</para>
@@ -62,19 +62,29 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string Ipv6 { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to enable keep-alive protection. This feature is disabled by default. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>on: enabled.</description></item>
+        /// <item><description>off: disabled.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>off</para>
+        /// </summary>
         [NameInMap("KeepAliveProtection")]
         [Validation(Required=false)]
         public string KeepAliveProtection { get; set; }
 
         /// <summary>
-        /// <para>A list of forwarding rules. For each rule, all parameters are required except for <c>Comment</c>.</para>
+        /// <para>The list of forwarding rules. For each rule, all parameters except the comment are required.</para>
         /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]
         public string RulesShrink { get; set; }
 
         /// <summary>
-        /// <para>The site ID. You can obtain this ID by calling the <a href="~~ListSites~~">ListSites</a> operation.</para>
+        /// <para>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -84,6 +94,16 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public long? SiteId { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to enable static IP. This feature is disabled by default. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>on: enabled.</description></item>
+        /// <item><description>off: disabled.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>off</para>
+        /// </summary>
         [NameInMap("StaticIp")]
         [Validation(Required=false)]
         public string StaticIp { get; set; }

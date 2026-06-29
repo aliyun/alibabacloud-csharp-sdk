@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateWaitingRoomRuleRequest : TeaModel {
         /// <summary>
-        /// <para>Rule content, using conditional expressions to match user requests. This parameter is not required when adding global configuration. There are two usage scenarios:</para>
+        /// <para>The rule content. A conditional expression is used to match user requests. This parameter is not required when you add a global configuration. Two scenarios are supported:</para>
         /// <list type="bullet">
-        /// <item><description>Match all incoming requests: Set the value to true</description></item>
-        /// <item><description>Match specific requests: Set the value to a custom expression, for example: (http.host eq &quot;video.example.com&quot;)</description></item>
+        /// <item><description>Match all incoming requests: set the value to true.</description></item>
+        /// <item><description>Match specified requests: set the value to a custom expression, for example, (http.host eq \&quot;video.example.com\&quot;).</description></item>
         /// </list>
+        /// <para>For the complete syntax of rule expressions, refer to
+        /// &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/edge-security-acceleration/esa/user-guide/work-with-rules-engine/">https://www.alibabacloud.com/help/en/edge-security-acceleration/esa/user-guide/work-with-rules-engine/</a>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/edge-security-acceleration/esa/user-guide/work-with-rules-engine/">https://www.alibabacloud.com/help/edge-security-acceleration/esa/user-guide/work-with-rules-engine/</a></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,10 +28,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Rule { get; set; }
 
         /// <summary>
-        /// <para>Rule switch. This parameter is not required when adding global configuration. Value range:</para>
+        /// <para>Specifies whether to enable the rule. This parameter is not required when you add a global configuration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on: Enable.</description></item>
-        /// <item><description>off: Disable.</description></item>
+        /// <item><description>on: enabled.</description></item>
+        /// <item><description>off: disabled.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -40,7 +43,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleEnable { get; set; }
 
         /// <summary>
-        /// <para>Rule name. This parameter is not required when adding global configuration.</para>
+        /// <para>The rule name. This parameter is not required when you add a global configuration.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +54,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</para>
+        /// <para>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,7 +65,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the waiting room bypass rule to be updated, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850279.html">ListWaitingRoomRules</a> interface.</para>
+        /// <para>The ID of the waiting room bypass rule to update. You can obtain this ID after creating a rule by calling CreateWaitingRoomRule, or by calling the <a href="https://help.aliyun.com/document_detail/2850279.html">ListWaitingRoomRules</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListUserRatePlanInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array of plan instances that meet the specified criteria.</para>
+        /// <para>The plan instances that match the specified conditions under the user.</para>
         /// </summary>
         [NameInMap("InstanceInfo")]
         [Validation(Required=false)]
@@ -19,10 +19,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The billing method. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>PREPAY</b>: subscription.</para>
-            /// </description></item>
-            /// <item><description><para><b>POSTPAY</b>: pay-as-you-go.</para>
-            /// </description></item>
+            /// <item><description><b>PREPAY</b>: subscription.</description></item>
+            /// <item><description><b>POSTPAY</b>: pay-as-you-go.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -32,23 +30,38 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [Validation(Required=false)]
             public string BillingMode { get; set; }
 
+            /// <summary>
+            /// <para>If this field is empty, the plan does not include a bot protection instance. If a value is returned, the plan includes a bot protection instance. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>enterprise_bot: Web Edition</para>
+            /// </description></item>
+            /// <item><description><para>enterprise_bot_with_app: App Edition.</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>enterprise_bot</para>
+            /// </summary>
             [NameInMap("BotInstanceLevel")]
             [Validation(Required=false)]
             public string BotInstanceLevel { get; set; }
 
+            /// <summary>
+            /// <para>The prepaid bot protection requests included in the plan, in units of 10,000.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100</para>
+            /// </summary>
             [NameInMap("BotRequest")]
             [Validation(Required=false)]
             public string BotRequest { get; set; }
 
             /// <summary>
-            /// <para>The acceleration regions covered by the plan instance. Multiple values are separated by commas (,). Valid values:</para>
+            /// <para>The acceleration regions to which sites can be bound under this plan instance. Multiple values are separated by commas (,). Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>domestic</b>: The Chinese mainland.</para>
-            /// </description></item>
-            /// <item><description><para><b>overseas</b>: Regions outside the Chinese mainland.</para>
-            /// </description></item>
-            /// <item><description><para><b>global</b>: Global (including the Chinese mainland).</para>
-            /// </description></item>
+            /// <item><description><b>domestic</b>: China or the Chinese mainland.</description></item>
+            /// <item><description><b>overseas</b>: Global (excluding China or the Chinese mainland).</description></item>
+            /// <item><description><b>global</b>: Global (including China or the Chinese mainland).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -59,33 +72,57 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Coverages { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The purchase time of the plan instance. The time is in ISO 8601 format and displayed in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>YYYY-MM-DDThh:mm:ssZ</para>
+            /// <para>2026-04-19T11:15:20Z</para>
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
+            /// <summary>
+            /// <para>The prepaid China network acceleration traffic included in the plan, in GB.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100</para>
+            /// </summary>
             [NameInMap("CrossborderTraffic")]
             [Validation(Required=false)]
             public string CrossborderTraffic { get; set; }
 
+            /// <summary>
+            /// <para>The Anti-DDoS instance specification for the Chinese mainland included in the plan.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn_300</para>
+            /// </summary>
             [NameInMap("DdosBurstableDomesticProtection")]
             [Validation(Required=false)]
             public string DdosBurstableDomesticProtection { get; set; }
 
+            /// <summary>
+            /// <para>The Anti-DDoS instance specification outside the Chinese mainland included in the plan.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>overseas_300</para>
+            /// </summary>
             [NameInMap("DdosBurstableOverseasProtection")]
             [Validation(Required=false)]
             public string DdosBurstableOverseasProtection { get; set; }
 
+            /// <summary>
+            /// <para>If this field is empty, the plan does not include an Anti-DDoS instance. If a value is returned, the plan includes an Anti-DDoS instance. The value is <c>esa_ddos_instance</c>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>esa_ddos_instance</para>
+            /// </summary>
             [NameInMap("DdosInstanceLevel")]
             [Validation(Required=false)]
             public string DdosInstanceLevel { get; set; }
 
             /// <summary>
-            /// <para>The duration in months.</para>
+            /// <para>The subscription duration of the plan instance. Unit: months.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -94,19 +131,31 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [Validation(Required=false)]
             public int? Duration { get; set; }
 
+            /// <summary>
+            /// <para>The prepaid Edge Routine (ER) requests included in the plan, in units of 10,000.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100</para>
+            /// </summary>
             [NameInMap("EdgeRoutineRquest")]
             [Validation(Required=false)]
             public string EdgeRoutineRquest { get; set; }
 
+            /// <summary>
+            /// <para>The prepaid WAF requests included in the plan, in units of 10,000.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100</para>
+            /// </summary>
             [NameInMap("EdgeWafRequest")]
             [Validation(Required=false)]
             public string EdgeWafRequest { get; set; }
 
             /// <summary>
-            /// <para>The expiration time.</para>
+            /// <para>The expiration time of the plan instance. The time is in ISO 8601 format and displayed in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>YYYY-MM-DDThh:mm:ssZ</para>
+            /// <para>2026-04-19T11:15:20Z</para>
             /// </summary>
             [NameInMap("ExpireTime")]
             [Validation(Required=false)]
@@ -122,16 +171,28 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
+            /// <summary>
+            /// <para>The prepaid Layer 4 proxy traffic included in the plan, in GB, for the Chinese mainland.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100</para>
+            /// </summary>
             [NameInMap("Layer4Traffic")]
             [Validation(Required=false)]
             public string Layer4Traffic { get; set; }
 
+            /// <summary>
+            /// <para>The prepaid Layer 4 proxy traffic included in the plan, in GB, outside the Chinese mainland.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100</para>
+            /// </summary>
             [NameInMap("Layer4TrafficIntl")]
             [Validation(Required=false)]
             public string Layer4TrafficIntl { get; set; }
 
             /// <summary>
-            /// <para>The plan name.</para>
+            /// <para>The plan name associated with the plan instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>basic</para>
@@ -140,17 +201,21 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [Validation(Required=false)]
             public string PlanName { get; set; }
 
+            /// <summary>
+            /// <para>The prepaid Layer 7 acceleration traffic included in the plan, in GB.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100</para>
+            /// </summary>
             [NameInMap("PlanTraffic")]
             [Validation(Required=false)]
             public string PlanTraffic { get; set; }
 
             /// <summary>
-            /// <para>The plan type. Valid values:</para>
+            /// <para>The plan type associated with the plan instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>normal</b>: The normal plan.</para>
-            /// </description></item>
-            /// <item><description><para><b>enterprise</b>: The enterprise plan.</para>
-            /// </description></item>
+            /// <item><description><b>normal</b>: fixed-version plan.</description></item>
+            /// <item><description><b>enterprise</b>: Enterprise Edition plan.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -161,6 +226,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string PlanType { get; set; }
 
             /// <summary>
+            /// <para>The auto-renewal cycle. Unit: months.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>6</para>
             /// </summary>
@@ -169,6 +236,13 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? RenewalDuration { get; set; }
 
             /// <summary>
+            /// <para>The auto-renewal status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>nomal: normal</description></item>
+            /// <item><description>auto_renewal: auto-renewal enabled</description></item>
+            /// <item><description>not_renewal: auto-renewal disabled.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>nomal</para>
             /// </summary>
@@ -177,7 +251,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RenewalStatus { get; set; }
 
             /// <summary>
-            /// <para>The site quota.</para>
+            /// <para>The site quota for the plan instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -187,7 +261,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string SiteQuota { get; set; }
 
             /// <summary>
-            /// <para>The sites associated with this plan instance.</para>
+            /// <para>The list of sites bound to the current plan instance.</para>
             /// </summary>
             [NameInMap("Sites")]
             [Validation(Required=false)]
@@ -216,14 +290,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 /// <summary>
                 /// <para>The site status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>pending</b>: The site is pending configuration.</para>
-                /// </description></item>
-                /// <item><description><para><b>active</b>: The site is active.</para>
-                /// </description></item>
-                /// <item><description><para><b>offline</b>: The site is offline.</para>
-                /// </description></item>
-                /// <item><description><para><b>moved</b>: The site has been replaced.</para>
-                /// </description></item>
+                /// <item><description><b>pending</b>: The site is pending configuration.</description></item>
+                /// <item><description><b>active</b>: The site is activated.</description></item>
+                /// <item><description><b>offline</b>: The site is offline.</description></item>
+                /// <item><description><b>moved</b>: The site has been superseded.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -235,10 +305,22 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
             }
 
+            /// <summary>
+            /// <para>The prepaid smart routing requests included in the plan, in units of 10,000.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100</para>
+            /// </summary>
             [NameInMap("SmartRoutingRequest")]
             [Validation(Required=false)]
             public string SmartRoutingRequest { get; set; }
 
+            /// <summary>
+            /// <para>The prepaid HTTP requests included in the plan, in units of 10,000.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100</para>
+            /// </summary>
             [NameInMap("StaticRequest")]
             [Validation(Required=false)]
             public string StaticRequest { get; set; }
@@ -246,12 +328,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The instance status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>online</b>: The plan instance is active.</para>
-            /// </description></item>
-            /// <item><description><para><b>offline</b>: The plan instance is unavailable because it has expired but is still within the grace period.</para>
-            /// </description></item>
-            /// <item><description><para><b>disable</b>: The plan instance is released.</para>
-            /// </description></item>
+            /// <item><description><b>online</b>: The plan instance is in normal service.</description></item>
+            /// <item><description><b>offline</b>: The plan instance has expired but has not exceeded the grace period and is not active.</description></item>
+            /// <item><description><b>disable</b>: The plan instance has been released.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -261,6 +340,20 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            /// <summary>
+            /// <para>The plan subscription type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>entranceplan: Free Edition (Chinese mainland)</description></item>
+            /// <item><description>entranceplan_intl: Free Edition (International)</description></item>
+            /// <item><description>basicplan: Basic Edition</description></item>
+            /// <item><description>standardplan: Standard Edition</description></item>
+            /// <item><description>advancedplan: Premium Edition</description></item>
+            /// <item><description>enterpriseplan: Enterprise Edition.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>basicplan</para>
+            /// </summary>
             [NameInMap("SubscribeType")]
             [Validation(Required=false)]
             public string SubscribeType { get; set; }
@@ -268,7 +361,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The current page number, which is the same as the PageNumber request parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -278,7 +371,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -298,7 +391,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total count of entries.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>68</para>

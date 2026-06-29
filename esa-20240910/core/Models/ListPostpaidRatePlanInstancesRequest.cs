@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListPostpaidRatePlanInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to return only instances that have remaining site quota. Valid values:</para>
+        /// <para>Specifies whether to check for remaining site quota. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>true</c>: Returns only instances with remaining site quota.</para>
+        /// <item><description><para>true: Queries instances that have remaining site quota.</para>
         /// </description></item>
-        /// <item><description><para><c>false</c>: Returns all instances, regardless of site quota.</para>
+        /// <item><description><para>false: Does not filter by this condition.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CheckRemainingSiteQuota { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance to query.</para>
+        /// <para>The instance ID. Use this parameter to query a specific instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sp-dps-xxxxxx</para>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The page number. The value must be greater than or equal to 1.</para>
+        /// <para>The page number for paging. The value must be greater than or equal to 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. The maximum value is 500.</para>
+        /// <para>The number of entries per page for paging. Valid values: 1 to 500.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12</para>
@@ -56,9 +56,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The field to sort the results by. Valid value:</para>
+        /// <para>The field by which to sort the results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>CreateTime</c>: Sorts by creation time.</description></item>
+        /// <item><description>CreateTime: sorts by creation time.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -71,9 +71,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The sort order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>asc</c>: ascending</para>
+        /// <item><description><para>asc: ascending order</para>
         /// </description></item>
-        /// <item><description><para><c>desc</c>: descending</para>
+        /// <item><description><para>desc: descending order.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -87,11 +87,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The instance status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>online</c>: The instance is running.</para>
+        /// <item><description><para>online: Normal.</para>
         /// </description></item>
-        /// <item><description><para><c>overdue</c>: The payment for the instance is overdue.</para>
+        /// <item><description><para>overdue: Overdue payment.</para>
         /// </description></item>
-        /// <item><description><para><c>disable</c>: The instance is released.</para>
+        /// <item><description><para>disable: Released.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The type of add-on service to filter by, such as <c>bot</c> or <c>ddos</c>.</para>
+        /// <para>Specifies whether the instance has purchased additional bot or DDoS protection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bot</para>

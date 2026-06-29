@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListHttpsBasicConfigurationsRequest : TeaModel {
         /// <summary>
-        /// <para>Configuration ID.</para>
+        /// <para>The configuration ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>35281609698****</para>
@@ -20,14 +20,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? ConfigId { get; set; }
 
         /// <summary>
-        /// <para>Configuration type, which can be used to query global or rule configurations. Value range:</para>
+        /// <para>The configuration type. You can use this parameter to query global or rule configurations. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>global: Query global configuration.</para>
-        /// </description></item>
-        /// <item><description><para>rule: Query rule configuration.</para>
-        /// </description></item>
+        /// <item><description>global: queries global configurations.</description></item>
+        /// <item><description>rule: queries rule configurations.</description></item>
         /// </list>
-        /// <para>This parameter is optional. If not provided, it does not distinguish between global and rule configurations.</para>
+        /// <para>This parameter is optional. If you do not specify this parameter, both global and rule configurations are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>global</para>
@@ -37,7 +35,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string ConfigType { get; set; }
 
         /// <summary>
-        /// <para>Page number, default is 1 if not provided.</para>
+        /// <para>The page number for a paged query. The value must be greater than or equal to 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -47,7 +45,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Number of items per page, maximum is 500, default is 500 if not provided.</para>
+        /// <para>The number of entries per page for a paged query. Valid values: 1 to 500.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -57,7 +55,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Rule name, which can be used to find the rule with the specified name.</para>
+        /// <para>The rule name. You can use this parameter to query the rule that matches the specified name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -67,7 +65,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</para>
+        /// <para>The site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

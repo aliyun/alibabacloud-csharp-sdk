@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListInstanceQuotasResponseBody : TeaModel {
         /// <summary>
-        /// <para>The plan ID.</para>
+        /// <para>The plan instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sp-xcdn-96wblslz****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The quotas in the plan.</para>
+        /// <para>The list of plan instance quotas.</para>
         /// </summary>
         [NameInMap("Quotas")]
         [Validation(Required=false)]
@@ -49,11 +49,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The threshold type of the quota. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>value: enumerates the values of the quota.</description></item>
-            /// <item><description>bool: specifies whether the quota is available.</description></item>
-            /// <item><description>num: the upper limit of the quota.</description></item>
-            /// <item><description>range: the value range for the quota.</description></item>
-            /// <item><description>custom: other types than the preceding four quota threshold types.</description></item>
+            /// <item><description><b>value</b>: enumeration type. The enumeration range of quota values.</description></item>
+            /// <item><description><b>bool</b>: Boolean type. Indicates whether the quota is available.</description></item>
+            /// <item><description><b>num</b>: numeric type. The maximum usage of the quota.</description></item>
+            /// <item><description><b>range</b>: range type. The value range of the quota.</description></item>
+            /// <item><description><b>custom</b>: custom type. Other types that do not fall into the preceding four threshold types.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -76,11 +76,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The plan status. Valid values:</para>
+        /// <para>The plan instance status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>online: The plan is in service.</description></item>
-        /// <item><description>offline: The plan has expired within an allowable period. In this state, the plan is unavailable.</description></item>
-        /// <item><description>disable: The plan is released.</description></item>
+        /// <item><description><b>online</b>: The instance is in normal service.</description></item>
+        /// <item><description><b>offline</b>: The instance has expired but has not exceeded the grace period and is unavailable.</description></item>
+        /// <item><description><b>disable</b>: The instance has been released.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

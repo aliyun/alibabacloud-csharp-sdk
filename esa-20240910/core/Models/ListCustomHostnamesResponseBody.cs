@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListCustomHostnamesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of SaaS domain names.</para>
+        /// <para>The list of SaaS domain names returned.</para>
         /// </summary>
         [NameInMap("Hostnames")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? CertApplyCode { get; set; }
 
             /// <summary>
-            /// <para>The error description for the free certificate application.</para>
+            /// <para>The error message for the free certificate application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>canceled</para>
@@ -69,11 +69,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The certificate status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>OK</b>: Normal.</description></item>
-            /// <item><description><b>Applying</b>: Being applied.</description></item>
-            /// <item><description><b>ApplyFailed</b>: Application failed.</description></item>
-            /// <item><description><b>Expiring</b>: About to expire.</description></item>
-            /// <item><description><b>Expired</b>: Expired.</description></item>
+            /// <item><description><b>OK</b>: normal.</description></item>
+            /// <item><description><b>Applying</b>: being applied.</description></item>
+            /// <item><description><b>ApplyFailed</b>: application failed.</description></item>
+            /// <item><description><b>Expiring</b>: about to expire.</description></item>
+            /// <item><description><b>Expired</b>: expired.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CertStatus { get; set; }
 
             /// <summary>
-            /// <para>The TXT name for certificate verification.</para>
+            /// <para>The TXT record name for certificate verification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>_acme-challenge.custom.site.com</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CertTxtKey { get; set; }
 
             /// <summary>
-            /// <para>The TXT content for certificate verification.</para>
+            /// <para>The TXT record content for certificate verification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>lcKYad3UQXgrZLvMm_6TBUYKK4xTkGmninV0Mzx4gjM</para>
@@ -121,10 +121,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The reason why the SaaS domain name is occupied. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>existing_custom_hostname</b>: Conflicts with an existing SaaS domain name.</description></item>
-            /// <item><description><b>existing_record</b>: Conflicts with an existing site record.</description></item>
-            /// <item><description><b>existing_load_balancer</b>: Conflicts with an existing load balancing instance.</description></item>
-            /// <item><description><b>existing_origin_pool</b>: Conflicts with an existing origin IPAM pool.</description></item>
+            /// <item><description><b>existing_custom_hostname</b>: conflicts with an existing SaaS domain name.</description></item>
+            /// <item><description><b>existing_site</b>: conflicts with an existing site.</description></item>
+            /// <item><description><b>existing_record</b>: conflicts with an existing site record.</description></item>
+            /// <item><description><b>existing_load_balancer</b>: conflicts with an existing load balancing instance.</description></item>
+            /// <item><description><b>existing_origin_pool</b>: conflicts with an existing origin IPAM pool.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -135,7 +136,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string ConflictWith { get; set; }
 
             /// <summary>
-            /// <para>The time when the SaaS domain name was created, in the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
+            /// <para>The creation time of the SaaS domain name, in the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-04-19T11:15:20Z</para>
@@ -167,11 +168,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The reason why the SaaS domain name was taken offline. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>expiration_ arrears</b>: The subscription plan has expired or the account has an overdue payment.</description></item>
-            /// <item><description><b>internally_disabled</b>: Disabled by the system.</description></item>
-            /// <item><description><b>missing_icp</b>: The domain name does not have an ICP filing.</description></item>
-            /// <item><description><b>content_violation</b>: Content violation.</description></item>
-            /// <item><description><b>proactively_disabled</b>: You proactively disabled the domain name or the usage cap you configured was reached.</description></item>
+            /// <item><description><b>expiration_arrears</b>: the subscription plan expired or the account has an overdue payment.</description></item>
+            /// <item><description><b>internally_disabled</b>: disabled by the system.</description></item>
+            /// <item><description><b>missing_icp</b>: the domain name does not have an ICP filing.</description></item>
+            /// <item><description><b>content_violation</b>: content violation.</description></item>
+            /// <item><description><b>proactively_disabled</b>: proactively disabled by you or disabled because the usage cap you configured was reached.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -253,7 +254,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The time when the SaaS domain name was last updated, in the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
+            /// <para>The update time of the SaaS domain name, in the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-04-19T11:15:20Z</para>
@@ -263,7 +264,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The TXT content for domain name verification.</para>
+            /// <para>The TXT record content for domain name verification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>verify_16ab7f4d389d4dff6655f995c6a997bd</para>
@@ -273,7 +274,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string VerifyCode { get; set; }
 
             /// <summary>
-            /// <para>The TXT name for domain name verification.</para>
+            /// <para>The TXT record name for domain name verification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>_esa_custom_hostname.custom.site.com</para>
@@ -285,7 +286,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The current page number. This value is the same as the PageNumber request parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -305,7 +306,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for this request.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>04F0F334-1335-436C-A1D7-6C044FE73368</para>

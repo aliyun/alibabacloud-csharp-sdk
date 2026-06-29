@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CodeDescription { get; set; }
 
         /// <summary>
-        /// <para>The time when the version was created.</para>
+        /// <para>The creation time. The time follows the RFC 3339 standard in the UTC time zone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-03-11T01:23:21Z</para>

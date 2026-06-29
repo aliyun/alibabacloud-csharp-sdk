@@ -10,13 +10,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateSitePauseRequest : TeaModel {
         /// <summary>
-        /// <para>Indicates whether to pause proxy acceleration for the site. If set to <c>true</c>, DNS queries for the site return the record values directly to the client. Valid values:</para>
+        /// <para>Specifies whether to temporarily pause the proxy acceleration feature for the entire site. After the feature is paused, all DNS records directly return record values to the client. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: Pauses proxy acceleration for the site.</para>
-        /// </description></item>
-        /// <item><description><para>false: Resumes proxy acceleration for the site.</para>
-        /// </description></item>
+        /// <item><description>true: Pauses site acceleration.</description></item>
+        /// <item><description>false: Resumes normal site acceleration.</description></item>
         /// </list>
+        /// <para>When site acceleration is paused, only activated sites with NS access mode are supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -27,7 +26,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public bool? Paused { get; set; }
 
         /// <summary>
-        /// <para>The site ID. To obtain this ID, call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
+        /// <para>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID. Check the Status field to confirm the site status and the AccessType field to confirm the access mode of the site.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
