@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class CreateGatewayRequest : TeaModel {
         /// <summary>
-        /// <para>The logging configurations.</para>
+        /// <para>The billing method.</para>
         /// 
         /// <b>Example:</b>
         /// <para>POSTPAY</para>
@@ -20,11 +20,15 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>Gateway instance edition:</para>
+        /// <para>The gateway instance edition. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Standard instance: Professional</para>
+        /// <item><description><para>Professional: Standard instance.</para>
         /// </description></item>
-        /// <item><description><para>Serverless: Serverless (currently supports only AI gateway)</para>
+        /// <item><description><para>Serverless: Serverless instance.</para>
+        /// </description></item>
+        /// <item><description><para>MultiTenantServerless: Multi-tenant Serverless instance.</para>
+        /// </description></item>
+        /// <item><description><para>Unknown: Unknown.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -36,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayEdition { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The gateway type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>API</para>
@@ -46,21 +50,21 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayType { get; set; }
 
         /// <summary>
-        /// <para>Gateway log configuration.</para>
+        /// <para>The gateway log configuration.</para>
         /// </summary>
         [NameInMap("logConfig")]
         [Validation(Required=false)]
         public CreateGatewayRequestLogConfig LogConfig { get; set; }
         public class CreateGatewayRequestLogConfig : TeaModel {
             /// <summary>
-            /// <para>SLS log configuration.</para>
+            /// <para>The Simple Log Service (SLS) log configuration.</para>
             /// </summary>
             [NameInMap("sls")]
             [Validation(Required=false)]
             public CreateGatewayRequestLogConfigSls Sls { get; set; }
             public class CreateGatewayRequestLogConfigSls : TeaModel {
                 /// <summary>
-                /// <para>Whether to enable.</para>
+                /// <para>Specifies whether to enable SLS logging.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -74,7 +78,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The ID of the vSwitch.</para>
+        /// <para>The gateway name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-ceshi</para>
@@ -84,16 +88,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The gateway edition.</para>
+        /// <para>The network access configuration.</para>
         /// </summary>
         [NameInMap("networkAccessConfig")]
         [Validation(Required=false)]
         public CreateGatewayRequestNetworkAccessConfig NetworkAccessConfig { get; set; }
         public class CreateGatewayRequestNetworkAccessConfig : TeaModel {
             /// <summary>
-            /// <list type="bullet">
-            /// <item><description></description></item>
-            /// </list>
+            /// <para>The network access type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Internet</para>
@@ -105,7 +107,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-ahr5uil8raz0rq3b</para>
@@ -115,7 +117,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The tag key.</para>
+        /// <para>The node specifications.</para>
         /// 
         /// <b>Example:</b>
         /// <para>apigw.dev.x2</para>
@@ -125,7 +127,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Spec { get; set; }
 
         /// <summary>
-        /// <para>The list of labels.</para>
+        /// <para>The list of tags.</para>
         /// </summary>
         [NameInMap("tag")]
         [Validation(Required=false)]
@@ -142,7 +144,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the label.</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>value</para>
@@ -154,7 +156,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The tag value.</para>
+        /// <para>The VPC ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-zm0x16tomfiat1mk9f6rs</para>
@@ -164,14 +166,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>The status message.</para>
+        /// <para>The zone configuration.</para>
         /// </summary>
         [NameInMap("zoneConfig")]
         [Validation(Required=false)]
         public CreateGatewayRequestZoneConfig ZoneConfig { get; set; }
         public class CreateGatewayRequestZoneConfig : TeaModel {
             /// <summary>
-            /// <para>The response payload.</para>
+            /// <para>The zone selection option.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Manual</para>
@@ -181,7 +183,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string SelectOption { get; set; }
 
             /// <summary>
-            /// <para>Virtual switch ID.</para>
+            /// <para>The vSwitch ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-xxx</para>
@@ -191,14 +193,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// <para>List of supported zones.</para>
+            /// <para>The list of supported zones.</para>
             /// </summary>
             [NameInMap("zones")]
             [Validation(Required=false)]
             public List<CreateGatewayRequestZoneConfigZones> Zones { get; set; }
             public class CreateGatewayRequestZoneConfigZones : TeaModel {
                 /// <summary>
-                /// <para>The ID of the virtual switch.</para>
+                /// <para>The vSwitch ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vsw-xx</para>
@@ -208,7 +210,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string VSwitchId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the zone.</para>
+                /// <para>The zone ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-wulanchabu-a</para>

@@ -10,21 +10,24 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class AiTokenRateLimitConfig : TeaModel {
         /// <summary>
-        /// <para>Controls whether global rules are enabled. If set to <c>true</c>, the rules in <c>globalRules</c> are applied. Defaults to <c>false</c>.</para>
+        /// <para>Specifies whether to enable global (API-level) throttling rules. Default value: false.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("enableGlobalRules")]
         [Validation(Required=false)]
         public bool? EnableGlobalRules { get; set; }
 
         /// <summary>
-        /// <para>A list of global rate limit rules. These rules are applied when no specific rule in <c>rules</c> is matched.</para>
+        /// <para>The list of global throttling rules. Only the LimitByGlobal type is allowed.</para>
         /// </summary>
         [NameInMap("globalRules")]
         [Validation(Required=false)]
         public List<AiTokenRateLimitConfigRule> GlobalRules { get; set; }
 
         /// <summary>
-        /// <para>Specifies the status of the plugin, such as <c>enabled</c> or <c>disabled</c>.</para>
+        /// <para>The running status of the plugin.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -34,7 +37,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public AiPluginStatus PluginStatus { get; set; }
 
         /// <summary>
-        /// <para>Specifies the Redis configuration for distributed rate limiting.</para>
+        /// <para>The Redis configuration.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -44,7 +47,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public AiPolicyRedisConfig RedisConfig { get; set; }
 
         /// <summary>
-        /// <para>A list of specific rate limit rules.</para>
+        /// <para>The list of throttling rules.</para>
         /// </summary>
         [NameInMap("rules")]
         [Validation(Required=false)]

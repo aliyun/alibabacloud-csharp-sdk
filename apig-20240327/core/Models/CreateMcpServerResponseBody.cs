@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class CreateMcpServerResponseBody : TeaModel {
         /// <summary>
-        /// <para>code</para>
+        /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>object</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string McpServerId { get; set; }
 
             /// <summary>
-            /// <para>MCP server name</para>
+            /// <para>The MCP server name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-mcp</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>message</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

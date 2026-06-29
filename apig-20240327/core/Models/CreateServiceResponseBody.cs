@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class CreateServiceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

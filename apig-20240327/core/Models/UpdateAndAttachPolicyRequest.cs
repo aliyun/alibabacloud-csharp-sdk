@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class UpdateAndAttachPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The association IDs.</para>
+        /// <para>The list of mount point IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("attachResourceIds")]
@@ -18,15 +18,15 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<string> AttachResourceIds { get; set; }
 
         /// <summary>
-        /// <para>The supported associated resource type. Valid values:</para>
+        /// <para>The type of mount point supported by the policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>HttpApi: an HTTP API</description></item>
-        /// <item><description>Operation: an operation in an HTTP API</description></item>
-        /// <item><description>GatewayRoute: a route</description></item>
-        /// <item><description>GatewayService: a service</description></item>
-        /// <item><description>GatewayServicePort: a service port</description></item>
-        /// <item><description>Domain: a domain name</description></item>
-        /// <item><description>Gateway: an instance</description></item>
+        /// <item><description>HttpApi: HttpApi.</description></item>
+        /// <item><description>Operation: Operation of HttpApi.</description></item>
+        /// <item><description>GatewayRoute: gateway rule.</description></item>
+        /// <item><description>GatewayService: gateway service.</description></item>
+        /// <item><description>GatewayServicePort: gateway service port.</description></item>
+        /// <item><description>Domain: gateway domain name.</description></item>
+        /// <item><description>Gateway: gateway.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string AttachResourceType { get; set; }
 
         /// <summary>
-        /// <para>The policy configurations. The value is a JSON string.</para>
+        /// <para>The configuration information. The value is a JSON string.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string EnvironmentId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The gateway ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gw-cq2avtllhtgja4dk5djg</para>

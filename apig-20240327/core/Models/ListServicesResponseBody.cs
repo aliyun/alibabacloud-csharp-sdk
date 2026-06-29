@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListServicesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response payload.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<Service> Items { get; set; }
 
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>18</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

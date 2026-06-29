@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public CreateSourceResponseBodyData Data { get; set; }
         public class CreateSourceResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Source ID</para>
+            /// <para>The source ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>src-crdddallhtgt***</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>Response message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>393E2630-DBE7-5221-AB35-9E740675491A</para>

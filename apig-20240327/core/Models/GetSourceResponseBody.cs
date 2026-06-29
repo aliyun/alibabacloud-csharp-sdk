@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class GetSourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>Response status code.</para>
+        /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Response data.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string AssociationStatus { get; set; }
 
             /// <summary>
-            /// <para>Creation timestamp.</para>
+            /// <para>The creation timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1719386834548</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public long? CreateTimestamp { get; set; }
 
             /// <summary>
-            /// <para>Gateway ID.</para>
+            /// <para>The gateway ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>gw-cq2vundlhtg***</para>
@@ -63,14 +63,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string GatewayId { get; set; }
 
             /// <summary>
-            /// <para>K8s source information.</para>
+            /// <para>The Kubernetes source information.</para>
             /// </summary>
             [NameInMap("k8SSourceInfo")]
             [Validation(Required=false)]
             public GetSourceResponseBodyDataK8SSourceInfo K8SSourceInfo { get; set; }
             public class GetSourceResponseBodyDataK8SSourceInfo : TeaModel {
                 /// <summary>
-                /// <para>Container Service cluster ID.</para>
+                /// <para>The container service cluster ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>c2d290b2d8b5d4935864cace5f0173f31</para>
@@ -82,14 +82,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>MSE Nacos source information.</para>
+            /// <para>The Microservices Engine (MSE) Nacos source information.</para>
             /// </summary>
             [NameInMap("nacosSourceInfo")]
             [Validation(Required=false)]
             public GetSourceResponseBodyDataNacosSourceInfo NacosSourceInfo { get; set; }
             public class GetSourceResponseBodyDataNacosSourceInfo : TeaModel {
                 /// <summary>
-                /// <para>Nacos instance access address.</para>
+                /// <para>The access address of the Nacos instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>mse</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Address { get; set; }
 
                 /// <summary>
-                /// <para>Cluster ID.</para>
+                /// <para>The cluster ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>fluss-cn-w7k4hann601</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ClusterId { get; set; }
 
                 /// <summary>
-                /// <para>Nacos instance ID.</para>
+                /// <para>The Nacos instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>hgprecn-cn-cfn47q7oh001</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>Name.</para>
+            /// <para>The name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>import-test</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Resource group ID.</para>
+            /// <para>The resource group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-aekz4us4iruleja</para>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>Source ID.</para>
+            /// <para>The source ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>src-crdddallhtgt***</para>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string SourceId { get; set; }
 
             /// <summary>
-            /// <para>Type.</para>
+            /// <para>The type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>K8S</para>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>Update timestamp.</para>
+            /// <para>The update timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1719386834548</para>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>Response message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

@@ -49,10 +49,18 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 [Validation(Required=false)]
                 public List<ResetGatewayQuotaRuleResponseBodyDataConflictPreviewItems> Items { get; set; }
                 public class ResetGatewayQuotaRuleResponseBodyDataConflictPreviewItems : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>week</para>
+                    /// </summary>
                     [NameInMap("conflictPeriodType")]
                     [Validation(Required=false)]
                     public string ConflictPeriodType { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>calendar</para>
+                    /// </summary>
                     [NameInMap("conflictType")]
                     [Validation(Required=false)]
                     public string ConflictType { get; set; }

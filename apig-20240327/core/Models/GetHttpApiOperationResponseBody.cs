@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class GetHttpApiOperationResponseBody : TeaModel {
         /// <summary>
-        /// <para>Response status code.</para>
+        /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public HttpApiOperationInfo Data { get; set; }
 
         /// <summary>
-        /// <para>Response message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B725275B-50C6-5A49-A9FD-F0332FCB3351</para>

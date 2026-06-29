@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string GatewayId { get; set; }
 
             /// <summary>
-            /// <para>A list of route IDs.</para>
+            /// <para>The route IDs.</para>
             /// </summary>
             [NameInMap("routeIds")]
             [Validation(Required=false)]
@@ -39,14 +39,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The REST API deployment configuration. This parameter is required when you deploy an HTTP API as a REST API.</para>
+        /// <para>The deployment configuration for the REST API. This parameter is required when the HTTP API to be published is a REST API.</para>
         /// </summary>
         [NameInMap("restApiConfig")]
         [Validation(Required=false)]
         public DeployHttpApiRequestRestApiConfig RestApiConfig { get; set; }
         public class DeployHttpApiRequestRestApiConfig : TeaModel {
             /// <summary>
-            /// <para>The deployment description.</para>
+            /// <para>The publish description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>用户服务API发布。</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The deployment environment configuration.</para>
+            /// <para>The publish environment configuration.</para>
             /// </summary>
             [NameInMap("environment")]
             [Validation(Required=false)]
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <term><b>Obsolete</b></term>
                 /// 
                 /// <summary>
-                /// <para>The API deployment scenario.</para>
+                /// <para>The API publish scenario.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SingleService</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string BackendScene { get; set; }
 
                 /// <summary>
-                /// <para>A list of custom domain IDs.</para>
+                /// <para>The list of custom domain names.</para>
                 /// </summary>
                 [NameInMap("customDomainIds")]
                 [Validation(Required=false)]
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <term><b>Obsolete</b></term>
                 /// 
                 /// <summary>
-                /// <para>The configurations for one or more backend services. A single-service scenario allows only one entry, while other scenarios, such as canary release by ratio and content-based routing, allow multiple entries.</para>
+                /// <para>The existing service configurations. In the single-service scenario, only one entry is allowed. In ratio-based or content-based scenarios, multiple entries are allowed.</para>
                 /// 
                 /// <b>if can be null:</b>
                 /// <c>true</c>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public List<DeployHttpApiRequestRestApiConfigEnvironmentServiceConfigs> ServiceConfigs { get; set; }
                 public class DeployHttpApiRequestRestApiConfigEnvironmentServiceConfigs : TeaModel {
                     /// <summary>
-                    /// <para>The conditions that a request must meet to be routed to this service. This parameter is used for content-based routing.</para>
+                    /// <para>The match condition configuration related to API publishing.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>{\&quot;change_order_revision\&quot;:\&quot;3.657.33_fc-hz-yunqi.1662568293908382_faas-eerouter\&quot;}</para>
@@ -129,12 +129,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public int? Port { get; set; }
 
                     /// <summary>
-                    /// <para>The service protocol.</para>
+                    /// <para>The service protocol. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para>HTTP</para>
-                    /// </description></item>
-                    /// <item><description><para>HTTPS</para>
-                    /// </description></item>
+                    /// <item><description>HTTP</description></item>
+                    /// <item><description>HTTPS</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -165,7 +163,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string Version { get; set; }
 
                     /// <summary>
-                    /// <para>The weight, which must be an integer from 1 to 100. This parameter applies only to the canary release by ratio scenario.</para>
+                    /// <para>The weight. Valid values: 1 to 100. This parameter takes effect only in the ratio-based scenario.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>49</para>
@@ -189,7 +187,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string GatewayId { get; set; }
 
             /// <summary>
-            /// <para>A list of operation-level deployment controls.</para>
+            /// <para>The operation-level deployment control list.</para>
             /// </summary>
             [NameInMap("operationDeployments")]
             [Validation(Required=false)]
@@ -206,7 +204,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Action { get; set; }
 
                 /// <summary>
-                /// <para>The unique ID of the operation.</para>
+                /// <para>The unique identifier of the operation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>op-xxx</para>
@@ -220,7 +218,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>A list of operation IDs.</para>
+            /// <para>The operation IDs.</para>
             /// </summary>
             [NameInMap("operationIds")]
             [Validation(Required=false)]
@@ -228,7 +226,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<string> OperationIds { get; set; }
 
             /// <summary>
-            /// <para>The revision ID. If you specify this parameter, the deployment uses the settings from the specified revision.</para>
+            /// <para>The historical version number. If this parameter is specified, the publish information is based on the historical version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>apr-xxx</para>
@@ -240,7 +238,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The route ID. This parameter is required when you deploy a route for an HTTP API.</para>
+        /// <para>The route ID. This parameter is required when you publish a route of an HTTP API.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hr-cr82undlhtgrl***</para>

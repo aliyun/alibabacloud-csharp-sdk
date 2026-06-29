@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class CreateConsumerAuthorizationRulesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Response status code.</para>
+        /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Response data.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public CreateConsumerAuthorizationRulesResponseBodyData Data { get; set; }
         public class CreateConsumerAuthorizationRulesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>List of consumer authorization rule IDs.</para>
+            /// <para>The list of consumer authorization rule IDs.</para>
             /// </summary>
             [NameInMap("consumerAuthorizationRuleIds")]
             [Validation(Required=false)]
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>Response message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

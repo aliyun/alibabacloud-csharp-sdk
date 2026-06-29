@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public ListHttpApiRoutesResponseBodyData Data { get; set; }
         public class ListHttpApiRoutesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>路由列表。</para>
+            /// <para>The route list.</para>
             /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The page size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>

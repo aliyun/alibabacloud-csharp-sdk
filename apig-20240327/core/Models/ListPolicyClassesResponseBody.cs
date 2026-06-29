@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListPolicyClassesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code returned.</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>An array of policy template information.</para>
+        /// <para>The policy template information.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public ListPolicyClassesResponseBodyData Data { get; set; }
         public class ListPolicyClassesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The templates.</para>
+            /// <para>The list of policy templates.</para>
             /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]
             public List<PolicyClassInfo> Items { get; set; }
 
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The response message returned.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

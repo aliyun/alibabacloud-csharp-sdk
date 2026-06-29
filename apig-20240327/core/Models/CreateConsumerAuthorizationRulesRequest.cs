@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class CreateConsumerAuthorizationRulesRequest : TeaModel {
         /// <summary>
-        /// <para>Consumer authorization rules.</para>
+        /// <para>The consumer authentication rules.</para>
         /// </summary>
         [NameInMap("authorizationRules")]
         [Validation(Required=false)]
         public List<CreateConsumerAuthorizationRulesRequestAuthorizationRules> AuthorizationRules { get; set; }
         public class CreateConsumerAuthorizationRulesRequestAuthorizationRules : TeaModel {
             /// <summary>
-            /// <para>Consumer ID.</para>
+            /// <para>The consumer ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cs-******</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ConsumerId { get; set; }
 
             /// <summary>
-            /// <para>Expiration mode. Currently only LongTerm is supported.</para>
+            /// <para>The expiration mode. Currently, only LongTerm is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>LongTerm</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ExpireMode { get; set; }
 
             /// <summary>
-            /// <para>Expiration time.</para>
+            /// <para>The expiration time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>174116222x</para>
@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public long? ExpireTimestamp { get; set; }
 
             /// <summary>
-            /// <para>Resource identifier, provided to non-standard code sources as a unique identifier for space reuse</para>
+            /// <para>The resource identifier, which serves as a unique identifier for non-standard code sources for space reuse.</para>
             /// </summary>
             [NameInMap("resourceIdentifier")]
             [Validation(Required=false)]
             public CreateConsumerAuthorizationRulesRequestAuthorizationRulesResourceIdentifier ResourceIdentifier { get; set; }
             public class CreateConsumerAuthorizationRulesRequestAuthorizationRulesResourceIdentifier : TeaModel {
                 /// <summary>
-                /// <para>Environment ID.</para>
+                /// <para>The environment ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>env-******</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string EnvironmentId { get; set; }
 
                 /// <summary>
-                /// <para>Parent resource ID.</para>
+                /// <para>The parent resource ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>api-******</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ParentResourceId { get; set; }
 
                 /// <summary>
-                /// <para>Resource ID.</para>
+                /// <para>The resource ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ha-cn-li942gy8p03</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// <para>Resource information.</para>
+                /// <para>The resource information.</para>
                 /// </summary>
                 [NameInMap("resources")]
                 [Validation(Required=false)]
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>Resource type.</para>
+            /// <para>The resource type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HttpApiRoute</para>

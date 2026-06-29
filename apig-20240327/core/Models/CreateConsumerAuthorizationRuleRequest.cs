@@ -17,7 +17,11 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<AuthorizationResourceInfo> AuthorizationResourceInfos { get; set; }
 
         /// <summary>
-        /// <para>The expiry mode. Valid values: LongTerm and ShortTerm.</para>
+        /// <para>The expiration mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>LongTerm: long-term</description></item>
+        /// <item><description>ShortTerm: short-term</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>LongTerm</para>
@@ -37,7 +41,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public long? ExpireTimestamp { get; set; }
 
         /// <summary>
-        /// <para>The type of the parent resource.</para>
+        /// <para>The parent resource type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>API</para>
@@ -47,7 +51,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ParentResourceType { get; set; }
 
         /// <summary>
-        /// <para>The resource type,</para>
+        /// <para>The resource type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>API</para>

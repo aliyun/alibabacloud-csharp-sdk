@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListServicesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Cloud-native API Gateway instance.</para>
+        /// <para>The ID of the cloud-native API gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gw-cpv4sqdl*****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The service name.</para>
+        /// <para>The service name for exact match query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user-service</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The page number to return. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number. Pages start from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -60,21 +60,13 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The service source. Valid values:</para>
+        /// <para>The source type of the service. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>MSE_NACOS: a service in an MSE Nacos instance</description></item>
-        /// <item><description>K8S: a service in a Kubernetes (K8s) cluster in Container Service for Kubernetes (ACK)</description></item>
-        /// <item><description>FC3: a service in Function Compute</description></item>
-        /// <item><description>VIP: a fixed address</description></item>
-        /// <item><description>DNS: a domain name</description></item>
-        /// </list>
-        /// <para>Enumerated values:</para>
-        /// <list type="bullet">
-        /// <item><description>K8S</description></item>
-        /// <item><description>FC3</description></item>
-        /// <item><description>DNS</description></item>
-        /// <item><description>VIP</description></item>
-        /// <item><description>MSE_NACOS</description></item>
+        /// <item><description>MSE_NACOS: The service is from MSE Nacos.</description></item>
+        /// <item><description>K8S: The service is from a Kubernetes cluster in Container Service.</description></item>
+        /// <item><description>FC3: The service is from Function Compute.</description></item>
+        /// <item><description>VIP: The service is from a fixed address.</description></item>
+        /// <item><description>DNS: The service is from a domain name.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -85,7 +77,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string SourceType { get; set; }
 
         /// <summary>
-        /// <para>List of service source types</para>
+        /// <para>The list of service source types.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;K8S&quot;, &quot;FC3&quot;]</para>

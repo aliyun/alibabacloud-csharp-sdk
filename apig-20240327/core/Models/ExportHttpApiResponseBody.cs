@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ExportHttpApiResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The API definition.</para>
+        /// <para>The API definition information.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]

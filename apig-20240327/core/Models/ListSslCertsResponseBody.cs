@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public ListSslCertsResponseBodyData Data { get; set; }
         public class ListSslCertsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>证书信息列表。</para>
+            /// <para>The list of certificate information.</para>
             /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]

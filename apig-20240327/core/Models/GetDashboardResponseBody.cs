@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class GetDashboardResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetDashboardResponseBodyData Data { get; set; }
         public class GetDashboardResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The instance ID.</para>
+            /// <para>The unique identifier of the gateway.</para>
             /// 
             /// <b>Example:</b>
             /// <para>gw-co370icmjeu****</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The error code.</para>
+        /// <para>The backend error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>

@@ -10,77 +10,107 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class AiSecurityGuardConfig : TeaModel {
         /// <summary>
-        /// <para>The buffer limit in bytes for streaming content checks. The service buffers content up to this limit before sending it for analysis.</para>
+        /// <para>The response buffer size in KB. Default value: 1000. Valid values: 1 to 1500.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1000</para>
         /// </summary>
         [NameInMap("bufferLimit")]
         [Validation(Required=false)]
         public int? BufferLimit { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to check the content of incoming requests.</para>
+        /// <para>Specifies whether to check request content.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("checkRequest")]
         [Validation(Required=false)]
         public bool? CheckRequest { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to check incoming requests for image content. Requires <c>checkRequest</c> to be <c>true</c>.</para>
+        /// <para>Specifies whether to check request images.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("checkRequestImage")]
         [Validation(Required=false)]
         public bool? CheckRequestImage { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to check the content of outgoing responses.</para>
+        /// <para>Specifies whether to check response content.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("checkResponse")]
         [Validation(Required=false)]
         public bool? CheckResponse { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to check outgoing responses for image content. Requires <c>checkResponse</c> to be <c>true</c>.</para>
+        /// <para>Specifies whether to check response images.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("checkResponseImage")]
         [Validation(Required=false)]
         public bool? CheckResponseImage { get; set; }
 
         /// <summary>
-        /// <para>Specifies consumer-specific configurations for the request check service.</para>
+        /// <para>The consumer-level request detection service configuration.</para>
         /// </summary>
         [NameInMap("consumerRequestCheckService")]
         [Validation(Required=false)]
         public List<AiSecurityGuardConfigConsumerRequestCheckService> ConsumerRequestCheckService { get; set; }
         public class AiSecurityGuardConfigConsumerRequestCheckService : TeaModel {
             /// <summary>
-            /// <para>The match type for identifying the consumer. For example: <c>header</c> or <c>query</c>.</para>
+            /// <para>The consumer matching method.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>exact</para>
             /// </summary>
             [NameInMap("matchType")]
             [Validation(Required=false)]
             public string MatchType { get; set; }
 
             /// <summary>
-            /// <para>The modality type for this rule. For example: <c>text</c> or <c>image</c>.</para>
+            /// <para>The modality type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Text</para>
             /// </summary>
             [NameInMap("modalityType")]
             [Validation(Required=false)]
             public string ModalityType { get; set; }
 
             /// <summary>
-            /// <para>The identifier of the consumer.</para>
+            /// <para>The consumer name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>consumer-a</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The identifier of the request check service for text content for this consumer.</para>
+            /// <para>The check service.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>query_security_check</para>
             /// </summary>
             [NameInMap("requestCheckService")]
             [Validation(Required=false)]
             public string RequestCheckService { get; set; }
 
             /// <summary>
-            /// <para>The identifier of the request check service for image content for this consumer.</para>
+            /// <para>The image check service.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>img_query_guard</para>
             /// </summary>
             [NameInMap("requestImageCheckService")]
             [Validation(Required=false)]
@@ -89,42 +119,57 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>Specifies consumer-specific configurations for the response check service.</para>
+        /// <para>The consumer-level response detection service configuration.</para>
         /// </summary>
         [NameInMap("consumerResponseCheckService")]
         [Validation(Required=false)]
         public List<AiSecurityGuardConfigConsumerResponseCheckService> ConsumerResponseCheckService { get; set; }
         public class AiSecurityGuardConfigConsumerResponseCheckService : TeaModel {
             /// <summary>
-            /// <para>The match type for identifying the consumer. For example: <c>header</c> or <c>query</c>.</para>
+            /// <para>The consumer matching method.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>exact</para>
             /// </summary>
             [NameInMap("matchType")]
             [Validation(Required=false)]
             public string MatchType { get; set; }
 
             /// <summary>
-            /// <para>The modality type for this rule. For example: <c>text</c> or <c>image</c>.</para>
+            /// <para>The modality type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Text</para>
             /// </summary>
             [NameInMap("modalityType")]
             [Validation(Required=false)]
             public string ModalityType { get; set; }
 
             /// <summary>
-            /// <para>The identifier of the consumer.</para>
+            /// <para>The consumer name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>consumer-a</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The identifier of the response check service for text content for this consumer.</para>
+            /// <para>The check service.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>query_security_check</para>
             /// </summary>
             [NameInMap("responseCheckService")]
             [Validation(Required=false)]
             public string ResponseCheckService { get; set; }
 
             /// <summary>
-            /// <para>The identifier of the response check service for image content for this consumer.</para>
+            /// <para>The image check service.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>img_query_guard</para>
             /// </summary>
             [NameInMap("responseImageCheckService")]
             [Validation(Required=false)]
@@ -133,35 +178,47 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>Specifies customized risk thresholds for different consumers.</para>
+        /// <para>The consumer-level risk level configuration.</para>
         /// </summary>
         [NameInMap("consumerRiskLevel")]
         [Validation(Required=false)]
         public List<AiSecurityGuardConfigConsumerRiskLevel> ConsumerRiskLevel { get; set; }
         public class AiSecurityGuardConfigConsumerRiskLevel : TeaModel {
             /// <summary>
-            /// <para>The risk level to apply to the specified consumer and risk type. For example: <c>low</c>, <c>medium</c>, or <c>high</c>.</para>
+            /// <para>The risk level.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>high</para>
             /// </summary>
             [NameInMap("level")]
             [Validation(Required=false)]
             public string Level { get; set; }
 
             /// <summary>
-            /// <para>The match type for identifying the consumer. For example: <c>header</c> or <c>query</c>.</para>
+            /// <para>The consumer matching method.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>exact</para>
             /// </summary>
             [NameInMap("matchType")]
             [Validation(Required=false)]
             public string MatchType { get; set; }
 
             /// <summary>
-            /// <para>The identifier of the consumer.</para>
+            /// <para>The consumer name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>consumer-a</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The type of risk to configure. For example: <c>profanity</c> or <c>spam</c>.</para>
+            /// <para>The risk dimension type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ContentModeration</para>
             /// </summary>
             [NameInMap("type")]
             [Validation(Required=false)]
@@ -170,7 +227,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>Controls whether the AI Security Guard plugin is enabled or disabled.</para>
+        /// <para>The plugin running status.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -180,63 +237,84 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public AiPluginStatus PluginStatus { get; set; }
 
         /// <summary>
-        /// <para>The identifier of the request check service for text content.</para>
+        /// <para>The ServiceCode of the request text detection service (system-injected default value).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>query_security_check</para>
         /// </summary>
         [NameInMap("requestCheckService")]
         [Validation(Required=false)]
         public string RequestCheckService { get; set; }
 
         /// <summary>
-        /// <para>The identifier of the request check service for image content.</para>
+        /// <para>The ServiceCode of the request image detection service (system-injected default value).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>img_query_guard</para>
         /// </summary>
         [NameInMap("requestImageCheckService")]
         [Validation(Required=false)]
         public string RequestImageCheckService { get; set; }
 
         /// <summary>
-        /// <para>The identifier of the response check service for text content.</para>
+        /// <para>The ServiceCode of the response text detection service (system-injected default value).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>response_security_check</para>
         /// </summary>
         [NameInMap("responseCheckService")]
         [Validation(Required=false)]
         public string ResponseCheckService { get; set; }
 
         /// <summary>
-        /// <para>The identifier of the response check service for image content.</para>
+        /// <para>The ServiceCode of the response image detection service (system-injected default value).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>img_response_guard</para>
         /// </summary>
         [NameInMap("responseImageCheckService")]
         [Validation(Required=false)]
         public string ResponseImageCheckService { get; set; }
 
         /// <summary>
-        /// <para>The risk alert level. The service triggers an alert when a detected risk meets or exceeds this level.</para>
+        /// <para>The global risk alert level.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>high</para>
         /// </summary>
         [NameInMap("riskAlertLevel")]
         [Validation(Required=false)]
         public string RiskAlertLevel { get; set; }
 
         /// <summary>
-        /// <para>Specifies general risk configurations.</para>
+        /// <para>The risk dimension configuration list (system-injected, normalized from ConsumerRiskLevel).</para>
         /// </summary>
         [NameInMap("riskConfig")]
         [Validation(Required=false)]
         public List<AiSecurityGuardConfigRiskConfig> RiskConfig { get; set; }
         public class AiSecurityGuardConfigRiskConfig : TeaModel {
             /// <summary>
-            /// <para>Contains rules that override the default settings for specific consumers.</para>
+            /// <para>The consumer-level matching rules.</para>
             /// </summary>
             [NameInMap("consumerRules")]
             [Validation(Required=false)]
             public AiSecurityGuardConfigRiskConfigConsumerRules ConsumerRules { get; set; }
             public class AiSecurityGuardConfigRiskConfigConsumerRules : TeaModel {
                 /// <summary>
-                /// <para>The location in the request to search for the <c>pattern</c>. For example: <c>header</c> or <c>query</c>.</para>
+                /// <para>The matching method.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Exact</para>
                 /// </summary>
                 [NameInMap("matchType")]
                 [Validation(Required=false)]
                 public string MatchType { get; set; }
 
                 /// <summary>
-                /// <para>The pattern for matching a consumer. This can be a regular expression.</para>
+                /// <para>The consumer matching pattern value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>consumer-a</para>
                 /// </summary>
                 [NameInMap("pattern")]
                 [Validation(Required=false)]
@@ -245,14 +323,20 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>The default risk level for this risk type. For example: <c>low</c>, <c>medium</c>, or <c>high</c>.</para>
+            /// <para>The risk level.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>high</para>
             /// </summary>
             [NameInMap("level")]
             [Validation(Required=false)]
             public string Level { get; set; }
 
             /// <summary>
-            /// <para>The type of risk to configure. For example: <c>profanity</c> or <c>spam</c>.</para>
+            /// <para>The risk dimension type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ContentModeration</para>
             /// </summary>
             [NameInMap("type")]
             [Validation(Required=false)]
@@ -261,7 +345,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The service address of the security check endpoint.</para>
+        /// <para>The security guardrail service address (green-cip endpoint). Use the VPC internal address when the gateway and security guardrail are in the same region.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="https://green-cip-vpc.cn-shanghai.aliyuncs.com">https://green-cip-vpc.cn-shanghai.aliyuncs.com</a></para>
         /// </summary>
         [NameInMap("serviceAddress")]
         [Validation(Required=false)]

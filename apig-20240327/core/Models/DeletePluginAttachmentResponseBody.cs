@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response message returned.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>76BDFFC7-0764-5168-B047-92EE0BC7FDDE</para>

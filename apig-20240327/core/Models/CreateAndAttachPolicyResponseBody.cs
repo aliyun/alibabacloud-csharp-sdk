@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class CreateAndAttachPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code returned.</para>
+        /// <para>Response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>Response data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public CreateAndAttachPolicyResponseBodyData Data { get; set; }
         public class CreateAndAttachPolicyResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The association information of the policy.</para>
+            /// <para>Attachment information.</para>
             /// </summary>
             [NameInMap("attachment")]
             [Validation(Required=false)]
             public Attachment Attachment { get; set; }
 
             /// <summary>
-            /// <para>The policy ID.</para>
+            /// <para>Policy ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>p-cq7l5s5lhtgi6qasrdc0</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The response message returned.</para>
+        /// <para>Response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which is used to trace the call link.</para>
+        /// <para>Request ID, used for tracing the API call chain.</para>
         /// 
         /// <b>Example:</b>
         /// <para>585657D2-1C20-5B8A-AF17-D727C6490BE4</para>

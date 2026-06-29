@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public ListDomainsResponseBodyData Data { get; set; }
         public class ListDomainsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>域名信息列表。</para>
+            /// <para>The list of domain name information.</para>
             /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]

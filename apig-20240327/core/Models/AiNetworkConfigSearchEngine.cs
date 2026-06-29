@@ -10,70 +10,97 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class AiNetworkConfigSearchEngine : TeaModel {
         /// <summary>
-        /// <para>Required. The API key to authenticate requests to the search engine service.</para>
+        /// <para>The API key of the search engine.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sk-xxx</para>
         /// </summary>
         [NameInMap("apiKey")]
         [Validation(Required=false)]
         public string ApiKey { get; set; }
 
         /// <summary>
-        /// <para>The search content mode, which determines how the service interprets the query and returns results.</para>
+        /// <para>Quark-specific: the content mode.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>summary</para>
         /// </summary>
         [NameInMap("contentMode")]
         [Validation(Required=false)]
         public string ContentMode { get; set; }
 
         /// <summary>
-        /// <para>The number of search results to return. If this parameter is omitted, the service uses a default value.</para>
+        /// <para>The number of results returned per search.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5</para>
         /// </summary>
         [NameInMap("count")]
         [Validation(Required=false)]
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>The endpoint URL for the search engine service.</para>
+        /// <para>The endpoint of the search engine.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="https://cloud-iqs.aliyuncs.com">https://cloud-iqs.aliyuncs.com</a></para>
         /// </summary>
         [NameInMap("endpoint")]
         [Validation(Required=false)]
         public string Endpoint { get; set; }
 
         /// <summary>
-        /// <para>The industry context for tailoring search results to a specific domain.</para>
+        /// <para>Quark-specific: the industry filter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>互联网</para>
         /// </summary>
         [NameInMap("industry")]
         [Validation(Required=false)]
         public string Industry { get; set; }
 
         /// <summary>
-        /// <para>Optional. A key-value map for service-specific parameters not covered by the standard configuration.</para>
+        /// <para>The search engine-specific parameters in key-value pair format.</para>
         /// </summary>
         [NameInMap("optionArgs")]
         [Validation(Required=false)]
         public Dictionary<string, string> OptionArgs { get; set; }
 
         /// <summary>
-        /// <para>The starting offset for the search results, used for pagination. For example, a value of 10 skips the first 10 results. The default is 0.</para>
+        /// <para>The offset of search results.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("start")]
         [Validation(Required=false)]
         public int? Start { get; set; }
 
         /// <summary>
-        /// <para>The time range for filtering results by their creation or modification date.</para>
+        /// <para>Quark-specific: the time range filter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7d</para>
         /// </summary>
         [NameInMap("timeRange")]
         [Validation(Required=false)]
         public string TimeRange { get; set; }
 
         /// <summary>
-        /// <para>The request timeout in milliseconds. If a request exceeds this time, the service terminates it.</para>
+        /// <para>The API call timeout period, in milliseconds.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5000</para>
         /// </summary>
         [NameInMap("timeoutMillisecond")]
         [Validation(Required=false)]
         public int? TimeoutMillisecond { get; set; }
 
         /// <summary>
-        /// <para>Specifies the search engine service to use.</para>
+        /// <para>The search engine type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>aliyunQuark</para>
         /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]

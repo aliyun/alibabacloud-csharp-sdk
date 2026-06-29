@@ -10,84 +10,108 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class GetConsumerResponseBody : TeaModel {
         /// <summary>
-        /// <para>O código de resposta.</para>
+        /// <para>The response code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Ok</para>
         /// </summary>
         [NameInMap("code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Os dados de resposta.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetConsumerResponseBodyData Data { get; set; }
         public class GetConsumerResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>As configurações de autenticação por par de AccessKey.</para>
+            /// <para>The AK/SK identity authentication configurations.</para>
             /// </summary>
             [NameInMap("akSkIdentityConfigs")]
             [Validation(Required=false)]
             public List<AkSkIdentityConfig> AkSkIdentityConfigs { get; set; }
 
             /// <summary>
-            /// <para>A configuração de autenticação de chave de API.</para>
+            /// <para>The API key identity authentication configuration.</para>
             /// </summary>
             [NameInMap("apiKeyIdentityConfig")]
             [Validation(Required=false)]
             public ApiKeyIdentityConfig ApiKeyIdentityConfig { get; set; }
 
             /// <summary>
-            /// <para>O ID do consumidor de API.</para>
+            /// <para>The consumer ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cs-cvgbtk6m1hkji5sb8dr0</para>
             /// </summary>
             [NameInMap("consumerId")]
             [Validation(Required=false)]
             public string ConsumerId { get; set; }
 
             /// <summary>
-            /// <para>O carimbo de data/hora de criação.</para>
+            /// <para>The creation timestamp.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1719386834548</para>
             /// </summary>
             [NameInMap("createTimestamp")]
             [Validation(Required=false)]
             public long? CreateTimestamp { get; set; }
 
             /// <summary>
-            /// <para>O status de publicação da API no ambiente atual.</para>
+            /// <para>The publish status of the API in the current environment.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>&quot;&quot;</para>
             /// </summary>
             [NameInMap("deployStatus")]
             [Validation(Required=false)]
             public string DeployStatus { get; set; }
 
             /// <summary>
-            /// <para>A descrição.</para>
+            /// <para>The description.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>测试专用消费者</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Indica se o consumidor de API está habilitado.</para>
+            /// <para>Indicates whether the consumer is enabled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("enable")]
             [Validation(Required=false)]
             public bool? Enable { get; set; }
 
             /// <summary>
-            /// <para>A configuração de autenticação JWT.</para>
+            /// <para>The JWT identity authentication configuration.</para>
             /// </summary>
             [NameInMap("jwtIdentityConfig")]
             [Validation(Required=false)]
             public JwtIdentityConfig JwtIdentityConfig { get; set; }
 
             /// <summary>
-            /// <para>O nome do consumidor de API.</para>
+            /// <para>The consumer name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>consumer-1</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>O carimbo de data/hora de atualização.</para>
+            /// <para>The update timestamp.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1719386834548</para>
             /// </summary>
             [NameInMap("updateTimestamp")]
             [Validation(Required=false)]
@@ -96,14 +120,20 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>A mensagem de resposta.</para>
+        /// <para>The response message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>O ID da solicitação.</para>
+        /// <para>Id of the request</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>880C61B3-7B90-5570-A3F7-D6D92C0E2D36</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]

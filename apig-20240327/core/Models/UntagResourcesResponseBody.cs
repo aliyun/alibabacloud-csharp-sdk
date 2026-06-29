@@ -8,16 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.APIG20240327.Models
 {
-    public class DeleteGatewaySecurityGroupRuleRequest : TeaModel {
+    public class UntagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether to cascade delete security group rules.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>585657D2-1C20-5B8A-AF17-D727C6490BE4</para>
         /// </summary>
-        [NameInMap("cascadingDelete")]
+        [NameInMap("requestId")]
         [Validation(Required=false)]
-        public bool? CascadingDelete { get; set; }
+        public string RequestId { get; set; }
 
     }
 

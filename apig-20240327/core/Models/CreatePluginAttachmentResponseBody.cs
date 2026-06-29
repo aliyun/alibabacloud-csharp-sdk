@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class CreatePluginAttachmentResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public CreatePluginAttachmentResponseBodyData Data { get; set; }
         public class CreatePluginAttachmentResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The plug-in ID.</para>
+            /// <para>The plug-in attachment ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pa-cvs7jpmm1hkgihaqv4a0</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The response message returned.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>EBCB8485-24F9-54CD-B258-CB15FDB27677</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListHttpApiRoutesRequest : TeaModel {
         /// <summary>
+        /// <para>The backend service name. You can use this name to filter routes.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test-svc</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string BackendServiceName { get; set; }
 
         /// <summary>
-        /// <para>The consumer authorization rule ID. If specified, the response includes only routes that are authorized by the specified rule.</para>
+        /// <para>Filters the API list by a specific consumer authorization rule ID. The response only includes authorized APIs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cas-xxx</para>
@@ -38,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string DeployStatuses { get; set; }
 
         /// <summary>
-        /// <para>The domain name ID used to filter routes.</para>
+        /// <para>Filters route information by domain name ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d-xxx</para>
@@ -58,7 +60,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string EnvironmentId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the query is for a deployment scenario.</para>
+        /// <para>Specifies whether the request is for a deployment scenario.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -88,7 +90,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The route name for fuzzy match.</para>
+        /// <para>Fuzzy match by route name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>item</para>
@@ -98,7 +100,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string NameLike { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from 1. Default value: 1.</para>
+        /// <para>The page number, starting from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -108,7 +110,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 10.</para>
+        /// <para>The page size. Valid values: 1 to 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -118,7 +120,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The route path for fuzzy match.</para>
+        /// <para>Fuzzy match by route path.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/v1</para>
@@ -128,7 +130,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string PathLike { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to include consumer authorization information in the response.</para>
+        /// <para>Includes consumer authorization information in the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -138,7 +140,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? WithAuthPolicyInfo { get; set; }
 
         /// <summary>
-        /// <para>The consumer ID. If specified, the response includes the authorization rule list for the specified consumer in each route.</para>
+        /// <para>Includes the authorization rule list of the specified consumer ID for each route in the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cs-xxx</para>
@@ -148,7 +150,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string WithConsumerInfoById { get; set; }
 
         /// <summary>
-        /// <para>The plug-in ID. If specified, the response includes the attachment information of the specified plug-in for each route.</para>
+        /// <para>Includes the mount information of the specified plug-in ID for each route in the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pl-xxx</para>

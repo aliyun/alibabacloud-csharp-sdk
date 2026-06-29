@@ -21,10 +21,18 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public List<DescribeRegionsResponseBodyData> Data { get; set; }
         public class DescribeRegionsResponseBodyData : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>China (Beijing)</para>
+            /// </summary>
             [NameInMap("localName")]
             [Validation(Required=false)]
             public string LocalName { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
+            /// </summary>
             [NameInMap("regionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }

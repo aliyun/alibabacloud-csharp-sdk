@@ -10,56 +10,79 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class AiCacheConfig : TeaModel {
         /// <summary>
-        /// <para>The cache key strategy, which determines how the system generates a unique key for each cacheable request. Valid values: <c>DEFAULT</c> and <c>CUSTOM</c>.</para>
+        /// <para>The cache key generation strategy.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
         /// </summary>
         [NameInMap("cacheKeyStrategy")]
         [Validation(Required=false)]
         public string CacheKeyStrategy { get; set; }
 
         /// <summary>
-        /// <para>The cache mode, which defines the caching behavior. Valid values are <c>NORMAL</c> for standard key-value caching and <c>SEMANTIC</c> for vector-based similarity caching.</para>
+        /// <para>The cache mode.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>exact</para>
         /// </summary>
         [NameInMap("cacheMode")]
         [Validation(Required=false)]
         public string CacheMode { get; set; }
 
         /// <summary>
-        /// <para>The cache Time-to-Live (TTL) in seconds. This specifies the duration that a cached response remains valid. After the TTL expires, the cache removes the response.</para>
+        /// <para>The cache expiration time, in seconds.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3600</para>
         /// </summary>
         [NameInMap("cacheTTL")]
         [Validation(Required=false)]
         public int? CacheTTL { get; set; }
 
         /// <summary>
-        /// <para>The embedding configuration. Specifies the service that converts text queries into vector embeddings for semantic search.</para>
+        /// <para>The embedding service configuration.</para>
         /// </summary>
         [NameInMap("embeddingConfig")]
         [Validation(Required=false)]
         public AiCacheConfigEmbeddingConfig EmbeddingConfig { get; set; }
         public class AiCacheConfigEmbeddingConfig : TeaModel {
             /// <summary>
-            /// <para>The model name to use for generating embeddings, such as <c>text-embedding-v1</c>.</para>
+            /// <para>The embedding model name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>text-embedding-v2</para>
             /// </summary>
             [NameInMap("modelName")]
             [Validation(Required=false)]
             public string ModelName { get; set; }
 
             /// <summary>
-            /// <para>The service ID of the deployed embedding model.</para>
+            /// <para>The embedding service ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>svc-xxx</para>
             /// </summary>
             [NameInMap("serviceId")]
             [Validation(Required=false)]
             public string ServiceId { get; set; }
 
             /// <summary>
-            /// <para>The request timeout in milliseconds. A request to the embedding service fails if it exceeds this duration. Default: <c>10000</c>.</para>
+            /// <para>The request timeout period, in milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5000</para>
             /// </summary>
             [NameInMap("timeout")]
             [Validation(Required=false)]
             public int? Timeout { get; set; }
 
             /// <summary>
-            /// <para>The type of embedding service. For example, specify <c>Tongyi</c> for Alibaba Cloud\&quot;s Tongyi Qwen model series.</para>
+            /// <para>The embedding service type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>dashscope</para>
             /// </summary>
             [NameInMap("type")]
             [Validation(Required=false)]
@@ -68,7 +91,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The plugin status. Set to <c>enable</c> to activate the plugin or <c>disable</c> to deactivate it.</para>
+        /// <para>The plugin running status.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -78,7 +101,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public AiPluginStatus PluginStatus { get; set; }
 
         /// <summary>
-        /// <para>The Redis configuration, required if you use a Redis instance as the cache backend.</para>
+        /// <para>The Redis configuration for exact cache count storage.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -88,49 +111,67 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public AiPolicyRedisConfig RedisConfig { get; set; }
 
         /// <summary>
-        /// <para>The vector configuration for semantic caching. This enables the cache to retrieve results based on semantic similarity instead of exact matches.</para>
+        /// <para>The vector database configuration.</para>
         /// </summary>
         [NameInMap("vectorConfig")]
         [Validation(Required=false)]
         public AiCacheConfigVectorConfig VectorConfig { get; set; }
         public class AiCacheConfigVectorConfig : TeaModel {
             /// <summary>
-            /// <para>The API key to authenticate with the vector database service.</para>
+            /// <para>The API key of the vector database.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>sk-xxx</para>
             /// </summary>
             [NameInMap("apiKey")]
             [Validation(Required=false)]
             public string ApiKey { get; set; }
 
             /// <summary>
-            /// <para>The unique ID of the collection or index within the vector database for search and storage.</para>
+            /// <para>The vector collection ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>col-xxx</para>
             /// </summary>
             [NameInMap("collectionId")]
             [Validation(Required=false)]
             public string CollectionId { get; set; }
 
             /// <summary>
-            /// <para>The endpoint URL of the vector database service.</para>
+            /// <para>The service address of the vector database.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>vdb-xxx.dashvector.aliyuncs.com</para>
             /// </summary>
             [NameInMap("serviceHost")]
             [Validation(Required=false)]
             public string ServiceHost { get; set; }
 
             /// <summary>
-            /// <para>The similarity threshold for a vector search to qualify as a cache hit. The value must be between 0.0 and 1.0. A higher value means a stricter similarity requirement.</para>
+            /// <para>The similarity threshold.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.95</para>
             /// </summary>
             [NameInMap("threshold")]
             [Validation(Required=false)]
             public float? Threshold { get; set; }
 
             /// <summary>
-            /// <para>The request timeout in milliseconds. A request to the vector service fails if it exceeds this duration. Default: <c>10000</c>.</para>
+            /// <para>The request timeout period, in milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5000</para>
             /// </summary>
             [NameInMap("timeout")]
             [Validation(Required=false)]
             public int? Timeout { get; set; }
 
             /// <summary>
-            /// <para>The type of vector database service. For example, specify <c>DashVector</c> for Alibaba Cloud\&quot;s vector search service.</para>
+            /// <para>The vector database type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>dashvector</para>
             /// </summary>
             [NameInMap("type")]
             [Validation(Required=false)]

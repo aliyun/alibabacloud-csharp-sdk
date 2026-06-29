@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class AiNetworkSearchConfig : TeaModel {
         /// <summary>
-        /// <para>Whether the network search feature is enabled by default.</para>
+        /// <para>Specifies whether the plug-in feature is enabled by default.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("defaultEnable")]
         [Validation(Required=false)]
         public bool? DefaultEnable { get; set; }
 
         /// <summary>
-        /// <para>The default language for the search query.</para>
+        /// <para>The default search language code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>zh-CN</para>
         /// </summary>
         [NameInMap("defaultLang")]
         [Validation(Required=false)]
         public string DefaultLang { get; set; }
 
         /// <summary>
-        /// <para>Whether to include references in the search results.</para>
+        /// <para>Specifies whether to add reference sources in the answer.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("needReference")]
         [Validation(Required=false)]
         public bool? NeedReference { get; set; }
 
         /// <summary>
-        /// <para>The status of the AI plugin.</para>
+        /// <para>The plug-in running status.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -41,14 +50,20 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public AiPluginStatus PluginStatus { get; set; }
 
         /// <summary>
-        /// <para>The format of the references.</para>
+        /// <para>The format template for reference content. The template must contain at least one %s placeholder.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>参考来源:\n%s</para>
         /// </summary>
         [NameInMap("referenceFormat")]
         [Validation(Required=false)]
         public string ReferenceFormat { get; set; }
 
         /// <summary>
-        /// <para>The location of the references in the response.</para>
+        /// <para>The reference location.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>head</para>
         /// </summary>
         [NameInMap("referenceLocation")]
         [Validation(Required=false)]
@@ -62,49 +77,64 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public AiNetworkConfigSearchEngine SearchEngineConfig { get; set; }
 
         /// <summary>
-        /// <para>A list of search engine configurations for the network search.</para>
+        /// <para>The list of search engines (multi-engine configuration).</para>
         /// </summary>
         [NameInMap("searchFrom")]
         [Validation(Required=false)]
         public List<AiNetworkConfigSearchEngine> SearchFrom { get; set; }
 
         /// <summary>
-        /// <para>Configuration for search query rewriting.</para>
+        /// <para>The search term rewriting configuration.</para>
         /// </summary>
         [NameInMap("searchRewrite")]
         [Validation(Required=false)]
         public AiNetworkSearchConfigSearchRewrite SearchRewrite { get; set; }
         public class AiNetworkSearchConfigSearchRewrite : TeaModel {
             /// <summary>
-            /// <para>Whether to enable the search query rewrite feature.</para>
+            /// <para>Specifies whether to enable search query rewriting.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("enable")]
             [Validation(Required=false)]
             public bool? Enable { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of rewritten queries to generate.</para>
+            /// <para>The maximum number of search queries after rewriting.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3</para>
             /// </summary>
             [NameInMap("maxCount")]
             [Validation(Required=false)]
             public int? MaxCount { get; set; }
 
             /// <summary>
-            /// <para>The name of the model to use for query rewriting.</para>
+            /// <para>The name of the model used for rewriting.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>qwen-max</para>
             /// </summary>
             [NameInMap("modelName")]
             [Validation(Required=false)]
             public string ModelName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the query rewriting service.</para>
+            /// <para>The ID of the rewriting service.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>svc-xxx</para>
             /// </summary>
             [NameInMap("serviceId")]
             [Validation(Required=false)]
             public string ServiceId { get; set; }
 
             /// <summary>
-            /// <para>Timeout for the query rewriting operation, in milliseconds.</para>
+            /// <para>The timeout period for the rewriting request, in milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5000</para>
             /// </summary>
             [NameInMap("timeoutMillisecond")]
             [Validation(Required=false)]

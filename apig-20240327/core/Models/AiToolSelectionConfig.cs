@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class AiToolSelectionConfig : TeaModel {
         /// <summary>
-        /// <para>Conditions for activating the tool selection feature.</para>
+        /// <para>The enable conditions configuration. Controls when the overall feature is triggered.</para>
         /// </summary>
         [NameInMap("enableConditions")]
         [Validation(Required=false)]
         public AiToolSelectionConfigEnableConditions EnableConditions { get; set; }
         public class AiToolSelectionConfigEnableConditions : TeaModel {
             /// <summary>
-            /// <para>The minimum number of tools required to activate tool selection.</para>
+            /// <para>The tool count threshold.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("toolCountThreshold")]
             [Validation(Required=false)]
@@ -26,7 +29,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The status of the AI tool selection plugin.</para>
+        /// <para>The plug-in running status.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -36,28 +39,34 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public AiPluginStatus PluginStatus { get; set; }
 
         /// <summary>
-        /// <para>Configuration for query rewriting, which optimizes user queries before tool selection.</para>
+        /// <para>The query rewrite configuration. Rewrites user queries before tool reranking to improve matching precision.</para>
         /// </summary>
         [NameInMap("queryRewriting")]
         [Validation(Required=false)]
         public AiToolSelectionConfigQueryRewriting QueryRewriting { get; set; }
         public class AiToolSelectionConfigQueryRewriting : TeaModel {
             /// <summary>
-            /// <para>Method for selecting the conversation context for query rewriting.</para>
+            /// <para>The context selection configuration.</para>
             /// </summary>
             [NameInMap("contextSelection")]
             [Validation(Required=false)]
             public AiToolSelectionConfigQueryRewritingContextSelection ContextSelection { get; set; }
             public class AiToolSelectionConfigQueryRewritingContextSelection : TeaModel {
                 /// <summary>
-                /// <para>The strategy for selecting the conversation context.</para>
+                /// <para>The context selection method.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>allMessages</para>
                 /// </summary>
                 [NameInMap("type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>The value associated with the context selection strategy, such as the number of messages to include.</para>
+                /// <para>The number of retained messages or characters.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>5</para>
                 /// </summary>
                 [NameInMap("value")]
                 [Validation(Required=false)]
@@ -66,49 +75,67 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>Whether to enable query rewriting.</para>
+            /// <para>Specifies whether query rewrite is enabled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("enabled")]
             [Validation(Required=false)]
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// <para>The fallback strategy used if query rewriting fails or returns no results.</para>
+            /// <para>The fallback strategy.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>skip</para>
             /// </summary>
             [NameInMap("fallbackStrategy")]
             [Validation(Required=false)]
             public string FallbackStrategy { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of tokens to generate for the rewritten query.</para>
+            /// <para>The maximum number of output tokens for rewriting.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>50</para>
             /// </summary>
             [NameInMap("maxOutputTokens")]
             [Validation(Required=false)]
             public int? MaxOutputTokens { get; set; }
 
             /// <summary>
-            /// <para>Model service configuration for query rewriting.</para>
+            /// <para>The rewriting model service configuration.</para>
             /// </summary>
             [NameInMap("modelService")]
             [Validation(Required=false)]
             public AiToolSelectionConfigQueryRewritingModelService ModelService { get; set; }
             public class AiToolSelectionConfigQueryRewritingModelService : TeaModel {
                 /// <summary>
-                /// <para>The name of the model used for query rewriting.</para>
+                /// <para>The model name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>gte-rerank-v2</para>
                 /// </summary>
                 [NameInMap("modelName")]
                 [Validation(Required=false)]
                 public string ModelName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the model service used for query rewriting.</para>
+                /// <para>The model service ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>svc-xxx</para>
                 /// </summary>
                 [NameInMap("serviceId")]
                 [Validation(Required=false)]
                 public string ServiceId { get; set; }
 
                 /// <summary>
-                /// <para>The request timeout in milliseconds for the query rewriting model service.</para>
+                /// <para>The request timeout period, in milliseconds.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>5000</para>
                 /// </summary>
                 [NameInMap("timeoutMillisecond")]
                 [Validation(Required=false)]
@@ -117,21 +144,27 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>Prompt configuration for query rewriting.</para>
+            /// <para>The prompt configuration.</para>
             /// </summary>
             [NameInMap("promptConfig")]
             [Validation(Required=false)]
             public AiToolSelectionConfigQueryRewritingPromptConfig PromptConfig { get; set; }
             public class AiToolSelectionConfigQueryRewritingPromptConfig : TeaModel {
                 /// <summary>
-                /// <para>The custom prompt template for query rewriting. This parameter is required if <c>type</c> is set to <c>custom</c>.</para>
+                /// <para>The custom prompt content.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>请将以下用户问题改写为...</para>
                 /// </summary>
                 [NameInMap("customPrompt")]
                 [Validation(Required=false)]
                 public string CustomPrompt { get; set; }
 
                 /// <summary>
-                /// <para>The type of prompt, such as default or custom.</para>
+                /// <para>The prompt type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>builtIn</para>
                 /// </summary>
                 [NameInMap("type")]
                 [Validation(Required=false)]
@@ -140,14 +173,17 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>Conditions for activating query rewriting.</para>
+            /// <para>The trigger condition configuration.</para>
             /// </summary>
             [NameInMap("triggerConditions")]
             [Validation(Required=false)]
             public AiToolSelectionConfigQueryRewritingTriggerConditions TriggerConditions { get; set; }
             public class AiToolSelectionConfigQueryRewritingTriggerConditions : TeaModel {
                 /// <summary>
-                /// <para>The minimum number of messages in the conversation history required to activate query rewriting.</para>
+                /// <para>The number of conversation turns after which rewriting is triggered.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("messageCountThreshold")]
                 [Validation(Required=false)]
@@ -158,49 +194,64 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>Configuration for tool reranking, which controls how tools are scored and filtered.</para>
+        /// <para>The tool reranking configuration. Uses a model to rank and filter candidate tools.</para>
         /// </summary>
         [NameInMap("toolReranking")]
         [Validation(Required=false)]
         public AiToolSelectionConfigToolReranking ToolReranking { get; set; }
         public class AiToolSelectionConfigToolReranking : TeaModel {
             /// <summary>
-            /// <para>The fallback strategy used if tool reranking fails or returns no results.</para>
+            /// <para>The fallback strategy upon failure.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>skip</para>
             /// </summary>
             [NameInMap("fallbackStrategy")]
             [Validation(Required=false)]
             public string FallbackStrategy { get; set; }
 
             /// <summary>
-            /// <para>The method for filtering tools after reranking.</para>
+            /// <para>The filtering method.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>topN</para>
             /// </summary>
             [NameInMap("filteringMethod")]
             [Validation(Required=false)]
             public string FilteringMethod { get; set; }
 
             /// <summary>
-            /// <para>Model service configuration for tool reranking.</para>
+            /// <para>The reranking model service configuration.</para>
             /// </summary>
             [NameInMap("modelService")]
             [Validation(Required=false)]
             public AiToolSelectionConfigToolRerankingModelService ModelService { get; set; }
             public class AiToolSelectionConfigToolRerankingModelService : TeaModel {
                 /// <summary>
-                /// <para>The name of the model used for reranking.</para>
+                /// <para>The model name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>gte-rerank-v2</para>
                 /// </summary>
                 [NameInMap("modelName")]
                 [Validation(Required=false)]
                 public string ModelName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the model service used for reranking.</para>
+                /// <para>The model service ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>svc-xxx</para>
                 /// </summary>
                 [NameInMap("serviceId")]
                 [Validation(Required=false)]
                 public string ServiceId { get; set; }
 
                 /// <summary>
-                /// <para>The request timeout in milliseconds for the reranking model service.</para>
+                /// <para>The request timeout period, in milliseconds.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>5000</para>
                 /// </summary>
                 [NameInMap("timeoutMillisecond")]
                 [Validation(Required=false)]
@@ -209,21 +260,30 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>The minimum score a tool must have to be selected. Tools with scores below this threshold are filtered out.</para>
+            /// <para>The score threshold.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.5</para>
             /// </summary>
             [NameInMap("scoreThreshold")]
             [Validation(Required=false)]
             public float? ScoreThreshold { get; set; }
 
             /// <summary>
-            /// <para>The percentage of top-ranked tools to select. This parameter only applies when <c>filteringMethod</c> is set to a percentage-based method.</para>
+            /// <para>The retention percentage.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>50</para>
             /// </summary>
             [NameInMap("topKPercent")]
             [Validation(Required=false)]
             public int? TopKPercent { get; set; }
 
             /// <summary>
-            /// <para>The number of top-ranked tools to select. This parameter only applies when <c>filteringMethod</c> is set to a count-based method.</para>
+            /// <para>The retention count.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5</para>
             /// </summary>
             [NameInMap("topNCount")]
             [Validation(Required=false)]

@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class GetDashboardRequest : TeaModel {
         /// <summary>
-        /// <para>The language. Valid values: zh (Chinese) and en (English).</para>
+        /// <para>The language. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh: Chinese</description></item>
+        /// <item><description>en: English</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -20,7 +24,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>API ID</para>
+        /// <para>The unique ID of the API.</para>
         /// 
         /// <b>Example:</b>
         /// <para>api-ctl7no6m1h****</para>
@@ -30,7 +34,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ApiId { get; set; }
 
         /// <summary>
-        /// <para>The filter configurations.</para>
+        /// <para>The filter configuration.</para>
         /// </summary>
         [NameInMap("filter")]
         [Validation(Required=false)]
@@ -49,10 +53,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The dashboard name.</para>
+        /// <para>The dashboard name. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>LOG: access logs</description></item>
-        /// <item><description>PLUGIN: plug-in logs</description></item>
+        /// <item><description>LOG: access log</description></item>
+        /// <item><description>PLUGIN: plug-in log</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -95,7 +99,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <summary>
         /// <para>The dashboard source. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SLS: Simple Log Service</description></item>
+        /// <item><description>SLS: log dashboard</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
