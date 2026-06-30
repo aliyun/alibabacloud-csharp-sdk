@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>Make sure that the client token is unique for each request. The token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID is different for each request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -34,10 +34,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and performs the actual request.</description></item>
+        /// <item><description><para><b>true</b>: performs a dry run. The system checks the required parameters, request format, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned. The system does not change the configuration of the ECR connection.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): sends a normal request. If the request passes the check, the system changes the configuration of the ECR connection.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,7 +50,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ECR.</para>
+        /// <para>The ID of the ECR instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -59,9 +61,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string EcrId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account to which the ECR belongs. By default, the ID of the current Alibaba Cloud account is specified.</para>
+        /// <para>The ID of the Alibaba Cloud account to which the ECR instance belongs. The default value is the ID of the current Alibaba Cloud account.</para>
         /// <remarks>
-        /// <para> If you want to connect to a network instance that belongs to a different account, this parameter is required.</para>
+        /// <para>If you want to connect to a network instance that belongs to another Alibaba Cloud account, this parameter is required.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -80,7 +82,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the transit router.</para>
+        /// <para>The ID of the region where the transit router is deployed.</para>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</para>
         /// 
         /// <b>Example:</b>
@@ -100,7 +102,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The tags.</para>
-        /// <para>You can specify at most 20 tags in each call.</para>
+        /// <para>You can specify up to 20 tags in each call.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -108,8 +110,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public class CreateTransitRouterEcrAttachmentRequestTag : TeaModel {
             /// <summary>
             /// <para>The tag key.</para>
-            /// <para>The tag key cannot be an empty string. The tag key can be up to 64 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
-            /// <para>You can specify at most 20 tag keys in each call.</para>
+            /// <para>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https:// </c>.</para>
+            /// <para>You can specify up to 20 tag keys.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tagtest</para>
@@ -120,8 +122,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
             /// <summary>
             /// <para>The tag value.</para>
-            /// <para>The tag value can be an empty string or up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
-            /// <para>Each key-value pair must be unique. You can specify values for at most 20 tag keys in each call.</para>
+            /// <para>The tag value can be empty or up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https:// </c>.</para>
+            /// <para>Each tag key must have a unique tag value. You can specify up to 20 tag values.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tagtest</para>
@@ -134,7 +136,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The description of the ECR connection.</para>
-        /// <para>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http:// or https://.</para>
+        /// <para>The description can be empty or 1 to 256 characters in length, and cannot start with http\:// or https\://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testdesc</para>
@@ -145,7 +147,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The name of the ECR connection.</para>
-        /// <para>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</para>
+        /// <para>The name can be empty or 1 to 128 characters in length, and cannot start with http\:// or https\://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nametest</para>

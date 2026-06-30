@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class CreateTransitRouterShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>The ID of the CEN instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string CenId { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.
-        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>Generate a client token to make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not set this parameter, the system automatically uses <b>RequestId</b> as <b>ClientToken</b>. The value of <b>RequestId</b> of each API request is different.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -35,10 +35,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to check the request without performing the operation. Check items include permissions and the status of the specified cloud resources. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run. The dry run checks permissions and whether the required parameters are specified. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (default): sends the request. If the request passes the check, an Enterprise Edition transit router is created.</description></item>
-        /// <item><description><b>true</b>: checks the request but does not create the Enterprise Edition transit router. If you use this value, the system checks whether the required parameters are set, and whether the request syntax is valid. If the request fails the check, an error message is returned. If the request passes the check, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><para><b>false</b> (default): sends the request and creates the instance after the request passes the check.</para>
+        /// </description></item>
+        /// <item><description><para><b>true</b>: sends a dry run request to check the parameters without creating the instance. The system checks the required parameters, request format, and permissions. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -79,10 +81,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>Specifies whether to enable the multicast feature for the Enterprise Edition transit router. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (default): no</description></item>
-        /// <item><description><b>true</b>: yes</description></item>
+        /// <item><description><para><b>false</b> (default): disables the multicast feature.</para>
+        /// </description></item>
+        /// <item><description><para><b>true</b>: enables the multicast feature.</para>
+        /// </description></item>
         /// </list>
-        /// <para>The multicast feature is supported only in specific regions. You can call <a href="https://help.aliyun.com/document_detail/261356.html">ListTransitRouterAvailableResource</a> to query the regions that support multicast.</para>
+        /// <para>The multicast feature is supported only in some regions. You can call the <a href="https://help.aliyun.com/document_detail/261356.html">ListTransitRouterAvailableResource</a> operation to query the regions that support multicast.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -92,7 +96,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public bool? SupportMulticast { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The tag.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -100,8 +104,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public class CreateTransitRouterShrinkRequestTag : TeaModel {
             /// <summary>
             /// <para>The tag key.</para>
-            /// <para>The tag keys cannot be an empty string. The tag key can be up to 64 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
-            /// <para>You can specify at most 20 tag keys in each call.</para>
+            /// <para>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https:// </c>.</para>
+            /// <para>You can specify at most 20 tag keys.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tagtest</para>
@@ -112,8 +116,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
             /// <summary>
             /// <para>The tag value.</para>
-            /// <para>The tag value can be an empty string or up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
-            /// <para>Each key-value must be unique. You can specify at most 20 tag values in each call.</para>
+            /// <para>The tag value can be empty or a string of up to 128 characters. It cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https:// </c>.</para>
+            /// <para>Each tag key must have a unique tag value. You can specify at most 20 tag values.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TagValue</para>
@@ -125,7 +129,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         }
 
         /// <summary>
-        /// <para>The CIDR blocks to be added to the transit router.</para>
+        /// <para>The CIDR blocks of the transit router.</para>
         /// </summary>
         [NameInMap("TransitRouterCidrList")]
         [Validation(Required=false)]
@@ -133,7 +137,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The description of the Enterprise Edition transit router instance.</para>
-        /// <para>The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</para>
+        /// <para>The description can be empty or 1 to 256 characters in length, and cannot start with http\:// or https\://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testdesc</para>
@@ -143,8 +147,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterDescription { get; set; }
 
         /// <summary>
-        /// <para>The name of the Enterprise Edition transit router.</para>
-        /// <para>The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</para>
+        /// <para>The name of the Enterprise Edition transit router instance.</para>
+        /// <para>The name can be empty or 1 to 128 characters in length, and cannot start with http\:// or https\://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testname</para>

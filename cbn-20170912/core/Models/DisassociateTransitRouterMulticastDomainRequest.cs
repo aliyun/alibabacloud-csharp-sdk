@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
     public class DisassociateTransitRouterMulticastDomainRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the value, but you must make sure that it is unique among all requests. The client token can contain only ASCII characters.</para>
+        /// <para>Generate a token from your client to make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -21,10 +21,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether only to precheck the API request. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: prechecks the request but does not disassociate the vSwitch from the multicast domain. The system checks the required parameters, the request format, and the service limits. If the request fails the check, an error message is returned. If the request passes the check, the DryRunOperation error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): sends the request. The vSwitch is disassociated from the multicast domain after the request passes the precheck.</description></item>
+        /// <item><description><para><b>true</b>: performs a dry run. The system checks the required parameters, request format, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): performs a normal request. If the request passes the check, the vSwitch is dissociated from the multicast domain.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -51,8 +53,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the virtual private cloud (VPC) connection.</para>
-        /// <para>A connection ID is generated after a VPC to which the vSwitch belongs is connected to a transit router.</para>
+        /// <para>The ID of the VPC connection.</para>
+        /// <para>The VPC connection is created after the Virtual Private Cloud (VPC) to which the vSwitch belongs is connected to the transit router.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -74,7 +76,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterMulticastDomainId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of vSwitches.</para>
+        /// <para>The list of vSwitch IDs.</para>
         /// </summary>
         [NameInMap("VSwitchIds")]
         [Validation(Required=false)]

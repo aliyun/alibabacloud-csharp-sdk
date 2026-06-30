@@ -67,8 +67,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>If no value is specified for <b>MaxResults</b>, query results are returned in one batch. The value of <b>MaxResults</b> indicates the total number of entries.</description></item>
-        /// <item><description>If a value is specified for <b>MaxResults</b>, it indicates that you need to query results in batches. The value of <b>MaxResults</b> in the response indicates the number of entries in the current batch.</description></item>
+        /// <item><description><para>The maximum number of entries to return per page.</para>
+        /// </description></item>
+        /// <item><description><para>This value is the same as the <b>MaxResults</b> value that you specified in the request.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -79,10 +81,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> is empty, no next page exists.</description></item>
-        /// <item><description>If a value of <b>NextToken</b> was returned in the previous query, specify the value to obtain the next set of results.</description></item>
+        /// <item><description><para>If the <b>NextToken</b> parameter is empty, no more results are available.</para>
+        /// </description></item>
+        /// <item><description><para>To retrieve the next page, set the NextToken request parameter to this value.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -103,7 +107,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

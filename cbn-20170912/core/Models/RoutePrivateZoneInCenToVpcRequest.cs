@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class RoutePrivateZoneInCenToVpcRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the region where PrivateZone is accessed.</para>
-        /// <para>This region refers to the region in which PrivateZone is accessed by clients.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</para>
+        /// <para>The ID of the region from which the PrivateZone service is accessed.</para>
+        /// <para>The access region is the region from which the PrivateZone service is accessed.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to obtain the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string CenId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where PrivateZone is deployed.</para>
+        /// <para>The ID of the region where the PrivateZone service is located.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string HostRegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC that is associated with PrivateZone.</para>
+        /// <para>The ID of the VPC instance that is associated with the PrivateZone service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

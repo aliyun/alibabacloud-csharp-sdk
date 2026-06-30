@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <para>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Guangzhou Testing</para>
+            /// <para>Guangzhou test</para>
             /// </summary>
             [NameInMap("TrafficMatchRuleName")]
             [Validation(Required=false)]
@@ -240,7 +240,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <para>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http:// or https://.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Hangzhou-to-Qingdao CAT</para>
+            /// <para>Hangzhou-Qingdao CAT</para>
             /// </summary>
             [NameInMap("TrafficMatchRuleDescription")]
             [Validation(Required=false)]

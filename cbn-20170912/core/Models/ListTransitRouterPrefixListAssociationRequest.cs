@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListTransitRouterPrefixListAssociationRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the next hop.</para>
+        /// <para>The ID of the next hop connection.</para>
         /// <remarks>
-        /// <para>Set the value to <b>BlackHole</b> if you want to query the prefix list that generates blackhole routes.</para>
+        /// <para>If you want to query information about the prefix list that is used to generate blackhole routes, set this parameter to <b>BlackHole</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string NextHop { get; set; }
 
         /// <summary>
-        /// <para>The ID of the network instance associated with the next hop connection.</para>
+        /// <para>The ID of the network instance that is associated with the next hop connection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-6eh7fp9hdqa2wv85t****</para>
@@ -33,12 +33,16 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string NextHopInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the next hop. Valid values:</para>
+        /// <para>The next hop type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>BlackHole</b>: The prefix list that generates blackhole routes.</description></item>
-        /// <item><description><b>VPC</b>: The prefix list whose next hop is a virtual private cloud (VPC) connection.</description></item>
-        /// <item><description><b>VBR</b>: The prefix list whose next hop is a virtual border router (VBR) connection.</description></item>
-        /// <item><description><b>TR</b>: The prefix list whose next hop is an inter-region connection on the transit router.</description></item>
+        /// <item><description><para><b>BlackHole</b>: queries the prefix lists that generate blackhole routes.</para>
+        /// </description></item>
+        /// <item><description><para><b>VPC</b>: queries the prefix lists whose next hop is a Virtual Private Cloud (VPC) connection.</para>
+        /// </description></item>
+        /// <item><description><para><b>VBR</b>: queries the prefix lists whose next hop is a virtual border router (VBR) connection.</para>
+        /// </description></item>
+        /// <item><description><para><b>TR</b>: queries the prefix lists whose next hop is an inter-region connection.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -97,8 +101,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string PrefixListId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the transit router is deployed.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the transit router.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to obtain the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -117,10 +121,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The status of the prefix list. Valid values:</para>
+        /// <para>The status of the prefix list.</para>
         /// <list type="bullet">
-        /// <item><description><b>Active</b></description></item>
-        /// <item><description><b>Updating</b></description></item>
+        /// <item><description><para><b>Active</b>: The prefix list is active.</para>
+        /// </description></item>
+        /// <item><description><para><b>Updating</b>: The prefix list is being updated.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

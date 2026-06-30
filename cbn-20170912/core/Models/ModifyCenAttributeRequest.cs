@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The description of the CEN instance.</para>
-        /// <para>The description must be 2 to 256 characters in length. It must start with a letter or Chinese character and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The description can be empty or must be 1 to 256 characters in length. The description cannot start with http\:// or https\://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cen</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The name of the CEN instance.</para>
-        /// <para>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The name can be empty or must be 1 to 128 characters in length. The name cannot start with http\:// or https\://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -51,8 +51,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The level of CIDR block overlapping.</para>
-        /// <para>Set the value to <b>REDUCED</b> (default). This value specifies that CIDR blocks can overlap but cannot be the same.</para>
+        /// <para>The level of CIDR block overlap.</para>
+        /// <para>Set the value to <b>REDUCED</b>. This is the default value. This value specifies that CIDR blocks can overlap but cannot be identical.</para>
         /// 
         /// <b>Example:</b>
         /// <para>REDUCED</para>

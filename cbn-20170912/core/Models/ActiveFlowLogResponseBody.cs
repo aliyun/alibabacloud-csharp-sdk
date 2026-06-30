@@ -22,8 +22,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>Indicates whether the call is successful.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: yes</description></item>
-        /// <item><description><b>false</b>: no</description></item>
+        /// <item><description><para><b>true</b>: yes</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: no</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeChildInstanceRegionsRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values: zh-CN (Chinese, which is the default language), en-US (English), and ja (Japanese).</para>
+        /// <para>The language of the response. Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh-CN</para>
@@ -30,9 +30,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>The type of the network instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>VPC</b>: virtual private cloud (VPC)</description></item>
-        /// <item><description><b>VBR</b>: virtual border router (VBR)</description></item>
-        /// <item><description><b>CCN</b>: Cloud Connect Network (CCN) instance</description></item>
+        /// <item><description><para><b>VPC</b>: a virtual private cloud (VPC).</para>
+        /// </description></item>
+        /// <item><description><para><b>VBR</b>: a virtual border router (VBR).</para>
+        /// </description></item>
+        /// <item><description><para><b>CCN</b>: a Cloud Connect Network (CCN) instance.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

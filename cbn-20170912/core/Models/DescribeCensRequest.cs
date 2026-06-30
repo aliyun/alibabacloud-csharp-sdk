@@ -11,20 +11,22 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
     public class DescribeCensRequest : TeaModel {
         /// <summary>
         /// <para>The filter conditions.</para>
-        /// <para>You can specify at most five filter conditions in each call.</para>
+        /// <para>You can specify up to five filter conditions.</para>
         /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public List<DescribeCensRequestFilter> Filter { get; set; }
         public class DescribeCensRequestFilter : TeaModel {
             /// <summary>
-            /// <para>The key of the filter. Valid values:</para>
+            /// <para>The filter key. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>CenId</b>: the ID of a CEN instance.</description></item>
-            /// <item><description><b>Name</b>: the name of a CEN instance.</description></item>
+            /// <item><description><para><b>CenId</b>: The ID of the CEN instance.</para>
+            /// </description></item>
+            /// <item><description><para><b>Name</b>: The name of the CEN instance.</para>
+            /// </description></item>
             /// </list>
-            /// <para>By default, the logical operator among filter conditions is <b>AND</b>. Information about a CEN instance is returned only if the CEN instance matches all filter conditions.</para>
-            /// <para>You can specify at most five filter conditions in each call.</para>
+            /// <para>The logical relationship among multiple filter conditions is <b>AND</b>. All filter conditions must be met.</para>
+            /// <para>You can specify up to five filter conditions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CenId</para>
@@ -34,9 +36,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the filter condition.</para>
-            /// <para>Specify a filter value based on the <b>Key</b> parameter. You can specify multiple values for a filter <b>key</b>. The logical operator among multiple filter values is <b>OR</b>. If a CEN instance matches one or more of the values that you specify, the CEN instance matches the filter condition.</para>
-            /// <para>You can specify at most five values in each filter condition.</para>
+            /// <para>The filter value.</para>
+            /// <para>Specify the filter value based on the <b>Key</b>. You can specify multiple values for a key. The logical relationship among the values is <b>OR</b>. A resource is a match if it meets any of the specified values.</para>
+            /// <para>You can specify up to five filter values for a filter condition.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cen-0xyeagctz5sfg9****</para>
@@ -56,7 +58,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -95,16 +97,16 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The tags.</para>
-        /// <para>You can specify at most 20 tags in each call.</para>
+        /// <para>You can specify up to 20 tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeCensRequestTag> Tag { get; set; }
         public class DescribeCensRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag keys.</para>
-            /// <para>The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with <c>acs:</c> or <c>aliyun</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
-            /// <para>You can specify at most 20 tag keys.</para>
+            /// <para>The tag key of the resource.</para>
+            /// <para>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>You can specify up to 20 tag keys.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tagtest</para>
@@ -114,9 +116,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag values.</para>
-            /// <para>The tag values can be 0 to 128 characters in length, and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
-            /// <para>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</para>
+            /// <para>The tag value of the resource.</para>
+            /// <para>The tag value can be an empty string or a string of up to 128 characters. It cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>Each tag key must have a corresponding tag value. You can specify up to 20 tag values.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tagtest</para>

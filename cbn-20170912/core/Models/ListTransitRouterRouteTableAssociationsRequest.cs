@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that determines the start point of the query. Valid values:</para>
+        /// <para>The token for the next query.</para>
         /// <list type="bullet">
-        /// <item><description>If this is your first query or no subsequent query is to be sent, ignore this parameter.</description></item>
-        /// <item><description>If a next query is to be sent, set the value to the value of <b>NextToken</b> that is returned from the last call.</description></item>
+        /// <item><description><para>You do not need to specify this parameter for the first query.</para>
+        /// </description></item>
+        /// <item><description><para>For a subsequent query, set this parameter to the <b>NextToken</b> value returned from the previous query.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -50,11 +52,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The status of the associated forwarding correlation. Valid values:</para>
+        /// <para>The status of the association.</para>
         /// <list type="bullet">
-        /// <item><description><b>Active</b>: The associated forwarding correlation is available.</description></item>
-        /// <item><description><b>Associating</b>: The associated forwarding correlation is being created.</description></item>
-        /// <item><description><b>Dissociating</b>: The associated forwarding correlation is being deleted.</description></item>
+        /// <item><description><para><b>Active</b>: The association is active.</para>
+        /// </description></item>
+        /// <item><description><para><b>Associating</b>: The association is being created.</para>
+        /// </description></item>
+        /// <item><description><para><b>Dissociating</b>: The association is being deleted.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -75,7 +80,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterAttachmentId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the next hop.</para>
+        /// <para>The ID of the next hop resource.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp1h8vbrbcgohcju5****</para>
@@ -85,12 +90,16 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterAttachmentResourceId { get; set; }
 
         /// <summary>
-        /// <para>The type of next hop. Valid values:</para>
+        /// <para>The type of the next hop resource.</para>
         /// <list type="bullet">
-        /// <item><description><b>VPC</b>: virtual private cloud (VPC)</description></item>
-        /// <item><description><b>VBR</b>: virtual border router (VBR)</description></item>
-        /// <item><description><b>TR</b>: transit router</description></item>
-        /// <item><description><b>VPN</b>: VPN attachment</description></item>
+        /// <item><description><para><b>VPC</b>: virtual private cloud (VPC).</para>
+        /// </description></item>
+        /// <item><description><para><b>VBR</b>: virtual border router (VBR).</para>
+        /// </description></item>
+        /// <item><description><para><b>TR</b>: transit router.</para>
+        /// </description></item>
+        /// <item><description><para><b>VPN</b>: VPN connection.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

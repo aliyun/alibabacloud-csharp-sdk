@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DeleteCenChildInstanceRouteEntryToCenRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the CEN instance.</para>
+        /// <para>The ID of the Cloud Enterprise Network (CEN) instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>The ID of the Alibaba Cloud account to which the network instance belongs.</para>
         /// <remarks>
-        /// <para>If the network instance and the CEN instance belong to different Alibaba Cloud accounts, this parameter is required.</para>
+        /// <para>This parameter is required if the network instance belongs to another Alibaba Cloud account.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -59,8 +59,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>The type of the network instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>VPC</b>: a virtual private cloud (VPC)</description></item>
-        /// <item><description><b>VBR</b>: a virtual border router (VBR)</description></item>
+        /// <item><description><para><b>VPC</b>: a virtual private cloud (VPC).</para>
+        /// </description></item>
+        /// <item><description><para><b>VBR</b>: a virtual border router (VBR).</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -73,7 +75,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The destination CIDR block of the route.</para>
-        /// <para>Specify the value of this parameter in CIDR notation. Example: 192.168.10.0/24.</para>
+        /// <para>The destination CIDR block must be in CIDR format. Example: 192.168.10.0/24.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -100,7 +102,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the route table configured on the network instance.</para>
+        /// <para>The ID of the route table of the network instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

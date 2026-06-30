@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
         /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> is different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request may be different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,10 +24,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (default): performs a dry run and performs the actual request.</description></item>
-        /// <item><description><b>true</b>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><para><b>false</b> (default): sends a normal request. The route entry is created after the request passes the check.</para>
+        /// </description></item>
+        /// <item><description><para><b>true</b>: sends a dry run request to check the request. The route entry is not created. The system checks the required parameters, request format, and service limits. If the request fails the check, an error message is returned. If the request passes the check, the <c>DryRunOperation</c> error code is returned.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -54,8 +56,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The description of the route.</para>
-        /// <para>The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</para>
+        /// <para>The description of the route entry.</para>
+        /// <para>The description can be empty or 1 to 256 characters in length, and cannot start with http\:// or https\://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testdesc</para>
@@ -65,7 +67,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterRouteEntryDescription { get; set; }
 
         /// <summary>
-        /// <para>The destination CIDR block of the route entry. IPv4 and IPv6 addresses are supported.</para>
+        /// <para>The destination CIDR block of the route entry. IPv4 and IPv6 CIDR blocks are supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -76,8 +78,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterRouteEntryDestinationCidrBlock { get; set; }
 
         /// <summary>
-        /// <para>The name of the route.</para>
-        /// <para>The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</para>
+        /// <para>The name of the route entry.</para>
+        /// <para>The name can be empty or 1 to 128 characters in length, and cannot start with http\:// or https\://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testname</para>
@@ -87,7 +89,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterRouteEntryName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the network instance connection that you want to specify as the next hop.</para>
+        /// <para>The ID of the network instance connection that is associated with the next hop.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tr-attach-nls9fzkfat8934****</para>
@@ -97,10 +99,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterRouteEntryNextHopId { get; set; }
 
         /// <summary>
-        /// <para>The type of the next hop. Valid values:</para>
+        /// <para>The next hop type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>BlackHole</b>: routes network traffic to a black hole. All packets that match this route are dropped. If you select this option, you do not need to specify the next hop information.</description></item>
-        /// <item><description><b>Attachment</b>: routes network traffic to a network instance connection. If you select this option, you must specify the ID of the network instance connection. All packets that match this route are routed to the specified network instance connection.</description></item>
+        /// <item><description><para><b>BlackHole</b>: The route is a blackhole route. All packets to the destination CIDR block are dropped. You do not need to specify a next hop.</para>
+        /// </description></item>
+        /// <item><description><para><b>Attachment</b>: The next hop of the route is a network instance connection. You must specify the ID of the network instance connection. All packets to the destination CIDR block are forwarded to the specified network instance connection.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

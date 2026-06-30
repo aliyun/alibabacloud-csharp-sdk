@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string CenId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the attached network instance.</para>
+        /// <para>The ID of the network instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ChildInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the attached network instance is created.</para>
+        /// <para>The region ID of the network instance.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to obtain the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +44,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ChildInstanceRegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the route table of the attached network instance.</para>
+        /// <para>The route table ID of the network instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,8 +55,13 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ChildInstanceRouteTableId { get; set; }
 
         /// <summary>
-        /// <para>The type of the attached network instance.</para>
-        /// <para>Set the value to <b>VPC</b>, which indicates a virtual private cloud (VPC).</para>
+        /// <para>The type of the network instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>VPC</b>: virtual private cloud.</para>
+        /// </description></item>
+        /// <item><description><para><b>VBR</b>: virtual border router.</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,11 +72,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ChildInstanceType { get; set; }
 
         /// <summary>
-        /// <para>The destination CIDR block of the route that you want to withdraw.</para>
+        /// <para>The destination CIDR block of the route entry that you want to withdraw.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>172.XX.XX.0/24</para>
+        /// <para>172.16.1.0/24</para>
         /// </summary>
         [NameInMap("DestinationCidrBlock")]
         [Validation(Required=false)]

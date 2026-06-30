@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListCenInterRegionTrafficQosQueuesRequest : TeaModel {
         /// <summary>
-        /// <para>The filter works based on the actual bandwidth. Enter a positive integer. Unit: Mbit/s.</para>
+        /// <para>Filters the results by the actual bandwidth. Only positive integers are supported. Unit: Mbit/s.</para>
         /// </summary>
         [NameInMap("EffectiveBandwidthFilter")]
         [Validation(Required=false)]
         public ListCenInterRegionTrafficQosQueuesRequestEffectiveBandwidthFilter EffectiveBandwidthFilter { get; set; }
         public class ListCenInterRegionTrafficQosQueuesRequestEffectiveBandwidthFilter : TeaModel {
             /// <summary>
-            /// <para>The actual bandwidth is equal to or larger than the specified value.</para>
+            /// <para>The actual bandwidth is greater than or equal to the specified value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public long? Gte { get; set; }
 
             /// <summary>
-            /// <para>The actual bandwidth is equal to or smaller than the specified value.</para>
+            /// <para>The actual bandwidth is less than or equal to the specified value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b>.</para>
+        /// <para>The number of entries to return on each page. Valid values: 1 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -49,10 +49,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// <para>A pagination token. It is used in the next request to retrieve a new page of results.</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> is empty, no next page exists.</description></item>
-        /// <item><description>If a value of <b>NextToken</b> is returned, the value indicates the token that is used for the next query.</description></item>
+        /// <item><description><para>If <b>NextToken</b> is empty, no more results are returned.</para>
+        /// </description></item>
+        /// <item><description><para>If NextToken is not empty, the value of <b>NextToken</b> is used for the next query.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -89,8 +91,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TrafficQosPolicyId { get; set; }
 
         /// <summary>
-        /// <para>The description of the QoS queue.</para>
-        /// <para>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http:// or https://.</para>
+        /// <para>The description of the queue in the QoS policy.</para>
+        /// <para>The description can be empty or 1 to 256 characters in length. It cannot start with \<c>http\\://\\</c> or \<c>https\\://\\</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>qosQueueDescription</para>
@@ -100,7 +102,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TrafficQosQueueDescription { get; set; }
 
         /// <summary>
-        /// <para>The ID of the queue.</para>
+        /// <para>The ID of the queue in the QoS policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>qos-queue-siakjb2nn9gz5z****</para>
@@ -110,8 +112,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TrafficQosQueueId { get; set; }
 
         /// <summary>
-        /// <para>The name of the QoS queue.</para>
-        /// <para>The name must be 1 to 128 characters in length, and cannot start with http:// or https://.</para>
+        /// <para>The name of the queue in the QoS policy.</para>
+        /// <para>The name can be empty or 1 to 128 characters in length. It cannot start with \<c>http\\://\\</c> or \<c>https\\://\\</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>qosQueueName</para>

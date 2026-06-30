@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeGrantRulesToResourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The permissions that are granted to the CEN instance.</para>
+        /// <para>A list of permission records.</para>
         /// </summary>
         [NameInMap("GrantRules")]
         [Validation(Required=false)]
         public List<DescribeGrantRulesToResourceResponseBodyGrantRules> GrantRules { get; set; }
         public class DescribeGrantRulesToResourceResponseBodyGrantRules : TeaModel {
             /// <summary>
-            /// <para>The ID of the CEN instance.</para>
+            /// <para>The ID of the Cloud Enterprise Network (CEN) instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cen-44m0p68spvlrqq****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string CenId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account to which the CEN instance belongs.</para>
+            /// <para>The ID of the main account that owns the Cloud Enterprise Network (CEN) instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1250123456123456</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public long? CenOwnerId { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the permissions were granted. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The timestamp when the permission was granted. The value is in UTC and follows the ISO 8601 standard: <c>YYYY-MM-DDThh:mmZ</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-01-24T16:46Z</para>
@@ -55,10 +55,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string EffectiveOrderType { get; set; }
 
             /// <summary>
-            /// <para>The entity that pays the fees of the network instance. Valid values: Valid values:</para>
+            /// <para>The payer for the network instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>PayByCenOwner</b>: The fees of the connections and data forwarding on the transit router are paid by the Alibaba Cloud account to which the CEN instance belongs.</description></item>
-            /// <item><description><b>PayByResourceOwner</b>: The fees of the connections and data forwarding on the transit router are paid by the Alibaba Cloud account to which the network instance belongs.</description></item>
+            /// <item><description><para><b>PayByCenOwner</b>: The CEN instance owner pays the Transit Router connection and data processing fees for the network instance.</para>
+            /// </description></item>
+            /// <item><description><para><b>PayByResourceOwner</b>: The network instance owner pays the Transit Router connection and data processing fees for the network instance.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -72,8 +74,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>If no value is specified for <b>MaxResults</b>, query results are returned in one batch. The value of <b>MaxResults</b> indicates the total number of entries.</description></item>
-        /// <item><description>If a value is specified for <b>MaxResults</b>, query results are returned in batches. The value of <b>MaxResults</b> in the response indicates the number of entries in the current batch.</description></item>
+        /// <item><description><para>If the <b>MaxResults</b> parameter was not included in the request, this field indicates the total number of entries.</para>
+        /// </description></item>
+        /// <item><description><para>If the <b>MaxResults</b> parameter was included in the request, this field indicates the number of entries on the current page.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -84,10 +88,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The token to use in your next request to retrieve a new page of results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If the <b>NextToken</b> parameter is empty, no next page exists.</description></item>
-        /// <item><description>If a value is returned for <b>NextToken</b>, the value is the token that determines the start point of the next query.</description></item>
+        /// <item><description><para>If the <b>NextToken</b> parameter is empty, no more results are available.</para>
+        /// </description></item>
+        /// <item><description><para>If a value is returned for <b>NextToken</b>, use it for the next request to get the next page of results.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

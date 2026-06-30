@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ModifyFlowLogAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The CEN instance ID.</para>
+        /// <para>The ID of the Cloud Enterprise Network (CEN) instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cen-7qthudw0ll6jmc****</para>
@@ -20,10 +20,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string CenId { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</para>
+        /// <para>The unique, one-use client token that is used to ensure the idempotence of the request. It can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.</para>
+        /// <para>If you leave this parameter empty, the system automatically uses the <b>request ID</b> as the <b>client token</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -35,7 +34,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The new description of the flow log.</para>
-        /// <para>The description can be empty or 1 to 256 characters in length, and cannot start with http:// or https://.</para>
+        /// <para>The description can be empty or 1 to 256 characters in length, and cannot start with http\:// or https\://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>myFlowlog</para>
@@ -57,7 +56,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The new name of the flow log.</para>
-        /// <para>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</para>
+        /// <para>The name can be empty or 1 to 128 characters in length, and cannot start with http\:// or https\://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>myFlowlog</para>
@@ -67,7 +66,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string FlowLogName { get; set; }
 
         /// <summary>
-        /// <para>The time window for collecting log data. Unit: seconds. Valid values: <b>60</b> or <b>600</b> Default value: <b>600</b>.</para>
+        /// <para>The duraton of the capture window. Unit: seconds. Valid values: <b>60</b> and <b>600</b>. Default value: <b>600</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>600</para>
@@ -86,7 +85,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The ID of the region where the flow log is deployed.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

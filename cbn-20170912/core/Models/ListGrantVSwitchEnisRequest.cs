@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListGrantVSwitchEnisRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the CEN instance to which the VPC is attached.</para>
+        /// <para>The ID of the CEN instance to which the VPC is connected.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,11 +21,13 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string CenId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: 10 to 500.</para>
+        /// <para>The maximum number of entries to return on each page. Valid values: 10 to 500.</para>
         /// <para>Default value:</para>
         /// <list type="bullet">
-        /// <item><description>If you do not specify a value, the default value is 20.</description></item>
-        /// <item><description>If this parameter is set to a value greater than 500, the default value is 500.</description></item>
+        /// <item><description><para>If you do not specify this parameter, the default value is 20.</para>
+        /// </description></item>
+        /// <item><description><para>If you specify a value greater than 500, the default value is 500.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,7 +38,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The ID of ENI N. Valid values of N: 1 to 100.</para>
+        /// <para>The ID of the ENI.</para>
         /// </summary>
         [NameInMap("NetworkInterfaceId")]
         [Validation(Required=false)]
@@ -53,7 +55,13 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string NetworkInterfaceName { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// <para>The token that is used for the next query. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>If this is your first query, you do not need to specify this parameter.</para>
+        /// </description></item>
+        /// <item><description><para>If a next query is to be sent, set the value to the NextToken value that was returned from the last call.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2****</para>
@@ -74,7 +82,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <para>The primary private IPv4 address of the ENI.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>192.168.XX.XX</para>
+        /// <para><c>192.168.**.**</c></para>
         /// </summary>
         [NameInMap("PrimaryIpAddress")]
         [Validation(Required=false)]
@@ -89,7 +97,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of a vSwitch in the VPC. You can specify only one vSwitch in each call.</para>
+        /// <para>The ID of a vSwitch in the VPC.</para>
+        /// <para>You can query information about the ENIs in only one vSwitch at a time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

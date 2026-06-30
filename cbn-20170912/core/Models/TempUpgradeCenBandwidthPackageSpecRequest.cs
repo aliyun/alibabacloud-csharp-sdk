@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class TempUpgradeCenBandwidthPackageSpecRequest : TeaModel {
         /// <summary>
+        /// <para>The maximum temporary bandwidth. Unit: Mbps.</para>
+        /// <para>Valid values: <b>2 to 10,000</b></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +22,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? Bandwidth { get; set; }
 
         /// <summary>
+        /// <para>Bandwidth package ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +33,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string CenBandwidthPackageId { get; set; }
 
         /// <summary>
+        /// <para>The expiration time of the temporary upgrade. It follows the ISO8601 standard and is displayed in UTC time, <c>YYYY-MM-DDThh:mm:ssZ</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

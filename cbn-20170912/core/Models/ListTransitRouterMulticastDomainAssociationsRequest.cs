@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
     public class ListTransitRouterMulticastDomainAssociationsRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can only contain ASCII characters.</para>
+        /// <para>Generate a token from your client to ensure that it is unique among different requests. The ClientToken parameter can contain only ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-4266****</para>
@@ -31,10 +31,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that determines the start point of the query. Valid values:</para>
+        /// <para>The token that determines the start point of the next query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If this is your first query and no next queries are to be sent, ignore this parameter.</description></item>
-        /// <item><description>If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</description></item>
+        /// <item><description><para>If this is your first query and no next query is to be sent, ignore this parameter.</para>
+        /// </description></item>
+        /// <item><description><para>If a next query is to be sent, set the value to the NextToken value returned from the last API call.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -72,7 +74,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The type of resource associated with the multicast domain.</para>
-        /// <para>Valid value: <b>VPC</b>.</para>
+        /// <para>The value is <b>VPC</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>VPC</para>
@@ -102,7 +104,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterMulticastDomainId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of vSwitches.</para>
+        /// <para>The list of vSwitch IDs.</para>
         /// </summary>
         [NameInMap("VSwitchIds")]
         [Validation(Required=false)]

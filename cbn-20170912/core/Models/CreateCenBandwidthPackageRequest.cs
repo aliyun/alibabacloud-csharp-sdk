@@ -10,12 +10,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class CreateCenBandwidthPackageRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to automatically complete the payment of the bandwidth plan. Valid values:</para>
+        /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: yes</description></item>
-        /// <item><description><b>false</b> (default): no</description></item>
+        /// <item><description><para><b>true</b>: yes.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): no.</para>
+        /// </description></item>
         /// </list>
-        /// <para>If you set the parameter to false, go to Billing Management to complete the payment after you call this operation. The instance is created only after you complete the payment.</para>
+        /// <para>If you disable automatic payment, you must go to the Order Hub in the console to complete the payment after you call this operation. Otherwise, the instance cannot be created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -24,35 +26,16 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
 
-        /// <summary>
-        /// <para>Specifies whether to enable the auto-renewal feature. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>true</b>: enables auto-renewal.</description></item>
-        /// <item><description><b>false</b> (default): disables auto-renewal.</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para>Only subscription bandwidth plans support auto-renewal.</para>
-        /// </remarks>
-        /// 
-        /// <b>Example:</b>
-        /// <para>false</para>
-        /// </summary>
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]
         public bool? AutoRenew { get; set; }
 
-        /// <summary>
-        /// <para>The auto-renewal duration. Unit: months. Valid values: <b>0</b> to <b>2147483647</b>. Default value: <b>1</b>.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
-        /// </summary>
         [NameInMap("AutoRenewDuration")]
         [Validation(Required=false)]
         public int? AutoRenewDuration { get; set; }
 
         /// <summary>
-        /// <para>The maximum bandwidth value of the bandwidth plan. Unit: Mbit/s. Valid values: <b>2</b> to <b>10000</b>.</para>
+        /// <para>The maximum bandwidth of the bandwidth plan. Unit: Mbps. Valid values: <b>2</b> to <b>10000</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,7 +46,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? Bandwidth { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the bandwidth plan. Set the value to <b>PREPAY</b>, which indicates that the billing method is pay-as-you-go.</para>
+        /// <para>The billing method of the bandwidth plan. Set the value to <b>PREPAY</b>. This value specifies the subscription billing method.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PREPAY</para>
@@ -74,7 +57,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>Make sure that the client token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>02fb3da4-130e-11e9-8e44-001****</para>
@@ -85,6 +68,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The description of the bandwidth plan.</para>
+        /// <para>The description can be empty or 1 to 256 characters in length. It cannot start with http\:// or https\://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>namedesc</para>
@@ -96,10 +80,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>The area where the network instance is deployed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>China</b>: Chinese mainland</description></item>
-        /// <item><description><b>North-America</b>: North America</description></item>
-        /// <item><description><b>Asia-Pacific</b>: Asia Pacific</description></item>
-        /// <item><description><b>Europe</b>: Europe</description></item>
+        /// <item><description><para><b>China</b>: the Chinese mainland.</para>
+        /// </description></item>
+        /// <item><description><para><b>North-America</b>: North America.</para>
+        /// </description></item>
+        /// <item><description><para><b>Asia-Pacific</b>: Asia-Pacific.</para>
+        /// </description></item>
+        /// <item><description><para><b>Europe</b>: Europe.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -111,12 +99,16 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string GeographicRegionAId { get; set; }
 
         /// <summary>
-        /// <para>The area where the other network instance is deployed. Valid values: Valid values:</para>
+        /// <para>The other area where the network instance is deployed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>China</b>: Chinese mainland</description></item>
-        /// <item><description><b>North-America</b>: North America</description></item>
-        /// <item><description><b>Asia-Pacific</b>: Asia Pacific</description></item>
-        /// <item><description><b>Europe</b>: Europe</description></item>
+        /// <item><description><para><b>China</b>: the Chinese mainland.</para>
+        /// </description></item>
+        /// <item><description><para><b>North-America</b>: North America.</para>
+        /// </description></item>
+        /// <item><description><para><b>Asia-Pacific</b>: Asia-Pacific.</para>
+        /// </description></item>
+        /// <item><description><para><b>Europe</b>: Europe.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -129,7 +121,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The name of the bandwidth plan.</para>
-        /// <para>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The name can be empty or 1 to 128 characters in length. It cannot start with http\:// or https\://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nametest</para>
@@ -149,11 +141,13 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>The subscription duration of the bandwidth plan. Default value: 1.</para>
         /// <list type="bullet">
-        /// <item><description>If <b>PricingCycle</b> is set to <b>Month</b>, set <b>Period</b> to a value from <b>1</b> to <b>3</b> or <b>6</b>.</description></item>
-        /// <item><description>If <b>PricingCycle</b> is set to <b>Year</b>, set <b>Period</b> to a value from <b>1</b> to <b>3</b>.</description></item>
+        /// <item><description><para>If you set <b>PricingCycle</b> to <b>Month</b>, valid values for <b>Period</b> are <b>1</b> to <b>3</b> and <b>6</b>.</para>
+        /// </description></item>
+        /// <item><description><para>If you set <b>PricingCycle</b> to <b>Year</b>, valid values for <b>Period</b> are <b>1</b> to <b>3</b>.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is required when <b>BandwidthPackageChargeType</b> is set to <b>PREPAY</b>.</para>
+        /// <para>This parameter is required if you set <b>BandwidthPackageChargeType</b> to <b>PREPAY</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -166,8 +160,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>The billing cycle of the bandwidth plan. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Month</b> (default): billed on a monthly basis.</description></item>
-        /// <item><description><b>Year</b>: billed on an annual basis.</description></item>
+        /// <item><description><para><b>Month</b> (default): The bandwidth plan is billed by month.</para>
+        /// </description></item>
+        /// <item><description><para><b>Year</b>: The bandwidth plan is billed by year.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -186,8 +182,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The information about the tags.</para>
-        /// <para>You can specify at most 20 tags in each call.</para>
+        /// <para>The tags.</para>
+        /// <para>You can specify up to 20 tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -195,8 +191,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public class CreateCenBandwidthPackageRequestTag : TeaModel {
             /// <summary>
             /// <para>The tag key.</para>
-            /// <para>The tag keys cannot be an empty string. The tag key can be up to 64 characters in length, and cannot start with <c>acs:</c> or <c>aliyun</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
-            /// <para>You can specify at most 20 tag keys.</para>
+            /// <para>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>You can specify up to 20 tag keys.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tagtest</para>
@@ -207,8 +203,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
             /// <summary>
             /// <para>The tag value.</para>
-            /// <para>The tag value can be 0 to 128 characters in length, and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
-            /// <para>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</para>
+            /// <para>The tag value can be an empty string or a string of up to 128 characters. It cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>Each tag key corresponds to a tag value. You can specify up to 20 tag values.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tagtest</para>

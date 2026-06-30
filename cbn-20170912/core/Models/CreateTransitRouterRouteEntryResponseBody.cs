@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class CreateTransitRouterRouteEntryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>835E7F4B-B380-4E0F-96A5-6EA572388047</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the route.</para>
+        /// <para>The ID of the route entry.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rte-75eg4jprkvk0pw****</para>

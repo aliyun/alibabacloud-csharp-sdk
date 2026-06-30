@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListCenInterRegionTrafficQosQueuesResponseBody : TeaModel {
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>A pagination token. It is used in the next request to retrieve a new page of results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> is empty, no next page exists.</description></item>
-        /// <item><description>If a value of <b>NextToken</b> is returned, the value indicates the token that is used for the next query.</description></item>
+        /// <item><description><para>If <b>NextToken</b> is empty, no more results are returned.</para>
+        /// </description></item>
+        /// <item><description><para>If NextToken is not empty, the value of <b>NextToken</b> is used for the next query.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1D1E15D2-416D-54F3-BDD9-BC27DE4C6352</para>
@@ -34,15 +36,15 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the QoS queue.</para>
+        /// <para>The information about the queues of the QoS policy.</para>
         /// </summary>
         [NameInMap("TrafficQosQueues")]
         [Validation(Required=false)]
         public List<ListCenInterRegionTrafficQosQueuesResponseBodyTrafficQosQueues> TrafficQosQueues { get; set; }
         public class ListCenInterRegionTrafficQosQueuesResponseBodyTrafficQosQueues : TeaModel {
             /// <summary>
-            /// <para>The absolute bandwidth value that can be allocated to the current queue.</para>
-            /// <para>A value of <b>1</b> indicates that the QoS queue can consume at most 1 Mbit/s of inter-region bandwidth.</para>
+            /// <para>The bandwidth allocated to the queue. This parameter is returned only if you allocate bandwidth to the queue by absolute value.</para>
+            /// <para>For example, a value of <b>1</b> indicates that traffic that matches the queue can use up to 1 Mbit/s of the inter-region connection bandwidth.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -52,14 +54,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string Bandwidth { get; set; }
 
             /// <summary>
-            /// <para>The Differentiated Services Code Point (DSCP) value that matches the current QoS queue.</para>
+            /// <para>The Differentiated Services Code Point (DSCP) values that are matched by the queue.</para>
             /// </summary>
             [NameInMap("Dscps")]
             [Validation(Required=false)]
             public List<int?> Dscps { get; set; }
 
             /// <summary>
-            /// <para>The actual bandwidth of the current queue.</para>
+            /// <para>The actual bandwidth of the queue.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.35</para>
@@ -69,8 +71,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string EffectiveBandwidth { get; set; }
 
             /// <summary>
-            /// <para>The percentage of bandwidth that can be allocated to the current queue.</para>
-            /// <para>A value of <b>1</b> indicates that the QoS queue can consume at most 1% of the inter-region bandwidth.</para>
+            /// <para>The percentage of the inter-region connection bandwidth that can be used by the queue. This parameter is returned only if you allocate bandwidth to the queue by percentage.</para>
+            /// <para>For example, a value of <b>1</b> indicates that traffic that matches the queue can use up to 1% of the inter-region connection bandwidth.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -80,11 +82,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public int? RemainBandwidthPercent { get; set; }
 
             /// <summary>
-            /// <para>The status of the QoS queue. Valid values:</para>
+            /// <para>The status of the queue.</para>
             /// <list type="bullet">
-            /// <item><description><b>Creating</b></description></item>
-            /// <item><description><b>Active</b></description></item>
-            /// <item><description><b>Deleting</b></description></item>
+            /// <item><description><para><b>Creating</b>: The queue is being created.</para>
+            /// </description></item>
+            /// <item><description><para><b>Active</b>: The queue is running.</para>
+            /// </description></item>
+            /// <item><description><para><b>Deleting</b>: The queue is being deleted.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -105,7 +110,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string TrafficQosPolicyId { get; set; }
 
             /// <summary>
-            /// <para>The description of the QoS queue.</para>
+            /// <para>The description of the queue in the QoS policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>qosQueueDescription</para>
@@ -115,7 +120,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string TrafficQosQueueDescription { get; set; }
 
             /// <summary>
-            /// <para>The ID of the QoS queue.</para>
+            /// <para>The ID of the queue in the QoS policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>qos-queue-siakjb2nn9gz5z****</para>
@@ -125,7 +130,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string TrafficQosQueueId { get; set; }
 
             /// <summary>
-            /// <para>The name of the QoS queue.</para>
+            /// <para>The name of the queue in the QoS policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>qosQueueName</para>

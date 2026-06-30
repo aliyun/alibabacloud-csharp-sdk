@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListTrafficMarkingPoliciesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries returned on each page.</para>
+        /// <para>The number of entries returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that determines the start point of the query.</para>
+        /// <para>The token that is used for the next query.</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> was not returned in the previous query, it indicates that no additional results exist.</description></item>
-        /// <item><description>If <b>NextToken</b> was returned in the previous query, specify the value to obtain the next set of results.</description></item>
+        /// <item><description><para>If <b>NextToken</b> is empty, no next query is to be sent.</para>
+        /// </description></item>
+        /// <item><description><para>If a value is returned for <b>NextToken</b>, the value is the token that is used for the next query.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>699989E4-64A0-5F78-8B93-CDB32D98971F</para>
@@ -54,14 +56,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The information about the traffic marking policy.</para>
+        /// <para>The list of traffic marking policies.</para>
         /// </summary>
         [NameInMap("TrafficMarkingPolicies")]
         [Validation(Required=false)]
         public List<ListTrafficMarkingPoliciesResponseBodyTrafficMarkingPolicies> TrafficMarkingPolicies { get; set; }
         public class ListTrafficMarkingPoliciesResponseBodyTrafficMarkingPolicies : TeaModel {
             /// <summary>
-            /// <para>The Differentiated Service Code Point (DSCP) value of the traffic marking policy.</para>
+            /// <para>The Differentiated Services Code Point (DSCP) value of the traffic marking policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -72,7 +74,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
             /// <summary>
             /// <para>The priority of the traffic marking policy.</para>
-            /// <para>A lower value indicates a higher priority.</para>
+            /// <para>A smaller value indicates a higher priority.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -112,12 +114,16 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string TrafficMarkingPolicyName { get; set; }
 
             /// <summary>
-            /// <para>The status of the traffic marking policy. Valid values:</para>
+            /// <para>The status of the traffic marking policy.</para>
             /// <list type="bullet">
-            /// <item><description><b>Creating</b>: The policy is being created.</description></item>
-            /// <item><description><b>Active</b>: The policy is available.</description></item>
-            /// <item><description><b>Modifying</b>: The policy is being modified.</description></item>
-            /// <item><description><b>Deleting</b>: The policy is being deleted.</description></item>
+            /// <item><description><para><b>Creating</b>: The policy is being created.</para>
+            /// </description></item>
+            /// <item><description><para><b>Active</b>: The policy is available.</para>
+            /// </description></item>
+            /// <item><description><para><b>Modifying</b>: The policy is being modified.</para>
+            /// </description></item>
+            /// <item><description><para><b>Deleting</b>: The policy is being deleted.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -128,14 +134,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string TrafficMarkingPolicyStatus { get; set; }
 
             /// <summary>
-            /// <para>The traffic classification rules.</para>
+            /// <para>The list of traffic classification rules.</para>
             /// </summary>
             [NameInMap("TrafficMatchRules")]
             [Validation(Required=false)]
             public List<ListTrafficMarkingPoliciesResponseBodyTrafficMarkingPoliciesTrafficMatchRules> TrafficMatchRules { get; set; }
             public class ListTrafficMarkingPoliciesResponseBodyTrafficMarkingPoliciesTrafficMatchRules : TeaModel {
                 /// <summary>
-                /// <para>The address family. You can set the value to IPv4 or IPv6, or leave the value empty.</para>
+                /// <para>The address type. Valid values are IPv4, IPv6, or empty.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>IPv4</para>
@@ -145,7 +151,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public string AddressFamily { get; set; }
 
                 /// <summary>
-                /// <para>The destination CIDR block of packets. IPv4 and IPv6 addresses are supported.</para>
+                /// <para>The destination CIDR block of the traffic message. IPv4 and IPv6 addresses are supported.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>192.168.120.0/24</para>
@@ -155,16 +161,16 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public string DstCidr { get; set; }
 
                 /// <summary>
-                /// <para>The destination port range used to match data packets.</para>
+                /// <para>The destination port range to be matched by the traffic classification rule.</para>
                 /// </summary>
                 [NameInMap("DstPortRange")]
                 [Validation(Required=false)]
                 public List<int?> DstPortRange { get; set; }
 
                 /// <summary>
-                /// <para>The DSCP value used to match data packets.</para>
+                /// <para>The DSCP value of the traffic message.</para>
                 /// <remarks>
-                /// <para> If the value of the <b>MatchDscp</b> parameter is -1, data packets are considered a match regardless of the DSCP value.</para>
+                /// <para>If <b>MatchDscp</b> returns -1, it indicates that all DSCP values are matched.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -175,9 +181,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public int? MatchDscp { get; set; }
 
                 /// <summary>
-                /// <para>The protocol that is used to match packets.</para>
+                /// <para>The protocol type of the traffic message.</para>
                 /// <remarks>
-                /// <para> Traffic marking policies support multiple protocols. For more information, see the documentation of CEN.</para>
+                /// <para>A traffic marking policy supports matching multiple protocol types. For more information about the protocol types, see the relevant documentation.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -188,7 +194,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public string Protocol { get; set; }
 
                 /// <summary>
-                /// <para>The source CIDR block of packets. IPv6 and IPv4 addresses are supported.</para>
+                /// <para>The source CIDR block of the traffic message. IPv6 and IPv4 addresses are supported.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>192.168.10.0/24</para>
@@ -198,7 +204,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public string SrcCidr { get; set; }
 
                 /// <summary>
-                /// <para>The source port range used to match data packets.</para>
+                /// <para>The source port range to be matched by the traffic classification rule.</para>
                 /// </summary>
                 [NameInMap("SrcPortRange")]
                 [Validation(Required=false)]
@@ -235,11 +241,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public string TrafficMatchRuleName { get; set; }
 
                 /// <summary>
-                /// <para>The status of the traffic classification rule. Valid values:</para>
+                /// <para>The status of the traffic classification rule.</para>
                 /// <list type="bullet">
-                /// <item><description><b>Creating</b>: The rule is being created.</description></item>
-                /// <item><description><b>Active</b>: The rule is available.</description></item>
-                /// <item><description><b>Deleting</b>: The rule is being deleted.</description></item>
+                /// <item><description><para><b>Creating</b>: The rule is being created.</para>
+                /// </description></item>
+                /// <item><description><para><b>Active</b>: The rule is available.</para>
+                /// </description></item>
+                /// <item><description><para><b>Deleting</b>: The rule is being deleted.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -252,7 +261,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             }
 
             /// <summary>
-            /// <para>The ID of the transit router.</para>
+            /// <para>The ID of the TransitRouter instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tr-ccni***</para>

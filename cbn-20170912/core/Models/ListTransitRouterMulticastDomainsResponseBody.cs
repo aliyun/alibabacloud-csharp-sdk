@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListTransitRouterMulticastDomainsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The token for the next query.</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> is empty, no next page exists.</description></item>
-        /// <item><description>If a value is returned for <b>NextToken</b>, the value is the token that determines the start point of the next query.</description></item>
+        /// <item><description><para>If the value of <b>NextToken</b> is empty, it indicates that no next query is to be sent.</para>
+        /// </description></item>
+        /// <item><description><para>If a value is returned for <b>NextToken</b>, the value is the token that is used for the next query.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -61,24 +63,24 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public List<ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomains> TransitRouterMulticastDomains { get; set; }
         public class ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomains : TeaModel {
             /// <summary>
-            /// <para>The CEN instance ID.</para>
+            /// <para>The ID of the CEN instance.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>cen-a7syd349kne38g****</para>
+            /// <para>cen-h19xdb0qy2b3ir****</para>
             /// </summary>
             [NameInMap("CenId")]
             [Validation(Required=false)]
             public string CenId { get; set; }
 
             /// <summary>
-            /// <para>Multicast domain feature.</para>
+            /// <para>The options of the multicast domain.</para>
             /// </summary>
             [NameInMap("Options")]
             [Validation(Required=false)]
             public ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomainsOptions Options { get; set; }
             public class ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomainsOptions : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether the IGMP feature is enabled for the multicast domain.</para>
+                /// <para>Indicates whether IGMPv2 is enabled for the multicast domain.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>enable</para>
@@ -87,11 +89,19 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 [Validation(Required=false)]
                 public string Igmpv2Support { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>enable</para>
+                /// </summary>
+                [NameInMap("StrictSourceControl")]
+                [Validation(Required=false)]
+                public string StrictSourceControl { get; set; }
+
             }
 
             /// <summary>
-            /// <para>The region ID of the transit router.</para>
-            /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</para>
+            /// <para>The ID of the region where the transit router is deployed.</para>
+            /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to obtain the region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -102,7 +112,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
             /// <summary>
             /// <para>The status of the multicast domain.</para>
-            /// <para>The valid value is <b>Active</b>, which indicates that the multicast domain is available.</para>
+            /// <para>The value is <b>Active</b>, which indicates that the multicast domain is available.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Active</para>
@@ -112,7 +122,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The tags.</para>
+            /// <para>The list of tags.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -141,7 +151,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             }
 
             /// <summary>
-            /// <para>The transit router ID.</para>
+            /// <para>The ID of the transit router.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tr-bp1c23ijrl6d6c226h***</para>

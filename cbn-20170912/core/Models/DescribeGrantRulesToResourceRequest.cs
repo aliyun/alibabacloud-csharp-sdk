@@ -11,8 +11,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
     public class DescribeGrantRulesToResourceRequest : TeaModel {
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>If you do not specify a value for <b>MaxResults</b>, entries are returned in one response. After you send the request, the value of <b>MaxResults</b> includes all entries.</description></item>
-        /// <item><description>If you specify a value for <b>MaxResults</b>, entries are returned in batches. The value of <b>MaxResults</b> indicates the total number of entries returned per batch. Valid values: <b>1</b> to <b>100</b>. After you send the request, the value of <b>MaxResults</b> indicates the number of entries returned in the current response. We recommend that you set <b>MaxResults</b> to <b>20</b>.</description></item>
+        /// <item><description><para>If you omit this parameter, all entries are returned in a single response. In this case, the <b>MaxResults</b> field in the response indicates the total number of entries.</para>
+        /// </description></item>
+        /// <item><description><para>If you specify the <b>MaxResults</b> parameter, the query is paginated. <b>MaxResults</b> sets the number of entries per page. The value must be an integer from <b>1</b> to <b>100</b>. The <b>MaxResults</b> value in the response indicates the number of entries on the current page. The recommended value for this parameter is <b>20</b>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -23,10 +25,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The token used to retrieve the next page of results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>You do not need to specify this parameter for the first request.</description></item>
-        /// <item><description>You must specify the token that is obtained from the previous query as the value of the <b>NextToken</b> parameter.</description></item>
+        /// <item><description><para>Omit this parameter for the first request.</para>
+        /// </description></item>
+        /// <item><description><para>For subsequent requests, set this parameter to the <b>NextToken</b> value from the previous response.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -45,12 +49,16 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The type of network instance. Valid values:</para>
+        /// <para>The type of the network instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>VPC</b>: virtual private cloud (VPC)</description></item>
-        /// <item><description><b>ExpressConnect</b>: virtual border router (VBR)</description></item>
-        /// <item><description><b>VPN</b>: IPsec-VPN connection</description></item>
-        /// <item><description><b>ECR</b>: Express Connect Router (ECR)</description></item>
+        /// <item><description><para><b>VPC</b>: a Virtual Private Cloud (VPC) instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>ExpressConnect</b>: a Virtual Border Router (VBR) instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>VPN</b>: an IPsec connection.</para>
+        /// </description></item>
+        /// <item><description><para><b>ECR</b>: an ExpressConnect Router (ECR) instance.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -63,7 +71,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The region ID of the network instance.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -73,7 +81,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The network instance ID.</para>
+        /// <para>The ID of the network instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

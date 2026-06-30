@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that determines the start point of the next query. Valid values:</para>
+        /// <para>The token that is used for the next query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> is not returned, it indicates that no additional results exist.</description></item>
-        /// <item><description>If <b>NextToken</b> was returned in the previous query, specify the value to obtain the next set of results.</description></item>
+        /// <item><description><para>If <b>NextToken</b> is empty, it indicates that no next query is to be sent.</para>
+        /// </description></item>
+        /// <item><description><para>If a value is returned for <b>NextToken</b>, the value is the token that is used for the next query.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3D5530D2-3BBB-524E-8E98-59AB06A250E4</para>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -54,17 +56,19 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The information about the VPN attachment.</para>
+        /// <para>A list of VPN connections.</para>
         /// </summary>
         [NameInMap("TransitRouterAttachments")]
         [Validation(Required=false)]
         public List<ListTransitRouterVpnAttachmentsResponseBodyTransitRouterAttachments> TransitRouterAttachments { get; set; }
         public class ListTransitRouterVpnAttachmentsResponseBodyTransitRouterAttachments : TeaModel {
             /// <summary>
-            /// <para>Indicates the transit router can automatically advertise routes to the IPsec connection. Valid values:</para>
+            /// <para>Indicates whether the transit router automatically advertises routes to the IPsec-VPN connection. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: yes</description></item>
-            /// <item><description><b>false</b>: no</description></item>
+            /// <item><description><para><b>true</b>: enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -75,7 +79,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public bool? AutoPublishRouteEnabled { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Cloud Enterprise Network (CEN) instance.</para>
+            /// <para>The ID of the CEN instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cen-j3jzhw1zpau2km****</para>
@@ -85,8 +89,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string CenId { get; set; }
 
             /// <summary>
-            /// <para>The billing method of the VPN attachment.</para>
-            /// <para>Only POSTPAY may be returned, which is the default pay-as-you-go billing method.</para>
+            /// <para>The billing method of the VPN connection.</para>
+            /// <para>The value is set to POSTPAY, which indicates the pay-as-you-go billing method.</para>
             /// 
             /// <b>Example:</b>
             /// <para>POSTPAY</para>
@@ -97,7 +101,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
             /// <summary>
             /// <para>The time when the VPN connection was created.</para>
-            /// <para>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The time is displayed in the ISO 8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-07-08T08:45Z</para>
@@ -107,10 +111,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The entity that pays the fees of the network instance. Valid values:</para>
+            /// <para>The party that pays for the network instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>PayByCenOwner</b>: the Alibaba Cloud account that owns the CEN instance.</description></item>
-            /// <item><description><b>PayByResourceOwner</b>: the Alibaba Cloud account that owns the network instance.</description></item>
+            /// <item><description><para><b>PayByCenOwner</b>: The fees for the network instance are paid by the account that owns the CEN instance.</para>
+            /// </description></item>
+            /// <item><description><para><b>PayByResourceOwner</b>: The fees for the network instance are paid by the account that owns the network instance.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -121,8 +127,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string OrderType { get; set; }
 
             /// <summary>
-            /// <para>The type of resource attached to the transit router.</para>
-            /// <para>Only <b>VPN</b> may be returned, which indicates that an IPsec-VPN connection is attached to the transit router.</para>
+            /// <para>The resource type of the VPN connection.</para>
+            /// <para>The value is set to <b>VPN</b>, which indicates that the transit router is connected to an IPsec-VPN connection.</para>
             /// 
             /// <b>Example:</b>
             /// <para>VPN</para>
@@ -132,11 +138,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The status of the VPN connection. Valid values:</para>
+            /// <para>The status of the VPN connection.</para>
             /// <list type="bullet">
-            /// <item><description><b>Attached</b></description></item>
-            /// <item><description><b>Attaching</b></description></item>
-            /// <item><description><b>Detaching</b></description></item>
+            /// <item><description><para><b>Attached</b>: The VPN connection is attached.</para>
+            /// </description></item>
+            /// <item><description><para><b>Attaching</b>: The VPN connection is being attached.</para>
+            /// </description></item>
+            /// <item><description><para><b>Detaching</b>: The VPN connection is being detached.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -176,7 +185,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             }
 
             /// <summary>
-            /// <para>The description of the IPsec-VPN connection.</para>
+            /// <para>The description of the VPN connection.</para>
             /// 
             /// <b>Example:</b>
             /// <para>desctest</para>
@@ -186,7 +195,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string TransitRouterAttachmentDescription { get; set; }
 
             /// <summary>
-            /// <para>The ID of the VPN attachment.</para>
+            /// <para>The ID of the VPN connection.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tr-attach-a6p8voaodog5c0****</para>
@@ -196,7 +205,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string TransitRouterAttachmentId { get; set; }
 
             /// <summary>
-            /// <para>The name of the VPN attachment.</para>
+            /// <para>The name of the VPN connection.</para>
             /// 
             /// <b>Example:</b>
             /// <para>nametest</para>
@@ -236,8 +245,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public long? VpnOwnerId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region to which the IPsec-VPN connection belongs.</para>
-            /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
+            /// <para>The ID of the region where the IPsec-VPN connection is deployed.</para>
+            /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -247,7 +256,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string VpnRegionId { get; set; }
 
             /// <summary>
-            /// <para>The zones in which the VPN attachment is deployed.</para>
+            /// <para>A list of zones where the VPN connection is deployed.</para>
             /// </summary>
             [NameInMap("Zones")]
             [Validation(Required=false)]
@@ -255,7 +264,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public class ListTransitRouterVpnAttachmentsResponseBodyTransitRouterAttachmentsZones : TeaModel {
                 /// <summary>
                 /// <para>The zone ID.</para>
-                /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a> operation to query the most recent zone list.</para>
+                /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou-h</para>

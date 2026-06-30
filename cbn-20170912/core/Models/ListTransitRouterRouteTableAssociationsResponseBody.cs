@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that determines the start point of the query. Valid values:</para>
+        /// <para>The token for the next query.</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> was not returned, it indicates that no additional results exist.</description></item>
-        /// <item><description>If <b>NextToken</b> was returned in the previous query, specify the value to obtain the next set of results.</description></item>
+        /// <item><description><para>If this parameter is not returned, it indicates that no more results are to be returned.</para>
+        /// </description></item>
+        /// <item><description><para>If a value is returned for this parameter, the value is the token that is used for the next query.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F6B1D9AB-176D-4399-801D-8BC576F4EB0D</para>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -54,14 +56,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>A list of associated forwarding correlations.</para>
+        /// <para>A list of forwarding associations.</para>
         /// </summary>
         [NameInMap("TransitRouterAssociations")]
         [Validation(Required=false)]
         public List<ListTransitRouterRouteTableAssociationsResponseBodyTransitRouterAssociations> TransitRouterAssociations { get; set; }
         public class ListTransitRouterRouteTableAssociationsResponseBodyTransitRouterAssociations : TeaModel {
             /// <summary>
-            /// <para>The ID of the next hop.</para>
+            /// <para>The ID of the next hop resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-bp1h8vbrbcgohcju5****</para>
@@ -71,12 +73,16 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The type of next hop. Valid values:</para>
+            /// <para>The type of the next hop resource.</para>
             /// <list type="bullet">
-            /// <item><description><b>VPC</b>: VPC</description></item>
-            /// <item><description><b>VBR</b>: VBR</description></item>
-            /// <item><description><b>TR</b>: transit router</description></item>
-            /// <item><description><b>VPN</b> :VPN attachment</description></item>
+            /// <item><description><para><b>VPC</b>: virtual private cloud (VPC).</para>
+            /// </description></item>
+            /// <item><description><para><b>VBR</b>: virtual border router (VBR).</para>
+            /// </description></item>
+            /// <item><description><para><b>TR</b>: transit router.</para>
+            /// </description></item>
+            /// <item><description><para><b>VPN</b>: VPN connection.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -87,12 +93,16 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The status of the associated forwarding correlation. Valid values:</para>
+            /// <para>The status of the association.</para>
             /// <list type="bullet">
-            /// <item><description><b>Active</b>: The associated forwarding correlation is available.</description></item>
-            /// <item><description><b>Associating</b>: The associated forwarding correlation is being created.</description></item>
-            /// <item><description><b>Dissociating</b>: The associated forwarding correlation is being deleted.</description></item>
-            /// <item><description><b>Deleted</b>: The associated forwarding correlation is deleted.</description></item>
+            /// <item><description><para><b>Active</b>: The association is active.</para>
+            /// </description></item>
+            /// <item><description><para><b>Associating</b>: The association is being created.</para>
+            /// </description></item>
+            /// <item><description><para><b>Dissociating</b>: The association is being deleted.</para>
+            /// </description></item>
+            /// <item><description><para><b>Deleted</b>: The association is deleted.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

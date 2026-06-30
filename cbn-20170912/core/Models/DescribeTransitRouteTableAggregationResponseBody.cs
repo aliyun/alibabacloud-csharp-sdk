@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeTransitRouteTableAggregationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries returned on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
             /// <summary>
             /// <para>The type of the aggregate route.</para>
-            /// <para>The valid value is <b>Static</b>, which indicates a static route. By default, aggregate routes advertised to a VPC are considered custom routes.</para>
+            /// <para>The value is set to <b>Static</b>. This indicates that the route is a static route. After the aggregate route is advertised to a VPC, it becomes a custom route entry by default.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Static</para>
@@ -58,8 +58,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string RouteType { get; set; }
 
             /// <summary>
-            /// <para>The scope of networks that you want to advertise the aggregate route.</para>
-            /// <para>The valid value is <b>VPC</b>, which indicates that the aggregate route is advertised to all virtual private clouds (VPCs) that are in associated forwarding correlation with the Enterprise Edition transit router and have route synchronization enabled.</para>
+            /// <para>The scope of the aggregate route.</para>
+            /// <para>The value is set to <b>VPC</b>. This indicates that the aggregate route is advertised to all VPCs that are associated with the route table of the Enterprise Edition transit router and have route synchronization enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>VPC</para>
@@ -69,9 +69,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string Scope { get; set; }
 
             /// <summary>
-            /// <para>The list of propagation ranges of the aggregation route.</para>
+            /// <para>The list of scopes of the aggregate route.</para>
             /// <remarks>
-            /// <para> You must specify at least one of the following attributes: Aggregation Scope and Aggregate Scope List. We recommend that you specify the latter. The elements in the two attributes cannot be duplicate.</para>
+            /// <para>You must specify at least one of the Scope and ScopeList properties. We recommend that you specify ScopeList. The elements in ScopeList cannot be the same as the value of Scope.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("ScopeList")]
@@ -79,13 +79,18 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public List<string> ScopeList { get; set; }
 
             /// <summary>
-            /// <para>The status of the advertisement of the aggregate route. Valid values:</para>
+            /// <para>The advertising status of the aggregate route.</para>
             /// <list type="bullet">
-            /// <item><description><b>AllConfigured</b>: The aggregate route is advertised to all VPCs.</description></item>
-            /// <item><description><b>Configuring</b>: The aggregate route is being advertised.</description></item>
-            /// <item><description><b>ConfigFailed</b>: The aggregate route failed to be advertised.</description></item>
-            /// <item><description><b>PartialConfigured</b>: Failed to advertise the aggregate route to some VPCs.</description></item>
-            /// <item><description><b>Deleting</b>: The aggregate route is being deleted.</description></item>
+            /// <item><description><para><b>AllConfigured</b>: The aggregate route is advertised to all VPCs.</para>
+            /// </description></item>
+            /// <item><description><para><b>Configuring</b>: The aggregate route is being advertised.</para>
+            /// </description></item>
+            /// <item><description><para><b>ConfigFailed</b>: The aggregate route failed to be advertised.</para>
+            /// </description></item>
+            /// <item><description><para><b>PartialConfigured</b>: The aggregate route is advertised to some VPCs.</para>
+            /// </description></item>
+            /// <item><description><para><b>Deleting</b>: The aggregate route is being deleted.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -120,8 +125,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> is empty, no next page exists.</description></item>
-        /// <item><description>If a value is returned for <b>NextToken</b>, the value is the token that determines the start point of the next query.</description></item>
+        /// <item><description><para>If <b>NextToken</b> is empty, no next page exists.</para>
+        /// </description></item>
+        /// <item><description><para>If a value is returned for <b>NextToken</b>, the value is the token that determines the start point of the next query.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -132,7 +139,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0C2EE7A8-74D4-4081-8236-CEBDE3BBCF50</para>
@@ -142,7 +149,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

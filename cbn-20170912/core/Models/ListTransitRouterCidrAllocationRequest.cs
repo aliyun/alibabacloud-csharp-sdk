@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string Cidr { get; set; }
 
         /// <summary>
-        /// <para>The CIDR blocks that have IP addresses allocated to network instances.</para>
+        /// <para>The allocated CIDR block.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.10.0/28</para>
@@ -50,10 +50,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string CidrBlock { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>A client token that is used to ensure the idempotence of the request.</para>
+        /// <para>Generate a token from your client to make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> is different for each request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -64,8 +64,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The CIDR block that is for exclusive use.</para>
-        /// <para>Set the value to <b>VPN</b>, which specifies the CIDR block that is reserved for VPN connections.</para>
+        /// <para>The dedicated CIDR block.</para>
+        /// <para>The only valid value is <b>VPN</b>. This value specifies that you want to query the CIDR block that is reserved by the system for creating VPN connections.</para>
         /// 
         /// <b>Example:</b>
         /// <para>VPN</para>
@@ -77,8 +77,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and sends the request.</description></item>
+        /// <item><description><para><b>true</b>: performs a dry run. The system checks the required parameters, request format, and service limits. If the request fails the check, an error message is returned. If the request passes the check, the <c>DryRunOperation</c> error code is returned.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): sends a normal request. After the request passes the check, the system queries the allocation details of the CIDR block.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -91,10 +93,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>The number of entries per page.</para>
         /// <list type="bullet">
-        /// <item><description><para>If you do not specify a value for <b>MaxResults</b>, entries are returned in one response. After you send the request, the value of <b>MaxResults</b> includes all entries.</para>
+        /// <item><description><para>If you do not specify this parameter, the query is not paginated.</para>
         /// </description></item>
-        /// <item><description><para>If you specify a value for <b>MaxResults</b>, entries are returned in batches. Valid values: <b>1</b> to <b>100</b>. We recommend that you set <b>MaxResults</b> to <b>20</b>.</para>
-        /// <para>The value of <b>MaxResults</b> in the response indicates that number of entries in the current batch.</para>
+        /// <item><description><para>If you specify this parameter, the query is paginated. Valid values: <b>1</b> to <b>100</b>. The recommended value is <b>20</b>.</para>
+        /// <para>The value of the returned <b>MaxResults</b> parameter indicates the number of list entries in the current query batch.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -106,10 +108,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that determines the start point of the query. Valid values:</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If this is your first query or no subsequent query is to be sent, ignore this parameter.</description></item>
-        /// <item><description>If a subsequent query is to be sent, set the value to the value of <b>NextToken</b> that is returned from the last call.</description></item>
+        /// <item><description><para>You do not need to specify this parameter for the first request.</para>
+        /// </description></item>
+        /// <item><description><para>If a next page exists, set the value to the <b>NextToken</b> value returned from the previous request.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -128,8 +132,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the transit router.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</para>
+        /// <para>The ID of the region where the Transit Router instance is deployed.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -148,8 +152,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the CIDR block.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/462772.html">ListTransitRouterCidr</a> operation to query the ID of a CIDR block.</para>
+        /// <para>The ID of the CIDR block of the transit router.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/462772.html">ListTransitRouterCidr</a> operation to query the IDs of the CIDR blocks of the transit router.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cidr-0zv0q9crqpntzz****</para>
@@ -159,7 +163,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterCidrId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the transit router.</para>
+        /// <para>The ID of the Transit Router instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

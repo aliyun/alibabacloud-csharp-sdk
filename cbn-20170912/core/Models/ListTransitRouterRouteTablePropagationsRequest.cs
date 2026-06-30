@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListTransitRouterRouteTablePropagationsRequest : TeaModel {
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: <b>50</b>.</para>
+        /// <para>The number of entries to return on each page. The default value is <b>50</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that determines the start point of the query.</para>
+        /// <para>The token that is used to retrieve the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dd20****</para>
@@ -46,11 +46,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The status of the route learning correlation. Valid values:</para>
+        /// <para>The status of the route propagation.</para>
         /// <list type="bullet">
-        /// <item><description><b>Active</b>: available</description></item>
-        /// <item><description><b>Enabling</b>: being enabled</description></item>
-        /// <item><description><b>Disabling</b>: being disabled</description></item>
+        /// <item><description><para><b>Active</b>: The propagation is active.</para>
+        /// </description></item>
+        /// <item><description><para><b>Enabling</b>: The propagation is being enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>Disabling</b>: The propagation is being disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -81,12 +84,16 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterAttachmentResourceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the network instance. Valid values:</para>
+        /// <para>The type of the network instance.</para>
         /// <list type="bullet">
-        /// <item><description><b>VPC</b>: virtual private cloud (VPC)</description></item>
-        /// <item><description><b>VBR</b>: virtual border router (VBR)</description></item>
-        /// <item><description><b>TR</b>: transit router</description></item>
-        /// <item><description><b>VPN</b>: VPN connection</description></item>
+        /// <item><description><para><b>VPC</b>: a virtual private cloud (VPC).</para>
+        /// </description></item>
+        /// <item><description><para><b>VBR</b>: a virtual border router (VBR).</para>
+        /// </description></item>
+        /// <item><description><para><b>TR</b>: a transit router.</para>
+        /// </description></item>
+        /// <item><description><para><b>VPN</b>: a VPN connection.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

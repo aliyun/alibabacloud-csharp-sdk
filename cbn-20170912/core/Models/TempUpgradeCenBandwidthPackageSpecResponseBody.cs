@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class TempUpgradeCenBandwidthPackageSpecResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>DB0A026C-A8E5-40AB-977E-3A87DD78F694</para>
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class CreateCenResponseBody : TeaModel {
         /// <summary>
-        /// <para>The CEN instance ID.</para>
+        /// <para>The ID of the CEN instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cen-dc4vwznpwbobrl****</para>

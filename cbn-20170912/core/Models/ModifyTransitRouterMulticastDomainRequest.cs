@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ModifyTransitRouterMulticastDomainRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>A client token that ensures the idempotence of the request.</para>
+        /// <para>Generate a unique token on your client for each request. The token can contain only ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-4266****</para>
@@ -21,10 +21,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and performs the actual request.</description></item>
+        /// <item><description><para><b>true</b>: Performs a dry run. The system checks the required parameters, request format, and service limits. If the check fails, an error message is returned. If the check passes, the <c>DryRunOperation</c> error code is returned.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): Sends the request. If the request passes the check, the name and description of the multicast domain are modified.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,18 +37,20 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>Multicast domain feature.</para>
+        /// <para>The feature options of the multicast domain.</para>
         /// </summary>
         [NameInMap("Options")]
         [Validation(Required=false)]
         public ModifyTransitRouterMulticastDomainRequestOptions Options { get; set; }
         public class ModifyTransitRouterMulticastDomainRequestOptions : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the IGMP feature is enabled for the multicast domain. Once enabled, hosts can dynamically join or leave multicast groups by using the IGMP protocol. Default value: <b>enable</b>.</para>
+            /// <para>Specifies whether to enable the Internet Group Management Protocol (IGMP) feature for the multicast domain. When this feature is enabled, hosts can use IGMP to dynamically join or leave multicast groups. Set the value to <b>enable</b>.</para>
             /// <remarks>
             /// <list type="bullet">
-            /// <item><description>The IGMP feature is in beta testing. To use it, contact your account manager.</description></item>
-            /// <item><description>The IGMP feature cannot be disabled after it is enabled.</description></item>
+            /// <item><description><para>The IGMP feature is in public preview. To use this feature, contact your account manager.</para>
+            /// </description></item>
+            /// <item><description><para>You cannot disable the IGMP feature after it is enabled.</para>
+            /// </description></item>
             /// </list>
             /// </remarks>
             /// 
@@ -56,6 +60,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [NameInMap("Igmpv2Support")]
             [Validation(Required=false)]
             public string Igmpv2Support { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>enable</para>
+            /// </summary>
+            [NameInMap("StrictSourceControl")]
+            [Validation(Required=false)]
+            public string StrictSourceControl { get; set; }
 
         }
 
@@ -77,7 +89,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The new description of the multicast domain.</para>
-        /// <para>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http:// or https://.</para>
+        /// <para>The description can be empty or 1 to 256 characters long. It cannot start with http\:// or https\://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>desctest</para>
@@ -99,7 +111,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The new name of the multicast domain.</para>
-        /// <para>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</para>
+        /// <para>The name can be empty or 1 to 128 characters long. It cannot start with http\:// or https\://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nametest</para>

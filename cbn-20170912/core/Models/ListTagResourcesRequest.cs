@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListTagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The token that determines the start point of the query. Valid values:</para>
+        /// <para>The token that is used for the next query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If this is your first query and no next queries are to be sent, ignore this parameter.</description></item>
-        /// <item><description>If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</description></item>
+        /// <item><description><para>If this is your first query or no next query is to be sent, you do not need to specify this parameter.</para>
+        /// </description></item>
+        /// <item><description><para>If a subsequent query is to be sent, set the value to the NextToken value that is returned from the last API call.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -43,7 +45,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The ID of the region where the resource is deployed.</para>
-        /// <para>You can ignore this parameter if ResourceType is set to Cen or BandwidthPackage.</para>
+        /// <para>This parameter is not required for the Cen and BandwidthPackage resource types. It is required for all other resource types.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -53,8 +55,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the CEN instances.</para>
-        /// <para>You can specify at most 20 IDs in each call.</para>
+        /// <para>The ID of the CEN instance.</para>
+        /// <para>You can enter a maximum of 20 CEN instance IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cen-8z69wtwqel33lq****</para>
@@ -72,17 +74,17 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource to which you want to add the tag. Valid values:</para>
-        /// <para><b>Cen</b>: CEN instance</para>
-        /// <para><b>BandwidthPackage</b>: bandwidth plan</para>
-        /// <para><b>TransitRouter</b>: transit router</para>
-        /// <para><b>TransitRouterVpcAttachment</b>: virtual private cloud (VPC) connection</para>
-        /// <para><b>TransitRouterVbrAttachment</b>: virtual border router (VBR) connection</para>
-        /// <para><b>TransitRouterPeerAttachment</b>: inter-region connection</para>
-        /// <para><b>TransitRouterVpnAttachment</b>: VPN connection</para>
-        /// <para><b>TransitRouterRouteTable</b>: route table</para>
-        /// <para><b>Flowlog</b>: flow log</para>
-        /// <para><b>TransitRouterMulticastDomain</b>: multicast domain</para>
+        /// <para>The resource type. Valid values:</para>
+        /// <para><b>Cen</b>: a CEN instance.</para>
+        /// <para><b>BandwidthPackage</b>: a bandwidth plan.</para>
+        /// <para><b>TransitRouter</b>: a transit router.</para>
+        /// <para><b>TransitRouterVpcAttachment</b>: a VPC connection.</para>
+        /// <para><b>TransitRouterVbrAttachment</b>: a VBR connection.</para>
+        /// <para><b>TransitRouterPeerAttachment</b>: an inter-region connection.</para>
+        /// <para><b>TransitRouterVpnAttachment</b>: a VPN connection.</para>
+        /// <para><b>TransitRouterRouteTable</b>: a route table.</para>
+        /// <para><b>Flowlog</b>: a flow log.</para>
+        /// <para><b>TransitRouterMulticastDomain</b>: a multicast domain.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -93,8 +95,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The information about the tags that are added to the CEN instance.</para>
-        /// <para>You can query at most 20 tags in each call.</para>
+        /// <para>The tags of the CEN instance.</para>
+        /// <para>You can query a maximum of 20 tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -102,8 +104,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public class ListTagResourcesRequestTag : TeaModel {
             /// <summary>
             /// <para>The tag key.</para>
-            /// <para>The tag key cannot exceed 64 characters in length, and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
-            /// <para>You can specify at most 20 tag keys.</para>
+            /// <para>The tag key can be up to 64 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>You can enter a maximum of 20 tag keys.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -114,8 +116,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
             /// <summary>
             /// <para>The tag value.</para>
-            /// <para>The tag value cannot exceed 128 characters in length, and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
-            /// <para>You can specify at most 20 tag values.</para>
+            /// <para>The tag value can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>You can enter a maximum of 20 tag values.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Bp</para>

@@ -144,6 +144,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public string ChildInstanceType { get; set; }
 
+        /// <summary>
+        /// <para>The cloud service that the network instance belongs to. Its standard code is only returned when the VPC is connected to the transit router. For self-managed VPCs, no code is returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>swas</para>
+        /// </summary>
         [NameInMap("ManagedService")]
         [Validation(Required=false)]
         public string ManagedService { get; set; }

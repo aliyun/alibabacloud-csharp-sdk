@@ -31,8 +31,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string CenId { get; set; }
 
         /// <summary>
-        /// <para>The service address of the cloud service.</para>
-        /// <para>You can enter a domain name, an IP address, or a CIDR block.</para>
+        /// <para>The endpoint of the Alibaba Cloud service.</para>
+        /// <para>The endpoint can be a domain name, an IP address, or a CIDR block.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100.118.28.0/24</para>
@@ -42,8 +42,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string Host { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the cloud service.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</para>
+        /// <para>The ID of the region where the Alibaba Cloud service is deployed.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to obtain the region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string HostRegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC associated with the cloud service.</para>
+        /// <para>The ID of the VPC that is associated with the Alibaba Cloud service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp1h8vbrbcgohcju5****</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number. The default value is <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: <b>10</b>. Valid values: <b>1</b> to <b>50</b>.</para>
+        /// <para>The number of entries to return on each page. The default value is <b>10</b>. Valid values: <b>1</b> to <b>50</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

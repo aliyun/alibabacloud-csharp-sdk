@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class CreateTransitRouterVpnAttachmentRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to allow the transit router to automatically advertise routes to the IPsec-VPN attachment. Valid values:</para>
+        /// <para>Specifies whether to enable the transit router to automatically publish routes to the IPsec-VPN connection. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b> (default): yes</description></item>
-        /// <item><description><b>false</b>: no</description></item>
+        /// <item><description><para><b>true</b> (default): enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,7 +37,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The billing method.</para>
-        /// <para>Set the value to <b>POSTPAY</b>, which is the default value and specifies the pay-as-you-go billing method.</para>
+        /// <para>The value is set to <b>POSTPAY</b> (default), which specifies the pay-as-you-go billing method.</para>
         /// 
         /// <b>Example:</b>
         /// <para>POSTPAY</para>
@@ -45,10 +47,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.</para>
+        /// <para>A client token that is used to ensure the idempotence of the request.</para>
+        /// <para>Generate a unique token on your client. The token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not set this parameter, <b>ClientToken</b> is set to the value of <b>RequestId</b>. The value of <b>RequestId</b> for each API request may be different.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> as the <b>ClientToken</b>. The <b>RequestId</b> of each API request may be different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -61,8 +63,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and sends the request.</description></item>
+        /// <item><description><para><b>true</b>: performs a dry run but does not create the VPN connection. The system checks the request for required parameters, format, and service limits. If the request fails the check, an error message is returned. If the request passes the check, the <c>DryRunOperation</c> error code is returned.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): performs a dry run and creates the VPN connection if the request passes the check.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -81,7 +85,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the transit router is deployed.</para>
+        /// <para>The ID of the region where the transit router instance is deployed.</para>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</para>
         /// 
         /// <b>Example:</b>
@@ -101,7 +105,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The tags.</para>
-        /// <para>You can specify at most 20 tags in each call.</para>
+        /// <para>You can specify up to 20 tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -109,8 +113,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public class CreateTransitRouterVpnAttachmentRequestTag : TeaModel {
             /// <summary>
             /// <para>The tag key.</para>
-            /// <para>The tag keys cannot be an empty string. The tag key can be up to 64 characters in length, and cannot start with <c>acs:</c> or <c>aliyun</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
-            /// <para>You can specify at most 20 tag keys.</para>
+            /// <para>The tag key cannot be an empty string. It can be up to 64 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>You can specify up to 20 tag keys.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TagKey</para>
@@ -121,8 +125,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
             /// <summary>
             /// <para>The tag value.</para>
-            /// <para>The tag value can be 0 to 128 characters in length, and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
-            /// <para>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</para>
+            /// <para>The tag value can be an empty string or a string of up to 128 characters. It cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>You can specify up to 20 tag values.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TagValue</para>
@@ -134,8 +138,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         }
 
         /// <summary>
-        /// <para>The description of the VPN attachment.</para>
-        /// <para>The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The description of the VPN connection.</para>
+        /// <para>The description can be empty or 1 to 256 characters in length, and cannot start with \<c>http\\://\\</c> or \<c>https\\://\\</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>desctest</para>
@@ -145,8 +149,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterAttachmentDescription { get; set; }
 
         /// <summary>
-        /// <para>The name of the VPN attachment.</para>
-        /// <para>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). It must start with a letter.</para>
+        /// <para>The name of the VPN connection.</para>
+        /// <para>The name can be empty or 1 to 128 characters in length, and cannot start with \<c>http\\://\\</c> or \<c>https\\://\\</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nametest</para>
@@ -156,7 +160,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterAttachmentName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the transit router.</para>
+        /// <para>The ID of the transit router instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tr-p0wm740vjnbaprv0m****</para>
@@ -166,7 +170,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the IPsec-VPN attachment.</para>
+        /// <para>The ID of the IPsec-VPN connection.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -179,8 +183,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>The ID of the Alibaba Cloud account to which the IPsec-VPN connection belongs.</para>
         /// <list type="bullet">
-        /// <item><description>If you do not set this parameter, the ID of the current Alibaba Cloud account is used.</description></item>
-        /// <item><description>You must set VpnOwnerId if you want to connect the transit router to an IPsec-VPN connection that belongs to another Alibaba Cloud account.</description></item>
+        /// <item><description><para>If you do not specify this parameter, the ID of the current Alibaba Cloud account is used.</para>
+        /// </description></item>
+        /// <item><description><para>This parameter is required if you want to connect to a cross-account IPsec-VPN connection.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -192,15 +198,18 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The ID of the zone in the current region.</para>
-        /// <para>Resources are deployed in the specified zone.</para>
+        /// <para>The system creates resources in the specified zone.</para>
+        /// <remarks>
+        /// <para>Do not specify this parameter if the attached IPsec-VPN connection is in dual-tunnel mode.</para>
+        /// </remarks>
         /// </summary>
         [NameInMap("Zone")]
         [Validation(Required=false)]
         public List<CreateTransitRouterVpnAttachmentRequestZone> Zone { get; set; }
         public class CreateTransitRouterVpnAttachmentRequestZone : TeaModel {
             /// <summary>
-            /// <para>The zone ID of the read-only instance.</para>
-            /// <para>You can call the <a href="https://help.aliyun.com/document_detail/261356.html">ListTransitRouterAvailableResource</a> operation to query the most recent zone list.</para>
+            /// <para>The zone ID.</para>
+            /// <para>You can call the <a href="https://help.aliyun.com/document_detail/261356.html">ListTransitRouterAvailableResource</a> operation to query available zones.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-h</para>

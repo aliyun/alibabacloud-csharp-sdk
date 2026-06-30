@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class SetCenInterRegionBandwidthLimitRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum bandwidth value of the inter-region connection. Unit: Mbit/s.</para>
+        /// <para>The inter-region bandwidth between the two regions. Unit: Mbps.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,8 +21,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? BandwidthLimit { get; set; }
 
         /// <summary>
-        /// <para>The bandwidth allocation method. Valid values:</para>
-        /// <para><b>BandwidthPackage</b>: allocates bandwidth from a bandwidth plan.</para>
+        /// <para>The method used to allocate bandwidth. Valid value:</para>
+        /// <list type="bullet">
+        /// <item><description><b>BandwidthPackage</b> (default): allocates bandwidth from a bandwidth plan.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>BandwidthPackage</para>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The ID of the local region.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query regions where you can attach network instances to a CEN instance.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the regions where network instances can be attached to a CEN instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

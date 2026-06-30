@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The ID of the region where the network instance is deployed.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</para>
+        /// <para>For more information, see <a href="t2264556.xdita#"></a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,9 +56,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>The type of the network instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>VPC</b>: VPC</description></item>
-        /// <item><description><b>VBR</b>: VBR</description></item>
-        /// <item><description><b>CCN</b>: Cloud Connect Network (CCN) instance</description></item>
+        /// <item><description><para><b>VPC</b>: virtual private cloud.</para>
+        /// </description></item>
+        /// <item><description><para><b>VBR</b>: virtual border router.</para>
+        /// </description></item>
+        /// <item><description><para><b>CCN</b>: Cloud Connect Network.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -80,7 +83,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string DestinationCidrBlock { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -90,7 +93,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: <b>10</b>. Valid values: <b>1</b> to <b>50</b>.</para>
+        /// <para>The number of entries per page. Default value: <b>10</b>. Valid values: <b>1</b> to <b>500</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

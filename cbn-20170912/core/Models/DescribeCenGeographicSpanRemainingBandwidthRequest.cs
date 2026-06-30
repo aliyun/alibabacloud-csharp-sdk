@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeCenGeographicSpanRemainingBandwidthRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Cloud Enterprise Network (CEN) instance to which the bandwidth plan is associated.</para>
+        /// <para>The ID of the Cloud Enterprise Network (CEN) instance to which the bandwidth plan is attached.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,12 +21,16 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string CenId { get; set; }
 
         /// <summary>
-        /// <para>The ID of one of the connected areas of the bandwidth plan. Valid values:</para>
+        /// <para>The ID of a connected area of the bandwidth plan. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>China</b>: Chinese mainland</description></item>
-        /// <item><description><b>North-America</b>: North America</description></item>
-        /// <item><description><b>Asia-Pacific</b>: Asia Pacific</description></item>
-        /// <item><description><b>Europe</b>: Europe</description></item>
+        /// <item><description><para><b>China</b>: the Chinese mainland.</para>
+        /// </description></item>
+        /// <item><description><para><b>North-America</b>: North America.</para>
+        /// </description></item>
+        /// <item><description><para><b>Asia-Pacific</b>: Asia Pacific.</para>
+        /// </description></item>
+        /// <item><description><para><b>Europe</b>: Europe.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -38,12 +42,16 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string GeographicRegionAId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the other area connected by the bandwidth plan. Valid values:</para>
+        /// <para>The ID of the other connected area of the bandwidth plan. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>China</b>: Chinese mainland</description></item>
-        /// <item><description><b>North-America</b>: North America</description></item>
-        /// <item><description><b>Asia-Pacific</b>: Asia Pacific</description></item>
-        /// <item><description><b>Europe</b>: Europe</description></item>
+        /// <item><description><para><b>China</b>: the Chinese mainland.</para>
+        /// </description></item>
+        /// <item><description><para><b>North-America</b>: North America.</para>
+        /// </description></item>
+        /// <item><description><para><b>Asia-Pacific</b>: Asia Pacific.</para>
+        /// </description></item>
+        /// <item><description><para><b>Europe</b>: Europe.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -63,7 +71,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number. The default value is <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -73,7 +81,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: <b>10</b>. Valid values: <b>1</b> to <b>50</b>.</para>
+        /// <para>The number of entries per page. The default value is <b>10</b>. Valid values: <b>1</b> to <b>50</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

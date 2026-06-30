@@ -20,14 +20,15 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string CenId { get; set; }
 
         /// <summary>
-        /// <para>The field that is used to enable or disable a feature of the transit router.</para>
+        /// <para>The feature to be filtered.</para>
         /// </summary>
         [NameInMap("FeatureFilter")]
         [Validation(Required=false)]
         public List<ListTransitRoutersRequestFeatureFilter> FeatureFilter { get; set; }
         public class ListTransitRoutersRequestFeatureFilter : TeaModel {
             /// <summary>
-            /// <para>The value of the field that is used to enable or disable a feature of the transit router. Supported fields:</para>
+            /// <para>The key of the feature to be filtered.
+            /// The following key is supported:</para>
             /// <list type="bullet">
             /// <item><description><b>Multicast</b>: the multicast feature.</description></item>
             /// </list>
@@ -40,10 +41,13 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The fields that are used to enable or disable the features of the transit router. The <b>Multicast</b> field supports only one value. Valid values:</para>
+            /// <para>A list of values for the feature.
+            /// If you set the key to <b>Multicast</b>, you can specify only one value. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Enabled</b>: enables multicast.</description></item>
-            /// <item><description><b>Disabled</b>: disables multicast.</description></item>
+            /// <item><description><para><b>Enabled</b>: Multicast is supported.</para>
+            /// </description></item>
+            /// <item><description><para><b>Disabled</b>: Multicast is not supported.</para>
+            /// </description></item>
             /// </list>
             /// </summary>
             [NameInMap("Value")]
@@ -61,7 +65,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -71,7 +75,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: <b>1</b> to <b>50</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page. Valid values: <b>1</b> to <b>50</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -100,13 +104,18 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The status of the transit router. Valid values:</para>
+        /// <para>The status of the transit router.</para>
         /// <list type="bullet">
-        /// <item><description><b>Creating</b>: The transit router is being created.</description></item>
-        /// <item><description><b>Active</b>: The transit router is available.</description></item>
-        /// <item><description><b>Modifying</b>: The transit router is being modified</description></item>
-        /// <item><description><b>Deleting</b>: The transit router is being deleted.</description></item>
-        /// <item><description><b>Upgrading</b>: The transit router is being upgraded.</description></item>
+        /// <item><description><para><b>Creating</b>: The transit router is being created.</para>
+        /// </description></item>
+        /// <item><description><para><b>Active</b>: The transit router is available.</para>
+        /// </description></item>
+        /// <item><description><para><b>Modifying</b>: The transit router is being modified.</para>
+        /// </description></item>
+        /// <item><description><para><b>Deleting</b>: The transit router is being deleted.</para>
+        /// </description></item>
+        /// <item><description><para><b>Upgrading</b>: The transit router is being upgraded.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -117,8 +126,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The information about the tags.</para>
-        /// <para>You can specify at most 20 tags in each call.</para>
+        /// <para>The tags.</para>
+        /// <para>You can specify up to 20 tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -126,8 +135,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public class ListTransitRoutersRequestTag : TeaModel {
             /// <summary>
             /// <para>The tag key.</para>
-            /// <para>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <c>acs:</c> or <c>aliyun</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
-            /// <para>You can specify at most 20 tag keys.</para>
+            /// <para>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>You can specify up to 20 tag keys.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TagKey</para>
@@ -138,8 +147,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
             /// <summary>
             /// <para>The tag value.</para>
-            /// <para>The tag value can be 0 to 128 characters in length, and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
-            /// <para>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</para>
+            /// <para>The tag value can be an empty string or a string of up to 128 characters. It cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>Each tag key must have a unique tag value. You can specify up to 20 tag values.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TagValue</para>
@@ -161,8 +170,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterId { get; set; }
 
         /// <summary>
-        /// <para>The name of the Enterprise Edition transit router.</para>
-        /// <para>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter but cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The name of the transit router.</para>
+        /// <para>The name must be 1 to 128 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testname</para>
@@ -172,10 +181,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterName { get; set; }
 
         /// <summary>
-        /// <para>The edition of the transit router. Valid values:</para>
+        /// <para>The type of the transit router.</para>
         /// <list type="bullet">
-        /// <item><description><b>Enterprise</b>: Enhance Edition</description></item>
-        /// <item><description><b>Basic</b>: Basic Edition</description></item>
+        /// <item><description><para><b>Enterprise</b>: Enterprise Edition.</para>
+        /// </description></item>
+        /// <item><description><para><b>Basic</b>: Basic Edition.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

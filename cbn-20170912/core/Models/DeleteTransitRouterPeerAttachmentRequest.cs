@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DeleteTransitRouterPeerAttachmentRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that you want to use to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>A client token that is used to ensure the idempotence of the request.</para>
+        /// <para>Generate a token from your client to ensure that the token is unique among different requests. The ClientToken parameter can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> of the request as the <b>ClientToken</b>. The <b>RequestId</b> of each request is different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,10 +24,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run. A dry run checks permissions and the status of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (default): performs a dry run and sends the request.</description></item>
-        /// <item><description><b>true</b>: performs a dry run. The system checks the required parameters and request syntax. If the request fails to pass the check, an error message is returned. If the request passes the dry run, the system returns the ID of the request.</description></item>
+        /// <item><description><para><b>false</b> (default): sends the request. If the request passes the check, the inter-region connection is deleted.</para>
+        /// </description></item>
+        /// <item><description><para><b>true</b>: sends a check request. The system checks the required parameters and the request format. If the request fails the check, an error is returned. If the request passes the check, the corresponding request ID is returned. The inter-region connection is not deleted.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -40,8 +42,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>Specifies whether to forcefully delete the inter-region connection. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (default): Check for relevant resources, including associated forwarding and route learning, before deleting the inter-region connection. If such a resource exists, the VPC connection is not deleted and an error message is returned.</description></item>
-        /// <item><description><b>true</b>: Delete the inter-region connection and all relevant resources.</description></item>
+        /// <item><description><para><b>false</b> (default): checks for resource dependencies, such as associated forwarding and route learning, before deleting the inter-region connection. If dependencies exist, the deletion is not allowed and an error is returned.</para>
+        /// </description></item>
+        /// <item><description><para><b>true</b>: deletes all related dependencies when deleting the inter-region connection.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

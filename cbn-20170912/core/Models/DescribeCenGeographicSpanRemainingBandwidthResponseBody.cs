@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeCenGeographicSpanRemainingBandwidthResponseBody : TeaModel {
         /// <summary>
-        /// <para>The remaining bandwidth of the bandwidth plan. Unit: Mbit/s.</para>
+        /// <para>The remaining bandwidth of the bandwidth plan. Unit: Mbps.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? RemainingBandwidth { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E4B345CD-2CBA-4881-AF6D-E5D9BAE1CA7B</para>

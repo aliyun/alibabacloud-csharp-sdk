@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListTransitRouterMulticastGroupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that determines the start point of the query. Valid values:</para>
+        /// <para>The token for the next page of results.</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> was not returned, it indicates that no additional results exist.</description></item>
-        /// <item><description>If <b>NextToken</b> was returned in the previous query, specify the value to obtain the next set of results.</description></item>
+        /// <item><description><para>If <b>NextToken</b> is empty, no next page exists.</para>
+        /// </description></item>
+        /// <item><description><para>If a value is returned for <b>NextToken</b>, the value is the token for the next page.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FB3C4A16-0933-5850-9D43-0C3EA37BCBFB</para>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -61,7 +63,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public List<ListTransitRouterMulticastGroupsResponseBodyTransitRouterMulticastGroups> TransitRouterMulticastGroups { get; set; }
         public class ListTransitRouterMulticastGroupsResponseBodyTransitRouterMulticastGroups : TeaModel {
             /// <summary>
-            /// <para>The IP address of the multicast group to which the multicast resource belongs.</para>
+            /// <para>The IP address of the multicast group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>239.XX.XX.2</para>
@@ -71,10 +73,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string GroupIpAddress { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the multicast resource is a multicast member. Valid values:</para>
+            /// <para>Indicates whether the multicast resource is a multicast member.</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: yes</description></item>
-            /// <item><description><b>false</b>: no</description></item>
+            /// <item><description><para><b>true</b>: The resource is a multicast member.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: The resource is not a multicast member.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -85,10 +89,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public bool? GroupMember { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the multicast resource is a multicast source. Valid values:</para>
+            /// <para>Indicates whether the multicast resource is a multicast source.</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: yes</description></item>
-            /// <item><description><b>false</b>: no</description></item>
+            /// <item><description><para><b>true</b>: The resource is a multicast source.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: The resource is not a multicast source.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -99,8 +105,13 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public bool? GroupSource { get; set; }
 
             /// <summary>
-            /// <para>The type of the multicast source.</para>
-            /// <para>If the value is <b>Static</b>, the multicast source is manually specified.</para>
+            /// <para>The type of the multicast member.</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>Static</b>: The multicast member is manually specified.</para>
+            /// </description></item>
+            /// <item><description><para><b>IGMPv2</b>: The multicast member dynamically joins the multicast group based on Internet Group Management Protocol Version 2 (IGMPv2).</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Static</para>
@@ -110,7 +121,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string MemberType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the ENI, which is a multicast resource.</para>
+            /// <para>The ID of the ENI. The ENI is the multicast resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eni-p0weuda3lszwzjly****</para>
@@ -120,7 +131,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string NetworkInterfaceId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the multicast domain associated with the multicast resource that is deployed across regions.</para>
+            /// <para>The ID of the multicast domain that is associated with the cross-region multicast resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tr-mcast-domain-91wpg6wbhchjeq****</para>
@@ -140,20 +151,22 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account to which the multicast resource belongs.</para>
+            /// <para>The ID of the Alibaba Cloud account that owns the multicast resource.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>253460731706911258</para>
+            /// <para>11081188765****</para>
             /// </summary>
             [NameInMap("ResourceOwnerId")]
             [Validation(Required=false)]
             public long? ResourceOwnerId { get; set; }
 
             /// <summary>
-            /// <para>The type of the multicast resource. Valid values:</para>
+            /// <para>The type of the multicast resource.</para>
             /// <list type="bullet">
-            /// <item><description><b>VPC</b>: The multicast resource is in a VPC.</description></item>
-            /// <item><description><b>TR</b>: The multicast resource is deployed across regions.</description></item>
+            /// <item><description><para><b>VPC</b>: The multicast resource is in a VPC.</para>
+            /// </description></item>
+            /// <item><description><para><b>TR</b>: The multicast resource is a cross-region resource.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -164,8 +177,13 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The type of the multicast member.</para>
-            /// <para>If the value is <b>Static</b>, the multicast member is manually specified.</para>
+            /// <para>The type of the multicast source.</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>Static</b>: The multicast source is manually specified.</para>
+            /// </description></item>
+            /// <item><description><para><b>IGMPv2</b>: The multicast source dynamically joins the multicast group based on IGMPv2.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Static</para>
@@ -175,11 +193,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string SourceType { get; set; }
 
             /// <summary>
-            /// <para>The status of the multicast resource. Valid values:</para>
+            /// <para>The status of the multicast resource.</para>
             /// <list type="bullet">
-            /// <item><description><b>Registering</b>: being created</description></item>
-            /// <item><description><b>Registered</b>: available</description></item>
-            /// <item><description><b>Deregistering</b>: being deleted</description></item>
+            /// <item><description><para><b>Registering</b>: The resource is being created.</para>
+            /// </description></item>
+            /// <item><description><para><b>Registered</b>: The resource is available.</para>
+            /// </description></item>
+            /// <item><description><para><b>Deregistering</b>: The resource is being deleted.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -210,7 +231,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string TransitRouterMulticastDomainId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the vSwitch to which the multicast resource belongs.</para>
+            /// <para>The ID of the vSwitch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-p0w9s2ig1jnwgrbzl****</para>

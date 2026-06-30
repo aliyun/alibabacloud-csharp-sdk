@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
     public class ModifyTransitRouteTableAggregationShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>Use the client to generate the token, but make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>Generate a token from your client to make sure that the token is unique among different requests. The \<c>ClientToken\\</c> parameter can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the <b>RequestId</b> as the <b>ClientToken</b>. The <b>RequestId</b> may be different.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,10 +24,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run to check information such as the permissions and instance status. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (default): sends the request. If the request passes the check, an Enterprise Edition transit router is created.</description></item>
-        /// <item><description><b>true</b>: checks the request but does not create the Enterprise Edition transit router. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><para><b>false</b> (default): sends a normal request and modifies the aggregate route after the request passes the check.</para>
+        /// </description></item>
+        /// <item><description><para><b>true</b>: sends a check request to perform a dry run. The system checks the required parameters, request format, and permissions. If the check fails, the corresponding error is returned. If the check passes, the \<c>DryRunOperation\\</c> error code is returned. In this case, the aggregate route is not modified.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -66,7 +68,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The description of the aggregate route.</para>
-        /// <para>The description can be empty or 0 to 256 characters in length and cannot start with http:// or https://.</para>
+        /// <para>The description can be empty or 0 to 256 characters in length. It cannot start with http\:// or https\://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>desctest</para>
@@ -77,7 +79,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The name of the aggregate route.</para>
-        /// <para>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</para>
+        /// <para>The name can be empty or 1 to 128 characters in length. It cannot start with http\:// or https\://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nametest</para>
@@ -87,8 +89,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouteTableAggregationName { get; set; }
 
         /// <summary>
-        /// <para>The scope of networks that you want to advertise the aggregate route.</para>
-        /// <para>The valid value is <b>VPC</b>, which indicates that the aggregate route is advertised to all VPCs that have associated forwarding correlation with the Enterprise Edition transit router and have route synchronization enabled.</para>
+        /// <para>The propagation scope of the aggregate route.</para>
+        /// <para>The only valid value is <b>VPC</b>. This value specifies that the aggregate route is propagated to all VPC instances that are associated with the route table of the Enterprise Edition transit router and have route synchronization enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>VPC</para>
@@ -98,9 +100,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouteTableAggregationScope { get; set; }
 
         /// <summary>
-        /// <para>The scope of networks to which the aggregate route is advertised.</para>
+        /// <para>The list of propagation scopes for the aggregate route.</para>
         /// <remarks>
-        /// <para> You must select at least one attribute from either the Aggregate Route Propagation Range or the Aggregate Route Propagation Range List. We recommend using the latter. The elements of the two attributes cannot duplicate.</para>
+        /// <para>You must specify this parameter or \<c>TransitRouteTableAggregationScope\\</c>. We recommend that you specify this parameter. The elements in this list cannot be the same as the value of \<c>TransitRouteTableAggregationScope\\</c>.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("TransitRouteTableAggregationScopeList")]
@@ -108,7 +110,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouteTableAggregationScopeListShrink { get; set; }
 
         /// <summary>
-        /// <para>The list of route table IDs of the Enterprise Edition transit router.</para>
+        /// <para>The ID of the route table of the Enterprise Edition transit router.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

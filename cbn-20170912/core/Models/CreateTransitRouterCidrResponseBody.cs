@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class CreateTransitRouterCidrResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0876E54E-3E36-5C31-89F0-9EE8A9266F9A</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the CIDR block.</para>
+        /// <para>The ID of the transit router CIDR block.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cidr-0zv0q9crqpntzz****</para>

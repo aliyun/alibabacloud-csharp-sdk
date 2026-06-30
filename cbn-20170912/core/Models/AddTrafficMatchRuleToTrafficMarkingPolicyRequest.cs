@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
         /// <para>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not set this parameter, <b>ClientToken</b> is set to the value of <b>RequestId</b>. The value of <b>RequestId</b> for each API request may be different.</para>
+        /// <para>If you do not set this parameter, <b>ClientToken</b> is set to the value of <b>RequestId</b>. The value of <b>RequestId</b> for each API request may be different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <para>The Differentiated Services Code Point (DSCP) value that is used to match packets. Valid values: <b>0</b> to <b>63</b>.</para>
             /// <para>Packets that carry the specified DSCP value are considered a match. If you do not specify a DSCP value, packets are considered a match regardless of the DSCP value.</para>
             /// <remarks>
-            /// <para> The DSCP value that you specify for this parameter is the DSCP value that packets carry before they are transmitted over the inter-region connection.</para>
+            /// <para>The DSCP value that you specify for this parameter is the DSCP value that packets carry before they are transmitted over the inter-region connection.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
             /// <summary>
             /// <para>The description of the traffic classification rule.</para>
-            /// <para>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length, and cannot start with http:// or https://.</para>
+            /// <para>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length, and cannot start with http\:// or https\://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>desctest</para>
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
             /// <summary>
             /// <para>The name of the traffic classification rule.</para>
-            /// <para>The name is optional. If you enter a name, it must be 1 to 128 characters in length, and cannot start with http:// or https://.</para>
+            /// <para>The name is optional. If you enter a name, it must be 1 to 128 characters in length, and cannot start with http\:// or https\://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>nametest</para>

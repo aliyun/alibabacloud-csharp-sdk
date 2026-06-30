@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DeleteRouteServiceInCenRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the region where the cloud service is accessed.</para>
+        /// <para>The region ID from which the Alibaba Cloud service is accessed.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string AccessRegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the CEN instance.</para>
+        /// <para>The ID of the Cloud Enterprise Network (CEN) instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string CenId { get; set; }
 
         /// <summary>
-        /// <para>The IP addresses or CIDR blocks of the cloud service.</para>
+        /// <para>The IP address or CIDR block of the Alibaba Cloud service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,8 +43,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string Host { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the cloud service.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the Alibaba Cloud service.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string HostRegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the virtual private cloud (VPC) that is associated with the cloud service.</para>
+        /// <para>The ID of the VPC that is associated with the Alibaba Cloud service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp1t36rn9l53iwbsf****</para>

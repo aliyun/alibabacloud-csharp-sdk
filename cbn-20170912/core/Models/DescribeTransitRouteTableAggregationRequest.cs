@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
     public class DescribeTransitRouteTableAggregationRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
+        /// <para>Generate a token from your client to ensure that the token is unique among different requests. The token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the RequestId of the request as the ClientToken. The RequestId is different for each request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -34,10 +34,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that determines the start point of the query. Valid values:</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If this is your first query or no subsequent query is to be sent, ignore this parameter.</description></item>
-        /// <item><description>If a next query is to be sent, set the value to the value of <b>NextToken</b> that is returned from the last call.</description></item>
+        /// <item><description><para>You do not need to specify this parameter for the first request.</para>
+        /// </description></item>
+        /// <item><description><para>You must specify the token that is obtained from the previous query as the value of <b>NextToken</b>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

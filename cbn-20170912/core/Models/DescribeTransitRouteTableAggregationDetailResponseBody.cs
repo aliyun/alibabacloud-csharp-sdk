@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeTransitRouteTableAggregationDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries returned on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>The configuration of the aggregate route.</para>
+        /// <para>The configuration details of the aggregate route.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeTransitRouteTableAggregationDetailResponseBodyData> Data { get; set; }
         public class DescribeTransitRouteTableAggregationDetailResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The error message returned if the configuration of the aggregate route fails.</para>
+            /// <para>The message returned if the configuration of the aggregate route fails.</para>
             /// 
             /// <b>Example:</b>
             /// <para>desctest</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the virtual private cloud (VPC) for which the aggregate route is configured.</para>
+            /// <para>The ID of the VPC instance for which the aggregate route is configured.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-6eh7fp9hdqa2wv85t****</para>
@@ -47,13 +47,18 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The status of the aggregate route. Valid values:</para>
+            /// <para>The configuration status of the aggregate route.</para>
             /// <list type="bullet">
-            /// <item><description><b>Configured</b>: The aggregate route is advertised to the VPC.</description></item>
-            /// <item><description><b>Configuring</b>: The aggregate route is being advertised.</description></item>
-            /// <item><description><b>ConfigFailed</b>: The aggregate route failed to be advertised.</description></item>
-            /// <item><description><b>PartialConfigured</b>: Failed to advertise the aggregate route to some VPCs.</description></item>
-            /// <item><description><b>Deleting</b>: The aggregate route is being deleted.</description></item>
+            /// <item><description><para><b>Configured</b>: The aggregate route is advertised to the VPC instance.</para>
+            /// </description></item>
+            /// <item><description><para><b>Configuring</b>: The aggregate route is being advertised.</para>
+            /// </description></item>
+            /// <item><description><para><b>ConfigFailed</b>: The aggregate route failed to be advertised.</para>
+            /// </description></item>
+            /// <item><description><para><b>PartialConfigured</b>: The aggregate route was partially advertised.</para>
+            /// </description></item>
+            /// <item><description><para><b>Deleting</b>: The aggregate route is being deleted.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -66,7 +71,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0C2EE7A8-74D4-4081-8236-CEBDE3BBCF50</para>
@@ -76,7 +81,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

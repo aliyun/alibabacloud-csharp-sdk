@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DeleteCenBandwidthPackageRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the bandwidth plan that you want to delete.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

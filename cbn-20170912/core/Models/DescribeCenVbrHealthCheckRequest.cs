@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: <b>1</b> to <b>50</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page. Valid values: <b>1</b> to <b>50</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string VbrInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account that owns the VBRs.</para>
+        /// <para>The ID of the Alibaba Cloud account that owns the VBR.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1250123456123456</para>
@@ -76,8 +76,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? VbrInstanceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the VBRs are deployed.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</para>
+        /// <para>The ID of the region where the Virtual Border Router (VBR) is deployed.</para>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

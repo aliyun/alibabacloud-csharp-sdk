@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListTransitRoutersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>68521297-5FA6-46CB-B4EB-658F1C68C8CC</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
             /// <summary>
             /// <para>The time when the transit router was created.</para>
-            /// <para>The time follows the ISO8601 standard in the <c>YYYY-MM-DDThh:mmZ</c> format. The time is displayed in UTC.</para>
+            /// <para>The time is displayed in the <c>YYYY-MM-DDThh:mmZ</c> format in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-03-15T09:39Z</para>
@@ -98,13 +98,18 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The status of the transit router. Valid values:</para>
+            /// <para>The status of the transit router.</para>
             /// <list type="bullet">
-            /// <item><description><b>Creating</b>: The transit router is being created.</description></item>
-            /// <item><description><b>Active</b>: The transit router is available.</description></item>
-            /// <item><description><b>Modifying</b>: The transit router is being modified</description></item>
-            /// <item><description><b>Deleting</b>: The transit router is being deleted.</description></item>
-            /// <item><description><b>Upgrading</b>: The transit router is being upgraded.</description></item>
+            /// <item><description><para><b>Creating</b>: The transit router is being created.</para>
+            /// </description></item>
+            /// <item><description><para><b>Active</b>: The transit router is available.</para>
+            /// </description></item>
+            /// <item><description><para><b>Modifying</b>: The transit router is being modified.</para>
+            /// </description></item>
+            /// <item><description><para><b>Deleting</b>: The transit router is being deleted.</para>
+            /// </description></item>
+            /// <item><description><para><b>Upgrading</b>: The transit router is being upgraded.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -115,10 +120,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether multicast is enabled for the transit router. Valid values:</para>
+            /// <para>Indicates whether the multicast feature is enabled for the transit router.</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: enabled</description></item>
-            /// <item><description><b>false</b>: disabled</description></item>
+            /// <item><description><para><b>true</b>: enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -158,7 +165,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             }
 
             /// <summary>
-            /// <para>The CIDR blocks of the transit router.</para>
+            /// <para>A list of CIDR blocks of the transit router.</para>
             /// </summary>
             [NameInMap("TransitRouterCidrList")]
             [Validation(Required=false)]
@@ -195,13 +202,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the system is allowed to automatically add a route to the route table of the transit router. Valid values:</para>
+                /// <para>Indicates whether the system automatically adds a route for the transit router CIDR block to the route table of the transit router.</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>true</b>: yes</para>
-                /// <para>A value of <b>true</b> indicates that after you create a private VPN connection and create a route learning correlation for the private VPC connection, the system automatically adds the following route to the route table of the transit router that is in route learning correlation with the private VPN connection: A blackhole route whose destination CIDR block is the CIDR block of the transit router. The CIDR block of the transit router refers to the CIDR block from which gateway IP addresses are allocated to IPsec-VPN connections. </para>
-                /// <para>The blackhole route is advertised only to the route tables of virtual border routers (VBRs) that are connected to the transit router. </para>
+                /// <item><description><para><b>true</b>: Yes.</para>
+                /// <para>If this parameter is set to <b>true</b>, after you create a VPN connection of the private gateway type and enable route learning for the VPN connection, the system automatically adds a blackhole route to the route table of the transit router that is in a route learning correlation with the VPN connection.</para>
+                /// <para>The destination CIDR block of the blackhole route is the CIDR block of the transit router. The CIDR block of the transit router is the CIDR block from which an IP address is allocated to the IPsec-VPN connection.</para>
+                /// <para>This blackhole route is advertised only to the route tables of the virtual border routers (VBRs) that are connected to the transit router.</para>
                 /// </description></item>
-                /// <item><description><para><b>false</b>: no</para>
+                /// <item><description><para><b>false</b>: No.</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -255,10 +263,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string TransitRouterName { get; set; }
 
             /// <summary>
-            /// <para>The edition of the transit router. Valid values:</para>
+            /// <para>The type of the transit router.</para>
             /// <list type="bullet">
-            /// <item><description><b>Enterprise</b>: Enhance Edition</description></item>
-            /// <item><description><b>Basic</b>: Basic Edition</description></item>
+            /// <item><description><para><b>Enterprise</b>: Enterprise Edition.</para>
+            /// </description></item>
+            /// <item><description><para><b>Basic</b>: Basic Edition.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeCenRegionDomainRouteEntriesRequest : TeaModel {
         /// <summary>
-        /// <para>The CEN instance ID.</para>
+        /// <para>The ID of the CEN instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The region ID.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</para>
+        /// <para>Call <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> to obtain the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number. The default value is <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: <b>1</b> to <b>500</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries to return on each page. The default value is <b>10</b>. Valid values: <b>1</b> to <b>500</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -69,13 +69,18 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The route status. Valid values:</para>
+        /// <para>The status of the route entry. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Active</b> (default): available</description></item>
-        /// <item><description><b>Candidate</b>: standby</description></item>
-        /// <item><description><b>Rejected</b>: rejected</description></item>
-        /// <item><description><b>Prohibited</b>: prohibited</description></item>
-        /// <item><description><b>All</b> (default value): all routes</description></item>
+        /// <item><description><para><b>Active</b> (default): active.</para>
+        /// </description></item>
+        /// <item><description><para><b>Candidate</b>: backup.</para>
+        /// </description></item>
+        /// <item><description><para><b>Rejected</b>: rejected.</para>
+        /// </description></item>
+        /// <item><description><para><b>Prohibited</b>: disabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>All</b>: all route entries in the current region, regardless of their status.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

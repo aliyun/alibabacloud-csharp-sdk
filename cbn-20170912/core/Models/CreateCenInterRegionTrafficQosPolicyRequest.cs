@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>The allocation mode of the guaranteed bandwidth. You can specify an absolute bandwidth value or a bandwidth percentage. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>byBandwidth</b>: allocates an absolute bandwidth value for the QoS queue.</description></item>
-        /// <item><description><b>byBandwidthPercent</b> (default): allocates a bandwidth percentage for the OoS queue.</description></item>
+        /// <item><description><para><b>byBandwidth</b>: allocates an absolute bandwidth value for the QoS queue.</para>
+        /// </description></item>
+        /// <item><description><para><b>byBandwidthPercent</b> (default): allocates a bandwidth percentage for the OoS queue.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -41,8 +43,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>Specifies whether only to precheck the API request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: prechecks the request but does not create the QoS policy. The system checks the required parameters, the request format, and the service limits. If the request fails the check, an error message is returned. If the request passes the check, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b>: sends the API request. If the request passes the precheck, the QoS policy is created. This is the default value.</description></item>
+        /// <item><description><para><b>true</b>: prechecks the request but does not create the QoS policy. The system checks the required parameters, the request format, and the service limits. If the request fails the check, an error message is returned. If the request passes the check, the <c>DryRunOperation</c> error code is returned.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: sends the API request. If the request passes the precheck, the QoS policy is created. This is the default value.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -70,7 +74,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The description of the QoS policy.</para>
-        /// <para>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length, and cannot start with http:// or https://.</para>
+        /// <para>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length, and cannot start with http\:// or https\://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>desctest</para>
@@ -81,7 +85,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The name of the QoS policy.</para>
-        /// <para>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</para>
+        /// <para>The name can be empty or 1 to 128 characters in length, and cannot start with http\:// or https\://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nametest</para>
@@ -103,7 +107,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <para>Each QoS policy supports at most 10 queues. You can specify a valid bandwidth value for each queue.</para>
             /// <para>For example, a value of 1 specifies that the queue can consume 1 Mbit/s of the inter-region bandwidth.</para>
             /// <remarks>
-            /// <para> The sum of the absolute bandwidth values of all the queues in a QoS policy cannot exceed the total bandwidth of the inter-region connection.</para>
+            /// <para>The sum of the absolute bandwidth values of all the queues in a QoS policy cannot exceed the total bandwidth of the inter-region connection.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -124,7 +128,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// <para>The description of the current queue.</para>
             /// <para>Each QoS policy supports at most 10 queues. You can specify a description for each queue.</para>
-            /// <para>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http:// or https://.</para>
+            /// <para>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http\:// or https\://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>desctest</para>
@@ -136,7 +140,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// <para>The name of the current queue.</para>
             /// <para>Each QoS policy supports at most three queues. You can specify a name for each queue.</para>
-            /// <para>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</para>
+            /// <para>The name can be empty or 1 to 128 characters in length, and cannot start with http\:// or https\://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>nametest</para>
@@ -150,7 +154,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <para>Each QoS policy supports at most 10 queues. You can specify a valid percentage for each queue.</para>
             /// <para>For example, a value of <b>1</b> specifies that the queue can consume 1% of the inter-region bandwidth.</para>
             /// <remarks>
-            /// <para> The sum of the percentage values of all the queues in a QoS policy cannot exceed 100%.</para>
+            /// <para>The sum of the percentage values of all the queues in a QoS policy cannot exceed 100%.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

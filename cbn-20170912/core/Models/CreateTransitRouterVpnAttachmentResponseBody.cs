@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class CreateTransitRouterVpnAttachmentResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8B5DD40A-3A29-5AC0-B8DA-05FD10D5C893</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPN attachment.</para>
+        /// <para>The ID of the VPN connection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tr-attach-y5dup2qwfyh9lu****</para>

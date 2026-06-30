@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that determines the start point of the query.</para>
+        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> was not returned in the previous query, it indicates that no additional results exist.</description></item>
-        /// <item><description>If <b>NextToken</b> was returned in the previous query, specify the value to obtain the next set of results.</description></item>
+        /// <item><description><para>If <b>NextToken</b> is empty, no next page exists.</para>
+        /// </description></item>
+        /// <item><description><para>If a value is returned for <b>NextToken</b>, the value is the token that determines the start point of the next query.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>113BFD47-63DF-5D9D-972C-033FB9C360CD</para>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -54,17 +56,19 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>A list of QoS policies.</para>
+        /// <para>The list of QoS policies.</para>
         /// </summary>
         [NameInMap("TrafficQosPolicies")]
         [Validation(Required=false)]
         public List<ListCenInterRegionTrafficQosPoliciesResponseBodyTrafficQosPolicies> TrafficQosPolicies { get; set; }
         public class ListCenInterRegionTrafficQosPoliciesResponseBodyTrafficQosPolicies : TeaModel {
             /// <summary>
-            /// <para>The guaranteed bandwidth mode.</para>
+            /// <para>The bandwidth guarantee type.</para>
             /// <list type="bullet">
-            /// <item><description><b>byBandwidth</b>: allocates absolute bandwidth values to QoS queues.</description></item>
-            /// <item><description><b>byBandwidthPercent</b>: assigns bandwidth percentages to QoS queues.</description></item>
+            /// <item><description><para><b>byBandwidth</b>: The QoS queues are configured based on an absolute bandwidth value.</para>
+            /// </description></item>
+            /// <item><description><para><b>byBandwidthPercent</b>: The QoS queues are configured based on a bandwidth percentage.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -107,10 +111,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// <para>The status of the QoS policy.</para>
             /// <list type="bullet">
-            /// <item><description><b>Creating</b>: The QoS policy is being created.</description></item>
-            /// <item><description><b>Active</b>: The QoS policy is available.</description></item>
-            /// <item><description><b>Modifying</b>: The policy is being modified.</description></item>
-            /// <item><description><b>Deleting</b>: The QoS policy is being deleted.</description></item>
+            /// <item><description><para><b>Creating</b>: The policy is being created.</para>
+            /// </description></item>
+            /// <item><description><para><b>Active</b>: The policy is active.</para>
+            /// </description></item>
+            /// <item><description><para><b>Modifying</b>: The policy is being modified.</para>
+            /// </description></item>
+            /// <item><description><para><b>Deleting</b>: The policy is being deleted.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -121,14 +129,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string TrafficQosPolicyStatus { get; set; }
 
             /// <summary>
-            /// <para>A list of queues.</para>
+            /// <para>The list of queues.</para>
             /// </summary>
             [NameInMap("TrafficQosQueues")]
             [Validation(Required=false)]
             public List<ListCenInterRegionTrafficQosPoliciesResponseBodyTrafficQosPoliciesTrafficQosQueues> TrafficQosQueues { get; set; }
             public class ListCenInterRegionTrafficQosPoliciesResponseBodyTrafficQosPoliciesTrafficQosQueues : TeaModel {
                 /// <summary>
-                /// <para>If the QoS queues are assigned absolute bandwidth values, this parameter indicates the absolute bandwidth value that is allocated to the queue.</para>
+                /// <para>The bandwidth value allocated to the queue of the inter-region connection. This parameter is returned when the bandwidth guarantee type is byBandwidth.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -138,14 +146,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public string Bandwidth { get; set; }
 
                 /// <summary>
-                /// <para>The differentiated services code point (DSCP) value that is used to match packets.</para>
+                /// <para>The Differentiated Services Code Point (DSCP) values of the traffic messages that are matched by the queue.</para>
                 /// </summary>
                 [NameInMap("Dscps")]
                 [Validation(Required=false)]
                 public List<int?> Dscps { get; set; }
 
                 /// <summary>
-                /// <para>The actual bandwidth value of the current queue.</para>
+                /// <para>The actual bandwidth of the queue.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1.35</para>
@@ -165,7 +173,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public string QosQueueDescription { get; set; }
 
                 /// <summary>
-                /// <para>The queue ID.</para>
+                /// <para>The ID of the queue.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>qos-queue-njcrmr9fiu1jii****</para>
@@ -185,7 +193,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public string QosQueueName { get; set; }
 
                 /// <summary>
-                /// <para>If the QoS queues are assigned bandwidth percentages, this parameter indicates the percentage of bandwidth that is allocated to the queue.</para>
+                /// <para>The percentage of the inter-region connection bandwidth that is used by the queue. This parameter is returned when the bandwidth guarantee type is byBandwidthPercent.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -207,7 +215,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string TransitRouterAttachmentId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the transit router.</para>
+            /// <para>The ID of the TransitRouter instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tr-2ze4ta4v32umj0rb***</para>

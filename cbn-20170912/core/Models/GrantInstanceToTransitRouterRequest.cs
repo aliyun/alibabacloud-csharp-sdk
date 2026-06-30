@@ -45,10 +45,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>The type of network instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>VPC</b>: VPC</description></item>
-        /// <item><description><b>ExpressConnect</b>: VBR</description></item>
-        /// <item><description><b>VPN</b>: IPsec-VPN connection</description></item>
-        /// <item><description><b>ECR</b>: ECR</description></item>
+        /// <item><description><para><b>VPC</b>: VPC</para>
+        /// </description></item>
+        /// <item><description><para><b>ExpressConnect</b>: VBR</para>
+        /// </description></item>
+        /// <item><description><para><b>VPN</b>: IPsec-VPN connection</para>
+        /// </description></item>
+        /// <item><description><para><b>ECR</b>: ECR</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -62,8 +66,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>The entity that pays the fees of the network instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>PayByCenOwner</b>: the Alibaba Cloud account that owns the CEN instance.</description></item>
-        /// <item><description><b>PayByResourceOwner</b>: the Alibaba Cloud account that owns the network instance.</description></item>
+        /// <item><description><para><b>PayByCenOwner</b>: the Alibaba Cloud account that owns the CEN instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>PayByResourceOwner</b>: the Alibaba Cloud account that owns the network instance.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

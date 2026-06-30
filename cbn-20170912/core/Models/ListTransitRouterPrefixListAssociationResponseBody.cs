@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListTransitRouterPrefixListAssociationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,16 +30,16 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>A list of prefix lists.</para>
+        /// <para>The information about the prefix lists.</para>
         /// </summary>
         [NameInMap("PrefixLists")]
         [Validation(Required=false)]
         public List<ListTransitRouterPrefixListAssociationResponseBodyPrefixLists> PrefixLists { get; set; }
         public class ListTransitRouterPrefixListAssociationResponseBodyPrefixLists : TeaModel {
             /// <summary>
-            /// <para>The ID of the next hop.</para>
+            /// <para>The ID of the next hop connection.</para>
             /// <remarks>
-            /// <para>A value of <b>BlackHole</b> indicates that all the CIDR blocks in the prefix list are blackhole routes. Packets destined for the CIDR blocks are dropped.</para>
+            /// <para>If <b>BlackHole</b> is returned, it indicates that all CIDR blocks in the prefix list are blackhole routes. All traffic destined for the CIDR blocks in the prefix list is dropped.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string NextHop { get; set; }
 
             /// <summary>
-            /// <para>The ID of the network instance associated with the next hop connection.</para>
+            /// <para>The ID of the network instance that is associated with the next hop connection.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-6eh7fp9hdqa2wv85t****</para>
@@ -60,12 +60,16 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string NextHopInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The type of the next hop. Valid values:</para>
+            /// <para>The next hop type.</para>
             /// <list type="bullet">
-            /// <item><description><b>BlackHole</b>: All the CIDR blocks in the prefix list are blackhole routes. Packets destined for the CIDR blocks are dropped.</description></item>
-            /// <item><description><b>VPC</b>: The next hop of the CIDR blocks in the prefix list is a VPC connection.</description></item>
-            /// <item><description><b>VBR</b>: The next hop of the CIDR blocks in the prefix list is a VBR connection.</description></item>
-            /// <item><description><b>TR</b>: The next hop of the CIDR blocks in the prefix list is an inter-region connection.</description></item>
+            /// <item><description><para><b>BlackHole</b>: The routes are blackhole routes. All traffic destined for the CIDR blocks in the prefix list is dropped.</para>
+            /// </description></item>
+            /// <item><description><para><b>VPC</b>: The next hop is a Virtual Private Cloud (VPC) connection.</para>
+            /// </description></item>
+            /// <item><description><para><b>VBR</b>: The next hop is a virtual border router (VBR) connection.</para>
+            /// </description></item>
+            /// <item><description><para><b>TR</b>: The next hop is an inter-region connection.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -96,10 +100,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string PrefixListId { get; set; }
 
             /// <summary>
-            /// <para>The status of the prefix list. Valid values:</para>
+            /// <para>The status of the prefix list.</para>
             /// <list type="bullet">
-            /// <item><description><b>Active</b>: The prefix list is effective.</description></item>
-            /// <item><description><b>Updating</b>: The prefix list is being updated.</description></item>
+            /// <item><description><para><b>Active</b>: The prefix list is active.</para>
+            /// </description></item>
+            /// <item><description><para><b>Updating</b>: The prefix list is being updated.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -132,7 +138,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6005CA94-676E-1FEE-985E-7602EFAADD6A</para>

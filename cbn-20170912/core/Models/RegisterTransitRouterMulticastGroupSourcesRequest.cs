@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class RegisterTransitRouterMulticastGroupSourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>A client token to ensure the idempotence of the request.</para>
+        /// <para>Generate a unique value from your client. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID is different for each request.</para>
+        /// <para>If you do not specify this parameter, the system uses the request ID as the client token. The request ID is different for each request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,10 +24,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run, without sending the actual request. Default values:</para>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</description></item>
+        /// <item><description><para><b>true</b>: performs a dry run. The system checks the required parameters, request format, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): sends the request. If the request passes the check, a multicast source is created.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,11 +40,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the multicast group to which the multicast source belongs. Valid values: <b>224.0.1.0</b> to <b>239.255.255.254</b>.</para>
+        /// <para>The IP address of the multicast group to which the multicast source belongs. Valid values range from <b>224.0.1.0</b> to <b>239.255.255.254</b>.</para>
         /// <remarks>
-        /// <para>224.0.0.0 to 224.0.0.255 are reserved by the system and cannot be used by multicast groups.</para>
+        /// <para>Notice: </para>
         /// </remarks>
-        /// <para>If the multicast group does not exist in the multicast domain, the system automatically creates the multicast group in the multicast domain.</para>
+        /// <para>The IP addresses from 224.0.0.0 to 224.0.0.127 are system reserved IP addresses. They cannot be used as multicast group IP addresses.</para>
+        /// <para>If the specified multicast group does not exist in the multicast domain, the system automatically creates the multicast group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,7 +56,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string GroupIpAddress { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the ENIs.</para>
+        /// <para>A list of ENI IDs.</para>
         /// </summary>
         [NameInMap("NetworkInterfaceIds")]
         [Validation(Required=false)]
@@ -89,8 +92,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>The ID of the VPC to which the ENI belongs.</para>
         /// <list type="bullet">
-        /// <item><description>If the ENI belongs to the current Alibaba Cloud account, ignore this parameter.</description></item>
-        /// <item><description>If the ENI belongs to a different Alibaba Cloud account, you must set this parameter.</description></item>
+        /// <item><description><para>If the ENI belongs to your Alibaba Cloud account, this parameter is optional.</para>
+        /// </description></item>
+        /// <item><description><para>If the ENI belongs to a different Alibaba Cloud account, this parameter is required.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
