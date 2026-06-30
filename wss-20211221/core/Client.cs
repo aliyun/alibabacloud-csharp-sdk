@@ -18,7 +18,12 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"cn-shanghai", "wss.cn-shanghai.aliyuncs.com"},
+                {"ap-southeast-1", "wss.ap-southeast-1.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("wss", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -39,8 +44,17 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>多商品组合下单</para>
+        /// <para>Use this API to order, renew, and modify specific products, such as monthly resource plans for Elastic Desktop Service (EDS) Enterprise Edition.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>&lt;props=&quot;china&quot;&gt;
+        /// Before calling this API, make sure you understand how Wuying Workspace is billed and its <a href="https://www.aliyun.com/price/product?#/gws/detail/gws">pricing</a>.
+        /// &lt;props=&quot;intl&quot;&gt;
+        /// Before calling this API, make sure you understand how Wuying Workspace is billed and its <a href="https://www.alibabacloud.com/zh/product/cloud-desktop?#J_8623712560">pricing</a>.
+        /// If you do not specify automatic payment, this API does not handle the payment. You must use the returned order ID to construct a payment URL. The order becomes active and the resource is provisioned only after the payment is complete.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateMultiOrderRequest
@@ -103,8 +117,17 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>多商品组合下单</para>
+        /// <para>Use this API to order, renew, and modify specific products, such as monthly resource plans for Elastic Desktop Service (EDS) Enterprise Edition.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>&lt;props=&quot;china&quot;&gt;
+        /// Before calling this API, make sure you understand how Wuying Workspace is billed and its <a href="https://www.aliyun.com/price/product?#/gws/detail/gws">pricing</a>.
+        /// &lt;props=&quot;intl&quot;&gt;
+        /// Before calling this API, make sure you understand how Wuying Workspace is billed and its <a href="https://www.alibabacloud.com/zh/product/cloud-desktop?#J_8623712560">pricing</a>.
+        /// If you do not specify automatic payment, this API does not handle the payment. You must use the returned order ID to construct a payment URL. The order becomes active and the resource is provisioned only after the payment is complete.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateMultiOrderRequest
@@ -167,8 +190,17 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>多商品组合下单</para>
+        /// <para>Use this API to order, renew, and modify specific products, such as monthly resource plans for Elastic Desktop Service (EDS) Enterprise Edition.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>&lt;props=&quot;china&quot;&gt;
+        /// Before calling this API, make sure you understand how Wuying Workspace is billed and its <a href="https://www.aliyun.com/price/product?#/gws/detail/gws">pricing</a>.
+        /// &lt;props=&quot;intl&quot;&gt;
+        /// Before calling this API, make sure you understand how Wuying Workspace is billed and its <a href="https://www.alibabacloud.com/zh/product/cloud-desktop?#J_8623712560">pricing</a>.
+        /// If you do not specify automatic payment, this API does not handle the payment. You must use the returned order ID to construct a payment URL. The order becomes active and the resource is provisioned only after the payment is complete.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateMultiOrderRequest
@@ -185,8 +217,17 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>多商品组合下单</para>
+        /// <para>Use this API to order, renew, and modify specific products, such as monthly resource plans for Elastic Desktop Service (EDS) Enterprise Edition.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>&lt;props=&quot;china&quot;&gt;
+        /// Before calling this API, make sure you understand how Wuying Workspace is billed and its <a href="https://www.aliyun.com/price/product?#/gws/detail/gws">pricing</a>.
+        /// &lt;props=&quot;intl&quot;&gt;
+        /// Before calling this API, make sure you understand how Wuying Workspace is billed and its <a href="https://www.alibabacloud.com/zh/product/cloud-desktop?#J_8623712560">pricing</a>.
+        /// If you do not specify automatic payment, this API does not handle the payment. You must use the returned order ID to construct a payment URL. The order becomes active and the resource is provisioned only after the payment is complete.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateMultiOrderRequest
@@ -203,8 +244,20 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询积分包Agent列表</para>
+        /// <para>Queries a list of agents and their usage information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Usage notes</h2>
+        /// <list type="bullet">
+        /// <item><description><b>Pagination</b>: This operation supports pagination by using the <c>NextToken</c> and <c>MaxResults</c> parameters. For the first request, set <c>NextToken</c> to an empty string.</description></item>
+        /// <item><description><b>Filtering</b>: Use the <c>AgentType</c> and <c>AgentIds</c> parameters to filter the results.</description></item>
+        /// <item><description><b>Status filtering</b>: Use the <c>Status</c> parameter to filter agents by status. Valid values are 0 (deleted) and 1 (active).</description></item>
+        /// <item><description><b>Sorting</b>: By default, the results are sorted by <c>id</c> in ascending order.</description></item>
+        /// <item><description><b>Additional parameter for anonymous edition</b>: The <c>FillInstance</c> parameter automatically populates the ID of the JVS_COPILOT agent that is associated with the current user.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCreditPackageAgentsRequest
@@ -261,8 +314,20 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询积分包Agent列表</para>
+        /// <para>Queries a list of agents and their usage information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Usage notes</h2>
+        /// <list type="bullet">
+        /// <item><description><b>Pagination</b>: This operation supports pagination by using the <c>NextToken</c> and <c>MaxResults</c> parameters. For the first request, set <c>NextToken</c> to an empty string.</description></item>
+        /// <item><description><b>Filtering</b>: Use the <c>AgentType</c> and <c>AgentIds</c> parameters to filter the results.</description></item>
+        /// <item><description><b>Status filtering</b>: Use the <c>Status</c> parameter to filter agents by status. Valid values are 0 (deleted) and 1 (active).</description></item>
+        /// <item><description><b>Sorting</b>: By default, the results are sorted by <c>id</c> in ascending order.</description></item>
+        /// <item><description><b>Additional parameter for anonymous edition</b>: The <c>FillInstance</c> parameter automatically populates the ID of the JVS_COPILOT agent that is associated with the current user.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCreditPackageAgentsRequest
@@ -319,8 +384,20 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询积分包Agent列表</para>
+        /// <para>Queries a list of agents and their usage information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Usage notes</h2>
+        /// <list type="bullet">
+        /// <item><description><b>Pagination</b>: This operation supports pagination by using the <c>NextToken</c> and <c>MaxResults</c> parameters. For the first request, set <c>NextToken</c> to an empty string.</description></item>
+        /// <item><description><b>Filtering</b>: Use the <c>AgentType</c> and <c>AgentIds</c> parameters to filter the results.</description></item>
+        /// <item><description><b>Status filtering</b>: Use the <c>Status</c> parameter to filter agents by status. Valid values are 0 (deleted) and 1 (active).</description></item>
+        /// <item><description><b>Sorting</b>: By default, the results are sorted by <c>id</c> in ascending order.</description></item>
+        /// <item><description><b>Additional parameter for anonymous edition</b>: The <c>FillInstance</c> parameter automatically populates the ID of the JVS_COPILOT agent that is associated with the current user.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCreditPackageAgentsRequest
@@ -337,8 +414,20 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询积分包Agent列表</para>
+        /// <para>Queries a list of agents and their usage information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Usage notes</h2>
+        /// <list type="bullet">
+        /// <item><description><b>Pagination</b>: This operation supports pagination by using the <c>NextToken</c> and <c>MaxResults</c> parameters. For the first request, set <c>NextToken</c> to an empty string.</description></item>
+        /// <item><description><b>Filtering</b>: Use the <c>AgentType</c> and <c>AgentIds</c> parameters to filter the results.</description></item>
+        /// <item><description><b>Status filtering</b>: Use the <c>Status</c> parameter to filter agents by status. Valid values are 0 (deleted) and 1 (active).</description></item>
+        /// <item><description><b>Sorting</b>: By default, the results are sorted by <c>id</c> in ascending order.</description></item>
+        /// <item><description><b>Additional parameter for anonymous edition</b>: The <c>FillInstance</c> parameter automatically populates the ID of the JVS_COPILOT agent that is associated with the current user.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCreditPackageAgentsRequest
@@ -355,8 +444,24 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询积分包用量信息</para>
+        /// <para>Queries credit usage by a specified dimension such as user, credit package, or agent.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation queries credit usage details based on the dimension specified by <c>UsageType</c> (User, CreditPackage, or Agent). The response includes the total, remaining, and used credits of the current credit package, hourly consumption samples, alert thresholds, period quotas, and other information.</para>
+        /// <list type="bullet">
+        /// <item><description><b>User</b>: User dimension. Returns the aggregated usage and remaining credits across all active credit packages for the current user.</description></item>
+        /// <item><description><b>CreditPackage</b>: Credit package dimension. Returns the total, remaining, and consumption samples for a specified credit package instance.</description></item>
+        /// <item><description><b>Agent</b>: Agent dimension. Returns the cumulative usage, current period usage, quota, alert, and other information for a specified agent.
+        /// <b>Notes</b>:</description></item>
+        /// <item><description>The <c>InstanceIds</c> parameter can be omitted when <c>UsageType=User</c>. Set this parameter to the credit package instance ID when <c>UsageType=CreditPackage</c>, or to the AgentId when <c>UsageType=Agent</c>.</description></item>
+        /// <item><description>Anonymous requests support the <c>FillInstance</c> parameter. If <c>InstanceIds</c> is not explicitly specified and <c>FillInstance=true</c>, the server automatically populates the bound <c>JVS_COPILOT</c> AgentId based on the current logon <c>wyId</c>.</description></item>
+        /// <item><description>Time window constants: The <c>dayUsedCredit</c> statistics window is <c>now - ONE_DAY_MILLIS</c>, and the <c>weekUsedCredit</c> statistics window is <c>now - ONE_WEEK_MILLIS</c>.</description></item>
+        /// <item><description>The consumption samples in <c>currentCreditConsumeList</c> are aggregated by hour and may have an asynchronous synchronization delay of up to 5 minutes.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCreditUsageInfoRequest
@@ -405,8 +510,24 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询积分包用量信息</para>
+        /// <para>Queries credit usage by a specified dimension such as user, credit package, or agent.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation queries credit usage details based on the dimension specified by <c>UsageType</c> (User, CreditPackage, or Agent). The response includes the total, remaining, and used credits of the current credit package, hourly consumption samples, alert thresholds, period quotas, and other information.</para>
+        /// <list type="bullet">
+        /// <item><description><b>User</b>: User dimension. Returns the aggregated usage and remaining credits across all active credit packages for the current user.</description></item>
+        /// <item><description><b>CreditPackage</b>: Credit package dimension. Returns the total, remaining, and consumption samples for a specified credit package instance.</description></item>
+        /// <item><description><b>Agent</b>: Agent dimension. Returns the cumulative usage, current period usage, quota, alert, and other information for a specified agent.
+        /// <b>Notes</b>:</description></item>
+        /// <item><description>The <c>InstanceIds</c> parameter can be omitted when <c>UsageType=User</c>. Set this parameter to the credit package instance ID when <c>UsageType=CreditPackage</c>, or to the AgentId when <c>UsageType=Agent</c>.</description></item>
+        /// <item><description>Anonymous requests support the <c>FillInstance</c> parameter. If <c>InstanceIds</c> is not explicitly specified and <c>FillInstance=true</c>, the server automatically populates the bound <c>JVS_COPILOT</c> AgentId based on the current logon <c>wyId</c>.</description></item>
+        /// <item><description>Time window constants: The <c>dayUsedCredit</c> statistics window is <c>now - ONE_DAY_MILLIS</c>, and the <c>weekUsedCredit</c> statistics window is <c>now - ONE_WEEK_MILLIS</c>.</description></item>
+        /// <item><description>The consumption samples in <c>currentCreditConsumeList</c> are aggregated by hour and may have an asynchronous synchronization delay of up to 5 minutes.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCreditUsageInfoRequest
@@ -455,8 +576,24 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询积分包用量信息</para>
+        /// <para>Queries credit usage by a specified dimension such as user, credit package, or agent.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation queries credit usage details based on the dimension specified by <c>UsageType</c> (User, CreditPackage, or Agent). The response includes the total, remaining, and used credits of the current credit package, hourly consumption samples, alert thresholds, period quotas, and other information.</para>
+        /// <list type="bullet">
+        /// <item><description><b>User</b>: User dimension. Returns the aggregated usage and remaining credits across all active credit packages for the current user.</description></item>
+        /// <item><description><b>CreditPackage</b>: Credit package dimension. Returns the total, remaining, and consumption samples for a specified credit package instance.</description></item>
+        /// <item><description><b>Agent</b>: Agent dimension. Returns the cumulative usage, current period usage, quota, alert, and other information for a specified agent.
+        /// <b>Notes</b>:</description></item>
+        /// <item><description>The <c>InstanceIds</c> parameter can be omitted when <c>UsageType=User</c>. Set this parameter to the credit package instance ID when <c>UsageType=CreditPackage</c>, or to the AgentId when <c>UsageType=Agent</c>.</description></item>
+        /// <item><description>Anonymous requests support the <c>FillInstance</c> parameter. If <c>InstanceIds</c> is not explicitly specified and <c>FillInstance=true</c>, the server automatically populates the bound <c>JVS_COPILOT</c> AgentId based on the current logon <c>wyId</c>.</description></item>
+        /// <item><description>Time window constants: The <c>dayUsedCredit</c> statistics window is <c>now - ONE_DAY_MILLIS</c>, and the <c>weekUsedCredit</c> statistics window is <c>now - ONE_WEEK_MILLIS</c>.</description></item>
+        /// <item><description>The consumption samples in <c>currentCreditConsumeList</c> are aggregated by hour and may have an asynchronous synchronization delay of up to 5 minutes.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCreditUsageInfoRequest
@@ -473,8 +610,24 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询积分包用量信息</para>
+        /// <para>Queries credit usage by a specified dimension such as user, credit package, or agent.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation queries credit usage details based on the dimension specified by <c>UsageType</c> (User, CreditPackage, or Agent). The response includes the total, remaining, and used credits of the current credit package, hourly consumption samples, alert thresholds, period quotas, and other information.</para>
+        /// <list type="bullet">
+        /// <item><description><b>User</b>: User dimension. Returns the aggregated usage and remaining credits across all active credit packages for the current user.</description></item>
+        /// <item><description><b>CreditPackage</b>: Credit package dimension. Returns the total, remaining, and consumption samples for a specified credit package instance.</description></item>
+        /// <item><description><b>Agent</b>: Agent dimension. Returns the cumulative usage, current period usage, quota, alert, and other information for a specified agent.
+        /// <b>Notes</b>:</description></item>
+        /// <item><description>The <c>InstanceIds</c> parameter can be omitted when <c>UsageType=User</c>. Set this parameter to the credit package instance ID when <c>UsageType=CreditPackage</c>, or to the AgentId when <c>UsageType=Agent</c>.</description></item>
+        /// <item><description>Anonymous requests support the <c>FillInstance</c> parameter. If <c>InstanceIds</c> is not explicitly specified and <c>FillInstance=true</c>, the server automatically populates the bound <c>JVS_COPILOT</c> AgentId based on the current logon <c>wyId</c>.</description></item>
+        /// <item><description>Time window constants: The <c>dayUsedCredit</c> statistics window is <c>now - ONE_DAY_MILLIS</c>, and the <c>weekUsedCredit</c> statistics window is <c>now - ONE_WEEK_MILLIS</c>.</description></item>
+        /// <item><description>The consumption samples in <c>currentCreditConsumeList</c> are aggregated by hour and may have an asynchronous synchronization delay of up to 5 minutes.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCreditUsageInfoRequest
@@ -491,8 +644,21 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询计量消耗信息</para>
+        /// <para>Retrieves resource deduction and usage statistics based on specified criteria.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request</h2>
+        /// <list type="bullet">
+        /// <item><description>This API supports GET and POST methods.</description></item>
+        /// <item><description>The <c>periods</c> parameter is a JSON array of <c>PeriodParam</c> objects, each containing the <c>periodUnit</c> and <c>baseTime</c> fields.</description></item>
+        /// <item><description>The <c>resourceTypes</c> parameter is a JSON array of resource type strings.</description></item>
+        /// <item><description>The <c>startTime</c> and <c>endTime</c> parameters are timestamps that define the query\&quot;s time range.</description></item>
+        /// <item><description>The <c>nextToken</c>, <c>maxResults</c>, <c>pageNo</c>, and <c>pageSize</c> parameters control pagination and the number of results to return.</description></item>
+        /// <item><description>The API throws a <c>SalesClientException</c> if the <c>resourceTypes</c> parameter contains an invalid value or if the <c>periods</c> parameter fails JSON parsing.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeDeductionStatisticRequest
@@ -549,8 +715,21 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询计量消耗信息</para>
+        /// <para>Retrieves resource deduction and usage statistics based on specified criteria.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request</h2>
+        /// <list type="bullet">
+        /// <item><description>This API supports GET and POST methods.</description></item>
+        /// <item><description>The <c>periods</c> parameter is a JSON array of <c>PeriodParam</c> objects, each containing the <c>periodUnit</c> and <c>baseTime</c> fields.</description></item>
+        /// <item><description>The <c>resourceTypes</c> parameter is a JSON array of resource type strings.</description></item>
+        /// <item><description>The <c>startTime</c> and <c>endTime</c> parameters are timestamps that define the query\&quot;s time range.</description></item>
+        /// <item><description>The <c>nextToken</c>, <c>maxResults</c>, <c>pageNo</c>, and <c>pageSize</c> parameters control pagination and the number of results to return.</description></item>
+        /// <item><description>The API throws a <c>SalesClientException</c> if the <c>resourceTypes</c> parameter contains an invalid value or if the <c>periods</c> parameter fails JSON parsing.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeDeductionStatisticRequest
@@ -607,8 +786,21 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询计量消耗信息</para>
+        /// <para>Retrieves resource deduction and usage statistics based on specified criteria.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request</h2>
+        /// <list type="bullet">
+        /// <item><description>This API supports GET and POST methods.</description></item>
+        /// <item><description>The <c>periods</c> parameter is a JSON array of <c>PeriodParam</c> objects, each containing the <c>periodUnit</c> and <c>baseTime</c> fields.</description></item>
+        /// <item><description>The <c>resourceTypes</c> parameter is a JSON array of resource type strings.</description></item>
+        /// <item><description>The <c>startTime</c> and <c>endTime</c> parameters are timestamps that define the query\&quot;s time range.</description></item>
+        /// <item><description>The <c>nextToken</c>, <c>maxResults</c>, <c>pageNo</c>, and <c>pageSize</c> parameters control pagination and the number of results to return.</description></item>
+        /// <item><description>The API throws a <c>SalesClientException</c> if the <c>resourceTypes</c> parameter contains an invalid value or if the <c>periods</c> parameter fails JSON parsing.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeDeductionStatisticRequest
@@ -625,8 +817,21 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询计量消耗信息</para>
+        /// <para>Retrieves resource deduction and usage statistics based on specified criteria.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request</h2>
+        /// <list type="bullet">
+        /// <item><description>This API supports GET and POST methods.</description></item>
+        /// <item><description>The <c>periods</c> parameter is a JSON array of <c>PeriodParam</c> objects, each containing the <c>periodUnit</c> and <c>baseTime</c> fields.</description></item>
+        /// <item><description>The <c>resourceTypes</c> parameter is a JSON array of resource type strings.</description></item>
+        /// <item><description>The <c>startTime</c> and <c>endTime</c> parameters are timestamps that define the query\&quot;s time range.</description></item>
+        /// <item><description>The <c>nextToken</c>, <c>maxResults</c>, <c>pageNo</c>, and <c>pageSize</c> parameters control pagination and the number of results to return.</description></item>
+        /// <item><description>The API throws a <c>SalesClientException</c> if the <c>resourceTypes</c> parameter contains an invalid value or if the <c>periods</c> parameter fails JSON parsing.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeDeductionStatisticRequest
@@ -643,7 +848,7 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询物流地址</para>
+        /// <para>Retrieves information about delivery addresses.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -673,7 +878,7 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询物流地址</para>
+        /// <para>Retrieves information about delivery addresses.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -703,7 +908,7 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询物流地址</para>
+        /// <para>Retrieves information about delivery addresses.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -717,7 +922,7 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询物流地址</para>
+        /// <para>Retrieves information about delivery addresses.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -731,8 +936,14 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量询价</para>
+        /// <para>Queries prices for Elastic Desktop Service products, covering order types such as purchase, renewal, configuration change, and cancellation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>&lt;props=&quot;china&quot;&gt;
+        /// Before using this interface, ensure you understand the billing methods and <a href="https://www.aliyun.com/price/product?#/gws/detail/gws">pricing</a> for Wuying Workspace.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeMultiPriceRequest
@@ -785,8 +996,14 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量询价</para>
+        /// <para>Queries prices for Elastic Desktop Service products, covering order types such as purchase, renewal, configuration change, and cancellation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>&lt;props=&quot;china&quot;&gt;
+        /// Before using this interface, ensure you understand the billing methods and <a href="https://www.aliyun.com/price/product?#/gws/detail/gws">pricing</a> for Wuying Workspace.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeMultiPriceRequest
@@ -839,8 +1056,14 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量询价</para>
+        /// <para>Queries prices for Elastic Desktop Service products, covering order types such as purchase, renewal, configuration change, and cancellation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>&lt;props=&quot;china&quot;&gt;
+        /// Before using this interface, ensure you understand the billing methods and <a href="https://www.aliyun.com/price/product?#/gws/detail/gws">pricing</a> for Wuying Workspace.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeMultiPriceRequest
@@ -857,8 +1080,14 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量询价</para>
+        /// <para>Queries prices for Elastic Desktop Service products, covering order types such as purchase, renewal, configuration change, and cancellation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>&lt;props=&quot;china&quot;&gt;
+        /// Before using this interface, ensure you understand the billing methods and <a href="https://www.aliyun.com/price/product?#/gws/detail/gws">pricing</a> for Wuying Workspace.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeMultiPriceRequest
@@ -875,7 +1104,7 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询核时包抵扣明细</para>
+        /// <para>Query deduction details for time-based packages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -945,7 +1174,7 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询核时包抵扣明细</para>
+        /// <para>Query deduction details for time-based packages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1015,7 +1244,7 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询核时包抵扣明细</para>
+        /// <para>Query deduction details for time-based packages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1033,7 +1262,7 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询核时包抵扣明细</para>
+        /// <para>Query deduction details for time-based packages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1051,7 +1280,7 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例属性</para>
+        /// <para>Modifies the attributes of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1109,7 +1338,7 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例属性</para>
+        /// <para>Modifies the attributes of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1167,7 +1396,7 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例属性</para>
+        /// <para>Modifies the attributes of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1185,7 +1414,7 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例属性</para>
+        /// <para>Modifies the attributes of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1203,8 +1432,21 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量设置Agent积分配额</para>
+        /// <para>Sets the credit quota for specified Agents.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Description</h2>
+        /// <para>This operation sets the credit quota for one or more Agents of a specific type.</para>
+        /// <h3>Usage notes</h3>
+        /// <list type="bullet">
+        /// <item><description>The <c>AgentType</c> parameter specifies the type of Agent to which the quota applies, such as <c>JVSClaw</c> or <c>OpenClaw</c>.</description></item>
+        /// <item><description>The <c>AgentIds</c> parameter is an array of up to 100 Agent IDs.</description></item>
+        /// <item><description>The <c>CreditQuota</c> parameter specifies the credit quota for each Agent.</description></item>
+        /// </list>
+        /// <h3>Examples</h3>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetAgentCreditQuotaRequest
@@ -1257,8 +1499,21 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量设置Agent积分配额</para>
+        /// <para>Sets the credit quota for specified Agents.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Description</h2>
+        /// <para>This operation sets the credit quota for one or more Agents of a specific type.</para>
+        /// <h3>Usage notes</h3>
+        /// <list type="bullet">
+        /// <item><description>The <c>AgentType</c> parameter specifies the type of Agent to which the quota applies, such as <c>JVSClaw</c> or <c>OpenClaw</c>.</description></item>
+        /// <item><description>The <c>AgentIds</c> parameter is an array of up to 100 Agent IDs.</description></item>
+        /// <item><description>The <c>CreditQuota</c> parameter specifies the credit quota for each Agent.</description></item>
+        /// </list>
+        /// <h3>Examples</h3>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetAgentCreditQuotaRequest
@@ -1311,8 +1566,21 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量设置Agent积分配额</para>
+        /// <para>Sets the credit quota for specified Agents.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Description</h2>
+        /// <para>This operation sets the credit quota for one or more Agents of a specific type.</para>
+        /// <h3>Usage notes</h3>
+        /// <list type="bullet">
+        /// <item><description>The <c>AgentType</c> parameter specifies the type of Agent to which the quota applies, such as <c>JVSClaw</c> or <c>OpenClaw</c>.</description></item>
+        /// <item><description>The <c>AgentIds</c> parameter is an array of up to 100 Agent IDs.</description></item>
+        /// <item><description>The <c>CreditQuota</c> parameter specifies the credit quota for each Agent.</description></item>
+        /// </list>
+        /// <h3>Examples</h3>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetAgentCreditQuotaRequest
@@ -1329,8 +1597,21 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量设置Agent积分配额</para>
+        /// <para>Sets the credit quota for specified Agents.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Description</h2>
+        /// <para>This operation sets the credit quota for one or more Agents of a specific type.</para>
+        /// <h3>Usage notes</h3>
+        /// <list type="bullet">
+        /// <item><description>The <c>AgentType</c> parameter specifies the type of Agent to which the quota applies, such as <c>JVSClaw</c> or <c>OpenClaw</c>.</description></item>
+        /// <item><description>The <c>AgentIds</c> parameter is an array of up to 100 Agent IDs.</description></item>
+        /// <item><description>The <c>CreditQuota</c> parameter specifies the credit quota for each Agent.</description></item>
+        /// </list>
+        /// <h3>Examples</h3>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetAgentCreditQuotaRequest

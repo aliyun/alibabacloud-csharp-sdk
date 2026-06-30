@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
 {
     public class SetAgentCreditQuotaResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9B353D6D-53C9-1C24-95D5-2D24596DBCF1</para>
         /// </summary>
