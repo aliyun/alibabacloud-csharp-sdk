@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<DescribePolarClawAgentsResponseBodyAgents> Agents { get; set; }
         public class DescribePolarClawAgentsResponseBodyAgents : TeaModel {
             /// <summary>
+            /// <para>Indicates whether this is the default agent.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -24,11 +26,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public bool? Default { get; set; }
 
+            /// <summary>
+            /// <para>The agent file list.</para>
+            /// </summary>
             [NameInMap("Files")]
             [Validation(Required=false)]
             public List<DescribePolarClawAgentsResponseBodyAgentsFiles> Files { get; set; }
             public class DescribePolarClawAgentsResponseBodyAgentsFiles : TeaModel {
                 /// <summary>
+                /// <para>Indicates whether the file is missing.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
                 /// </summary>
@@ -37,6 +44,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public bool? Missing { get; set; }
 
                 /// <summary>
+                /// <para>The file name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>SOUL.md</para>
                 /// </summary>
@@ -45,6 +54,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string Name { get; set; }
 
                 /// <summary>
+                /// <para>The file path.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>/home/node/.openclaw/workspace-work/SOUL.md</para>
                 /// </summary>
@@ -53,6 +64,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string Path { get; set; }
 
                 /// <summary>
+                /// <para>The file size, in bytes.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1024</para>
                 /// </summary>
@@ -61,6 +74,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public long? Size { get; set; }
 
                 /// <summary>
+                /// <para>The last updated timestamp, in milliseconds.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1716000000000</para>
                 /// </summary>
@@ -108,7 +123,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string AvatarUrl { get; set; }
 
                 /// <summary>
-                /// <para>The emoji identifier in Unicode encoding format such as U+1F99E, or a direct emoji character.</para>
+                /// <para>The emoji identifier in Unicode format such as U+1F99E, or a direct emoji character.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>U+1F99E</para>
@@ -139,15 +154,23 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
             }
 
+            /// <summary>
+            /// <para>The model configuration.</para>
+            /// </summary>
             [NameInMap("Model")]
             [Validation(Required=false)]
             public DescribePolarClawAgentsResponseBodyAgentsModel Model { get; set; }
             public class DescribePolarClawAgentsResponseBodyAgentsModel : TeaModel {
+                /// <summary>
+                /// <para>The fallback model list.</para>
+                /// </summary>
                 [NameInMap("Fallbacks")]
                 [Validation(Required=false)]
                 public List<string> Fallbacks { get; set; }
 
                 /// <summary>
+                /// <para>The primary model.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>claude-sonnet-4-5</para>
                 /// </summary>
@@ -158,7 +181,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             }
 
             /// <summary>
-            /// <para>The display name of the agent.</para>
+            /// <para>The agent display name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>main</para>
@@ -167,11 +190,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// <para>The list of skills available to the agent.</para>
+            /// </summary>
             [NameInMap("Skills")]
             [Validation(Required=false)]
             public List<string> Skills { get; set; }
 
             /// <summary>
+            /// <para>The working directory path.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>/home/node/.openclaw/workspace-work</para>
             /// </summary>

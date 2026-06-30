@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class UpdatePolarClawAgentResponseBody : TeaModel {
         /// <summary>
-        /// <para>Updated Agent details</para>
+        /// <para>The details of the updated agent.</para>
         /// </summary>
         [NameInMap("Agent")]
         [Validation(Required=false)]
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>Identity information</para>
+            /// <para>The identity information.</para>
             /// </summary>
             [NameInMap("Identity")]
             [Validation(Required=false)]
             public UpdatePolarClawAgentResponseBodyAgentIdentity Identity { get; set; }
             public class UpdatePolarClawAgentResponseBodyAgentIdentity : TeaModel {
                 /// <summary>
-                /// <para>Avatar path or content</para>
+                /// <para>The avatar path or content.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string Avatar { get; set; }
 
                 /// <summary>
-                /// <para>Avatar URL</para>
+                /// <para>The avatar URL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string AvatarUrl { get; set; }
 
                 /// <summary>
-                /// <para>Emoji identifier (Unicode format such as U+1F99E, or direct emoji character)</para>
+                /// <para>The emoji identifier. The value is in Unicode encoding format such as U+1F99E, or a direct emoji character.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>U+1F99E</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string Emoji { get; set; }
 
                 /// <summary>
-                /// <para>Identity name</para>
+                /// <para>The identity name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>PolarClaw</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>Theme</para>
+                /// <para>The theme.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>soul lobster</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             }
 
             /// <summary>
-            /// <para>Agent display name</para>
+            /// <para>The display name of the agent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PolarClaw</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Workspace directory path</para>
+            /// <para>The working directory path.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/home/node/.openclaw/workspace-work-v2</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AgentId { get; set; }
 
         /// <summary>
-        /// <para>Application ID</para>
+        /// <para>The application ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pa-**************</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>Response status code</para>
+        /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>Response message</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>

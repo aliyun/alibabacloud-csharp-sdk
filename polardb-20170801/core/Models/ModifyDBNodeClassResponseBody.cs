@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyDBNodeClassResponseBody : TeaModel {
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <para>The database cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-*************</para>

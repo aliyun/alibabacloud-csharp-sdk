@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class UpdatePolarClawAgentRequest : TeaModel {
         /// <summary>
-        /// <para>Agent ID to update</para>
+        /// <para>The ID of the agent to update.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AgentId { get; set; }
 
         /// <summary>
-        /// <para>Application ID</para>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>New avatar</para>
+        /// <para>The new avatar.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Avatar { get; set; }
 
         /// <summary>
-        /// <para>List of files to update</para>
+        /// <para>The list of files to update.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;FileName&quot;:&quot;SOUL.md&quot;,&quot;FileContent&quot;:&quot;You are a helpful assistant.&quot;}]</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<UpdatePolarClawAgentRequestFiles> Files { get; set; }
         public class UpdatePolarClawAgentRequestFiles : TeaModel {
             /// <summary>
-            /// <para>File content</para>
+            /// <para>The file content.</para>
             /// 
             /// <b>Example:</b>
             /// <para>You are a helpful assistant.</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string FileContent { get; set; }
 
             /// <summary>
-            /// <para>File name, must be one of the allowed file names (AGENTS.md, SOUL.md, TOOLS.md, IDENTITY.md, USER.md, HEARTBEAT.md, BOOTSTRAP.md, MEMORY.md, MEMORY.alt.md)</para>
+            /// <para>The file name. The value must be one of the following allowed file names: AGENTS.md, SOUL.md, TOOLS.md, IDENTITY.md, USER.md, HEARTBEAT.md, BOOTSTRAP.md, MEMORY.md, or MEMORY.alt.md.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SOUL.md</para>
@@ -74,6 +74,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
+        /// <para>Specifies whether to set the agent as the default agent.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -82,6 +84,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? IsDefault { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to keep files when switching the workspace.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -90,7 +94,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? KeepWorkspaceFiles { get; set; }
 
         /// <summary>
-        /// <para>Model override</para>
+        /// <para>The model override.</para>
         /// 
         /// <b>Example:</b>
         /// <para>claude-sonnet-4-5</para>
@@ -100,7 +104,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Model { get; set; }
 
         /// <summary>
-        /// <para>New display name</para>
+        /// <para>The new display name of the agent.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Work Bot</para>
@@ -110,7 +114,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Whether to restart the gateway after creation, default is true</para>
+        /// <para>Specifies whether to restart the gateway after creation. Default value: true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -120,7 +124,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? Restart { get; set; }
 
         /// <summary>
-        /// <para>New workspace directory path</para>
+        /// <para>The new working directory path.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/home/node/.openclaw/workspace-work-v2</para>

@@ -9,15 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeApikeyAttributeResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of consumer objects.</para>
+        /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeApikeyAttributeResponseBodyItems> Items { get; set; }
         public class DescribeApikeyAttributeResponseBodyItems : TeaModel {
+            /// <summary>
+            /// <para>The consumer information.</para>
+            /// </summary>
             [NameInMap("Consumer")]
             [Validation(Required=false)]
             public DescribeApikeyAttributeResponseBodyItemsConsumer Consumer { get; set; }
             public class DescribeApikeyAttributeResponseBodyItemsConsumer : TeaModel {
                 /// <summary>
+                /// <para>The API key.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <hr>
                 /// </summary>
@@ -26,6 +34,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string ApiKey { get; set; }
 
                 /// <summary>
+                /// <para>The user group ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>cg-bq6rcdjp02vt</para>
                 /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string ConsumerGroupId { get; set; }
 
                 /// <summary>
+                /// <para>The consumer ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>c-71qh3pscbd3i</para>
                 /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string ConsumerId { get; set; }
 
                 /// <summary>
+                /// <para>The consumer tag.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
                 /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string ConsumerTag { get; set; }
 
                 /// <summary>
+                /// <para>The creation time.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2021-07-18T07:32:30Z</para>
                 /// </summary>
@@ -58,6 +74,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
+                /// <para>The gateway instance ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>pg-2ze5n62ef4s165***</para>
                 /// </summary>
@@ -66,6 +84,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string GwClusterId { get; set; }
 
                 /// <summary>
+                /// <para>The last modification time.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2026-04-10T01:48:25Z</para>
                 /// </summary>
@@ -74,6 +94,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string ModifyTime { get; set; }
 
                 /// <summary>
+                /// <para>The consumer name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
                 /// </summary>
@@ -82,6 +104,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string Name { get; set; }
 
                 /// <summary>
+                /// <para>The consumer status.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Enabled</para>
                 /// </summary>
@@ -91,11 +115,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
             }
 
+            /// <summary>
+            /// <para>The usage statistics for the consumer.</para>
+            /// </summary>
             [NameInMap("UsageStatistics")]
             [Validation(Required=false)]
             public List<DescribeApikeyAttributeResponseBodyItemsUsageStatistics> UsageStatistics { get; set; }
             public class DescribeApikeyAttributeResponseBodyItemsUsageStatistics : TeaModel {
                 /// <summary>
+                /// <para>The dimension reference ID, which is the ConsumerId.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>c-xxxxxx</para>
                 /// </summary>
@@ -104,6 +133,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string DimensionRefId { get; set; }
 
                 /// <summary>
+                /// <para>The statistics dimension. The value is typically Consumer.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Consumer</para>
                 /// </summary>
@@ -112,6 +143,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string DimensionType { get; set; }
 
                 /// <summary>
+                /// <para>The gateway instance ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>pg-bp1ln7w98yrhzz7i2</para>
                 /// </summary>
@@ -120,6 +153,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string GwClusterId { get; set; }
 
                 /// <summary>
+                /// <para>The number of cache tokens for the current month.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
                 /// </summary>
@@ -128,6 +163,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string MonthlyCacheToken { get; set; }
 
                 /// <summary>
+                /// <para>The cost points consumed for the current month.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
                 /// </summary>
@@ -136,6 +173,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string MonthlyCostPoints { get; set; }
 
                 /// <summary>
+                /// <para>The number of input tokens for the current month.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
                 /// </summary>
@@ -144,6 +183,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string MonthlyInputToken { get; set; }
 
                 /// <summary>
+                /// <para>The number of output tokens for the current month.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
                 /// </summary>
@@ -152,6 +193,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string MonthlyOutputToken { get; set; }
 
                 /// <summary>
+                /// <para>The number of tokens for the current month.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
                 /// </summary>
@@ -160,6 +203,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string MonthlyToken { get; set; }
 
                 /// <summary>
+                /// <para>The cumulative number of cache tokens.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
                 /// </summary>
@@ -168,6 +213,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string TotalCacheToken { get; set; }
 
                 /// <summary>
+                /// <para>The cumulative cost points consumed.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
                 /// </summary>
@@ -176,6 +223,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string TotalCostPoints { get; set; }
 
                 /// <summary>
+                /// <para>The cumulative number of input tokens.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
                 /// </summary>
@@ -184,6 +233,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string TotalInputToken { get; set; }
 
                 /// <summary>
+                /// <para>The cumulative number of output tokens.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
                 /// </summary>
@@ -192,6 +243,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string TotalOutputToken { get; set; }
 
                 /// <summary>
+                /// <para>The cumulative number of tokens.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
                 /// </summary>
@@ -204,6 +257,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
+        /// <para>Id of the request</para>
+        /// 
         /// <b>Example:</b>
         /// <para>F3322AFE-083E-4D77-A074-421301******</para>
         /// </summary>

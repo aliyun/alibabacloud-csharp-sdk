@@ -10300,7 +10300,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add read-only nodes to a PolarDB cluster.</para>
+        /// <para>Adds read-only nodes to a PolarDB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10402,7 +10402,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add read-only nodes to a PolarDB cluster.</para>
+        /// <para>Adds read-only nodes to a PolarDB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10504,7 +10504,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add read-only nodes to a PolarDB cluster.</para>
+        /// <para>Adds read-only nodes to a PolarDB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10522,7 +10522,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add read-only nodes to a PolarDB cluster.</para>
+        /// <para>Adds read-only nodes to a PolarDB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23936,7 +23936,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询该apikey的详细信息</para>
+        /// <para>Queries the details of a specified API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23990,7 +23990,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询该apikey的详细信息</para>
+        /// <para>Queries the details of a specified API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24044,7 +24044,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询该apikey的详细信息</para>
+        /// <para>Queries the details of a specified API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24062,7 +24062,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询该apikey的详细信息</para>
+        /// <para>Queries the details of a specified API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41028,6 +41028,278 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries a PolarClaw Agent file.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePolarClawAgentFileRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePolarClawAgentFileResponse
+        /// </returns>
+        public DescribePolarClawAgentFileResponse DescribePolarClawAgentFileWithOptions(DescribePolarClawAgentFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
+            {
+                query["AgentId"] = request.AgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                query["FileName"] = request.FileName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePolarClawAgentFile",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePolarClawAgentFileResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a PolarClaw Agent file.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePolarClawAgentFileRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePolarClawAgentFileResponse
+        /// </returns>
+        public async Task<DescribePolarClawAgentFileResponse> DescribePolarClawAgentFileWithOptionsAsync(DescribePolarClawAgentFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
+            {
+                query["AgentId"] = request.AgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                query["FileName"] = request.FileName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePolarClawAgentFile",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePolarClawAgentFileResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a PolarClaw Agent file.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePolarClawAgentFileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePolarClawAgentFileResponse
+        /// </returns>
+        public DescribePolarClawAgentFileResponse DescribePolarClawAgentFile(DescribePolarClawAgentFileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribePolarClawAgentFileWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a PolarClaw Agent file.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePolarClawAgentFileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePolarClawAgentFileResponse
+        /// </returns>
+        public async Task<DescribePolarClawAgentFileResponse> DescribePolarClawAgentFileAsync(DescribePolarClawAgentFileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribePolarClawAgentFileWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the PolarClaw Agent tool catalog.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePolarClawAgentToolsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePolarClawAgentToolsResponse
+        /// </returns>
+        public DescribePolarClawAgentToolsResponse DescribePolarClawAgentToolsWithOptions(DescribePolarClawAgentToolsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
+            {
+                query["AgentId"] = request.AgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludePlugins))
+            {
+                query["IncludePlugins"] = request.IncludePlugins;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePolarClawAgentTools",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePolarClawAgentToolsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the PolarClaw Agent tool catalog.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePolarClawAgentToolsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePolarClawAgentToolsResponse
+        /// </returns>
+        public async Task<DescribePolarClawAgentToolsResponse> DescribePolarClawAgentToolsWithOptionsAsync(DescribePolarClawAgentToolsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
+            {
+                query["AgentId"] = request.AgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludePlugins))
+            {
+                query["IncludePlugins"] = request.IncludePlugins;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePolarClawAgentTools",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePolarClawAgentToolsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the PolarClaw Agent tool catalog.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePolarClawAgentToolsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePolarClawAgentToolsResponse
+        /// </returns>
+        public DescribePolarClawAgentToolsResponse DescribePolarClawAgentTools(DescribePolarClawAgentToolsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribePolarClawAgentToolsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the PolarClaw Agent tool catalog.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePolarClawAgentToolsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePolarClawAgentToolsResponse
+        /// </returns>
+        public async Task<DescribePolarClawAgentToolsResponse> DescribePolarClawAgentToolsAsync(DescribePolarClawAgentToolsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribePolarClawAgentToolsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries all installed plug-ins and their status information under a specified application.</para>
         /// </summary>
         /// 
@@ -41796,6 +42068,134 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribePolarClawPluginsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a PolarClaw Skill.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePolarClawSkillDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePolarClawSkillDetailResponse
+        /// </returns>
+        public DescribePolarClawSkillDetailResponse DescribePolarClawSkillDetailWithOptions(DescribePolarClawSkillDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Slug))
+            {
+                query["Slug"] = request.Slug;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePolarClawSkillDetail",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePolarClawSkillDetailResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a PolarClaw Skill.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePolarClawSkillDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePolarClawSkillDetailResponse
+        /// </returns>
+        public async Task<DescribePolarClawSkillDetailResponse> DescribePolarClawSkillDetailWithOptionsAsync(DescribePolarClawSkillDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Slug))
+            {
+                query["Slug"] = request.Slug;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePolarClawSkillDetail",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePolarClawSkillDetailResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a PolarClaw Skill.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePolarClawSkillDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePolarClawSkillDetailResponse
+        /// </returns>
+        public DescribePolarClawSkillDetailResponse DescribePolarClawSkillDetail(DescribePolarClawSkillDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribePolarClawSkillDetailWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a PolarClaw Skill.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePolarClawSkillDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePolarClawSkillDetailResponse
+        /// </returns>
+        public async Task<DescribePolarClawSkillDetailResponse> DescribePolarClawSkillDetailAsync(DescribePolarClawSkillDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribePolarClawSkillDetailWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -49928,6 +50328,166 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await InstallPolarClawPluginWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Installs a PolarClaw Skill.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InstallPolarClawSkillRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InstallPolarClawSkillResponse
+        /// </returns>
+        public InstallPolarClawSkillResponse InstallPolarClawSkillWithOptions(InstallPolarClawSkillRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                query["Force"] = request.Force;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillVersion))
+            {
+                query["SkillVersion"] = request.SkillVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Slug))
+            {
+                query["Slug"] = request.Slug;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
+            {
+                query["Url"] = request.Url;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "InstallPolarClawSkill",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<InstallPolarClawSkillResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Installs a PolarClaw Skill.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InstallPolarClawSkillRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InstallPolarClawSkillResponse
+        /// </returns>
+        public async Task<InstallPolarClawSkillResponse> InstallPolarClawSkillWithOptionsAsync(InstallPolarClawSkillRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                query["Force"] = request.Force;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillVersion))
+            {
+                query["SkillVersion"] = request.SkillVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Slug))
+            {
+                query["Slug"] = request.Slug;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
+            {
+                query["Url"] = request.Url;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "InstallPolarClawSkill",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<InstallPolarClawSkillResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Installs a PolarClaw Skill.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InstallPolarClawSkillRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InstallPolarClawSkillResponse
+        /// </returns>
+        public InstallPolarClawSkillResponse InstallPolarClawSkill(InstallPolarClawSkillRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return InstallPolarClawSkillWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Installs a PolarClaw Skill.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InstallPolarClawSkillRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InstallPolarClawSkillResponse
+        /// </returns>
+        public async Task<InstallPolarClawSkillResponse> InstallPolarClawSkillAsync(InstallPolarClawSkillRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await InstallPolarClawSkillWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -59852,7 +60412,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the node specifications of a PolarDB cluster.</para>
+        /// <para>Changes the node specifications of a PolarDB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -59954,7 +60514,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the node specifications of a PolarDB cluster.</para>
+        /// <para>Changes the node specifications of a PolarDB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -60056,7 +60616,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the node specifications of a PolarDB cluster.</para>
+        /// <para>Changes the node specifications of a PolarDB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -60074,7 +60634,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the node specifications of a PolarDB cluster.</para>
+        /// <para>Changes the node specifications of a PolarDB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -67884,6 +68444,142 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Searches for PolarClaw Skills.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SearchPolarClawSkillsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchPolarClawSkillsResponse
+        /// </returns>
+        public SearchPolarClawSkillsResponse SearchPolarClawSkillsWithOptions(SearchPolarClawSkillsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                query["Limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                query["Query"] = request.Query;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SearchPolarClawSkills",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SearchPolarClawSkillsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Searches for PolarClaw Skills.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SearchPolarClawSkillsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchPolarClawSkillsResponse
+        /// </returns>
+        public async Task<SearchPolarClawSkillsResponse> SearchPolarClawSkillsWithOptionsAsync(SearchPolarClawSkillsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                query["Limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                query["Query"] = request.Query;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SearchPolarClawSkills",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SearchPolarClawSkillsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Searches for PolarClaw Skills.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SearchPolarClawSkillsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchPolarClawSkillsResponse
+        /// </returns>
+        public SearchPolarClawSkillsResponse SearchPolarClawSkills(SearchPolarClawSkillsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SearchPolarClawSkillsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Searches for PolarClaw Skills.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SearchPolarClawSkillsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchPolarClawSkillsResponse
+        /// </returns>
+        public async Task<SearchPolarClawSkillsResponse> SearchPolarClawSkillsAsync(SearchPolarClawSkillsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SearchPolarClawSkillsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Sets file quota rules for specific directories in a PolarFS instance.</para>
         /// </summary>
         /// 
@@ -69732,7 +70428,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update PolarClaw Agent</para>
+        /// <para>Updates a PolarClaw agent.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -69816,7 +70512,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update PolarClaw Agent</para>
+        /// <para>Updates a PolarClaw agent.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -69900,7 +70596,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update PolarClaw Agent</para>
+        /// <para>Updates a PolarClaw agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -69918,7 +70614,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update PolarClaw Agent</para>
+        /// <para>Updates a PolarClaw agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -69932,6 +70628,342 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdatePolarClawAgentWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the skills of a PolarClaw Agent.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdatePolarClawAgentSkillsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePolarClawAgentSkillsResponse
+        /// </returns>
+        public UpdatePolarClawAgentSkillsResponse UpdatePolarClawAgentSkillsWithOptions(UpdatePolarClawAgentSkillsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdatePolarClawAgentSkillsShrinkRequest request = new UpdatePolarClawAgentSkillsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Skills))
+            {
+                request.SkillsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Skills, "Skills", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
+            {
+                query["AgentId"] = request.AgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillsShrink))
+            {
+                query["Skills"] = request.SkillsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdatePolarClawAgentSkills",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdatePolarClawAgentSkillsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the skills of a PolarClaw Agent.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdatePolarClawAgentSkillsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePolarClawAgentSkillsResponse
+        /// </returns>
+        public async Task<UpdatePolarClawAgentSkillsResponse> UpdatePolarClawAgentSkillsWithOptionsAsync(UpdatePolarClawAgentSkillsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdatePolarClawAgentSkillsShrinkRequest request = new UpdatePolarClawAgentSkillsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Skills))
+            {
+                request.SkillsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Skills, "Skills", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
+            {
+                query["AgentId"] = request.AgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillsShrink))
+            {
+                query["Skills"] = request.SkillsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdatePolarClawAgentSkills",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdatePolarClawAgentSkillsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the skills of a PolarClaw Agent.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdatePolarClawAgentSkillsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePolarClawAgentSkillsResponse
+        /// </returns>
+        public UpdatePolarClawAgentSkillsResponse UpdatePolarClawAgentSkills(UpdatePolarClawAgentSkillsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdatePolarClawAgentSkillsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the skills of a PolarClaw Agent.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdatePolarClawAgentSkillsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePolarClawAgentSkillsResponse
+        /// </returns>
+        public async Task<UpdatePolarClawAgentSkillsResponse> UpdatePolarClawAgentSkillsAsync(UpdatePolarClawAgentSkillsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdatePolarClawAgentSkillsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the tool configuration of a PolarClaw Agent.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdatePolarClawAgentToolsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePolarClawAgentToolsResponse
+        /// </returns>
+        public UpdatePolarClawAgentToolsResponse UpdatePolarClawAgentToolsWithOptions(UpdatePolarClawAgentToolsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdatePolarClawAgentToolsShrinkRequest request = new UpdatePolarClawAgentToolsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Allow))
+            {
+                request.AllowShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Allow, "Allow", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AlsoAllow))
+            {
+                request.AlsoAllowShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AlsoAllow, "AlsoAllow", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Deny))
+            {
+                request.DenyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Deny, "Deny", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
+            {
+                query["AgentId"] = request.AgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowShrink))
+            {
+                query["Allow"] = request.AllowShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlsoAllowShrink))
+            {
+                query["AlsoAllow"] = request.AlsoAllowShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DenyShrink))
+            {
+                query["Deny"] = request.DenyShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Profile))
+            {
+                query["Profile"] = request.Profile;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdatePolarClawAgentTools",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdatePolarClawAgentToolsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the tool configuration of a PolarClaw Agent.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdatePolarClawAgentToolsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePolarClawAgentToolsResponse
+        /// </returns>
+        public async Task<UpdatePolarClawAgentToolsResponse> UpdatePolarClawAgentToolsWithOptionsAsync(UpdatePolarClawAgentToolsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdatePolarClawAgentToolsShrinkRequest request = new UpdatePolarClawAgentToolsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Allow))
+            {
+                request.AllowShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Allow, "Allow", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AlsoAllow))
+            {
+                request.AlsoAllowShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AlsoAllow, "AlsoAllow", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Deny))
+            {
+                request.DenyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Deny, "Deny", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
+            {
+                query["AgentId"] = request.AgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowShrink))
+            {
+                query["Allow"] = request.AllowShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlsoAllowShrink))
+            {
+                query["AlsoAllow"] = request.AlsoAllowShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DenyShrink))
+            {
+                query["Deny"] = request.DenyShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Profile))
+            {
+                query["Profile"] = request.Profile;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdatePolarClawAgentTools",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdatePolarClawAgentToolsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the tool configuration of a PolarClaw Agent.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdatePolarClawAgentToolsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePolarClawAgentToolsResponse
+        /// </returns>
+        public UpdatePolarClawAgentToolsResponse UpdatePolarClawAgentTools(UpdatePolarClawAgentToolsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdatePolarClawAgentToolsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the tool configuration of a PolarClaw Agent.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdatePolarClawAgentToolsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePolarClawAgentToolsResponse
+        /// </returns>
+        public async Task<UpdatePolarClawAgentToolsResponse> UpdatePolarClawAgentToolsAsync(UpdatePolarClawAgentToolsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdatePolarClawAgentToolsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -70200,6 +71232,170 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdatePolarClawCronJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the PolarClaw Skill configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdatePolarClawSkillRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePolarClawSkillResponse
+        /// </returns>
+        public UpdatePolarClawSkillResponse UpdatePolarClawSkillWithOptions(UpdatePolarClawSkillRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdatePolarClawSkillShrinkRequest request = new UpdatePolarClawSkillShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Env))
+            {
+                request.EnvShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Env, "Env", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiKey))
+            {
+                query["ApiKey"] = request.ApiKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
+            {
+                query["Enabled"] = request.Enabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvShrink))
+            {
+                query["Env"] = request.EnvShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillKey))
+            {
+                query["SkillKey"] = request.SkillKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdatePolarClawSkill",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdatePolarClawSkillResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the PolarClaw Skill configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdatePolarClawSkillRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePolarClawSkillResponse
+        /// </returns>
+        public async Task<UpdatePolarClawSkillResponse> UpdatePolarClawSkillWithOptionsAsync(UpdatePolarClawSkillRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdatePolarClawSkillShrinkRequest request = new UpdatePolarClawSkillShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Env))
+            {
+                request.EnvShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Env, "Env", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiKey))
+            {
+                query["ApiKey"] = request.ApiKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
+            {
+                query["Enabled"] = request.Enabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvShrink))
+            {
+                query["Env"] = request.EnvShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillKey))
+            {
+                query["SkillKey"] = request.SkillKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdatePolarClawSkill",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdatePolarClawSkillResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the PolarClaw Skill configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdatePolarClawSkillRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePolarClawSkillResponse
+        /// </returns>
+        public UpdatePolarClawSkillResponse UpdatePolarClawSkill(UpdatePolarClawSkillRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdatePolarClawSkillWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the PolarClaw Skill configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdatePolarClawSkillRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePolarClawSkillResponse
+        /// </returns>
+        public async Task<UpdatePolarClawSkillResponse> UpdatePolarClawSkillAsync(UpdatePolarClawSkillRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdatePolarClawSkillWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
