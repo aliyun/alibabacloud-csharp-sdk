@@ -81,6 +81,9 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 
                     /// <summary>
                     /// <para>The response message.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>实例运行状态正常</para>
                     /// </summary>
                     [NameInMap("Message")]
                     [Validation(Required=false)]
@@ -122,6 +125,9 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 
             /// <summary>
             /// <para>The description of the instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>测试实例</para>
             /// </summary>
             [NameInMap("InstanceDesc")]
             [Validation(Required=false)]
@@ -192,6 +198,9 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             /// <item><description>If the InstanceId parameter is not specified, all content of the inspection report is returned. However, the MarkdownText field is empty.</description></item>
             /// <item><description>If the InstanceId parameter is specified, the content related to the instance is returned in the MarkdownText field.</description></item>
             /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <h1>RDS实例巡检报告\n\n<b>实例ID</b>: <c>rm-2zep6e5u6l2yu****</c>\n\n<b>引擎类型</b>: MySQL\n\n<b>地域</b>: cn-beijing\n\n<b>时间范围(UTC)</b>: 2026-02-04T03:31:00Z ~ 2026-02-05T03:31:00Z\n\n&gt; 本次巡检共包含 <b>60</b> 项检查，其中 1项警告、57项正常、2项数据获取失败。……</h1>
             /// </summary>
             [NameInMap("MarkdownText")]
             [Validation(Required=false)]
@@ -221,6 +230,9 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 
         /// <summary>
         /// <para>The report text in the markdown format.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <h1>RDS批量巡检汇总报告\n\n&gt; 本次批量巡检共检查 <b>1</b> 个实例；发现 <b>1</b> 个实例存在警告（共 1 项警告）……</h1>
         /// </summary>
         [NameInMap("MarkdownText")]
         [Validation(Required=false)]

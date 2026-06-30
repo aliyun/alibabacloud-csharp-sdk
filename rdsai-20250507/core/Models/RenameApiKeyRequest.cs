@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class RenameApiKeyRequest : TeaModel {
         /// <summary>
-        /// <para>API KEY</para>
+        /// <para>The API key to rename.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string ApiKey { get; set; }
 
         /// <summary>
+        /// <para>The ID of the instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rds_copilot***_public_cn-*********6</para>
         /// </summary>
@@ -29,6 +31,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The new name for the API key.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
     public class ListScheduledTasksResponseBody : TeaModel {
         /// <summary>
         /// <para>The response message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>任务信息查询成功</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -27,7 +30,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of records returned on each page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -47,14 +50,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of scheduled inspection tasks.</para>
+        /// <para>A list of scheduled inspection tasks.</para>
         /// </summary>
         [NameInMap("Schedules")]
         [Validation(Required=false)]
         public List<ListScheduledTasksResponseBodySchedules> Schedules { get; set; }
         public class ListScheduledTasksResponseBodySchedules : TeaModel {
             /// <summary>
-            /// <para>The creation time of the task.</para>
+            /// <para>The time the task was created, in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-02-04T06:51:24Z</para>
@@ -64,25 +67,36 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The description of the inspection task.</para>
+            /// <para>The description of the inspection.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>每天凌晨2点自动巡检生产环境RDS实例</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The new inspection frequency. Separate multiple values with commas (,). Default value: DAILY. Valid values:</para>
+            /// <para>The inspection frequency. Multiple values are separated by commas. The default is DAILY. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>DAILY</description></item>
-            /// <item><description>Monday</description></item>
-            /// <item><description>Tuesday</description></item>
-            /// <item><description>Wednesday</description></item>
-            /// <item><description>Thursday</description></item>
-            /// <item><description>Friday</description></item>
-            /// <item><description>Saturday</description></item>
-            /// <item><description>Sunday</description></item>
+            /// <item><description><para>DAILY: Every day</para>
+            /// </description></item>
+            /// <item><description><para>Monday: Monday</para>
+            /// </description></item>
+            /// <item><description><para>Tuesday: Tuesday</para>
+            /// </description></item>
+            /// <item><description><para>Wednesday: Wednesday</para>
+            /// </description></item>
+            /// <item><description><para>Thursday: Thursday</para>
+            /// </description></item>
+            /// <item><description><para>Friday: Friday</para>
+            /// </description></item>
+            /// <item><description><para>Saturday: Saturday</para>
+            /// </description></item>
+            /// <item><description><para>Sunday: Sunday</para>
+            /// </description></item>
             /// </list>
-            /// <h3><a href="#daily--dailymonday--daily-"></a>Note: DAILY takes precedence over other values. For example, if you set this parameter to DAILY,Monday, the backend will use DAILY as the inspection frequency.</h3>
+            /// <h3>Note: The DAILY setting overrides any specified days of the week. For example, if you specify DAILY,Monday, the inspection runs daily.</h3>
             /// 
             /// <b>Example:</b>
             /// <para>Monday</para>
@@ -96,7 +110,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string InspectionItems { get; set; }
 
             /// <summary>
-            /// <para>The number of instances covered by the task.</para>
+            /// <para>The number of instances in the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -107,6 +121,9 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 
             /// <summary>
             /// <para>The name of the task.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>巡检测试</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -135,7 +152,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string ScheduledId { get; set; }
 
             /// <summary>
-            /// <para>The actual start time of the task.</para>
+            /// <para>The task start time, in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>18:00:00Z</para>
@@ -145,7 +162,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string TaskStartTime { get; set; }
 
             /// <summary>
-            /// <para>The inspection time range. The default value is the latest 24 hours. Valid values: 1 to 168. The maximum value is 7 days.</para>
+            /// <para>The inspection time range in hours. Default: 24. Valid values: 1 to 168.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>24小时</para>
             /// </summary>
             [NameInMap("TimeRange")]
             [Validation(Required=false)]
@@ -164,7 +184,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries that are returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

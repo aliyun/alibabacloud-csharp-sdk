@@ -38,6 +38,9 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 
             /// <summary>
             /// <para>The introduction to the conversation.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>测试搜索RDS资源</para>
             /// </summary>
             [NameInMap("Introduction")]
             [Validation(Required=false)]
@@ -45,6 +48,9 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 
             /// <summary>
             /// <para>The name of the history conversation.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>搜索RDS资源。</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]

@@ -10,25 +10,36 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class ModifyScheduledTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the new inspection configuration.</para>
+        /// <para>The new description of the inspection configuration.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>定时RDS实例巡检任务</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The new inspection frequency. Separate multiple values with commas (,). Default value: DAILY. Valid values:</para>
+        /// <para>The new inspection frequency. Separate multiple values with a comma (,). The default value is DAILY. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DAILY</description></item>
-        /// <item><description>Monday</description></item>
-        /// <item><description>Tuesday</description></item>
-        /// <item><description>Wednesday</description></item>
-        /// <item><description>Thursday</description></item>
-        /// <item><description>Friday</description></item>
-        /// <item><description>Saturday</description></item>
-        /// <item><description>Sunday</description></item>
+        /// <item><description><para>DAILY: Every day</para>
+        /// </description></item>
+        /// <item><description><para>Monday: Every Monday</para>
+        /// </description></item>
+        /// <item><description><para>Tuesday: Every Tuesday</para>
+        /// </description></item>
+        /// <item><description><para>Wednesday: Every Wednesday</para>
+        /// </description></item>
+        /// <item><description><para>Thursday: Every Thursday</para>
+        /// </description></item>
+        /// <item><description><para>Friday: Every Friday</para>
+        /// </description></item>
+        /// <item><description><para>Saturday: Every Saturday</para>
+        /// </description></item>
+        /// <item><description><para>Sunday: Every Sunday</para>
+        /// </description></item>
         /// </list>
-        /// <h3><a href="#daily--dailymonday--daily-"></a>Note: DAILY takes precedence over other values. For example, if you enter DAILY,Monday, the backend will use DAILY as the inspection frequency.</h3>
+        /// <h3>Note: <c>DAILY</c> overrides all other day-of-the-week settings. For example, if you specify <c>DAILY,Monday</c>, the system uses <c>DAILY</c> as the inspection frequency.</h3>
         /// 
         /// <b>Example:</b>
         /// <para>Monday</para>
@@ -42,7 +53,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string InspectionItems { get; set; }
 
         /// <summary>
-        /// <para>The new list of related instances. Separate multiple instances with commas (,).</para>
+        /// <para>The new instance IDs to associate with the task. Separate multiple IDs with a comma (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-2ze6mk259v322****,rm-2zef3b65430j0****</para>
@@ -52,7 +63,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The name of the new inspection configuration.</para>
+        /// <para>The new name of the inspection configuration.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>RDS巡检任务</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -74,7 +88,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string ScheduledId { get; set; }
 
         /// <summary>
-        /// <para>The new execution time of the inspection task. Specify the time in the ISO 8601 standard in the HH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The new time to run the inspection task. The time must be in the <c>HH:mm:ssZ</c> format and in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>02:00:00Z</para>
@@ -84,7 +98,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The inspection time range. The default value is the latest 24 hours. Valid values: 1 to 168. The maximum value is 7 days.</para>
+        /// <para>The inspection time range in hours. The default is 24, which means data from the last 24 hours is inspected. Valid values: 1 to 168. The maximum supported range is 7 days.</para>
         /// 
         /// <b>Example:</b>
         /// <para>24</para>

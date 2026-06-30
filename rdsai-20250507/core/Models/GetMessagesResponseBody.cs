@@ -10,21 +10,24 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class GetMessagesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned results.</para>
+        /// <para>A list of message objects.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<GetMessagesResponseBodyData> Data { get; set; }
         public class GetMessagesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The response to the query.</para>
+            /// <para>The AI-generated response to the query.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>您询问的实例rm-bp14as9914vd3**** 磁盘使用率为23%，暂时不需要进行扩容。如果您需要进一步查看某个实例的详细配置、性能监控或进行其他操作，请告诉我具体需求！</para>
             /// </summary>
             [NameInMap("Answer")]
             [Validation(Required=false)]
             public string Answer { get; set; }
 
             /// <summary>
-            /// <para>The ID of the conversation.</para>
+            /// <para>The unique identifier for the conversation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9cbbe885-b240-4803-9d15-6781a3fd****</para>
@@ -34,7 +37,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string ConversationId { get; set; }
 
             /// <summary>
-            /// <para>The creation time of the conversation.</para>
+            /// <para>The Unix timestamp (in seconds) when the message was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1763986004</para>
@@ -58,7 +61,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             }
 
             /// <summary>
-            /// <para>The feedback.</para>
+            /// <para>The user\&quot;s feedback on the answer, such as &quot;like&quot; or &quot;dislike&quot;.</para>
             /// 
             /// <b>Example:</b>
             /// <para>like</para>
@@ -80,7 +83,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string GenerationStatus { get; set; }
 
             /// <summary>
-            /// <para>The message ID.</para>
+            /// <para>The unique identifier for the message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>84dc9f9b-424a-404d-9c36-35e9d000****</para>
@@ -94,14 +97,17 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string LastSentEntryId { get; set; }
 
             /// <summary>
-            /// <para>The query statement.</para>
+            /// <para>The user\&quot;s query.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>实例rm-bp14as9914vd3**** 磁盘使用率，是否需要扩容</para>
             /// </summary>
             [NameInMap("Query")]
             [Validation(Required=false)]
             public string Query { get; set; }
 
             /// <summary>
-            /// <para>The retriever resources.</para>
+            /// <para>The resources that were retrieved to generate the answer.</para>
             /// </summary>
             [NameInMap("RetrieverResources")]
             [Validation(Required=false)]
@@ -114,7 +120,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the current page is followed by a page.</para>
+        /// <para>Indicates whether there are more messages to retrieve.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -124,7 +130,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public bool? HasMore { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return.</para>
+        /// <para>The value of the Limit parameter used for this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -134,7 +140,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? Limit { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique identifier for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FE9C65D7-930F-57A5-A207-8C396329****</para>

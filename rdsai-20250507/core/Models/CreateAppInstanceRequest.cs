@@ -42,10 +42,19 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// <para>List of modules</para>
+        /// </summary>
         [NameInMap("Components")]
         [Validation(Required=false)]
         public List<CreateAppInstanceRequestComponents> Components { get; set; }
         public class CreateAppInstanceRequestComponents : TeaModel {
+            /// <summary>
+            /// <para>Module type</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>supabase</para>
+            /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
@@ -60,6 +69,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public CreateAppInstanceRequestDBInstanceConfig DBInstanceConfig { get; set; }
         public class CreateAppInstanceRequestDBInstanceConfig : TeaModel {
             /// <summary>
+            /// <para>The instance type of the database instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>pg.n2.2c.1m</para>
             /// </summary>
@@ -68,6 +79,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string DBInstanceClass { get; set; }
 
             /// <summary>
+            /// <para>The storage capacity of the database instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -76,6 +89,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public int? DBInstanceStorage { get; set; }
 
             /// <summary>
+            /// <para>The payment type of the database instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Postpaid</para>
             /// </summary>
@@ -115,6 +130,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [NameInMap("DashboardUsername")]
         [Validation(Required=false)]
         public string DashboardUsername { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>test_database_01</para>
+        /// </summary>
+        [NameInMap("Database")]
+        [Validation(Required=false)]
+        public string Database { get; set; }
 
         /// <summary>
         /// <para>The idempotency token. The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</para>

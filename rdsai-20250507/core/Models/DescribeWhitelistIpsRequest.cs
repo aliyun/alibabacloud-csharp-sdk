@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class DescribeWhitelistIpsRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rds_copilot****_public_cn-4****02</para>
         /// </summary>

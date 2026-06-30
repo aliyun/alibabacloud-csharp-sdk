@@ -28,6 +28,9 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 
             /// <summary>
             /// <para>The description in Japanese.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>RDS インスタンスの一覧を照会します。</para>
             /// </summary>
             [NameInMap("Ja")]
             [Validation(Required=false)]
@@ -45,6 +48,9 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 
             /// <summary>
             /// <para>The description in Traditional Chinese.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>查詢 RDS 實例清單。</para>
             /// </summary>
             [NameInMap("Tc")]
             [Validation(Required=false)]
@@ -62,6 +68,9 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 
             /// <summary>
             /// <para>The description in Simplified Chinese.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>查询RDS实例列表。</para>
             /// </summary>
             [NameInMap("Zh")]
             [Validation(Required=false)]

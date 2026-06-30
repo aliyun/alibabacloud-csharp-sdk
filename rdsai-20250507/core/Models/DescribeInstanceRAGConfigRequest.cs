@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ra-supabase-8moov5lxba***</para>
+        /// <para>ra-supabase-8moov5lxba****</para>
         /// </summary>
         [NameInMap("InstanceName")]
         [Validation(Required=false)]

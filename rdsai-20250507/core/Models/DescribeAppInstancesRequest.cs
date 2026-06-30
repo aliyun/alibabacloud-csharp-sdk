@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class DescribeAppInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the RDS for PostgreSQL instance with which the RDS Supabase instances are associated. If you specify this parameter, the RDS Supabase instances associated with the specified RDS for PostgreSQL instance are queried.</para>
+        /// <para>The application type. The only supported value is <b>supabase</b>, which indicates <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>supabase</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string AppType { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
+        /// <para>The ID of an RDS PostgreSQL instance to return only the associated AI application instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pgm-2ze49qv594vi****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The number of records per page. Valid values: <b>1 to 50</b>.</para>
+        /// <para>The page number of the results to return. The value must be greater than 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The application type. Only <b>supabase</b> is supported. For more information, see <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a>.</para>
+        /// <para>The number of AI application instances to return on each page. Valid values: <b>1 to 50</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The operation that you want to perform. Set the value to <b>DescribeAppInstances</b>.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>

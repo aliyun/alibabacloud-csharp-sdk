@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class ListApiKeysRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rds_copilot***_public_cn-*********6</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public int? Page { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

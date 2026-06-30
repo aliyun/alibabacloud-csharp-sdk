@@ -28,6 +28,9 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 
             /// <summary>
             /// <para>The instance description.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>巡检测试实例。</para>
             /// </summary>
             [NameInMap("InstanceDesc")]
             [Validation(Required=false)]
@@ -67,6 +70,9 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 
         /// <summary>
         /// <para>The response message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>获取巡检实例ID列表成功</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class UpdateApiKeyQuotaShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rds_copilot***_public_cn-*********6</para>
         /// </summary>
@@ -17,6 +19,9 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <para>A list of API keys.</para>
+        /// </summary>
         [NameInMap("Keys")]
         [Validation(Required=false)]
         public string KeysShrink { get; set; }

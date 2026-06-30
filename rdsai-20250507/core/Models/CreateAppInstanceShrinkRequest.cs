@@ -42,6 +42,9 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// <para>List of modules</para>
+        /// </summary>
         [NameInMap("Components")]
         [Validation(Required=false)]
         public string ComponentsShrink { get; set; }
@@ -83,6 +86,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [NameInMap("DashboardUsername")]
         [Validation(Required=false)]
         public string DashboardUsername { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>test_database_01</para>
+        /// </summary>
+        [NameInMap("Database")]
+        [Validation(Required=false)]
+        public string Database { get; set; }
 
         /// <summary>
         /// <para>The idempotency token. The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</para>

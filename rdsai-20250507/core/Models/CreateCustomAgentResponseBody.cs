@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class CreateCustomAgentResponseBody : TeaModel {
         /// <summary>
-        /// <para>The creation time of the agent.</para>
+        /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-11-27 16:01:28</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string CreatedAt { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether tools are enabled.</para>
+        /// <para>Specifies whether to enable tools.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -41,6 +41,9 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 
         /// <summary>
         /// <para>The name of the agent.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>查询实例列表Agent</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -79,14 +82,17 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
-        /// <para>The system prompts.</para>
+        /// <para>The system prompt.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>我是您用来查询实例列表的专属Agent</para>
         /// </summary>
         [NameInMap("SystemPrompt")]
         [Validation(Required=false)]
         public string SystemPrompt { get; set; }
 
         /// <summary>
-        /// <para>The information about the tool.</para>
+        /// <para>The tool information.</para>
         /// </summary>
         [NameInMap("Tools")]
         [Validation(Required=false)]

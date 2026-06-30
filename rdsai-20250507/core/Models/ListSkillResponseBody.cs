@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public class ListSkillResponseBodyData : TeaModel {
             /// <summary>
             /// <para>The content of the skill.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;MySQL&quot;: &quot;MySQL 优化指南...&quot;,&quot;PostgreSQL&quot;: &quot;PostgreSQL 优化指南...&quot;}</para>
             /// </summary>
             [NameInMap("Content")]
             [Validation(Required=false)]
@@ -42,6 +45,9 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 
             /// <summary>
             /// <para>The description of the skill.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>SQL审查专家：全面审核SQL的安全性、性能与规范性，识别风险并提供优化建议。用户提交SQL或询问“SQL审核”“SQL Review”“有风险吗”“如何优化”时，立即启用。</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]

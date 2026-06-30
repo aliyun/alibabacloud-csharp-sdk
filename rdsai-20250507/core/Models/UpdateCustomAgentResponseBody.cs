@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string EnableTools { get; set; }
 
         /// <summary>
-        /// <para>The ID of the agent.</para>
+        /// <para>AgentId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>82cf3d62-0add-47bd-869f-877131f7****</para>
@@ -30,7 +30,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The name of the agent.</para>
+        /// <para>The name of the custom agent.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>查询实例列表Agent</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -69,14 +72,17 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
-        /// <para>The system prompts.</para>
+        /// <para>The system prompt.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>我是您用来查询实例列表的专属Agent</para>
         /// </summary>
         [NameInMap("SystemPrompt")]
         [Validation(Required=false)]
         public string SystemPrompt { get; set; }
 
         /// <summary>
-        /// <para>The information about the tool.</para>
+        /// <para>The tools that the custom agent can use.</para>
         /// </summary>
         [NameInMap("Tools")]
         [Validation(Required=false)]

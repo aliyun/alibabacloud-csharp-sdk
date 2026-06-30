@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
     public class CreateSkillResponseBody : TeaModel {
         /// <summary>
         /// <para>The database engine-specific content.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;MySQL&quot;: &quot;MySQL 优化指南...&quot;,&quot;PostgreSQL&quot;: &quot;PostgreSQL 优化指南...&quot;}</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
@@ -35,6 +38,9 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 
         /// <summary>
         /// <para>The description of the skill.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SQL查询优化技能。</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]

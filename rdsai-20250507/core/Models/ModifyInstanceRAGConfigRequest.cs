@@ -31,6 +31,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public List<ModifyInstanceRAGConfigRequestConfigList> ConfigList { get; set; }
         public class ModifyInstanceRAGConfigRequestConfigList : TeaModel {
             /// <summary>
+            /// <para>The name of the configuration item.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>LLM_MODEL</para>
             /// </summary>
@@ -39,6 +41,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The value of the configuration item.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>qwen-flash</para>
             /// </summary>

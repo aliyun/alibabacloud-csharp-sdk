@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class DescribeInstanceAuthInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The region ID.</para>
+        /// <para>The instance ID of the AI application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ra-supabase-8moov5lxba****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The operation that you want to perform. Set the value to <b>DescribeInstanceAuthInfo</b>.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>

@@ -11,13 +11,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
     public class GetScheduledReportsResponseBody : TeaModel {
         /// <summary>
         /// <para>The response message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>获取巡检报告列表成功</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from 1. Default value: 1.</para>
+        /// <para>The page number. The default value is 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -27,7 +30,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of reports returned on each page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -37,14 +40,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The details of the report.</para>
+        /// <para>A list of inspection reports.</para>
         /// </summary>
         [NameInMap("Reports")]
         [Validation(Required=false)]
         public List<GetScheduledReportsResponseBodyReports> Reports { get; set; }
         public class GetScheduledReportsResponseBodyReports : TeaModel {
             /// <summary>
-            /// <para>The creation time of the task.</para>
+            /// <para>The time when the report was created, in YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-01-01T22:59:59Z</para>
@@ -54,7 +57,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string CreatedTime { get; set; }
 
             /// <summary>
-            /// <para>The end time of the inspection task. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</para>
+            /// <para>The inspection end time, in YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-01-01T23:59:59Z</para>
@@ -67,6 +70,9 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             [Validation(Required=false)]
             public string InspectionItems { get; set; }
 
+            /// <summary>
+            /// <para>The region ID.</para>
+            /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
@@ -80,7 +86,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string ReportType { get; set; }
 
             /// <summary>
-            /// <para>The start time of the inspection task. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</para>
+            /// <para>The inspection start time, in YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-01-01T00:00:00Z</para>
@@ -90,7 +96,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the task.</para>
+            /// <para>The status of the report.</para>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>
@@ -100,7 +106,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The ID of the report.</para>
+            /// <para>The task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>65f0053b-f933-49f5-bf65-4e4593e1****</para>
@@ -132,7 +138,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned reports.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
     public class ModifyScheduledTaskResponseBody : TeaModel {
         /// <summary>
         /// <para>The response message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>定时任务更新成功</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -27,7 +30,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned results.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

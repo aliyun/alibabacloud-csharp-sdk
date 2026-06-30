@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class ListScheduledTasksRequest : TeaModel {
         /// <summary>
-        /// <para>The page number. Pages start from 1. Default value: 1.</para>
+        /// <para>The page number. The default value is 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of records on each page. Default value: 20. Maximum value: 100.</para>
+        /// <para>The number of entries per page. The default value is 20. The maximum value is 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the scheduled inspection configuration.</para>
+        /// <para>The scheduled inspection configuration ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>847268a4-196f-416b-aa12-bfe0c115****</para>

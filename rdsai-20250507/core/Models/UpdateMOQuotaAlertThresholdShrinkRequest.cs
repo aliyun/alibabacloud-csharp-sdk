@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class UpdateMOQuotaAlertThresholdShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>A list of API keys.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Apikey")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string ApikeyShrink { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The application type. Only <b>supabase</b> is supported. For more information, see <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a>.</para>
+        /// <para>The application type. Currently, only <b>supabase</b> is supported, which indicates <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>supabase</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
-        /// <para>The ID of the RDS for PostgreSQL instance with which the RDS Supabase instances are associated.</para>
+        /// <para>The instance ID of the ApsaraDB RDS for PostgreSQL database to which the AI application is connected.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pgm-2ze49qv594vi****</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string EipStatus { get; set; }
 
         /// <summary>
-        /// <para>The instance type of the RDS Supabase instance.</para>
+        /// <para>The instance type of the AI application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rdsai.supabase.basic</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string InstanceClass { get; set; }
 
         /// <summary>
-        /// <para>The minor version number of RDS Supabase instance.</para>
+        /// <para>The minor version of the RDS AI application instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20241231</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string InstanceMinorVersion { get; set; }
 
         /// <summary>
-        /// <para>The ID of the RDS Supabase instance.</para>
+        /// <para>The instance ID of the AI application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ra-supabase-8moov5lxba****</para>
@@ -90,6 +90,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
         public string InstanceName { get; set; }
+
+        [NameInMap("LoginToken")]
+        [Validation(Required=false)]
+        public string LoginToken { get; set; }
 
         [NameInMap("NatCreatedBy")]
         [Validation(Required=false)]
@@ -133,8 +137,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("RetentionHours")]
+        [Validation(Required=false)]
+        public string RetentionHours { get; set; }
+
+        [NameInMap("SqlExtendMoInstanceId")]
+        [Validation(Required=false)]
+        public string SqlExtendMoInstanceId { get; set; }
+
         /// <summary>
-        /// <para>The status of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/2623972.html">Instance state table</a>.</para>
+        /// <para>The instance status. For more information, see <a href="https://help.aliyun.com/document_detail/2623972.html">Instance status</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Running</para>
@@ -143,8 +155,38 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        [NameInMap("UploadKey")]
+        [Validation(Required=false)]
+        public string UploadKey { get; set; }
+
+        [NameInMap("UploadKeyList")]
+        [Validation(Required=false)]
+        public List<DescribeAppInstanceAttributeResponseBodyUploadKeyList> UploadKeyList { get; set; }
+        public class DescribeAppInstanceAttributeResponseBodyUploadKeyList : TeaModel {
+            [NameInMap("IsSystemKey")]
+            [Validation(Required=false)]
+            public bool? IsSystemKey { get; set; }
+
+            [NameInMap("Remark")]
+            [Validation(Required=false)]
+            public string Remark { get; set; }
+
+            [NameInMap("SlsStorageBytes")]
+            [Validation(Required=false)]
+            public long? SlsStorageBytes { get; set; }
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
+            [NameInMap("UploadKey")]
+            [Validation(Required=false)]
+            public string UploadKey { get; set; }
+
+        }
+
         /// <summary>
-        /// <para>The ID of the vSwitch.</para>
+        /// <para>The vSwitch ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-2zeaepb8k4ku05ov2****</para>

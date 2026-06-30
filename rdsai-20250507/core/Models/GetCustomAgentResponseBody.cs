@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class GetCustomAgentResponseBody : TeaModel {
         /// <summary>
-        /// <para>The creation time of the agent.</para>
+        /// <para>The time when the custom agent was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-06-04T02:25:43Z</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public bool? EnableTools { get; set; }
 
         /// <summary>
-        /// <para>The ID of the backup set.</para>
+        /// <para>The ID of the custom agent.</para>
         /// 
         /// <b>Example:</b>
         /// <para>17053</para>
@@ -40,7 +40,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The name of the dedicated agent.</para>
+        /// <para>The name of the custom agent.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>查询实例列表Agent</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -50,7 +53,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>FE9C65D7-930F-57A5-A207-8C396329241C</para>
+        /// <para>FE9C65D7-930F-57A5-A207-8C396329****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -79,21 +82,24 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
-        /// <para>The system prompts.</para>
+        /// <para>The system prompt for the agent.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>我是您用来查询实例列表的专属Agent</para>
         /// </summary>
         [NameInMap("SystemPrompt")]
         [Validation(Required=false)]
         public string SystemPrompt { get; set; }
 
         /// <summary>
-        /// <para>The details of the tools.</para>
+        /// <para>A list of tools enabled for the agent.</para>
         /// </summary>
         [NameInMap("Tools")]
         [Validation(Required=false)]
         public List<string> Tools { get; set; }
 
         /// <summary>
-        /// <para>The modification time of the agent.</para>
+        /// <para>The time when the custom agent was last updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-11-27 16:02:28</para>

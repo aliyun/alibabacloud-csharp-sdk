@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class UpdateCustomAgentShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The operation that you want to perform. Set the value to <b>UpdateCustomAgent</b>.</para>
+        /// <para>The agent ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string CustomAgentId { get; set; }
 
         /// <summary>
-        /// <para>The system prompts.</para>
+        /// <para>Specifies whether to enable tools.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -31,7 +31,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public bool? EnableTools { get; set; }
 
         /// <summary>
-        /// <para>The ID of the agent.</para>
+        /// <para>The name of the custom agent.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>查询实例列表Agent</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -42,14 +45,17 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string SkillIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>The name of the agent.</para>
+        /// <para>The system prompt.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>我是您用来查询实例列表的专属Agent</para>
         /// </summary>
         [NameInMap("SystemPrompt")]
         [Validation(Required=false)]
         public string SystemPrompt { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable tools.</para>
+        /// <para>The tools that the custom agent can use.</para>
         /// </summary>
         [NameInMap("Tools")]
         [Validation(Required=false)]

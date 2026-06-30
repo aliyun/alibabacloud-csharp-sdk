@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class DescribeSandboxTemplatesResponseBody : TeaModel {
         /// <summary>
+        /// <para>This parameter is reserved.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>None</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The token to retrieve the next page of results. If this parameter is empty, all results have been returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AAAAAc3HCuYhJi/wvpk4xOr0VLYz/NvD85HpgBeRBCusEIeVQ0dHZH9jr+NP3X9Jx0iSoql55b9nd4PIDm252/a0f+U=</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries returned on the current page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -42,7 +50,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FE9C65D7-930F-57A5-A207-8C396329****</para>
@@ -51,11 +59,20 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>A list of sandbox templates.</para>
+        /// </summary>
         [NameInMap("SandboxTemplates")]
         [Validation(Required=false)]
         public List<DescribeSandboxTemplatesResponseBodySandboxTemplates> SandboxTemplates { get; set; }
         public class DescribeSandboxTemplatesResponseBodySandboxTemplates : TeaModel {
+            [NameInMap("CreatedBy")]
+            [Validation(Required=false)]
+            public string CreatedBy { get; set; }
+
             /// <summary>
+            /// <para>The default number of CPUs for a sandbox created from this template.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -64,6 +81,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string DefaultCpu { get; set; }
 
             /// <summary>
+            /// <para>The default memory size for a sandbox created from this template.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>4Gi</para>
             /// </summary>
@@ -72,6 +91,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string DefaultMemory { get; set; }
 
             /// <summary>
+            /// <para>The description of the sandbox template.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>code-interpreter-vpc</para>
             /// </summary>
@@ -80,6 +101,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>Specifies whether sandboxes created from this template can access resources in the VPC of the parent RDS Supabase instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -88,6 +111,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string EnableVpcAccess { get; set; }
 
             /// <summary>
+            /// <para>The name of the sandbox template.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>code-interpreter</para>
             /// </summary>
@@ -100,6 +125,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public long? Replicas { get; set; }
 
             /// <summary>
+            /// <para>The ID of the sandbox template. Use this ID when you create a sandbox.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>code-interpreter-asdxxxx</para>
             /// </summary>
@@ -110,6 +137,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
+        /// <para>The total number of entries that match the query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>

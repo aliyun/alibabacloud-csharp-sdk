@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class CreateInspectionTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the result is returned.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -29,7 +29,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The response message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>任务创建成功</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

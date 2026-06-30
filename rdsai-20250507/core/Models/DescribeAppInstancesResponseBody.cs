@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class DescribeAppInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the RDS Supabase instances.</para>
+        /// <para>A list of instances.</para>
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
         public List<DescribeAppInstancesResponseBodyInstances> Instances { get; set; }
         public class DescribeAppInstancesResponseBodyInstances : TeaModel {
             /// <summary>
-            /// <para>The name of the AI application.</para>
+            /// <para>The application name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-supabase</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string AppName { get; set; }
 
             /// <summary>
-            /// <para>The application type. Only <b>supabase</b> is supported. For more information, see <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a>.</para>
+            /// <para>The application type. The only supported value is <b>supabase</b>, which represents <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>supabase</para>
@@ -36,14 +36,23 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             [Validation(Required=false)]
             public string AppType { get; set; }
 
+            /// <summary>
+            /// <para>The components of the instance.</para>
+            /// </summary>
             [NameInMap("Components")]
             [Validation(Required=false)]
             public List<DescribeAppInstancesResponseBodyInstancesComponents> Components { get; set; }
             public class DescribeAppInstancesResponseBodyInstancesComponents : TeaModel {
+                /// <summary>
+                /// <para>The component status.</para>
+                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
+                /// <summary>
+                /// <para>The component type.</para>
+                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
@@ -51,7 +60,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             }
 
             /// <summary>
-            /// <para>The ID of the RDS for PostgreSQL instance with which the RDS Supabase instances are associated.</para>
+            /// <para>The DB instance ID of the connected ApsaraDB RDS for PostgreSQL instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pgm-2ze49qv594vi****</para>
@@ -71,7 +80,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string InstanceClass { get; set; }
 
             /// <summary>
-            /// <para>The minor version number of RDS Supabase instance.</para>
+            /// <para>The minor version of the AI application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20241231</para>
@@ -81,7 +90,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string InstanceMinorVersion { get; set; }
 
             /// <summary>
-            /// <para>The ID of the RDS Supabase instance.</para>
+            /// <para>The ID of the application instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ra-supabase-8moov5lxba****</para>
@@ -91,7 +100,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// <para>The public endpoint of the AI application.</para>
+            /// <para>The public connection string.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8.152. XXX.XXX:8000</para>
@@ -111,7 +120,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The instance status. For more information, see <a href="https://help.aliyun.com/document_detail/2623972.html">Instance state table</a>.</para>
+            /// <para>The instance status. For more information, see <a href="https://help.aliyun.com/document_detail/2623972.html">Instance status table</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -121,7 +130,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The ID of the vSwitch.</para>
+            /// <para>The VSwitch ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-2zeaepb8k4ku05ov2****</para>
@@ -131,7 +140,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// <para>The internal endpoint of the AI application.</para>
+            /// <para>The VPC connection string.</para>
             /// 
             /// <b>Example:</b>
             /// <para>172.16.XXX.XXX:8000</para>
@@ -143,7 +152,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
-        /// <para>A reserved parameter. You do not need to specify this parameter.</para>
+        /// <para>This parameter is reserved for future use.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -153,7 +162,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -163,7 +172,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned on each page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

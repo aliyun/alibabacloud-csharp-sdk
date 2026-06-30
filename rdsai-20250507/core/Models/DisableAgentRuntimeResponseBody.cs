@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class DisableAgentRuntimeResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the AI application instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ra-supabase-8moov5lxba****</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D984FD38-6C2D-55DF-B0D7-8BCAC2E1F8C2</para>

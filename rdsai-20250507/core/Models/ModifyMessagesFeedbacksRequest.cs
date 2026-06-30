@@ -16,6 +16,9 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         /// <item><description>like</description></item>
         /// <item><description>dislike</description></item>
         /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>无法理解上下文；答非所问</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]

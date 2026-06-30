@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class GetMessagesRequest : TeaModel {
         /// <summary>
-        /// <para>The operation that you want to perform. Set the value to <b>GetMessages</b>.</para>
+        /// <para>The ID of the conversation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>941c6f59-acf5-4e11-9adc-31e52e1f****</para>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string EventMode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the conversation.</para>
+        /// <para>The ID of the message from which to start fetching the list. Use this for pagination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>038866af-a050-4bc5-bfad-b7bfc838****</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string FirstId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the first message.</para>
+        /// <para>The maximum number of messages to return per page. Valid values: 1–100. Default: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class DisableAgentRuntimeRequest : TeaModel {
         /// <summary>
+        /// <para>An idempotent parameter.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0c593ea1-3bea-11e9-b96b-88**********</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>The ID of the AI application instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string InstanceName { get; set; }
 
         /// <summary>
+        /// <para>The ID of the region where the instance is located.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
         /// </summary>

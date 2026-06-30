@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class GetStandAloneReportsRequest : TeaModel {
         /// <summary>
-        /// <para>The task end time based on which the reports are filtered. If you do not specify this parameter, all reports are returned.</para>
+        /// <para>The end of the query\&quot;s time range. The time must be in UTC and in the <c>YYYY-MM-DDTHH:mm:ssZ</c> format. If omitted, no end time filter is applied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-01-19T02:20:20Z</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from 1. Default value: 1.</para>
+        /// <para>The number of the page to return. The default value is 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of records on each page. Default value: 20. Maximum value: 100.</para>
+        /// <para>The number of entries to return on each page. Default: 20. Maximum: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string ReportType { get; set; }
 
         /// <summary>
-        /// <para>The task start time based on which the reports are filtered. If you do not specify this parameter, all reports are returned.</para>
+        /// <para>The start of the query\&quot;s time range. The time must be in UTC and in the <c>YYYY-MM-DDTHH:mm:ssZ</c> format. If omitted, no start time filter is applied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-03-11T02:09:00Z</para>

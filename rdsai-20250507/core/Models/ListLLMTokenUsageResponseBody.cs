@@ -42,8 +42,6 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? PromptTokens { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
-        /// 
         /// <b>Example:</b>
         /// <para>FE9C65D7-930F-57A5-A207-8C396329****</para>
         /// </summary>

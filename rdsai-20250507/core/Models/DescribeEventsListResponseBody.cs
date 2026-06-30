@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class DescribeEventsListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The total number of events.</para>
+        /// <para>The count for each event code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OtherException:3,MysqlIOException:1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string EventCodeCounts { get; set; }
 
         /// <summary>
-        /// <para>The information about the events.</para>
+        /// <para>A list of events.</para>
         /// </summary>
         [NameInMap("Events")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string EventCode { get; set; }
 
             /// <summary>
-            /// <para>The state of the event.</para>
+            /// <para>The event status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>None</para>
@@ -47,14 +47,17 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string EventStatus { get; set; }
 
             /// <summary>
-            /// <para>The event.</para>
+            /// <para>A list of event times.</para>
             /// </summary>
             [NameInMap("EventTimeList")]
             [Validation(Required=false)]
             public List<string> EventTimeList { get; set; }
 
             /// <summary>
-            /// <para>The description of the instance.</para>
+            /// <para>The instance description.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>测试实例</para>
             /// </summary>
             [NameInMap("InstanceDescription")]
             [Validation(Required=false)]
@@ -64,7 +67,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>rm-2zecnb327gp36e7lh</para>
+            /// <para>rm-2zecnb327gp36****</para>
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
@@ -80,6 +83,9 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             [Validation(Required=false)]
             public string RecoveryTime { get; set; }
 
+            /// <summary>
+            /// <para>The region ID.</para>
+            /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
@@ -87,7 +93,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
-        /// <para>The total number of pages.</para>
+        /// <para>The number of pages returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -97,7 +103,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? PageCount { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -107,7 +113,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned on each page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -120,14 +126,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>FE9C65D7-930F-57A5-A207-8C396329241C</para>
+        /// <para>FE9C65D7-930F-57A5-A207-8C396329****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -137,7 +143,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The total number of pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
