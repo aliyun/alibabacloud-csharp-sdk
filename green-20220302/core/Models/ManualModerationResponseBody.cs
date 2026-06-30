@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>Returned data.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ManualModerationResponseBodyData Data { get; set; }
         public class ManualModerationResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The value of dataId passed during the API request. This field will not be present if it was not provided during the request.</para>
+            /// <para>The value of dataId passed in the API request. This field is not present if no dataId was passed in the request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2a5389eb-4ff8-4584-ac99-644e2a539aa1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             public string DataId { get; set; }
 
             /// <summary>
-            /// <para>Task ID</para>
+            /// <para>The task ID</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxxxx-xxxxx</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>ID of the request</para>
+        /// <para>The ID of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>

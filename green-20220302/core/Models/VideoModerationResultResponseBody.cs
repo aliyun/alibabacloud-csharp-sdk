@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 {
     public class VideoModerationResultResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned HTTP status code. The status code 200 indicates that the request was successful.</para>
+        /// <para>The response code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,38 +20,38 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The moderation results.</para>
+        /// <para>The moderation result data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public VideoModerationResultResponseBodyData Data { get; set; }
         public class VideoModerationResultResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The voice moderation results. The moderation results contain a structure.</para>
+            /// <para>The segmented results of video audio moderation.</para>
             /// </summary>
             [NameInMap("AudioResult")]
             [Validation(Required=false)]
             public VideoModerationResultResponseBodyDataAudioResult AudioResult { get; set; }
             public class VideoModerationResultResponseBodyDataAudioResult : TeaModel {
                 /// <summary>
-                /// <para>Summary of voice labels.</para>
+                /// <para>The audio label summary.</para>
                 /// </summary>
                 [NameInMap("AudioSummarys")]
                 [Validation(Required=false)]
                 public List<VideoModerationResultResponseBodyDataAudioResultAudioSummarys> AudioSummarys { get; set; }
                 public class VideoModerationResultResponseBodyDataAudioResultAudioSummarys : TeaModel {
                     /// <summary>
-                    /// <para>The description of the labels.</para>
+                    /// <para>The label descriptions.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>no risk</para>
+                    /// <para>疑似违禁内容</para>
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// <para>The voice label.</para>
+                    /// <para>The video audio label.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>profanity</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     public string Label { get; set; }
 
                     /// <summary>
-                    /// <para>The number of times that the label is matched.</para>
+                    /// <para>The number of times the label appears.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>8</para>
@@ -73,7 +73,17 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 }
 
                 /// <summary>
-                /// <para>Risk Level.</para>
+                /// <para>The risk level, returned based on the configured high and low risk score thresholds. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para>high: High risk.</para>
+                /// </description></item>
+                /// <item><description><para>medium: Medium risk.</para>
+                /// </description></item>
+                /// <item><description><para>low: Low risk.</para>
+                /// </description></item>
+                /// <item><description><para>none: No risk detected.</para>
+                /// </description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>high</para>
@@ -83,24 +93,24 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 public string RiskLevel { get; set; }
 
                 /// <summary>
-                /// <para>The details about the text in the moderated voice. The value is a JSON array that contains one or more elements. Each element corresponds to a text entry.</para>
+                /// <para>The list of audio segments.</para>
                 /// </summary>
                 [NameInMap("SliceDetails")]
                 [Validation(Required=false)]
                 public List<VideoModerationResultResponseBodyDataAudioResultSliceDetails> SliceDetails { get; set; }
                 public class VideoModerationResultResponseBodyDataAudioResultSliceDetails : TeaModel {
                     /// <summary>
-                    /// <para>The description of the labels.</para>
+                    /// <para>The label descriptions.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>no risk</para>
+                    /// <para>疑似违禁内容</para>
                     /// </summary>
                     [NameInMap("Descriptions")]
                     [Validation(Required=false)]
                     public string Descriptions { get; set; }
 
                     /// <summary>
-                    /// <para>The end time of the text after voice-to-text conversion. Unit: seconds.</para>
+                    /// <para>The end time of the segment, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>30</para>
@@ -110,7 +120,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     public long? EndTime { get; set; }
 
                     /// <summary>
-                    /// <para>The end timestamp of the segment. Unit: milliseconds.</para>
+                    /// <para>The end timestamp.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1685245261939</para>
@@ -120,7 +130,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     public long? EndTimestamp { get; set; }
 
                     /// <summary>
-                    /// <para>A reserved parameter.</para>
+                    /// <para>The extended field.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>{\&quot;consoleProduct\&quot;:\&quot;slbnext\&quot;}</para>
@@ -130,7 +140,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     public string Extend { get; set; }
 
                     /// <summary>
-                    /// <para>The details of the labels.</para>
+                    /// <para>The violation labels that are hit.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>porn</para>
@@ -139,8 +149,76 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     [Validation(Required=false)]
                     public string Labels { get; set; }
 
+                    [NameInMap("Result")]
+                    [Validation(Required=false)]
+                    public List<VideoModerationResultResponseBodyDataAudioResultSliceDetailsResult> Result { get; set; }
+                    public class VideoModerationResultResponseBodyDataAudioResultSliceDetailsResult : TeaModel {
+                        [NameInMap("Confidence")]
+                        [Validation(Required=false)]
+                        public float? Confidence { get; set; }
+
+                        [NameInMap("CustomizedHit")]
+                        [Validation(Required=false)]
+                        public List<VideoModerationResultResponseBodyDataAudioResultSliceDetailsResultCustomizedHit> CustomizedHit { get; set; }
+                        public class VideoModerationResultResponseBodyDataAudioResultSliceDetailsResultCustomizedHit : TeaModel {
+                            [NameInMap("KeyWords")]
+                            [Validation(Required=false)]
+                            public string KeyWords { get; set; }
+
+                            [NameInMap("LibName")]
+                            [Validation(Required=false)]
+                            public string LibName { get; set; }
+
+                        }
+
+                        [NameInMap("Description")]
+                        [Validation(Required=false)]
+                        public string Description { get; set; }
+
+                        [NameInMap("Label")]
+                        [Validation(Required=false)]
+                        public string Label { get; set; }
+
+                        [NameInMap("RiskLevel")]
+                        [Validation(Required=false)]
+                        public string RiskLevel { get; set; }
+
+                        [NameInMap("RiskPositions")]
+                        [Validation(Required=false)]
+                        public List<VideoModerationResultResponseBodyDataAudioResultSliceDetailsResultRiskPositions> RiskPositions { get; set; }
+                        public class VideoModerationResultResponseBodyDataAudioResultSliceDetailsResultRiskPositions : TeaModel {
+                            [NameInMap("EndPos")]
+                            [Validation(Required=false)]
+                            public int? EndPos { get; set; }
+
+                            [NameInMap("RiskWord")]
+                            [Validation(Required=false)]
+                            public string RiskWord { get; set; }
+
+                            [NameInMap("StartPos")]
+                            [Validation(Required=false)]
+                            public int? StartPos { get; set; }
+
+                        }
+
+                        [NameInMap("RiskWords")]
+                        [Validation(Required=false)]
+                        public string RiskWords { get; set; }
+
+                    }
+
                     /// <summary>
-                    /// <para>Risk Level.</para>
+                    /// <para>The risk level, returned based on the configured high and low risk score thresholds. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><para>high: High risk.</para>
+                    /// </description></item>
+                    /// <item><description><para>medium: Medium risk.</para>
+                    /// </description></item>
+                    /// <item><description><para>low: Low risk.</para>
+                    /// </description></item>
+                    /// <item><description><para>none: No risk detected.</para>
+                    /// </description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>high</para>
@@ -150,7 +228,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     public string RiskLevel { get; set; }
 
                     /// <summary>
-                    /// <para>Subcategory labels. Multiple labels are separated by commas (,).</para>
+                    /// <para>The details of the hit risk.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>&quot;&quot;</para>
@@ -160,7 +238,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     public string RiskTips { get; set; }
 
                     /// <summary>
-                    /// <para>The risk words that are hit. Multiple words are separated by commas (,).</para>
+                    /// <para>The risk keywords that are hit.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>&quot;&quot;</para>
@@ -180,7 +258,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     public float? Score { get; set; }
 
                     /// <summary>
-                    /// <para>The start time of the text after voice-to-text conversion. Unit: seconds.</para>
+                    /// <para>The start time of the segment, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -190,7 +268,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     public long? StartTime { get; set; }
 
                     /// <summary>
-                    /// <para>The start timestamp of the segment. Unit: milliseconds.</para>
+                    /// <para>The start timestamp, in milliseconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1659935002123</para>
@@ -200,17 +278,17 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     public long? StartTimestamp { get; set; }
 
                     /// <summary>
-                    /// <para>The text converted from voice.</para>
+                    /// <para>The transcribed text of the audio segment.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Disgusting</para>
+                    /// <para>今天天气真不错</para>
                     /// </summary>
                     [NameInMap("Text")]
                     [Validation(Required=false)]
                     public string Text { get; set; }
 
                     /// <summary>
-                    /// <para>If the moderation object is a voice stream, this parameter indicates the temporary access URL of the voice stream to which the text entry corresponds. The validity period of the URL is 30 minutes. You must prepare another URL to store the voice stream at the earliest opportunity.</para>
+                    /// <para>The temporary URL of the audio segment file.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para><a href="http://xxxx.abc.img">http://xxxx.abc.img</a></para>
@@ -224,7 +302,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             }
 
             /// <summary>
-            /// <para>The value of dataId that is specified in the API request. If this parameter is not specified in the API request, the dataId field is not available in the response.</para>
+            /// <para>The value of dataId passed in the API request. This field is not returned if dataId was not specified in the request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>product_content-2055763</para>
@@ -233,48 +311,115 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             [Validation(Required=false)]
             public string DataId { get; set; }
 
+            /// <summary>
+            /// <para>The extended information.</para>
+            /// </summary>
             [NameInMap("Ext")]
             [Validation(Required=false)]
             public VideoModerationResultResponseBodyDataExt Ext { get; set; }
             public class VideoModerationResultResponseBodyDataExt : TeaModel {
+                /// <summary>
+                /// <para>The AIGC metadata detection result.</para>
+                /// </summary>
                 [NameInMap("AigcData")]
                 [Validation(Required=false)]
                 public VideoModerationResultResponseBodyDataExtAigcData AigcData { get; set; }
                 public class VideoModerationResultResponseBodyDataExtAigcData : TeaModel {
+                    /// <summary>
+                    /// <para>The AIGC metadata.</para>
+                    /// </summary>
                     [NameInMap("AIGC")]
                     [Validation(Required=false)]
                     public VideoModerationResultResponseBodyDataExtAigcDataAIGC AIGC { get; set; }
                     public class VideoModerationResultResponseBodyDataExtAigcDataAIGC : TeaModel {
+                        /// <summary>
+                        /// <para>The code or name of the service provider, used to identify the content producer.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>001191******M000100Y43</para>
+                        /// </summary>
                         [NameInMap("ContentProducer")]
                         [Validation(Required=false)]
                         public string ContentProducer { get; set; }
 
+                        /// <summary>
+                        /// <para>The name, ID, or code of the propagation platform. For services that provide artificial intelligence-generated content, this value can be the same as ContentProducer.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>001191******M000100Y43</para>
+                        /// </summary>
                         [NameInMap("ContentPropagator")]
                         [Validation(Required=false)]
                         public string ContentPropagator { get; set; }
 
+                        /// <summary>
+                        /// <para>Indicates whether the content is generated by artificial intelligence (AI). Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description><para>1: The content is generated through artificial intelligence content generation.</para>
+                        /// </description></item>
+                        /// <item><description><para>2: (Propagation platforms only) The content may be generated through artificial intelligence content generation.</para>
+                        /// </description></item>
+                        /// <item><description><para>3: (Propagation platforms only) The content is suspected to be generated through artificial intelligence content generation.</para>
+                        /// </description></item>
+                        /// </list>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>1</para>
+                        /// </summary>
                         [NameInMap("Label")]
                         [Validation(Required=false)]
                         public string Label { get; set; }
 
+                        /// <summary>
+                        /// <para>The content production ID, which is the unique identifier used by the production platform to trace synthesized content.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>123******456</para>
+                        /// </summary>
                         [NameInMap("ProduceID")]
                         [Validation(Required=false)]
                         public string ProduceID { get; set; }
 
+                        /// <summary>
+                        /// <para>The content propagation ID, which is the unique identifier assigned by the propagation platform to the propagated AI-generated content.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>123******456</para>
+                        /// </summary>
                         [NameInMap("PropagateID")]
                         [Validation(Required=false)]
                         public string PropagateID { get; set; }
 
+                        /// <summary>
+                        /// <para>The reserved field.</para>
+                        /// <para>This field can store information used by the content generation service provider for self-initiated security protection to safeguard content and identifier integrity. A hashing mechanism based on ContentProducer and ProduceID can be used to securely store and verify critical information.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>d41d**********427e</para>
+                        /// </summary>
                         [NameInMap("ReservedCode1")]
                         [Validation(Required=false)]
                         public string ReservedCode1 { get; set; }
 
+                        /// <summary>
+                        /// <para>The reserved field.</para>
+                        /// <para>This field can be used by the content propagation service provider for self-initiated security protection to safeguard content and identifier integrity. A hashing mechanism based on ContentProducer and ProduceID can be used to securely store and verify critical information.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>d41d**********427e</para>
+                        /// </summary>
                         [NameInMap("ReservedCode2")]
                         [Validation(Required=false)]
                         public string ReservedCode2 { get; set; }
 
                     }
 
+                    /// <summary>
+                    /// <para>The detection result.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>None</para>
+                    /// </summary>
                     [NameInMap("Result")]
                     [Validation(Required=false)]
                     public string Result { get; set; }
@@ -284,14 +429,14 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             }
 
             /// <summary>
-            /// <para>The image moderation results. If the call is successful, the HTTP status code 200 and moderation results are returned. The moderation results contain a structure.</para>
+            /// <para>The list of video frame capture results.</para>
             /// </summary>
             [NameInMap("FrameResult")]
             [Validation(Required=false)]
             public VideoModerationResultResponseBodyDataFrameResult FrameResult { get; set; }
             public class VideoModerationResultResponseBodyDataFrameResult : TeaModel {
                 /// <summary>
-                /// <para>The number of captured frames that are returned for the video file.</para>
+                /// <para>The number of result frames.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -301,24 +446,24 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 public int? FrameNum { get; set; }
 
                 /// <summary>
-                /// <para>The summary of the labels against which captured frames are matched.</para>
+                /// <para>The video frame label summary.</para>
                 /// </summary>
                 [NameInMap("FrameSummarys")]
                 [Validation(Required=false)]
                 public List<VideoModerationResultResponseBodyDataFrameResultFrameSummarys> FrameSummarys { get; set; }
                 public class VideoModerationResultResponseBodyDataFrameResultFrameSummarys : TeaModel {
                     /// <summary>
-                    /// <para>The description of the result.</para>
+                    /// <para>The description of the Label field.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>no risk</para>
+                    /// <para>未检测出风险</para>
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// <para>The label against which a captured frame is matched.</para>
+                    /// <para>The video frame label.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>violent_armedForces</para>
@@ -328,7 +473,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     public string Label { get; set; }
 
                     /// <summary>
-                    /// <para>The number of times that the label is matched.</para>
+                    /// <para>The number of times the label appears.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>8</para>
@@ -340,14 +485,14 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 }
 
                 /// <summary>
-                /// <para>The information about the frames that match the labels.</para>
+                /// <para>The information about video frames that contain hit labels.</para>
                 /// </summary>
                 [NameInMap("Frames")]
                 [Validation(Required=false)]
                 public List<VideoModerationResultResponseBodyDataFrameResultFrames> Frames { get; set; }
                 public class VideoModerationResultResponseBodyDataFrameResultFrames : TeaModel {
                     /// <summary>
-                    /// <para>The interval between the start of the video file and the captured frame. Unit: seconds.</para>
+                    /// <para>The offset of the captured frame.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>338</para>
@@ -357,14 +502,14 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     public float? Offset { get; set; }
 
                     /// <summary>
-                    /// <para>The results of frame moderation parameters such as the label parameter and the confidence parameter.</para>
+                    /// <para>The frame detection result details.</para>
                     /// </summary>
                     [NameInMap("Results")]
                     [Validation(Required=false)]
                     public List<VideoModerationResultResponseBodyDataFrameResultFramesResults> Results { get; set; }
                     public class VideoModerationResultResponseBodyDataFrameResultFramesResults : TeaModel {
                         /// <summary>
-                        /// <para>If a custom image library is hit, information about the custom image library is returned.</para>
+                        /// <para>The custom image library information that is hit. This field is returned only when a custom image library is hit.</para>
                         /// </summary>
                         [NameInMap("CustomImage")]
                         [Validation(Required=false)]
@@ -393,14 +538,14 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                         }
 
                         /// <summary>
-                        /// <para>Returns logo information when the video contains a logo.</para>
+                        /// <para>The logo information returned when the video contains a logo.</para>
                         /// </summary>
                         [NameInMap("LogoData")]
                         [Validation(Required=false)]
                         public List<VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoData> LogoData { get; set; }
                         public class VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoData : TeaModel {
                             /// <summary>
-                            /// <para>The location of the logo.</para>
+                            /// <para>The text line and coordinate information.</para>
                             /// </summary>
                             [NameInMap("Location")]
                             [Validation(Required=false)]
@@ -427,7 +572,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                                 public int? W { get; set; }
 
                                 /// <summary>
-                                /// <para>The distance from the top-left corner of the text area to the y-axis, with the top-left corner of the image as the origin. Unit: pixels.</para>
+                                /// <para>The distance from the upper-left corner of the text area to the y-axis, with the upper-left corner of the image as the origin. Unit: pixels.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>111</para>
@@ -437,7 +582,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                                 public int? X { get; set; }
 
                                 /// <summary>
-                                /// <para>The distance from the top-left corner of the text area to the x-axis, with the top-left corner of the image as the origin. Unit: pixels.</para>
+                                /// <para>The distance from the upper-left corner of the text area to the x-axis, with the upper-left corner of the image as the origin. Unit: pixels.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>222</para>
@@ -449,24 +594,24 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                             }
 
                             /// <summary>
-                            /// <para>Logo information.</para>
+                            /// <para>The logo identification information.</para>
                             /// </summary>
                             [NameInMap("Logo")]
                             [Validation(Required=false)]
                             public List<VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoDataLogo> Logo { get; set; }
                             public class VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoDataLogo : TeaModel {
                                 /// <summary>
-                                /// <para>Confidence score, ranging from 0 to 100, with two decimal places.</para>
+                                /// <para>The confidence score, ranging from 0 to 100, rounded to two decimal places.</para>
                                 /// 
                                 /// <b>Example:</b>
-                                /// <para>99.10</para>
+                                /// <para>99.1</para>
                                 /// </summary>
                                 [NameInMap("confidence")]
                                 [Validation(Required=false)]
                                 public long? Confidence { get; set; }
 
                                 /// <summary>
-                                /// <para>label</para>
+                                /// <para>The hit label.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>pt_logotoSocialNetwork</para>
@@ -476,10 +621,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                                 public string Label { get; set; }
 
                                 /// <summary>
-                                /// <para>Logo name.</para>
+                                /// <para>The logo name.</para>
                                 /// 
                                 /// <b>Example:</b>
-                                /// <para>**logo</para>
+                                /// <para>**卫视</para>
                                 /// </summary>
                                 [NameInMap("name")]
                                 [Validation(Required=false)]
@@ -490,14 +635,14 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                         }
 
                         /// <summary>
-                        /// <para>If the video contains a specific figure, the code of the identified figure is returned.</para>
+                        /// <para>The recognized public figure codes returned when the video contains specific public figures.</para>
                         /// </summary>
                         [NameInMap("PublicFigure")]
                         [Validation(Required=false)]
                         public List<VideoModerationResultResponseBodyDataFrameResultFramesResultsPublicFigure> PublicFigure { get; set; }
                         public class VideoModerationResultResponseBodyDataFrameResultFramesResultsPublicFigure : TeaModel {
                             /// <summary>
-                            /// <para>The information about the code of the identified figure.</para>
+                            /// <para>The code of the recognized public figure.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>xxx001</para>
@@ -506,26 +651,59 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                             [Validation(Required=false)]
                             public string FigureId { get; set; }
 
+                            /// <summary>
+                            /// <para>The name of the recognized public figure.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>张三</para>
+                            /// </summary>
                             [NameInMap("FigureName")]
                             [Validation(Required=false)]
                             public string FigureName { get; set; }
 
+                            /// <summary>
+                            /// <para>The location of the recognized public figure.</para>
+                            /// </summary>
                             [NameInMap("Location")]
                             [Validation(Required=false)]
                             public List<VideoModerationResultResponseBodyDataFrameResultFramesResultsPublicFigureLocation> Location { get; set; }
                             public class VideoModerationResultResponseBodyDataFrameResultFramesResultsPublicFigureLocation : TeaModel {
+                                /// <summary>
+                                /// <para>The height.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>222</para>
+                                /// </summary>
                                 [NameInMap("H")]
                                 [Validation(Required=false)]
                                 public int? H { get; set; }
 
+                                /// <summary>
+                                /// <para>The width.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>111</para>
+                                /// </summary>
                                 [NameInMap("W")]
                                 [Validation(Required=false)]
                                 public int? W { get; set; }
 
+                                /// <summary>
+                                /// <para>The x-coordinate of the starting point.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>111</para>
+                                /// </summary>
                                 [NameInMap("X")]
                                 [Validation(Required=false)]
                                 public int? X { get; set; }
 
+                                /// <summary>
+                                /// <para>The y-coordinate of the starting point.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>222</para>
+                                /// </summary>
                                 [NameInMap("Y")]
                                 [Validation(Required=false)]
                                 public int? Y { get; set; }
@@ -535,14 +713,14 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                         }
 
                         /// <summary>
-                        /// <para>The results of frame moderation parameters such as the label parameter and the confidence parameter.</para>
+                        /// <para>The hit result details.</para>
                         /// </summary>
                         [NameInMap("Result")]
                         [Validation(Required=false)]
                         public List<VideoModerationResultResponseBodyDataFrameResultFramesResultsResult> Result { get; set; }
                         public class VideoModerationResultResponseBodyDataFrameResultFramesResultsResult : TeaModel {
                             /// <summary>
-                            /// <para>The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places.</para>
+                            /// <para>The confidence score, ranging from 0 to 100, rounded to two decimal places.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>50</para>
@@ -552,17 +730,17 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                             public float? Confidence { get; set; }
 
                             /// <summary>
-                            /// <para>The description of the result.</para>
+                            /// <para>The description of the Label field.</para>
                             /// 
                             /// <b>Example:</b>
-                            /// <para>no risk</para>
+                            /// <para>未检测出风险</para>
                             /// </summary>
                             [NameInMap("Description")]
                             [Validation(Required=false)]
                             public string Description { get; set; }
 
                             /// <summary>
-                            /// <para>The label returned after a frame is moderated. Multiple risk labels and the corresponding scores of confidence levels may be returned for a frame.</para>
+                            /// <para>The classification of the detection result.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>bloody</para>
@@ -574,7 +752,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                         }
 
                         /// <summary>
-                        /// <para>The moderation service that is called.</para>
+                        /// <para>The image moderation service type.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>tonalityImprove</para>
@@ -584,16 +762,25 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                         public string Service { get; set; }
 
                         /// <summary>
-                        /// <para>The information about the text hit in the image is returned.</para>
+                        /// <para>The text information in the image that is hit.</para>
                         /// </summary>
                         [NameInMap("TextInImage")]
                         [Validation(Required=false)]
                         public Dictionary<string, object> TextInImage { get; set; }
 
+                        /// <summary>
+                        /// <para>The foundation model result.</para>
+                        /// </summary>
                         [NameInMap("VlContent")]
                         [Validation(Required=false)]
                         public VideoModerationResultResponseBodyDataFrameResultFramesResultsVlContent VlContent { get; set; }
                         public class VideoModerationResultResponseBodyDataFrameResultFramesResultsVlContent : TeaModel {
+                            /// <summary>
+                            /// <para>The output text from the foundation model.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>in the picture XXX</para>
+                            /// </summary>
                             [NameInMap("OutputText")]
                             [Validation(Required=false)]
                             public string OutputText { get; set; }
@@ -603,7 +790,17 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     }
 
                     /// <summary>
-                    /// <para>Risk Level.</para>
+                    /// <para>The risk level, returned based on the configured high and low risk score thresholds. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><para>high: High risk.</para>
+                    /// </description></item>
+                    /// <item><description><para>medium: Medium risk.</para>
+                    /// </description></item>
+                    /// <item><description><para>low: Low risk.</para>
+                    /// </description></item>
+                    /// <item><description><para>none: No risk detected.</para>
+                    /// </description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>high</para>
@@ -613,7 +810,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     public string RiskLevel { get; set; }
 
                     /// <summary>
-                    /// <para>The temporary URL of a captured frame.</para>
+                    /// <para>The temporary URL of the captured frame image.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para><a href="http://xxxx.abc.jpg">http://xxxx.abc.jpg</a></para>
@@ -635,7 +832,17 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 }
 
                 /// <summary>
-                /// <para>Risk Level.</para>
+                /// <para>The risk level, returned based on the configured high and low risk score thresholds. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para>high: High risk.</para>
+                /// </description></item>
+                /// <item><description><para>medium: Medium risk.</para>
+                /// </description></item>
+                /// <item><description><para>low: Low risk.</para>
+                /// </description></item>
+                /// <item><description><para>none: No risk detected.</para>
+                /// </description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>high</para>
@@ -656,12 +863,28 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             [Validation(Required=false)]
             public string LiveId { get; set; }
 
+            /// <summary>
+            /// <para>The manual review task ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>xxxxx-xxxxx</para>
+            /// </summary>
             [NameInMap("ManualTaskId")]
             [Validation(Required=false)]
             public string ManualTaskId { get; set; }
 
             /// <summary>
-            /// <para>Risk Level.</para>
+            /// <para>The risk level, returned based on the configured high and low risk score thresholds. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>high: High risk.</para>
+            /// </description></item>
+            /// <item><description><para>medium: Medium risk.</para>
+            /// </description></item>
+            /// <item><description><para>low: Low risk.</para>
+            /// </description></item>
+            /// <item><description><para>none: No risk detected.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>high</para>
@@ -683,7 +906,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         }
 
         /// <summary>
-        /// <para>The message that is returned in response to the request.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success finished</para>

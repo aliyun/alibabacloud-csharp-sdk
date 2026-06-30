@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 {
     public class TextModerationPlusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned HTTP status code. The status code 200 indicates that the request was successful.</para>
+        /// <para>The return code. A value of 200 indicates that the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,25 +20,31 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The moderation results.</para>
+        /// <para>The data that is returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public TextModerationPlusResponseBodyData Data { get; set; }
         public class TextModerationPlusResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The AccountId from the request.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>123456789</para>
+            /// </summary>
             [NameInMap("AccountId")]
             [Validation(Required=false)]
             public string AccountId { get; set; }
 
             /// <summary>
-            /// <para>The suggestion.</para>
+            /// <para>The suggested actions.</para>
             /// </summary>
             [NameInMap("Advice")]
             [Validation(Required=false)]
             public List<TextModerationPlusResponseBodyDataAdvice> Advice { get; set; }
             public class TextModerationPlusResponseBodyDataAdvice : TeaModel {
                 /// <summary>
-                /// <para>The answer.</para>
+                /// <para>The suggested answer.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>XXX</para>
@@ -48,20 +54,20 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 public string Answer { get; set; }
 
                 /// <summary>
-                /// <para>Hit Label</para>
+                /// <para>The label that was hit.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xxx</para>
+                /// <para>XXX</para>
                 /// </summary>
                 [NameInMap("HitLabel")]
                 [Validation(Required=false)]
                 public string HitLabel { get; set; }
 
                 /// <summary>
-                /// <para>Hit Library Name</para>
+                /// <para>The name of the keyword library that was hit.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xxx</para>
+                /// <para>XXX</para>
                 /// </summary>
                 [NameInMap("HitLibName")]
                 [Validation(Required=false)]
@@ -70,7 +76,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             }
 
             /// <summary>
-            /// <para>The level of prompt attack</para>
+            /// <para>The attack level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>none</para>
@@ -80,14 +86,14 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             public string AttackLevel { get; set; }
 
             /// <summary>
-            /// <para>The result of prompt attack detect</para>
+            /// <para>The prompt attack detection results.</para>
             /// </summary>
             [NameInMap("AttackResult")]
             [Validation(Required=false)]
             public List<TextModerationPlusResponseBodyDataAttackResult> AttackResult { get; set; }
             public class TextModerationPlusResponseBodyDataAttackResult : TeaModel {
                 /// <summary>
-                /// <para>The level of prompt attack</para>
+                /// <para>The attack level.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>none</para>
@@ -97,7 +103,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 public string AttackLevel { get; set; }
 
                 /// <summary>
-                /// <para>The confidence</para>
+                /// <para>The confidence score.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -107,7 +113,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 public float? Confidence { get; set; }
 
                 /// <summary>
-                /// <para>Description</para>
+                /// <para>The description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>safe</para>
@@ -117,7 +123,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The label</para>
+                /// <para>The label.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>safe</para>
@@ -129,7 +135,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             }
 
             /// <summary>
-            /// <para>The id of data</para>
+            /// <para>The ID of the data that was moderated.</para>
+            /// <remarks>
+            /// <para>If you specify the \<c>dataId\\</c> parameter in the request, the value of this parameter is returned.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>text1234</para>
@@ -138,18 +147,36 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             [Validation(Required=false)]
             public string DataId { get; set; }
 
+            /// <summary>
+            /// <para>The detected language.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>en</para>
+            /// </summary>
             [NameInMap("DetectedLanguage")]
             [Validation(Required=false)]
             public string DetectedLanguage { get; set; }
 
+            /// <summary>
+            /// <para>The auxiliary information.</para>
+            /// </summary>
             [NameInMap("Ext")]
             [Validation(Required=false)]
             public TextModerationPlusResponseBodyDataExt Ext { get; set; }
             public class TextModerationPlusResponseBodyDataExt : TeaModel {
+                /// <summary>
+                /// <para>The LLM output.</para>
+                /// </summary>
                 [NameInMap("LlmContent")]
                 [Validation(Required=false)]
                 public TextModerationPlusResponseBodyDataExtLlmContent LlmContent { get; set; }
                 public class TextModerationPlusResponseBodyDataExtLlmContent : TeaModel {
+                    /// <summary>
+                    /// <para>The output.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>正常。文本中无风险内容。</para>
+                    /// </summary>
                     [NameInMap("OutputText")]
                     [Validation(Required=false)]
                     public string OutputText { get; set; }
@@ -158,19 +185,25 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 
             }
 
+            /// <summary>
+            /// <para>The ID of the manual review task.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>xxxxx-xxxxx</para>
+            /// </summary>
             [NameInMap("ManualTaskId")]
             [Validation(Required=false)]
             public string ManualTaskId { get; set; }
 
             /// <summary>
-            /// <para>The results.</para>
+            /// <para>The moderation results.</para>
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
             public List<TextModerationPlusResponseBodyDataResult> Result { get; set; }
             public class TextModerationPlusResponseBodyDataResult : TeaModel {
                 /// <summary>
-                /// <para>The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places.</para>
+                /// <para>The confidence score. The value ranges from 0 to 100. The value is accurate to two decimal places.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>81.22</para>
@@ -180,14 +213,14 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 public float? Confidence { get; set; }
 
                 /// <summary>
-                /// <para>The custom term hit by the moderated content.</para>
+                /// <para>The custom keywords that were hit.</para>
                 /// </summary>
                 [NameInMap("CustomizedHit")]
                 [Validation(Required=false)]
                 public List<TextModerationPlusResponseBodyDataResultCustomizedHit> CustomizedHit { get; set; }
                 public class TextModerationPlusResponseBodyDataResultCustomizedHit : TeaModel {
                     /// <summary>
-                    /// <para>The terms that are hit. Multiple terms are separated by commas (,).</para>
+                    /// <para>The keywords that were hit, separated by commas.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>xxx</para>
@@ -197,10 +230,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     public string KeyWords { get; set; }
 
                     /// <summary>
-                    /// <para>The library name.</para>
+                    /// <para>The name of the keyword library.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>test</para>
+                    /// <para>测试词库</para>
                     /// </summary>
                     [NameInMap("LibName")]
                     [Validation(Required=false)]
@@ -212,7 +245,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 /// <para>The description of the label.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>none</para>
+                /// <para>未检测出风险</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -228,18 +261,39 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 [Validation(Required=false)]
                 public string Label { get; set; }
 
+                /// <summary>
+                /// <para>The position information of the risk words.</para>
+                /// </summary>
                 [NameInMap("RiskPositions")]
                 [Validation(Required=false)]
                 public List<TextModerationPlusResponseBodyDataResultRiskPositions> RiskPositions { get; set; }
                 public class TextModerationPlusResponseBodyDataResultRiskPositions : TeaModel {
+                    /// <summary>
+                    /// <para>The end position of the non-compliant word.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>6</para>
+                    /// </summary>
                     [NameInMap("EndPos")]
                     [Validation(Required=false)]
                     public int? EndPos { get; set; }
 
+                    /// <summary>
+                    /// <para>The non-compliant word.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>词A</para>
+                    /// </summary>
                     [NameInMap("RiskWord")]
                     [Validation(Required=false)]
                     public string RiskWord { get; set; }
 
+                    /// <summary>
+                    /// <para>The start position of the non-compliant word.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>4</para>
+                    /// </summary>
                     [NameInMap("StartPos")]
                     [Validation(Required=false)]
                     public int? StartPos { get; set; }
@@ -247,7 +301,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 }
 
                 /// <summary>
-                /// <para>The term hit by the moderated content.</para>
+                /// <para>The risk keywords that were hit.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>XXX</para>
@@ -259,7 +313,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             }
 
             /// <summary>
-            /// <para>Risk Level</para>
+            /// <para>The risk level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>high</para>
@@ -279,7 +333,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             public float? Score { get; set; }
 
             /// <summary>
-            /// <para>The level of sensitivity data</para>
+            /// <para>The sensitivity level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>S0</para>
@@ -289,24 +343,24 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             public string SensitiveLevel { get; set; }
 
             /// <summary>
-            /// <para>The result of sensitivity data detect</para>
+            /// <para>The sensitive data detection results.</para>
             /// </summary>
             [NameInMap("SensitiveResult")]
             [Validation(Required=false)]
             public List<TextModerationPlusResponseBodyDataSensitiveResult> SensitiveResult { get; set; }
             public class TextModerationPlusResponseBodyDataSensitiveResult : TeaModel {
                 /// <summary>
-                /// <para>Description</para>
+                /// <para>The description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xxx</para>
+                /// <para>省份</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The label</para>
+                /// <para>The label.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1234</para>
@@ -316,14 +370,14 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 public string Label { get; set; }
 
                 /// <summary>
-                /// <para>The sensitive data.</para>
+                /// <para>The list of sensitive data.</para>
                 /// </summary>
                 [NameInMap("SensitiveData")]
                 [Validation(Required=false)]
                 public List<string> SensitiveData { get; set; }
 
                 /// <summary>
-                /// <para>The level of sensitivity data</para>
+                /// <para>The sensitivity level.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>S1</para>
@@ -334,6 +388,12 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 
             }
 
+            /// <summary>
+            /// <para>The translated content.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>hello</para>
+            /// </summary>
             [NameInMap("TranslatedContent")]
             [Validation(Required=false)]
             public string TranslatedContent { get; set; }
@@ -341,7 +401,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         }
 
         /// <summary>
-        /// <para>The message that is returned in response to the request.</para>
+        /// <para>A human-readable description of the error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -351,7 +411,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>

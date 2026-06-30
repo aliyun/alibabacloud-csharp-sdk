@@ -18,8 +18,6 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         public string ImageBase64Str { get; set; }
 
         /// <summary>
-        /// <para>Service</para>
-        /// 
         /// <b>Example:</b>
         /// <para>query_security_check</para>
         /// </summary>

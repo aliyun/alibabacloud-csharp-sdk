@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 {
     public class VideoModerationCancelRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the moderation service.</para>
+        /// <para>The moderation service type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>videoDetection</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         public string Service { get; set; }
 
         /// <summary>
-        /// <para>The parameters required by the moderation service. The value is a JSON string.</para>
+        /// <para>The TaskId of the task to be canceled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;taskId\&quot;:\&quot;vi_s_4O9gp7GfNQdx9GOqdekFmk-1z2RJT\&quot;}</para>

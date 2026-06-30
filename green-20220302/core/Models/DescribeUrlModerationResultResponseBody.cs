@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 {
     public class DescribeUrlModerationResultResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned HTTP status code. The status code 200 indicates that the request was successful.</para>
+        /// <para>The return code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeUrlModerationResultResponseBodyData Data { get; set; }
         public class DescribeUrlModerationResultResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The value of dataId that is specified in the API request. If this parameter is not specified in the API request, this field is not available in the response.</para>
+            /// <para>The value of the dataId parameter passed in the API request. This field is not returned if the parameter is not passed in the request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>26769ada6e264e7ba9aa048241e12be9</para>
@@ -37,34 +37,34 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             public string DataId { get; set; }
 
             /// <summary>
-            /// <para>The supplementary information.</para>
+            /// <para>Additional information.</para>
             /// </summary>
             [NameInMap("ExtraInfo")]
             [Validation(Required=false)]
             public DescribeUrlModerationResultResponseBodyDataExtraInfo ExtraInfo { get; set; }
             public class DescribeUrlModerationResultResponseBodyDataExtraInfo : TeaModel {
                 /// <summary>
-                /// <para>The ICP number.</para>
+                /// <para>The ICP filing number.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xx</para>
+                /// <para>ICP备123456789</para>
                 /// </summary>
                 [NameInMap("IcpNo")]
                 [Validation(Required=false)]
                 public string IcpNo { get; set; }
 
                 /// <summary>
-                /// <para>The type of the ICP filing.</para>
+                /// <para>The ICP filing type.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xx</para>
+                /// <para>企业</para>
                 /// </summary>
                 [NameInMap("IcpType")]
                 [Validation(Required=false)]
                 public string IcpType { get; set; }
 
                 /// <summary>
-                /// <para>The type of site</para>
+                /// <para>The website type</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>game</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             }
 
             /// <summary>
-            /// <para>The ReqId field returned by an asynchronous URL moderation operation.</para>
+            /// <para>The ReqId field returned by the asynchronous URL moderation operation</para>
             /// 
             /// <b>Example:</b>
             /// <para>B0963D30-BAB4-562F-9ED0-7A23AEC51C7C</para>
@@ -86,14 +86,14 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             public string ReqId { get; set; }
 
             /// <summary>
-            /// <para>The returned results.</para>
+            /// <para>The returned collection.</para>
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
             public List<DescribeUrlModerationResultResponseBodyDataResult> Result { get; set; }
             public class DescribeUrlModerationResultResponseBodyDataResult : TeaModel {
                 /// <summary>
-                /// <para>The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places.</para>
+                /// <para>The confidence score, ranging from 0 to 100, with two decimal places.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>81.22</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 public float? Confidence { get; set; }
 
                 /// <summary>
-                /// <para>The labels returned after the asynchronous URL moderation.</para>
+                /// <para>The label returned after URL moderation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sexual_url</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         }
 
         /// <summary>
-        /// <para>The message that is returned in response to the request.</para>
+        /// <para>The response message of this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         public string Msg { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>01F9144A-2088-5D87-935B-2DB865284B1A</para>

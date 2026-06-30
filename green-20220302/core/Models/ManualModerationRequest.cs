@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         public string Service { get; set; }
 
         /// <summary>
-        /// <para>Parameter set required for the review service, in JSON string format.</para>
+        /// <para>Parameters required by the moderation service, in JSON string format.</para>
         /// <list type="bullet">
-        /// <item><description>url: The URL of the object to be checked. Please ensure that this URL is publicly accessible.</description></item>
-        /// <item><description>dataId: Optional, the data ID corresponding to the object being checked.</description></item>
+        /// <item><description>url: The URL of the object to be inspected. Make sure the URL is accessible through the public network.</description></item>
+        /// <item><description>dataId: Optional. The data ID corresponding to the object being inspected.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

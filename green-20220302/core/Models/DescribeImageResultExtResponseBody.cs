@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 {
     public class DescribeImageResultExtResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned HTTP status code.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeImageResultExtResponseBodyData Data { get; set; }
         public class DescribeImageResultExtResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>If a custom image library is hit, information about the hit custom image library is returned.</para>
+            /// <para>The list of custom image library hit information.</para>
             /// </summary>
             [NameInMap("CustomImage")]
             [Validation(Required=false)]
@@ -66,14 +66,14 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             }
 
             /// <summary>
-            /// <para>Person information list.</para>
+            /// <para>The list of figure information.</para>
             /// </summary>
             [NameInMap("PublicFigure")]
             [Validation(Required=false)]
             public List<DescribeImageResultExtResponseBodyDataPublicFigure> PublicFigure { get; set; }
             public class DescribeImageResultExtResponseBodyDataPublicFigure : TeaModel {
                 /// <summary>
-                /// <para>Identified person coding information.</para>
+                /// <para>The figure ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>yzazhzou</para>
@@ -85,31 +85,31 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             }
 
             /// <summary>
-            /// <para>Returns the text information in the hit image.</para>
+            /// <para>The text information in the hit image.</para>
             /// </summary>
             [NameInMap("TextInImage")]
             [Validation(Required=false)]
             public DescribeImageResultExtResponseBodyDataTextInImage TextInImage { get; set; }
             public class DescribeImageResultExtResponseBodyDataTextInImage : TeaModel {
                 /// <summary>
-                /// <para>When a custom text library is hit, the custom library ID, custom library name, and custom word are returned.</para>
+                /// <para>When a custom text library is hit, the custom library ID, custom library name, and custom words are returned.</para>
                 /// </summary>
                 [NameInMap("CustomTexts")]
                 [Validation(Required=false)]
                 public List<DescribeImageResultExtResponseBodyDataTextInImageCustomTexts> CustomTexts { get; set; }
                 public class DescribeImageResultExtResponseBodyDataTextInImageCustomTexts : TeaModel {
                     /// <summary>
-                    /// <para>Custom words, multiple words separated by commas.</para>
+                    /// <para>The custom words, multiple words are separated by commas.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>aaa,bbb</para>
+                    /// <para>自定义词1,自定义词2</para>
                     /// </summary>
                     [NameInMap("KeyWords")]
                     [Validation(Required=false)]
                     public string KeyWords { get; set; }
 
                     /// <summary>
-                    /// <para>Custom library ID.</para>
+                    /// <para>The custom library ID</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>123456</para>
@@ -119,10 +119,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     public string LibId { get; set; }
 
                     /// <summary>
-                    /// <para>Custom library name.</para>
+                    /// <para>The custom library name.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>test</para>
+                    /// <para>自定义库1</para>
                     /// </summary>
                     [NameInMap("LibName")]
                     [Validation(Required=false)]
@@ -131,14 +131,14 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 }
 
                 /// <summary>
-                /// <para>Returns the text information in the recognized image.</para>
+                /// <para>The text information detected in the image.</para>
                 /// </summary>
                 [NameInMap("OcrDatas")]
                 [Validation(Required=false)]
                 public List<string> OcrDatas { get; set; }
 
                 /// <summary>
-                /// <para>The risk words that are hit. Multiple words are separated by commas (,).</para>
+                /// <para>The hit risk keywords</para>
                 /// </summary>
                 [NameInMap("RiskWords")]
                 [Validation(Required=false)]
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         }
 
         /// <summary>
-        /// <para>The message that is returned in response to the request.</para>
+        /// <para>The response message of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

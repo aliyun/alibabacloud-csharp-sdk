@@ -8,16 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Green20220302.Models
 {
-    public class DescribeImageModerationResultRequest : TeaModel {
+    public class MultiModalGuardWsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The \<c>ReqId\\</c> returned by the asynchronous Image Moderation Pro API.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
-        /// <para>B0963D30-BAB4-562F-9ED0-7A23AEC51C7C</para>
+        /// <para>552F83A7-80C9-17ED-B344-0E13F7D3BF00</para>
         /// </summary>
-        [NameInMap("ReqId")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string ReqId { get; set; }
+        public string RequestId { get; set; }
 
     }
 

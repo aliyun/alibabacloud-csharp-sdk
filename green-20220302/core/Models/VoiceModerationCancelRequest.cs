@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 {
     public class VoiceModerationCancelRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the moderation service.</para>
+        /// <para>The type of moderation service. Valid values include \<c>nickname_detection\\</c> for user nicknames. Other values are to be determined.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nickname_detection</para>
@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         public string Service { get; set; }
 
         /// <summary>
-        /// <para>The parameters required by the moderation service. The value is a JSON string.</para>
+        /// <para>The ID of the task that you want to cancel.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;taskId&quot;:&quot;xxxxx-xxxx&quot;}</para>
+        /// <para>{
+        ///         &quot;taskId&quot;: &quot;xxxxx-xxxx&quot;
+        ///     }</para>
         /// </summary>
         [NameInMap("ServiceParameters")]
         [Validation(Required=false)]

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 {
     public class DescribeMultimodalModerationResultRequest : TeaModel {
         /// <summary>
+        /// <para>The ReqId field returned by the asynchronous moderation API.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AAAAA-BBBBB-AIXI-1314-CCCCC</para>
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 {
     public class DescribeImageModerationResultResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned HTTP status code.</para>
+        /// <para>The error code. This is the same as the HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,18 +20,24 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The image moderation results.</para>
+        /// <para>The results of the image content moderation.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeImageModerationResultResponseBodyData Data { get; set; }
         public class DescribeImageModerationResultResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The AccountId specified in the request.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>123456789</para>
+            /// </summary>
             [NameInMap("AccountId")]
             [Validation(Required=false)]
             public string AccountId { get; set; }
 
             /// <summary>
-            /// <para>The value of dataId that is specified in the API request. If this parameter is not specified in the API request, this field is not available in the response.</para>
+            /// <para>The value of the \<c>dataId\\</c> parameter specified in the API request. This field is not returned if \<c>dataId\\</c> was not specified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2a5389eb-4ff8-4584-ac99-644e2a539aa1</para>
@@ -41,7 +47,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             public string DataId { get; set; }
 
             /// <summary>
-            /// <para>The information about the captured frames.</para>
+            /// <para>Information about the image frames.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[{&quot;result&quot;:[{&quot;confidence&quot;:81.22,&quot;label&quot;:&quot;violent_explosion&quot;}]}]</para>
@@ -51,7 +57,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             public string Frame { get; set; }
 
             /// <summary>
-            /// <para>The number of frames.</para>
+            /// <para>The number of result frames.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -60,12 +66,18 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             [Validation(Required=false)]
             public int? FrameNum { get; set; }
 
+            /// <summary>
+            /// <para>The ID of the manual review task.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>xxxxx-xxxxx</para>
+            /// </summary>
             [NameInMap("ManualTaskId")]
             [Validation(Required=false)]
             public string ManualTaskId { get; set; }
 
             /// <summary>
-            /// <para>The reqId field returned by the Image Async Moderation API.</para>
+            /// <para>The \<c>ReqId\\</c> returned by the asynchronous Image Moderation Pro API.</para>
             /// 
             /// <b>Example:</b>
             /// <para>B0963D30-BAB4-562F-9ED0-7A23AEC51C7C</para>
@@ -75,14 +87,14 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             public string ReqId { get; set; }
 
             /// <summary>
-            /// <para>The results of image moderation parameters such as the label parameter and the confidence parameter.</para>
+            /// <para>The results of the image moderation, including risk labels and confidence scores.</para>
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
             public List<DescribeImageModerationResultResponseBodyDataResult> Result { get; set; }
             public class DescribeImageModerationResultResponseBodyDataResult : TeaModel {
                 /// <summary>
-                /// <para>The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places.</para>
+                /// <para>The confidence score. The value ranges from 0 to 100. The value is accurate to two decimal places.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>81.22</para>
@@ -92,17 +104,17 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 public float? Confidence { get; set; }
 
                 /// <summary>
-                /// <para>The description of the result.</para>
+                /// <para>The description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>no risk</para>
+                /// <para>未检测出风险</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The labels returned after the image moderation.</para>
+                /// <para>The label returned after the image content is moderated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>violent_explosion</para>
@@ -112,7 +124,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 public string Label { get; set; }
 
                 /// <summary>
-                /// <para>Risk Level</para>
+                /// <para>The risk level.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>high</para>
@@ -124,7 +136,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             }
 
             /// <summary>
-            /// <para>Risk Level.</para>
+            /// <para>The risk level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>high</para>
@@ -136,7 +148,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         }
 
         /// <summary>
-        /// <para>The message that is returned in response to the request.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -146,7 +158,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         public string Msg { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which is used to locate and troubleshoot issues.</para>
+        /// <para>The unique ID of the request. Alibaba Cloud generates this ID for each request. Use this ID to troubleshoot and locate issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2881AD4F-638B-52A3-BA20-F74C5B1CEAE3</para>

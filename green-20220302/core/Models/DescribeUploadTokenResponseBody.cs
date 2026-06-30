@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 {
     public class DescribeUploadTokenResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned HTTP status code.</para>
+        /// <para>The return code. A value of 200 indicates that the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeUploadTokenResponseBodyData Data { get; set; }
         public class DescribeUploadTokenResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The AccessKey ID.</para>
+            /// <para>The AccessKey ID of the temporary credential for file upload.</para>
             /// 
             /// <b>Example:</b>
             /// <para>STS.NUEUjvDqMuvH6oQA1TXxxH4wVR</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             public string AccessKeyId { get; set; }
 
             /// <summary>
-            /// <para>The AccessKey secret.</para>
+            /// <para>The temporary authorization secret.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxxx</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             public string BucketName { get; set; }
 
             /// <summary>
-            /// <para>The time when the file sharing link expires.</para>
+            /// <para>The expiration time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1720577200</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             public string FileNamePrefix { get; set; }
 
             /// <summary>
-            /// <para>the oss intranet point.</para>
+            /// <para>The internal endpoint of OSS.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://oss-cn-shanghai-internal.aliyuncs.com">https://oss-cn-shanghai-internal.aliyuncs.com</a></para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             public string OssInternalEndPoint { get; set; }
 
             /// <summary>
-            /// <para>the oss internet point.</para>
+            /// <para>The Internet endpoint of OSS.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://oss-cn-shanghai.aliyuncs.com">https://oss-cn-shanghai.aliyuncs.com</a></para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             public string OssInternetEndPoint { get; set; }
 
             /// <summary>
-            /// <para>The security token.</para>
+            /// <para>The security token of the temporary credential for file upload.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxxx</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         }
 
         /// <summary>
-        /// <para>The message that is returned in response to the request.</para>
+        /// <para>The response message for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>

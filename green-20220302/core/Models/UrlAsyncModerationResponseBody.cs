@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 {
     public class UrlAsyncModerationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned HTTP status code.</para>
+        /// <para>The return code. A value of 200 indicates that the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public UrlAsyncModerationResponseBodyData Data { get; set; }
         public class UrlAsyncModerationResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the moderated object.</para>
+            /// <para>The value of dataId that you specified in the API request. If you did not specify this parameter in the request, this field is not returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>26769ada6e264e7ba9aa048241e12be9</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             public string DataId { get; set; }
 
             /// <summary>
-            /// <para>The reqId field returned by the Url Async Moderation API.</para>
+            /// <para>The ReqId field returned by the enhanced URL asynchronous moderation API. You can use this field to query the detection results.</para>
             /// 
             /// <b>Example:</b>
             /// <para>A07B3DB9-D762-5C56-95B1-8EC55CF176D2</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         }
 
         /// <summary>
-        /// <para>The message that is returned in response to the request.</para>
+        /// <para>The response message for the current request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

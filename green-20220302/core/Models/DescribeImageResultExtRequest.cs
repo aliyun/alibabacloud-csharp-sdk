@@ -10,7 +10,13 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 {
     public class DescribeImageResultExtRequest : TeaModel {
         /// <summary>
-        /// <para>The content of the information to be obtained. Multiple values are separated by commas.</para>
+        /// <para>The type of information to obtain. Multiple values are separated by commas. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>customImage: custom image library hit information</para>
+        /// </description></item>
+        /// <item><description><para>textInImage: text information in the image</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>customImage,textInImage</para>
@@ -20,7 +26,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         public string InfoType { get; set; }
 
         /// <summary>
-        /// <para>The reqId field returned by the Url Async Moderation API.</para>
+        /// <para>The requestId field returned by the enhanced image moderation API</para>
         /// 
         /// <b>Example:</b>
         /// <para>638EDDC65C82AB39319A9F60</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 {
     public class ManualModerationResultResponseBody : TeaModel {
         /// <summary>
-        /// <para>Error code.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>Returned data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ManualModerationResultResponseBodyData Data { get; set; }
         public class ManualModerationResultResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The value of dataId passed during the API request. This field will not be present if it was not provided during the request.</para>
+            /// <para>The value of dataId passed in the API request. This field is not returned if dataId was not specified in the request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>data1234</para>
@@ -37,24 +37,24 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             public string DataId { get; set; }
 
             /// <summary>
-            /// <para>Detailed label results.</para>
+            /// <para>The detailed label results.</para>
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
             public List<ManualModerationResultResponseBodyDataResult> Result { get; set; }
             public class ManualModerationResultResponseBodyDataResult : TeaModel {
                 /// <summary>
-                /// <para>Label description</para>
+                /// <para>The label description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>no risk</para>
+                /// <para>未检测出风险</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>Risk label</para>
+                /// <para>The risk label.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>violent_explosion</para>
@@ -65,14 +65,18 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 
             }
 
+            [NameInMap("ReviewCount")]
+            [Validation(Required=false)]
+            public string ReviewCount { get; set; }
+
             /// <summary>
-            /// <para>Risk level, returned based on the set high and low risk scores. Possible values include:</para>
+            /// <para>The risk level, returned based on the configured high and low risk scores. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>high: High risk</para>
+            /// <item><description><para>high: high risk</para>
             /// </description></item>
-            /// <item><description><para>low: Low risk</para>
+            /// <item><description><para>low: low risk</para>
             /// </description></item>
-            /// <item><description><para>none: No risk detected</para>
+            /// <item><description><para>none: no risk detected</para>
             /// </description></item>
             /// </list>
             /// 
@@ -84,7 +88,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             public string RiskLevel { get; set; }
 
             /// <summary>
-            /// <para>Task ID</para>
+            /// <para>The task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxxxx-xxxxx</para>
@@ -96,7 +100,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         }
 
         /// <summary>
-        /// <para>Error message</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -106,7 +110,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>ID of the request</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>

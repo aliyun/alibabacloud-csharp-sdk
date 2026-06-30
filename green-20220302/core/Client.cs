@@ -39,6 +39,11 @@ namespace AlibabaCloud.SDK.Green20220302
                 {"cn-shenzhen-finance-1", "green.aliyuncs.com"},
                 {"cn-shanghai-finance-1", "green.aliyuncs.com"},
                 {"cn-north-2-gov-1", "green.aliyuncs.com"},
+                {"cn-shenzhen", "green-cip.cn-shenzhen.aliyuncs.com"},
+                {"cn-shanghai", "green-cip.cn-shanghai.aliyuncs.com"},
+                {"cn-hangzhou", "green-cip.cn-hangzhou.aliyuncs.com"},
+                {"cn-beijing", "green-cip.cn-beijing.aliyuncs.com"},
+                {"ap-southeast-1", "green-cip.ap-southeast-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("green", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -60,7 +65,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文档审核结果</para>
+        /// <para>Document review results</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -106,7 +111,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文档审核结果</para>
+        /// <para>Document review results</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -152,7 +157,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文档审核结果</para>
+        /// <para>Document review results</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -170,7 +175,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文档审核结果</para>
+        /// <para>Document review results</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -188,14 +193,14 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the moderation results of an Image Moderation 2.0 task.</para>
+        /// <para>Retrieves the results of an Image Moderation Pro task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Billing: This operation is free of charge.</para>
         /// <list type="bullet">
-        /// <item><description>QPS limit: You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</description></item>
+        /// <item><description>Billing information: This operation is not billed.</description></item>
+        /// <item><description>QPS limit: This operation is limited to 100 queries per second (QPS) for each user. If you exceed this limit, your API calls are throttled, which may affect your business. We recommend that you call this operation at a reasonable rate.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -238,14 +243,14 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the moderation results of an Image Moderation 2.0 task.</para>
+        /// <para>Retrieves the results of an Image Moderation Pro task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Billing: This operation is free of charge.</para>
         /// <list type="bullet">
-        /// <item><description>QPS limit: You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</description></item>
+        /// <item><description>Billing information: This operation is not billed.</description></item>
+        /// <item><description>QPS limit: This operation is limited to 100 queries per second (QPS) for each user. If you exceed this limit, your API calls are throttled, which may affect your business. We recommend that you call this operation at a reasonable rate.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -288,14 +293,14 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the moderation results of an Image Moderation 2.0 task.</para>
+        /// <para>Retrieves the results of an Image Moderation Pro task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Billing: This operation is free of charge.</para>
         /// <list type="bullet">
-        /// <item><description>QPS limit: You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</description></item>
+        /// <item><description>Billing information: This operation is not billed.</description></item>
+        /// <item><description>QPS limit: This operation is limited to 100 queries per second (QPS) for each user. If you exceed this limit, your API calls are throttled, which may affect your business. We recommend that you call this operation at a reasonable rate.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -314,14 +319,14 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the moderation results of an Image Moderation 2.0 task.</para>
+        /// <para>Retrieves the results of an Image Moderation Pro task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Billing: This operation is free of charge.</para>
         /// <list type="bullet">
-        /// <item><description>QPS limit: You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</description></item>
+        /// <item><description>Billing information: This operation is not billed.</description></item>
+        /// <item><description>QPS limit: This operation is limited to 100 queries per second (QPS) for each user. If you exceed this limit, your API calls are throttled, which may affect your business. We recommend that you call this operation at a reasonable rate.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -340,8 +345,13 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains more auxiliary information that is identified by calling the Image Moderation 2.0 API. The auxiliary information includes the moderation results of images and text and the hit information of custom image libraries.</para>
+        /// <para>The enhanced image moderation auxiliary information API operation retrieves additional auxiliary information detected by the enhanced image moderation API operation, including OCR results and custom image library hit information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation must be used with the enhanced image moderation API. After you call the enhanced image moderation API operation, you can call this API operation to obtain additional detection information. This API operation is free of charge.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeImageResultExtRequest
@@ -386,8 +396,13 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains more auxiliary information that is identified by calling the Image Moderation 2.0 API. The auxiliary information includes the moderation results of images and text and the hit information of custom image libraries.</para>
+        /// <para>The enhanced image moderation auxiliary information API operation retrieves additional auxiliary information detected by the enhanced image moderation API operation, including OCR results and custom image library hit information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation must be used with the enhanced image moderation API. After you call the enhanced image moderation API operation, you can call this API operation to obtain additional detection information. This API operation is free of charge.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeImageResultExtRequest
@@ -432,8 +447,13 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains more auxiliary information that is identified by calling the Image Moderation 2.0 API. The auxiliary information includes the moderation results of images and text and the hit information of custom image libraries.</para>
+        /// <para>The enhanced image moderation auxiliary information API operation retrieves additional auxiliary information detected by the enhanced image moderation API operation, including OCR results and custom image library hit information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation must be used with the enhanced image moderation API. After you call the enhanced image moderation API operation, you can call this API operation to obtain additional detection information. This API operation is free of charge.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeImageResultExtRequest
@@ -450,8 +470,13 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains more auxiliary information that is identified by calling the Image Moderation 2.0 API. The auxiliary information includes the moderation results of images and text and the hit information of custom image libraries.</para>
+        /// <para>The enhanced image moderation auxiliary information API operation retrieves additional auxiliary information detected by the enhanced image moderation API operation, including OCR results and custom image library hit information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation must be used with the enhanced image moderation API. After you call the enhanced image moderation API operation, you can call this API operation to obtain additional detection information. This API operation is free of charge.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeImageResultExtRequest
@@ -468,8 +493,17 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询异步多模态检测结果</para>
+        /// <para>Query the results of an asynchronous multimodal moderation task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Billing information: This API call is free.</description></item>
+        /// <item><description>Query timeout: Wait 30 seconds after you submit an asynchronous moderation task before querying the result. Do not wait longer than 24 hours, or the result will be automatically deleted.</description></item>
+        /// <item><description>This API has a per-user rate limiting limit of 10 requests per second. Exceeding this limit triggers rate limiting, which may affect your service. Call the API responsibly.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeMultimodalModerationResultRequest
@@ -510,8 +544,17 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询异步多模态检测结果</para>
+        /// <para>Query the results of an asynchronous multimodal moderation task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Billing information: This API call is free.</description></item>
+        /// <item><description>Query timeout: Wait 30 seconds after you submit an asynchronous moderation task before querying the result. Do not wait longer than 24 hours, or the result will be automatically deleted.</description></item>
+        /// <item><description>This API has a per-user rate limiting limit of 10 requests per second. Exceeding this limit triggers rate limiting, which may affect your service. Call the API responsibly.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeMultimodalModerationResultRequest
@@ -552,8 +595,17 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询异步多模态检测结果</para>
+        /// <para>Query the results of an asynchronous multimodal moderation task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Billing information: This API call is free.</description></item>
+        /// <item><description>Query timeout: Wait 30 seconds after you submit an asynchronous moderation task before querying the result. Do not wait longer than 24 hours, or the result will be automatically deleted.</description></item>
+        /// <item><description>This API has a per-user rate limiting limit of 10 requests per second. Exceeding this limit triggers rate limiting, which may affect your service. Call the API responsibly.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeMultimodalModerationResultRequest
@@ -570,8 +622,17 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询异步多模态检测结果</para>
+        /// <para>Query the results of an asynchronous multimodal moderation task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Billing information: This API call is free.</description></item>
+        /// <item><description>Query timeout: Wait 30 seconds after you submit an asynchronous moderation task before querying the result. Do not wait longer than 24 hours, or the result will be automatically deleted.</description></item>
+        /// <item><description>This API has a per-user rate limiting limit of 10 requests per second. Exceeding this limit triggers rate limiting, which may affect your service. Call the API responsibly.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeMultimodalModerationResultRequest
@@ -588,7 +649,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the token for uploading files.</para>
+        /// <para>Retrieves an upload token.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -618,7 +679,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the token for uploading files.</para>
+        /// <para>Retrieves an upload token.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -648,7 +709,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the token for uploading files.</para>
+        /// <para>Retrieves an upload token.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -662,7 +723,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the token for uploading files.</para>
+        /// <para>Retrieves an upload token.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -676,15 +737,15 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the moderation results based on the ReqId returned by asynchronous URL moderation.</para>
+        /// <para>Queries moderation results based on the ReqId returned by asynchronous URL moderation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Billing: This operation is free of charge.</para>
         /// <list type="bullet">
-        /// <item><description>Query timeout: We recommend that you query moderation results at least 480 seconds after you send an asynchronous moderation request. Content Moderation retains moderation results for up to 3 days. After 3 days, the results are deleted.</description></item>
-        /// <item><description>You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</description></item>
+        /// <item><description>Billing information: This operation is free of charge.</description></item>
+        /// <item><description>Query timeout: We recommend that you set the query interval to 480 seconds (query the results 480 seconds after you submit the asynchronous moderation task). The maximum timeout period is 3 days. After this period, the results are automatically deleted.</description></item>
+        /// <item><description>The QPS limit for this operation is 100 queries per second (QPS) per user. If the limit is exceeded, your API calls will be throttled, which may affect your business. Make sure you call the operation at a reasonable rate.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -727,15 +788,15 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the moderation results based on the ReqId returned by asynchronous URL moderation.</para>
+        /// <para>Queries moderation results based on the ReqId returned by asynchronous URL moderation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Billing: This operation is free of charge.</para>
         /// <list type="bullet">
-        /// <item><description>Query timeout: We recommend that you query moderation results at least 480 seconds after you send an asynchronous moderation request. Content Moderation retains moderation results for up to 3 days. After 3 days, the results are deleted.</description></item>
-        /// <item><description>You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</description></item>
+        /// <item><description>Billing information: This operation is free of charge.</description></item>
+        /// <item><description>Query timeout: We recommend that you set the query interval to 480 seconds (query the results 480 seconds after you submit the asynchronous moderation task). The maximum timeout period is 3 days. After this period, the results are automatically deleted.</description></item>
+        /// <item><description>The QPS limit for this operation is 100 queries per second (QPS) per user. If the limit is exceeded, your API calls will be throttled, which may affect your business. Make sure you call the operation at a reasonable rate.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -778,15 +839,15 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the moderation results based on the ReqId returned by asynchronous URL moderation.</para>
+        /// <para>Queries moderation results based on the ReqId returned by asynchronous URL moderation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Billing: This operation is free of charge.</para>
         /// <list type="bullet">
-        /// <item><description>Query timeout: We recommend that you query moderation results at least 480 seconds after you send an asynchronous moderation request. Content Moderation retains moderation results for up to 3 days. After 3 days, the results are deleted.</description></item>
-        /// <item><description>You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</description></item>
+        /// <item><description>Billing information: This operation is free of charge.</description></item>
+        /// <item><description>Query timeout: We recommend that you set the query interval to 480 seconds (query the results 480 seconds after you submit the asynchronous moderation task). The maximum timeout period is 3 days. After this period, the results are automatically deleted.</description></item>
+        /// <item><description>The QPS limit for this operation is 100 queries per second (QPS) per user. If the limit is exceeded, your API calls will be throttled, which may affect your business. Make sure you call the operation at a reasonable rate.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -805,15 +866,15 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the moderation results based on the ReqId returned by asynchronous URL moderation.</para>
+        /// <para>Queries moderation results based on the ReqId returned by asynchronous URL moderation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Billing: This operation is free of charge.</para>
         /// <list type="bullet">
-        /// <item><description>Query timeout: We recommend that you query moderation results at least 480 seconds after you send an asynchronous moderation request. Content Moderation retains moderation results for up to 3 days. After 3 days, the results are deleted.</description></item>
-        /// <item><description>You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</description></item>
+        /// <item><description>Billing information: This operation is free of charge.</description></item>
+        /// <item><description>Query timeout: We recommend that you set the query interval to 480 seconds (query the results 480 seconds after you submit the asynchronous moderation task). The maximum timeout period is 3 days. After this period, the results are automatically deleted.</description></item>
+        /// <item><description>The QPS limit for this operation is 100 queries per second (QPS) per user. If the limit is exceeded, your API calls will be throttled, which may affect your business. Make sure you call the operation at a reasonable rate.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -832,7 +893,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moderates files.</para>
+        /// <para>Moderates document content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -878,7 +939,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moderates files.</para>
+        /// <para>Moderates document content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -924,7 +985,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moderates files.</para>
+        /// <para>Moderates document content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -942,7 +1003,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moderates files.</para>
+        /// <para>Moderates document content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -960,8 +1021,17 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moderates images in asynchronous mode. An asynchronous image moderation task does not return the moderation results in real time. To obtain moderation results, you can poll the moderation results periodically or enable callback notification. The moderation results are retained for a maximum of 3 days.</para>
+        /// <para>This API is used for asynchronous image moderation. Asynchronous moderation tasks do not return detection results in real time. You can obtain the detection results using a callback or by polling. The detection results are retained for up to three days.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The following image formats are supported: PNG, JPG, JPEG, BMP, WEBP, TIFF, ICO, HEIC, and SVG.</description></item>
+        /// <item><description>The image size cannot exceed 10 MB. The recommended image resolution is greater than 200 × 200 pixels. A low resolution may compromise the accuracy of the Content Moderation algorithm.</description></item>
+        /// <item><description>The timeout period for image downloads is 3 seconds. If an image download exceeds this duration, a download timeout error is returned.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ImageAsyncModerationRequest
@@ -1006,8 +1076,17 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moderates images in asynchronous mode. An asynchronous image moderation task does not return the moderation results in real time. To obtain moderation results, you can poll the moderation results periodically or enable callback notification. The moderation results are retained for a maximum of 3 days.</para>
+        /// <para>This API is used for asynchronous image moderation. Asynchronous moderation tasks do not return detection results in real time. You can obtain the detection results using a callback or by polling. The detection results are retained for up to three days.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The following image formats are supported: PNG, JPG, JPEG, BMP, WEBP, TIFF, ICO, HEIC, and SVG.</description></item>
+        /// <item><description>The image size cannot exceed 10 MB. The recommended image resolution is greater than 200 × 200 pixels. A low resolution may compromise the accuracy of the Content Moderation algorithm.</description></item>
+        /// <item><description>The timeout period for image downloads is 3 seconds. If an image download exceeds this duration, a download timeout error is returned.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ImageAsyncModerationRequest
@@ -1052,8 +1131,17 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moderates images in asynchronous mode. An asynchronous image moderation task does not return the moderation results in real time. To obtain moderation results, you can poll the moderation results periodically or enable callback notification. The moderation results are retained for a maximum of 3 days.</para>
+        /// <para>This API is used for asynchronous image moderation. Asynchronous moderation tasks do not return detection results in real time. You can obtain the detection results using a callback or by polling. The detection results are retained for up to three days.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The following image formats are supported: PNG, JPG, JPEG, BMP, WEBP, TIFF, ICO, HEIC, and SVG.</description></item>
+        /// <item><description>The image size cannot exceed 10 MB. The recommended image resolution is greater than 200 × 200 pixels. A low resolution may compromise the accuracy of the Content Moderation algorithm.</description></item>
+        /// <item><description>The timeout period for image downloads is 3 seconds. If an image download exceeds this duration, a download timeout error is returned.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ImageAsyncModerationRequest
@@ -1070,8 +1158,17 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moderates images in asynchronous mode. An asynchronous image moderation task does not return the moderation results in real time. To obtain moderation results, you can poll the moderation results periodically or enable callback notification. The moderation results are retained for a maximum of 3 days.</para>
+        /// <para>This API is used for asynchronous image moderation. Asynchronous moderation tasks do not return detection results in real time. You can obtain the detection results using a callback or by polling. The detection results are retained for up to three days.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The following image formats are supported: PNG, JPG, JPEG, BMP, WEBP, TIFF, ICO, HEIC, and SVG.</description></item>
+        /// <item><description>The image size cannot exceed 10 MB. The recommended image resolution is greater than 200 × 200 pixels. A low resolution may compromise the accuracy of the Content Moderation algorithm.</description></item>
+        /// <item><description>The timeout period for image downloads is 3 seconds. If an image download exceeds this duration, a download timeout error is returned.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ImageAsyncModerationRequest
@@ -1088,7 +1185,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>图片批量调用</para>
+        /// <para>Batch Invocation of Images</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1134,7 +1231,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>图片批量调用</para>
+        /// <para>Batch Invocation of Images</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1180,7 +1277,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>图片批量调用</para>
+        /// <para>Batch Invocation of Images</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1198,7 +1295,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>图片批量调用</para>
+        /// <para>Batch Invocation of Images</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1216,12 +1313,17 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Identifies whether an image contains content or elements that violate relevant regulations on network content dissemination, affect the content order of a specific platform, or affect user experience. Image Moderation 2.0 supports over 90 content risk labels and over 100 risk control items. Image Moderation 2.0 of Content Moderation allows you to develop further moderation or governance measures for specific image content based on business scenarios, platform-specific content governance rules, or rich risk labels and scores of confidence levels returned by API calls.</para>
+        /// <para>Image moderation</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>*Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/467826.html">billing</a><a href="https://www.aliyun.com/price/product?#/lvwang/detail/cdibag"></a> of Image Moderation 2.0.</para>
+        /// <para>Before you call this operation, complete the following steps:</para>
+        /// <ol>
+        /// <item><description><a href="https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn">Activate AI Guardrails-Enhanced Edition</a>.</description></item>
+        /// <item><description>Understand the <a href="https://help.aliyun.com/document_detail/467826.html?#section-h06-qz6-1pt">billing methods and pricing</a> of the enhanced image moderation feature.</description></item>
+        /// <item><description>For more information about API usage and parameters, see the <a href="https://help.aliyun.com/document_detail/467829.html">API reference</a>.</description></item>
+        /// </ol>
         /// </description>
         /// 
         /// <param name="request">
@@ -1267,12 +1369,17 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Identifies whether an image contains content or elements that violate relevant regulations on network content dissemination, affect the content order of a specific platform, or affect user experience. Image Moderation 2.0 supports over 90 content risk labels and over 100 risk control items. Image Moderation 2.0 of Content Moderation allows you to develop further moderation or governance measures for specific image content based on business scenarios, platform-specific content governance rules, or rich risk labels and scores of confidence levels returned by API calls.</para>
+        /// <para>Image moderation</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>*Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/467826.html">billing</a><a href="https://www.aliyun.com/price/product?#/lvwang/detail/cdibag"></a> of Image Moderation 2.0.</para>
+        /// <para>Before you call this operation, complete the following steps:</para>
+        /// <ol>
+        /// <item><description><a href="https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn">Activate AI Guardrails-Enhanced Edition</a>.</description></item>
+        /// <item><description>Understand the <a href="https://help.aliyun.com/document_detail/467826.html?#section-h06-qz6-1pt">billing methods and pricing</a> of the enhanced image moderation feature.</description></item>
+        /// <item><description>For more information about API usage and parameters, see the <a href="https://help.aliyun.com/document_detail/467829.html">API reference</a>.</description></item>
+        /// </ol>
         /// </description>
         /// 
         /// <param name="request">
@@ -1318,12 +1425,17 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Identifies whether an image contains content or elements that violate relevant regulations on network content dissemination, affect the content order of a specific platform, or affect user experience. Image Moderation 2.0 supports over 90 content risk labels and over 100 risk control items. Image Moderation 2.0 of Content Moderation allows you to develop further moderation or governance measures for specific image content based on business scenarios, platform-specific content governance rules, or rich risk labels and scores of confidence levels returned by API calls.</para>
+        /// <para>Image moderation</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>*Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/467826.html">billing</a><a href="https://www.aliyun.com/price/product?#/lvwang/detail/cdibag"></a> of Image Moderation 2.0.</para>
+        /// <para>Before you call this operation, complete the following steps:</para>
+        /// <ol>
+        /// <item><description><a href="https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn">Activate AI Guardrails-Enhanced Edition</a>.</description></item>
+        /// <item><description>Understand the <a href="https://help.aliyun.com/document_detail/467826.html?#section-h06-qz6-1pt">billing methods and pricing</a> of the enhanced image moderation feature.</description></item>
+        /// <item><description>For more information about API usage and parameters, see the <a href="https://help.aliyun.com/document_detail/467829.html">API reference</a>.</description></item>
+        /// </ol>
         /// </description>
         /// 
         /// <param name="request">
@@ -1341,12 +1453,17 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Identifies whether an image contains content or elements that violate relevant regulations on network content dissemination, affect the content order of a specific platform, or affect user experience. Image Moderation 2.0 supports over 90 content risk labels and over 100 risk control items. Image Moderation 2.0 of Content Moderation allows you to develop further moderation or governance measures for specific image content based on business scenarios, platform-specific content governance rules, or rich risk labels and scores of confidence levels returned by API calls.</para>
+        /// <para>Image moderation</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>*Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/467826.html">billing</a><a href="https://www.aliyun.com/price/product?#/lvwang/detail/cdibag"></a> of Image Moderation 2.0.</para>
+        /// <para>Before you call this operation, complete the following steps:</para>
+        /// <ol>
+        /// <item><description><a href="https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn">Activate AI Guardrails-Enhanced Edition</a>.</description></item>
+        /// <item><description>Understand the <a href="https://help.aliyun.com/document_detail/467826.html?#section-h06-qz6-1pt">billing methods and pricing</a> of the enhanced image moderation feature.</description></item>
+        /// <item><description>For more information about API usage and parameters, see the <a href="https://help.aliyun.com/document_detail/467829.html">API reference</a>.</description></item>
+        /// </ol>
         /// </description>
         /// 
         /// <param name="request">
@@ -1492,7 +1609,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Content Security Manual Review Result Callback Interface</para>
+        /// <para>The channel callback API for manual review results in Content Moderation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1554,7 +1671,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Content Security Manual Review Result Callback Interface</para>
+        /// <para>The channel callback API for manual review results in Content Moderation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1616,7 +1733,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Content Security Manual Review Result Callback Interface</para>
+        /// <para>The channel callback API for manual review results in Content Moderation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1634,7 +1751,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Content Security Manual Review Result Callback Interface</para>
+        /// <para>The channel callback API for manual review results in Content Moderation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1652,7 +1769,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Content Security Manual Review Request Interface</para>
+        /// <para>Interface for submitting Content Moderation manual review requests</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1698,7 +1815,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Content Security Manual Review Request Interface</para>
+        /// <para>Interface for submitting Content Moderation manual review requests</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1744,7 +1861,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Content Security Manual Review Request Interface</para>
+        /// <para>Interface for submitting Content Moderation manual review requests</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1762,7 +1879,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Content Security Manual Review Request Interface</para>
+        /// <para>Interface for submitting Content Moderation manual review requests</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1780,7 +1897,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve manual review results</para>
+        /// <para>Retrieves the manual review result.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1822,7 +1939,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve manual review results</para>
+        /// <para>Retrieves the manual review result.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1864,7 +1981,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve manual review results</para>
+        /// <para>Retrieves the manual review result.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1882,7 +1999,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve manual review results</para>
+        /// <para>Retrieves the manual review result.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1900,8 +2017,13 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>多模态AgentAPI同步检测接口</para>
+        /// <para>This is the synchronous detection API for the multi-modal agent.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This is the AI Guardrails agent.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// MultiModalAgentRequest
@@ -1946,8 +2068,13 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>多模态AgentAPI同步检测接口</para>
+        /// <para>This is the synchronous detection API for the multi-modal agent.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This is the AI Guardrails agent.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// MultiModalAgentRequest
@@ -1992,8 +2119,13 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>多模态AgentAPI同步检测接口</para>
+        /// <para>This is the synchronous detection API for the multi-modal agent.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This is the AI Guardrails agent.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// MultiModalAgentRequest
@@ -2010,8 +2142,13 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>多模态AgentAPI同步检测接口</para>
+        /// <para>This is the synchronous detection API for the multi-modal agent.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This is the AI Guardrails agent.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// MultiModalAgentRequest
@@ -2028,7 +2165,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>同步检测接口</para>
+        /// <para>API for synchronous detection</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2074,7 +2211,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>同步检测接口</para>
+        /// <para>API for synchronous detection</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2120,7 +2257,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>同步检测接口</para>
+        /// <para>API for synchronous detection</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2138,7 +2275,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>同步检测接口</para>
+        /// <para>API for synchronous detection</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2156,8 +2293,13 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>视频检测任务提交</para>
+        /// <para>An asynchronous multimodal AI safety guardrail API for audio and video. It provides comprehensive detection of non-compliant content, sensitive content, prompt injection attacks, malicious files, and malicious URLs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If an API is subject to billing, add the following sentence in bold: &quot;Before using this API, ensure that you fully understand the billing methods and pricing of the XXX product.&quot; The word &quot;pricing&quot; must be a hyperlink to https\://www\.aliyun.com/price/product#/ecs/detail.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// MultiModalGuardAsyncRequest
@@ -2202,8 +2344,13 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>视频检测任务提交</para>
+        /// <para>An asynchronous multimodal AI safety guardrail API for audio and video. It provides comprehensive detection of non-compliant content, sensitive content, prompt injection attacks, malicious files, and malicious URLs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If an API is subject to billing, add the following sentence in bold: &quot;Before using this API, ensure that you fully understand the billing methods and pricing of the XXX product.&quot; The word &quot;pricing&quot; must be a hyperlink to https\://www\.aliyun.com/price/product#/ecs/detail.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// MultiModalGuardAsyncRequest
@@ -2248,8 +2395,13 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>视频检测任务提交</para>
+        /// <para>An asynchronous multimodal AI safety guardrail API for audio and video. It provides comprehensive detection of non-compliant content, sensitive content, prompt injection attacks, malicious files, and malicious URLs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If an API is subject to billing, add the following sentence in bold: &quot;Before using this API, ensure that you fully understand the billing methods and pricing of the XXX product.&quot; The word &quot;pricing&quot; must be a hyperlink to https\://www\.aliyun.com/price/product#/ecs/detail.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// MultiModalGuardAsyncRequest
@@ -2266,8 +2418,13 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>视频检测任务提交</para>
+        /// <para>An asynchronous multimodal AI safety guardrail API for audio and video. It provides comprehensive detection of non-compliant content, sensitive content, prompt injection attacks, malicious files, and malicious URLs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If an API is subject to billing, add the following sentence in bold: &quot;Before using this API, ensure that you fully understand the billing methods and pricing of the XXX product.&quot; The word &quot;pricing&quot; must be a hyperlink to https\://www\.aliyun.com/price/product#/ecs/detail.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// MultiModalGuardAsyncRequest
@@ -2284,8 +2441,13 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取视频检测结果</para>
+        /// <para>This AI Security Guardrail API retrieves asynchronous multimodal results from both audio and video.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For APIs that incur charges, add the following sentence in bold at the beginning of the description: &quot;Before you use this API, make sure that you fully understand the billing methods and pricing of the XXX product.&quot; Link the word \&quot;pricing\&quot; to https\://www\.aliyun.com/price/product#/ecs/detail.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// MultiModalGuardAsyncResultRequest
@@ -2330,8 +2492,13 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取视频检测结果</para>
+        /// <para>This AI Security Guardrail API retrieves asynchronous multimodal results from both audio and video.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For APIs that incur charges, add the following sentence in bold at the beginning of the description: &quot;Before you use this API, make sure that you fully understand the billing methods and pricing of the XXX product.&quot; Link the word \&quot;pricing\&quot; to https\://www\.aliyun.com/price/product#/ecs/detail.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// MultiModalGuardAsyncResultRequest
@@ -2376,8 +2543,13 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取视频检测结果</para>
+        /// <para>This AI Security Guardrail API retrieves asynchronous multimodal results from both audio and video.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For APIs that incur charges, add the following sentence in bold at the beginning of the description: &quot;Before you use this API, make sure that you fully understand the billing methods and pricing of the XXX product.&quot; Link the word \&quot;pricing\&quot; to https\://www\.aliyun.com/price/product#/ecs/detail.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// MultiModalGuardAsyncResultRequest
@@ -2394,8 +2566,13 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取视频检测结果</para>
+        /// <para>This AI Security Guardrail API retrieves asynchronous multimodal results from both audio and video.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For APIs that incur charges, add the following sentence in bold at the beginning of the description: &quot;Before you use this API, make sure that you fully understand the billing methods and pricing of the XXX product.&quot; Link the word \&quot;pricing\&quot; to https\://www\.aliyun.com/price/product#/ecs/detail.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// MultiModalGuardAsyncResultRequest
@@ -2552,8 +2729,129 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>多模态-异步检测</para>
+        /// <para>Provides a WebSocket-based multimodal detection API for AI safety guardrails. This API supports content compliance detection, sensitive content detection, prompt attack detection, malicious file detection, malicious URL detection, and other comprehensive detection capabilities.</para>
         /// </summary>
+        /// 
+        /// <param name="request">
+        /// MultiModalGuardWsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MultiModalGuardWsResponse
+        /// </returns>
+        public MultiModalGuardWsResponse MultiModalGuardWsWithOptions(MultiModalGuardWsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MultiModalGuardWs",
+                Version = "2022-03-02",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MultiModalGuardWsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Provides a WebSocket-based multimodal detection API for AI safety guardrails. This API supports content compliance detection, sensitive content detection, prompt attack detection, malicious file detection, malicious URL detection, and other comprehensive detection capabilities.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MultiModalGuardWsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MultiModalGuardWsResponse
+        /// </returns>
+        public async Task<MultiModalGuardWsResponse> MultiModalGuardWsWithOptionsAsync(MultiModalGuardWsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MultiModalGuardWs",
+                Version = "2022-03-02",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MultiModalGuardWsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Provides a WebSocket-based multimodal detection API for AI safety guardrails. This API supports content compliance detection, sensitive content detection, prompt attack detection, malicious file detection, malicious URL detection, and other comprehensive detection capabilities.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MultiModalGuardWsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MultiModalGuardWsResponse
+        /// </returns>
+        public MultiModalGuardWsResponse MultiModalGuardWs(MultiModalGuardWsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return MultiModalGuardWsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Provides a WebSocket-based multimodal detection API for AI safety guardrails. This API supports content compliance detection, sensitive content detection, prompt attack detection, malicious file detection, malicious URL detection, and other comprehensive detection capabilities.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MultiModalGuardWsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MultiModalGuardWsResponse
+        /// </returns>
+        public async Task<MultiModalGuardWsResponse> MultiModalGuardWsAsync(MultiModalGuardWsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await MultiModalGuardWsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Multimodal-Asynchronous Detection</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The asynchronous URL moderation service supports two billing methods: pay-as-you-go and resource plan usage.</para>
+        /// <list type="bullet">
+        /// <item><description>After you activate the enhanced text moderation service, the default billing method is pay-as-you-go. You are billed daily based on actual usage. No charges apply if you do not invoke the service.</description></item>
+        /// <item><description>If your moderation volume is large or your moderation needs are relatively stable, purchase a resource plan in advance. Larger resource plans offer greater discounts. You can stack multiple resource plans.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// MultimodalAsyncModerationRequest
@@ -2598,8 +2896,17 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>多模态-异步检测</para>
+        /// <para>Multimodal-Asynchronous Detection</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The asynchronous URL moderation service supports two billing methods: pay-as-you-go and resource plan usage.</para>
+        /// <list type="bullet">
+        /// <item><description>After you activate the enhanced text moderation service, the default billing method is pay-as-you-go. You are billed daily based on actual usage. No charges apply if you do not invoke the service.</description></item>
+        /// <item><description>If your moderation volume is large or your moderation needs are relatively stable, purchase a resource plan in advance. Larger resource plans offer greater discounts. You can stack multiple resource plans.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// MultimodalAsyncModerationRequest
@@ -2644,8 +2951,17 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>多模态-异步检测</para>
+        /// <para>Multimodal-Asynchronous Detection</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The asynchronous URL moderation service supports two billing methods: pay-as-you-go and resource plan usage.</para>
+        /// <list type="bullet">
+        /// <item><description>After you activate the enhanced text moderation service, the default billing method is pay-as-you-go. You are billed daily based on actual usage. No charges apply if you do not invoke the service.</description></item>
+        /// <item><description>If your moderation volume is large or your moderation needs are relatively stable, purchase a resource plan in advance. Larger resource plans offer greater discounts. You can stack multiple resource plans.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// MultimodalAsyncModerationRequest
@@ -2662,8 +2978,17 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>多模态-异步检测</para>
+        /// <para>Multimodal-Asynchronous Detection</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The asynchronous URL moderation service supports two billing methods: pay-as-you-go and resource plan usage.</para>
+        /// <list type="bullet">
+        /// <item><description>After you activate the enhanced text moderation service, the default billing method is pay-as-you-go. You are billed daily based on actual usage. No charges apply if you do not invoke the service.</description></item>
+        /// <item><description>If your moderation volume is large or your moderation needs are relatively stable, purchase a resource plan in advance. Larger resource plans offer greater discounts. You can stack multiple resource plans.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// MultimodalAsyncModerationRequest
@@ -2680,12 +3005,12 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides moderation services for multiple business scenarios and identifies various violation risks.</para>
+        /// <para>This service uses dynamic policies and models to defend against adversarial content. It provides moderation services for various business scenarios and detects different types of violations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/464388.html?#section-itm-m2s-ugq">billing</a> of Text Moderation 2.0.</para>
+        /// <para>Before you use this operation, review the <a href="https://help.aliyun.com/document_detail/464388.html?#section-itm-m2s-ugq">billing methods and pricing</a> for Text Moderation Plus.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2731,12 +3056,12 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides moderation services for multiple business scenarios and identifies various violation risks.</para>
+        /// <para>This service uses dynamic policies and models to defend against adversarial content. It provides moderation services for various business scenarios and detects different types of violations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/464388.html?#section-itm-m2s-ugq">billing</a> of Text Moderation 2.0.</para>
+        /// <para>Before you use this operation, review the <a href="https://help.aliyun.com/document_detail/464388.html?#section-itm-m2s-ugq">billing methods and pricing</a> for Text Moderation Plus.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2782,12 +3107,12 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides moderation services for multiple business scenarios and identifies various violation risks.</para>
+        /// <para>This service uses dynamic policies and models to defend against adversarial content. It provides moderation services for various business scenarios and detects different types of violations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/464388.html?#section-itm-m2s-ugq">billing</a> of Text Moderation 2.0.</para>
+        /// <para>Before you use this operation, review the <a href="https://help.aliyun.com/document_detail/464388.html?#section-itm-m2s-ugq">billing methods and pricing</a> for Text Moderation Plus.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2805,12 +3130,12 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides moderation services for multiple business scenarios and identifies various violation risks.</para>
+        /// <para>This service uses dynamic policies and models to defend against adversarial content. It provides moderation services for various business scenarios and detects different types of violations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/464388.html?#section-itm-m2s-ugq">billing</a> of Text Moderation 2.0.</para>
+        /// <para>Before you use this operation, review the <a href="https://help.aliyun.com/document_detail/464388.html?#section-itm-m2s-ugq">billing methods and pricing</a> for Text Moderation Plus.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2828,12 +3153,12 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moderates the input command and generated text of large language models (LLMs). Specific model input commands can be used to retrieve standard answers. The feature of enabling and disabling the moderation labels is also available.</para>
+        /// <para>Text Moderation Plus is an upgraded service that moderates the input instructions and generated text of large language models (LLMs). This service can retrieve standard answers for specific input instructions and lets you enable or disable moderation labels.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you have <a href="https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn">activated the Content Moderation 2.0 service</a> and are familiar with the <a href="https://help.aliyun.com/document_detail/2671445.html?#section-6od-32j-99n">billing</a> of the Text Moderation 2.0 Plus service.</para>
+        /// <para>Before you use this API, <a href="https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn">activate AI Guardrails Pro</a> and make sure that you understand the <a href="https://help.aliyun.com/document_detail/2671445.html?#section-6od-32j-99n">billing methods and pricing</a> for Text Moderation Plus.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2879,12 +3204,12 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moderates the input command and generated text of large language models (LLMs). Specific model input commands can be used to retrieve standard answers. The feature of enabling and disabling the moderation labels is also available.</para>
+        /// <para>Text Moderation Plus is an upgraded service that moderates the input instructions and generated text of large language models (LLMs). This service can retrieve standard answers for specific input instructions and lets you enable or disable moderation labels.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you have <a href="https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn">activated the Content Moderation 2.0 service</a> and are familiar with the <a href="https://help.aliyun.com/document_detail/2671445.html?#section-6od-32j-99n">billing</a> of the Text Moderation 2.0 Plus service.</para>
+        /// <para>Before you use this API, <a href="https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn">activate AI Guardrails Pro</a> and make sure that you understand the <a href="https://help.aliyun.com/document_detail/2671445.html?#section-6od-32j-99n">billing methods and pricing</a> for Text Moderation Plus.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2930,12 +3255,12 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moderates the input command and generated text of large language models (LLMs). Specific model input commands can be used to retrieve standard answers. The feature of enabling and disabling the moderation labels is also available.</para>
+        /// <para>Text Moderation Plus is an upgraded service that moderates the input instructions and generated text of large language models (LLMs). This service can retrieve standard answers for specific input instructions and lets you enable or disable moderation labels.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you have <a href="https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn">activated the Content Moderation 2.0 service</a> and are familiar with the <a href="https://help.aliyun.com/document_detail/2671445.html?#section-6od-32j-99n">billing</a> of the Text Moderation 2.0 Plus service.</para>
+        /// <para>Before you use this API, <a href="https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn">activate AI Guardrails Pro</a> and make sure that you understand the <a href="https://help.aliyun.com/document_detail/2671445.html?#section-6od-32j-99n">billing methods and pricing</a> for Text Moderation Plus.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2953,12 +3278,12 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moderates the input command and generated text of large language models (LLMs). Specific model input commands can be used to retrieve standard answers. The feature of enabling and disabling the moderation labels is also available.</para>
+        /// <para>Text Moderation Plus is an upgraded service that moderates the input instructions and generated text of large language models (LLMs). This service can retrieve standard answers for specific input instructions and lets you enable or disable moderation labels.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you have <a href="https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn">activated the Content Moderation 2.0 service</a> and are familiar with the <a href="https://help.aliyun.com/document_detail/2671445.html?#section-6od-32j-99n">billing</a> of the Text Moderation 2.0 Plus service.</para>
+        /// <para>Before you use this API, <a href="https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn">activate AI Guardrails Pro</a> and make sure that you understand the <a href="https://help.aliyun.com/document_detail/2671445.html?#section-6od-32j-99n">billing methods and pricing</a> for Text Moderation Plus.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2976,8 +3301,17 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Identifies whether URL links contain risks such as fraud, pornographic, and gambling content, to protect the platform content ecosystem.</para>
+        /// <para>The URL asynchronous moderation service detects threats such as fraud, pornography, and gambling in URLs to protect the content ecosystem of your platform.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The URL asynchronous moderation service supports the pay-as-you-go and resource plan billing methods.</para>
+        /// <list type="bullet">
+        /// <item><description>After you activate the enhanced edition of Text Moderation, the default billing method is pay-as-you-go. You are charged CNY 30 per 10,000 calls based on your daily usage. No fees are incurred if you do not call the service.</description></item>
+        /// <item><description>If you have many moderation requests or relatively fixed moderation requirements, we recommend that you purchase resource plans in advance. The larger the resource plan you purchase, the greater the discount you receive. You can purchase and use multiple resource plans.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UrlAsyncModerationRequest
@@ -3022,8 +3356,17 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Identifies whether URL links contain risks such as fraud, pornographic, and gambling content, to protect the platform content ecosystem.</para>
+        /// <para>The URL asynchronous moderation service detects threats such as fraud, pornography, and gambling in URLs to protect the content ecosystem of your platform.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The URL asynchronous moderation service supports the pay-as-you-go and resource plan billing methods.</para>
+        /// <list type="bullet">
+        /// <item><description>After you activate the enhanced edition of Text Moderation, the default billing method is pay-as-you-go. You are charged CNY 30 per 10,000 calls based on your daily usage. No fees are incurred if you do not call the service.</description></item>
+        /// <item><description>If you have many moderation requests or relatively fixed moderation requirements, we recommend that you purchase resource plans in advance. The larger the resource plan you purchase, the greater the discount you receive. You can purchase and use multiple resource plans.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UrlAsyncModerationRequest
@@ -3068,8 +3411,17 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Identifies whether URL links contain risks such as fraud, pornographic, and gambling content, to protect the platform content ecosystem.</para>
+        /// <para>The URL asynchronous moderation service detects threats such as fraud, pornography, and gambling in URLs to protect the content ecosystem of your platform.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The URL asynchronous moderation service supports the pay-as-you-go and resource plan billing methods.</para>
+        /// <list type="bullet">
+        /// <item><description>After you activate the enhanced edition of Text Moderation, the default billing method is pay-as-you-go. You are charged CNY 30 per 10,000 calls based on your daily usage. No fees are incurred if you do not call the service.</description></item>
+        /// <item><description>If you have many moderation requests or relatively fixed moderation requirements, we recommend that you purchase resource plans in advance. The larger the resource plan you purchase, the greater the discount you receive. You can purchase and use multiple resource plans.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UrlAsyncModerationRequest
@@ -3086,8 +3438,17 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Identifies whether URL links contain risks such as fraud, pornographic, and gambling content, to protect the platform content ecosystem.</para>
+        /// <para>The URL asynchronous moderation service detects threats such as fraud, pornography, and gambling in URLs to protect the content ecosystem of your platform.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The URL asynchronous moderation service supports the pay-as-you-go and resource plan billing methods.</para>
+        /// <list type="bullet">
+        /// <item><description>After you activate the enhanced edition of Text Moderation, the default billing method is pay-as-you-go. You are charged CNY 30 per 10,000 calls based on your daily usage. No fees are incurred if you do not call the service.</description></item>
+        /// <item><description>If you have many moderation requests or relatively fixed moderation requirements, we recommend that you purchase resource plans in advance. The larger the resource plan you purchase, the greater the discount you receive. You can purchase and use multiple resource plans.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UrlAsyncModerationRequest
@@ -3104,8 +3465,13 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Identifies risky or illegal content in video files. You can call this operation to submit a moderation task.</para>
+        /// <para>The enhanced video moderation feature of Content Moderation detects threats and non-compliant content in video files. Use this operation to submit a moderation task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you have activated the <a href="https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn">enhanced Content Moderation</a> service and understand the <a href="https://help.aliyun.com/document_detail/2505807.html">billing methods</a> and <a href="https://www.aliyun.com/price/product?#/lvwang/detail/cdibag">pricing</a> of the enhanced video moderation feature.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// VideoModerationRequest
@@ -3150,8 +3516,13 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Identifies risky or illegal content in video files. You can call this operation to submit a moderation task.</para>
+        /// <para>The enhanced video moderation feature of Content Moderation detects threats and non-compliant content in video files. Use this operation to submit a moderation task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you have activated the <a href="https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn">enhanced Content Moderation</a> service and understand the <a href="https://help.aliyun.com/document_detail/2505807.html">billing methods</a> and <a href="https://www.aliyun.com/price/product?#/lvwang/detail/cdibag">pricing</a> of the enhanced video moderation feature.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// VideoModerationRequest
@@ -3196,8 +3567,13 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Identifies risky or illegal content in video files. You can call this operation to submit a moderation task.</para>
+        /// <para>The enhanced video moderation feature of Content Moderation detects threats and non-compliant content in video files. Use this operation to submit a moderation task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you have activated the <a href="https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn">enhanced Content Moderation</a> service and understand the <a href="https://help.aliyun.com/document_detail/2505807.html">billing methods</a> and <a href="https://www.aliyun.com/price/product?#/lvwang/detail/cdibag">pricing</a> of the enhanced video moderation feature.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// VideoModerationRequest
@@ -3214,8 +3590,13 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Identifies risky or illegal content in video files. You can call this operation to submit a moderation task.</para>
+        /// <para>The enhanced video moderation feature of Content Moderation detects threats and non-compliant content in video files. Use this operation to submit a moderation task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you have activated the <a href="https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn">enhanced Content Moderation</a> service and understand the <a href="https://help.aliyun.com/document_detail/2505807.html">billing methods</a> and <a href="https://www.aliyun.com/price/product?#/lvwang/detail/cdibag">pricing</a> of the enhanced video moderation feature.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// VideoModerationRequest
@@ -3232,7 +3613,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a live stream moderation task.</para>
+        /// <para>Cancels an ApsaraVideo Live moderation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3278,7 +3659,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a live stream moderation task.</para>
+        /// <para>Cancels an ApsaraVideo Live moderation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3324,7 +3705,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a live stream moderation task.</para>
+        /// <para>Cancels an ApsaraVideo Live moderation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3342,7 +3723,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a live stream moderation task.</para>
+        /// <para>Cancels an ApsaraVideo Live moderation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3360,12 +3741,12 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Video Detection Results</para>
+        /// <para>Retrieves the task result of an enhanced video content moderation node.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is free of charge. We recommend that you query moderation results at least 30 seconds after you send an asynchronous moderation request. Content Moderation retains moderation results for at most 24 hours. After 24 hours, the results are deleted.</para>
+        /// <para>This operation is not billed. Set the query interval to 30 seconds (that is, query the results 30 seconds after submitting the asynchronous moderation task). The maximum query window is 24 hours. After 24 hours, the results are automatically deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3411,12 +3792,12 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Video Detection Results</para>
+        /// <para>Retrieves the task result of an enhanced video content moderation node.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is free of charge. We recommend that you query moderation results at least 30 seconds after you send an asynchronous moderation request. Content Moderation retains moderation results for at most 24 hours. After 24 hours, the results are deleted.</para>
+        /// <para>This operation is not billed. Set the query interval to 30 seconds (that is, query the results 30 seconds after submitting the asynchronous moderation task). The maximum query window is 24 hours. After 24 hours, the results are automatically deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3462,12 +3843,12 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Video Detection Results</para>
+        /// <para>Retrieves the task result of an enhanced video content moderation node.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is free of charge. We recommend that you query moderation results at least 30 seconds after you send an asynchronous moderation request. Content Moderation retains moderation results for at most 24 hours. After 24 hours, the results are deleted.</para>
+        /// <para>This operation is not billed. Set the query interval to 30 seconds (that is, query the results 30 seconds after submitting the asynchronous moderation task). The maximum query window is 24 hours. After 24 hours, the results are automatically deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3485,12 +3866,12 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Video Detection Results</para>
+        /// <para>Retrieves the task result of an enhanced video content moderation node.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is free of charge. We recommend that you query moderation results at least 30 seconds after you send an asynchronous moderation request. Content Moderation retains moderation results for at most 24 hours. After 24 hours, the results are deleted.</para>
+        /// <para>This operation is not billed. Set the query interval to 30 seconds (that is, query the results 30 seconds after submitting the asynchronous moderation task). The maximum query window is 24 hours. After 24 hours, the results are automatically deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3508,7 +3889,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a Voice Moderation 2.0 task.</para>
+        /// <para>Submits a task for enhanced voice moderation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3554,7 +3935,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a Voice Moderation 2.0 task.</para>
+        /// <para>Submits a task for enhanced voice moderation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3600,7 +3981,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a Voice Moderation 2.0 task.</para>
+        /// <para>Submits a task for enhanced voice moderation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3618,7 +3999,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a Voice Moderation 2.0 task.</para>
+        /// <para>Submits a task for enhanced voice moderation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3636,7 +4017,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a Voice Moderation 2.0 task.</para>
+        /// <para>This operation cancels an enhanced voice moderation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3682,7 +4063,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a Voice Moderation 2.0 task.</para>
+        /// <para>This operation cancels an enhanced voice moderation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3728,7 +4109,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a Voice Moderation 2.0 task.</para>
+        /// <para>This operation cancels an enhanced voice moderation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3746,7 +4127,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a Voice Moderation 2.0 task.</para>
+        /// <para>This operation cancels an enhanced voice moderation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3764,7 +4145,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the moderation results of a Voice Moderation 2.0 task.</para>
+        /// <para>Retrieve the detection results for enhanced voice moderation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3810,7 +4191,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the moderation results of a Voice Moderation 2.0 task.</para>
+        /// <para>Retrieve the detection results for enhanced voice moderation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3856,7 +4237,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the moderation results of a Voice Moderation 2.0 task.</para>
+        /// <para>Retrieve the detection results for enhanced voice moderation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3874,7 +4255,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the moderation results of a Voice Moderation 2.0 task.</para>
+        /// <para>Retrieve the detection results for enhanced voice moderation.</para>
         /// </summary>
         /// 
         /// <param name="request">
