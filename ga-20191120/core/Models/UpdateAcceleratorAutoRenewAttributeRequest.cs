@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class UpdateAcceleratorAutoRenewAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the GA instance.</para>
+        /// <para>The ID of the Global Accelerator instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,13 +21,15 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string AcceleratorId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable auto-renewal for the GA instance. Valid values:</para>
+        /// <para>Specifies whether to enable auto-renewal for the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b> (default)</description></item>
+        /// <item><description><para><b>true</b>: Auto-renewal is enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): Auto-renewal is disabled.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> <b>AutoRenew</b> and <b>RenewalStatus</b> cannot be left empty at the same time.</para>
+        /// <para>You must specify at least one of <b>AutoRenew</b> and <b>RenewalStatus</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -41,7 +43,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <para>The auto-renewal duration. Unit: month.</para>
         /// <para>Valid values: <b>1</b> to <b>12</b>.</para>
         /// <remarks>
-        /// <para> This parameter takes effect only if you set <b>AutoRenew</b> to <b>true</b>.</para>
+        /// <para>This parameter takes effect only when <b>AutoRenew</b> is set to <b>true</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -55,7 +57,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
         /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -66,8 +68,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The name of the GA instance.</para>
-        /// <para>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</para>
+        /// <para>The name of the Global Accelerator instance.</para>
+        /// <para>The name must be 1 to 128 characters in length, start with a letter or a Chinese character, and can contain letters, digits, underscores (_), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -77,7 +79,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the GA instance is deployed. Set the value to <b>cn-hangzhou</b>.</para>
+        /// <para>The region ID of the Global Accelerator instance. Set the value to <b>cn-hangzhou</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -87,20 +89,23 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Specifies how to renew the GA instance. Valid values:</para>
+        /// <para>The auto-renewal status of the Global Accelerator instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>AutoRenewal</b>: The system automatically renews the GA instance.</description></item>
-        /// <item><description><b>Normal</b>: You must manually renew the GA instance.</description></item>
-        /// <item><description><b>NotRenewal</b>: The GA instance is not renewed after the instance expires. The system sends only a non-renewal reminder three days before the expiration date. The system no longer reminds you to renew the GA instance. To renew a GA instance whose RenewalStatus is set to NotRenewal, change the value of RenewalStatus from NotRenewal to <b>Normal</b>, and then manually renew the instance. You can also set RenewalStatus to <b>AutoRenewal</b>.</description></item>
+        /// <item><description><para><b>AutoRenewal</b>: The instance is configured for auto-renewal.</para>
+        /// </description></item>
+        /// <item><description><para><b>Normal</b>: The instance is configured for manual renewal.</para>
+        /// </description></item>
+        /// <item><description><para>NotRenewal: The instance is not renewed. The system does not send expiration reminders, but sends a non-renewal reminder three days before the expiration date. You can change the renewal status from <b>NotRenewal</b> to <b>Normal</b> to manually renew the instance, or change the renewal status to <b>AutoRenewal</b>.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para><b>AutoRenew</b> and <b>RenewalStatus</b> cannot be left empty at the same time.</para>
+        /// <item><description><para>You must specify at least one of <b>AutoRenew</b> and <b>RenewalStatus</b>.</para>
         /// </description></item>
-        /// <item><description><para><b>RenewalStatus</b> takes precedence over <b>AutoRenew</b>. By default, if you do not specify <b>RenewalStatus</b>, <b>AutoRenew</b> is used.</para>
+        /// <item><description><para>The <b>RenewalStatus</b> parameter takes precedence over the <b>AutoRenew</b> parameter. If you do not specify <b>RenewalStatus</b>, the value of <b>AutoRenew</b> is used.</para>
         /// </description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>Normal</para>

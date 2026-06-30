@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class CreateForwardingRulesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the GA instance.</para>
+        /// <para>The ID of the Global Accelerator instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,9 +22,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
+        /// <para>You can generate a client token from your client and make sure that the client token is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the request as the <b>ClientToken</b>. The <b>RequestId</b> of each request is different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the forwarding rules.</para>
+        /// <para>The forwarding rule configurations.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public List<CreateForwardingRulesRequestForwardingRules> ForwardingRules { get; set; }
         public class CreateForwardingRulesRequestForwardingRules : TeaModel {
             /// <summary>
-            /// <para>The name of the forwarding rule. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</para>
+            /// <para>The name of the forwarding rule. The name must be 2 to 128 characters long. It must start with a letter or a Chinese character, and can contain letters, Chinese characters, digits, periods (.), underscores (_), and hyphens (-).</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -56,17 +56,18 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string ForwardingRuleName { get; set; }
 
             /// <summary>
-            /// <para>The priority of the forwarding rule. Valid values: <b>1</b> to <b>10000</b>. A lower value specifies a higher priority.</para>
+            /// <para>The priority of the forwarding rule.
+            /// Valid values: <b>1</b> to <b>10000</b>. A smaller value indicates a higher priority.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1000</para>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Priority")]
             [Validation(Required=false)]
             public int? Priority { get; set; }
 
             /// <summary>
-            /// <para>The configurations of the forwarding action.</para>
+            /// <para>The rule actions.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("RuleActions")]
@@ -74,9 +75,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public List<CreateForwardingRulesRequestForwardingRulesRuleActions> RuleActions { get; set; }
             public class CreateForwardingRulesRequestForwardingRulesRuleActions : TeaModel {
                 /// <summary>
-                /// <para>The forwarding configurations.</para>
+                /// <para>The forwarding configuration.</para>
                 /// <remarks>
-                /// <para> We recommend that you use <b>RuleActionType</b> and <b>RuleActionValue</b> rather than this parameter to configure forwarding conditions.</para>
+                /// <para>This parameter is deprecated. We recommend that you use <b>RuleActionType</b> and <b>RuleActionValue</b> to configure rule actions.</para>
                 /// </remarks>
                 /// </summary>
                 [NameInMap("ForwardGroupConfig")]
@@ -84,9 +85,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 public CreateForwardingRulesRequestForwardingRulesRuleActionsForwardGroupConfig ForwardGroupConfig { get; set; }
                 public class CreateForwardingRulesRequestForwardingRulesRuleActionsForwardGroupConfig : TeaModel {
                     /// <summary>
-                    /// <para>The configurations of an endpoint group.</para>
+                    /// <para>The endpoint group configuration.</para>
                     /// <remarks>
-                    /// <para> We recommend that you use <b>RuleActionType</b> and <b>RuleActionValue</b> rather than this parameter to configure forwarding conditions.</para>
+                    /// <para>This parameter is deprecated. We recommend that you use <b>RuleActionType</b> and <b>RuleActionValue</b> to configure rule actions.</para>
                     /// </remarks>
                     /// <para>This parameter is required.</para>
                     /// </summary>
@@ -97,12 +98,12 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                         /// <summary>
                         /// <para>The ID of the endpoint group.</para>
                         /// <remarks>
-                        /// <para> We recommend that you use <b>RuleActionType</b> and <b>RuleActionValue</b> rather than this parameter to configure forwarding conditions.</para>
+                        /// <para>This parameter is deprecated. We recommend that you use <b>RuleActionType</b> and <b>RuleActionValue</b> to configure rule actions.</para>
                         /// </remarks>
                         /// <para>This parameter is required.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>epg-bp1ieei9664r5nv****</para>
+                        /// <para>epg-bp1nktp3qgbcq9ih6****</para>
                         /// </summary>
                         [NameInMap("EndpointGroupId")]
                         [Validation(Required=false)]
@@ -113,9 +114,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 }
 
                 /// <summary>
-                /// <para>The forwarding priority.</para>
+                /// <para>The priority of the action.</para>
                 /// <remarks>
-                /// <para> This parameter does not take effect. Ignore this parameter.</para>
+                /// <para>This parameter is not in use and can be ignored.</para>
                 /// </remarks>
                 /// <para>This parameter is required.</para>
                 /// 
@@ -127,15 +128,22 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 public int? Order { get; set; }
 
                 /// <summary>
-                /// <para>The type of the forwarding action. Valid values:</para>
+                /// <para>The type of the rule action. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>ForwardGroup</b>: forwards a request.</description></item>
-                /// <item><description><b>Redirect</b>: redirects a request.</description></item>
-                /// <item><description><b>FixResponse</b>: returns a fixed response.</description></item>
-                /// <item><description><b>Rewrite</b>: rewrites a request.</description></item>
-                /// <item><description><b>AddHeader</b>: adds a header to a request.</description></item>
-                /// <item><description><b>RemoveHeaderConfig</b>: deletes the header from a request.</description></item>
-                /// <item><description><b>Drop</b>: drops a request.</description></item>
+                /// <item><description><para><b>ForwardGroup</b>: Forwards requests.</para>
+                /// </description></item>
+                /// <item><description><para><b>Redirect</b>: Redirects requests.</para>
+                /// </description></item>
+                /// <item><description><para><b>FixResponse</b>: Returns a fixed response.</para>
+                /// </description></item>
+                /// <item><description><para><b>Rewrite</b>: Rewrites requests.</para>
+                /// </description></item>
+                /// <item><description><para><b>AddHeader</b>: Adds a header.</para>
+                /// </description></item>
+                /// <item><description><para><b>RemoveHeader</b>: Removes a header.</para>
+                /// </description></item>
+                /// <item><description><para><b>Drop</b>: Drops requests.</para>
+                /// </description></item>
                 /// </list>
                 /// <para>This parameter is required.</para>
                 /// 
@@ -147,55 +155,72 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 public string RuleActionType { get; set; }
 
                 /// <summary>
-                /// <para>The value of the forwarding action.</para>
-                /// <para>You must specify different JSON strings based on the <b>RuleActionType</b> parameter.</para>
-                /// <para>A forwarding rule can contain only one forwarding action whose type is <b>ForwardGroup</b>, <b>Redirect</b>, or <b>FixResponse</b>. You must specify a forwarding action whose type is <b>Rewrite</b>, <b>AddHeader</b>, or <b>RemoveHeader</b> before a forwarding action whose type is <b>ForwardGroup</b>.</para>
+                /// <para>The value for the rule action.</para>
+                /// <para>This is a JSON-formatted string whose structure depends on the specified <b>RuleActionType</b>.</para>
+                /// <para>A forwarding rule can have at most one action of type <b>ForwardGroup</b>, <b>Redirect</b>, or <b>FixResponse</b>. Actions of type <b>Rewrite</b>, <b>AddHeader</b>, and <b>RemoveHeader</b> must be specified before a <b>ForwardGroup</b> action.</para>
                 /// <list type="bullet">
-                /// <item><description><para>If <b>RuleActionType</b> is set to <b>ForwardGroup</b>, this parameter specifies the information of a virtual endpoint group. You can forward requests to only one virtual endpoint group. Example: <c>{&quot;type&quot;:&quot;endpointgroup&quot;, &quot;value&quot;:&quot;epg-bp1enpdcrqhl78g6r****&quot;}</c>.</para>
+                /// <item><description><para>If <b>RuleActionType</b> is set to <b>ForwardGroup</b>, this parameter specifies the endpoint group. You can forward requests to only one endpoint group. Example: <c>{&quot;type&quot;:&quot;endpointgroup&quot;, &quot;value&quot;:&quot;epg-bp1enpdcrqhl78g6r****&quot;}</c>, where:</para>
                 /// <list type="bullet">
-                /// <item><description><c>type</c>: Set this parameter to <c>endpointgroup</c>.</description></item>
-                /// <item><description><c>value</c>: Set this parameter to the ID of a virtual endpoint group.</description></item>
+                /// <item><description><para><c>type</c>: Set the value to<c> endpointgroup</c>.</para>
+                /// </description></item>
+                /// <item><description><para><c>value</c>: The ID of the target endpoint group.</para>
+                /// </description></item>
                 /// </list>
                 /// </description></item>
-                /// <item><description><para>If <b>RuleActionType</b> is set to <b>Redirect</b>, this parameter specifies redirecting configurations. You cannot leave all the following parameters empty or use the default values for all the following parameters for a forwarding action whose type is <b>Redirect</b>: <c>protocol</c>, <c>domain</c>, <c>port</c>, <c>path</c>, and <c>query</c>. Example: <c>{&quot;protocol&quot;:&quot;HTTP&quot;, &quot;domain&quot;:&quot;www.example.com&quot;, &quot;port&quot;:&quot;80&quot;, &quot;path&quot;:&quot;/a&quot;,&quot;query&quot;:&quot;value1&quot;, &quot;code&quot;:&quot;301&quot; }</c>.</para>
+                /// <item><description><para>If <b>RuleActionType</b> is set to <b>Redirect</b>, this parameter specifies the redirect configuration. At least one of the <c>protocol</c>, <c>domain</c>, <c>port</c>, <c>path</c>, or <c>query</c> fields must be set to a value other than its default. Example: <c>{&quot;protocol&quot;:&quot;HTTP&quot;, &quot;domain&quot;:&quot;www.example.com&quot;, &quot;port&quot;:&quot;80&quot;, &quot;path&quot;:&quot;/a&quot;,&quot;query&quot;:&quot;value1&quot;, &quot;code&quot;:&quot;301&quot; }</c>, where:</para>
                 /// <list type="bullet">
-                /// <item><description><c>protocol</c>: the protocol of requests after the requests are redirected. Valid values: <c>${protocol}</c> (default), <c>HTTP</c>, and <c>HTTPS</c>.</description></item>
-                /// <item><description><c>domain</c>: the domain name to which requests are redirected. Default value: <c>${host}</c>. You can also enter a domain name. The domain name must be 3 to 128 characters in length, and can contain only letters, digits, and the following special characters: <c>. - ? = ~ _ - + / ^ * ! $ &amp; | ( ) [ ]</c>.</description></item>
-                /// <item><description><c>port</c>: the port to which requests are redirected. Default value: <c>${port}</c>. You can enter a port number that ranges from 1 to 63335.</description></item>
-                /// <item><description><c>path</c>: the path to which requests are redirected. Default value: <c>${path}</c>. The path must be 1 to 128 characters in length. To use a regular expression, the path can contain letters, digits, and the following special characters: <c>. - _ / = ? ~ ^ * $ : ( ) [ ] +</c>. The path must start with a tilde (~). If you do not want to use a regular expression, the path can contain letters, digits, and the following special characters: <c>. - _ / = ? :</c>. The path must start with a forward slash (/).</description></item>
-                /// <item><description><c>query</c>: the query string to which requests are redirected. Default value: <c>${query}</c>. You can also specify a query string. The query string must be 1 to 128 characters in length, and can contain printable characters whose ASCII values are <c>greater than or equal to 32 and smaller than 127</c>. The query string cannot contain uppercase letters, space characters, or the following special characters: <c>[ ] { } &lt; &gt; # &amp;</c>.</description></item>
-                /// <item><description><c>code</c>: the redirect code. Valid values: <c>301</c>, <c>302</c>, <c>303</c>, <c>307</c>, and <c>308</c>.</description></item>
+                /// <item><description><para><c>protocol</c>: The protocol for the redirect. Valid values: <c>${protocol}</c> (default), <c>HTTP</c>, and <c>HTTPS</c>.</para>
+                /// </description></item>
+                /// <item><description><para><c>domain</c>: The domain name for the redirect. The default value is <c>${host}</c>. You can also specify another domain name. A domain name must be 3 to 128 characters long and can contain only lowercase letters, digits, and the following special characters:<c> .-=~_-+/^*!$&amp;()[]?</c>.</para>
+                /// </description></item>
+                /// <item><description><para><c>port</c>: The port for the redirect. The default value is <c>${port}</c>. You can also specify a port number. Valid values: 1 to 63335.</para>
+                /// </description></item>
+                /// <item><description><para><c>path</c>: The path for the redirect. The default value is <c>${path}</c>. The path must be 1 to 128 characters long. For a regular expression path, it must start with a tilde (\<del>) and can contain uppercase and lowercase letters, digits, and the following special characters:` .-_/=?</del>^*$:()[]+<c>. For a non-regular expression path, it must start with a forward slash (/) and can contain uppercase and lowercase letters, digits, and the following special characters:</c> .-_/=:?`.</para>
+                /// </description></item>
+                /// <item><description><para><c>query</c>: The query string for the redirect. The default value is <c>${query}</c>. You can also specify another query string. The query string must be 1 to 128 characters long and contain only printable characters within the ASCII range of<c> ch &gt;= 32 &amp;&amp; ch &lt; 127</c>. Letters must be lowercase. Spaces and the following special characters are not supported:<c> []{}&lt;&gt;\\#&amp;</c>.</para>
+                /// </description></item>
+                /// <item><description><para><c>code</c>: The redirect code. Valid values: <c>301</c>, <c>302</c>, <c>303</c>, <c>307</c>, and <c>308</c>.</para>
+                /// </description></item>
                 /// </list>
                 /// </description></item>
-                /// <item><description><para>If <b>RuleActionType</b> is set to <b>FixResponse</b>, this parameter specifies a fixed response. Example: <c>{&quot;code&quot;:&quot;200&quot;, &quot;type&quot;:&quot;text/plain&quot;, &quot;content&quot;:&quot;dssacav&quot; }</c>.</para>
+                /// <item><description><para>If <b>RuleActionType</b> is set to <b>FixResponse</b>, this parameter specifies the fixed response configuration. Example: <c>{&quot;code&quot;:&quot;200&quot;, &quot;type&quot;:&quot;text/plain&quot;, &quot;content&quot;:&quot;dssacav&quot; }</c>, where:</para>
                 /// <list type="bullet">
-                /// <item><description><c>code</c>: the HTTP response status code. The response status code must be one of the following numeric strings: <c>2xx</c>, <c>4xx</c>, and <c>5xx</c>. The letter <c>x</c> is a digit.</description></item>
-                /// <item><description><c>type</c>: the type of the response content. Valid values: <b>text/plain</b>, <b>text/css</b>, <b>text/html</b>, <b>application/javascript</b>, and <b>application/json</b>.</description></item>
-                /// <item><description><c>content</c>: the response content. The response content cannot exceed 1,000 characters in length, and does not support Chinese characters.</description></item>
+                /// <item><description><para><c>code</c>: The response status code. The value must be a numeric string in the <c>2xx</c>, <c>4xx</c>, or <c>5xx</c> format, where <c>x</c> is any digit.</para>
+                /// </description></item>
+                /// <item><description><para><c>type</c>: The content type of the response body. Valid values: <b>text/plain</b>, <b>text/css</b>, <b>text/html</b>, <b>application/javascript</b>, and <b>application/json</b>.</para>
+                /// </description></item>
+                /// <item><description><para><c>content</c>: The content of the response body. The content cannot exceed 1,000 characters and does not support Chinese characters.</para>
+                /// </description></item>
                 /// </list>
                 /// </description></item>
-                /// <item><description><para>If <b>RuleActionType</b> is set to <b>AddHeader</b>, this parameter specifies an HTTP header to be added. If a forwarding rule contains a forwarding action whose type is <b>AddHeader</b>, you must specify another forwarding action whose type is <b>ForwardGroup</b>. Example: <c>[{&quot;name&quot;:&quot;header1&quot;,&quot;type&quot;:&quot;userdefined&quot;, &quot;value&quot;:&quot;value&quot;}]</c>.</para>
+                /// <item><description><para>If <b>RuleActionType</b> is set to <b>AddHeader</b>, this parameter specifies the configuration for adding an HTTP header. If a forwarding rule contains an <b>AddHeader</b> action, it must also contain a <b>ForwardGroup</b> action. Example: <c>[{&quot;name&quot;:&quot;header1&quot;,&quot;type&quot;:&quot;user-defined&quot;, &quot;value&quot;:&quot;value&quot;}]</c>, where:</para>
                 /// <list type="bullet">
-                /// <item><description><c>name</c>: the name of the HTTP header. The name must be 1 to 40 characters in length, and can contain letters, digits, hyphens (-), and underscores (_). The name of the HTTP header specified by <b>AddHeader</b> must be unique and cannot be the same as the name of the HTTP header specified by <b>RemoveHeader</b>.</description></item>
-                /// <item><description><c>type</c>: the content type of the HTTP header. Valid values: <c>user-defined</c>, <c>ref</c>, and <c>system-defined</c>.</description></item>
-                /// <item><description><c>value</c>: the content of the HTTP header. You cannot leave this parameter empty. If you set <c>type</c> to <c>user-defined</c>, the content must be 1 to 128 characters in length, and can contain printable characters whose ASCII values are <c>greater than or equal to 32 and smaller than 127</c>. The content can contain letters, digits, hyphens (-), and underscores (<em>*). The content cannot start or end with a space character. If you set <c>type</c> to <c>ref</c>, the content must be 1 to 128 characters in length, and can contain letters, digits, hyphens (-), and underscores (</em>*). The content cannot start or end with a space character. If you set <c>type</c> to <c>system-defined</c>, only <c>ClientSrcIp</c> is supported.</description></item>
+                /// <item><description><para><c>name</c>: The name of the HTTP header. The name must be 1 to 40 characters long and can contain uppercase and lowercase letters, digits, hyphens (-), and underscores (_). The header names in <b>AddHeader</b> actions must be unique and cannot be the same as any header name in a <b>RemoveHeader</b> action.</para>
+                /// </description></item>
+                /// <item><description><para><c>type</c>: The type of the header value. Valid values: <c>user-defined</c>, <c>ref</c> (reference), and <c>system-defined</c>.</para>
+                /// </description></item>
+                /// <item><description><para><c>value</c>: The content of the HTTP header. This field cannot be empty. If <c>type</c> is <c>user-defined</c>, the value must be 1 to 128 characters long and contain only printable characters within the ASCII range of <c>ch &gt;= 32 &amp;&amp; ch &lt; 127</c>. The value can contain uppercase and lowercase letters, digits, hyphens (-), and underscores (<em>), and cannot start or end with a space. If <c>type</c> is <c>ref</c>, the value must be 1 to 128 characters long and can contain uppercase and lowercase letters, digits, hyphens (-), and underscores (</em>). The value cannot start or end with a space. If <c>type</c> is <c>system-defined</c>, the only valid value is <c>ClientSrcIp</c>.</para>
+                /// </description></item>
                 /// </list>
                 /// </description></item>
-                /// <item><description><para>If <b>RuleActionType</b> is set to <b>RemoveHeader</b>, this parameter specifies an HTTP header to be removed. If a forwarding rule contains a forwarding action whose type is <b>RemoveHeader</b>, you must specify another forwarding action whose type is <b>ForwardGroup</b>. The header must be 1 to 40 characters in length, and can contain letters, digits, hyphens (-), and underscores (_). Example: <c>[&quot;header1&quot;]</c>.</para>
+                /// <item><description><para>If <b>RuleActionType</b> is set to <b>RemoveHeader</b>, this parameter specifies the HTTP headers to remove. If a forwarding rule contains a <b>RemoveHeader</b> action, it must also contain a <b>ForwardGroup</b> action. The value must be 1 to 40 characters long and can contain uppercase and lowercase letters, digits, hyphens (-), and underscores (_). Example: <c>[&quot;header1&quot;]</c>.</para>
                 /// </description></item>
-                /// <item><description><para>If <b>RuleActionType</b> is set to <b>Rewrite</b>, this parameter specifies the rewriting configuration. If a forwarding rule contains a forwarding action whose type is <b>Rewrite</b>, you must specify another forwarding action whose type is <b>ForwardGroup</b>. Example: <c>{&quot;domain&quot;:&quot;value1&quot;, &quot;path&quot;:&quot;value2&quot;, &quot;query&quot;:&quot;value3&quot;}</c>.</para>
+                /// <item><description><para>If <b>RuleActionType</b> is set to <b>Rewrite</b>, this parameter specifies the rewrite configuration. If a forwarding rule contains a <b>Rewrite</b> action, it must also contain a <b>ForwardGroup</b> action. Example: <c>{&quot;domain&quot;:&quot;value1&quot;, &quot;path&quot;:&quot;value2&quot;, &quot;query&quot;:&quot;value3&quot;}</c>, where:</para>
                 /// <list type="bullet">
-                /// <item><description><c>domain</c>: the domain name to which requests are redirected. Default value: <c>${host}</c>. You can also enter a domain name. The domain name must be 3 to 128 characters in length, and can contain only lowercase letters, digits, and the following special characters: <c>. - ? = ~ _ - + / ^ * ! $ &amp; | ( ) [ ]</c>.</description></item>
-                /// <item><description><c>path</c>: the path to which requests are redirected. Default value: <c>${path}</c>. The path must be 1 to 128 characters in length. To use a regular expression, the path can contain letters, digits, and the following special characters: <c>. - _ / = ? ~ ^ * $ : ( ) [ ] +</c>. The path must start with a tilde (~). If you do not want to use a regular expression, the path can contain letters, digits, and the following special characters: <c>. - _ / = ? :</c>. The path must start with a forward slash (/).</description></item>
-                /// <item><description><c>query</c>: the query string to which requests are redirected. Default value: <c>${query}</c>. You can also specify a query string. The query string must be 1 to 128 characters in length, and can contain printable characters whose ASCII values are <c>greater than or equal to 32 and smaller than 127</c>. The query string cannot contain uppercase letters, space characters, or the following special characters: <c>[ ] { } &lt; &gt; # &amp;</c>.</description></item>
+                /// <item><description><para><c>domain</c>: The domain name to rewrite. The default value is <c>${host}</c>. You can also specify another domain name. A domain name must be 3 to 128 characters long and can contain only lowercase letters, digits, and the following special characters:<c> .-=~_-+/^*!$&amp;()[]?</c>.</para>
+                /// </description></item>
+                /// <item><description><para><c>path</c>: The path to rewrite. The default value is <c>${path}</c>. The path must be 1 to 128 characters long. For a regular expression path, it must start with a tilde (\<del>) and can contain uppercase and lowercase letters, digits, and the following special characters:` .-_/=?</del>^*$:()[]+<c>. For a non-regular expression path, it must start with a forward slash (/) and can contain uppercase and lowercase letters, digits, and the following special characters:</c> .-_/=:?`.</para>
+                /// </description></item>
+                /// <item><description><para><c>query</c>: The query string to rewrite. The default value is <c>${query}</c>. You can also specify another query string. The query string must be 1 to 128 characters long and contain only printable characters within the ASCII range of<c> ch &gt;= 32 &amp;&amp; ch &lt; 127</c>. Letters must be lowercase. Spaces and the following special characters are not supported:<c> []{}&lt;&gt;\\#&amp;</c>.</para>
+                /// </description></item>
                 /// </list>
                 /// </description></item>
-                /// <item><description><para>If <b>RuleActionType</b> is set to <b>Drop</b>, you do not need to specify this parameter.</para>
+                /// <item><description><para>If <b>RuleActionType</b> is set to <b>Drop</b>, you do not need to specify a value for this parameter.</para>
                 /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>[{&quot;type&quot;:&quot;endpointgroup&quot;, &quot;value&quot;:&quot;epg-bp1enpdcrqhl78g6r****&quot;}]</para>
+                /// <para>[{&quot;type&quot;:&quot;endpointgroup&quot;,&quot;value&quot;:&quot;epg-bp1l49ltx6iengvf2ks5z****&quot;}]</para>
                 /// </summary>
                 [NameInMap("RuleActionValue")]
                 [Validation(Required=false)]
@@ -204,7 +229,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             }
 
             /// <summary>
-            /// <para>The forwarding conditions.</para>
+            /// <para>The rule conditions.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("RuleConditions")]
@@ -212,9 +237,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public List<CreateForwardingRulesRequestForwardingRulesRuleConditions> RuleConditions { get; set; }
             public class CreateForwardingRulesRequestForwardingRulesRuleConditions : TeaModel {
                 /// <summary>
-                /// <para>The configuration of the domain name.</para>
+                /// <para>The domain name configuration.</para>
                 /// <remarks>
-                /// <para> We recommend that you use <b>RuleConditionType</b> and <b>RuleConditionValue</b> rather than this parameter to configure forwarding conditions.</para>
+                /// <para>This parameter is deprecated. We recommend that you use <b>RuleConditionType</b> and <b>RuleConditionValue</b> to configure rule conditions.</para>
                 /// </remarks>
                 /// </summary>
                 [NameInMap("HostConfig")]
@@ -222,9 +247,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 public CreateForwardingRulesRequestForwardingRulesRuleConditionsHostConfig HostConfig { get; set; }
                 public class CreateForwardingRulesRequestForwardingRulesRuleConditionsHostConfig : TeaModel {
                     /// <summary>
-                    /// <para>The domain name.</para>
+                    /// <para>The domain name configuration.</para>
                     /// <remarks>
-                    /// <para> We recommend that you use <b>RuleConditionType</b> and <b>RuleConditionValue</b> rather than this parameter to configure forwarding conditions.</para>
+                    /// <para>This parameter is deprecated. We recommend that you use <b>RuleConditionType</b> and <b>RuleConditionValue</b> to configure rule conditions.</para>
                     /// </remarks>
                     /// </summary>
                     [NameInMap("Values")]
@@ -234,9 +259,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 }
 
                 /// <summary>
-                /// <para>The configuration of the path.</para>
+                /// <para>The path configuration.</para>
                 /// <remarks>
-                /// <para> We recommend that you use <b>RuleConditionType</b> and <b>RuleConditionValue</b> rather than this parameter to configure forwarding conditions.</para>
+                /// <para>This parameter is deprecated. We recommend that you use <b>RuleConditionType</b> and <b>RuleConditionValue</b> to configure rule conditions.</para>
                 /// </remarks>
                 /// </summary>
                 [NameInMap("PathConfig")]
@@ -244,10 +269,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 public CreateForwardingRulesRequestForwardingRulesRuleConditionsPathConfig PathConfig { get; set; }
                 public class CreateForwardingRulesRequestForwardingRulesRuleConditionsPathConfig : TeaModel {
                     /// <summary>
-                    /// <para>The path.</para>
-                    /// <para>The path must be 1 to 128 characters in length, and must start with a forward slash (/). The path can contain letters, digits, and the following special characters: $ - _ . + / &amp; ~ @ : \&quot;. Supported wildcard characters are asterisks (\*) and question marks (?).</para>
+                    /// <para>The path configuration.</para>
+                    /// <para>A path must be 1 to 128 characters long and must start with a forward slash (/). It can contain letters, digits, dollar signs ($), hyphens (-), underscores (_), periods (.), plus signs (+), forward slashes (/), ampersands (&amp;), tildes (\~), at signs (@), colons (:), and apostrophes (\&quot;). You can use asterisks (\*) and question marks (?) as wildcards.</para>
                     /// <remarks>
-                    /// <para> We recommend that you use <b>RuleConditionType</b> and <b>RuleConditionValue</b> rather than this parameter to configure forwarding conditions.</para>
+                    /// <para>This parameter is deprecated. We recommend that you use <b>RuleConditionType</b> and <b>RuleConditionValue</b> to configure rule conditions.</para>
                     /// </remarks>
                     /// </summary>
                     [NameInMap("Values")]
@@ -257,15 +282,22 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 }
 
                 /// <summary>
-                /// <para>The type of the forwarding condition. Valid values:</para>
+                /// <para>The type of the rule condition. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Host</b>: Requests are forwarded based on domain names.</description></item>
-                /// <item><description><b>Path</b>: Requests are forwarded based on paths.</description></item>
-                /// <item><description><b>RequestHeader</b>: Requests are forwarded based on HTTP headers.</description></item>
-                /// <item><description><b>Query</b>: Requests are forwarded based on query strings.</description></item>
-                /// <item><description><b>Method</b>: Requests are forwarded based on HTTP request methods.</description></item>
-                /// <item><description><b>Cookie</b>: Requests are forwarded based on cookies.</description></item>
-                /// <item><description><b>SourceIP</b>: Requests are forwarded based on source IP addresses.</description></item>
+                /// <item><description><para><b>Host</b>: Matches requests by domain name.</para>
+                /// </description></item>
+                /// <item><description><para><b>Path</b>: Matches requests by path.</para>
+                /// </description></item>
+                /// <item><description><para><b>RequestHeader</b>: Matches requests by HTTP header.</para>
+                /// </description></item>
+                /// <item><description><para><b>Query</b>: Matches requests by query string.</para>
+                /// </description></item>
+                /// <item><description><para><b>Method</b>: Matches requests by HTTP method.</para>
+                /// </description></item>
+                /// <item><description><para><b>Cookie</b>: Matches requests by cookie.</para>
+                /// </description></item>
+                /// <item><description><para><b>SourceIP</b>: Matches requests by source IP address.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -276,33 +308,40 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 public string RuleConditionType { get; set; }
 
                 /// <summary>
-                /// <para>The value of the forwarding condition. You must specify different JSON strings based on <b>RuleConditionType</b>.</para>
+                /// <para>The value of the rule condition.
+                /// This is a JSON-formatted string whose structure depends on the specified <b>RuleConditionType</b>.</para>
                 /// <list type="bullet">
-                /// <item><description><para>If <b>RuleConditionType</b> is set to <b>Host</b>, RuleConditionValue specifies a domain name condition. A forwarding rule can contain only one forwarding condition of the Host type. You can specify multiple domain names in a forwarding condition. The relationship between multiple domain names is OR. The domain name must be 3 to 128 characters in length, and can contain letters, digits, hyphens (-), and periods (.). You can use asterisks (\*) and question marks (?) as wildcard characters. Example: <c>[&quot;www.example.com&quot;, &quot;www.aliyun.com&quot;]</c>.</para>
+                /// <item><description><para>If <b>RuleConditionType</b> is set to <b>Host</b>, this parameter specifies the domain name conditions. A forwarding rule can have only one <b>Host</b> rule condition. This rule condition can contain multiple domain names, which are evaluated with a logical OR. A domain name must be 3 to 128 characters long and can contain letters, digits, hyphens (-), and periods (.). You can use asterisks (\*) and question marks (?) as wildcards. Example: <c>[&quot;www.example.com&quot;, &quot;www.aliyun.com&quot;]</c>.</para>
                 /// </description></item>
-                /// <item><description><para>If <b>RuleConditionType</b> is set to <b>Path</b>, RuleConditionValue specifies a path condition. A forwarding rule can contain multiple forwarding conditions of the Path type. The relationship between multiple path conditions is OR. You can specify multiple paths in a forwarding condition. The relationship between multiple paths is OR. The path must be 1 to 128 characters in length, and must start with a forward slash (/). The path can contain letters, digits, and the following special characters: $ - _ . + / &amp; ~ @ : \&quot;. Supported wildcard characters are asterisks (\*) and question marks (?). Example: <c>[&quot;/a&quot;, &quot;/b/&quot;]</c>.</para>
+                /// <item><description><para>If <b>RuleConditionType</b> is set to <b>Path</b>, this parameter specifies the path conditions. A forwarding rule can have multiple <b>Path</b> rule conditions, which are evaluated with a logical OR. Each path rule condition can contain multiple paths, which are also evaluated with a logical OR. A path must be 1 to 128 characters long and must start with a forward slash (/). It can contain letters, digits, dollar signs ($), hyphens (-), underscores (_), periods (.), plus signs (+), forward slashes (/), ampersands (&amp;), tildes (\~), at signs (@), colons (:), and apostrophes (\&quot;). You can use asterisks (\*) and question marks (?) as wildcards. Example: <c>[&quot;/a&quot;, &quot;/b/&quot;]</c>.</para>
                 /// </description></item>
-                /// <item><description><para>If <b>RuleConditionType</b> is set to <b>RequestHeader</b>, RuleConditionValue specifies an HTTP header condition. An HTTP header consists of a key and a value. The header values in a forwarding condition must be unique. Example: <c>[{&quot;header1&quot;:[&quot;value1&quot;,&quot;value2&quot;]}]</c>.</para>
+                /// <item><description><para>If <b>RuleConditionType</b> is set to <b>RequestHeader</b>, this parameter specifies the HTTP header conditions. The value is a key-value pair. The header values within the same rule condition must be unique. Example: <c>[{&quot;header1&quot;:[&quot;value1&quot;,&quot;value2&quot;]}]</c>.</para>
                 /// <list type="bullet">
-                /// <item><description>Key: The key of an HTTP header must be 1 to 40 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</description></item>
-                /// <item><description>Value: The value of an HTTP header must be 1 to 128 characters in length and can contain printable characters whose ASCII values <c>are larger than or equal to 32 and smaller than 127</c>. The value cannot start or end with a space.</description></item>
+                /// <item><description><para>Key: The HTTP header key must be 1 to 40 characters long and can contain letters, digits, hyphens (-), and underscores (_).</para>
+                /// </description></item>
+                /// <item><description><para>Value: The HTTP header value must be 1 to 128 characters long and contain only printable characters within the ASCII range of<c> ch &gt;= 32 &amp;&amp; ch &lt; 127</c>. The value cannot start or end with a space.</para>
+                /// </description></item>
                 /// </list>
                 /// </description></item>
-                /// <item><description><para>If <b>RuleConditionType</b> is set to <b>Query</b>, RuleConditionValue specifies a query string condition. A query string consists of a key and a value. Example: <c>[{&quot;query1&quot;:[&quot;value1&quot;]}, {&quot;query2&quot;:[&quot;value2&quot;]}]</c>.</para>
+                /// <item><description><para>If <b>RuleConditionType</b> is set to <b>Query</b>, this parameter specifies the query string conditions. The value is a key-value pair. Example: <c>[{&quot;query1&quot;:[&quot;value1&quot;]}, {&quot;query2&quot;:[&quot;value2&quot;]}]</c>.</para>
                 /// <list type="bullet">
-                /// <item><description>Key: The key must be 1 to 100 characters in length and can contain printable characters whose ASCII values <c>are larger than or equal to 32 and smaller than 127</c>, excluding uppercase letters, spaces, and the following special characters: <c>[ ] { } &lt; &gt; \\ ; / ? : @ &amp; = + , $ % &quot; ^ ~</c>.</description></item>
-                /// <item><description>Value: The value must be 1 to 128 characters in length and can contain printable characters whose ASCII values <c>are larger than or equal to 32 and smaller than 127</c>, excluding uppercase letters, spaces, and the following special characters: <c>[ ] { } &lt; &gt; \\ ; / ? : @ &amp; = + , $ % &quot; ^ ~</c>.</description></item>
+                /// <item><description><para>Key: The key must be 1 to 100 characters long and contain only printable characters within the ASCII range of<c> ch &gt;= 32 &amp;&amp; ch &lt; 127</c>. Letters must be lowercase. Spaces and the following characters are not supported:<c> []{}&lt;&gt;\\;/?:@&amp;=+,$%&quot;^~</c>.</para>
+                /// </description></item>
+                /// <item><description><para>Value: The value must be 1 to 128 characters long and contain only printable characters within the ASCII range of<c> ch &gt;= 32 &amp;&amp; ch &lt; 127</c>. Letters must be lowercase. Spaces and the following characters are not supported:<c> []{}&lt;&gt;\\;/?:@&amp;=+,$%&quot;^~</c>.</para>
+                /// </description></item>
                 /// </list>
                 /// </description></item>
-                /// <item><description><para>If <b>RuleConditionType</b> is set to <b>Method</b>, RuleConditionValue specifies an HTTP method condition. Valid values: <b>HEAD</b>, <b>GET</b>, <b>POST</b>, <b>OPTIONS</b>, <b>PUT</b>, <b>PATCH</b>, and <b>DELETE</b>. Example: <c>[&quot;GET&quot;, &quot;OPTIONS&quot;, &quot;POST&quot;]</c>.</para>
+                /// <item><description><para>If <b>RuleConditionType</b> is set to <b>Method</b>, this parameter specifies the HTTP method conditions. Valid values: <b>HEAD</b>, <b>GET</b>, <b>POST</b>, <b>OPTIONS</b>, <b>PUT</b>, <b>PATCH</b>, and <b>DELETE</b>. Example: <c>[&quot;GET&quot;, &quot;OPTIONS&quot;, &quot;POST&quot;]</c>.</para>
                 /// </description></item>
-                /// <item><description><para>If <b>RuleConditionType</b> is set to <b>Cookie</b>, RuleConditionValue specifies a cookie condition. A cookie consists of a key and a value. Example: <c>[{&quot;cookie1&quot;:[&quot;value1&quot;]}, {&quot;cookie2&quot;:[&quot;value2&quot;]}]</c>.</para>
+                /// <item><description><para>If <b>RuleConditionType</b> is set to <b>Cookie</b>, this parameter specifies the cookie conditions. The value is a key-value pair. Example: <c>[{&quot;cookie1&quot;:[&quot;value1&quot;]}, {&quot;cookie2&quot;:[&quot;value2&quot;]}]</c></para>
                 /// <list type="bullet">
-                /// <item><description>Key: The key of a cookie must be 1 to 100 characters in length and can contain printable characters whose ASCII values <c>are larger than or equal to 32 and smaller than 127</c>, excluding uppercase letters, spaces, and the following special characters: <c># [ ] { } \\ &lt; &gt; &amp;</c>.</description></item>
-                /// <item><description>Value: The value of a cookie must be 1 to 128 characters in length and can contain printable characters whose ASCII values <c>are larger than or equal to 32 and smaller than 127</c>, excluding uppercase letters, spaces, and the following special characters: <c># [ ] { } \\ &lt; &gt; &amp;</c>.</description></item>
+                /// <item><description><para>Key: The cookie key must be 1 to 100 characters long and contain only printable characters within the ASCII range of<c> ch &gt;= 32 &amp;&amp; ch &lt; 127</c>. Letters must be lowercase. Spaces and the following characters are not supported:<c> #[]{}\\&lt;&gt;&amp;</c>.</para>
+                /// </description></item>
+                /// <item><description><para>Value: The cookie value must be 1 to 128 characters long and contain only printable characters within the ASCII range of<c> ch &gt;= 32 &amp;&amp; ch &lt; 127</c>. Letters must be lowercase. Spaces and the following characters are not supported:<c> #[]{}\\&lt;&gt;&amp;</c>.</para>
+                /// </description></item>
                 /// </list>
                 /// </description></item>
-                /// <item><description><para>If <b>RuleConditionType</b> is set to <b>SourceIP</b>, RuleConditionValue specifies a source IP address condition. IP addresses, such as 1.1.XX.XX/32, and CIDR blocks, such as 2.2.XX.XX/24, are supported. A forwarding rule can contain only one forwarding condition of the SourceIP type. You can specify multiple source IP addresses or CIDR blocks in a forwarding condition. The relationship between multiple IP addresses or CIDR blocks is OR. Example: <c>[&quot;1.1.XX.XX/32&quot;, &quot;2.2.XX.XX/24&quot;]</c>.</para>
+                /// <item><description><para>If <b>RuleConditionType</b> is set to <b>SourceIP</b>, this parameter specifies the source IP conditions. You can specify IP addresses, for example, <c>1.1.XX.XX/32</c>, or CIDR blocks, for example, <c>2.2.XX.XX/24</c>. A forwarding rule can have only one <b>SourceIP</b> rule condition. This rule condition can contain multiple source IP addresses, which are evaluated with a logical OR. Example: <c>[&quot;1.1.XX.XX/32&quot;, &quot;2.2.XX.XX/24&quot;]</c>.</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -316,8 +355,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             }
 
             /// <summary>
-            /// <para>The direction in which the rule takes effect. You do not need to specify this parameter.</para>
-            /// <para>By default, this parameter is set to <b>request</b>, which specifies that the rule takes effect on requests.</para>
+            /// <para>The direction in which the rule takes effect. This parameter does not need to be configured.</para>
+            /// <para>By default, this parameter is set to <b>request</b>, which indicates that the rule applies to requests.</para>
             /// 
             /// <b>Example:</b>
             /// <para>request</para>
@@ -340,7 +379,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string ListenerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the GA instance is deployed. Set the value to <b>cn-hangzhou</b>.</para>
+        /// <para>The ID of the region where the Global Accelerator instance is deployed. The only valid value is <b>cn-hangzhou</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

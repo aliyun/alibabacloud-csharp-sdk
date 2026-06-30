@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>NLB</para>
+            /// <para>ENI</para>
             /// </summary>
             [NameInMap("EndpointType")]
             [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class ListCommonAreasResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the areas.</para>
+        /// <para>The area information.</para>
         /// </summary>
         [NameInMap("Areas")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string LocalName { get; set; }
 
             /// <summary>
-            /// <para>The information about the regions.</para>
+            /// <para>The region list.</para>
             /// </summary>
             [NameInMap("RegionList")]
             [Validation(Required=false)]

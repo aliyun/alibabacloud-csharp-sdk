@@ -69,8 +69,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// <para>Indicates whether client affinity is enabled for the listener. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>NONE</b>: Client affinity is disabled. Requests from the same client may be forwarded to different endpoints.</description></item>
-        /// <item><description><b>SOURCE_IP</b>: Client affinity is enabled. When a client accesses stateful applications, requests from the same client are forwarded to the same endpoint regardless of the source port or protocol.</description></item>
+        /// <item><description><para><b>NONE</b>: Client affinity is disabled. Requests from the same client may be forwarded to different endpoints.</para>
+        /// </description></item>
+        /// <item><description><para><b>SOURCE_IP</b>: Client affinity is enabled. When a client accesses stateful applications, requests from the same client are forwarded to the same endpoint regardless of the source port or protocol.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -84,7 +86,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
         /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -108,12 +110,15 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// <para>The maximum version of the HTTP protocol. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>http3</b></description></item>
-        /// <item><description><b>http2</b></description></item>
-        /// <item><description><b>http1.1</b></description></item>
+        /// <item><description><para><b>http3</b></para>
+        /// </description></item>
+        /// <item><description><para><b>http2</b></para>
+        /// </description></item>
+        /// <item><description><para><b>http1.1</b></para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> Only HTTPS listeners support this parameter.</para>
+        /// <para>Only HTTPS listeners support this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -126,9 +131,12 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// <para>The timeout period for idle connections. Unit: seconds.</para>
         /// <list type="bullet">
-        /// <item><description>TCP: 10-900. Default value: 900. Unit: seconds.</description></item>
-        /// <item><description>UDP: 10-20. Default value: 20. Unit: seconds.</description></item>
-        /// <item><description>HTTP/HTTPS: 1-60. Default value: 15. Unit: seconds.</description></item>
+        /// <item><description><para>TCP: 10-900. Default value: 900. Unit: seconds.</para>
+        /// </description></item>
+        /// <item><description><para>UDP: 10-20. Default value: 20. Unit: seconds.</para>
+        /// </description></item>
+        /// <item><description><para>HTTP/HTTPS: 1-60. Default value: 15. Unit: seconds.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -206,10 +214,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// <para>The network transmission protocol that is used by the listener. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>tcp</b>: TCP</description></item>
-        /// <item><description><b>udp</b>: UDP</description></item>
-        /// <item><description><b>http</b>: HTTP</description></item>
-        /// <item><description><b>https</b>: HTTPS</description></item>
+        /// <item><description><para><b>tcp</b>: TCP</para>
+        /// </description></item>
+        /// <item><description><para><b>udp</b>: UDP</para>
+        /// </description></item>
+        /// <item><description><para><b>http</b>: HTTP</para>
+        /// </description></item>
+        /// <item><description><para><b>https</b>: HTTPS</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -224,11 +236,13 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// <para>Specifies whether to preserve source IP addresses of clients.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b> This feature allows you to view client IP addresses on backend servers.</description></item>
-        /// <item><description><b>false</b> (default)</description></item>
+        /// <item><description><para><b>true</b> This feature allows you to view client IP addresses on backend servers.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default)</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter will be discontinued in the API operations that are used to configure listeners. We recommend that you set this parameter when you call API operations to configure endpoint groups. For more information about the <b>ProxyProtocol</b> parameter, see <a href="https://help.aliyun.com/document_detail/153259.html">CreateEndpointGroup</a> and <a href="https://help.aliyun.com/document_detail/153262.html">UpdateEndpointGroup</a>.</para>
+        /// <para>This parameter will be discontinued in the API operations that are used to configure listeners. We recommend that you set this parameter when you call API operations to configure endpoint groups. For more information about the <b>ProxyProtocol</b> parameter, see <a href="https://help.aliyun.com/document_detail/153259.html">CreateEndpointGroup</a> and <a href="https://help.aliyun.com/document_detail/153262.html">UpdateEndpointGroup</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -253,7 +267,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <para>The timeout period for HTTP or HTTPS requests.</para>
         /// <para>Valid values: 1 to 180. Default value: 60. Unit: seconds.</para>
         /// <remarks>
-        /// <para> This parameter takes effect only for HTTP or HTTPS listeners. If the backend server does not respond within the timeout period, GA returns an HTTP 504 error code to the client.</para>
+        /// <para>This parameter takes effect only for HTTP or HTTPS listeners. If the backend server does not respond within the timeout period, GA returns an HTTP 504 error code to the client.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -268,32 +282,42 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <list type="bullet">
         /// <item><description><para><b>tls_cipher_policy_1_0</b></para>
         /// <list type="bullet">
-        /// <item><description>Supported Transport Layer Security (TLS) versions: TLS 1.0, TLS 1.1, and TLS 1.2</description></item>
-        /// <item><description>Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA</description></item>
+        /// <item><description><para>Supported Transport Layer Security (TLS) versions: TLS 1.0, TLS 1.1, and TLS 1.2</para>
+        /// </description></item>
+        /// <item><description><para>Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// <item><description><para><b>tls_cipher_policy_1_1</b></para>
         /// <list type="bullet">
-        /// <item><description>Supported TLS versions: TLS 1.1 and TLS 1.2</description></item>
-        /// <item><description>Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA</description></item>
+        /// <item><description><para>Supported TLS versions: TLS 1.1 and TLS 1.2</para>
+        /// </description></item>
+        /// <item><description><para>Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// <item><description><para><b>tls_cipher_policy_1_2</b></para>
         /// <list type="bullet">
-        /// <item><description>Supported TLS version: TLS 1.2</description></item>
-        /// <item><description>Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA</description></item>
+        /// <item><description><para>Supported TLS version: TLS 1.2</para>
+        /// </description></item>
+        /// <item><description><para>Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// <item><description><para><b>tls_cipher_policy_1_2_strict</b></para>
         /// <list type="bullet">
-        /// <item><description>Supported TLS version: TLS 1.2</description></item>
-        /// <item><description>Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA</description></item>
+        /// <item><description><para>Supported TLS version: TLS 1.2</para>
+        /// </description></item>
+        /// <item><description><para>Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// <item><description><para><b>tls_cipher_policy_1_2_strict_with_1_3</b></para>
         /// <list type="bullet">
-        /// <item><description>Supported TLS versions: TLS 1.2 and TLS 1.3</description></item>
-        /// <item><description>Supported cipher suites: TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384, TLS_CHACHA20_POLY1305_SHA256, TLS_AES_128_CCM_SHA256, TLS_AES_128_CCM_8_SHA256, ECDHE-ECDSA-AES128-GCM-SHA256, ECDHE-ECDSA-AES256-GCM-SHA384, ECDHE-ECDSA-AES128-SHA256, ECDHE-ECDSA-AES256-SHA384, ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-ECDSA-AES128-SHA, ECDHE-ECDSA-AES256-SHA, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA</description></item>
+        /// <item><description><para>Supported TLS versions: TLS 1.2 and TLS 1.3</para>
+        /// </description></item>
+        /// <item><description><para>Supported cipher suites: TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384, TLS_CHACHA20_POLY1305_SHA256, TLS_AES_128_CCM_SHA256, TLS_AES_128_CCM_8_SHA256, ECDHE-ECDSA-AES128-GCM-SHA256, ECDHE-ECDSA-AES256-GCM-SHA384, ECDHE-ECDSA-AES128-SHA256, ECDHE-ECDSA-AES256-SHA384, ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-ECDSA-AES128-SHA, ECDHE-ECDSA-AES256-SHA, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -318,8 +342,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// <para>Specifies whether to use the <c>GA-AP</c> header to retrieve information about acceleration regions. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: yes</description></item>
-            /// <item><description><b>false</b> (default): no</description></item>
+            /// <item><description><para><b>true</b>: yes</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b> (default): no</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
             /// <para>This parameter is available only when you create an HTTPS or HTTP listener.</para>
@@ -335,8 +361,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// <para>Specifies whether to use the <c>GA-ID</c> header to retrieve the ID of the GA instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: yes</description></item>
-            /// <item><description><b>false</b> (default): no</description></item>
+            /// <item><description><para><b>true</b>: yes</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b> (default): no</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
             /// <para>This parameter is available only when you create an HTTPS or HTTP listener.</para>
@@ -352,8 +380,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// <para>Specifies whether to use the <c>GA-X-Forward-Port</c> header to retrieve the listener ports of the GA instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: yes</description></item>
-            /// <item><description><b>false</b> (default): no</description></item>
+            /// <item><description><para><b>true</b>: yes</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b> (default): no</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
             /// <para>This parameter is available only when you create an HTTPS or HTTP listener.</para>
@@ -369,8 +399,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// <para>Specifies whether to use the <c>GA-X-Forward-Proto</c> header to retrieve the listener protocol of the GA instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: yes</description></item>
-            /// <item><description><b>false</b> (default): no</description></item>
+            /// <item><description><para><b>true</b>: yes</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b> (default): no</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
             /// <para>This parameter is available only when you create an HTTPS or HTTP listener.</para>
@@ -386,8 +418,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// <para>Specifies whether to use the <c>X-Real-IP</c> header to retrieve client IP addresses. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: yes</description></item>
-            /// <item><description><b>false</b> (default): no</description></item>
+            /// <item><description><para><b>true</b>: yes</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b> (default): no</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
             /// <para>This parameter is available only when you create an HTTPS or HTTP listener.</para>

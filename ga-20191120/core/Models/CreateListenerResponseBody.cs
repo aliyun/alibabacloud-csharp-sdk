@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class CreateListenerResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the listener.</para>
+        /// <para>The ID of the created listener.</para>
         /// 
         /// <b>Example:</b>
         /// <para>lsr-bp1bpn0kn908w4nbw****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string ListenerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>04F0F334-1335-436C-A1D7-6C044FE73368</para>

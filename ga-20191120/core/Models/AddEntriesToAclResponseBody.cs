@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class AddEntriesToAclResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ACL ID.</para>
+        /// <para>The ID of the access control policy group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nacl-hp34s2h0xx1ht4nwo****</para>

@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>White</para>
+            /// <para>white</para>
             /// </summary>
             [NameInMap("AclType")]
             [Validation(Required=false)]

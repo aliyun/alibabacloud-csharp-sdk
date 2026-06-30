@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class ListCustomRoutingPortMappingsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned on each page.</para>
+        /// <para>The number of entries returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Details about the port mapping table.</para>
+        /// <para>The information about the port mappings.</para>
         /// </summary>
         [NameInMap("PortMappings")]
         [Validation(Required=false)]
         public List<ListCustomRoutingPortMappingsResponseBodyPortMappings> PortMappings { get; set; }
         public class ListCustomRoutingPortMappingsResponseBodyPortMappings : TeaModel {
             /// <summary>
-            /// <para>The ID of the GA instance.</para>
+            /// <para>The ID of the GA instance to which the port mapping belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ga-bp1odcab8tmno0hdq****</para>
@@ -57,14 +57,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public int? AcceleratorPort { get; set; }
 
             /// <summary>
-            /// <para>The service IP address and port of the backend instance.</para>
+            /// <para>The IP address and port of the backend service.</para>
             /// </summary>
             [NameInMap("DestinationSocketAddress")]
             [Validation(Required=false)]
             public ListCustomRoutingPortMappingsResponseBodyPortMappingsDestinationSocketAddress DestinationSocketAddress { get; set; }
             public class ListCustomRoutingPortMappingsResponseBodyPortMappingsDestinationSocketAddress : TeaModel {
                 /// <summary>
-                /// <para>The service IP address of the backend instance.</para>
+                /// <para>The IP address of the backend service.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10.0.XX.XX</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 public string IpAddress { get; set; }
 
                 /// <summary>
-                /// <para>The service port of the backend instance.</para>
+                /// <para>The port of the backend service.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>443</para>
@@ -86,10 +86,12 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             }
 
             /// <summary>
-            /// <para>The access policy of traffic for the backend instance. Valid values:</para>
+            /// <para>The traffic policy for the backend instance.</para>
             /// <list type="bullet">
-            /// <item><description><b>allow</b>: allows traffic to the backend instance.</description></item>
-            /// <item><description><b>deny</b>: denies traffic to the backend instance.</description></item>
+            /// <item><description><para><b>allow</b>: allows the backend instance to receive traffic.</para>
+            /// </description></item>
+            /// <item><description><para><b>deny</b>: denies the backend instance from receiving traffic.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -110,7 +112,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string EndpointGroupId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region in which the endpoint group resides.</para>
+            /// <para>The ID of the region to which the endpoint group belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>us-west-1</para>
@@ -130,7 +132,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string EndpointId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the listener.</para>
+            /// <para>The ID of the custom routing listener to which the port mapping belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>lsr-bp1bpn0kn908w4nbw****</para>
@@ -142,8 +144,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// <para>The protocol of the backend service.</para>
             /// <list type="bullet">
-            /// <item><description><b>tcp</b>: TCP</description></item>
-            /// <item><description><b>udp</b>: UDP</description></item>
+            /// <item><description><para><b>TCP</b>: the TCP protocol.</para>
+            /// </description></item>
+            /// <item><description><para><b>UDP</b>: the UDP protocol.</para>
+            /// </description></item>
             /// </list>
             /// </summary>
             [NameInMap("Protocols")]
@@ -151,7 +155,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public List<string> Protocols { get; set; }
 
             /// <summary>
-            /// <para>The name of the endpoint (vSwitch).</para>
+            /// <para>The name of the vSwitch of the endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-test01</para>
@@ -163,7 +167,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>04F0F334-1335-436C-A1D7-6C044FE73368</para>
@@ -173,7 +177,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

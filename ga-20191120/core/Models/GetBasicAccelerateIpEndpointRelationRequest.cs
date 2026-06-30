@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class GetBasicAccelerateIpEndpointRelationRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the accelerated IP address.</para>
+        /// <para>The accelerated IP address instance ID of the basic Global Accelerator (GA) instance.</para>
         /// <remarks>
-        /// <para> You must specify <b>EndpointId</b> or <b>AccelerateIpId</b>.</para>
+        /// <para><b>EndpointId</b> and <b>AccelerateIpId</b> cannot both be empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string AccelerateIpId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the basic GA instance.</para>
+        /// <para>The instance ID of the basic Global Accelerator (GA) instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,9 +35,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> value as the <b>ClientToken</b> value. The <b>RequestId</b> value of each API request is different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -48,9 +48,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the endpoint.</para>
+        /// <para>The endpoint ID of the basic Global Accelerator (GA) instance.</para>
         /// <remarks>
-        /// <para> You must specify <b>EndpointId</b> or <b>AccelerateIpId</b>.</para>
+        /// <para><b>EndpointId</b> and <b>AccelerateIpId</b> cannot both be empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string EndpointId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the GA instance is deployed. Set the value to <b>cn-hangzhou</b>.</para>
+        /// <para>The region ID of the Global Accelerator instance. Set the value to <b>cn-hangzhou</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

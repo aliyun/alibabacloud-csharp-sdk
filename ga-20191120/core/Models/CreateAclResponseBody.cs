@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class CreateAclResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the ACL.</para>
+        /// <para>The access control policy group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nacl-hp34s2h0xx1ht4nwo****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string AclId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</para>

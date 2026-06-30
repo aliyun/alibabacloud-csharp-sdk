@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class ChangeResourceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <b>client token</b> can contain only ASCII characters.</para>
+        /// <para>The client token that is used to ensure the idempotence of a request.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <b>ClientToken</b> value can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the value of <b>RequestId</b> as the value of <b>ClientToken</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string NewResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the GA instance is deployed. Set the value to <b>cn-hangzhou</b>.</para>
+        /// <para>The region ID of the Alibaba Cloud Global Accelerator (GA) instance. Set the value to <b>ap-southeast-1</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,12 +46,12 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the GA resource.</para>
+        /// <para>The instance ID of the Global Accelerator resource for which you want to modify the resource group.</para>
         /// <list type="bullet">
-        /// <item><description>If you set <b>ResourceType</b> to <b>accelerator</b>, set the value of ResourceId to the ID of a standard GA instance.</description></item>
-        /// <item><description>If you set <b>ResourceType</b> to <b>basicaccelerator</b>, set the value of ResourceId to the ID of a basic GA instance.</description></item>
-        /// <item><description>If you set <b>ResourceType</b> to <b>bandwidthpackage</b>, set the value of ResourceId to the ID of a bandwidth plan.</description></item>
-        /// <item><description>If you set <b>ResourceType</b> to <b>acl</b>, set the value of ResourceId to the ID of an access control list (ACL).</description></item>
+        /// <item><description>If <b>ResourceType</b> is set to <b>accelerator</b>, set this parameter to the instance ID of a standard Global Accelerator instance.</description></item>
+        /// <item><description>If <b>ResourceType</b> is set to <b>basicaccelerator</b>, set this parameter to the instance ID of a basic Global Accelerator instance.</description></item>
+        /// <item><description>If <b>ResourceType</b> is set to <b>bandwidthpackage</b>, set this parameter to the ID of a bandwidth plan.</description></item>
+        /// <item><description>If <b>ResourceType</b> is set to <b>acl</b>, set this parameter to the ID of an access control policy group.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -63,12 +63,12 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the GA resource. Valid values:</para>
+        /// <para>The type of the Global Accelerator resource for which you want to modify the resource group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>accelerator:</b> a standard GA instance.</description></item>
-        /// <item><description><b>basicaccelerator:</b> a basic GA instance.</description></item>
-        /// <item><description><b>bandwidthpackage:</b> a bandwidth plan.</description></item>
-        /// <item><description><b>acl:</b> an ACL.</description></item>
+        /// <item><description><b>accelerator</b>: a standard Alibaba Cloud Global Accelerator (GA) instance.</description></item>
+        /// <item><description><b>basicaccelerator</b>: a basic Alibaba Cloud Global Accelerator (GA) instance.</description></item>
+        /// <item><description><b>bandwidthpackage</b>: a bandwidth plan.</description></item>
+        /// <item><description><b>acl</b>: an access control policy group.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

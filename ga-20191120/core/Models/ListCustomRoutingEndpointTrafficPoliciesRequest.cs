@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class ListCustomRoutingEndpointTrafficPoliciesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the GA instance to which the traffic policies belong.</para>
+        /// <para>The instance ID of the Alibaba Cloud Global Accelerator (GA) instance for which you want to query traffic policies.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string AcceleratorId { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the traffic destination.</para>
+        /// <para>The IP address of the traffic policy destination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.0.XX.XX</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string Address { get; set; }
 
         /// <summary>
-        /// <para>The ID of the endpoint group to which the traffic policies belong.</para>
+        /// <para>The ID of the endpoint group for which you want to query traffic policies.</para>
         /// 
         /// <b>Example:</b>
         /// <para>lsr-bp1bpn0kn908w4nbw****</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string EndpointGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the endpoint to which the traffic policies belong.</para>
+        /// <para>The ID of the endpoint for which you want to query traffic policies.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ep-bp16jdc00bhe97sr5****</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string EndpointId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the listener to which the traffic policies belong.</para>
+        /// <para>The ID of the listener for which you want to query traffic policies.</para>
         /// 
         /// <b>Example:</b>
         /// <para>lsr-bp1bpn0kn908w4nbw****</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string ListenerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// <para>The page number of the list. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: <b>1 to 50</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page for a paged query. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the Global Accelerator (GA) instance. Set the value to <b>cn-hangzhou</b>.</para>
+        /// <para>The region ID of the Alibaba Cloud Global Accelerator (GA) instance. Set the value to <b>ap-southeast-1</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

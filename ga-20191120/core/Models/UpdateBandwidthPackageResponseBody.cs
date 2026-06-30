@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class UpdateBandwidthPackageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The bandwidth plan ID.</para>
+        /// <para>The ID of the bandwidth plan.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gbwp-bp1eo4f57z1kbbcmn****</para>

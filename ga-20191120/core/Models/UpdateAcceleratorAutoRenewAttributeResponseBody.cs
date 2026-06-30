@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class UpdateAcceleratorAutoRenewAttributeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the GA instance.</para>
+        /// <para>The ID of the Global Accelerator instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ga-bp17frjjh0udz4qz****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string AcceleratorId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F591955F-5CB5-4CCE-A75D-17CF2085CE22</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class UpdateLogStoreConfigResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>DE77A7F3-3B74-41C0-A5BC-CAFD188C28B6</para>
         /// </summary>

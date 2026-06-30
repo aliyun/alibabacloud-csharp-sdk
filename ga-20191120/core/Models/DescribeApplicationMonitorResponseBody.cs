@@ -32,8 +32,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// <para>Indicates whether the automatic diagnostics feature is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -85,7 +87,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <para>The name of the city in which the probe point of the ISP is deployed.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Singapore</para>
+            /// <para>新加坡</para>
             /// </summary>
             [NameInMap("CityName")]
             [Validation(Required=false)]
@@ -105,7 +107,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <para>The probe point name of the ISP.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Alibaba</para>
+            /// <para>阿里巴巴</para>
             /// </summary>
             [NameInMap("IspName")]
             [Validation(Required=false)]
@@ -168,11 +170,16 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// <para>The status of the origin probing task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>init</b></description></item>
-        /// <item><description><b>active</b></description></item>
-        /// <item><description><b>updating</b></description></item>
-        /// <item><description><b>inactive</b></description></item>
-        /// <item><description><b>deleting</b></description></item>
+        /// <item><description><para><b>init</b></para>
+        /// </description></item>
+        /// <item><description><para><b>active</b></para>
+        /// </description></item>
+        /// <item><description><para><b>updating</b></para>
+        /// </description></item>
+        /// <item><description><para><b>inactive</b></para>
+        /// </description></item>
+        /// <item><description><para><b>deleting</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

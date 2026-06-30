@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class CreateBasicEndpointGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the basic GA instance.</para>
+        /// <para>The instance ID of the basic Alibaba Cloud Global Accelerator (GA).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,9 +22,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> value as the <b>ClientToken</b> value. The <b>RequestId</b> value is different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The description of the endpoint group.</para>
+        /// <para>The description of the endpoint group for the basic Alibaba Cloud Global Accelerator (GA) instance.</para>
         /// <para>The description can be up to 200 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The endpoint address.</para>
+        /// <para>The address of the endpoint.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eni-bp1a05txelswuj8g****</para>
@@ -56,8 +56,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string EndpointAddress { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region to which the endpoint group belongs.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2253223.html">ListAvailableBusiRegions</a> operation to query the region ID.</para>
+        /// <para>The region ID of the endpoint group for the basic Alibaba Cloud Global Accelerator (GA) instance.</para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/2253223.html">ListAvailableBusiRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -69,10 +69,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// <para>The secondary address of the endpoint.</para>
-        /// <para>You must specify this parameter when the accelerated IP address is associated with the secondary private IP address of an Elastic Compute Service (ECS) instance or an elastic network interface (ENI).</para>
+        /// <para>Specify this parameter when the accelerated IP address is associated with a secondary private IP address of an ECS instance or an ENI.</para>
         /// <list type="bullet">
-        /// <item><description>When the endpoint type is <b>ECS</b>, you can set <b>EndpointSubAddress</b> to the secondary private IP address of the primary ENI. If the parameter is left empty, the primary private IP address of the primary ENI is used.</description></item>
-        /// <item><description>If the endpoint type is <b>ENI</b>, you can set <b>EndpointSubAddress</b> to the secondary private IP address of the secondary ENI. If the parameter is left empty, the primary private IP address of the secondary ENI is used.</description></item>
+        /// <item><description>If the endpoint type is <b>ECS</b>, EndpointSubAddress can be set to a secondary private IP address of the primary ENI. If this parameter is left empty, the primary private IP address of the primary ENI is used.</description></item>
+        /// <item><description>If the endpoint type is <b>ENI</b>, EndpointSubAddress can be set to a secondary private IP address of the secondary ENI. If this parameter is left empty, the primary private IP address of the secondary ENI is used.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -83,11 +83,11 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string EndpointSubAddress { get; set; }
 
         /// <summary>
-        /// <para>The type of the endpoint. Valid values:</para>
+        /// <para>The endpoint type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ENI</b></description></item>
-        /// <item><description><b>SLB</b></description></item>
-        /// <item><description><b>ECS</b></description></item>
+        /// <item><description><b>ENI</b>: elastic network interface (ENI).</description></item>
+        /// <item><description><b>SLB</b>: Classic Load Balancer (CLB) instance.</description></item>
+        /// <item><description><b>ECS</b>: ECS instance.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -98,8 +98,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string EndpointType { get; set; }
 
         /// <summary>
-        /// <para>The name of the endpoint group.</para>
-        /// <para>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</para>
+        /// <para>The name of the endpoint group for the basic Alibaba Cloud Global Accelerator (GA) instance.</para>
+        /// <para>The name must be 1 to 128 characters in length and must start with a letter or a Chinese character. The name can contain digits, periods (.), underscores (_), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>group1</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the GA instance. Set the value to <b>cn-hangzhou</b>.</para>
+        /// <para>The region ID of the basic Alibaba Cloud Global Accelerator (GA) instance. Set the value to <b>ap-southeast-1</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

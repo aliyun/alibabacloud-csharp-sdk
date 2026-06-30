@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class ListEndpointGroupsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the GA instance.</para>
+        /// <para>The ID of the Global Accelerator instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +21,12 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string AcceleratorId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the access logging feature is enabled. Default value: off. Valid values:</para>
+        /// <para>Whether to enable the access log. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>on</b>: The access logging feature is enabled.</description></item>
-        /// <item><description><b>off</b>: The access logging feature is disabled.</description></item>
+        /// <item><description><para><b>on</b>: enables the access log.</para>
+        /// </description></item>
+        /// <item><description><para><b>off</b> (default): disables the access log.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,12 +46,19 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public string EndpointGroupId { get; set; }
 
+        [NameInMap("EndpointGroupRegion")]
+        [Validation(Required=false)]
+        public string EndpointGroupRegion { get; set; }
+
         /// <summary>
-        /// <para>The type of the endpoint group. Valid values: Valid values:</para>
+        /// <para>The type of the endpoint group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>default</b></description></item>
-        /// <item><description><b>virtual</b></description></item>
-        /// <item><description>If you leave this parameter empty, all default and virtual endpoint groups are queried.</description></item>
+        /// <item><description><para><b>default</b>: a default endpoint group.</para>
+        /// </description></item>
+        /// <item><description><para><b>virtual</b>: a virtual endpoint group.</para>
+        /// </description></item>
+        /// <item><description><para>If you omit this parameter, the operation returns all default and virtual endpoint groups.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -80,7 +89,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries to return on each page. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -90,7 +99,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to <b>cn-hangzhou</b>.</para>
+        /// <para>The ID of the region where the Global Accelerator instance is deployed. Set the value to <b>cn-hangzhou</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -101,7 +110,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The tag of the endpoint group.</para>
+        /// <para>The tags used to filter endpoint groups. You can specify up to 20 tags.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>false</c>
@@ -111,9 +120,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public List<ListEndpointGroupsRequestTag> Tag { get; set; }
         public class ListEndpointGroupsRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key of the endpoint group. It cannot be an empty string.</para>
-            /// <para>The tag key can be up to 64 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>aliyun</c> or <c>acs:</c>.</para>
-            /// <para>You can specify up to 20 tag keys.</para>
+            /// <para>The tag key. The tag key cannot be an empty string.</para>
+            /// <para>The tag key can be up to 64 characters long and cannot start with <c>aliyun</c> or <c>acs:</c>, or contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-key</para>
@@ -123,9 +131,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value of the endpoint group. The tag value can be an empty string.</para>
-            /// <para>The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag value cannot start with <c>aliyun</c> or <c>acs:</c>.</para>
-            /// <para>You can specify up to 20 tag values.</para>
+            /// <para>The tag value. The tag value can be an empty string.</para>
+            /// <para>The tag value can be up to 128 characters long and cannot start with <c>aliyun</c> or <c>acs:</c>, or contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-value</para>

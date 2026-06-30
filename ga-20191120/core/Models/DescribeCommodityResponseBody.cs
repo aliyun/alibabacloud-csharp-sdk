@@ -13,13 +13,17 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <para>The commodity code.</para>
         /// <para>Examples for the China site (aliyun.com):</para>
         /// <list type="bullet">
-        /// <item><description><b>ga_gapluspre_public_cn</b>: GA instance.</description></item>
-        /// <item><description><b>ga_plusbwppre_public_cn</b>: basic bandwidth plan.</description></item>
+        /// <item><description><para><b>ga_gapluspre_public_cn</b>: GA instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>ga_plusbwppre_public_cn</b>: basic bandwidth plan.</para>
+        /// </description></item>
         /// </list>
         /// <para>Examples for the international site (alibabacloud.com):</para>
         /// <list type="bullet">
-        /// <item><description><b>ga_pluspre_public_intl</b>: GA instance.</description></item>
-        /// <item><description><b>ga_bwppreintl_public_intl</b>: basic bandwidth plan.</description></item>
+        /// <item><description><para><b>ga_pluspre_public_intl</b>: GA instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>ga_bwppreintl_public_intl</b>: basic bandwidth plan.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,7 +56,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <para>The returned information varies based on the commodity module.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Duration</para>
+            /// <para>Subscription duration</para>
             /// </summary>
             [NameInMap("ComponentCode")]
             [Validation(Required=false)]
@@ -63,7 +67,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <para>The returned information varies based on the commodity module.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Duration</para>
+            /// <para>Subscription duration</para>
             /// </summary>
             [NameInMap("ComponentName")]
             [Validation(Required=false)]
@@ -93,7 +97,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 /// <para>The returned information varies based on the commodity module.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Duration</para>
+                /// <para>Subscription duration</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -123,7 +127,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                     /// <para>The returned information varies based on the commodity module.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>1 Month</para>
+                    /// <para>1 month</para>
                     /// </summary>
                     [NameInMap("Text")]
                     [Validation(Required=false)]
@@ -134,7 +138,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                     /// <para>The returned information varies based on the commodity module.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>1 Month</para>
+                    /// <para>1 month</para>
                     /// </summary>
                     [NameInMap("Tips")]
                     [Validation(Required=false)]

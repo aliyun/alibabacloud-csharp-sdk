@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class UpdateLogStoreConfigRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID of Alibaba Cloud Global Accelerator (GA).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -19,11 +20,23 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public string AcceleratorId { get; set; }
 
+        /// <summary>
+        /// <para>A list of custom header field names to be included in access logs.</para>
+        /// </summary>
         [NameInMap("AccessLogRecordCustomizedHeaderList")]
         [Validation(Required=false)]
         public List<string> AccessLogRecordCustomizedHeaderList { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to include custom headers in access logs. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: Yes.</description></item>
+        /// <item><description><b>false</b> (default): No.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>You can set this parameter to <b>true</b> only when the <b>AccessLogEnabled</b> toggle for the instance is turned on.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>False</para>
         /// </summary>
@@ -32,6 +45,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public bool? AccessLogRecordCustomizedHeadersEnabled { get; set; }
 
         /// <summary>
+        /// <para>An idempotent token.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
         /// </summary>
@@ -40,6 +55,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>The ID of the endpoint group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,6 +66,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string EndpointGroupId { get; set; }
 
         /// <summary>
+        /// <para>The listener ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -60,6 +77,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string ListenerId { get; set; }
 
         /// <summary>
+        /// <para>The region ID of the Alibaba Cloud Global Accelerator (GA) instance. The only valid value is cn-hangzhou.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -70,6 +88,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The name of the Logstore.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -80,6 +99,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string SlsLogStoreName { get; set; }
 
         /// <summary>
+        /// <para>The name of the Data Service Project.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

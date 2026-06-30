@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class CreateListenerRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the GA instance.</para>
+        /// <para>The ID of the Global Accelerator instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string AcceleratorId { get; set; }
 
         /// <summary>
-        /// <para>The SSL certificates.</para>
+        /// <para>The SSL certificates for an HTTPS listener.</para>
         /// </summary>
         [NameInMap("Certificates")]
         [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// <para>The ID of the SSL certificate.</para>
             /// <remarks>
-            /// <para>This parameter is required only when you create an HTTPS listener.</para>
+            /// <para>This parameter is required only for HTTPS listeners.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -43,10 +43,12 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to enable client affinity for the listener.</para>
+        /// <para>The client affinity for the listener.</para>
         /// <list type="bullet">
-        /// <item><description>If this parameter is left empty, client affinity is disabled. After client affinity is disabled, requests from a specific client IP address may be forwarded to different endpoints.</description></item>
-        /// <item><description>To enable client affinity, set this parameter to <b>SOURCE_IP</b>. In this case, when a client accesses stateful applications, requests from the same client are forwarded to the same endpoint regardless of the source port or protocol.</description></item>
+        /// <item><description><para>By default, client affinity is disabled, and requests from the same client may be routed to different endpoints.</para>
+        /// </description></item>
+        /// <item><description><para>Set to <b>SOURCE_IP</b> to enable client affinity. This setting directs all requests from the same client to the same endpoint, regardless of the source port or protocol.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -57,10 +59,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string ClientAffinity { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>A client token that ensures the idempotence of the request.</para>
+        /// <para>Generate a unique token on your client for each request. The token must contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not set this parameter, <b>ClientToken</b> is set to the value of <b>RequestId</b>. The value of <b>RequestId</b> is different for each API request.</para>
+        /// <para>If you omit this parameter, the system uses the request\&quot;s <b>RequestId</b> as the <b>ClientToken</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -71,10 +73,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The endpoint group that is associated with the custom routing listener.</para>
-        /// <para>The endpoint groups that are associated with the custom routing listener.</para>
+        /// <para>The configurations of the endpoint groups for a custom routing listener.</para>
+        /// <para>You can specify up to five endpoint groups.</para>
         /// <remarks>
-        /// <para> You can configure endpoint groups and endpoints for a custom routing listener only if <b>Type</b> is set to <b>CustomRouting</b>.</para>
+        /// <para>This parameter applies only when the listener\&quot;s routing type (<b>Type</b>) is <b>CustomRouting</b>.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("CustomRoutingEndpointGroupConfigurations")]
@@ -82,11 +84,11 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public List<CreateListenerRequestCustomRoutingEndpointGroupConfigurations> CustomRoutingEndpointGroupConfigurations { get; set; }
         public class CreateListenerRequestCustomRoutingEndpointGroupConfigurations : TeaModel {
             /// <summary>
-            /// <para>The description of the endpoint group that is associated with the custom routing listener.</para>
-            /// <para>The description can be up to 200 characters in length and cannot contain <c>http://</c> or <c>https://</c>.</para>
-            /// <para>You can specify up to five endpoint group descriptions.</para>
+            /// <para>The description of the endpoint group.</para>
+            /// <para>The description can be up to 200 characters long and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>You can enter up to 5 endpoint group descriptions.</para>
             /// <remarks>
-            /// <para> You can configure endpoint groups and endpoints for a custom routing listener only if <b>Type</b> is set to <b>CustomRouting</b>.</para>
+            /// <para>This parameter applies only when the listener\&quot;s routing type (<b>Type</b>) is <b>CustomRouting</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -97,11 +99,11 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The mapping configurations of the endpoint group that is associated with the custom routing listener.</para>
-            /// <para>You need to specify the port ranges and protocols used by the endpoint group. The ports are mapped to listener ports.</para>
-            /// <para>You can specify up to 20 mapping configurations for an endpoint group of a custom routing listener.</para>
+            /// <para>The mapping configurations for the endpoint group.</para>
+            /// <para>You must specify the port ranges and protocols for the backend service. The settings are mapped to the associated listener port ranges.</para>
+            /// <para>You can specify up to 20 mapping configurations for each endpoint group.</para>
             /// <remarks>
-            /// <para> You can configure endpoint groups and endpoints for a custom routing listener only if <b>Type</b> is set to <b>CustomRouting</b>.</para>
+            /// <para>This parameter applies only when the listener\&quot;s routing type (<b>Type</b>) is <b>CustomRouting</b>.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("DestinationConfigurations")]
@@ -109,11 +111,11 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public List<CreateListenerRequestCustomRoutingEndpointGroupConfigurationsDestinationConfigurations> DestinationConfigurations { get; set; }
             public class CreateListenerRequestCustomRoutingEndpointGroupConfigurationsDestinationConfigurations : TeaModel {
                 /// <summary>
-                /// <para>The start port used by the endpoint group that is associated with the custom routing listener.</para>
-                /// <para>Valid values: <b>1</b> to <b>65499</b>. The value of <b>FromPort</b> must be equal to or smaller than the value of <b>ToPort</b>.</para>
-                /// <para>You can specify up to 20 start ports for an endpoint group of a custom routing listener.</para>
+                /// <para>The first port of the backend service.</para>
+                /// <para>The valid port range is <b>1</b> to <b>65499</b>. The value of <b>FromPort</b> must be less than or equal to the value of <b>ToPort</b>.</para>
+                /// <para>In each endpoint group for a custom routing type listener, you can enter up to 20 backend service starting ports.</para>
                 /// <remarks>
-                /// <para> You can configure endpoint groups and endpoints for a custom routing listener only if <b>Type</b> is set to <b>CustomRouting</b>.</para>
+                /// <para>This parameter applies only when the listener\&quot;s routing type (<b>Type</b>) is <b>CustomRouting</b>.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -124,10 +126,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 public int? FromPort { get; set; }
 
                 /// <summary>
-                /// <para>The protocol used by the endpoint group that is associated with the custom routing listener.</para>
-                /// <para>You can specify up to four protocol types for an endpoint group of a custom routing listener.</para>
+                /// <para>The protocols of the backend service.</para>
+                /// <para>You can specify up to four backend service protocols for each mapping configuration.</para>
                 /// <remarks>
-                /// <para> You can configure endpoint groups and endpoints for a custom routing listener only if <b>Type</b> is set to <b>CustomRouting</b>.</para>
+                /// <para>This parameter applies only when the listener\&quot;s routing type (<b>Type</b>) is <b>CustomRouting</b>.</para>
                 /// </remarks>
                 /// </summary>
                 [NameInMap("Protocols")]
@@ -135,11 +137,11 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 public List<string> Protocols { get; set; }
 
                 /// <summary>
-                /// <para>The end port used by the endpoint group that is associated with the custom routing listener.</para>
-                /// <para>Valid values: <b>1</b> to <b>65499</b>. The value of <b>FromPort</b> must be equal to or smaller than the value of <b>ToPort</b>.</para>
-                /// <para>You can specify up to 20 end ports for an endpoint group of a custom routing listener.</para>
+                /// <para>The last port of the backend service.</para>
+                /// <para>The valid port range is <b>1</b> to <b>65499</b>. The value of <b>FromPort</b> must be less than or equal to the value of <b>ToPort</b>.</para>
+                /// <para>In each endpoint group of a listener of the custom routing type, you can enter a maximum of 20 backend service ports.</para>
                 /// <remarks>
-                /// <para> You can configure endpoint groups and endpoints for a custom routing listener only if <b>Type</b> is set to <b>CustomRouting</b>.</para>
+                /// <para>This parameter applies only when the listener\&quot;s routing type (<b>Type</b>) is <b>CustomRouting</b>.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -152,10 +154,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             }
 
             /// <summary>
-            /// <para>The endpoints that are associated with the custom routing listener.</para>
-            /// <para>You can configure up to 10 endpoints for an endpoint group of a custom routing listener.</para>
+            /// <para>The endpoint configurations.</para>
+            /// <para>You can specify up to 10 endpoints for each endpoint group.</para>
             /// <remarks>
-            /// <para> You can configure endpoint groups and endpoints for a custom routing listener only if <b>Type</b> is set to <b>CustomRouting</b>.</para>
+            /// <para>This parameter applies only when the listener\&quot;s routing type (<b>Type</b>) is <b>CustomRouting</b>.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("EndpointConfigurations")]
@@ -163,9 +165,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public List<CreateListenerRequestCustomRoutingEndpointGroupConfigurationsEndpointConfigurations> EndpointConfigurations { get; set; }
             public class CreateListenerRequestCustomRoutingEndpointGroupConfigurationsEndpointConfigurations : TeaModel {
                 /// <summary>
-                /// <para>The name of the vSwitch attached to the endpoint of the custom routing listener.</para>
+                /// <para>The vSwitch of the custom routing listener.</para>
                 /// <remarks>
-                /// <para> You can configure endpoint groups and endpoints for a custom routing listener only if <b>Type</b> is set to <b>CustomRouting</b>.</para>
+                /// <para>This parameter applies only when the listener\&quot;s routing type (<b>Type</b>) is <b>CustomRouting</b>.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -176,10 +178,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 public string Endpoint { get; set; }
 
                 /// <summary>
-                /// <para>The destinations in the endpoint that is associated with the custom routing listener.</para>
-                /// <para>You can specify up to 20 traffic destinations for each endpoint of a custom routing listener.</para>
+                /// <para>The destination configurations for a custom routing listener.</para>
+                /// <para>You can specify up to 20 destinations for each endpoint.</para>
                 /// <remarks>
-                /// <para> You can configure endpoint groups and endpoints for a custom routing listener only if <b>Type</b> is set to <b>CustomRouting</b>.</para>
+                /// <para>This parameter applies only when the listener\&quot;s routing type (<b>Type</b>) is <b>CustomRouting</b>.</para>
                 /// </remarks>
                 /// </summary>
                 [NameInMap("PolicyConfigurations")]
@@ -187,11 +189,11 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 public List<CreateListenerRequestCustomRoutingEndpointGroupConfigurationsEndpointConfigurationsPolicyConfigurations> PolicyConfigurations { get; set; }
                 public class CreateListenerRequestCustomRoutingEndpointGroupConfigurationsEndpointConfigurationsPolicyConfigurations : TeaModel {
                     /// <summary>
-                    /// <para>The IP address of the destination.</para>
-                    /// <para>This parameter takes effect only if <b>TrafficToEndpointPolicy</b> is set to <b>AllowCustom</b>.</para>
-                    /// <para>You can specify up to 20 destination IP addresses for each endpoint of a custom routing listener.</para>
+                    /// <para>The IP address of the destination that is allowed to receive traffic.</para>
+                    /// <para>This parameter is required only when <b>TrafficToEndpointPolicy</b> is set to <b>AllowCustom</b>.</para>
+                    /// <para>You can specify up to 20 destination IP addresses for each endpoint.</para>
                     /// <remarks>
-                    /// <para> You can configure endpoint groups and endpoints for a custom routing listener only if <b>Type</b> is set to <b>CustomRouting</b>.</para>
+                    /// <para>This parameter applies only when the listener\&quot;s routing type (<b>Type</b>) is <b>CustomRouting</b>.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -202,12 +204,12 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                     public string Address { get; set; }
 
                     /// <summary>
-                    /// <para>The port ranges of the destination to which traffic is forwarded. The value of this parameter must fall within the port range of the endpoint group.</para>
-                    /// <para>If you do not specify this parameter, traffic is forwarded over all ports.</para>
-                    /// <para>This parameter takes effect only if <b>TrafficToEndpointPolicy</b> is set to <b>AllowCustom</b>.</para>
-                    /// <para>You can specify port ranges for up to 20 destinations in each endpoint of a custom routing listener. You can specify up to five port ranges for each destination.</para>
+                    /// <para>The port range of the destination that is allowed to receive traffic. The port range must be within the port range of the backend service.</para>
+                    /// <para>If you leave this parameter empty, all ports of the destination are allowed.</para>
+                    /// <para>This parameter is required only when <b>TrafficToEndpointPolicy</b> is set to <b>AllowCustom</b>.</para>
+                    /// <para>You can specify up to 20 port ranges for each endpoint, and up to 5 port ranges for each destination.</para>
                     /// <remarks>
-                    /// <para> You can configure endpoint groups and endpoints for a custom routing listener only if <b>Type</b> is set to <b>CustomRouting</b>.</para>
+                    /// <para>This parameter applies only when the listener\&quot;s routing type (<b>Type</b>) is <b>CustomRouting</b>.</para>
                     /// </remarks>
                     /// </summary>
                     [NameInMap("PortRanges")]
@@ -215,11 +217,11 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                     public List<CreateListenerRequestCustomRoutingEndpointGroupConfigurationsEndpointConfigurationsPolicyConfigurationsPortRanges> PortRanges { get; set; }
                     public class CreateListenerRequestCustomRoutingEndpointGroupConfigurationsEndpointConfigurationsPolicyConfigurationsPortRanges : TeaModel {
                         /// <summary>
-                        /// <para>The start port of the port range. The value of this parameter must fall within the port range of the backend service.</para>
-                        /// <para>This parameter takes effect only if <b>TrafficToEndpointPolicy</b> is set to <b>AllowCustom</b>.</para>
-                        /// <para>You can specify port ranges for up to 20 destinations in each endpoint of a custom routing listener. You can specify up to five start ports for each destination.</para>
+                        /// <para>The first port of the destination that is allowed to receive traffic. The port must be within the port range of the backend service.</para>
+                        /// <para>This parameter is required only when <b>TrafficToEndpointPolicy</b> is set to <b>AllowCustom</b>.</para>
+                        /// <para>You can specify up to 20 port ranges for each endpoint, and up to 5 first ports for each destination.</para>
                         /// <remarks>
-                        /// <para> You can configure endpoint groups and endpoints for a custom routing listener only if <b>Type</b> is set to <b>CustomRouting</b>.</para>
+                        /// <para>This parameter applies only when the listener\&quot;s routing type (<b>Type</b>) is <b>CustomRouting</b>.</para>
                         /// </remarks>
                         /// 
                         /// <b>Example:</b>
@@ -230,11 +232,11 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                         public int? FromPort { get; set; }
 
                         /// <summary>
-                        /// <para>The end port of the destination port range. The value of this parameter must fall within the port range of the backend service.</para>
-                        /// <para>This parameter takes effect only if <b>TrafficToEndpointPolicy</b> is set to <b>AllowCustom</b>.</para>
-                        /// <para>You can specify port ranges for up to 20 destinations in each endpoint of a custom routing listener. You can specify up to five end ports for each destination.</para>
+                        /// <para>The last port of the destination that is allowed to receive traffic. The port must be within the port range of the backend service.</para>
+                        /// <para>This parameter is required only when <b>TrafficToEndpointPolicy</b> is set to <b>AllowCustom</b>.</para>
+                        /// <para>You can specify up to 20 port ranges for each endpoint, and up to 5 last ports for each destination.</para>
                         /// <remarks>
-                        /// <para> You can configure endpoint groups and endpoints for a custom routing listener only if <b>Type</b> is set to <b>CustomRouting</b>.</para>
+                        /// <para>This parameter applies only when the listener\&quot;s routing type (<b>Type</b>) is <b>CustomRouting</b>.</para>
                         /// </remarks>
                         /// 
                         /// <b>Example:</b>
@@ -249,14 +251,18 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 }
 
                 /// <summary>
-                /// <para>The traffic policy for the endpoint that is associated with the custom routing listener. Default value: DenyAll. Valid values:</para>
+                /// <para>The traffic policy for the backend service of a custom routing listener. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>DenyAll</b> (default): denies all traffic to the specified backend service.</description></item>
-                /// <item><description><b>AllowAll</b>: allows all traffic to the specified backend service.</description></item>
-                /// <item><description><b>AllowCustom</b>: allows traffic only to specified destinations in the endpoint. If you set this parameter to AllowCustom, you must specify IP addresses and port ranges as the destinations to which you want to distribute traffic. If you specify only IP addresses and do not specify port ranges, GA can forward traffic to the specified IP addresses over all destination ports.</description></item>
+                /// <item><description><para><b>DenyAll</b> (default): Denies all traffic to the specified backend service.</para>
+                /// </description></item>
+                /// <item><description><para><b>AllowAll</b>: Allows all traffic to the specified backend service.</para>
+                /// </description></item>
+                /// <item><description><para><b>AllowCustom</b>: Allows traffic to specific destinations.
+                /// You must specify the IP addresses and port ranges of the allowed destinations. If no port range is specified, all ports of the destination are allowed.</para>
+                /// </description></item>
                 /// </list>
                 /// <remarks>
-                /// <para> You can configure endpoint groups and endpoints for a custom routing listener only if <b>Type</b> is set to <b>CustomRouting</b>.</para>
+                /// <para>This parameter applies only when the listener\&quot;s routing type (<b>Type</b>) is <b>CustomRouting</b>.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -267,10 +273,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 public string TrafficToEndpointPolicy { get; set; }
 
                 /// <summary>
-                /// <para>The service type of the endpoint that is associated with the custom routing listener. Default value: PrivateSubNet. Set the value to</para>
-                /// <para><b>PrivateSubNet</b>, which specifies a private CIDR block.</para>
+                /// <para>The type of the backend service for a custom routing listener. Valid value:</para>
+                /// <para><b>PrivateSubNet</b> (default): a private CIDR block.</para>
                 /// <remarks>
-                /// <para> You can configure endpoint groups and endpoints for a custom routing listener only if <b>Type</b> is set to <b>CustomRouting</b>.</para>
+                /// <para>This parameter applies only when the listener\&quot;s routing type (<b>Type</b>) is <b>CustomRouting</b>.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -283,10 +289,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             }
 
             /// <summary>
-            /// <para>The region ID of the endpoint group that is associated with the custom routing listener.</para>
-            /// <para>You can enter the region IDs of up to five endpoint groups.</para>
+            /// <para>The ID of the region where the endpoint group is created.</para>
+            /// <para>You can enter up to 5 endpoint group region IDs.</para>
             /// <remarks>
-            /// <para> You can configure endpoint groups and endpoints for a custom routing listener only if <b>Type</b> is set to <b>CustomRouting</b>.</para>
+            /// <para>This parameter applies only when the listener\&quot;s routing type (<b>Type</b>) is <b>CustomRouting</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -297,11 +303,11 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string EndpointGroupRegion { get; set; }
 
             /// <summary>
-            /// <para>The name of the endpoint group that is associated with the custom routing listener.</para>
-            /// <para>The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</para>
-            /// <para>You can specify up to five endpoint group names.</para>
+            /// <para>The name of the endpoint group.</para>
+            /// <para>The name must be 1 to 128 characters long, start with a letter or a Chinese character, and can contain digits, periods (.), underscores (_), and hyphens (-).</para>
+            /// <para>You can enter up to 5 endpoint group names.</para>
             /// <remarks>
-            /// <para> You can configure endpoint groups and endpoints for a custom routing listener only if <b>Type</b> is set to <b>CustomRouting</b>.</para>
+            /// <para>This parameter applies only when the listener\&quot;s routing type (<b>Type</b>) is <b>CustomRouting</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -315,7 +321,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// <para>The description of the listener.</para>
-        /// <para>The description can be up to 200 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The description can be up to 200 characters long and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Listener</para>
@@ -325,10 +331,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The endpoint groups that are associated with the intelligent routing listener.</para>
-        /// <para>You can configure up to 10 endpoint groups for an intelligent routing listener.</para>
+        /// <para>The configurations of the endpoint groups for a standard listener.</para>
+        /// <para>You can specify up to 10 endpoint groups.</para>
         /// <remarks>
-        /// <para> You can configure endpoint groups and endpoints only if you set <b>Type</b> to <b>Standard</b>.</para>
+        /// <para>This parameter applies only when the listener\&quot;s routing type (<b>Type</b>) is <b>Standard</b>.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("EndpointGroupConfigurations")]
@@ -336,7 +342,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public List<CreateListenerRequestEndpointGroupConfigurations> EndpointGroupConfigurations { get; set; }
         public class CreateListenerRequestEndpointGroupConfigurations : TeaModel {
             /// <summary>
-            /// <para>The endpoints that are associated with the intelligent routing listener.</para>
+            /// <para>The endpoint configurations.</para>
             /// </summary>
             [NameInMap("EndpointConfigurations")]
             [Validation(Required=false)]
@@ -347,18 +353,22 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 public List<string> ApiKeys { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to automatically preserve client IP addresses. Valid values:</para>
+                /// <para>Specifies whether to preserve client source IP addresses. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b></description></item>
-                /// <item><description><b>false</b> (default)</description></item>
+                /// <item><description><para><b>true</b>: enables the feature.</para>
+                /// </description></item>
+                /// <item><description><para><b>false</b> (default): disables the feature.</para>
+                /// </description></item>
                 /// </list>
                 /// <remarks>
                 /// <list type="bullet">
-                /// <item><description>By default, client IP address preservation is disabled for an endpoint group that is associated with a UDP or TCP listener. You can configure this parameter based on your business requirements.</description></item>
-                /// <item><description>By default, client IP address preservation is enabled for an endpoint group that is associated with a HTTP or HTTPS listener. Client IP addresses are obtained by using the X-Forwarded-For header. You cannot disable the feature.</description></item>
-                /// <item><description>EnableClientIPPreservation and EnableProxyProtocol cannot be set to true at the same time.<remarks>
-                /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/158080.html">Preserve client IP addresses</a>.</para>
-                /// </remarks>
+                /// <item><description><para>This feature is disabled by default for endpoint groups of TCP or UDP listeners. You can enable it as needed.</para>
+                /// </description></item>
+                /// <item><description><para>This feature is enabled by default for endpoint groups of HTTP or HTTPS listeners. Client source IP addresses are retrieved from the <c>X-Forwarded-For</c> header. You cannot disable this feature.</para>
+                /// </description></item>
+                /// <item><description><para>You cannot set both <c>EnableClientIPPreservation</c> and <c>EnableProxyProtocol</c> to <c>true</c>.</para>
+                /// </description></item>
+                /// <item><description><para>For more information, see <a href="https://help.aliyun.com/document_detail/158080.html">Preserve client source IP addresses</a>.</para>
                 /// </description></item>
                 /// </list>
                 /// </remarks>
@@ -368,17 +378,20 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 public bool? EnableClientIPPreservation { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to use the proxy protocol to preserve client IP addresses. Valid values:</para>
+                /// <para>Specifies whether to use the proxy protocol to preserve client source IP addresses. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b></description></item>
-                /// <item><description><b>false</b> (default)</description></item>
+                /// <item><description><para><b>true</b>: enables the feature.</para>
+                /// </description></item>
+                /// <item><description><para><b>false</b> (default): disables the feature.</para>
+                /// </description></item>
                 /// </list>
                 /// <remarks>
                 /// <list type="bullet">
-                /// <item><description>This parameter is supported only by endpoint groups associated with TCP listeners.</description></item>
-                /// <item><description>EnableClientIPPreservation and EnableProxyProtocol cannot be set to true at the same time.<remarks>
-                /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/158080.html">Preserve client IP addresses</a>.</para>
-                /// </remarks>
+                /// <item><description><para>You can configure this parameter only for endpoint groups of TCP listeners.</para>
+                /// </description></item>
+                /// <item><description><para>You cannot set both <c>EnableClientIPPreservation</c> and <c>EnableProxyProtocol</c> to <c>true</c>.</para>
+                /// </description></item>
+                /// <item><description><para>For more information, see <a href="https://help.aliyun.com/document_detail/158080.html">Preserve client source IP addresses</a>.</para>
                 /// </description></item>
                 /// </list>
                 /// </remarks>
@@ -388,10 +401,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 public bool? EnableProxyProtocol { get; set; }
 
                 /// <summary>
-                /// <para>The IP address or domain name of the endpoint that is associated with the intelligent routing listener.</para>
-                /// <para>You can enter the IP addresses or domain names of up to 100 endpoints in an endpoint group that is associated with the intelligent routing listener.</para>
+                /// <para>The IP address or domain name of the endpoint.</para>
+                /// <para>In an endpoint group of an intelligent routing listener, you can enter up to 100 IP addresses or domain names of endpoints.</para>
                 /// <remarks>
-                /// <para> If you set <b>Type</b> to <b>Standard</b>, you can configure endpoint groups and endpoints, and this parameter is required.</para>
+                /// <para>This parameter applies only when the listener\&quot;s routing type (<b>Type</b>) is <b>Standard</b>.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -412,7 +425,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 /// <summary>
                 /// <para>The private IP address of the ENI.</para>
                 /// <remarks>
-                /// <para> This parameter is available only when you set the endpoint type to <b>ENI</b>. If you leave this parameter empty, the primary private IP address of the ENI is used.</para>
+                /// <para>If the endpoint type is <b>ENI</b>, you can specify this parameter. If you do not specify this parameter, the primary private IP address of the ENI is used.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -423,31 +436,43 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 public string SubAddress { get; set; }
 
                 /// <summary>
-                /// <para>The type of the endpoint that is associated with the intelligent routing listener. Valid values:</para>
+                /// <para>The type of the endpoint. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Domain</b>: a custom domain name.</description></item>
-                /// <item><description><b>Ip</b>: a custom IP address.</description></item>
-                /// <item><description><b>PublicIp</b>: a public IP address provided by Alibaba Cloud.</description></item>
-                /// <item><description><b>ECS</b>: an Elastic Compute Service (ECS) instance.</description></item>
-                /// <item><description><b>SLB</b>: a Server Load Balancer (SLB) instance.</description></item>
-                /// <item><description><b>ALB</b>: an Application Load Balancer (ALB) instance.</description></item>
-                /// <item><description><b>OSS</b>: an Object Storage Service (OSS) bucket.</description></item>
-                /// <item><description><b>ENI</b>: an elastic network interface (ENI).</description></item>
-                /// <item><description><b>NLB</b>: a Network Load Balancer (NLB) instance.</description></item>
-                /// <item><description><b>IpTarget</b>: a custom private IP address.</description></item>
-                /// </list>
-                /// <para>You can specify up to 100 endpoint types in the endpoint group that is associated with the intelligent routing listener.</para>
-                /// <remarks>
-                /// <list type="bullet">
-                /// <item><description>If you set <b>Type</b> to <b>Standard</b>, you can configure the endpoint group and endpoint that are associated with the intelligent routing listener. In addition, this parameter is required.</description></item>
-                /// <item><description>If you set this parameter to <b>ECS</b>, <b>ENI</b>, <b>SLB</b>, <b>ALB</b>, <b>NLB</b>, or <b>IpTarget</b> and the AliyunServiceRoleForGaVpcEndpoint service-linked role does not exist, the system automatically creates the role.</description></item>
-                /// <item><description>If you set this parameter to <b>ALB</b> and the AliyunServiceRoleForGaAlb service-linked role does not exist, the system automatically creates the role.</description></item>
-                /// <item><description>If you set this parameter to <b>OSS</b> and the AliyunServiceRoleForGaOss service-linked role does not exist, the system automatically creates the role.</description></item>
-                /// <item><description>If you set this parameter to <b>NLB</b> and the AliyunServiceRoleForGaNlb service-linked role does not exist, the system automatically creates the role.<remarks>
-                /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/178360.html">Service-linked roles</a>.</para>
-                /// </remarks>
+                /// <item><description><para><b>Domain</b>: a custom domain name.</para>
+                /// </description></item>
+                /// <item><description><para><b>Ip</b>: a custom IP address.</para>
+                /// </description></item>
+                /// <item><description><para><b>PublicIp</b>: a public IP address of an Alibaba Cloud service.</para>
+                /// </description></item>
+                /// <item><description><para><b>ECS</b>: an Elastic Compute Service (ECS) instance.</para>
+                /// </description></item>
+                /// <item><description><para><b>SLB</b>: a Server Load Balancer (SLB) instance.</para>
+                /// </description></item>
+                /// <item><description><para><b>ALB</b>: an Application Load Balancer (ALB) instance.</para>
+                /// </description></item>
+                /// <item><description><para><b>OSS</b>: an Object Storage Service (OSS) bucket.</para>
+                /// </description></item>
+                /// <item><description><para><b>ENI</b>: an elastic network interface (ENI).</para>
+                /// </description></item>
+                /// <item><description><para><b>NLB</b>: a Network Load Balancer (NLB) instance.</para>
+                /// </description></item>
+                /// <item><description><para><b>IpTarget</b>: a custom private IP address.</para>
                 /// </description></item>
                 /// </list>
+                /// <para>You can specify up to 100 endpoints in an endpoint group.</para>
+                /// <remarks>
+                /// <list type="bullet">
+                /// <item><description><para>This parameter applies only when the listener\&quot;s routing type (<b>Type</b>) is <b>Standard</b>.</para>
+                /// </description></item>
+                /// <item><description><para>When you add endpoints, Global Accelerator may create service-linked roles to access your resources. The role created depends on the endpoint type:</para>
+                /// </description></item>
+                /// <item><description></description></item>
+                /// <item><description></description></item>
+                /// <item><description></description></item>
+                /// </list>
+                /// <remarks>
+                /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/178360.html">Service-linked roles</a>.</para>
+                /// </remarks>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -458,17 +483,17 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>The IDs of vSwitches that are deployed in the VPC.</para>
+                /// <para>The list of vSwitches in the VPC. You can specify up to two vSwitch IDs.</para>
                 /// </summary>
                 [NameInMap("VSwitchIds")]
                 [Validation(Required=false)]
                 public List<string> VSwitchIds { get; set; }
 
                 /// <summary>
-                /// <para>The virtual private cloud (VPC) ID.</para>
-                /// <para>You can specify one VPC ID for an endpoint group of an intelligent routing listener.</para>
+                /// <para>The ID of the Virtual Private Cloud (VPC).</para>
+                /// <para>In an endpoint group of an intelligent routing listener, you can enter a maximum of 1 VPC ID.</para>
                 /// <remarks>
-                /// <para> This parameter is valid and required only if Type is set to <b>IpTarget</b>.</para>
+                /// <para>This parameter is required only for <b>IpTarget</b> endpoints.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -479,13 +504,15 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 public string VpcId { get; set; }
 
                 /// <summary>
-                /// <para>The weight of the endpoint that is associated with the intelligent routing listener.</para>
+                /// <para>The weight of the endpoint.</para>
                 /// <para>Valid values: <b>0</b> to <b>255</b>.</para>
-                /// <para>You can specify the weights of up to 100 endpoints for an endpoint group of an intelligent routing listener.</para>
+                /// <para>In an endpoint group for an intelligent routing type listener, you can enter weights for up to 100 endpoints.</para>
                 /// <remarks>
                 /// <list type="bullet">
-                /// <item><description>If you set <b>Type</b> to <b>Standard</b>, you can configure the endpoint group and endpoint that are associated with the intelligent routing listener. In addition, this parameter is required.</description></item>
-                /// <item><description>If the weight of an endpoint is set to 0, GA stops distributing network traffic to the endpoint. Proceed with caution.</description></item>
+                /// <item><description><para>This parameter applies only when the listener\&quot;s routing type (<b>Type</b>) is <b>Standard</b>.</para>
+                /// </description></item>
+                /// <item><description><para>If an endpoint\&quot;s weight is set to 0, Global Accelerator stops sending traffic to it. Use this setting with caution.</para>
+                /// </description></item>
                 /// </list>
                 /// </remarks>
                 /// 
@@ -499,11 +526,11 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             }
 
             /// <summary>
-            /// <para>The description of the endpoint group that is associated with the intelligent routing listener.</para>
-            /// <para>The description can be up to 200 characters in length and cannot contain <c>http://</c> or <c>https://</c>.</para>
-            /// <para>You can enter the descriptions of up to 10 endpoint groups.</para>
+            /// <para>The description of the endpoint group.</para>
+            /// <para>The description can be up to 200 characters long and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>You can enter up to 10 endpoint group descriptions.</para>
             /// <remarks>
-            /// <para> You can configure endpoint groups and endpoints only if you set <b>Type</b> to <b>Standard</b>.</para>
+            /// <para>This parameter applies only when the listener\&quot;s routing type (<b>Type</b>) is <b>Standard</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -514,11 +541,11 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string EndpointGroupDescription { get; set; }
 
             /// <summary>
-            /// <para>The name of the endpoint group that is associated with the intelligent routing listener.</para>
-            /// <para>The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</para>
-            /// <para>You can enter the names of up to 10 endpoint groups.</para>
+            /// <para>The name of the endpoint group.</para>
+            /// <para>The name must be 1 to 128 characters long, start with a letter or a Chinese character, and can contain digits, periods (.), underscores (_), and hyphens (-).</para>
+            /// <para>You can enter up to 10 endpoint group names.</para>
             /// <remarks>
-            /// <para> You can configure endpoint groups and endpoints only if you set <b>Type</b> to <b>Standard</b>.</para>
+            /// <para>This parameter applies only when the listener\&quot;s routing type (<b>Type</b>) is <b>Standard</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -529,10 +556,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string EndpointGroupName { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the endpoint group that is associated with the intelligent routing listener.</para>
-            /// <para>You can enter the IDs of up to 10 regions.</para>
+            /// <para>The ID of the region where the endpoint group is created.</para>
+            /// <para>You can enter up to 10 endpoint group region IDs.</para>
             /// <remarks>
-            /// <para> You can configure endpoint groups and endpoints only if you set <b>Type</b> to <b>Standard</b>.</para>
+            /// <para>This parameter applies only when the listener\&quot;s routing type (<b>Type</b>) is <b>Standard</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -543,16 +570,20 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string EndpointGroupRegion { get; set; }
 
             /// <summary>
-            /// <para>The type of the endpoint group associated with the intelligent routing listener. Valid values:</para>
+            /// <para>The type of the endpoint group. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>default</b> (default): a default endpoint group.</description></item>
-            /// <item><description><b>virtual</b>: a virtual endpoint group.</description></item>
+            /// <item><description><para><b>default</b> (default): a default endpoint group.</para>
+            /// </description></item>
+            /// <item><description><para><b>virtual</b>: a virtual endpoint group.</para>
+            /// </description></item>
             /// </list>
-            /// <para>You can specify up to 10 endpoint group types.</para>
+            /// <para>You can enter up to 10 endpoint group types.</para>
             /// <remarks>
             /// <list type="bullet">
-            /// <item><description>You can configure endpoint groups and endpoints for an intelligent routing listener only if you set <b>Type</b> to <b>Standard</b>.</description></item>
-            /// <item><description>Only HTTP and HTTPS intelligent routing listeners support virtual endpoint groups.</description></item>
+            /// <item><description><para>This parameter applies only when the listener\&quot;s routing type (<b>Type</b>) is <b>Standard</b>.</para>
+            /// </description></item>
+            /// <item><description><para>You can create virtual endpoint groups only for HTTP or HTTPS listeners.</para>
+            /// </description></item>
             /// </list>
             /// </remarks>
             /// 
@@ -563,36 +594,60 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [Validation(Required=false)]
             public string EndpointGroupType { get; set; }
 
+            /// <summary>
+            /// <para>The IP version used by the backend service. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>IPv4</b> (default): GA uses only IPv4 addresses to communicate with backend services.</para>
+            /// </description></item>
+            /// <item><description><para><b>IPv6</b>: GA uses only IPv6 addresses to communicate with backend services.</para>
+            /// </description></item>
+            /// <item><description><para><b>ProtocolAffinity</b>: GA uses the same IP version as the client request to communicate with backend services.</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>IPv4</para>
+            /// </summary>
             [NameInMap("EndpointIpVersion")]
             [Validation(Required=false)]
             public string EndpointIpVersion { get; set; }
 
             /// <summary>
-            /// <para>The backend service protocol version of the endpoint that is associated with the intelligent routing listener. Valid values:</para>
+            /// <para>The protocol version of the backend service. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>HTTP1.1</b> (default)</description></item>
-            /// <item><description><b>HTTP2</b></description></item>
+            /// <item><description><para><b>HTTP1.1</b> (default): HTTP/1.1</para>
+            /// </description></item>
+            /// <item><description><para><b>HTTP2</b>: HTTP/2</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> You can specify this parameter only if EndpointRequestProtocol is set to HTTPS.</para>
+            /// <para>This parameter is available only when EndpointRequestProtocol is set to HTTPS.</para>
             /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>HTTP1.1</para>
             /// </summary>
             [NameInMap("EndpointProtocolVersion")]
             [Validation(Required=false)]
             public string EndpointProtocolVersion { get; set; }
 
             /// <summary>
-            /// <para>The backend service protocol of the endpoint that is associated with the intelligent routing listener. Valid values:</para>
+            /// <para>The protocol used by the backend service. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>HTTP</b> (default)</description></item>
-            /// <item><description><b>HTTPS</b></description></item>
+            /// <item><description><para><b>HTTP</b> (default)</para>
+            /// </description></item>
+            /// <item><description><para><b>HTTPS</b></para>
+            /// </description></item>
             /// </list>
-            /// <para>You can specify up to 10 backend service protocols.</para>
+            /// <para>You can enter up to 10 backend service protocols.</para>
             /// <remarks>
             /// <list type="bullet">
-            /// <item><description>You can configure endpoint groups and endpoints for an intelligent routing listener only if you set <b>Type</b> to <b>Standard</b>.</description></item>
-            /// <item><description>You can specify this parameter only for HTTP and HTTPS intelligent routing listeners.</description></item>
-            /// <item><description>For an HTTP listener, the backend service protocol must be <b>HTTP</b>.</description></item>
+            /// <item><description><para>This parameter applies only when the listener\&quot;s routing type (<b>Type</b>) is <b>Standard</b>.</para>
+            /// </description></item>
+            /// <item><description><para>You can configure this parameter only for endpoint groups of HTTP or HTTPS listeners.</para>
+            /// </description></item>
+            /// <item><description><para>For an HTTP listener, the backend service protocol must be <b>HTTP</b>.</para>
+            /// </description></item>
             /// </list>
             /// </remarks>
             /// 
@@ -606,12 +661,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// <para>Specifies whether to enable health checks for the endpoint group. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: enables the health check feature.</description></item>
-            /// <item><description><b>false</b> (default): disables the health check feature.</description></item>
+            /// <item><description><para><b>true</b>: Enables health checks.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b> (Default): Disables health checks.</para>
+            /// </description></item>
             /// </list>
-            /// <para>You can enable the health check feature for up to 10 endpoint groups.</para>
+            /// <para>You can enable health checks for up to 10 endpoint groups.</para>
             /// <remarks>
-            /// <para> You can configure endpoint groups and endpoints only if you set <b>Type</b> to <b>Standard</b>.</para>
+            /// <para>This parameter applies only when the listener\&quot;s routing type (<b>Type</b>) is <b>Standard</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -621,15 +678,21 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [Validation(Required=false)]
             public bool? HealthCheckEnabled { get; set; }
 
+            /// <summary>
+            /// <para>The domain name that is used for health checks.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="http://www.taobao.com">www.taobao.com</a></para>
+            /// </summary>
             [NameInMap("HealthCheckHost")]
             [Validation(Required=false)]
             public string HealthCheckHost { get; set; }
 
             /// <summary>
-            /// <para>The interval at which health checks are performed. Unit: seconds.</para>
-            /// <para>You can specify up to 10 health check intervals.</para>
+            /// <para>The health check interval, in seconds.</para>
+            /// <para>You can enter up to 10 health check intervals.</para>
             /// <remarks>
-            /// <para> You can configure endpoint groups and endpoints only if you set <b>Type</b> to <b>Standard</b>.</para>
+            /// <para>This parameter applies only when the listener\&quot;s routing type (<b>Type</b>) is <b>Standard</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -640,10 +703,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public long? HealthCheckIntervalSeconds { get; set; }
 
             /// <summary>
-            /// <para>The health check path.</para>
-            /// <para>You can specify up to 10 health check paths.</para>
+            /// <para>The path to which health check requests are sent.</para>
+            /// <para>You can enter up to 10 health check paths.</para>
             /// <remarks>
-            /// <para> You can configure endpoint groups and endpoints only if you set <b>Type</b> to <b>Standard</b>.</para>
+            /// <para>This parameter applies only when the listener\&quot;s routing type (<b>Type</b>) is <b>Standard</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -654,10 +717,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string HealthCheckPath { get; set; }
 
             /// <summary>
-            /// <para>The port that you want to use for health checks. Valid values: <b>1</b> to <b>65535</b>.</para>
-            /// <para>You can specify up to 10 ports for health checks.</para>
+            /// <para>The port that is used for health checks. Valid values: <b>1</b> to <b>65535</b>.</para>
+            /// <para>You can enter a maximum of 10 ports for health checks.</para>
             /// <remarks>
-            /// <para> You can configure endpoint groups and endpoints only if you set <b>Type</b> to <b>Standard</b>.</para>
+            /// <para>This parameter applies only when the listener\&quot;s routing type (<b>Type</b>) is <b>Standard</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -670,13 +733,16 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// <para>The protocol over which health check requests are sent. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>tcp</b> or <b>TCP</b></description></item>
-            /// <item><description><b>http</b> or <b>HTTP</b></description></item>
-            /// <item><description><b>https</b> or <b>HTTPS</b></description></item>
+            /// <item><description><para><b>tcp</b> or <b>TCP</b>: TCP</para>
+            /// </description></item>
+            /// <item><description><para><b>http</b> or <b>HTTP</b>: HTTP</para>
+            /// </description></item>
+            /// <item><description><para><b>https</b> or <b>HTTPS</b>: HTTPS</para>
+            /// </description></item>
             /// </list>
-            /// <para>You can specify up to 10 health check protocols.</para>
+            /// <para>You can enter up to 10 health check protocols.</para>
             /// <remarks>
-            /// <para> You can configure endpoint groups and endpoints only if you set <b>Type</b> to <b>Standard</b>.</para>
+            /// <para>This parameter applies only when the listener\&quot;s routing type (<b>Type</b>) is <b>Standard</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -687,21 +753,25 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string HealthCheckProtocol { get; set; }
 
             /// <summary>
-            /// <para>The port mappings.</para>
+            /// <para>The port mapping. You can specify up to five port mappings.</para>
             /// </summary>
             [NameInMap("PortOverrides")]
             [Validation(Required=false)]
             public List<CreateListenerRequestEndpointGroupConfigurationsPortOverrides> PortOverrides { get; set; }
             public class CreateListenerRequestEndpointGroupConfigurationsPortOverrides : TeaModel {
                 /// <summary>
-                /// <para>The endpoint port that is mapped to the listener port.</para>
-                /// <para>You can specify endpoint ports in up to five port mappings.</para>
+                /// <para>The endpoint port that is specified in the port mapping.</para>
+                /// <para>You can enter a maximum of 5 endpoint ports for port mapping.</para>
                 /// <remarks>
                 /// <list type="bullet">
-                /// <item><description>You can configure endpoint groups and endpoints for an intelligent routing listener only if you set <b>Type</b> to <b>Standard</b>.</description></item>
-                /// <item><description>You cannot configure port mappings for virtual endpoint groups of TCP listeners. If a virtual endpoint group already exists on the listener, you cannot configure port mappings for the default endpoint group. If port mappings are configured for the default endpoint group, you cannot add a virtual endpoint group.</description></item>
-                /// <item><description>If you configure port mappings for a listener, you cannot modify the listener protocol. You can only switch between HTTP and HTTPS.</description></item>
-                /// <item><description>Listener port: When you modify the listener port range, make sure that the port range includes the ports configured in port mappings. For example, if you set the listener port range to 80 to 82 and map the listener ports to endpoint ports 100 to 102, you cannot change the listener port range to 80 to 81.</description></item>
+                /// <item><description><para>This parameter applies only when the listener\&quot;s routing type (<b>Type</b>) is <b>Standard</b>.</para>
+                /// </description></item>
+                /// <item><description><para>For TCP listeners, you cannot configure a port mapping for a virtual endpoint group. If a virtual endpoint group already exists for the listener, you cannot configure a port mapping for the default endpoint group. If a port mapping is configured for the default endpoint group, you cannot add a virtual endpoint group to the listener.</para>
+                /// </description></item>
+                /// <item><description><para>After you configure a port mapping, you cannot modify the listener protocol, except for switching between HTTP and HTTPS.</para>
+                /// </description></item>
+                /// <item><description><para>When you modify the listener port range, make sure that the new port range includes all listener ports that are specified in the port mapping. For example, if the listener port range is 80-82 and the listener ports are mapped to the endpoint ports 100-102, you cannot change the listener port range to 80-81.</para>
+                /// </description></item>
                 /// </list>
                 /// </remarks>
                 /// 
@@ -713,14 +783,18 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 public long? EndpointPort { get; set; }
 
                 /// <summary>
-                /// <para>The listener port that is mapped to the endpoint port.</para>
-                /// <para>You can specify listener ports in up to five port mappings.</para>
+                /// <para>The listener port that is specified in the port mapping.</para>
+                /// <para>You can enter up to 5 listener ports for port mappings.</para>
                 /// <remarks>
                 /// <list type="bullet">
-                /// <item><description>You can configure endpoint groups and endpoints for an intelligent routing listener only if you set <b>Type</b> to <b>Standard</b>.</description></item>
-                /// <item><description>You cannot configure port mappings for virtual endpoint groups of TCP listeners. If a virtual endpoint group already exists on the listener, you cannot configure port mappings for the default endpoint group. If port mappings are configured for the default endpoint group, you cannot add a virtual endpoint group.</description></item>
-                /// <item><description>If you configure port mappings for a listener, you cannot modify the listener protocol. You can only switch between HTTP and HTTPS.</description></item>
-                /// <item><description>Listener port: When you modify the listener port range, make sure that the port range includes the ports configured in port mappings. For example, if you set the listener port range to 80 to 82 and map the listener ports to endpoint ports 100 to 102, you cannot change the listener port range to 80 to 81.</description></item>
+                /// <item><description><para>This parameter applies only when the listener\&quot;s routing type (<b>Type</b>) is <b>Standard</b>.</para>
+                /// </description></item>
+                /// <item><description><para>For TCP listeners, you cannot configure a port mapping for a virtual endpoint group. If a virtual endpoint group already exists for the listener, you cannot configure a port mapping for the default endpoint group. If a port mapping is configured for the default endpoint group, you cannot add a virtual endpoint group to the listener.</para>
+                /// </description></item>
+                /// <item><description><para>After you configure a port mapping, you cannot modify the listener protocol, except for switching between HTTP and HTTPS.</para>
+                /// </description></item>
+                /// <item><description><para>When you modify the listener port range, make sure that the new port range includes all listener ports that are specified in the port mapping. For example, if the listener port range is 80-82 and the listener ports are mapped to the endpoint ports 100-102, you cannot change the listener port range to 80-81.</para>
+                /// </description></item>
                 /// </list>
                 /// </remarks>
                 /// 
@@ -734,10 +808,11 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             }
 
             /// <summary>
-            /// <para>The number of failed consecutive health checks that must occur before a healthy endpoint group is considered unhealthy or the number of successful consecutive health checks that must occur before an unhealthy endpoint group is considered healthy. Valid values: <b>2</b> to <b>10</b>. Default value: <b>3</b>.</para>
-            /// <para>You can specify up to 10 values (the number of consecutive health check successes or consecutive health check failures).</para>
+            /// <para>The number of consecutive successful health checks required to mark an endpoint as healthy, or consecutive failed health checks to mark an endpoint as unhealthy.
+            /// Valid values: <b>2</b> to <b>10</b>. Default value: <b>3</b>.</para>
+            /// <para>You can enter up to 10 values for the number of consecutive health checks required to trigger a health status change.</para>
             /// <remarks>
-            /// <para> You can configure endpoint groups and endpoints only if you set <b>Type</b> to <b>Standard</b>.</para>
+            /// <para>This parameter applies only when the listener\&quot;s routing type (<b>Type</b>) is <b>Standard</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -748,11 +823,11 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public long? ThresholdCount { get; set; }
 
             /// <summary>
-            /// <para>The traffic distribution ratio. If an intelligent routing listener is associated with multiple endpoint groups, you can configure this parameter to specify the ratio of traffic distributed to each endpoint group.</para>
+            /// <para>The traffic distribution ratio. If a standard listener is associated with multiple endpoint groups, this parameter specifies the percentage of traffic that is distributed to each endpoint group.</para>
             /// <para>Valid values: <b>1</b> to <b>100</b>. Default value: <b>100</b>.</para>
-            /// <para>You can specify traffic distribution ratios for up to 10 endpoint groups.</para>
+            /// <para>You can enter traffic distribution values for up to 10 endpoint groups.</para>
             /// <remarks>
-            /// <para> You can configure endpoint groups and endpoints only if you set <b>Type</b> to <b>Standard</b>.</para>
+            /// <para>This parameter applies only when the listener\&quot;s routing type (<b>Type</b>) is <b>Standard</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -765,14 +840,17 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         }
 
         /// <summary>
-        /// <para>The maximum version of the HTTP protocol. Valid values:</para>
+        /// <para>The maximum HTTP version. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>http3</b></description></item>
-        /// <item><description><b>http2</b> (default)</description></item>
-        /// <item><description><b>http1.1</b></description></item>
+        /// <item><description><para><b>http3</b>: HTTP/3</para>
+        /// </description></item>
+        /// <item><description><para><b>http2</b> (default): HTTP/2</para>
+        /// </description></item>
+        /// <item><description><para><b>http1.1</b>: HTTP/1.1</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> Only HTTPS listeners support this parameter.</para>
+        /// <para>This parameter applies only to HTTPS listeners.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -783,11 +861,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string HttpVersion { get; set; }
 
         /// <summary>
-        /// <para>The timeout period of idle connections. Unit: seconds.</para>
+        /// <para>The connection idle timeout, in seconds.</para>
         /// <list type="bullet">
-        /// <item><description>TCP: 10-900. Default value: 900. Unit: seconds.</description></item>
-        /// <item><description>UDP: 10-20. Default value: 20. Unit: seconds.</description></item>
-        /// <item><description>HTTP/HTTPS: 1-60. Default value: 15. Unit: seconds.</description></item>
+        /// <item><description><para>TCP: 10–900 seconds. Default: 900 seconds.</para>
+        /// </description></item>
+        /// <item><description><para>UDP: 10–20 seconds. Default: 20 seconds.</para>
+        /// </description></item>
+        /// <item><description><para>HTTP/HTTPS: 1–60 seconds. Default: 15 seconds.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -799,7 +880,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// <para>The name of the listener.</para>
-        /// <para>The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</para>
+        /// <para>The name must be 1 to 128 characters long, start with a letter or a Chinese character, and can contain digits, periods (.), underscores (_), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>Listener</para>
@@ -809,7 +890,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The listener ports. Valid values: <b>1</b> to <b>65499</b>. The maximum number of ports that can be configured depends on the routing type and protocol of the listener. For more information, see <a href="https://help.aliyun.com/document_detail/153216.html">Listener overview</a>.</para>
+        /// <para>The listener port range. The port numbers must be within the range of <b>1</b> to <b>65499</b>. The maximum number of allowed ports depends on the listener\&quot;s routing type and protocol. For more information, see <a href="https://help.aliyun.com/document_detail/153216.html">Listener ports</a>.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("PortRanges")]
@@ -817,11 +898,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public List<CreateListenerRequestPortRanges> PortRanges { get; set; }
         public class CreateListenerRequestPortRanges : TeaModel {
             /// <summary>
-            /// <para>The first port of the listener port range that you want to use to receive and forward requests to endpoints.</para>
-            /// <para>Valid values: <b>1</b> to <b>65499</b>. The value of <b>FromPort</b> must be smaller than or equal to the value of <b>ToPort</b>.</para>
-            /// <para>The maximum number of ports that can be configured varies based on the routing type and protocol of the listener. For more information, see <a href="https://help.aliyun.com/document_detail/153216.html">Listener overview</a>.</para>
+            /// <para>The first port in the listener range used to receive and forward requests to endpoints.</para>
+            /// <para>The port number must be in the range of <b>1</b> to <b>65499</b>, and the value of <b>FromPort</b> must be less than or equal to the value of <b>ToPort</b>.</para>
             /// <remarks>
-            /// <para>You can configure only one listener port for an HTTP or HTTPS listener. In this case, the first port is the same as the last port.</para>
+            /// <para>For HTTP or HTTPS listeners, you can specify only one listener port. In this case, the value of <b>FromPort</b> must be the same as the value of <b>ToPort</b>.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -833,11 +913,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public int? FromPort { get; set; }
 
             /// <summary>
-            /// <para>The last port of the listener port range that you want to use to receive and forward requests to endpoints.</para>
-            /// <para>Valid values: <b>1</b> to <b>65499</b>. The value of <b>FromPort</b> must be smaller than or equal to the value of <b>ToPort</b>.</para>
-            /// <para>The maximum number of ports that can be configured varies based on the routing type and protocol of the listener. For more information, see <a href="https://help.aliyun.com/document_detail/153216.html">Listener overview</a>.</para>
+            /// <para>The last port in the listener range used to receive and forward requests to endpoints.</para>
+            /// <para>The port number must be in the range of <b>1</b> to <b>65499</b>, and the value of <b>FromPort</b> must be less than or equal to the value of <b>ToPort</b>.</para>
             /// <remarks>
-            /// <para>You can configure only one listener port for an HTTP or HTTPS listener. In this case, the first port is the same as the last port.</para>
+            /// <para>For HTTP or HTTPS listeners, you can specify only one listener port. In this case, the value of <b>FromPort</b> must be the same as the value of <b>ToPort</b>.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -851,12 +930,16 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         }
 
         /// <summary>
-        /// <para>The network transmission protocol that you want to use for the listener. Valid values:</para>
+        /// <para>The listener\&quot;s network protocol. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>tcp</b>: TCP</description></item>
-        /// <item><description><b>udp</b>: UDP</description></item>
-        /// <item><description><b>http</b>: HTTP</description></item>
-        /// <item><description><b>https</b>: HTTPS</description></item>
+        /// <item><description><para><b>tcp</b>: TCP.</para>
+        /// </description></item>
+        /// <item><description><para><b>udp</b>: UDP.</para>
+        /// </description></item>
+        /// <item><description><para><b>http</b>: HTTP.</para>
+        /// </description></item>
+        /// <item><description><para><b>https</b>: HTTPS.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -867,7 +950,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string Protocol { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the GA instance is deployed. Set the value to <b>cn-hangzhou</b>.</para>
+        /// <para>The region ID of the Global Accelerator instance. Set the value to <b>cn-hangzhou</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -878,10 +961,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The timeout period for HTTP or HTTPS requests. Unit: seconds.</para>
-        /// <para>Valid values: 1 to 180. Default value: 60. Unit: seconds.</para>
+        /// <para>The request timeout for HTTP/HTTPS connections, in seconds.</para>
+        /// <para>Valid values: 1–180 seconds. Default: 60 seconds.</para>
         /// <remarks>
-        /// <para> This parameter takes effect only for HTTP or HTTPS listeners. If the backend server does not respond within the timeout period, GA returns an HTTP 504 error code to the client.</para>
+        /// <para>This parameter applies only to HTTP or HTTPS listeners. If the backend server does not respond within the timeout period, Global Accelerator returns an HTTP 504 error to the client.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -896,37 +979,47 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <list type="bullet">
         /// <item><description><para><b>tls_cipher_policy_1_0</b></para>
         /// <list type="bullet">
-        /// <item><description>Supported Transport Layer Security (TLS) versions: TLS 1.0, TLS 1.1, and TLS 1.2</description></item>
-        /// <item><description>Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA.</description></item>
+        /// <item><description><para>Supported TLS versions: TLS 1.0, TLS 1.1, and TLS 1.2.</para>
+        /// </description></item>
+        /// <item><description><para>Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// <item><description><para><b>tls_cipher_policy_1_1</b></para>
         /// <list type="bullet">
-        /// <item><description>Supported TLS versions: TLS 1.1 and TLS 1.2</description></item>
-        /// <item><description>Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA.</description></item>
+        /// <item><description><para>Supported TLS versions: TLS 1.1 and TLS 1.2.</para>
+        /// </description></item>
+        /// <item><description><para>Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// <item><description><para><b>tls_cipher_policy_1_2</b></para>
         /// <list type="bullet">
-        /// <item><description>Supported TLS version: TLS 1.2</description></item>
-        /// <item><description>Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA.</description></item>
+        /// <item><description><para>Supported TLS version: TLS 1.2.</para>
+        /// </description></item>
+        /// <item><description><para>Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// <item><description><para><b>tls_cipher_policy_1_2_strict</b></para>
         /// <list type="bullet">
-        /// <item><description>Supported TLS version: TLS 1.2</description></item>
-        /// <item><description>Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA</description></item>
+        /// <item><description><para>Supported TLS version: TLS 1.2.</para>
+        /// </description></item>
+        /// <item><description><para>Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// <item><description><para><b>tls_cipher_policy_1_2_strict_with_1_3</b></para>
         /// <list type="bullet">
-        /// <item><description>Supported TLS versions: TLS 1.2 and TLS 1.3</description></item>
-        /// <item><description>Supported cipher suites: TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384, TLS_CHACHA20_POLY1305_SHA256, TLS_AES_128_CCM_SHA256, TLS_AES_128_CCM_8_SHA256, ECDHE-ECDSA-AES128-GCM-SHA256, ECDHE-ECDSA-AES256-GCM-SHA384, ECDHE-ECDSA-AES128-SHA256, ECDHE-ECDSA-AES256-SHA384, ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-ECDSA-AES128-SHA, ECDHE-ECDSA-AES256-SHA, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA</description></item>
+        /// <item><description><para>Supported TLS versions: TLS 1.2 and TLS 1.3.</para>
+        /// </description></item>
+        /// <item><description><para>Supported cipher suites: TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384, TLS_CHACHA20_POLY1305_SHA256, TLS_AES_128_CCM_SHA256, TLS_AES_128_CCM_8_SHA256, ECDHE-ECDSA-AES128-GCM-SHA256, ECDHE-ECDSA-AES256-GCM-SHA384, ECDHE-ECDSA-AES128-SHA256, ECDHE-ECDSA-AES256-SHA384, ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-ECDSA-AES128-SHA, ECDHE-ECDSA-AES256-SHA, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is available only when you create an HTTPS listener.</para>
+        /// <para>This parameter applies only to HTTPS listeners.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -939,13 +1032,17 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// <para>The routing type of the listener. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Standard</b> (default): intelligent routing</description></item>
-        /// <item><description><b>CustomRouting</b>: custom routing</description></item>
+        /// <item><description><para><b>Standard</b> (default): standard routing.</para>
+        /// </description></item>
+        /// <item><description><para><b>CustomRouting</b>: custom routing.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Custom routing listeners are in invitational preview. To use custom routing listeners, contact your account manager.</description></item>
-        /// <item><description>You can create only listeners of the same routing type for a standard GA instance. You cannot change the routing types of listeners. For more information, see <a href="https://help.aliyun.com/document_detail/153216.html">Listener overview</a>.</description></item>
+        /// <item><description><para>Custom routing is in invitation-only preview. To use this feature, contact your Alibaba Cloud account manager.</para>
+        /// </description></item>
+        /// <item><description><para>A standard Global Accelerator instance supports only one routing type for all of its listeners. The routing type cannot be changed after the listener is created. For more information, see <a href="https://help.aliyun.com/document_detail/153216.html">Listener overview</a>.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -957,20 +1054,22 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The <c>XForward</c> headers.</para>
+        /// <para>Settings for <c>X-Forwarded-For</c> related headers.</para>
         /// </summary>
         [NameInMap("XForwardedForConfig")]
         [Validation(Required=false)]
         public CreateListenerRequestXForwardedForConfig XForwardedForConfig { get; set; }
         public class CreateListenerRequestXForwardedForConfig : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to use the <c>GA-AP</c> header to retrieve the information about acceleration regions. Valid values:</para>
+            /// <para>Specifies whether to use the <c>GA-AP</c> header to pass information about the acceleration region to the backend server. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: yes</description></item>
-            /// <item><description><b>false</b> (default): no</description></item>
+            /// <item><description><para><b>true</b></para>
+            /// </description></item>
+            /// <item><description><para><b>false</b> (Default)</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para>This parameter is available only when you create an HTTPS or HTTP listener.</para>
+            /// <para>This parameter applies only to HTTP and HTTPS listeners.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -981,13 +1080,15 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public bool? XForwardedForGaApEnabled { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to use the <c>GA-ID</c> header to retrieve the ID of the GA instance. Valid values:</para>
+            /// <para>Specifies whether to use the <c>GA-ID</c> header to pass the Global Accelerator instance ID to the backend server. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: yes</description></item>
-            /// <item><description><b>false</b> (default): no</description></item>
+            /// <item><description><para><b>true</b></para>
+            /// </description></item>
+            /// <item><description><para><b>false</b> (Default)</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para>This parameter is available only when you create an HTTPS or HTTP listener.</para>
+            /// <para>This parameter applies only to HTTP and HTTPS listeners.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -998,13 +1099,15 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public bool? XForwardedForGaIdEnabled { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to use the <c>GA-X-Forward-Port</c> header to retrieve the listener ports of the GA instance. Valid values:</para>
+            /// <para>Specifies whether to use the <c>GA-X-Forward-Port</c> header to pass the listener port of the Global Accelerator instance to the backend server. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: yes</description></item>
-            /// <item><description><b>false</b> (default): no</description></item>
+            /// <item><description><para><b>true</b></para>
+            /// </description></item>
+            /// <item><description><para><b>false</b> (Default)</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para>This parameter is available only when you create an HTTPS or HTTP listener.</para>
+            /// <para>This parameter applies only to HTTP and HTTPS listeners.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -1015,13 +1118,15 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public bool? XForwardedForPortEnabled { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to use the <c>GA-X-Forward-Proto</c> header to retrieve the listener protocol of the GA instance. Valid values:</para>
+            /// <para>Specifies whether to use the <c>GA-X-Forward-Proto</c> header to pass the listener protocol of the Global Accelerator instance to the backend server. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: yes</description></item>
-            /// <item><description><b>false</b> (default): no</description></item>
+            /// <item><description><para><b>true</b></para>
+            /// </description></item>
+            /// <item><description><para><b>false</b> (Default)</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para>This parameter is available only when you create an HTTPS or HTTP listener.</para>
+            /// <para>This parameter applies only to HTTP and HTTPS listeners.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -1032,13 +1137,15 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public bool? XForwardedForProtoEnabled { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to use the <c>X-Real-IP</c> header to retrieve client IP addresses. Valid values:</para>
+            /// <para>Specifies whether to use the <c>X-Real-IP</c> header to pass the client\&quot;s real IP address to the backend server. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: yes</description></item>
-            /// <item><description><b>false</b> (default): no</description></item>
+            /// <item><description><para><b>true</b></para>
+            /// </description></item>
+            /// <item><description><para><b>false</b> (Default)</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para>This parameter is available only when you create an HTTPS or HTTP listener.</para>
+            /// <para>This parameter applies only to HTTP and HTTPS listeners.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

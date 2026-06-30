@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class DisassociateResourcesRequest : TeaModel {
         /// <summary>
+        /// <para>Alibaba Cloud Global Accelerator (GA) instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string AcceleratorId { get; set; }
 
         /// <summary>
+        /// <para>Linked instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string AssociatedResourceId { get; set; }
 
         /// <summary>
+        /// <para>Region ID of the linked instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -38,6 +42,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string AssociatedResourceRegionId { get; set; }
 
         /// <summary>
+        /// <para>Resource type of the linked peripheral resource.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,6 +53,12 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string AssociatedResourceType { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to perform a dry run of the request. Valid values:  </para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: Sends a dry run request without detaching the resource. The system checks whether required parameters are specified, whether the request format is valid, and whether business limits are met. If the check fails, an error is returned. If the check passes, an HTTP 2xx status code is returned.  </description></item>
+        /// <item><description><b>false</b> (default): Sends a normal request. If the check passes, an HTTP 2xx status code is returned and the endpoint group is created immediately.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -56,6 +67,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
+        /// <para>Region ID of the Alibaba Cloud Global Accelerator (GA) instance. Valid value: <b>cn-hangzhou</b> only.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>

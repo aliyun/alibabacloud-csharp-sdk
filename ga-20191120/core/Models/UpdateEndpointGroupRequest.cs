@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class UpdateEndpointGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
+        /// <para>A client-generated token to ensure the idempotence of the request.</para>
+        /// <para>The token must be unique across requests and can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> is unique for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// <para>The description of the endpoint group.</para>
-        /// <para>The description can be up to 200 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The description can be up to 200 characters long and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EndpointGroup</para>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the endpoints in the endpoint group.</para>
+        /// <para>The configurations of the endpoints.</para>
         /// </summary>
         [NameInMap("EndpointConfigurations")]
         [Validation(Required=false)]
@@ -46,18 +46,22 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public List<string> ApiKeys { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to automatically preserve client IP addresses. Valid values:</para>
+            /// <para>Specifies whether to preserve client source IP addresses. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b> (default)</description></item>
+            /// <item><description><para><b>true</b>: Preserves client source IP addresses.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b> (default): Does not preserve client source IP addresses.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
             /// <list type="bullet">
-            /// <item><description>By default, client IP address preservation is disabled for an endpoint group of a UDP or TCP listener. You can configure this parameter based on your business requirements.</description></item>
-            /// <item><description>By default, client IP address preservation is enabled for an endpoint group of an HTTP or HTTP listener. You can obtain client IP addresses by using the X-Forwarded-For header. You cannot disable the feature.</description></item>
-            /// <item><description>EnableClientIPPreservation and EnableProxyProtocol cannot be set to true at the same time.<remarks>
-            /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/158080.html">Preserve client IP addresses</a>.</para>
-            /// </remarks>
+            /// <item><description><para>For endpoint groups of TCP or UDP listeners, this feature is disabled by default but can be enabled if needed.</para>
+            /// </description></item>
+            /// <item><description><para>For endpoint groups of HTTP or HTTPS listeners, client source IP addresses are preserved by default. The client IP addresses are retrieved from the X-Forwarded-For header. You cannot disable this feature.</para>
+            /// </description></item>
+            /// <item><description><para>You cannot set both <c>EnableClientIPPreservation</c> and <c>EnableProxyProtocol</c> to <c>true</c>.</para>
+            /// </description></item>
+            /// <item><description><para>For more information, see <a href="https://help.aliyun.com/document_detail/158080.html">preserve client source IP addresses</a>.</para>
             /// </description></item>
             /// </list>
             /// </remarks>
@@ -70,17 +74,20 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public bool? EnableClientIPPreservation { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to use the proxy protocol to preserve client IP addresses. Valid values:</para>
+            /// <para>Specifies whether to use the Proxy Protocol to preserve client source IP addresses. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b> (default)</description></item>
+            /// <item><description><para><b>true</b>: Preserves client source IP addresses.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b> (default): Does not preserve client source IP addresses.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
             /// <list type="bullet">
-            /// <item><description>This parameter is available only to endpoint groups of TCP listeners.</description></item>
-            /// <item><description>EnableClientIPPreservation and EnableProxyProtocol cannot be set to true at the same time.<remarks>
-            /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/158080.html">Preserve client IP addresses</a>.</para>
-            /// </remarks>
+            /// <item><description><para>You can configure this parameter only for endpoint groups of TCP listeners.</para>
+            /// </description></item>
+            /// <item><description><para>You cannot set both <c>EnableClientIPPreservation</c> and <c>EnableProxyProtocol</c> to <c>true</c>.</para>
+            /// </description></item>
+            /// <item><description><para>For more information, see <a href="https://help.aliyun.com/document_detail/158080.html">preserve client source IP addresses</a>.</para>
             /// </description></item>
             /// </list>
             /// </remarks>
@@ -93,7 +100,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public bool? EnableProxyProtocol { get; set; }
 
             /// <summary>
-            /// <para>Enter the IP address, domain name, or instance ID based on the value of the Type parameter.</para>
+            /// <para>Enter an IP address, a domain name, or an instance ID based on the value of the <c>Type</c> parameter.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -112,9 +119,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string Provider { get; set; }
 
             /// <summary>
-            /// <para>The private IP address of the ENI.</para>
+            /// <para>The private IP address of the elastic network interface.</para>
             /// <remarks>
-            /// <para> This parameter is available only when you set the endpoint type to <b>ENI</b>. If you leave this parameter empty, the primary private IP address of the ENI is used.</para>
+            /// <para>If the endpoint type is <b>ENI</b>, you can specify this parameter. If you omit this parameter, the primary private IP address of the ENI is used.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -125,29 +132,43 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string SubAddress { get; set; }
 
             /// <summary>
-            /// <para>The type of the endpoint. Valid values:</para>
+            /// <para>The type of endpoint. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Domain</b>: a custom domain name.</description></item>
-            /// <item><description><b>Ip</b>: a custom IP address.</description></item>
-            /// <item><description><b>IpTarget</b>: a custom private IP address.</description></item>
-            /// <item><description><b>PublicIp</b>: a public IP address provided by Alibaba Cloud.</description></item>
-            /// <item><description><b>ECS</b>: an Elastic Compute Service (ECS) instance.</description></item>
-            /// <item><description><b>SLB</b>: a Server Load Balancer (SLB) instance.</description></item>
-            /// <item><description><b>ALB</b>: an Application Load Balancer (ALB) instance.</description></item>
-            /// <item><description><b>OSS</b>: an Object Storage Service (OSS) bucket.</description></item>
-            /// <item><description><b>ENI</b>: an elastic network interface (ENI).</description></item>
-            /// <item><description><b>NLB</b>: a Network Load Balancer (NLB) instance.</description></item>
+            /// <item><description><para><b>Domain</b>: a custom domain name.</para>
+            /// </description></item>
+            /// <item><description><para><b>Ip</b>: a custom IP address.</para>
+            /// </description></item>
+            /// <item><description><para><b>IpTarget</b>: a custom private IP address.</para>
+            /// </description></item>
+            /// <item><description><para><b>PublicIp</b>: an Alibaba Cloud public IP address.</para>
+            /// </description></item>
+            /// <item><description><para><b>ECS</b>: an ECS instance.</para>
+            /// </description></item>
+            /// <item><description><para><b>SLB</b>: an SLB instance.</para>
+            /// </description></item>
+            /// <item><description><para><b>ALB</b>: an ALB instance.</para>
+            /// </description></item>
+            /// <item><description><para><b>OSS</b>: an OSS instance.</para>
+            /// </description></item>
+            /// <item><description><para><b>ENI</b>: an elastic network interface.</para>
+            /// </description></item>
+            /// <item><description><para><b>NLB</b>: an NLB instance.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
             /// <list type="bullet">
-            /// <item><description>If you set this parameter to <b>ECS</b>, <b>ENI</b>, <b>SLB</b>, <b>ALB</b>, <b>NLB</b>, or <b>IpTarget</b>, and the AliyunServiceRoleForGaVpcEndpoint service-linked role does not exist, the system automatically creates the role.</description></item>
-            /// <item><description>If you set this parameter to <b>ALB</b> and the AliyunServiceRoleForGaAlb service-linked role does not exist, the system automatically creates the role.</description></item>
-            /// <item><description>If you set this parameter to <b>OSS</b> and the AliyunServiceRoleForGaOss service-linked role does not exist, the system automatically creates the role.</description></item>
-            /// <item><description>If you set this parameter to <b>NLB</b> and the AliyunServiceRoleForGaNlb service-linked role does not exist, the system automatically creates the role.<remarks>
-            /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/178360.html">Service-linked roles</a>.</para>
-            /// </remarks>
+            /// <item><description><para>If the endpoint type is <b>ECS</b>, <b>ENI</b>, <b>SLB</b>, or <b>IpTarget</b>, and the service-linked role does not exist, the system automatically creates a service-linked role named AliyunServiceRoleForGaVpcEndpoint.</para>
+            /// </description></item>
+            /// <item><description><para>If the endpoint type is <b>ALB</b>, and the service-linked role does not exist, the system automatically creates a service-linked role named AliyunServiceRoleForGaAlb.</para>
+            /// </description></item>
+            /// <item><description><para>If the endpoint type is <b>OSS</b>, and the service-linked role does not exist, the system automatically creates a service-linked role named AliyunServiceRoleForGaOss.</para>
+            /// </description></item>
+            /// <item><description><para>If the endpoint type is <b>NLB</b>, and the service-linked role does not exist, the system automatically creates a service-linked role named AliyunServiceRoleForGaNlb.</para>
             /// </description></item>
             /// </list>
+            /// <remarks>
+            /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/178360.html">service-linked roles</a>.</para>
+            /// </remarks>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -159,17 +180,17 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The IDs of vSwitches that are deployed in the VPC.</para>
+            /// <para>A list of vSwitches in the VPC.</para>
             /// </summary>
             [NameInMap("VSwitchIds")]
             [Validation(Required=false)]
             public List<string> VSwitchIds { get; set; }
 
             /// <summary>
-            /// <para>The virtual private cloud (VPC) ID.</para>
-            /// <para>You can specify one VPC ID for an endpoint group of an intelligent routing listener.</para>
+            /// <para>The ID of the VPC.</para>
+            /// <para>You can specify at most one VPC ID for an endpoint group that is associated with an intelligent routing listener.</para>
             /// <remarks>
-            /// <para> This parameter is valid and required only if Type is set to <b>IpTarget</b>.</para>
+            /// <para>This parameter is required only when the endpoint type is <b>IpTarget</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -183,7 +204,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <para>The weight of the endpoint.</para>
             /// <para>Valid values: <b>0</b> to <b>255</b>.</para>
             /// <remarks>
-            /// <para> If you set the weight of an endpoint to 0, GA stops distributing traffic to the endpoint. Proceed with caution.</para>
+            /// <para>If you set the weight of an endpoint to 0, Global Accelerator stops distributing traffic to the endpoint. Proceed with caution.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -208,7 +229,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string EndpointGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the endpoint group is created.</para>
+        /// <para>The ID of the region where the endpoint group is deployed.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -218,18 +239,26 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public string EndpointGroupRegion { get; set; }
 
+        /// <summary>
+        /// <para>Specifies the IP protocol that GA uses to communicate with endpoints. Valid values: ● <b>IPv4</b> (default): Use IPv4. ● <b>IPv6</b>: Use IPv6. ● <b>ProtocolAffinity</b>: Use the same IP protocol as the client request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>IPv4</para>
+        /// </summary>
         [NameInMap("EndpointIpVersion")]
         [Validation(Required=false)]
         public string EndpointIpVersion { get; set; }
 
         /// <summary>
-        /// <para>The protocol version that is used by the backend service. Valid values:</para>
+        /// <para>The version of the backend service protocol. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>HTTP1.1</b></description></item>
-        /// <item><description><b>HTTP2</b></description></item>
+        /// <item><description><para><b>HTTP1.1</b></para>
+        /// </description></item>
+        /// <item><description><para><b>HTTP2</b></para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter takes effect only when you set EndpointRequestProtocol to HTTPS.</para>
+        /// <para>You can configure this parameter only when <c>EndpointRequestProtocol</c> is set to HTTPS.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -240,15 +269,19 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string EndpointProtocolVersion { get; set; }
 
         /// <summary>
-        /// <para>The protocol that is used by the backend service. Valid values:</para>
+        /// <para>The backend service protocol. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>HTTP</b></description></item>
-        /// <item><description><b>HTTPS</b></description></item>
+        /// <item><description><para><b>HTTP</b></para>
+        /// </description></item>
+        /// <item><description><para><b>HTTPS</b></para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>You can set this parameter only when the listener that is associated with the endpoint group uses the HTTP or HTTPS protocol.</description></item>
-        /// <item><description>For an HTTP listener, the backend service protocol must be HTTP.</description></item>
+        /// <item><description><para>You can configure this parameter only for endpoint groups of HTTP or HTTPS listeners.</para>
+        /// </description></item>
+        /// <item><description><para>For an HTTP listener, the backend service protocol must be HTTP.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -260,10 +293,12 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string EndpointRequestProtocol { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the health check feature. Valid values: Valid values:</para>
+        /// <para>Specifies whether to enable health checks. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The health check feature is enabled.</description></item>
-        /// <item><description><b>false</b> (default)</description></item>
+        /// <item><description><para><b>true</b>: Enables health checks.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): Disables health checks.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -273,12 +308,18 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public bool? HealthCheckEnabled { get; set; }
 
+        /// <summary>
+        /// <para>The domain name for the health check.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="http://www.taobao.com">www.taobao.com</a></para>
+        /// </summary>
         [NameInMap("HealthCheckHost")]
         [Validation(Required=false)]
         public string HealthCheckHost { get; set; }
 
         /// <summary>
-        /// <para>The interval between two consecutive health checks. Unit: seconds. Valid values: <b>1</b> to <b>50</b>.</para>
+        /// <para>The interval between health checks, in seconds. Valid values: <b>1</b> to <b>50</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -288,7 +329,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public int? HealthCheckIntervalSeconds { get; set; }
 
         /// <summary>
-        /// <para>The path to which health check requests are sent.</para>
+        /// <para>The path for health checks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/healthcheck</para>
@@ -298,7 +339,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string HealthCheckPath { get; set; }
 
         /// <summary>
-        /// <para>The port that is used for health checks. Valid values: <b>1</b> to <b>65535</b>.</para>
+        /// <para>The port used for health checks. Valid values: <b>1</b> to <b>65535</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -308,15 +349,18 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public int? HealthCheckPort { get; set; }
 
         /// <summary>
-        /// <para>The protocol over which to send health check requests. Valid values:</para>
+        /// <para>The protocol for health checks. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>tcp</b> or <b>TCP</b></description></item>
-        /// <item><description><b>http</b> or <b>HTTP</b></description></item>
-        /// <item><description><b>https</b> or <b>HTTPS</b></description></item>
+        /// <item><description><para><b>tcp</b> or <b>TCP</b></para>
+        /// </description></item>
+        /// <item><description><para><b>http</b> or <b>HTTP</b></para>
+        /// </description></item>
+        /// <item><description><para><b>https</b> or <b>HTTPS</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>tcp</para>
+        /// <para>HTTPS</para>
         /// </summary>
         [NameInMap("HealthCheckProtocol")]
         [Validation(Required=false)]
@@ -324,7 +368,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// <para>The name of the endpoint group.</para>
-        /// <para>The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</para>
+        /// <para>The name must be 1 to 128 characters long, start with a letter or a Chinese character, and can contain digits, periods (.), underscores (_), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>group1</para>
@@ -334,14 +378,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The port mapping.</para>
+        /// <para>The port override settings.</para>
         /// </summary>
         [NameInMap("PortOverrides")]
         [Validation(Required=false)]
         public List<UpdateEndpointGroupRequestPortOverrides> PortOverrides { get; set; }
         public class UpdateEndpointGroupRequestPortOverrides : TeaModel {
             /// <summary>
-            /// <para>The endpoint port that is mapped to the listener port.</para>
+            /// <para>The endpoint port in the port override settings.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -351,12 +395,15 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public int? EndpointPort { get; set; }
 
             /// <summary>
-            /// <para>The listener port that is mapped to the endpoint port.</para>
+            /// <para>The listener port in the port override settings.</para>
             /// <remarks>
             /// <list type="bullet">
-            /// <item><description>You cannot configure port mappings for virtual endpoint groups of TCP listeners. If a virtual endpoint group already exists on the listener, you cannot configure port mappings for the default endpoint group. If port mappings are configured for the default endpoint group, you cannot add a virtual endpoint group.</description></item>
-            /// <item><description>If you configure port mappings for a listener, you cannot modify the listener protocol. You can only switch between HTTP and HTTPS.</description></item>
-            /// <item><description>Listener port: When you modify the listener port range, make sure that the port range includes the ports configured in port mappings. For example, if you set the listener port range to 80 to 82 and map the listener ports to endpoint ports 100 to 102, you cannot change the listener port range to 80 to 81.</description></item>
+            /// <item><description><para>For TCP listeners, virtual endpoint groups do not support port overrides. If a listener is already associated with a virtual endpoint group, you cannot configure port overrides for the default endpoint group. If the default endpoint group has port overrides configured, you cannot add a virtual endpoint group.</para>
+            /// </description></item>
+            /// <item><description><para>After you configure port overrides, you can change the listener protocol only between HTTP and HTTPS.</para>
+            /// </description></item>
+            /// <item><description><para>The updated listener port range must include all listener ports in the configured port overrides. For example, if the listener port range is 80-82 and port overrides are configured to map the ports to endpoint ports 100-102, you cannot update the listener port range to 80-81.</para>
+            /// </description></item>
             /// </list>
             /// </remarks>
             /// 
@@ -381,7 +428,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The number of consecutive health check failures that must occur before a healthy endpoint group is considered unhealthy, or the number of consecutive health check successes that must occur before an unhealthy endpoint group is considered healthy.</para>
+        /// <para>The number of consecutive successful or failed health checks required to change an endpoint\&quot;s health status.</para>
         /// <para>Valid values: <b>2</b> to <b>10</b>.</para>
         /// 
         /// <b>Example:</b>

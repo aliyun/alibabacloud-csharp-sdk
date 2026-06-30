@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class CreateCustomRoutingEndpointTrafficPoliciesRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.</para>
+        /// <para>The client token that is used to ensure the idempotence of a request.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not set this parameter, <b>ClientToken</b> is set to the value of <b>RequestId</b>. The value of <b>RequestId</b> for each API request is different.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> value as the <b>ClientToken</b> value. The <b>RequestId</b> value is different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the endpoint for which you want to create traffic destinations.</para>
+        /// <para>The ID of the endpoint for which you want to create traffic policies.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,8 +35,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string EndpointId { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the traffic destinations.</para>
-        /// <para>You can specify up to 500 traffic destinations for each endpoint.</para>
+        /// <para>The traffic policy configurations.</para>
+        /// <para>You can specify up to 500 traffic policies for each endpoint.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("PolicyConfigurations")]
@@ -44,9 +44,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public List<CreateCustomRoutingEndpointTrafficPoliciesRequestPolicyConfigurations> PolicyConfigurations { get; set; }
         public class CreateCustomRoutingEndpointTrafficPoliciesRequestPolicyConfigurations : TeaModel {
             /// <summary>
-            /// <para>The IP address of the destination to which traffic is forwarded.</para>
+            /// <para>The IP address of the traffic destination that is allowed to receive traffic.</para>
             /// <para>This parameter takes effect only when <b>TrafficToEndpointPolicy</b> is set to <b>AllowCustom</b>.</para>
-            /// <para>You can specify up to 500 destination IP addresses for each endpoint.</para>
+            /// <para>You can specify up to 500 traffic destination IP addresses for each endpoint.</para>
             /// <remarks>
             /// <para>This parameter is required.</para>
             /// </remarks>
@@ -59,20 +59,20 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string Address { get; set; }
 
             /// <summary>
-            /// <para>The port range of the destination to which traffic is forwarded. The value of this parameter must fall within the port range of the endpoint group.</para>
-            /// <para>If you leave this parameter empty, traffic is forwarded to all destination ports.</para>
+            /// <para>The port range of the traffic destination that is allowed to receive traffic. The port range must fall within the backend service port range of the endpoint group.</para>
+            /// <para>If you leave this parameter empty, all ports of the traffic destination are supported.</para>
             /// <para>This parameter takes effect only when <b>TrafficToEndpointPolicy</b> is set to <b>AllowCustom</b>.</para>
-            /// <para>You can specify port ranges for up to 500 traffic destinations in each endpoint and specify up to 10 port ranges for each traffic destination.</para>
+            /// <para>You can specify up to 500 port ranges for each endpoint, and up to 10 port ranges for each traffic destination.</para>
             /// </summary>
             [NameInMap("PortRanges")]
             [Validation(Required=false)]
             public List<CreateCustomRoutingEndpointTrafficPoliciesRequestPolicyConfigurationsPortRanges> PortRanges { get; set; }
             public class CreateCustomRoutingEndpointTrafficPoliciesRequestPolicyConfigurationsPortRanges : TeaModel {
                 /// <summary>
-                /// <para>The first port of the destination port range. The value of this parameter must fall within the port range of the endpoint group.</para>
+                /// <para>The start port of the traffic destination that is allowed to receive traffic. The port value must fall within the backend service port range of the endpoint group.</para>
                 /// <para>This parameter takes effect only when <b>TrafficToEndpointPolicy</b> is set to <b>AllowCustom</b>.</para>
-                /// <para>If the first port and the last port are not specified, traffic on all ports of the destination is allowed.</para>
-                /// <para>You can specify port ranges for up to 500 destinations in each endpoint and specify up to 10 first ports for each destination.</para>
+                /// <para>If you leave both the start port and end port empty, all ports of the traffic destination are supported.</para>
+                /// <para>You can specify up to 500 port ranges for each endpoint, and up to 10 start ports for each traffic destination.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>80</para>
@@ -82,10 +82,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 public int? FromPort { get; set; }
 
                 /// <summary>
-                /// <para>The last port of the destination port range. The value of this parameter must fall within the port range of the endpoint group.</para>
+                /// <para>The end port of the traffic destination that is allowed to receive traffic. The port value must fall within the backend service port range of the endpoint group.</para>
                 /// <para>This parameter takes effect only when <b>TrafficToEndpointPolicy</b> is set to <b>AllowCustom</b>.</para>
-                /// <para>If the first port and the last port are not specified, traffic on all ports of the destination is allowed.</para>
-                /// <para>You can specify port ranges for up to 500 destinations in each endpoint and specify up to 10 last ports for each destination.</para>
+                /// <para>If you leave both the start port and end port empty, all ports of the traffic destination are supported.</para>
+                /// <para>You can specify up to 500 port ranges for each endpoint, and up to 10 end ports for each traffic destination.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>80</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         }
 
         /// <summary>
-        /// <para>The ID of the region where the GA instance is deployed. Set the value to <b>cn-hangzhou</b>.</para>
+        /// <para>The region ID of the Global Accelerator instance. Set the value to <b>ap-southeast-1</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

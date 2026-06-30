@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
         /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -59,8 +59,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <para>The secondary address of the endpoint.</para>
         /// <para>This parameter is required only if the accelerated IP address is associated with the secondary private IP address of an ECS instance or an ENI.</para>
         /// <list type="bullet">
-        /// <item><description>If you set the endpoint type to <b>ECS</b>, you can set <b>EndpointSubAddress</b> to the secondary private IP address of the primary ENI. If you leave this parameter empty, the primary private IP address of the primary ENI is used.</description></item>
-        /// <item><description>If you set the endpoint type to <b>ENI</b>, you can set <b>EndpointSubAddress</b> to the secondary private IP address of the secondary ENI. If you leave this parameter empty, the primary private IP address of the secondary ENI is used.</description></item>
+        /// <item><description><para>If you set the endpoint type to <b>ECS</b>, you can set <b>EndpointSubAddress</b> to the secondary private IP address of the primary ENI. If you leave this parameter empty, the primary private IP address of the primary ENI is used.</para>
+        /// </description></item>
+        /// <item><description><para>If you set the endpoint type to <b>ENI</b>, you can set <b>EndpointSubAddress</b> to the secondary private IP address of the secondary ENI. If you leave this parameter empty, the primary private IP address of the secondary ENI is used.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -73,9 +75,12 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// <para>The type of the endpoint. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ENI</b>: elastic network interface (ENI).</description></item>
-        /// <item><description><b>SLB</b>: Classic Load Balancer (CLB) instance.</description></item>
-        /// <item><description><b>ECS</b>: Elastic Compute Service (ECS) instance.</description></item>
+        /// <item><description><para><b>ENI</b>: elastic network interface (ENI).</para>
+        /// </description></item>
+        /// <item><description><para><b>SLB</b>: Classic Load Balancer (CLB) instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>ECS</b>: Elastic Compute Service (ECS) instance.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -19,8 +19,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// <para>Indicates whether the region is in the Chinese mainland. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b></para>
+            /// </description></item>
+            /// <item><description><para><b>false</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -43,8 +45,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// <para>Indicates whether it is a point of presence (PoP) of Alibaba Cloud. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b></para>
+            /// </description></item>
+            /// <item><description><para><b>false</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

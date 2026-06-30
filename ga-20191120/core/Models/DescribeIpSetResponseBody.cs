@@ -59,9 +59,12 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// <para>The IP version. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>IPv4</b></description></item>
-        /// <item><description><b>IPv6</b></description></item>
-        /// <item><description><b>DUAL_STACK</b></description></item>
+        /// <item><description><para><b>IPv4</b></para>
+        /// </description></item>
+        /// <item><description><para><b>IPv6</b></para>
+        /// </description></item>
+        /// <item><description><para><b>DUAL_STACK</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -74,8 +77,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// <para>The line type of the elastic IP address (EIP) in the acceleration region. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>BGP</b>: BGP (Multi-ISP) lines. This is the default value.</description></item>
-        /// <item><description><b>BGP_PRO</b>: BGP (Multi-ISP) Pro lines.</description></item>
+        /// <item><description><para><b>BGP</b>: BGP (Multi-ISP) lines. This is the default value.</para>
+        /// </description></item>
+        /// <item><description><para><b>BGP_PRO</b>: BGP (Multi-ISP) Pro lines.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -98,7 +103,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// <para>The ID of the service that manages the instance.</para>
         /// <remarks>
-        /// <para> This parameter is returned only if the value of <b>ServiceManaged</b> is <b>true</b>.</para>
+        /// <para>This parameter is returned only if the value of <b>ServiceManaged</b> is <b>true</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -111,8 +116,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// <para>Indicates whether the GA instance is managed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -126,8 +133,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <para>The actions that users can perform on the managed instance.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This parameter is returned only if the value of <b>ServiceManaged</b> is <b>true</b>.</description></item>
-        /// <item><description>Users can perform only specific actions on a managed instance.</description></item>
+        /// <item><description><para>This parameter is returned only if the value of <b>ServiceManaged</b> is <b>true</b>.</para>
+        /// </description></item>
+        /// <item><description><para>Users can perform only specific actions on a managed instance.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// </summary>
@@ -138,12 +147,18 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// <para>The name of the action on the managed instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Create</b></description></item>
-            /// <item><description><b>Update</b></description></item>
-            /// <item><description><b>Delete</b></description></item>
-            /// <item><description><b>Associate</b></description></item>
-            /// <item><description><b>UserUnmanaged</b></description></item>
-            /// <item><description><b>CreateChild</b></description></item>
+            /// <item><description><para><b>Create</b></para>
+            /// </description></item>
+            /// <item><description><para><b>Update</b></para>
+            /// </description></item>
+            /// <item><description><para><b>Delete</b></para>
+            /// </description></item>
+            /// <item><description><para><b>Associate</b></para>
+            /// </description></item>
+            /// <item><description><para><b>UserUnmanaged</b></para>
+            /// </description></item>
+            /// <item><description><para><b>CreateChild</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -156,16 +171,23 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// <para>The type of the child resource. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Listener</b>: listener.</description></item>
-            /// <item><description><b>IpSet</b>: acceleration region.</description></item>
-            /// <item><description><b>EndpointGroup</b>: endpoint group.</description></item>
-            /// <item><description><b>ForwardingRule</b>: forwarding rule.</description></item>
-            /// <item><description><b>Endpoint</b>: endpoint.</description></item>
-            /// <item><description><b>EndpointGroupDestination</b>: protocol mapping of an endpoint group associated with a custom routing listener.</description></item>
-            /// <item><description><b>EndpointPolicy</b>: traffic policy of an endpoint associated with a custom routing listener.</description></item>
+            /// <item><description><para><b>Listener</b>: listener.</para>
+            /// </description></item>
+            /// <item><description><para><b>IpSet</b>: acceleration region.</para>
+            /// </description></item>
+            /// <item><description><para><b>EndpointGroup</b>: endpoint group.</para>
+            /// </description></item>
+            /// <item><description><para><b>ForwardingRule</b>: forwarding rule.</para>
+            /// </description></item>
+            /// <item><description><para><b>Endpoint</b>: endpoint.</para>
+            /// </description></item>
+            /// <item><description><para><b>EndpointGroupDestination</b>: protocol mapping of an endpoint group associated with a custom routing listener.</para>
+            /// </description></item>
+            /// <item><description><para><b>EndpointPolicy</b>: traffic policy of an endpoint associated with a custom routing listener.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> This parameter takes effect only if <b>Action</b> is set to <b>CreateChild</b>.</para>
+            /// <para>This parameter takes effect only if <b>Action</b> is set to <b>CreateChild</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -178,8 +200,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// <para>Indicates whether the specified actions are managed.</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: The specified actions are managed, and users cannot perform the actions on the managed instance.</description></item>
-            /// <item><description><b>false</b>: The specified actions are not managed, and users can perform the actions on the managed instance.</description></item>
+            /// <item><description><para><b>true</b>: The specified actions are managed, and users cannot perform the actions on the managed instance.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: The specified actions are not managed, and users can perform the actions on the managed instance.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -194,10 +218,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// <para>The status of the acceleration region. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>init</b>: The acceleration region is being initialized.</description></item>
-        /// <item><description><b>active</b>: The acceleration region is in the running state.</description></item>
-        /// <item><description><b>updating</b>: The acceleration region is being configured.</description></item>
-        /// <item><description><b>deleting</b>: The GA instance is being deleted.</description></item>
+        /// <item><description><para><b>init</b>: The acceleration region is being initialized.</para>
+        /// </description></item>
+        /// <item><description><para><b>active</b>: The acceleration region is in the running state.</para>
+        /// </description></item>
+        /// <item><description><para><b>updating</b>: The acceleration region is being configured.</para>
+        /// </description></item>
+        /// <item><description><para><b>deleting</b>: The GA instance is being deleted.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

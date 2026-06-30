@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class ListCustomRoutingEndpointGroupDestinationsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the GA instance.</para>
+        /// <para>The instance ID of the Alibaba Cloud Global Accelerator (GA) instance for which you want to query endpoint group destination configurations.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string AcceleratorId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the endpoint group.</para>
+        /// <para>The ID of the endpoint group for which you want to query destination configurations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>epg-bp16jdc00bhe97sr5****</para>
@@ -31,8 +31,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string EndpointGroupId { get; set; }
 
         /// <summary>
-        /// <para>The start port of the backend service port range of the endpoint group.</para>
-        /// <para>Valid values: <b>1</b> to <b>65499</b>. The <b>FromPort</b> value must be smaller than or equal to the <b>ToPort</b> value.</para>
+        /// <para>The start port of the backend service of the endpoint group.</para>
+        /// <para>Valid values: <b>1</b> to <b>65499</b>. The value of <b>FromPort</b> must be less than or equal to the value of <b>ToPort</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>80</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public int? FromPort { get; set; }
 
         /// <summary>
-        /// <para>The ID of the listener.</para>
+        /// <para>The ID of the listener for which you want to query endpoint group destination configurations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>lsr-bp1bpn0kn908w4nbw****</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string ListenerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// <para>The page number of the list. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page for a paged query. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -72,21 +72,24 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The backend service protocols of the endpoint group. Valid values:</para>
+        /// <para>The protocol type of the backend service of the endpoint group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>TCP</b>: TCP.</description></item>
-        /// <item><description><b>UDP</b>: UDP.</description></item>
-        /// <item><description><b>TCP,UDP</b>: TCP and UDP.</description></item>
+        /// <item><description><para><b>TCP</b>: TCP protocol.</para>
+        /// </description></item>
+        /// <item><description><para><b>UDP</b>: UDP protocol.</para>
+        /// </description></item>
+        /// <item><description><para><b>TCP,UDP</b>: TCP and UDP protocols.</para>
+        /// </description></item>
         /// </list>
-        /// <para>If this parameter is empty, all types of protocols are queried.</para>
-        /// <para>You can specify up to 10 protocols.</para>
+        /// <para>If this parameter is left empty, all protocol types are queried.</para>
+        /// <para>You can specify up to 10 protocol entries.</para>
         /// </summary>
         [NameInMap("Protocols")]
         [Validation(Required=false)]
         public List<string> Protocols { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the GA instance. Set the value to <b>cn-hangzhou</b>.</para>
+        /// <para>The region ID of the Alibaba Cloud Global Accelerator (GA) instance. Set the value to <b>cn-hangzhou</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -97,8 +100,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The end port of the backend service port range of the endpoint group.</para>
-        /// <para>Valid values: <b>1</b> to <b>65499</b>. The <b>FromPort</b> value must be smaller than or equal to the <b>ToPort</b> value.</para>
+        /// <para>The end port of the backend service of the endpoint group.</para>
+        /// <para>Valid values: <b>1</b> to <b>65499</b>. The value of <b>FromPort</b> must be less than or equal to the value of <b>ToPort</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>80</para>

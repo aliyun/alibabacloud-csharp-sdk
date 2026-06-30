@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>false</para>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("IsManaged")]
                 [Validation(Required=false)]

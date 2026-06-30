@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class ListAcceleratorsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the GA instance.</para>
+        /// <para>The ID of the Global Accelerator instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ga-bp1odcab8tmno0hdq****</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The ID of the region where the GA instance is deployed. Set the value to <b>cn-hangzhou</b>.</para>
+        /// <para>The region ID of the Global Accelerator instance. Set the value to <b>cn-hangzhou</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,15 +64,22 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The status of the GA instance. Valid values:</para>
+        /// <para>The state of the Global Accelerator instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>init</b>: The GA instance is being initialized.</description></item>
-        /// <item><description><b>active</b>: The GA instance is available.</description></item>
-        /// <item><description><b>configuring</b>: The GA instance is being configured.</description></item>
-        /// <item><description><b>binding</b>: The GA instance is being associated.</description></item>
-        /// <item><description><b>unbinding</b>: The GA instance is being disassociated.</description></item>
-        /// <item><description><b>deleting</b>: The GA instance is being deleted.</description></item>
-        /// <item><description><b>finacialLocked</b>: The GA instance is locked due to overdue payments.</description></item>
+        /// <item><description><para><b>init</b>: The instance is being initialized.</para>
+        /// </description></item>
+        /// <item><description><para><b>active</b>: The instance is active.</para>
+        /// </description></item>
+        /// <item><description><para><b>configuring</b>: The instance is being configured.</para>
+        /// </description></item>
+        /// <item><description><para><b>binding</b>: The instance is being bound.</para>
+        /// </description></item>
+        /// <item><description><para><b>unbinding</b>: The instance is being unbound.</para>
+        /// </description></item>
+        /// <item><description><para><b>deleting</b>: The instance is being deleted.</para>
+        /// </description></item>
+        /// <item><description><para><b>finacialLocked</b>: The instance is locked due to an overdue payment.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -83,15 +90,15 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string State { get; set; }
 
         /// <summary>
-        /// <para>The tags of the GA instance.</para>
+        /// <para>The tags of the resource.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListAcceleratorsRequestTag> Tag { get; set; }
         public class ListAcceleratorsRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key of the GA resource. The tag key cannot be an empty string.</para>
-            /// <para>The tag key can be up to 64 characters in length and cannot contain <c>http://</c> or <c>https://</c>. It cannot start with <c>aliyun</c> or <c>acs:</c>.</para>
+            /// <para>The tag key of the Global Accelerator resource. The tag key cannot be an empty string.</para>
+            /// <para>The tag key can be up to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// <para>You can specify up to 20 tag keys.</para>
             /// 
             /// <b>Example:</b>
@@ -102,8 +109,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value of the GA resource. The tag value can be an empty string.</para>
-            /// <para>The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. It cannot start with <c>aliyun</c> or <c>acs:</c>.</para>
+            /// <para>The tag value of the Global Accelerator resource. The tag value can be an empty string.</para>
+            /// <para>The tag value can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// <para>You can specify up to 20 tag values.</para>
             /// 
             /// <b>Example:</b>

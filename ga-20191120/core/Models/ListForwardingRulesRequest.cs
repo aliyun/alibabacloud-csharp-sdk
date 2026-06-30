@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
         /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -68,8 +68,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// <para>The token that is used for the next query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If this is your first query or no subsequent query is to be sent, ignore this parameter.</description></item>
-        /// <item><description>If a next query is to be sent, set the value to the value of <b>NextToken</b> that is returned from the last call.</description></item>
+        /// <item><description><para>If this is your first query or no subsequent query is to be sent, ignore this parameter.</para>
+        /// </description></item>
+        /// <item><description><para>If a next query is to be sent, set the value to the value of <b>NextToken</b> that is returned from the last call.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

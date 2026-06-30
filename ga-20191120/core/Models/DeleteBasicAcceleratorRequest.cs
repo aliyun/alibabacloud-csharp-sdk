@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class DeleteBasicAcceleratorRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the basic GA instance.</para>
+        /// <para>The instance ID of the basic Alibaba Cloud Global Accelerator (GA) instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string AcceleratorId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region to which the basic GA instance belongs. Set the value to <b>cn-hangzhou</b>.</para>
+        /// <para>The region ID of the basic Alibaba Cloud Global Accelerator (GA) instance. Set the value to <b>ap-southeast-1</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

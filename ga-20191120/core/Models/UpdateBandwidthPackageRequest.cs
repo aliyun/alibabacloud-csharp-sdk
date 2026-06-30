@@ -12,11 +12,13 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b>: disables automatic payment. This is the default value. If you select this option, you must go to <a href="https://usercenter2-intl.aliyun.com/order/list">Order Center</a> to complete the payment after an order is generated.</description></item>
-        /// <item><description><b>true</b>: enables automatic payment. Payments are automatically completed.</description></item>
+        /// <item><description><para><b>false</b> (default): disables automatic payment. After an order is generated, you must go to the &lt;props=&quot;china&quot;&gt;<a href="https://usercenter2.aliyun.com/order/list">Order Hub</a>&lt;props=&quot;intl&quot;&gt;<a href="https://usercenter2-intl.aliyun.com/order/list">Order Hub</a> to complete the payment.</para>
+        /// </description></item>
+        /// <item><description><para><b>true</b>: enables automatic payment. The system automatically pays the bill.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter takes effect only if you call the UpdateBandwidthPackage operation to upgrade a bandwidth plan.</para>
+        /// <para>This parameter is required only for upgrade orders.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -29,8 +31,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// <para>Specifies whether to use coupons. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b> (default)</description></item>
+        /// <item><description><para><b>true</b>: yes.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): no.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -41,7 +45,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public bool? AutoUseCoupon { get; set; }
 
         /// <summary>
-        /// <para>The bandwidth value of the bandwidth plan. Unit: Mbit/s.</para>
+        /// <para>The bandwidth of the bandwidth plan. Unit: Mbit/s.</para>
         /// <para>Valid values: <b>2</b> to <b>2000</b>.</para>
         /// 
         /// <b>Example:</b>
@@ -63,14 +67,17 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string BandwidthPackageId { get; set; }
 
         /// <summary>
-        /// <para>The type of bandwidth. Valid values:</para>
+        /// <para>The bandwidth type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Basic</b></description></item>
-        /// <item><description><b>Enhanced</b></description></item>
-        /// <item><description><b>Advanced</b></description></item>
+        /// <item><description><para><b>Basic</b>: standard bandwidth.</para>
+        /// </description></item>
+        /// <item><description><para><b>Enhanced</b>: enhanced bandwidth.</para>
+        /// </description></item>
+        /// <item><description><para><b>Advanced</b>: premium bandwidth.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> You can upgrade <b>Basic</b> bandwidth to <b>Enhanced</b> bandwidth or downgrade Enhanced bandwidth to Basic bandwidth. You cannot change <b>Advanced</b> bandwidth to another type of bandwidth.</para>
+        /// <para>You can upgrade a Basic bandwidth plan to Enhanced, or downgrade an <b>Enhanced</b> bandwidth plan to <b>Basic</b>. You cannot change the bandwidth type of an <b>Advanced</b> bandwidth plan.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -92,7 +99,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The name of the bandwidth plan. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</para>
+        /// <para>The name of the bandwidth plan.
+        /// The name must be 1 to 128 characters in length, start with a letter or a Chinese character, and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>testName</para>
@@ -102,7 +110,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the GA instance. Set the value to <b>cn-hangzhou</b>.</para>
+        /// <para>The ID of the region where the Global Accelerator instance is deployed. Set the value to <b>cn-hangzhou</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

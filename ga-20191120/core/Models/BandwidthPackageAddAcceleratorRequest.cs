@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class BandwidthPackageAddAcceleratorRequest : TeaModel {
         /// <summary>
-        /// <para>The GA instance ID.</para>
+        /// <para>The ID of the Alibaba Cloud Global Accelerator (GA) instance to which the bandwidth plan is attached.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string AcceleratorId { get; set; }
 
         /// <summary>
-        /// <para>The bandwidth plan ID.</para>
+        /// <para>The ID of the bandwidth plan to attach to the Alibaba Cloud Global Accelerator (GA) instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string BandwidthPackageId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the GA instance. Set the value to <b>cn-hangzhou</b>.</para>
+        /// <para>The region ID of the Alibaba Cloud Global Accelerator (GA) instance. Set the value to <b>cn-hangzhou</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

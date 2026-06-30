@@ -95,8 +95,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>on - binding
-        /// off - unbinding</para>
+        /// <para>on</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

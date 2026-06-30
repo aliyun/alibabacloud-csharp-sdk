@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class GetBasicAccelerateIpEndpointRelationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the accelerated IP address.</para>
+        /// <para>The accelerated IP address instance ID of the basic Global Accelerator (GA) instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gaip-bp1****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string AccelerateIpId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the basic GA instance.</para>
+        /// <para>The instance ID of the basic Global Accelerator (GA) instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ga-bp11v53zfftax68b0daws</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string EndpointAddress { get; set; }
 
         /// <summary>
-        /// <para>The ID of the endpoint.</para>
+        /// <para>The endpoint ID of the basic Global Accelerator (GA) instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ep-bp14sz7ftcwwjgrdm****</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string EndpointId { get; set; }
 
         /// <summary>
-        /// <para>The name of the endpoint.</para>
+        /// <para>The name of the endpoint of the basic Global Accelerator (GA) instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ep01</para>
@@ -61,11 +61,11 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// <para>The secondary address of the endpoint.</para>
-        /// <para>This parameter is returned if the endpoint type is <b>ECS</b>, <b>ENI</b>, or <b>NLB</b>.</para>
+        /// <para>This parameter is returned when the endpoint type attached to the accelerated IP address is <b>ECS</b>, <b>ENI</b>, or <b>NLB</b>.</para>
         /// <list type="bullet">
-        /// <item><description>If the endpoint type is <b>ECS</b>, <b>EndpointSubAddress</b> returns the primary or secondary private IP address of the primary ENI.</description></item>
-        /// <item><description>If the endpoint type is <b>ENI</b>, <b>EndpointSubAddress</b> returns the primary or secondary private IP address of the secondary ENI.</description></item>
-        /// <item><description>If the endpoint type is <b>NLB</b>, <b>EndpointSubAddress</b> returns the primary private IP address of the NLB backend server.</description></item>
+        /// <item><description>If the endpoint type is <b>ECS</b>, EndpointSubAddress is the secondary private IP address or the primary private IP address of the primary network interface controller (NIC).</description></item>
+        /// <item><description>If the endpoint type is <b>ENI</b>, EndpointSubAddress is the secondary private IP address or the primary private IP address of the secondary elastic network interface (ENI).</description></item>
+        /// <item><description>If the endpoint type is <b>NLB</b>, EndpointSubAddress is the primary private IP address of the NLB backend server.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -76,12 +76,12 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string EndpointSubAddress { get; set; }
 
         /// <summary>
-        /// <para>The type of the secondary address of the endpoint.</para>
+        /// <para>The type of the secondary address of the endpoint. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>primary</b>: a primary private IP address.</description></item>
-        /// <item><description><b>secondary</b>: a secondary private IP address.</description></item>
+        /// <item><description><b>primary</b>: The secondary address type is the primary private IP address.</description></item>
+        /// <item><description><b>secondary</b>: The secondary address type is the secondary private IP address.</description></item>
         /// </list>
-        /// <para>This parameter is returned if the endpoint type is <b>ECS</b>, <b>ENI</b>, or <b>NLB</b>. If the endpoint type is set to <b>NLB</b>, <b>primary</b> is returned.</para>
+        /// <para>This parameter is returned when the endpoint type bound to the accelerated IP address is <b>ECS</b>, <b>ENI</b>, or <b>NLB</b>. If the endpoint type is <b>NLB</b>, only <b>primary</b> is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>primary</para>
@@ -91,12 +91,12 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string EndpointSubAddressType { get; set; }
 
         /// <summary>
-        /// <para>The type of endpoint. Valid values:</para>
+        /// <para>The endpoint type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ENI</b>: elastic network interface (ENI).</description></item>
-        /// <item><description><b>SLB</b>: Classic Load Balancer (CLB) instance.</description></item>
-        /// <item><description><b>ECS</b>: Elastic Compute Service (ECS) instance.</description></item>
-        /// <item><description><b>NLB</b>: Network Load Balancer (NLB) instance.</description></item>
+        /// <item><description><b>ENI</b>: an Alibaba Cloud elastic network interface (ENI).</description></item>
+        /// <item><description><b>SLB</b>: an Alibaba Cloud Classic Load Balancer (CLB) instance.</description></item>
+        /// <item><description><b>ECS</b>: an Alibaba Cloud ECS instance.</description></item>
+        /// <item><description><b>NLB</b>: an Alibaba Cloud Network Load Balancer (NLB) instance.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -107,8 +107,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string EndpointType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the zone where the endpoint is created.</para>
-        /// <para>This parameter is returned only when the endpoint type is <b>NLB</b>.</para>
+        /// <para>The zone ID of the endpoint.</para>
+        /// <para>Currently, this parameter is returned only when the endpoint type bound to the accelerated IP address is <b>NLB</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-g</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string EndpointZoneId { get; set; }
 
         /// <summary>
-        /// <para>The accelerated IP address of the basic GA instance.</para>
+        /// <para>The accelerated IP address of the basic Global Accelerator (GA) instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>116.132.XX.XX</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string IpAddress { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>04F0F334-1335-436C-A1D7-6C044FE73368</para>
@@ -138,8 +138,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The association status between the accelerated IP address and endpoint.</para>
-        /// <para>A value of <b>active</b> indicates that the accelerated IP address is associated with the endpoint.</para>
+        /// <para>The status of the attachment between the accelerated IP address and the endpoint of the basic Global Accelerator (GA) instance.</para>
+        /// <para>The value <b>active</b> indicates that the accelerated IP address is attached to the endpoint.</para>
         /// 
         /// <b>Example:</b>
         /// <para>active</para>

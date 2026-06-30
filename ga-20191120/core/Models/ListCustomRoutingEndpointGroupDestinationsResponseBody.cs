@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class ListCustomRoutingEndpointGroupDestinationsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the endpoint group mappings.</para>
+        /// <para>The destination configurations of the endpoint group.</para>
         /// </summary>
         [NameInMap("Destinations")]
         [Validation(Required=false)]
         public List<ListCustomRoutingEndpointGroupDestinationsResponseBodyDestinations> Destinations { get; set; }
         public class ListCustomRoutingEndpointGroupDestinationsResponseBodyDestinations : TeaModel {
             /// <summary>
-            /// <para>The GA instance ID.</para>
+            /// <para>The instance ID of the Alibaba Cloud Global Accelerator (GA) instance to which the endpoint group destination configuration belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ga-bp1odcab8tmno0hdq****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string AcceleratorId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the endpoint group mapping.</para>
+            /// <para>The ID of the endpoint group destination configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dst-123abc****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string DestinationId { get; set; }
 
             /// <summary>
-            /// <para>The endpoint group ID.</para>
+            /// <para>The ID of the endpoint group to which the destination configuration belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>epg-bp14sz7ftcwwjgrdm****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string EndpointGroupId { get; set; }
 
             /// <summary>
-            /// <para>The first port of the backend service port range.</para>
+            /// <para>The start port of the backend service of the endpoint group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public int? FromPort { get; set; }
 
             /// <summary>
-            /// <para>The listener ID.</para>
+            /// <para>The ID of the listener to which the endpoint group destination configuration belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>lsr-bp1bpn0kn908w4nbw****</para>
@@ -67,11 +67,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string ListenerId { get; set; }
 
             /// <summary>
-            /// <para>The backend service protocols of the endpoint group. Valid values:</para>
+            /// <para>The Protocol Type of the backend service of the endpoint group.</para>
             /// <list type="bullet">
-            /// <item><description><b>TCP</b></description></item>
-            /// <item><description><b>UDP</b></description></item>
-            /// <item><description><b>TCP,UDP</b></description></item>
+            /// <item><description><para><b>TCP</b>: TCP protocol.</para>
+            /// </description></item>
+            /// <item><description><para><b>UDP</b>: UDP protocol.</para>
+            /// </description></item>
+            /// <item><description><para><b>TCP,UDP</b>: TCP and UDP protocols.</para>
+            /// </description></item>
             /// </list>
             /// </summary>
             [NameInMap("Protocols")]
@@ -79,9 +82,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public List<string> Protocols { get; set; }
 
             /// <summary>
-            /// <para>The ID of the service that manages the GA instance.</para>
+            /// <para>The ID of the service to which the managed instance belongs.</para>
             /// <remarks>
-            /// <para> This parameter takes effect only if <b>ServiceManaged</b> is set to <b>True</b>.</para>
+            /// <para>This parameter is valid only when <b>ServiceManaged</b> is set to <b>True</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -92,10 +95,12 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string ServiceId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the GA instance is managed. Valid values:</para>
+            /// <para>Indicates whether the instance is managed. Valid values:  </para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description><para>true: The instance is managed.  </para>
+            /// </description></item>
+            /// <item><description><para>false: The instance is not managed.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -106,11 +111,11 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public bool? ServiceManaged { get; set; }
 
             /// <summary>
-            /// <para>The actions that you can perform on the managed instance.</para>
+            /// <para>The list of action policies that the user can execute on the managed instance.</para>
             /// <remarks>
+            /// <para>This parameter is valid only when <b>ServiceManaged</b> is set to <b>True</b>.</para>
             /// <list type="bullet">
-            /// <item><description>This parameter takes effect only if <b>ServiceManaged</b> is set to <b>True</b>.</description></item>
-            /// <item><description>You can perform only specific actions on the managed instance.</description></item>
+            /// <item><description>When the instance is in the managed state, user operations on the instance are restricted, and certain operations are prohibited.</description></item>
             /// </list>
             /// </remarks>
             /// </summary>
@@ -119,18 +124,18 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public List<ListCustomRoutingEndpointGroupDestinationsResponseBodyDestinationsServiceManagedInfos> ServiceManagedInfos { get; set; }
             public class ListCustomRoutingEndpointGroupDestinationsResponseBodyDestinationsServiceManagedInfos : TeaModel {
                 /// <summary>
-                /// <para>The name of the action that you can perform on the managed instance. Valid values:</para>
+                /// <para>The name of the managed policy action. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>Create</b>: Create an instance.</description></item>
                 /// <item><description><b>Update</b>: Update the current instance.</description></item>
                 /// <item><description><b>Delete</b>: Delete the current instance.</description></item>
-                /// <item><description><b>Associate</b>: Reference the current instance.</description></item>
+                /// <item><description><b>Associate</b>: Reference or be referenced by the current instance.</description></item>
                 /// <item><description><b>UserUnmanaged</b>: Unmanage the instance.</description></item>
-                /// <item><description><b>CreateChild</b>: Create a child resource in the current instance.</description></item>
+                /// <item><description><b>CreateChild</b>: Create a child resource under the current instance.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Update</para>
+                /// <para>Create</para>
                 /// </summary>
                 [NameInMap("Action")]
                 [Validation(Required=false)]
@@ -139,17 +144,17 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 /// <summary>
                 /// <para>The type of the child resource. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Listener</b>: listener.</description></item>
-                /// <item><description><b>IpSet</b>: acceleration region.</description></item>
-                /// <item><description><b>EndpointGroup</b>: endpoint group.</description></item>
-                /// <item><description><b>ForwardingRule</b>: forwarding rule.</description></item>
-                /// <item><description><b>Endpoint</b>: endpoint.</description></item>
-                /// <item><description><b>EndpointGroupDestination</b>: protocol mapping of an endpoint group associated with a custom routing listener.</description></item>
-                /// <item><description><b>EndpointPolicy</b>: traffic policy of an endpoint associated with a custom routing listener.</description></item>
-                /// </list>
-                /// <remarks>
-                /// <para> This parameter takes effect only if <b>Action</b> is set to <b>CreateChild</b>.</para>
+                /// <item><description><b>Listener</b>: listener resource.</description></item>
+                /// <item><description><b>IpSet</b>: acceleration region resource.</description></item>
+                /// <item><description><b>EndpointGroup</b>: endpoint group resource.</description></item>
+                /// <item><description><b>ForwardingRule</b>: forwarding rule resource.</description></item>
+                /// <item><description><b>Endpoint</b>: endpoint resource.</description></item>
+                /// <item><description><b>EndpointGroupDestination</b>: protocol mapping resource of the endpoint group under a custom routing listener.</description></item>
+                /// <item><description><b>EndpointPolicy</b>: endpoint traffic policy resource under a custom routing listener.<remarks>
+                /// <para>This parameter is valid only when <b>Action</b> is set to <b>CreateChild</b>.</para>
                 /// </remarks>
+                /// </description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Listener</para>
@@ -159,10 +164,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 public string ChildType { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the specified actions are managed. Valid values:</para>
+                /// <para>Indicates whether the managed policy action is managed. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b>: The specified actions are managed, and you cannot perform the specified actions on the managed instance.</description></item>
-                /// <item><description><b>false</b>: The specified actions are not managed, and you can perform the specified actions on the managed instance.</description></item>
+                /// <item><description><b>true</b>: The managed policy action is managed. The user cannot perform the action specified by Action on the managed instance.</description></item>
+                /// <item><description><b>false</b>: The managed policy action is not managed. The user can perform the action specified by Action on the managed instance.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -175,7 +180,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             }
 
             /// <summary>
-            /// <para>The last port of the backend service port range.</para>
+            /// <para>The end port of the backend service of the endpoint group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -187,7 +192,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         }
 
         /// <summary>
-        /// <para>The number of the returned page.</para>
+        /// <para>The page number of the list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -197,7 +202,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -207,7 +212,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>04F0F334-1335-436C-A1D7-6C044FE73368</para>

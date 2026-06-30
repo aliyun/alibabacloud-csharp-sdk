@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class AddEntriesToAclRequest : TeaModel {
         /// <summary>
-        /// <para>The entries (IP addresses or CIDR blocks) that you want to add to the ACL.</para>
-        /// <para>You can add at most 50 entries at a time.</para>
+        /// <para>The access control policy group entries to add. An entry can be an IP address or a CIDR block.</para>
+        /// <para>You can add up to 50 entries at a time.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AclEntries")]
@@ -19,9 +19,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public List<AddEntriesToAclRequestAclEntries> AclEntries { get; set; }
         public class AddEntriesToAclRequestAclEntries : TeaModel {
             /// <summary>
-            /// <para>The entry (IP address or CIDR block) that you want to add. You can add at most 50 entries at a time.</para>
+            /// <para>The access control policy group entry to add. An entry can be an IP address or a CIDR block. You can add up to 50 entries at a time.</para>
             /// <remarks>
-            /// <para> This parameter is required.</para>
+            /// <para>This parameter is required.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -32,9 +32,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string Entry { get; set; }
 
             /// <summary>
-            /// <para>The description of the entry that you want to add to the ACL.</para>
-            /// <para>You can add at most 50 descriptions in each request.</para>
-            /// <para>The description must be 1 to 256 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (_).</para>
+            /// <para>The description of the access control policy group entry.</para>
+            /// <para>You can add descriptions for up to 50 entries at a time.</para>
+            /// <para>The description must be 1 to 256 characters in length and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (_). Chinese characters are supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-entry</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         }
 
         /// <summary>
-        /// <para>The ACL ID.</para>
+        /// <para>The ID of the access control policy group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -57,10 +57,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string AclId { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>The client token that is used to ensure the idempotence of a request.</para>
         /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> value as the <b>ClientToken</b> value. The <b>RequestId</b> value is different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -71,10 +71,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b>(default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</description></item>
+        /// <item><description><b>true</b>: performs a dry run. The system checks the required parameters, request format, and business limitations without actually adding IP entries to the access control policy group. If the check fails, the corresponding error is returned. If the check succeeds, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): sends a normal request. If the check succeeds, an HTTP 2xx status code is returned and the operation is performed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the GA instance. Set the value to <b>cn-hangzhou</b>.</para>
+        /// <para>The region ID of the Global Accelerator (GA) instance. Set the value to <b>cn-hangzhou</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

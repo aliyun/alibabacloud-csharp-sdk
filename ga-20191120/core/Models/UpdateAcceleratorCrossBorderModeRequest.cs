@@ -40,8 +40,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// <para>The type of transmission network of the GA instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>bgpPro</b>: BGP (Multi-ISP) Pro. BGP (Multi-ISP) Pro lines are used for cross-border acceleration. You do not need to complete real-name verification.</description></item>
-        /// <item><description><b>private</b>: cross-border Express Connect circuit. Cross-border Express Connect circuits provide better acceleration performance but require real-name verification.</description></item>
+        /// <item><description><para><b>bgpPro</b>: BGP (Multi-ISP) Pro. BGP (Multi-ISP) Pro lines are used for cross-border acceleration. You do not need to complete real-name verification.</para>
+        /// </description></item>
+        /// <item><description><para><b>private</b>: cross-border Express Connect circuit. Cross-border Express Connect circuits provide better acceleration performance but require real-name verification.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

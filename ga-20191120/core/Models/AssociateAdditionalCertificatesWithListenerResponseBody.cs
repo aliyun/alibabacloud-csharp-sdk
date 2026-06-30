@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class AssociateAdditionalCertificatesWithListenerResponseBody : TeaModel {
         /// <summary>
-        /// <para>The listener ID.</para>
+        /// <para>The listener instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>lsr-bp1bpn0kn908w4nbw****</para>

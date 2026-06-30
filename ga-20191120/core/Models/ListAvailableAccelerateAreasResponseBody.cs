@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class ListAvailableAccelerateAreasResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about acceleration areas.</para>
+        /// <para>The list of areas.</para>
         /// </summary>
         [NameInMap("Areas")]
         [Validation(Required=false)]
         public List<ListAvailableAccelerateAreasResponseBodyAreas> Areas { get; set; }
         public class ListAvailableAccelerateAreasResponseBodyAreas : TeaModel {
             /// <summary>
-            /// <para>The ID of the acceleration area.</para>
+            /// <para>The ID of the area.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-huabei</para>
@@ -27,17 +27,17 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string AreaId { get; set; }
 
             /// <summary>
-            /// <para>The acceleration area name.</para>
+            /// <para>The name of the area.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>North China</para>
+            /// <para>China North</para>
             /// </summary>
             [NameInMap("LocalName")]
             [Validation(Required=false)]
             public string LocalName { get; set; }
 
             /// <summary>
-            /// <para>The information about acceleration regions.</para>
+            /// <para>The list of regions.</para>
             /// </summary>
             [NameInMap("RegionList")]
             [Validation(Required=false)]
@@ -46,22 +46,26 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 /// <summary>
                 /// <para>Indicates whether the region is in the Chinese mainland. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b></description></item>
-                /// <item><description><b>false</b></description></item>
+                /// <item><description><para><b>true</b>: The region is in the Chinese mainland.</para>
+                /// </description></item>
+                /// <item><description><para><b>false</b>: The region is not in the Chinese mainland.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>false</para>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("ChinaMainland")]
                 [Validation(Required=false)]
                 public bool? ChinaMainland { get; set; }
 
                 /// <summary>
-                /// <para>The line type of the elastic IP address (EIP) in the acceleration region. Valid values:</para>
+                /// <para>The line type of the public IP address in the acceleration region.</para>
                 /// <list type="bullet">
-                /// <item><description><b>BGP</b>: BGP (Multi-ISP) lines.</description></item>
-                /// <item><description><b>BGP_PRO</b>: BGP (Multi-ISP) Pro lines.</description></item>
+                /// <item><description><para><b>BGP</b> (default): BGP (Multi-ISP) line.</para>
+                /// </description></item>
+                /// <item><description><para><b>BGP_PRO</b>: BGP (Multi-ISP) Pro line.</para>
+                /// </description></item>
                 /// </list>
                 /// </summary>
                 [NameInMap("IspTypeList")]
@@ -69,7 +73,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 public List<string> IspTypeList { get; set; }
 
                 /// <summary>
-                /// <para>The acceleration region name.</para>
+                /// <para>The name of the region.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>China (Qingdao)</para>
@@ -79,10 +83,12 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 public string LocalName { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether multiple zones are supported. Valid values:</para>
+                /// <para>Indicates whether multi-zone deployment is supported. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b></description></item>
-                /// <item><description><b>false</b></description></item>
+                /// <item><description><para><b>true</b>: Multi-zone deployment is supported.</para>
+                /// </description></item>
+                /// <item><description><para><b>false</b>: Multi-zone deployment is not supported.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -93,7 +99,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 public bool? MultiAz { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the acceleration region.</para>
+                /// <para>The ID of the region.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-qingdao</para>
@@ -105,8 +111,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 /// <summary>
                 /// <para>Indicates whether IPv6 is supported. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b></description></item>
-                /// <item><description><b>false</b></description></item>
+                /// <item><description><para><b>true</b>: IPv6 is supported.</para>
+                /// </description></item>
+                /// <item><description><para><b>false</b>: IPv6 is not supported.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -121,7 +129,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A9B4E54C-9CCD-4002-91A9-D38C6C209192</para>

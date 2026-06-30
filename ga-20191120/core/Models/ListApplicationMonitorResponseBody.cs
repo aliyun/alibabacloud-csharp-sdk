@@ -39,8 +39,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// <para>Indicates whether the automatic diagnostics feature is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b></para>
+            /// </description></item>
+            /// <item><description><para><b>false</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -105,10 +107,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// <para>The status of the origin probing task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>active:</b> The origin probing task is running.</description></item>
-            /// <item><description><b>inactive:</b> The origin probing task is stopped.</description></item>
-            /// <item><description><b>init:</b> The origin probing task is being initialized.</description></item>
-            /// <item><description><b>deleting:</b> The origin probing task is being deleted.</description></item>
+            /// <item><description><para><b>active:</b> The origin probing task is running.</para>
+            /// </description></item>
+            /// <item><description><para><b>inactive:</b> The origin probing task is stopped.</para>
+            /// </description></item>
+            /// <item><description><para><b>init:</b> The origin probing task is being initialized.</para>
+            /// </description></item>
+            /// <item><description><para><b>deleting:</b> The origin probing task is being deleted.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <para>The region name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>China (Hangzhou)</para>
+            /// <para>杭州</para>
             /// </summary>
             [NameInMap("LocalName")]
             [Validation(Required=false)]

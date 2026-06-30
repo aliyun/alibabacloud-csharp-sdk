@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class DeleteAclResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the ACL.</para>
+        /// <para>The ID of the access control policy group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nacl-hp34s2h0xx1ht4nwo****</para>

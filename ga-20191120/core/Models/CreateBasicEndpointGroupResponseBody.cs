@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class CreateBasicEndpointGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The endpoint group ID.</para>
+        /// <para>The ID of the endpoint group for the basic Alibaba Cloud Global Accelerator (GA) instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>epg-bp1dmlohjjz4kqaun****</para>

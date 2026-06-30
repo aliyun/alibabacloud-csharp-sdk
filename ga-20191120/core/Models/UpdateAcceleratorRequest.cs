@@ -23,11 +23,13 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b>: disables automatic payment. This is the default value. After an order is generated, you must go to the <a href="https://usercenter2-intl.aliyun.com/order/list">Order Center</a> to complete the payment.</description></item>
-        /// <item><description><b>true</b>: enables automatic payment. Payments are automatically completed.</description></item>
+        /// <item><description><para><b>false</b> (default): Disables automatic payment. After an order is generated, you must go to the <a href="https://usercenter2-intl.aliyun.com/order/list">Order Hub</a> to complete the payment.</para>
+        /// </description></item>
+        /// <item><description><para><b>true</b>: Enables automatic payment. The system automatically pays the bill.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter takes effect only if you call the operation to upgrade a GA instance.</para>
+        /// <para>This parameter is valid only for upgrade orders.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -38,13 +40,15 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to automatically pay bills by using coupons. Default value: false. Valid values:</para>
+        /// <para>Specifies whether to automatically use a coupon to pay for the bill. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: automatically pays bills by using coupons.</description></item>
-        /// <item><description><b>false</b>: does not automatically pay bills by using coupons.</description></item>
+        /// <item><description><para><b>true</b>: Use a coupon.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): Do not use a coupon.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter takes effect only if the <b>AutoPay</b> parameter is set to <b>true</b>.</para>
+        /// <para>This parameter is valid only if <b>AutoPay</b> is set to <b>true</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -54,15 +58,25 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public bool? AutoUseCoupon { get; set; }
 
+        /// <summary>
+        /// <para>The bandwidth of the standard GA instance. Unit: <b>Mbps</b>.</para>
+        /// <para>Valid values: 200 to 5000.</para>
+        /// <remarks>
+        /// <para>This parameter is valid only when the access mode of the acceleration area is Anycast.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
+        /// </summary>
         [NameInMap("Bandwidth")]
         [Validation(Required=false)]
         public int? Bandwidth { get; set; }
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>Generate a parameter value from your client to make sure that the value is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request may be different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -84,7 +98,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// <para>The name of the GA instance.</para>
-        /// <para>The name must be 1 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</para>
+        /// <para>The name must be 1 to 128 characters in length, start with a letter or a Chinese character, and can contain digits, periods (.), underscores (_), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>Accelerator</para>
@@ -96,7 +110,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The region where the GA instance is deployed. Set the value to <b>cn-hangzhou</b>.</para>
+        /// <para>The region ID of the GA instance. Set the value to <b>cn-hangzhou</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -109,27 +123,43 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// <para>The specification of the GA instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: Small Ⅰ</description></item>
-        /// <item><description><b>2</b>: Small Ⅱ</description></item>
-        /// <item><description><b>3</b>: Small Ⅲ</description></item>
-        /// <item><description><b>5</b>: Medium Ⅰ</description></item>
-        /// <item><description><b>8</b>: Medium Ⅱ</description></item>
-        /// <item><description><b>10</b>: Medium Ⅲ</description></item>
-        /// <item><description><b>20</b>: Large Ⅰ</description></item>
-        /// <item><description><b>30</b>: Large Ⅱ</description></item>
-        /// <item><description><b>40</b>: Large Ⅲ</description></item>
-        /// <item><description><b>50</b>: Large Ⅳ</description></item>
-        /// <item><description><b>60</b>: Large Ⅴ</description></item>
-        /// <item><description><b>70</b>: Large Ⅵ</description></item>
-        /// <item><description><b>80</b>: Large VⅡ</description></item>
-        /// <item><description><b>90</b>: Large VⅢ</description></item>
-        /// <item><description><b>100</b>: Super Large Ⅰ</description></item>
-        /// <item><description><b>200</b>: Super Large Ⅱ</description></item>
+        /// <item><description><para><b>1</b>: Small I</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: Small II</para>
+        /// </description></item>
+        /// <item><description><para><b>3</b>: Small III</para>
+        /// </description></item>
+        /// <item><description><para><b>5</b>: Medium I</para>
+        /// </description></item>
+        /// <item><description><para><b>8</b>: Medium II</para>
+        /// </description></item>
+        /// <item><description><para><b>10</b>: Medium III</para>
+        /// </description></item>
+        /// <item><description><para><b>20</b>: Large I</para>
+        /// </description></item>
+        /// <item><description><para><b>30</b>: Large II</para>
+        /// </description></item>
+        /// <item><description><para><b>40</b>: Large III</para>
+        /// </description></item>
+        /// <item><description><para><b>50</b>: Large IV</para>
+        /// </description></item>
+        /// <item><description><para><b>60</b>: Large V</para>
+        /// </description></item>
+        /// <item><description><para><b>70</b>: Large VI</para>
+        /// </description></item>
+        /// <item><description><para><b>80</b>: Large VII</para>
+        /// </description></item>
+        /// <item><description><para><b>90</b>: Large VIII</para>
+        /// </description></item>
+        /// <item><description><para><b>100</b>: Ultra-large I</para>
+        /// </description></item>
+        /// <item><description><para><b>200</b>: Ultra-large II</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> The Large Ⅲ specification and higher specifications are available only for accounts that are added to the whitelist. To use these specifications, contact your Alibaba Cloud account manager.</para>
+        /// <para>Large III and higher specifications are available only to whitelisted users. To use these specifications, contact your account manager.</para>
         /// </remarks>
-        /// <para>Different specifications provide different capabilities. For more information, see <a href="https://help.aliyun.com/document_detail/153127.html">Instance specifications</a>.</para>
+        /// <para>The definitions of instance types vary. For more information, see <a href="https://help.aliyun.com/document_detail/153127.html">Instance types</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

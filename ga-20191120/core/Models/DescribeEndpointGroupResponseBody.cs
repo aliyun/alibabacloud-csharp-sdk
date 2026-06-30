@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class DescribeEndpointGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the GA instance.</para>
+        /// <para>The Global Accelerator instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ga-bp1odcab8tmno0hdq****</para>
@@ -19,21 +19,40 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public string AcceleratorId { get; set; }
 
+        /// <summary>
+        /// <para>The custom header fields to record in access logs.</para>
+        /// </summary>
         [NameInMap("AccessLogRecordCustomizedHeaderList")]
         [Validation(Required=false)]
         public List<string> AccessLogRecordCustomizedHeaderList { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to record custom header fields in access logs. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b>: Yes.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): No.</para>
+        /// </description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>You can set this parameter to <b>true</b> only when <b>EnableAccessLog</b> is set to <b>true</b>.</para>
+        /// </remarks>
+        /// </summary>
         [NameInMap("AccessLogRecordCustomizedHeadersEnabled")]
         [Validation(Required=false)]
         public bool? AccessLogRecordCustomizedHeadersEnabled { get; set; }
 
         /// <summary>
-        /// <para>Indicates the binding status between the Simple Log Service project and the endpoint group. Valid values:</para>
+        /// <para>The status of the access log configuration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>on:</b> The endpoint group is bound to the Simple Log Service project.</description></item>
-        /// <item><description><b>off:</b> The endpoint group is not bound to the Simple Log Service project.</description></item>
-        /// <item><description><b>binding:</b> The endpoint group is being bound to the Simple Log Service project.</description></item>
-        /// <item><description><b>unbinding:</b> The endpoint group is being unbound from the Simple Log Service project.</description></item>
+        /// <item><description><para><b>on</b>: The access log is configured.</para>
+        /// </description></item>
+        /// <item><description><para><b>off</b>: The access log is not configured.</para>
+        /// </description></item>
+        /// <item><description><para><b>binding</b>: The access log is being configured.</para>
+        /// </description></item>
+        /// <item><description><para><b>unbinding</b>: The access log configuration is being removed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -54,10 +73,12 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the access log feature is enabled. Valid values:</para>
+        /// <para>Indicates whether access logging is enabled.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: Access logging is enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Access logging is disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -68,21 +89,26 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public bool? EnableAccessLog { get; set; }
 
         /// <summary>
-        /// <para>The configurations of endpoints in the endpoint group.</para>
+        /// <para>The endpoint configurations.</para>
         /// </summary>
         [NameInMap("EndpointConfigurations")]
         [Validation(Required=false)]
         public List<DescribeEndpointGroupResponseBodyEndpointConfigurations> EndpointConfigurations { get; set; }
         public class DescribeEndpointGroupResponseBodyEndpointConfigurations : TeaModel {
+            /// <summary>
+            /// <para>The API keys for the endpoint configuration.</para>
+            /// </summary>
             [NameInMap("ApiKeys")]
             [Validation(Required=false)]
             public List<string> ApiKeys { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the client IP address preservation feature is enabled. Valid values:</para>
+            /// <para>Indicates whether client IP preservation is enabled by using the automatic method.</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b>: Enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: Disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -93,7 +119,13 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public bool? EnableClientIPPreservation { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the proxy protocol is used to preserve client IP addresses.</para>
+            /// <para>Indicates whether client IP preservation is enabled using the Proxy Protocol.</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>true</b>: Enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: Disabled.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -103,7 +135,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public bool? EnableProxyProtocol { get; set; }
 
             /// <summary>
-            /// <para>The IP address, domain name, or ID of the endpoint.</para>
+            /// <para>The IP address, domain name, or instance ID of the endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>120.XX.XX.21</para>
@@ -113,7 +145,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string Endpoint { get; set; }
 
             /// <summary>
-            /// <para>The port that is used to monitor latency.</para>
+            /// <para>The port used for latency probing.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -123,10 +155,12 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public int? ProbePort { get; set; }
 
             /// <summary>
-            /// <para>The protocol that is used to monitor latency. Valid values:</para>
+            /// <para>The protocol for latency probing. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>tcp</b></description></item>
-            /// <item><description><b>icmp</b></description></item>
+            /// <item><description><para><b>tcp</b>: TCP</para>
+            /// </description></item>
+            /// <item><description><para><b>icmp</b>: ICMP</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -137,6 +171,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string ProbeProtocol { get; set; }
 
             /// <summary>
+            /// <para>The provider of the endpoint configuration.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>BAILIAN</para>
             /// </summary>
@@ -145,7 +181,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string Provider { get; set; }
 
             /// <summary>
-            /// <para>The private IP address of the ENI.</para>
+            /// <para>The private IP address of the elastic network interface.</para>
             /// 
             /// <b>Example:</b>
             /// <para>172.168.XX.XX</para>
@@ -157,16 +193,26 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// <para>The type of the endpoint. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Domain</b>: a custom domain name.</description></item>
-            /// <item><description><b>Ip</b>: a custom IP address.</description></item>
-            /// <item><description><b>IpTarget</b>: a custom private IP address.</description></item>
-            /// <item><description><b>PublicIp</b>: a public IP address provided by Alibaba Cloud.</description></item>
-            /// <item><description><b>ECS</b>: an Elastic Compute Service (ECS) instance.</description></item>
-            /// <item><description><b>SLB</b>: a Server Load Balancer (SLB) instance.</description></item>
-            /// <item><description><b>ALB</b> an Application Load Balancer (ALB) instance.</description></item>
-            /// <item><description><b>OSS</b>: an Object Storage Service (OSS) bucket.</description></item>
-            /// <item><description><b>ENI</b>: an elastic network interface (ENI).</description></item>
-            /// <item><description><b>NLB</b>: a Network Load Balancer (NLB) instance.</description></item>
+            /// <item><description><para><b>Domain</b>: A custom domain name.</para>
+            /// </description></item>
+            /// <item><description><para><b>Ip</b>: A custom IP address.</para>
+            /// </description></item>
+            /// <item><description><para><b>IpTarget</b>: A custom private IP address.</para>
+            /// </description></item>
+            /// <item><description><para><b>PublicIp</b>: An Alibaba Cloud public IP address.</para>
+            /// </description></item>
+            /// <item><description><para><b>ECS</b>: An ECS instance.</para>
+            /// </description></item>
+            /// <item><description><para><b>SLB</b>: An SLB instance.</para>
+            /// </description></item>
+            /// <item><description><para><b>ALB</b>: An ALB instance.</para>
+            /// </description></item>
+            /// <item><description><para><b>OSS</b>: An OSS instance.</para>
+            /// </description></item>
+            /// <item><description><para><b>ENI</b>: An elastic network interface.</para>
+            /// </description></item>
+            /// <item><description><para><b>NLB</b>: An NLB instance.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -177,7 +223,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The IDs of vSwitches that are deployed in the VPC.</para>
+            /// <para>A list of VSwitch IDs.</para>
             /// </summary>
             [NameInMap("VSwitchIds")]
             [Validation(Required=false)]
@@ -197,7 +243,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <para>The weight of the endpoint.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>20</para>
+            /// <para>255</para>
             /// </summary>
             [NameInMap("Weight")]
             [Validation(Required=false)]
@@ -206,7 +252,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         }
 
         /// <summary>
-        /// <para>The ID of the endpoint group.</para>
+        /// <para>The endpoint group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>epg-bp14sz7ftcwwjgrdm****</para>
@@ -216,14 +262,17 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string EndpointGroupId { get; set; }
 
         /// <summary>
-        /// <para>The active endpoint IP addresses of the endpoint group.</para>
+        /// <para>The list of active IP addresses of the endpoints in the endpoint group.</para>
+        /// <remarks>
+        /// <para>Notice: For an endpoint group configured for back-to-source from a private network, the console displays only the private back-to-source IP addresses and not the public IP addresses. If the network connection type for the backend service of the endpoint group changes (for example, from a private network to a public network, or to a mix of private and public networks), you must monitor the changes in the back-to-source IP addresses and update the access control list (ACL) of the backend service accordingly.</para>
+        /// </remarks>
         /// </summary>
         [NameInMap("EndpointGroupIpList")]
         [Validation(Required=false)]
         public List<string> EndpointGroupIpList { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the endpoint group is deployed.</para>
+        /// <para>The region ID where the endpoint group is deployed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -233,10 +282,12 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string EndpointGroupRegion { get; set; }
 
         /// <summary>
-        /// <para>The type of endpoint group. Valid values:</para>
+        /// <para>The type of the endpoint group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>default</b>: a default endpoint group</description></item>
-        /// <item><description><b>virtual</b>: a virtual endpoint group</description></item>
+        /// <item><description><para><b>default</b>: A default endpoint group.</para>
+        /// </description></item>
+        /// <item><description><para><b>virtual</b>: A virtual endpoint group.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -247,16 +298,33 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string EndpointGroupType { get; set; }
 
         /// <summary>
-        /// <para>The endpoint group IP addresses to be confirmed. After the GA instance is upgraded, the IP addresses that are added to the endpoint group need to be confirmed.</para>
+        /// <para>A list of endpoint IP addresses pending confirmation after a Global Accelerator instance upgrade.</para>
         /// </summary>
         [NameInMap("EndpointGroupUnconfirmedIpList")]
         [Validation(Required=false)]
         public List<string> EndpointGroupUnconfirmedIpList { get; set; }
 
+        /// <summary>
+        /// <para>The IP version used to connect to the backend service. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>IPv4</b> (default): Global Accelerator connects to the backend service using IPv4.</para>
+        /// </description></item>
+        /// <item><description><para><b>IPv6</b>: Global Accelerator connects to the backend service using IPv6.</para>
+        /// </description></item>
+        /// <item><description><para><b>ProtocolAffinity</b>: Global Accelerator connects to the backend service using the same IP version as the client request.</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>IPv4</para>
+        /// </summary>
         [NameInMap("EndpointIpVersion")]
         [Validation(Required=false)]
         public string EndpointIpVersion { get; set; }
 
+        /// <summary>
+        /// <para>The private IP addresses of the endpoints.</para>
+        /// </summary>
         [NameInMap("EndpointPrivateIpList")]
         [Validation(Required=false)]
         public List<DescribeEndpointGroupResponseBodyEndpointPrivateIpList> EndpointPrivateIpList { get; set; }
@@ -265,10 +333,22 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [Validation(Required=false)]
             public string CIDR { get; set; }
 
+            /// <summary>
+            /// <para>The private IP address.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>172.16.49.***</para>
+            /// </summary>
             [NameInMap("PrivateIp")]
             [Validation(Required=false)]
             public string PrivateIp { get; set; }
 
+            /// <summary>
+            /// <para>The VSwitch ID in the VPC.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>gsw-bp1rsfd2frym**</para>
+            /// </summary>
             [NameInMap("VSwitchId")]
             [Validation(Required=false)]
             public string VSwitchId { get; set; }
@@ -276,21 +356,28 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         }
 
         /// <summary>
-        /// <para>The version of the protocol that is used by the backend service.</para>
+        /// <para>The version of the backend service protocol. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>HTTP1.1</b></description></item>
-        /// <item><description><b>HTTP2</b></description></item>
+        /// <item><description><para><b>HTTP1.1</b></para>
+        /// </description></item>
+        /// <item><description><para><b>HTTP2</b></para>
+        /// </description></item>
         /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>HTTP2</para>
         /// </summary>
         [NameInMap("EndpointProtocolVersion")]
         [Validation(Required=false)]
         public string EndpointProtocolVersion { get; set; }
 
         /// <summary>
-        /// <para>The protocol that is used by the backend service.</para>
+        /// <para>The protocol used by the backend service. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>HTTP</b></description></item>
-        /// <item><description><b>HTTPS</b></description></item>
+        /// <item><description><para><b>HTTP</b></para>
+        /// </description></item>
+        /// <item><description><para><b>HTTPS</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -301,17 +388,19 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string EndpointRequestProtocol { get; set; }
 
         /// <summary>
-        /// <para>The ID of the forwarding rule that is associated with the endpoint group.</para>
+        /// <para>The IDs of the associated forwarding rules.</para>
         /// </summary>
         [NameInMap("ForwardingRuleIds")]
         [Validation(Required=false)]
         public List<string> ForwardingRuleIds { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the health check feature is enabled. Valid values:</para>
+        /// <para>Indicates whether health checks are enabled.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enabled</description></item>
-        /// <item><description><b>false</b>: disabled</description></item>
+        /// <item><description><para><b>true</b>: Health checks are enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Health checks are disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -321,12 +410,18 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public bool? HealthCheckEnabled { get; set; }
 
+        /// <summary>
+        /// <para>The domain name used for health checks.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="http://www.taobao.com">www.taobao.com</a></para>
+        /// </summary>
         [NameInMap("HealthCheckHost")]
         [Validation(Required=false)]
         public string HealthCheckHost { get; set; }
 
         /// <summary>
-        /// <para>The interval between two consecutive health checks. Unit: seconds.</para>
+        /// <para>The health check interval, in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -336,7 +431,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public int? HealthCheckIntervalSeconds { get; set; }
 
         /// <summary>
-        /// <para>The path to which health check probes are sent.</para>
+        /// <para>The path for health check probes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/healthcheck</para>
@@ -346,7 +441,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string HealthCheckPath { get; set; }
 
         /// <summary>
-        /// <para>The port that is used for health checks.</para>
+        /// <para>The port used for health checks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -356,11 +451,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public int? HealthCheckPort { get; set; }
 
         /// <summary>
-        /// <para>The protocol over which health check requests are sent. Valid values:</para>
+        /// <para>The protocol used for health checks.</para>
         /// <list type="bullet">
-        /// <item><description><b>tcp</b> or <b>TCP</b></description></item>
-        /// <item><description><b>http</b> or <b>HTTP</b></description></item>
-        /// <item><description><b>https</b> or <b>HTTPS</b></description></item>
+        /// <item><description><para><b>tcp</b> or <b>TCP</b>: TCP</para>
+        /// </description></item>
+        /// <item><description><para><b>http</b> or <b>HTTP</b>: HTTP</para>
+        /// </description></item>
+        /// <item><description><para><b>https</b> or <b>HTTPS</b>: HTTPS</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -371,7 +469,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string HealthCheckProtocol { get; set; }
 
         /// <summary>
-        /// <para>The ID of the listener.</para>
+        /// <para>The listener ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>lsr-bp1bpn0kn908w4nbw****</para>
@@ -391,7 +489,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The mappings between ports.</para>
+        /// <para>The port mapping configuration.</para>
         /// </summary>
         [NameInMap("PortOverrides")]
         [Validation(Required=false)]
@@ -420,7 +518,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6FEA0CF3-D3B9-43E5-A304-D217037876A8</para>
@@ -430,9 +528,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the service that manages the GA instance.</para>
+        /// <para>The ID of the service that manages the instance.</para>
         /// <remarks>
-        /// <para> This parameter takes effect only if <b>ServiceManaged</b> is set to <b>True</b>.</para>
+        /// <para>This parameter is returned only if <b>ServiceManaged</b> is set to <b>True</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -443,10 +541,12 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string ServiceId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the instance is managed.</para>
+        /// <para>Indicates whether the instance is a managed instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: The instance is a managed instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The instance is not a managed instance.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -457,11 +557,13 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public bool? ServiceManaged { get; set; }
 
         /// <summary>
-        /// <para>The actions that users can perform on the managed instance.</para>
+        /// <para>A list of management states for actions that can be performed on the instance.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This parameter takes effect only if the value of <b>ServiceManaged</b> is <b>true</b>.</description></item>
-        /// <item><description>Users can perform only specific actions on a managed instance.</description></item>
+        /// <item><description><para>This parameter is returned only if <b>ServiceManaged</b> is set to <b>True</b>.</para>
+        /// </description></item>
+        /// <item><description><para>When an instance is managed, some operations may be restricted.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// </summary>
@@ -470,14 +572,20 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public List<DescribeEndpointGroupResponseBodyServiceManagedInfos> ServiceManagedInfos { get; set; }
         public class DescribeEndpointGroupResponseBodyServiceManagedInfos : TeaModel {
             /// <summary>
-            /// <para>The name of the action on the managed instance.</para>
+            /// <para>The name of the action on the managed instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Create</b></description></item>
-            /// <item><description><b>Update</b></description></item>
-            /// <item><description><b>Delete</b></description></item>
-            /// <item><description><b>Associate</b></description></item>
-            /// <item><description><b>UserUnmanaged</b></description></item>
-            /// <item><description><b>CreateChild</b></description></item>
+            /// <item><description><para><b>Create</b>: Create an instance.</para>
+            /// </description></item>
+            /// <item><description><para><b>Update</b>: Update the instance.</para>
+            /// </description></item>
+            /// <item><description><para><b>Delete</b>: Delete the instance.</para>
+            /// </description></item>
+            /// <item><description><para><b>Associate</b>: Associate the instance.</para>
+            /// </description></item>
+            /// <item><description><para><b>UserUnmanaged</b>: Releases the instance from service management.</para>
+            /// </description></item>
+            /// <item><description><para><b>CreateChild</b>: Create a child resource.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -488,18 +596,25 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string Action { get; set; }
 
             /// <summary>
-            /// <para>The type of the child resource.</para>
+            /// <para>The type of the child resource. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Listener:</b> listener.</description></item>
-            /// <item><description><b>IpSet:</b> acceleration region.</description></item>
-            /// <item><description><b>EndpointGroup:</b> endpoint group.</description></item>
-            /// <item><description><b>ForwardingRule:</b> forwarding rule.</description></item>
-            /// <item><description><b>Endpoint:</b> endpoint.</description></item>
-            /// <item><description><b>EndpointGroupDestination:</b> protocol mapping of an endpoint group associated with a custom routing listener.</description></item>
-            /// <item><description><b>EndpointPolicy:</b> traffic policy of an endpoint associated with a custom routing listener.</description></item>
+            /// <item><description><para><b>Listener</b>: A listener.</para>
+            /// </description></item>
+            /// <item><description><para><b>IpSet</b>: An acceleration region.</para>
+            /// </description></item>
+            /// <item><description><para><b>EndpointGroup</b>: An endpoint group.</para>
+            /// </description></item>
+            /// <item><description><para><b>ForwardingRule</b>: A forwarding rule.</para>
+            /// </description></item>
+            /// <item><description><para><b>Endpoint</b>: An endpoint.</para>
+            /// </description></item>
+            /// <item><description><para><b>EndpointGroupDestination</b>: A protocol mapping for an endpoint group of a custom routing listener.</para>
+            /// </description></item>
+            /// <item><description><para><b>EndpointPolicy</b>: A traffic policy for an endpoint of a custom routing listener.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> This parameter takes effect only if the value of <b>Action</b> is <b>CreateChild</b>.</para>
+            /// <para>This parameter is valid only when <b>Action</b> is set to <b>CreateChild</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -510,10 +625,12 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string ChildType { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the specified actions are managed.</para>
+            /// <para>Indicates whether the action is managed. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true:</b> The specified actions are managed. Users cannot perform the specified actions on the managed instance.****</description></item>
-            /// <item><description><b>false:</b> The specified actions are not managed. Users can perform the specified actions on the managed instance.</description></item>
+            /// <item><description><para><b>true</b>: The action is managed. You cannot perform this action on the instance.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: The action is not managed. You can perform this action on the instance.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -556,12 +673,16 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string SlsRegion { get; set; }
 
         /// <summary>
-        /// <para>The status of the endpoint group. Valid values:</para>
+        /// <para>The status of the endpoint group.</para>
         /// <list type="bullet">
-        /// <item><description><b>init</b>: The endpoint group is being initialized.</description></item>
-        /// <item><description><b>active</b>: The endpoint group is running as expected.</description></item>
-        /// <item><description><b>updating</b>: The endpoint group is being updated.</description></item>
-        /// <item><description><b>deleting</b>: The endpoint group is being deleted.</description></item>
+        /// <item><description><para><b>init</b>: The endpoint group is being initialized.</para>
+        /// </description></item>
+        /// <item><description><para><b>active</b>: The endpoint group is active.</para>
+        /// </description></item>
+        /// <item><description><para><b>updating</b>: The endpoint group is being updated.</para>
+        /// </description></item>
+        /// <item><description><para><b>deleting</b>: The endpoint group is being deleted.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -572,14 +693,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string State { get; set; }
 
         /// <summary>
-        /// <para>The tag of the endpoint group.</para>
+        /// <para>A list of tags attached to the endpoint group.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<DescribeEndpointGroupResponseBodyTags> Tags { get; set; }
         public class DescribeEndpointGroupResponseBodyTags : TeaModel {
             /// <summary>
-            /// <para>The tag key of the endpoint group.</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-key</para>
@@ -589,7 +710,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value of the endpoint group.</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-value</para>
@@ -601,7 +722,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         }
 
         /// <summary>
-        /// <para>The number of consecutive failed health checks that must occur before an endpoint is considered unhealthy.</para>
+        /// <para>The number of consecutive failed health checks before an endpoint is marked as unhealthy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -611,10 +732,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public int? ThresholdCount { get; set; }
 
         /// <summary>
-        /// <para>The traffic ratio of the endpoint group when the specified listener is associated with multiple endpoint groups.</para>
+        /// <para>The percentage of traffic that is distributed to the endpoint group. This parameter is returned only when a listener is associated with multiple endpoint groups.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>20</para>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("TrafficPercentage")]
         [Validation(Required=false)]

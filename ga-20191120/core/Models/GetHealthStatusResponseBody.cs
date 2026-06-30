@@ -29,8 +29,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// <para>The type of the endpoint group. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>default:</b> the default endpoint group.</description></item>
-            /// <item><description><b>virtual:</b> a virtual endpoint group.</description></item>
+            /// <item><description><para><b>default:</b> the default endpoint group.</para>
+            /// </description></item>
+            /// <item><description><para><b>virtual:</b> a virtual endpoint group.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -70,11 +72,11 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 /// <summary>
                 /// <para>The health check details of the endpoint.</para>
                 /// <remarks>
-                /// <para> This parameter is unavailable.</para>
+                /// <para>This parameter is unavailable.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
-                /// <para>null</para>
+                /// <para>无</para>
                 /// </summary>
                 [NameInMap("HealthDetail")]
                 [Validation(Required=false)]
@@ -83,9 +85,12 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 /// <summary>
                 /// <para>The health status of the endpoint. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>init:</b> The endpoint is being initialized.</description></item>
-                /// <item><description><b>normal:</b> The endpoint is normal.</description></item>
-                /// <item><description><b>abnormal:</b> The endpoint is abnormal.</description></item>
+                /// <item><description><para><b>init:</b> The endpoint is being initialized.</para>
+                /// </description></item>
+                /// <item><description><para><b>normal:</b> The endpoint is normal.</para>
+                /// </description></item>
+                /// <item><description><para><b>abnormal:</b> The endpoint is abnormal.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -108,15 +113,24 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 /// <summary>
                 /// <para>The type of the endpoint. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Domain:</b> a custom domain name.</description></item>
-                /// <item><description><b>Ip:</b> a custom IP address.</description></item>
-                /// <item><description><b>PublicIp:</b> a public IP address provided by Alibaba Cloud.</description></item>
-                /// <item><description><b>ECS:</b> an Elastic Compute Service (ECS) instance.</description></item>
-                /// <item><description><b>SLB:</b> a Classic Load Balancer (CLB) instance.</description></item>
-                /// <item><description><b>ALB:</b> an Application Load Balancer (ALB) instance.</description></item>
-                /// <item><description><b>OSS:</b> an Object Storage Service (OSS) bucket.</description></item>
-                /// <item><description><b>ENI:</b> an elastic network interface (ENI).</description></item>
-                /// <item><description><b>NLB:</b> a Network Load Balancer (NLB) instance.</description></item>
+                /// <item><description><para><b>Domain:</b> a custom domain name.</para>
+                /// </description></item>
+                /// <item><description><para><b>Ip:</b> a custom IP address.</para>
+                /// </description></item>
+                /// <item><description><para><b>PublicIp:</b> a public IP address provided by Alibaba Cloud.</para>
+                /// </description></item>
+                /// <item><description><para><b>ECS:</b> an Elastic Compute Service (ECS) instance.</para>
+                /// </description></item>
+                /// <item><description><para><b>SLB:</b> a Classic Load Balancer (CLB) instance.</para>
+                /// </description></item>
+                /// <item><description><para><b>ALB:</b> an Application Load Balancer (ALB) instance.</para>
+                /// </description></item>
+                /// <item><description><para><b>OSS:</b> an Object Storage Service (OSS) bucket.</para>
+                /// </description></item>
+                /// <item><description><para><b>ENI:</b> an elastic network interface (ENI).</para>
+                /// </description></item>
+                /// <item><description><para><b>NLB:</b> a Network Load Balancer (NLB) instance.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -138,10 +152,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// <para>The health status of the endpoint group. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>init:</b> The endpoint group is being initialized.</description></item>
-            /// <item><description><b>normal:</b> The endpoint group is normal.</description></item>
-            /// <item><description><b>abnormal:</b> The endpoint group is abnormal.</description></item>
-            /// <item><description><b>partiallyAbnormal:</b> The endpoint group is partially abnormal.</description></item>
+            /// <item><description><para><b>init:</b> The endpoint group is being initialized.</para>
+            /// </description></item>
+            /// <item><description><para><b>normal:</b> The endpoint group is normal.</para>
+            /// </description></item>
+            /// <item><description><para><b>abnormal:</b> The endpoint group is abnormal.</para>
+            /// </description></item>
+            /// <item><description><para><b>partiallyAbnormal:</b> The endpoint group is partially abnormal.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -156,9 +174,12 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// <para>The health status of endpoints and endpoint groups. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>normal</b></description></item>
-        /// <item><description><b>abnormal</b></description></item>
-        /// <item><description><b>partiallyAbnormal</b></description></item>
+        /// <item><description><para><b>normal</b></para>
+        /// </description></item>
+        /// <item><description><para><b>abnormal</b></para>
+        /// </description></item>
+        /// <item><description><para><b>partiallyAbnormal</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

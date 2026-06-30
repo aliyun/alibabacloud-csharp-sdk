@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class CreateBasicEndpointRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the basic GA instance.</para>
+        /// <para>The instance ID of the basic Alibaba Cloud Global Accelerator (GA).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,9 +22,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string EndpointAddress { get; set; }
 
         /// <summary>
-        /// <para>The ID of the endpoint group.</para>
+        /// <para>The endpoint group ID of the basic Alibaba Cloud Global Accelerator (GA) instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,11 +58,11 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// <para>The secondary address of the endpoint.</para>
-        /// <para>This parameter is required if the endpoint type is <b>ECS</b>, <b>ENI</b>, or <b>NLB</b>.</para>
+        /// <para>This parameter is required when the endpoint type is <b>ECS</b>, <b>ENI</b>, or <b>NLB</b>.</para>
         /// <list type="bullet">
-        /// <item><description>If the endpoint type is <b>ECS</b>, you can set <b>EndpointSubAddress</b> to the secondary private IP address of the primary ENI. If the parameter is left empty, the primary private IP address of the primary ENI is used.</description></item>
-        /// <item><description>If the endpoint type is <b>ENI</b>, you can set <b>EndpointSubAddress</b> to the secondary private IP address of the secondary ENI. If the parameter is left empty, the primary private IP address of the secondary ENI is used.</description></item>
-        /// <item><description>This parameter is required if the endpoint type is <b>NLB</b>. <b>EndpointSubAddress</b> is the primary private IP address of the NLB backend server.</description></item>
+        /// <item><description>If the endpoint type is <b>ECS</b>, EndpointSubAddress can be set to a secondary private IP of the primary network interface controller (NIC). If you leave this parameter empty, the primary private IP of the primary network interface controller (NIC) is used.</description></item>
+        /// <item><description>If the endpoint type is <b>ENI</b>, EndpointSubAddress can be set to a secondary private IP of the secondary network interface controller (NIC). If you leave this parameter empty, the primary private IP of the secondary network interface controller (NIC) is used.</description></item>
+        /// <item><description>If the endpoint type is <b>NLB</b>, this parameter is required. Set EndpointSubAddress to the primary private IP of the NLB backend server.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -75,10 +75,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// <para>The type of the secondary address of the endpoint. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>primary</b>: a primary private IP address.</description></item>
-        /// <item><description><b>secondary</b>: a secondary private IP address.</description></item>
+        /// <item><description><b>primary</b>: The secondary address type is the primary private IP address.</description></item>
+        /// <item><description><b>secondary</b>: The secondary address type is a secondary private IP address.</description></item>
         /// </list>
-        /// <para>This parameter is required if the endpoint type is <b>ECS</b>, <b>ENI</b>, or <b>NLB</b>. If the endpoint type is <b>NLB</b>, only <b>primary</b> is supported.</para>
+        /// <para>This parameter is required when the endpoint type is <b>ECS</b>, <b>ENI</b>, or <b>NLB</b>. If the endpoint type is <b>NLB</b>, only <b>primary</b> is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>primary</para>
@@ -88,12 +88,12 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string EndpointSubAddressType { get; set; }
 
         /// <summary>
-        /// <para>The type of endpoint. Valid values:</para>
+        /// <para>The endpoint type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ENI</b>: elastic network interface (ENI)</description></item>
-        /// <item><description><b>SLB</b>: Classic Load Balancer (CLB)</description></item>
-        /// <item><description><b>ECS</b>: Elastic Compute Service (ECS)</description></item>
-        /// <item><description><b>NLB</b>: Network Load Balancer (NLB)</description></item>
+        /// <item><description><b>ENI</b>: Alibaba Cloud elastic network interface (ENI).</description></item>
+        /// <item><description><b>SLB</b>: Alibaba Cloud Classic Load Balancer (CLB) instance.</description></item>
+        /// <item><description><b>ECS</b>: Alibaba Cloud ECS instance.</description></item>
+        /// <item><description><b>NLB</b>: Alibaba Cloud Network Load Balancer (NLB) instance.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// <para>The zone ID of the endpoint.</para>
-        /// <para>This parameter is required only if the endpoint type is <b>NLB</b>.</para>
+        /// <para>Currently, this parameter is required only when the endpoint type is <b>NLB</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-g</para>
@@ -116,8 +116,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string EndpointZoneId { get; set; }
 
         /// <summary>
-        /// <para>The name of the endpoint that is associated with the basic GA instance.</para>
-        /// <para>The name must be 1 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</para>
+        /// <para>The name of the endpoint for the basic Alibaba Cloud Global Accelerator (GA) instance.</para>
+        /// <para>The name must be 1 to 128 characters in length and must start with a letter or a Chinese character. The name can contain digits, periods (.), underscores (_), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>ep01</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the GA instance is deployed. Set the value to <b>cn-hangzhou</b>.</para>
+        /// <para>The region ID of the Global Accelerator instance. Set the value to <b>ap-southeast-1</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class BandwidthPackageRemoveAcceleratorResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the GA instance.</para>
+        /// <para>The ID of the Alibaba Cloud Global Accelerator (GA) instance disassociated from the bandwidth plan.</para>
         /// </summary>
         [NameInMap("Accelerators")]
         [Validation(Required=false)]
         public List<string> Accelerators { get; set; }
 
         /// <summary>
-        /// <para>The ID of the bandwidth plan.</para>
+        /// <para>The ID of the bandwidth plan disassociated from the Alibaba Cloud Global Accelerator (GA) instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gbwp-bp1sgzldyj6b4q7cx****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string BandwidthPackageId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B7770CB9-9745-4FE5-9EDA-D14B01A12A50</para>

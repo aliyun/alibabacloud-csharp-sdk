@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class DeleteBasicAccelerateIpEndpointRelationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the accelerated IP address of the basic GA instance.</para>
+        /// <para>The accelerated IP address instance ID of the basic GA instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gaip-bp1****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string AcceleratorId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the endpoint that is associated with the basic GA instance.</para>
+        /// <para>The endpoint ID of the basic GA instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ep-bp14sz7ftcwwjgrdm****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string EndpointId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>04F0F334-1335-436C-A1D7-6C044FE73368</para>
@@ -50,9 +50,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status of the mapping between the accelerated IP address and endpoint.</para>
+        /// <para>The attach status between the accelerated IP address and the endpoint of the basic GA instance.</para>
         /// <remarks>
-        /// <para> This parameter is not in use and empty.</para>
+        /// <para>This parameter is not currently in use.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

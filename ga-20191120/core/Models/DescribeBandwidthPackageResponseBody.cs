@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class DescribeBandwidthPackageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the GA instance that is associated with the bandwidth plan.</para>
+        /// <para>The instance ID of the Alibaba Cloud Global Accelerator (GA) instance attached to the bandwidth plan.</para>
         /// </summary>
         [NameInMap("Accelerators")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public int? Bandwidth { get; set; }
 
         /// <summary>
-        /// <para>The ID of the bandwidth plan.</para>
+        /// <para>The bandwidth plan ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gbwp-bp1sgzldyj6b4q7cx****</para>
@@ -37,11 +37,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string BandwidthPackageId { get; set; }
 
         /// <summary>
-        /// <para>The type of the bandwidth. Valid values:</para>
+        /// <para>The bandwidth type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Basic</b>: basic bandwidth</description></item>
-        /// <item><description><b>Enhanced</b>: enhanced bandwidth</description></item>
-        /// <item><description><b>Advanced</b>: premium bandwidth</description></item>
+        /// <item><description><para><b>Basic</b>: standard acceleration bandwidth.</para>
+        /// </description></item>
+        /// <item><description><para><b>Enhanced</b>: enhanced acceleration bandwidth.</para>
+        /// </description></item>
+        /// <item><description><para><b>Advanced</b>: premium acceleration bandwidth.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,10 +55,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string BandwidthType { get; set; }
 
         /// <summary>
-        /// <para>The metering method that is used when you use the pay-as-you-go billing method. Valid values:</para>
+        /// <para>The billable methods for the pay-as-you-go billing method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>PayByTraffic</b>: pay-by-data-transfer</description></item>
-        /// <item><description><b>PayBY95</b>: pay-by-95th-percentile</description></item>
+        /// <item><description><b>PayByTraffic</b>: pay-by-data-transfer.</description></item>
+        /// <item><description><b>PayBY95</b>: pay-by-95th-percentile.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -66,8 +69,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string BillingType { get; set; }
 
         /// <summary>
-        /// <para>Area A specified in the cross-region acceleration bandwidth plan. Only <b>China-mainland</b> (the Chinese mainland) is returned.</para>
-        /// <para>This parameter is returned only if you call this operation on the International site (alibabacloud.com).</para>
+        /// <para>The interconnected area A of the cross-border acceleration bandwidth plan. The value is returned only as <b>China-mainland</b> (the Chinese mainland).</para>
+        /// <para>This parameter is returned only on the Alibaba Cloud International Website (<a href="http://www.alibabacloud.com">www.alibabacloud.com</a>).</para>
         /// 
         /// <b>Example:</b>
         /// <para>China-mainland</para>
@@ -77,8 +80,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string CbnGeographicRegionIdA { get; set; }
 
         /// <summary>
-        /// <para>Area B specified in the cross-region acceleration bandwidth plan. Only <b>Global</b> (global) is returned.</para>
-        /// <para>This parameter is returned only if you call this operation on the International site (alibabacloud.com).</para>
+        /// <para>The interconnected area B of the cross-border acceleration bandwidth plan. The value is returned only as <b>Global</b>.</para>
+        /// <para>This parameter is returned only on the Chinese site (Chinese mainland).</para>
         /// 
         /// <b>Example:</b>
         /// <para>Global</para>
@@ -88,9 +91,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string CbnGeographicRegionIdB { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the bandwidth plan.</para>
+        /// <para>The billing method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>PREPAY</b>: subscription. This is the default value.</description></item>
+        /// <item><description><b>PREPAY</b> (default): subscription.</description></item>
         /// <item><description><b>POSTPAY</b>: pay-as-you-go.</description></item>
         /// </list>
         /// 
@@ -102,7 +105,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The timestamp that indicates when the bandwidth plan was created.</para>
+        /// <para>The timestamp when the bandwidth plan was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1578966918000</para>
@@ -122,7 +125,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The timestamp that indicates when the bandwidth plan expires.</para>
+        /// <para>The timestamp when the bandwidth plan expires.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1578966918000</para>
@@ -142,7 +145,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The percentage of the minimum bandwidth guaranteed if the pay-by-95th-percentile-bandwidth metering method is used. Valid values: <b>30</b> to <b>100</b>.</para>
+        /// <para>The minimum percentage for the pay-by-95th-percentile metering method. Valid values: <b>30</b> to <b>100</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -152,7 +155,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public int? Ratio { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where GA instance is deployed. <b>cn-hangzhou</b> is returned.</para>
+        /// <para>The region ID of the Alibaba Cloud Global Accelerator (GA) instance. Set the value to <b>cn-hangzhou</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -162,7 +165,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4B6DBBB0-2D01-4C6A-A384-4129266E6B78</para>
@@ -172,7 +175,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfnvueepcihjiq</para>
@@ -182,16 +185,24 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The state of the bandwidth plan. Valid values:</para>
+        /// <para>The status of the bandwidth plan. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>init</b>: The bandwidth plan is being initialized.</description></item>
-        /// <item><description><b>active</b>: The bandwidth plan is available.</description></item>
-        /// <item><description><b>binded</b>: The bandwidth plan is associated with a GA instance.</description></item>
-        /// <item><description><b>binding</b>: The bandwidth plan is being associated.</description></item>
-        /// <item><description><b>unbinding</b>: The bandwidth plan is being disassociated.</description></item>
-        /// <item><description><b>updating</b>: The bandwidth plan is being updated.</description></item>
-        /// <item><description><b>finacialLocked</b>: The bandwidth plan is locked due to overdue payments.</description></item>
-        /// <item><description><b>Locked</b>: The bandwidth plan is locked.</description></item>
+        /// <item><description><para><b>init</b>: initialization.</para>
+        /// </description></item>
+        /// <item><description><para><b>active</b>: active.</para>
+        /// </description></item>
+        /// <item><description><para><b>binded</b>: attached.</para>
+        /// </description></item>
+        /// <item><description><para><b>binding</b>: being attached.</para>
+        /// </description></item>
+        /// <item><description><para><b>unbinding</b>: being disassociated.</para>
+        /// </description></item>
+        /// <item><description><para><b>updating</b>: being updated.</para>
+        /// </description></item>
+        /// <item><description><para><b>finacialLocked</b>: locked due to overdue payment.</para>
+        /// </description></item>
+        /// <item><description><para><b>locked</b>: locked.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -202,14 +213,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string State { get; set; }
 
         /// <summary>
-        /// <para>Tag objects.</para>
+        /// <para>The resource tags.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<DescribeBandwidthPackageResponseBodyTags> Tags { get; set; }
         public class DescribeBandwidthPackageResponseBodyTags : TeaModel {
             /// <summary>
-            /// <para>The key of tag N that is added to the bandwidth plan.</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tag-key</para>
@@ -219,7 +230,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N that is added to the bandwidth plan.</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tag-value</para>
@@ -233,10 +244,12 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// <para>The type of the bandwidth plan. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Basic</b>: a basic bandwidth plan</description></item>
-        /// <item><description><b>CrossDomain</b>: a cross-region acceleration bandwidth plan</description></item>
+        /// <item><description><para><b>Basic</b>: basic bandwidth plan.</para>
+        /// </description></item>
+        /// <item><description><para><b>CrossDomain</b>: cross-border acceleration bandwidth plan.</para>
+        /// </description></item>
         /// </list>
-        /// <para>If you call this operation on the Alibaba Cloud China Site (aliyun.com), only <b>Basic</b> is returned.</para>
+        /// <para>Only <b>Basic</b> is returned on the Alibaba Cloud China Website (<a href="http://www.aliyun.com">www.aliyun.com</a>).</para>
         /// 
         /// <b>Example:</b>
         /// <para>Basic</para>

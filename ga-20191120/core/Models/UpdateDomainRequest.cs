@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string Domain { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to <b>cn-hangzhou</b>.</para>
+        /// <para>The region ID of the Alibaba Cloud Global Accelerator (GA) instance. Set the value to <b>cn-hangzhou</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The accelerated domain name to be modified.</para>
+        /// <para>The accelerated domain name that you want to update.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

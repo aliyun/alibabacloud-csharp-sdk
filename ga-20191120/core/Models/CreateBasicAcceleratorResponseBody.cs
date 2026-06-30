@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class CreateBasicAcceleratorResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the basic GA instance.</para>
+        /// <para>The instance ID of the basic Alibaba Cloud Global Accelerator (GA) instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ga-bp17frjjh0udz4qz****</para>
@@ -21,8 +21,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// <para>The order ID.</para>
-        /// <para>This parameter is returned only if ChargeType is set to PREPAY.</para>
-        /// <para>If <b>AutoPay</b> is set to <b>false</b>, go to <a href="https://usercenter2-intl.aliyun.com/order/list">Order Center</a> to complete the payment after an order is generated.</para>
+        /// <para>This parameter is returned only when ChargeType is set to PREPAY (upfront).</para>
+        /// <para>If <b>AutoPay</b> is set to <b>false</b>, which means automatic payment of the bill is not enabled, go to the &lt;props=&quot;china&quot;&gt;<a href="https://usercenter2.aliyun.com/order/list">Order Center</a>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://usercenter2-intl.aliyun.com/order/list">Order Center</a> to complete the payment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2082574365</para>
@@ -32,7 +33,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F591955F-5CB5-4CCE-A75D-17CF2085CE22</para>

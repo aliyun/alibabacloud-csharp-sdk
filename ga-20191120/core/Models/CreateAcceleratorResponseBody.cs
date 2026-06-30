@@ -20,8 +20,11 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string AcceleratorId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the order.</para>
-        /// <para>This parameter is returned only when the InstanceChargeType parameter is set to PREPAY. If AutoPay is set to false, you must manually complete the payment in the <a href="https://usercenter2-intl.aliyun.com/order/list">Order Center</a>.</para>
+        /// <para>Order ID.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
+        /// <para>The order ID. This parameter is returned when \<c>InstanceChargeType\\</c> is set to \<c>PREPAY\\</c> (subscription). If \<c>AutoPay\\</c> is set to \<c>false\\</c>, go to the <a href="https://usercenter2.aliyun.com/order/list">Order Hub</a> on the Alibaba Cloud China site to complete the payment.</para>
+        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
+        /// <para>If you are using the Alibaba Cloud International site and \<c>AutoPay\\</c> is set to \<c>false\\</c>, go to the <a href="https://usercenter2-intl.aliyun.com/order/list">Order Hub</a> to complete the payment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>208257****</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class CreateForwardingRulesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The forwarding rules.</para>
+        /// <para>The details of the forwarding rules.</para>
         /// </summary>
         [NameInMap("ForwardingRules")]
         [Validation(Required=false)]
         public List<CreateForwardingRulesResponseBodyForwardingRules> ForwardingRules { get; set; }
         public class CreateForwardingRulesResponseBodyForwardingRules : TeaModel {
             /// <summary>
-            /// <para>The ID of the forwarding rule.</para>
+            /// <para>The forwarding rule ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>frule-bp1dii16gu9qdvb34****</para>

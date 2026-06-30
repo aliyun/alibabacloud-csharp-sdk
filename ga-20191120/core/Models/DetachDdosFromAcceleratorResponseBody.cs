@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The ID of the Anti-DDoS Pro/Premium instance that was disassociated from the GA instance.</para>
+        /// <para>The ID of the Anti-DDoS Pro or Anti-DDoS Premium instance that is detached from the Global Accelerator instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ddoscoo-cn-zz11vq7j****</para>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string DdosId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0ED8D006-F706-4D23-88ED-E11ED28DCAC0</para>

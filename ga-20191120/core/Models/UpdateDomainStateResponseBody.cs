@@ -32,10 +32,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// <para>The ICP filing status of the accelerated domain name. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>illegal:</b> The domain name is illegal.</description></item>
-        /// <item><description><b>inactive:</b> The domain name has not completed ICP filing.</description></item>
-        /// <item><description><b>active:</b> The domain name has a valid ICP number.</description></item>
-        /// <item><description><b>unknown:</b> The ICP filing status is unknown.</description></item>
+        /// <item><description><para><b>illegal:</b> The domain name is illegal.</para>
+        /// </description></item>
+        /// <item><description><para><b>inactive:</b> The domain name has not completed ICP filing.</para>
+        /// </description></item>
+        /// <item><description><para><b>active:</b> The domain name has a valid ICP number.</para>
+        /// </description></item>
+        /// <item><description><para><b>unknown:</b> The ICP filing status is unknown.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

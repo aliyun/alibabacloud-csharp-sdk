@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class CreateBasicIpSetResponseBody : TeaModel {
         /// <summary>
-        /// <para>The region ID of the GA instance.</para>
+        /// <para>The acceleration region instance ID of the basic Alibaba Cloud Global Accelerator (GA) instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ips-bp11r5jb8ogp122xl****</para>

@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false:</b> disables automatic payment. If you select this option, you must go to the Order Center to complete the payment after an order is generated. This is the default value.</description></item>
-        /// <item><description><b>true:</b> enables automatic payment. Payments are automatically completed.</description></item>
+        /// <item><description><para><b>false</b> (default): disables automatic payment. After an order is generated, go to the Order Center to complete the payment.</para>
+        /// </description></item>
+        /// <item><description><para><b>true</b>: enables automatic payment. The order is automatically paid.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,10 +26,12 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable auto-renewal for the basic GA instance. Valid values:</para>
+        /// <para>Specifies whether to enable auto-renewal.</para>
         /// <list type="bullet">
-        /// <item><description><b>true:</b> enables auto-renewal for the basic GA instance.</description></item>
-        /// <item><description><b>false:</b> disables auto-renewal for the basic GA instance. This is the default value.</description></item>
+        /// <item><description><para><b>true</b>: enables auto-renewal.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): disables auto-renewal.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -41,7 +45,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <para>The auto-renewal duration. Unit: months.</para>
         /// <para>Valid values: <b>1</b> to <b>12</b>. Default value: <b>1</b>.</para>
         /// <remarks>
-        /// <para> This parameter takes effect only when the <b>AutoPay</b> parameter is set to <b>true</b>.</para>
+        /// <para>This parameter takes effect only when <b>AutoRenew</b> is set to <b>true</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -52,13 +56,15 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public int? AutoRenewDuration { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to automatically apply coupons to your bills. Valid values:</para>
+        /// <para>Specifies whether to use coupons for automatic payment of the bill. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true:</b> automatically applies coupons to your bills.</description></item>
-        /// <item><description><b>false:</b> does not automatically apply coupons to your bills. This is the default value.</description></item>
+        /// <item><description><para><b>true</b>: uses coupons.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): does not use coupons.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter takes effect only when the <b>AutoPay</b> parameter is set to <b>true</b>.</para>
+        /// <para>This parameter takes effect only when <b>AutoPay</b> is set to <b>true</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -71,9 +77,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// <para>The bandwidth billing method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>BandwidthPackage:</b> billed based on bandwidth plans.</description></item>
-        /// <item><description><b>CDT:</b> billed based on data transfer. The bills are managed by using Cloud Data Transfer (CDT).</description></item>
-        /// <item><description><b>CDT95:</b> billed based on the 95th percentile bandwidth. The bills are managed by using Cloud Data Transfer (CDT). This bandwidth billing method is not available by default. Contact your Alibaba Cloud account manager for more information.</description></item>
+        /// <item><description><b>BandwidthPackage</b>: billed by bandwidth plan.</description></item>
+        /// <item><description><b>CDT</b>: billed by traffic and settled through unified settlement by Cloud Data Transfer (CDT).</description></item>
+        /// <item><description><b>CDT95</b>: billed by the 95th percentile bandwidth and settled through unified settlement by CDT. This bandwidth billing method is available only to users in the whitelist.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -86,8 +92,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// <para>The billing method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>PREPAY</b> (default)</description></item>
-        /// <item><description><b>POSTPAY</b></description></item>
+        /// <item><description><b>PREPAY (default)</b>: subscription.</description></item>
+        /// <item><description><b>POSTPAY</b>: pay-as-you-go.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -99,9 +105,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -114,8 +120,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true:</b> performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b>: performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed. This is the default value.</description></item>
+        /// <item><description><b>true</b>: performs a dry run without creating the resource. The system checks the required parameters, request syntax, and business limitations. If the check fails, the corresponding error is returned. If the check succeeds, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): performs a dry run and sends the request. If the check succeeds, an HTTP 2xx status code is returned and the operation is performed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -126,10 +132,12 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration of the GA instance.</para>
+        /// <para>The subscription duration.</para>
         /// <list type="bullet">
-        /// <item><description>If you set <b>PricingCycle</b> to <b>Month</b>, the valid values for <b>Duration</b> are <b>1</b> to <b>9</b>.</description></item>
-        /// <item><description>If you set <b>PricingCycle</b> to <b>Year</b>, the valid values for <b>Duration</b> are <b>1</b> to <b>3</b>.</description></item>
+        /// <item><description><para>If <b>PricingCycle</b> is set to <b>Month</b>, valid values of <b>Duration</b> are <b>1</b> to <b>9</b>.</para>
+        /// </description></item>
+        /// <item><description><para>If <b>PricingCycle</b> is set to <b>Year</b>, valid values of <b>Duration</b> are <b>1</b> to <b>3</b>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -142,8 +150,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// <para>The billing cycle. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Month</b></description></item>
-        /// <item><description><b>Year</b></description></item>
+        /// <item><description><para><b>Month</b>: billed on a monthly basis.</para>
+        /// </description></item>
+        /// <item><description><para><b>Year</b>: billed on a yearly basis.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -154,9 +164,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string PricingCycle { get; set; }
 
         /// <summary>
-        /// <para>The code of the coupon.</para>
+        /// <para>The coupon number.</para>
         /// <remarks>
-        /// <para> This parameter takes effect only for accounts registered on the international site (alibabacloud.com).</para>
+        /// <para>This parameter is applicable only to the China site (aliyun.com).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -167,7 +177,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string PromotionOptionNo { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the basic GA instance is deployed. Set the value to <b>cn-hangzhou</b>.</para>
+        /// <para>The region ID of the basic Alibaba Cloud Global Accelerator (GA) instance. Set the value to <b>cn-hangzhou</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -178,7 +188,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the basic GA instance belongs.</para>
+        /// <para>The ID of the resource group to which the basic Alibaba Cloud Global Accelerator (GA) instance belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmxshhcsn****</para>
@@ -188,16 +198,16 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The tags of the basic GA instance.</para>
+        /// <para>The labels of the basic Alibaba Cloud Global Accelerator (GA) instance.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateBasicAcceleratorRequestTag> Tag { get; set; }
         public class CreateBasicAcceleratorRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key. The tag key cannot be an empty string.</para>
-            /// <para>The tag key can be up to 64 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>aliyun</c> or <c>acs:</c>.</para>
-            /// <para>You can specify up to 20 tag keys.</para>
+            /// <para>The label key of the basic Alibaba Cloud Global Accelerator (GA) instance. If you specify this parameter, the value cannot be an empty string.</para>
+            /// <para>The label key can be up to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>You can specify up to 20 label keys.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tag-key</para>
@@ -207,9 +217,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value. The tag value cannot be an empty string.</para>
-            /// <para>The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. It cannot start with <c>acs:</c> or <c>aliyun</c>.</para>
-            /// <para>You can specify up to 20 tag values.</para>
+            /// <para>The label value of the basic Alibaba Cloud Global Accelerator (GA) instance. If you specify this parameter, the value cannot be an empty string.</para>
+            /// <para>The label value can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>You can specify up to 20 label values.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tag-value</para>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class GetGlobalAcceleratorResourcesRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID of the Alibaba Cloud Global Accelerator (GA).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string AcceleratorId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the linked peripheral resource.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>waf_v2_public_cn-x0r****gr1i</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string AssociatedResourceId { get; set; }
 
         /// <summary>
+        /// <para>The Region ID where the linked instance is located.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string AssociatedResourceRegionId { get; set; }
 
         /// <summary>
+        /// <para>The resource type of the linked peripheral resource.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>WAF</para>
         /// </summary>
@@ -44,6 +51,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string AssociatedResourceType { get; set; }
 
         /// <summary>
+        /// <para>The Region ID where the Alibaba Cloud Global Accelerator (GA) instance is located. The only valid value is cn-hangzhou.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

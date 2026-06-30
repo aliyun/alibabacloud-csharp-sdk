@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public List<ListBandwidthackagesResponseBodyBandwidthPackages> BandwidthPackages { get; set; }
         public class ListBandwidthackagesResponseBodyBandwidthPackages : TeaModel {
             /// <summary>
-            /// <para>The IDs of the GA instances that are associated with the bandwidth plans.</para>
+            /// <para>The IDs of the Global Accelerator instances that are associated with the bandwidth plan.</para>
             /// </summary>
             [NameInMap("Accelerators")]
             [Validation(Required=false)]
             public List<string> Accelerators { get; set; }
 
             /// <summary>
-            /// <para>The bandwidth of the bandwidth plan. Unit: Mbit/s.</para>
+            /// <para>The bandwidth of the bandwidth plan. Unit: Mbps.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -44,10 +44,12 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string BandwidthPackageId { get; set; }
 
             /// <summary>
-            /// <para>The billing method of the bandwidth plan. Valid values:</para>
+            /// <para>The billing method.</para>
             /// <list type="bullet">
-            /// <item><description><b>PREPAY</b>: subscription. This is the default value.</description></item>
-            /// <item><description><b>POSTPAY</b>: pay-as-you-go.</description></item>
+            /// <item><description><para><b>PREPAY</b> (default): subscription.</para>
+            /// </description></item>
+            /// <item><description><para><b>POSTPAY</b>: pay-as-you-go.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -58,7 +60,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// <para>The time when the bandwidth plan was created.</para>
+            /// <para>The timestamp that indicates when the bandwidth plan was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1578966918000</para>
@@ -78,7 +80,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the bandwidth plan.</para>
+            /// <para>The timestamp that indicates when the bandwidth plan expires.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1578966918000</para>
@@ -88,7 +90,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string ExpiredTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the GA instance.</para>
+            /// <para>The name of the bandwidth plan.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Accelerator</para>
@@ -98,7 +100,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The request ID.</para>
+            /// <para>The ID of the region.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DE77A7F3-3B74-41C0-A5BC-CAFD188C28B6</para>
@@ -118,16 +120,24 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The status of the bandwidth plan. Valid values:</para>
+            /// <para>The status of the bandwidth plan.</para>
             /// <list type="bullet">
-            /// <item><description><b>init:</b> The bandwidth plan is being initialized.</description></item>
-            /// <item><description><b>active:</b> The bandwidth plan is available.</description></item>
-            /// <item><description><b>binded:</b> The bandwidth plan is associated with a GA instance.</description></item>
-            /// <item><description><b>binding:</b> The bandwidth plan is being associated with a GA instance.</description></item>
-            /// <item><description><b>unbinding:</b> The bandwidth plan is being disassociated from a GA instance.</description></item>
-            /// <item><description><b>updating:</b> The bandwidth plan is being updated.</description></item>
-            /// <item><description><b>finacialLocked:</b> The bandwidth plan is locked due to overdue payments.</description></item>
-            /// <item><description><b>locked:</b> The bandwidth plan is locked.</description></item>
+            /// <item><description><para><b>init</b>: The bandwidth plan is being initialized.</para>
+            /// </description></item>
+            /// <item><description><para><b>active</b>: The bandwidth plan is available.</para>
+            /// </description></item>
+            /// <item><description><para><b>binded</b>: The bandwidth plan is bound.</para>
+            /// </description></item>
+            /// <item><description><para><b>binding</b>: The bandwidth plan is being bound.</para>
+            /// </description></item>
+            /// <item><description><para><b>unbinding</b>: The bandwidth plan is being unbound.</para>
+            /// </description></item>
+            /// <item><description><para><b>updating</b>: The bandwidth plan is being updated.</para>
+            /// </description></item>
+            /// <item><description><para><b>finacialLocked</b>: The bandwidth plan is financially locked.</para>
+            /// </description></item>
+            /// <item><description><para><b>locked</b>: The bandwidth plan is locked.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -138,14 +148,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string State { get; set; }
 
             /// <summary>
-            /// <para>The tag of the bandwidth plan.</para>
+            /// <para>The tags of the resource.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListBandwidthackagesResponseBodyBandwidthPackagesTags> Tags { get; set; }
             public class ListBandwidthackagesResponseBodyBandwidthPackagesTags : TeaModel {
                 /// <summary>
-                /// <para>The tag key of the bandwidth plan.</para>
+                /// <para>The tag key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>tag-key</para>
@@ -155,7 +165,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The tag value of the bandwidth plan.</para>
+                /// <para>The tag value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>tag-value</para>
@@ -169,7 +179,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -179,7 +189,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -189,7 +199,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4B6DBBB0-2D01-4C6A-A384-4129266E6B78</para>

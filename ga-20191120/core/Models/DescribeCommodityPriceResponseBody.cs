@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// <para>The currency unit.</para>
         /// <list type="bullet">
-        /// <item><description>China site: <b>CNY</b>.</description></item>
-        /// <item><description>International site: <b>USD</b>.</description></item>
+        /// <item><description><para>China site: <b>CNY</b>.</para>
+        /// </description></item>
+        /// <item><description><para>International site: <b>USD</b>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -54,7 +56,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <para>The name of the commodity.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Global Accelerator_Instance Type (Subscription)</para>
+            /// <para>全球加速_实例规格（包年包月）</para>
             /// </summary>
             [NameInMap("CommodityName")]
             [Validation(Required=false)]
@@ -101,7 +103,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 /// <para>The name of the commodity module.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Specification</para>
+                /// <para>规格</para>
                 /// </summary>
                 [NameInMap("ModuleName")]
                 [Validation(Required=false)]
@@ -142,7 +144,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// <para>The details of the discount.</para>
             /// <remarks>
-            /// <para> This parameter does not take effect for accounts registered on the China site (aliyun.com).</para>
+            /// <para>This parameter does not take effect for accounts registered on the China site (aliyun.com).</para>
             /// </remarks>
             /// </summary>
             [NameInMap("PromDetails")]
@@ -152,7 +154,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 /// <summary>
                 /// <para>The discounted price.</para>
                 /// <remarks>
-                /// <para> This parameter does not take effect for accounts registered on the China site (aliyun.com).</para>
+                /// <para>This parameter does not take effect for accounts registered on the China site (aliyun.com).</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -165,7 +167,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 /// <summary>
                 /// <para>The code of the discount option.</para>
                 /// <remarks>
-                /// <para> This parameter does not take effect for accounts registered on the China site (aliyun.com).</para>
+                /// <para>This parameter does not take effect for accounts registered on the China site (aliyun.com).</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -178,7 +180,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 /// <summary>
                 /// <para>The sub-type of the discount.</para>
                 /// <remarks>
-                /// <para> This parameter does not take effect for accounts registered on the China site (aliyun.com).</para>
+                /// <para>This parameter does not take effect for accounts registered on the China site (aliyun.com).</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -191,7 +193,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 /// <summary>
                 /// <para>The ID of the discount item.</para>
                 /// <remarks>
-                /// <para> This parameter does not take effect for accounts registered on the China site (aliyun.com).</para>
+                /// <para>This parameter does not take effect for accounts registered on the China site (aliyun.com).</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -204,7 +206,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 /// <summary>
                 /// <para>The name of the discount item.</para>
                 /// <remarks>
-                /// <para> This parameter does not take effect for accounts registered on the China site (aliyun.com).</para>
+                /// <para>This parameter does not take effect for accounts registered on the China site (aliyun.com).</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -258,7 +260,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// <para>The details of the coupon.</para>
         /// <remarks>
-        /// <para> This parameter does not take effect for accounts registered on the China site (aliyun.com).</para>
+        /// <para>This parameter does not take effect for accounts registered on the China site (aliyun.com).</para>
         /// </remarks>
         /// </summary>
         [NameInMap("Promotions")]
@@ -268,7 +270,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// <para>The discounted amount.</para>
             /// <remarks>
-            /// <para> This parameter does not take effect for accounts registered on the China site (aliyun.com).</para>
+            /// <para>This parameter does not take effect for accounts registered on the China site (aliyun.com).</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -281,7 +283,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// <para>The code of the commodity to which the coupon can be applied.</para>
             /// <remarks>
-            /// <para> This parameter does not take effect for accounts registered on the China site (aliyun.com).</para>
+            /// <para>This parameter does not take effect for accounts registered on the China site (aliyun.com).</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -294,7 +296,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// <para>The name of the coupon.</para>
             /// <remarks>
-            /// <para> This parameter does not take effect for accounts registered on the China site (aliyun.com).</para>
+            /// <para>This parameter does not take effect for accounts registered on the China site (aliyun.com).</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -308,8 +310,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <para>The code of the coupon.</para>
             /// <remarks>
             /// <list type="bullet">
-            /// <item><description><c>youhuiquan_promotion_option_id_for_blank</c> indicates coupons that cannot be applied to the commodity.</description></item>
-            /// <item><description>This parameter does not take effect for accounts registered on the China site (aliyun.com).</description></item>
+            /// <item><description><para><c>youhuiquan_promotion_option_id_for_blank</c> indicates coupons that cannot be applied to the commodity.</para>
+            /// </description></item>
+            /// <item><description><para>This parameter does not take effect for accounts registered on the China site (aliyun.com).</para>
+            /// </description></item>
             /// </list>
             /// </remarks>
             /// 
@@ -323,11 +327,13 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// <para>Indicates whether the coupon was selected.</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b></para>
+            /// </description></item>
+            /// <item><description><para><b>false</b></para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> This parameter does not take effect for accounts registered on the China site (aliyun.com).</para>
+            /// <para>This parameter does not take effect for accounts registered on the China site (aliyun.com).</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -370,7 +376,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <para>The name of the discount rule.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>GA New Customers Small II Specification Monthly Subscription - 20% Discount</para>
+            /// <para>GA新客户小型II规格月付-8折优惠</para>
             /// </summary>
             [NameInMap("RuleName")]
             [Validation(Required=false)]

@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class CreateCustomRoutingEndpointGroupDestinationsRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>true</b>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b>: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</description></item>
-        /// </list>
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
+        /// <remarks>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The mapping configuration of the endpoint group.</para>
-        /// <para>You need to specify the backend service ports and protocols for the endpoint group. The ports are mapped to listener ports.</para>
-        /// <para>You can specify up to 20 mappings in each call.</para>
+        /// <para>The mapping configurations of the endpoint group.</para>
+        /// <para>Specify the service port ranges and protocol types of the backend services for the endpoint group. The specified information is mapped to the associated listener port ranges.</para>
+        /// <para>You can specify up to 20 port ranges and protocol types in a single invoke of this operation.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DestinationConfigurations")]
@@ -34,9 +34,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public List<CreateCustomRoutingEndpointGroupDestinationsRequestDestinationConfigurations> DestinationConfigurations { get; set; }
         public class CreateCustomRoutingEndpointGroupDestinationsRequestDestinationConfigurations : TeaModel {
             /// <summary>
-            /// <para>The last port of the backend service port range.</para>
-            /// <para>Valid values: <b>1</b> to <b>65499</b>. The value of <b>FromPort</b> must be equal to or smaller than the value of <b>ToPort</b>.</para>
-            /// <para>You can specify up to 20 last ports in each call.</para>
+            /// <para>The start port of the backend service port range for the endpoint group.</para>
+            /// <para>Valid values: <b>1</b> to <b>65499</b>. The value of <b>FromPort</b> must be less than or equal to the value of <b>ToPort</b>.</para>
+            /// <para>You can specify up to 20 start ports in a single request.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -47,13 +47,16 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public int? FromPort { get; set; }
 
             /// <summary>
-            /// <para>The backend service protocol of the endpoint group. Valid values:</para>
+            /// <para>The protocol types of the backend services for the endpoint group. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>TCP</b></description></item>
-            /// <item><description><b>UDP</b></description></item>
-            /// <item><description><b>TCP+UDP: the TCP and UDP protocols.</b></description></item>
+            /// <item><description><para><b>TCP</b>: TCP protocol.</para>
+            /// </description></item>
+            /// <item><description><para><b>UDP</b>: UDP protocol.</para>
+            /// </description></item>
+            /// <item><description><para><b>TCP,UDP</b>: TCP and UDP protocols.</para>
+            /// </description></item>
             /// </list>
-            /// <para>You can specify up to four backend service protocols for each endpoint group mapping.</para>
+            /// <para>The Terms of Service apply to the selected protocols.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("Protocols")]
@@ -61,7 +64,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public List<string> Protocols { get; set; }
 
             /// <summary>
-            /// <para>The response parameters.</para>
+            /// <para>The end port of the backend service port range for the endpoint group.</para>
+            /// <para>Valid values: <b>1</b> to <b>65499</b>. The value of <b>FromPort</b> must be less than or equal to the value of <b>ToPort</b>.</para>
+            /// <para>You can specify up to 20 end ports in a single request.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -74,7 +79,11 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         }
 
         /// <summary>
-        /// <para>The endpoint group ID.</para>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: performs a dry run. The system checks the required parameters, request syntax, and business limitations without actually creating the mapping configurations create an endpoint group. If the request fails the dry run, the corresponding error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): performs a dry run and sends the request. If the request passes the dry run, an HTTP 2xx status code is returned and the mapping configurations create an endpoint group are created.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -84,9 +93,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The mappings of the endpoint group.</para>
-        /// <para>You need to specify the backend service ports and protocols for the endpoint group. The ports are mapped to listener ports.</para>
-        /// <para>You can specify up to 20 mappings in each call.</para>
+        /// <para>The endpoint group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -97,11 +104,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string EndpointGroupId { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.</para>
-        /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
-        /// </remarks>
+        /// <para>The region ID of the Alibaba Cloud Global Accelerator (GA) instance. Set the value to <b>ap-southeast-1</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

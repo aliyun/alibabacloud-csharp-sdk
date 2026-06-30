@@ -31,13 +31,17 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <para>The commodity code.</para>
             /// <para>Valid values on the China site (aliyun.com):</para>
             /// <list type="bullet">
-            /// <item><description><b>ga_gapluspre_public_cn</b>: GA instance.</description></item>
-            /// <item><description><b>ga_plusbwppre_public_cn</b>: basic bandwidth plan.</description></item>
+            /// <item><description><para><b>ga_gapluspre_public_cn</b>: GA instance.</para>
+            /// </description></item>
+            /// <item><description><para><b>ga_plusbwppre_public_cn</b>: basic bandwidth plan.</para>
+            /// </description></item>
             /// </list>
             /// <para>Valid values on the international site (alibabacloud.com):</para>
             /// <list type="bullet">
-            /// <item><description><b>ga_pluspre_public_intl</b>: GA instance.</description></item>
-            /// <item><description><b>ga_bwppreintl_public_intl:</b> basic bandwidth plan.</description></item>
+            /// <item><description><para><b>ga_pluspre_public_intl</b>: GA instance.</para>
+            /// </description></item>
+            /// <item><description><para><b>ga_bwppreintl_public_intl:</b> basic bandwidth plan.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -103,8 +107,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// <para>The subscription duration.</para>
             /// <list type="bullet">
-            /// <item><description>Valid values if you set <b>PricingCycle</b> to <b>Month</b>: <b>1</b> to <b>9</b>.</description></item>
-            /// <item><description>Valid values if you set <b>PricingCycle</b> to <b>Year</b>: <b>1</b> to <b>3</b>.</description></item>
+            /// <item><description><para>Valid values if you set <b>PricingCycle</b> to <b>Month</b>: <b>1</b> to <b>9</b>.</para>
+            /// </description></item>
+            /// <item><description><para>Valid values if you set <b>PricingCycle</b> to <b>Year</b>: <b>1</b> to <b>3</b>.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -117,9 +123,12 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// <para>The type of the order. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>BUY</b>: purchase order.</description></item>
-            /// <item><description><b>RENEW</b>: renewal order.</description></item>
-            /// <item><description><b>UPGRADE</b>: upgrade order.</description></item>
+            /// <item><description><para><b>BUY</b>: purchase order.</para>
+            /// </description></item>
+            /// <item><description><para><b>RENEW</b>: renewal order.</para>
+            /// </description></item>
+            /// <item><description><para><b>UPGRADE</b>: upgrade order.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -132,8 +141,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// <para>The billing cycle. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Month</b></description></item>
-            /// <item><description><b>Year</b></description></item>
+            /// <item><description><para><b>Month</b></para>
+            /// </description></item>
+            /// <item><description><para><b>Year</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -158,7 +169,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// <para>The coupon code.</para>
         /// <remarks>
-        /// <para> This parameter is unavailable on the China site (aliyun.com).</para>
+        /// <para>This parameter is unavailable on the China site (aliyun.com).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

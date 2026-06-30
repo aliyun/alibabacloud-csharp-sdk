@@ -1,3 +1,7 @@
+2026-06-30 Version: 3.0.2
+- Update API ListEndpointGroups: add request parameters EndpointGroupRegion.
+
+
 2026-04-02 Version: 3.0.1
 - Update API CreateEndpointGroup: add request parameters EndpointConfigurations.$.ApiKeys.
 - Update API CreateEndpointGroup: add request parameters EndpointConfigurations.$.Provider.

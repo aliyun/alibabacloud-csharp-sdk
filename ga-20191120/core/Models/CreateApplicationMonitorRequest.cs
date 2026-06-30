@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class CreateApplicationMonitorRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the GA instance on which you want to perform the origin probing task.</para>
+        /// <para>The instance ID of the Alibaba Cloud Global Accelerator (GA) instance to be probed.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string AcceleratorId { get; set; }
 
         /// <summary>
-        /// <para>The URL or IP address that you want to probe.</para>
+        /// <para>The URL or IP address to be probed.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,10 +32,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string Address { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>The client token that is used to ensure the idempotence of a request.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -48,8 +48,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// <para>Specifies whether to enable the automatic diagnostics feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b> (default)</description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default)</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -60,9 +62,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public bool? DetectEnable { get; set; }
 
         /// <summary>
-        /// <para>The threshold that is used to trigger the automatic diagnostics feature. Unit: percentage.</para>
+        /// <para>The threshold that triggers automatic diagnostics. Unit: %.</para>
         /// <para>Valid values: <b>0</b> to <b>100</b>.</para>
-        /// <para>The default value is <b>0</b>, which indicates that the automatic diagnostics feature is not triggered.</para>
+        /// <para>Default value: <b>0</b>, which indicates that automatic diagnostics is not triggered.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -72,7 +74,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public int? DetectThreshold { get; set; }
 
         /// <summary>
-        /// <para>The number of times that the threshold must be reached before the automatic diagnostics feature is triggered.</para>
+        /// <para>The number of times that the threshold must be reached to trigger automatic diagnostics.</para>
         /// <para>Valid values: <b>1</b> to <b>20</b>. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
@@ -83,7 +85,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public int? DetectTimes { get; set; }
 
         /// <summary>
-        /// <para>The ID of the listener on which you want to perform the origin probing task.</para>
+        /// <para>The instance ID of the listener to be probed.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -94,7 +96,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string ListenerId { get; set; }
 
         /// <summary>
-        /// <para>The extended options of the listener protocol that is used by the origin probing task. The options vary based on the listener protocol.</para>
+        /// <para>The advanced extension options for the listener protocol type of the origin probing task. Different listener protocol types correspond to different extension options.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{ &quot;http_method&quot;: &quot;get&quot;,&quot;header&quot;: &quot;key:asd&quot;,&quot;acceptable_response_code&quot;: &quot;500&quot;,&quot;cert_verify&quot;: true }</para>
@@ -104,7 +106,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string OptionsJson { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the GA instance. Set the value to <b>cn-hangzhou</b>.</para>
+        /// <para>The region ID of the Alibaba Cloud Global Accelerator (GA) instance. Set the value to <b>cn-hangzhou</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -115,8 +117,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The silence period of the automatic diagnostics feature. This parameter specifies the interval at which the automatic diagnostics feature is triggered. If the availability rate does not return to normal after GA triggers an automatic diagnostic task, GA must wait until the silence period ends before GA can trigger another automatic diagnostic task.</para>
-        /// <para>If the number of consecutive times that the availability rate drops below the threshold of automatic diagnostics reaches the value of <b>DetectTimes</b>, the automatic diagnostics feature is triggered. The automatic diagnostics feature is not triggered again within the silence period even if the availability rate remains below the threshold. If the availability rate does not return to normal after the silence period ends, the automatic diagnostics feature is triggered again.</para>
+        /// <para>The silence period for automatic diagnostics. This parameter specifies the interval between two consecutive automatic diagnostics when the availability does not recover to normal after automatic diagnostics is triggered.</para>
+        /// <para>When the availability is consecutively below the automatic diagnostics threshold for the specified number of times (the value of <b>DetectTimes</b>), automatic diagnostics is triggered. If the availability remains below the threshold during the silence period, automatic diagnostics is not triggered again within the silence period. If the availability has not recovered after the silence period, automatic diagnostics is triggered again.</para>
         /// <para>Unit: seconds. Valid values: <b>300</b> to <b>86400</b>. Default value: <b>300</b>.</para>
         /// 
         /// <b>Example:</b>
@@ -128,7 +130,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// <para>The name of the origin probing task.</para>
-        /// <para>The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</para>
+        /// <para>The name must be 1 to 128 characters in length and must start with a letter or a Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
