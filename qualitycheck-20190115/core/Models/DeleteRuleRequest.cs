@@ -10,13 +10,15 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class DeleteRuleRequest : TeaModel {
         /// <summary>
-        /// <para>baseMeAgentId</para>
+        /// <para>Workspace ID.</para>
         /// </summary>
         [NameInMap("BaseMeAgentId")]
         [Validation(Required=false)]
         public long? BaseMeAgentId { get; set; }
 
         /// <summary>
+        /// <para>Whether to delete the rule even if it is associated with a quality check task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public bool? ForceDelete { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether this is the new version of quality check. 0: old version. 1: new version. Default is 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -33,6 +37,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public int? IsSchemeData { get; set; }
 
         /// <summary>
+        /// <para>Rule ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

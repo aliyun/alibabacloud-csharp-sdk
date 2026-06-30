@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class GetRuleV4Request : TeaModel {
         /// <summary>
+        /// <para>Rule ID.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>531</para>
         /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]

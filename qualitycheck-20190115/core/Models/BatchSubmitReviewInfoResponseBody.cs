@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class BatchSubmitReviewInfoResponseBody : TeaModel {
         /// <summary>
+        /// <para>The result code. A value of <b>200</b> indicates success. Other values indicate failure. You can use this code to identify the cause of a failure.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The error details if the request fails. If the request is successful, the value is \<c>successful\\</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -44,6 +50,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>F190ADE9-619A-447D-84E3-7E241A5C428E</para>
         /// </summary>
@@ -52,6 +60,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. A value of \<c>true\\</c> indicates success. A value of \<c>false\\</c> or \<c>null\\</c> indicates failure.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

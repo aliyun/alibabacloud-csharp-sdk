@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class DeleteTaskAssignRuleResponseBody : TeaModel {
         /// <summary>
+        /// <para>The result code. <b>200</b> means the operation succeeded. Any other value means the operation failed. Use this field to identify the cause of failure.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The error details if the operation failed. If the operation succeeded, the value is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>106C6CA0-282D-4AF7-85F0-D2D24F4CE647</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request succeeded. A value of true means success. A value of false or null means failure.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

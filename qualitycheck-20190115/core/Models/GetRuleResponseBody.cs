@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class GetRuleResponseBody : TeaModel {
         /// <summary>
+        /// <para>The result code. <b>200</b> means success. Any other value means failure. Use this field to identify the cause of failure.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,6 +19,9 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The response data</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetRuleResponseBodyData Data { get; set; }
@@ -130,6 +135,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         }
 
         /// <summary>
+        /// <para>Error details if the request fails. Returns <b>successful</b> if the request succeeds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -138,6 +145,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>F190ADE9-619A-447D-84E3-7E241A5C428E</para>
         /// </summary>
@@ -146,6 +155,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request succeeded. true means success. <b>false</b> or <b>null</b> means failure.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class ApplyWsTokenRequest : TeaModel {
         /// <summary>
+        /// <para>Workspace ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123456</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public long? BaseMeAgentId { get; set; }
 
         /// <summary>
+        /// <para>Complete JSON string information. For details, see the following specifications.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{
         ///     &quot;business&quot;: &quot;test&quot;,

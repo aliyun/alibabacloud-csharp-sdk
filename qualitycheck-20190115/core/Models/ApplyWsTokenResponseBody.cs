@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class ApplyWsTokenResponseBody : TeaModel {
         /// <summary>
+        /// <para>Response code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Return Result</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ApplyWsTokenResponseBodyData Data { get; set; }
         public class ApplyWsTokenResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Session ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>42e59bcd-7206-44c5-ad34-525d364687c4</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public string SessionId { get; set; }
 
             /// <summary>
+            /// <para>User access token</para>
+            /// 
             /// <b>Example:</b>
             /// <para>5607b21d1728700640</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public string Token { get; set; }
 
             /// <summary>
+            /// <para>WebSocket connection domain name</para>
+            /// 
             /// <b>Example:</b>
             /// <para>wss://ws-gateway-real-voice.aliyuncs.com</para>
             /// </summary>
@@ -48,6 +59,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         }
 
         /// <summary>
+        /// <para>HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>

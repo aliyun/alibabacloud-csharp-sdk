@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public long? BaseMeAgentId { get; set; }
 
         /// <summary>
+        /// <para>The request parameter JSON. For details, see the supplementary description of request parameters.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;pageNumber&quot;:1,&quot;pageSize&quot;:10,&quot;sourceDataType&quot;:&quot;1&quot;}</para>
         /// </summary>

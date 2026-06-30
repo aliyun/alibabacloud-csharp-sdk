@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class ListSkillGroupConfigResponseBody : TeaModel {
         /// <summary>
+        /// <para>The result code. A value of 200 indicates success. Any other value indicates failure. Use this field to determine the cause of failure.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -174,6 +176,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         }
 
         /// <summary>
+        /// <para>Details of the error if the request failed. If successful, the value is &quot;successful&quot;.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -182,6 +186,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3CEA0495-341B-4482-9AD9-8191EF4***</para>
         /// </summary>
@@ -190,6 +196,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request succeeded. A value of true means success. A value of false or null means failure.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

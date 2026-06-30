@@ -10,14 +10,18 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class DeleteBusinessCategoryRequest : TeaModel {
         /// <summary>
-        /// <para>baseMeAgentId</para>
+        /// <para>The workspace ID.</para>
         /// </summary>
         [NameInMap("BaseMeAgentId")]
         [Validation(Required=false)]
         public long? BaseMeAgentId { get; set; }
 
         /// <summary>
+        /// <para>The complete JSON string. For more information, see the details below.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;bid &quot;:&quot;适用业务ID&quot;}</para>
         /// </summary>
         [NameInMap("JsonStr")]
         [Validation(Required=false)]

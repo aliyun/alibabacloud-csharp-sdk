@@ -10,13 +10,15 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class UpdateRuleByIdRequest : TeaModel {
         /// <summary>
-        /// <para>baseMeAgentId</para>
+        /// <para>Workspace ID</para>
         /// </summary>
         [NameInMap("BaseMeAgentId")]
         [Validation(Required=false)]
         public long? BaseMeAgentId { get; set; }
 
         /// <summary>
+        /// <para>Whether to copy. Setting to true is equivalent to copying the rule.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -25,6 +27,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public bool? IsCopy { get; set; }
 
         /// <summary>
+        /// <para>For more information about the format of JsonStrForlRule, see <a href="https://help.aliyun.com/document_detail/453053.html"><c>Rule object description</c></a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,6 +38,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string JsonStrForRule { get; set; }
 
         /// <summary>
+        /// <para>Returns the IDs and names of quality inspection schemes associated with this rule.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -43,6 +48,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public bool? ReturnRelatedSchemes { get; set; }
 
         /// <summary>
+        /// <para>Rule ID. Not required when creating, required when modifying.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

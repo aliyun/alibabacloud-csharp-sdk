@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class ListSchemeTaskConfigResponseBody : TeaModel {
         /// <summary>
+        /// <para>Result code. <b>200</b> indicates success. Other values indicate failure. Callers can use this field to determine the cause of failure.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>Total entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>22</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public int? Count { get; set; }
 
         /// <summary>
+        /// <para>Current page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -240,6 +246,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         }
 
         /// <summary>
+        /// <para>HTTP status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -248,6 +256,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>This field marks the data. When querying more than 10,000 entries using GetResult, include the \<c>lastDataId\\</c> of the last entry from the previous query in each request parameter.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
         /// </summary>
@@ -256,6 +266,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string LastDataId { get; set; }
 
         /// <summary>
+        /// <para>Provides error details on failure. For success, it is <b>successful</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -274,6 +286,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         }
 
         /// <summary>
+        /// <para>Current page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -282,6 +296,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>Entries displayed per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -290,6 +306,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4B0A8DCD-0DDF-5E80-8B9C-0A2F68B3403B</para>
         /// </summary>
@@ -297,11 +315,19 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Internal field. Ignore it.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>忽略</para>
+        /// </summary>
         [NameInMap("ResultCountId")]
         [Validation(Required=false)]
         public string ResultCountId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. Callers can use this field to determine if the request succeeded: \<c>true\\</c> for success, \<c>false\\</c>/\<c>null\\</c> for failure.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

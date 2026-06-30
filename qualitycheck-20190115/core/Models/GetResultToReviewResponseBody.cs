@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class GetResultToReviewResponseBody : TeaModel {
         /// <summary>
+        /// <para>Result code. <b>200</b> means success. Any other value means failure. Use this field to identify the cause.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Detailed response data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetResultToReviewResponseBodyData Data { get; set; }
         public class GetResultToReviewResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Protocol used in the audio URL. Possible values: http, https.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>https</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public string AudioScheme { get; set; }
 
             /// <summary>
+            /// <para>Audio URL without the protocol prefix (http\:// or https\://). Combine with AudioScheme to form the full URL.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>sca-ccc-test.oss-cn-beijing.aliyuncs.com/xxxxx</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public string AudioURL { get; set; }
 
             /// <summary>
+            /// <para>Review comments.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
             /// </summary>
@@ -102,6 +113,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             }
 
             /// <summary>
+            /// <para>File ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>e790e6c919d84b82b64ee*****</para>
             /// </summary>
@@ -110,6 +123,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public string FileId { get; set; }
 
             /// <summary>
+            /// <para>File name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxx.wav</para>
             /// </summary>
@@ -586,6 +601,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             }
 
             /// <summary>
+            /// <para>Current task status. 0: incomplete. 1: complete. Use this field to check completion. Any other value indicates an error.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -594,6 +611,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public int? Status { get; set; }
 
             /// <summary>
+            /// <para>Quality inspection score.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>99</para>
             /// </summary>
@@ -602,6 +621,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public int? TotalScore { get; set; }
 
             /// <summary>
+            /// <para>File ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>6fa76916-3ce6-45d8-ac64-01b7f31***</para>
             /// </summary>
@@ -612,6 +633,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         }
 
         /// <summary>
+        /// <para>Error details if the call fails. Returns <b>successful</b> on success.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -620,6 +643,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>82C91484-B2D5-4D2A-A21F-A6D73F4***</para>
         /// </summary>
@@ -628,6 +653,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request succeeded. true means success. <b>false</b> or <b>null</b> means failure.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

@@ -10,13 +10,14 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class UpdateSkillGroupConfigRequest : TeaModel {
         /// <summary>
-        /// <para>baseMeAgentId</para>
+        /// <para>The ID of the workspace.</para>
         /// </summary>
         [NameInMap("BaseMeAgentId")]
         [Validation(Required=false)]
         public long? BaseMeAgentId { get; set; }
 
         /// <summary>
+        /// <para>The complete JSON string. For more information, see the details that follow.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

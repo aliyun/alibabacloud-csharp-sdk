@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class GetResultResponseBody : TeaModel {
         /// <summary>
+        /// <para>Result code. <c>200</c> indicates success. Any other value indicates failure. Use this field to identify the cause of failure.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>Total number of records.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -882,6 +886,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         }
 
         /// <summary>
+        /// <para>Error details if the request failed. Returns successful if the request succeeded.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -890,6 +896,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Current page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -898,6 +906,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>Number of records per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -906,6 +916,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Unique request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3CEA0495-341B-4482-9AD9-8191EF4***</para>
         /// </summary>
@@ -914,6 +926,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Reserved field. Ignore this field.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>XXX</para>
         /// </summary>
@@ -922,6 +936,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string ResultCountId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request succeeded. A value of true means success. A value of false or null means failure.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

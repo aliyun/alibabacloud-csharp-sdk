@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class DeleteCheckTypeToSchemeRequest : TeaModel {
         /// <summary>
+        /// <para>The workspace ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123456</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public long? BaseMeAgentId { get; set; }
 
         /// <summary>
+        /// <para>A JSON string that contains the custom parameters for the operation. For more information, see the <b>jsonStr properties</b> section below.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;schemeId&quot;:&quot;1376&quot;,&quot;checkType&quot;:&quot;4&quot;}</para>
         /// </summary>

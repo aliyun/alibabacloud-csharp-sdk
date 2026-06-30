@@ -10,13 +10,18 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class UpdateRuleToSchemeRequest : TeaModel {
         /// <summary>
-        /// <para>baseMeAgentId</para>
+        /// <para>Workspace ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1232927</para>
         /// </summary>
         [NameInMap("BaseMeAgentId")]
         [Validation(Required=false)]
         public long? BaseMeAgentId { get; set; }
 
         /// <summary>
+        /// <para>Request JSON. For details, see the request parameter description below.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;schemeId&quot;:&quot;10&quot;,&quot;schemeRules&quot;:[{&quot;ruleId&quot;:229,&quot;checkType&quot;:0}]}</para>
         /// </summary>

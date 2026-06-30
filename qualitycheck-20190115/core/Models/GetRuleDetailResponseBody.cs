@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class GetRuleDetailResponseBody : TeaModel {
         /// <summary>
+        /// <para>The result code. <b>200</b> means success. Any other value means failure. Use this field to identify the cause of failure.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,6 +19,9 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The response data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetRuleDetailResponseBodyData Data { get; set; }
@@ -278,6 +283,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             }
 
             /// <summary>
+            /// <para>The total number of items.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -286,6 +293,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public int? Count { get; set; }
 
             /// <summary>
+            /// <para>The current page number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -294,6 +303,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
+            /// <para>The number of items per page.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -358,6 +369,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         }
 
         /// <summary>
+        /// <para>The error message if the request fails. If the request succeeds, the value is <b>successful</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -366,6 +379,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4987D326-83D9-4A42-B9A5-0B27F9B40539</para>
         /// </summary>
@@ -374,6 +389,14 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request succeeded. Use this field to check the result:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b> means success.</para>
+        /// </description></item>
+        /// <item><description><para>false or <b>null</b> means failure.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

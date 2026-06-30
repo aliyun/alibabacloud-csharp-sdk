@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class GetSchemeTaskConfigRequest : TeaModel {
         /// <summary>
+        /// <para>Workspace ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>12345</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public long? BaseMeAgentId { get; set; }
 
         /// <summary>
+        /// <para>A complete JSON string. See the detailed information below.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;sourceDataType&quot;:3,&quot;id&quot;:588}</para>
         /// </summary>

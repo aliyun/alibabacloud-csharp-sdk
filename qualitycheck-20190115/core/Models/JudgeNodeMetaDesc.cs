@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class JudgeNodeMetaDesc : TeaModel {
         /// <summary>
+        /// <para>Actual value</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xx</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string ActualValue { get; set; }
 
         /// <summary>
+        /// <para>Data type</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -56,6 +60,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         }
 
         /// <summary>
+        /// <para>System field</para>
+        /// 
         /// <b>Example:</b>
         /// <para>remark1</para>
         /// </summary>
@@ -64,6 +70,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string Field { get; set; }
 
         /// <summary>
+        /// <para>Field data source type: 1: System predefined field. 2: Quality inspection field for passed parameters.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -72,6 +80,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public int? FieldType { get; set; }
 
         /// <summary>
+        /// <para>Expression</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -80,6 +90,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public int? Symbol { get; set; }
 
         /// <summary>
+        /// <para>Preset value</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
         /// </summary>

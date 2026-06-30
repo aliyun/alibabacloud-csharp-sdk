@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class CreateMiningTaskResponseBody : TeaModel {
         /// <summary>
+        /// <para>Result code. A value of <b>200</b> indicates success. Any other value indicates failure. Use this field to identify the cause of failure.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Response data</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateMiningTaskResponseBodyData Data { get; set; }
         public class CreateMiningTaskResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Task ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>7C1DEF5F-2C18-4D36-99C6-8C27*****</para>
             /// </summary>
@@ -32,6 +39,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         }
 
         /// <summary>
+        /// <para>HTTP status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -40,6 +49,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Error details if the call failed. Returns successful if the call succeeded.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -48,7 +59,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>Request ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>106C6CA0-282D-4AF7-85F0-D2D24F4CE647</para>
@@ -58,6 +69,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the call succeeded</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

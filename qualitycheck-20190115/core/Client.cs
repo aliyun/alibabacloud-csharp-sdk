@@ -18,7 +18,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"cn-hangzhou", "qualitycheck.cn-hangzhou.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("qualitycheck", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -37,6 +41,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a business category.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddBusinessCategoryRequest
         /// </param>
@@ -78,6 +87,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<AddBusinessCategoryResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a business category.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddBusinessCategoryRequest
         /// </param>
@@ -119,6 +133,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<AddBusinessCategoryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a business category.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddBusinessCategoryRequest
         /// </param>
@@ -132,6 +151,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return AddBusinessCategoryWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a business category.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddBusinessCategoryRequest
         /// </param>
@@ -145,6 +169,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return await AddBusinessCategoryWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Add a rule category.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddRuleCategoryRequest
         /// </param>
@@ -186,6 +215,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<AddRuleCategoryResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Add a rule category.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddRuleCategoryRequest
         /// </param>
@@ -227,6 +261,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<AddRuleCategoryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Add a rule category.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddRuleCategoryRequest
         /// </param>
@@ -240,6 +279,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return AddRuleCategoryWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Add a rule category.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddRuleCategoryRequest
         /// </param>
@@ -255,7 +299,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>V4创建规则</para>
+        /// <para>This operation creates a rule on the Quality Inspection Rule Configuration page. For Apsara Stack, the URL is ip:port/api/client/UpdateRuleById.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -307,7 +351,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>V4创建规则</para>
+        /// <para>This operation creates a rule on the Quality Inspection Rule Configuration page. For Apsara Stack, the URL is ip:port/api/client/UpdateRuleById.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -359,7 +403,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>V4创建规则</para>
+        /// <para>This operation creates a rule on the Quality Inspection Rule Configuration page. For Apsara Stack, the URL is ip:port/api/client/UpdateRuleById.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -377,7 +421,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>V4创建规则</para>
+        /// <para>This operation creates a rule on the Quality Inspection Rule Configuration page. For Apsara Stack, the URL is ip:port/api/client/UpdateRuleById.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -395,7 +439,135 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>申领实时语音所需token</para>
+        /// <para>Performs tag categorization.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AnalyzeLabelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AnalyzeLabelResponse
+        /// </returns>
+        public AnalyzeLabelResponse AnalyzeLabelWithOptions(AnalyzeLabelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
+            {
+                query["JsonStr"] = request.JsonStr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AnalyzeLabel",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AnalyzeLabelResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs tag categorization.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AnalyzeLabelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AnalyzeLabelResponse
+        /// </returns>
+        public async Task<AnalyzeLabelResponse> AnalyzeLabelWithOptionsAsync(AnalyzeLabelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
+            {
+                query["JsonStr"] = request.JsonStr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AnalyzeLabel",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AnalyzeLabelResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs tag categorization.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AnalyzeLabelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AnalyzeLabelResponse
+        /// </returns>
+        public AnalyzeLabelResponse AnalyzeLabel(AnalyzeLabelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AnalyzeLabelWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs tag categorization.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AnalyzeLabelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AnalyzeLabelResponse
+        /// </returns>
+        public async Task<AnalyzeLabelResponse> AnalyzeLabelAsync(AnalyzeLabelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AnalyzeLabelWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Apply for the token required for real-time speech processing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -441,7 +613,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>申领实时语音所需token</para>
+        /// <para>Apply for the token required for real-time speech processing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -487,7 +659,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>申领实时语音所需token</para>
+        /// <para>Apply for the token required for real-time speech processing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -505,7 +677,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>申领实时语音所需token</para>
+        /// <para>Apply for the token required for real-time speech processing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -521,6 +693,18 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return await ApplyWsTokenWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Manually assign quality reviewers.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can manually assign files that have completed quality inspection to reviewers. Assignments can be made one file at a time or in batches:
+        /// Single-file assignment: Assign a specific file to a specified reviewer.
+        /// Batch assignment: Assign multiple filtered files to one or more reviewers. You can specify how many files each reviewer receives, or let the system distribute the files evenly among reviewers.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// AssignReviewerRequest
         /// </param>
@@ -562,6 +746,18 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<AssignReviewerResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Manually assign quality reviewers.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can manually assign files that have completed quality inspection to reviewers. Assignments can be made one file at a time or in batches:
+        /// Single-file assignment: Assign a specific file to a specified reviewer.
+        /// Batch assignment: Assign multiple filtered files to one or more reviewers. You can specify how many files each reviewer receives, or let the system distribute the files evenly among reviewers.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// AssignReviewerRequest
         /// </param>
@@ -603,6 +799,18 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<AssignReviewerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Manually assign quality reviewers.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can manually assign files that have completed quality inspection to reviewers. Assignments can be made one file at a time or in batches:
+        /// Single-file assignment: Assign a specific file to a specified reviewer.
+        /// Batch assignment: Assign multiple filtered files to one or more reviewers. You can specify how many files each reviewer receives, or let the system distribute the files evenly among reviewers.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// AssignReviewerRequest
         /// </param>
@@ -616,6 +824,18 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return AssignReviewerWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Manually assign quality reviewers.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can manually assign files that have completed quality inspection to reviewers. Assignments can be made one file at a time or in batches:
+        /// Single-file assignment: Assign a specific file to a specified reviewer.
+        /// Batch assignment: Assign multiple filtered files to one or more reviewers. You can specify how many files each reviewer receives, or let the system distribute the files evenly among reviewers.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// AssignReviewerRequest
         /// </param>
@@ -635,7 +855,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>会话组批量分配</para>
+        /// <para>Frontend location: Quality Check Plan Management &gt; Task Results &gt; Session Groups &gt; Batch Assign. Apsara Stack URL: ip:port/api/job/AssignReviewerBySessionGroup.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -687,7 +907,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>会话组批量分配</para>
+        /// <para>Frontend location: Quality Check Plan Management &gt; Task Results &gt; Session Groups &gt; Batch Assign. Apsara Stack URL: ip:port/api/job/AssignReviewerBySessionGroup.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -739,7 +959,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>会话组批量分配</para>
+        /// <para>Frontend location: Quality Check Plan Management &gt; Task Results &gt; Session Groups &gt; Batch Assign. Apsara Stack URL: ip:port/api/job/AssignReviewerBySessionGroup.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -763,7 +983,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>会话组批量分配</para>
+        /// <para>Frontend location: Quality Check Plan Management &gt; Task Results &gt; Session Groups &gt; Batch Assign. Apsara Stack URL: ip:port/api/job/AssignReviewerBySessionGroup.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -783,7 +1003,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量复核</para>
+        /// <para>This operation implements the Batch Review feature, which is available in the frontend under Task Management &gt; Task Result.
+        /// For private cloud deployments, use the URL: ip:port/api/qcsBatchSubmitReviewInfo.json.
+        /// You can use this operation to perform a batch review on all filtered data.
+        /// Note: This operation updates a large volume of data. The changes may take some time to appear.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -829,7 +1052,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量复核</para>
+        /// <para>This operation implements the Batch Review feature, which is available in the frontend under Task Management &gt; Task Result.
+        /// For private cloud deployments, use the URL: ip:port/api/qcsBatchSubmitReviewInfo.json.
+        /// You can use this operation to perform a batch review on all filtered data.
+        /// Note: This operation updates a large volume of data. The changes may take some time to appear.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -875,7 +1101,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量复核</para>
+        /// <para>This operation implements the Batch Review feature, which is available in the frontend under Task Management &gt; Task Result.
+        /// For private cloud deployments, use the URL: ip:port/api/qcsBatchSubmitReviewInfo.json.
+        /// You can use this operation to perform a batch review on all filtered data.
+        /// Note: This operation updates a large volume of data. The changes may take some time to appear.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -893,7 +1122,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量复核</para>
+        /// <para>This operation implements the Batch Review feature, which is available in the frontend under Task Management &gt; Task Result.
+        /// For private cloud deployments, use the URL: ip:port/api/qcsBatchSubmitReviewInfo.json.
+        /// You can use this operation to perform a batch review on all filtered data.
+        /// Note: This operation updates a large volume of data. The changes may take some time to appear.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -911,8 +1143,271 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建热词模型</para>
+        /// <para>Creates an agent.</para>
         /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAgentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAgentResponse
+        /// </returns>
+        public CreateAgentResponse CreateAgentWithOptions(CreateAgentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                body["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
+            {
+                body["JsonStr"] = request.JsonStr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAgent",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAgentResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an agent.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAgentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAgentResponse
+        /// </returns>
+        public async Task<CreateAgentResponse> CreateAgentWithOptionsAsync(CreateAgentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                body["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
+            {
+                body["JsonStr"] = request.JsonStr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAgent",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAgentResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an agent.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAgentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAgentResponse
+        /// </returns>
+        public CreateAgentResponse CreateAgent(CreateAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateAgentWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an agent.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAgentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAgentResponse
+        /// </returns>
+        public async Task<CreateAgentResponse> CreateAgentAsync(CreateAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateAgentWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an Agent batch task for conversation analysis. The application call supports HTTP calls to complete the customer response.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAgentTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAgentTaskResponse
+        /// </returns>
+        public CreateAgentTaskResponse CreateAgentTaskWithOptions(CreateAgentTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                body["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
+            {
+                body["JsonStr"] = request.JsonStr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAgentTask",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAgentTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an Agent batch task for conversation analysis. The application call supports HTTP calls to complete the customer response.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAgentTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAgentTaskResponse
+        /// </returns>
+        public async Task<CreateAgentTaskResponse> CreateAgentTaskWithOptionsAsync(CreateAgentTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                body["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
+            {
+                body["JsonStr"] = request.JsonStr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAgentTask",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAgentTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an Agent batch task for conversation analysis. The application call supports HTTP calls to complete the customer response.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAgentTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAgentTaskResponse
+        /// </returns>
+        public CreateAgentTaskResponse CreateAgentTask(CreateAgentTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateAgentTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an Agent batch task for conversation analysis. The application call supports HTTP calls to complete the customer response.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAgentTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAgentTaskResponse
+        /// </returns>
+        public async Task<CreateAgentTaskResponse> CreateAgentTaskAsync(CreateAgentTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateAgentTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Uploads a set of speech hotwords to the server and obtains the hotword ID in the response.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Hotwords help improve recognition accuracy for specific terms, such as names, place names, or technical terms. <a href="https://help.aliyun.com/document_detail/213249.html">Learn more</a>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAsrVocabRequest
@@ -957,8 +1452,15 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建热词模型</para>
+        /// <para>Uploads a set of speech hotwords to the server and obtains the hotword ID in the response.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Hotwords help improve recognition accuracy for specific terms, such as names, place names, or technical terms. <a href="https://help.aliyun.com/document_detail/213249.html">Learn more</a>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAsrVocabRequest
@@ -1003,8 +1505,15 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建热词模型</para>
+        /// <para>Uploads a set of speech hotwords to the server and obtains the hotword ID in the response.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Hotwords help improve recognition accuracy for specific terms, such as names, place names, or technical terms. <a href="https://help.aliyun.com/document_detail/213249.html">Learn more</a>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAsrVocabRequest
@@ -1021,8 +1530,15 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建热词模型</para>
+        /// <para>Uploads a set of speech hotwords to the server and obtains the hotword ID in the response.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Hotwords help improve recognition accuracy for specific terms, such as names, place names, or technical terms. <a href="https://help.aliyun.com/document_detail/213249.html">Learn more</a>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAsrVocabRequest
@@ -1039,7 +1555,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建质检方案中的质检维度</para>
+        /// <para>UI path: Quality Check Plan Management &gt; Add or Edit Quality Check Dimension &gt; Add Quality Check Dimension. Apsara Stack API endpoint: ip:port/api/qcs/CreateCheckTypeToScheme.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1085,7 +1601,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建质检方案中的质检维度</para>
+        /// <para>UI path: Quality Check Plan Management &gt; Add or Edit Quality Check Dimension &gt; Add Quality Check Dimension. Apsara Stack API endpoint: ip:port/api/qcs/CreateCheckTypeToScheme.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1131,7 +1647,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建质检方案中的质检维度</para>
+        /// <para>UI path: Quality Check Plan Management &gt; Add or Edit Quality Check Dimension &gt; Add Quality Check Dimension. Apsara Stack API endpoint: ip:port/api/qcs/CreateCheckTypeToScheme.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1149,7 +1665,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建质检方案中的质检维度</para>
+        /// <para>UI path: Quality Check Plan Management &gt; Add or Edit Quality Check Dimension &gt; Add Quality Check Dimension. Apsara Stack API endpoint: ip:port/api/qcs/CreateCheckTypeToScheme.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1167,7 +1683,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建标签挖掘任务</para>
+        /// <para>Creates a label mining task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1227,7 +1743,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建标签挖掘任务</para>
+        /// <para>Creates a label mining task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1287,7 +1803,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建标签挖掘任务</para>
+        /// <para>Creates a label mining task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1305,7 +1821,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建标签挖掘任务</para>
+        /// <para>Creates a label mining task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1323,7 +1839,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增质检方案</para>
+        /// <para>You can access this operation from the Quality Check Plan Management page in the console. The Apsara Stack endpoint is ip:port/api/qcs/CreateQualityCheckScheme.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1369,7 +1885,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增质检方案</para>
+        /// <para>You can access this operation from the Quality Check Plan Management page in the console. The Apsara Stack endpoint is ip:port/api/qcs/CreateQualityCheckScheme.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1415,7 +1931,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增质检方案</para>
+        /// <para>You can access this operation from the Quality Check Plan Management page in the console. The Apsara Stack endpoint is ip:port/api/qcs/CreateQualityCheckScheme.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1433,7 +1949,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增质检方案</para>
+        /// <para>You can access this operation from the Quality Check Plan Management page in the console. The Apsara Stack endpoint is ip:port/api/qcs/CreateQualityCheckScheme.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1451,7 +1967,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建质检任务</para>
+        /// <para>Corresponding frontend feature location: Plan Management &gt; Create Quality Inspection Job. Apsara Stack URL: ip:port/api/task/CreateSchemeTaskConfig.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1497,7 +2013,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建质检任务</para>
+        /// <para>Corresponding frontend feature location: Plan Management &gt; Create Quality Inspection Job. Apsara Stack URL: ip:port/api/task/CreateSchemeTaskConfig.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1543,7 +2059,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建质检任务</para>
+        /// <para>Corresponding frontend feature location: Plan Management &gt; Create Quality Inspection Job. Apsara Stack URL: ip:port/api/task/CreateSchemeTaskConfig.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1561,7 +2077,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建质检任务</para>
+        /// <para>Corresponding frontend feature location: Plan Management &gt; Create Quality Inspection Job. Apsara Stack URL: ip:port/api/task/CreateSchemeTaskConfig.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1580,6 +2096,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <term><b>Deprecated</b></term>
         /// 
         /// OpenAPI CreateSkillGroupConfig is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create a configuration.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// CreateSkillGroupConfigRequest
@@ -1628,6 +2149,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// OpenAPI CreateSkillGroupConfig is deprecated
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create a configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateSkillGroupConfigRequest
         /// </param>
@@ -1675,6 +2201,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// OpenAPI CreateSkillGroupConfig is deprecated
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create a configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateSkillGroupConfigRequest
         /// </param>
@@ -1694,6 +2225,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// OpenAPI CreateSkillGroupConfig is deprecated
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create a configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateSkillGroupConfigRequest
         /// </param>
@@ -1709,6 +2245,139 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return await CreateSkillGroupConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a label node.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTagRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTagResponse
+        /// </returns>
+        public CreateTagResponse CreateTagWithOptions(CreateTagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
+            {
+                query["JsonStr"] = request.JsonStr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateTag",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateTagResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a label node.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTagRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTagResponse
+        /// </returns>
+        public async Task<CreateTagResponse> CreateTagWithOptionsAsync(CreateTagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
+            {
+                query["JsonStr"] = request.JsonStr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateTag",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateTagResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a label node.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTagRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTagResponse
+        /// </returns>
+        public CreateTagResponse CreateTag(CreateTagRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateTagWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a label node.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTagRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTagResponse
+        /// </returns>
+        public async Task<CreateTagResponse> CreateTagAsync(CreateTagRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateTagWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an automatic allocation rule for quality review tasks.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateTaskAssignRuleRequest
         /// </param>
@@ -1750,6 +2419,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<CreateTaskAssignRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an automatic allocation rule for quality review tasks.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateTaskAssignRuleRequest
         /// </param>
@@ -1791,6 +2465,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<CreateTaskAssignRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an automatic allocation rule for quality review tasks.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateTaskAssignRuleRequest
         /// </param>
@@ -1804,6 +2483,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return CreateTaskAssignRuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an automatic allocation rule for quality review tasks.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateTaskAssignRuleRequest
         /// </param>
@@ -1819,8 +2503,13 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建用户</para>
+        /// <para>Create a user</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Alibaba Cloud uses Resource Access Management (RAM) for unified account management. Before you create a user in Smart Conversation Analysis, first create the user in <a href="https://ram.console.aliyun.com">RAM</a>. Then, obtain the user’s UID, username, and display name. Finally, add the RAM user to Smart Conversation Analysis to grant them access to the Smart Conversation Analysis service.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateUserRequest
@@ -1865,8 +2554,13 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建用户</para>
+        /// <para>Create a user</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Alibaba Cloud uses Resource Access Management (RAM) for unified account management. Before you create a user in Smart Conversation Analysis, first create the user in <a href="https://ram.console.aliyun.com">RAM</a>. Then, obtain the user’s UID, username, and display name. Finally, add the RAM user to Smart Conversation Analysis to grant them access to the Smart Conversation Analysis service.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateUserRequest
@@ -1911,8 +2605,13 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建用户</para>
+        /// <para>Create a user</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Alibaba Cloud uses Resource Access Management (RAM) for unified account management. Before you create a user in Smart Conversation Analysis, first create the user in <a href="https://ram.console.aliyun.com">RAM</a>. Then, obtain the user’s UID, username, and display name. Finally, add the RAM user to Smart Conversation Analysis to grant them access to the Smart Conversation Analysis service.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateUserRequest
@@ -1929,8 +2628,13 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建用户</para>
+        /// <para>Create a user</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Alibaba Cloud uses Resource Access Management (RAM) for unified account management. Before you create a user in Smart Conversation Analysis, first create the user in <a href="https://ram.console.aliyun.com">RAM</a>. Then, obtain the user’s UID, username, and display name. Finally, add the RAM user to Smart Conversation Analysis to grant them access to the Smart Conversation Analysis service.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateUserRequest
@@ -1945,6 +2649,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return await CreateUserWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create a warning configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateWarningConfigRequest
         /// </param>
@@ -1986,6 +2695,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<CreateWarningConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create a warning configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateWarningConfigRequest
         /// </param>
@@ -2027,6 +2741,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<CreateWarningConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create a warning configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateWarningConfigRequest
         /// </param>
@@ -2040,6 +2759,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return CreateWarningConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create a warning configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateWarningConfigRequest
         /// </param>
@@ -2181,6 +2905,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return await CreateWarningStrategyConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a rule category.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DelRuleCategoryRequest
         /// </param>
@@ -2222,6 +2951,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<DelRuleCategoryResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a rule category.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DelRuleCategoryRequest
         /// </param>
@@ -2263,6 +2997,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<DelRuleCategoryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a rule category.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DelRuleCategoryRequest
         /// </param>
@@ -2276,6 +3015,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return DelRuleCategoryWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a rule category.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DelRuleCategoryRequest
         /// </param>
@@ -2289,6 +3033,139 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return await DelRuleCategoryWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an agent.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAgentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgentResponse
+        /// </returns>
+        public DeleteAgentResponse DeleteAgentWithOptions(DeleteAgentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                body["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
+            {
+                body["JsonStr"] = request.JsonStr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAgent",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAgentResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an agent.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAgentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgentResponse
+        /// </returns>
+        public async Task<DeleteAgentResponse> DeleteAgentWithOptionsAsync(DeleteAgentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                body["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
+            {
+                body["JsonStr"] = request.JsonStr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAgent",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAgentResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an agent.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAgentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgentResponse
+        /// </returns>
+        public DeleteAgentResponse DeleteAgent(DeleteAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteAgentWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an agent.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAgentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgentResponse
+        /// </returns>
+        public async Task<DeleteAgentResponse> DeleteAgentAsync(DeleteAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteAgentWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a hotword group.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteAsrVocabRequest
         /// </param>
@@ -2330,6 +3207,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<DeleteAsrVocabResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a hotword group.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteAsrVocabRequest
         /// </param>
@@ -2371,6 +3253,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<DeleteAsrVocabResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a hotword group.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteAsrVocabRequest
         /// </param>
@@ -2384,6 +3271,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return DeleteAsrVocabWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a hotword group.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteAsrVocabRequest
         /// </param>
@@ -2397,6 +3289,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return await DeleteAsrVocabWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a business category.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteBusinessCategoryRequest
         /// </param>
@@ -2438,6 +3335,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<DeleteBusinessCategoryResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a business category.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteBusinessCategoryRequest
         /// </param>
@@ -2479,6 +3381,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<DeleteBusinessCategoryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a business category.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteBusinessCategoryRequest
         /// </param>
@@ -2492,6 +3399,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return DeleteBusinessCategoryWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a business category.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteBusinessCategoryRequest
         /// </param>
@@ -2507,7 +3419,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除质检唯独</para>
+        /// <para>Deletes a dimension from a quality inspection scheme.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2553,7 +3465,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除质检唯独</para>
+        /// <para>Deletes a dimension from a quality inspection scheme.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2599,7 +3511,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除质检唯独</para>
+        /// <para>Deletes a dimension from a quality inspection scheme.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2617,7 +3529,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除质检唯独</para>
+        /// <para>Deletes a dimension from a quality inspection scheme.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2633,6 +3545,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return await DeleteCheckTypeToSchemeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a language model.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteCustomizationConfigRequest
         /// </param>
@@ -2674,6 +3591,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<DeleteCustomizationConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a language model.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteCustomizationConfigRequest
         /// </param>
@@ -2715,6 +3637,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<DeleteCustomizationConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a language model.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteCustomizationConfigRequest
         /// </param>
@@ -2728,6 +3655,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return DeleteCustomizationConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a language model.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteCustomizationConfigRequest
         /// </param>
@@ -2744,6 +3676,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <term><b>Deprecated</b></term>
         /// 
         /// OpenAPI DeleteDataSet is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a dataset.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// DeleteDataSetRequest
@@ -2792,6 +3729,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// OpenAPI DeleteDataSet is deprecated
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a dataset.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteDataSetRequest
         /// </param>
@@ -2839,6 +3781,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// OpenAPI DeleteDataSet is deprecated
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a dataset.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteDataSetRequest
         /// </param>
@@ -2858,6 +3805,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// OpenAPI DeleteDataSet is deprecated
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a dataset.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteDataSetRequest
         /// </param>
@@ -2873,6 +3825,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return await DeleteDataSetWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete a speech recognition quality check task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeletePrecisionTaskRequest
         /// </param>
@@ -2914,6 +3871,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<DeletePrecisionTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete a speech recognition quality check task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeletePrecisionTaskRequest
         /// </param>
@@ -2955,6 +3917,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<DeletePrecisionTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete a speech recognition quality check task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeletePrecisionTaskRequest
         /// </param>
@@ -2968,6 +3935,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return DeletePrecisionTaskWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete a speech recognition quality check task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeletePrecisionTaskRequest
         /// </param>
@@ -2983,7 +3955,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除质检方案</para>
+        /// <para>You can delete a quality check plan from the Quality Check Plan Management page by clicking the Delete button on the right side of the plan. The Apsara Stack API endpoint is ip:port/api/qcs/DeleteQualityCheckScheme.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3029,7 +4001,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除质检方案</para>
+        /// <para>You can delete a quality check plan from the Quality Check Plan Management page by clicking the Delete button on the right side of the plan. The Apsara Stack API endpoint is ip:port/api/qcs/DeleteQualityCheckScheme.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3075,7 +4047,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除质检方案</para>
+        /// <para>You can delete a quality check plan from the Quality Check Plan Management page by clicking the Delete button on the right side of the plan. The Apsara Stack API endpoint is ip:port/api/qcs/DeleteQualityCheckScheme.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3093,7 +4065,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除质检方案</para>
+        /// <para>You can delete a quality check plan from the Quality Check Plan Management page by clicking the Delete button on the right side of the plan. The Apsara Stack API endpoint is ip:port/api/qcs/DeleteQualityCheckScheme.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3115,7 +4087,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除规则</para>
+        /// <para>This operation deletes a quality check rule. You can access it from the Quality Check Rule Configuration page in the Apsara Stack console. The API endpoint is ip:port/api/client/DeleteRule.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3177,7 +4149,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除规则</para>
+        /// <para>This operation deletes a quality check rule. You can access it from the Quality Check Rule Configuration page in the Apsara Stack console. The API endpoint is ip:port/api/client/DeleteRule.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3239,7 +4211,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除规则</para>
+        /// <para>This operation deletes a quality check rule. You can access it from the Quality Check Rule Configuration page in the Apsara Stack console. The API endpoint is ip:port/api/client/DeleteRule.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3263,7 +4235,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除规则</para>
+        /// <para>This operation deletes a quality check rule. You can access it from the Quality Check Rule Configuration page in the Apsara Stack console. The API endpoint is ip:port/api/client/DeleteRule.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3283,7 +4255,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>V4删除规则</para>
+        /// <para>Frontend feature location: Quality Inspection Rule Configuration — Delete. Apsara Stack URL: ip:port/api/client/DeleteRule.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3335,7 +4307,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>V4删除规则</para>
+        /// <para>Frontend feature location: Quality Inspection Rule Configuration — Delete. Apsara Stack URL: ip:port/api/client/DeleteRule.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3387,7 +4359,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>V4删除规则</para>
+        /// <para>Frontend feature location: Quality Inspection Rule Configuration — Delete. Apsara Stack URL: ip:port/api/client/DeleteRule.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3405,7 +4377,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>V4删除规则</para>
+        /// <para>Frontend feature location: Quality Inspection Rule Configuration — Delete. Apsara Stack URL: ip:port/api/client/DeleteRule.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3423,7 +4395,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除质检任务</para>
+        /// <para>This feature is not available on the frontend. The Apsara Stack API endpoint is ip:port/api/task/DeleteSchemeTaskConfig.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3469,7 +4441,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除质检任务</para>
+        /// <para>This feature is not available on the frontend. The Apsara Stack API endpoint is ip:port/api/task/DeleteSchemeTaskConfig.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3515,7 +4487,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除质检任务</para>
+        /// <para>This feature is not available on the frontend. The Apsara Stack API endpoint is ip:port/api/task/DeleteSchemeTaskConfig.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3533,7 +4505,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除质检任务</para>
+        /// <para>This feature is not available on the frontend. The Apsara Stack API endpoint is ip:port/api/task/DeleteSchemeTaskConfig.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3552,6 +4524,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <term><b>Deprecated</b></term>
         /// 
         /// OpenAPI DeleteSkillGroupConfig is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete a configuration.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// DeleteSkillGroupConfigRequest
@@ -3600,6 +4577,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// OpenAPI DeleteSkillGroupConfig is deprecated
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete a configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteSkillGroupConfigRequest
         /// </param>
@@ -3647,6 +4629,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// OpenAPI DeleteSkillGroupConfig is deprecated
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete a configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteSkillGroupConfigRequest
         /// </param>
@@ -3666,6 +4653,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// OpenAPI DeleteSkillGroupConfig is deprecated
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete a configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteSkillGroupConfigRequest
         /// </param>
@@ -3681,6 +4673,139 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return await DeleteSkillGroupConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a label node.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteTagRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTagResponse
+        /// </returns>
+        public DeleteTagResponse DeleteTagWithOptions(DeleteTagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
+            {
+                query["JsonStr"] = request.JsonStr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteTag",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteTagResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a label node.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteTagRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTagResponse
+        /// </returns>
+        public async Task<DeleteTagResponse> DeleteTagWithOptionsAsync(DeleteTagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
+            {
+                query["JsonStr"] = request.JsonStr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteTag",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteTagResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a label node.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteTagRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTagResponse
+        /// </returns>
+        public DeleteTagResponse DeleteTag(DeleteTagRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteTagWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a label node.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteTagRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTagResponse
+        /// </returns>
+        public async Task<DeleteTagResponse> DeleteTagAsync(DeleteTagRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteTagWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an automatic allocation rule for review tasks.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteTaskAssignRuleRequest
         /// </param>
@@ -3722,6 +4847,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<DeleteTaskAssignRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an automatic allocation rule for review tasks.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteTaskAssignRuleRequest
         /// </param>
@@ -3763,6 +4893,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<DeleteTaskAssignRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an automatic allocation rule for review tasks.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteTaskAssignRuleRequest
         /// </param>
@@ -3776,6 +4911,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return DeleteTaskAssignRuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an automatic allocation rule for review tasks.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteTaskAssignRuleRequest
         /// </param>
@@ -3789,6 +4929,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return await DeleteTaskAssignRuleWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a warning configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteWarningConfigRequest
         /// </param>
@@ -3830,6 +4975,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<DeleteWarningConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a warning configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteWarningConfigRequest
         /// </param>
@@ -3871,6 +5021,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<DeleteWarningConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a warning configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteWarningConfigRequest
         /// </param>
@@ -3884,6 +5039,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return DeleteWarningConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a warning configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteWarningConfigRequest
         /// </param>
@@ -4025,6 +5185,531 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return await DeleteWarningStrategyConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Runs an agent.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteAgentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteAgentResponse
+        /// </returns>
+        public ExecuteAgentResponse ExecuteAgentWithOptions(ExecuteAgentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                body["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
+            {
+                body["JsonStr"] = request.JsonStr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Stream))
+            {
+                body["Stream"] = request.Stream;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExecuteAgent",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExecuteAgentResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Runs an agent.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteAgentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteAgentResponse
+        /// </returns>
+        public async Task<ExecuteAgentResponse> ExecuteAgentWithOptionsAsync(ExecuteAgentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                body["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
+            {
+                body["JsonStr"] = request.JsonStr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Stream))
+            {
+                body["Stream"] = request.Stream;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExecuteAgent",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExecuteAgentResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Runs an agent.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteAgentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteAgentResponse
+        /// </returns>
+        public ExecuteAgentResponse ExecuteAgent(ExecuteAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ExecuteAgentWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Runs an agent.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteAgentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteAgentResponse
+        /// </returns>
+        public async Task<ExecuteAgentResponse> ExecuteAgentAsync(ExecuteAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ExecuteAgentWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generates labels.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateLabelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateLabelResponse
+        /// </returns>
+        public GenerateLabelResponse GenerateLabelWithOptions(GenerateLabelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
+            {
+                query["JsonStr"] = request.JsonStr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GenerateLabel",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GenerateLabelResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generates labels.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateLabelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateLabelResponse
+        /// </returns>
+        public async Task<GenerateLabelResponse> GenerateLabelWithOptionsAsync(GenerateLabelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
+            {
+                query["JsonStr"] = request.JsonStr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GenerateLabel",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GenerateLabelResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generates labels.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateLabelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateLabelResponse
+        /// </returns>
+        public GenerateLabelResponse GenerateLabel(GenerateLabelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GenerateLabelWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generates labels.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateLabelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateLabelResponse
+        /// </returns>
+        public async Task<GenerateLabelResponse> GenerateLabelAsync(GenerateLabelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GenerateLabelWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of an agent.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentResponse
+        /// </returns>
+        public GetAgentResponse GetAgentWithOptions(GetAgentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                body["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
+            {
+                body["JsonStr"] = request.JsonStr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgent",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgentResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of an agent.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentResponse
+        /// </returns>
+        public async Task<GetAgentResponse> GetAgentWithOptionsAsync(GetAgentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                body["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
+            {
+                body["JsonStr"] = request.JsonStr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgent",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgentResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of an agent.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentResponse
+        /// </returns>
+        public GetAgentResponse GetAgent(GetAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAgentWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of an agent.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentResponse
+        /// </returns>
+        public async Task<GetAgentResponse> GetAgentAsync(GetAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAgentWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the task result of an agent node.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgentTaskResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentTaskResultResponse
+        /// </returns>
+        public GetAgentTaskResultResponse GetAgentTaskResultWithOptions(GetAgentTaskResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                body["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
+            {
+                body["JsonStr"] = request.JsonStr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgentTaskResult",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgentTaskResultResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the task result of an agent node.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgentTaskResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentTaskResultResponse
+        /// </returns>
+        public async Task<GetAgentTaskResultResponse> GetAgentTaskResultWithOptionsAsync(GetAgentTaskResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                body["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
+            {
+                body["JsonStr"] = request.JsonStr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgentTaskResult",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgentTaskResultResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the task result of an agent node.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgentTaskResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentTaskResultResponse
+        /// </returns>
+        public GetAgentTaskResultResponse GetAgentTaskResult(GetAgentTaskResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAgentTaskResultWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the task result of an agent node.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgentTaskResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentTaskResultResponse
+        /// </returns>
+        public async Task<GetAgentTaskResultResponse> GetAgentTaskResultAsync(GetAgentTaskResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAgentTaskResultWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves details for a specified hotword group.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetAsrVocabRequest
         /// </param>
@@ -4066,6 +5751,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<GetAsrVocabResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves details for a specified hotword group.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetAsrVocabRequest
         /// </param>
@@ -4107,6 +5797,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<GetAsrVocabResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves details for a specified hotword group.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetAsrVocabRequest
         /// </param>
@@ -4120,6 +5815,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return GetAsrVocabWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves details for a specified hotword group.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetAsrVocabRequest
         /// </param>
@@ -4133,6 +5833,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return await GetAsrVocabWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain the list of applicable businesses.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetBusinessCategoryListRequest
         /// </param>
@@ -4174,6 +5879,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<GetBusinessCategoryListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain the list of applicable businesses.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetBusinessCategoryListRequest
         /// </param>
@@ -4215,6 +5925,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<GetBusinessCategoryListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain the list of applicable businesses.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetBusinessCategoryListRequest
         /// </param>
@@ -4228,6 +5943,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return GetBusinessCategoryListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain the list of applicable businesses.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetBusinessCategoryListRequest
         /// </param>
@@ -4243,7 +5963,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取语音模型列表</para>
+        /// <para>Retrieves a list of language models.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4289,7 +6009,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取语音模型列表</para>
+        /// <para>Retrieves a list of language models.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4335,7 +6055,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取语音模型列表</para>
+        /// <para>Retrieves a list of language models.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4353,7 +6073,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取语音模型列表</para>
+        /// <para>Retrieves a list of language models.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4371,7 +6091,263 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取标签挖掘任务结果</para>
+        /// <para>Queries the results of tag categorization analysis.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetLabelAnalysisResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetLabelAnalysisResultResponse
+        /// </returns>
+        public GetLabelAnalysisResultResponse GetLabelAnalysisResultWithOptions(GetLabelAnalysisResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
+            {
+                query["JsonStr"] = request.JsonStr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetLabelAnalysisResult",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetLabelAnalysisResultResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the results of tag categorization analysis.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetLabelAnalysisResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetLabelAnalysisResultResponse
+        /// </returns>
+        public async Task<GetLabelAnalysisResultResponse> GetLabelAnalysisResultWithOptionsAsync(GetLabelAnalysisResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
+            {
+                query["JsonStr"] = request.JsonStr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetLabelAnalysisResult",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetLabelAnalysisResultResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the results of tag categorization analysis.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetLabelAnalysisResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetLabelAnalysisResultResponse
+        /// </returns>
+        public GetLabelAnalysisResultResponse GetLabelAnalysisResult(GetLabelAnalysisResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetLabelAnalysisResultWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the results of tag categorization analysis.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetLabelAnalysisResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetLabelAnalysisResultResponse
+        /// </returns>
+        public async Task<GetLabelAnalysisResultResponse> GetLabelAnalysisResultAsync(GetLabelAnalysisResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetLabelAnalysisResultWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the result of a label generation task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetLabelGeneratedResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetLabelGeneratedResultResponse
+        /// </returns>
+        public GetLabelGeneratedResultResponse GetLabelGeneratedResultWithOptions(GetLabelGeneratedResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
+            {
+                query["JsonStr"] = request.JsonStr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetLabelGeneratedResult",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetLabelGeneratedResultResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the result of a label generation task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetLabelGeneratedResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetLabelGeneratedResultResponse
+        /// </returns>
+        public async Task<GetLabelGeneratedResultResponse> GetLabelGeneratedResultWithOptionsAsync(GetLabelGeneratedResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
+            {
+                query["JsonStr"] = request.JsonStr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetLabelGeneratedResult",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetLabelGeneratedResultResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the result of a label generation task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetLabelGeneratedResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetLabelGeneratedResultResponse
+        /// </returns>
+        public GetLabelGeneratedResultResponse GetLabelGeneratedResult(GetLabelGeneratedResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetLabelGeneratedResultWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the result of a label generation task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetLabelGeneratedResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetLabelGeneratedResultResponse
+        /// </returns>
+        public async Task<GetLabelGeneratedResultResponse> GetLabelGeneratedResultAsync(GetLabelGeneratedResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetLabelGeneratedResultWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve the result of a tag mining task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4417,7 +6393,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取标签挖掘任务结果</para>
+        /// <para>Retrieve the result of a tag mining task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4463,7 +6439,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取标签挖掘任务结果</para>
+        /// <para>Retrieve the result of a tag mining task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4481,7 +6457,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取标签挖掘任务结果</para>
+        /// <para>Retrieve the result of a tag mining task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4497,6 +6473,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return await GetMiningTaskResultWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve the next file details for manual verification.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetNextResultToVerifyRequest
         /// </param>
@@ -4538,6 +6519,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<GetNextResultToVerifyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve the next file details for manual verification.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetNextResultToVerifyRequest
         /// </param>
@@ -4579,6 +6565,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<GetNextResultToVerifyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve the next file details for manual verification.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetNextResultToVerifyRequest
         /// </param>
@@ -4592,6 +6583,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return GetNextResultToVerifyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve the next file details for manual verification.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetNextResultToVerifyRequest
         /// </param>
@@ -4605,6 +6601,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return await GetNextResultToVerifyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a (speech recognition) detection task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetPrecisionTaskRequest
         /// </param>
@@ -4646,6 +6647,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<GetPrecisionTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a (speech recognition) detection task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetPrecisionTaskRequest
         /// </param>
@@ -4687,6 +6693,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<GetPrecisionTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a (speech recognition) detection task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetPrecisionTaskRequest
         /// </param>
@@ -4700,6 +6711,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return GetPrecisionTaskWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a (speech recognition) detection task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetPrecisionTaskRequest
         /// </param>
@@ -4715,7 +6731,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质检方案</para>
+        /// <para>This operation implements the query feature in quality check plan management on the frontend. The Apsara Stack URL is ip:port/api/qcs/GetQualityCheckScheme.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4761,7 +6777,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质检方案</para>
+        /// <para>This operation implements the query feature in quality check plan management on the frontend. The Apsara Stack URL is ip:port/api/qcs/GetQualityCheckScheme.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4807,7 +6823,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质检方案</para>
+        /// <para>This operation implements the query feature in quality check plan management on the frontend. The Apsara Stack URL is ip:port/api/qcs/GetQualityCheckScheme.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4825,7 +6841,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质检方案</para>
+        /// <para>This operation implements the query feature in quality check plan management on the frontend. The Apsara Stack URL is ip:port/api/qcs/GetQualityCheckScheme.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4843,8 +6859,13 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质检结果</para>
+        /// <para>Query quality inspection results. Some fields require the requiredFields parameter to be explicitly specified in the request. Set the service endpoint (Region) to Hangzhou (cn-hangzhou).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query data uploaded using <a href="https://help.aliyun.com/document_detail/139399.html">UploadAudioData</a> or <a href="https://help.aliyun.com/document_detail/111394.html">UploadData</a>. You can also query data from dataset-based quality inspection tasks created with <a href="https://help.aliyun.com/document_detail/158890.html">SubmitQualityCheckTask</a>. You can search by task ID (taskId) or by time range.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetResultRequest
@@ -4889,8 +6910,13 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质检结果</para>
+        /// <para>Query quality inspection results. Some fields require the requiredFields parameter to be explicitly specified in the request. Set the service endpoint (Region) to Hangzhou (cn-hangzhou).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query data uploaded using <a href="https://help.aliyun.com/document_detail/139399.html">UploadAudioData</a> or <a href="https://help.aliyun.com/document_detail/111394.html">UploadData</a>. You can also query data from dataset-based quality inspection tasks created with <a href="https://help.aliyun.com/document_detail/158890.html">SubmitQualityCheckTask</a>. You can search by task ID (taskId) or by time range.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetResultRequest
@@ -4935,8 +6961,13 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质检结果</para>
+        /// <para>Query quality inspection results. Some fields require the requiredFields parameter to be explicitly specified in the request. Set the service endpoint (Region) to Hangzhou (cn-hangzhou).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query data uploaded using <a href="https://help.aliyun.com/document_detail/139399.html">UploadAudioData</a> or <a href="https://help.aliyun.com/document_detail/111394.html">UploadData</a>. You can also query data from dataset-based quality inspection tasks created with <a href="https://help.aliyun.com/document_detail/158890.html">SubmitQualityCheckTask</a>. You can search by task ID (taskId) or by time range.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetResultRequest
@@ -4953,8 +6984,13 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质检结果</para>
+        /// <para>Query quality inspection results. Some fields require the requiredFields parameter to be explicitly specified in the request. Set the service endpoint (Region) to Hangzhou (cn-hangzhou).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query data uploaded using <a href="https://help.aliyun.com/document_detail/139399.html">UploadAudioData</a> or <a href="https://help.aliyun.com/document_detail/111394.html">UploadData</a>. You can also query data from dataset-based quality inspection tasks created with <a href="https://help.aliyun.com/document_detail/158890.html">SubmitQualityCheckTask</a>. You can search by task ID (taskId) or by time range.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetResultRequest
@@ -4971,7 +7007,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质检结果详情用于复核</para>
+        /// <para>Retrieves the quality inspection results for a specified file. The response includes the transcript, audio URL, and details of detected rule hits. You can use this information to review the file by listening to the audio, reading the transcript, and locating where rules were triggered.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5017,7 +7053,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质检结果详情用于复核</para>
+        /// <para>Retrieves the quality inspection results for a specified file. The response includes the transcript, audio URL, and details of detected rule hits. You can use this information to review the file by listening to the audio, reading the transcript, and locating where rules were triggered.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5063,7 +7099,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质检结果详情用于复核</para>
+        /// <para>Retrieves the quality inspection results for a specified file. The response includes the transcript, audio URL, and details of detected rule hits. You can use this information to review the file by listening to the audio, reading the transcript, and locating where rules were triggered.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5081,7 +7117,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质检结果详情用于复核</para>
+        /// <para>Retrieves the quality inspection results for a specified file. The response includes the transcript, audio URL, and details of detected rule hits. You can use this information to review the file by listening to the audio, reading the transcript, and locating where rules were triggered.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5100,6 +7136,18 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <term><b>Deprecated</b></term>
         /// 
         /// OpenAPI GetRule is deprecated, please use Qualitycheck::2019-01-15::GetRuleV4 instead.
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves basic information about rules.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation returns basic rule information such as the <b>id</b> and <b>name</b>. You can use this information with <a href="https://help.aliyun.com/document_detail/142310.html">GetRuleDetails</a>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetRuleRequest
@@ -5148,6 +7196,18 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// OpenAPI GetRule is deprecated, please use Qualitycheck::2019-01-15::GetRuleV4 instead.
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves basic information about rules.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation returns basic rule information such as the <b>id</b> and <b>name</b>. You can use this information with <a href="https://help.aliyun.com/document_detail/142310.html">GetRuleDetails</a>.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetRuleRequest
         /// </param>
@@ -5195,6 +7255,18 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// OpenAPI GetRule is deprecated, please use Qualitycheck::2019-01-15::GetRuleV4 instead.
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves basic information about rules.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation returns basic rule information such as the <b>id</b> and <b>name</b>. You can use this information with <a href="https://help.aliyun.com/document_detail/142310.html">GetRuleDetails</a>.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetRuleRequest
         /// </param>
@@ -5213,6 +7285,18 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <term><b>Deprecated</b></term>
         /// 
         /// OpenAPI GetRule is deprecated, please use Qualitycheck::2019-01-15::GetRuleV4 instead.
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves basic information about rules.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation returns basic rule information such as the <b>id</b> and <b>name</b>. You can use this information with <a href="https://help.aliyun.com/document_detail/142310.html">GetRuleDetails</a>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetRuleRequest
@@ -5235,7 +7319,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取规则</para>
+        /// <para>Retrieves the details of a specific quality inspection rule. It corresponds to the <b>Edit</b> action on the <b>Quality Inspection Rule Configuration</b> page. The URL for this operation in a private cloud is <c>ip:port/api/client/GetRuleById.json</c>.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5289,7 +7373,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取规则</para>
+        /// <para>Retrieves the details of a specific quality inspection rule. It corresponds to the <b>Edit</b> action on the <b>Quality Inspection Rule Configuration</b> page. The URL for this operation in a private cloud is <c>ip:port/api/client/GetRuleById.json</c>.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5343,7 +7427,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取规则</para>
+        /// <para>Retrieves the details of a specific quality inspection rule. It corresponds to the <b>Edit</b> action on the <b>Quality Inspection Rule Configuration</b> page. The URL for this operation in a private cloud is <c>ip:port/api/client/GetRuleById.json</c>.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5367,7 +7451,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取规则</para>
+        /// <para>Retrieves the details of a specific quality inspection rule. It corresponds to the <b>Edit</b> action on the <b>Quality Inspection Rule Configuration</b> page. The URL for this operation in a private cloud is <c>ip:port/api/client/GetRuleById.json</c>.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5385,6 +7469,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return await GetRuleByIdWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of rule types.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetRuleCategoryRequest
         /// </param>
@@ -5426,6 +7515,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<GetRuleCategoryResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of rule types.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetRuleCategoryRequest
         /// </param>
@@ -5467,6 +7561,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<GetRuleCategoryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of rule types.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetRuleCategoryRequest
         /// </param>
@@ -5480,6 +7579,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return GetRuleCategoryWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of rule types.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetRuleCategoryRequest
         /// </param>
@@ -5496,6 +7600,18 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <term><b>Deprecated</b></term>
         /// 
         /// OpenAPI GetRuleDetail is deprecated, please use Qualitycheck::2019-01-15::GetRuleV4 instead.
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the detailed information of a rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation is used in conjunction with <a href="https://help.aliyun.com/document_detail/142333.html">Get basic rule information</a>. First, call the GetRule operation to obtain the rule ID. Then, use the rule ID as a parameter to call the <b>GetRuleDetail</b> operation.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetRuleDetailRequest
@@ -5544,6 +7660,18 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// OpenAPI GetRuleDetail is deprecated, please use Qualitycheck::2019-01-15::GetRuleV4 instead.
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the detailed information of a rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation is used in conjunction with <a href="https://help.aliyun.com/document_detail/142333.html">Get basic rule information</a>. First, call the GetRule operation to obtain the rule ID. Then, use the rule ID as a parameter to call the <b>GetRuleDetail</b> operation.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetRuleDetailRequest
         /// </param>
@@ -5591,6 +7719,18 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// OpenAPI GetRuleDetail is deprecated, please use Qualitycheck::2019-01-15::GetRuleV4 instead.
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the detailed information of a rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation is used in conjunction with <a href="https://help.aliyun.com/document_detail/142333.html">Get basic rule information</a>. First, call the GetRule operation to obtain the rule ID. Then, use the rule ID as a parameter to call the <b>GetRuleDetail</b> operation.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetRuleDetailRequest
         /// </param>
@@ -5610,6 +7750,18 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// OpenAPI GetRuleDetail is deprecated, please use Qualitycheck::2019-01-15::GetRuleV4 instead.
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the detailed information of a rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation is used in conjunction with <a href="https://help.aliyun.com/document_detail/142333.html">Get basic rule information</a>. First, call the GetRule operation to obtain the rule ID. Then, use the rule ID as a parameter to call the <b>GetRuleDetail</b> operation.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetRuleDetailRequest
         /// </param>
@@ -5627,7 +7779,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>V4获取规则</para>
+        /// <para>This API is located in the frontend at Quality Check Rule Configuration &gt; Query. The Apsara Stack URL is ip:port/api/client/GetRuleById.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5669,7 +7821,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>V4获取规则</para>
+        /// <para>This API is located in the frontend at Quality Check Rule Configuration &gt; Query. The Apsara Stack URL is ip:port/api/client/GetRuleById.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5711,7 +7863,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>V4获取规则</para>
+        /// <para>This API is located in the frontend at Quality Check Rule Configuration &gt; Query. The Apsara Stack URL is ip:port/api/client/GetRuleById.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5729,7 +7881,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>V4获取规则</para>
+        /// <para>This API is located in the frontend at Quality Check Rule Configuration &gt; Query. The Apsara Stack URL is ip:port/api/client/GetRuleById.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5747,7 +7899,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得规则列表</para>
+        /// <para>Corresponds to the frontend feature location: Quality Inspection Rule Configuration &gt; List. Apsara Stack URL: ip:port/api/rule/GetRulesCountList.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5891,7 +8043,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得规则列表</para>
+        /// <para>Corresponds to the frontend feature location: Quality Inspection Rule Configuration &gt; List. Apsara Stack URL: ip:port/api/rule/GetRulesCountList.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6035,7 +8187,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得规则列表</para>
+        /// <para>Corresponds to the frontend feature location: Quality Inspection Rule Configuration &gt; List. Apsara Stack URL: ip:port/api/rule/GetRulesCountList.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6053,7 +8205,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得规则列表</para>
+        /// <para>Corresponds to the frontend feature location: Quality Inspection Rule Configuration &gt; List. Apsara Stack URL: ip:port/api/rule/GetRulesCountList.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6071,7 +8223,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质检任务配置详情</para>
+        /// <para>Obtain the configuration details of a quality inspection task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6117,7 +8269,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质检任务配置详情</para>
+        /// <para>Obtain the configuration details of a quality inspection task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6163,7 +8315,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质检任务配置详情</para>
+        /// <para>Obtain the configuration details of a quality inspection task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6181,7 +8333,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质检任务配置详情</para>
+        /// <para>Obtain the configuration details of a quality inspection task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6200,6 +8352,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <term><b>Deprecated</b></term>
         /// 
         /// OpenAPI GetScoreInfo is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves information about all scoring items.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// GetScoreInfoRequest
@@ -6248,6 +8405,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// OpenAPI GetScoreInfo is deprecated
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves information about all scoring items.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetScoreInfoRequest
         /// </param>
@@ -6295,6 +8457,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// OpenAPI GetScoreInfo is deprecated
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves information about all scoring items.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetScoreInfoRequest
         /// </param>
@@ -6314,6 +8481,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// OpenAPI GetScoreInfo is deprecated
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves information about all scoring items.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetScoreInfoRequest
         /// </param>
@@ -6332,6 +8504,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <term><b>Deprecated</b></term>
         /// 
         /// OpenAPI GetSkillGroupConfig is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the configuration that is specified by its ID.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// GetSkillGroupConfigRequest
@@ -6380,6 +8557,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// OpenAPI GetSkillGroupConfig is deprecated
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the configuration that is specified by its ID.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetSkillGroupConfigRequest
         /// </param>
@@ -6427,6 +8609,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// OpenAPI GetSkillGroupConfig is deprecated
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the configuration that is specified by its ID.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetSkillGroupConfigRequest
         /// </param>
@@ -6446,6 +8633,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// OpenAPI GetSkillGroupConfig is deprecated
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the configuration that is specified by its ID.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetSkillGroupConfigRequest
         /// </param>
@@ -6464,6 +8656,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <term><b>Deprecated</b></term>
         /// 
         /// OpenAPI GetSyncResult is deprecated, please use Qualitycheck::2019-01-15::GetResult instead.
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can obtain the real-time quality inspection result of the hotline.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// GetSyncResultRequest
@@ -6512,6 +8709,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// OpenAPI GetSyncResult is deprecated, please use Qualitycheck::2019-01-15::GetResult instead.
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can obtain the real-time quality inspection result of the hotline.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetSyncResultRequest
         /// </param>
@@ -6559,6 +8761,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// OpenAPI GetSyncResult is deprecated, please use Qualitycheck::2019-01-15::GetResult instead.
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can obtain the real-time quality inspection result of the hotline.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetSyncResultRequest
         /// </param>
@@ -6578,6 +8785,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// OpenAPI GetSyncResult is deprecated, please use Qualitycheck::2019-01-15::GetResult instead.
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can obtain the real-time quality inspection result of the hotline.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetSyncResultRequest
         /// </param>
@@ -6591,6 +8803,134 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetSyncResultWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a label node.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTagRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTagResponse
+        /// </returns>
+        public GetTagResponse GetTagWithOptions(GetTagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
+            {
+                query["JsonStr"] = request.JsonStr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTag",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTagResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a label node.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTagRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTagResponse
+        /// </returns>
+        public async Task<GetTagResponse> GetTagWithOptionsAsync(GetTagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
+            {
+                query["JsonStr"] = request.JsonStr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTag",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTagResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a label node.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTagRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTagResponse
+        /// </returns>
+        public GetTagResponse GetTag(GetTagRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetTagWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a label node.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTagRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTagResponse
+        /// </returns>
+        public async Task<GetTagResponse> GetTagAsync(GetTagRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetTagWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6721,6 +9061,16 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return await GetWarningStrategyConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Handles a complaint.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only quality checkers or administrators can call this operation.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HandleComplaintRequest
         /// </param>
@@ -6762,6 +9112,16 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<HandleComplaintResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Handles a complaint.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only quality checkers or administrators can call this operation.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HandleComplaintRequest
         /// </param>
@@ -6803,6 +9163,16 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<HandleComplaintResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Handles a complaint.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only quality checkers or administrators can call this operation.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HandleComplaintRequest
         /// </param>
@@ -6816,6 +9186,16 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return HandleComplaintWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Handles a complaint.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only quality checkers or administrators can call this operation.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HandleComplaintRequest
         /// </param>
@@ -6832,6 +9212,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <term><b>Deprecated</b></term>
         /// 
         /// OpenAPI InvalidRule is deprecated, please use Qualitycheck::2019-01-15::DeleteRuleV4 instead.
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete rules.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// InvalidRuleRequest
@@ -6880,6 +9265,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// OpenAPI InvalidRule is deprecated, please use Qualitycheck::2019-01-15::DeleteRuleV4 instead.
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete rules.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// InvalidRuleRequest
         /// </param>
@@ -6927,6 +9317,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// OpenAPI InvalidRule is deprecated, please use Qualitycheck::2019-01-15::DeleteRuleV4 instead.
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete rules.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// InvalidRuleRequest
         /// </param>
@@ -6946,6 +9341,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// OpenAPI InvalidRule is deprecated, please use Qualitycheck::2019-01-15::DeleteRuleV4 instead.
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete rules.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// InvalidRuleRequest
         /// </param>
@@ -6963,7 +9363,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取热词模型列表</para>
+        /// <para>Retrieves a list of vocabulary groups without their specific content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7009,7 +9409,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取热词模型列表</para>
+        /// <para>Retrieves a list of vocabulary groups without their specific content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7055,7 +9455,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取热词模型列表</para>
+        /// <para>Retrieves a list of vocabulary groups without their specific content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7073,7 +9473,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取热词模型列表</para>
+        /// <para>Retrieves a list of vocabulary groups without their specific content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7095,7 +9495,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据集列表</para>
+        /// <para>This feature is located in the Dataset management section of the frontend. The Apsara Stack URL is ip:port/api/dataset/ListDataSet.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7147,7 +9547,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据集列表</para>
+        /// <para>This feature is located in the Dataset management section of the frontend. The Apsara Stack URL is ip:port/api/dataset/ListDataSet.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7199,7 +9599,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据集列表</para>
+        /// <para>This feature is located in the Dataset management section of the frontend. The Apsara Stack URL is ip:port/api/dataset/ListDataSet.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7223,7 +9623,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据集列表</para>
+        /// <para>This feature is located in the Dataset management section of the frontend. The Apsara Stack URL is ip:port/api/dataset/ListDataSet.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7241,6 +9641,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return await ListDataSetWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve the list of speech recognition precision tasks. Set the service endpoint to Hangzhou (cn-hangzhou).</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListPrecisionTaskRequest
         /// </param>
@@ -7282,6 +9687,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<ListPrecisionTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve the list of speech recognition precision tasks. Set the service endpoint to Hangzhou (cn-hangzhou).</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListPrecisionTaskRequest
         /// </param>
@@ -7323,6 +9733,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<ListPrecisionTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve the list of speech recognition precision tasks. Set the service endpoint to Hangzhou (cn-hangzhou).</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListPrecisionTaskRequest
         /// </param>
@@ -7336,6 +9751,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return ListPrecisionTaskWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve the list of speech recognition precision tasks. Set the service endpoint to Hangzhou (cn-hangzhou).</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListPrecisionTaskRequest
         /// </param>
@@ -7351,7 +9771,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>质检方案列表</para>
+        /// <para>Retrieves a list of quality check schemes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7397,7 +9817,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>质检方案列表</para>
+        /// <para>Retrieves a list of quality check schemes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7443,7 +9863,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>质检方案列表</para>
+        /// <para>Retrieves a list of quality check schemes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7461,7 +9881,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>质检方案列表</para>
+        /// <para>Retrieves a list of quality check schemes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7480,6 +9900,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <term><b>Deprecated</b></term>
         /// 
         /// OpenAPI ListRules is deprecated, please use Qualitycheck::2019-01-15::ListRulesV4 instead.
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists rules.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// ListRulesRequest
@@ -7528,6 +9953,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// OpenAPI ListRules is deprecated, please use Qualitycheck::2019-01-15::ListRulesV4 instead.
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists rules.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListRulesRequest
         /// </param>
@@ -7575,6 +10005,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// OpenAPI ListRules is deprecated, please use Qualitycheck::2019-01-15::ListRulesV4 instead.
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists rules.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListRulesRequest
         /// </param>
@@ -7594,6 +10029,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// OpenAPI ListRules is deprecated, please use Qualitycheck::2019-01-15::ListRulesV4 instead.
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists rules.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListRulesRequest
         /// </param>
@@ -7611,7 +10051,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>V4获得规则列表</para>
+        /// <para>Frontend location: Quality inspection rule configuration — List. Apsara Stack URL: ip:port/api/rule/GetRulesCountList.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7755,7 +10195,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>V4获得规则列表</para>
+        /// <para>Frontend location: Quality inspection rule configuration — List. Apsara Stack URL: ip:port/api/rule/GetRulesCountList.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7899,7 +10339,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>V4获得规则列表</para>
+        /// <para>Frontend location: Quality inspection rule configuration — List. Apsara Stack URL: ip:port/api/rule/GetRulesCountList.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7917,7 +10357,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>V4获得规则列表</para>
+        /// <para>Frontend location: Quality inspection rule configuration — List. Apsara Stack URL: ip:port/api/rule/GetRulesCountList.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7935,7 +10375,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质检任务列表</para>
+        /// <para>This operation is used for the Task Management feature on the frontend. The Apsara Stack URL is ip:port/api/task/ListSchemeTaskInfo.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7981,7 +10421,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质检任务列表</para>
+        /// <para>This operation is used for the Task Management feature on the frontend. The Apsara Stack URL is ip:port/api/task/ListSchemeTaskInfo.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8027,7 +10467,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质检任务列表</para>
+        /// <para>This operation is used for the Task Management feature on the frontend. The Apsara Stack URL is ip:port/api/task/ListSchemeTaskInfo.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8045,7 +10485,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质检任务列表</para>
+        /// <para>This operation is used for the Task Management feature on the frontend. The Apsara Stack URL is ip:port/api/task/ListSchemeTaskInfo.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8067,7 +10507,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取会话组列表</para>
+        /// <para>This API corresponds to the frontend location: Task Management &gt; View Results &gt; Task Result &gt; Session Group Results tab. The Apsara Stack URL is: ip:port/api/session/group/ListSessionGroup.json. It aggregates multi-turn sessions by their session group ID for unified management. You must pass the <c>sessionGroupId</c> field. For more information, see the UploadData and UploadAudioData API documentation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8119,7 +10559,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取会话组列表</para>
+        /// <para>This API corresponds to the frontend location: Task Management &gt; View Results &gt; Task Result &gt; Session Group Results tab. The Apsara Stack URL is: ip:port/api/session/group/ListSessionGroup.json. It aggregates multi-turn sessions by their session group ID for unified management. You must pass the <c>sessionGroupId</c> field. For more information, see the UploadData and UploadAudioData API documentation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8171,7 +10611,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取会话组列表</para>
+        /// <para>This API corresponds to the frontend location: Task Management &gt; View Results &gt; Task Result &gt; Session Group Results tab. The Apsara Stack URL is: ip:port/api/session/group/ListSessionGroup.json. It aggregates multi-turn sessions by their session group ID for unified management. You must pass the <c>sessionGroupId</c> field. For more information, see the UploadData and UploadAudioData API documentation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8195,7 +10635,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取会话组列表</para>
+        /// <para>This API corresponds to the frontend location: Task Management &gt; View Results &gt; Task Result &gt; Session Group Results tab. The Apsara Stack URL is: ip:port/api/session/group/ListSessionGroup.json. It aggregates multi-turn sessions by their session group ID for unified management. You must pass the <c>sessionGroupId</c> field. For more information, see the UploadData and UploadAudioData API documentation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8216,6 +10656,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <term><b>Deprecated</b></term>
         /// 
         /// OpenAPI ListSkillGroupConfig is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call ListSkillGroupConfig to obtain the configuration list.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// ListSkillGroupConfigRequest
@@ -8264,6 +10709,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// OpenAPI ListSkillGroupConfig is deprecated
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call ListSkillGroupConfig to obtain the configuration list.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListSkillGroupConfigRequest
         /// </param>
@@ -8311,6 +10761,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// OpenAPI ListSkillGroupConfig is deprecated
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call ListSkillGroupConfig to obtain the configuration list.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListSkillGroupConfigRequest
         /// </param>
@@ -8330,6 +10785,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// OpenAPI ListSkillGroupConfig is deprecated
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call ListSkillGroupConfig to obtain the configuration list.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListSkillGroupConfigRequest
         /// </param>
@@ -8345,6 +10805,139 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return await ListSkillGroupConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of label nodes.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResponse
+        /// </returns>
+        public ListTagResponse ListTagWithOptions(ListTagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
+            {
+                query["JsonStr"] = request.JsonStr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTag",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListTagResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of label nodes.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResponse
+        /// </returns>
+        public async Task<ListTagResponse> ListTagWithOptionsAsync(ListTagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
+            {
+                query["JsonStr"] = request.JsonStr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTag",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListTagResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of label nodes.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResponse
+        /// </returns>
+        public ListTagResponse ListTag(ListTagRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListTagWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of label nodes.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResponse
+        /// </returns>
+        public async Task<ListTagResponse> ListTagAsync(ListTagRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListTagWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists automatic allocation rules for review tasks.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListTaskAssignRulesRequest
         /// </param>
@@ -8386,6 +10979,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<ListTaskAssignRulesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists automatic allocation rules for review tasks.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListTaskAssignRulesRequest
         /// </param>
@@ -8427,6 +11025,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<ListTaskAssignRulesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists automatic allocation rules for review tasks.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListTaskAssignRulesRequest
         /// </param>
@@ -8440,6 +11043,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return ListTaskAssignRulesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists automatic allocation rules for review tasks.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListTaskAssignRulesRequest
         /// </param>
@@ -8453,6 +11061,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return await ListTaskAssignRulesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of users. Set the service endpoint to China (Hangzhou) (cn-hangzhou).</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListUsersRequest
         /// </param>
@@ -8494,6 +11107,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<ListUsersResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of users. Set the service endpoint to China (Hangzhou) (cn-hangzhou).</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListUsersRequest
         /// </param>
@@ -8535,6 +11153,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<ListUsersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of users. Set the service endpoint to China (Hangzhou) (cn-hangzhou).</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListUsersRequest
         /// </param>
@@ -8548,6 +11171,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return ListUsersWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of users. Set the service endpoint to China (Hangzhou) (cn-hangzhou).</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListUsersRequest
         /// </param>
@@ -8561,6 +11189,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return await ListUsersWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists warning configurations.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListWarningConfigRequest
         /// </param>
@@ -8602,6 +11235,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<ListWarningConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists warning configurations.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListWarningConfigRequest
         /// </param>
@@ -8643,6 +11281,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<ListWarningConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists warning configurations.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListWarningConfigRequest
         /// </param>
@@ -8656,6 +11299,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return ListWarningConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists warning configurations.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListWarningConfigRequest
         /// </param>
@@ -8799,7 +11447,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量回收</para>
+        /// <para>Frontend location: Task Management &gt; Task Results &gt; Batch Revoke. Apsara Stack URL: ip:port/api/job/RevertAssignedSession.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8845,7 +11493,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量回收</para>
+        /// <para>Frontend location: Task Management &gt; Task Results &gt; Batch Revoke. Apsara Stack URL: ip:port/api/job/RevertAssignedSession.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8891,7 +11539,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量回收</para>
+        /// <para>Frontend location: Task Management &gt; Task Results &gt; Batch Revoke. Apsara Stack URL: ip:port/api/job/RevertAssignedSession.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8909,7 +11557,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量回收</para>
+        /// <para>Frontend location: Task Management &gt; Task Results &gt; Batch Revoke. Apsara Stack URL: ip:port/api/job/RevertAssignedSession.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8931,7 +11579,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>会话组批量回收</para>
+        /// <para>You can use this feature in the frontend console under Plan Management &gt; Task Result &gt; Session Group &gt; Batch Revoke. The Apsara Stack URL for this operation is <c>ip:port/api/job/RevertAssignedSessionGroup.json</c>.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8983,7 +11631,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>会话组批量回收</para>
+        /// <para>You can use this feature in the frontend console under Plan Management &gt; Task Result &gt; Session Group &gt; Batch Revoke. The Apsara Stack URL for this operation is <c>ip:port/api/job/RevertAssignedSessionGroup.json</c>.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9035,7 +11683,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>会话组批量回收</para>
+        /// <para>You can use this feature in the frontend console under Plan Management &gt; Task Result &gt; Session Group &gt; Batch Revoke. The Apsara Stack URL for this operation is <c>ip:port/api/job/RevertAssignedSessionGroup.json</c>.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9059,7 +11707,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>会话组批量回收</para>
+        /// <para>You can use this feature in the frontend console under Plan Management &gt; Task Result &gt; Session Group &gt; Batch Revoke. The Apsara Stack URL for this operation is <c>ip:port/api/job/RevertAssignedSessionGroup.json</c>.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9079,7 +11727,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>使用原生Prompt调用通义晓蜜</para>
+        /// <para>This operation calls a large model using the message protocol to generate a response. You can make calls using standard HTTP for a complete response or use Server-Sent Events (SSE) for a streaming response.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9135,7 +11783,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>使用原生Prompt调用通义晓蜜</para>
+        /// <para>This operation calls a large model using the message protocol to generate a response. You can make calls using standard HTTP for a complete response or use Server-Sent Events (SSE) for a streaming response.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9191,7 +11839,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>使用原生Prompt调用通义晓蜜</para>
+        /// <para>This operation calls a large model using the message protocol to generate a response. You can make calls using standard HTTP for a complete response or use Server-Sent Events (SSE) for a streaming response.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9209,7 +11857,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>使用原生Prompt调用通义晓蜜</para>
+        /// <para>This operation calls a large model using the message protocol to generate a response. You can make calls using standard HTTP for a complete response or use Server-Sent Events (SSE) for a streaming response.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9228,6 +11876,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <term><b>Deprecated</b></term>
         /// 
         /// OpenAPI SaveConfigDataSet is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Saves the speaker role configuration for a dataset.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// SaveConfigDataSetRequest
@@ -9276,6 +11929,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// OpenAPI SaveConfigDataSet is deprecated
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Saves the speaker role configuration for a dataset.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveConfigDataSetRequest
         /// </param>
@@ -9323,6 +11981,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// OpenAPI SaveConfigDataSet is deprecated
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Saves the speaker role configuration for a dataset.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveConfigDataSetRequest
         /// </param>
@@ -9342,6 +12005,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// OpenAPI SaveConfigDataSet is deprecated
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Saves the speaker role configuration for a dataset.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveConfigDataSetRequest
         /// </param>
@@ -9357,6 +12025,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return await SaveConfigDataSetWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a complaint.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SubmitComplaintRequest
         /// </param>
@@ -9398,6 +12071,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<SubmitComplaintResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a complaint.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SubmitComplaintRequest
         /// </param>
@@ -9439,6 +12117,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<SubmitComplaintResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a complaint.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SubmitComplaintRequest
         /// </param>
@@ -9452,6 +12135,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return SubmitComplaintWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a complaint.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SubmitComplaintRequest
         /// </param>
@@ -9465,6 +12153,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return await SubmitComplaintWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a speech recognition evaluation task. The service endpoint is China East 1 (Hangzhou) (cn-hangzhou).</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SubmitPrecisionTaskRequest
         /// </param>
@@ -9506,6 +12199,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<SubmitPrecisionTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a speech recognition evaluation task. The service endpoint is China East 1 (Hangzhou) (cn-hangzhou).</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SubmitPrecisionTaskRequest
         /// </param>
@@ -9547,6 +12245,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<SubmitPrecisionTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a speech recognition evaluation task. The service endpoint is China East 1 (Hangzhou) (cn-hangzhou).</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SubmitPrecisionTaskRequest
         /// </param>
@@ -9560,6 +12263,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return SubmitPrecisionTaskWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a speech recognition evaluation task. The service endpoint is China East 1 (Hangzhou) (cn-hangzhou).</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SubmitPrecisionTaskRequest
         /// </param>
@@ -9573,6 +12281,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return await SubmitPrecisionTaskWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create a new dataset quality check task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SubmitQualityCheckTaskRequest
         /// </param>
@@ -9614,6 +12327,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<SubmitQualityCheckTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create a new dataset quality check task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SubmitQualityCheckTaskRequest
         /// </param>
@@ -9655,6 +12373,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<SubmitQualityCheckTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create a new dataset quality check task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SubmitQualityCheckTaskRequest
         /// </param>
@@ -9668,6 +12391,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return SubmitQualityCheckTaskWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create a new dataset quality check task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SubmitQualityCheckTaskRequest
         /// </param>
@@ -9681,6 +12409,16 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return await SubmitQualityCheckTaskWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Save review results. This is only supported by the legacy Smart Conversation Analysis.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can manually review files after quality inspection. After completing the review, call this API to save the review results. This involves manually reviewing rules identified by the system as hits to determine if they are true hits or false positives. Refer to the file review feature on the console page. For more information, see <a href="https://help.aliyun.com/document_detail/139653.html#h2-u6587u4EF6u590Du68385">File Review</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SubmitReviewInfoRequest
         /// </param>
@@ -9722,6 +12460,16 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<SubmitReviewInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Save review results. This is only supported by the legacy Smart Conversation Analysis.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can manually review files after quality inspection. After completing the review, call this API to save the review results. This involves manually reviewing rules identified by the system as hits to determine if they are true hits or false positives. Refer to the file review feature on the console page. For more information, see <a href="https://help.aliyun.com/document_detail/139653.html#h2-u6587u4EF6u590Du68385">File Review</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SubmitReviewInfoRequest
         /// </param>
@@ -9763,6 +12511,16 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<SubmitReviewInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Save review results. This is only supported by the legacy Smart Conversation Analysis.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can manually review files after quality inspection. After completing the review, call this API to save the review results. This involves manually reviewing rules identified by the system as hits to determine if they are true hits or false positives. Refer to the file review feature on the console page. For more information, see <a href="https://help.aliyun.com/document_detail/139653.html#h2-u6587u4EF6u590Du68385">File Review</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SubmitReviewInfoRequest
         /// </param>
@@ -9776,6 +12534,16 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return SubmitReviewInfoWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Save review results. This is only supported by the legacy Smart Conversation Analysis.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can manually review files after quality inspection. After completing the review, call this API to save the review results. This involves manually reviewing rules identified by the system as hits to determine if they are true hits or false positives. Refer to the file review feature on the console page. For more information, see <a href="https://help.aliyun.com/document_detail/139653.html#h2-u6587u4EF6u590Du68385">File Review</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SubmitReviewInfoRequest
         /// </param>
@@ -9791,7 +12559,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交复核结果v4</para>
+        /// <para>Review quality inspection results</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9837,7 +12605,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交复核结果v4</para>
+        /// <para>Review quality inspection results</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9883,7 +12651,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交复核结果v4</para>
+        /// <para>Review quality inspection results</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9901,7 +12669,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交复核结果v4</para>
+        /// <para>Review quality inspection results</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9917,6 +12685,27 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return await SubmitReviewInfoV4WithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Perform real-time quality inspection for hotlines.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Real-time hotline quality inspection transcribes spoken dialogue into text during a call. It sends the text to the Smart Conversation Analysis system for real-time quality inspection to detect potential issues or risks. You can display the dialogue text and inspection results in real time on the customer service representative\&quot;s workbench (a third-party system). This differs from offline quality inspection, which uses UploadAudioData for inspection or dataset inspection. For details, see the developer guide. Offline quality inspection occurs after the call ends and the recording file is generated.
+        /// <b>Usage Flow</b>
+        /// You can implement real-time transcription of audio streams to text during calls, or use Alibaba Cloud Call Center (CC) directly. CC integrates deeply with Smart Conversation Analysis, enabling real-time quality inspection during calls without API integration.
+        /// If you implement audio-to-text conversion yourself, invoke the SyncQualityCheck API for real-time quality inspection after a speaker finishes a sentence and generates dialogue text. This returns the inspection result for that sentence synchronously.
+        /// You should include skill group information when uploading data. Then, you can use the Call Center Quality Inspection - Configuration Management feature to configure different quality inspection rules for calls from different skill groups.
+        /// After the call ends, you can store the recording file on a storage server accessible over the public network. You can invoke the recording information maintenance API: UpdateSyncQualityCheckData. You can submit the recording name, recording file URL, and other details to the Smart Conversation Analysis service. This lets quality inspectors play back the recording during review.
+        /// After the call ends, you can view the quality inspection results in Call Center Quality Inspection - Result Display - Real-time Quality Inspection Results. You can also invoke the real-time quality inspection result query API: GetSyncResult to retrieve the results. You can use Score Dashboard - Real-time Dashboard to view data charts for customer service representatives, skill groups, and scoring items.
+        /// <b>Full-Text Quality Inspection</b>
+        /// Quality inspection rules include dozens of operators. Some operators require dialogue context (multi-turn conversations between customer service representatives and customers) for analysis. However, real-time quality inspection occurs during a call and typically uses text from only one sentence spoken by a single speaker. Some operators are not suitable for real-time quality inspection. Therefore, quality inspection rules are divided into real-time quality inspection rules and full-text quality inspection rules:
+        /// <b>Real-time quality inspection rules</b>: Rules used for real-time quality inspection. They support a limited number of operator types. They do not support specifying the detection range for operators.
+        /// <b>Full-text quality inspection rules</b>: Rules used for offline quality inspection. They support all operator types. They support custom detection ranges for operators.
+        /// For calls that underwent real-time quality inspection, you can apply full-text quality inspection rules to the complete dialogue text after the call ends. To enable full-text quality inspection after real-time inspection, see the full-text quality inspection description in Call Center Quality Inspection - Configuration Management.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SyncQualityCheckRequest
         /// </param>
@@ -9958,6 +12747,27 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<SyncQualityCheckResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Perform real-time quality inspection for hotlines.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Real-time hotline quality inspection transcribes spoken dialogue into text during a call. It sends the text to the Smart Conversation Analysis system for real-time quality inspection to detect potential issues or risks. You can display the dialogue text and inspection results in real time on the customer service representative\&quot;s workbench (a third-party system). This differs from offline quality inspection, which uses UploadAudioData for inspection or dataset inspection. For details, see the developer guide. Offline quality inspection occurs after the call ends and the recording file is generated.
+        /// <b>Usage Flow</b>
+        /// You can implement real-time transcription of audio streams to text during calls, or use Alibaba Cloud Call Center (CC) directly. CC integrates deeply with Smart Conversation Analysis, enabling real-time quality inspection during calls without API integration.
+        /// If you implement audio-to-text conversion yourself, invoke the SyncQualityCheck API for real-time quality inspection after a speaker finishes a sentence and generates dialogue text. This returns the inspection result for that sentence synchronously.
+        /// You should include skill group information when uploading data. Then, you can use the Call Center Quality Inspection - Configuration Management feature to configure different quality inspection rules for calls from different skill groups.
+        /// After the call ends, you can store the recording file on a storage server accessible over the public network. You can invoke the recording information maintenance API: UpdateSyncQualityCheckData. You can submit the recording name, recording file URL, and other details to the Smart Conversation Analysis service. This lets quality inspectors play back the recording during review.
+        /// After the call ends, you can view the quality inspection results in Call Center Quality Inspection - Result Display - Real-time Quality Inspection Results. You can also invoke the real-time quality inspection result query API: GetSyncResult to retrieve the results. You can use Score Dashboard - Real-time Dashboard to view data charts for customer service representatives, skill groups, and scoring items.
+        /// <b>Full-Text Quality Inspection</b>
+        /// Quality inspection rules include dozens of operators. Some operators require dialogue context (multi-turn conversations between customer service representatives and customers) for analysis. However, real-time quality inspection occurs during a call and typically uses text from only one sentence spoken by a single speaker. Some operators are not suitable for real-time quality inspection. Therefore, quality inspection rules are divided into real-time quality inspection rules and full-text quality inspection rules:
+        /// <b>Real-time quality inspection rules</b>: Rules used for real-time quality inspection. They support a limited number of operator types. They do not support specifying the detection range for operators.
+        /// <b>Full-text quality inspection rules</b>: Rules used for offline quality inspection. They support all operator types. They support custom detection ranges for operators.
+        /// For calls that underwent real-time quality inspection, you can apply full-text quality inspection rules to the complete dialogue text after the call ends. To enable full-text quality inspection after real-time inspection, see the full-text quality inspection description in Call Center Quality Inspection - Configuration Management.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SyncQualityCheckRequest
         /// </param>
@@ -9999,6 +12809,27 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<SyncQualityCheckResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Perform real-time quality inspection for hotlines.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Real-time hotline quality inspection transcribes spoken dialogue into text during a call. It sends the text to the Smart Conversation Analysis system for real-time quality inspection to detect potential issues or risks. You can display the dialogue text and inspection results in real time on the customer service representative\&quot;s workbench (a third-party system). This differs from offline quality inspection, which uses UploadAudioData for inspection or dataset inspection. For details, see the developer guide. Offline quality inspection occurs after the call ends and the recording file is generated.
+        /// <b>Usage Flow</b>
+        /// You can implement real-time transcription of audio streams to text during calls, or use Alibaba Cloud Call Center (CC) directly. CC integrates deeply with Smart Conversation Analysis, enabling real-time quality inspection during calls without API integration.
+        /// If you implement audio-to-text conversion yourself, invoke the SyncQualityCheck API for real-time quality inspection after a speaker finishes a sentence and generates dialogue text. This returns the inspection result for that sentence synchronously.
+        /// You should include skill group information when uploading data. Then, you can use the Call Center Quality Inspection - Configuration Management feature to configure different quality inspection rules for calls from different skill groups.
+        /// After the call ends, you can store the recording file on a storage server accessible over the public network. You can invoke the recording information maintenance API: UpdateSyncQualityCheckData. You can submit the recording name, recording file URL, and other details to the Smart Conversation Analysis service. This lets quality inspectors play back the recording during review.
+        /// After the call ends, you can view the quality inspection results in Call Center Quality Inspection - Result Display - Real-time Quality Inspection Results. You can also invoke the real-time quality inspection result query API: GetSyncResult to retrieve the results. You can use Score Dashboard - Real-time Dashboard to view data charts for customer service representatives, skill groups, and scoring items.
+        /// <b>Full-Text Quality Inspection</b>
+        /// Quality inspection rules include dozens of operators. Some operators require dialogue context (multi-turn conversations between customer service representatives and customers) for analysis. However, real-time quality inspection occurs during a call and typically uses text from only one sentence spoken by a single speaker. Some operators are not suitable for real-time quality inspection. Therefore, quality inspection rules are divided into real-time quality inspection rules and full-text quality inspection rules:
+        /// <b>Real-time quality inspection rules</b>: Rules used for real-time quality inspection. They support a limited number of operator types. They do not support specifying the detection range for operators.
+        /// <b>Full-text quality inspection rules</b>: Rules used for offline quality inspection. They support all operator types. They support custom detection ranges for operators.
+        /// For calls that underwent real-time quality inspection, you can apply full-text quality inspection rules to the complete dialogue text after the call ends. To enable full-text quality inspection after real-time inspection, see the full-text quality inspection description in Call Center Quality Inspection - Configuration Management.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SyncQualityCheckRequest
         /// </param>
@@ -10012,6 +12843,27 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return SyncQualityCheckWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Perform real-time quality inspection for hotlines.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Real-time hotline quality inspection transcribes spoken dialogue into text during a call. It sends the text to the Smart Conversation Analysis system for real-time quality inspection to detect potential issues or risks. You can display the dialogue text and inspection results in real time on the customer service representative\&quot;s workbench (a third-party system). This differs from offline quality inspection, which uses UploadAudioData for inspection or dataset inspection. For details, see the developer guide. Offline quality inspection occurs after the call ends and the recording file is generated.
+        /// <b>Usage Flow</b>
+        /// You can implement real-time transcription of audio streams to text during calls, or use Alibaba Cloud Call Center (CC) directly. CC integrates deeply with Smart Conversation Analysis, enabling real-time quality inspection during calls without API integration.
+        /// If you implement audio-to-text conversion yourself, invoke the SyncQualityCheck API for real-time quality inspection after a speaker finishes a sentence and generates dialogue text. This returns the inspection result for that sentence synchronously.
+        /// You should include skill group information when uploading data. Then, you can use the Call Center Quality Inspection - Configuration Management feature to configure different quality inspection rules for calls from different skill groups.
+        /// After the call ends, you can store the recording file on a storage server accessible over the public network. You can invoke the recording information maintenance API: UpdateSyncQualityCheckData. You can submit the recording name, recording file URL, and other details to the Smart Conversation Analysis service. This lets quality inspectors play back the recording during review.
+        /// After the call ends, you can view the quality inspection results in Call Center Quality Inspection - Result Display - Real-time Quality Inspection Results. You can also invoke the real-time quality inspection result query API: GetSyncResult to retrieve the results. You can use Score Dashboard - Real-time Dashboard to view data charts for customer service representatives, skill groups, and scoring items.
+        /// <b>Full-Text Quality Inspection</b>
+        /// Quality inspection rules include dozens of operators. Some operators require dialogue context (multi-turn conversations between customer service representatives and customers) for analysis. However, real-time quality inspection occurs during a call and typically uses text from only one sentence spoken by a single speaker. Some operators are not suitable for real-time quality inspection. Therefore, quality inspection rules are divided into real-time quality inspection rules and full-text quality inspection rules:
+        /// <b>Real-time quality inspection rules</b>: Rules used for real-time quality inspection. They support a limited number of operator types. They do not support specifying the detection range for operators.
+        /// <b>Full-text quality inspection rules</b>: Rules used for offline quality inspection. They support all operator types. They support custom detection ranges for operators.
+        /// For calls that underwent real-time quality inspection, you can apply full-text quality inspection rules to the complete dialogue text after the call ends. To enable full-text quality inspection after real-time inspection, see the full-text quality inspection description in Call Center Quality Inspection - Configuration Management.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SyncQualityCheckRequest
         /// </param>
@@ -10027,7 +12879,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>测试规则</para>
+        /// <para>Frontend location: Quality Check Rule Configuration &gt; Test. Apsara Stack URL: http://<ip>:<port>/api/client/TestRule.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10073,7 +12925,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>测试规则</para>
+        /// <para>Frontend location: Quality Check Rule Configuration &gt; Test. Apsara Stack URL: http://<ip>:<port>/api/client/TestRule.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10119,7 +12971,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>测试规则</para>
+        /// <para>Frontend location: Quality Check Rule Configuration &gt; Test. Apsara Stack URL: http://<ip>:<port>/api/client/TestRule.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10137,7 +12989,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>测试规则</para>
+        /// <para>Frontend location: Quality Check Rule Configuration &gt; Test. Apsara Stack URL: http://<ip>:<port>/api/client/TestRule.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10153,6 +13005,139 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return await TestRuleV4WithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies an agent.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAgentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAgentResponse
+        /// </returns>
+        public UpdateAgentResponse UpdateAgentWithOptions(UpdateAgentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                body["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
+            {
+                body["JsonStr"] = request.JsonStr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAgent",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAgentResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies an agent.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAgentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAgentResponse
+        /// </returns>
+        public async Task<UpdateAgentResponse> UpdateAgentWithOptionsAsync(UpdateAgentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                body["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
+            {
+                body["JsonStr"] = request.JsonStr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAgent",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAgentResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies an agent.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAgentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAgentResponse
+        /// </returns>
+        public UpdateAgentResponse UpdateAgent(UpdateAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateAgentWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies an agent.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAgentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAgentResponse
+        /// </returns>
+        public async Task<UpdateAgentResponse> UpdateAgentAsync(UpdateAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateAgentWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the hotword vocabulary.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateAsrVocabRequest
         /// </param>
@@ -10194,6 +13179,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<UpdateAsrVocabResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the hotword vocabulary.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateAsrVocabRequest
         /// </param>
@@ -10235,6 +13225,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<UpdateAsrVocabResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the hotword vocabulary.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateAsrVocabRequest
         /// </param>
@@ -10248,6 +13243,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return UpdateAsrVocabWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the hotword vocabulary.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateAsrVocabRequest
         /// </param>
@@ -10263,7 +13263,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新质检方案中的质检维度</para>
+        /// <para>You can access this operation from the frontend by navigating to Plan Management &gt; Create Quality Inspection Task or Edit &gt; Edit icon next to the quality inspection dimension name. The Apsara Stack endpoint is ip:port/api/qcs/UpdateCheckTypeToScheme.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10309,7 +13309,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新质检方案中的质检维度</para>
+        /// <para>You can access this operation from the frontend by navigating to Plan Management &gt; Create Quality Inspection Task or Edit &gt; Edit icon next to the quality inspection dimension name. The Apsara Stack endpoint is ip:port/api/qcs/UpdateCheckTypeToScheme.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10355,7 +13355,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新质检方案中的质检维度</para>
+        /// <para>You can access this operation from the frontend by navigating to Plan Management &gt; Create Quality Inspection Task or Edit &gt; Edit icon next to the quality inspection dimension name. The Apsara Stack endpoint is ip:port/api/qcs/UpdateCheckTypeToScheme.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10373,7 +13373,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新质检方案中的质检维度</para>
+        /// <para>You can access this operation from the frontend by navigating to Plan Management &gt; Create Quality Inspection Task or Edit &gt; Edit icon next to the quality inspection dimension name. The Apsara Stack endpoint is ip:port/api/qcs/UpdateCheckTypeToScheme.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10391,7 +13391,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新会话随录数据</para>
+        /// <para>Update session recording data (third-party business fields) to facilitate statistics and queries across more business dimensions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10437,7 +13437,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新会话随录数据</para>
+        /// <para>Update session recording data (third-party business fields) to facilitate statistics and queries across more business dimensions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10483,7 +13483,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新会话随录数据</para>
+        /// <para>Update session recording data (third-party business fields) to facilitate statistics and queries across more business dimensions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10501,7 +13501,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新会话随录数据</para>
+        /// <para>Update session recording data (third-party business fields) to facilitate statistics and queries across more business dimensions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10519,7 +13519,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新质检方案</para>
+        /// <para>Updates a quality check scheme.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10565,7 +13565,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新质检方案</para>
+        /// <para>Updates a quality check scheme.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10611,7 +13611,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新质检方案</para>
+        /// <para>Updates a quality check scheme.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10629,7 +13629,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新质检方案</para>
+        /// <para>Updates a quality check scheme.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10648,6 +13648,18 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <term><b>Deprecated</b></term>
         /// 
         /// OpenAPI UpdateRule is deprecated, please use Qualitycheck::2019-01-15::UpdateRuleV4 instead.
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Update rule information.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Update an existing rule. You can modify its conditions and operators as needed. The rule ID (rid) remains unchanged, but condition IDs and operator IDs may change.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateRuleRequest
@@ -10696,6 +13708,18 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// OpenAPI UpdateRule is deprecated, please use Qualitycheck::2019-01-15::UpdateRuleV4 instead.
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Update rule information.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Update an existing rule. You can modify its conditions and operators as needed. The rule ID (rid) remains unchanged, but condition IDs and operator IDs may change.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateRuleRequest
         /// </param>
@@ -10743,6 +13767,18 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// OpenAPI UpdateRule is deprecated, please use Qualitycheck::2019-01-15::UpdateRuleV4 instead.
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Update rule information.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Update an existing rule. You can modify its conditions and operators as needed. The rule ID (rid) remains unchanged, but condition IDs and operator IDs may change.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateRuleRequest
         /// </param>
@@ -10761,6 +13797,18 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <term><b>Deprecated</b></term>
         /// 
         /// OpenAPI UpdateRule is deprecated, please use Qualitycheck::2019-01-15::UpdateRuleV4 instead.
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Update rule information.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Update an existing rule. You can modify its conditions and operators as needed. The rule ID (rid) remains unchanged, but condition IDs and operator IDs may change.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateRuleRequest
@@ -10783,7 +13831,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新规则</para>
+        /// <para>This API maps to the frontend function location: Quality Inspection Rule Configuration - Create &amp; Update. The Apsara Stack URL is: ip:port/api/client/UpdateRuleById.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10849,7 +13897,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新规则</para>
+        /// <para>This API maps to the frontend function location: Quality Inspection Rule Configuration - Create &amp; Update. The Apsara Stack URL is: ip:port/api/client/UpdateRuleById.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10915,7 +13963,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新规则</para>
+        /// <para>This API maps to the frontend function location: Quality Inspection Rule Configuration - Create &amp; Update. The Apsara Stack URL is: ip:port/api/client/UpdateRuleById.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10939,7 +13987,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新规则</para>
+        /// <para>This API maps to the frontend function location: Quality Inspection Rule Configuration - Create &amp; Update. The Apsara Stack URL is: ip:port/api/client/UpdateRuleById.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10959,7 +14007,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新质检方案的规则</para>
+        /// <para>Frontend location: Quality Check Plan Management &gt; Create or edit a quality check task &gt; Associate quality check rules. Apsara Stack URL: ip:port/api/qcs/UpdateRuleToScheme.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11005,7 +14053,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新质检方案的规则</para>
+        /// <para>Frontend location: Quality Check Plan Management &gt; Create or edit a quality check task &gt; Associate quality check rules. Apsara Stack URL: ip:port/api/qcs/UpdateRuleToScheme.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11051,7 +14099,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新质检方案的规则</para>
+        /// <para>Frontend location: Quality Check Plan Management &gt; Create or edit a quality check task &gt; Associate quality check rules. Apsara Stack URL: ip:port/api/qcs/UpdateRuleToScheme.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11069,7 +14117,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新质检方案的规则</para>
+        /// <para>Frontend location: Quality Check Plan Management &gt; Create or edit a quality check task &gt; Associate quality check rules. Apsara Stack URL: ip:port/api/qcs/UpdateRuleToScheme.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11087,7 +14135,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>V4更新规则</para>
+        /// <para>Corresponding frontend feature location: Rule Configuration - Update. Apsara Stack URL: ip:port/api/client/UpdateRuleById.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11139,7 +14187,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>V4更新规则</para>
+        /// <para>Corresponding frontend feature location: Rule Configuration - Update. Apsara Stack URL: ip:port/api/client/UpdateRuleById.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11191,7 +14239,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>V4更新规则</para>
+        /// <para>Corresponding frontend feature location: Rule Configuration - Update. Apsara Stack URL: ip:port/api/client/UpdateRuleById.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11209,7 +14257,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>V4更新规则</para>
+        /// <para>Corresponding frontend feature location: Rule Configuration - Update. Apsara Stack URL: ip:port/api/client/UpdateRuleById.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11227,8 +14275,13 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新质检任务</para>
+        /// <para>Frontend path: Task Management &gt; Edit any data on the right. Apsara Stack URL: ip:port/api/task/UpdateSchemeTaskConfig.json.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates quality inspection task information.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateSchemeTaskConfigRequest
@@ -11273,8 +14326,13 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新质检任务</para>
+        /// <para>Frontend path: Task Management &gt; Edit any data on the right. Apsara Stack URL: ip:port/api/task/UpdateSchemeTaskConfig.json.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates quality inspection task information.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateSchemeTaskConfigRequest
@@ -11319,8 +14377,13 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新质检任务</para>
+        /// <para>Frontend path: Task Management &gt; Edit any data on the right. Apsara Stack URL: ip:port/api/task/UpdateSchemeTaskConfig.json.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates quality inspection task information.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateSchemeTaskConfigRequest
@@ -11337,8 +14400,13 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新质检任务</para>
+        /// <para>Frontend path: Task Management &gt; Edit any data on the right. Apsara Stack URL: ip:port/api/task/UpdateSchemeTaskConfig.json.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates quality inspection task information.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateSchemeTaskConfigRequest
@@ -11356,6 +14424,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <term><b>Deprecated</b></term>
         /// 
         /// OpenAPI UpdateSkillGroupConfig is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call UpdateSkillGroupConfig to update a configuration.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// UpdateSkillGroupConfigRequest
@@ -11404,6 +14477,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// OpenAPI UpdateSkillGroupConfig is deprecated
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call UpdateSkillGroupConfig to update a configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateSkillGroupConfigRequest
         /// </param>
@@ -11451,6 +14529,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// OpenAPI UpdateSkillGroupConfig is deprecated
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call UpdateSkillGroupConfig to update a configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateSkillGroupConfigRequest
         /// </param>
@@ -11470,6 +14553,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// OpenAPI UpdateSkillGroupConfig is deprecated
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call UpdateSkillGroupConfig to update a configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateSkillGroupConfigRequest
         /// </param>
@@ -11485,6 +14573,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return await UpdateSkillGroupConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Maintain the recording information after real-time quality inspection is completed, which is used to play back the recording during review. After the recording information is maintained, the task status will change to Succeeded.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateSyncQualityCheckDataRequest
         /// </param>
@@ -11526,6 +14619,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<UpdateSyncQualityCheckDataResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Maintain the recording information after real-time quality inspection is completed, which is used to play back the recording during review. After the recording information is maintained, the task status will change to Succeeded.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateSyncQualityCheckDataRequest
         /// </param>
@@ -11567,6 +14665,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<UpdateSyncQualityCheckDataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Maintain the recording information after real-time quality inspection is completed, which is used to play back the recording during review. After the recording information is maintained, the task status will change to Succeeded.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateSyncQualityCheckDataRequest
         /// </param>
@@ -11580,6 +14683,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return UpdateSyncQualityCheckDataWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Maintain the recording information after real-time quality inspection is completed, which is used to play back the recording during review. After the recording information is maintained, the task status will change to Succeeded.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateSyncQualityCheckDataRequest
         /// </param>
@@ -11593,6 +14701,139 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return await UpdateSyncQualityCheckDataWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a label node.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateTagRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTagResponse
+        /// </returns>
+        public UpdateTagResponse UpdateTagWithOptions(UpdateTagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
+            {
+                query["JsonStr"] = request.JsonStr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateTag",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateTagResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a label node.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateTagRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTagResponse
+        /// </returns>
+        public async Task<UpdateTagResponse> UpdateTagWithOptionsAsync(UpdateTagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
+            {
+                query["JsonStr"] = request.JsonStr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateTag",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateTagResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a label node.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateTagRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTagResponse
+        /// </returns>
+        public UpdateTagResponse UpdateTag(UpdateTagRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateTagWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a label node.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateTagRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTagResponse
+        /// </returns>
+        public async Task<UpdateTagResponse> UpdateTagAsync(UpdateTagRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateTagWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Update the automatic allocation rule for quality review tasks.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateTaskAssignRuleRequest
         /// </param>
@@ -11634,6 +14875,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<UpdateTaskAssignRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Update the automatic allocation rule for quality review tasks.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateTaskAssignRuleRequest
         /// </param>
@@ -11675,6 +14921,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<UpdateTaskAssignRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Update the automatic allocation rule for quality review tasks.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateTaskAssignRuleRequest
         /// </param>
@@ -11688,6 +14939,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return UpdateTaskAssignRuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Update the automatic allocation rule for quality review tasks.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateTaskAssignRuleRequest
         /// </param>
@@ -11701,6 +14957,16 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return await UpdateTaskAssignRuleWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Update users by modifying their roles in batches.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you update users, you can modify only their roles. You cannot modify other account information because all Alibaba Cloud products use a unified account management system. Smart Conversation Analysis uses these accounts. To modify account information, go to <a href="https://ram.console.aliyun.com/">Resource Access Management (RAM)</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateUserRequest
         /// </param>
@@ -11742,6 +15008,16 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<UpdateUserResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Update users by modifying their roles in batches.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you update users, you can modify only their roles. You cannot modify other account information because all Alibaba Cloud products use a unified account management system. Smart Conversation Analysis uses these accounts. To modify account information, go to <a href="https://ram.console.aliyun.com/">Resource Access Management (RAM)</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateUserRequest
         /// </param>
@@ -11783,6 +15059,16 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<UpdateUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Update users by modifying their roles in batches.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you update users, you can modify only their roles. You cannot modify other account information because all Alibaba Cloud products use a unified account management system. Smart Conversation Analysis uses these accounts. To modify account information, go to <a href="https://ram.console.aliyun.com/">Resource Access Management (RAM)</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateUserRequest
         /// </param>
@@ -11796,6 +15082,16 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return UpdateUserWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Update users by modifying their roles in batches.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you update users, you can modify only their roles. You cannot modify other account information because all Alibaba Cloud products use a unified account management system. Smart Conversation Analysis uses these accounts. To modify account information, go to <a href="https://ram.console.aliyun.com/">Resource Access Management (RAM)</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateUserRequest
         /// </param>
@@ -11809,6 +15105,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return await UpdateUserWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the warning configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateWarningConfigRequest
         /// </param>
@@ -11850,6 +15151,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<UpdateWarningConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the warning configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateWarningConfigRequest
         /// </param>
@@ -11891,6 +15197,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<UpdateWarningConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the warning configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateWarningConfigRequest
         /// </param>
@@ -11904,6 +15215,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return UpdateWarningConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the warning configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateWarningConfigRequest
         /// </param>
@@ -12045,6 +15361,44 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return await UpdateWarningStrategyConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Uploads offline audio data—such as recorded call session files—for quality inspection. This operation supports two call center agent scenarios.
+        /// Scenario 1: Native integration with Alibaba Cloud Call Center (CC). No development is required. You can push call data to Smart Conversation Analysis (SCA) with a single click.
+        /// Scenario 2: Integration with your own call center system. Each time a recording is generated, the call center pushes it to SCA for analysis.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Process description</h3>
+        /// <para>The process is as follows: An API call uploads the audio file for quality inspection → The audio file is converted to text → The transcribed text is separated by speaker role (agent and customer), based on the specified channel separation method → The role-separated text is analyzed using quality inspection rules → Quality inspection completes.</para>
+        /// <h3>Task execution efficiency</h3>
+        /// <para>Task execution speed depends on how quickly the audio file is transcribed. A 5-minute audio file is typically transcribed in about 2 minutes. However, if the transcription service queue is long, a waiting period occurs. Transcription usually completes within 6 hours, except when large volumes of data are uploaded simultaneously—more than 500 hours of audio within 30 minutes. After transcription, quality inspection analysis completes in milliseconds.</para>
+        /// <h3>Audio file URL requirements</h3>
+        /// <list type="bullet">
+        /// <item><description>Supports single-channel or dual-channel audio files in WAV or MP3 format. File size must be less than 512 MB.</description></item>
+        /// <item><description>The URL must be accessible over HTTP. Local files are not supported. The audio file must have public access permissions.</description></item>
+        /// <item><description>The URL must use a domain name, not an IP address. The URL cannot contain spaces or Chinese characters.</description></item>
+        /// <item><description>After transcription, the system deletes the downloaded audio file. No copy of the recording is retained.</description></item>
+        /// <item><description>If your audio URL has an expiration period—such as a presigned URL for an audio file stored in Alibaba Cloud Object Storage Service (OSS)—set the validity period to at least 12 hours. Ideally, set it to 24 hours. Because transcription may involve queuing, the audio file is downloaded only when transcription begins. A longer validity period prevents the URL from expiring before download starts.</description></item>
+        /// <item><description>After quality inspection completes, the provided URL is used for playback when you review the file in the console. Ensure the URL remains valid long-term. Otherwise, audio playback fails.</description></item>
+        /// </list>
+        /// <h3>Role separation</h3>
+        /// <para>After transcription, the system automatically separates the text into two speaker roles but cannot determine which role corresponds to the agent and which to the customer. You must define rules for role separation. Role separation accuracy is critical because many quality inspection rules apply to a specific role—for example, checking only agent or only customer utterances. Incorrect role separation significantly reduces quality inspection accuracy.
+        /// Audio files are typically either single-channel (mono) or dual-channel (stereo):</para>
+        /// <list type="bullet">
+        /// <item><description>Single-channel recording: The voices of the agent and customer are mixed on one channel. After transcription, the system uses a built-in algorithm to separate dialogue into two roles. You can provide a list of keywords commonly spoken by agents. The system analyzes the transcribed text sentence by sentence. When a sentence contains a keyword, that speaker is identified as the agent, and the other speaker is identified as the customer. For more information, see the recognizeRoleDataSetId and serviceChannelKeywords request parameters. Because conversations can be unpredictable—for example, speakers may talk over each other—role separation for single-channel recordings cannot achieve 100% accuracy. We strongly recommend saving recordings as dual-channel audio.</description></item>
+        /// <item><description>Dual-channel recording: The voices of the agent and customer are stored on separate channels. Even if speakers talk over each other, transcription accurately distinguishes between them. Specify the agent and customer channels using the serviceChannel and clientChannel request parameters.</description></item>
+        /// </list>
+        /// <h3>Retrieve quality inspection results</h3>
+        /// <para>Because audio analysis is asynchronous, you must retrieve results asynchronously. You can retrieve results in one of the following three ways:</para>
+        /// <list type="bullet">
+        /// <item><description>Message notification: For more information, see <a href="https://help.aliyun.com/document_detail/213237.html">Message Queue</a>. After you receive a message, call the GetResult operation to retrieve detailed results. (Recommended)</description></item>
+        /// <item><description>Callback: Specify a callbackUrl in the request parameters. The system initiates a callback after the task completes. After you receive the callback, call the GetResult operation to retrieve detailed results.</description></item>
+        /// <item><description>Polling: The operation returns a task ID (taskId). Use the taskId to poll the getResult operation and retrieve the result asynchronously. Check the <c>status</c> parameter in the response to determine whether the task is complete. We recommend a polling interval of 30 seconds or longer because analysis typically completes within a few minutes. (Not recommended)</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UploadAudioDataRequest
         /// </param>
@@ -12086,6 +15440,44 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<UploadAudioDataResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Uploads offline audio data—such as recorded call session files—for quality inspection. This operation supports two call center agent scenarios.
+        /// Scenario 1: Native integration with Alibaba Cloud Call Center (CC). No development is required. You can push call data to Smart Conversation Analysis (SCA) with a single click.
+        /// Scenario 2: Integration with your own call center system. Each time a recording is generated, the call center pushes it to SCA for analysis.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Process description</h3>
+        /// <para>The process is as follows: An API call uploads the audio file for quality inspection → The audio file is converted to text → The transcribed text is separated by speaker role (agent and customer), based on the specified channel separation method → The role-separated text is analyzed using quality inspection rules → Quality inspection completes.</para>
+        /// <h3>Task execution efficiency</h3>
+        /// <para>Task execution speed depends on how quickly the audio file is transcribed. A 5-minute audio file is typically transcribed in about 2 minutes. However, if the transcription service queue is long, a waiting period occurs. Transcription usually completes within 6 hours, except when large volumes of data are uploaded simultaneously—more than 500 hours of audio within 30 minutes. After transcription, quality inspection analysis completes in milliseconds.</para>
+        /// <h3>Audio file URL requirements</h3>
+        /// <list type="bullet">
+        /// <item><description>Supports single-channel or dual-channel audio files in WAV or MP3 format. File size must be less than 512 MB.</description></item>
+        /// <item><description>The URL must be accessible over HTTP. Local files are not supported. The audio file must have public access permissions.</description></item>
+        /// <item><description>The URL must use a domain name, not an IP address. The URL cannot contain spaces or Chinese characters.</description></item>
+        /// <item><description>After transcription, the system deletes the downloaded audio file. No copy of the recording is retained.</description></item>
+        /// <item><description>If your audio URL has an expiration period—such as a presigned URL for an audio file stored in Alibaba Cloud Object Storage Service (OSS)—set the validity period to at least 12 hours. Ideally, set it to 24 hours. Because transcription may involve queuing, the audio file is downloaded only when transcription begins. A longer validity period prevents the URL from expiring before download starts.</description></item>
+        /// <item><description>After quality inspection completes, the provided URL is used for playback when you review the file in the console. Ensure the URL remains valid long-term. Otherwise, audio playback fails.</description></item>
+        /// </list>
+        /// <h3>Role separation</h3>
+        /// <para>After transcription, the system automatically separates the text into two speaker roles but cannot determine which role corresponds to the agent and which to the customer. You must define rules for role separation. Role separation accuracy is critical because many quality inspection rules apply to a specific role—for example, checking only agent or only customer utterances. Incorrect role separation significantly reduces quality inspection accuracy.
+        /// Audio files are typically either single-channel (mono) or dual-channel (stereo):</para>
+        /// <list type="bullet">
+        /// <item><description>Single-channel recording: The voices of the agent and customer are mixed on one channel. After transcription, the system uses a built-in algorithm to separate dialogue into two roles. You can provide a list of keywords commonly spoken by agents. The system analyzes the transcribed text sentence by sentence. When a sentence contains a keyword, that speaker is identified as the agent, and the other speaker is identified as the customer. For more information, see the recognizeRoleDataSetId and serviceChannelKeywords request parameters. Because conversations can be unpredictable—for example, speakers may talk over each other—role separation for single-channel recordings cannot achieve 100% accuracy. We strongly recommend saving recordings as dual-channel audio.</description></item>
+        /// <item><description>Dual-channel recording: The voices of the agent and customer are stored on separate channels. Even if speakers talk over each other, transcription accurately distinguishes between them. Specify the agent and customer channels using the serviceChannel and clientChannel request parameters.</description></item>
+        /// </list>
+        /// <h3>Retrieve quality inspection results</h3>
+        /// <para>Because audio analysis is asynchronous, you must retrieve results asynchronously. You can retrieve results in one of the following three ways:</para>
+        /// <list type="bullet">
+        /// <item><description>Message notification: For more information, see <a href="https://help.aliyun.com/document_detail/213237.html">Message Queue</a>. After you receive a message, call the GetResult operation to retrieve detailed results. (Recommended)</description></item>
+        /// <item><description>Callback: Specify a callbackUrl in the request parameters. The system initiates a callback after the task completes. After you receive the callback, call the GetResult operation to retrieve detailed results.</description></item>
+        /// <item><description>Polling: The operation returns a task ID (taskId). Use the taskId to poll the getResult operation and retrieve the result asynchronously. Check the <c>status</c> parameter in the response to determine whether the task is complete. We recommend a polling interval of 30 seconds or longer because analysis typically completes within a few minutes. (Not recommended)</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UploadAudioDataRequest
         /// </param>
@@ -12127,6 +15519,44 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<UploadAudioDataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Uploads offline audio data—such as recorded call session files—for quality inspection. This operation supports two call center agent scenarios.
+        /// Scenario 1: Native integration with Alibaba Cloud Call Center (CC). No development is required. You can push call data to Smart Conversation Analysis (SCA) with a single click.
+        /// Scenario 2: Integration with your own call center system. Each time a recording is generated, the call center pushes it to SCA for analysis.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Process description</h3>
+        /// <para>The process is as follows: An API call uploads the audio file for quality inspection → The audio file is converted to text → The transcribed text is separated by speaker role (agent and customer), based on the specified channel separation method → The role-separated text is analyzed using quality inspection rules → Quality inspection completes.</para>
+        /// <h3>Task execution efficiency</h3>
+        /// <para>Task execution speed depends on how quickly the audio file is transcribed. A 5-minute audio file is typically transcribed in about 2 minutes. However, if the transcription service queue is long, a waiting period occurs. Transcription usually completes within 6 hours, except when large volumes of data are uploaded simultaneously—more than 500 hours of audio within 30 minutes. After transcription, quality inspection analysis completes in milliseconds.</para>
+        /// <h3>Audio file URL requirements</h3>
+        /// <list type="bullet">
+        /// <item><description>Supports single-channel or dual-channel audio files in WAV or MP3 format. File size must be less than 512 MB.</description></item>
+        /// <item><description>The URL must be accessible over HTTP. Local files are not supported. The audio file must have public access permissions.</description></item>
+        /// <item><description>The URL must use a domain name, not an IP address. The URL cannot contain spaces or Chinese characters.</description></item>
+        /// <item><description>After transcription, the system deletes the downloaded audio file. No copy of the recording is retained.</description></item>
+        /// <item><description>If your audio URL has an expiration period—such as a presigned URL for an audio file stored in Alibaba Cloud Object Storage Service (OSS)—set the validity period to at least 12 hours. Ideally, set it to 24 hours. Because transcription may involve queuing, the audio file is downloaded only when transcription begins. A longer validity period prevents the URL from expiring before download starts.</description></item>
+        /// <item><description>After quality inspection completes, the provided URL is used for playback when you review the file in the console. Ensure the URL remains valid long-term. Otherwise, audio playback fails.</description></item>
+        /// </list>
+        /// <h3>Role separation</h3>
+        /// <para>After transcription, the system automatically separates the text into two speaker roles but cannot determine which role corresponds to the agent and which to the customer. You must define rules for role separation. Role separation accuracy is critical because many quality inspection rules apply to a specific role—for example, checking only agent or only customer utterances. Incorrect role separation significantly reduces quality inspection accuracy.
+        /// Audio files are typically either single-channel (mono) or dual-channel (stereo):</para>
+        /// <list type="bullet">
+        /// <item><description>Single-channel recording: The voices of the agent and customer are mixed on one channel. After transcription, the system uses a built-in algorithm to separate dialogue into two roles. You can provide a list of keywords commonly spoken by agents. The system analyzes the transcribed text sentence by sentence. When a sentence contains a keyword, that speaker is identified as the agent, and the other speaker is identified as the customer. For more information, see the recognizeRoleDataSetId and serviceChannelKeywords request parameters. Because conversations can be unpredictable—for example, speakers may talk over each other—role separation for single-channel recordings cannot achieve 100% accuracy. We strongly recommend saving recordings as dual-channel audio.</description></item>
+        /// <item><description>Dual-channel recording: The voices of the agent and customer are stored on separate channels. Even if speakers talk over each other, transcription accurately distinguishes between them. Specify the agent and customer channels using the serviceChannel and clientChannel request parameters.</description></item>
+        /// </list>
+        /// <h3>Retrieve quality inspection results</h3>
+        /// <para>Because audio analysis is asynchronous, you must retrieve results asynchronously. You can retrieve results in one of the following three ways:</para>
+        /// <list type="bullet">
+        /// <item><description>Message notification: For more information, see <a href="https://help.aliyun.com/document_detail/213237.html">Message Queue</a>. After you receive a message, call the GetResult operation to retrieve detailed results. (Recommended)</description></item>
+        /// <item><description>Callback: Specify a callbackUrl in the request parameters. The system initiates a callback after the task completes. After you receive the callback, call the GetResult operation to retrieve detailed results.</description></item>
+        /// <item><description>Polling: The operation returns a task ID (taskId). Use the taskId to poll the getResult operation and retrieve the result asynchronously. Check the <c>status</c> parameter in the response to determine whether the task is complete. We recommend a polling interval of 30 seconds or longer because analysis typically completes within a few minutes. (Not recommended)</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UploadAudioDataRequest
         /// </param>
@@ -12140,6 +15570,44 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return UploadAudioDataWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Uploads offline audio data—such as recorded call session files—for quality inspection. This operation supports two call center agent scenarios.
+        /// Scenario 1: Native integration with Alibaba Cloud Call Center (CC). No development is required. You can push call data to Smart Conversation Analysis (SCA) with a single click.
+        /// Scenario 2: Integration with your own call center system. Each time a recording is generated, the call center pushes it to SCA for analysis.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Process description</h3>
+        /// <para>The process is as follows: An API call uploads the audio file for quality inspection → The audio file is converted to text → The transcribed text is separated by speaker role (agent and customer), based on the specified channel separation method → The role-separated text is analyzed using quality inspection rules → Quality inspection completes.</para>
+        /// <h3>Task execution efficiency</h3>
+        /// <para>Task execution speed depends on how quickly the audio file is transcribed. A 5-minute audio file is typically transcribed in about 2 minutes. However, if the transcription service queue is long, a waiting period occurs. Transcription usually completes within 6 hours, except when large volumes of data are uploaded simultaneously—more than 500 hours of audio within 30 minutes. After transcription, quality inspection analysis completes in milliseconds.</para>
+        /// <h3>Audio file URL requirements</h3>
+        /// <list type="bullet">
+        /// <item><description>Supports single-channel or dual-channel audio files in WAV or MP3 format. File size must be less than 512 MB.</description></item>
+        /// <item><description>The URL must be accessible over HTTP. Local files are not supported. The audio file must have public access permissions.</description></item>
+        /// <item><description>The URL must use a domain name, not an IP address. The URL cannot contain spaces or Chinese characters.</description></item>
+        /// <item><description>After transcription, the system deletes the downloaded audio file. No copy of the recording is retained.</description></item>
+        /// <item><description>If your audio URL has an expiration period—such as a presigned URL for an audio file stored in Alibaba Cloud Object Storage Service (OSS)—set the validity period to at least 12 hours. Ideally, set it to 24 hours. Because transcription may involve queuing, the audio file is downloaded only when transcription begins. A longer validity period prevents the URL from expiring before download starts.</description></item>
+        /// <item><description>After quality inspection completes, the provided URL is used for playback when you review the file in the console. Ensure the URL remains valid long-term. Otherwise, audio playback fails.</description></item>
+        /// </list>
+        /// <h3>Role separation</h3>
+        /// <para>After transcription, the system automatically separates the text into two speaker roles but cannot determine which role corresponds to the agent and which to the customer. You must define rules for role separation. Role separation accuracy is critical because many quality inspection rules apply to a specific role—for example, checking only agent or only customer utterances. Incorrect role separation significantly reduces quality inspection accuracy.
+        /// Audio files are typically either single-channel (mono) or dual-channel (stereo):</para>
+        /// <list type="bullet">
+        /// <item><description>Single-channel recording: The voices of the agent and customer are mixed on one channel. After transcription, the system uses a built-in algorithm to separate dialogue into two roles. You can provide a list of keywords commonly spoken by agents. The system analyzes the transcribed text sentence by sentence. When a sentence contains a keyword, that speaker is identified as the agent, and the other speaker is identified as the customer. For more information, see the recognizeRoleDataSetId and serviceChannelKeywords request parameters. Because conversations can be unpredictable—for example, speakers may talk over each other—role separation for single-channel recordings cannot achieve 100% accuracy. We strongly recommend saving recordings as dual-channel audio.</description></item>
+        /// <item><description>Dual-channel recording: The voices of the agent and customer are stored on separate channels. Even if speakers talk over each other, transcription accurately distinguishes between them. Specify the agent and customer channels using the serviceChannel and clientChannel request parameters.</description></item>
+        /// </list>
+        /// <h3>Retrieve quality inspection results</h3>
+        /// <para>Because audio analysis is asynchronous, you must retrieve results asynchronously. You can retrieve results in one of the following three ways:</para>
+        /// <list type="bullet">
+        /// <item><description>Message notification: For more information, see <a href="https://help.aliyun.com/document_detail/213237.html">Message Queue</a>. After you receive a message, call the GetResult operation to retrieve detailed results. (Recommended)</description></item>
+        /// <item><description>Callback: Specify a callbackUrl in the request parameters. The system initiates a callback after the task completes. After you receive the callback, call the GetResult operation to retrieve detailed results.</description></item>
+        /// <item><description>Polling: The operation returns a task ID (taskId). Use the taskId to poll the getResult operation and retrieve the result asynchronously. Check the <c>status</c> parameter in the response to determine whether the task is complete. We recommend a polling interval of 30 seconds or longer because analysis typically completes within a few minutes. (Not recommended)</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UploadAudioDataRequest
         /// </param>
@@ -12159,8 +15627,18 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>推荐使用UploadDataV4接口,支持更长的JsonStr,但仅支持POST方法.</para>
+        /// <para>Upload offline plain text quality inspection data (plain text sessions). This applies to online agent scenarios. Use the UploadDataV4 API. Differences between UploadDataV4 and UploadData include the following: UploadDataV4 supports only POST requests, and it supports longer JsonStr values.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call UploadData.json to upload text-based quality inspection data. Text typically originates from online customer service interactions or tickets. The API returns a task ID. You can retrieve results in one of three ways:</para>
+        /// <list type="bullet">
+        /// <item><description>Message notification: For details, see <a href="https://help.aliyun.com/document_detail/213237.html">message queues</a>. After you receive a message, call the GetResult API to retrieve detailed results. (Recommended)</description></item>
+        /// <item><description>Callback: Specify a callback URL in your request parameters. After the task completes, the system sends a callback to that URL. Then call the GetResult API to retrieve detailed results.</description></item>
+        /// <item><description>Polling: Use the returned task ID to poll the GetResult API asynchronously. Check whether the status field in the response indicates completion. (Not recommended)</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UploadDataRequest
@@ -12211,8 +15689,18 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>推荐使用UploadDataV4接口,支持更长的JsonStr,但仅支持POST方法.</para>
+        /// <para>Upload offline plain text quality inspection data (plain text sessions). This applies to online agent scenarios. Use the UploadDataV4 API. Differences between UploadDataV4 and UploadData include the following: UploadDataV4 supports only POST requests, and it supports longer JsonStr values.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call UploadData.json to upload text-based quality inspection data. Text typically originates from online customer service interactions or tickets. The API returns a task ID. You can retrieve results in one of three ways:</para>
+        /// <list type="bullet">
+        /// <item><description>Message notification: For details, see <a href="https://help.aliyun.com/document_detail/213237.html">message queues</a>. After you receive a message, call the GetResult API to retrieve detailed results. (Recommended)</description></item>
+        /// <item><description>Callback: Specify a callback URL in your request parameters. After the task completes, the system sends a callback to that URL. Then call the GetResult API to retrieve detailed results.</description></item>
+        /// <item><description>Polling: Use the returned task ID to poll the GetResult API asynchronously. Check whether the status field in the response indicates completion. (Not recommended)</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UploadDataRequest
@@ -12263,8 +15751,18 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>推荐使用UploadDataV4接口,支持更长的JsonStr,但仅支持POST方法.</para>
+        /// <para>Upload offline plain text quality inspection data (plain text sessions). This applies to online agent scenarios. Use the UploadDataV4 API. Differences between UploadDataV4 and UploadData include the following: UploadDataV4 supports only POST requests, and it supports longer JsonStr values.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call UploadData.json to upload text-based quality inspection data. Text typically originates from online customer service interactions or tickets. The API returns a task ID. You can retrieve results in one of three ways:</para>
+        /// <list type="bullet">
+        /// <item><description>Message notification: For details, see <a href="https://help.aliyun.com/document_detail/213237.html">message queues</a>. After you receive a message, call the GetResult API to retrieve detailed results. (Recommended)</description></item>
+        /// <item><description>Callback: Specify a callback URL in your request parameters. After the task completes, the system sends a callback to that URL. Then call the GetResult API to retrieve detailed results.</description></item>
+        /// <item><description>Polling: Use the returned task ID to poll the GetResult API asynchronously. Check whether the status field in the response indicates completion. (Not recommended)</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UploadDataRequest
@@ -12287,8 +15785,18 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>推荐使用UploadDataV4接口,支持更长的JsonStr,但仅支持POST方法.</para>
+        /// <para>Upload offline plain text quality inspection data (plain text sessions). This applies to online agent scenarios. Use the UploadDataV4 API. Differences between UploadDataV4 and UploadData include the following: UploadDataV4 supports only POST requests, and it supports longer JsonStr values.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call UploadData.json to upload text-based quality inspection data. Text typically originates from online customer service interactions or tickets. The API returns a task ID. You can retrieve results in one of three ways:</para>
+        /// <list type="bullet">
+        /// <item><description>Message notification: For details, see <a href="https://help.aliyun.com/document_detail/213237.html">message queues</a>. After you receive a message, call the GetResult API to retrieve detailed results. (Recommended)</description></item>
+        /// <item><description>Callback: Specify a callback URL in your request parameters. After the task completes, the system sends a callback to that URL. Then call the GetResult API to retrieve detailed results.</description></item>
+        /// <item><description>Polling: Use the returned task ID to poll the GetResult API asynchronously. Check whether the status field in the response indicates completion. (Not recommended)</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UploadDataRequest
@@ -12307,8 +15815,17 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>http_hsf</para>
+        /// <para>Real-time text quality check</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API pushes text data to SCA for real-time quality inspection based on specified rules and synchronously returns the analysis results. Unlike post-call quality inspection, which requires uploading the full transcript after a dialogue ends, real-time quality inspection offers lower latency by analyzing text immediately after a speaker completes one or more utterances.</para>
+        /// <list type="bullet">
+        /// <item><description>If you push a single utterance from one speaker, some rule operators may fail because the required dialogue context is missing. Examples include the context repetition check, speech interruption check, and call mute check.</description></item>
+        /// <item><description>SCA returns analysis results synchronously and does not save call records, so you cannot query the results later via an API.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UploadDataSyncRequest
@@ -12353,8 +15870,17 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>http_hsf</para>
+        /// <para>Real-time text quality check</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API pushes text data to SCA for real-time quality inspection based on specified rules and synchronously returns the analysis results. Unlike post-call quality inspection, which requires uploading the full transcript after a dialogue ends, real-time quality inspection offers lower latency by analyzing text immediately after a speaker completes one or more utterances.</para>
+        /// <list type="bullet">
+        /// <item><description>If you push a single utterance from one speaker, some rule operators may fail because the required dialogue context is missing. Examples include the context repetition check, speech interruption check, and call mute check.</description></item>
+        /// <item><description>SCA returns analysis results synchronously and does not save call records, so you cannot query the results later via an API.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UploadDataSyncRequest
@@ -12399,8 +15925,17 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>http_hsf</para>
+        /// <para>Real-time text quality check</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API pushes text data to SCA for real-time quality inspection based on specified rules and synchronously returns the analysis results. Unlike post-call quality inspection, which requires uploading the full transcript after a dialogue ends, real-time quality inspection offers lower latency by analyzing text immediately after a speaker completes one or more utterances.</para>
+        /// <list type="bullet">
+        /// <item><description>If you push a single utterance from one speaker, some rule operators may fail because the required dialogue context is missing. Examples include the context repetition check, speech interruption check, and call mute check.</description></item>
+        /// <item><description>SCA returns analysis results synchronously and does not save call records, so you cannot query the results later via an API.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UploadDataSyncRequest
@@ -12417,8 +15952,17 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>http_hsf</para>
+        /// <para>Real-time text quality check</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API pushes text data to SCA for real-time quality inspection based on specified rules and synchronously returns the analysis results. Unlike post-call quality inspection, which requires uploading the full transcript after a dialogue ends, real-time quality inspection offers lower latency by analyzing text immediately after a speaker completes one or more utterances.</para>
+        /// <list type="bullet">
+        /// <item><description>If you push a single utterance from one speaker, some rule operators may fail because the required dialogue context is missing. Examples include the context repetition check, speech interruption check, and call mute check.</description></item>
+        /// <item><description>SCA returns analysis results synchronously and does not save call records, so you cannot query the results later via an API.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UploadDataSyncRequest
@@ -12456,13 +16000,15 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             {
                 query["BaseMeAgentId"] = request.BaseMeAgentId;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
-                query["JsonStr"] = request.JsonStr;
+                body["JsonStr"] = request.JsonStr;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -12502,13 +16048,15 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             {
                 query["BaseMeAgentId"] = request.BaseMeAgentId;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
             {
-                query["JsonStr"] = request.JsonStr;
+                body["JsonStr"] = request.JsonStr;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -12563,8 +16111,18 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>UploadDataV4</para>
+        /// <para>Uploads offline plain text conversation data for quality inspection in online agent scenarios. We recommend that you use the UploadDataV4 API. Compared to the UploadData API, UploadDataV4 supports only POST requests and allows a longer JsonStr.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the UploadData.json operation to upload text data for quality inspection. The text usually comes from sources such as online customer service and tickets. The API returns a task ID. You can retrieve the results in one of the following three ways:</para>
+        /// <list type="bullet">
+        /// <item><description>Message notifications: After you receive a notification, call the GetResult API to obtain the detailed results. For more information, see <a href="https://help.aliyun.com/document_detail/213237.html">Message Queue</a>. (Recommended)</description></item>
+        /// <item><description>Callbacks: Specify a callbackUrl in the request parameters. The system automatically initiates a callback after the task is complete. After you receive the callback, call the GetResult API to retrieve the detailed results.</description></item>
+        /// <item><description>Polling: Use the task ID returned by this API to poll the GetResult API and asynchronously retrieve the results. Check the status in the response to determine whether the task is complete. (Not recommended)</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UploadDataV4Request
@@ -12609,8 +16167,18 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>UploadDataV4</para>
+        /// <para>Uploads offline plain text conversation data for quality inspection in online agent scenarios. We recommend that you use the UploadDataV4 API. Compared to the UploadData API, UploadDataV4 supports only POST requests and allows a longer JsonStr.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the UploadData.json operation to upload text data for quality inspection. The text usually comes from sources such as online customer service and tickets. The API returns a task ID. You can retrieve the results in one of the following three ways:</para>
+        /// <list type="bullet">
+        /// <item><description>Message notifications: After you receive a notification, call the GetResult API to obtain the detailed results. For more information, see <a href="https://help.aliyun.com/document_detail/213237.html">Message Queue</a>. (Recommended)</description></item>
+        /// <item><description>Callbacks: Specify a callbackUrl in the request parameters. The system automatically initiates a callback after the task is complete. After you receive the callback, call the GetResult API to retrieve the detailed results.</description></item>
+        /// <item><description>Polling: Use the task ID returned by this API to poll the GetResult API and asynchronously retrieve the results. Check the status in the response to determine whether the task is complete. (Not recommended)</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UploadDataV4Request
@@ -12655,8 +16223,18 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>UploadDataV4</para>
+        /// <para>Uploads offline plain text conversation data for quality inspection in online agent scenarios. We recommend that you use the UploadDataV4 API. Compared to the UploadData API, UploadDataV4 supports only POST requests and allows a longer JsonStr.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the UploadData.json operation to upload text data for quality inspection. The text usually comes from sources such as online customer service and tickets. The API returns a task ID. You can retrieve the results in one of the following three ways:</para>
+        /// <list type="bullet">
+        /// <item><description>Message notifications: After you receive a notification, call the GetResult API to obtain the detailed results. For more information, see <a href="https://help.aliyun.com/document_detail/213237.html">Message Queue</a>. (Recommended)</description></item>
+        /// <item><description>Callbacks: Specify a callbackUrl in the request parameters. The system automatically initiates a callback after the task is complete. After you receive the callback, call the GetResult API to retrieve the detailed results.</description></item>
+        /// <item><description>Polling: Use the task ID returned by this API to poll the GetResult API and asynchronously retrieve the results. Check the status in the response to determine whether the task is complete. (Not recommended)</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UploadDataV4Request
@@ -12673,8 +16251,18 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>UploadDataV4</para>
+        /// <para>Uploads offline plain text conversation data for quality inspection in online agent scenarios. We recommend that you use the UploadDataV4 API. Compared to the UploadData API, UploadDataV4 supports only POST requests and allows a longer JsonStr.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the UploadData.json operation to upload text data for quality inspection. The text usually comes from sources such as online customer service and tickets. The API returns a task ID. You can retrieve the results in one of the following three ways:</para>
+        /// <list type="bullet">
+        /// <item><description>Message notifications: After you receive a notification, call the GetResult API to obtain the detailed results. For more information, see <a href="https://help.aliyun.com/document_detail/213237.html">Message Queue</a>. (Recommended)</description></item>
+        /// <item><description>Callbacks: Specify a callbackUrl in the request parameters. The system automatically initiates a callback after the task is complete. After you receive the callback, call the GetResult API to retrieve the detailed results.</description></item>
+        /// <item><description>Polling: Use the task ID returned by this API to poll the GetResult API and asynchronously retrieve the results. Check the status in the response to determine whether the task is complete. (Not recommended)</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UploadDataV4Request
@@ -12689,6 +16277,18 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return await UploadDataV4WithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a rule. You can use this operation to provide your own rule editing interface.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/213225.html">Rule configuration</a>.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UploadRuleRequest
         /// </param>
@@ -12730,6 +16330,18 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<UploadRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a rule. You can use this operation to provide your own rule editing interface.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/213225.html">Rule configuration</a>.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UploadRuleRequest
         /// </param>
@@ -12771,6 +16383,18 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<UploadRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a rule. You can use this operation to provide your own rule editing interface.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/213225.html">Rule configuration</a>.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UploadRuleRequest
         /// </param>
@@ -12784,6 +16408,18 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return UploadRuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a rule. You can use this operation to provide your own rule editing interface.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/213225.html">Rule configuration</a>.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UploadRuleRequest
         /// </param>
@@ -12797,6 +16433,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return await UploadRuleWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Saves the verification result of a single file.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// VerifyFileRequest
         /// </param>
@@ -12838,6 +16479,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<VerifyFileResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Saves the verification result of a single file.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// VerifyFileRequest
         /// </param>
@@ -12879,6 +16525,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<VerifyFileResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Saves the verification result of a single file.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// VerifyFileRequest
         /// </param>
@@ -12892,6 +16543,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return VerifyFileWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Saves the verification result of a single file.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// VerifyFileRequest
         /// </param>
@@ -12905,6 +16561,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return await VerifyFileWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Save the verification result for a single sentence.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// VerifySentenceRequest
         /// </param>
@@ -12946,6 +16607,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<VerifySentenceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Save the verification result for a single sentence.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// VerifySentenceRequest
         /// </param>
@@ -12987,6 +16653,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<VerifySentenceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Save the verification result for a single sentence.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// VerifySentenceRequest
         /// </param>
@@ -13000,6 +16671,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return VerifySentenceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Save the verification result for a single sentence.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// VerifySentenceRequest
         /// </param>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class ListSessionGroupResponseBody : TeaModel {
         /// <summary>
+        /// <para>The result code. A value of \<c>200\\</c> indicates that the request was successful. Other values indicate that the request failed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2228</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public int? Count { get; set; }
 
         /// <summary>
+        /// <para>The number of the returned page. The default value is 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -160,6 +166,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -168,6 +176,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The data marker. To retrieve more than 10,000 records, include the LastDataId from the previous response in the next request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
         /// </summary>
@@ -176,6 +186,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string LastDataId { get; set; }
 
         /// <summary>
+        /// <para>The error details if the request fails. \<c>successful\\</c> is returned if the request is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -194,6 +206,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         }
 
         /// <summary>
+        /// <para>The number of the current page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -202,6 +216,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries to return on each page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -210,6 +226,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>F190ADE9-619A-447D-84E3-7E241A5C428E</para>
         /// </summary>
@@ -217,11 +235,19 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>A reserved parameter. You can ignore this parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>忽略</para>
+        /// </summary>
         [NameInMap("ResultCountId")]
         [Validation(Required=false)]
         public string ResultCountId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. A value of \<c>true\\</c> indicates that the request was successful. A value of \<c>false\\</c> or \<c>null\\</c> indicates that the request failed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

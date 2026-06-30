@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class CreateMiningTaskRequest : TeaModel {
         /// <summary>
+        /// <para>Workspace ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123456</para>
         /// </summary>
@@ -17,11 +19,19 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         [Validation(Required=false)]
         public long? BaseMeAgentId { get; set; }
 
+        /// <summary>
+        /// <para>Webhook address</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="https://xxxxxxxxk.com">https://xxxxxxxxk.com</a></para>
+        /// </summary>
         [NameInMap("CallbackUrl")]
         [Validation(Required=false)]
         public string CallbackUrl { get; set; }
 
         /// <summary>
+        /// <para>File path</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123.22.com/11.csv</para>
         /// </summary>
@@ -30,6 +40,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string FilePath { get; set; }
 
         /// <summary>
+        /// <para>Task parameters</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;startDate&quot;:&quot;20250505&quot;}</para>
         /// </summary>
@@ -38,6 +50,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string Param { get; set; }
 
         /// <summary>
+        /// <para>Task type</para>
+        /// 
         /// <b>Example:</b>
         /// <para>demandMining</para>
         /// </summary>

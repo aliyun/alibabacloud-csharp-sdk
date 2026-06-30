@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class ListAsrVocabResponseBody : TeaModel {
         /// <summary>
+        /// <para>The result code. A value of <b>200</b> indicates that the request was successful. Other values indicate that the request failed. You can use this field to determine the cause of the failure.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -58,6 +60,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         }
 
         /// <summary>
+        /// <para>The error details if the request fails. If the request is successful, the value is <b>successful</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -66,6 +70,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>66E1ACB8-17B2-4BE8-8581-954A8EE1324B</para>
         /// </summary>
@@ -74,6 +80,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. Use this field to determine if the request was successful. A value of true indicates success. A value of <b>false</b> or <b>null</b> indicates failure.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
