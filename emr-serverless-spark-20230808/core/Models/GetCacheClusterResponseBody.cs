@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class GetCacheClusterResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of Cache clusters.</para>
+        /// </summary>
         [NameInMap("cacheClusters")]
         [Validation(Required=false)]
         public CacheCluster CacheClusters { get; set; }
 
         /// <summary>
+        /// <para>Id of the request</para>
+        /// 
         /// <b>Example:</b>
         /// <para>DD6B1B2A-5837-5237-ABE4-FF0C8944****</para>
         /// </summary>

@@ -18,7 +18,25 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"us-west-1", "emr-serverless-spark.us-west-1.aliyuncs.com"},
+                {"us-east-1", "emr-serverless-spark.us-east-1.aliyuncs.com"},
+                {"na-south-1", "emr-serverless-spark.na-south-1.aliyuncs.com"},
+                {"eu-central-1", "emr-serverless-spark.eu-central-1.aliyuncs.com"},
+                {"cn-zhangjiakou", "emr-serverless-spark.cn-zhangjiakou.aliyuncs.com"},
+                {"cn-wulanchabu", "emr-serverless-spark.cn-wulanchabu.aliyuncs.com"},
+                {"cn-shenzhen", "emr-serverless-spark.cn-shenzhen.aliyuncs.com"},
+                {"cn-shanghai", "emr-serverless-spark.cn-shanghai.aliyuncs.com"},
+                {"cn-hongkong", "emr-serverless-spark.cn-hongkong.aliyuncs.com"},
+                {"cn-hangzhou", "emr-serverless-spark.cn-hangzhou.aliyuncs.com"},
+                {"cn-chengdu", "emr-serverless-spark.cn-chengdu.aliyuncs.com"},
+                {"cn-beijing", "emr-serverless-spark.cn-beijing.aliyuncs.com"},
+                {"ap-southeast-5", "emr-serverless-spark.ap-southeast-5.aliyuncs.com"},
+                {"ap-southeast-1", "emr-serverless-spark.ap-southeast-1.aliyuncs.com"},
+                {"ap-northeast-1", "emr-serverless-spark.ap-northeast-1.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("emr-serverless-spark", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -4011,7 +4029,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取CacheCluster详情</para>
+        /// <para>Retrieves the details of a Cache cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4057,7 +4075,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取CacheCluster详情</para>
+        /// <para>Retrieves the details of a Cache cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4103,7 +4121,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取CacheCluster详情</para>
+        /// <para>Retrieves the details of a Cache cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4122,7 +4140,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取CacheCluster详情</para>
+        /// <para>Retrieves the details of a Cache cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5263,6 +5281,144 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetRayJobWithOptionsAsync(workspaceId, submissionId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the log of a Ray job.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRayLogRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRayLogResponse
+        /// </returns>
+        public GetRayLogResponse GetRayLogWithOptions(string workspaceId, string instanceId, GetRayLogRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BucketName))
+            {
+                query["bucketName"] = request.BucketName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Path))
+            {
+                query["path"] = request.Path;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRayLog",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/interactive/v1/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/ray/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/log",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRayLogResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the log of a Ray job.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRayLogRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRayLogResponse
+        /// </returns>
+        public async Task<GetRayLogResponse> GetRayLogWithOptionsAsync(string workspaceId, string instanceId, GetRayLogRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BucketName))
+            {
+                query["bucketName"] = request.BucketName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Path))
+            {
+                query["path"] = request.Path;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRayLog",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/interactive/v1/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/ray/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/log",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRayLogResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the log of a Ray job.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRayLogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRayLogResponse
+        /// </returns>
+        public GetRayLogResponse GetRayLog(string workspaceId, string instanceId, GetRayLogRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetRayLogWithOptions(workspaceId, instanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the log of a Ray job.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRayLogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRayLogResponse
+        /// </returns>
+        public async Task<GetRayLogResponse> GetRayLogAsync(string workspaceId, string instanceId, GetRayLogRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetRayLogWithOptionsAsync(workspaceId, instanceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -8331,6 +8487,168 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListRayJobWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists Ray logs.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRayLogsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRayLogsResponse
+        /// </returns>
+        public ListRayLogsResponse ListRayLogsWithOptions(string workspaceId, string instanceId, ListRayLogsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BucketName))
+            {
+                query["bucketName"] = request.BucketName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Delimiter))
+            {
+                query["delimiter"] = request.Delimiter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Marker))
+            {
+                query["marker"] = request.Marker;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxKeys))
+            {
+                query["maxKeys"] = request.MaxKeys;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Prefix))
+            {
+                query["prefix"] = request.Prefix;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListRayLogs",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/interactive/v1/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/ray/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/logs",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListRayLogsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists Ray logs.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRayLogsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRayLogsResponse
+        /// </returns>
+        public async Task<ListRayLogsResponse> ListRayLogsWithOptionsAsync(string workspaceId, string instanceId, ListRayLogsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BucketName))
+            {
+                query["bucketName"] = request.BucketName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Delimiter))
+            {
+                query["delimiter"] = request.Delimiter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Marker))
+            {
+                query["marker"] = request.Marker;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxKeys))
+            {
+                query["maxKeys"] = request.MaxKeys;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Prefix))
+            {
+                query["prefix"] = request.Prefix;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListRayLogs",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/interactive/v1/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/ray/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/logs",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListRayLogsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists Ray logs.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRayLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRayLogsResponse
+        /// </returns>
+        public ListRayLogsResponse ListRayLogs(string workspaceId, string instanceId, ListRayLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListRayLogsWithOptions(workspaceId, instanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists Ray logs.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRayLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRayLogsResponse
+        /// </returns>
+        public async Task<ListRayLogsResponse> ListRayLogsAsync(string workspaceId, string instanceId, ListRayLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListRayLogsWithOptionsAsync(workspaceId, instanceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
