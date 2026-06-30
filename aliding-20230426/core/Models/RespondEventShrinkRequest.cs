@@ -11,9 +11,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
     public class RespondEventShrinkRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>primary</para>
         /// </summary>
         [NameInMap("CalendarId")]
         [Validation(Required=false)]
@@ -21,9 +18,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>RHN2REJFc2w4VHNiUUlvcVB0ejFydz09</para>
         /// </summary>
         [NameInMap("EventId")]
         [Validation(Required=false)]
@@ -31,9 +25,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>accepted</para>
         /// </summary>
         [NameInMap("ResponseStatus")]
         [Validation(Required=false)]

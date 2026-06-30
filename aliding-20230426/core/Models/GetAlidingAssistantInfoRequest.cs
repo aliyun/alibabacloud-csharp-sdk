@@ -11,9 +11,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
     public class GetAlidingAssistantInfoRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>123456</para>
         /// </summary>
         [NameInMap("AssistantId")]
         [Validation(Required=false)]

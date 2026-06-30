@@ -72,8 +72,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         public List<CreateTodoTaskRequestContentFieldList> ContentFieldList { get; set; }
         public class CreateTodoTaskRequestContentFieldList : TeaModel {
             /// <summary>
-            /// <para>fieldKey</para>
-            /// 
             /// <b>Example:</b>
             /// <para>fieldKey</para>
             /// </summary>
@@ -82,8 +80,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             public string FieldKey { get; set; }
 
             /// <summary>
-            /// <para>fieldValue</para>
-            /// 
             /// <b>Example:</b>
             /// <para>fieldValue</para>
             /// </summary>
@@ -181,10 +177,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>12345</para>
-        /// </summary>
         [NameInMap("operatorId")]
         [Validation(Required=false)]
         public string OperatorId { get; set; }

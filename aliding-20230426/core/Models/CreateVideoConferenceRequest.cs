@@ -16,10 +16,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string ConfTitle { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>true</para>
-        /// </summary>
         [NameInMap("InviteCaller")]
         [Validation(Required=false)]
         public bool? InviteCaller { get; set; }

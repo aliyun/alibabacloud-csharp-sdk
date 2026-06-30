@@ -37,10 +37,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>012345</para>
-            /// </summary>
             [NameInMap("UserId")]
             [Validation(Required=false)]
             public string UserId { get; set; }
@@ -172,8 +168,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         public string Path { get; set; }
 
         /// <summary>
-        /// <para>requestId</para>
-        /// 
         /// <b>Example:</b>
         /// <para>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</para>
         /// </summary>
@@ -205,18 +199,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             [Validation(Required=false)]
             public QueryDentryResponseBodySpaceHdIconVO HdIconVO { get; set; }
             public class QueryDentryResponseBodySpaceHdIconVO : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>http://</para>
-                /// </summary>
                 [NameInMap("Icon")]
                 [Validation(Required=false)]
                 public string Icon { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>type</para>
-                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
@@ -227,18 +213,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             [Validation(Required=false)]
             public QueryDentryResponseBodySpaceIconVO IconVO { get; set; }
             public class QueryDentryResponseBodySpaceIconVO : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>http://</para>
-                /// </summary>
                 [NameInMap("Icon")]
                 [Validation(Required=false)]
                 public string Icon { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>type</para>
-                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
@@ -491,10 +469,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>012345</para>
-                    /// </summary>
                     [NameInMap("UserId")]
                     [Validation(Required=false)]
                     public string UserId { get; set; }
@@ -517,10 +491,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
                     [Validation(Required=false)]
                     public List<string> DentryActions { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>1</para>
-                    /// </summary>
                     [NameInMap("RoleCode")]
                     [Validation(Required=false)]
                     public string RoleCode { get; set; }
@@ -609,10 +579,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>012345</para>
-            /// </summary>
             [NameInMap("UserId")]
             [Validation(Required=false)]
             public string UserId { get; set; }
@@ -635,10 +601,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             [Validation(Required=false)]
             public List<string> DentryActions { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>1</para>
-            /// </summary>
             [NameInMap("RoleCode")]
             [Validation(Required=false)]
             public string RoleCode { get; set; }

@@ -201,10 +201,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             [Validation(Required=false)]
             public string Title { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>1.0</para>
-            /// </summary>
             [NameInMap("Version")]
             [Validation(Required=false)]
             public long? Version { get; set; }

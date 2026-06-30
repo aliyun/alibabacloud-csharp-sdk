@@ -18,8 +18,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         public List<List<GetRangeResponseBodyBackgroundColors>> BackgroundColors { get; set; }
         public class GetRangeResponseBodyBackgroundColors : TeaModel {
             /// <summary>
-            /// <para>red</para>
-            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -28,8 +26,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             public int? Red { get; set; }
 
             /// <summary>
-            /// <para>green</para>
-            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -38,8 +34,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             public int? Green { get; set; }
 
             /// <summary>
-            /// <para>blue</para>
-            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -48,8 +42,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             public int? Blue { get; set; }
 
             /// <summary>
-            /// <para>hexString</para>
-            /// 
             /// <b>Example:</b>
             /// <para>#000000</para>
             /// </summary>
@@ -98,8 +90,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         }
 
         /// <summary>
-        /// <para>requestId</para>
-        /// 
         /// <b>Example:</b>
         /// <para>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</para>
         /// </summary>

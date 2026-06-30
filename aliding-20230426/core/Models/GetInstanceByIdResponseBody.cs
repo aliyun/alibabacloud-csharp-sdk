@@ -221,10 +221,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string VendorType { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>1</para>
-        /// </summary>
         [NameInMap("version")]
         [Validation(Required=false)]
         public long? Version { get; set; }

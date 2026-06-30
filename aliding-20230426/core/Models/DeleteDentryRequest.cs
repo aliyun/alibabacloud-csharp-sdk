@@ -11,9 +11,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
     public class DeleteDentryRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>b9XJlZ44W3NeDGyA</para>
         /// </summary>
         [NameInMap("DentryId")]
         [Validation(Required=false)]
@@ -21,9 +18,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>nb9XJx4EPx16QGyA</para>
         /// </summary>
         [NameInMap("SpaceId")]
         [Validation(Required=false)]

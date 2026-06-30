@@ -11,9 +11,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
     public class DocUpdateContentRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>[]</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
@@ -29,9 +26,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>4j6OJzVEG4jJO3p8</para>
         /// </summary>
         [NameInMap("DocKey")]
         [Validation(Required=false)]

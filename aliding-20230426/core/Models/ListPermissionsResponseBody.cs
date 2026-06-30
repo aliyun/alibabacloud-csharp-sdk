@@ -9,18 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class ListPermissionsResponseBody : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>59886</para>
-        /// </summary>
         [NameInMap("duration")]
         [Validation(Required=false)]
         public long? Duration { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>1</para>
-        /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }

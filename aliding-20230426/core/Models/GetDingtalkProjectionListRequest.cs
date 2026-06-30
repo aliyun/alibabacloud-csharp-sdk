@@ -55,10 +55,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>343242</para>
-        /// </summary>
         [NameInMap("projectorWorkNo")]
         [Validation(Required=false)]
         public string ProjectorWorkNo { get; set; }

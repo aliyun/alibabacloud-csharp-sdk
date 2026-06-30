@@ -17,12 +17,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public GetSkillsHeadersAccountContext AccountContext { get; set; }
         public class GetSkillsHeadersAccountContext : TeaModel {
-            /// <summary>
-            /// <para>Buc SsoTicket</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>bucxxx</para>
-            /// </summary>
             [NameInMap("SsoTicket")]
             [Validation(Required=false)]
             public string SsoTicket { get; set; }

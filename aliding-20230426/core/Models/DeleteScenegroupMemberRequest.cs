@@ -11,9 +11,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
     public class DeleteScenegroupMemberRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>cidvkLfbOyIiSYqjgvAiWwFow==</para>
         /// </summary>
         [NameInMap("OpenConversationId")]
         [Validation(Required=false)]
@@ -21,9 +18,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>123xxx,223xxx</para>
         /// </summary>
         [NameInMap("UserIds")]
         [Validation(Required=false)]

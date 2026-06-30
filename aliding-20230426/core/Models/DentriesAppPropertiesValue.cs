@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string Value { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>PRIVATE</para>
-        /// </summary>
         [NameInMap("Visibility")]
         [Validation(Required=false)]
         public string Visibility { get; set; }

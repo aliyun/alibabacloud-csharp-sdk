@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public List<string> SkillIds { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>xxx</para>
-        /// </summary>
         [NameInMap("SourceIdOfAssistantId")]
         [Validation(Required=false)]
         public string SourceIdOfAssistantId { get; set; }

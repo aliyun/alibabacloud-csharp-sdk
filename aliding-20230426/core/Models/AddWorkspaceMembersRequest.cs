@@ -13,26 +13,14 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public List<AddWorkspaceMembersRequestMembers> Members { get; set; }
         public class AddWorkspaceMembersRequestMembers : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>012345</para>
-            /// </summary>
             [NameInMap("MemberId")]
             [Validation(Required=false)]
             public string MemberId { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>USER</para>
-            /// </summary>
             [NameInMap("MemberType")]
             [Validation(Required=false)]
             public string MemberType { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>EDITOR</para>
-            /// </summary>
             [NameInMap("RoleType")]
             [Validation(Required=false)]
             public string RoleType { get; set; }

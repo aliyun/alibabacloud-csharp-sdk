@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public long? Duration { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>1127942</para>
-        /// </summary>
         [NameInMap("fileSize")]
         [Validation(Required=false)]
         public long? FileSize { get; set; }
@@ -42,8 +38,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         public string PlayUrl { get; set; }
 
         /// <summary>
-        /// <para>requestId</para>
-        /// 
         /// <b>Example:</b>
         /// <para>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</para>
         /// </summary>

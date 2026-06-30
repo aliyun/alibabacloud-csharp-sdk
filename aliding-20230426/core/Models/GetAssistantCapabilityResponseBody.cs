@@ -77,10 +77,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>requestId</para>
-        /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

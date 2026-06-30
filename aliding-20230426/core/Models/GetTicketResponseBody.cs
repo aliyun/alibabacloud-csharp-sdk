@@ -143,22 +143,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public GetTicketResponseBodyTemplate Template { get; set; }
         public class GetTicketResponseBodyTemplate : TeaModel {
-            /// <summary>
-            /// <para>OpenTemplateBizId</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>OpenTemplateBizId</para>
-            /// </summary>
             [NameInMap("OpenTemplateBizId")]
             [Validation(Required=false)]
             public string OpenTemplateBizId { get; set; }
 
-            /// <summary>
-            /// <para>OpenTemplateBizId</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>OpenTemplateBizId</para>
-            /// </summary>
             [NameInMap("OpenTemplateId")]
             [Validation(Required=false)]
             public string OpenTemplateId { get; set; }

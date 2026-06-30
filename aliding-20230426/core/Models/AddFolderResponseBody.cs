@@ -33,18 +33,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             [Validation(Required=false)]
             public string CreatorId { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>txt</para>
-            /// </summary>
             [NameInMap("Extension")]
             [Validation(Required=false)]
             public string Extension { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>dentry_id</para>
-            /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
@@ -57,26 +49,14 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             [Validation(Required=false)]
             public string ModifiedTime { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>modifier_id</para>
-            /// </summary>
             [NameInMap("ModifierId")]
             [Validation(Required=false)]
             public string ModifierId { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>dentry_name</para>
-            /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>163201723391</para>
-            /// </summary>
             [NameInMap("ParentId")]
             [Validation(Required=false)]
             public string ParentId { get; set; }
@@ -101,28 +81,16 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             [Validation(Required=false)]
             public AddFolderResponseBodyDentryProperties Properties { get; set; }
             public class AddFolderResponseBodyDentryProperties : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>true</para>
-                /// </summary>
                 [NameInMap("ReadOnly")]
                 [Validation(Required=false)]
                 public bool? ReadOnly { get; set; }
 
             }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>6020771</para>
-            /// </summary>
             [NameInMap("Size")]
             [Validation(Required=false)]
             public long? Size { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>Ao01nSzzBxZQ68JW</para>
-            /// </summary>
             [NameInMap("SpaceId")]
             [Validation(Required=false)]
             public string SpaceId { get; set; }
@@ -151,18 +119,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             [Validation(Required=false)]
             public string Type { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>80a7201602b34450a7a97d8d4e255421</para>
-            /// </summary>
             [NameInMap("Uuid")]
             [Validation(Required=false)]
             public string Uuid { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>1</para>
-            /// </summary>
             [NameInMap("Version")]
             [Validation(Required=false)]
             public long? Version { get; set; }

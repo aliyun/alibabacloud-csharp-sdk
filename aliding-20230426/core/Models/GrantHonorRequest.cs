@@ -13,20 +13,12 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public GrantHonorRequestTenantContext TenantContext { get; set; }
         public class GrantHonorRequestTenantContext : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>null</para>
-            /// </summary>
             [NameInMap("tenantId")]
             [Validation(Required=false)]
             public string TenantId { get; set; }
 
         }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>null</para>
-        /// </summary>
         [NameInMap("expirationTime")]
         [Validation(Required=false)]
         public long? ExpirationTime { get; set; }
@@ -47,26 +39,15 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>21659398</para>
         /// </summary>
         [NameInMap("honorId")]
         [Validation(Required=false)]
         public string HonorId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>false</para>
-        /// </summary>
         [NameInMap("noticeAnnouncer")]
         [Validation(Required=false)]
         public bool? NoticeAnnouncer { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>false</para>
-        /// </summary>
         [NameInMap("noticeSingle")]
         [Validation(Required=false)]
         public bool? NoticeSingle { get; set; }
@@ -77,9 +58,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>345391052</para>
         /// </summary>
         [NameInMap("orgId")]
         [Validation(Required=false)]
@@ -94,9 +72,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>363784</para>
         /// </summary>
         [NameInMap("senderUserId")]
         [Validation(Required=false)]

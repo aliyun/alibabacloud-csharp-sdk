@@ -333,10 +333,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             [Validation(Required=false)]
             public string ProcessCode { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>52330</para>
-            /// </summary>
             [NameInMap("ProcessId")]
             [Validation(Required=false)]
             public long? ProcessId { get; set; }

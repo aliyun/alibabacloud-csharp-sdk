@@ -11,9 +11,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
     public class GetMultiDimTableAllSheetsShrinkRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>144972</para>
         /// </summary>
         [NameInMap("BaseId")]
         [Validation(Required=false)]

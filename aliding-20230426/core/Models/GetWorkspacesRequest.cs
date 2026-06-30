@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public GetWorkspacesRequestOption Option { get; set; }
         public class GetWorkspacesRequestOption : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>true</para>
-            /// </summary>
             [NameInMap("WithPermissionRole")]
             [Validation(Required=false)]
             public bool? WithPermissionRole { get; set; }

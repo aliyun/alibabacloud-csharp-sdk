@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class DocBlocksQueryRequest : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>heading</para>
-        /// </summary>
         [NameInMap("BlockType")]
         [Validation(Required=false)]
         public string BlockType { get; set; }

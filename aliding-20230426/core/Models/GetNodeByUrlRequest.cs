@@ -13,18 +13,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public GetNodeByUrlRequestOption Option { get; set; }
         public class GetNodeByUrlRequestOption : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>false</para>
-            /// </summary>
             [NameInMap("WithPermissionRole")]
             [Validation(Required=false)]
             public bool? WithPermissionRole { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>false</para>
-            /// </summary>
             [NameInMap("WithStatisticalInfo")]
             [Validation(Required=false)]
             public bool? WithStatisticalInfo { get; set; }
@@ -47,9 +39,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para><a href="https://alidocs.dingtalk.com/i/nodes/EpGBa2L*********gN7R35y">https://alidocs.dingtalk.com/i/nodes/EpGBa2L*********gN7R35y</a></para>
         /// </summary>
         [NameInMap("Url")]
         [Validation(Required=false)]

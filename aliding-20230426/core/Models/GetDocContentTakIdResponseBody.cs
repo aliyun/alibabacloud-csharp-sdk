@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>72652830001</para>
-        /// </summary>
         [NameInMap("taskId")]
         [Validation(Required=false)]
         public long? TaskId { get; set; }

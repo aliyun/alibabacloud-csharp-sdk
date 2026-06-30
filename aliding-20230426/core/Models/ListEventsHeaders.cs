@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>208579</para>
+            /// <para>012345</para>
             /// </summary>
             [NameInMap("accountId")]
             [Validation(Required=false)]

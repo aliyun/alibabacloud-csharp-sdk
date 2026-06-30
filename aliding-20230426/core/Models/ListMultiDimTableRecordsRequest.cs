@@ -11,9 +11,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
     public class ListMultiDimTableRecordsRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>101114</para>
         /// </summary>
         [NameInMap("BaseId")]
         [Validation(Required=false)]
@@ -23,10 +20,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public ListMultiDimTableRecordsRequestFilter Filter { get; set; }
         public class ListMultiDimTableRecordsRequestFilter : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>and</para>
-            /// </summary>
             [NameInMap("Combination")]
             [Validation(Required=false)]
             public string Combination { get; set; }
@@ -35,18 +28,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             [Validation(Required=false)]
             public List<ListMultiDimTableRecordsRequestFilterConditions> Conditions { get; set; }
             public class ListMultiDimTableRecordsRequestFilterConditions : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>Sandbox</para>
-                /// </summary>
                 [NameInMap("Field")]
                 [Validation(Required=false)]
                 public string Field { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>equal</para>
-                /// </summary>
                 [NameInMap("Operator")]
                 [Validation(Required=false)]
                 public string Operator { get; set; }
@@ -59,27 +44,16 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>100</para>
-        /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>AAAAAUUg5QSTWwHyeElt8z5z4Qo=</para>
-        /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>xxx</para>
         /// </summary>
         [NameInMap("SheetIdOrName")]
         [Validation(Required=false)]

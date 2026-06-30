@@ -11,9 +11,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
     public class DeleteDriveSpaceRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>123</para>
         /// </summary>
         [NameInMap("SpaceId")]
         [Validation(Required=false)]

@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         public class ListApplicationResponseBodyData : TeaModel {
             /// <summary>
             /// <b>Example:</b>
-            /// <para>{\&quot;ODIN_TOPIC_ID\&quot;:\&quot;256\&quot;}</para>
+            /// <para>{&quot;ODIN_TOPIC_ID&quot;:&quot;256&quot;}</para>
             /// </summary>
             [NameInMap("AppConfig")]
             [Validation(Required=false)]

@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class UpdateUserAvatarResponseBody : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>0</para>
-        /// </summary>
         [NameInMap("errcode")]
         [Validation(Required=false)]
         public string Errcode { get; set; }

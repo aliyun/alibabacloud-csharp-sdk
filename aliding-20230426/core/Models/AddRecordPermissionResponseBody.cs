@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class AddRecordPermissionResponseBody : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>200</para>
-        /// </summary>
         [NameInMap("code")]
         [Validation(Required=false)]
         public string Code { get; set; }

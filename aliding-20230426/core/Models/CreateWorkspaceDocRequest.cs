@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         public class CreateWorkspaceDocRequestTenantContext : TeaModel {
             /// <summary>
             /// <b>Example:</b>
-            /// <para>1</para>
+            /// <para>xxxxxx</para>
             /// </summary>
             [NameInMap("tenantId")]
             [Validation(Required=false)]

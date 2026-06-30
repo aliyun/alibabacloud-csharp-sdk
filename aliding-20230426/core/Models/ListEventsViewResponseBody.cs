@@ -201,10 +201,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
                 [Validation(Required=false)]
                 public string ResponseStatus { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>c10315a8b4e740a317813ab6fxxxxxx</para>
-                /// </summary>
                 [NameInMap("RoomId")]
                 [Validation(Required=false)]
                 public string RoomId { get; set; }
@@ -462,8 +458,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>requestId</para>
-        /// 
         /// <b>Example:</b>
         /// <para>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</para>
         /// </summary>

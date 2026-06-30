@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class InsertDropDownListResponseBody : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>A3:C3</para>
-        /// </summary>
         [NameInMap("a1Notation")]
         [Validation(Required=false)]
         public string A1Notation { get; set; }

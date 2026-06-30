@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class GetReportUnReadCountRequest : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>null</para>
-        /// </summary>
         [NameInMap("Request")]
         [Validation(Required=false)]
         public Dictionary<string, object> Request { get; set; }

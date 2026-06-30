@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public List<InsertMultiDimTableRecordResponseBodyValue> Value { get; set; }
         public class InsertMultiDimTableRecordResponseBodyValue : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>hfauVBFJIo</para>
-            /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }

@@ -9,18 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class CloseVideoConferenceResponseBody : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>success</para>
-        /// </summary>
         [NameInMap("cause")]
         [Validation(Required=false)]
         public string Cause { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>200</para>
-        /// </summary>
         [NameInMap("code")]
         [Validation(Required=false)]
         public long? Code { get; set; }

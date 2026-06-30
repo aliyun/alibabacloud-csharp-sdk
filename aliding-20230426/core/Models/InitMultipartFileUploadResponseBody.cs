@@ -17,18 +17,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>DINGTALK</para>
-        /// </summary>
         [NameInMap("storageDriver")]
         [Validation(Required=false)]
         public string StorageDriver { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>xhy89xxxxx</para>
-        /// </summary>
         [NameInMap("uploadKey")]
         [Validation(Required=false)]
         public string UploadKey { get; set; }

@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class GetScencegroupFileDownloadurlResponseBody : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>An https download connection</para>
-        /// </summary>
         [NameInMap("downloadUrl")]
         [Validation(Required=false)]
         public string DownloadUrl { get; set; }

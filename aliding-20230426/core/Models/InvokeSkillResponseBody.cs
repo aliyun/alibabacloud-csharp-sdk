@@ -33,12 +33,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public object Metadata { get; set; }
 
-        /// <summary>
-        /// <para>RequestId</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>2715B4D3-A3FB-5FC7-AFA0-4471687B1EC6</para>
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

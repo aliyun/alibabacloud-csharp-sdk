@@ -13,12 +13,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public List<string> FailedUserIds { get; set; }
 
-        /// <summary>
-        /// <para>requestId</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>45b4d029-ab94-4672-aa0f-bd79590374cb</para>
-        /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

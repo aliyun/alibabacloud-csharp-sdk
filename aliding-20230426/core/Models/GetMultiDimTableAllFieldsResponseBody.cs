@@ -25,34 +25,18 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public List<GetMultiDimTableAllFieldsResponseBodyValue> Value { get; set; }
         public class GetMultiDimTableAllFieldsResponseBodyValue : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>stxxxx</para>
-            /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>Sheet1</para>
-            /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>xxx</para>
-            /// </summary>
             [NameInMap("Property")]
             [Validation(Required=false)]
             public Dictionary<string, object> Property { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>xxx</para>
-            /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }

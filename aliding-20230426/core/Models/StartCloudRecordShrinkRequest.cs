@@ -9,18 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class StartCloudRecordShrinkRequest : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>speech</para>
-        /// </summary>
         [NameInMap("Mode")]
         [Validation(Required=false)]
         public string Mode { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>relative_right</para>
-        /// </summary>
         [NameInMap("SmallWindowPosition")]
         [Validation(Required=false)]
         public string SmallWindowPosition { get; set; }

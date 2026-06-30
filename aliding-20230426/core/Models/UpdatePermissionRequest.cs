@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class UpdatePermissionRequest : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>kDnRL6jAJMLgNkw7tBnw5aY4VyMoPYe1</para>
-        /// </summary>
         [NameInMap("DentryUuid")]
         [Validation(Required=false)]
         public string DentryUuid { get; set; }
@@ -54,20 +50,12 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public UpdatePermissionRequestOption Option { get; set; }
         public class UpdatePermissionRequestOption : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>10</para>
-            /// </summary>
             [NameInMap("Duration")]
             [Validation(Required=false)]
             public long? Duration { get; set; }
 
         }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>READER</para>
-        /// </summary>
         [NameInMap("RoleId")]
         [Validation(Required=false)]
         public string RoleId { get; set; }

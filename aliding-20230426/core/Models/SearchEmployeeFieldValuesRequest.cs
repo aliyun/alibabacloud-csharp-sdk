@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>{\&quot;textField_annandfa\&quot;:\&quot;1212\&quot;}</para>
+        /// <para>{&quot;textField_annandfa&quot;:&quot;1212&quot;}</para>
         /// </summary>
         [NameInMap("SearchFieldJson")]
         [Validation(Required=false)]
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>[\&quot;textField_xahdfna\&quot;]</para>
+        /// <para>[&quot;textField_xahdfna&quot;]</para>
         /// </summary>
         [NameInMap("TargetFieldJson")]
         [Validation(Required=false)]

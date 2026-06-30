@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class CreateTicketShrinkRequest : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>[]</para>
-        /// </summary>
         [NameInMap("CustomFields")]
         [Validation(Required=false)]
         public string CustomFields { get; set; }
@@ -23,9 +19,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>G3IOe205RLciE</para>
         /// </summary>
         [NameInMap("OpenTeamId")]
         [Validation(Required=false)]
@@ -33,9 +26,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>xxxx</para>
         /// </summary>
         [NameInMap("OpenTemplateBizId")]
         [Validation(Required=false)]
@@ -50,9 +40,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>SG</para>
         /// </summary>
         [NameInMap("Scene")]
         [Validation(Required=false)]
@@ -68,9 +55,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>Killer Ball Wo Mouichido</para>
         /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]

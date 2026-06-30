@@ -185,18 +185,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             [Validation(Required=false)]
             public CopyDentryResponseBodySpaceHdIconVO HdIconVO { get; set; }
             public class CopyDentryResponseBodySpaceHdIconVO : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>http://</para>
-                /// </summary>
                 [NameInMap("Icon")]
                 [Validation(Required=false)]
                 public string Icon { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>type</para>
-                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
@@ -207,18 +199,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             [Validation(Required=false)]
             public CopyDentryResponseBodySpaceIconVO IconVO { get; set; }
             public class CopyDentryResponseBodySpaceIconVO : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>http://</para>
-                /// </summary>
                 [NameInMap("Icon")]
                 [Validation(Required=false)]
                 public string Icon { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>type</para>
-                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
@@ -471,10 +455,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>012345</para>
-                    /// </summary>
                     [NameInMap("UserId")]
                     [Validation(Required=false)]
                     public string UserId { get; set; }
@@ -497,10 +477,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
                     [Validation(Required=false)]
                     public List<string> DentryActions { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>1</para>
-                    /// </summary>
                     [NameInMap("RoleCode")]
                     [Validation(Required=false)]
                     public string RoleCode { get; set; }
@@ -577,10 +553,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public long? UpdatedTime { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>{\&quot;UserId\&quot;: \&quot;353851\&quot;, \&quot;Name\&quot;: u\&quot;\u848b\u7fbd\u4e2d\&quot;}</para>
-        /// </summary>
         [NameInMap("updater")]
         [Validation(Required=false)]
         public Dictionary<string, object> Updater { get; set; }

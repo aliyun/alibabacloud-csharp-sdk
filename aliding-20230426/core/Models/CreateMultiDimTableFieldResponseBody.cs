@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class CreateMultiDimTableFieldResponseBody : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>UhfysgH</para>
-        /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public string Id { get; set; }
@@ -25,10 +21,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public Dictionary<string, object> Property { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>text</para>
-        /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }

@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>012345</para>
+        /// <para>PUoiinWIpxxx</para>
         /// </summary>
         [NameInMap("creatorId")]
         [Validation(Required=false)]
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>012345</para>
+        /// <para>PUoiinWxxx</para>
         /// </summary>
         [NameInMap("modifierId")]
         [Validation(Required=false)]

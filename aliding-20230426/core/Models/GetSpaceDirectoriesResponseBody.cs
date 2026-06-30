@@ -199,18 +199,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
                 [Validation(Required=false)]
                 public GetSpaceDirectoriesResponseBodyChildrenSpaceHdIconVO HdIconVO { get; set; }
                 public class GetSpaceDirectoriesResponseBodyChildrenSpaceHdIconVO : TeaModel {
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para><a href="https://img.alicdn.com/imgextra/i1/xxxxx.png">https://img.alicdn.com/imgextra/i1/xxxxx.png</a></para>
-                    /// </summary>
                     [NameInMap("Icon")]
                     [Validation(Required=false)]
                     public string Icon { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>1</para>
-                    /// </summary>
                     [NameInMap("Type")]
                     [Validation(Required=false)]
                     public string Type { get; set; }
@@ -221,18 +213,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
                 [Validation(Required=false)]
                 public GetSpaceDirectoriesResponseBodyChildrenSpaceIconVO IconVO { get; set; }
                 public class GetSpaceDirectoriesResponseBodyChildrenSpaceIconVO : TeaModel {
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para><a href="https://img.alicdn.com/imgextra/i1/xxxxx.png">https://img.alicdn.com/imgextra/i1/xxxxx.png</a></para>
-                    /// </summary>
                     [NameInMap("Icon")]
                     [Validation(Required=false)]
                     public string Icon { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>1</para>
-                    /// </summary>
                     [NameInMap("Type")]
                     [Validation(Required=false)]
                     public string Type { get; set; }
@@ -341,12 +325,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             [Validation(Required=false)]
             public GetSpaceDirectoriesResponseBodyChildrenStatisticalInfo StatisticalInfo { get; set; }
             public class GetSpaceDirectoriesResponseBodyChildrenStatisticalInfo : TeaModel {
-                /// <summary>
-                /// <para>WordCount</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>10</para>
-                /// </summary>
                 [NameInMap("WordCount")]
                 [Validation(Required=false)]
                 public long? WordCount { get; set; }
@@ -373,10 +351,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>012345</para>
-                /// </summary>
                 [NameInMap("UserId")]
                 [Validation(Required=false)]
                 public string UserId { get; set; }
@@ -399,10 +373,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
                 [Validation(Required=false)]
                 public List<string> DentryActions { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>OWNER</para>
-                /// </summary>
                 [NameInMap("RoleCode")]
                 [Validation(Required=false)]
                 public string RoleCode { get; set; }
@@ -415,25 +385,15 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>true</para>
-        /// </summary>
         [NameInMap("hasMore")]
         [Validation(Required=false)]
         public bool? HasMore { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>1296</para>
-        /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>requestId</para>
-        /// 
         /// <b>Example:</b>
         /// <para>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</para>
         /// </summary>

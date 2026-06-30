@@ -69,10 +69,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public long? StartTime { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>34343</para>
-        /// </summary>
         [NameInMap("workNo")]
         [Validation(Required=false)]
         public string WorkNo { get; set; }

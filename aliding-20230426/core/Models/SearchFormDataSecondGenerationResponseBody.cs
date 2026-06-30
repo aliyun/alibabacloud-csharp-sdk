@@ -13,18 +13,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public List<SearchFormDataSecondGenerationResponseBodyData> Data { get; set; }
         public class SearchFormDataSecondGenerationResponseBodyData : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>2021-05-01 10:10:10</para>
-            /// </summary>
             [NameInMap("CreateTimeGMT")]
             [Validation(Required=false)]
             public string CreateTimeGMT { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>012345</para>
-            /// </summary>
             [NameInMap("CreatorUserId")]
             [Validation(Required=false)]
             public string CreatorUserId { get; set; }
@@ -33,42 +25,22 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             [Validation(Required=false)]
             public Dictionary<string, object> FormData { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>FINST-xxxx</para>
-            /// </summary>
             [NameInMap("FormInstanceId")]
             [Validation(Required=false)]
             public string FormInstanceId { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>FORM-xxxx</para>
-            /// </summary>
             [NameInMap("FormUuid")]
             [Validation(Required=false)]
             public string FormUuid { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>1023</para>
-            /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>{}</para>
-            /// </summary>
             [NameInMap("InstanceValue")]
             [Validation(Required=false)]
             public string InstanceValue { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>2021-05-01 10:10:10</para>
-            /// </summary>
             [NameInMap("ModifiedTimeGMT")]
             [Validation(Required=false)]
             public string ModifiedTimeGMT { get; set; }
@@ -89,20 +61,12 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
                     [Validation(Required=false)]
                     public string NameInChinese { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>English</para>
-                    /// </summary>
                     [NameInMap("NameInEnglish")]
                     [Validation(Required=false)]
                     public string NameInEnglish { get; set; }
 
                 }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>012345</para>
-                /// </summary>
                 [NameInMap("UserId")]
                 [Validation(Required=false)]
                 public string UserId { get; set; }
@@ -121,38 +85,22 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
                     [Validation(Required=false)]
                     public string NameInChinese { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>English</para>
-                    /// </summary>
                     [NameInMap("NameInEnglish")]
                     [Validation(Required=false)]
                     public string NameInEnglish { get; set; }
 
                 }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>012345</para>
-                /// </summary>
                 [NameInMap("UserId")]
                 [Validation(Required=false)]
                 public string UserId { get; set; }
 
             }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>1</para>
-            /// </summary>
             [NameInMap("Sequence")]
             [Validation(Required=false)]
             public string Sequence { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>sagc1b3090d</para>
-            /// </summary>
             [NameInMap("SerialNumber")]
             [Validation(Required=false)]
             public string SerialNumber { get; set; }
@@ -161,20 +109,12 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             [Validation(Required=false)]
             public string Title { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>3</para>
-            /// </summary>
             [NameInMap("Version")]
             [Validation(Required=false)]
             public long? Version { get; set; }
 
         }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>1</para>
-        /// </summary>
         [NameInMap("pageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
@@ -187,10 +127,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>20</para>
-        /// </summary>
         [NameInMap("totalCount")]
         [Validation(Required=false)]
         public long? TotalCount { get; set; }

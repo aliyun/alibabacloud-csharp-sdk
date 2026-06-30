@@ -29,10 +29,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string ExtraShrink { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>true</para>
-        /// </summary>
         [NameInMap("IsAllDay")]
         [Validation(Required=false)]
         public bool? IsAllDay { get; set; }
@@ -74,9 +70,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>primary</para>
         /// </summary>
         [NameInMap("calendarId")]
         [Validation(Required=false)]

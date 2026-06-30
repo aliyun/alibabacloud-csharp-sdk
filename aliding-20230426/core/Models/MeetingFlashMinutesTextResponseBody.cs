@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public bool? HasNext { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>1778490366045000_62XXX</para>
-        /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }

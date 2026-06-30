@@ -25,50 +25,26 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public List<GetDingtalkProjectionListResponseBodyData> Data { get; set; }
         public class GetDingtalkProjectionListResponseBodyData : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>IN</para>
-            /// </summary>
             [NameInMap("callStatus")]
             [Validation(Required=false)]
             public string CallStatus { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>ABCD</para>
-            /// </summary>
             [NameInMap("code")]
             [Validation(Required=false)]
             public string Code { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>3424242</para>
-            /// </summary>
             [NameInMap("devUid")]
             [Validation(Required=false)]
             public long? DevUid { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>517169</para>
-            /// </summary>
             [NameInMap("duration")]
             [Validation(Required=false)]
             public string Duration { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>1757729705000</para>
-            /// </summary>
             [NameInMap("endTs")]
             [Validation(Required=false)]
             public long? EndTs { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>342456</para>
-            /// </summary>
             [NameInMap("nickCode")]
             [Validation(Required=false)]
             public string NickCode { get; set; }
@@ -81,10 +57,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             [Validation(Required=false)]
             public long? OrgId { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>4234242</para>
-            /// </summary>
             [NameInMap("recvClientId")]
             [Validation(Required=false)]
             public string RecvClientId { get; set; }
@@ -113,26 +85,14 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             [Validation(Required=false)]
             public string SendClientName { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>24324</para>
-            /// </summary>
             [NameInMap("sendClientWorkNo")]
             [Validation(Required=false)]
             public string SendClientWorkNo { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>1765502676356</para>
-            /// </summary>
             [NameInMap("startTs")]
             [Validation(Required=false)]
             public long? StartTs { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>2432424</para>
-            /// </summary>
             [NameInMap("timeStr")]
             [Validation(Required=false)]
             public string TimeStr { get; set; }

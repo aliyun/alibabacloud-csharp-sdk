@@ -57,10 +57,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             [Validation(Required=false)]
             public string CreatorNick { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>3423423</para>
-            /// </summary>
             [NameInMap("creatorWorkNo")]
             [Validation(Required=false)]
             public string CreatorWorkNo { get; set; }

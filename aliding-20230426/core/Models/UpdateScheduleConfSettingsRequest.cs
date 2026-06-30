@@ -17,26 +17,14 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             [Validation(Required=false)]
             public List<string> CohostUserIds { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>ding********</para>
-            /// </summary>
             [NameInMap("ConfAllowedCorpId")]
             [Validation(Required=false)]
             public string ConfAllowedCorpId { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>012345</para>
-            /// </summary>
             [NameInMap("HostUserId")]
             [Validation(Required=false)]
             public string HostUserId { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>1</para>
-            /// </summary>
             [NameInMap("LockRoom")]
             [Validation(Required=false)]
             public int? LockRoom { get; set; }
@@ -83,10 +71,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
                 [Validation(Required=false)]
                 public string CloudRecordOwnerUserId { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("EnableChat")]
                 [Validation(Required=false)]
                 public int? EnableChat { get; set; }
@@ -95,26 +79,14 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
                 [Validation(Required=false)]
                 public bool? EnableWebAnonymousJoin { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("JoinBeforeHost")]
                 [Validation(Required=false)]
                 public int? JoinBeforeHost { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("LockMediaStatusMicMute")]
                 [Validation(Required=false)]
                 public int? LockMediaStatusMicMute { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("LockNick")]
                 [Validation(Required=false)]
                 public int? LockNick { get; set; }
@@ -165,38 +137,22 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
                 [Validation(Required=false)]
                 public bool? PushMinutesCard { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("WaitingRoom")]
                 [Validation(Required=false)]
                 public int? WaitingRoom { get; set; }
 
             }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>1</para>
-            /// </summary>
             [NameInMap("MuteOnJoin")]
             [Validation(Required=false)]
             public int? MuteOnJoin { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>1</para>
-            /// </summary>
             [NameInMap("ScreenShareForbidden")]
             [Validation(Required=false)]
             public int? ScreenShareForbidden { get; set; }
 
         }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>f6fb627e-a7e8-403e-b1f8-26e85450f4a9</para>
-        /// </summary>
         [NameInMap("ScheduleConferenceId")]
         [Validation(Required=false)]
         public string ScheduleConferenceId { get; set; }

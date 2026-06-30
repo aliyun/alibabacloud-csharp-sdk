@@ -11,27 +11,17 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
     public class ListDriveSpacesRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>fekaf</para>
-        /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>org</para>
         /// </summary>
         [NameInMap("SpaceType")]
         [Validation(Required=false)]

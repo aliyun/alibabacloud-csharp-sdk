@@ -55,9 +55,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>15002141</para>
         /// </summary>
         [NameInMap("taskId")]
         [Validation(Required=false)]

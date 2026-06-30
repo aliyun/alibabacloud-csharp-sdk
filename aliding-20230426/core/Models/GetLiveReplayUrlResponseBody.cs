@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class GetLiveReplayUrlResponseBody : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para><a href="https://xxxxxxxx">https://xxxxxxxx</a></para>
-        /// </summary>
         [NameInMap("replayUrl")]
         [Validation(Required=false)]
         public string ReplayUrl { get; set; }

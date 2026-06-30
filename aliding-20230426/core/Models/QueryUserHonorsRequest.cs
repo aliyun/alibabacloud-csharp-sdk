@@ -13,29 +13,18 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public QueryUserHonorsRequestTenantContext TenantContext { get; set; }
         public class QueryUserHonorsRequestTenantContext : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>189477710813728</para>
-            /// </summary>
             [NameInMap("tenantId")]
             [Validation(Required=false)]
             public string TenantId { get; set; }
 
         }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>200</para>
-        /// </summary>
         [NameInMap("maxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>15</para>
         /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]
@@ -43,9 +32,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>123456</para>
         /// </summary>
         [NameInMap("orgId")]
         [Validation(Required=false)]
@@ -53,9 +39,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>123123</para>
         /// </summary>
         [NameInMap("userId")]
         [Validation(Required=false)]

@@ -11,9 +11,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
     public class GetConversaionSpaceRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>cidB8Pzg****FIWPv2PMA==</para>
         /// </summary>
         [NameInMap("OpenConversationId")]
         [Validation(Required=false)]

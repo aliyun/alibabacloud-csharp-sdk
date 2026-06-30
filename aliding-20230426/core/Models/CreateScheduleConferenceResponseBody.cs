@@ -18,8 +18,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         public List<string> Phones { get; set; }
 
         /// <summary>
-        /// <para>requestId</para>
-        /// 
         /// <b>Example:</b>
         /// <para>1234567</para>
         /// </summary>

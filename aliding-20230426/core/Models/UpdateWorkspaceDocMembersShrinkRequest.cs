@@ -15,9 +15,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>node_feb8fea0</para>
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]
@@ -29,9 +26,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>xb8bkxxxxxrXJNaL</para>
         /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]

@@ -37,36 +37,20 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             [Validation(Required=false)]
             public ListMultiDimTableRecordsResponseBodyRecordsCreatedBy CreatedBy { get; set; }
             public class ListMultiDimTableRecordsResponseBodyRecordsCreatedBy : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>012345</para>
-                /// </summary>
                 [NameInMap("UserId")]
                 [Validation(Required=false)]
                 public string UserId { get; set; }
 
             }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>xxx</para>
-            /// </summary>
             [NameInMap("CreatedTime")]
             [Validation(Required=false)]
             public long? CreatedTime { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>title,shortTitle</para>
-            /// </summary>
             [NameInMap("Fields")]
             [Validation(Required=false)]
             public Dictionary<string, object> Fields { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>123</para>
-            /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
@@ -75,20 +59,12 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             [Validation(Required=false)]
             public ListMultiDimTableRecordsResponseBodyRecordsLastModifiedBy LastModifiedBy { get; set; }
             public class ListMultiDimTableRecordsResponseBodyRecordsLastModifiedBy : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>012345</para>
-                /// </summary>
                 [NameInMap("UserId")]
                 [Validation(Required=false)]
                 public string UserId { get; set; }
 
             }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>xxx</para>
-            /// </summary>
             [NameInMap("LastModifiedTime")]
             [Validation(Required=false)]
             public long? LastModifiedTime { get; set; }

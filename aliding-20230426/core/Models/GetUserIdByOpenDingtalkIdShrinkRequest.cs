@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>DTOJdYJ2IQC4HuexhtjsSXXXX</para>
+        /// <para>DTOJdYJ2IQC4HuexhtjsS8QiEiE</para>
         /// </summary>
         [NameInMap("openDingtalkId")]
         [Validation(Required=false)]

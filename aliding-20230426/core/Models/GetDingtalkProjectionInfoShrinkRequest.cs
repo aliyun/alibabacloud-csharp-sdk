@@ -29,18 +29,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public long? EndTs { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>21001</para>
-        /// </summary>
         [NameInMap("orgId")]
         [Validation(Required=false)]
         public string OrgId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>342342</para>
-        /// </summary>
         [NameInMap("pubWorkNo")]
         [Validation(Required=false)]
         public string PubWorkNo { get; set; }

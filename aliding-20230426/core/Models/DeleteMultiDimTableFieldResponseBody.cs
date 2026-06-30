@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class DeleteMultiDimTableFieldResponseBody : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>True</para>
-        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

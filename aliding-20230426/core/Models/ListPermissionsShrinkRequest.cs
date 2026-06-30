@@ -11,9 +11,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
     public class ListPermissionsShrinkRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>KGZLxjv9VGkoG9YwHE5wx7k2V6EDybno</para>
         /// </summary>
         [NameInMap("DentryUuid")]
         [Validation(Required=false)]

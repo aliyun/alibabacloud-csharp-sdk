@@ -26,8 +26,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Id</para>
-            /// 
             /// <b>Example:</b>
             /// <para>lastMessage</para>
             /// </summary>

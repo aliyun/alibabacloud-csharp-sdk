@@ -515,16 +515,12 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>originalAssistantId1</para>
+        /// <para>assistantId2</para>
         /// </summary>
         [NameInMap("originalAssistantId")]
         [Validation(Required=false)]
         public string OriginalAssistantId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>cfp</para>
-        /// </summary>
         [NameInMap("protocol")]
         [Validation(Required=false)]
         public string Protocol { get; set; }

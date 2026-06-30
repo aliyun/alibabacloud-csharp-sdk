@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class CreateAlidingAssistantShrinkRequest : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>f5cb37a0fb44441ab7b74c6f4a679dd3</para>
-        /// </summary>
         [NameInMap("AppCode")]
         [Validation(Required=false)]
         public string AppCode { get; set; }
@@ -30,9 +26,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>@lADPDetfgMsFFUvNAkjNAkg</para>
         /// </summary>
         [NameInMap("Icon")]
         [Validation(Required=false)]
@@ -58,18 +51,11 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>11</para>
         /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]
         public int? Source { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>chatBot-123</para>
-        /// </summary>
         [NameInMap("SourceIdentityId")]
         [Validation(Required=false)]
         public string SourceIdentityId { get; set; }

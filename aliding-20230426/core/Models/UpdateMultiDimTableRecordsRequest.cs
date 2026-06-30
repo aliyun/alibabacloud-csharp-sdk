@@ -11,9 +11,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
     public class UpdateMultiDimTableRecordsRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>r1R7q3QmWew5lo02fxB7nxxxxxxxx</para>
         /// </summary>
         [NameInMap("BaseId")]
         [Validation(Required=false)]
@@ -35,9 +32,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
             /// <summary>
             /// <para>This parameter is required.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>HyDGtSj</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]

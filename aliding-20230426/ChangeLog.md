@@ -1,3 +1,7 @@
+2026-06-30 Version: 2.55.0
+- Support API DisableSceneGroupTemplate.
+
+
 2026-06-04 Version: 2.54.2
 - Generated csharp 2023-04-26 for aliding.
 

@@ -20,18 +20,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public GetNodesRequestOption Option { get; set; }
         public class GetNodesRequestOption : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>false</para>
-            /// </summary>
             [NameInMap("WithPermissionRole")]
             [Validation(Required=false)]
             public bool? WithPermissionRole { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>false</para>
-            /// </summary>
             [NameInMap("WithStatisticalInfo")]
             [Validation(Required=false)]
             public bool? WithStatisticalInfo { get; set; }

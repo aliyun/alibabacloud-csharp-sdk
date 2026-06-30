@@ -61,10 +61,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string ModifiedToTimeGMT { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>{}</para>
-        /// </summary>
         [NameInMap("OrderConfigJson")]
         [Validation(Required=false)]
         public string OrderConfigJson { get; set; }
@@ -93,10 +89,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>{}</para>
-        /// </summary>
         [NameInMap("SearchCondition")]
         [Validation(Required=false)]
         public string SearchCondition { get; set; }

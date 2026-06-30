@@ -13,19 +13,12 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string TenantContextShrink { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>false</para>
-        /// </summary>
         [NameInMap("WithPermissionRole")]
         [Validation(Required=false)]
         public bool? WithPermissionRole { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>MJ0pDSKMV9dO20E4</para>
         /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]

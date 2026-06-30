@@ -11,9 +11,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
     public class ListPermissionsRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>KGZLxjv9VGkoG9YwHE5wx7k2V6EDybno</para>
         /// </summary>
         [NameInMap("DentryUuid")]
         [Validation(Required=false)]
@@ -27,18 +24,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             [Validation(Required=false)]
             public List<string> FilterRoleIds { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>20</para>
-            /// </summary>
             [NameInMap("MaxResults")]
             [Validation(Required=false)]
             public int? MaxResults { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>2</para>
-            /// </summary>
             [NameInMap("NextToken")]
             [Validation(Required=false)]
             public string NextToken { get; set; }

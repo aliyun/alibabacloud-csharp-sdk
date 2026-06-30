@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class UpdateMultiDimTableFieldResponseBody : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>r1R7q3QmWew5lo02fxB7xxxxxxx</para>
-        /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public string Id { get; set; }

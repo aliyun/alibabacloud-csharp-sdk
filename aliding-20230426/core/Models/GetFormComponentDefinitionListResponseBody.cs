@@ -13,34 +13,18 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public List<GetFormComponentDefinitionListResponseBodyResult> Result { get; set; }
         public class GetFormComponentDefinitionListResponseBodyResult : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>FooterYida</para>
-            /// </summary>
             [NameInMap("ComponentName")]
             [Validation(Required=false)]
             public string ComponentName { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>formContainer_kksjiuk</para>
-            /// </summary>
             [NameInMap("FieldId")]
             [Validation(Required=false)]
             public string FieldId { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>{&quot;en_US&quot;:&quot;&quot;}</para>
-            /// </summary>
             [NameInMap("Label")]
             [Validation(Required=false)]
             public string Label { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>formContainer_kksjiuk</para>
-            /// </summary>
             [NameInMap("ParentId")]
             [Validation(Required=false)]
             public string ParentId { get; set; }

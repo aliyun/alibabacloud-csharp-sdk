@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
                     /// <summary>
                     /// <b>Example:</b>
-                    /// <para>012345</para>
+                    /// <para>ersqqdddf</para>
                     /// </summary>
                     [NameInMap("AnchorUserId")]
                     [Validation(Required=false)]

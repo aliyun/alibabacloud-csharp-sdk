@@ -11,9 +11,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
     public class CopyDentryRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>b9XJljElJv6RPGyA</para>
         /// </summary>
         [NameInMap("DentryId")]
         [Validation(Required=false)]
@@ -28,9 +25,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>24458420428</para>
         /// </summary>
         [NameInMap("SpaceId")]
         [Validation(Required=false)]
@@ -38,9 +32,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>b9XJljElJv6RPG</para>
         /// </summary>
         [NameInMap("TargetSpaceId")]
         [Validation(Required=false)]
@@ -60,26 +51,14 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>b9XJljElJv6RPGyA2</para>
-        /// </summary>
         [NameInMap("ToNextDentryId")]
         [Validation(Required=false)]
         public string ToNextDentryId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>b9XJljElJv6RPGyA4</para>
-        /// </summary>
         [NameInMap("ToParentDentryId")]
         [Validation(Required=false)]
         public string ToParentDentryId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>b9XJljElJv6RPGyA3</para>
-        /// </summary>
         [NameInMap("ToPrevDentryId")]
         [Validation(Required=false)]
         public string ToPrevDentryId { get; set; }

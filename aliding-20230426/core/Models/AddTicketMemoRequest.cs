@@ -11,9 +11,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
     public class AddTicketMemoRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>eKWh3xxxxiE</para>
         /// </summary>
         [NameInMap("OpenTeamId")]
         [Validation(Required=false)]
@@ -21,9 +18,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>Dq9hP8Sk2v6vQxxxxiE</para>
         /// </summary>
         [NameInMap("OpenTicketId")]
         [Validation(Required=false)]
@@ -51,18 +45,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             [Validation(Required=false)]
             public List<AddTicketMemoRequestTicketMemoAttachments> Attachments { get; set; }
             public class AddTicketMemoRequestTicketMemoAttachments : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>&quot;ticket/image/44xxxx9/43003/e27204b38xxxx1640499.txt</para>
-                /// </summary>
                 [NameInMap("FileName")]
                 [Validation(Required=false)]
                 public string FileName { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>wahaha.txt</para>
-                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }

@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Eijxxx</para>
+        /// <para>333d</para>
         /// </summary>
         [NameInMap("AnchorUnionId")]
         [Validation(Required=false)]
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>123456</para>
+        /// <para>4d38xxxxx</para>
         /// </summary>
         [NameInMap("LiveUuid")]
         [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         public class QueryGroupLiveInfoRequestTenantContext : TeaModel {
             /// <summary>
             /// <b>Example:</b>
-            /// <para>1</para>
+            /// <para>xxxxxx</para>
             /// </summary>
             [NameInMap("tenantId")]
             [Validation(Required=false)]

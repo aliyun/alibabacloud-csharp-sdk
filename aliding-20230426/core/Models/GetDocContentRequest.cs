@@ -11,18 +11,11 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
     public class GetDocContentRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>dentry_uuid</para>
         /// </summary>
         [NameInMap("DentryUuid")]
         [Validation(Required=false)]
         public string DentryUuid { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>markdown</para>
-        /// </summary>
         [NameInMap("TargetFormat")]
         [Validation(Required=false)]
         public string TargetFormat { get; set; }

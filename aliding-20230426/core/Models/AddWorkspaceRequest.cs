@@ -24,10 +24,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>lHiicjNFM2iSFYSdz2iPuI8ZwiEiE</para>
-            /// </summary>
             [NameInMap("TeamId")]
             [Validation(Required=false)]
             public string TeamId { get; set; }

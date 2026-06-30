@@ -22,8 +22,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         public List<CreateTodoTaskResponseBodyContentFieldList> ContentFieldList { get; set; }
         public class CreateTodoTaskResponseBodyContentFieldList : TeaModel {
             /// <summary>
-            /// <para>fieldKey</para>
-            /// 
             /// <b>Example:</b>
             /// <para>fieldKey</para>
             /// </summary>
@@ -32,8 +30,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             public string FieldKey { get; set; }
 
             /// <summary>
-            /// <para>fieldValue</para>
-            /// 
             /// <b>Example:</b>
             /// <para>fieldValue</para>
             /// </summary>
@@ -176,8 +172,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         public int? Priority { get; set; }
 
         /// <summary>
-        /// <para>requestId</para>
-        /// 
         /// <b>Example:</b>
         /// <para>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</para>
         /// </summary>

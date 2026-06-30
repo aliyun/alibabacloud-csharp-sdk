@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public CreateOrgHonorTemplateRequestTenantContext TenantContext { get; set; }
         public class CreateOrgHonorTemplateRequestTenantContext : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>123456</para>
-            /// </summary>
             [NameInMap("tenantId")]
             [Validation(Required=false)]
             public string TenantId { get; set; }
@@ -25,9 +21,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>fsdfasdjf132342d</para>
         /// </summary>
         [NameInMap("avatarFrameMediaId")]
         [Validation(Required=false)]
@@ -35,9 +28,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>#FFFBB4</para>
         /// </summary>
         [NameInMap("defaultBgColor")]
         [Validation(Required=false)]
@@ -52,9 +42,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1273adf23</para>
         /// </summary>
         [NameInMap("medalMediaId")]
         [Validation(Required=false)]
@@ -69,9 +56,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>123456</para>
         /// </summary>
         [NameInMap("orgId")]
         [Validation(Required=false)]
@@ -79,9 +63,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>363784</para>
         /// </summary>
         [NameInMap("userId")]
         [Validation(Required=false)]

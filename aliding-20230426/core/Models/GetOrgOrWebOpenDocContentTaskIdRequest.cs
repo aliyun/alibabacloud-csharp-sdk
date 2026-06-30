@@ -11,9 +11,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
     public class GetOrgOrWebOpenDocContentTaskIdRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>20eMKjyp810mMdK4Hz4B5BA6JxAZB1Gv</para>
         /// </summary>
         [NameInMap("DentryUuid")]
         [Validation(Required=false)]
@@ -31,10 +28,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public int? ScopeType { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>markdown</para>
-        /// </summary>
         [NameInMap("TargetFormat")]
         [Validation(Required=false)]
         public string TargetFormat { get; set; }

@@ -181,10 +181,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             [Validation(Required=false)]
             public string TaskExecuteType { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>2021-01-01</para>
-            /// </summary>
             [NameInMap("TaskHoldTimeGMT")]
             [Validation(Required=false)]
             public long? TaskHoldTimeGMT { get; set; }

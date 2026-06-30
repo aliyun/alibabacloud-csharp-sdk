@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>mgokkwiovcq5eu02le8</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("BlockId")]
         [Validation(Required=false)]

@@ -419,10 +419,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>792</para>
-            /// </summary>
             [NameInMap("TaskId")]
             [Validation(Required=false)]
             public long? TaskId { get; set; }

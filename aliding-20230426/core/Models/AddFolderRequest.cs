@@ -26,9 +26,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             public class AddFolderRequestOptionAppProperties : TeaModel {
                 /// <summary>
                 /// <para>This parameter is required.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>test</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -36,9 +33,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
                 /// <summary>
                 /// <para>This parameter is required.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>value</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -46,9 +40,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
                 /// <summary>
                 /// <para>This parameter is required.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>PUBLIC</para>
                 /// </summary>
                 [NameInMap("Visibility")]
                 [Validation(Required=false)]
@@ -68,9 +59,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>140822073803</para>
         /// </summary>
         [NameInMap("ParentId")]
         [Validation(Required=false)]
@@ -78,9 +66,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>xPar2SZ63KodG3aV</para>
         /// </summary>
         [NameInMap("SpaceId")]
         [Validation(Required=false)]

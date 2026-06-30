@@ -18,9 +18,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         public class AddWorkspaceDocMembersRequestMembers : TeaModel {
             /// <summary>
             /// <para>This parameter is required.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>012345</para>
             /// </summary>
             [NameInMap("MemberId")]
             [Validation(Required=false)]
@@ -28,9 +25,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
             /// <summary>
             /// <para>This parameter is required.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>USER</para>
             /// </summary>
             [NameInMap("MemberType")]
             [Validation(Required=false)]
@@ -38,9 +32,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
             /// <summary>
             /// <para>This parameter is required.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>EDITOR</para>
             /// </summary>
             [NameInMap("RoleType")]
             [Validation(Required=false)]
@@ -50,9 +41,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>xxx</para>
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]
@@ -74,9 +62,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>xxx</para>
         /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]

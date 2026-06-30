@@ -11,9 +11,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
     public class UpdateAlidingAssistantShrinkRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1234</para>
         /// </summary>
         [NameInMap("AssistantId")]
         [Validation(Required=false)]
@@ -27,10 +24,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string ExtShrink { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>fallbackContent</para>
-        /// </summary>
         [NameInMap("FallbackContent")]
         [Validation(Required=false)]
         public string FallbackContent { get; set; }
@@ -39,10 +32,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string FeatureShrink { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>@lADPDetfgMsFFUvNAkjNAkg</para>
-        /// </summary>
         [NameInMap("Icon")]
         [Validation(Required=false)]
         public string Icon { get; set; }

@@ -37,10 +37,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
                 [Validation(Required=false)]
                 public string AnchorNickname { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>Eijxx</para>
-                /// </summary>
                 [NameInMap("AnchorUnionId")]
                 [Validation(Required=false)]
                 public string AnchorUnionId { get; set; }

@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class CheckAlibabaStaffRequest : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>156****9665</para>
-        /// </summary>
         [NameInMap("Mobile")]
         [Validation(Required=false)]
         public string Mobile { get; set; }

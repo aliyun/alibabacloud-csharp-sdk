@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public GetMultipartFileUploadInfosRequestOption Option { get; set; }
         public class GetMultipartFileUploadInfosRequestOption : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>true</para>
-            /// </summary>
             [NameInMap("PreferIntranet")]
             [Validation(Required=false)]
             public bool? PreferIntranet { get; set; }
@@ -41,10 +37,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>hwHPAAAAAipHxxxxx</para>
-        /// </summary>
         [NameInMap("UploadKey")]
         [Validation(Required=false)]
         public string UploadKey { get; set; }
