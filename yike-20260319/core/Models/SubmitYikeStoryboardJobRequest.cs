@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
 {
     public class SubmitYikeStoryboardJobRequest : TeaModel {
         /// <summary>
+        /// <para>The aspect ratio of the output video. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>16:9</description></item>
+        /// <item><description>9:16</description></item>
+        /// <item><description>4:3</description></item>
+        /// <item><description>3:4.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>4:3</para>
         /// </summary>
@@ -18,6 +26,12 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         public string AspectRatio { get; set; }
 
         /// <summary>
+        /// <para>The execution mode for storyboard generation. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>FullPipeline: Full pipeline generation, which includes both storyboard generation and shot video generation.</description></item>
+        /// <item><description>StoryboardOnly: Generates only the storyboard.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>FullPipeline</para>
         /// </summary>
@@ -26,18 +40,29 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         public string ExecMode { get; set; }
 
         /// <summary>
+        /// <para>The OSS URL of the file. Only URLs with the .txt or .doc file name extension are supported.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para><a href="http://test.oss-cn-shanghai.aliyuncs.com/test.mp4">http://test.oss-cn-shanghai.aliyuncs.com/test.mp4</a></para>
+        /// <para><a href="http://test.oss-cn-shanghai.aliyuncs.com/test.txt">http://test.oss-cn-shanghai.aliyuncs.com/test.txt</a></para>
         /// </summary>
         [NameInMap("FileURL")]
         [Validation(Required=false)]
         public string FileURL { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to retain the original dialogue during final video composition. Default value: True.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>True</para>
+        /// </summary>
         [NameInMap("KeepOriginDialogue")]
         [Validation(Required=false)]
         public bool? KeepOriginDialogue { get; set; }
 
         /// <summary>
+        /// <para>The model parameters in JSON format.</para>
+        /// <para>&quot;AudioEnable&quot;: false disables audio.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{
         ///   &quot;AudioEnable&quot;: false
@@ -48,6 +73,28 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         public string ModelParams { get; set; }
 
         /// <summary>
+        /// <para>The narration voice ID. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>sys_GracefulPoisedWoman: Graceful Poised Woman</description></item>
+        /// <item><description>sys_ElderlyWistfulWoman: Elderly Wistful Woman</description></item>
+        /// <item><description>sys_SweetBrightGirl: Sweet Bright Girl</description></item>
+        /// <item><description>sys_YoungGracefulWoman: Young Graceful Woman</description></item>
+        /// <item><description>sys_MaturePoisedWoman: Mature Poised Woman</description></item>
+        /// <item><description>sys_MatureWiseWoman: Mature Wise Woman</description></item>
+        /// <item><description>sys_CalmDeepMale: Calm Deep Male</description></item>
+        /// <item><description>sys_SereneIntellect: Serene Intellect</description></item>
+        /// <item><description>sys_MajesticBaritone: Majestic Baritone</description></item>
+        /// <item><description>sys_GravellySoulful: Gravelly Soulful</description></item>
+        /// <item><description>sys_ClassicYoungMan: Classic Young Man Narrator</description></item>
+        /// <item><description>sys_WiseYoungMan: Wise Young Man Narrator</description></item>
+        /// <item><description>sys_ClassicYoungWoman: Classic Young Woman Narrator</description></item>
+        /// <item><description>sys_IntellectualYoungWoman: Intellectual Young Woman Narrator</description></item>
+        /// <item><description>sys_GentleYoungMan: Gentle Young Man Narrator</description></item>
+        /// <item><description>sys_thoughtfulBoy: Thoughtful Boy</description></item>
+        /// <item><description>sys_RichBassMale: Rich Bass Male</description></item>
+        /// <item><description>sys_ClassicMiddleAgedWoman: Classic Middle-Aged Woman Narrator.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>sys_YoungGracefulWoman</para>
         /// </summary>
@@ -56,6 +103,14 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         public string NarrationVoiceId { get; set; }
 
         /// <summary>
+        /// <para>The resolution of the output video. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>720P</description></item>
+        /// <item><description>1080P</description></item>
+        /// <item><description>2K</description></item>
+        /// <item><description>4K.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>720P</para>
         /// </summary>
@@ -64,6 +119,12 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         public string Resolution { get; set; }
 
         /// <summary>
+        /// <para>The storyboard shot generation mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>multi: multi-reference video generation</description></item>
+        /// <item><description>default: image-to-video generation.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>multi</para>
         /// </summary>
@@ -72,6 +133,11 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         public string ShotPromptMode { get; set; }
 
         /// <summary>
+        /// <para>The shot split mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>firstPersonNarration: narration mode.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>firstPersonNarration</para>
         /// </summary>
@@ -80,6 +146,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         public string ShotSplitMode { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to skip failed shots. Default value: True.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>True</para>
         /// </summary>
@@ -88,6 +156,11 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         public bool? SkipFailureShot { get; set; }
 
         /// <summary>
+        /// <para>The type of the material source. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Novel: novel.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Novel</para>
         /// </summary>
@@ -96,6 +169,37 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         public string SourceType { get; set; }
 
         /// <summary>
+        /// <para>The storyboard style ID. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>RealisticPhotographyPro: Realistic Photography Pro</description></item>
+        /// <item><description>RealisticGuzhuangPro: Realistic Ancient Costume Pro</description></item>
+        /// <item><description>RealisticXianxiaPro: Realistic Xianxia Pro</description></item>
+        /// <item><description>RealisticWesternPro: Western Realism Pro</description></item>
+        /// <item><description>RealisticPhotography: Realistic Photography</description></item>
+        /// <item><description>RealisticGuzhuang: Realistic Ancient Costume</description></item>
+        /// <item><description>RealisticXianxia: Realistic Xianxia</description></item>
+        /// <item><description>RealisticWasteland: Realistic Wasteland</description></item>
+        /// <item><description>RealisticEra: Realistic Vintage</description></item>
+        /// <item><description>GuofengAnime: 2D Chinese-style Anime</description></item>
+        /// <item><description>GuofengAnime3D: 3D Chinese-style Anime</description></item>
+        /// <item><description>AncientRomanceAnime: Anime Ancient Romance</description></item>
+        /// <item><description>PostApocalypticAnime: Anime Post-Apocalyptic</description></item>
+        /// <item><description>Cartoon3D: 3D Cartoon</description></item>
+        /// <item><description>Photorealistic3D: Photorealistic 3D Rendering</description></item>
+        /// <item><description>SciFiRealism: Sci-Fi Realism</description></item>
+        /// <item><description>Chibi3D: 3D Chibi</description></item>
+        /// <item><description>ShojoManga: Japanese Manga</description></item>
+        /// <item><description>NewPeriodAnime: New Era Japanese Anime</description></item>
+        /// <item><description>FairyTale2D: 2D Fairy Tale</description></item>
+        /// <item><description>Wasteland2D: 2D Wasteland</description></item>
+        /// <item><description>InkWuxia: Ink Wash Wuxia</description></item>
+        /// <item><description>ShadiaoMeme: Panda Head Meme</description></item>
+        /// <item><description>Chibi2D: 2D Chibi</description></item>
+        /// <item><description>Ghibli: Ghibli</description></item>
+        /// <item><description>SciFiComic: Cyberpunk</description></item>
+        /// <item><description>AmericanSuperhero: American Superhero.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>RealisticPhotography</para>
         /// </summary>
@@ -104,6 +208,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         public string StyleId { get; set; }
 
         /// <summary>
+        /// <para>The task title. If not specified, a default title is automatically generated based on the date. The title cannot exceed 128 bytes in length and must be UTF-8 encoded.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test-title</para>
         /// </summary>
@@ -112,6 +218,11 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         public string Title { get; set; }
 
         /// <summary>
+        /// <para>The custom settings in JSON format.</para>
+        /// <list type="bullet">
+        /// <item><description>NotifyAddress specifies the callback for task completion. Both MNS callbacks and HTTP callbacks are supported.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>{
         ///   &quot;NotifyAddress&quot;: &quot;<a href="https://www.callback.com">https://www.callback.com</a>&quot;
@@ -122,6 +233,11 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         public string UserData { get; set; }
 
         /// <summary>
+        /// <para>The video model. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>wan2.6-r2v-flash.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>wan2.6-r2v-flash</para>
         /// </summary>

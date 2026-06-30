@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Yike20260319.Models
 {
-    public class SubmitYikeVoiceNarratorJobResponseBody : TeaModel {
+    public class SubmitYikeProjectExportJobResponseBody : TeaModel {
         /// <summary>
         /// <para>The task ID.</para>
         /// 

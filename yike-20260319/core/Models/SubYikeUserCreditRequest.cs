@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
 {
     public class SubYikeUserCreditRequest : TeaModel {
         /// <summary>
+        /// <para>The number of credits to reclaim. The value must be greater than 0 and cannot exceed the sub-account credit balance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         public int? Credit { get; set; }
 
         /// <summary>
+        /// <para>The sub-account user ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

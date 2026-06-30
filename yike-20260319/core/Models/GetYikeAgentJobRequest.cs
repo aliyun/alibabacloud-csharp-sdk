@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
 {
     public class GetYikeAgentJobRequest : TeaModel {
         /// <summary>
+        /// <para>The task ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

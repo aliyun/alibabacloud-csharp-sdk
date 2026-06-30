@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
 {
     public class GetYikeUserCreditRequest : TeaModel {
         /// <summary>
+        /// <para>The user ID of the sub-account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

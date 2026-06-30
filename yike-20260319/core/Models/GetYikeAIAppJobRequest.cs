@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
 {
     public class GetYikeAIAppJobRequest : TeaModel {
         /// <summary>
+        /// <para>The task ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b><b>20b48fb04483915d4f2cd8ac</b></b></para>
         /// </summary>

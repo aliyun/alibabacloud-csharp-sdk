@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
 {
     public class CreateYikeAssetUploadRequest : TeaModel {
         /// <summary>
+        /// <para>The file name extension.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         public string FileExt { get; set; }
 
         /// <summary>
+        /// <para>The file type. Default value: Media.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>StoryboardInput</para>
         /// </summary>

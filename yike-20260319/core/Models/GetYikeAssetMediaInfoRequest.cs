@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
 {
     public class GetYikeAssetMediaInfoRequest : TeaModel {
         /// <summary>
+        /// <para>The media asset ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

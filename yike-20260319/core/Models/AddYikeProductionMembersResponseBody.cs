@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the member is added.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

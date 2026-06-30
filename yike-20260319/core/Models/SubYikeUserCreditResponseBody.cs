@@ -10,6 +10,11 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
 {
     public class SubYikeUserCreditResponseBody : TeaModel {
         /// <summary>
+        /// <para>The error code returned when the deduction fails.</para>
+        /// <list type="bullet">
+        /// <item><description>NOT_ENOUGH_ALLOCATE_CREDIT_QUOTA: the account credit balance is insufficient.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>NOT_ENOUGH_ALLOCATE_CREDIT_QUOTA</para>
         /// </summary>
@@ -28,6 +33,12 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the operation is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Successful.</description></item>
+        /// <item><description>false: Failed.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

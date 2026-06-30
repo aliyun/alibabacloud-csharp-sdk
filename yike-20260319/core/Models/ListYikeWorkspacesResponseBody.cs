@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Total number of workspaces</para>
+        /// 
         /// <b>Example:</b>
         /// <para>54</para>
         /// </summary>
@@ -27,11 +29,16 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
 
+        /// <summary>
+        /// <para>Workspace list</para>
+        /// </summary>
         [NameInMap("WorkspaceList")]
         [Validation(Required=false)]
         public List<ListYikeWorkspacesResponseBodyWorkspaceList> WorkspaceList { get; set; }
         public class ListYikeWorkspacesResponseBodyWorkspaceList : TeaModel {
             /// <summary>
+            /// <para>Workspace code</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ABCD12</para>
             /// </summary>
@@ -40,6 +47,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
             public string Code { get; set; }
 
             /// <summary>
+            /// <para>Creation time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2026-04-29T10:22:44Z</para>
             /// </summary>
@@ -48,6 +57,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>Default project ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>pd_1234***</para>
             /// </summary>
@@ -56,6 +67,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
             public string DefaultProductionId { get; set; }
 
             /// <summary>
+            /// <para>Workspace status</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Online</para>
             /// </summary>
@@ -64,6 +77,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>Title</para>
+            /// 
             /// <b>Example:</b>
             /// <para>workspace title</para>
             /// </summary>
@@ -72,6 +87,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
             public string Title { get; set; }
 
             /// <summary>
+            /// <para>Number of users in the workspace</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -80,6 +97,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
             public string UserCount { get; set; }
 
             /// <summary>
+            /// <para>Workspace ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ws_1243****</para>
             /// </summary>

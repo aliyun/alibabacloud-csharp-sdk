@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
 {
     public class AddYikeUserCreditRequest : TeaModel {
         /// <summary>
+        /// <para>The number of credits to increase. The value must be greater than 0.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         public int? Credit { get; set; }
 
         /// <summary>
+        /// <para>The ID of the sub-account user.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

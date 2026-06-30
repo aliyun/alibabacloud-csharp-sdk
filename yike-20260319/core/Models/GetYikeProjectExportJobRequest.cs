@@ -8,26 +8,17 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Yike20260319.Models
 {
-    public class SubmitYikeVoiceNarratorJobResponseBody : TeaModel {
+    public class GetYikeProjectExportJobRequest : TeaModel {
         /// <summary>
         /// <para>The task ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>task_abc123def456</para>
+        /// <para>68ca759e798b40b4903b255*******</para>
         /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public string JobId { get; set; }
-
-        /// <summary>
-        /// <para>The request ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>req_create_20260420_001</para>
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
     }
 

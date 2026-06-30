@@ -18,7 +18,11 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"cn-shanghai", "yike.cn-shanghai.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("yike", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -39,7 +43,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>增加一刻项目成员</para>
+        /// <para>Adds a member to a Yike project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -85,7 +89,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>增加一刻项目成员</para>
+        /// <para>Adds a member to a Yike project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -131,7 +135,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>增加一刻项目成员</para>
+        /// <para>Adds a member to a Yike project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -149,7 +153,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>增加一刻项目成员</para>
+        /// <para>Adds a member to a Yike project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -167,7 +171,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>增加用户积分</para>
+        /// <para>Increases user credits.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -213,7 +217,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>增加用户积分</para>
+        /// <para>Increases user credits.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -259,7 +263,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>增加用户积分</para>
+        /// <para>Increases user credits.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -277,7 +281,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>增加用户积分</para>
+        /// <para>Increases user credits.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -295,7 +299,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量获取一刻AI应用生成任务</para>
+        /// <para>Retrieves multiple Yike AI application generation tasks in a batch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -337,7 +341,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量获取一刻AI应用生成任务</para>
+        /// <para>Retrieves multiple Yike AI application generation tasks in a batch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -379,7 +383,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量获取一刻AI应用生成任务</para>
+        /// <para>Retrieves multiple Yike AI application generation tasks in a batch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -397,7 +401,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量获取一刻AI应用生成任务</para>
+        /// <para>Retrieves multiple Yike AI application generation tasks in a batch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -415,7 +419,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量获取媒资信息</para>
+        /// <para>Retrieves information about multiple media assets in a batch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -457,7 +461,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量获取媒资信息</para>
+        /// <para>Retrieves information about multiple media assets in a batch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -499,7 +503,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量获取媒资信息</para>
+        /// <para>Retrieves information about multiple media assets in a batch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -517,7 +521,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量获取媒资信息</para>
+        /// <para>Retrieves information about multiple media assets in a batch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -535,7 +539,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻媒资上传凭证</para>
+        /// <para>Retrieves the upload credential for a media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -581,7 +585,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻媒资上传凭证</para>
+        /// <para>Retrieves the upload credential for a media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -627,7 +631,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻媒资上传凭证</para>
+        /// <para>Retrieves the upload credential for a media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -645,7 +649,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻媒资上传凭证</para>
+        /// <para>Retrieves the upload credential for a media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -663,7 +667,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一刻项目</para>
+        /// <para>Creates a project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -709,7 +713,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一刻项目</para>
+        /// <para>Creates a project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -755,7 +759,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一刻项目</para>
+        /// <para>Creates a project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -773,7 +777,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一刻项目</para>
+        /// <para>Creates a project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -791,7 +795,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一刻子用户</para>
+        /// <para>Creates a sub-account user in WonderClip.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -849,7 +853,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一刻子用户</para>
+        /// <para>Creates a sub-account user in WonderClip.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -907,7 +911,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一刻子用户</para>
+        /// <para>Creates a sub-account user in WonderClip.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -925,7 +929,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一刻子用户</para>
+        /// <para>Creates a sub-account user in WonderClip.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -943,7 +947,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建工作室</para>
+        /// <para>Creates a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -989,7 +993,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建工作室</para>
+        /// <para>Creates a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1035,7 +1039,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建工作室</para>
+        /// <para>Creates a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1053,7 +1057,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建工作室</para>
+        /// <para>Creates a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1071,7 +1075,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除媒资信息</para>
+        /// <para>Deletes media asset information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1117,7 +1121,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除媒资信息</para>
+        /// <para>Deletes media asset information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1163,7 +1167,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除媒资信息</para>
+        /// <para>Deletes media asset information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1181,7 +1185,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除媒资信息</para>
+        /// <para>Deletes media asset information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1199,7 +1203,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻AI应用任务</para>
+        /// <para>Retrieves the details of an AI application task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1241,7 +1245,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻AI应用任务</para>
+        /// <para>Retrieves the details of an AI application task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1283,7 +1287,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻AI应用任务</para>
+        /// <para>Retrieves the details of an AI application task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1301,7 +1305,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻AI应用任务</para>
+        /// <para>Retrieves the details of an AI application task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1319,7 +1323,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询一刻口播视频生成任务</para>
+        /// <para>Queries an agent task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1361,7 +1365,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询一刻口播视频生成任务</para>
+        /// <para>Queries an agent task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1403,7 +1407,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询一刻口播视频生成任务</para>
+        /// <para>Queries an agent task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1421,7 +1425,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询一刻口播视频生成任务</para>
+        /// <para>Queries an agent task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1439,7 +1443,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻媒资内容信息</para>
+        /// <para>Retrieves the content information of a media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1481,7 +1485,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻媒资内容信息</para>
+        /// <para>Retrieves the content information of a media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1523,7 +1527,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻媒资内容信息</para>
+        /// <para>Retrieves the content information of a media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1541,7 +1545,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻媒资内容信息</para>
+        /// <para>Retrieves the content information of a media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1559,7 +1563,127 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询一刻提示词扩写和音频修复视频生成任务</para>
+        /// <para>Queries the information and results of an editing project export task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetYikeProjectExportJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetYikeProjectExportJobResponse
+        /// </returns>
+        public GetYikeProjectExportJobResponse GetYikeProjectExportJobWithOptions(GetYikeProjectExportJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetYikeProjectExportJob",
+                Version = "2026-03-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetYikeProjectExportJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information and results of an editing project export task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetYikeProjectExportJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetYikeProjectExportJobResponse
+        /// </returns>
+        public async Task<GetYikeProjectExportJobResponse> GetYikeProjectExportJobWithOptionsAsync(GetYikeProjectExportJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetYikeProjectExportJob",
+                Version = "2026-03-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetYikeProjectExportJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information and results of an editing project export task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetYikeProjectExportJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetYikeProjectExportJobResponse
+        /// </returns>
+        public GetYikeProjectExportJobResponse GetYikeProjectExportJob(GetYikeProjectExportJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetYikeProjectExportJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information and results of an editing project export task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetYikeProjectExportJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetYikeProjectExportJobResponse
+        /// </returns>
+        public async Task<GetYikeProjectExportJobResponse> GetYikeProjectExportJobAsync(GetYikeProjectExportJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetYikeProjectExportJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a Yike prompt enhancement and audio repair video generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1601,7 +1725,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询一刻提示词扩写和音频修复视频生成任务</para>
+        /// <para>Queries a Yike prompt enhancement and audio repair video generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1643,7 +1767,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询一刻提示词扩写和音频修复视频生成任务</para>
+        /// <para>Queries a Yike prompt enhancement and audio repair video generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1661,7 +1785,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询一刻提示词扩写和音频修复视频生成任务</para>
+        /// <para>Queries a Yike prompt enhancement and audio repair video generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1679,7 +1803,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻故事板任务</para>
+        /// <para>Retrieves a storyboard task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1721,7 +1845,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻故事板任务</para>
+        /// <para>Retrieves a storyboard task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1763,7 +1887,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻故事板任务</para>
+        /// <para>Retrieves a storyboard task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1781,7 +1905,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻故事板任务</para>
+        /// <para>Retrieves a storyboard task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1799,7 +1923,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻子用户信息</para>
+        /// <para>Retrieves information about a WonderClip sub-account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1841,7 +1965,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻子用户信息</para>
+        /// <para>Retrieves information about a WonderClip sub-account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1883,7 +2007,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻子用户信息</para>
+        /// <para>Retrieves information about a WonderClip sub-account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1901,7 +2025,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻子用户信息</para>
+        /// <para>Retrieves information about a WonderClip sub-account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1919,7 +2043,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询一刻用户积分</para>
+        /// <para>Queries the credit balance of a WonderClip user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1961,7 +2085,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询一刻用户积分</para>
+        /// <para>Queries the credit balance of a WonderClip user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2003,7 +2127,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询一刻用户积分</para>
+        /// <para>Queries the credit balance of a WonderClip user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2021,7 +2145,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询一刻用户积分</para>
+        /// <para>Queries the credit balance of a WonderClip user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2039,7 +2163,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询一刻口播视频生成任务</para>
+        /// <para>Queries an intelligent video generation task for a narration-only video without a digital human.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2081,7 +2205,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询一刻口播视频生成任务</para>
+        /// <para>Queries an intelligent video generation task for a narration-only video without a digital human.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2123,7 +2247,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询一刻口播视频生成任务</para>
+        /// <para>Queries an intelligent video generation task for a narration-only video without a digital human.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2141,7 +2265,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询一刻口播视频生成任务</para>
+        /// <para>Queries an intelligent video generation task for a narration-only video without a digital human.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2159,7 +2283,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻文件夹列表</para>
+        /// <para>Retrieves the list of folders.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2209,7 +2333,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻文件夹列表</para>
+        /// <para>Retrieves the list of folders.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2259,7 +2383,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻文件夹列表</para>
+        /// <para>Retrieves the list of folders.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2277,7 +2401,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻文件夹列表</para>
+        /// <para>Retrieves the list of folders.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2295,7 +2419,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻项目列表</para>
+        /// <para>Retrieves a list of Yike projects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2353,7 +2477,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻项目列表</para>
+        /// <para>Retrieves a list of Yike projects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2411,7 +2535,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻项目列表</para>
+        /// <para>Retrieves a list of Yike projects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2429,7 +2553,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻项目列表</para>
+        /// <para>Retrieves a list of Yike projects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2447,7 +2571,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻工作室列表</para>
+        /// <para>Get Yike Workspace List</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2493,7 +2617,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻工作室列表</para>
+        /// <para>Get Yike Workspace List</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2539,7 +2663,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻工作室列表</para>
+        /// <para>Get Yike Workspace List</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2557,7 +2681,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻工作室列表</para>
+        /// <para>Get Yike Workspace List</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2575,7 +2699,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查应用参数是否合法</para>
+        /// <para>Checks whether the application parameters are valid.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2621,7 +2745,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查应用参数是否合法</para>
+        /// <para>Checks whether the application parameters are valid.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2667,7 +2791,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查应用参数是否合法</para>
+        /// <para>Checks whether the application parameters are valid.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2685,7 +2809,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查应用参数是否合法</para>
+        /// <para>Checks whether the application parameters are valid.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2703,7 +2827,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>注册一刻媒资</para>
+        /// <para>Registers a Yike media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2757,7 +2881,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>注册一刻媒资</para>
+        /// <para>Registers a Yike media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2811,7 +2935,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>注册一刻媒资</para>
+        /// <para>Registers a Yike media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2829,7 +2953,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>注册一刻媒资</para>
+        /// <para>Registers a Yike media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2847,7 +2971,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>故事板任务恢复继续执行任务</para>
+        /// <para>Resumes the execution of a storyboard task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2889,7 +3013,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>故事板任务恢复继续执行任务</para>
+        /// <para>Resumes the execution of a storyboard task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2931,7 +3055,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>故事板任务恢复继续执行任务</para>
+        /// <para>Resumes the execution of a storyboard task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2949,7 +3073,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>故事板任务恢复继续执行任务</para>
+        /// <para>Resumes the execution of a storyboard task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2967,7 +3091,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置一刻事件回调</para>
+        /// <para>Configures event callbacks for the business system.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3013,7 +3137,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置一刻事件回调</para>
+        /// <para>Configures event callbacks for the business system.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3059,7 +3183,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置一刻事件回调</para>
+        /// <para>Configures event callbacks for the business system.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3077,7 +3201,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置一刻事件回调</para>
+        /// <para>Configures event callbacks for the business system.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3095,7 +3219,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置用户角色</para>
+        /// <para>Sets the user role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3141,7 +3265,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置用户角色</para>
+        /// <para>Sets the user role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3187,7 +3311,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置用户角色</para>
+        /// <para>Sets the user role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3205,7 +3329,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置用户角色</para>
+        /// <para>Sets the user role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3223,7 +3347,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>扣减用户积分</para>
+        /// <para>Reclaims credits from a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3269,7 +3393,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>扣减用户积分</para>
+        /// <para>Reclaims credits from a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3315,7 +3439,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>扣减用户积分</para>
+        /// <para>Reclaims credits from a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3333,7 +3457,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>扣减用户积分</para>
+        /// <para>Reclaims credits from a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3351,7 +3475,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交一刻AI应用任务</para>
+        /// <para>Submits an AI application task to Yike AI.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3405,7 +3529,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交一刻AI应用任务</para>
+        /// <para>Submits an AI application task to Yike AI.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3459,7 +3583,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交一刻AI应用任务</para>
+        /// <para>Submits an AI application task to Yike AI.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3477,7 +3601,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交一刻AI应用任务</para>
+        /// <para>Submits an AI application task to Yike AI.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3495,8 +3619,14 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交一刻数字人口播视频生成任务</para>
+        /// <para>Creates an intelligent video production task for a digital human oral broadcasting scenario. This task is applicable to video scenarios such as influencer product promotion and knowledge sharing.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation generates a video featuring a virtual human delivering an oral broadcast based on the provided text content and other parameters such as digital human information and common scenario type. You must specify key configuration items including the text type (raw script or oral broadcast script), video dimensions, and resolution. You can also choose whether to add subtitles or specify the output language. In addition, you can pass custom parameters through the <c>UserData</c> field, which are returned as-is in the callback.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitYikeAvatarNarratorJobRequest
@@ -3541,8 +3671,14 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交一刻数字人口播视频生成任务</para>
+        /// <para>Creates an intelligent video production task for a digital human oral broadcasting scenario. This task is applicable to video scenarios such as influencer product promotion and knowledge sharing.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation generates a video featuring a virtual human delivering an oral broadcast based on the provided text content and other parameters such as digital human information and common scenario type. You must specify key configuration items including the text type (raw script or oral broadcast script), video dimensions, and resolution. You can also choose whether to add subtitles or specify the output language. In addition, you can pass custom parameters through the <c>UserData</c> field, which are returned as-is in the callback.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitYikeAvatarNarratorJobRequest
@@ -3587,8 +3723,14 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交一刻数字人口播视频生成任务</para>
+        /// <para>Creates an intelligent video production task for a digital human oral broadcasting scenario. This task is applicable to video scenarios such as influencer product promotion and knowledge sharing.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation generates a video featuring a virtual human delivering an oral broadcast based on the provided text content and other parameters such as digital human information and common scenario type. You must specify key configuration items including the text type (raw script or oral broadcast script), video dimensions, and resolution. You can also choose whether to add subtitles or specify the output language. In addition, you can pass custom parameters through the <c>UserData</c> field, which are returned as-is in the callback.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitYikeAvatarNarratorJobRequest
@@ -3605,8 +3747,14 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交一刻数字人口播视频生成任务</para>
+        /// <para>Creates an intelligent video production task for a digital human oral broadcasting scenario. This task is applicable to video scenarios such as influencer product promotion and knowledge sharing.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation generates a video featuring a virtual human delivering an oral broadcast based on the provided text content and other parameters such as digital human information and common scenario type. You must specify key configuration items including the text type (raw script or oral broadcast script), video dimensions, and resolution. You can also choose whether to add subtitles or specify the output language. In addition, you can pass custom parameters through the <c>UserData</c> field, which are returned as-is in the callback.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitYikeAvatarNarratorJobRequest
@@ -3623,7 +3771,143 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交一刻提示词扩写和音频修复视频生成任务</para>
+        /// <para>Submits an online editing project export task that supports exporting pure audio and SRT subtitles.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitYikeProjectExportJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitYikeProjectExportJobResponse
+        /// </returns>
+        public SubmitYikeProjectExportJobResponse SubmitYikeProjectExportJobWithOptions(SubmitYikeProjectExportJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExportType))
+            {
+                query["ExportType"] = request.ExportType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitYikeProjectExportJob",
+                Version = "2026-03-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitYikeProjectExportJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits an online editing project export task that supports exporting pure audio and SRT subtitles.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitYikeProjectExportJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitYikeProjectExportJobResponse
+        /// </returns>
+        public async Task<SubmitYikeProjectExportJobResponse> SubmitYikeProjectExportJobWithOptionsAsync(SubmitYikeProjectExportJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExportType))
+            {
+                query["ExportType"] = request.ExportType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitYikeProjectExportJob",
+                Version = "2026-03-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitYikeProjectExportJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits an online editing project export task that supports exporting pure audio and SRT subtitles.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitYikeProjectExportJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitYikeProjectExportJobResponse
+        /// </returns>
+        public SubmitYikeProjectExportJobResponse SubmitYikeProjectExportJob(SubmitYikeProjectExportJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitYikeProjectExportJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits an online editing project export task that supports exporting pure audio and SRT subtitles.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitYikeProjectExportJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitYikeProjectExportJobResponse
+        /// </returns>
+        public async Task<SubmitYikeProjectExportJobResponse> SubmitYikeProjectExportJobAsync(SubmitYikeProjectExportJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitYikeProjectExportJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a video generation task with prompt enhancement and audio repair.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3669,7 +3953,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交一刻提示词扩写和音频修复视频生成任务</para>
+        /// <para>Submits a video generation task with prompt enhancement and audio repair.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3715,7 +3999,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交一刻提示词扩写和音频修复视频生成任务</para>
+        /// <para>Submits a video generation task with prompt enhancement and audio repair.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3733,7 +4017,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交一刻提示词扩写和音频修复视频生成任务</para>
+        /// <para>Submits a video generation task with prompt enhancement and audio repair.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3751,8 +4035,13 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交一刻故事板全链路编排任务</para>
+        /// <para>Submits a storyboard generation task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Ensure that your credits remain above 5,000 when calling this operation. Insufficient credits may cause the task to be interrupted.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitYikeStoryboardJobRequest
@@ -3851,8 +4140,13 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交一刻故事板全链路编排任务</para>
+        /// <para>Submits a storyboard generation task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Ensure that your credits remain above 5,000 when calling this operation. Insufficient credits may cause the task to be interrupted.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitYikeStoryboardJobRequest
@@ -3951,8 +4245,13 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交一刻故事板全链路编排任务</para>
+        /// <para>Submits a storyboard generation task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Ensure that your credits remain above 5,000 when calling this operation. Insufficient credits may cause the task to be interrupted.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitYikeStoryboardJobRequest
@@ -3969,8 +4268,13 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交一刻故事板全链路编排任务</para>
+        /// <para>Submits a storyboard generation task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Ensure that your credits remain above 5,000 when calling this operation. Insufficient credits may cause the task to be interrupted.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitYikeStoryboardJobRequest
@@ -3987,7 +4291,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交一刻口播视频生成任务</para>
+        /// <para>Creates an intelligent video generation task for a voiceover-only scenario (without a digital human). This task is applicable to video scenarios such as product showcases and news broadcasts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4033,7 +4337,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交一刻口播视频生成任务</para>
+        /// <para>Creates an intelligent video generation task for a voiceover-only scenario (without a digital human). This task is applicable to video scenarios such as product showcases and news broadcasts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4079,7 +4383,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交一刻口播视频生成任务</para>
+        /// <para>Creates an intelligent video generation task for a voiceover-only scenario (without a digital human). This task is applicable to video scenarios such as product showcases and news broadcasts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4097,7 +4401,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交一刻口播视频生成任务</para>
+        /// <para>Creates an intelligent video generation task for a voiceover-only scenario (without a digital human). This task is applicable to video scenarios such as product showcases and news broadcasts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4115,7 +4419,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新一刻项目</para>
+        /// <para>Update a Yike project</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4161,7 +4465,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新一刻项目</para>
+        /// <para>Update a Yike project</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4207,7 +4511,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新一刻项目</para>
+        /// <para>Update a Yike project</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4225,7 +4529,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新一刻项目</para>
+        /// <para>Update a Yike project</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4243,7 +4547,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改一刻项目成员权限</para>
+        /// <para>Modifies the permissions of a Yike project member.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4293,7 +4597,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改一刻项目成员权限</para>
+        /// <para>Modifies the permissions of a Yike project member.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4343,7 +4647,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改一刻项目成员权限</para>
+        /// <para>Modifies the permissions of a Yike project member.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4361,7 +4665,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改一刻项目成员权限</para>
+        /// <para>Modifies the permissions of a Yike project member.</para>
         /// </summary>
         /// 
         /// <param name="request">

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
 {
     public class GetYikeUserCreditResponseBody : TeaModel {
         /// <summary>
+        /// <para>The total allocated credits.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10417.0</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         public string CreditTotal { get; set; }
 
         /// <summary>
+        /// <para>The remaining available credits.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>165.0</para>
         /// </summary>

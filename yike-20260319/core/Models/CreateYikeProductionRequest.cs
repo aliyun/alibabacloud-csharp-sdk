@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
 {
     public class CreateYikeProductionRequest : TeaModel {
         /// <summary>
+        /// <para>The project title.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         public string Title { get; set; }
 
         /// <summary>
+        /// <para>The workspace ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>581236</para>
         /// </summary>

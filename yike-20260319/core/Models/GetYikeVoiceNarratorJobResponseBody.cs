@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
 {
     public class GetYikeVoiceNarratorJobResponseBody : TeaModel {
         /// <summary>
+        /// <para>The error code. This parameter is returned only when JobStatus is Failed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>WorkflowTaskFailed</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
+        /// <para>The task ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>task_abc123def456</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         public string JobId { get; set; }
 
         /// <summary>
+        /// <para>The input parameters of the task, in JSON string format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{\&quot;TextType\&quot;:2,\&quot;TextContent\&quot;:\&quot;Today, Beijing held a press conference to announce plans to further optimize the city\&quot;s transportation network, including adding three new subway lines within the next three years....\&quot;,\&quot;AspectRatio\&quot;:\&quot;16:9\&quot;, \&quot;Resolution\&quot;:\&quot;720P\&quot;, \&quot;OutputLanguages\&quot;:[\&quot;CN\&quot;,\&quot;YUE\&quot;]&quot;}</para>
         /// </summary>
@@ -33,11 +39,16 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         [Validation(Required=false)]
         public string JobParams { get; set; }
 
+        /// <summary>
+        /// <para>The task results. This parameter is valid only when JobStatus is Succeeded.</para>
+        /// </summary>
         [NameInMap("JobResult")]
         [Validation(Required=false)]
         public List<GetYikeVoiceNarratorJobResponseBodyJobResult> JobResult { get; set; }
         public class GetYikeVoiceNarratorJobResponseBodyJobResult : TeaModel {
             /// <summary>
+            /// <para>The online editing project ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>01a6adbbd181437eb5030d3d93e0182d</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
             public string EditingProjectId { get; set; }
 
             /// <summary>
+            /// <para>The asset ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>9d7e982012c671f1b803e7f6d75a6302</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
             public string MediaId { get; set; }
 
             /// <summary>
+            /// <para>The output language.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>CN</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
             public string OutputLanguage { get; set; }
 
             /// <summary>
+            /// <para>The download URL.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="https://test.oss-cn-shanghai.aliyuncs.com/videos/task_abc123def456.mp4">https://test.oss-cn-shanghai.aliyuncs.com/videos/task_abc123def456.mp4</a></para>
             /// </summary>
@@ -72,6 +89,13 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         }
 
         /// <summary>
+        /// <para>The task status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Running</description></item>
+        /// <item><description>Succeeded</description></item>
+        /// <item><description>Failed.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Running</para>
         /// </summary>
@@ -80,6 +104,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         public string JobStatus { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>req_query_20260420_002</para>
         /// </summary>
@@ -88,6 +114,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The custom user data passed in when the task was created. The value is returned as-is.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{\&quot;newsKey\&quot;:\&quot;NEWS_20260420_001\&quot;,\&quot;key1\&quot;:\&quot;value1\&quot;, \&quot;NotifyAddress\&quot;:\&quot;<a href="https://cms.example.com/callback/video-task%5C%5C%22%7D">https://cms.example.com/callback/video-task\\&quot;}</a></para>
         /// </summary>

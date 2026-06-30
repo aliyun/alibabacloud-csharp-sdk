@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
 {
     public class ListYikeProductionsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The maximum number of results to return.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>50</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The pagination token for the next page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Token</para>
         /// </summary>
@@ -25,11 +29,16 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// <para>The list of projects.</para>
+        /// </summary>
         [NameInMap("ProductionList")]
         [Validation(Required=false)]
         public List<ListYikeProductionsResponseBodyProductionList> ProductionList { get; set; }
         public class ListYikeProductionsResponseBodyProductionList : TeaModel {
             /// <summary>
+            /// <para>The authentication method.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Manage</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
             public string Auth { get; set; }
 
             /// <summary>
+            /// <para>The cover URL.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="https://tagvvcloud-material-center-prod.oss-cn-hangzhou.aliyuncs.com/sumvideo/utils_image/sumvideo-video-cover.png">https://tagvvcloud-material-center-prod.oss-cn-hangzhou.aliyuncs.com/sumvideo/utils_image/sumvideo-video-cover.png</a></para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
             public string CoverUrl { get; set; }
 
             /// <summary>
+            /// <para>The creation time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2026-01-07T02:21:36Z</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The username of the creator.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>aliyun_183*************</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
             public string CreateUserName { get; set; }
 
             /// <summary>
+            /// <para>The project description.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Swas_QuerySwasInstanceByRegion</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The project ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>pd_463862****</para>
             /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
             public string ProductionId { get; set; }
 
             /// <summary>
+            /// <para>The project title.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Harvest</para>
             /// </summary>
@@ -86,6 +107,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
             public string Title { get; set; }
 
             /// <summary>
+            /// <para>The workspace ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>llm-m3r546h1n9kq3mtm</para>
             /// </summary>
@@ -96,6 +119,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b><b><b>11-DB8D-4A9A-875B-275798</b></b></b></para>
         /// </summary>

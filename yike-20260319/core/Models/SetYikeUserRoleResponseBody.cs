@@ -20,6 +20,12 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the role is set. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Successful.</description></item>
+        /// <item><description>false: Failed.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

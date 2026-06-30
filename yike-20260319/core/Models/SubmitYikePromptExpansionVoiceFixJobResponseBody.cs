@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
 {
     public class SubmitYikePromptExpansionVoiceFixJobResponseBody : TeaModel {
         /// <summary>
+        /// <para>The task ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>68ca759e798b40b4903b255********</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         public string JobId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b><b>63E8B7C7-4812-46AD-0FA56029AC86</b></b></para>
         /// </summary>

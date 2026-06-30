@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
 {
     public class PrecheckYikeAIAppJobRequest : TeaModel {
         /// <summary>
+        /// <para>The AI application ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>app-****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>The input parameters for running the AI application. The value is a JSON-serialized string.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{\&quot;LoadImage.1.TargetImage\&quot;:\&quot;MediaId1\&quot;}</para>
         /// </summary>

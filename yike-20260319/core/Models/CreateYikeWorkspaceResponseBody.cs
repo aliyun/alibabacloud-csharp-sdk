@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
 {
     public class CreateYikeWorkspaceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The project ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ProductionId</para>
         /// </summary>
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The workspace ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>llm-zna577pdximvztk5</para>
         /// </summary>

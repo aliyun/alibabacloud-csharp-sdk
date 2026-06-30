@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
 {
     public class AddYikeProductionMembersRequest : TeaModel {
         /// <summary>
+        /// <para>The project ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         public string ProductionId { get; set; }
 
         /// <summary>
+        /// <para>The IDs of the RAM users.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

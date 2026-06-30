@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
 {
     public class GetYikeStoryboardJobRequest : TeaModel {
         /// <summary>
+        /// <para>The screenshot task ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b><b>20b48fb04483915d4f2cd8ac</b></b></para>
         /// </summary>

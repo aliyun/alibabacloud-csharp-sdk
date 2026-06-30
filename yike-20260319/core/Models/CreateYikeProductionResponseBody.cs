@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
 {
     public class CreateYikeProductionResponseBody : TeaModel {
         /// <summary>
+        /// <para>The project ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ProductionId</para>
         /// </summary>

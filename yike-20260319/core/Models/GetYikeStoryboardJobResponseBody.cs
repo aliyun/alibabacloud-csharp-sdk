@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Yike20260319.Models
 {
     public class GetYikeStoryboardJobResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The credit consumption.</para>
+        /// </summary>
         [NameInMap("JobCredit")]
         [Validation(Required=false)]
         public GetYikeStoryboardJobResponseBodyJobCredit JobCredit { get; set; }
         public class GetYikeStoryboardJobResponseBodyJobCredit : TeaModel {
             /// <summary>
+            /// <para>The credit consumption for element image generation.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10.0</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
             public string ElementImageGeneration { get; set; }
 
             /// <summary>
+            /// <para>The total credit consumption.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>200.2</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
             public string TotalCreditCost { get; set; }
 
             /// <summary>
+            /// <para>The credit consumption for video composition.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10.2</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
             public string VideoComposition { get; set; }
 
             /// <summary>
+            /// <para>The credit consumption for video generation.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>180.0</para>
             /// </summary>
@@ -48,6 +59,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         }
 
         /// <summary>
+        /// <para>The task ID. You can obtain this value from the response of <a href="https://help.aliyun.com/document_detail/461964.html">SubmitPackageJob</a>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b><b>a046-263c-3560-978a-fb287782</b></b></para>
         /// </summary>
@@ -55,11 +68,16 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         [Validation(Required=false)]
         public string JobId { get; set; }
 
+        /// <summary>
+        /// <para>The algorithm job parameters. This is a JSON object whose content varies depending on the algorithm.</para>
+        /// </summary>
         [NameInMap("JobParams")]
         [Validation(Required=false)]
         public GetYikeStoryboardJobResponseBodyJobParams JobParams { get; set; }
         public class GetYikeStoryboardJobResponseBodyJobParams : TeaModel {
             /// <summary>
+            /// <para>The aspect ratio of the video.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>16:9</para>
             /// </summary>
@@ -68,6 +86,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
             public string AspectRatio { get; set; }
 
             /// <summary>
+            /// <para>The OSS URL of the file.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="https://test.oss-cn-shanghai.aliyuncs.com/test.mp4">https://test.oss-cn-shanghai.aliyuncs.com/test.mp4</a></para>
             /// </summary>
@@ -76,6 +96,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
             public string FileURL { get; set; }
 
             /// <summary>
+            /// <para>The random seed.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{
             ///   &quot;AudioEnable&quot;: false
@@ -86,6 +108,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
             public string ModelParams { get; set; }
 
             /// <summary>
+            /// <para>The narration voice ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>sys_YoungGracefulWoman</para>
             /// </summary>
@@ -94,6 +118,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
             public string NarrationVoiceId { get; set; }
 
             /// <summary>
+            /// <para>The resolution of the generated video.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1K</para>
             /// </summary>
@@ -102,6 +128,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
             public string Resolution { get; set; }
 
             /// <summary>
+            /// <para>The shot prompt generation mode.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>multi</para>
             /// </summary>
@@ -110,6 +138,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
             public string ShotPromptMode { get; set; }
 
             /// <summary>
+            /// <para>The shot splitting mode.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>firstPersonNarration</para>
             /// </summary>
@@ -118,6 +148,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
             public string ShotSplitMode { get; set; }
 
             /// <summary>
+            /// <para>The source type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Novel</para>
             /// </summary>
@@ -126,6 +158,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
             public string SourceType { get; set; }
 
             /// <summary>
+            /// <para>The style ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>RealisticPhotography</para>
             /// </summary>
@@ -134,6 +168,12 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
             public string StyleId { get; set; }
 
             /// <summary>
+            /// <para>The task title. Requirements:</para>
+            /// <list type="bullet">
+            /// <item><description>The title cannot exceed 128 bytes in length.</description></item>
+            /// <item><description>The title must be UTF-8 encoded.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>test-title</para>
             /// </summary>
@@ -142,6 +182,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
             public string Title { get; set; }
 
             /// <summary>
+            /// <para>The video model.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>wan2.6-r2v-flash</para>
             /// </summary>
@@ -151,11 +193,16 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
 
         }
 
+        /// <summary>
+        /// <para>The task result.</para>
+        /// </summary>
         [NameInMap("JobResult")]
         [Validation(Required=false)]
         public GetYikeStoryboardJobResponseBodyJobResult JobResult { get; set; }
         public class GetYikeStoryboardJobResponseBodyJobResult : TeaModel {
             /// <summary>
+            /// <para>The list of abnormal storyboard IDs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>[\&quot;st_2053348871\&quot;]</para>
             /// </summary>
@@ -164,6 +211,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
             public string ExceptionStoryboardIds { get; set; }
 
             /// <summary>
+            /// <para>The list of failed shots.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>[{\&quot;errorCode\&quot;:\&quot;NoMediaData\&quot;,\&quot;storyboardId\&quot;:\&quot;st_2118280473\&quot;,\&quot;shotId\&quot;:\&quot;54\&quot;}]</para>
             /// </summary>
@@ -172,6 +221,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
             public string FailureShotList { get; set; }
 
             /// <summary>
+            /// <para>The downloadable OSS URL.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="https://test.oss-cn-shanghai.aliyuncs.com/test.mp4">https://test.oss-cn-shanghai.aliyuncs.com/test.mp4</a></para>
             /// </summary>
@@ -180,6 +231,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
             public string OutputUrl { get; set; }
 
             /// <summary>
+            /// <para>The URL of the SRT file.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="https://bucket.oss-cn-shanghai.aliyuncs.com/test/110412818/6bf24c75285142f395464d4b9c2bcf07.srt?Expires=1778220836&OSSAccessKeyId=*******&Signature=">https://bucket.oss-cn-shanghai.aliyuncs.com/test/110412818/6bf24c75285142f395464d4b9c2bcf07.srt?Expires=1778220836&amp;OSSAccessKeyId=*******&amp;Signature=</a>*******</para>
             /// </summary>
@@ -188,6 +241,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
             public string SrtFileUrl { get; set; }
 
             /// <summary>
+            /// <para>The detailed storyboard information for the storyboard generation task.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>[{\&quot;storyboardId\&quot;:\&quot;st_1541525214\&quot;,\&quot;title\&quot;:\&quot;test_1\&quot;,\&quot;status\&quot;:\&quot;Produced\&quot;,\&quot;subStatus\&quot;:\&quot;ProduceSucc\&quot;},{\&quot;storyboardId\&quot;:\&quot;st_1633435355\&quot;,\&quot;title\&quot;:\&quot;test_2\&quot;,\&quot;status\&quot;:\&quot;Produced\&quot;,\&quot;subStatus\&quot;:\&quot;ProduceSucc\&quot;}]</para>
             /// </summary>
@@ -196,6 +251,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
             public string StoryboardInfoList { get; set; }
 
             /// <summary>
+            /// <para>The list of successful storyboard IDs, separated by commas.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>st_2118280473, st_2118280471</para>
             /// </summary>
@@ -204,6 +261,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
             public string SuccessStoryboardIds { get; set; }
 
             /// <summary>
+            /// <para>The list of successful storyboards.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>[\&quot;st_2118280473\&quot;]</para>
             /// </summary>
@@ -214,6 +273,16 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         }
 
         /// <summary>
+        /// <para>The task status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>Succeeded</b>: The task is successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>Failed</b>: The task failed.</para>
+        /// </description></item>
+        /// <item><description><para><b>Running</b>: The task is running.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Succeeded</para>
         /// </summary>
@@ -222,6 +291,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         public string JobStatus { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b><b><b>3B-0E1A-586A-AC29-742247</b></b></b></para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
 {
     public class UpdateYikeProductionResponseBody : TeaModel {
         /// <summary>
+        /// <para>The project ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pd_12334**</para>
         /// </summary>

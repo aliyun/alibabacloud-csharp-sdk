@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
 {
     public class ListYikeWorkspacesRequest : TeaModel {
         /// <summary>
+        /// <para>Current page number</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         public int? PageNo { get; set; }
 
         /// <summary>
+        /// <para>Number of records per page</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>

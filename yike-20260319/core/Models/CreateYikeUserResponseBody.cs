@@ -19,11 +19,16 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The user information.</para>
+        /// </summary>
         [NameInMap("UserInfo")]
         [Validation(Required=false)]
         public CreateYikeUserResponseBodyUserInfo UserInfo { get; set; }
         public class CreateYikeUserResponseBodyUserInfo : TeaModel {
             /// <summary>
+            /// <para>The nickname of the user.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>nick</para>
             /// </summary>
@@ -32,6 +37,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
             public string Nickname { get; set; }
 
             /// <summary>
+            /// <para>The user ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>id</para>
             /// </summary>
@@ -40,6 +47,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
             public string UserId { get; set; }
 
             /// <summary>
+            /// <para>The username.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>name</para>
             /// </summary>
@@ -48,6 +57,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
             public string UserName { get; set; }
 
             /// <summary>
+            /// <para>The workspace ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>spaceId</para>
             /// </summary>

@@ -10,6 +10,11 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
 {
     public class UpdateYikeProductionMemberAuthRequest : TeaModel {
         /// <summary>
+        /// <para>The permission name. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Manage: manageable</description></item>
+        /// <item><description>Edit: editable.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +25,7 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         public string Auth { get; set; }
 
         /// <summary>
+        /// <para>The project ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,7 +36,11 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         public string ProductionId { get; set; }
 
         /// <summary>
+        /// <para>The RAM user ID.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>21******</para>
         /// </summary>
         [NameInMap("YikeUserId")]
         [Validation(Required=false)]
