@@ -4298,7 +4298,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改组织成员角色</para>
+        /// <para>Modifies the roles of organization members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4348,7 +4348,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改组织成员角色</para>
+        /// <para>Modifies the roles of organization members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4398,7 +4398,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改组织成员角色</para>
+        /// <para>Modifies the roles of organization members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4417,7 +4417,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改组织成员角色</para>
+        /// <para>Modifies the roles of organization members.</para>
         /// </summary>
         /// 
         /// <param name="request">

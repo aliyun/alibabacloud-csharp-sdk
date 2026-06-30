@@ -50,6 +50,20 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                 [Validation(Required=false)]
                 public List<string> AccessIps { get; set; }
 
+                [NameInMap("modelAccessScope")]
+                [Validation(Required=false)]
+                public ListApiKeysResponseBodyApiKeysAuthModelAccessScope ModelAccessScope { get; set; }
+                public class ListApiKeysResponseBodyApiKeysAuthModelAccessScope : TeaModel {
+                    [NameInMap("accessibleModels")]
+                    [Validation(Required=false)]
+                    public List<string> AccessibleModels { get; set; }
+
+                    [NameInMap("allowAllModels")]
+                    [Validation(Required=false)]
+                    public bool? AllowAllModels { get; set; }
+
+                }
+
                 /// <summary>
                 /// <para>All: all permissions. Custom: custom permissions.</para>
                 /// 
