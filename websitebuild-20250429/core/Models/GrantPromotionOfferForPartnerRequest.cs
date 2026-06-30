@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GrantPromotionOfferForPartnerRequest : TeaModel {
+        [NameInMap("ActivityCode")]
+        [Validation(Required=false)]
+        public string ActivityCode { get; set; }
+
         /// <summary>
         /// <para>The activity ID.</para>
         /// 

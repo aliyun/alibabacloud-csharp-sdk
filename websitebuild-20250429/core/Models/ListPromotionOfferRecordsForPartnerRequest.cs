@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ActivityCode { get; set; }
 
         /// <summary>
-        /// <para>The belonging ID.</para>
+        /// <para>The belong ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>

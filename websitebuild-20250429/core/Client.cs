@@ -10490,6 +10490,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActivityCode))
+            {
+                query["ActivityCode"] = request.ActivityCode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActivityId))
             {
                 query["ActivityId"] = request.ActivityId;
@@ -10553,6 +10557,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActivityCode))
+            {
+                query["ActivityCode"] = request.ActivityCode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActivityId))
             {
                 query["ActivityId"] = request.ActivityId;
