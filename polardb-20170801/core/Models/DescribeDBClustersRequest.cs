@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ConnectionString { get; set; }
 
         /// <summary>
-        /// <para>The cluster description. Fuzzy search is supported.</para>
+        /// <para>The cluster description. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-****************</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterDescription { get; set; }
 
         /// <summary>
-        /// <para>The IDs of one or more clusters. Separate multiple IDs with a comma.</para>
+        /// <para>The cluster ID. Separate multiple cluster IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-****************</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterIds { get; set; }
 
         /// <summary>
-        /// <para>The cluster status. For more information, see <a href="https://help.aliyun.com/document_detail/99286.html">Cluster state table</a>.</para>
+        /// <para>The cluster status. For valid values, see <a href="https://help.aliyun.com/document_detail/99286.html">Cluster status table</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Running</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterStatus { get; set; }
 
         /// <summary>
-        /// <para>The IDs of one or more nodes. Separate multiple IDs with a comma.</para>
+        /// <para>The node ID. You can specify multiple node IDs, separated by commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>pi-***************</para>
@@ -60,14 +60,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBNodeIds { get; set; }
 
         /// <summary>
-        /// <para>The database engine. Valid values:</para>
+        /// <para>The database type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>MySQL</b></para>
-        /// </description></item>
-        /// <item><description><para><b>PostgreSQL</b></para>
-        /// </description></item>
-        /// <item><description><para><b>Oracle</b></para>
-        /// </description></item>
+        /// <item><description><b>MySQL</b></description></item>
+        /// <item><description><b>PostgreSQL</b></description></item>
+        /// <item><description><b>Oracle</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -78,7 +75,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBType { get; set; }
 
         /// <summary>
-        /// <para>The database version.</para>
+        /// <para>The database engine version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5.6</para>
@@ -88,9 +85,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBVersion { get; set; }
 
         /// <summary>
-        /// <para>The query mode. Set the value to Simple to return only the basic metadata of clusters.</para>
+        /// <para>The query mode for the list. Set the value to Simple to use the simple mode, which returns only basic metadata of clusters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the operation returns detailed information about the clusters.</para>
+        /// <para>If you do not specify this parameter, the detailed mode is used by default, which returns detailed information about clusters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -125,7 +122,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. The value must be an integer that is greater than 0. Default value: <b>1</b>.</para>
+        /// <para>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -135,7 +132,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: <b>30</b>, <b>50</b>, and <b>100</b>.</para>
+        /// <para>The number of entries per page. Valid values: <b>30</b>, <b>50</b>, and <b>100</b>.</para>
         /// <para>Default value: <b>30</b>.</para>
         /// 
         /// <b>Example:</b>
@@ -146,12 +143,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The billing method. Valid values:</para>
+        /// <para>The billing method. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><para><b>Postpaid</b>: pay-as-you-go</para>
-        /// </description></item>
-        /// <item><description><para><b>Prepaid</b>: subscription</para>
-        /// </description></item>
+        /// <item><description><b>Postpaid</b>: pay-as-you-go.</description></item>
+        /// <item><description><b>Prepaid</b>: subscription.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -162,7 +157,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>Filters the query to return only clusters created within the specified number of days. Valid values: 0 to 15.</para>
+        /// <para>Filters clusters created within the last N days. Valid values: 0 to 15.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>
@@ -172,7 +167,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? RecentCreationInterval { get; set; }
 
         /// <summary>
-        /// <para>Filters the query to return only clusters that will expire within the specified number of days. Valid values: 0 to 15.</para>
+        /// <para>Filters clusters that expire within the next N days. Valid values: 0 to 15.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>
@@ -184,7 +179,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The region ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the available regions.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query available regions.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -214,16 +209,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The tags used to filter clusters.</para>
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeDBClustersRequestTag> Tag { get; set; }
         public class DescribeDBClustersRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of a tag used for filtering. You can specify up to 20 tags. The <c>n</c> in <c>Tag.n.Key</c> indicates the tag number and must be a consecutive integer starting from 1.</para>
+            /// <para>The tag key. You can use tags to filter the cluster list. You can specify up to 20 tag pairs. The number n for each tag pair must be unique and must be a consecutive integer that starts from 1. The Tag.n.Key parameter is paired with the Tag.n.Value parameter.</para>
             /// <remarks>
-            /// <para>The tag key cannot exceed 128 characters in length and cannot start with <c>aliyun</c>, <c>acs:</c>, <c>http://</c>, or <c>https://</c>.</para>
+            /// <para>The tag key can be up to 64 characters in length and cannot start with <c>aliyun</c>, <c>acs:</c>, <c>http://</c>, or <c>https://</c>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -234,9 +229,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value.</para>
+            /// <para>The tag value that corresponds to the tag key.</para>
             /// <remarks>
-            /// <para>The tag value cannot exceed 128 characters in length and cannot start with <c>aliyun</c>, <c>acs:</c>, <c>http://</c>, or <c>https://</c>.</para>
+            /// <para>The tag value can be up to 64 characters in length and cannot start with <c>aliyun</c>, <c>acs:</c>, <c>http://</c>, or <c>https://</c>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBClustersResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The details of the clusters.</para>
-        /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public DescribeDBClustersResponseBodyItems Items { get; set; }
@@ -27,6 +24,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 [NameInMap("Category")]
                 [Validation(Required=false)]
                 public string Category { get; set; }
+
+                [NameInMap("ConnectionResourceQuota")]
+                [Validation(Required=false)]
+                public long? ConnectionResourceQuota { get; set; }
+
+                [NameInMap("ConnectionResourceUsed")]
+                [Validation(Required=false)]
+                public long? ConnectionResourceUsed { get; set; }
 
                 [NameInMap("CpuCores")]
                 [Validation(Required=false)]
@@ -235,7 +240,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of clusters returned on the current page.</para>
+        /// <para>The number of clusters on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
