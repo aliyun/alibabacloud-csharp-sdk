@@ -27,6 +27,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <item><description>The translated text corresponding to the matched hotwords. Maximum length: 100 characters.</description></item>
         /// <item><description>This field is only used in translation-related scenarios.</description></item>
         /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>你好</para>
         /// </summary>
         [NameInMap("TranslatedText")]
         [Validation(Required=false)]

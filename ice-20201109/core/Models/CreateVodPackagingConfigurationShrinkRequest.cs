@@ -49,9 +49,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The package type.</para>
         /// <list type="bullet">
-        /// <item><description>HLS: packages content into TS segments for delivery over the HLS protocol.</description></item>
-        /// <item><description>HLS_CMAF: packages content into CMAF segments for delivery over the HLS protocol.</description></item>
-        /// <item><description>DASH: packages content for delivery over the DASH protocol.</description></item>
+        /// <item><description><para>HLS: packages content into TS segments for delivery over the HLS protocol.</para>
+        /// </description></item>
+        /// <item><description><para>HLS_CMAF: packages content into CMAF segments for delivery over the HLS protocol.</para>
+        /// </description></item>
+        /// <item><description><para>DASH: packages content for delivery over the DASH protocol.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

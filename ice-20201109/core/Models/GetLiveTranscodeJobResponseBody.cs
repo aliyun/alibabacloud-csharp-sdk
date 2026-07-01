@@ -97,9 +97,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <summary>
             /// <para>The state of the job.</para>
             /// <list type="bullet">
-            /// <item><description>0: The job is not started.</description></item>
-            /// <item><description>1: The job is in progress.</description></item>
-            /// <item><description>2: The job is stopped.</description></item>
+            /// <item><description><para>0: The job is not started.</para>
+            /// </description></item>
+            /// <item><description><para>1: The job is in progress.</para>
+            /// </description></item>
+            /// <item><description><para>2: The job is stopped.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

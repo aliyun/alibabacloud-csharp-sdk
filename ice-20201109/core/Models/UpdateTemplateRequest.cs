@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <para>The name of the online editing template.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>视频添加水印模板</para>
+        /// <para>Cloud editing template 1</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <para>The ID of the preview video.</para>
         /// 
         /// <b>Example:</b>
-        /// <para><b><b>20b48fb04483915d4f2cd8ac</b></b></para>
+        /// <para>1ae320b48fb04483915d4f2cd8ac****</para>
         /// </summary>
         [NameInMap("PreviewMedia")]
         [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <para>The IDs of the materials associated with the template for use by the regular template editor.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;video&quot;:[&quot;<b><b><b>c04f1d4a06996144cc1a</b></b></b>&quot;,&quot;<b><b><b>cb7db64841b159b4f2ea</b></b></b>&quot;],&quot;audio&quot;:[&quot;<b><b><b>c04f1d4a06996144cc1a</b></b></b>&quot;],&quot;image&quot;:[&quot;<b><b><b>c04f1d4a06996144cc1a</b></b></b>&quot;]}</para>
+        /// <para>{&quot;video&quot;:[&quot;f64c6acc840247edb6b12f575c66****&quot;,&quot;9675dcf040ba4525bb037c29d156****&quot;],&quot;audio&quot;:[&quot;62a54019d9114009a5ae9bcfd70b****&quot;],&quot;image&quot;:[&quot;743ffbeb7e004c758cdc1fb34c04****&quot;]}</para>
         /// </summary>
         [NameInMap("RelatedMediaids")]
         [Validation(Required=false)]
@@ -76,9 +76,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The source from which the template is modified. Default value: OpenAPI. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>AliyunConsole</description></item>
-        /// <item><description>OpenAPI</description></item>
-        /// <item><description>WebSDK</description></item>
+        /// <item><description><para>AliyunConsole</para>
+        /// </description></item>
+        /// <item><description><para>OpenAPI</para>
+        /// </description></item>
+        /// <item><description><para>WebSDK</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -91,15 +94,21 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The template state. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Available: The template is available.</description></item>
-        /// <item><description>Created: The template is created but not ready for use.</description></item>
-        /// <item><description>Uploading: The video is being uploaded.</description></item>
-        /// <item><description>Processing: The advanced template is being processed.</description></item>
-        /// <item><description>UploadFailed: Failed to upload the video.</description></item>
-        /// <item><description>ProcessFailed: Failed to process the advanced template.</description></item>
+        /// <item><description><para>Available: The template is available.</para>
+        /// </description></item>
+        /// <item><description><para>Created: The template is created but not ready for use.</para>
+        /// </description></item>
+        /// <item><description><para>Uploading: The video is being uploaded.</para>
+        /// </description></item>
+        /// <item><description><para>Processing: The advanced template is being processed.</para>
+        /// </description></item>
+        /// <item><description><para>UploadFailed: Failed to upload the video.</para>
+        /// </description></item>
+        /// <item><description><para>ProcessFailed: Failed to process the advanced template.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> After an advanced template is created, it enters the Processing state. In this case, the template is unavailable. The template can be used only when it is in the Available state. The time required for template processing varies based on the size of the template file. Generally, it ranges from 10 seconds to 5 minutes.</para>
+        /// <para>After an advanced template is created, it enters the Processing state. In this case, the template is unavailable. The template can be used only when it is in the Available state. The time required for template processing varies based on the size of the template file. Generally, it ranges from 10 seconds to 5 minutes.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -113,7 +122,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <para>The ID of the online editing template. You can obtain the template ID in the <a href="https://ice.console.aliyun.com/production/template/list/common">Intelligent Media Services (IMS) console</a> or the response parameters of the <a href="https://help.aliyun.com/document_detail/441161.html">AddTemplate</a> operation.</para>
         /// 
         /// <b>Example:</b>
-        /// <para><b><b>20b48fb04483915d4f2cd8ac</b></b></para>
+        /// <para>23923ec3318f4c359e42e1e5b296****</para>
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

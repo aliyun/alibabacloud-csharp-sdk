@@ -13,10 +13,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <para>The job state.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Finished: The job is complete.</description></item>
-        /// <item><description>Failed: The job failed.</description></item>
-        /// <item><description>Executing: The job is in progress.</description></item>
-        /// <item><description>Created: The job is created.</description></item>
+        /// <item><description><para>Finished: The job is complete.</para>
+        /// </description></item>
+        /// <item><description><para>Failed: The job failed.</para>
+        /// </description></item>
+        /// <item><description><para>Executing: The job is in progress.</para>
+        /// </description></item>
+        /// <item><description><para>Created: The job is created.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -30,10 +34,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <para>The job type.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ASR: automatic speech recognition(job) job.</description></item>
-        /// <item><description>DynamicChart: dynamic chart job.</description></item>
-        /// <item><description>VideoTranslation: video translation job.</description></item>
-        /// <item><description>TextToSpeech: intelligent audio production job.</description></item>
+        /// <item><description><para>ASR: automatic speech recognition(job) job.</para>
+        /// </description></item>
+        /// <item><description><para>DynamicChart: dynamic chart job.</para>
+        /// </description></item>
+        /// <item><description><para>VideoTranslation: video translation job.</para>
+        /// </description></item>
+        /// <item><description><para>TextToSpeech: intelligent audio production job.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -88,8 +96,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <para>The sorting parameter. By default, the query results are sorted by creation time in descending order.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CreationTime:Asc: sorted by creation time in ascending order.</description></item>
-        /// <item><description>CreationTime:Desc: sorted by creation time in descending order.</description></item>
+        /// <item><description><para>CreationTime:Asc: sorted by creation time in ascending order.</para>
+        /// </description></item>
+        /// <item><description><para>CreationTime:Desc: sorted by creation time in descending order.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

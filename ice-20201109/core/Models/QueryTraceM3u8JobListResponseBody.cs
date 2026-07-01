@@ -66,8 +66,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <summary>
                 /// <para>The type of the output file. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>OSS: an OSS object.</description></item>
-                /// <item><description>Media: a media asset.</description></item>
+                /// <item><description><para>OSS: an OSS object.</para>
+                /// </description></item>
+                /// <item><description><para>Media: a media asset.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

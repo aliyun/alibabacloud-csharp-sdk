@@ -36,8 +36,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <summary>
                 /// <para>The gender. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>female</description></item>
-                /// <item><description>male</description></item>
+                /// <item><description><para>female</para>
+                /// </description></item>
+                /// <item><description><para>male</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -50,9 +52,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <summary>
                 /// <para>The scenario. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>story</description></item>
-                /// <item><description>interaction</description></item>
-                /// <item><description>navigation</description></item>
+                /// <item><description><para>story</para>
+                /// </description></item>
+                /// <item><description><para>interaction</para>
+                /// </description></item>
+                /// <item><description><para>navigation</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -66,8 +71,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <list type="bullet">
                 /// <item><description><para>The voice type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Basic</description></item>
-                /// <item><description>Standard</description></item>
+                /// <item><description><para>Basic</para>
+                /// </description></item>
+                /// <item><description><para>Standard</para>
+                /// </description></item>
                 /// </list>
                 /// </description></item>
                 /// </list>
@@ -81,6 +88,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
                 /// <summary>
                 /// <para>The voice description.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>这是一个个性化人声小专</para>
                 /// </summary>
                 [NameInMap("VoiceDesc")]
                 [Validation(Required=false)]
@@ -98,6 +108,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
                 /// <summary>
                 /// <para>The voice name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>小专</para>
                 /// </summary>
                 [NameInMap("VoiceName")]
                 [Validation(Required=false)]
@@ -130,8 +143,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

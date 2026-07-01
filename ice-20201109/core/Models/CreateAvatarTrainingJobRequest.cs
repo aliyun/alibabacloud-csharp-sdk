@@ -11,9 +11,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
     public class CreateAvatarTrainingJobRequest : TeaModel {
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>The description of the digital human.</description></item>
-        /// <item><description>The description can be up to 1,000 characters in length.</description></item>
+        /// <item><description><para>The description of the digital human.</para>
+        /// </description></item>
+        /// <item><description><para>The description can be up to 1,000 characters in length.</para>
+        /// </description></item>
         /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>This is a digital human used for a specific scenario.</para>
         /// </summary>
         [NameInMap("AvatarDescription")]
         [Validation(Required=false)]
@@ -21,10 +26,15 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>The name of the digital human.</description></item>
-        /// <item><description>The name can be up to seven characters in length.</description></item>
+        /// <item><description><para>The name of the digital human.</para>
+        /// </description></item>
+        /// <item><description><para>The name can be up to seven characters in length.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Decimal</para>
         /// </summary>
         [NameInMap("AvatarName")]
         [Validation(Required=false)]
@@ -42,8 +52,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>The media asset ID of the portrait image.</description></item>
-        /// <item><description>The value must be 32 characters in length.</description></item>
+        /// <item><description><para>The media asset ID of the portrait image.</para>
+        /// </description></item>
+        /// <item><description><para>The value must be 32 characters in length.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -55,10 +67,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>The thumbnail URL.</description></item>
-        /// <item><description>After the digital human is trained, the thumbnail is uploaded to this URL.</description></item>
-        /// <item><description>The URL must be a valid public Object Storage Service (OSS) URL.</description></item>
-        /// <item><description>The URL can be up to 512 characters in length.</description></item>
+        /// <item><description><para>The thumbnail URL.</para>
+        /// </description></item>
+        /// <item><description><para>After the digital human is trained, the thumbnail is uploaded to this URL.</para>
+        /// </description></item>
+        /// <item><description><para>The URL must be a valid public Object Storage Service (OSS) URL.</para>
+        /// </description></item>
+        /// <item><description><para>The URL can be up to 512 characters in length.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -71,7 +87,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <list type="bullet">
         /// <item><description><para>Specifies whether the training video supports alpha channels.</para>
-        /// <para>**</para>
+        /// <para>\<em>\</em></para>
         /// <para><b>Note</b>: Make sure that the current settings are consistent with those of the submitted training video. Otherwise, the digital human may malfunction.</para>
         /// </description></item>
         /// </list>
@@ -85,11 +101,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>The ID of the video used for training.</description></item>
-        /// <item><description>The value must be 32 characters in length.</description></item>
-        /// <item><description>Supported formats: MP4, MOV, and WebM.</description></item>
-        /// <item><description>The duration of the video must be 5 to 15 minutes.</description></item>
-        /// <item><description>The resolution of the video must be 1920×1080 or 1080×1920.</description></item>
+        /// <item><description><para>The ID of the video used for training.</para>
+        /// </description></item>
+        /// <item><description><para>The value must be 32 characters in length.</para>
+        /// </description></item>
+        /// <item><description><para>Supported formats: MP4, MOV, and WebM.</para>
+        /// </description></item>
+        /// <item><description><para>The duration of the video must be 5 to 15 minutes.</para>
+        /// </description></item>
+        /// <item><description><para>The resolution of the video must be 1920×1080 or 1080×1920.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

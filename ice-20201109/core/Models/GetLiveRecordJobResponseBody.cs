@@ -39,6 +39,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
             /// <summary>
             /// <para>The name of the recording job.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Live event recording task 1</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -85,8 +88,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <para>The type of the storage address.</para>
                 /// <para>Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>vod</description></item>
-                /// <item><description>oss</description></item>
+                /// <item><description><para>vod</para>
+                /// </description></item>
+                /// <item><description><para>oss</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -102,9 +107,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <para>The state of the recording job.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>paused: The job is paused.</description></item>
-            /// <item><description>initial: The job is not started.</description></item>
-            /// <item><description>started: The job is in progress.</description></item>
+            /// <item><description><para>paused: The job is paused.</para>
+            /// </description></item>
+            /// <item><description><para>initial: The job is not started.</para>
+            /// </description></item>
+            /// <item><description><para>started: The job is in progress.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

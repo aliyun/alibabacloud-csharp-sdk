@@ -52,8 +52,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The status of the authorization code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>1</c>: Activated</description></item>
-        /// <item><description><c>2</c>: Inactive</description></item>
+        /// <item><description><para><c>1</c>: Activated</para>
+        /// </description></item>
+        /// <item><description><para><c>2</c>: Inactive</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -66,8 +68,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The type of license. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>1</c>: Audio call</description></item>
-        /// <item><description><c>2</c>: Vision call</description></item>
+        /// <item><description><para><c>1</c>: Audio call</para>
+        /// </description></item>
+        /// <item><description><para><c>2</c>: Vision call</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

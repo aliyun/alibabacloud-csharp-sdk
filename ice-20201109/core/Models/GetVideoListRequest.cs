@@ -52,8 +52,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The sorting method of the results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CreationTime:Desc (default): sorts results in reverse chronological order.</description></item>
-        /// <item><description>CreationTime:Asc: sorts results in chronological order.</description></item>
+        /// <item><description><para>CreationTime:Desc (default): sorts results in reverse chronological order.</para>
+        /// </description></item>
+        /// <item><description><para>CreationTime:Asc: sorts results in chronological order.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -77,17 +79,28 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <para>The status of the video. You can specify multiple video statuses and separate them with commas (,).</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PrepareFail: The file is abnormal.</description></item>
-        /// <item><description>UploadFail: The video failed to be uploaded.</description></item>
-        /// <item><description>UploadSucc: The video is uploaded.</description></item>
-        /// <item><description>Transcoding: The video is being transcoded.</description></item>
-        /// <item><description>TranscodeFail: The video failed to be transcoded.</description></item>
-        /// <item><description>ProduceFail: The video failed to be produced.</description></item>
-        /// <item><description>Normal: The video is normal.</description></item>
-        /// <item><description>Uploading: The video is being uploaded.</description></item>
-        /// <item><description>Preparing: The file is being generated.</description></item>
-        /// <item><description>Blocked: The video is blocked.</description></item>
-        /// <item><description>checking: The video is being reviewed.</description></item>
+        /// <item><description><para>PrepareFail: The file is abnormal.</para>
+        /// </description></item>
+        /// <item><description><para>UploadFail: The video failed to be uploaded.</para>
+        /// </description></item>
+        /// <item><description><para>UploadSucc: The video is uploaded.</para>
+        /// </description></item>
+        /// <item><description><para>Transcoding: The video is being transcoded.</para>
+        /// </description></item>
+        /// <item><description><para>TranscodeFail: The video failed to be transcoded.</para>
+        /// </description></item>
+        /// <item><description><para>ProduceFail: The video failed to be produced.</para>
+        /// </description></item>
+        /// <item><description><para>Normal: The video is normal.</para>
+        /// </description></item>
+        /// <item><description><para>Uploading: The video is being uploaded.</para>
+        /// </description></item>
+        /// <item><description><para>Preparing: The file is being generated.</para>
+        /// </description></item>
+        /// <item><description><para>Blocked: The video is blocked.</para>
+        /// </description></item>
+        /// <item><description><para>checking: The video is being reviewed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

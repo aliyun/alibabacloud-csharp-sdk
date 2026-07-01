@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitMediaCensorJobShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The live comments of the video.</para>
+        /// <para>The video barrages (on-screen comments).</para>
         /// <remarks>
-        /// <para> If this parameter is specified, the system checks the live comments specified by this parameter instead of the live comments of the input file specified by Media.</para>
+        /// <para>If specified, it overrides the barrages specified in the Media object.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,9 +23,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Barrages { get; set; }
 
         /// <summary>
-        /// <para>The Object Storage Service (OSS) objects that are used as the thumbnails. Specify the thumbnails in a JSON array. A maximum of five thumbnails are supported.</para>
+        /// <para>The Object Storage Service (OSS) files for the cover images, specified as a JSON array. You can specify up to five cover images.</para>
         /// <remarks>
-        /// <para> If this parameter is specified, the system checks the thumbnails specified by this parameter instead of the thumbnails of the input file specified by <b>Media</b>.</para>
+        /// <para>If specified, this parameter overrides the cover image information in the <b>Media</b> object.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -36,9 +36,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string CoverImages { get; set; }
 
         /// <summary>
-        /// <para>The video description, which can be up to 128 bytes in length.</para>
+        /// <para>The video description. The maximum length is 128 bytes.</para>
         /// <remarks>
-        /// <para> If this parameter is specified, the system checks the description specified by this parameter instead of the description of the input file specified by Media.</para>
+        /// <para>If specified, this parameter overrides the description specified in the Media object.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -49,14 +49,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The information about the file to be moderated.</para>
+        /// <para>The input file to censor.</para>
         /// </summary>
         [NameInMap("Input")]
         [Validation(Required=false)]
         public string InputShrink { get; set; }
 
         /// <summary>
-        /// <para>The callback URL. Simple Message Queue (SMQ, formerly MNS) and HTTP callbacks are supported.</para>
+        /// <para>The callback path. Both Message Service (MNS) and HTTP callbacks are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mns://125340688170****.oss-cn-shanghai.aliyuncs.com/queues/example-pipeline</para>
@@ -66,10 +66,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string NotifyUrl { get; set; }
 
         /// <summary>
-        /// <para>The output snapshots. The moderation job generates output snapshots and the result JSON file in the path corresponding to the input file.</para>
+        /// <para>The output location for screenshots. The censor job generates screenshots and a result JSON file in the OSS location specified by this parameter.</para>
         /// <list type="bullet">
-        /// <item><description>File name format of output snapshots: oss://bucket/snapshot-{Count}.jpg. In the path, bucket indicates an OSS bucket that resides in the same region as the current project, and {Count} is the sequence number of the snapshot.</description></item>
-        /// <item><description>The detailed moderation results are stored in the {jobId}.output file in the same OSS folder as the output snapshots. For more information about the parameters in the output file, see <a href="https://help.aliyun.com/document_detail/609211.html">Output parameters of media moderation jobs</a>.</description></item>
+        /// <item><description><para>Example format: <c>oss://bucket/snapshot-{Count}.jpg</c>, where <c>bucket</c> is the name of an OSS bucket in the same region as the project, and <c>{Count}</c> is a placeholder for the screenshot sequence number.</para>
+        /// </description></item>
+        /// <item><description><para>The detailed censor results are saved to a file named <c>{jobId}.output</c> in the same OSS folder as the value of <c>Output</c>. For information about the fields in the output file, see <a href="https://help.aliyun.com/document_detail/609211.html">Media censor result file fields</a>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -80,14 +82,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Output { get; set; }
 
         /// <summary>
-        /// <para>The scheduling configurations.</para>
+        /// <para>The scheduling configuration.</para>
         /// </summary>
         [NameInMap("ScheduleConfig")]
         [Validation(Required=false)]
         public string ScheduleConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The template ID. If this parameter is not specified, the default template is used for moderation.</para>
+        /// <para>The template ID. If this parameter is left empty, the service uses the default template for the censor job.</para>
         /// 
         /// <b>Example:</b>
         /// <para>S00000001-100060</para>
@@ -97,9 +99,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string TemplateId { get; set; }
 
         /// <summary>
-        /// <para>The video title, which can be up to 64 bytes in length.</para>
+        /// <para>The video title. The maximum length is 64 bytes.</para>
         /// <remarks>
-        /// <para> If this parameter is specified, the system checks the title specified by this parameter instead of the title of the input file specified by Media.</para>
+        /// <para>If specified, this parameter overrides the title specified in the Media object.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -110,7 +112,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Title { get; set; }
 
         /// <summary>
-        /// <para>The user-defined data, which can be up to 128 bytes in length.</para>
+        /// <para>The user-defined data. The maximum length is 128 bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UserDatatestid-001-****</para>

@@ -11,14 +11,17 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
     public class SearchEditingProjectRequest : TeaModel {
         /// <summary>
         /// <para>The source of the project.</para>
-        /// <para>\-OpenAPI</para>
-        /// <para>\-AliyunConsole</para>
-        /// <para>\-WebSDK</para>
+        /// <para>-OpenAPI</para>
+        /// <para>-AliyunConsole</para>
+        /// <para>-WebSDK</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>AliyunConsole: The project is created in the Alibaba Cloud console.</description></item>
-        /// <item><description>WebSDK: The project is created by using the SDK for Web.</description></item>
-        /// <item><description>OpenAPI: The project is created by calling API operations.</description></item>
+        /// <item><description><para>AliyunConsole: The project is created in the Alibaba Cloud console.</para>
+        /// </description></item>
+        /// <item><description><para>WebSDK: The project is created by using the SDK for Web.</para>
+        /// </description></item>
+        /// <item><description><para>OpenAPI: The project is created by calling API operations.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -61,8 +64,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The type of the editing project. Default value: EditingProject. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>EditingProject: a regular editing project.</description></item>
-        /// <item><description>LiveEditingProject: a live stream editing project.</description></item>
+        /// <item><description><para>EditingProject: a regular editing project.</para>
+        /// </description></item>
+        /// <item><description><para>LiveEditingProject: a live stream editing project.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -97,10 +102,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The status of the online editing project. Separate multiple values with commas (,). By default, all online editing projects are queried.</para>
         /// <para>Valid values:</para>
-        /// <para>\-Draft</para>
-        /// <para>\-Producing</para>
-        /// <para>\-Produced</para>
-        /// <para>\-ProduceFailed</para>
+        /// <para>-Draft</para>
+        /// <para>-Producing</para>
+        /// <para>-Produced</para>
+        /// <para>-ProduceFailed</para>
         /// 
         /// <b>Example:</b>
         /// <para>Producing</para>
@@ -111,13 +116,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         /// <summary>
         /// <para>The template type. Valid values:</para>
-        /// <para>\-Timeline</para>
-        /// <para>\-VETemplate</para>
+        /// <para>-Timeline</para>
+        /// <para>-VETemplate</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Timeline: regular template.</description></item>
-        /// <item><description>VETemplate: advanced template.</description></item>
-        /// <item><description>None: No template is used.</description></item>
+        /// <item><description><para>Timeline: regular template.</para>
+        /// </description></item>
+        /// <item><description><para>VETemplate: advanced template.</para>
+        /// </description></item>
+        /// <item><description><para>None: No template is used.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

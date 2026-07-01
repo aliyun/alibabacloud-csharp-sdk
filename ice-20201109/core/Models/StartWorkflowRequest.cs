@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class StartWorkflowRequest : TeaModel {
+        /// <summary>
+        /// <para>Specifies whether to skip verification of the input path supported by the pipeline. This parameter takes effect only when the pipeline input is an OSS file. We recommend that you do not skip this verification to avoid faults caused by incorrect paths. If this parameter is not specified, verification is performed by default. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b>: Skip verification</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Do not skip verification</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("SkipInputVerification")]
         [Validation(Required=false)]
         public bool? SkipInputVerification { get; set; }
@@ -18,8 +30,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// 
         /// <b>Example:</b>
         /// <para>{
-        ///       &quot;Type&quot;: &quot;Media&quot;,
-        ///       &quot;Media&quot;: &quot;<b><b><b>30706071edbfe290b488</b></b></b>&quot;
+        ///       &quot;Type&quot;: &quot;Media&quot;,
+        ///       &quot;Media&quot;: &quot;<b><b><b>30706071edbfe290b488</b></b></b>&quot;
+        /// } or
+        /// {
+        ///       &quot;Type&quot;: &quot;OSS&quot;,
+        ///       &quot;Media&quot;: &quot;oss://bucket/path/to/video.mp4&quot;
         /// }</para>
         /// </summary>
         [NameInMap("TaskInput")]
@@ -28,6 +44,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         /// <summary>
         /// <para>The user-defined data in the JSON format, which cannot be up to 512 bytes in length. You can specify a custom callback URL. For more information, see <a href="https://help.aliyun.com/document_detail/451631.html">Configure a callback upon editing completion</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;NotifyAddress&quot;:&quot;<a href="https://xx.xx.xxx%22%7D">https://xx.xx.xxx&quot;}</a> or{&quot;NotifyAddress&quot;:&quot;ice-callback-demo&quot;}</para>
         /// </summary>
         [NameInMap("UserData")]
         [Validation(Required=false)]

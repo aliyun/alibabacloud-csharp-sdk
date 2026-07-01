@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The export type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>BaseTimeline</b>: exports the timeline.</description></item>
-        /// <item><description><b>AdobePremierePro</b>: exports an Adobe Premiere Pro project.</description></item>
+        /// <item><description><para><b>BaseTimeline</b>: exports the timeline.</para>
+        /// </description></item>
+        /// <item><description><para><b>AdobePremierePro</b>: exports an Adobe Premiere Pro project.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,10 +28,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The output path for the exported project and generated intermediate files, in JSON format. The export destination only supports OSS. Path fields:</para>
         /// <list type="bullet">
-        /// <item><description><b>Bucket</b>: Required. The OSS bucket name.</description></item>
-        /// <item><description><b>Prefix</b>: Optional. The path prefix. If not specified, it defaults to the root directory.</description></item>
-        /// <item><description><b>Width</b>: Optional. The width of the output. The value must be a positive integer. If not provided, the system automatically calculates the value based on the input project or timeline.</description></item>
-        /// <item><description><b>Height</b>: Optional. The height of the output. The value must be a positive integer. If not provided, the system automatically calculates the value based on the input project or timeline.</description></item>
+        /// <item><description><para><b>Bucket</b>: Required. The OSS bucket name.</para>
+        /// </description></item>
+        /// <item><description><para><b>Prefix</b>: Optional. The path prefix. If not specified, it defaults to the root directory.</para>
+        /// </description></item>
+        /// <item><description><para><b>Width</b>: Optional. The width of the output. The value must be a positive integer. If not provided, the system automatically calculates the value based on the input project or timeline.</para>
+        /// </description></item>
+        /// <item><description><para><b>Height</b>: Optional. The height of the output. The value must be a positive integer. If not provided, the system automatically calculates the value based on the input project or timeline.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

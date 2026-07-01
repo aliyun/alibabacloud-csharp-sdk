@@ -47,18 +47,43 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string SourceUrl { get; set; }
 
+            /// <summary>
+            /// <para>The latency of the SRT stream, in milliseconds (ms). Valid values: [100, 10000]. This parameter is optional when Type is SRT_PUSH or SRT_PULL.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1000</para>
+            /// </summary>
             [NameInMap("SrtLatency")]
             [Validation(Required=false)]
             public int? SrtLatency { get; set; }
 
+            /// <summary>
+            /// <para>The maximum bitrate of the SRT stream, in bits per second (bps). Valid values: [100, 100000000]. This parameter is optional when Type is SRT_PUSH or SRT_PULL.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3000000</para>
+            /// </summary>
             [NameInMap("SrtMaxBitrate")]
             [Validation(Required=false)]
             public int? SrtMaxBitrate { get; set; }
 
+            /// <summary>
+            /// <para>The SRT encryption configuration. The password for the SRT stream consists of 10 to 79 visible ASCII characters. This parameter is optional when Type is SRT_PUSH or SRT_PULL.</para>
+            /// <para>If the encryption configuration is not empty, all SRT clients must use the correct password to publish or playback; otherwise, the SRT connection will be denied.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>srtencryption</para>
+            /// </summary>
             [NameInMap("SrtPassphrase")]
             [Validation(Required=false)]
             public string SrtPassphrase { get; set; }
 
+            /// <summary>
+            /// <para>The SRT encryption configuration. The key length for the SRT stream. Valid values: 0, 16, 24, 32. This parameter is optional when Type is SRT_PUSH or SRT_PULL.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>16</para>
+            /// </summary>
             [NameInMap("SrtPbKeyLen")]
             [Validation(Required=false)]
             public int? SrtPbKeyLen { get; set; }

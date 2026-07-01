@@ -68,6 +68,23 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
             /// <summary>
             /// <para>The input configurations.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{
+            ///   &quot;MediaGroupArray&quot;: [{
+            ///       &quot;MediaArray&quot;: [
+            ///         &quot;<b><b>9d46c886b45481030f6e</b></b>&quot;,
+            ///         &quot;<b><b>6c886b4549d481030f6e</b></b>&quot; ]
+            ///     }, {
+            ///       &quot;MediaArray&quot;: [
+            ///         &quot;<b><b>d46c886810b454930f6e</b></b>&quot;,
+            ///         &quot;<b><b>4549d886810b46c30f6e</b></b>&quot; ]
+            ///   }],
+            ///   &quot;TitleArray&quot;: [
+            ///       &quot;Hema Fresh grand opening at Huilongguan&quot;],
+            ///   &quot;SpeechTextArray&quot;: [
+            ///       &quot;A new Hema Fresh store just opened at the nearby mall, today is the first day of business&quot;]
+            /// }</para>
             /// </summary>
             [NameInMap("InputConfig")]
             [Validation(Required=false)]
@@ -87,8 +104,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <para>The job type.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Script: script-based editing job that mixes media assets.</description></item>
-            /// <item><description>Smart_Mix: intelligent editing job that mixes media assets.</description></item>
+            /// <item><description><para>Script: script-based editing job that mixes media assets.</para>
+            /// </description></item>
+            /// <item><description><para>Smart_Mix: intelligent editing job that mixes media assets.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -129,10 +148,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <para>The job state.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Finished</description></item>
-            /// <item><description>Init</description></item>
-            /// <item><description>Failed</description></item>
-            /// <item><description>Processing</description></item>
+            /// <item><description><para>Finished</para>
+            /// </description></item>
+            /// <item><description><para>Init</para>
+            /// </description></item>
+            /// <item><description><para>Failed</para>
+            /// </description></item>
+            /// <item><description><para>Processing</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -144,6 +167,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
             /// <summary>
             /// <para>The user-defined data in the JSON format, which can be up to 512 bytes in length. You can specify a custom callback URL. For more information, see <a href="https://help.aliyun.com/document_detail/451631.html">Configure a callback upon editing completion</a>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;NotifyAddress&quot;:&quot;<a href="http://xx.xx.xxx%22%7D">http://xx.xx.xxx&quot;}</a> or {&quot;NotifyAddress&quot;:&quot;<a href="https://xx.xx.xxx%22%7D">https://xx.xx.xxx&quot;}</a> or {&quot;NotifyAddress&quot;:&quot;ice-callback-demo&quot;}</para>
             /// </summary>
             [NameInMap("UserData")]
             [Validation(Required=false)]

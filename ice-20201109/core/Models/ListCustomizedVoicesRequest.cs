@@ -33,8 +33,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <list type="bullet">
         /// <item><description><para>The voice type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Basic</description></item>
-        /// <item><description>Standard</description></item>
+        /// <item><description><para>Basic</para>
+        /// </description></item>
+        /// <item><description><para>Standard</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// <item><description><para>If you do not specify this parameter, the default value Basic is used.</para>

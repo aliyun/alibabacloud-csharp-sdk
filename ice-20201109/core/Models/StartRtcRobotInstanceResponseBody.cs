@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class StartRtcRobotInstanceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The instance\&quot;s unique identifier.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>727dc0e296014bb58670940a3da95592</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>11DE0AB3-603B-5055-8A72-9C424854F983</para>

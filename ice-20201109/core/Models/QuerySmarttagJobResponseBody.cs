@@ -10,12 +10,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class QuerySmarttagJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status of the job. Valid values:</para>
+        /// <para>The job status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Success</b>: The job was successful.</description></item>
-        /// <item><description><b>Fail</b>: The job failed.</description></item>
-        /// <item><description><b>Processing</b>: The job is in progress.</description></item>
-        /// <item><description><b>Submitted</b>: The job is submitted and waiting to be processed.</description></item>
+        /// <item><description><para><b>Success</b>: The job was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>Fail</b>: The job failed.</para>
+        /// </description></item>
+        /// <item><description><para><b>Processing</b>: The job is in progress.</para>
+        /// </description></item>
+        /// <item><description><para><b>Submitted</b>: The job is queued for processing.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -76,7 +80,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
-        /// <para>The content of callback messages that are sent to Simple Message Queue (SMQ) when the information of the smart tagging job changes. For more information about the parameters contained in the callback message, see the &quot;Callback parameters&quot; section of this topic.</para>
+        /// <para>The custom data passed through the MNS callback. For details on the message format, see the callback message format definitions below.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;userId&quot;:&quot;123432412831&quot;}</para>

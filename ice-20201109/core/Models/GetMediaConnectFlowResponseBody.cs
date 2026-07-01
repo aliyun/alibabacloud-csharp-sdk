@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public GetMediaConnectFlowResponseBodyContent Content { get; set; }
         public class GetMediaConnectFlowResponseBodyContent : TeaModel {
             /// <summary>
-            /// <para>The time when the flow was created.</para>
+            /// <para>The creation time of the MediaConnect Flow instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-07-18T01:29:24Z</para>
@@ -26,12 +26,18 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether Input Failover is enabled for the flow. Valid values: <c>yes</c> and <c>no</c>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>yes</para>
+            /// </summary>
             [NameInMap("FlowFailover")]
             [Validation(Required=false)]
             public string FlowFailover { get; set; }
 
             /// <summary>
-            /// <para>The flow ID.</para>
+            /// <para>The ID of the MediaConnect Flow instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>34900dc6-90ec-4968-af3c-fcd87f231a5f</para>
@@ -41,7 +47,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string FlowId { get; set; }
 
             /// <summary>
-            /// <para>The flow name.</para>
+            /// <para>The name of the MediaConnect Flow instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AliTestFlow</para>
@@ -55,7 +61,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string FlowRegion { get; set; }
 
             /// <summary>
-            /// <para>The state of the flow.</para>
+            /// <para>The status of the MediaConnect Flow instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>online</para>
@@ -65,7 +71,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string FlowStatus { get; set; }
 
             /// <summary>
-            /// <para>The time when the flow is started.</para>
+            /// <para>The start time of the MediaConnect Flow instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-07-18T01:39:24Z</para>
@@ -77,7 +83,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
-        /// <para>The call description.</para>
+        /// <para>The description of the API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -87,7 +93,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Request ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>FB503AEF-118E-1516-89E2-7B227EA1AC20</para>
@@ -97,7 +103,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned code. A value of 0 indicates the call is successful.</para>
+        /// <para>The return code. A value of 0 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

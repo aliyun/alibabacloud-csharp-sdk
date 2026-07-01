@@ -117,8 +117,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The sorting order of the assets based on the time when they were ingested. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>desc: descending order.</description></item>
-        /// <item><description>asc: ascending order.</description></item>
+        /// <item><description><para>desc: descending order.</para>
+        /// </description></item>
+        /// <item><description><para>asc: ascending order.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

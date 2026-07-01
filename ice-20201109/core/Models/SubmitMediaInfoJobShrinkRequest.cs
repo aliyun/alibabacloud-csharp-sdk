@@ -10,8 +10,11 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitMediaInfoJobShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The input of the job.</para>
+        /// <para>The input for the job.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>job-name</para>
         /// </summary>
         [NameInMap("Input")]
         [Validation(Required=false)]
@@ -28,14 +31,17 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The scheduling parameters.</para>
+        /// <para>The scheduling settings.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>user-data</para>
         /// </summary>
         [NameInMap("ScheduleConfig")]
         [Validation(Required=false)]
         public string ScheduleConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The user data.</para>
+        /// <para>The custom user data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user-data</para>

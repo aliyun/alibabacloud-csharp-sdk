@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class CreateLiveRecordTemplateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0622C702-41BE-467E-AF2E-883D4517962E</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The template ID.</para>
+        /// <para>The ID of the Live Record Template.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>96e8864746a0b6f3</b></b></para>

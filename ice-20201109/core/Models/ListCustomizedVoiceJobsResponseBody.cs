@@ -25,8 +25,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public class ListCustomizedVoiceJobsResponseBodyDataCustomizedVoiceJobList : TeaModel {
                 /// <summary>
                 /// <list type="bullet">
-                /// <item><description>The time when the job was created.</description></item>
-                /// <item><description>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</description></item>
+                /// <item><description><para>The time when the job was created.</para>
+                /// </description></item>
+                /// <item><description><para>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -39,8 +41,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <summary>
                 /// <para>The gender. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>female</description></item>
-                /// <item><description>male</description></item>
+                /// <item><description><para>female</para>
+                /// </description></item>
+                /// <item><description><para>male</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -72,6 +76,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
                 /// <summary>
                 /// <para>The returned message.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Training succeeded</para>
                 /// </summary>
                 [NameInMap("Message")]
                 [Validation(Required=false)]
@@ -80,9 +87,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <summary>
                 /// <para>The scenario. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>story</description></item>
-                /// <item><description>interaction</description></item>
-                /// <item><description>navigation</description></item>
+                /// <item><description><para>story</para>
+                /// </description></item>
+                /// <item><description><para>interaction</para>
+                /// </description></item>
+                /// <item><description><para>navigation</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -95,12 +105,18 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <summary>
                 /// <para>The job state. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Initialization</description></item>
-                /// <item><description>AudioDetecting</description></item>
-                /// <item><description>PreTraining</description></item>
-                /// <item><description>Training</description></item>
-                /// <item><description>Success</description></item>
-                /// <item><description>Fail</description></item>
+                /// <item><description><para>Initialization</para>
+                /// </description></item>
+                /// <item><description><para>AudioDetecting</para>
+                /// </description></item>
+                /// <item><description><para>PreTraining</para>
+                /// </description></item>
+                /// <item><description><para>Training</para>
+                /// </description></item>
+                /// <item><description><para>Success</para>
+                /// </description></item>
+                /// <item><description><para>Fail</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -114,8 +130,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <list type="bullet">
                 /// <item><description><para>The voice type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Basic</description></item>
-                /// <item><description>Standard</description></item>
+                /// <item><description><para>Basic</para>
+                /// </description></item>
+                /// <item><description><para>Standard</para>
+                /// </description></item>
                 /// </list>
                 /// </description></item>
                 /// </list>
@@ -132,6 +150,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <list type="bullet">
                 /// <item><description>The description can be up to 256 characters in length.</description></item>
                 /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>这是这个声音的描述</para>
                 /// </summary>
                 [NameInMap("VoiceDesc")]
                 [Validation(Required=false)]
@@ -152,6 +173,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <list type="bullet">
                 /// <item><description>The name can be up to 32 characters in length.</description></item>
                 /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>小专</para>
                 /// </summary>
                 [NameInMap("VoiceName")]
                 [Validation(Required=false)]

@@ -52,11 +52,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <para>The business status of the project. This parameter can be ignored for general editing projects. Valid values:</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>BroadCasting:</description></item>
-            /// <item><description>ReservationCanceled</description></item>
-            /// <item><description>LiveFinished</description></item>
-            /// <item><description>LoadingFailed</description></item>
-            /// <item><description>Reserving</description></item>
+            /// <item><description><para>BroadCasting:</para>
+            /// </description></item>
+            /// <item><description><para>ReservationCanceled</para>
+            /// </description></item>
+            /// <item><description><para>LiveFinished</para>
+            /// </description></item>
+            /// <item><description><para>LoadingFailed</para>
+            /// </description></item>
+            /// <item><description><para>Reserving</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -78,14 +83,17 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
             /// <summary>
             /// <para>The method for editing the online editing project.</para>
-            /// <para>\-OpenAPI</para>
-            /// <para>\-AliyunConsole</para>
-            /// <para>\-WebSDK</para>
+            /// <para>-OpenAPI</para>
+            /// <para>-AliyunConsole</para>
+            /// <para>-WebSDK</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>AliyunConsole: The project is created in the Alibaba Cloud console.</description></item>
-            /// <item><description>WebSDK: The project is created by using the SDK for Web.</description></item>
-            /// <item><description>OpenAPI: The project is created by calling API operations.</description></item>
+            /// <item><description><para>AliyunConsole: The project is created in the Alibaba Cloud console.</para>
+            /// </description></item>
+            /// <item><description><para>WebSDK: The project is created by using the SDK for Web.</para>
+            /// </description></item>
+            /// <item><description><para>OpenAPI: The project is created by calling API operations.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -179,8 +187,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <para>The type of the editing project.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>LiveEditingProject: a live stream editing project.</description></item>
-            /// <item><description>EditingProject: a regular editing project.</description></item>
+            /// <item><description><para>LiveEditingProject: a live stream editing project.</para>
+            /// </description></item>
+            /// <item><description><para>EditingProject: a regular editing project.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -192,18 +202,23 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
             /// <summary>
             /// <para>The status of the online editing project. Valid values:</para>
-            /// <para>\-Draft</para>
-            /// <para>\-Editing</para>
-            /// <para>\-Producing</para>
-            /// <para>\-Produced</para>
-            /// <para>\-ProduceFailed</para>
+            /// <para>-Draft</para>
+            /// <para>-Editing</para>
+            /// <para>-Producing</para>
+            /// <para>-Produced</para>
+            /// <para>-ProduceFailed</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Draft</description></item>
-            /// <item><description>Produced</description></item>
-            /// <item><description>Editing</description></item>
-            /// <item><description>Producing</description></item>
-            /// <item><description>ProduceFailed</description></item>
+            /// <item><description><para>Draft</para>
+            /// </description></item>
+            /// <item><description><para>Produced</para>
+            /// </description></item>
+            /// <item><description><para>Editing</para>
+            /// </description></item>
+            /// <item><description><para>Producing</para>
+            /// </description></item>
+            /// <item><description><para>ProduceFailed</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

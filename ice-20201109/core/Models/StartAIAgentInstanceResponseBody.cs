@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class StartAIAgentInstanceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The unique ID of the agent instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>39f8e0bc005e4f309379701645f4****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7B117AF5-2A16-412C-B127-FA6175ED1AD0</para>
         /// </summary>

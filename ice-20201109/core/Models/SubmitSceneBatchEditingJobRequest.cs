@@ -37,6 +37,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         /// <summary>
         /// <para>Custom user data, including callback configurations. For more information, see <a href="~~357745#section-urj-v3f-0s1~~">UserData</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;NotifyAddress&quot;:&quot;<a href="http://xx.xx.xxx%22%7D">http://xx.xx.xxx&quot;}</a> or {&quot;NotifyAddress&quot;:&quot;<a href="https://xx.xx.xxx%22%7D">https://xx.xx.xxx&quot;}</a> or {&quot;NotifyAddress&quot;:&quot;ice-callback-demo&quot;}</para>
         /// </summary>
         [NameInMap("UserData")]
         [Validation(Required=false)]

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 10. Maximum value: 50.</para>
+        /// <para>The number of entries to return on each page. Default value: 10. Max value: 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

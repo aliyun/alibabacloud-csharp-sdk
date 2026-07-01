@@ -9,15 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetPublicMediaInfoResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Media asset information</para>
+        /// </summary>
         [NameInMap("MediaInfo")]
         [Validation(Required=false)]
         public GetPublicMediaInfoResponseBodyMediaInfo MediaInfo { get; set; }
         public class GetPublicMediaInfoResponseBodyMediaInfo : TeaModel {
+            /// <summary>
+            /// <para>Public media asset dynamic metadata</para>
+            /// </summary>
             [NameInMap("DynamicMetaData")]
             [Validation(Required=false)]
             public GetPublicMediaInfoResponseBodyMediaInfoDynamicMetaData DynamicMetaData { get; set; }
             public class GetPublicMediaInfoResponseBodyMediaInfoDynamicMetaData : TeaModel {
                 /// <summary>
+                /// <para>Metadata in JSON format</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;AuditionUrl&quot;: &quot;<a href="http://example-bucket.cdn.domain.com/example.mp4">http://example-bucket.cdn.domain.com/example.mp4</a>&quot;, &quot;AuditionCount&quot;: 3}</para>
                 /// </summary>
@@ -26,6 +34,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string Data { get; set; }
 
                 /// <summary>
+                /// <para>Type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para>&quot;ai&quot;: AI data processed from raw AI results</para>
+                /// </description></item>
+                /// <item><description><para>&quot;user-defined&quot;: User-defined metadata</para>
+                /// </description></item>
+                /// <item><description><para>&quot;system&quot;: System-provided</para>
+                /// </description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>system</para>
                 /// </summary>
@@ -42,11 +60,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public List<GetPublicMediaInfoResponseBodyMediaInfoFileInfoList> FileInfoList { get; set; }
             public class GetPublicMediaInfoResponseBodyMediaInfoFileInfoList : TeaModel {
+                /// <summary>
+                /// <para>Audio stream information. A media asset may contain multiple audio streams.</para>
+                /// </summary>
                 [NameInMap("AudioStreamInfoList")]
                 [Validation(Required=false)]
                 public List<GetPublicMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList> AudioStreamInfoList { get; set; }
                 public class GetPublicMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList : TeaModel {
                     /// <summary>
+                    /// <para>bitrate</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>192.0</para>
                     /// </summary>
@@ -55,6 +78,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Bitrate { get; set; }
 
                     /// <summary>
+                    /// <para>Sound channel output layout</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>stereo</para>
                     /// </summary>
@@ -63,6 +88,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string ChannelLayout { get; set; }
 
                     /// <summary>
+                    /// <para>the number of sound channels</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>2</para>
                     /// </summary>
@@ -71,6 +98,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Channels { get; set; }
 
                     /// <summary>
+                    /// <para>Long name of the encoding format</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>AAC (Advanced Audio Coding)</para>
                     /// </summary>
@@ -79,6 +108,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string CodecLongName { get; set; }
 
                     /// <summary>
+                    /// <para>short name of the encoding format</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>aac</para>
                     /// </summary>
@@ -87,6 +118,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string CodecName { get; set; }
 
                     /// <summary>
+                    /// <para>Encoding format tag</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>0x6134706d</para>
                     /// </summary>
@@ -95,6 +128,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string CodecTag { get; set; }
 
                     /// <summary>
+                    /// <para>Encoding format tag text</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>mp4a</para>
                     /// </summary>
@@ -103,6 +138,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string CodecTagString { get; set; }
 
                     /// <summary>
+                    /// <para>Codec time base</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1/44100</para>
                     /// </summary>
@@ -111,6 +148,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string CodecTimeBase { get; set; }
 
                     /// <summary>
+                    /// <para>Duration</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>16.2</para>
                     /// </summary>
@@ -119,6 +158,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Duration { get; set; }
 
                     /// <summary>
+                    /// <para>Audio frame rate</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>10</para>
                     /// </summary>
@@ -127,6 +168,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Fps { get; set; }
 
                     /// <summary>
+                    /// <para>Audio stream ordinal number</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
                     /// </summary>
@@ -135,6 +178,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Index { get; set; }
 
                     /// <summary>
+                    /// <para>Language</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>und</para>
                     /// </summary>
@@ -143,6 +188,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Lang { get; set; }
 
                     /// <summary>
+                    /// <para>Total number of frames</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>162</para>
                     /// </summary>
@@ -151,6 +198,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string NumFrames { get; set; }
 
                     /// <summary>
+                    /// <para>codec profile</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>High</para>
                     /// </summary>
@@ -159,6 +208,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Profile { get; set; }
 
                     /// <summary>
+                    /// <para>Sampling format</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>fltp</para>
                     /// </summary>
@@ -167,6 +218,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string SampleFmt { get; set; }
 
                     /// <summary>
+                    /// <para>Sample rate</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>44100</para>
                     /// </summary>
@@ -175,6 +228,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string SampleRate { get; set; }
 
                     /// <summary>
+                    /// <para>Start time</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>0.000000</para>
                     /// </summary>
@@ -183,6 +238,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string StartTime { get; set; }
 
                     /// <summary>
+                    /// <para>Timebase</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1/44100</para>
                     /// </summary>
@@ -192,11 +249,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
                 }
 
+                /// <summary>
+                /// <para>Basic file information, including duration and size.</para>
+                /// </summary>
                 [NameInMap("FileBasicInfo")]
                 [Validation(Required=false)]
                 public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo FileBasicInfo { get; set; }
                 public class GetPublicMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo : TeaModel {
                     /// <summary>
+                    /// <para>Bitrate</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>192.0</para>
                     /// </summary>
@@ -205,6 +267,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Bitrate { get; set; }
 
                     /// <summary>
+                    /// <para>Duration</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>16.2</para>
                     /// </summary>
@@ -213,6 +277,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Duration { get; set; }
 
                     /// <summary>
+                    /// <para>File name</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>example.mp4</para>
                     /// </summary>
@@ -221,6 +287,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string FileName { get; set; }
 
                     /// <summary>
+                    /// <para>File Size (bytes)</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>27007</para>
                     /// </summary>
@@ -229,6 +297,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string FileSize { get; set; }
 
                     /// <summary>
+                    /// <para>File status</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>Normal</para>
                     /// </summary>
@@ -237,6 +307,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string FileStatus { get; set; }
 
                     /// <summary>
+                    /// <para>File type</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>source_file</para>
                     /// </summary>
@@ -245,6 +317,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string FileType { get; set; }
 
                     /// <summary>
+                    /// <para>Preview or sample playback URL for the copyrighted media asset.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para><a href="http://example-bucket.cdn.domain.com/example.mp4">http://example-bucket.cdn.domain.com/example.mp4</a></para>
                     /// </summary>
@@ -253,6 +327,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string FileUrl { get; set; }
 
                     /// <summary>
+                    /// <para>Container format</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>mp4</para>
                     /// </summary>
@@ -261,6 +337,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string FormatName { get; set; }
 
                     /// <summary>
+                    /// <para>Height</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
                     /// </summary>
@@ -269,6 +347,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Height { get; set; }
 
                     /// <summary>
+                    /// <para>File storage area</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>cn-shanghai</para>
                     /// </summary>
@@ -277,6 +357,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Region { get; set; }
 
                     /// <summary>
+                    /// <para>Width</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
                     /// </summary>
@@ -286,11 +368,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
                 }
 
+                /// <summary>
+                /// <para>Caption stream information. A media asset may have multiple caption streams.</para>
+                /// </summary>
                 [NameInMap("SubtitleStreamInfoList")]
                 [Validation(Required=false)]
                 public List<GetPublicMediaInfoResponseBodyMediaInfoFileInfoListSubtitleStreamInfoList> SubtitleStreamInfoList { get; set; }
                 public class GetPublicMediaInfoResponseBodyMediaInfoFileInfoListSubtitleStreamInfoList : TeaModel {
                     /// <summary>
+                    /// <para>Long name of encoding format</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>SubRip Text</para>
                     /// </summary>
@@ -299,6 +386,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string CodecLongName { get; set; }
 
                     /// <summary>
+                    /// <para>Brief name of encoding format</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>srt</para>
                     /// </summary>
@@ -307,6 +396,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string CodecName { get; set; }
 
                     /// <summary>
+                    /// <para>Encoding format tag</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>unicode</para>
                     /// </summary>
@@ -315,6 +406,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string CodecTag { get; set; }
 
                     /// <summary>
+                    /// <para>Encoding format mark text</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>unicode</para>
                     /// </summary>
@@ -323,6 +416,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string CodecTagString { get; set; }
 
                     /// <summary>
+                    /// <para>Codec time base</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>29.97</para>
                     /// </summary>
@@ -331,6 +426,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string CodecTimeBase { get; set; }
 
                     /// <summary>
+                    /// <para>Duration</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
                     /// </summary>
@@ -339,6 +436,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Duration { get; set; }
 
                     /// <summary>
+                    /// <para>Caption stream ordinal number</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
                     /// </summary>
@@ -347,6 +446,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Index { get; set; }
 
                     /// <summary>
+                    /// <para>Language</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>und</para>
                     /// </summary>
@@ -355,6 +456,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Lang { get; set; }
 
                     /// <summary>
+                    /// <para>Start time</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
                     /// </summary>
@@ -363,6 +466,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string StartTime { get; set; }
 
                     /// <summary>
+                    /// <para>Time base</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>30</para>
                     /// </summary>
@@ -372,11 +477,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
                 }
 
+                /// <summary>
+                /// <para>Video stream information; a media asset may contain multiple video streams.</para>
+                /// </summary>
                 [NameInMap("VideoStreamInfoList")]
                 [Validation(Required=false)]
                 public List<GetPublicMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList> VideoStreamInfoList { get; set; }
                 public class GetPublicMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList : TeaModel {
                     /// <summary>
+                    /// <para>average frame rate</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>24.0</para>
                     /// </summary>
@@ -385,6 +495,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string AvgFPS { get; set; }
 
                     /// <summary>
+                    /// <para>bitrate</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1001.594</para>
                     /// </summary>
@@ -393,6 +505,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Bitrate { get; set; }
 
                     /// <summary>
+                    /// <para>Long name of the encoding format</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</para>
                     /// </summary>
@@ -401,6 +515,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string CodecLongName { get; set; }
 
                     /// <summary>
+                    /// <para>Encoding format short name</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>h264</para>
                     /// </summary>
@@ -409,6 +525,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string CodecName { get; set; }
 
                     /// <summary>
+                    /// <para>Encoding format tag</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>0x0000</para>
                     /// </summary>
@@ -417,6 +535,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string CodecTag { get; set; }
 
                     /// <summary>
+                    /// <para>Encoding format mark text</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>[0][0][0][0]</para>
                     /// </summary>
@@ -425,6 +545,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string CodecTagString { get; set; }
 
                     /// <summary>
+                    /// <para>Codec time base</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1/48</para>
                     /// </summary>
@@ -433,6 +555,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string CodecTimeBase { get; set; }
 
                     /// <summary>
+                    /// <para>Encoded display aspect ratio</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>0:1</para>
                     /// </summary>
@@ -441,6 +565,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Dar { get; set; }
 
                     /// <summary>
+                    /// <para>Duration</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>216.206706</para>
                     /// </summary>
@@ -449,6 +575,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Duration { get; set; }
 
                     /// <summary>
+                    /// <para>video frame rate</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>24.0</para>
                     /// </summary>
@@ -457,6 +585,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Fps { get; set; }
 
                     /// <summary>
+                    /// <para>Whether B-frames are present</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>2</para>
                     /// </summary>
@@ -465,6 +595,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string HasBFrames { get; set; }
 
                     /// <summary>
+                    /// <para>Height</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>540</para>
                     /// </summary>
@@ -473,6 +605,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Height { get; set; }
 
                     /// <summary>
+                    /// <para>Video stream ordinal number</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
                     /// </summary>
@@ -481,6 +615,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Index { get; set; }
 
                     /// <summary>
+                    /// <para>Language</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>und</para>
                     /// </summary>
@@ -489,6 +625,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Lang { get; set; }
 
                     /// <summary>
+                    /// <para>Encoding Level</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>30</para>
                     /// </summary>
@@ -497,6 +635,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Level { get; set; }
 
                     /// <summary>
+                    /// <para>total number of frames</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>5184</para>
                     /// </summary>
@@ -505,6 +645,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string NbFrames { get; set; }
 
                     /// <summary>
+                    /// <para>Total number of frames</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>5184</para>
                     /// </summary>
@@ -513,6 +655,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string NumFrames { get; set; }
 
                     /// <summary>
+                    /// <para>Pixel format</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>yuv420p</para>
                     /// </summary>
@@ -521,6 +665,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string PixFmt { get; set; }
 
                     /// <summary>
+                    /// <para>codec profile</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>High</para>
                     /// </summary>
@@ -529,6 +675,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Profile { get; set; }
 
                     /// <summary>
+                    /// <para>rotate</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
                     /// </summary>
@@ -537,6 +685,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Rotate { get; set; }
 
                     /// <summary>
+                    /// <para>Sample Aspect Ratio (SAR)</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>0:1</para>
                     /// </summary>
@@ -545,6 +695,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Sar { get; set; }
 
                     /// <summary>
+                    /// <para>start time</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>0.081706</para>
                     /// </summary>
@@ -553,6 +705,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string StartTime { get; set; }
 
                     /// <summary>
+                    /// <para>time base</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1/12288</para>
                     /// </summary>
@@ -561,6 +715,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Timebase { get; set; }
 
                     /// <summary>
+                    /// <para>Width</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>960</para>
                     /// </summary>
@@ -580,6 +736,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public GetPublicMediaInfoResponseBodyMediaInfoMediaBasicInfo MediaBasicInfo { get; set; }
             public class GetPublicMediaInfoResponseBodyMediaInfoMediaBasicInfo : TeaModel {
                 /// <summary>
+                /// <para>Media asset business type</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>general</para>
                 /// </summary>
@@ -588,6 +746,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string BusinessType { get; set; }
 
                 /// <summary>
+                /// <para>categorization</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>category</para>
                 /// </summary>
@@ -596,6 +756,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string Category { get; set; }
 
                 /// <summary>
+                /// <para>thumbnail URL</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.png?Expires=">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.png?Expires=</a><ExpireTime>&amp;OSSAccessKeyId=<OSSAccessKeyId>&amp;Signature=<Signature>&amp;security-token=<SecurityToken></para>
                 /// </summary>
@@ -604,6 +766,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string CoverURL { get; set; }
 
                 /// <summary>
+                /// <para>Media asset creation time</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2020-12-26T04:11:08Z</para>
                 /// </summary>
@@ -612,6 +776,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
+                /// <para>Media asset deletion time</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2020-12-26T04:11:15Z</para>
                 /// </summary>
@@ -620,6 +786,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string DeletedTime { get; set; }
 
                 /// <summary>
+                /// <para>Content description</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>description</para>
                 /// </summary>
@@ -637,11 +805,19 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 [Validation(Required=false)]
                 public string MediaId { get; set; }
 
+                /// <summary>
+                /// <para>label</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>tag1</para>
+                /// </summary>
                 [NameInMap("MediaTags")]
                 [Validation(Required=false)]
                 public string MediaTags { get; set; }
 
                 /// <summary>
+                /// <para>media asset Type</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>video</para>
                 /// </summary>
@@ -650,6 +826,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string MediaType { get; set; }
 
                 /// <summary>
+                /// <para>Updated At</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2020-12-26T04:11:10Z</para>
                 /// </summary>
@@ -658,6 +836,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string ModifiedTime { get; set; }
 
                 /// <summary>
+                /// <para>Source</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>oss</para>
                 /// </summary>
@@ -666,6 +846,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string Source { get; set; }
 
                 /// <summary>
+                /// <para>sprite</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>[{&quot;bucket&quot;:&quot;example-bucket&quot;,&quot;count&quot;:&quot;32&quot;,&quot;iceJobId&quot;:&quot;<b><b><b>83ec44d58b2069def2e</b></b></b>&quot;,&quot;location&quot;:&quot;oss-cn-shanghai&quot;,&quot;snapshotRegular&quot;:&quot;example/example-{Count}.jpg&quot;,&quot;spriteRegular&quot;:&quot;example/example-{TileCount}.jpg&quot;,&quot;templateId&quot;:&quot;<b><b><b>e438b14ff39293eaec25</b></b></b>&quot;,&quot;tileCount&quot;:&quot;1&quot;}]</para>
                 /// </summary>
@@ -674,6 +856,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string SpriteImages { get; set; }
 
                 /// <summary>
+                /// <para>Resource status</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Normal</para>
                 /// </summary>
@@ -682,6 +866,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string Status { get; set; }
 
                 /// <summary>
+                /// <para>title</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>title</para>
                 /// </summary>
@@ -690,6 +876,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string Title { get; set; }
 
                 /// <summary>
+                /// <para>User Data</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;key&quot;:&quot;value&quot;}</para>
                 /// </summary>
@@ -700,6 +888,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             }
 
             /// <summary>
+            /// <para>Media asset ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>icepublic-<b><b>14e501538aeef0a3140176f6</b></b></para>
             /// </summary>

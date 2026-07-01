@@ -38,6 +38,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
             /// <summary>
             /// <para>The name of the material tag in English.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Animated image</para>
             /// </summary>
             [NameInMap("MediaTagNameEnglish")]
             [Validation(Required=false)]
@@ -52,6 +55,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public class ListAllPublicMediaTagsResponseBodyMediaTagListOptions : TeaModel {
                 /// <summary>
                 /// <para>The option name in Chinese.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>愤怒</para>
                 /// </summary>
                 [NameInMap("OptionChineseName")]
                 [Validation(Required=false)]

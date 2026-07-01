@@ -48,6 +48,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
             /// <summary>
             /// <para>The name of the entity.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>John Doe</para>
             /// </summary>
             [NameInMap("LabelName")]
             [Validation(Required=false)]
@@ -70,6 +73,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 [Validation(Required=false)]
                 public float? EndTime { get; set; }
 
+                /// <summary>
+                /// <para>Expression.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>平静</para>
+                /// </summary>
                 [NameInMap("Expression")]
                 [Validation(Required=false)]
                 public string Expression { get; set; }

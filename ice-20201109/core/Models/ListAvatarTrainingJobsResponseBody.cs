@@ -25,6 +25,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public class ListAvatarTrainingJobsResponseBodyDataAvatarTrainingJobList : TeaModel {
                 /// <summary>
                 /// <para>The description of the digital human.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>This is a digital human used for a specific scenario.</para>
                 /// </summary>
                 [NameInMap("AvatarDescription")]
                 [Validation(Required=false)]
@@ -42,6 +45,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
                 /// <summary>
                 /// <para>The name of the digital human.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Decimal</para>
                 /// </summary>
                 [NameInMap("AvatarName")]
                 [Validation(Required=false)]
@@ -59,8 +65,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
                 /// <summary>
                 /// <list type="bullet">
-                /// <item><description>The time when the job was created.</description></item>
-                /// <item><description>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</description></item>
+                /// <item><description><para>The time when the job was created.</para>
+                /// </description></item>
+                /// <item><description><para>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -72,8 +80,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
                 /// <summary>
                 /// <list type="bullet">
-                /// <item><description>The time when the first training was initiated.</description></item>
-                /// <item><description>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</description></item>
+                /// <item><description><para>The time when the first training was initiated.</para>
+                /// </description></item>
+                /// <item><description><para>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -95,8 +105,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
                 /// <summary>
                 /// <list type="bullet">
-                /// <item><description>The time when the last training was initiated.</description></item>
-                /// <item><description>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</description></item>
+                /// <item><description><para>The time when the last training was initiated.</para>
+                /// </description></item>
+                /// <item><description><para>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -108,6 +120,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
                 /// <summary>
                 /// <para>The status description.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Training succeeded</para>
                 /// </summary>
                 [NameInMap("Message")]
                 [Validation(Required=false)]
@@ -127,7 +142,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <para>The state of the digital human training job.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Normal</para>
+                /// <para>Success</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -160,8 +175,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetYikeUserRequest : TeaModel {
         /// <summary>
+        /// <para>The user name of the sub-account.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="mailto:test.xxx@xxx.yikeai">test.xxx@xxx.yikeai</a></para>
         /// </summary>

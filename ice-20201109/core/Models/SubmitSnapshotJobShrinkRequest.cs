@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitSnapshotJobShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The snapshot input.</para>
+        /// <para>The input for the snapshot job.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Input")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string InputShrink { get; set; }
 
         /// <summary>
-        /// <para>The name of the job.</para>
+        /// <para>The name of the snapshot job.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SampleJob</para>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The snapshot output.</para>
+        /// <para>The output destination for the snapshot job.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Output")]
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string OutputShrink { get; set; }
 
         /// <summary>
-        /// <para>The scheduling settings.</para>
+        /// <para>The scheduling configuration.</para>
         /// </summary>
         [NameInMap("ScheduleConfig")]
         [Validation(Required=false)]
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string TemplateConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The user-defined data.</para>
+        /// <para>Custom user data, passed as a JSON-formatted string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;test parameter&quot;: &quot;test value&quot;}</para>

@@ -92,6 +92,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
             /// <summary>
             /// <para>The text prompt to send to the MLLM along with the captured frames.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>请分析视频中的场景</para>
             /// </summary>
             [NameInMap("Prompt")]
             [Validation(Required=false)]
@@ -122,7 +125,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <para>http(s)://{BucketName}.{Endpoint}/{ObjectName}</para>
             /// 
             /// <b>Example:</b>
-            /// <para><a href="http://my-bucket.cn-shanghai.aliyuncs.com/object-id.mp4">http://my-bucket.cn-shanghai.aliyuncs.com/object-id.mp4</a></para>
+            /// <para><a href="http://my-bucket.oss-cn-shanghai.aliyuncs.com/object-id.mp4">http://my-bucket.oss-cn-shanghai.aliyuncs.com/object-id.mp4</a></para>
             /// </summary>
             [NameInMap("Media")]
             [Validation(Required=false)]
@@ -145,6 +148,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         /// <summary>
         /// <para>The user-defined data.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;Custom&quot;:&quot;hello&quot;}</para>
         /// </summary>
         [NameInMap("UserData")]
         [Validation(Required=false)]

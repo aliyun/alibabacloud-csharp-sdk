@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetAiRtcLicenseInfoListRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the batch.</para>
+        /// <para>The License Item ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>17712***</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string LicenseItemId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to include the total count of records in the response. Defaults to <c>true</c>.</para>
+        /// <para>Specifies whether to return the total count. Default value: <c>true</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public long? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -50,10 +50,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The status of the batch. Valid values:</para>
+        /// <para>The status of the license batch. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>1</c>: Active</description></item>
-        /// <item><description><c>2</c>: Expired</description></item>
+        /// <item><description><para><c>1</c>: Normal</para>
+        /// </description></item>
+        /// <item><description><para><c>2</c>: Expired</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -64,10 +66,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? Status { get; set; }
 
         /// <summary>
-        /// <para>The type of license. Valid values:</para>
+        /// <para>The license type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>1</c>: Audio call</description></item>
-        /// <item><description><c>2</c>: Vision call</description></item>
+        /// <item><description><para><c>1</c>: voice call</para>
+        /// </description></item>
+        /// <item><description><para><c>2</c>: visual understanding</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

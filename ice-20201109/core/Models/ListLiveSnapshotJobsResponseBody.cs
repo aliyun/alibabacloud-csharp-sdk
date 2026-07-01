@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public List<ListLiveSnapshotJobsResponseBodyJobList> JobList { get; set; }
         public class ListLiveSnapshotJobsResponseBodyJobList : TeaModel {
             /// <summary>
-            /// <para>The time when the template was created.</para>
+            /// <para>The creation time of the job.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-07-20T02:48:58Z</para>
@@ -37,21 +37,24 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string JobId { get; set; }
 
             /// <summary>
-            /// <para>The name of the job.</para>
+            /// <para>The job name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Screenshot task1</para>
             /// </summary>
             [NameInMap("JobName")]
             [Validation(Required=false)]
             public string JobName { get; set; }
 
             /// <summary>
-            /// <para>The output information.</para>
+            /// <para>Details of the snapshot output.</para>
             /// </summary>
             [NameInMap("SnapshotOutput")]
             [Validation(Required=false)]
             public ListLiveSnapshotJobsResponseBodyJobListSnapshotOutput SnapshotOutput { get; set; }
             public class ListLiveSnapshotJobsResponseBodyJobListSnapshotOutput : TeaModel {
                 /// <summary>
-                /// <para>The bucket of the output endpoint. If the storage type is set to oss, the OSS bucket is returned.</para>
+                /// <para>The name of the OSS Bucket.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>testbucket</para>
@@ -61,7 +64,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string Bucket { get; set; }
 
                 /// <summary>
-                /// <para>The output endpoint. If the storage type is set to oss, the Object Storage Service (OSS) domain name is returned.</para>
+                /// <para>The domain name of the OSS endpoint.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>oss-cn-shanghai.aliyuncs.com</para>
@@ -71,7 +74,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string Endpoint { get; set; }
 
                 /// <summary>
-                /// <para>The storage type. The value can only be oss.</para>
+                /// <para>The storage type. Only Object Storage Service (OSS) is supported.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>oss</para>
@@ -83,13 +86,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             }
 
             /// <summary>
-            /// <para>The state of the job.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>init: The job is not started.</description></item>
-            /// <item><description>paused: The job is paused.</description></item>
-            /// <item><description>started: The job is in progress.</description></item>
-            /// </list>
+            /// <para>The job status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>started</para>
@@ -110,13 +107,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
             /// <summary>
             /// <para>The template name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Template 1</para>
             /// </summary>
             [NameInMap("TemplateName")]
             [Validation(Required=false)]
             public string TemplateName { get; set; }
 
             /// <summary>
-            /// <para>The interval between two adjacent snapshots. Unit: seconds.</para>
+            /// <para>The interval between snapshots, in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of jobs to return per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The sorting order of the jobs by creation time.</para>
+        /// <para>The sort order for the job list. For example, &quot;desc&quot; indicates descending order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>desc</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of jobs found.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

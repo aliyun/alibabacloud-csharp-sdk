@@ -10,6 +10,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class StopAIAgentInstanceRequest : TeaModel {
         /// <summary>
+        /// <para>The agent instance ID.</para>
+        /// <remarks>
+        /// <para>The InstanceId is the unique ID returned after successfully starting an agent instance. For information about starting an agent, see <a href="https://help.aliyun.com/document_detail/2846201.html">StartAIAgentInstance</a> and <a href="https://help.aliyun.com/document_detail/2846209.html">GenerateAIAgentCall</a>.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

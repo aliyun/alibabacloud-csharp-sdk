@@ -66,8 +66,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The type of the editing project. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>EditingProject: a regular editing project.</description></item>
-        /// <item><description>LiveEditingProject: a live stream editing project.</description></item>
+        /// <item><description><para>EditingProject: a regular editing project.</para>
+        /// </description></item>
+        /// <item><description><para>LiveEditingProject: a live stream editing project.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -80,8 +82,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The order of sorting of the results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CreationTime:Desc (default): sorts the results in reverse chronological order.</description></item>
-        /// <item><description>CreationTime:Asc: sorts the results in chronological order.</description></item>
+        /// <item><description><para>CreationTime:Desc (default): sorts the results in reverse chronological order.</para>
+        /// </description></item>
+        /// <item><description><para>CreationTime:Asc: sorts the results in chronological order.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -119,9 +123,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// </list>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Timeline: a regular template.</description></item>
-        /// <item><description>VETemplate: an advanced template.</description></item>
-        /// <item><description>None: general editing.</description></item>
+        /// <item><description><para>Timeline: a regular template.</para>
+        /// </description></item>
+        /// <item><description><para>VETemplate: an advanced template.</para>
+        /// </description></item>
+        /// <item><description><para>None: general editing.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

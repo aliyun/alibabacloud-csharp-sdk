@@ -45,11 +45,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <para>The output type.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>RTMP-PUSH</description></item>
-        /// <item><description>SRT-Caller</description></item>
-        /// <item><description>RTMP-PULL</description></item>
-        /// <item><description>SRT-Listener</description></item>
-        /// <item><description>Flow</description></item>
+        /// <item><description><para>RTMP-PUSH</para>
+        /// </description></item>
+        /// <item><description><para>SRT-Caller</para>
+        /// </description></item>
+        /// <item><description><para>RTMP-PULL</para>
+        /// </description></item>
+        /// <item><description><para>SRT-Listener</para>
+        /// </description></item>
+        /// <item><description><para>Flow</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

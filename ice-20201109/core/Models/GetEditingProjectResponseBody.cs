@@ -43,6 +43,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
             /// <summary>
             /// <para>The material parameter corresponding to the template, in the JSON format. If TemplateId is specified, ClipsParam must also be specified. For more information&lt;props=&quot;china&quot;&gt;, see <a href="https://help.aliyun.com/document_detail/328557.html">Create and use a regular template</a> and <a href="https://help.aliyun.com/document_detail/291418.html">Create and use an advanced template</a>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>See the template user guide.</para>
             /// </summary>
             [NameInMap("ClipsParam")]
             [Validation(Required=false)]
@@ -52,7 +55,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <para>The thumbnail URL of the online editing project.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>oss://example-bucket/example.jpg</para>
+            /// <para><a href="http://aaa.bbb/your-cover.jpg">http://aaa.bbb/your-cover.jpg</a></para>
             /// </summary>
             [NameInMap("CoverURL")]
             [Validation(Required=false)]
@@ -85,6 +88,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
             /// <summary>
             /// <para>The description of the online editing project.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Example description</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -221,6 +227,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
             /// <summary>
             /// <para>The title of the online editing project.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Sample title</para>
             /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]

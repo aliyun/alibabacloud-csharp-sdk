@@ -12,11 +12,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The type of recognition algorithm. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>landmark</description></item>
-        /// <item><description>object</description></item>
-        /// <item><description>logo</description></item>
-        /// <item><description>face</description></item>
-        /// <item><description>label</description></item>
+        /// <item><description><para>landmark</para>
+        /// </description></item>
+        /// <item><description><para>object</para>
+        /// </description></item>
+        /// <item><description><para>logo</para>
+        /// </description></item>
+        /// <item><description><para>face</para>
+        /// </description></item>
+        /// <item><description><para>label</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -29,6 +34,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         /// <summary>
         /// <para>The extra information about the custom entity, provided as a JSON string. Max length: 256 bytes.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;description&quot;: &quot;Book classification&quot;}</para>
         /// </summary>
         [NameInMap("EntityInfo")]
         [Validation(Required=false)]
@@ -37,6 +45,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The name of the custom entity. Max length: 64 bytes.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Custom library entity name</para>
         /// </summary>
         [NameInMap("EntityName")]
         [Validation(Required=false)]

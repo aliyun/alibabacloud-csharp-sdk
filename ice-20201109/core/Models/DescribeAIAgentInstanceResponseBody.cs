@@ -10,22 +10,28 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class DescribeAIAgentInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the AI agent.</para>
+        /// <para>Information about the AI agent instance.</para>
         /// </summary>
         [NameInMap("Instance")]
         [Validation(Required=false)]
         public DescribeAIAgentInstanceResponseBodyInstance Instance { get; set; }
         public class DescribeAIAgentInstanceResponseBodyInstance : TeaModel {
+            /// <summary>
+            /// <para>The configuration of the AI agent.</para>
+            /// </summary>
             [NameInMap("AgentConfig")]
             [Validation(Required=false)]
             public AIAgentConfig AgentConfig { get; set; }
 
+            /// <summary>
+            /// <para>Information about the call.</para>
+            /// </summary>
             [NameInMap("CallInfo")]
             [Validation(Required=false)]
             public AIAgentCallInfo CallInfo { get; set; }
 
             /// <summary>
-            /// <para>The URL of the call log file.</para>
+            /// <para>The URL of the call log.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://example.com/call_logs/12345">https://example.com/call_logs/12345</a></para>
@@ -34,16 +40,28 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string CallLogUrl { get; set; }
 
+            /// <summary>
+            /// <para>The creation time (UTC).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2025-07-18T06:39:08.000+00:00</para>
+            /// </summary>
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
             public string GmtCreate { get; set; }
 
+            /// <summary>
+            /// <para>The modification time (UTC).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2025-07-18T06:40:12.000+00:00</para>
+            /// </summary>
             [NameInMap("GmtModified")]
             [Validation(Required=false)]
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The runtime configurations of the AI agent.</para>
+            /// <para>The runtime configuration of the AI agent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;VoiceChat&quot;:{&quot;AgentUserId&quot;:&quot;voice_agent_001&quot;,&quot;ChannelId&quot;:&quot;voice_channel_001&quot;,&quot;AuthToken&quot;:&quot;your_voice_chat_auth_token&quot;}}</para>
@@ -52,12 +70,18 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public AIAgentRuntimeConfig RuntimeConfig { get; set; }
 
+            /// <summary>
+            /// <para>The session ID for the conversation. This parameter is empty by default.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>955535**************</para>
+            /// </summary>
             [NameInMap("SessionId")]
             [Validation(Required=false)]
             public string SessionId { get; set; }
 
             /// <summary>
-            /// <para>The state of the AI agent. Valid values: Finished and Executing.</para>
+            /// <para>The status of the AI agent instance, such as <c>Finished</c> or <c>Executing</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Finished</para>
@@ -69,7 +93,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The template configurations of the AI agent.</para>
+            /// <para>The AI agent template configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;VoiceChat&quot;: {&quot;AppId&quot;: &quot;your_voice_chat_app_id&quot;}}</para>
@@ -80,7 +104,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public AIAgentTemplateConfig TemplateConfig { get; set; }
 
             /// <summary>
-            /// <para>The custom information.</para>
+            /// <para>The user data.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;Email&quot;:&quot;<a href="mailto:johndoe@example.com">johndoe@example.com</a>&quot;,&quot;Preferences&quot;:{&quot;Language&quot;:&quot;en&quot;}}</para>

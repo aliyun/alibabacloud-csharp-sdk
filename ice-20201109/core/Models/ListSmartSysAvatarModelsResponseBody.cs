@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The queried digital humans.</para>
+        /// <para>A list of system digital avatars.</para>
         /// </summary>
         [NameInMap("SmartSysAvatarModelList")]
         [Validation(Required=false)]
         public List<ListSmartSysAvatarModelsResponseBodySmartSysAvatarModelList> SmartSysAvatarModelList { get; set; }
         public class ListSmartSysAvatarModelsResponseBodySmartSysAvatarModelList : TeaModel {
             /// <summary>
-            /// <para>The ID of the digital human. The ID is required to submit a separate digital human rendering job or use the digital human image in an intelligent timeline.</para>
+            /// <para>The digital avatar ID. Use this ID when you submit a rendering job or use the digital avatar in an intelligent timeline.</para>
             /// 
             /// <b>Example:</b>
             /// <para>yunqiao</para>
@@ -37,7 +37,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string AvatarId { get; set; }
 
             /// <summary>
-            /// <para>The name of the digital human.</para>
+            /// <para>The digital avatar name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Yun Qiao</para>
             /// </summary>
             [NameInMap("AvatarName")]
             [Validation(Required=false)]
@@ -54,7 +57,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public int? Bitrate { get; set; }
 
             /// <summary>
-            /// <para>The sample thumbnail URL of the digital human.</para>
+            /// <para>The URL of the sample cover for the digital avatar.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://ice-pub-media.myalicdn.com/smart/avatarModel/coverDemo/yunqiao.mp4">http://ice-pub-media.myalicdn.com/smart/avatarModel/coverDemo/yunqiao.mp4</a></para>
@@ -84,7 +87,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public bool? OutputMask { get; set; }
 
             /// <summary>
-            /// <para>The sample video URL of the digital human.</para>
+            /// <para>The URL of the sample video for the digital avatar.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://ice-pub-media.myalicdn.com/smart/avatarModel/videoDemo/yunqiao.mp4">http://ice-pub-media.myalicdn.com/smart/avatarModel/videoDemo/yunqiao.mp4</a></para>
@@ -106,7 +109,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
-        /// <para>The total number of system digital human images returned.</para>
+        /// <para>The total number of system digital avatars.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>

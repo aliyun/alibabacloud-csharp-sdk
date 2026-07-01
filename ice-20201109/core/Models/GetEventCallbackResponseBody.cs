@@ -22,8 +22,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>Specifies whether callback authentication is enabled. This parameter is returned only for <b>HTTP</b> callbacks. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>on</b></description></item>
-        /// <item><description><b>off</b></description></item>
+        /// <item><description><para><b>on</b></para>
+        /// </description></item>
+        /// <item><description><para><b>off</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,8 +48,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The callback method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>HTTP</b></description></item>
-        /// <item><description><b>MNS</b></description></item>
+        /// <item><description><para><b>HTTP</b></para>
+        /// </description></item>
+        /// <item><description><para><b>MNS</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -30,10 +30,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The type of the template. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>normal</description></item>
-        /// <item><description>narrow-band</description></item>
-        /// <item><description>audio-only</description></item>
-        /// <item><description>origin</description></item>
+        /// <item><description><para>normal</para>
+        /// </description></item>
+        /// <item><description><para>narrow-band</para>
+        /// </description></item>
+        /// <item><description><para>audio-only</para>
+        /// </description></item>
+        /// <item><description><para>origin</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

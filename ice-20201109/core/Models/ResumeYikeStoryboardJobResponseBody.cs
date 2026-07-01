@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ResumeYikeStoryboardJobResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the storyboard job. This ID is returned in the response when you submit the job.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b><b>a046-263c-3560-978a-fb287782</b></b></para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string JobId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b><b><b>3B-0E1A-586A-AC29-742247</b></b></b></para>
         /// </summary>

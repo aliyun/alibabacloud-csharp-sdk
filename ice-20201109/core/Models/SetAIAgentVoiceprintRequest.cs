@@ -43,17 +43,17 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// </description></item>
             /// <item><description><para>oss: An OSS object. Supports the following formats:</para>
             /// <ol>
-            /// <item><description><para>OSS URI: oss://bucket-name/object-key</para>
-            /// <para>Example: oss://my-bucket/audio/sample.wav</para>
+            /// <item><description><para>OSS URI: oss\://bucket-name/object-key</para>
+            /// <para>Example: oss\://my-bucket/audio/sample.wav</para>
             /// </description></item>
             /// <item><description><para>OSS public URL: http(s)://${bucket}.oss-${region}.aliyuncs.com/${object}</para>
-            /// <para>Example: <a href="https://my-bucket.oss-cn-hangzhou.aliyuncs.com/audio/sample.wav">https://my-bucket.oss-cn-hangzhou.aliyuncs.com/audio/sample.wav</a></para>
+            /// <para>Example: https\://my-bucket.oss-cn-hangzhou.aliyuncs.com/audio/sample.wav</para>
             /// </description></item>
             /// </ol>
             /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> The OSS bucket must be in the same region as the service. Otherwise, the access fails.</para>
+            /// <para>The OSS bucket must be in the same region as the service. Otherwise, the access fails.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

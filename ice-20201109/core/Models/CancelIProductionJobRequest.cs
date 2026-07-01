@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class CancelIProductionJobRequest : TeaModel {
         /// <summary>
+        /// <para>Idempotency parameter</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b><b>12e8864746a0a398</b></b></para>
         /// </summary>

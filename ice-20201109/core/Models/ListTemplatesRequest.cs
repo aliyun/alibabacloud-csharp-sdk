@@ -13,9 +13,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <para>The source from which the template was created.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>AliyunConsole</description></item>
-        /// <item><description>WebSDK</description></item>
-        /// <item><description>OpenAPI</description></item>
+        /// <item><description><para>AliyunConsole</para>
+        /// </description></item>
+        /// <item><description><para>WebSDK</para>
+        /// </description></item>
+        /// <item><description><para>OpenAPI</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,8 +39,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: 1.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -46,10 +47,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public long? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 20. Valid values: 1 to 100.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>20</para>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -59,8 +58,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <para>The sorting parameter. By default, the query results are sorted by creation time in descending order.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CreationTime:Asc: sorted by creation time in ascending order.</description></item>
-        /// <item><description>CreationTime:Desc: sorted by creation time in descending order.</description></item>
+        /// <item><description><para>CreationTime:Asc: sorted by creation time in ascending order.</para>
+        /// </description></item>
+        /// <item><description><para>CreationTime:Desc: sorted by creation time in descending order.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -74,12 +75,18 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <para>The template state.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>UploadFailed: Failed to upload the video.</description></item>
-        /// <item><description>ProcessFailed: Failed to process the advanced template.</description></item>
-        /// <item><description>Available: The template is available.</description></item>
-        /// <item><description>Uploading: The video is being uploaded.</description></item>
-        /// <item><description>Created: The template is created but not ready for use.</description></item>
-        /// <item><description>Processing: The advanced template is being processed.</description></item>
+        /// <item><description><para>UploadFailed: Failed to upload the video.</para>
+        /// </description></item>
+        /// <item><description><para>ProcessFailed: Failed to process the advanced template.</para>
+        /// </description></item>
+        /// <item><description><para>Available: The template is available.</para>
+        /// </description></item>
+        /// <item><description><para>Uploading: The video is being uploaded.</para>
+        /// </description></item>
+        /// <item><description><para>Created: The template is created but not ready for use.</para>
+        /// </description></item>
+        /// <item><description><para>Processing: The advanced template is being processed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -93,8 +100,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <para>The template type.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Timeline</description></item>
-        /// <item><description>VETemplate</description></item>
+        /// <item><description><para>Timeline</para>
+        /// </description></item>
+        /// <item><description><para>VETemplate</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

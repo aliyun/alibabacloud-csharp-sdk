@@ -10,8 +10,18 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SearchMediaByFaceRequest : TeaModel {
         /// <summary>
+        /// <para>Custom filters. A JSON string. The following backing fields are supported: intField1 (integer type), strField1 and strField2 (string type). For the same field, only one matching mode can be specified. Filters across different fields are combined with a logical AND relationship.</para>
+        /// <list type="bullet">
+        /// <item><description><para>Exact match, for example: {&quot;intField1&quot;:12,&quot;strField1&quot;:&quot;abc&quot;}</para>
+        /// </description></item>
+        /// <item><description><para>Multi-value match, for example: {&quot;intField1&quot;:[12,13],&quot;strField1&quot;:[&quot;abc&quot;,&quot;cd&quot;]}</para>
+        /// </description></item>
+        /// <item><description><para>Range match, for example: {&quot;intField1&quot;:{&quot;gte&quot;:12,&quot;lte&quot;:13}}</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
-        /// <para>{}</para>
+        /// <para>{&quot;intField1&quot;:{&quot;gte&quot;:12,&quot;lte&quot;:13},&quot;strField2&quot;:[&quot;cd&quot;,&quot;de&quot;],&quot;strField1&quot;:&quot;abc&quot;}</para>
         /// </summary>
         [NameInMap("CustomFilters")]
         [Validation(Required=false)]
@@ -41,8 +51,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The type of the media asset. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>image</description></item>
-        /// <item><description>video</description></item>
+        /// <item><description><para>image</para>
+        /// </description></item>
+        /// <item><description><para>video</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,6 +64,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string MediaType { get; set; }
 
+        /// <summary>
+        /// <para>Namespace.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>name-1</para>
+        /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
@@ -98,8 +116,13 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string SearchLibName { get; set; }
 
         /// <summary>
+        /// <para>Creation time, in milliseconds UNIX timestamp. Use gte for greater than or equal to, and lte for less than or equal to.</para>
+        /// <list type="bullet">
+        /// <item><description>Example range: {&quot;gte&quot;:1761205662998,&quot;lte&quot;:1771205662998}</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
-        /// <para>{}</para>
+        /// <para>{&quot;gte&quot;:1761205662998,&quot;lte&quot;:1771205662998}</para>
         /// </summary>
         [NameInMap("UtcCreate")]
         [Validation(Required=false)]

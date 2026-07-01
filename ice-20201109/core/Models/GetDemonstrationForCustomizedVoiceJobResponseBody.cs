@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <para>The URL of the sample audio.</para>
                 /// <list type="bullet">
                 /// <item><description><para>The value is an Object Storage Service (OSS) URL.</para>
-                /// <para>**</para>
+                /// <para>\<em>\</em></para>
                 /// <para><b>Note</b>: The URL expires in 12 hours.</para>
                 /// </description></item>
                 /// </list>
@@ -51,6 +51,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
                 /// <summary>
                 /// <para>The text content to be read.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>No, he thought for a moment, I cannot say this to the king, that would be lying.</para>
                 /// </summary>
                 [NameInMap("Text")]
                 [Validation(Required=false)]
@@ -73,8 +76,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

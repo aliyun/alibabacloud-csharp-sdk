@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class QueryVideoCognitionJobShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to include the full algorithm results in the response.</para>
+        /// <para>A container for parameters that determine which algorithm results to include in the response.</para>
         /// </summary>
         [NameInMap("IncludeResults")]
         [Validation(Required=false)]
         public string IncludeResultsShrink { get; set; }
 
         /// <summary>
-        /// <para>The ID of the task to query. It is returned when you call the <a href="https://help.aliyun.com/document_detail/478786.html">SubmitSmarttagJob</a> operation.</para>
+        /// <para>The ID of the intelligent tagging job. You can obtain this ID from the response of the <a href="https://help.aliyun.com/document_detail/478786.html">SubmitIntelligentTaggingJob</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>Additional request parameters, provided as a JSON string.</para>
+        /// <para>Additional request parameters, specified as a JSON string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>

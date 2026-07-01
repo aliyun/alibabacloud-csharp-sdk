@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitTraceAbJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>Contains the IDs for the submitted job and the output media asset.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string JobId { get; set; }
 
             /// <summary>
-            /// <para>The media ID.</para>
+            /// <para>The ID of the media asset created for tracing.</para>
             /// 
             /// <b>Example:</b>
             /// <para>bf53333264f4d80648792021e****</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The response message. A value of <c>ok</c> indicates a successful request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ok</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The unique identifier for the request. If you encounter an issue, provide this ID for technical support.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b><b>36-3C1E-4417-BDB2-1E034F</b></b></b></para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>The HTTP status code. A value of <c>200</c> indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>

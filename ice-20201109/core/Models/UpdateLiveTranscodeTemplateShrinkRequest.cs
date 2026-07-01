@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
     public class UpdateLiveTranscodeTemplateShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The template name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Template1130-2</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

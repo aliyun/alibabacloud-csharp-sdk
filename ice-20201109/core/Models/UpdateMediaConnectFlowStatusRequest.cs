@@ -23,8 +23,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The flow state. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>online: starts the flow.</description></item>
-        /// <item><description>offline: stops the flow.</description></item>
+        /// <item><description><para>online: starts the flow.</para>
+        /// </description></item>
+        /// <item><description><para>offline: stops the flow.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -145,6 +145,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
             /// <summary>
             /// <para>The template name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Template 1</para>
             /// </summary>
             [NameInMap("TemplateName")]
             [Validation(Required=false)]

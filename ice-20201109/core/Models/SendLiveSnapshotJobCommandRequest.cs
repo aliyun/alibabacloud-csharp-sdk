@@ -13,9 +13,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <para>The operation command.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>stop</description></item>
-        /// <item><description>restart</description></item>
-        /// <item><description>start</description></item>
+        /// <item><description><para>stop</para>
+        /// </description></item>
+        /// <item><description><para>restart</para>
+        /// </description></item>
+        /// <item><description><para>start</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

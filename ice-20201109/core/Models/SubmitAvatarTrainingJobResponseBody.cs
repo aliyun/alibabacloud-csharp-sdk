@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitAvatarTrainingJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public SubmitAvatarTrainingJobResponseBodyData Data { get; set; }
         public class SubmitAvatarTrainingJobResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the digital human training job.</para>
+            /// <para>The unique identifier for the avatar training job.</para>
             /// 
             /// <b>Example:</b>
             /// <para><b><b>29faef8144638ba42eb8e037</b></b></para>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para><em><b><b>ACB-44F2-5F2D-88D7-1283E70</b></b></em></para>

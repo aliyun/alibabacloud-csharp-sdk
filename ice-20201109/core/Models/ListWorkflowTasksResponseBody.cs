@@ -71,11 +71,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <para>The task state.</para>
             /// <para><b>Valid values</b>:</para>
             /// <list type="bullet">
-            /// <item><description>Init: Initializing</description></item>
-            /// <item><description>Failed</description></item>
-            /// <item><description>Canceled</description></item>
-            /// <item><description>Processing</description></item>
-            /// <item><description>Succeed</description></item>
+            /// <item><description><para>Init: Initializing</para>
+            /// </description></item>
+            /// <item><description><para>Failed</para>
+            /// </description></item>
+            /// <item><description><para>Canceled</para>
+            /// </description></item>
+            /// <item><description><para>Processing</para>
+            /// </description></item>
+            /// <item><description><para>Succeed</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -135,8 +140,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <summary>
                 /// <para>The source of the media file. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>OSS: an OSS object.</description></item>
-                /// <item><description>Media: a media asset.</description></item>
+                /// <item><description><para>OSS: an OSS object.</para>
+                /// </description></item>
+                /// <item><description><para>Media: a media asset.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

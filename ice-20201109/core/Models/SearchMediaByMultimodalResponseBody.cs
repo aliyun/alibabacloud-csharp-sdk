@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <para>The score.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>1.2</para>
+                /// <para>0.99</para>
                 /// </summary>
                 [NameInMap("Score")]
                 [Validation(Required=false)]

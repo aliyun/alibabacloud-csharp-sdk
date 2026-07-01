@@ -19,8 +19,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <summary>
             /// <para>Indicates whether the audio file passes the check. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description><para>true</para>
+            /// </description></item>
+            /// <item><description><para>false</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -32,6 +34,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
             /// <summary>
             /// <para>The reason returned if the audio file failed to pass the check.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>发音错误，请准确读出文案中的内容</para>
             /// </summary>
             [NameInMap("Reason")]
             [Validation(Required=false)]

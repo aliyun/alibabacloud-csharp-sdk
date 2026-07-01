@@ -25,6 +25,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public class GetAvatarTrainingJobResponseBodyDataAvatarTrainingJob : TeaModel {
                 /// <summary>
                 /// <para>The description of the digital human.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>This is a digital human used for a specific scenario.</para>
                 /// </summary>
                 [NameInMap("AvatarDescription")]
                 [Validation(Required=false)]
@@ -42,6 +45,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
                 /// <summary>
                 /// <para>The name of the digital human.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Decimal</para>
                 /// </summary>
                 [NameInMap("AvatarName")]
                 [Validation(Required=false)]
@@ -59,8 +65,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
                 /// <summary>
                 /// <list type="bullet">
-                /// <item><description>The time when the first training was initiated.</description></item>
-                /// <item><description>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</description></item>
+                /// <item><description><para>The time when the first training was initiated.</para>
+                /// </description></item>
+                /// <item><description><para>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -82,8 +90,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
                 /// <summary>
                 /// <list type="bullet">
-                /// <item><description>The time when the last training was initiated.</description></item>
-                /// <item><description>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</description></item>
+                /// <item><description><para>The time when the last training was initiated.</para>
+                /// </description></item>
+                /// <item><description><para>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -95,6 +105,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
                 /// <summary>
                 /// <para>The status description.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Training succeeded</para>
                 /// </summary>
                 [NameInMap("Message")]
                 [Validation(Required=false)]
@@ -112,8 +125,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
                 /// <summary>
                 /// <list type="bullet">
-                /// <item><description>The state of the digital human training job.</description></item>
-                /// <item><description>Valid values: Init, Queuing, Training, Success, and Fail.</description></item>
+                /// <item><description><para>The state of the digital human training job.</para>
+                /// </description></item>
+                /// <item><description><para>Valid values: Init, Queuing, Training, Success, and Fail.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

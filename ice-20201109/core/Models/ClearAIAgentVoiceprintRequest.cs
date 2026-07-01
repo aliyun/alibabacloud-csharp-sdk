@@ -9,12 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ClearAIAgentVoiceprintRequest : TeaModel {
+        /// <summary>
+        /// <para>The registration mode. The default is <c>Explicit</c>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Explicit</para>
+        /// </summary>
         [NameInMap("RegistrationMode")]
         [Validation(Required=false)]
         public string RegistrationMode { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier for the voiceprint.</para>
+        /// <para>The unique identifier of the voiceprint to clear.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vp_1699123456_8527</para>

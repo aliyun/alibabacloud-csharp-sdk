@@ -42,6 +42,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public class SearchMediaByAILabelResponseBodyMediaListAiDataAiLabelInfo : TeaModel {
                     /// <summary>
                     /// <para>The category.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Vehicle</para>
                     /// </summary>
                     [NameInMap("Category")]
                     [Validation(Required=false)]
@@ -69,6 +72,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
                     /// <summary>
                     /// <para>The name of the entity.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Car</para>
                     /// </summary>
                     [NameInMap("LabelName")]
                     [Validation(Required=false)]
@@ -76,6 +82,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
                     /// <summary>
                     /// <para>The type of the tag.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Object</para>
                     /// </summary>
                     [NameInMap("LabelType")]
                     [Validation(Required=false)]
@@ -100,6 +109,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
                         /// <summary>
                         /// <para>The content of the text.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>Test content</para>
                         /// </summary>
                         [NameInMap("Content")]
                         [Validation(Required=false)]
@@ -117,6 +129,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
                         /// <summary>
                         /// <para>The fine-grained name of the entity.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>Car</para>
                         /// </summary>
                         [NameInMap("FinegrainName")]
                         [Validation(Required=false)]
@@ -244,6 +259,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
                     /// <summary>
                     /// <para>The content of the audio.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>智能标签测试</para>
                     /// </summary>
                     [NameInMap("Content")]
                     [Validation(Required=false)]
@@ -300,6 +318,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
                     /// <summary>
                     /// <para>The content of the text.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Pipi</para>
                     /// </summary>
                     [NameInMap("Content")]
                     [Validation(Required=false)]
@@ -371,6 +392,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
             /// <summary>
             /// <para>The description of the media asset.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Alibaba Cloud VOD video description</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -427,18 +451,30 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <para>The status of the video.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PrepareFail</description></item>
-            /// <item><description>UploadFail</description></item>
-            /// <item><description>Init</description></item>
-            /// <item><description>UploadSucc</description></item>
-            /// <item><description>Transcoding</description></item>
-            /// <item><description>TranscodeFail</description></item>
-            /// <item><description>Deleted</description></item>
-            /// <item><description>Normal</description></item>
-            /// <item><description>Uploading</description></item>
-            /// <item><description>Preparing</description></item>
-            /// <item><description>Blocked</description></item>
-            /// <item><description>Checking</description></item>
+            /// <item><description><para>PrepareFail</para>
+            /// </description></item>
+            /// <item><description><para>UploadFail</para>
+            /// </description></item>
+            /// <item><description><para>Init</para>
+            /// </description></item>
+            /// <item><description><para>UploadSucc</para>
+            /// </description></item>
+            /// <item><description><para>Transcoding</para>
+            /// </description></item>
+            /// <item><description><para>TranscodeFail</para>
+            /// </description></item>
+            /// <item><description><para>Deleted</para>
+            /// </description></item>
+            /// <item><description><para>Normal</para>
+            /// </description></item>
+            /// <item><description><para>Uploading</para>
+            /// </description></item>
+            /// <item><description><para>Preparing</para>
+            /// </description></item>
+            /// <item><description><para>Blocked</para>
+            /// </description></item>
+            /// <item><description><para>Checking</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -460,6 +496,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
             /// <summary>
             /// <para>The tags of the media asset.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Tag 1, Tag 2</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -467,6 +506,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
             /// <summary>
             /// <para>The title of the media asset.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>The best music player ever</para>
             /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]

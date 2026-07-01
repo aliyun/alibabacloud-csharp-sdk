@@ -9,96 +9,156 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class BatchGetMediaInfosResponseBody : TeaModel {
+        /// <summary>
+        /// <para>A list of media IDs for which information could not be retrieved.</para>
+        /// </summary>
         [NameInMap("IgnoredList")]
         [Validation(Required=false)]
         public List<string> IgnoredList { get; set; }
 
         /// <summary>
-        /// <para>The queried media assets.</para>
+        /// <para>A list of media assets.</para>
         /// </summary>
         [NameInMap("MediaInfos")]
         [Validation(Required=false)]
         public List<BatchGetMediaInfosResponseBodyMediaInfos> MediaInfos { get; set; }
         public class BatchGetMediaInfosResponseBodyMediaInfos : TeaModel {
             /// <summary>
-            /// <para>FileInfos</para>
+            /// <para>A list of basic file information.</para>
             /// </summary>
             [NameInMap("FileInfoList")]
             [Validation(Required=false)]
             public List<BatchGetMediaInfosResponseBodyMediaInfosFileInfoList> FileInfoList { get; set; }
             public class BatchGetMediaInfosResponseBodyMediaInfosFileInfoList : TeaModel {
+                /// <summary>
+                /// <para>The audio streams.</para>
+                /// </summary>
                 [NameInMap("AudioStreamInfoList")]
                 [Validation(Required=false)]
                 public List<BatchGetMediaInfosResponseBodyMediaInfosFileInfoListAudioStreamInfoList> AudioStreamInfoList { get; set; }
                 public class BatchGetMediaInfosResponseBodyMediaInfosFileInfoListAudioStreamInfoList : TeaModel {
+                    /// <summary>
+                    /// <para>The bitrate.</para>
+                    /// </summary>
                     [NameInMap("Bitrate")]
                     [Validation(Required=false)]
                     public string Bitrate { get; set; }
 
+                    /// <summary>
+                    /// <para>The channel layout.</para>
+                    /// </summary>
                     [NameInMap("ChannelLayout")]
                     [Validation(Required=false)]
                     public string ChannelLayout { get; set; }
 
+                    /// <summary>
+                    /// <para>The number of audio channels.</para>
+                    /// </summary>
                     [NameInMap("Channels")]
                     [Validation(Required=false)]
                     public string Channels { get; set; }
 
+                    /// <summary>
+                    /// <para>The full name of the codec.</para>
+                    /// </summary>
                     [NameInMap("CodecLongName")]
                     [Validation(Required=false)]
                     public string CodecLongName { get; set; }
 
+                    /// <summary>
+                    /// <para>The short name of the codec.</para>
+                    /// </summary>
                     [NameInMap("CodecName")]
                     [Validation(Required=false)]
                     public string CodecName { get; set; }
 
+                    /// <summary>
+                    /// <para>The codec tag.</para>
+                    /// </summary>
                     [NameInMap("CodecTag")]
                     [Validation(Required=false)]
                     public string CodecTag { get; set; }
 
+                    /// <summary>
+                    /// <para>The codec tag string.</para>
+                    /// </summary>
                     [NameInMap("CodecTagString")]
                     [Validation(Required=false)]
                     public string CodecTagString { get; set; }
 
+                    /// <summary>
+                    /// <para>The time base of the codec.</para>
+                    /// </summary>
                     [NameInMap("CodecTimeBase")]
                     [Validation(Required=false)]
                     public string CodecTimeBase { get; set; }
 
+                    /// <summary>
+                    /// <para>The duration.</para>
+                    /// </summary>
                     [NameInMap("Duration")]
                     [Validation(Required=false)]
                     public string Duration { get; set; }
 
+                    /// <summary>
+                    /// <para>The frame rate.</para>
+                    /// </summary>
                     [NameInMap("Fps")]
                     [Validation(Required=false)]
                     public string Fps { get; set; }
 
+                    /// <summary>
+                    /// <para>The index of the stream.</para>
+                    /// </summary>
                     [NameInMap("Index")]
                     [Validation(Required=false)]
                     public string Index { get; set; }
 
+                    /// <summary>
+                    /// <para>The language.</para>
+                    /// </summary>
                     [NameInMap("Lang")]
                     [Validation(Required=false)]
                     public string Lang { get; set; }
 
+                    /// <summary>
+                    /// <para>The total number of frames.</para>
+                    /// </summary>
                     [NameInMap("NumFrames")]
                     [Validation(Required=false)]
                     public string NumFrames { get; set; }
 
+                    /// <summary>
+                    /// <para>The profile.</para>
+                    /// </summary>
                     [NameInMap("Profile")]
                     [Validation(Required=false)]
                     public string Profile { get; set; }
 
+                    /// <summary>
+                    /// <para>The sample format.</para>
+                    /// </summary>
                     [NameInMap("SampleFmt")]
                     [Validation(Required=false)]
                     public string SampleFmt { get; set; }
 
+                    /// <summary>
+                    /// <para>The sample rate.</para>
+                    /// </summary>
                     [NameInMap("SampleRate")]
                     [Validation(Required=false)]
                     public string SampleRate { get; set; }
 
+                    /// <summary>
+                    /// <para>The start time.</para>
+                    /// </summary>
                     [NameInMap("StartTime")]
                     [Validation(Required=false)]
                     public string StartTime { get; set; }
 
+                    /// <summary>
+                    /// <para>The time base.</para>
+                    /// </summary>
                     [NameInMap("Timebase")]
                     [Validation(Required=false)]
                     public string Timebase { get; set; }
@@ -106,7 +166,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 }
 
                 /// <summary>
-                /// <para>The basic information of the file, including the duration and size.</para>
+                /// <para>The basic information about the file, such as the duration and file size.</para>
                 /// </summary>
                 [NameInMap("FileBasicInfo")]
                 [Validation(Required=false)]
@@ -143,7 +203,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string FileName { get; set; }
 
                     /// <summary>
-                    /// <para>The file size. Unit: bytes.</para>
+                    /// <para>The file size, in bytes.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>30611502</para>
@@ -173,7 +233,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string FileType { get; set; }
 
                     /// <summary>
-                    /// <para>The Object Storage Service (OSS) URL of the file.</para>
+                    /// <para>The OSS URL of the file.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4?Expires=">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4?Expires=</a><ExpireTime>&amp;OSSAccessKeyId=<OSSAccessKeyId>&amp;Signature=<Signature>&amp;security-token=<SecurityToken></para>
@@ -203,7 +263,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Height { get; set; }
 
                     /// <summary>
-                    /// <para>The region in which the file resides.</para>
+                    /// <para>The region where the file is stored.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cn-shanghai</para>
@@ -224,148 +284,256 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
                 }
 
+                /// <summary>
+                /// <para>The subtitle streams.</para>
+                /// </summary>
                 [NameInMap("SubtitleStreamInfoList")]
                 [Validation(Required=false)]
                 public List<BatchGetMediaInfosResponseBodyMediaInfosFileInfoListSubtitleStreamInfoList> SubtitleStreamInfoList { get; set; }
                 public class BatchGetMediaInfosResponseBodyMediaInfosFileInfoListSubtitleStreamInfoList : TeaModel {
+                    /// <summary>
+                    /// <para>The full name of the codec.</para>
+                    /// </summary>
                     [NameInMap("CodecLongName")]
                     [Validation(Required=false)]
                     public string CodecLongName { get; set; }
 
+                    /// <summary>
+                    /// <para>The short name of the codec.</para>
+                    /// </summary>
                     [NameInMap("CodecName")]
                     [Validation(Required=false)]
                     public string CodecName { get; set; }
 
+                    /// <summary>
+                    /// <para>The codec tag.</para>
+                    /// </summary>
                     [NameInMap("CodecTag")]
                     [Validation(Required=false)]
                     public string CodecTag { get; set; }
 
+                    /// <summary>
+                    /// <para>The codec tag string.</para>
+                    /// </summary>
                     [NameInMap("CodecTagString")]
                     [Validation(Required=false)]
                     public string CodecTagString { get; set; }
 
+                    /// <summary>
+                    /// <para>The time base of the codec.</para>
+                    /// </summary>
                     [NameInMap("CodecTimeBase")]
                     [Validation(Required=false)]
                     public string CodecTimeBase { get; set; }
 
+                    /// <summary>
+                    /// <para>The duration.</para>
+                    /// </summary>
                     [NameInMap("Duration")]
                     [Validation(Required=false)]
                     public string Duration { get; set; }
 
+                    /// <summary>
+                    /// <para>The index of the stream.</para>
+                    /// </summary>
                     [NameInMap("Index")]
                     [Validation(Required=false)]
                     public string Index { get; set; }
 
+                    /// <summary>
+                    /// <para>The language.</para>
+                    /// </summary>
                     [NameInMap("Lang")]
                     [Validation(Required=false)]
                     public string Lang { get; set; }
 
+                    /// <summary>
+                    /// <para>The start time.</para>
+                    /// </summary>
                     [NameInMap("StartTime")]
                     [Validation(Required=false)]
                     public string StartTime { get; set; }
 
+                    /// <summary>
+                    /// <para>The time base.</para>
+                    /// </summary>
                     [NameInMap("Timebase")]
                     [Validation(Required=false)]
                     public string Timebase { get; set; }
 
                 }
 
+                /// <summary>
+                /// <para>The video streams.</para>
+                /// </summary>
                 [NameInMap("VideoStreamInfoList")]
                 [Validation(Required=false)]
                 public List<BatchGetMediaInfosResponseBodyMediaInfosFileInfoListVideoStreamInfoList> VideoStreamInfoList { get; set; }
                 public class BatchGetMediaInfosResponseBodyMediaInfosFileInfoListVideoStreamInfoList : TeaModel {
+                    /// <summary>
+                    /// <para>The average frame rate.</para>
+                    /// </summary>
                     [NameInMap("AvgFPS")]
                     [Validation(Required=false)]
                     public string AvgFPS { get; set; }
 
+                    /// <summary>
+                    /// <para>The bitrate.</para>
+                    /// </summary>
                     [NameInMap("Bitrate")]
                     [Validation(Required=false)]
                     public string Bitrate { get; set; }
 
+                    /// <summary>
+                    /// <para>The full name of the codec.</para>
+                    /// </summary>
                     [NameInMap("CodecLongName")]
                     [Validation(Required=false)]
                     public string CodecLongName { get; set; }
 
+                    /// <summary>
+                    /// <para>The short name of the codec.</para>
+                    /// </summary>
                     [NameInMap("CodecName")]
                     [Validation(Required=false)]
                     public string CodecName { get; set; }
 
+                    /// <summary>
+                    /// <para>The codec tag.</para>
+                    /// </summary>
                     [NameInMap("CodecTag")]
                     [Validation(Required=false)]
                     public string CodecTag { get; set; }
 
+                    /// <summary>
+                    /// <para>The codec tag string.</para>
+                    /// </summary>
                     [NameInMap("CodecTagString")]
                     [Validation(Required=false)]
                     public string CodecTagString { get; set; }
 
+                    /// <summary>
+                    /// <para>The time base of the codec.</para>
+                    /// </summary>
                     [NameInMap("CodecTimeBase")]
                     [Validation(Required=false)]
                     public string CodecTimeBase { get; set; }
 
+                    /// <summary>
+                    /// <para>The display aspect ratio (DAR).</para>
+                    /// </summary>
                     [NameInMap("Dar")]
                     [Validation(Required=false)]
                     public string Dar { get; set; }
 
+                    /// <summary>
+                    /// <para>The duration.</para>
+                    /// </summary>
                     [NameInMap("Duration")]
                     [Validation(Required=false)]
                     public string Duration { get; set; }
 
+                    /// <summary>
+                    /// <para>The frame rate.</para>
+                    /// </summary>
                     [NameInMap("Fps")]
                     [Validation(Required=false)]
                     public string Fps { get; set; }
 
+                    /// <summary>
+                    /// <para>Indicates whether B-frames exist.</para>
+                    /// </summary>
                     [NameInMap("HasBFrames")]
                     [Validation(Required=false)]
                     public string HasBFrames { get; set; }
 
+                    /// <summary>
+                    /// <para>The height of the video.</para>
+                    /// </summary>
                     [NameInMap("Height")]
                     [Validation(Required=false)]
                     public string Height { get; set; }
 
+                    /// <summary>
+                    /// <para>The index of the stream.</para>
+                    /// </summary>
                     [NameInMap("Index")]
                     [Validation(Required=false)]
                     public string Index { get; set; }
 
+                    /// <summary>
+                    /// <para>The language.</para>
+                    /// </summary>
                     [NameInMap("Lang")]
                     [Validation(Required=false)]
                     public string Lang { get; set; }
 
+                    /// <summary>
+                    /// <para>The level.</para>
+                    /// </summary>
                     [NameInMap("Level")]
                     [Validation(Required=false)]
                     public string Level { get; set; }
 
+                    /// <summary>
+                    /// <para>This parameter is an alias for <c>NumFrames</c>.</para>
+                    /// </summary>
                     [NameInMap("Nb_frames")]
                     [Validation(Required=false)]
                     public string NbFrames { get; set; }
 
+                    /// <summary>
+                    /// <para>The total number of frames.</para>
+                    /// </summary>
                     [NameInMap("NumFrames")]
                     [Validation(Required=false)]
                     public string NumFrames { get; set; }
 
+                    /// <summary>
+                    /// <para>The pixel format.</para>
+                    /// </summary>
                     [NameInMap("PixFmt")]
                     [Validation(Required=false)]
                     public string PixFmt { get; set; }
 
+                    /// <summary>
+                    /// <para>The profile.</para>
+                    /// </summary>
                     [NameInMap("Profile")]
                     [Validation(Required=false)]
                     public string Profile { get; set; }
 
+                    /// <summary>
+                    /// <para>The rotation angle.</para>
+                    /// </summary>
                     [NameInMap("Rotate")]
                     [Validation(Required=false)]
                     public string Rotate { get; set; }
 
+                    /// <summary>
+                    /// <para>The sample aspect ratio (SAR).</para>
+                    /// </summary>
                     [NameInMap("Sar")]
                     [Validation(Required=false)]
                     public string Sar { get; set; }
 
+                    /// <summary>
+                    /// <para>The start time.</para>
+                    /// </summary>
                     [NameInMap("StartTime")]
                     [Validation(Required=false)]
                     public string StartTime { get; set; }
 
+                    /// <summary>
+                    /// <para>The time base.</para>
+                    /// </summary>
                     [NameInMap("Timebase")]
                     [Validation(Required=false)]
                     public string Timebase { get; set; }
 
+                    /// <summary>
+                    /// <para>The width of the video.</para>
+                    /// </summary>
                     [NameInMap("Width")]
                     [Validation(Required=false)]
                     public string Width { get; set; }
@@ -375,12 +543,18 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             }
 
             /// <summary>
-            /// <para>The basic information of the media asset.</para>
+            /// <para>The basic information about the media asset.</para>
             /// </summary>
             [NameInMap("MediaBasicInfo")]
             [Validation(Required=false)]
             public BatchGetMediaInfosResponseBodyMediaInfosMediaBasicInfo MediaBasicInfo { get; set; }
             public class BatchGetMediaInfosResponseBodyMediaInfosMediaBasicInfo : TeaModel {
+                /// <summary>
+                /// <para>The business associated with the media asset.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ICE</para>
+                /// </summary>
                 [NameInMap("Biz")]
                 [Validation(Required=false)]
                 public string Biz { get; set; }
@@ -396,14 +570,17 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string BusinessType { get; set; }
 
                 /// <summary>
-                /// <para>The category of the media asset.</para>
+                /// <para>The category.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>category1</para>
                 /// </summary>
                 [NameInMap("Category")]
                 [Validation(Required=false)]
                 public string Category { get; set; }
 
                 /// <summary>
-                /// <para>The thumbnail URL of the media asset.</para>
+                /// <para>The cover URL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.png?Expires=">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.png?Expires=</a><ExpireTime>&amp;OSSAccessKeyId=<OSSAccessKeyId>&amp;Signature=<Signature>&amp;security-token=<SecurityToken></para>
@@ -413,7 +590,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string CoverURL { get; set; }
 
                 /// <summary>
-                /// <para>The time when the media asset was created.</para>
+                /// <para>The time the media asset was created.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-12-26T04:11:10Z</para>
@@ -423,7 +600,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The time when the media asset was deleted.</para>
+                /// <para>The time the media asset was deleted.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-12-26T04:11:10Z</para>
@@ -433,14 +610,17 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string DeletedTime { get; set; }
 
                 /// <summary>
-                /// <para>The description of the media asset.</para>
+                /// <para>The description.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>description</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The URL of the media asset in another service.</para>
+                /// <para>The URL of the media asset in its source system.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4">https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</a></para>
@@ -450,7 +630,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string InputURL { get; set; }
 
                 /// <summary>
-                /// <para>MediaId</para>
+                /// <para>The media ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><b><b><b>c48fb37407365d4f2cd8</b></b></b></para>
@@ -460,18 +640,27 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string MediaId { get; set; }
 
                 /// <summary>
-                /// <para>The tags of the media asset.</para>
+                /// <para>The tags.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>tag1, tag2</para>
                 /// </summary>
                 [NameInMap("MediaTags")]
                 [Validation(Required=false)]
                 public string MediaTags { get; set; }
 
                 /// <summary>
-                /// <para>The type of the media asset. Valid values:</para>
-                /// <para>\- image</para>
-                /// <para>\- video</para>
-                /// <para>\- audio</para>
-                /// <para>\- text</para>
+                /// <para>The media type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para><c>Image</c></para>
+                /// </description></item>
+                /// <item><description><para><c>Video</c></para>
+                /// </description></item>
+                /// <item><description><para><c>Audio</c></para>
+                /// </description></item>
+                /// <item><description><para><c>Text</c></para>
+                /// </description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>video</para>
@@ -481,7 +670,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string MediaType { get; set; }
 
                 /// <summary>
-                /// <para>The time when the media asset was last modified.</para>
+                /// <para>The time the media asset was last modified.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-12-26T04:11:12Z</para>
@@ -491,19 +680,27 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string ModifiedTime { get; set; }
 
                 /// <summary>
-                /// <para>The snapshots of the media asset.</para>
+                /// <para>The snapshots.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>[{&quot;bucket&quot;:&quot;example-bucket&quot;,&quot;count&quot;:&quot;3&quot;,&quot;iceJobId&quot;:&quot;<b><b><b>f48f0e4154976b2b8c45</b></b></b>&quot;,&quot;location&quot;:&quot;oss-cn-beijing&quot;,&quot;snapshotRegular&quot;:&quot;example.jpg&quot;,&quot;templateId&quot;:&quot;<b><b><b>e6a6440b29eb60bd7c</b></b></b>&quot;}]</para>
+                /// <para>[
+                ///     &quot;<a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/snapshot-00001.png?Expires=&OSSAccessKeyId=&Signature=&security-token=">http://example-bucket.oss-cn-shanghai.aliyuncs.com/snapshot-00001.png?Expires=&amp;OSSAccessKeyId=&amp;Signature=&amp;security-token=</a>&quot;,
+                ///     &quot;<a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/snapshot-00002.jpg?Expires=&OSSAccessKeyId=&Signature=&security-token=">http://example-bucket.oss-cn-shanghai.aliyuncs.com/snapshot-00002.jpg?Expires=&amp;OSSAccessKeyId=&amp;Signature=&amp;security-token=</a>&quot;,
+                ///     &quot;<a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/snapshot-00003.jpg?Expires=&OSSAccessKeyId=&Signature=&security-token=">http://example-bucket.oss-cn-shanghai.aliyuncs.com/snapshot-00003.jpg?Expires=&amp;OSSAccessKeyId=&amp;Signature=&amp;security-token=</a>&quot;
+                /// ]</para>
                 /// </summary>
                 [NameInMap("Snapshots")]
                 [Validation(Required=false)]
                 public string Snapshots { get; set; }
 
                 /// <summary>
-                /// <para>The source of the media asset. Valid values:</para>
-                /// <para>\- oss</para>
-                /// <para>\- vod</para>
+                /// <para>The source. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para><c>OSS</c></para>
+                /// </description></item>
+                /// <item><description><para><c>VOD</c></para>
+                /// </description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>oss</para>
@@ -513,7 +710,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string Source { get; set; }
 
                 /// <summary>
-                /// <para>The sprite.</para>
+                /// <para>The sprite images.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[{&quot;bucket&quot;:&quot;example-bucket&quot;,&quot;count&quot;:&quot;32&quot;,&quot;iceJobId&quot;:&quot;<b><b><b>83ec44d58b2069def2e</b></b></b>&quot;,&quot;location&quot;:&quot;oss-cn-shanghai&quot;,&quot;snapshotRegular&quot;:&quot;example/example-{Count}.jpg&quot;,&quot;spriteRegular&quot;:&quot;example/example-{TileCount}.jpg&quot;,&quot;templateId&quot;:&quot;<b><b><b>e438b14ff39293eaec25</b></b></b>&quot;,&quot;tileCount&quot;:&quot;1&quot;}]</para>
@@ -533,14 +730,17 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The title of the media asset.</para>
+                /// <para>The title.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>title</para>
                 /// </summary>
                 [NameInMap("Title")]
                 [Validation(Required=false)]
                 public string Title { get; set; }
 
                 /// <summary>
-                /// <para>The transcoding status of the media asset.</para>
+                /// <para>The transcoding status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Init</para>
@@ -561,14 +761,34 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
             }
 
+            /// <summary>
+            /// <para>The dynamic information about the media asset.</para>
+            /// </summary>
             [NameInMap("MediaDynamicInfo")]
             [Validation(Required=false)]
             public BatchGetMediaInfosResponseBodyMediaInfosMediaDynamicInfo MediaDynamicInfo { get; set; }
             public class BatchGetMediaInfosResponseBodyMediaInfosMediaDynamicInfo : TeaModel {
+                /// <summary>
+                /// <para>The type of dynamic metadata. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para><c>&quot;ai&quot;</c>: Standardized data derived from raw AI results.</para>
+                /// </description></item>
+                /// <item><description><para><c>&quot;user-defined&quot;</c>: The user-defined metadata.</para>
+                /// </description></item>
+                /// <item><description><para><c>&quot;system&quot;</c>: The system-generated data.</para>
+                /// </description></item>
+                /// </list>
+                /// </summary>
                 [NameInMap("DynamicMetaData")]
                 [Validation(Required=false)]
                 public BatchGetMediaInfosResponseBodyMediaInfosMediaDynamicInfoDynamicMetaData DynamicMetaData { get; set; }
                 public class BatchGetMediaInfosResponseBodyMediaInfosMediaDynamicInfoDynamicMetaData : TeaModel {
+                    /// <summary>
+                    /// <para>The content of the dynamic metadata.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>system</para>
+                    /// </summary>
                     [NameInMap("Data")]
                     [Validation(Required=false)]
                     public string Data { get; set; }
@@ -578,7 +798,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             }
 
             /// <summary>
-            /// <para>The ID of the media asset.</para>
+            /// <para>The media ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para><b><b><b>c48fb37407365d4f2cd8</b></b></b></para>

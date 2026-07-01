@@ -30,6 +30,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string MsgBody { get; set; }
 
+        /// <summary>
+        /// <para>Namespace.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>name-1</para>
+        /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }

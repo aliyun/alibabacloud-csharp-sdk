@@ -42,8 +42,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The order that you use to sort the query results. Valid values:</para>
         /// <ol>
-        /// <item><description>CreateTimeAsc: sorts the jobs by creation time in ascending order.</description></item>
-        /// <item><description>CreateTimeDesc: sorts the jobs by creation time in descending order.</description></item>
+        /// <item><description><para>CreateTimeAsc: sorts the jobs by creation time in ascending order.</para>
+        /// </description></item>
+        /// <item><description><para>CreateTimeDesc: sorts the jobs by creation time in descending order.</para>
+        /// </description></item>
         /// </ol>
         /// 
         /// <b>Example:</b>
@@ -77,9 +79,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <para>The state of the job.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Init: The job is submitted.</description></item>
-        /// <item><description>Success: The job is successful.</description></item>
-        /// <item><description>Fail: The job failed.</description></item>
+        /// <item><description><para>Init: The job is submitted.</para>
+        /// </description></item>
+        /// <item><description><para>Success: The job is successful.</para>
+        /// </description></item>
+        /// <item><description><para>Fail: The job failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

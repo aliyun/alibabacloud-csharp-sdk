@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitMediaConvertJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The transcoding task.</para>
+        /// <para>The media transcoding job.</para>
         /// </summary>
         [NameInMap("Job")]
         [Validation(Required=false)]
         public SubmitMediaConvertJobResponseBodyJob Job { get; set; }
         public class SubmitMediaConvertJobResponseBodyJob : TeaModel {
             /// <summary>
-            /// <para>The idempotency key of the request for creating the transcoding task.</para>
+            /// <para>The idempotency token for the request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FB7F25E9-AD9B-1603-8AF6-F1E42DF2E706</para>
@@ -27,34 +27,34 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string ClientToken { get; set; }
 
             /// <summary>
-            /// <para>The error code returned when the transcoding task failed.</para>
+            /// <para>The error code returned if the job fails.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>200</para>
+            /// <para>InvalidParameter.ResourceContentBad</para>
             /// </summary>
             [NameInMap("Code")]
             [Validation(Required=false)]
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>The configurations of the transcoding task.</para>
+            /// <para>The job configuration.</para>
             /// </summary>
             [NameInMap("Config")]
             [Validation(Required=false)]
             public SubmitMediaConvertJobResponseBodyJobConfig Config { get; set; }
             public class SubmitMediaConvertJobResponseBodyJobConfig : TeaModel {
                 /// <summary>
-                /// <para>The inputs of the transcoding task.</para>
+                /// <para>The job inputs.</para>
                 /// </summary>
                 [NameInMap("Inputs")]
                 [Validation(Required=false)]
                 public List<MediaConvertInput> Inputs { get; set; }
 
                 /// <summary>
-                /// <para>The name of the job.</para>
+                /// <para>The job name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>insx6-1310</para>
+                /// <para>Name</para>
                 /// </summary>
                 [NameInMap("JobName")]
                 [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             }
 
             /// <summary>
-            /// <para>The ID of the transcoding task.</para>
+            /// <para>The job ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para><b><b>20b48fb04483915d4f2cd8ac</b></b></para>
@@ -87,41 +87,41 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string JobId { get; set; }
 
             /// <summary>
-            /// <para>The error message returned when the transcoding task failed.</para>
+            /// <para>The error message returned if the job fails.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ok</para>
+            /// <para>The resource operated InputFile is bad</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The details of the transcoded outputs.</para>
+            /// <para>The output details.</para>
             /// </summary>
             [NameInMap("OutputDetails")]
             [Validation(Required=false)]
             public List<MediaConvertOutputDetail> OutputDetails { get; set; }
 
             /// <summary>
-            /// <para>The details of the output groups.</para>
+            /// <para>The output group details.</para>
             /// </summary>
             [NameInMap("OutputGroupDetails")]
             [Validation(Required=false)]
             public List<MediaConvertOutputGroupDetail> OutputGroupDetails { get; set; }
 
             /// <summary>
-            /// <para>The ID of the queue.</para>
+            /// <para>The pipeline ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>3780049</para>
+            /// <para><em><b>48a4edf410b908aecd91fc3b</b></em></para>
             /// </summary>
             [NameInMap("PipelineId")]
             [Validation(Required=false)]
             public string PipelineId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the request.</para>
+            /// <para>The request ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>A2129C9F-CE95-58B5-B8C1-07758FF6C86F</para>
@@ -131,17 +131,22 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string RequestId { get; set; }
 
             /// <summary>
-            /// <para>The status of the transcoding task. Valid values:</para>
+            /// <para>The job status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Inited: The task is initialized.</description></item>
-            /// <item><description>Running</description></item>
-            /// <item><description>Complete</description></item>
-            /// <item><description>Error</description></item>
-            /// <item><description>Cancelled</description></item>
+            /// <item><description><para>Inited: The job has been initialized.</para>
+            /// </description></item>
+            /// <item><description><para>Running: The job is running.</para>
+            /// </description></item>
+            /// <item><description><para>Success: The job has completed successfully.</para>
+            /// </description></item>
+            /// <item><description><para>Failed: The job has failed.</para>
+            /// </description></item>
+            /// <item><description><para>Canceled: The job has been canceled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>Inited</para>
+            /// <para>Success</para>
             /// </summary>
             [NameInMap("State")]
             [Validation(Required=false)]
@@ -160,7 +165,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b><b>11-DB8D-4A9A-875B-275798</b></b></b></para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitMediaCensorJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the content moderation job. We recommend that you save this ID for subsequent calls of other operations.</para>
+        /// <para>The ID of the video censor job. We recommend saving this ID for subsequent API calls.</para>
         /// 
         /// <b>Example:</b>
         /// <para>88c6ca184c0e47098a5b665e2****</para>

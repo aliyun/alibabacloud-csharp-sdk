@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetCustomTemplateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The template information.</para>
+        /// <para>The template details.</para>
         /// </summary>
         [NameInMap("CustomTemplate")]
         [Validation(Required=false)]
@@ -26,14 +26,23 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
+            /// <summary>
+            /// <para>Reserved for frontend display.</para>
+            /// </summary>
             [NameInMap("FrontendHint")]
             [Validation(Required=false)]
             public GetCustomTemplateResponseBodyCustomTemplateFrontendHint FrontendHint { get; set; }
             public class GetCustomTemplateResponseBodyCustomTemplateFrontendHint : TeaModel {
+                /// <summary>
+                /// <para>Hint for transcoding templates.</para>
+                /// </summary>
                 [NameInMap("TranscodeTemplateHint")]
                 [Validation(Required=false)]
                 public GetCustomTemplateResponseBodyCustomTemplateFrontendHintTranscodeTemplateHint TranscodeTemplateHint { get; set; }
                 public class GetCustomTemplateResponseBodyCustomTemplateFrontendHintTranscodeTemplateHint : TeaModel {
+                    /// <summary>
+                    /// <para>The bitrate control type.</para>
+                    /// </summary>
                     [NameInMap("BitrateControlType")]
                     [Validation(Required=false)]
                     public string BitrateControlType { get; set; }
@@ -43,7 +52,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether the template is the default template.</para>
+            /// <para>Indicates whether the template is a default template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -63,7 +72,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string ModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>The template state.</para>
+            /// <para>The status of the template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Normal</para>
@@ -73,7 +82,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The subtype ID of the template.</para>
+            /// <para>The ID of the template subtype.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -83,7 +92,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public int? Subtype { get; set; }
 
             /// <summary>
-            /// <para>The subtype name of the template.</para>
+            /// <para>The name of the template subtype.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Normal</para>
@@ -93,7 +102,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string SubtypeName { get; set; }
 
             /// <summary>
-            /// <para>The template parameters.</para>
+            /// <para>The template configuration, in a JSON string.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;Type&quot;:&quot;Normal&quot;,&quot;FrameType&quot;:&quot;normal&quot;,&quot;Time&quot;:0,&quot;Count&quot;:10}</para>
@@ -116,14 +125,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <para>The template name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试转码模板</para>
+            /// <para>Test screenshot template</para>
             /// </summary>
             [NameInMap("TemplateName")]
             [Validation(Required=false)]
             public string TemplateName { get; set; }
 
             /// <summary>
-            /// <para>The type ID of the template.</para>
+            /// <para>The ID of the template type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -133,7 +142,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public int? Type { get; set; }
 
             /// <summary>
-            /// <para>The type name of the template.</para>
+            /// <para>The name of the template type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SnapshotTemplate</para>

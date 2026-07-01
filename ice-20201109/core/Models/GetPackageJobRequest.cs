@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ab4802364a2e49208c99efab82dfa8e8</para>
+        /// <para>ab4802364a2e49208c99efab82df****</para>
         /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]

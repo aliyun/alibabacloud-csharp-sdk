@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class AddFavoritePublicMediaResponseBody : TeaModel {
+        /// <summary>
+        /// <para>A list of Media Asset IDs that were not added to your Favorites. This happens if a Media Asset does not exist or is already in your Favorites.</para>
+        /// </summary>
         [NameInMap("IgnoredList")]
         [Validation(Required=false)]
         public List<string> IgnoredList { get; set; }
 
         /// <summary>
+        /// <para>The Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b><b><b>11-DB8D-4A9A-875B-275798</b></b></b></para>
         /// </summary>

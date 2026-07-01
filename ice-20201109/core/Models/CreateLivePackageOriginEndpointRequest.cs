@@ -42,6 +42,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         /// <summary>
         /// <para>The endpoint description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>This is an origin endpoint.</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -89,6 +92,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string IpWhitelist { get; set; }
 
+        /// <summary>
+        /// <para>Live stream encapsulation configuration</para>
+        /// </summary>
         [NameInMap("LivePackagingConfig")]
         [Validation(Required=false)]
         public LivePackagingConfig LivePackagingConfig { get; set; }

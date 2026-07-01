@@ -82,11 +82,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <para>The task state.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>running</description></item>
-            /// <item><description>stopped</description></item>
-            /// <item><description>failed</description></item>
-            /// <item><description>partial-succeeded</description></item>
-            /// <item><description>succeeded</description></item>
+            /// <item><description><para>running</para>
+            /// </description></item>
+            /// <item><description><para>stopped</para>
+            /// </description></item>
+            /// <item><description><para>failed</para>
+            /// </description></item>
+            /// <item><description><para>partial-succeeded</para>
+            /// </description></item>
+            /// <item><description><para>succeeded</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -179,9 +184,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <summary>
                 /// <para>Workflow template status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Draft</description></item>
-                /// <item><description>Published</description></item>
-                /// <item><description>Editing</description></item>
+                /// <item><description><para>Draft</para>
+                /// </description></item>
+                /// <item><description><para>Published</para>
+                /// </description></item>
+                /// <item><description><para>Editing</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

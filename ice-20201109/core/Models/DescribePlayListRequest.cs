@@ -34,10 +34,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The criteria by which the sorting is performed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>FirstFrameDuration</description></item>
-        /// <item><description>PlayDuration</description></item>
-        /// <item><description>VideoDuration</description></item>
-        /// <item><description>StuckDuration</description></item>
+        /// <item><description><para>FirstFrameDuration</para>
+        /// </description></item>
+        /// <item><description><para>PlayDuration</para>
+        /// </description></item>
+        /// <item><description><para>VideoDuration</para>
+        /// </description></item>
+        /// <item><description><para>StuckDuration</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -50,8 +54,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The sort order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DESC: descending order.</description></item>
-        /// <item><description>ASC: ascending order.</description></item>
+        /// <item><description><para>DESC: descending order.</para>
+        /// </description></item>
+        /// <item><description><para>ASC: ascending order.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -84,7 +90,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The playback type. Valid value: </para>
+        /// <para>The playback type. Valid value:</para>
         /// <list type="bullet">
         /// <item><description>vod</description></item>
         /// </list>
@@ -99,9 +105,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The playback status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>complete</description></item>
-        /// <item><description>playing</description></item>
-        /// <item><description>unusual: A playback error occurs.</description></item>
+        /// <item><description><para>complete</para>
+        /// </description></item>
+        /// <item><description><para>playing</para>
+        /// </description></item>
+        /// <item><description><para>unusual: A playback error occurs.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

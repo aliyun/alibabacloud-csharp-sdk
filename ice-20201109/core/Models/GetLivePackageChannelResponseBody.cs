@@ -38,6 +38,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
             /// <summary>
             /// <para>The channel description.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Test channel</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]

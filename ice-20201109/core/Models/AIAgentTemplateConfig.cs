@@ -10,22 +10,43 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class AIAgentTemplateConfig : TeaModel {
         /// <summary>
-        /// <para>The parameters of the 3D avatar.</para>
+        /// <para>3D avatar parameters.</para>
         /// </summary>
         [NameInMap("AvatarChat3D")]
         [Validation(Required=false)]
         public AIAgentTemplateConfigAvatarChat3D AvatarChat3D { get; set; }
         public class AIAgentTemplateConfigAvatarChat3D : TeaModel {
+            /// <summary>
+            /// <para>A list of hot words to improve ASR accuracy. A maximum of 128 words is supported.</para>
+            /// </summary>
             [NameInMap("AsrHotWords")]
             [Validation(Required=false)]
             public List<string> AsrHotWords { get; set; }
 
+            /// <summary>
+            /// <para>The language ID for Automatic Speech Recognition (ASR). Possible values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><c>zh_mandarin</c>: Chinese</para>
+            /// </description></item>
+            /// <item><description><para><c>en</c>: English</para>
+            /// </description></item>
+            /// <item><description><para><c>zh_en</c>: Chinese-English</para>
+            /// </description></item>
+            /// <item><description><para><c>es</c>: Spanish</para>
+            /// </description></item>
+            /// <item><description><para><c>jp</c>: Japanese</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>zh_mandarin</para>
+            /// </summary>
             [NameInMap("AsrLanguageId")]
             [Validation(Required=false)]
             public string AsrLanguageId { get; set; }
 
             /// <summary>
-            /// <para>The threshold used to determine the end of a sentence. If the duration of silence exceeds this threshold, the system determines that a sentence ends. Unit: milliseconds. Default value: 400. Valid values: 200 to 1200.</para>
+            /// <para>The maximum duration of silence in milliseconds before a sentence break is detected. Range: 200 to 1,200. Default: 400.</para>
             /// 
             /// <b>Example:</b>
             /// <para>400</para>
@@ -35,7 +56,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public int? AsrMaxSilence { get; set; }
 
             /// <summary>
-            /// <para>The ID of the avatar.</para>
+            /// <para>The ID of the avatar model.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1231</para>
@@ -45,7 +66,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string AvatarId { get; set; }
 
             /// <summary>
-            /// <para>The parameters of the application center of Alibaba Cloud Model Studio. For more information about the parameter format, see <a href="https://help.aliyun.com/document_detail/2858132.html">Parameters of the application center of Alibaba Cloud Model Studio</a>.</para>
+            /// <para>Parameters for Alibaba Cloud Bailian. For details, see <a href="https://help.aliyun.com/document_detail/2858132.html">Bailian App Params</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -59,6 +80,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public bool? CharBreak { get; set; }
 
             /// <summary>
+            /// <para>Specifies whether to enable intelligent segmentation. If enabled, this feature intelligently merges pauses in a user\&quot;s speech into a single, complete sentence. Default: <c>true</c>.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -67,7 +90,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public bool? EnableIntelligentSegment { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the intercom mode. Default value: false.</para>
+            /// <para>Specifies whether to enable Push-to-Talk mode. Default: <c>false</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -77,7 +100,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public bool? EnablePushToTalk { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the intelligent agent can be interrupted by voice. Default value: true.</para>
+            /// <para>Specifies whether to enable voice interruption. Default: <c>true</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -87,38 +110,69 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public bool? EnableVoiceInterrupt { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the intelligent agent supports graceful shutdown. Default value: false.</para>
+            /// <para>Specifies whether to enable graceful shutdown. Default: <c>false</c>.</para>
             /// <list type="bullet">
-            /// <item><description>Graceful shutdown: When the intelligent agent is stopped, it completes its current sentence before stopping. However, the intelligent agent can speak for 10 seconds at most.</description></item>
+            /// <item><description>If enabled, the agent finishes its current speech (up to 10 seconds) before stopping.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>true</para>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("GracefulShutdown")]
             [Validation(Required=false)]
             public bool? GracefulShutdown { get; set; }
 
             /// <summary>
-            /// <para>The greetings spoken by the intelligent agent when it joins the meeting. If you do not specify this parameter, the system uses the default greetings specified in the template of the intelligent agent. The greetings can be up to 128 characters in length.</para>
+            /// <para>The greeting message delivered when a user joins the session. If this parameter is omitted, the greeting configured in the agent template is used. Maximum length: 128 characters.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>早上好，我的朋友！</para>
             /// </summary>
             [NameInMap("Greeting")]
             [Validation(Required=false)]
             public string Greeting { get; set; }
 
+            /// <summary>
+            /// <para>A list of specific words or phrases that trigger a conversation interruption.</para>
+            /// </summary>
             [NameInMap("InterruptWords")]
             [Validation(Required=false)]
             public List<string> InterruptWords { get; set; }
 
+            /// <summary>
+            /// <para>The LLM/MLLM conversation history.</para>
+            /// </summary>
             [NameInMap("LlmHistory")]
             [Validation(Required=false)]
             public List<AIAgentTemplateConfigAvatarChat3DLlmHistory> LlmHistory { get; set; }
             public class AIAgentTemplateConfigAvatarChat3DLlmHistory : TeaModel {
+                /// <summary>
+                /// <para>The text content of the message.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>你好</para>
+                /// </summary>
                 [NameInMap("Content")]
                 [Validation(Required=false)]
                 public string Content { get; set; }
 
                 /// <summary>
+                /// <para>The role of the conversation participant. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para><c>user</c>: The user.</para>
+                /// </description></item>
+                /// <item><description><para><c>assistant</c>: The AI assistant.</para>
+                /// </description></item>
+                /// <item><description><para><c>system</c>: The system.</para>
+                /// </description></item>
+                /// <item><description><para><c>function</c>: A function call.</para>
+                /// </description></item>
+                /// <item><description><para><c>plugin</c>: A plugin.</para>
+                /// </description></item>
+                /// <item><description><para><c>tool</c>: A tool.</para>
+                /// </description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>user</para>
                 /// </summary>
@@ -129,6 +183,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             }
 
             /// <summary>
+            /// <para>The maximum number of conversation turns to retain in the LLM/MLLM history. Default: 10.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -136,11 +192,19 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public int? LlmHistoryLimit { get; set; }
 
+            /// <summary>
+            /// <para>The system prompt for the LLM, applied when the call starts.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>你是一位友好且乐于助人的助手，专注于为用户提供准确的信息和建议。</para>
+            /// </summary>
             [NameInMap("LlmSystemPrompt")]
             [Validation(Required=false)]
             public string LlmSystemPrompt { get; set; }
 
             /// <summary>
+            /// <para>The maximum idle time in seconds with no interaction before the agent goes offline. Default: 600.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>600</para>
             /// </summary>
@@ -149,7 +213,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public int? MaxIdleTime { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable voiceprint recognition. Default value: false.</para>
+            /// <para>Specifies whether to use voiceprint recognition. Default: <c>false</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -159,7 +223,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public bool? UseVoiceprint { get; set; }
 
             /// <summary>
-            /// <para>The timeout period after the user leaves the meeting. Unit: seconds. Default value: 5.</para>
+            /// <para>The time in seconds that the agent waits after a user leaves before closing the task. Default: 5.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -169,7 +233,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public int? UserOfflineTimeout { get; set; }
 
             /// <summary>
-            /// <para>The timeout period before the user joins the meeting. Unit: seconds. Default value: 60.</para>
+            /// <para>The time in seconds that the agent waits for a user to join before closing the task. Default: 60.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>
@@ -178,12 +242,26 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public int? UserOnlineTimeout { get; set; }
 
+            /// <summary>
+            /// <para>The interruption sensitivity threshold. A higher value makes it more difficult to interrupt the agent. Range: 0 to 11. Default: 11.</para>
+            /// <list type="bullet">
+            /// <item><description><para><c>0</c>: Disables VAD.</para>
+            /// </description></item>
+            /// <item><description><para><c>1</c> to <c>10</c>: A higher value makes it more difficult to interrupt the agent.</para>
+            /// </description></item>
+            /// <item><description><para><c>11</c>: Offers lower audio distortion and stronger resistance to interference.</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("VadLevel")]
             [Validation(Required=false)]
             public int? VadLevel { get; set; }
 
             /// <summary>
-            /// <para>The voice ID of the intelligent agent. The modification takes effect in the next sentence. If you do not specify this parameter, the system uses the default voice ID specified in the template of the intelligent agent. This parameter takes effect only for the preset TTS model. The ID can be up to 64 characters in length. For more information about the available voices, visit <a href="url">https://help.aliyun.com/zh/ims/developer-reference/smart-voice-effect-example</a>.</para>
+            /// <para>The ID of the Text-to-Speech (TTS) voice. Changes take effect on the next utterance. If omitted, the default voice from the agent template is used. This parameter applies only to preset TTS voices. Maximum length: 64 characters. For available values, see <a href="https://help.aliyun.com/document_detail/449563.html">Intelligent voice effect samples</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>zhixiaoxia</para>
@@ -192,12 +270,15 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string VoiceId { get; set; }
 
+            /// <summary>
+            /// <para>A list of available voices.</para>
+            /// </summary>
             [NameInMap("VoiceIdList")]
             [Validation(Required=false)]
             public List<string> VoiceIdList { get; set; }
 
             /// <summary>
-            /// <para>The unique ID of the voiceprint. This parameter is empty by default.</para>
+            /// <para>The unique ID for voiceprint recognition. Default: not specified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>uniqueId</para>
@@ -207,15 +288,20 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string VoiceprintId { get; set; }
 
             /// <summary>
-            /// <para>The speech volume of the intelligent agent.</para>
+            /// <para>The speaking volume of the agent.</para>
             /// <list type="bullet">
-            /// <item><description>If this parameter is not specified, the adaptive volume mode recommended by Alibaba Cloud is used by default.</description></item>
-            /// <item><description>To specify this parameter, enter a value between 0 and 400. The output volume is calculated by using the following formula: Output volume = Voice output volume specified in the workflow × Volume/100. Example:</description></item>
+            /// <item><description><para>If omitted, the system uses adaptive volume mode.</para>
+            /// </description></item>
+            /// <item><description><para>If specified, the valid range is 0 to 400. The output volume is calculated as: <c>Output Volume in Workflow</c> \* (<c>volume</c>/100). For example:</para>
+            /// </description></item>
             /// </list>
             /// <ol>
-            /// <item><description>If Volume is set to 0, the output volume is 0.</description></item>
-            /// <item><description>If Volume is set to 100, the output volume is the voice output volume specified in the workflow.</description></item>
-            /// <item><description>If Volume is set to 200, the output volume is twice the voice output volume specified in the workflow.</description></item>
+            /// <item><description><para>If <c>volume</c> is <c>0</c>, the output is silent.</para>
+            /// </description></item>
+            /// <item><description><para>If <c>volume</c> is <c>100</c>, the output volume is the original volume.</para>
+            /// </description></item>
+            /// <item><description><para>If <c>volume</c> is <c>200</c>, the output volume is twice the original volume.</para>
+            /// </description></item>
             /// </ol>
             /// 
             /// <b>Example:</b>
@@ -225,11 +311,19 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public long? Volume { get; set; }
 
+            /// <summary>
+            /// <para>An initial user query that the agent addresses immediately when the call starts.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>今天天气怎么样？</para>
+            /// </summary>
             [NameInMap("WakeUpQuery")]
             [Validation(Required=false)]
             public string WakeUpQuery { get; set; }
 
             /// <summary>
+            /// <para>Workflow override parameters. Default: empty.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{}</para>
             /// </summary>
@@ -240,22 +334,43 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
-        /// <para>The parameters of the visual intelligent agent.</para>
+        /// <para>Vision agent parameters.</para>
         /// </summary>
         [NameInMap("VisionChat")]
         [Validation(Required=false)]
         public AIAgentTemplateConfigVisionChat VisionChat { get; set; }
         public class AIAgentTemplateConfigVisionChat : TeaModel {
+            /// <summary>
+            /// <para>A list of hot words to improve ASR accuracy. A maximum of 128 words is supported.</para>
+            /// </summary>
             [NameInMap("AsrHotWords")]
             [Validation(Required=false)]
             public List<string> AsrHotWords { get; set; }
 
+            /// <summary>
+            /// <para>The language ID for Automatic Speech Recognition (ASR). Possible values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><c>zh_mandarin</c>: Chinese</para>
+            /// </description></item>
+            /// <item><description><para><c>en</c>: English</para>
+            /// </description></item>
+            /// <item><description><para><c>zh_en</c>: Chinese-English</para>
+            /// </description></item>
+            /// <item><description><para><c>es</c>: Spanish</para>
+            /// </description></item>
+            /// <item><description><para><c>jp</c>: Japanese</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>zh_mandarin</para>
+            /// </summary>
             [NameInMap("AsrLanguageId")]
             [Validation(Required=false)]
             public string AsrLanguageId { get; set; }
 
             /// <summary>
-            /// <para>The threshold used to determine the end of a sentence. If the duration of silence exceeds this threshold, the system determines that a sentence ends. Unit: milliseconds. Default value: 400. Valid values: 200 to 1200.</para>
+            /// <para>The maximum duration of silence in milliseconds before a sentence break is detected. Range: 200 to 1,200. Default: 400.</para>
             /// 
             /// <b>Example:</b>
             /// <para>400</para>
@@ -265,7 +380,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public int? AsrMaxSilence { get; set; }
 
             /// <summary>
-            /// <para>The parameters of the application center of Alibaba Cloud Model Studio. For more information about the parameter format, see <a href="https://help.aliyun.com/document_detail/2858132.html">Parameters of the application center of Alibaba Cloud Model Studio</a>.</para>
+            /// <para>Parameters for Alibaba Cloud Bailian. For details, see <a href="https://help.aliyun.com/document_detail/2858132.html">Bailian App Params</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -279,7 +394,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public bool? CharBreak { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable intelligent sentence segmentation. This feature intelligently combines the segments of a speech into a single sentence if brief pauses occur when users are speaking. Default value: true.</para>
+            /// <para>Specifies whether to enable intelligent segmentation. If enabled, this feature intelligently merges pauses in a user\&quot;s speech into a single, complete sentence. Default: <c>true</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -289,7 +404,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public bool? EnableIntelligentSegment { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the intercom mode. Default value: false.</para>
+            /// <para>Specifies whether to enable Push-to-Talk mode. Default: <c>false</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -299,7 +414,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public bool? EnablePushToTalk { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the intelligent agent can be interrupted by voice. Default value: true.</para>
+            /// <para>Specifies whether to enable voice interruption. Default: <c>true</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -309,8 +424,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public bool? EnableVoiceInterrupt { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the intelligent agent supports graceful shutdown. Default value: false.</para>
-            /// <para>Graceful shutdown: When the intelligent agent is stopped, it completes its current sentence before stopping. However, the intelligent agent can speak for 10 seconds at most.</para>
+            /// <para>Specifies whether to enable graceful shutdown. Default: <c>false</c>.</para>
+            /// <list type="bullet">
+            /// <item><description>If enabled, the agent finishes its current speech (up to 10 seconds) before stopping.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -320,28 +437,56 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public bool? GracefulShutdown { get; set; }
 
             /// <summary>
-            /// <para>The greetings spoken by the intelligent agent when it joins the meeting. If you do not specify this parameter, the system uses the default greetings specified in the template of the intelligent agent. The value can be up to 128 characters in length.</para>
+            /// <para>The greeting message delivered when a user joins the session. If this parameter is omitted, the greeting configured in the agent template is used. Maximum length: 128 characters.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Good morning, my friend!</para>
+            /// <para>早上好，我的朋友！</para>
             /// </summary>
             [NameInMap("Greeting")]
             [Validation(Required=false)]
             public string Greeting { get; set; }
 
+            /// <summary>
+            /// <para>A list of specific words or phrases that trigger a conversation interruption.</para>
+            /// </summary>
             [NameInMap("InterruptWords")]
             [Validation(Required=false)]
             public List<string> InterruptWords { get; set; }
 
+            /// <summary>
+            /// <para>The LLM/MLLM conversation history.</para>
+            /// </summary>
             [NameInMap("LlmHistory")]
             [Validation(Required=false)]
             public List<AIAgentTemplateConfigVisionChatLlmHistory> LlmHistory { get; set; }
             public class AIAgentTemplateConfigVisionChatLlmHistory : TeaModel {
+                /// <summary>
+                /// <para>The text content of the message.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>你好</para>
+                /// </summary>
                 [NameInMap("Content")]
                 [Validation(Required=false)]
                 public string Content { get; set; }
 
                 /// <summary>
+                /// <para>The role of the conversation participant. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para><c>user</c>: The user.</para>
+                /// </description></item>
+                /// <item><description><para><c>assistant</c>: The AI assistant.</para>
+                /// </description></item>
+                /// <item><description><para><c>system</c>: The system.</para>
+                /// </description></item>
+                /// <item><description><para><c>function</c>: A function call.</para>
+                /// </description></item>
+                /// <item><description><para><c>plugin</c>: A plugin.</para>
+                /// </description></item>
+                /// <item><description><para><c>tool</c>: A tool.</para>
+                /// </description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>user</para>
                 /// </summary>
@@ -352,6 +497,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             }
 
             /// <summary>
+            /// <para>The maximum number of conversation turns to retain in the LLM/MLLM history. Default: 10.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -359,11 +506,19 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public int? LlmHistoryLimit { get; set; }
 
+            /// <summary>
+            /// <para>The system prompt for the LLM, applied when the call starts.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>你是一位友好且乐于助人的助手，专注于为用户提供准确的信息和建议。</para>
+            /// </summary>
             [NameInMap("LlmSystemPrompt")]
             [Validation(Required=false)]
             public string LlmSystemPrompt { get; set; }
 
             /// <summary>
+            /// <para>The maximum idle time in seconds with no interaction before the agent goes offline. Default: 600.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>600</para>
             /// </summary>
@@ -372,7 +527,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public int? MaxIdleTime { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable voiceprint recognition. Default value: false.</para>
+            /// <para>Specifies whether to use voiceprint recognition. Default: <c>false</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -382,7 +537,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public bool? UseVoiceprint { get; set; }
 
             /// <summary>
-            /// <para>The timeout period after the user leaves the meeting. Unit: seconds. Default value: 5.</para>
+            /// <para>The time in seconds that the agent waits after a user leaves before closing the task. Default: 5.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -392,7 +547,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public int? UserOfflineTimeout { get; set; }
 
             /// <summary>
-            /// <para>The timeout period before the user joins the meeting. Unit: seconds. Default value: 60.</para>
+            /// <para>The time in seconds that the agent waits for a user to join before closing the task. Default: 60.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>
@@ -401,12 +556,26 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public int? UserOnlineTimeout { get; set; }
 
+            /// <summary>
+            /// <para>The interruption sensitivity threshold. A higher value makes it more difficult to interrupt the agent. Range: 0 to 11. Default: 11.</para>
+            /// <list type="bullet">
+            /// <item><description><para><c>0</c>: Disables VAD.</para>
+            /// </description></item>
+            /// <item><description><para><c>1</c> to <c>10</c>: A higher value makes it more difficult to interrupt the agent.</para>
+            /// </description></item>
+            /// <item><description><para><c>11</c>: Offers lower audio distortion and stronger resistance to interference.</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("VadLevel")]
             [Validation(Required=false)]
             public int? VadLevel { get; set; }
 
             /// <summary>
-            /// <para>The voice ID of the intelligent agent. The modification takes effect in the next sentence. If you do not specify this parameter, the system uses the default voice ID specified in the template of the intelligent agent. This parameter takes effect only for the preset TTS model. The ID can be up to 64 characters in length. For more information about the available voices, visit <a href="url">https://help.aliyun.com/zh/ims/developer-reference/smart-voice-effect-example</a>.</para>
+            /// <para>The ID of the Text-to-Speech (TTS) voice. Changes take effect on the next utterance. If omitted, the default voice from the agent template is used. This parameter applies only to preset TTS voices. Maximum length: 64 characters. For available values, see <a href="https://help.aliyun.com/document_detail/449563.html">Intelligent voice effect samples</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>zhixiaoxia</para>
@@ -415,12 +584,15 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string VoiceId { get; set; }
 
+            /// <summary>
+            /// <para>A list of available voices.</para>
+            /// </summary>
             [NameInMap("VoiceIdList")]
             [Validation(Required=false)]
             public List<string> VoiceIdList { get; set; }
 
             /// <summary>
-            /// <para>The unique ID of the voiceprint. This parameter is empty by default.</para>
+            /// <para>The unique ID for voiceprint recognition. Default: not specified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>uniqueId</para>
@@ -430,12 +602,21 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string VoiceprintId { get; set; }
 
             /// <summary>
-            /// <para>The speech volume of the intelligent agent.</para>
-            /// <para>If this parameter is not specified, the adaptive volume mode recommended by Alibaba Cloud is used by default.</para>
-            /// <para>To specify this parameter, enter a value between 0 and 400. The output volume is calculated by using the following formula: Output volume = Voice output volume specified in the workflow × Volume/100. Example:</para>
-            /// <para>If Volume is set to 0, the output volume is 0.</para>
-            /// <para>If Volume is set to 100, the output volume is the voice output volume specified in the workflow.</para>
-            /// <para>If Volume is set to 200, the output volume is twice the voice output volume specified in the workflow.</para>
+            /// <para>The speaking volume of the agent.</para>
+            /// <list type="bullet">
+            /// <item><description><para>If omitted, the system uses adaptive volume mode.</para>
+            /// </description></item>
+            /// <item><description><para>If specified, the valid range is 0 to 400. The output volume is calculated as: <c>Output Volume in Workflow</c> \* (<c>volume</c>/100). For example:</para>
+            /// </description></item>
+            /// </list>
+            /// <ol>
+            /// <item><description><para>If <c>volume</c> is <c>0</c>, the output is silent.</para>
+            /// </description></item>
+            /// <item><description><para>If <c>volume</c> is <c>100</c>, the output volume is the original volume.</para>
+            /// </description></item>
+            /// <item><description><para>If <c>volume</c> is <c>200</c>, the output volume is twice the original volume.</para>
+            /// </description></item>
+            /// </ol>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -444,11 +625,19 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public long? Volume { get; set; }
 
+            /// <summary>
+            /// <para>An initial user query that the agent addresses immediately when the call starts.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>今天天气怎么样？</para>
+            /// </summary>
             [NameInMap("WakeUpQuery")]
             [Validation(Required=false)]
             public string WakeUpQuery { get; set; }
 
             /// <summary>
+            /// <para>Workflow override parameters. Default: empty.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{}</para>
             /// </summary>
@@ -459,22 +648,44 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
-        /// <para>The voice call parameters.</para>
+        /// <para>Voice chat parameters.</para>
         /// </summary>
         [NameInMap("VoiceChat")]
         [Validation(Required=false)]
         public AIAgentTemplateConfigVoiceChat VoiceChat { get; set; }
         public class AIAgentTemplateConfigVoiceChat : TeaModel {
+            /// <summary>
+            /// <para>A list of hot words to improve ASR accuracy. A maximum of 128 words is supported.</para>
+            /// </summary>
             [NameInMap("AsrHotWords")]
             [Validation(Required=false)]
             public List<string> AsrHotWords { get; set; }
 
+            /// <summary>
+            /// <para>The language ID for Automatic Speech Recognition (ASR).
+            /// Possible values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><c>zh_mandarin</c>: Chinese</para>
+            /// </description></item>
+            /// <item><description><para><c>en</c>: English</para>
+            /// </description></item>
+            /// <item><description><para><c>zh_en</c>: Chinese-English</para>
+            /// </description></item>
+            /// <item><description><para><c>es</c>: Spanish</para>
+            /// </description></item>
+            /// <item><description><para><c>jp</c>: Japanese</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>zh_mandarin</para>
+            /// </summary>
             [NameInMap("AsrLanguageId")]
             [Validation(Required=false)]
             public string AsrLanguageId { get; set; }
 
             /// <summary>
-            /// <para>The threshold used to determine the end of a sentence. If the duration of silence exceeds this threshold, the system determines that a sentence ends. Unit: milliseconds. Default value: 400. Valid values: 200 to 1200.</para>
+            /// <para>The maximum duration of silence in milliseconds before a sentence break is detected. Range: 200 to 1,200. Default: 400.</para>
             /// 
             /// <b>Example:</b>
             /// <para>400</para>
@@ -484,6 +695,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public int? AsrMaxSilence { get; set; }
 
             /// <summary>
+            /// <para>The URL of the agent\&quot;s avatar for voice chat. Default: none.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="http://example.com/a.jpg">http://example.com/a.jpg</a></para>
             /// </summary>
@@ -492,6 +705,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string AvatarUrl { get; set; }
 
             /// <summary>
+            /// <para>The type of the agent\&quot;s avatar URL. Default: none.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>USER</para>
             /// </summary>
@@ -500,7 +715,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string AvatarUrlType { get; set; }
 
             /// <summary>
-            /// <para>The parameters of the application center of Alibaba Cloud Model Studio. For more information about the parameter format, see <a href="https://help.aliyun.com/document_detail/2858132.html">Parameters of the application center of Alibaba Cloud Model Studio</a>.</para>
+            /// <para>Parameters for Alibaba Cloud Bailian. For details, see <a href="https://help.aliyun.com/document_detail/2858132.html">Bailian App Params</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -514,6 +729,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public bool? CharBreak { get; set; }
 
             /// <summary>
+            /// <para>Specifies whether to enable intelligent segmentation. If enabled, this feature intelligently merges pauses in a user\&quot;s speech into a single, complete sentence. Default: <c>true</c>.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -522,7 +739,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public bool? EnableIntelligentSegment { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the intercom mode. Default value: false.</para>
+            /// <para>Specifies whether to enable Push-to-Talk mode. Default: <c>false</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -532,7 +749,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public bool? EnablePushToTalk { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the intelligent agent can be interrupted by voice. Default value: true.</para>
+            /// <para>Specifies whether to enable voice interruption. Default: <c>true</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -542,38 +759,69 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public bool? EnableVoiceInterrupt { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the intelligent agent supports graceful shutdown. Default value: false.</para>
+            /// <para>Specifies whether to enable graceful shutdown. Default: <c>false</c>.</para>
             /// <list type="bullet">
-            /// <item><description>Graceful shutdown: When the intelligent agent is stopped, it completes its current sentence before stopping. However, the intelligent agent can speak for 10 seconds at most.</description></item>
+            /// <item><description>If enabled, the agent finishes its current speech (up to 10 seconds) before stopping.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>true</para>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("GracefulShutdown")]
             [Validation(Required=false)]
             public bool? GracefulShutdown { get; set; }
 
             /// <summary>
-            /// <para>The greetings spoken by the intelligent agent when it joins the meeting. If you do not specify this parameter, the system uses the default greetings specified in the template of the intelligent agent. The value can be up to 128 characters in length.</para>
+            /// <para>The greeting message delivered when a user joins the session. If this parameter is omitted, the greeting configured in the agent template is used. Maximum length: 128 characters.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>早上好，我的朋友</para>
             /// </summary>
             [NameInMap("Greeting")]
             [Validation(Required=false)]
             public string Greeting { get; set; }
 
+            /// <summary>
+            /// <para>A list of specific words or phrases that trigger a conversation interruption.</para>
+            /// </summary>
             [NameInMap("InterruptWords")]
             [Validation(Required=false)]
             public List<string> InterruptWords { get; set; }
 
+            /// <summary>
+            /// <para>The LLM/MLLM conversation history.</para>
+            /// </summary>
             [NameInMap("LlmHistory")]
             [Validation(Required=false)]
             public List<AIAgentTemplateConfigVoiceChatLlmHistory> LlmHistory { get; set; }
             public class AIAgentTemplateConfigVoiceChatLlmHistory : TeaModel {
+                /// <summary>
+                /// <para>The text content of the message.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>你好</para>
+                /// </summary>
                 [NameInMap("Content")]
                 [Validation(Required=false)]
                 public string Content { get; set; }
 
                 /// <summary>
+                /// <para>The role of the conversation participant. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para><c>user</c>: The user.</para>
+                /// </description></item>
+                /// <item><description><para><c>assistant</c>: The AI assistant.</para>
+                /// </description></item>
+                /// <item><description><para><c>system</c>: The system.</para>
+                /// </description></item>
+                /// <item><description><para><c>function</c>: A function call.</para>
+                /// </description></item>
+                /// <item><description><para><c>plugin</c>: A plugin.</para>
+                /// </description></item>
+                /// <item><description><para><c>tool</c>: A tool.</para>
+                /// </description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>user</para>
                 /// </summary>
@@ -584,6 +832,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             }
 
             /// <summary>
+            /// <para>The maximum number of conversation turns to retain in the LLM/MLLM history. Default: 10.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -591,11 +841,19 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public int? LlmHistoryLimit { get; set; }
 
+            /// <summary>
+            /// <para>The system prompt for the LLM, applied when the call starts.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>你是一位友好且乐于助人的助手，专注于为用户提供准确的信息和建议。</para>
+            /// </summary>
             [NameInMap("LlmSystemPrompt")]
             [Validation(Required=false)]
             public string LlmSystemPrompt { get; set; }
 
             /// <summary>
+            /// <para>The maximum idle time in seconds with no interaction before the agent goes offline. Default: 600.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>600</para>
             /// </summary>
@@ -604,7 +862,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public int? MaxIdleTime { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable voiceprint recognition. Default value: false.</para>
+            /// <para>Specifies whether to use voiceprint recognition. Default: <c>false</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -614,7 +872,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public bool? UseVoiceprint { get; set; }
 
             /// <summary>
-            /// <para>The timeout period after the user leaves the meeting. Unit: seconds. Default value: 5.</para>
+            /// <para>The time in seconds that the agent waits after a user leaves before closing the task. Default: 5.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -624,7 +882,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public int? UserOfflineTimeout { get; set; }
 
             /// <summary>
-            /// <para>The timeout period before the user joins the meeting. Unit: seconds. Default value: 60.</para>
+            /// <para>The time in seconds that the agent waits for a user to join before closing the task. Default: 60.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>
@@ -633,12 +891,26 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public int? UserOnlineTimeout { get; set; }
 
+            /// <summary>
+            /// <para>The interruption sensitivity threshold. A higher value makes it more difficult to interrupt the agent. Range: 0 to 11. Default: 11.</para>
+            /// <list type="bullet">
+            /// <item><description><para><c>0</c>: Disables Voice Activity Detection (VAD).</para>
+            /// </description></item>
+            /// <item><description><para><c>1</c> to <c>10</c>: A higher value makes it more difficult to interrupt the agent.</para>
+            /// </description></item>
+            /// <item><description><para><c>11</c>: Offers lower audio distortion and stronger resistance to interference.</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>11</para>
+            /// </summary>
             [NameInMap("VadLevel")]
             [Validation(Required=false)]
             public int? VadLevel { get; set; }
 
             /// <summary>
-            /// <para>The voice ID of the intelligent agent. The modification takes effect in the next sentence. If you do not specify this parameter, the system uses the default voice ID specified in the template of the intelligent agent. This parameter takes effect only for the preset TTS model. The ID can be up to 64 characters in length. For more information about the available voices, visit <a href="url">https://help.aliyun.com/zh/ims/developer-reference/smart-voice-effect-example</a>.</para>
+            /// <para>The ID of the Text-to-Speech (TTS) voice. Changes take effect on the next utterance. If omitted, the default voice from the agent template is used. This parameter applies only to preset TTS voices. Maximum length: 64 characters. For available values, see <a href="https://help.aliyun.com/document_detail/449563.html">Intelligent voice effect samples</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>zhixiaoxia</para>
@@ -647,12 +919,15 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string VoiceId { get; set; }
 
+            /// <summary>
+            /// <para>A list of available voices.</para>
+            /// </summary>
             [NameInMap("VoiceIdList")]
             [Validation(Required=false)]
             public List<string> VoiceIdList { get; set; }
 
             /// <summary>
-            /// <para>The unique ID of the voiceprint. This parameter is empty by default.</para>
+            /// <para>The unique ID for voiceprint recognition. Default: not specified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>uniqueId</para>
@@ -662,15 +937,20 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string VoiceprintId { get; set; }
 
             /// <summary>
-            /// <para>The speech volume of the intelligent agent.</para>
+            /// <para>The speaking volume of the agent.</para>
             /// <list type="bullet">
-            /// <item><description>If this parameter is not specified, the adaptive volume mode recommended by Alibaba Cloud is used by default.</description></item>
-            /// <item><description>To specify this parameter, enter a value between 0 and 400. The output volume is calculated by using the following formula: Output volume = Voice output volume specified in the workflow × Volume/100. Example:</description></item>
+            /// <item><description><para>If omitted, the system uses adaptive volume mode.</para>
+            /// </description></item>
+            /// <item><description><para>If specified, the valid range is 0 to 400. The output volume is calculated as: <c>Output Volume in Workflow</c> \* (<c>volume</c>/100). For example:</para>
+            /// </description></item>
             /// </list>
             /// <ol>
-            /// <item><description>If Volume is set to 0, the output volume is 0.</description></item>
-            /// <item><description>If Volume is set to 100, the output volume is the voice output volume specified in the workflow.</description></item>
-            /// <item><description>If Volume is set to 200, the output volume is twice the voice output volume specified in the workflow.</description></item>
+            /// <item><description><para>If <c>volume</c> is <c>0</c>, the output is silent.</para>
+            /// </description></item>
+            /// <item><description><para>If <c>volume</c> is <c>100</c>, the output volume is the original volume.</para>
+            /// </description></item>
+            /// <item><description><para>If <c>volume</c> is <c>200</c>, the output volume is twice the original volume.</para>
+            /// </description></item>
             /// </ol>
             /// 
             /// <b>Example:</b>
@@ -680,11 +960,19 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public long? Volume { get; set; }
 
+            /// <summary>
+            /// <para>An initial user query that the agent addresses immediately when the call starts.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>今天天气怎么样？</para>
+            /// </summary>
             [NameInMap("WakeUpQuery")]
             [Validation(Required=false)]
             public string WakeUpQuery { get; set; }
 
             /// <summary>
+            /// <para>Workflow override parameters. Default: empty.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{}</para>
             /// </summary>

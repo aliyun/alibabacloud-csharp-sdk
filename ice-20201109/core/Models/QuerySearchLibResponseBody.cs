@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class QuerySearchLibResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code returned.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -19,18 +19,61 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The index information.</para>
+        /// </summary>
         [NameInMap("IndexInfo")]
         [Validation(Required=false)]
         public List<QuerySearchLibResponseBodyIndexInfo> IndexInfo { get; set; }
         public class QuerySearchLibResponseBodyIndexInfo : TeaModel {
+            /// <summary>
+            /// <para>The readiness status of the index. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>Initializing: The index is being initialized.</para>
+            /// </description></item>
+            /// <item><description><para>Normal: The index is ready.</para>
+            /// </description></item>
+            /// <item><description><para>Fail: The index failed to be created.</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Normal</para>
+            /// </summary>
             [NameInMap("IndexReadiness")]
             [Validation(Required=false)]
             public string IndexReadiness { get; set; }
 
+            /// <summary>
+            /// <para>The status of the index. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>Active: The index is active.</para>
+            /// </description></item>
+            /// <item><description><para>Deactive: The index is inactive.</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Active</para>
+            /// </summary>
             [NameInMap("IndexStatus")]
             [Validation(Required=false)]
             public string IndexStatus { get; set; }
 
+            /// <summary>
+            /// <para>The index type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>mm: Large language model (LLM).</para>
+            /// </description></item>
+            /// <item><description><para>face: Face recognition.</para>
+            /// </description></item>
+            /// <item><description><para>aiLabel: Smart tagging.</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>face</para>
+            /// </summary>
             [NameInMap("IndexType")]
             [Validation(Required=false)]
             public string IndexType { get; set; }
@@ -38,7 +81,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b><b>11-DB8D-4A9A-875B-275798</b></b></b></para>
@@ -47,6 +90,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The search library configuration.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;faceGroupIds&quot;:&quot;xxx1,xxx2,xx3&quot;}</para>
+        /// </summary>
         [NameInMap("SearchLibConfig")]
         [Validation(Required=false)]
         public string SearchLibConfig { get; set; }
@@ -63,12 +112,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         /// <summary>
         /// <para>The status of the search library.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>normal</description></item>
-        /// <item><description>deleting</description></item>
-        /// <item><description>deleteFail</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>normal</para>
@@ -78,10 +121,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para><b>true</b>: The call was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The call failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

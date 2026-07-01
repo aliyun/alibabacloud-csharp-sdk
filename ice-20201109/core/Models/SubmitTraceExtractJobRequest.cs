@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitTraceExtractJobRequest : TeaModel {
         /// <summary>
-        /// <para>The source video file from which to extract the watermark.</para>
+        /// <para>The input video from which to extract the watermark.</para>
         /// <remarks>
-        /// <para>The OSS object or media asset must reside in the same region as the IMS service region.</para>
+        /// <list type="bullet">
+        /// <item><description>The OSS object or media asset must be in the same region as your IMS service.</description></item>
+        /// </list>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -21,10 +23,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public SubmitTraceExtractJobRequestInput Input { get; set; }
         public class SubmitTraceExtractJobRequestInput : TeaModel {
             /// <summary>
-            /// <para>The specific information for the source file, which can be an OSS URL or a media asset ID. OSS URL formats:</para>
-            /// <para>1\. oss://bucket/object</para>
-            /// <para>2\. http(s)://bucket.oss-[regionId].aliyuncs.com/object</para>
-            /// <para>where bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object path in OSS.</para>
+            /// <para>The input source. Specify an OSS object URL or a media asset ID.</para>
+            /// <para>An OSS object URL can be in one of the following formats:</para>
+            /// <para>1\. oss\://bucket/object</para>
+            /// <para>In these formats, <c>bucket</c> is the name of an OSS bucket in the same region as your IMS service, and <c>object</c> is the path of the OSS object.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -35,10 +37,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Media { get; set; }
 
             /// <summary>
-            /// <para>The type of the source file. Valid values:</para>
+            /// <para>The input type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>OSS: an OSS object.</description></item>
-            /// <item><description>Media: a media asset.</description></item>
+            /// <item><description><para>OSS: An OSS object URL.</para>
+            /// </description></item>
+            /// <item><description><para>Media: A media asset ID.</para>
+            /// </description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -52,12 +56,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
-        /// <para>Additional parameters for the watermark job, provided as a JSON string. Supported parameter:</para>
+        /// <para>Extraction job parameters, specified as a JSON string. The following parameters are supported:</para>
         /// <list type="bullet">
-        /// <item><description><para>m3u8Type: The extraction algorithm type. Defaults to v1.</para>
+        /// <item><description><para><c>m3u8Type</c>: The algorithm type. The default value is <c>v1</c>.</para>
         /// <list type="bullet">
-        /// <item><description>v1: Extracts from an M3U8 with absolute paths.</description></item>
-        /// <item><description>v2: Extracts from an M3U8 with relative paths.</description></item>
+        /// <item><description><para><c>v1</c>: Extracts an m3u8 playlist with absolute paths.</para>
+        /// </description></item>
+        /// <item><description><para><c>v2</c>: Extracts an m3u8 playlist with relative paths.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -70,7 +76,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Params { get; set; }
 
         /// <summary>
-        /// <para>The custom data, which can be up to 1,024 bytes in size.</para>
+        /// <para>The user-defined data. Maximum length: 1,024 bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123</para>

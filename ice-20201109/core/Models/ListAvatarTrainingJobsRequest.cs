@@ -11,8 +11,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
     public class ListAvatarTrainingJobsRequest : TeaModel {
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>The page number.</description></item>
-        /// <item><description>Default value: 1.</description></item>
+        /// <item><description><para>The page number.</para>
+        /// </description></item>
+        /// <item><description><para>Default value: 1.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,9 +26,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>The number of entries per page.</description></item>
-        /// <item><description>Default value: 10.</description></item>
-        /// <item><description>Valid values: 1 to 100.</description></item>
+        /// <item><description><para>The number of entries per page.</para>
+        /// </description></item>
+        /// <item><description><para>Default value: 10.</para>
+        /// </description></item>
+        /// <item><description><para>Valid values: 1 to 100.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,8 +43,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>The job state.</description></item>
-        /// <item><description>Valid values: Init, Queuing, Training, Success, and Fail.</description></item>
+        /// <item><description><para>The job state.</para>
+        /// </description></item>
+        /// <item><description><para>Valid values: Init, Queuing, Training, Success, and Fail.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

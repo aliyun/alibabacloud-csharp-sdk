@@ -71,6 +71,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         /// <summary>
         /// <para>The template name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Template 1</para>
         /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]
@@ -90,8 +93,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <para>The type of the template.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>system</description></item>
-        /// <item><description>custom</description></item>
+        /// <item><description><para>system</para>
+        /// </description></item>
+        /// <item><description><para>custom</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

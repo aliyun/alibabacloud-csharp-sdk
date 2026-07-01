@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <para>The name of the hotword library.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>热词库使用名称</para>
+        /// <para>Hotword library name</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -93,9 +93,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The usage scenario of the hotword library. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ASR: Automatic Speech Recognition</description></item>
-        /// <item><description>StructuredMediaAssets: structured media analysis</description></item>
-        /// <item><description>VideoTranslation: Video translation. This field cannot be modified after the hotword library is created.</description></item>
+        /// <item><description><para>ASR: Automatic Speech Recognition</para>
+        /// </description></item>
+        /// <item><description><para>StructuredMediaAssets: structured media analysis</para>
+        /// </description></item>
+        /// <item><description><para>VideoTranslation: Video translation. This field cannot be modified after the hotword library is created.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

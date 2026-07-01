@@ -49,9 +49,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <summary>
             /// <para>The index type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>mm: large visual model.</description></item>
-            /// <item><description>face: face recognition.</description></item>
-            /// <item><description>aiLabel: smart tagging.</description></item>
+            /// <item><description><para>mm: large visual model.</para>
+            /// </description></item>
+            /// <item><description><para>face: face recognition.</para>
+            /// </description></item>
+            /// <item><description><para>aiLabel: smart tagging.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -64,9 +67,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <summary>
             /// <para>The job status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Running</description></item>
-            /// <item><description>Success</description></item>
-            /// <item><description>Fail</description></item>
+            /// <item><description><para>Running</para>
+            /// </description></item>
+            /// <item><description><para>Success</para>
+            /// </description></item>
+            /// <item><description><para>Fail</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -91,8 +97,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

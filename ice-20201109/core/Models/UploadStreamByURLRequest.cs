@@ -12,15 +12,24 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The quality of the media stream. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>FD: low definition.</description></item>
-        /// <item><description>LD: standard definition.</description></item>
-        /// <item><description>SD: high definition.</description></item>
-        /// <item><description>HD: ultra-high definition.</description></item>
-        /// <item><description>OD: original quality.</description></item>
-        /// <item><description>2K: 2K resolution.</description></item>
-        /// <item><description>4K: 4K resolution.</description></item>
-        /// <item><description>SQ: standard sound quality.</description></item>
-        /// <item><description>HQ: high sound quality.</description></item>
+        /// <item><description><para>FD: low definition.</para>
+        /// </description></item>
+        /// <item><description><para>LD: standard definition.</para>
+        /// </description></item>
+        /// <item><description><para>SD: high definition.</para>
+        /// </description></item>
+        /// <item><description><para>HD: ultra-high definition.</para>
+        /// </description></item>
+        /// <item><description><para>OD: original quality.</para>
+        /// </description></item>
+        /// <item><description><para>2K: 2K resolution.</para>
+        /// </description></item>
+        /// <item><description><para>4K: 4K resolution.</para>
+        /// </description></item>
+        /// <item><description><para>SQ: standard sound quality.</para>
+        /// </description></item>
+        /// <item><description><para>HQ: high sound quality.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -43,12 +52,18 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The high dynamic range (HDR) format of the transcoded stream. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>HDR</description></item>
-        /// <item><description>HDR10</description></item>
-        /// <item><description>HLG</description></item>
-        /// <item><description>DolbyVision</description></item>
-        /// <item><description>HDRVivid</description></item>
-        /// <item><description>SDR+</description></item>
+        /// <item><description><para>HDR</para>
+        /// </description></item>
+        /// <item><description><para>HDR10</para>
+        /// </description></item>
+        /// <item><description><para>HLG</para>
+        /// </description></item>
+        /// <item><description><para>DolbyVision</para>
+        /// </description></item>
+        /// <item><description><para>HDRVivid</para>
+        /// </description></item>
+        /// <item><description><para>SDR+</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// </remarks>

@@ -28,6 +28,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
             /// <summary>
             /// <para>The channel group description.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>这是频道组的描述信息。</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]

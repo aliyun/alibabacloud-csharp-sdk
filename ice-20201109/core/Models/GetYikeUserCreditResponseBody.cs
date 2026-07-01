@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetYikeUserCreditResponseBody : TeaModel {
         /// <summary>
+        /// <para>The total allocated credit.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>400</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string CreditTotal { get; set; }
 
         /// <summary>
+        /// <para>The remaining credit.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string CreditUsage { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b><b>63E8B7C7-4812-46AD-0FA56029AC86</b></b></para>
         /// </summary>

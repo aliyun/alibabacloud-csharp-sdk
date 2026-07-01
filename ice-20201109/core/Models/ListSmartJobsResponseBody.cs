@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <para>The job description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试描述</para>
+            /// <para>Test description</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <para>The keyword information.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>测试关键词</para>
+                /// <para>Test keyword</para>
                 /// </summary>
                 [NameInMap("Keyword")]
                 [Validation(Required=false)]
@@ -119,10 +119,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <para>The job state.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Finished: The job is complete.</description></item>
-            /// <item><description>Failed: The job failed.</description></item>
-            /// <item><description>Executing: The job is in progress.</description></item>
-            /// <item><description>Created: The job is created.</description></item>
+            /// <item><description><para>Finished: The job is complete.</para>
+            /// </description></item>
+            /// <item><description><para>Failed: The job failed.</para>
+            /// </description></item>
+            /// <item><description><para>Executing: The job is in progress.</para>
+            /// </description></item>
+            /// <item><description><para>Created: The job is created.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -136,9 +140,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <para>The job type.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ASR: ASR job.</description></item>
-            /// <item><description>DynamicChart: dynamic chart job.</description></item>
-            /// <item><description>TextToSpeech: intelligent audio production job.</description></item>
+            /// <item><description><para>ASR: ASR job.</para>
+            /// </description></item>
+            /// <item><description><para>DynamicChart: dynamic chart job.</para>
+            /// </description></item>
+            /// <item><description><para>TextToSpeech: intelligent audio production job.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -191,7 +198,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <para>The job title.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试标题</para>
+            /// <para>Test title</para>
             /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]

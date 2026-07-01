@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about upload jobs.</para>
+        /// <para>An array of upload jobs.</para>
         /// </summary>
         [NameInMap("UploadJobs")]
         [Validation(Required=false)]
         public List<UploadMediaByURLResponseBodyUploadJobs> UploadJobs { get; set; }
         public class UploadMediaByURLResponseBodyUploadJobs : TeaModel {
             /// <summary>
-            /// <para>The ID of the upload job.</para>
+            /// <para>The upload job ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20ce1e05dba64576b96e9683879f0***</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string JobId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the media asset.</para>
+            /// <para>The media ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>f476988629f54a7b8a4ba90d1a6c7***</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string MediaId { get; set; }
 
             /// <summary>
-            /// <para>The URL of the source file that is uploaded in the upload job.</para>
+            /// <para>The source URL corresponding to the upload job.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://example****.mp4">http://example****.mp4</a></para>

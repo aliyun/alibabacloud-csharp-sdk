@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitScreenMediaHighlightsJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the task.</para>
+        /// <para>The ID of the highlight compilation job.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>20b48fb04483915d4f2cd8ac</b></b></para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>A unique ID for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>36-3C1E-4417-BDB2-1E034F</b></b></para>

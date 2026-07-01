@@ -23,10 +23,15 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The URL of the media asset that you want to delete. The file corresponding to the URL must be registered with IMS. Separate multiple URLs with commas (,). The following two formats are supported:</para>
         /// <ol>
-        /// <item><description>http(s)://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4?</description></item>
-        /// <item><description>OSS://example-bucket/example.mp4?\
-        /// In this format, it is considered by default that the region of the OSS bucket in which the media asset resides is the same as the region in which IMS is activated.</description></item>
+        /// <item><description><para>http(s)://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4?</para>
+        /// </description></item>
+        /// <item><description><para>OSS://example-bucket/example.mp4?<br>
+        /// In this format, it is considered by default that the region of the OSS bucket in which the media asset resides is the same as the region in which IMS is activated.</para>
+        /// </description></item>
         /// </ol>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Http(s)://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4? or oss://example-bucket/example.mp4?</para>
         /// </summary>
         [NameInMap("InputURLs")]
         [Validation(Required=false)]

@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The end of the time range to query.</para>
         /// <list type="bullet">
-        /// <item><description>Specify the time in the ISO 8601 standard. The time must be in UTC.</description></item>
-        /// <item><description>Format: yyyy-MM-ddTHH:mm:ssZ.</description></item>
+        /// <item><description><para>Specify the time in the ISO 8601 standard. The time must be in UTC.</para>
+        /// </description></item>
+        /// <item><description><para>Format: yyyy-MM-ddTHH:mm:ssZ.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,8 +38,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The number of entries per page.</para>
         /// <list type="bullet">
-        /// <item><description>Default value: <b>30</b>.</description></item>
-        /// <item><description>Valid values: <b>1 to 300</b>.</description></item>
+        /// <item><description><para>Default value: <b>30</b>.</para>
+        /// </description></item>
+        /// <item><description><para>Valid values: <b>1 to 300</b>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -51,7 +55,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>79aff3eee82242e092899db5f669</para>
+        /// <para>79aff3eee82242e092899db5****</para>
         /// </summary>
         [NameInMap("NextPageToken")]
         [Validation(Required=false)]
@@ -86,8 +90,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The beginning of the time range to query.</para>
         /// <list type="bullet">
-        /// <item><description>Specify the time in the ISO 8601 standard. The time must be in UTC.</description></item>
-        /// <item><description>Format: yyyy-MM-ddTHH:mm:ssZ.</description></item>
+        /// <item><description><para>Specify the time in the ISO 8601 standard. The time must be in UTC.</para>
+        /// </description></item>
+        /// <item><description><para>Format: yyyy-MM-ddTHH:mm:ssZ.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -100,11 +106,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The state of the jobs that you want to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>All</b>: all jobs.</description></item>
-        /// <item><description><b>Queuing</b>: the jobs that are waiting in the queue.</description></item>
-        /// <item><description><b>Analysing</b>: the jobs that are in progress.</description></item>
-        /// <item><description><b>Fail</b>: failed jobs.</description></item>
-        /// <item><description><b>Success</b>: successful jobs.</description></item>
+        /// <item><description><para><b>All</b>: all jobs.</para>
+        /// </description></item>
+        /// <item><description><para><b>Queuing</b>: the jobs that are waiting in the queue.</para>
+        /// </description></item>
+        /// <item><description><para><b>Analysing</b>: the jobs that are in progress.</para>
+        /// </description></item>
+        /// <item><description><para><b>Fail</b>: failed jobs.</para>
+        /// </description></item>
+        /// <item><description><para><b>Success</b>: successful jobs.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

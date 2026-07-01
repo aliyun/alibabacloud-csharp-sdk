@@ -13,9 +13,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <para>The demonstration scenario.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>story</b></description></item>
-        /// <item><description><b>interaction</b></description></item>
-        /// <item><description><b>navigation</b></description></item>
+        /// <item><description><para><b>story</b></para>
+        /// </description></item>
+        /// <item><description><para><b>interaction</b></para>
+        /// </description></item>
+        /// <item><description><para><b>navigation</b></para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class QueryIProductionJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The time when the job was created.</para>
+        /// <para>The time when the job was created, in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-07-07T07:16:11Z</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the job was complete.</para>
+        /// <para>The time when the job was completed, in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-11-26T14:50:25Z</para>
@@ -30,12 +30,36 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string FinishTime { get; set; }
 
         /// <summary>
-        /// <para>The name of the algorithm that you want to use for the job. Valid values:</para>
+        /// <para>The name of the algorithm to use. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Cover</b>: This algorithm intelligently generates a thumbnail image for a video.</description></item>
-        /// <item><description><b>VideoClip</b>: This algorithm intelligently generates a summary for a video.</description></item>
-        /// <item><description><b>VideoDelogo</b>: This algorithm removes logos from a video.</description></item>
-        /// <item><description><b>VideoDetext</b>: This algorithm removes captions from a video.</description></item>
+        /// <item><description><para><b>Cover</b>: smart cover</para>
+        /// </description></item>
+        /// <item><description><para><b>VideoClip</b>: video summary</para>
+        /// </description></item>
+        /// <item><description><para><b>VideoDelogo</b>: video logo removal</para>
+        /// </description></item>
+        /// <item><description><para><b>VideoDetext</b>: video text removal</para>
+        /// </description></item>
+        /// <item><description><para><b>CaptionExtraction</b>: caption extraction</para>
+        /// </description></item>
+        /// <item><description><para><b>VideoGreenScreenMatting</b>: green screen matting</para>
+        /// </description></item>
+        /// <item><description><para><b>FaceBeauty</b>: video beautification</para>
+        /// </description></item>
+        /// <item><description><para><b>VideoH2V</b>: horizontal-to-vertical video conversion</para>
+        /// </description></item>
+        /// <item><description><para><b>MusicSegmentDetect</b>: chorus detection</para>
+        /// </description></item>
+        /// <item><description><para><b>AudioBeatDetection</b>: beat detection</para>
+        /// </description></item>
+        /// <item><description><para><b>AudioQualityAssessment</b>: audio quality assessment</para>
+        /// </description></item>
+        /// <item><description><para><b>SpeechDenoise</b>: speech denoising</para>
+        /// </description></item>
+        /// <item><description><para><b>AudioMixing</b>: audio mixing</para>
+        /// </description></item>
+        /// <item><description><para><b>MusicDemix</b>: music source separation</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,17 +70,21 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string FunctionName { get; set; }
 
         /// <summary>
-        /// <para>The input file.</para>
+        /// <para>The input media.</para>
         /// </summary>
         [NameInMap("Input")]
         [Validation(Required=false)]
         public QueryIProductionJobResponseBodyInput Input { get; set; }
         public class QueryIProductionJobResponseBodyInput : TeaModel {
             /// <summary>
-            /// <para>The input file. If Type is set to OSS, set this parameter to the path of an OSS object. If Type is set to Media, set this parameter to the ID of a media asset. You can specify the path of an OSS object in one of the following formats:</para>
+            /// <para>The source file for the job. Set this to an OSS file URL if <c>Type</c> is <c>OSS</c>, or a media asset ID if <c>Type</c> is <c>Media</c>.
+            /// Valid OSS URL formats:</para>
             /// <ol>
-            /// <item><description>oss://bucket/object</description></item>
-            /// <item><description>http(s)://bucket.oss-[RegionId].aliyuncs.com/object bucket in the path specifies an OSS bucket that resides in the same region as the intelligent production job. object in the path specifies the object path in OSS.</description></item>
+            /// <item><description><para>oss\://bucket/object</para>
+            /// </description></item>
+            /// <item><description><para>http(s)://bucket.oss-[RegionId].aliyuncs.com/object
+            /// In these formats, <c>bucket</c> is the name of the OSS bucket in the same region as the current project, and <c>object</c> is the file path.</para>
+            /// </description></item>
             /// </ol>
             /// 
             /// <b>Example:</b>
@@ -67,10 +95,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Media { get; set; }
 
             /// <summary>
-            /// <para>The media type. Valid values:</para>
+            /// <para>The input type. Valid values:</para>
             /// <ol>
-            /// <item><description>OSS: Object Storage Service (OSS) object</description></item>
-            /// <item><description>Media: media asset</description></item>
+            /// <item><description><para>OSS: An OSS file URL.</para>
+            /// </description></item>
+            /// <item><description><para>Media: A media asset ID.</para>
+            /// </description></item>
             /// </ol>
             /// 
             /// <b>Example:</b>
@@ -83,7 +113,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
-        /// <para>The ID of the intelligent production job.</para>
+        /// <para>The job ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>20b48fb04483915d4f2cd8ac</b></b></para>
@@ -93,7 +123,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>The algorithm-specific parameters. The parameters are specified as JSON objects and vary based on the algorithm.</para>
+        /// <para>A JSON object that contains the parameters for the algorithm job. The specific parameters vary depending on the selected algorithm.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;Model&quot;:&quot;gif&quot;}</para>
@@ -103,28 +133,41 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string JobParams { get; set; }
 
         /// <summary>
-        /// <para>The name of the intelligent production job.</para>
+        /// <para>The job name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Test task</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The output file.</para>
+        /// <para>The output media.</para>
         /// </summary>
         [NameInMap("Output")]
         [Validation(Required=false)]
         public QueryIProductionJobResponseBodyOutput Output { get; set; }
         public class QueryIProductionJobResponseBodyOutput : TeaModel {
+            /// <summary>
+            /// <para>The service that the media asset belongs to.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>IMS</para>
+            /// </summary>
             [NameInMap("Biz")]
             [Validation(Required=false)]
             public string Biz { get; set; }
 
             /// <summary>
-            /// <para>The output file. If Type is set to OSS, set this parameter to the path of an OSS object. If Type is set to Media, set this parameter to the ID of a media asset. You can specify the path of an OSS object in one of the following formats:</para>
+            /// <para>The destination for the output. If the output <c>Type</c> is <c>OSS</c>, this parameter returns an OSS file URL. If the output <c>Type</c> is <c>Media</c>, it returns the specified or a newly generated media asset ID.</para>
+            /// <para>Valid OSS URL formats:</para>
             /// <ol>
-            /// <item><description>oss://bucket/object</description></item>
-            /// <item><description>http(s)://bucket.oss-[RegionId].aliyuncs.com/object bucket in the path specifies an OSS bucket that resides in the same region as the intelligent production job. object in the path specifies the object path in OSS.</description></item>
+            /// <item><description><para>oss\://bucket/object</para>
+            /// </description></item>
+            /// <item><description><para>http(s)://bucket.oss-[RegionId].aliyuncs.com/object
+            /// In these formats, <c>bucket</c> is the name of the OSS bucket in the same region as the current project, and <c>object</c> is the file path.</para>
+            /// </description></item>
             /// </ol>
             /// 
             /// <b>Example:</b>
@@ -134,6 +177,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string Media { get; set; }
 
+            /// <summary>
+            /// <para>The OSS URL of the output file. This value is returned only when <c>Type</c> is <c>Media</c>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>http(s)://bucket.oss-[RegionId].aliyuncs.com/object</para>
+            /// </summary>
             [NameInMap("OutputUrl")]
             [Validation(Required=false)]
             public string OutputUrl { get; set; }
@@ -141,8 +190,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <summary>
             /// <para>The media type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>OSS: OSS object</description></item>
-            /// <item><description>Media: media asset</description></item>
+            /// <item><description><para>OSS: An OSS file URL.</para>
+            /// </description></item>
+            /// <item><description><para>Media: A media asset ID.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -155,32 +206,35 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
-        /// <para>The output files.</para>
+        /// <para>An array of output file paths.</para>
         /// </summary>
         [NameInMap("OutputFiles")]
         [Validation(Required=false)]
         public List<string> OutputFiles { get; set; }
 
+        /// <summary>
+        /// <para>The output media asset IDs.</para>
+        /// </summary>
         [NameInMap("OutputMediaIds")]
         [Validation(Required=false)]
         public List<string> OutputMediaIds { get; set; }
 
         /// <summary>
-        /// <para>The URLs of the output files.</para>
+        /// <para>An array of output file URLs.</para>
         /// </summary>
         [NameInMap("OutputUrls")]
         [Validation(Required=false)]
         public List<string> OutputUrls { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The output of the algorithm. The output is in JSON format and varies based on the algorithm. For more information, see the &quot;Parameters of Result&quot; section of this topic.</para>
+        /// <para>The algorithm output, returned as a JSON string. The structure of the output varies based on the <c>FunctionName</c>. For more information, see the additional notes below.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -190,14 +244,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Result { get; set; }
 
         /// <summary>
-        /// <para>The scheduling configuration.</para>
+        /// <para>The job configuration.</para>
         /// </summary>
         [NameInMap("ScheduleConfig")]
         [Validation(Required=false)]
         public QueryIProductionJobResponseBodyScheduleConfig ScheduleConfig { get; set; }
         public class QueryIProductionJobResponseBodyScheduleConfig : TeaModel {
             /// <summary>
-            /// <para>The ID of the ApsaraVideo Media Processing (MPS) queue.</para>
+            /// <para>The pipeline ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a54fdc9c9aab413caef0d1150f565e86</para>
@@ -207,10 +261,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string PipelineId { get; set; }
 
             /// <summary>
-            /// <para>The priority of the job in the MPS queue to which the job is added.</para>
+            /// <para>The job\&quot;s priority within the pipeline.</para>
             /// <list type="bullet">
-            /// <item><description>A value of 10 indicates the highest priority.</description></item>
-            /// <item><description>Default value: <b>6</b>.</description></item>
+            /// <item><description><para>A larger value indicates a higher priority. The highest priority is 10.</para>
+            /// </description></item>
+            /// <item><description><para>Default: <b>6</b>.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -223,12 +279,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
-        /// <para>The status of the job. Valid values:</para>
+        /// <para>The job status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Queuing: The job is waiting in the queue.</description></item>
-        /// <item><description>Analysing: The job is in progress.</description></item>
-        /// <item><description>Fail: The job failed.</description></item>
-        /// <item><description>Success: The job was successful.</description></item>
+        /// <item><description><para>Queuing: The job is awaiting processing.</para>
+        /// </description></item>
+        /// <item><description><para>Analyzing: The job is being processed.</para>
+        /// </description></item>
+        /// <item><description><para>Fail: The job failed to complete.</para>
+        /// </description></item>
+        /// <item><description><para>Success: The job completed successfully.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -249,7 +309,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string TemplateId { get; set; }
 
         /// <summary>
-        /// <para>The user-defined data that is returned in the response.</para>
+        /// <para>The user data. The system returns this value unchanged.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;test&quot;:1}</para>

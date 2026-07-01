@@ -10,19 +10,21 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitCopyrightJobRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the watermark.</para>
+        /// <para>A description of the watermark job.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Description</para>
+        /// <para>Task description</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The source video file that you want to add a watermark to.</para>
+        /// <para>The input video file to be watermarked.</para>
         /// <remarks>
-        /// <para>The OSS object or media asset must reside in the same region as the IMS service region.</para>
+        /// <list type="bullet">
+        /// <item><description>The OSS object or media asset must be in the same region as the service call.</description></item>
+        /// </list>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -34,10 +36,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public SubmitCopyrightJobRequestInput Input { get; set; }
         public class SubmitCopyrightJobRequestInput : TeaModel {
             /// <summary>
-            /// <para>The URL of the source file. You can specify the path of an OSS object in one of the following formats:</para>
-            /// <para>1\. oss://bucket/object</para>
-            /// <para>2\. http(s)://bucket.oss-[regionId].aliyuncs.com/object</para>
-            /// <para>where bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object path in OSS.</para>
+            /// <para>The input file, specified as either an OSS URL or a media asset ID. The following formats are supported for OSS URLs:</para>
+            /// <para>1\. <c>oss://bucket/object</c></para>
+            /// <para>2\. <c>http(s)://bucket.oss-[regionId].aliyuncs.com/object</c></para>
+            /// <para>In these formats, <c>bucket</c> specifies the name of an OSS bucket in the same region as the service, and <c>object</c> specifies the file path.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -48,10 +50,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Media { get; set; }
 
             /// <summary>
-            /// <para>The type of the source file. Valid values:</para>
+            /// <para>The type of the input file. Valid values:</para>
             /// <ol>
-            /// <item><description>OSS: an OSS object.</description></item>
-            /// <item><description>Media: a media asset.</description></item>
+            /// <item><description><para><c>OSS</c>: The URL of an OSS object.</para>
+            /// </description></item>
+            /// <item><description><para><c>Media</c>: The media asset ID.</para>
+            /// </description></item>
             /// </ol>
             /// <para>This parameter is required.</para>
             /// 
@@ -65,7 +69,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
-        /// <para>The watermark level, which specifies the channel to embed watermarks. Valid values: 0 specifies the 0u channel, 1 specifies the 1uv channel, and 2 specifies the 2yuv channel.</para>
+        /// <para>The watermark level, which specifies the embedding channel. Valid values are 0, 1, and 2, which correspond to the U, UV, and YUV channels, respectively.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -75,20 +79,22 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public long? Level { get; set; }
 
         /// <summary>
-        /// <para>The information about the watermark to be added.</para>
+        /// <para>The watermark content to embed.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Test</para>
+        /// <para>Copyright watermark test</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The URL of the output file.</para>
+        /// <para>The location of the output file.</para>
         /// <remarks>
-        /// <para>The OSS bucket must reside in the same region as the IMS service region.</para>
+        /// <list type="bullet">
+        /// <item><description>The OSS bucket must be in the same region as the service call.</description></item>
+        /// </list>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -100,9 +106,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public SubmitCopyrightJobRequestOutput Output { get; set; }
         public class SubmitCopyrightJobRequestOutput : TeaModel {
             /// <summary>
-            /// <para>The OSS path where the output file is saved. You can specify the path in one of the following formats:</para>
-            /// <para>1\. oss://bucket/object</para>
-            /// <para>2\. http(s)://bucket.oss-[regionId].aliyuncs.com/object where bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object path in OSS.</para>
+            /// <para>The OSS URL for the output file. The following formats are supported:</para>
+            /// <para>1\. <c>oss://bucket/object</c></para>
+            /// <para>2\. <c>http(s)://bucket.oss-[regionId].aliyuncs.com/object</c><br>In these formats, <c>bucket</c> specifies the name of an OSS bucket in the same region as the service, and <c>object</c> specifies the file path.<br></para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -115,7 +121,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <summary>
             /// <para>The type of the output file. Valid value:</para>
             /// <ol>
-            /// <item><description>OSS: an OSS object.</description></item>
+            /// <item><description><c>OSS</c>: The URL of an OSS object.</description></item>
             /// </ol>
             /// <para>This parameter is required.</para>
             /// 
@@ -129,12 +135,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
-        /// <para>The parameters related to watermark jobs. The value is a JSON string. Supported parameter:</para>
+        /// <para>The parameters for the watermark job, specified as a JSON string. The following parameter is supported:</para>
         /// <list type="bullet">
-        /// <item><description><para>algoType: the algorithm type. Default value: v1.</para>
+        /// <item><description><para><c>algoType</c>: The algorithm type. Defaults to <c>v1</c>.</para>
         /// <list type="bullet">
-        /// <item><description>v1: watermarking for long videos that last at least 3 minutes.</description></item>
-        /// <item><description>v2: watermarking for videos shorter than 3 minutes.</description></item>
+        /// <item><description><para><c>v1</c>: For videos 3 minutes or longer.</para>
+        /// </description></item>
+        /// <item><description><para><c>v2</c>: For short videos.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -147,7 +155,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Params { get; set; }
 
         /// <summary>
-        /// <para>The start time of the watermark. Unit: seconds. If you do not specify this parameter, the default value 0 is used.</para>
+        /// <para>The start time of the watermark in seconds. Defaults to 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -157,7 +165,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The end time of the watermark. Unit: seconds. If you do not specify this parameter, the default value is the video duration.</para>
+        /// <para>The end time of the watermark in seconds. If unspecified, the watermark is applied until the video ends.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -167,7 +175,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public long? TotalTime { get; set; }
 
         /// <summary>
-        /// <para>The custom data, which can be up to 1,024 bytes in size.</para>
+        /// <para>The user data. The value can be up to 1,024 bytes in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123</para>

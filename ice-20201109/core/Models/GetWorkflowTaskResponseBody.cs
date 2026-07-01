@@ -28,6 +28,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public class GetWorkflowTaskResponseBodyWorkflowTask : TeaModel {
             /// <summary>
             /// <para>The results for all nodes of the workflow task.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Json格式，内容根据工作流配置有变化。</para>
             /// </summary>
             [NameInMap("ActivityResults")]
             [Validation(Required=false)]
@@ -57,11 +60,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <para>The task state.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Init: The task is being initialized.</description></item>
-            /// <item><description>Failed: The task failed.</description></item>
-            /// <item><description>Canceled: The task is canceled.</description></item>
-            /// <item><description>Processing: The task is in progress.</description></item>
-            /// <item><description>Succeed: The task is successful.</description></item>
+            /// <item><description><para>Init: The task is being initialized.</para>
+            /// </description></item>
+            /// <item><description><para>Failed: The task failed.</para>
+            /// </description></item>
+            /// <item><description><para>Canceled: The task is canceled.</para>
+            /// </description></item>
+            /// <item><description><para>Processing: The task is in progress.</para>
+            /// </description></item>
+            /// <item><description><para>Succeed: The task is successful.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -133,6 +141,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
                 /// <summary>
                 /// <para>The workflow name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Super-resolution transcoding workflow</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -142,8 +153,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <para>The workflow state.</para>
                 /// <para>Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Active</description></item>
-                /// <item><description>Inactive</description></item>
+                /// <item><description><para>Active</para>
+                /// </description></item>
+                /// <item><description><para>Inactive</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -157,9 +170,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <para>The workflow type.</para>
                 /// <para>Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Customize: custom workflow.</description></item>
-                /// <item><description>System: system workflow.</description></item>
-                /// <item><description>Common: user-created workflow.</description></item>
+                /// <item><description><para>Customize: custom workflow.</para>
+                /// </description></item>
+                /// <item><description><para>System: system workflow.</para>
+                /// </description></item>
+                /// <item><description><para>Common: user-created workflow.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

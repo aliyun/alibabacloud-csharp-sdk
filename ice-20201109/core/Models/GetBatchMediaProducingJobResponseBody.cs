@@ -72,16 +72,86 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string Extend { get; set; }
 
+            /// <summary>
+            /// <para>Additional input.</para>
+            /// <list type="bullet">
+            /// <item><description><para>When JobType is Smart_Mix_Timeline_Organize or Screen_Media_Highlights_Timeline_Organize, the additional input is the material selection result.</para>
+            /// </description></item>
+            /// <item><description><para>When JobType is Scene_Batch_Editing, the additional input is a list of video editing project IDs.</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>[&quot;<b><b>7cc47fe04eaa81bd853acb6a</b></b>&quot;, &quot;<b><b>04eaa7cc47fe81bd853acb6a</b></b>&quot;]</para>
+            /// </summary>
             [NameInMap("ExtendInput")]
             [Validation(Required=false)]
             public string ExtendInput { get; set; }
 
+            /// <summary>
+            /// <para>Additional outputs.</para>
+            /// <list type="bullet">
+            /// <item><description>When JobType is Smart_Mix_Media_Select or Screen_Media_Highlights_Media_Select, material selection results are additionally returned.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{
+            /// &quot;textMatchMediaOutputList&quot;: [{
+            /// &quot;textMatchMediaSentenceOutputList&quot;: [{
+            /// &quot;duration&quot;: 3.366667,
+            /// &quot;matchClipList&quot;: [{
+            /// &quot;clipId&quot;: &quot;null-2&quot;,
+            /// &quot;endTime&quot;: 11.16,
+            /// &quot;mediaId&quot;: &quot;<b><b>a0900f5071efbf1ce7e6c66a</b></b>&quot;,
+            /// &quot;score&quot;: -0.253,
+            /// &quot;startTime&quot;: 8.04
+            /// }],
+            /// &quot;text&quot;: &quot;A new Freshippo store just opened at the nearby mall.&quot;,
+            /// &quot;textId&quot;: &quot;0&quot;
+            /// },
+            /// {
+            /// &quot;duration&quot;: 1.566667,
+            /// &quot;matchClipList&quot;: [{
+            /// &quot;clipId&quot;: &quot;null-1&quot;,
+            /// &quot;endTime&quot;: 1.54,
+            /// &quot;mediaId&quot;: &quot;<b><b>a0900f5071efbf1ce7e6c66a</b></b>&quot;,
+            /// &quot;score&quot;: -0.2326,
+            /// &quot;startTime&quot;: 0
+            /// }],
+            /// &quot;text&quot;: &quot;today Yesfirst day of opening&quot;,
+            /// &quot;textId&quot;: &quot;0&quot;
+            /// }
+            /// ]
+            /// }]
+            /// }</para>
+            /// </summary>
             [NameInMap("ExtendOutput")]
             [Validation(Required=false)]
             public string ExtendOutput { get; set; }
 
             /// <summary>
             /// <para>The input configurations. For more information, see <a href="~~2692547#2faed1559549n~~">InputConfig</a>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{
+            ///   &quot;MediaGroupArray&quot;: [{
+            ///       &quot;GroupName&quot;: &quot;MediaGroup1&quot;,
+            ///       &quot;MediaArray&quot;: [
+            ///         &quot;<b><b>9d46c886b45481030f6e</b></b>&quot;,
+            ///         &quot;<b><b>6c886b4549d481030f6e</b></b>&quot; ]
+            ///     }, {
+            ///       &quot;GroupName&quot;: &quot;MediaGroup2&quot;,
+            ///       &quot;MediaArray&quot;: [
+            ///         &quot;<b><b>d46c886810b454930f6e</b></b>&quot;,
+            ///         &quot;<b><b>4549d886810b46c30f6e</b></b>&quot; ]
+            ///   }],
+            ///   &quot;TitleArray&quot;: [
+            ///       &quot;回龙观盒马鲜生开业啦&quot;,
+            ///       &quot;盒马鲜生开业啦&quot; ],
+            ///   &quot;SpeechTextArray&quot;: [
+            ///       &quot;附近的商场新开了一家盒马鲜生，今天是第一天开业&quot;
+            ///       &quot;商场里的人不少，零食、酒水都比较便宜大家也快来看看呀&quot; ]
+            /// }</para>
             /// </summary>
             [NameInMap("InputConfig")]
             [Validation(Required=false)]
@@ -97,6 +167,32 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string JobId { get; set; }
 
+            /// <summary>
+            /// <para>Task Type:</para>
+            /// <list type="bullet">
+            /// <item><description><para>Script (Script-based automated video editing)</para>
+            /// </description></item>
+            /// <item><description><para>Smart_Mix (Intelligent text-to-media matching for video editing)</para>
+            /// </description></item>
+            /// <item><description><para>Sports_Highlights (Sporting event highlights compilation)</para>
+            /// </description></item>
+            /// <item><description><para>Screen_Media_Highlights (High-energy multi-media mashup editing)</para>
+            /// </description></item>
+            /// <item><description><para>Smart_Mix_Media_Select (Intelligent matching – Material selection)</para>
+            /// </description></item>
+            /// <item><description><para>Smart_Mix_Timeline_Organize (Intelligent matching – Timeline orchestration)</para>
+            /// </description></item>
+            /// <item><description><para>Screen_Media_Highlights_Media_Select (High-energy mashup – Material selection)</para>
+            /// </description></item>
+            /// <item><description><para>Screen_Media_Highlights_Timeline_Organize (High-energy mashup – Timeline orchestration)</para>
+            /// </description></item>
+            /// <item><description><para>Scene_Batch_Editing (Batch synthesis across multiple timelines)</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Script</para>
+            /// </summary>
             [NameInMap("JobType")]
             [Validation(Required=false)]
             public string JobType { get; set; }
@@ -149,6 +245,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public List<GetBatchMediaProducingJobResponseBodyEditingBatchJobSubJobList> SubJobList { get; set; }
             public class GetBatchMediaProducingJobResponseBodyEditingBatchJobSubJobList : TeaModel {
+                /// <summary>
+                /// <para>The duration of the output video, in seconds (s).</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>24.5</para>
+                /// </summary>
                 [NameInMap("Duration")]
                 [Validation(Required=false)]
                 public float? Duration { get; set; }

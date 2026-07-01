@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitMediaProducingJobRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>A client-generated token that ensures request idempotence. This token must be a unique value of up to 64 ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>12e8864746a0a398</b></b></para>
@@ -20,22 +20,29 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The material parameters of the template, in the JSON format. If TemplateId is specified, ClipsParam must also be specified. For more information, see <a href="https://help.aliyun.com/document_detail/445399.html">Create and use a regular template</a> and <a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a>.</para>
+        /// <para>The clip parameters that correspond to the template, in JSON format. If <c>TemplateId</c> is specified, this parameter is required. For details about the format, see <a href="https://help.aliyun.com/document_detail/445399.html">Create and use basic templates</a> and <a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>See the template user guide.</para>
         /// </summary>
         [NameInMap("ClipsParam")]
         [Validation(Required=false)]
         public string ClipsParam { get; set; }
 
         /// <summary>
-        /// <para>The parameters for editing and production. For more information, see <a href="https://help.aliyun.com/document_detail/357745.html">EditingProduceConfig</a>.</para>
+        /// <para>The parameters for the media producing job. For configuration details, see <a href="~~357745#section-8a4-pb2-hkv~~">EditingProduceConfig parameter details</a>.</para>
         /// <remarks>
-        /// <para> If no thumbnail is specified in EditingProduceConfig, the first frame of the video is used as the thumbnail.</para>
+        /// <para>If a cover is not configured in <c>EditingProduceConfig</c>, the first frame of the video is used as the default cover.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>AutoRegisterInputVodMedia: specifies whether to automatically register the ApsaraVideo VOD media assets in your timeline with IMS. Default value: true.</description></item>
-        /// <item><description>OutputWebmTransparentChannel: specifies whether the output video contains alpha channels. Default value: false.</description></item>
-        /// <item><description>CoverConfig: the custom thumbnail parameters.</description></item>
-        /// <item><description></description></item>
+        /// <item><description><para><c>AutoRegisterInputVodMedia</c>: Specifies whether to automatically register the VOD media assets in your timeline to IMS. Default value: true.</para>
+        /// </description></item>
+        /// <item><description><para><c>OutputWebmTransparentChannel</c>: Specifies whether to output a video with a transparent channel. Default value: false.</para>
+        /// </description></item>
+        /// <item><description><para><c>CoverConfig</c>: The parameters for a custom cover.</para>
+        /// </description></item>
+        /// <item><description><para>...</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,7 +56,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string EditingProduceConfig { get; set; }
 
         /// <summary>
-        /// <para>The metadata of the produced video, in the JSON format. For more information about the parameters, see <a href="https://help.aliyun.com/document_detail/357745.html">MediaMetadata</a>.</para>
+        /// <para>The metadata of the output video, in JSON format. For details about the structure, see <a href="~~357745#97ff26d0e3c28~~">MediaMetadata</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -62,9 +69,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string MediaMetadata { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the output file, in the JSON format. You can specify an OSS URL or a storage location in a storage bucket of ApsaraVideo VOD.</para>
-        /// <para>To store the output file in OSS, you must specify MediaURL. To store the output file in ApsaraVideo VOD, you must specify StorageLocation and FileName.</para>
-        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/357745.html">OutputMediaConfig</a>.</para>
+        /// <para>The configuration for the output media target, in JSON format. You can set the URL for the output media in OSS or the storage location in a VOD bucket.</para>
+        /// <list type="bullet">
+        /// <item><description><para>When outputting to OSS, the <c>MediaURL</c> parameter is required.</para>
+        /// </description></item>
+        /// <item><description><para>When outputting to VOD, both the <c>StorageLocation</c> and <c>FileName</c> parameters are required.</para>
+        /// </description></item>
+        /// </list>
+        /// <para>For more information, see <a href="~~357745#title-4j6-ve7-g31~~">OutputMediaConfig parameter examples</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -75,11 +87,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string OutputMediaConfig { get; set; }
 
         /// <summary>
-        /// <para>The type of the output file. Valid values:</para>
+        /// <para>The target type for the output media. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>oss-object: OSS object in an OSS bucket.</description></item>
-        /// <item><description>vod-media: media asset in ApsaraVideo VOD.</description></item>
-        /// <item><description>S3: output file based on the Amazon Simple Storage Service (S3) protocol.</description></item>
+        /// <item><description><para><c>oss-object</c>: An object in your Alibaba Cloud OSS bucket.</para>
+        /// </description></item>
+        /// <item><description><para><c>vod-media</c>: A media asset in Alibaba Cloud VOD.</para>
+        /// </description></item>
+        /// <item><description><para><c>S3</c>: A destination that supports the S3 protocol.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -90,9 +105,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string OutputMediaTarget { get; set; }
 
         /// <summary>
-        /// <para>The ID of the editing project.</para>
+        /// <para>The ID of the editing project. Call the <a href="https://help.aliyun.com/document_detail/441137.html">CreateEditingProject</a> operation to create an editing project and obtain the <c>ProjectId</c> to submit a media producing job.</para>
         /// <remarks>
-        /// <para>: You must specify one of ProgectId, Timeline, and TempalteId and leave the other two parameters empty.</para>
+        /// <para>Notice: You must specify one of the <c>ProjectId</c>, <c>Timeline</c>, or <c>TemplateId</c> parameters. The other two parameters must be left empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -103,18 +118,24 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The metadata of the editing project, in the JSON format. For more information about the parameters, see <a href="https://help.aliyun.com/document_detail/357745.html">ProjectMetadata</a>.</para>
+        /// <para>The metadata of the editing project, in JSON format. For details about the structure, see <a href="~~357745#title-yvp-81k-wff~~">ProjectMetadata</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;Description&quot;:&quot;Video editing description&quot;,&quot;Title&quot;:&quot;Editing title test&quot;}</para>
         /// </summary>
         [NameInMap("ProjectMetadata")]
         [Validation(Required=false)]
         public string ProjectMetadata { get; set; }
 
         /// <summary>
-        /// <para>The source of the editing and production request. Valid values:</para>
+        /// <para>The source of the media producing job request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>OpenAPI</description></item>
-        /// <item><description>AliyunConsole</description></item>
-        /// <item><description>WebSDK</description></item>
+        /// <item><description><para><c>OpenAPI</c>: A request initiated through an API call.</para>
+        /// </description></item>
+        /// <item><description><para><c>AliyunConsole</c>: A request that originates from the Alibaba Cloud console.</para>
+        /// </description></item>
+        /// <item><description><para><c>WebSDK</c>: A request sent from a front-end page that integrates the WebSDK.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -125,10 +146,17 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>The template ID. The template is used to build a timeline with ease.</para>
+        /// <para>The ID of a template for quickly building a timeline. You can use basic and advanced templates for video editing.</para>
+        /// <list type="bullet">
+        /// <item><description><para>When you submit a media producing job using a template ID, you must provide the <c>ClipsParam</c> parameter to adjust or replace clips in the template.</para>
+        /// </description></item>
+        /// <item><description><para>Call the <a href="https://help.aliyun.com/document_detail/441164.html">GetTemplate</a> operation to obtain template information.</para>
+        /// </description></item>
+        /// </list>
         /// <remarks>
-        /// <para>: You must specify one of ProgectId, Timeline, and TempalteId and leave the other two parameters empty. If TemplateId is specified, ClipsParam must also be specified.</para>
+        /// <para>Notice: </para>
         /// </remarks>
+        /// <para>You must specify one of the <c>ProjectId</c>, <c>Timeline</c>, or <c>TemplateId</c> parameters. The other two parameters must be left empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>96e8864746a0b6f3</b></b></para>
@@ -138,10 +166,17 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string TemplateId { get; set; }
 
         /// <summary>
-        /// <para>The timeline of the online editing job. For more information about the parameters, see <a href="https://help.aliyun.com/document_detail/198823.html">Timeline configurations</a>.</para>
+        /// <para>The timeline for the cloud editing job. To arrange clips and design effects, manually construct the <c>Timeline</c> parameter.</para>
+        /// <list type="bullet">
+        /// <item><description><para>A timeline primarily consists of three types of objects: tracks, clips, and effects. For more information, see <a href="https://help.aliyun.com/document_detail/198823.html">Timeline configuration</a>.</para>
+        /// </description></item>
+        /// <item><description><para>For more examples of timeline configurations, see <a href="https://help.aliyun.com/document_detail/2766669.html">Best practices</a>.</para>
+        /// </description></item>
+        /// </list>
         /// <remarks>
-        /// <para>: You must specify one of ProgectId, Timeline, and TempalteId and leave the other two parameters empty.</para>
+        /// <para>Notice: </para>
         /// </remarks>
+        /// <para>You must specify one of the <c>ProjectId</c>, <c>Timeline</c>, or <c>TemplateId</c> parameters. The other two parameters must be left empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;VideoTracks&quot;:[{&quot;VideoTrackClips&quot;:[{&quot;MediaId&quot;:&quot;<b><b>4d7cf14dc7b83b0e801c</b></b>&quot;},{&quot;MediaId&quot;:&quot;<b><b>4d7cf14dc7b83b0e801c</b></b>&quot;}]}]}</para>
@@ -151,7 +186,13 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Timeline { get; set; }
 
         /// <summary>
-        /// <para>The user-defined data in the JSON format, which can be up to 512 bytes in length. You can specify a custom callback URL. For more information, see <a href="https://help.aliyun.com/document_detail/451631.html">Configure a callback upon editing completion</a>.</para>
+        /// <para>Custom user data in JSON format. The value can be up to 512 bytes in length. This parameter supports <a href="https://help.aliyun.com/document_detail/451631.html">job completion callback configuration</a>. The fields include:</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>NotifyAddress</c>: The callback for job completion.</para>
+        /// </description></item>
+        /// <item><description><para><c>RegisterMediaNotifyAddress</c>: The callback invoked when the analysis of the output media asset is complete.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;NotifyAddress&quot;:&quot;<a href="https://xx.com/xx%22,%22RegisterMediaNotifyAddress%22:%22https://xxx.com/xx%22%7D">https://xx.com/xx&quot;,&quot;RegisterMediaNotifyAddress&quot;:&quot;https://xxx.com/xx&quot;}</a></para>

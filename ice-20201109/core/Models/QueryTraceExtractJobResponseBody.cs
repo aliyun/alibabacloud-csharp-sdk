@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public class QueryTraceExtractJobResponseBodyData : TeaModel {
             /// <summary>
             /// <para>The trace watermark information.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>测试溯源水印</para>
             /// </summary>
             [NameInMap("Trace")]
             [Validation(Required=false)]

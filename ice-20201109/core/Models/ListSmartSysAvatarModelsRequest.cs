@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListSmartSysAvatarModelsRequest : TeaModel {
         /// <summary>
-        /// <para>The page number. Default value: 1.</para>
+        /// <para>The page number. The default value is 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public long? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 10. Valid values: 1 to 100.</para>
+        /// <para>The number of items to return on each page. The default value is 10. The maximum value is 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -29,6 +29,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The SDK version.</para>
+        /// </summary>
         [NameInMap("SdkVersion")]
         [Validation(Required=false)]
         public string SdkVersion { get; set; }

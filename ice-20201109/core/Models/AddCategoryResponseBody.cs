@@ -28,6 +28,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
             /// <summary>
             /// <para>The category name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Category 1</para>
             /// </summary>
             [NameInMap("CateName")]
             [Validation(Required=false)]
@@ -56,8 +59,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <summary>
             /// <para>The type of the category. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>default</b>: audio, video, and image files. This is the default value.</description></item>
-            /// <item><description><b>material</b>: short video materials.</description></item>
+            /// <item><description><para><b>default</b>: audio, video, and image files. This is the default value.</para>
+            /// </description></item>
+            /// <item><description><para><b>material</b>: short video materials.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

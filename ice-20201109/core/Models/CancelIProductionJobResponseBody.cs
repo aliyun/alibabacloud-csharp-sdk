@@ -29,9 +29,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <summary>
             /// <para>The identity. Values:</para>
             /// <list type="bullet">
-            /// <item><description>RAM user: a UID</description></item>
-            /// <item><description>RAM role: RoleName:RoleSessionName</description></item>
-            /// <item><description>Federated user: ProviderType/ProviderName</description></item>
+            /// <item><description><para>RAM user: a UID</para>
+            /// </description></item>
+            /// <item><description><para>RAM role: RoleName:RoleSessionName</para>
+            /// </description></item>
+            /// <item><description><para>Federated user: ProviderType/ProviderName</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -54,9 +57,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <summary>
             /// <para>The type of identity that made the request. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>SubUser: RAM user</description></item>
-            /// <item><description>AssumedRoleUser: RAM role</description></item>
-            /// <item><description>Federated: SSO federated user</description></item>
+            /// <item><description><para>SubUser: RAM user</para>
+            /// </description></item>
+            /// <item><description><para>AssumedRoleUser: RAM role</para>
+            /// </description></item>
+            /// <item><description><para>Federated: SSO federated user</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -79,8 +85,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <summary>
             /// <para>The type of policy that resulted in the denial. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ImplicitDeny</b>: The resource holder has not configured a policy for the current user. By default, unauthorized operations are denied.</description></item>
-            /// <item><description><b>ExplicitDeny</b>: The RAM policy configured by the resource holder explicitly denies the current user access to the corresponding resources.</description></item>
+            /// <item><description><para><b>ImplicitDeny</b>: The resource holder has not configured a policy for the current user. By default, unauthorized operations are denied.</para>
+            /// </description></item>
+            /// <item><description><para><b>ExplicitDeny</b>: The RAM policy configured by the resource holder explicitly denies the current user access to the corresponding resources.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -93,11 +101,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <summary>
             /// <para>The type of policy that triggered the permission failure.</para>
             /// <list type="bullet">
-            /// <item><description><b>ControlPolicy</b>: control policy</description></item>
-            /// <item><description><b>SessionPolicy</b>: an additional policy attached to a temporary token.</description></item>
-            /// <item><description><b>AssumeRolePolicy</b>: the trust policy of a RAM role.</description></item>
-            /// <item><description><b>AccountLevelIdentityBasedPolicy</b>: an identity-based policy at the account level (custom or system).</description></item>
-            /// <item><description><b>ResourceGroupLevelIdentityBasedPolicy</b>: an identity-based policy scoped to a resource group.</description></item>
+            /// <item><description><para><b>ControlPolicy</b>: control policy</para>
+            /// </description></item>
+            /// <item><description><para><b>SessionPolicy</b>: an additional policy attached to a temporary token.</para>
+            /// </description></item>
+            /// <item><description><para><b>AssumeRolePolicy</b>: the trust policy of a RAM role.</para>
+            /// </description></item>
+            /// <item><description><para><b>AccountLevelIdentityBasedPolicy</b>: an identity-based policy at the account level (custom or system).</para>
+            /// </description></item>
+            /// <item><description><para><b>ResourceGroupLevelIdentityBasedPolicy</b>: an identity-based policy scoped to a resource group.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

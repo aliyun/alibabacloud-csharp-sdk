@@ -33,9 +33,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The type of the MPS queue. Valid values:</para>
         /// <ol>
-        /// <item><description>Standard: standard MPS queue.</description></item>
-        /// <item><description>Boost: MPS queue with transcoding speed boosted.</description></item>
-        /// <item><description>NarrowBandHDV2: MPS queue that supports Narrowband HD 2.0.</description></item>
+        /// <item><description><para>Standard: standard MPS queue.</para>
+        /// </description></item>
+        /// <item><description><para>Boost: MPS queue with transcoding speed boosted.</para>
+        /// </description></item>
+        /// <item><description><para>NarrowBandHDV2: MPS queue that supports Narrowband HD 2.0.</para>
+        /// </description></item>
         /// </ol>
         /// <para>This parameter is required.</para>
         /// 

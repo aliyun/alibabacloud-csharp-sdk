@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class DeleteAIAgentDialogueRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the dialog that you want to delete.</para>
+        /// <para>The ID of the dialogue to delete.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +20,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string DialogueId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the node to delete.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>c22f9b9be2864g46fse73*******</para>
+        /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]
         public string NodeId { get; set; }

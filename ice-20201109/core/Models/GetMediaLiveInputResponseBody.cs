@@ -100,18 +100,42 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 [Validation(Required=false)]
                 public string SourceUrl { get; set; }
 
+                /// <summary>
+                /// <para>Latency of the SRT stream, in ms.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1000</para>
+                /// </summary>
                 [NameInMap("SrtLatency")]
                 [Validation(Required=false)]
                 public int? SrtLatency { get; set; }
 
+                /// <summary>
+                /// <para>Maximum bitrate of the SRT stream, in bps.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3000000</para>
+                /// </summary>
                 [NameInMap("SrtMaxBitrate")]
                 [Validation(Required=false)]
                 public int? SrtMaxBitrate { get; set; }
 
+                /// <summary>
+                /// <para>SRT encryption configuration: the password for the SRT stream.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>srtencryption</para>
+                /// </summary>
                 [NameInMap("SrtPassphrase")]
                 [Validation(Required=false)]
                 public string SrtPassphrase { get; set; }
 
+                /// <summary>
+                /// <para>SRT encryption configuration: key length for the SRT stream.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>16</para>
+                /// </summary>
                 [NameInMap("SrtPbKeyLen")]
                 [Validation(Required=false)]
                 public int? SrtPbKeyLen { get; set; }

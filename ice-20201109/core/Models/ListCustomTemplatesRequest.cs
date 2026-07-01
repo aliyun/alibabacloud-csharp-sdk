@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListCustomTemplatesRequest : TeaModel {
         /// <summary>
-        /// <para>The template name.</para>
+        /// <para>The name of the template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-template</para>
@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The order in which the entries are sorted. Valid values:</para>
+        /// <para>The sort order of the results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CreateTimeDesc: sorted by creation time in descending order.</description></item>
-        /// <item><description>CreateTimeAsc: sorted by creation time in ascending order.</description></item>
+        /// <item><description><para><c>CreationTime:Desc</c>: Sorts the results by Creation Time in descending order.</para>
+        /// </description></item>
+        /// <item><description><para><c>CreationTime:Asc</c>: Sorts the results by Creation Time in ascending order.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the results to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -54,35 +56,48 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The subtype ID of the template.</para>
+        /// <para>The subtype of the template. This parameter applies only when <c>Type</c> is set to 1, 2, 7, or 9.</para>
         /// <list type="bullet">
-        /// <item><description><para>Valid values for transcoding templates:</para>
+        /// <item><description><para>Transcoding Template subtypes:</para>
         /// <list type="bullet">
-        /// <item><description>1 (Normal): regular template.</description></item>
-        /// <item><description>2 (AudioTranscode): audio transcoding template.</description></item>
-        /// <item><description>3 (Remux): container format conversion template.</description></item>
-        /// <item><description>4 (NarrowBandV1): Narrowband HD 1.0 template.</description></item>
-        /// <item><description>5 (NarrowBandV2): Narrowband HD 2.0 template.</description></item>
+        /// <item><description><para>1: Normal (<c>Normal</c>)</para>
+        /// </description></item>
+        /// <item><description><para>2: Audio-only (<c>AudioTranscode</c>)</para>
+        /// </description></item>
+        /// <item><description><para>3: Remuxing (<c>Remux</c>)</para>
+        /// </description></item>
+        /// <item><description><para>4: Narrowband HD 1.0 (<c>NarrowBandV1</c>)</para>
+        /// </description></item>
+        /// <item><description><para>5: Narrowband HD 2.0 (<c>NarrowBandV2</c>)</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>Valid values for snapshot templates:</para>
+        /// <item><description><para>Screenshot Template subtypes:</para>
         /// <list type="bullet">
-        /// <item><description>1 (Normal): regular template.</description></item>
-        /// <item><description>2 (Sprite): sprite template.</description></item>
-        /// <item><description>3 (WebVtt): WebVTT template.</description></item>
+        /// <item><description><para>1: Normal (<c>Normal</c>)</para>
+        /// </description></item>
+        /// <item><description><para>2: Sprite Image (<c>Sprite</c>)</para>
+        /// </description></item>
+        /// <item><description><para>3: WebVTT (<c>WebVtt</c>)</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>Valid values for AI-assisted content moderation templates:</para>
+        /// <item><description><para>AI Content Moderation subtypes:</para>
         /// <list type="bullet">
-        /// <item><description>1 (Video): video moderation template.</description></item>
-        /// <item><description>2 (Audio): audio moderation template.</description></item>
-        /// <item><description>3 (Image): image moderation template.</description></item>
+        /// <item><description><para>1: Video moderation (<c>Video</c>)</para>
+        /// </description></item>
+        /// <item><description><para>2: Audio moderation (<c>Audio</c>)</para>
+        /// </description></item>
+        /// <item><description><para>3: Image moderation (<c>Image</c>)</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>Valid values for AI-assisted intelligent erasure templates:</para>
+        /// <item><description><para>AI-powered Object Removal subtypes:</para>
         /// <list type="bullet">
-        /// <item><description>1 (VideoDelogo): logo erasure template.</description></item>
-        /// <item><description>2 (VideoDetext): subtitle erasure template.</description></item>
+        /// <item><description><para>1: Logo Removal (<c>VideoDelogo</c>)</para>
+        /// </description></item>
+        /// <item><description><para>2: Text Removal (<c>VideoDetext</c>)</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -95,7 +110,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Subtype { get; set; }
 
         /// <summary>
-        /// <para>The template ID.</para>
+        /// <para>The ID of the template.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>96e8864746a0b6f3</b></b></para>
@@ -105,17 +120,26 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string TemplateId { get; set; }
 
         /// <summary>
-        /// <para>The template type. Valid values:</para>
+        /// <para>The type of the template. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: transcoding template.</description></item>
-        /// <item><description>2: snapshot template.</description></item>
-        /// <item><description>3: animated image template.</description></item>
-        /// <item><description>4\. image watermark template.</description></item>
-        /// <item><description>5: text watermark template.</description></item>
-        /// <item><description>6: subtitle template.</description></item>
-        /// <item><description>7: AI-assisted content moderation template.</description></item>
-        /// <item><description>8: AI-assisted intelligent thumbnail template.</description></item>
-        /// <item><description>9: AI-assisted intelligent erasure template.</description></item>
+        /// <item><description><para>1: Transcoding Template</para>
+        /// </description></item>
+        /// <item><description><para>2: Screenshot Template</para>
+        /// </description></item>
+        /// <item><description><para>3: Animated GIF Template</para>
+        /// </description></item>
+        /// <item><description><para>4: Image Watermark Template</para>
+        /// </description></item>
+        /// <item><description><para>5: Text Watermark Template</para>
+        /// </description></item>
+        /// <item><description><para>6: Subtitle Template</para>
+        /// </description></item>
+        /// <item><description><para>7: AI Content Moderation</para>
+        /// </description></item>
+        /// <item><description><para>8: AI-powered Smart Cover</para>
+        /// </description></item>
+        /// <item><description><para>9: AI-powered Object Removal</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

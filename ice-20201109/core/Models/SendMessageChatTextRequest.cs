@@ -23,8 +23,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The mode of message sending. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>online</description></item>
-        /// <item><description>offline</description></item>
+        /// <item><description><para>online</para>
+        /// </description></item>
+        /// <item><description><para>offline</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: offline.</para>
         /// 
@@ -72,7 +74,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Hello</para>
+        /// <para>Hello.</para>
         /// </summary>
         [NameInMap("Text")]
         [Validation(Required=false)]
@@ -81,8 +83,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The type of the message. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>announcement: notification.</description></item>
-        /// <item><description>custom: custom message.</description></item>
+        /// <item><description><para>announcement: notification.</para>
+        /// </description></item>
+        /// <item><description><para>custom: custom message.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

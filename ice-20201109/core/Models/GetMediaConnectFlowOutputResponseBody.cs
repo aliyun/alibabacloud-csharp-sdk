@@ -36,6 +36,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether the output is disabled. Valid values: yes or no.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>no</para>
+            /// </summary>
             [NameInMap("Forbid")]
             [Validation(Required=false)]
             public string Forbid { get; set; }
@@ -54,11 +60,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <para>The output type.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>RTMP-PUSH</description></item>
-            /// <item><description>SRT-Caller</description></item>
-            /// <item><description>RTMP-PULL</description></item>
-            /// <item><description>SRT-Listener</description></item>
-            /// <item><description>Flow</description></item>
+            /// <item><description><para>RTMP-PUSH</para>
+            /// </description></item>
+            /// <item><description><para>SRT-Caller</para>
+            /// </description></item>
+            /// <item><description><para>RTMP-PULL</para>
+            /// </description></item>
+            /// <item><description><para>SRT-Listener</para>
+            /// </description></item>
+            /// <item><description><para>Flow</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -132,10 +143,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <para>The encryption key length. This parameter is returned when the source type is SRT-Listener or SRT-Caller.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0</description></item>
-            /// <item><description>16</description></item>
-            /// <item><description>24</description></item>
-            /// <item><description>32</description></item>
+            /// <item><description><para>0</para>
+            /// </description></item>
+            /// <item><description><para>16</para>
+            /// </description></item>
+            /// <item><description><para>24</para>
+            /// </description></item>
+            /// <item><description><para>32</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -42,8 +42,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The sorting order of the packaging groups based on the time when they were created. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>desc (default): descending order.</description></item>
-        /// <item><description>asc: ascending order.</description></item>
+        /// <item><description><para>desc (default): descending order.</para>
+        /// </description></item>
+        /// <item><description><para>asc: ascending order.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

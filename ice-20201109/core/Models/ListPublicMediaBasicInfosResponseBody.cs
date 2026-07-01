@@ -303,6 +303,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
                 /// <summary>
                 /// <para>The title of the media asset.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>My video title</para>
                 /// </summary>
                 [NameInMap("Title")]
                 [Validation(Required=false)]

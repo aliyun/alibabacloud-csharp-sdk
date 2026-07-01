@@ -11,8 +11,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
     public class AddTemplateRequest : TeaModel {
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>The template configurations. The Config object of a regular template is encapsulated based on the Timeline object of an online editing project. The Config object of a custom template provides more flexible features. If you have special requirements, we recommend that you understand the structure of a Config object and configure a custom template. For more information, see <a href="https://help.aliyun.com/document_detail/456193.html">Config object of a regular template</a>.</description></item>
-        /// <item><description>For more information about Config object examples, see <a href="https://help.aliyun.com/document_detail/451634.html">Basic template configurations</a>.</description></item>
+        /// <item><description><para>The template configurations. The Config object of a regular template is encapsulated based on the Timeline object of an online editing project. The Config object of a custom template provides more flexible features. If you have special requirements, we recommend that you understand the structure of a Config object and configure a custom template. For more information, see <a href="https://help.aliyun.com/document_detail/456193.html">Config object of a regular template</a>.</para>
+        /// </description></item>
+        /// <item><description><para>For more information about Config object examples, see <a href="https://help.aliyun.com/document_detail/451634.html">Basic template configurations</a>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,7 +38,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <para>The name of the custom template.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>视频添加水印模板</para>
+        /// <para>Template name</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -65,9 +67,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The source from which the template is created. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>OpenAPI</description></item>
-        /// <item><description>AliyunConsole</description></item>
-        /// <item><description>WebSDK</description></item>
+        /// <item><description><para>OpenAPI</para>
+        /// </description></item>
+        /// <item><description><para>AliyunConsole</para>
+        /// </description></item>
+        /// <item><description><para>WebSDK</para>
+        /// </description></item>
         /// </list>
         /// <!---->
         /// 
@@ -81,12 +86,18 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The template state. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Available: The template is available.</description></item>
-        /// <item><description>Created: The template is created but not ready for use.</description></item>
-        /// <item><description>Uploading: The video is being uploaded.</description></item>
-        /// <item><description>Processing: The advanced template is being processed.</description></item>
-        /// <item><description>UploadFailed: Failed to upload the video.</description></item>
-        /// <item><description>ProcessFailed: Failed to process the advanced template.</description></item>
+        /// <item><description><para>Available: The template is available.</para>
+        /// </description></item>
+        /// <item><description><para>Created: The template is created but not ready for use.</para>
+        /// </description></item>
+        /// <item><description><para>Uploading: The video is being uploaded.</para>
+        /// </description></item>
+        /// <item><description><para>Processing: The advanced template is being processed.</para>
+        /// </description></item>
+        /// <item><description><para>UploadFailed: Failed to upload the video.</para>
+        /// </description></item>
+        /// <item><description><para>ProcessFailed: Failed to process the advanced template.</para>
+        /// </description></item>
         /// </list>
         /// <!---->
         /// 
@@ -100,8 +111,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The template type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Timeline: a regular template created based on the timeline of a video editing project, in which multiple materials are arranged in sequence across multiple layers. It can be used to convert text and images into videos, create photo albums, add opening and closing parts, and apply the default watermark.</description></item>
-        /// <item><description>VETemplate: an advanced template created using effects of Adobe After Effects (AE). It can be used to produce complex animations and advanced media effects.</description></item>
+        /// <item><description><para>Timeline: a regular template created based on the timeline of a video editing project, in which multiple materials are arranged in sequence across multiple layers. It can be used to convert text and images into videos, create photo albums, add opening and closing parts, and apply the default watermark.</para>
+        /// </description></item>
+        /// <item><description><para>VETemplate: an advanced template created using effects of Adobe After Effects (AE). It can be used to produce complex animations and advanced media effects.</para>
+        /// </description></item>
         /// </list>
         /// <!---->
         /// 

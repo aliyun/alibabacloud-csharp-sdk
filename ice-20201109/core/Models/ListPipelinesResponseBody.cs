@@ -80,8 +80,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <para>The state of the MPS queue.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Active</description></item>
-            /// <item><description>Paused</description></item>
+            /// <item><description><para>Active</para>
+            /// </description></item>
+            /// <item><description><para>Paused</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

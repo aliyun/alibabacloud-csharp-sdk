@@ -22,8 +22,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The state of the index. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>active: the index is enabled.</description></item>
-        /// <item><description>Deactive: the index is not enabled.</description></item>
+        /// <item><description><para>active: the index is enabled.</para>
+        /// </description></item>
+        /// <item><description><para>Deactive: the index is not enabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,9 +38,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The category of the index. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>mm: large visual model.</description></item>
-        /// <item><description>face: face recognition.</description></item>
-        /// <item><description>aiLabel: smart tagging.</description></item>
+        /// <item><description><para>mm: large visual model.</para>
+        /// </description></item>
+        /// <item><description><para>face: face recognition.</para>
+        /// </description></item>
+        /// <item><description><para>aiLabel: smart tagging.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -81,8 +86,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

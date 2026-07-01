@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class QueryIProductionJobRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>A token that ensures request idempotence.</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the intelligent production job.</para>
+        /// <para>The intelligent job ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

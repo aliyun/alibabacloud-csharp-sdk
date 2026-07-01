@@ -9,17 +9,38 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListMediaBasicInfosRequest : TeaModel {
+        /// <summary>
+        /// <para>The authentication expiration time, in seconds.</para>
+        /// <list type="bullet">
+        /// <item><description><para>Minimum value: 1.</para>
+        /// </description></item>
+        /// <item><description><para>Maximum value: 86400.</para>
+        /// </description></item>
+        /// <item><description><para>Default value: 3600.</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30</para>
+        /// </summary>
         [NameInMap("AuthTimeout")]
         [Validation(Required=false)]
         public long? AuthTimeout { get; set; }
 
         /// <summary>
-        /// <para>The business type of the media asset. Valid values:</para>
-        /// <para>\- subtitles</para>
-        /// <para>\- watermark</para>
-        /// <para>\- opening</para>
-        /// <para>\- ending</para>
-        /// <para>\- general</para>
+        /// <para>The business type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>subtitles</c>: subtitles</para>
+        /// </description></item>
+        /// <item><description><para><c>watermark</c>: watermark</para>
+        /// </description></item>
+        /// <item><description><para><c>opening</c>: opening</para>
+        /// </description></item>
+        /// <item><description><para><c>ending</c>: ending</para>
+        /// </description></item>
+        /// <item><description><para><c>general</c>: General</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>opening</para>
@@ -29,9 +50,13 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string BusinessType { get; set; }
 
         /// <summary>
-        /// <para>The end time of utcCreated.</para>
-        /// <para>\- The value is the end of the left-open right-closed interval.</para>
-        /// <para>\- Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. For example, 2017-01-11T12:00:00Z indicates 20:00:00 on January 11, 2017 (UTC +8).</para>
+        /// <para>The end time of the query range, based on the creation time (<c>utcCreated</c>).</para>
+        /// <list type="bullet">
+        /// <item><description><para>The query returns results created at or before this time (inclusive).</para>
+        /// </description></item>
+        /// <item><description><para>The time must be in UTC and comply with the ISO 8601 standard. The format is <c>YYYY-MM-DD\\&quot;T\\&quot;HH:mm:ss\\&quot;Z\\&quot;</c>. For example, <c>2017-01-11T12:00:00Z</c> corresponds to 20:00:00 on January 11, 2017 (UTC+8).</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>2020-12-20T13:00:00Z</para>
@@ -41,7 +66,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return the basic information of the source file.</para>
+        /// <para>Set to <c>true</c> to include basic file information in the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -51,7 +76,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public bool? IncludeFileBasicInfo { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return.</para>
+        /// <para>The maximum number of results to return per page.</para>
         /// <para>Maximum value: 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -62,7 +87,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The ID of the media asset.</para>
+        /// <para>The media ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>019b82e24b37a1c2958dec38</b></b></para>
@@ -72,11 +97,17 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string MediaId { get; set; }
 
         /// <summary>
-        /// <para>The type of the media asset. Valid values:</para>
-        /// <para>\- image</para>
-        /// <para>\- video</para>
-        /// <para>\- audio</para>
-        /// <para>\- text</para>
+        /// <para>The media type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>image</c>: image</para>
+        /// </description></item>
+        /// <item><description><para><c>video</c>: video</para>
+        /// </description></item>
+        /// <item><description><para><c>audio</c>: audio</para>
+        /// </description></item>
+        /// <item><description><para><c>text</c>: text</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>video</para>
@@ -86,7 +117,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string MediaType { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// <para>The pagination token used to retrieve the next page of results. An empty value indicates that all results have been returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pSa1SQ0wCe5pzVrQ6mWZEw==</para>
@@ -96,9 +127,13 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The order of sorting by utcCreated. Default value: desc. Valid values:</para>
-        /// <para>\- desc</para>
-        /// <para>\- asc</para>
+        /// <para>The sort order for results based on the creation time (<c>utcCreated</c>). The default is descending. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>desc</c>: Descending order</para>
+        /// </description></item>
+        /// <item><description><para><c>asc</c>: Ascending order</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>desc</para>
@@ -108,11 +143,17 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The source of the media asset. Valid values:</para>
-        /// <para>\- oss: Object Storage Service (OSS).</para>
-        /// <para>\- vod: ApsaraVideo VOD.</para>
-        /// <para>\- live: ApsaraVideo Live.</para>
-        /// <para>\- general: other sources. This is the default value.</para>
+        /// <para>The source. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>oss</c>: OSS</para>
+        /// </description></item>
+        /// <item><description><para><c>vod</c>: video on demand</para>
+        /// </description></item>
+        /// <item><description><para><c>live</c>: live streaming</para>
+        /// </description></item>
+        /// <item><description><para><c>general</c>: Other sources (default).</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>oss</para>
@@ -122,9 +163,13 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>The start time of utcCreated.</para>
-        /// <para>\- The value is the beginning of a left-open right-closed interval.</para>
-        /// <para>\- Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. For example, 2017-01-11T12:00:00Z indicates 20:00:00 on January 11, 2017 (UTC +8).</para>
+        /// <para>The start time of the query range, based on the creation time (<c>utcCreated</c>).</para>
+        /// <list type="bullet">
+        /// <item><description><para>The query returns results created after this time (exclusive).</para>
+        /// </description></item>
+        /// <item><description><para>The time must be in UTC and comply with the ISO 8601 standard. The format is <c>YYYY-MM-DD\\&quot;T\\&quot;HH:mm:ss\\&quot;Z\\&quot;</c>. For example, <c>2017-01-11T12:00:00Z</c> corresponds to 20:00:00 on January 11, 2017 (UTC+8).</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>2020-12-20T12:00:00Z</para>
@@ -134,11 +179,17 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The status of the media asset. Valid values:</para>
-        /// <para>\- Init: the initial state, which indicates that the source file is not ready.</para>
-        /// <para>\- Preparing: The source file is being prepared. For example, the file is being uploaded or edited.</para>
-        /// <para>\- PrepareFail: The source file failed to be prepared. For example, the information of the source file failed to be obtained.</para>
-        /// <para>\- Normal: The source file is ready.</para>
+        /// <para>The media status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>Init</c>: The source file is not ready.</para>
+        /// </description></item>
+        /// <item><description><para><c>Preparing</c>: The source file is being prepared. For example, it is being uploaded or composited.</para>
+        /// </description></item>
+        /// <item><description><para><c>PrepareFail</c>: The source file failed to prepare. This may occur, for example, if the system fails to retrieve information about the source file.</para>
+        /// </description></item>
+        /// <item><description><para><c>Normal</c>: The source file is ready.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Normal</para>

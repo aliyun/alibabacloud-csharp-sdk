@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public class QueryDNAJobListResponseBodyJobListInput : TeaModel {
                 /// <summary>
                 /// <para>The input file. The file can be an OSS object or a media asset. The path of an OSS object can be in one of the following formats:</para>
-                /// <para>1\. oss://bucket/object</para>
+                /// <para>1\. oss\://bucket/object</para>
                 /// <para>2\. http(s)://bucket.oss-[regionId].aliyuncs.com/object</para>
                 /// <para>In the preceding paths, bucket indicates an OSS bucket that resides in the same region as the current project, and object indicates the path of the object in the bucket.</para>
                 /// 
@@ -109,8 +109,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <summary>
                 /// <para>The type of the input file. Valid values:</para>
                 /// <ol>
-                /// <item><description>OSS: Object Storage Service (OSS) object.</description></item>
-                /// <item><description>Media: media asset.</description></item>
+                /// <item><description><para>OSS: Object Storage Service (OSS) object.</para>
+                /// </description></item>
+                /// <item><description><para>Media: media asset.</para>
+                /// </description></item>
                 /// </ol>
                 /// 
                 /// <b>Example:</b>
@@ -145,10 +147,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <summary>
             /// <para>The job state. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Queuing</b>: The job is waiting in the queue.</description></item>
-            /// <item><description><b>Analysing</b>: The job is in progress.</description></item>
-            /// <item><description><b>Success</b>: The job is successful.</description></item>
-            /// <item><description><b>Fail</b>: The job failed.</description></item>
+            /// <item><description><para><b>Queuing</b>: The job is waiting in the queue.</para>
+            /// </description></item>
+            /// <item><description><para><b>Analysing</b>: The job is in progress.</para>
+            /// </description></item>
+            /// <item><description><para><b>Success</b>: The job is successful.</para>
+            /// </description></item>
+            /// <item><description><para><b>Fail</b>: The job failed.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

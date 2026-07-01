@@ -33,8 +33,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <para>The job type.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Script: script-based editing job that mixes media assets.</description></item>
-        /// <item><description>Smart_Mix: intelligent editing job that mixes media assets.</description></item>
+        /// <item><description><para>Script: script-based editing job that mixes media assets.</para>
+        /// </description></item>
+        /// <item><description><para>Smart_Mix: intelligent editing job that mixes media assets.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -67,8 +69,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The sorting parameter. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>desc (default): sorted by creation time in descending order.</description></item>
-        /// <item><description>asc: sorted by creation time in ascending order.</description></item>
+        /// <item><description><para>desc (default): sorted by creation time in descending order.</para>
+        /// </description></item>
+        /// <item><description><para>asc: sorted by creation time in ascending order.</para>
+        /// </description></item>
         /// </list>
         /// <!---->
         /// 
@@ -93,10 +97,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <para>The job state.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Finished</description></item>
-        /// <item><description>Init</description></item>
-        /// <item><description>Failed</description></item>
-        /// <item><description>Processing</description></item>
+        /// <item><description><para>Finished</para>
+        /// </description></item>
+        /// <item><description><para>Init</para>
+        /// </description></item>
+        /// <item><description><para>Failed</para>
+        /// </description></item>
+        /// <item><description><para>Processing</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

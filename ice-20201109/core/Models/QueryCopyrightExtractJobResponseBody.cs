@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public class QueryCopyrightExtractJobResponseBodyData : TeaModel {
             /// <summary>
             /// <para>The copyright watermark information.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>版权水印测试</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
@@ -29,7 +32,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <para>The message returned.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ok</para>
+        /// <para>Copyright watermark test</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

@@ -9,12 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class CreateSearchLibRequest : TeaModel {
+        /// <summary>
+        /// <para>The configuration of the search library, in JSON string format. The fields include the following:</para>
+        /// <list type="bullet">
+        /// <item><description>faceGroupIds: The IDs of custom face recognition libraries. You can create these libraries by calling the CreateRecognitionLib operation. You can specify up to three library IDs, separated by commas (,).</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;faceGroupIds&quot;:&quot;xxx1,xxx2,xx3&quot;}</para>
+        /// </summary>
         [NameInMap("SearchLibConfig")]
         [Validation(Required=false)]
         public string SearchLibConfig { get; set; }
 
         /// <summary>
-        /// <para>The name of the search library. The name can contain letters and digits and must start with a letter.</para>
+        /// <para>The name of the search library. The name can contain letters and digits. For IP camera (IPC) monitoring scenarios, the name must start with the <c>IPCamera_</c> prefix. For other scenarios, you can use a custom name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

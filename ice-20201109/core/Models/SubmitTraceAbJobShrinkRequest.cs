@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitTraceAbJobShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The key that is encoded by using the Base64 algorithm.</para>
+        /// <para>The Base64-encoded encryption key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Qh6OdgIMcliQSI1fReOw****</para>
@@ -20,9 +20,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string CipherBase64ed { get; set; }
 
         /// <summary>
-        /// <para>The source video file for A/B watermarking.</para>
+        /// <para>The input video for the A/B stream forensic watermarking job.</para>
         /// <remarks>
-        /// <para>OSS object or media asset must reside in the same region as the IMS service region. This API supports only videos that last at least 3 minutes. If the video is too short, the call may fail, or no output may be returned.</para>
+        /// <list type="bullet">
+        /// <item><description><para>The Object Storage Service (OSS) file or media asset must be in the same region where Intelligent Media Services (IMS) is deployed.</para>
+        /// </description></item>
+        /// <item><description><para>This operation supports only videos that are three minutes or longer. Using a shorter video may cause the API call to fail or produce no output.</para>
+        /// </description></item>
+        /// </list>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -31,7 +36,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string InputShrink { get; set; }
 
         /// <summary>
-        /// <para>The watermark level, which specifies the channel to embed watermarks. Valid values: 0 specifies the 0u channel, 1 specifies the 1uv channel, and 2 specifies the 2yuv channel.</para>
+        /// <para>The watermark level, which specifies the embedding channel. Valid values: <c>0</c> (U channel), <c>1</c> (UV channels), and <c>2</c> (YUV channels).</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -41,7 +46,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public long? Level { get; set; }
 
         /// <summary>
-        /// <para>The output directory path.</para>
+        /// <para>The output location for the A/B stream job. This must be an OSS directory.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Output")]
@@ -49,7 +54,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string OutputShrink { get; set; }
 
         /// <summary>
-        /// <para>The start point of watermark embedding. Unit: seconds.</para>
+        /// <para>The start time for watermark embedding, in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -59,7 +64,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The duration of the watermark embedding. Unit: seconds.</para>
+        /// <para>The total duration for watermark embedding, in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>360</para>
@@ -69,7 +74,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public long? TotalTime { get; set; }
 
         /// <summary>
-        /// <para>The custom data, which can be up to 1,024 bytes in size.</para>
+        /// <para>User data to include in the request. The maximum length is 1,024 bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123</para>

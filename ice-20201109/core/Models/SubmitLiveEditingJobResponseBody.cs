@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>The media asset ID of the output file.</para>
+        /// <para>The ID of the output media asset.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>c469e944b5a856828dc2</b></b></para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>36-3C1E-4417-BDB2-1E034F</b></b></para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The media asset ID of the output file in ApsaraVideo VOD if the output file is stored in ApsaraVideo VOD.</para>
+        /// <para>The ID of the VOD media asset. This parameter is returned only if the output destination is VOD.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>d7578s4h75ci945c14b</b></b></para>

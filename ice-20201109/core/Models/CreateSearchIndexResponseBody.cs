@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class CreateSearchIndexResponseBody : TeaModel {
         /// <summary>
+        /// <para>Return code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><em><b><b>ACB-44F2-5F2D-88D7-1283E70</b></b></em></para>
         /// </summary>
@@ -26,6 +30,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the invocation succeeded. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: Invocation succeeded</para>
+        /// </description></item>
+        /// <item><description><para>false: Failed to invoke</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

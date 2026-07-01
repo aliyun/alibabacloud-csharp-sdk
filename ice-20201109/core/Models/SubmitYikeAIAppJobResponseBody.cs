@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitYikeAIAppJobResponseBody : TeaModel {
         /// <summary>
+        /// <para>The unique identifier for the submitted job.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ab4802364a2e49208c99efab82df****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string JobId { get; set; }
 
         /// <summary>
+        /// <para>A unique identifier for the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4E84BE44-58A7-<b><b>-</b></b>-FBEBEA16EF94</para>
         /// </summary>

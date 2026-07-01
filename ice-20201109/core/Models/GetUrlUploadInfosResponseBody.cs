@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <summary>
             /// <para>The upload URL of the source file.</para>
             /// <remarks>
-            /// <para> A maximum of 100 URLs can be returned.</para>
+            /// <para>A maximum of 100 URLs can be returned.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class RegisterYikeAssetMediaInfoRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the folder.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>fd-ABMFfAB2bA</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string FolderId { get; set; }
 
         /// <summary>
+        /// <para>The URL of the media asset. You can use the FileURL value that is returned by the CreateYikeAssetUpload operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string InputURL { get; set; }
 
         /// <summary>
+        /// <para>The type of the media asset.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string MediaType { get; set; }
 
         /// <summary>
+        /// <para>The ID of the production. If this parameter is omitted, the media asset is uploaded to the default production.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ProductionId</para>
         /// </summary>

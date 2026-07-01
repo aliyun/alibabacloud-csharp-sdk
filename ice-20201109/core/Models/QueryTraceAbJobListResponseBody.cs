@@ -56,8 +56,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <summary>
                 /// <para>The type of the input file. Valid values:</para>
                 /// <ol>
-                /// <item><description>OSS: an Object Storage Service (OSS) object.</description></item>
-                /// <item><description>Media: a media asset.</description></item>
+                /// <item><description><para>OSS: an Object Storage Service (OSS) object.</para>
+                /// </description></item>
+                /// <item><description><para>Media: a media asset.</para>
+                /// </description></item>
                 /// </ol>
                 /// 
                 /// <b>Example:</b>
@@ -109,8 +111,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <summary>
                 /// <para>The type of the output file. Valid values:</para>
                 /// <ol>
-                /// <item><description>OSS: an OSS object.</description></item>
-                /// <item><description>Media: a media asset.</description></item>
+                /// <item><description><para>OSS: an OSS object.</para>
+                /// </description></item>
+                /// <item><description><para>Media: a media asset.</para>
+                /// </description></item>
                 /// </ol>
                 /// 
                 /// <b>Example:</b>

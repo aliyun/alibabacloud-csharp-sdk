@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitASRJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The job ID.</para>
+        /// <para>The ID of the intelligent job.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>20b48fb04483915d4f2cd8ac</b></b></para>
@@ -30,12 +30,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The job state. Valid values:</para>
+        /// <para>The job status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Created</description></item>
-        /// <item><description>Executing</description></item>
-        /// <item><description>Finished</description></item>
-        /// <item><description>Failed</description></item>
+        /// <item><description><para>Created</para>
+        /// </description></item>
+        /// <item><description><para>Executing</para>
+        /// </description></item>
+        /// <item><description><para>Finished</para>
+        /// </description></item>
+        /// <item><description><para>Failed</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

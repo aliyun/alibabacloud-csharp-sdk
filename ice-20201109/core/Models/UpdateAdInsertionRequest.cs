@@ -13,8 +13,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <para>Specifies whether to enable ad marker passthrough. Default value: OFF.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>OFF: Disable.</description></item>
-        /// <item><description>ON: Enable.</description></item>
+        /// <item><description><para>OFF: Disable.</para>
+        /// </description></item>
+        /// <item><description><para>ON: Enable.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

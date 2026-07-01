@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitASRJobRequest : TeaModel {
         /// <summary>
-        /// <para>The job description, which can up to 128 bytes in length.</para>
+        /// <para>The job description. The maximum length is 128 bytes.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试描述</para>
+        /// <para>Test description</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The speech duration.</para>
+        /// <para>The duration of the segment to transcribe.</para>
         /// 
         /// <b>Example:</b>
         /// <para>00:00:10</para>
@@ -29,22 +29,33 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string Duration { get; set; }
 
+        /// <summary>
+        /// <para>The configuration for speech-to-text conversion:</para>
+        /// <list type="bullet">
+        /// <item><description>HotwordLibraryIdList: A list of custom vocabulary IDs. Only one custom vocabulary ID is currently supported. Future releases will support multiple IDs.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{
+        ///     &quot;HotwordLibraryIdList&quot;: &quot;<b><b><b>2609a14f54a0636b7e16</b></b></b>&quot;
+        /// }</para>
+        /// </summary>
         [NameInMap("EditingConfig")]
         [Validation(Required=false)]
         public string EditingConfig { get; set; }
 
         /// <summary>
-        /// <para>The input file. You can specify an Object Storage Service (OSS) URL or the ID of a media asset in the media asset library.</para>
+        /// <para>The input configuration. Specify either an OSS URL or a media ID from the media library.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>oss://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4 或 <b><b>20b48fb04483915d4f2cd8ac</b></b></para>
+        /// <para>oss://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4 or <b><b>20b48fb04483915d4f2cd8ac</b></b></para>
         /// </summary>
         [NameInMap("InputFile")]
         [Validation(Required=false)]
         public string InputFile { get; set; }
 
         /// <summary>
-        /// <para>The start time of the speech to recognize.</para>
+        /// <para>The start time of the segment to be transcribed from the media file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>00:00:00</para>
@@ -54,17 +65,17 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The job title, which can be up to 128 bytes in length.</para>
+        /// <para>The job title. The maximum length is 128 bytes.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试标题</para>
+        /// <para>Test title</para>
         /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]
         public string Title { get; set; }
 
         /// <summary>
-        /// <para>The user-defined data in the JSON format. You can specify your business information, such as the business environment and job information.</para>
+        /// <para>User-defined settings in JSON format. Use this to pass business-related data, such as the operating environment or other job details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{

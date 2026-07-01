@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitCopyrightExtractJobRequest : TeaModel {
         /// <summary>
-        /// <para>The source video file from which to extract the watermark.</para>
+        /// <para>The video file for watermark extraction.</para>
         /// <remarks>
-        /// <para>The OSS object or media asset must reside in the same region as the IMS service region.</para>
+        /// <list type="bullet">
+        /// <item><description>The region of the Object Storage Service (OSS) file or media asset must match the region of the current Intelligent Media Service (IMS) instance.</description></item>
+        /// </list>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -21,10 +23,11 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public SubmitCopyrightExtractJobRequestInput Input { get; set; }
         public class SubmitCopyrightExtractJobRequestInput : TeaModel {
             /// <summary>
-            /// <para>The specific information for the input file, which can be an OSS URL or a media asset ID. OSS URL formats:</para>
-            /// <para>1\. oss://bucket/object</para>
+            /// <para>Specifies the URL of an Object Storage Service (OSS) object or the ID of a media asset.
+            /// OSS URLs can be in the following formats:</para>
+            /// <para>1\. oss\://bucket/object</para>
             /// <para>2\. http(s)://bucket.oss-[regionId].aliyuncs.com/object</para>
-            /// <para>where bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object path in OSS.</para>
+            /// <para>In these formats, <c>bucket</c> is the name of a bucket in the same region as your IMS instance, and <c>object</c> is the file path.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -35,10 +38,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Media { get; set; }
 
             /// <summary>
-            /// <para>The type of the source file. Valid values:</para>
+            /// <para>The type of the input file. Valid values:</para>
             /// <ol>
-            /// <item><description>OSS: an OSS object.</description></item>
-            /// <item><description>Media: a media asset.</description></item>
+            /// <item><description><para>OSS: The URL of a file in Object Storage Service (OSS).</para>
+            /// </description></item>
+            /// <item><description><para>Media: The ID of a media asset.</para>
+            /// </description></item>
             /// </ol>
             /// <para>This parameter is required.</para>
             /// 
@@ -52,12 +57,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
-        /// <para>Additional parameters for the watermark job, provided as a JSON string. Supported parameter:</para>
+        /// <para>The watermark job parameters, specified as a JSON string.</para>
         /// <list type="bullet">
-        /// <item><description><para>algoType: The algorithm type. Defaults to v1. The extraction algorithm must match the one used for embedding.</para>
+        /// <item><description><para>algoType: The algorithm type. Default value: v1. The extraction algorithm type must match the algorithm type used for embedding the watermark.</para>
         /// <list type="bullet">
-        /// <item><description>v1: Copyright watermark extraction algorithm for long videos.</description></item>
-        /// <item><description>v2: Copyright watermark extraction algorithm for short videos.</description></item>
+        /// <item><description><para>v1: The copyright extraction algorithm for long-form videos.</para>
+        /// </description></item>
+        /// <item><description><para>v2: The copyright extraction algorithm for short-form videos.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -70,7 +77,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Params { get; set; }
 
         /// <summary>
-        /// <para>The custom data, which can be up to 1,024 bytes in size.</para>
+        /// <para>The user-defined data. The maximum length is 1,024 bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123</para>

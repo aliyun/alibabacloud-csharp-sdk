@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The ID of the AI agent instance.</para>
         /// <remarks>
-        /// <para>InstanceId is a unique identifier that is returned when the AI agent is started. To start an AI agent, call <a href="https://help.aliyun.com/document_detail/2846201.html">StartAIAgentInstance </a> or <a href="https://help.aliyun.com/document_detail/2846209.html">GenerateAIAgentCall</a>.</para>
+        /// <para>InstanceId is a unique identifier that is returned when the AI agent is started. To start an AI agent, call <a href="https://help.aliyun.com/document_detail/2846201.html">StartAIAgentInstance </a>or <a href="https://help.aliyun.com/document_detail/2846209.html">GenerateAIAgentCall</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Hello</para>
+        /// <para>Hello.</para>
         /// </summary>
         [NameInMap("Text")]
         [Validation(Required=false)]

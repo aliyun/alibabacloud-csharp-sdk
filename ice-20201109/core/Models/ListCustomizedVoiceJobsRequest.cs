@@ -32,8 +32,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The type of the human voice cloning job. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Basic</description></item>
-        /// <item><description>Standard</description></item>
+        /// <item><description><para>Basic</para>
+        /// </description></item>
+        /// <item><description><para>Standard</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// <para>: If you do not specify this parameter, the default value Basic is used.</para>

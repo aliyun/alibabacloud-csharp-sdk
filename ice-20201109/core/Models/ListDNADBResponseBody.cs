@@ -28,6 +28,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
             /// <summary>
             /// <para>The description of the media fingerprint library.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>This is a video DNA library.</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -36,10 +39,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <summary>
             /// <para>The model of the media fingerprint library. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Video</b></description></item>
-            /// <item><description><b>Audio</b></description></item>
-            /// <item><description><b>Image</b></description></item>
-            /// <item><description><b>Text</b> (supported only in the China (Shanghai) region)</description></item>
+            /// <item><description><para><b>Video</b></para>
+            /// </description></item>
+            /// <item><description><para><b>Audio</b></para>
+            /// </description></item>
+            /// <item><description><para><b>Image</b></para>
+            /// </description></item>
+            /// <item><description><para><b>Text</b> (supported only in the China (Shanghai) region)</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -60,11 +67,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The state of the media fingerprint library. Default value: <b>offline</b>. ****Valid values:</para>
+            /// <para>The state of the media fingerprint library. Default value: <b>offline</b>. \<em>\</em>\*\*Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>offline</b>: The media fingerprint library is offline.</description></item>
-            /// <item><description><b>active</b>: The media fingerprint library is online.</description></item>
-            /// <item><description><b>deleted</b>: The media fingerprint library is deleted.</description></item>
+            /// <item><description><para><b>offline</b>: The media fingerprint library is offline.</para>
+            /// </description></item>
+            /// <item><description><para><b>active</b>: The media fingerprint library is online.</para>
+            /// </description></item>
+            /// <item><description><para><b>deleted</b>: The media fingerprint library is deleted.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

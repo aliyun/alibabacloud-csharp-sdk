@@ -12,9 +12,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The business type of the media asset. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>sticker</description></item>
-        /// <item><description>bgm</description></item>
-        /// <item><description>bgi</description></item>
+        /// <item><description><para>sticker</para>
+        /// </description></item>
+        /// <item><description><para>bgm</para>
+        /// </description></item>
+        /// <item><description><para>bgi</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -50,37 +53,54 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <list type="bullet">
         /// <item><description><para>Sticker tags:</para>
         /// <list type="bullet">
-        /// <item><description>sticker-atmosphere</description></item>
-        /// <item><description>sticker-bubble</description></item>
-        /// <item><description>sticker-cute</description></item>
-        /// <item><description>sticker-daily</description></item>
-        /// <item><description>sticker-expression</description></item>
-        /// <item><description>sticker-gif</description></item>
+        /// <item><description><para>sticker-atmosphere</para>
+        /// </description></item>
+        /// <item><description><para>sticker-bubble</para>
+        /// </description></item>
+        /// <item><description><para>sticker-cute</para>
+        /// </description></item>
+        /// <item><description><para>sticker-daily</para>
+        /// </description></item>
+        /// <item><description><para>sticker-expression</para>
+        /// </description></item>
+        /// <item><description><para>sticker-gif</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// <item><description><para>Background music (BGM) tags:</para>
         /// <list type="bullet">
-        /// <item><description>bgm-romantic</description></item>
-        /// <item><description>bgm-cuisine</description></item>
-        /// <item><description>bgm-chinese-style</description></item>
-        /// <item><description>bgm-upbeat</description></item>
-        /// <item><description>bgm-dynamic</description></item>
-        /// <item><description>bgm-relaxing</description></item>
-        /// <item><description>bgm-quirky</description></item>
-        /// <item><description>bgm-beauty</description></item>
+        /// <item><description><para>bgm-romantic</para>
+        /// </description></item>
+        /// <item><description><para>bgm-cuisine</para>
+        /// </description></item>
+        /// <item><description><para>bgm-chinese-style</para>
+        /// </description></item>
+        /// <item><description><para>bgm-upbeat</para>
+        /// </description></item>
+        /// <item><description><para>bgm-dynamic</para>
+        /// </description></item>
+        /// <item><description><para>bgm-relaxing</para>
+        /// </description></item>
+        /// <item><description><para>bgm-quirky</para>
+        /// </description></item>
+        /// <item><description><para>bgm-beauty</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// <item><description><para>Background image (BGI) tags:</para>
         /// <list type="bullet">
-        /// <item><description>bgi-grad</description></item>
-        /// <item><description>bgi-solid</description></item>
-        /// <item><description>bgi-pic</description></item>
+        /// <item><description><para>bgi-grad</para>
+        /// </description></item>
+        /// <item><description><para>bgi-solid</para>
+        /// </description></item>
+        /// <item><description><para>bgi-pic</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>ticker-atmosphere</para>
+        /// <para>sticker-atmosphere</para>
         /// </summary>
         [NameInMap("MediaTagId")]
         [Validation(Required=false)]

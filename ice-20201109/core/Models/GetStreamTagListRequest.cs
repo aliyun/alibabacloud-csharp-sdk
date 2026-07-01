@@ -82,8 +82,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The sorting order for the results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>StartTime:Desc (default): Sort by creation time in descending order.</description></item>
-        /// <item><description>StartTime:Asc: Sort by creation time in ascending order.</description></item>
+        /// <item><description><para>StartTime:Desc (default): Sort by creation time in descending order.</para>
+        /// </description></item>
+        /// <item><description><para>StartTime:Asc: Sort by creation time in ascending order.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

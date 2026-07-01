@@ -11,6 +11,11 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
     public class ListAlertsRequest : TeaModel {
         /// <summary>
         /// <para>The alert type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Scheduling Error: An error occurred when building the schedule.
+        /// PlayBack Warning: Address pull exception when adding source.
+        /// info: Information.</para>
         /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]

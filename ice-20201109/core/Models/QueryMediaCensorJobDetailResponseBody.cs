@@ -26,13 +26,20 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <summary>
                 /// <para>The label of the moderation result. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>normal</b>: normal content.</description></item>
-                /// <item><description><b>spam</b>: spam.</description></item>
-                /// <item><description><b>ad</b>: ads.</description></item>
-                /// <item><description><b>abuse</b>: abuse content.</description></item>
-                /// <item><description><b>flood</b>: excessive junk content.</description></item>
-                /// <item><description><b>contraband</b>: prohibited content.</description></item>
-                /// <item><description><b>meaningless</b>: meaningless content.</description></item>
+                /// <item><description><para><b>normal</b>: normal content.</para>
+                /// </description></item>
+                /// <item><description><para><b>spam</b>: spam.</para>
+                /// </description></item>
+                /// <item><description><para><b>ad</b>: ads.</para>
+                /// </description></item>
+                /// <item><description><para><b>abuse</b>: abuse content.</para>
+                /// </description></item>
+                /// <item><description><para><b>flood</b>: excessive junk content.</para>
+                /// </description></item>
+                /// <item><description><para><b>contraband</b>: prohibited content.</para>
+                /// </description></item>
+                /// <item><description><para><b>meaningless</b>: meaningless content.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -65,9 +72,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <summary>
                 /// <para>The recommended subsequent operation. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>pass</b>: The content passes the moderation.</description></item>
-                /// <item><description><b>review</b>: The content needs to be manually reviewed.</description></item>
-                /// <item><description><b>block</b>: The content needs to be blocked.</description></item>
+                /// <item><description><para><b>pass</b>: The content passes the moderation.</para>
+                /// </description></item>
+                /// <item><description><para><b>review</b>: The content needs to be manually reviewed.</para>
+                /// </description></item>
+                /// <item><description><para><b>block</b>: The content needs to be blocked.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -161,13 +171,20 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <summary>
                 /// <para>The label of the moderation result. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>normal</b>: normal content.</description></item>
-                /// <item><description><b>spam</b>: spam.</description></item>
-                /// <item><description><b>ad</b>: ads.</description></item>
-                /// <item><description><b>abuse</b>: abuse content.</description></item>
-                /// <item><description><b>flood</b>: excessive junk content.</description></item>
-                /// <item><description><b>contraband</b>: prohibited content.</description></item>
-                /// <item><description><b>meaningless</b>: meaningless content.</description></item>
+                /// <item><description><para><b>normal</b>: normal content.</para>
+                /// </description></item>
+                /// <item><description><para><b>spam</b>: spam.</para>
+                /// </description></item>
+                /// <item><description><para><b>ad</b>: ads.</para>
+                /// </description></item>
+                /// <item><description><para><b>abuse</b>: abuse content.</para>
+                /// </description></item>
+                /// <item><description><para><b>flood</b>: excessive junk content.</para>
+                /// </description></item>
+                /// <item><description><para><b>contraband</b>: prohibited content.</para>
+                /// </description></item>
+                /// <item><description><para><b>meaningless</b>: meaningless content.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -200,9 +217,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <summary>
                 /// <para>The recommended subsequent operation. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>pass</b>: The content passes the moderation.</description></item>
-                /// <item><description><b>review</b>: The content needs to be manually reviewed.</description></item>
-                /// <item><description><b>block</b>: The content needs to be blocked.</description></item>
+                /// <item><description><para><b>pass</b>: The content passes the moderation.</para>
+                /// </description></item>
+                /// <item><description><para><b>review</b>: The content needs to be manually reviewed.</para>
+                /// </description></item>
+                /// <item><description><para><b>block</b>: The content needs to be blocked.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -306,12 +326,15 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <summary>
             /// <para>The overall result of the content moderation job. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>pass</b>: The content passes the moderation.</description></item>
-            /// <item><description><b>review</b>: The content needs to be manually reviewed.</description></item>
-            /// <item><description><b>block</b>: The content needs to be blocked.</description></item>
+            /// <item><description><para><b>pass</b>: The content passes the moderation.</para>
+            /// </description></item>
+            /// <item><description><para><b>review</b>: The content needs to be manually reviewed.</para>
+            /// </description></item>
+            /// <item><description><para><b>block</b>: The content needs to be blocked.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> If the moderation result of any type of content is review, the overall result is review. If the moderation result of any type of content is block, the overall result is block.</para>
+            /// <para>If the moderation result of any type of content is review, the overall result is review. If the moderation result of any type of content is block, the overall result is block.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -331,13 +354,20 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <summary>
                 /// <para>The label of the moderation result. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>normal</b>: normal content.</description></item>
-                /// <item><description><b>spam</b>: spam.</description></item>
-                /// <item><description><b>ad</b>: ads.</description></item>
-                /// <item><description><b>abuse</b>: abuse content.</description></item>
-                /// <item><description><b>flood</b>: excessive junk content.</description></item>
-                /// <item><description><b>contraband</b>: prohibited content.</description></item>
-                /// <item><description><b>meaningless</b>: meaningless content.</description></item>
+                /// <item><description><para><b>normal</b>: normal content.</para>
+                /// </description></item>
+                /// <item><description><para><b>spam</b>: spam.</para>
+                /// </description></item>
+                /// <item><description><para><b>ad</b>: ads.</para>
+                /// </description></item>
+                /// <item><description><para><b>abuse</b>: abuse content.</para>
+                /// </description></item>
+                /// <item><description><para><b>flood</b>: excessive junk content.</para>
+                /// </description></item>
+                /// <item><description><para><b>contraband</b>: prohibited content.</para>
+                /// </description></item>
+                /// <item><description><para><b>meaningless</b>: meaningless content.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -370,9 +400,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <summary>
                 /// <para>The recommended subsequent operation. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>pass</b>: The content passes the moderation.</description></item>
-                /// <item><description><b>review</b>: The content needs to be manually reviewed.</description></item>
-                /// <item><description><b>block</b>: The content needs to be blocked.</description></item>
+                /// <item><description><para><b>pass</b>: The content passes the moderation.</para>
+                /// </description></item>
+                /// <item><description><para><b>review</b>: The content needs to be manually reviewed.</para>
+                /// </description></item>
+                /// <item><description><para><b>block</b>: The content needs to be blocked.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -536,7 +569,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     /// <summary>
                     /// <para>The OSS object that is generated as the output snapshot.</para>
                     /// <remarks>
-                    /// <para> In the example, {Count} is a placeholder. The OSS objects that are generated as output snapshots are named <c>output00001-****.jpg</c>, <c>output00002-****.jpg</c>, and so on.</para>
+                    /// <para>In the example, {Count} is a placeholder. The OSS objects that are generated as output snapshots are named <c>output00001-****.jpg</c>, <c>output00002-****.jpg</c>, and so on.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -551,8 +584,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <summary>
                 /// <para>Indicates whether the video content needs to be moderated. Default value: <b>true</b>. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b>: The video content needs to be moderated.</description></item>
-                /// <item><description><b>false</b>: The video content does not need to be moderated.</description></item>
+                /// <item><description><para><b>true</b>: The video content needs to be moderated.</para>
+                /// </description></item>
+                /// <item><description><para><b>false</b>: The video content does not need to be moderated.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

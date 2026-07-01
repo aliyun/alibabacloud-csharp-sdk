@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class StartRtcRobotInstanceRequest : TeaModel {
         /// <summary>
+        /// <para>The authentication token required to join the RTC call. You must generate this token using your RTC AppKey.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string AuthToken { get; set; }
 
         /// <summary>
+        /// <para>The RTC channel\&quot;s unique identifier.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,6 +31,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string ChannelId { get; set; }
 
+        /// <summary>
+        /// <para>Specifies advanced call configurations that override the agent\&quot;s default configurations. If you omit this parameter, the agent uses its default configurations.</para>
+        /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
         public StartRtcRobotInstanceRequestConfig Config { get; set; }
@@ -38,6 +43,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public int? AsrMaxSilence { get; set; }
 
             /// <summary>
+            /// <para>Specifies whether to allow voice interrupt.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -45,6 +52,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public bool? EnableVoiceInterrupt { get; set; }
 
+            /// <summary>
+            /// <para>The greeting the AI agent speaks when a user joins the call.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>你好，有什么可以帮助的吗？</para>
+            /// </summary>
             [NameInMap("Greeting")]
             [Validation(Required=false)]
             public string Greeting { get; set; }
@@ -62,6 +75,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public int? UserOnlineTimeout { get; set; }
 
             /// <summary>
+            /// <para>The voice\&quot;s unique identifier.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>zhixiaoxia</para>
             /// </summary>
@@ -80,6 +95,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
+        /// <para>The AI agent\&quot;s unique identifier.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -90,6 +106,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RobotId { get; set; }
 
         /// <summary>
+        /// <para>User-defined information.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>
@@ -98,6 +116,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string UserData { get; set; }
 
         /// <summary>
+        /// <para>The AI agent\&quot;s unique identifier within the channel.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

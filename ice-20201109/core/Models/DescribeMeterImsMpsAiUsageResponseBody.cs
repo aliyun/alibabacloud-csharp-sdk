@@ -38,6 +38,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
             /// <summary>
             /// <para>The AI type. Valid values:</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Censor：审核类型
+            /// Product：生产类型</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]

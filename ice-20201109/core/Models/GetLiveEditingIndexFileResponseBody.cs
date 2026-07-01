@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
     public class GetLiveEditingIndexFileResponseBody : TeaModel {
         /// <summary>
         /// <para>The URL of the index file.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="https://bucket.oss-cn-shanghai.aliyuncs.com/test/live1.m3u8">https://bucket.oss-cn-shanghai.aliyuncs.com/test/live1.m3u8</a>?&lt;鉴权&gt;&amp;x-oss-process=hls/sign</para>
         /// </summary>
         [NameInMap("IndexFile")]
         [Validation(Required=false)]

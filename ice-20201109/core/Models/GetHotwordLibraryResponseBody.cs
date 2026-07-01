@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <para>The name of the hotword library.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>热词库名称</para>
+        /// <para>Hotword library name</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

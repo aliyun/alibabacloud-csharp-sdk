@@ -21,8 +21,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>The page number.</description></item>
-        /// <item><description>Default value: 1.</description></item>
+        /// <item><description><para>The page number.</para>
+        /// </description></item>
+        /// <item><description><para>Default value: 1.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

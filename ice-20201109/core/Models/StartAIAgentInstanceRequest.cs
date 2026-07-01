@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class StartAIAgentInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the AI agent created in the <a href="https://ims.console.aliyun.com/ai/robot/list">IMS</a> console.</para>
+        /// <para>The agent ID configured in the <a href="https://ims.console.aliyun.com/ai/robot/list">IMS console</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,19 +20,25 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string AIAgentId { get; set; }
 
+        /// <summary>
+        /// <para>The agent template configuration. Values you provide merge with the template configuration set in the console. If you omit this parameter, the agent uses its default configuration from the console.</para>
+        /// <remarks>
+        /// <para>This field is compatible with TemplateConfig. Fields in AgentConfig take precedence. If TemplateConfig contains fields not defined in AgentConfig, those fields are used. Use AgentConfig instead of TemplateConfig.</para>
+        /// </remarks>
+        /// </summary>
         [NameInMap("AgentConfig")]
         [Validation(Required=false)]
         public AIAgentConfig AgentConfig { get; set; }
 
         /// <summary>
-        /// <para>同步聊天记录配置。</para>
+        /// <para>The chat history synchronization configuration.</para>
         /// </summary>
         [NameInMap("ChatSyncConfig")]
         [Validation(Required=false)]
         public StartAIAgentInstanceRequestChatSyncConfig ChatSyncConfig { get; set; }
         public class StartAIAgentInstanceRequestChatSyncConfig : TeaModel {
             /// <summary>
-            /// <para>IM的智能体Id。</para>
+            /// <para>The IM agent ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>**<b><b>005e4f309379701645f4</b></b></para>
@@ -42,7 +48,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string IMAIAgentId { get; set; }
 
             /// <summary>
-            /// <para>接收用户Id。</para>
+            /// <para>The receiver user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4167626d312034b2b1c3b7f2f3e41884</para>
@@ -54,6 +60,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
+        /// <para>The configuration required for the agent at runtime.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RuntimeConfig")]
@@ -61,6 +68,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public AIAgentRuntimeConfig RuntimeConfig { get; set; }
 
         /// <summary>
+        /// <para>A unique identifier for the chat session. This parameter is optional.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>f213fbc005e4f309379701645f4****</para>
         /// </summary>
@@ -69,12 +78,21 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string SessionId { get; set; }
 
         /// <term><b>Obsolete</b></term>
+        /// 
+        /// <summary>
+        /// <para>The agent template configuration. Values you provide merge with the template configuration set in the console. If you omit this parameter, the agent uses its default configuration from the console.</para>
+        /// <remarks>
+        /// <para>The agent template configuration. This field is deprecated. See the AgentConfig field.</para>
+        /// </remarks>
+        /// </summary>
         [NameInMap("TemplateConfig")]
         [Validation(Required=false)]
         [Obsolete]
         public AIAgentTemplateConfig TemplateConfig { get; set; }
 
         /// <summary>
+        /// <para>User-defined data.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;Email&quot;:&quot;<a href="mailto:johndoe@example.com">johndoe@example.com</a>&quot;,&quot;Preferences&quot;:{&quot;Language&quot;:&quot;en&quot;}}</para>
         /// </summary>

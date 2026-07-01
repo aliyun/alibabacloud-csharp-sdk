@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetDefaultStorageLocationResponseBody : TeaModel {
         /// <summary>
+        /// <para>OSS bucket name</para>
+        /// 
         /// <b>Example:</b>
         /// <para>oss-test-bucket</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Bucket { get; set; }
 
         /// <summary>
+        /// <para>Path</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ice/dir</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Path { get; set; }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b><b><b>11-DB8D-4A9A-875B-275798</b></b></b></para>
         /// </summary>
@@ -34,6 +40,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Bucket status:</para>
+        /// <list type="bullet">
+        /// <item><description><para>Normal: The bucket is in normal status.</para>
+        /// </description></item>
+        /// <item><description><para>notExist: The bucket does not exist.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>normal</para>
         /// </summary>
@@ -42,6 +56,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Status { get; set; }
 
         /// <summary>
+        /// <para>Storage class</para>
+        /// 
         /// <b>Example:</b>
         /// <para>user_oss_bucket</para>
         /// </summary>

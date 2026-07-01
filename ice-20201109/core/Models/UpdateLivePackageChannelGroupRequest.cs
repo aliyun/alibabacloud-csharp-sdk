@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
     public class UpdateLivePackageChannelGroupRequest : TeaModel {
         /// <summary>
         /// <para>The channel group description. It can be up to 1,000 characters in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>This is a channel group.</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]

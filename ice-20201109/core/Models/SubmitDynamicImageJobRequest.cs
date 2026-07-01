@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitDynamicImageJobRequest : TeaModel {
         /// <summary>
-        /// <para>The input of the job.</para>
+        /// <para>The job input.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Input")]
@@ -18,14 +18,23 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public SubmitDynamicImageJobRequestInput Input { get; set; }
         public class SubmitDynamicImageJobRequestInput : TeaModel {
             /// <summary>
-            /// <para>The input file. If Type is set to OSS, set this parameter to the URL of an OSS object. If Type is set to Media, set this parameter to the ID of a media asset. The URL of an OSS object can be in one of the following formats:</para>
+            /// <para>The input media resource.</para>
+            /// <list type="bullet">
+            /// <item><description><para>If <c>Type</c> is set to <c>OSS</c>, specify the OSS URL of the input file.</para>
+            /// </description></item>
+            /// <item><description><para>If <c>Type</c> is set to <c>Media</c>, specify the media asset ID.</para>
+            /// </description></item>
+            /// </list>
+            /// <para>An OSS URL must be in one of the following formats:</para>
             /// <ol>
-            /// <item><description>oss://bucket/object</description></item>
-            /// <item><description>http(s)://bucket.oss-[RegionId].aliyuncs.com/object</description></item>
+            /// <item><description><para><c>oss://bucket/object</c></para>
+            /// </description></item>
+            /// <item><description><para><c>http(s)://bucket.oss-[RegionId].aliyuncs.com/object</c></para>
+            /// </description></item>
             /// </ol>
-            /// <para>In the URL, bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object URL in OSS.</para>
+            /// <para>In these formats, <c>bucket</c> is the name of an OSS bucket in the same region as the current project, and <c>object</c> is the file path.</para>
             /// <remarks>
-            /// <para> Before you use the OSS bucket in the URL, you must add the bucket on the <a href="https://help.aliyun.com/document_detail/609918.html">Storage Management</a> page of the Intelligent Media Services (IMS) console.</para>
+            /// <para>The specified OSS bucket must be registered in IMS <a href="https://help.aliyun.com/document_detail/609918.html">storage management</a>.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -37,11 +46,13 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Media { get; set; }
 
             /// <summary>
-            /// <para>The type of the input file. Valid values:</para>
-            /// <ol>
-            /// <item><description>OSS: an Object Storage Service (OSS) object.</description></item>
-            /// <item><description>Media: a media asset.</description></item>
-            /// </ol>
+            /// <para>The type of the job input. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><c>OSS</c>: An Object Storage Service (OSS) file URL.</para>
+            /// </description></item>
+            /// <item><description><para><c>Media</c>: A media asset ID.</para>
+            /// </description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -54,7 +65,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
-        /// <para>The name of the job.</para>
+        /// <para>The job name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SampleJob</para>
@@ -64,7 +75,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The output of the job.</para>
+        /// <para>The job output.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Output")]
@@ -72,14 +83,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public SubmitDynamicImageJobRequestOutput Output { get; set; }
         public class SubmitDynamicImageJobRequestOutput : TeaModel {
             /// <summary>
-            /// <para>The output file. The file can be an OSS object or a media asset. The URL of an OSS object can be in one of the following formats:</para>
+            /// <para>The destination OSS URL for the output file. This parameter is required when <c>Type</c> is set to <c>OSS</c>. The URL must be in one of the following formats:</para>
             /// <list type="bullet">
-            /// <item><description>oss://bucket/object</description></item>
-            /// <item><description>http(s)://bucket.oss-[regionId].aliyuncs.com/object</description></item>
+            /// <item><description><para><c>oss://bucket/object</c></para>
+            /// </description></item>
+            /// <item><description><para><c>http(s)://bucket.oss-[regionId].aliyuncs.com/object</c></para>
+            /// </description></item>
             /// </list>
-            /// <para>In the URL, bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object URL in OSS.</para>
+            /// <para>In these formats, <c>bucket</c> is the name of an OSS bucket in the same region as the current project, and <c>object</c> is the file path.</para>
             /// <remarks>
-            /// <para> Before you use the OSS bucket in the URL, you must add the bucket on the <a href="https://help.aliyun.com/document_detail/609918.html">Storage Management</a> page of the IMS console.</para>
+            /// <para>The specified OSS bucket must be registered in IMS <a href="https://help.aliyun.com/document_detail/609918.html">storage management</a>.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -91,11 +104,13 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Media { get; set; }
 
             /// <summary>
-            /// <para>The type of the output file. Valid values:</para>
-            /// <ol>
-            /// <item><description>OSS: an OSS object.</description></item>
-            /// <item><description>Media: a media asset.</description></item>
-            /// </ol>
+            /// <para>The type of the job output. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><c>OSS</c>: The output is an OSS file.</para>
+            /// </description></item>
+            /// <item><description><para><c>Media</c>: The output is a new media asset.</para>
+            /// </description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -108,14 +123,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
-        /// <para>The scheduling settings.</para>
+        /// <para>The scheduling configuration.</para>
         /// </summary>
         [NameInMap("ScheduleConfig")]
         [Validation(Required=false)]
         public SubmitDynamicImageJobRequestScheduleConfig ScheduleConfig { get; set; }
         public class SubmitDynamicImageJobRequestScheduleConfig : TeaModel {
             /// <summary>
-            /// <para>The ID of the MPS queue to which the job was submitted.</para>
+            /// <para>The pipeline ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para><b><b>96e8864746a0b6f3</b></b></para>
@@ -125,7 +140,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string PipelineId { get; set; }
 
             /// <summary>
-            /// <para>The priority. Valid values: 1 to 10. Default value: 6. A greater value specifies a higher priority.</para>
+            /// <para>The priority of the job. Valid range: [1, 10]. A higher value indicates a higher priority. Default value: 6.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6</para>
@@ -145,17 +160,19 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public SubmitDynamicImageJobRequestTemplateConfig TemplateConfig { get; set; }
         public class SubmitDynamicImageJobRequestTemplateConfig : TeaModel {
             /// <summary>
-            /// <para>The parameters that are used to overwrite the corresponding parameters.</para>
+            /// <para>The overwrite parameters.</para>
             /// </summary>
             [NameInMap("OverwriteParams")]
             [Validation(Required=false)]
             public SubmitDynamicImageJobRequestTemplateConfigOverwriteParams OverwriteParams { get; set; }
             public class SubmitDynamicImageJobRequestTemplateConfigOverwriteParams : TeaModel {
                 /// <summary>
-                /// <para>The format of the animated image. Valid values:</para>
+                /// <para>The animated image format. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>gif</b></description></item>
-                /// <item><description><b>webp</b></description></item>
+                /// <item><description><para><c>gif</c></para>
+                /// </description></item>
+                /// <item><description><para><c>webp</c></para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -166,7 +183,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string Format { get; set; }
 
                 /// <summary>
-                /// <para>The frame rate. Valid values: [1,60].</para>
+                /// <para>The frame rate. Valid range: [1, 60].</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>15</para>
@@ -176,7 +193,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public int? Fps { get; set; }
 
                 /// <summary>
-                /// <para>The height of the animated image. Valid values: [128,4096].</para>
+                /// <para>The height of the output animated image. Valid range: [128, 4096].</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>720</para>
@@ -186,14 +203,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public int? Height { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to enable the auto-rotate screen feature. Valid values:</para>
+                /// <para>Specifies whether to enable adaptive orientation based on the long and short edges of the video. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b></description></item>
-                /// <item><description><b>false</b></description></item>
+                /// <item><description><para><b>true</b>: Enables adaptive orientation.</para>
+                /// </description></item>
+                /// <item><description><para><b>false</b>: Disables adaptive orientation.</para>
+                /// </description></item>
                 /// </list>
                 /// <para>Default value: <b>true</b>.</para>
                 /// <remarks>
-                /// <para> If this feature is enabled, the width of the output video corresponds to the long side of the input video, which is the height of the input video in portrait mode. The height of the output video corresponds to the short side of the input video, which is the width of the input video in portrait mode.</para>
+                /// <para>When enabled, this mode sets the output width to the source video\&quot;s long edge and the output height to its short edge. For a portrait video, its height is treated as the long edge and its width as the short edge.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -206,8 +225,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <summary>
                 /// <para>The scan mode. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>interlaced</b></description></item>
-                /// <item><description><b>progressive</b> This is the default value.</description></item>
+                /// <item><description><para><b>interlaced</b>: Interlaced scanning.</para>
+                /// </description></item>
+                /// <item><description><para><b>progressive</b>: Progressive scanning. This is the default value.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -218,17 +239,19 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string ScanMode { get; set; }
 
                 /// <summary>
-                /// <para>The timeline parameters.</para>
+                /// <para>Specifies the time range of the video to process for the animated image.</para>
                 /// </summary>
                 [NameInMap("TimeSpan")]
                 [Validation(Required=false)]
                 public SubmitDynamicImageJobRequestTemplateConfigOverwriteParamsTimeSpan TimeSpan { get; set; }
                 public class SubmitDynamicImageJobRequestTemplateConfigOverwriteParamsTimeSpan : TeaModel {
                     /// <summary>
-                    /// <para>The length of the clip.</para>
+                    /// <para>The duration of the video segment to be processed.</para>
                     /// <list type="bullet">
-                    /// <item><description>Format: <c>hh:mm:ss[.SSS]</c> or <c>sssss[.SSS]</c>.</description></item>
-                    /// <item><description>Valid values: <c>[00:00:00.000,23:59:59.999]</c> or <c>[0.000,86399.999]</c>.</description></item>
+                    /// <item><description><para>Format: <c>hh:mm:ss[.SSS]</c> or <c>sssss[.SSS]</c>.</para>
+                    /// </description></item>
+                    /// <item><description><para>Valid range: <c>[00:00:00.000,23:59:59.999]</c> or <c>[0.000,86399.999]</c>.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -239,10 +262,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Duration { get; set; }
 
                     /// <summary>
-                    /// <para>The length of the ending part of the original clip to be cropped out. If you specify this parameter, the Duration parameter becomes invalid.</para>
+                    /// <para>The end time of the video segment to be processed. If this parameter is set, the <c>Duration</c> parameter is ignored.</para>
                     /// <list type="bullet">
-                    /// <item><description>Format: <c>hh:mm:ss[.SSS]</c> or <c>sssss[.SSS]</c>.</description></item>
-                    /// <item><description>Valid values: <c>[00:00:00.000,23:59:59.999]</c> or <c>[0.000,86399.999]</c>.</description></item>
+                    /// <item><description><para>Format: <c>hh:mm:ss[.SSS]</c> or <c>sssss[.SSS]</c>.</para>
+                    /// </description></item>
+                    /// <item><description><para>Valid range: <c>[00:00:00.000,23:59:59.999]</c> or <c>[0.000,86399.999]</c>.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -253,10 +278,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string End { get; set; }
 
                     /// <summary>
-                    /// <para>The start point of the clip.</para>
+                    /// <para>The start time of the video segment to be processed.</para>
                     /// <list type="bullet">
-                    /// <item><description>Format: <c>hh:mm:ss[.SSS]</c> or <c>sssss[.SSS]</c>.</description></item>
-                    /// <item><description>Valid values: <c>[00:00:00.000,23:59:59.999]</c> or <c>[0.000,86399.999]</c>.</description></item>
+                    /// <item><description><para>Format: <c>hh:mm:ss[.SSS]</c> or <c>sssss[.SSS]</c>.</para>
+                    /// </description></item>
+                    /// <item><description><para>Valid range: <c>[00:00:00.000,23:59:59.999]</c> or <c>[0.000,86399.999]</c>.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -269,7 +296,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 }
 
                 /// <summary>
-                /// <para>The width of the animated image. Valid values: [128,4096].</para>
+                /// <para>The width of the output animated image. Valid range: [128, 4096].</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1024</para>

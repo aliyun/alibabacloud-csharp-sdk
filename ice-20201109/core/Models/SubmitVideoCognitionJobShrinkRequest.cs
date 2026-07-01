@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitVideoCognitionJobShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The media input object.</para>
+        /// <para>The input media object.</para>
         /// </summary>
         [NameInMap("Input")]
         [Validation(Required=false)]
         public string InputShrink { get; set; }
 
         /// <summary>
-        /// <para>Additional request parameters, provided as a JSON string. This is used to pass specific settings for various AI analysis modules, such as Natural Language Processing (NLP), shot segmentation, tagging, and action recognition.</para>
+        /// <para>A JSON string containing additional parameters for operators such as natural language processing, shot detection, custom tagging, and action recognition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -38,12 +38,15 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string Params { get; set; }
 
+        /// <summary>
+        /// <para>The template configuration.</para>
+        /// </summary>
         [NameInMap("TemplateConfig")]
         [Validation(Required=false)]
         public string TemplateConfig { get; set; }
 
         /// <summary>
-        /// <para>The ID of the template that specifies the analysis algorithms to be used. For details, see <a href="https://help.aliyun.com/zh/ims/developer-reference/api-ice-2020-11-09-createcustomtemplate?spm=a2c4g.11186623.help-menu-193643.d_5_0_3_3_0_0.17b66afamjKySv">CreateCustomTemplate</a> and <a href="https://help.aliyun.com/zh/ims/user-guide/smart-tagging-template?spm=a2c4g.11186623.0.i15">smart tagging template</a>.</para>
+        /// <para>The ID of the template that specifies the analysis algorithms to use. For more information about managing templates, see <a href="https://help.aliyun.com/zh/ims/developer-reference/api-ice-2020-11-09-createcustomtemplate?spm=a2c4g.11186623.help-menu-193643.d_5_0_3_3_0_0.17b66afamjKySv">Create Custom Template</a> and <a href="https://help.aliyun.com/zh/ims/user-guide/smart-tagging-template?spm=a2c4g.11186623.0.i15">AI-powered tagging template</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>39f8e0bc00***************</para>
@@ -53,7 +56,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string TemplateId { get; set; }
 
         /// <summary>
-        /// <para>The video title. It supports letters, digits, and hyphens (-), and cannot start with a special character. Max length: 256 bytes.</para>
+        /// <para>The title of the video. The title can contain Chinese characters, English letters, digits, and hyphens (-). The title cannot start with a special character and must not exceed 256 bytes in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example-title-****</para>
@@ -63,7 +66,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Title { get; set; }
 
         /// <summary>
-        /// <para>The user-defined data that is passed through and returned as-is in the response. Max length: 1,024 bytes.</para>
+        /// <para>The user-defined data. The service returns this data unmodified in the callback notification. This parameter cannot exceed 1,024 bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;test&quot;:1}</para>

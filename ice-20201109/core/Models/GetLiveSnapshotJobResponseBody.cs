@@ -41,6 +41,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         /// <summary>
         /// <para>The name of the job.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Screenshot task 1</para>
         /// </summary>
         [NameInMap("JobName")]
         [Validation(Required=false)]
@@ -129,9 +132,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <para>The state of the job.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>init: The job is not started.</description></item>
-        /// <item><description>paused: The job is paused.</description></item>
-        /// <item><description>started: The job is in progress.</description></item>
+        /// <item><description><para>init: The job is not started.</para>
+        /// </description></item>
+        /// <item><description><para>paused: The job is paused.</para>
+        /// </description></item>
+        /// <item><description><para>started: The job is in progress.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -182,6 +188,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         /// <summary>
         /// <para>The name of the template.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Template 1</para>
         /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]

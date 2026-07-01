@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetMediaConvertJobRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the transcoding task.</para>
+        /// <para>The ID of the media transcoding job.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>d80e4e4044975745c14b</b></b></para>

@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <para>The description of the hotword library. It can be up to 200 characters in length.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>存放名人的词库</para>
+        /// <para>Lexicon containing celebrity names</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -32,6 +32,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         /// <summary>
         /// <para>The hotword list. You can add up to 300 hotword entries to a single library.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Lexicon containing celebrity names</para>
         /// </summary>
         [NameInMap("Hotwords")]
         [Validation(Required=false)]

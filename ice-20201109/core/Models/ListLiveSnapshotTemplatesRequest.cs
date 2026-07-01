@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListLiveSnapshotTemplatesRequest : TeaModel {
         /// <summary>
-        /// <para>The page number. Valid values: [1,n). Default value: 1.</para>
+        /// <para>The page number. The value must be greater than or equal to 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,9 +30,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The search keyword. You can use the template ID or name as the keyword to search for templates. If you search for templates by name, fuzzy match is supported.</para>
+        /// <para>The search keyword. You can perform a fuzzy search by template ID or template name.</para>
         /// <list type="bullet">
-        /// <item><description>It cannot exceed 128 characters in length.</description></item>
+        /// <item><description>Maximum length: 128 characters.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -43,12 +43,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string SearchKeyWord { get; set; }
 
         /// <summary>
-        /// <para>The sorting order. By default, the query results are sorted by creation time in descending order.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>asc: sorts the query results by creation time in ascending order.</description></item>
-        /// <item><description>desc: sorts the query results by creation time in descending order.</description></item>
-        /// </list>
+        /// <para>The sorting method. By default, results are sorted by creation time in descending order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>desc</para>
@@ -60,8 +55,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The template IDs.</para>
         /// <list type="bullet">
-        /// <item><description>If you specify the SearchKeyWord parameter, this condition does not take effect.</description></item>
-        /// <item><description>The maximum length of the array is 200.</description></item>
+        /// <item><description><para>This parameter does not take effect if <c>SearchKeyWord</c> is specified.</para>
+        /// </description></item>
+        /// <item><description><para>You can specify a maximum of 200 template IDs.</para>
+        /// </description></item>
         /// </list>
         /// </summary>
         [NameInMap("TemplateIds")]
@@ -69,12 +66,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public List<string> TemplateIds { get; set; }
 
         /// <summary>
-        /// <para>The type of the template. By default, all types are queried.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>system</description></item>
-        /// <item><description>custom</description></item>
-        /// </list>
+        /// <para>The type of the template. By default, templates of all types are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>custom</para>

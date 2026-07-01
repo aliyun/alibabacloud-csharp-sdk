@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public long? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of templates per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public List<ListLiveRecordTemplatesResponseBodyRecordTemplateList> RecordTemplateList { get; set; }
         public class ListLiveRecordTemplatesResponseBodyRecordTemplateList : TeaModel {
             /// <summary>
-            /// <para>The time when the job was created.</para>
+            /// <para>The time the template was created.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
             /// 
             /// <b>Example:</b>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the template was last modified.</para>
+            /// <para>The time the template was last modified.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
             /// 
             /// <b>Example:</b>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public List<ListLiveRecordTemplatesResponseBodyRecordTemplateListRecordFormatList> RecordFormatList { get; set; }
             public class ListLiveRecordTemplatesResponseBodyRecordTemplateListRecordFormatList : TeaModel {
                 /// <summary>
-                /// <para>The duration of the recording cycle. Unit: seconds.</para>
+                /// <para>The duration of the recording cycle, in seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>21600</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public int? CycleDuration { get; set; }
 
                 /// <summary>
-                /// <para>The output file format.</para>
+                /// <para>The recording file format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>m3u8</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string Format { get; set; }
 
                 /// <summary>
-                /// <para>The name of the recording file that is stored in Object Storage Service (OSS).</para>
+                /// <para>The object prefix for the recording file stored in Object Storage Service (OSS).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>record/{JobId}/{Sequence}<em>{EscapedStartTime}</em>{EscapedEndTime}</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string OssObjectPrefix { get; set; }
 
                 /// <summary>
-                /// <para>The duration of a single segment. Unit: seconds.</para>
+                /// <para>The duration of each slice, in seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>30</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public int? SliceDuration { get; set; }
 
                 /// <summary>
-                /// <para>The name of the TS segment.</para>
+                /// <para>The object prefix for the Transport Stream (TS) slice.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>record/{JobId}/{UnixTimestamp}_{Sequence}</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string TemplateId { get; set; }
 
             /// <summary>
-            /// <para>The type of the template.</para>
+            /// <para>The template type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>custom</para>
@@ -160,12 +160,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The sorting order. By default, the query results are sorted by creation time in descending order.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>asc: sorts the query results in ascending order.</description></item>
-        /// <item><description>desc: sorts the query results in descending order.</description></item>
-        /// </list>
+        /// <para>The sort order. By default, templates are sorted by creation time in descending order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>desc</para>
@@ -175,7 +170,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of templates.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

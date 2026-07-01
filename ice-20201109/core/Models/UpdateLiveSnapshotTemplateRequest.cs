@@ -12,11 +12,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The naming format of the snapshot captured in overwrite mode.</para>
         /// <list type="bullet">
-        /// <item><description>The value cannot start with a forward slash (/). Only the suffix .jpg is supported.</description></item>
-        /// <item><description>The value cannot exceed 255 characters in length.</description></item>
-        /// <item><description>The {JobId} placeholder is supported. It specifies the ID of the snapshot job.</description></item>
-        /// <item><description>Placeholders such as {UnixTimestamp}, {Sequence}, and {Date} are not allowed.</description></item>
-        /// <item><description>You must specify at least one of the OverwriteFormat and SequenceFormat parameters.</description></item>
+        /// <item><description><para>The value cannot start with a forward slash (/). Only the suffix .jpg is supported.</para>
+        /// </description></item>
+        /// <item><description><para>The value cannot exceed 255 characters in length.</para>
+        /// </description></item>
+        /// <item><description><para>The {JobId} placeholder is supported. It specifies the ID of the snapshot job.</para>
+        /// </description></item>
+        /// <item><description><para>Placeholders such as {UnixTimestamp}, {Sequence}, and {Date} are not allowed.</para>
+        /// </description></item>
+        /// <item><description><para>You must specify at least one of the OverwriteFormat and SequenceFormat parameters.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -29,10 +34,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The naming format of the snapshot captured in time series mode.</para>
         /// <list type="bullet">
-        /// <item><description>The value cannot start with a forward slash (/). Only the suffix .jpg is supported.</description></item>
-        /// <item><description>The value cannot exceed 255 characters in length.</description></item>
-        /// <item><description>The {JobId}, {Date}, {UnixTimestamp}, and {Sequence} placeholders are supported. {JobId} specifies the ID of the snapshot job. {Date} specifies the date on which the snapshot is captured. {UnixTimestamp} specifies the timestamp of the snapshot. {Sequence} specifies the sequence number of the snapshot. You must specify at least one of the {UnixTimestamp} and {Sequence} placeholders.</description></item>
-        /// <item><description>You must specify at least one of the OverwriteFormat and SequenceFormat parameters.</description></item>
+        /// <item><description><para>The value cannot start with a forward slash (/). Only the suffix .jpg is supported.</para>
+        /// </description></item>
+        /// <item><description><para>The value cannot exceed 255 characters in length.</para>
+        /// </description></item>
+        /// <item><description><para>The {JobId}, {Date}, {UnixTimestamp}, and {Sequence} placeholders are supported. {JobId} specifies the ID of the snapshot job. {Date} specifies the date on which the snapshot is captured. {UnixTimestamp} specifies the timestamp of the snapshot. {Sequence} specifies the sequence number of the snapshot. You must specify at least one of the {UnixTimestamp} and {Sequence} placeholders.</para>
+        /// </description></item>
+        /// <item><description><para>You must specify at least one of the OverwriteFormat and SequenceFormat parameters.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -59,6 +68,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <item><description>It cannot exceed 128 characters in length.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Template 1</para>
         /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]

@@ -29,11 +29,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <summary>
             /// <para>The business status of the project. This parameter can be ignored for general editing projects. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Reserving</description></item>
-            /// <item><description>ReservationCanceled</description></item>
-            /// <item><description>BroadCasting</description></item>
-            /// <item><description>LoadingFailed</description></item>
-            /// <item><description>LiveFinished</description></item>
+            /// <item><description><para>Reserving</para>
+            /// </description></item>
+            /// <item><description><para>ReservationCanceled</para>
+            /// </description></item>
+            /// <item><description><para>BroadCasting</para>
+            /// </description></item>
+            /// <item><description><para>LoadingFailed</para>
+            /// </description></item>
+            /// <item><description><para>LiveFinished</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -45,6 +50,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
             /// <summary>
             /// <para>The template material parameters.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>See the template user guide.</para>
             /// </summary>
             [NameInMap("ClipsParam")]
             [Validation(Required=false)]
@@ -202,7 +210,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string TemplateType { get; set; }
 
             /// <summary>
-            /// <para>The timeline of the online editing project, in the JSON format.&lt;props=&quot;china&quot;&gt;For more information about objects in a timeline, see <a href="https://help.aliyun.com/document_detail/198823.htm?spm=a2c4g.11186623.2.9.90dc653dF67srN#topic-2024662">Timeline configurations</a>.  If you leave this parameter empty, an empty timeline is created and the duration of the online editing project is zero.</para>
+            /// <para>The timeline of the online editing project, in the JSON format.&lt;props=&quot;china&quot;&gt;For more information about objects in a timeline, see <a href="https://help.aliyun.com/document_detail/198823.htm?spm=a2c4g.11186623.2.9.90dc653dF67srN#topic-2024662">Timeline configurations</a>. If you leave this parameter empty, an empty timeline is created and the duration of the online editing project is zero.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;VideoTracks&quot;:[{&quot;VideoTrackClips&quot;:[{&quot;MediaId&quot;:&quot;<b><b>4d7cf14dc7b83b0e801c</b></b>&quot;},{&quot;MediaId&quot;:&quot;<b><b>4d7cf14dc7b83b0e801c</b></b>&quot;}]}]}</para>

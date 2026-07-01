@@ -21,6 +21,11 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         /// <summary>
         /// <para>A keyword for fuzzy matching against the TaskInput, such as a file name or Media ID. Max length: 32 characters.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><b><b><b>7aa4cc4459ada8ef35f7</b></b></b>
+        /// or
+        /// <b>TestVideo</b>*.flv</para>
         /// </summary>
         [NameInMap("KeyText")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListAIAgentDialoguesRequest : TeaModel {
         /// <summary>
-        /// <para>Specify the end of the time range to query using a UNIX timestamp accurate to milliseconds.</para>
+        /// <para>The end Unix timestamp (inclusive), in milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,11 +21,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The sorting order. Valid values: </para>
-        /// <list type="bullet">
-        /// <item><description>DESC: descending order (default)</description></item>
-        /// <item><description>ASC: ascending order</description></item>
-        /// </list>
+        /// <para>The sort order. Valid values: <c>ASC</c> (ascending) and <c>DESC</c> (descending). Default value: <c>DESC</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DESC</para>
@@ -45,7 +41,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 20. Valid values: 1 to 100.</para>
+        /// <para>The number of items per page. Maximum value: 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -54,6 +50,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The number of most recent dialogue rounds to return. This value must be a positive integer. This parameter is mutually exclusive with pagination parameters; if specified, it overrides them.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5</para>
+        /// </summary>
         [NameInMap("RoundLimit")]
         [Validation(Required=false)]
         public string RoundLimit { get; set; }
@@ -70,7 +72,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string SessionId { get; set; }
 
         /// <summary>
-        /// <para>Specify the start of the time range to query using a UNIX timestamp accurate to milliseconds.</para>
+        /// <para>The start Unix timestamp (inclusive), in milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

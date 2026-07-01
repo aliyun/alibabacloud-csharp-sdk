@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>69e1f9fe-1e97-11ed-ba64-0c42a1b73d66</para>
+        /// <para>69e1f9fe-1e97-11ed-ba64-0c42a1b7****</para>
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

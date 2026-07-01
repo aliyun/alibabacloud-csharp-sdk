@@ -88,11 +88,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <summary>
             /// <para>The tag that identifies the language of the RTMP input. It can be referenced by the output. The maximum length is 32 characters. Supported characters:</para>
             /// <list type="bullet">
-            /// <item><description>Unicode letters</description></item>
-            /// <item><description>Digits (0-9)</description></item>
-            /// <item><description>Underscore (_)</description></item>
-            /// <item><description>Hyphen (-)</description></item>
-            /// <item><description>Space (a space cannot be at the beginning or end)</description></item>
+            /// <item><description><para>Unicode letters</para>
+            /// </description></item>
+            /// <item><description><para>Digits (0-9)</para>
+            /// </description></item>
+            /// <item><description><para>Underscore (_)</para>
+            /// </description></item>
+            /// <item><description><para>Hyphen (-)</para>
+            /// </description></item>
+            /// <item><description><para>Space (a space cannot be at the beginning or end)</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -217,11 +222,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <summary>
             /// <para>The tag that identifies the language of the RTMP input. It can be referenced by the output. The maximum length is 32 characters. Supported characters:</para>
             /// <list type="bullet">
-            /// <item><description>Unicode letters</description></item>
-            /// <item><description>Digits (0-9)</description></item>
-            /// <item><description>Underscore (_)</description></item>
-            /// <item><description>Hyphen (-)</description></item>
-            /// <item><description>Space (a space cannot be at the beginning or end)</description></item>
+            /// <item><description><para>Unicode letters</para>
+            /// </description></item>
+            /// <item><description><para>Digits (0-9)</para>
+            /// </description></item>
+            /// <item><description><para>Underscore (_)</para>
+            /// </description></item>
+            /// <item><description><para>Hyphen (-)</para>
+            /// </description></item>
+            /// <item><description><para>Space (a space cannot be at the beginning or end)</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -341,9 +351,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <summary>
                 /// <para>The media type of the output. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>0: Audio and Video.</description></item>
-                /// <item><description>1: Audio. If you set the value to 1, you cannot reference VideoSettings.</description></item>
-                /// <item><description>2: Video. If you set the value to 2, you cannot reference AudioSettings.</description></item>
+                /// <item><description><para>0: Audio and Video.</para>
+                /// </description></item>
+                /// <item><description><para>1: Audio. If you set the value to 1, you cannot reference VideoSettings.</para>
+                /// </description></item>
+                /// <item><description><para>2: Video. If you set the value to 2, you cannot reference AudioSettings.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -400,8 +413,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <para>The height of the output. If you set it to 0 or leave it empty, the height automatically adapts to the specified width to maintain the original aspect ratio.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>For regular transcoding, the larger dimension cannot exceed 3840 px, and the smaller one cannot exceed 2160 px.</description></item>
-            /// <item><description>For Narrowband HD™ transcoding, the larger dimension cannot exceed 1920 px, and the smaller one cannot exceed 1080 px.</description></item>
+            /// <item><description><para>For regular transcoding, the larger dimension cannot exceed 3840 px, and the smaller one cannot exceed 2160 px.</para>
+            /// </description></item>
+            /// <item><description><para>For Narrowband HD™ transcoding, the larger dimension cannot exceed 1920 px, and the smaller one cannot exceed 1080 px.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -600,8 +615,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <summary>
             /// <para>The video transcoding method. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>NORMAL: regular transcoding</description></item>
-            /// <item><description>NBHD: Narrowband HD™ transcoding</description></item>
+            /// <item><description><para>NORMAL: regular transcoding</para>
+            /// </description></item>
+            /// <item><description><para>NBHD: Narrowband HD™ transcoding</para>
+            /// </description></item>
             /// </list>
             /// <para>If not specified, regular transcoding is used by default.</para>
             /// 
@@ -616,8 +633,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <para>The width of the output. If you set it to 0 or leave it empty, the width automatically adapts to the specified height to maintain the original aspect ratio.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>For regular transcoding, the larger dimension cannot exceed 3840 px, and the smaller one cannot exceed 2160 px.</description></item>
-            /// <item><description>For Narrowband HD™ transcoding, the larger dimension cannot exceed 1920 px, and the smaller one cannot exceed 1080 px.</description></item>
+            /// <item><description><para>For regular transcoding, the larger dimension cannot exceed 3840 px, and the smaller one cannot exceed 2160 px.</para>
+            /// </description></item>
+            /// <item><description><para>For Narrowband HD™ transcoding, the larger dimension cannot exceed 1920 px, and the smaller one cannot exceed 1080 px.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

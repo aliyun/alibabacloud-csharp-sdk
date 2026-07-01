@@ -11,8 +11,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
     public class ListAvatarsRequest : TeaModel {
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>The type of the digital human.</description></item>
-        /// <item><description>2DAvatar</description></item>
+        /// <item><description><para>The type of the digital human.</para>
+        /// </description></item>
+        /// <item><description><para>2DAvatar</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,8 +26,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>The page number.</description></item>
-        /// <item><description>Default value: 1.</description></item>
+        /// <item><description><para>The page number.</para>
+        /// </description></item>
+        /// <item><description><para>Default value: 1.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -37,8 +41,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>The number of entries per page.</description></item>
-        /// <item><description>Default value: 10.</description></item>
+        /// <item><description><para>The number of entries per page.</para>
+        /// </description></item>
+        /// <item><description><para>Default value: 10.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

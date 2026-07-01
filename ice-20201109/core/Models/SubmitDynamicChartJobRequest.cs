@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitDynamicChartJobRequest : TeaModel {
         /// <summary>
-        /// <para>The axis configurations. If XAxisFontInterval is set to 0 or left empty, the system automatically determines an optimal interval.</para>
+        /// <para>The axis style settings. If <c>XAxisFontInterval</c> is not specified or is set to 0, the system automatically calculates the interval.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;FontFile&quot;:&quot;Microsoft YaHei&quot;,&quot;XAxisFontSize&quot;:&quot;30&quot;,&quot;YAxisFontSize&quot;:&quot;30&quot;,&quot;XAxisFontInterval&quot;:&quot;30&quot;,&quot;AxisColor&quot;:&quot;30&quot;}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string AxisParams { get; set; }
 
         /// <summary>
-        /// <para>The chart background.</para>
+        /// <para>The settings for the chart background. You can specify a Background Color or a Background Image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;Color&quot;:&quot;#000000&quot;,&quot;ImageUrl&quot;:&quot;<a href="http://your-bucket.oss-cn-shanghai.aliyuncs.com/obj.jpg%22%7D">http://your-bucket.oss-cn-shanghai.aliyuncs.com/obj.jpg&quot;}</a></para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Background { get; set; }
 
         /// <summary>
-        /// <para>The chart configurations.</para>
+        /// <para>The overall configuration for the chart\&quot;s appearance and timing.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;Style&quot;:&quot;Normal&quot;,&quot;TitleStartTime&quot;:&quot;3000&quot;,&quot;ChartStartTime&quot;:&quot;3000&quot;,&quot;VideoDuration&quot;:&quot;15000&quot;}</para>
@@ -40,20 +40,17 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string ChartConfig { get; set; }
 
         /// <summary>
-        /// <para>The chart title.</para>
+        /// <para>The chart title settings.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;Text&quot;:&quot; primary title&quot;,&quot;FontSize&quot;:&quot;30&quot;,&quot;FontColor&quot;:&quot;#000000&quot;,&quot;FontFile&quot;:&quot;Microsoft YaHei&quot;}</para>
         /// </summary>
         [NameInMap("ChartTitle")]
         [Validation(Required=false)]
         public string ChartTitle { get; set; }
 
         /// <summary>
-        /// <para>The chart type.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Line: line chart</description></item>
-        /// <item><description>Histogram: bar chart</description></item>
-        /// <item><description>Pie: pie chart</description></item>
-        /// </list>
+        /// <para>The chart type to generate.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,7 +61,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string ChartType { get; set; }
 
         /// <summary>
-        /// <para>The data source.</para>
+        /// <para>The data source label settings.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;Text&quot;:&quot;Data source&quot;,&quot;FontSize&quot;:&quot;30&quot;,&quot;FontColor&quot;:&quot;#000000&quot;,&quot;FontFile&quot;:&quot;Microsoft YaHei&quot;}</para>
         /// </summary>
         [NameInMap("DataSource")]
         [Validation(Required=false)]
@@ -72,13 +72,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         /// <summary>
         /// <para>The job description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Task description</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The input data for the chart.</para>
+        /// <para>The input data configuration, which specifies the Excel file location.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -89,7 +92,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Input { get; set; }
 
         /// <summary>
-        /// <para>The output configurations.</para>
+        /// <para>The output video configuration.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -100,7 +103,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string OutputConfig { get; set; }
 
         /// <summary>
-        /// <para>The subtitle.</para>
+        /// <para>The subtitle settings.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;Text&quot;:&quot;Subtitle&quot;,&quot;FontSize&quot;:&quot;30&quot;,&quot;FontColor&quot;:&quot;#000000&quot;,&quot;FontFile&quot;:&quot;Microsoft YaHei&quot;}</para>
         /// </summary>
         [NameInMap("Subtitle")]
         [Validation(Required=false)]
@@ -108,20 +114,26 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         /// <summary>
         /// <para>The job title.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Task title</para>
         /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]
         public string Title { get; set; }
 
         /// <summary>
-        /// <para>Unit</para>
+        /// <para>The data unit label settings.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;Text&quot;:&quot;Unit&quot;,&quot;FontSize&quot;:&quot;30&quot;,&quot;FontColor&quot;:&quot;#000000&quot;,&quot;FontFile&quot;:&quot;Microsoft YaHei&quot;}</para>
         /// </summary>
         [NameInMap("Unit")]
         [Validation(Required=false)]
         public string Unit { get; set; }
 
         /// <summary>
-        /// <para>The custom data in JSON format.</para>
+        /// <para>The custom user data in JSON format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;user&quot;:&quot;data&quot;}</para>

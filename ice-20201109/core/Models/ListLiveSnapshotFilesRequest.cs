@@ -48,8 +48,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <para>The sorting order. Default value: asc.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>asc: sorts the query results by creation time in ascending order.</description></item>
-        /// <item><description>desc: sorts the query results by creation time in descending order.</description></item>
+        /// <item><description><para>asc: sorts the query results by creation time in ascending order.</para>
+        /// </description></item>
+        /// <item><description><para>desc: sorts the query results by creation time in descending order.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

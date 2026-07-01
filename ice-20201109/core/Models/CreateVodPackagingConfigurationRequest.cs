@@ -59,8 +59,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <summary>
                 /// <para>The encryption method. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>AES_128: Advanced Encryption Standard (AES) with 128-bit key length.</description></item>
-                /// <item><description>SAMPLE_AES: an encryption method that encrypts individual media samples.</description></item>
+                /// <item><description><para>AES_128: Advanced Encryption Standard (AES) with 128-bit key length.</para>
+                /// </description></item>
+                /// <item><description><para>SAMPLE_AES: an encryption method that encrypts individual media samples.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -83,15 +85,21 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <summary>
                 /// <para>The ID of the DRM system. The maximum number of system IDs allowed is determined by the protocol type. Limits:</para>
                 /// <list type="bullet">
-                /// <item><description>DASH: 2</description></item>
-                /// <item><description>HLS: 1</description></item>
-                /// <item><description>HLS_CMAF: 2</description></item>
+                /// <item><description><para>DASH: 2</para>
+                /// </description></item>
+                /// <item><description><para>HLS: 1</para>
+                /// </description></item>
+                /// <item><description><para>HLS_CMAF: 2</para>
+                /// </description></item>
                 /// </list>
                 /// <para>Apple FairPlay, Google Widevine, and Microsoft PlayReady are supported. Their system IDs are as follows:</para>
                 /// <list type="bullet">
-                /// <item><description>Apple FairPlay: 94ce86fb-07ff-4f43-adb8-93d2fa968ca2</description></item>
-                /// <item><description>Google Widevine: edef8ba9-79d6-4ace-a3c8-27dcd51d21e</description></item>
-                /// <item><description>Microsoft PlayReady: 9a04f079-9840-4286-ab92-e65be0885f95</description></item>
+                /// <item><description><para>Apple FairPlay: 94ce86fb-07ff-4f43-adb8-93d2fa968ca2</para>
+                /// </description></item>
+                /// <item><description><para>Google Widevine: edef8ba9-79d6-4ace-a3c8-27dcd51d21e</para>
+                /// </description></item>
+                /// <item><description><para>Microsoft PlayReady: 9a04f079-9840-4286-ab92-e65be0885f95</para>
+                /// </description></item>
                 /// </list>
                 /// </summary>
                 [NameInMap("SystemIds")]
@@ -157,9 +165,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <summary>
                 /// <para>The order of manifest files in the master playlist. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>ORIGINAL: sorts the manifest files in the same order as the source.</description></item>
-                /// <item><description>VIDEO_BITRATE_ASCENDING: sorts the manifest files in ascending order of bitrates, from lowest to highest.</description></item>
-                /// <item><description>VIDEO_BITRATE_DESCENDING: sorts the manifest files in descending order of bitrates, from highest to lowest.</description></item>
+                /// <item><description><para>ORIGINAL: sorts the manifest files in the same order as the source.</para>
+                /// </description></item>
+                /// <item><description><para>VIDEO_BITRATE_ASCENDING: sorts the manifest files in ascending order of bitrates, from lowest to highest.</para>
+                /// </description></item>
+                /// <item><description><para>VIDEO_BITRATE_DESCENDING: sorts the manifest files in descending order of bitrates, from highest to lowest.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -176,9 +187,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The package type.</para>
         /// <list type="bullet">
-        /// <item><description>HLS: packages content into TS segments for delivery over the HLS protocol.</description></item>
-        /// <item><description>HLS_CMAF: packages content into CMAF segments for delivery over the HLS protocol.</description></item>
-        /// <item><description>DASH: packages content for delivery over the DASH protocol.</description></item>
+        /// <item><description><para>HLS: packages content into TS segments for delivery over the HLS protocol.</para>
+        /// </description></item>
+        /// <item><description><para>HLS_CMAF: packages content into CMAF segments for delivery over the HLS protocol.</para>
+        /// </description></item>
+        /// <item><description><para>DASH: packages content for delivery over the DASH protocol.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

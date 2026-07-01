@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public List<ListTranscodeJobsResponseBodyJobs> Jobs { get; set; }
         public class ListTranscodeJobsResponseBodyJobs : TeaModel {
             /// <summary>
-            /// <para>The time when the job was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The time when the job was created. The time is in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-01-12T08:49:41Z</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the job was complete. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The time when the job was complete. The time is in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-01-12T08:49:41Z</para>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string FinishTime { get; set; }
 
             /// <summary>
-            /// <para>The input group of the job. An input of a single file indicates a transcoding job. An input of multiple files indicates an audio and video stream merge job.</para>
+            /// <para>The input group of the job. A single input indicates a transcoding job. Multiple inputs indicate a composition job.</para>
             /// </summary>
             [NameInMap("InputGroup")]
             [Validation(Required=false)]
             public List<ListTranscodeJobsResponseBodyJobsInputGroup> InputGroup { get; set; }
             public class ListTranscodeJobsResponseBodyJobsInputGroup : TeaModel {
                 /// <summary>
-                /// <para>The URL of the media asset. This parameter is specified only when the media asset is transcoded.</para>
+                /// <para>The URL of the media stream. This parameter is required only when you transcode a media stream.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>oss://bucket/path/to/video.mp4</para>
@@ -54,10 +54,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string InputUrl { get; set; }
 
                 /// <summary>
-                /// <para>The media object.</para>
+                /// <para>The media information. The value of this parameter varies based on the value of Type.</para>
                 /// <list type="bullet">
-                /// <item><description>If Type is set to OSS, the URL of an OSS object is returned. Both the OSS and HTTP protocols are supported.</description></item>
-                /// <item><description>If Type is set to Media, the ID of a media asset is returned.</description></item>
+                /// <item><description><para>If Type is set to <c>OSS</c>, the value of this parameter must be an OSS URL. Both the <c>oss://</c> and <c>http(s)://</c> protocols are supported.</para>
+                /// </description></item>
+                /// <item><description><para>If Type is set to <c>Media</c>, the value of this parameter must be a media ID.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -68,10 +70,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string Media { get; set; }
 
                 /// <summary>
-                /// <para>The type of the media object. Valid values:</para>
+                /// <para>The type of the media asset. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>OSS: an Object Storage Service (OSS) object.</description></item>
-                /// <item><description>Media: a media asset.</description></item>
+                /// <item><description><para><c>OSS</c>: an OSS file.</para>
+                /// </description></item>
+                /// <item><description><para><c>Media</c>: a media asset ID.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -84,7 +88,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             }
 
             /// <summary>
-            /// <para>The number of subjobs.</para>
+            /// <para>The number of sub-jobs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -111,14 +115,20 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public List<ListTranscodeJobsResponseBodyJobsOutputGroup> OutputGroup { get; set; }
             public class ListTranscodeJobsResponseBodyJobsOutputGroup : TeaModel {
                 /// <summary>
-                /// <para>The output file configuration.</para>
+                /// <para>The output media configuration.</para>
                 /// </summary>
                 [NameInMap("Output")]
                 [Validation(Required=false)]
                 public ListTranscodeJobsResponseBodyJobsOutputGroupOutput Output { get; set; }
                 public class ListTranscodeJobsResponseBodyJobsOutputGroupOutput : TeaModel {
                     /// <summary>
-                    /// <para>The media object. If Type is set to OSS, the URL of an OSS object is returned. Both the OSS and HTTP protocols are supported. If Type is set to Media, the ID of a media asset is returned.</para>
+                    /// <para>The media information. The value of this parameter varies based on the value of Type.</para>
+                    /// <list type="bullet">
+                    /// <item><description><para>If Type is set to <c>OSS</c>, the value of this parameter must be an OSS URL. Both the <c>oss://</c> and <c>http(s)://</c> protocols are supported.</para>
+                    /// </description></item>
+                    /// <item><description><para>If Type is set to <c>Media</c>, the value of this parameter must be a media ID.</para>
+                    /// </description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>oss://bucket/path/to/video.mp4</para>
@@ -128,7 +138,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Media { get; set; }
 
                     /// <summary>
-                    /// <para>The URL of the transcoded output stream. This parameter is required only when the output is a media asset.</para>
+                    /// <para>The URL of the output stream. This parameter is required only when you transcode a media stream.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>oss://bucket/path/to/{MediaId}/{JobId}.mp4</para>
@@ -138,10 +148,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string OutputUrl { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the media object. Valid values:</para>
+                    /// <para>The type of the media asset. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>OSS: an OSS object.</description></item>
-                    /// <item><description>Media: a media asset.</description></item>
+                    /// <item><description><para><c>OSS</c>: an OSS file.</para>
+                    /// </description></item>
+                    /// <item><description><para><c>Media</c>: a media asset ID.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -161,7 +173,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public ListTranscodeJobsResponseBodyJobsOutputGroupProcessConfig ProcessConfig { get; set; }
                 public class ListTranscodeJobsResponseBodyJobsOutputGroupProcessConfig : TeaModel {
                     /// <summary>
-                    /// <para>The multi-input stream merge configuration.</para>
+                    /// <para>The configurations for combining multiple inputs.</para>
                     /// </summary>
                     [NameInMap("CombineConfigs")]
                     [Validation(Required=false)]
@@ -172,14 +184,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                         /// <para>This parameter is required.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>0 或 exclude</para>
+                        /// <para>0 or exclude</para>
                         /// </summary>
                         [NameInMap("AudioIndex")]
                         [Validation(Required=false)]
                         public string AudioIndex { get; set; }
 
                         /// <summary>
-                        /// <para>The duration of the input stream. The default value is the duration of the video.</para>
+                        /// <para>The duration of the input stream. The default is the duration of the video.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>20.0</para>
@@ -189,7 +201,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                         public double? Duration { get; set; }
 
                         /// <summary>
-                        /// <para>The start time of the input stream. Default value: 0.</para>
+                        /// <para>The start time of the input stream. The default value is 0.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>0.0</para>
@@ -199,11 +211,11 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                         public double? Start { get; set; }
 
                         /// <summary>
-                        /// <para>The video stream index.</para>
+                        /// <para>The index of the video stream.</para>
                         /// <para>This parameter is required.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>0 或 exclude</para>
+                        /// <para>0 or exclude</para>
                         /// </summary>
                         [NameInMap("VideoIndex")]
                         [Validation(Required=false)]
@@ -219,7 +231,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public ListTranscodeJobsResponseBodyJobsOutputGroupProcessConfigEncryption Encryption { get; set; }
                     public class ListTranscodeJobsResponseBodyJobsOutputGroupProcessConfigEncryption : TeaModel {
                         /// <summary>
-                        /// <para>The ciphertext of HTTP Live Streaming (HLS) encryption.</para>
+                        /// <para>The key ciphertext for standard encryption.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>MTYi00NDU0LTg5O****</para>
@@ -229,7 +241,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                         public string CipherText { get; set; }
 
                         /// <summary>
-                        /// <para>The endpoint of the decryption service for HLS encryption.</para>
+                        /// <para>The URL of the decryption service for standard encryption.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para><a href="https://sample.com/path?CipherText=MTYi00NDU0LTg5O">https://sample.com/path?CipherText=MTYi00NDU0LTg5O</a>****</para>
@@ -251,21 +263,21 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     }
 
                     /// <summary>
-                    /// <para>The watermark configuration for an image.</para>
+                    /// <para>The image watermark configurations.</para>
                     /// </summary>
                     [NameInMap("ImageWatermarks")]
                     [Validation(Required=false)]
                     public List<ListTranscodeJobsResponseBodyJobsOutputGroupProcessConfigImageWatermarks> ImageWatermarks { get; set; }
                     public class ListTranscodeJobsResponseBodyJobsOutputGroupProcessConfigImageWatermarks : TeaModel {
                         /// <summary>
-                        /// <para>The parameters that are used to overwrite the corresponding parameters of the template.</para>
+                        /// <para>The override parameter. If you specify this parameter, the corresponding parameter in the template is overwritten.</para>
                         /// </summary>
                         [NameInMap("OverwriteParams")]
                         [Validation(Required=false)]
                         public ListTranscodeJobsResponseBodyJobsOutputGroupProcessConfigImageWatermarksOverwriteParams OverwriteParams { get; set; }
                         public class ListTranscodeJobsResponseBodyJobsOutputGroupProcessConfigImageWatermarksOverwriteParams : TeaModel {
                             /// <summary>
-                            /// <para>The position of the watermark on the x-axis.</para>
+                            /// <para>The horizontal offset of the watermark.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>10</para>
@@ -275,7 +287,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                             public string Dx { get; set; }
 
                             /// <summary>
-                            /// <para>The position of the watermark on the y-axis.</para>
+                            /// <para>The vertical offset of the watermark.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>10</para>
@@ -292,7 +304,13 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                             public ListTranscodeJobsResponseBodyJobsOutputGroupProcessConfigImageWatermarksOverwriteParamsFile File { get; set; }
                             public class ListTranscodeJobsResponseBodyJobsOutputGroupProcessConfigImageWatermarksOverwriteParamsFile : TeaModel {
                                 /// <summary>
-                                /// <para>The media object. If Type is set to OSS, the URL of an OSS object is returned. Both the OSS and HTTP protocols are supported. If Type is set to Media, the ID of a media asset is returned.</para>
+                                /// <para>The media information. The value of this parameter varies based on the value of Type.</para>
+                                /// <list type="bullet">
+                                /// <item><description><para>If Type is set to <c>OSS</c>, the value of this parameter must be an OSS URL. Both the <c>oss://</c> and <c>http(s)://</c> protocols are supported.</para>
+                                /// </description></item>
+                                /// <item><description><para>If Type is set to <c>Media</c>, the value of this parameter must be a media ID.</para>
+                                /// </description></item>
+                                /// </list>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>oss://bucket/path/to/video.mp4</para>
@@ -302,10 +320,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                                 public string Media { get; set; }
 
                                 /// <summary>
-                                /// <para>The type of the media object. Valid values:</para>
+                                /// <para>The type of the media asset. Valid values:</para>
                                 /// <list type="bullet">
-                                /// <item><description>OSS: an OSS object.</description></item>
-                                /// <item><description>Media: a media asset.</description></item>
+                                /// <item><description><para><c>OSS</c>: an OSS file.</para>
+                                /// </description></item>
+                                /// <item><description><para><c>Media</c>: a media asset ID.</para>
+                                /// </description></item>
                                 /// </list>
                                 /// 
                                 /// <b>Example:</b>
@@ -318,7 +338,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                             }
 
                             /// <summary>
-                            /// <para>The height of the output video.</para>
+                            /// <para>The height of the watermark.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>32</para>
@@ -328,7 +348,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                             public string Height { get; set; }
 
                             /// <summary>
-                            /// <para>The reference position of the watermark. Valid values: TopLeft, TopRight, BottomLeft, and BottomRight. Default value: TopLeft.</para>
+                            /// <para>The reference position. Valid values: <c>TopLeft</c>, <c>TopRight</c>, <c>BottomLeft</c>, and <c>BottomRight</c>. Default value: <c>TopLeft</c>.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>TopLeft</para>
@@ -345,7 +365,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                             public ListTranscodeJobsResponseBodyJobsOutputGroupProcessConfigImageWatermarksOverwriteParamsTimeline Timeline { get; set; }
                             public class ListTranscodeJobsResponseBodyJobsOutputGroupProcessConfigImageWatermarksOverwriteParamsTimeline : TeaModel {
                                 /// <summary>
-                                /// <para>The duration of the stream. Valid values: the number of seconds or &quot;ToEND&quot;.</para>
+                                /// <para>The display duration in seconds. You can also set the value to <c>ToEND</c>.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>ToEND</para>
@@ -355,7 +375,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                                 public string Duration { get; set; }
 
                                 /// <summary>
-                                /// <para>The beginning of the time range for which data was queried.</para>
+                                /// <para>The start time.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>00:00:05</para>
@@ -367,7 +387,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                             }
 
                             /// <summary>
-                            /// <para>The width of the output video.</para>
+                            /// <para>The width of the watermark.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>32</para>
@@ -382,7 +402,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                         /// <para>The template ID.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>9547c6ad97cb4f2aaa29683ebd18d410</para>
+                        /// <para>9547c6ad97cb4f2aaa29683ebd18****</para>
                         /// </summary>
                         [NameInMap("TemplateId")]
                         [Validation(Required=false)]
@@ -391,21 +411,21 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     }
 
                     /// <summary>
-                    /// <para>Indicates whether the tags of the input stream are inherited in the output stream. This parameter does not take effect when the input is not a media asset. Default value: false.</para>
+                    /// <para>Specifies whether to inherit tags from the input stream. This parameter applies only when the input is a Media Asset. Default Value: false</para>
                     /// </summary>
                     [NameInMap("IsInheritTags")]
                     [Validation(Required=false)]
                     public bool? IsInheritTags { get; set; }
 
                     /// <summary>
-                    /// <para>The subtitle configuration.</para>
+                    /// <para>The subtitle burn-in settings.</para>
                     /// </summary>
                     [NameInMap("Subtitles")]
                     [Validation(Required=false)]
                     public List<ListTranscodeJobsResponseBodyJobsOutputGroupProcessConfigSubtitles> Subtitles { get; set; }
                     public class ListTranscodeJobsResponseBodyJobsOutputGroupProcessConfigSubtitles : TeaModel {
                         /// <summary>
-                        /// <para>The parameters that are used to overwrite the corresponding parameters of the template.</para>
+                        /// <para>The overwrite parameters. If specified, these parameters overwrite the corresponding parameters in the template.</para>
                         /// </summary>
                         [NameInMap("OverwriteParams")]
                         [Validation(Required=false)]
@@ -429,10 +449,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                             public ListTranscodeJobsResponseBodyJobsOutputGroupProcessConfigSubtitlesOverwriteParamsFile File { get; set; }
                             public class ListTranscodeJobsResponseBodyJobsOutputGroupProcessConfigSubtitlesOverwriteParamsFile : TeaModel {
                                 /// <summary>
-                                /// <para>The media object.</para>
+                                /// <para>The media value:</para>
                                 /// <list type="bullet">
-                                /// <item><description>If Type is set to OSS, the URL of an OSS object is returned. Both the OSS and HTTP protocols are supported.</description></item>
-                                /// <item><description>If Type is set to Media, the ID of a media asset is returned.</description></item>
+                                /// <item><description><para>If type is OSS, the value is a URL. Both OSS and HTTP protocols are supported.</para>
+                                /// </description></item>
+                                /// <item><description><para>If type is Media, the value is the Media Asset ID.</para>
+                                /// </description></item>
                                 /// </list>
                                 /// 
                                 /// <b>Example:</b>
@@ -445,8 +467,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                                 /// <summary>
                                 /// <para>The type of the media object. Valid values:</para>
                                 /// <list type="bullet">
-                                /// <item><description>OSS: an OSS object.</description></item>
-                                /// <item><description>Media: a media asset.</description></item>
+                                /// <item><description><para>OSS: an Object Storage Service (OSS) file.</para>
+                                /// </description></item>
+                                /// <item><description><para>Media: the ID of the Media Asset.</para>
+                                /// </description></item>
                                 /// </list>
                                 /// 
                                 /// <b>Example:</b>
@@ -474,7 +498,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                         /// <para>The template ID.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>9547c6ad97cb4f2aaa29683ebd18d410</para>
+                        /// <para>9547c6ad97cb4f2aaa29683ebd18****</para>
                         /// </summary>
                         [NameInMap("TemplateId")]
                         [Validation(Required=false)]
@@ -483,21 +507,28 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     }
 
                     /// <summary>
-                    /// <para>The configurations of the text watermarks.</para>
+                    /// <para>The text watermark configurations.</para>
                     /// </summary>
                     [NameInMap("TextWatermarks")]
                     [Validation(Required=false)]
                     public List<ListTranscodeJobsResponseBodyJobsOutputGroupProcessConfigTextWatermarks> TextWatermarks { get; set; }
                     public class ListTranscodeJobsResponseBodyJobsOutputGroupProcessConfigTextWatermarks : TeaModel {
                         /// <summary>
-                        /// <para>The parameters that are used to overwrite the corresponding parameters of the template.</para>
+                        /// <para>The override parameter. If you specify this parameter, the corresponding parameter in the template is overwritten.</para>
                         /// </summary>
                         [NameInMap("OverwriteParams")]
                         [Validation(Required=false)]
                         public ListTranscodeJobsResponseBodyJobsOutputGroupProcessConfigTextWatermarksOverwriteParams OverwriteParams { get; set; }
                         public class ListTranscodeJobsResponseBodyJobsOutputGroupProcessConfigTextWatermarksOverwriteParams : TeaModel {
                             /// <summary>
-                            /// <para>Indicates whether the text size was adjusted based on the output video dimensions. true / false, default: false</para>
+                            /// <para>Specifies whether to adjust the font size based on the output video size.</para>
+                            /// <list type="bullet">
+                            /// <item><description><para><c>true</c>: The font size is automatically adjusted based on the output video size.</para>
+                            /// </description></item>
+                            /// <item><description><para><c>false</c>: The font size remains fixed and is not affected by the output video size.</para>
+                            /// </description></item>
+                            /// </list>
+                            /// <para>Default value: false</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>false</para>
@@ -507,7 +538,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                             public string Adaptive { get; set; }
 
                             /// <summary>
-                            /// <para>The border color.</para>
+                            /// <para>The color of the border.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>#006400</para>
@@ -517,7 +548,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                             public string BorderColor { get; set; }
 
                             /// <summary>
-                            /// <para>The border width.</para>
+                            /// <para>The width of the border.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>0</para>
@@ -527,17 +558,17 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                             public int? BorderWidth { get; set; }
 
                             /// <summary>
-                            /// <para>The watermark text. Base64 encoding is not required. The string must be encoded in UTF-8.</para>
+                            /// <para>The watermark text, which must be UTF-8 encoded. The text does not need to be Base64 encoded.</para>
                             /// 
                             /// <b>Example:</b>
-                            /// <para>测试水印</para>
+                            /// <para>Test watermark</para>
                             /// </summary>
                             [NameInMap("Content")]
                             [Validation(Required=false)]
                             public string Content { get; set; }
 
                             /// <summary>
-                            /// <para>The transparency of the watermark.</para>
+                            /// <para>The transparency.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>1.0</para>
@@ -547,7 +578,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                             public string FontAlpha { get; set; }
 
                             /// <summary>
-                            /// <para>The color of the text.</para>
+                            /// <para>The color.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>#006400</para>
@@ -557,7 +588,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                             public string FontColor { get; set; }
 
                             /// <summary>
-                            /// <para>The font of the text.</para>
+                            /// <para>The font.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>SimSun</para>
@@ -567,7 +598,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                             public string FontName { get; set; }
 
                             /// <summary>
-                            /// <para>The size of the text.</para>
+                            /// <para>The font size.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>16</para>
@@ -577,7 +608,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                             public int? FontSize { get; set; }
 
                             /// <summary>
-                            /// <para>The distance of the watermark from the left edge.</para>
+                            /// <para>The distance from the left edge of the video.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>10</para>
@@ -602,7 +633,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                         /// <para>The template ID.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>9547c6ad97cb4f2aaa29683ebd18d410</para>
+                        /// <para>9547c6ad97cb4f2aaa29683ebd18****</para>
                         /// </summary>
                         [NameInMap("TemplateId")]
                         [Validation(Required=false)]
@@ -618,7 +649,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public ListTranscodeJobsResponseBodyJobsOutputGroupProcessConfigTranscode Transcode { get; set; }
                     public class ListTranscodeJobsResponseBodyJobsOutputGroupProcessConfigTranscode : TeaModel {
                         /// <summary>
-                        /// <para>The parameters that are used to overwrite the corresponding parameters of the template.</para>
+                        /// <para>The override parameter. If you specify this parameter, the corresponding parameter in the template is overwritten.</para>
                         /// </summary>
                         [NameInMap("OverwriteParams")]
                         [Validation(Required=false)]
@@ -634,9 +665,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                                 /// <summary>
                                 /// <para>The audio bitrate of the output file.</para>
                                 /// <list type="bullet">
-                                /// <item><description>Valid values: [8,1000].</description></item>
-                                /// <item><description>Unit: Kbit/s.</description></item>
-                                /// <item><description>Default value: 128.</description></item>
+                                /// <item><description><para>Valid values: 8 to 1000.</para>
+                                /// </description></item>
+                                /// <item><description><para>Unit: Kbit/s.</para>
+                                /// </description></item>
+                                /// <item><description><para>Default value: 128.</para>
+                                /// </description></item>
                                 /// </list>
                                 /// 
                                 /// <b>Example:</b>
@@ -647,7 +681,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                                 public string Bitrate { get; set; }
 
                                 /// <summary>
-                                /// <para>The number of sound channels. Default value: 2.</para>
+                                /// <para>The number of audio channels. Default value: 2.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>2</para>
@@ -657,7 +691,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                                 public string Channels { get; set; }
 
                                 /// <summary>
-                                /// <para>The audio codec. Valid values: AAC, MP3, VORBIS, and FLAC. Default value: AAC.</para>
+                                /// <para>The audio codec. Valid values: <c>AAC</c>, <c>MP3</c>, <c>VORBIS</c>, and <c>FLAC</c>. Default value: <c>AAC</c>.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>AAC</para>
@@ -667,7 +701,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                                 public string Codec { get; set; }
 
                                 /// <summary>
-                                /// <para>The audio codec profile. If the Codec parameter is set to AAC, the valid values are aac_low, aac_he, aac_he_v2, aac_ld, and aac_eld.</para>
+                                /// <para>The audio encoding preset. This parameter is supported only when the audio codec is AAC. Valid values: <c>aac_low</c>, <c>aac_he</c>, <c>aac_he_v2</c>, <c>aac_ld</c>, and <c>aac_eld</c>.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>aac_low</para>
@@ -677,7 +711,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                                 public string Profile { get; set; }
 
                                 /// <summary>
-                                /// <para>Indicates whether the audio stream is deleted.</para>
+                                /// <para>Specifies whether to delete the audio stream. Valid values: <c>true</c> and <c>false</c>.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>false</para>
@@ -687,11 +721,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                                 public string Remove { get; set; }
 
                                 /// <summary>
-                                /// <para>The sampling rate.</para>
+                                /// <para>The sample rate.</para>
                                 /// <list type="bullet">
-                                /// <item><description>Default value: 44100.</description></item>
-                                /// <item><description>Valid values: 22050, 32000, 44100, 48000, and 96000.</description></item>
-                                /// <item><description>Unit: Hz.</description></item>
+                                /// <item><description><para>Valid values: 22050, 32000, 44100, 48000, and 96000.</para>
+                                /// </description></item>
+                                /// <item><description><para>Default value: 44100.</para>
+                                /// </description></item>
+                                /// <item><description><para>Unit: Hz.</para>
+                                /// </description></item>
                                 /// </list>
                                 /// 
                                 /// <b>Example:</b>
@@ -702,14 +739,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                                 public string Samplerate { get; set; }
 
                                 /// <summary>
-                                /// <para>The volume configurations.</para>
+                                /// <para>The volume control settings.</para>
                                 /// </summary>
                                 [NameInMap("Volume")]
                                 [Validation(Required=false)]
                                 public ListTranscodeJobsResponseBodyJobsOutputGroupProcessConfigTranscodeOverwriteParamsAudioVolume Volume { get; set; }
                                 public class ListTranscodeJobsResponseBodyJobsOutputGroupProcessConfigTranscodeOverwriteParamsAudioVolume : TeaModel {
                                     /// <summary>
-                                    /// <para>The output volume.</para>
+                                    /// <para>The target integrated loudness.</para>
                                     /// 
                                     /// <b>Example:</b>
                                     /// <para>-6</para>
@@ -719,7 +756,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                                     public string IntegratedLoudnessTarget { get; set; }
 
                                     /// <summary>
-                                    /// <para>The volume range.</para>
+                                    /// <para>The target loudness range.</para>
                                     /// 
                                     /// <b>Example:</b>
                                     /// <para>8</para>
@@ -729,7 +766,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                                     public string LoudnessRangeTarget { get; set; }
 
                                     /// <summary>
-                                    /// <para>The volume adjustment method. Valid values:</para>
+                                    /// <para>The volume adjustment method.</para>
                                     /// 
                                     /// <b>Example:</b>
                                     /// <para>auto</para>
@@ -739,7 +776,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                                     public string Method { get; set; }
 
                                     /// <summary>
-                                    /// <para>The peak volume.</para>
+                                    /// <para>The true peak level.</para>
                                     /// 
                                     /// <b>Example:</b>
                                     /// <para>-1</para>
@@ -753,7 +790,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                             }
 
                             /// <summary>
-                            /// <para>The encapsulation format settings.</para>
+                            /// <para>The container format settings.</para>
                             /// </summary>
                             [NameInMap("Container")]
                             [Validation(Required=false)]
@@ -772,7 +809,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                             }
 
                             /// <summary>
-                            /// <para>The encapsulation settings.</para>
+                            /// <para>The muxing settings.</para>
                             /// </summary>
                             [NameInMap("MuxConfig")]
                             [Validation(Required=false)]
@@ -786,7 +823,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                                 public ListTranscodeJobsResponseBodyJobsOutputGroupProcessConfigTranscodeOverwriteParamsMuxConfigSegment Segment { get; set; }
                                 public class ListTranscodeJobsResponseBodyJobsOutputGroupProcessConfigTranscodeOverwriteParamsMuxConfigSegment : TeaModel {
                                     /// <summary>
-                                    /// <para>The segment length.</para>
+                                    /// <para>The duration of each segment.</para>
                                     /// 
                                     /// <b>Example:</b>
                                     /// <para>10</para>
@@ -796,7 +833,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                                     public string Duration { get; set; }
 
                                     /// <summary>
-                                    /// <para>The forced segmentation point in time.</para>
+                                    /// <para>The time points at which to enforce segmentation.</para>
                                     /// 
                                     /// <b>Example:</b>
                                     /// <para>2,3</para>
@@ -809,6 +846,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
                             }
 
+                            /// <summary>
+                            /// <para>The custom tags.</para>
+                            /// </summary>
                             [NameInMap("Tags")]
                             [Validation(Required=false)]
                             public Dictionary<string, string> Tags { get; set; }
@@ -821,7 +861,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                             public ListTranscodeJobsResponseBodyJobsOutputGroupProcessConfigTranscodeOverwriteParamsVideo Video { get; set; }
                             public class ListTranscodeJobsResponseBodyJobsOutputGroupProcessConfigTranscodeOverwriteParamsVideo : TeaModel {
                                 /// <summary>
-                                /// <para>The maximum adaptive bitrate (ABR). This parameter takes effect only for Narrowband HD 1.0. Valid values: [10,50000]. Unit: Kbit/s.</para>
+                                /// <para>The maximum bitrate for adaptive bitrate (ABR) streaming. This parameter is valid only for videos with a narrow height and a wide width. Valid values: 10 to 50000. Unit: Kbit/s.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>6000</para>
@@ -831,10 +871,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                                 public string AbrMax { get; set; }
 
                                 /// <summary>
-                                /// <para>The average bitrate of the video.</para>
+                                /// <para>The average video bitrate.</para>
                                 /// <list type="bullet">
-                                /// <item><description>Valid values: [10,50000].</description></item>
-                                /// <item><description>Unit: Kbit/s.</description></item>
+                                /// <item><description><para>Valid values: 10 to 50000.</para>
+                                /// </description></item>
+                                /// <item><description><para>Unit: Kbit/s.</para>
+                                /// </description></item>
                                 /// </list>
                                 /// 
                                 /// <b>Example:</b>
@@ -847,9 +889,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                                 /// <summary>
                                 /// <para>The buffer size.</para>
                                 /// <list type="bullet">
-                                /// <item><description>Valid values: [1000,128000].</description></item>
-                                /// <item><description>Default value: 6000.</description></item>
-                                /// <item><description>Unit: KB.</description></item>
+                                /// <item><description><para>Valid values: 1000 to 128000.</para>
+                                /// </description></item>
+                                /// <item><description><para>Default value: 6000.</para>
+                                /// </description></item>
+                                /// <item><description><para>Unit: Kbit.</para>
+                                /// </description></item>
                                 /// </list>
                                 /// 
                                 /// <b>Example:</b>
@@ -860,7 +905,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                                 public string Bufsize { get; set; }
 
                                 /// <summary>
-                                /// <para>The encoding format.</para>
+                                /// <para>The video codec.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>H.264</para>
@@ -870,12 +915,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                                 public string Codec { get; set; }
 
                                 /// <summary>
-                                /// <para>The constant rate factor.</para>
+                                /// <para>The quality-to-bitrate control factor.</para>
                                 /// <list type="bullet">
-                                /// <item><description>Valid values: [0,51].</description></item>
-                                /// <item><description>Default value: 23 if the encoding format is H.264, or 26 if the encoding format is H.265.</description></item>
+                                /// <item><description><para>Valid values: 0 to 51.</para>
+                                /// </description></item>
+                                /// <item><description><para>Default value: If the codec is H.264, the default value is 23. If the codec is H.265, the default value is 26.</para>
+                                /// </description></item>
                                 /// </list>
-                                /// <para>If this parameter is set, the value of Bitrate becomes invalid.</para>
+                                /// <para>If you specify Crf, the value of Bitrate is ignored.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>23</para>
@@ -885,10 +932,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                                 public string Crf { get; set; }
 
                                 /// <summary>
-                                /// <para>The method of video cropping. Valid values:</para>
+                                /// <para>The cropping settings. Two modes are supported.</para>
                                 /// <list type="bullet">
-                                /// <item><description>border: automatically detects and removes black bars.</description></item>
-                                /// <item><description>A value in the width:height:left:top format: crops the videos based on the custom settings. Example: 1280:800:0:140.</description></item>
+                                /// <item><description><para>Automatic: Set the value to <c>border</c> to automatically detect and crop black borders.</para>
+                                /// </description></item>
+                                /// <item><description><para>Manual: Specify the crop area in the <c>width:height:left:top</c> format. Example: <c>1280:800:0:140</c>.</para>
+                                /// </description></item>
                                 /// </list>
                                 /// 
                                 /// <b>Example:</b>
@@ -901,9 +950,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                                 /// <summary>
                                 /// <para>The frame rate.</para>
                                 /// <list type="bullet">
-                                /// <item><description>Valid values: (0,60].</description></item>
-                                /// <item><description>The value is 60 if the frame rate of the input video exceeds 60.</description></item>
-                                /// <item><description>Default value: the frame rate of the input video.</description></item>
+                                /// <item><description><para>Valid values: 0 to 60.</para>
+                                /// </description></item>
+                                /// <item><description><para>If the frame rate of the input file is greater than 60, the value is 60.</para>
+                                /// </description></item>
+                                /// <item><description><para>Default value: the frame rate of the input file.</para>
+                                /// </description></item>
                                 /// </list>
                                 /// 
                                 /// <b>Example:</b>
@@ -914,10 +966,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                                 public string Fps { get; set; }
 
                                 /// <summary>
-                                /// <para>The maximum number of frames between two keyframes.</para>
+                                /// <para>The maximum number of frames in a Group of Pictures (GOP).</para>
                                 /// <list type="bullet">
-                                /// <item><description>Valid values: [1,1080000].</description></item>
-                                /// <item><description>Default value: 250.</description></item>
+                                /// <item><description><para>Valid values: 1 to 1080000.</para>
+                                /// </description></item>
+                                /// <item><description><para>Default value: 250.</para>
+                                /// </description></item>
                                 /// </list>
                                 /// 
                                 /// <b>Example:</b>
@@ -928,11 +982,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                                 public string Gop { get; set; }
 
                                 /// <summary>
-                                /// <para>The height of the output video.</para>
+                                /// <para>The height.</para>
                                 /// <list type="bullet">
-                                /// <item><description>Valid values: [128,4096].</description></item>
-                                /// <item><description>Unit: pixels.</description></item>
-                                /// <item><description>Default value: the height of the input video.</description></item>
+                                /// <item><description><para>Valid values: 128 to 4096.</para>
+                                /// </description></item>
+                                /// <item><description><para>Unit: px.</para>
+                                /// </description></item>
+                                /// <item><description><para>Default value: the height of the source video.</para>
+                                /// </description></item>
                                 /// </list>
                                 /// 
                                 /// <b>Example:</b>
@@ -943,7 +1000,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                                 public string Height { get; set; }
 
                                 /// <summary>
-                                /// <para>Indicates whether the auto-rotate screen feature is enabled.</para>
+                                /// <para>Specifies whether to enable adaptive resolution by long and short sides.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>false</para>
@@ -953,7 +1010,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                                 public string LongShortMode { get; set; }
 
                                 /// <summary>
-                                /// <para>The maximum bitrate of the output video. Valid values: [10,50000]. Unit: Kbit/s.</para>
+                                /// <para>The maximum video bitrate. Valid values: 10 to 50000. Unit: Kbit/s.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>9000</para>
@@ -963,10 +1020,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                                 public string Maxrate { get; set; }
 
                                 /// <summary>
-                                /// <para>The black bars added to the video.</para>
+                                /// <para>The settings for adding black bars.</para>
                                 /// <list type="bullet">
-                                /// <item><description>Format: width:height:left:top.</description></item>
-                                /// <item><description>Example: 1280:800:0:140.</description></item>
+                                /// <item><description><para>Format: <c>width:height:left:top</c>.</para>
+                                /// </description></item>
+                                /// <item><description><para>Example: <c>1280:800:0:140</c>.</para>
+                                /// </description></item>
                                 /// </list>
                                 /// 
                                 /// <b>Example:</b>
@@ -977,7 +1036,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                                 public string Pad { get; set; }
 
                                 /// <summary>
-                                /// <para>The pixel format of the video. Valid values: standard pixel formats such as yuv420p and yuvj420p.</para>
+                                /// <para>The pixel format. Valid values include <c>yuv420p</c> and <c>yuvj420p</c>.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>yuv420p</para>
@@ -987,7 +1046,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                                 public string PixFmt { get; set; }
 
                                 /// <summary>
-                                /// <para>The preset video algorithm. This parameter takes effect only if the encoding format is H.264. Valid values: veryfast, fast, medium, slow, and slower. Default value: medium.</para>
+                                /// <para>The preset of the video encoder. This parameter is supported only when the video codec is H.264. Valid values: <c>veryfast</c>, <c>fast</c>, <c>medium</c>, <c>slow</c>, and <c>slower</c>. Default value: <c>medium</c>.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>medium</para>
@@ -997,13 +1056,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                                 public string Preset { get; set; }
 
                                 /// <summary>
-                                /// <para>The encoding profile. Valid values: baseline, main, and high.</para>
+                                /// <para>The encoding profile. Valid values include baseline, main, and high.</para>
                                 /// <list type="bullet">
-                                /// <item><description>baseline: applicable to mobile devices.</description></item>
-                                /// <item><description>main: applicable to standard-definition devices.</description></item>
-                                /// <item><description>high: applicable to high-definition devices.</description></item>
+                                /// <item><description><para><c>baseline</c>: suitable for mobile devices.</para>
+                                /// </description></item>
+                                /// <item><description><para><c>main</c>: suitable for standard-definition devices.</para>
+                                /// </description></item>
+                                /// <item><description><para><c>high</c>: suitable for high-definition devices.</para>
+                                /// </description></item>
                                 /// </list>
-                                /// <para>Default value: high.</para>
+                                /// <para>Default value: <c>high</c>.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>Main</para>
@@ -1013,7 +1075,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                                 public string Profile { get; set; }
 
                                 /// <summary>
-                                /// <para>Indicates whether the video was removed.</para>
+                                /// <para>Specifies whether to delete the video. Valid values: <c>true</c> and <c>false</c>.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>false</para>
@@ -1023,7 +1085,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                                 public string Remove { get; set; }
 
                                 /// <summary>
-                                /// <para>The scan mode. Valid values: interlaced and progressive.</para>
+                                /// <para>The scan mode. Valid values: <c>interlaced</c> and <c>progressive</c>.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>progressive</para>
@@ -1033,11 +1095,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                                 public string ScanMode { get; set; }
 
                                 /// <summary>
-                                /// <para>The width of the output video.</para>
+                                /// <para>The width.</para>
                                 /// <list type="bullet">
-                                /// <item><description>Valid values: [128,4096].</description></item>
-                                /// <item><description>Unit: pixels.</description></item>
-                                /// <item><description>Default value: the width of the input video.</description></item>
+                                /// <item><description><para>Valid values: 128 to 4096.</para>
+                                /// </description></item>
+                                /// <item><description><para>Unit: px.</para>
+                                /// </description></item>
+                                /// <item><description><para>Default value: the width of the source video.</para>
+                                /// </description></item>
                                 /// </list>
                                 /// 
                                 /// <b>Example:</b>
@@ -1055,7 +1120,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                         /// <para>The template ID.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>9547c6ad97cb4f2aaa29683ebd18d410</para>
+                        /// <para>9547c6ad97cb4f2aaa29683ebd18****</para>
                         /// </summary>
                         [NameInMap("TemplateId")]
                         [Validation(Required=false)]
@@ -1068,17 +1133,17 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             }
 
             /// <summary>
-            /// <para>The main job ID.</para>
+            /// <para>The parent job ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>8b2198504dd340b7b3c9842a74fc9baa</para>
+            /// <para>8b2198504dd340b7b3c9842a74fc****</para>
             /// </summary>
             [NameInMap("ParentJobId")]
             [Validation(Required=false)]
             public string ParentJobId { get; set; }
 
             /// <summary>
-            /// <para>The completion percentage of the job.</para>
+            /// <para>The progress of the job.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -1088,7 +1153,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public int? Percent { get; set; }
 
             /// <summary>
-            /// <para>The ID of the request that submitted the job.</para>
+            /// <para>The request ID of the job.</para>
             /// 
             /// <b>Example:</b>
             /// <para>31E30781-9495-5E2D-A84D-759B0A01E262</para>
@@ -1098,24 +1163,24 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string RequestId { get; set; }
 
             /// <summary>
-            /// <para>The scheduling configuration of the job.</para>
+            /// <para>The schedule configuration of the job.</para>
             /// </summary>
             [NameInMap("ScheduleConfig")]
             [Validation(Required=false)]
             public ListTranscodeJobsResponseBodyJobsScheduleConfig ScheduleConfig { get; set; }
             public class ListTranscodeJobsResponseBodyJobsScheduleConfig : TeaModel {
                 /// <summary>
-                /// <para>The ID of the MPS queue to which the job was submitted.</para>
+                /// <para>The pipeline ID.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>e37ebee5d98b4781897f6086e89f9c56</para>
+                /// <para>e37ebee5d98b4781897f6086e89f****</para>
                 /// </summary>
                 [NameInMap("PipelineId")]
                 [Validation(Required=false)]
                 public string PipelineId { get; set; }
 
                 /// <summary>
-                /// <para>The priority of the job. Valid values: 1 to 10. The greater the value, the higher the priority.</para>
+                /// <para>The priority of the job. A larger value indicates a higher priority. The value can be an integer from 1 to 10.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5</para>
@@ -1127,10 +1192,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             }
 
             /// <summary>
-            /// <para>The state of the job.</para>
+            /// <para>The status of the job. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Success: At least one of the subjobs is successful.</description></item>
-            /// <item><description>Fail: All subjobs failed.</description></item>
+            /// <item><description><para><c>Success</c>: The job is successful if at least one sub-job is successful.</para>
+            /// </description></item>
+            /// <item><description><para><c>Fail</c>: The job fails if all sub-jobs fail.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -1141,7 +1208,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The time when the job was submitted. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The time when the job was submitted. The time is in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-01-12T08:49:41Z</para>
@@ -1153,9 +1220,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <summary>
             /// <para>The source of the job. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>API</description></item>
-            /// <item><description>WorkFlow</description></item>
-            /// <item><description>Console</description></item>
+            /// <item><description><para><c>API</c>: The job is submitted by calling an API operation.</para>
+            /// </description></item>
+            /// <item><description><para><c>Workflow</c>: The job is triggered by a workflow.</para>
+            /// </description></item>
+            /// <item><description><para><c>Console</c>: The job is submitted on the console.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -1178,17 +1248,17 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. The token of the next page is returned after you call this operation for the first time.</para>
+        /// <para>The token for the next page of results. Leave this parameter empty for the first request. The token is returned after the first query.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>019daf5780f74831b0e1a767c9f1c178</para>
+        /// <para>019daf5780f74831b0e1a767c9f1****</para>
         /// </summary>
         [NameInMap("NextPageToken")]
         [Validation(Required=false)]
         public string NextPageToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>31E30781-9495-5E2D-A84D-759B0A01E262</para>

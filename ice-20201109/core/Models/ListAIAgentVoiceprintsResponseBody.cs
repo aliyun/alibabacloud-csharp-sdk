@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of voiceprints that match the query criteria.</para>
+        /// <para>The total number of matching voiceprints.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The voiceprints.</para>
+        /// <para>A list of voiceprint objects.</para>
         /// </summary>
         [NameInMap("Voiceprints")]
         [Validation(Required=false)]
         public List<ListAIAgentVoiceprintsResponseBodyVoiceprints> Voiceprints { get; set; }
         public class ListAIAgentVoiceprintsResponseBodyVoiceprints : TeaModel {
             /// <summary>
-            /// <para>The creation time of the voiceprint.</para>
+            /// <para>The time the voiceprint was created. The time is in UTC and formatted according to the ISO 8601 standard.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-07-28T10:03:58.000+00:00</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The last modification time of the voiceprint.</para>
+            /// <para>The time the voiceprint was last modified. The time is in UTC and formatted according to the ISO 8601 standard.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-07-28T10:03:58.000+00:00</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The unique identifier for the voiceprint.</para>
+            /// <para>The unique voiceprint ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vp_1699123456_8527</para>

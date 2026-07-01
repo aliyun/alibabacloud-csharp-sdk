@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitDNAJobRequest : TeaModel {
         /// <summary>
-        /// <para>The configurations of the media fingerprint analysis job. The value is a JSON object. If you specify this parameter, the template parameters are overwritten.</para>
+        /// <para>The DNA configuration in JSON format. If specified, these settings override the corresponding template parameters.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;SaveType&quot;: &quot;save&quot;,&quot;MediaType&quot;&quot;:&quot;video&quot;}</para>
+        /// <para>{&quot;SaveType&quot;: &quot;save&quot;,&quot;MediaType&quot;:&quot;video&quot;}</para>
         /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
         public string Config { get; set; }
 
         /// <summary>
-        /// <para>The ID of the media fingerprint library. If you do not specify this parameter, the default media fingerprint library is used. For more information about how to create a media fingerprint library, see <a href="https://help.aliyun.com/document_detail/479275.html">CreateDNADB</a>.</para>
+        /// <para>The DNA library ID. To create a DNA library, see <a href="https://help.aliyun.com/document_detail/479275.html">CreateDNADB</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string DBId { get; set; }
 
         /// <summary>
-        /// <para>The input file for media fingerprint analysis.</para>
+        /// <para>The input DNA file.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Input")]
@@ -39,10 +39,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public SubmitDNAJobRequestInput Input { get; set; }
         public class SubmitDNAJobRequestInput : TeaModel {
             /// <summary>
-            /// <para>The input file. The file can be an OSS object or a media asset. You can specify the path of an OSS object in one of the following formats:</para>
-            /// <para>1\. oss://bucket/object</para>
-            /// <para>2\. http(s)://bucket.oss-[regionId].aliyuncs.com/object</para>
-            /// <para>In the preceding paths, bucket indicates an OSS bucket that resides in the same region as the current project, and object indicates the path of the object in the bucket.</para>
+            /// <para>The media ID or OSS file url of the input file.</para>
+            /// <para>1\. <c>oss://bucket/object</c></para>
+            /// <para>2\. <c>http(s)://bucket.oss-[regionId].aliyuncs.com/object</c></para>
+            /// <para>In these formats, <c>bucket</c> is the name of an OSS bucket in the same region as your project, and <c>object</c> is the file path.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -55,8 +55,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <summary>
             /// <para>The type of the input file. Valid values:</para>
             /// <ol>
-            /// <item><description>OSS: Object Storage Service (OSS) object.</description></item>
-            /// <item><description>Media: media asset.</description></item>
+            /// <item><description><para><c>OSS</c>: The input is an OSS file url.</para>
+            /// </description></item>
+            /// <item><description><para><c>Media</c>: The input is a media ID.</para>
+            /// </description></item>
             /// </ol>
             /// <para>This parameter is required.</para>
             /// 
@@ -78,7 +80,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ApsaraVideo Media Processing (MPS) queue to which the media fingerprint analysis job is submitted.</para>
+        /// <para>The pipeline ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5246b8d12a62433ab77845074039****</para>
@@ -88,7 +90,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string PipelineId { get; set; }
 
         /// <summary>
-        /// <para>The primary key of the video. You must make sure that each primary key is unique.</para>
+        /// <para>The unique primary key for the video. You are responsible for ensuring its uniqueness.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -117,7 +119,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string TemplateId { get; set; }
 
         /// <summary>
-        /// <para>The user-defined data. The data can be up to 128 bytes in length.</para>
+        /// <para>The user-defined data. The maximum length is 128 bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>userData</para>

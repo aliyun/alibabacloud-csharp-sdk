@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class UpdateEditingProjectRequest : TeaModel {
         /// <summary>
-        /// <para>The business status of the project. This parameter can be ignored for general editing projects. Valid values:</para>
+        /// <para>The business status of the project. You can typically ignore this parameter for standard cloud editing projects. Use this parameter to modify the project\&quot;s reservation status:</para>
         /// <list type="bullet">
-        /// <item><description>Reserving</description></item>
-        /// <item><description>ReservationCanceled</description></item>
+        /// <item><description><para><c>Reserving</c>: The project is being reserved.</para>
+        /// </description></item>
+        /// <item><description><para><c>ReservationCanceled</c>: The reservation for the project is canceled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,14 +26,17 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string BusinessStatus { get; set; }
 
         /// <summary>
-        /// <para>The material parameter corresponding to the template, in the JSON format. If TemplateId is specified, ClipsParam must also be specified.</para>
+        /// <para>The clip parameters for the template, in JSON format. This parameter is required if you specify <c>TemplateId</c>.&lt;props=&quot;china&quot;&gt; For more information about the format, see <a href="https://help.aliyun.com/document_detail/328557.html">Create and use a standard template</a> and <a href="https://help.aliyun.com/document_detail/291418.html">Create and use an advanced template</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>See the template user guide.</para>
         /// </summary>
         [NameInMap("ClipsParam")]
         [Validation(Required=false)]
         public string ClipsParam { get; set; }
 
         /// <summary>
-        /// <para>The thumbnail URL of the online editing project.</para>
+        /// <para>The project cover.</para>
         /// 
         /// <b>Example:</b>
         /// <para>https://<b><b>.com/6AB4D0E1E1C7446888</b></b>.png</para>
@@ -41,7 +46,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string CoverURL { get; set; }
 
         /// <summary>
-        /// <para>The description of the online editing project.</para>
+        /// <para>The project description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testtimeline001desciption</para>
@@ -51,7 +56,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the online editing project.</para>
+        /// <para>The project ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,7 +67,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The template ID. This parameter is used to quickly build a timeline with ease. Note: Only one of ProjectId, Timeline, and TemplateId can be specified. If TemplateId is specified, ClipsParam must also be specified.</para>
+        /// <para>The template ID. Use this parameter to quickly build a timeline.&gt;Notice: You can specify only one of <c>ProjectId</c>, <c>Timeline</c>, and <c>TemplateId</c>. If you specify <c>TemplateId</c>, <c>ClipsParam</c> is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>96e8864746a0b6f3</b></b></para>
@@ -72,17 +77,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string TemplateId { get; set; }
 
         /// <summary>
-        /// <para>The timeline of the online editing project, in the JSON format.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>{&quot;VideoTracks&quot;:[{&quot;VideoTrackClips&quot;:[{&quot;MediaId&quot;:&quot;<b><b>cc3308ac500ca54328bc3443</b></b>&quot;},{&quot;MediaId&quot;:&quot;<em><b><em>da87a9cff64</em>d88bc6d8326e4</b></em>*&quot;}]}]}</para>
+        /// <para>The project timeline, in JSON format.</para>
         /// </summary>
         [NameInMap("Timeline")]
         [Validation(Required=false)]
         public string Timeline { get; set; }
 
         /// <summary>
-        /// <para>The title of the online editing project.</para>
+        /// <para>The project title.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testtimeline</para>

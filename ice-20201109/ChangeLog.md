@@ -1,3 +1,8 @@
+2026-07-01 Version: 6.18.2
+- Update API GetProjectExportJob: add response parameters Body.ProjectExportJob.ExportResult.AudioUrl.
+- Update API GetProjectExportJob: add response parameters Body.ProjectExportJob.ExportResult.SrtList.
+
+
 2026-06-05 Version: 6.18.1
 - Generated csharp 2020-11-09 for ICE.
 

@@ -12,11 +12,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The material ID. Separate multiple material IDs with commas (,). Each type supports up to 10 material IDs. The following material types are supported:</para>
         /// <list type="bullet">
-        /// <item><description>video</description></item>
-        /// <item><description>audio</description></item>
-        /// <item><description>image</description></item>
-        /// <item><description>liveStream</description></item>
-        /// <item><description>editingProject</description></item>
+        /// <item><description><para>video</para>
+        /// </description></item>
+        /// <item><description><para>audio</para>
+        /// </description></item>
+        /// <item><description><para>image</para>
+        /// </description></item>
+        /// <item><description><para>liveStream</para>
+        /// </description></item>
+        /// <item><description><para>editingProject</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

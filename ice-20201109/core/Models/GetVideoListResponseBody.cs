@@ -48,6 +48,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
             /// <summary>
             /// <para>The name of the category.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Category1</para>
             /// </summary>
             [NameInMap("CateName")]
             [Validation(Required=false)]
@@ -75,6 +78,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
             /// <summary>
             /// <para>The description of the audio or video file.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Alibaba Cloud VOD video description</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -131,17 +137,28 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <para>The status of the video.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PrepareFail: The file is abnormal.</description></item>
-            /// <item><description>UploadFail: The video failed to be uploaded.</description></item>
-            /// <item><description>UploadSucc: The video is uploaded.</description></item>
-            /// <item><description>Transcoding: The video is being transcoded.</description></item>
-            /// <item><description>TranscodeFail: The video failed to be transcoded.</description></item>
-            /// <item><description>ProduceFail: The video failed to be produced.</description></item>
-            /// <item><description>Normal: The video is normal.</description></item>
-            /// <item><description>Uploading: The video is being uploaded.</description></item>
-            /// <item><description>Preparing: The file is being generated.</description></item>
-            /// <item><description>Blocked: The video is blocked.</description></item>
-            /// <item><description>checking: The video is being reviewed.</description></item>
+            /// <item><description><para>PrepareFail: The file is abnormal.</para>
+            /// </description></item>
+            /// <item><description><para>UploadFail: The video failed to be uploaded.</para>
+            /// </description></item>
+            /// <item><description><para>UploadSucc: The video is uploaded.</para>
+            /// </description></item>
+            /// <item><description><para>Transcoding: The video is being transcoded.</para>
+            /// </description></item>
+            /// <item><description><para>TranscodeFail: The video failed to be transcoded.</para>
+            /// </description></item>
+            /// <item><description><para>ProduceFail: The video failed to be produced.</para>
+            /// </description></item>
+            /// <item><description><para>Normal: The video is normal.</para>
+            /// </description></item>
+            /// <item><description><para>Uploading: The video is being uploaded.</para>
+            /// </description></item>
+            /// <item><description><para>Preparing: The file is being generated.</para>
+            /// </description></item>
+            /// <item><description><para>Blocked: The video is blocked.</para>
+            /// </description></item>
+            /// <item><description><para>checking: The video is being reviewed.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -163,6 +180,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
             /// <summary>
             /// <para>The tags of the audio or video file.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Tag 1, Tag 2</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -170,6 +190,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
             /// <summary>
             /// <para>The title of the audio or video file.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>The best music player ever</para>
             /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]
@@ -190,8 +213,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

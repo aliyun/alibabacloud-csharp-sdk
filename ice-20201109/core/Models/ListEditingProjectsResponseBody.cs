@@ -92,6 +92,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
             /// <summary>
             /// <para>The description of the online editing project.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>工程描述</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -150,8 +153,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <summary>
             /// <para>The type of the editing project. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>EditingProject: a regular editing project.</description></item>
-            /// <item><description>LiveEditingProject: a live stream editing project.</description></item>
+            /// <item><description><para>EditingProject: a regular editing project.</para>
+            /// </description></item>
+            /// <item><description><para>LiveEditingProject: a live stream editing project.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -179,8 +184,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <summary>
             /// <para>The template type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Timeline: a regular template.</description></item>
-            /// <item><description>VETemplate: an advanced template.</description></item>
+            /// <item><description><para>Timeline: a regular template.</para>
+            /// </description></item>
+            /// <item><description><para>VETemplate: an advanced template.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -192,6 +199,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
             /// <summary>
             /// <para>The title of the online editing project.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Project title</para>
             /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]

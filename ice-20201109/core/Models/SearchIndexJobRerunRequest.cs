@@ -20,6 +20,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string MediaIds { get; set; }
 
+        /// <summary>
+        /// <para>Namespace.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>name-1</para>
+        /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
@@ -37,13 +43,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The type of the job. Separate multiple types with commas (,).</para>
         /// <list type="bullet">
-        /// <item><description>aiLabel: smart tagging.</description></item>
-        /// <item><description>face: face recognition.</description></item>
-        /// <item><description>mm: large visual model.</description></item>
+        /// <item><description><para>aiLabel: smart tagging.</para>
+        /// </description></item>
+        /// <item><description><para>face: face recognition.</para>
+        /// </description></item>
+        /// <item><description><para>mm: large visual model.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>AiLabel,Face,Mm</para>
+        /// <para>aiLabel,face,mm</para>
         /// </summary>
         [NameInMap("Task")]
         [Validation(Required=false)]

@@ -58,6 +58,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         /// <summary>
         /// <para>The user-defined data.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;Custom&quot;:&quot;hello&quot;}</para>
         /// </summary>
         [NameInMap("UserData")]
         [Validation(Required=false)]

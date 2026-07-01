@@ -12,10 +12,15 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The category name.</para>
         /// <list type="bullet">
-        /// <item><description>The value can be up to 64 bytes in length.</description></item>
-        /// <item><description>The value must be encoded in UTF-8.</description></item>
+        /// <item><description><para>The value can be up to 64 bytes in length.</para>
+        /// </description></item>
+        /// <item><description><para>The value must be encoded in UTF-8.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Third-level subcategory</para>
         /// </summary>
         [NameInMap("CateName")]
         [Validation(Required=false)]
@@ -34,8 +39,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The type of the category. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>default: audio, video, and image files. This is the default value.</description></item>
-        /// <item><description>material: short video materials.</description></item>
+        /// <item><description><para>default: audio, video, and image files. This is the default value.</para>
+        /// </description></item>
+        /// <item><description><para>material: short video materials.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

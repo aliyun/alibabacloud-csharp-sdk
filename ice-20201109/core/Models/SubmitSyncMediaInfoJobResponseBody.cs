@@ -56,8 +56,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <summary>
                 /// <para>The type of the media object. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>OSS: an OSS object.</description></item>
-                /// <item><description>Media: a media asset.</description></item>
+                /// <item><description><para>OSS: an OSS object.</para>
+                /// </description></item>
+                /// <item><description><para>Media: a media asset.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -487,9 +489,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     /// <summary>
                     /// <para>Indicates whether the video stream contains bidirectional frames (B-frames). Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>0: The stream contains no B-frames.</description></item>
-                    /// <item><description>1: The stream contains one B-frame.</description></item>
-                    /// <item><description>2: The stream contains multiple consecutive B-frames.</description></item>
+                    /// <item><description><para>0: The stream contains no B-frames.</para>
+                    /// </description></item>
+                    /// <item><description><para>1: The stream contains one B-frame.</para>
+                    /// </description></item>
+                    /// <item><description><para>2: The stream contains multiple consecutive B-frames.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>

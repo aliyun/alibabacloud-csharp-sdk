@@ -42,8 +42,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The sorting order. By default, the query results are sorted by creation time in descending order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>asc</description></item>
-        /// <item><description>desc</description></item>
+        /// <item><description><para>asc</para>
+        /// </description></item>
+        /// <item><description><para>desc</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,8 +58,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The start mode of the transcoding job.</para>
         /// <list type="bullet">
-        /// <item><description>0: The transcoding job immediately starts.</description></item>
-        /// <item><description>1: The transcoding job starts at the scheduled time.</description></item>
+        /// <item><description><para>0: The transcoding job immediately starts.</para>
+        /// </description></item>
+        /// <item><description><para>1: The transcoding job starts at the scheduled time.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -81,10 +85,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The type of the template used by the transcoding job.</para>
         /// <list type="bullet">
-        /// <item><description>normal</description></item>
-        /// <item><description>narrow-band</description></item>
-        /// <item><description>audio-only</description></item>
-        /// <item><description>origin</description></item>
+        /// <item><description><para>normal</para>
+        /// </description></item>
+        /// <item><description><para>narrow-band</para>
+        /// </description></item>
+        /// <item><description><para>audio-only</para>
+        /// </description></item>
+        /// <item><description><para>origin</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

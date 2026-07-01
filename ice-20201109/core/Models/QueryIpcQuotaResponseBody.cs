@@ -9,11 +9,24 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class QueryIpcQuotaResponseBody : TeaModel {
+        /// <summary>
+        /// <para>List of IPC usage information.</para>
+        /// </summary>
         [NameInMap("IpcQuotaInfos")]
         [Validation(Required=false)]
         public List<QueryIpcQuotaResponseBodyIpcQuotaInfos> IpcQuotaInfos { get; set; }
         public class QueryIpcQuotaResponseBodyIpcQuotaInfos : TeaModel {
             /// <summary>
+            /// <para>Capability. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>understand: understanding</para>
+            /// </description></item>
+            /// <item><description><para>understand-reid: understanding with reid</para>
+            /// </description></item>
+            /// <item><description><para>search: search</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>understand</para>
             /// </summary>
@@ -22,6 +35,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Capability { get; set; }
 
             /// <summary>
+            /// <para>Consumed quota.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>32</para>
             /// </summary>
@@ -30,6 +45,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public long? ConsumedQuota { get; set; }
 
             /// <summary>
+            /// <para>Corresponding time. UTC time in the format: yyyy-MM-ddTHH:mm:ssZ.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2025-12-21T16:00:00Z</para>
             /// </summary>
@@ -38,6 +55,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string DateTime { get; set; }
 
             /// <summary>
+            /// <para>Maximum available quota.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10000</para>
             /// </summary>
@@ -48,6 +67,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b><b><b>11-DB8D-4A9A-875B-275798</b></b></b></para>
         /// </summary>
@@ -56,6 +77,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Total number of records.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>39</para>
         /// </summary>

@@ -57,8 +57,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <summary>
                 /// <para>The audio codec. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>AAC</description></item>
-                /// <item><description>MP3</description></item>
+                /// <item><description><para>AAC</para>
+                /// </description></item>
+                /// <item><description><para>MP3</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -71,10 +73,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <summary>
                 /// <para>The audio codec profile. Valid values when the Codec parameter is set to AAC:</para>
                 /// <list type="bullet">
-                /// <item><description>aac_low</description></item>
-                /// <item><description>aac_he</description></item>
-                /// <item><description>aac_he_v2</description></item>
-                /// <item><description>aac_ld</description></item>
+                /// <item><description><para>aac_low</para>
+                /// </description></item>
+                /// <item><description><para>aac_he</para>
+                /// </description></item>
+                /// <item><description><para>aac_he_v2</para>
+                /// </description></item>
+                /// <item><description><para>aac_ld</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -117,8 +123,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <summary>
                 /// <para>The encoding type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>H.264</description></item>
-                /// <item><description>H.265</description></item>
+                /// <item><description><para>H.264</para>
+                /// </description></item>
+                /// <item><description><para>H.265</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -187,10 +195,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The type of the template. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>normal</description></item>
-        /// <item><description>narrow-band</description></item>
-        /// <item><description>audio-only</description></item>
-        /// <item><description>origin</description></item>
+        /// <item><description><para>normal</para>
+        /// </description></item>
+        /// <item><description><para>narrow-band</para>
+        /// </description></item>
+        /// <item><description><para>audio-only</para>
+        /// </description></item>
+        /// <item><description><para>origin</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

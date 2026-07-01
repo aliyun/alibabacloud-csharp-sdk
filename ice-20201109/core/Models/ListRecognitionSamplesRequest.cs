@@ -12,10 +12,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The type of recognition algorithm. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>landmark</description></item>
-        /// <item><description>object</description></item>
-        /// <item><description>logo</description></item>
-        /// <item><description>face</description></item>
+        /// <item><description><para>landmark</para>
+        /// </description></item>
+        /// <item><description><para>object</para>
+        /// </description></item>
+        /// <item><description><para>logo</para>
+        /// </description></item>
+        /// <item><description><para>face</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -27,26 +31,32 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Algorithm { get; set; }
 
         /// <summary>
-        /// <para>The ID of the entity.</para>
+        /// <para>The entity ID. If you set this parameter to ANY, the system queries by EntityName.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>e6b985c05174412dbc77c92496b7373b</para>
+        /// <para>**<b><b><b><b><b><b>544cb84754</b></b></b></b></b></b></para>
         /// </summary>
         [NameInMap("EntityId")]
         [Validation(Required=false)]
         public string EntityId { get; set; }
 
+        /// <summary>
+        /// <para>The entity name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>custom_person</para>
+        /// </summary>
         [NameInMap("EntityName")]
         [Validation(Required=false)]
         public string EntityName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the recognition library.</para>
+        /// <para>The library ID. If you specify this parameter, the system performs an exact match. You can specify multiple library IDs. Separate them with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxxxxxxxxx</para>
+        /// <para>lib1,lib2,lib3</para>
         /// </summary>
         [NameInMap("LibId")]
         [Validation(Required=false)]

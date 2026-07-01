@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GenerateAIAgentCallRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the AI agent.</para>
+        /// <para>The AI agent ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,15 +20,26 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string AIAgentId { get; set; }
 
+        /// <summary>
+        /// <para>The agent template configuration. The configuration you provide merges with the agent template configuration in the console. If you omit this parameter, the agent uses the default configuration from the console.</para>
+        /// <remarks>
+        /// <para>Compatibility with <c>TemplateConfig</c>: Fields in <c>AgentConfig</c> take precedence. If a field is specified in <c>TemplateConfig</c> but not in <c>AgentConfig</c>, the system uses the value from <c>TemplateConfig</c>. We recommend using <c>AgentConfig</c> instead of <c>TemplateConfig</c>.</para>
+        /// </remarks>
+        /// </summary>
         [NameInMap("AgentConfig")]
         [Validation(Required=false)]
         public AIAgentConfig AgentConfig { get; set; }
 
+        /// <summary>
+        /// <para>The chat synchronization configuration.</para>
+        /// </summary>
         [NameInMap("ChatSyncConfig")]
         [Validation(Required=false)]
         public GenerateAIAgentCallRequestChatSyncConfig ChatSyncConfig { get; set; }
         public class GenerateAIAgentCallRequestChatSyncConfig : TeaModel {
             /// <summary>
+            /// <para>The ID of the Instant Messaging (IM) agent.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>**<b><b>005e4f309379701645f4</b></b></para>
             /// </summary>
@@ -37,6 +48,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string IMAIAgentId { get; set; }
 
             /// <summary>
+            /// <para>The user ID of the recipient.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>4167626d312034b2b1c3b7f2f3e41884</para>
             /// </summary>
@@ -47,7 +60,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
-        /// <para>The time when the token expires. Unit: seconds. Default value: 3600. Valid values: 0 to 604800.</para>
+        /// <para>Optional. The expiration time of the token in seconds. Default value: 3600. Value range: 0 to 604800.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3600</para>
@@ -57,6 +70,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public long? Expire { get; set; }
 
         /// <summary>
+        /// <para>A unique identifier for the session. If not provided, a new session is created.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>fw1gr0bc005e4f309379701645f4****</para>
         /// </summary>
@@ -67,7 +82,15 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The template configurations of the AI agent. The specified configurations are merged with the template configurations that are specified in the console. If you do not specify this parameter, the system uses the default configurations for an AI agent created in the console.</para>
+        /// <list type="bullet">
+        /// <item><description><para>This configuration merges with the agent template configuration in the console.</para>
+        /// </description></item>
+        /// <item><description><para>If you omit this parameter, the agent uses the default configuration from the console.</para>
+        /// </description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>The agent template configuration. This parameter is deprecated. Use the AgentConfig parameter instead.</para>
+        /// </remarks>
         /// </summary>
         [NameInMap("TemplateConfig")]
         [Validation(Required=false)]
@@ -75,6 +98,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public AIAgentTemplateConfig TemplateConfig { get; set; }
 
         /// <summary>
+        /// <para>User data.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;Email&quot;:&quot;<a href="mailto:johndoe@example.com">johndoe@example.com</a>&quot;,&quot;Preferences&quot;:{&quot;Language&quot;:&quot;en&quot;}}</para>
         /// </summary>
@@ -83,7 +108,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string UserData { get; set; }
 
         /// <summary>
-        /// <para>The username of the AI agent in the channel. If you do not specify this parameter, the system automatically generates a username. The value can be up to 64 characters in length.</para>
+        /// <para>The username in the channel. If you do not specify a username, one is automatically generated. The username can be up to 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>877ae632caae49b1afc81c2e8194ffb4</para>

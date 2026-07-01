@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The editing configuration. Its structure depends on the value of JobType.</para>
         /// <list type="bullet">
-        /// <item><description>When JobType is set to Smart_Mix_Timeline_Organize, see <a href="https://help.aliyun.com/zh/ims/use-cases/intelligent-graphic-matching-into-a-piece/?spm=a2c4g.11186623.help-menu-193643.d_3_2_0_1.7c3d6997qndkZj">Image-text matching</a>.</description></item>
-        /// <item><description>When JobType is set to Screen_Media_Highlights_Timeline_Organize, see <a href="https://help.aliyun.com/zh/ims/use-cases/create-highlight-videos?spm=a2c4g.11186623.help-menu-193643.d_3_2_0_3.84b5661bIcQULE">Highlight mashup</a>.</description></item>
+        /// <item><description><para>When JobType is set to Smart_Mix_Timeline_Organize, see <a href="https://help.aliyun.com/zh/ims/use-cases/intelligent-graphic-matching-into-a-piece/?spm=a2c4g.11186623.help-menu-193643.d_3_2_0_1.7c3d6997qndkZj">Image-text matching</a>.</para>
+        /// </description></item>
+        /// <item><description><para>When JobType is set to Screen_Media_Highlights_Timeline_Organize, see <a href="https://help.aliyun.com/zh/ims/use-cases/create-highlight-videos?spm=a2c4g.11186623.help-menu-193643.d_3_2_0_3.84b5661bIcQULE">Highlight mashup</a>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,20 +38,22 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The input configuration. Its structure and required fields depend on the value of JobType.</para>
         /// <list type="bullet">
-        /// <item><description>When JobType is set to Smart_Mix_Timeline_Organize, see <a href="https://help.aliyun.com/zh/ims/use-cases/intelligent-graphic-matching-into-a-piece/?spm=a2c4g.11186623.help-menu-193643.d_3_2_0_1.7c3d6997qndkZj">Image-text matching</a>.</description></item>
-        /// <item><description>When JobType is set to Screen_Media_Highlights_Timeline_Organize, see <a href="https://help.aliyun.com/zh/ims/use-cases/create-highlight-videos?spm=a2c4g.11186623.help-menu-193643.d_3_2_0_3.84b5661bIcQULE">Highlight mashup</a>.</description></item>
+        /// <item><description><para>When JobType is set to Smart_Mix_Timeline_Organize, see <a href="https://help.aliyun.com/zh/ims/use-cases/intelligent-graphic-matching-into-a-piece/?spm=a2c4g.11186623.help-menu-193643.d_3_2_0_1.7c3d6997qndkZj">Image-text matching</a>.</para>
+        /// </description></item>
+        /// <item><description><para>When JobType is set to Screen_Media_Highlights_Timeline_Organize, see <a href="https://help.aliyun.com/zh/ims/use-cases/create-highlight-videos?spm=a2c4g.11186623.help-menu-193643.d_3_2_0_3.84b5661bIcQULE">Highlight mashup</a>.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
-        ///     &quot;BackgroundMusic&quot;: &quot;<b><b>75c3936f3a8743850f2da942</b></b>&quot;,
-        ///     &quot;MediaArray&quot;: [
-        ///         &quot;<a href="https://test-bucket.oss-cn-shanghai.aliyuncs.com/test.mp4">https://test-bucket.oss-cn-shanghai.aliyuncs.com/test.mp4</a>&quot;
-        ///     ],
-        ///     &quot;SpeechTextArray&quot;: [
-        ///         &quot;A new Freshippo store just opened in the nearby mall. Today is the grand opening.&quot;
-        ///     ]
+        /// &quot;BackgroundMusic&quot;: &quot;<b><b>75c3936f3a8743850f2da942</b></b>&quot;,
+        /// &quot;MediaArray&quot;: [
+        /// &quot;<a href="https://test-bucket.oss-cn-shanghai.aliyuncs.com/test.mp4">https://test-bucket.oss-cn-shanghai.aliyuncs.com/test.mp4</a>&quot;
+        /// ],
+        /// &quot;SpeechTextArray&quot;: [
+        /// &quot;A new Freshippo store just opened at the nearby mall., today Yesfirst day of opening&quot;
+        /// ]
         /// }</para>
         /// </summary>
         [NameInMap("InputConfig")]
@@ -59,13 +63,17 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The job type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Smart_Mix_Timeline_Organize: Image-text matching.</description></item>
-        /// <item><description>Screen_Media_Highlights_Timeline_Organize: Highlight mashup.</description></item>
+        /// <item><description><para>Smart_Mix_Timeline_Organize: Image-text matching.</para>
+        /// </description></item>
+        /// <item><description><para>Screen_Media_Highlights_Timeline_Organize: Highlight mashup.</para>
+        /// </description></item>
         /// </list>
         /// <para>Differences:</para>
         /// <list type="bullet">
-        /// <item><description>Image-text matching: Arranges a timeline based on the results of matching a voiceover script to media assets. Ideal for bulk marketing videos and general-purpose montages.</description></item>
-        /// <item><description>Highlight mashup: Arranges a timeline based on the results of highlight clip selection. Ideal for creating action-packed highlight reels from short-form dramas.</description></item>
+        /// <item><description><para>Image-text matching: Arranges a timeline based on the results of matching a voiceover script to media assets. Ideal for bulk marketing videos and general-purpose montages.</para>
+        /// </description></item>
+        /// <item><description><para>Highlight mashup: Arranges a timeline based on the results of highlight clip selection. Ideal for creating action-packed highlight reels from short-form dramas.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -82,27 +90,27 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// 
         /// <b>Example:</b>
         /// <para>{
-        ///     &quot;textMatchMediaOutputList&quot;: [{
-        ///         &quot;textMatchMediaSentenceOutputList&quot;: [{
-        ///                 &quot;duration&quot;: 3.366667,
-        ///                 &quot;matchClipList&quot;: [{
-        ///                     &quot;endTime&quot;: 11.16,
-        ///                     &quot;mediaId&quot;: &quot;<b><b>a0900f5071efbf1ce7e6c66a</b></b>&quot;,
-        ///                     &quot;startTime&quot;: 8.04
-        ///                 }],
-        ///                 &quot;text&quot;: &quot;A new Freshippo store just opened in the nearby mall&quot;
-        ///             },
-        ///             {
-        ///                 &quot;duration&quot;: 1.566667,
-        ///                 &quot;matchClipList&quot;: [{
-        ///                     &quot;endTime&quot;: 1.54,
-        ///                     &quot;mediaId&quot;: &quot;<b><b>a0900f5071efbf1ce7e6c66a</b></b>&quot;,
-        ///                     &quot;startTime&quot;: 0
-        ///                 }],
-        ///                 &quot;text&quot;: &quot;Today is the grand opening&quot;
-        ///             }
-        ///         ]
-        ///     }]
+        /// &quot;textMatchMediaOutputList&quot;: [{
+        /// &quot;textMatchMediaSentenceOutputList&quot;: [{
+        /// &quot;duration&quot;: 3.366667,
+        /// &quot;matchClipList&quot;: [{
+        /// &quot;endTime&quot;: 11.16,
+        /// &quot;mediaId&quot;: &quot;<b><b>a0900f5071efbf1ce7e6c66a</b></b>&quot;,
+        /// &quot;startTime&quot;: 8.04
+        /// }],
+        /// &quot;text&quot;: &quot;A new Hema Fresh store just opened at the nearby mall&quot;
+        /// },
+        /// {
+        /// &quot;duration&quot;: 1.566667,
+        /// &quot;matchClipList&quot;: [{
+        /// &quot;endTime&quot;: 1.54,
+        /// &quot;mediaId&quot;: &quot;<b><b>a0900f5071efbf1ce7e6c66a</b></b>&quot;,
+        /// &quot;startTime&quot;: 0
+        /// }],
+        /// &quot;text&quot;: &quot;Today is the first day of business&quot;
+        /// }
+        /// ]
+        /// }]
         /// }</para>
         /// </summary>
         [NameInMap("MediaSelectResult")]
@@ -112,8 +120,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The output configuration. Its structure and required fields depend on the value of JobType.</para>
         /// <list type="bullet">
-        /// <item><description>When JobType is set to Smart_Mix_Timeline_Organize, see <a href="https://help.aliyun.com/zh/ims/use-cases/intelligent-graphic-matching-into-a-piece/?spm=a2c4g.11186623.help-menu-193643.d_3_2_0_1.7c3d6997qndkZj">Image-text matching</a>.</description></item>
-        /// <item><description>When JobType is set to Screen_Media_Highlights_Timeline_Organize, see <a href="https://help.aliyun.com/zh/ims/use-cases/create-highlight-videos?spm=a2c4g.11186623.help-menu-193643.d_3_2_0_3.84b5661bIcQULE">Highlight mashup</a>.</description></item>
+        /// <item><description><para>When JobType is set to Smart_Mix_Timeline_Organize, see <a href="https://help.aliyun.com/zh/ims/use-cases/intelligent-graphic-matching-into-a-piece/?spm=a2c4g.11186623.help-menu-193643.d_3_2_0_1.7c3d6997qndkZj">Image-text matching</a>.</para>
+        /// </description></item>
+        /// <item><description><para>When JobType is set to Screen_Media_Highlights_Timeline_Organize, see <a href="https://help.aliyun.com/zh/ims/use-cases/create-highlight-videos?spm=a2c4g.11186623.help-menu-193643.d_3_2_0_3.84b5661bIcQULE">Highlight mashup</a>.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitLiveEditingJobRequest : TeaModel {
         /// <summary>
-        /// <para>The clips in the JSON array format. The output video is created by merging these clips sequentially.</para>
-        /// <para>Each clip has a start time and an end time. If no live stream parameters are specified, the outer live stream configurations apply. The start and end timestamps are in UTC. For more information about the parameters, see the &quot;Clip&quot; section of this topic.</para>
+        /// <para>A JSON array that specifies the clips to edit. The job creates the output file by concatenating these clips in the specified order.</para>
+        /// <para>Each clip includes a start and end time. If live stream parameters are not specified for a clip, the system uses the global <c>LiveStreamConfig</c> settings. The start and end timestamps must be in UTC. For more details, see the Clip data structure below.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,11 +22,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Clips { get; set; }
 
         /// <summary>
-        /// <para>The live stream configurations, in the JSON format. The configurations must include the following parameters:</para>
+        /// <para>The configuration of the source live stream, specified as a JSON object. It includes the following parameters:</para>
         /// <list type="bullet">
-        /// <item><description>AppName: the name of the application to which the live stream belongs.</description></item>
-        /// <item><description>DomainName: the domain name of the application.</description></item>
-        /// <item><description>StreamName: the name of the live stream.</description></item>
+        /// <item><description><para><c>AppName</c>: The name of the application to which the stream belongs.</para>
+        /// </description></item>
+        /// <item><description><para><c>DomainName</c>: The domain name of the stream.</para>
+        /// </description></item>
+        /// <item><description><para><c>StreamName</c>: The name of the live stream.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -37,12 +40,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string LiveStreamConfig { get; set; }
 
         /// <summary>
-        /// <para>The production configurations, in the JSON format. Mode specifies the editing mode. Valid values:</para>
+        /// <para>The production configuration for the output file, specified as a JSON object. The <c>Mode</c> parameter specifies the editing mode. Valid values are:</para>
         /// <list type="bullet">
-        /// <item><description><b>AccurateFast</b> (default): fast editing. It is faster than the Accurate mode. The resolution of the output file is the same as that of the source stream. You cannot specify the width and height of the output file.</description></item>
-        /// <item><description><b>Accurate</b>: accurate editing. In this mode, you can specify the width and height of the output file.</description></item>
-        /// <item><description><b>Rough</b>: rough editing. The minimum precision is one TS segment. The output file comprises all segments within the specified time range. You can specify the width and height of the output file.</description></item>
-        /// <item><description><b>RoughFast</b>: fast rough editing. It is faster than the Accurate mode. The minimum precision is one TS segment. The output file comprises all segments within the specified time range. The resolution of the output file is the same as that of the source stream. You cannot specify the width and height of the output file.</description></item>
+        /// <item><description><para><b>AccurateFast</b> (Default): Fast and precise editing. It offers faster processing compared to the <c>Accurate</c> mode. The output file has the same resolution as the source stream. You cannot specify a custom width and height for the output file.</para>
+        /// </description></item>
+        /// <item><description><para><b>Accurate</b>: Precise editing. This mode lets you specify a custom width and height for the output file.</para>
+        /// </description></item>
+        /// <item><description><para><b>Rough</b>: Rough editing with a precision of a single TS segment. The output file includes all segments between the specified start and end times. You can specify a custom width and height for the output file.</para>
+        /// </description></item>
+        /// <item><description><para><b>RoughFast</b>: Fast rough-cut editing, which is faster than the <c>Accurate</c> mode. It has a precision of a single TS segment, and the output file includes all segments between the specified start and end times. The output file has the same resolution as the source stream. You cannot specify a custom width and height for the output file.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -53,21 +60,28 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string MediaProduceConfig { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the output file, in the JSON format. You can specify an OSS URL or a storage location in a storage bucket of ApsaraVideo VOD.</para>
+        /// <para>The destination configuration for the output file, specified as a JSON object. You can specify either a URL on OSS or a storage location in a VOD bucket.</para>
         /// <list type="bullet">
-        /// <item><description>To store the output file in OSS, you must specify MediaURL.</description></item>
-        /// <item><description>To store the output file in ApsaraVideo VOD, you must specify StorageLocation and FileName.</description></item>
+        /// <item><description><para>To output to OSS, the <c>MediaURL</c> parameter is required.</para>
+        /// </description></item>
+        /// <item><description><para>To output to VOD, the <c>StorageLocation</c> and <c>FileName</c> parameters are required.</para>
+        /// </description></item>
         /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{ &quot;MediaURL&quot;: &quot;<a href="https://ice-auto-test.oss-cn-shanghai.aliyuncs.com/testfile.mp4">https://ice-auto-test.oss-cn-shanghai.aliyuncs.com/testfile.mp4</a>&quot; }, or { &quot;StorageLocation&quot;: &quot;bucket.oss-cn-shanghai.aliyuncs.com&quot;, &quot;FileName&quot;: &quot;output.mp4&quot; }</para>
         /// </summary>
         [NameInMap("OutputMediaConfig")]
         [Validation(Required=false)]
         public string OutputMediaConfig { get; set; }
 
         /// <summary>
-        /// <para>The type of the output file. Valid values:</para>
+        /// <para>The destination type for the output file. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>oss-object: OSS object in an OSS bucket.</description></item>
-        /// <item><description>vod-media: media asset in Alibaba Cloud VOD.</description></item>
+        /// <item><description><para><c>oss-object</c>: An object in an Alibaba Cloud OSS bucket.</para>
+        /// </description></item>
+        /// <item><description><para><c>vod-media</c>: A media asset in Alibaba Cloud VOD.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -78,7 +92,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string OutputMediaTarget { get; set; }
 
         /// <summary>
-        /// <para>The ID of the live editing project. If this parameter is specified, the system reads the storage configurations of the project. If this parameter is not specified, the specified storage configurations take precedence.</para>
+        /// <para>The ID of the live editing project. If you specify this parameter, the system uses the storage settings from the project. If left empty, the system uses the storage settings provided in the request instead.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>fddd7748b58bf1d47e95</b></b></para>
@@ -88,7 +102,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The user-defined data in the JSON format, which can be up to 512 bytes in length.</para>
+        /// <para>Custom user data, provided as a JSON object. The maximum length is 512 bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;key&quot;: &quot;value&quot;}</para>

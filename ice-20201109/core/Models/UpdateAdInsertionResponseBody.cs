@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public UpdateAdInsertionResponseBodyConfigManifestEndpointConfig ManifestEndpointConfig { get; set; }
             public class UpdateAdInsertionResponseBodyConfigManifestEndpointConfig : TeaModel {
                 /// <summary>
-                /// <para>DASH清单播放端点前缀</para>
+                /// <para>The prefix of the playback endpoint for DASH manifests.</para>
                 /// </summary>
                 [NameInMap("DashPrefix")]
                 [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitSportsHighlightsJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the sports highlights job.</para>
+        /// <para>The sports highlight job ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>d80e4e4044975745c14b</b></b></para>

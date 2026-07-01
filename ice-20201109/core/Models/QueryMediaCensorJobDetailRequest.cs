@@ -23,8 +23,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The number of entries per page.</para>
         /// <list type="bullet">
-        /// <item><description>Default value: <b>30</b>.</description></item>
-        /// <item><description>Valid values: <b>1 to 300</b>.</description></item>
+        /// <item><description><para>Default value: <b>30</b>.</para>
+        /// </description></item>
+        /// <item><description><para>Valid values: <b>1 to 300</b>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

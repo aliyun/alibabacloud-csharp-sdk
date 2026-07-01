@@ -36,8 +36,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <summary>
                 /// <para>The gender. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>female</description></item>
-                /// <item><description>male</description></item>
+                /// <item><description><para>female</para>
+                /// </description></item>
+                /// <item><description><para>male</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -51,9 +53,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <para>The demonstration scenario.</para>
                 /// <para>Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>story</b></description></item>
-                /// <item><description><b>interaction</b></description></item>
-                /// <item><description><b>navigation</b></description></item>
+                /// <item><description><para><b>story</b></para>
+                /// </description></item>
+                /// <item><description><para><b>interaction</b></para>
+                /// </description></item>
+                /// <item><description><para><b>navigation</b></para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -65,6 +70,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
                 /// <summary>
                 /// <para>The voice description.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>这是一个个性化人声</para>
                 /// </summary>
                 [NameInMap("VoiceDesc")]
                 [Validation(Required=false)]
@@ -82,6 +90,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
                 /// <summary>
                 /// <para>The voice name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Basic</para>
                 /// </summary>
                 [NameInMap("VoiceName")]
                 [Validation(Required=false)]
@@ -104,8 +115,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

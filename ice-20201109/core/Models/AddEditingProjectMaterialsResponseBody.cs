@@ -121,11 +121,11 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
                     /// <summary>
                     /// <para>The file status.</para>
-                    /// <para>\-Uploading</para>
-                    /// <para>\-Normal</para>
-                    /// <para>\-UploadFail</para>
-                    /// <para>\-Disable</para>
-                    /// <para>\-Deleted</para>
+                    /// <para>-Uploading</para>
+                    /// <para>-Normal</para>
+                    /// <para>-UploadFail</para>
+                    /// <para>-Disable</para>
+                    /// <para>-Deleted</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Normal</para>

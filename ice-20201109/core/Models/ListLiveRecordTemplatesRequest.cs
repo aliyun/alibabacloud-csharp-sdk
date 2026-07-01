@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListLiveRecordTemplatesRequest : TeaModel {
         /// <summary>
-        /// <para>The search keyword. You can use the template ID or name as the keyword to search for templates. If you search for templates by name, fuzzy match is supported.</para>
+        /// <para>The keyword to search for templates by ID or name. Fuzzy matching is supported for template names.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test template</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public long? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 10.</para>
+        /// <para>The number of entries to return on each page. Value range: 1–100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,12 +40,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The sorting order. By default, the query results are sorted by creation time in descending order.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>asc: sorts the query results in ascending order.</description></item>
-        /// <item><description>desc: sorts the query results in descending order.</description></item>
-        /// </list>
+        /// <para>The sort order. The default sort is descending by creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>desc</para>
@@ -54,17 +49,15 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string SortBy { get; set; }
 
+        /// <summary>
+        /// <para>The template IDs to retrieve.</para>
+        /// </summary>
         [NameInMap("TemplateIds")]
         [Validation(Required=false)]
         public List<string> TemplateIds { get; set; }
 
         /// <summary>
-        /// <para>The type of the template.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>system</description></item>
-        /// <item><description>custom</description></item>
-        /// </list>
+        /// <para>The template type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>custom</para>

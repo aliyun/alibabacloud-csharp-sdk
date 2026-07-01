@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The category of the template. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>system</description></item>
-        /// <item><description>customized</description></item>
+        /// <item><description><para>system</para>
+        /// </description></item>
+        /// <item><description><para>customized</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,8 +58,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The sorting order. By default, the query results are sorted by creation time in descending order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>asc</description></item>
-        /// <item><description>desc</description></item>
+        /// <item><description><para>asc</para>
+        /// </description></item>
+        /// <item><description><para>desc</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -70,10 +74,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The type of the template. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>normal</description></item>
-        /// <item><description>narrow-band</description></item>
-        /// <item><description>audio-only</description></item>
-        /// <item><description>origin</description></item>
+        /// <item><description><para>normal</para>
+        /// </description></item>
+        /// <item><description><para>narrow-band</para>
+        /// </description></item>
+        /// <item><description><para>audio-only</para>
+        /// </description></item>
+        /// <item><description><para>origin</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -86,8 +94,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The video codec. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>H.264</description></item>
-        /// <item><description>H.265</description></item>
+        /// <item><description><para>H.264</para>
+        /// </description></item>
+        /// <item><description><para>H.265</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

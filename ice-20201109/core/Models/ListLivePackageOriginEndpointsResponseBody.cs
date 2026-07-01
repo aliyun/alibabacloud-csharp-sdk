@@ -48,6 +48,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
             /// <summary>
             /// <para>The endpoint description.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>This is an origin endpoint.</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]

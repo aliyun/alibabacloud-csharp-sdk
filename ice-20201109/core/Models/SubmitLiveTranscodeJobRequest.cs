@@ -23,8 +23,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The start mode of the transcoding job.</para>
         /// <list type="bullet">
-        /// <item><description>0: The transcoding job immediately starts.</description></item>
-        /// <item><description>1: The transcoding job starts at the scheduled time.</description></item>
+        /// <item><description><para>0: The transcoding job immediately starts.</para>
+        /// </description></item>
+        /// <item><description><para>1: The transcoding job starts at the scheduled time.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

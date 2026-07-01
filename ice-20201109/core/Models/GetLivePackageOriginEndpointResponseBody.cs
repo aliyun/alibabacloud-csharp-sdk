@@ -48,6 +48,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
             /// <summary>
             /// <para>The endpoint description.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>This is an origin endpoint.</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -113,6 +116,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string LastModified { get; set; }
 
+            /// <summary>
+            /// <para>Live packaging configuration</para>
+            /// </summary>
             [NameInMap("LivePackagingConfig")]
             [Validation(Required=false)]
             public LivePackagingConfig LivePackagingConfig { get; set; }
@@ -153,7 +159,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>requestIdExample123</para>
+        /// <para>5D87B753-0250-5D9D-B248-D40C3271F864</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

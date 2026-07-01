@@ -212,7 +212,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string MediaURL { get; set; }
 
                 /// <summary>
-                /// <para>If OutputMediaTarget is set to vod-media, this parameter indicates the storage location of the media asset in ApsaraVideo VOD. The storage location is the path of the file in ApsaraVideo VOD, excluding the prefix http://. Example: outin-xxxxxx.oss-cn-shanghai.aliyuncs.com.</para>
+                /// <para>If OutputMediaTarget is set to vod-media, this parameter indicates the storage location of the media asset in ApsaraVideo VOD. The storage location is the path of the file in ApsaraVideo VOD, excluding the prefix http\://. Example: outin-xxxxxx.oss-cn-shanghai.aliyuncs.com.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>outin-xxxxxx.oss-cn-shanghai.aliyuncs.com</para>

@@ -54,8 +54,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <para>The sorting order. By default, the query results are sorted by creation time in descending order.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>asc: sorts the query results in ascending order.</description></item>
-        /// <item><description>desc: sorts the query results in descending order.</description></item>
+        /// <item><description><para>asc: sorts the query results in ascending order.</para>
+        /// </description></item>
+        /// <item><description><para>desc: sorts the query results in descending order.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -80,9 +82,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <para>The state of the job. By default, the state is not filtered.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>paused: The job is paused.</description></item>
-        /// <item><description>initial: The job is not started.</description></item>
-        /// <item><description>started: The job is in progress.</description></item>
+        /// <item><description><para>paused: The job is paused.</para>
+        /// </description></item>
+        /// <item><description><para>initial: The job is not started.</para>
+        /// </description></item>
+        /// <item><description><para>started: The job is in progress.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

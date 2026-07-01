@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The snapshot callback URL.</para>
         /// <list type="bullet">
-        /// <item><description>It cannot exceed 255 characters in length.</description></item>
-        /// <item><description>Both HTTP and HTTPS URLs are supported.</description></item>
+        /// <item><description><para>It cannot exceed 255 characters in length.</para>
+        /// </description></item>
+        /// <item><description><para>Both HTTP and HTTPS URLs are supported.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -29,6 +31,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <item><description>It cannot exceed 128 characters in length.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Screenshot task1</para>
         /// </summary>
         [NameInMap("JobName")]
         [Validation(Required=false)]

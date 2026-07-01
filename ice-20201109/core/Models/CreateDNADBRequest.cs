@@ -10,19 +10,26 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class CreateDNADBRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the media fingerprint library.</para>
+        /// <para>The description of the DNA database.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>这是一个视频DNA库。</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The model of the media fingerprint library. Valid values:</para>
+        /// <para>The DNA database model. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Video</b></description></item>
-        /// <item><description><b>Audio</b></description></item>
-        /// <item><description><b>Image</b></description></item>
-        /// <item><description><b>Text</b> (supported only in the China (Shanghai) region)</description></item>
+        /// <item><description><para><b>Video</b>: For video content.</para>
+        /// </description></item>
+        /// <item><description><para><b>Audio</b>: For audio content.</para>
+        /// </description></item>
+        /// <item><description><para><b>Image</b>: For image content. (Deprecated)</para>
+        /// </description></item>
+        /// <item><description><para><b>Text</b>: For text content. Supported only in the China (Shanghai) region. (Deprecated)</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -33,7 +40,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Model { get; set; }
 
         /// <summary>
-        /// <para>The name of the media fingerprint library.</para>
+        /// <para>The name of the DNA database.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

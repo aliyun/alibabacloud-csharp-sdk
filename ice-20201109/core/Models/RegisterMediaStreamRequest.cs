@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <para>The URL of the media asset in another service. The URL is associated with the ID of the media asset in IMS. The URL cannot be modified once registered.</para>
         /// <para>Set this parameter to the OSS URL of the media asset. The following formats are supported:</para>
         /// <para>http(s)://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</para>
-        /// <para>oss://example-bucket/example.mp4: In this format, it is considered by default that the region of the OSS bucket in which the media asset resides is the same as the region in which IMS is activated.</para>
+        /// <para>oss\://example-bucket/example.mp4: In this format, it is considered by default that the region of the OSS bucket in which the media asset resides is the same as the region in which IMS is activated.</para>
         /// </summary>
         [NameInMap("InputURL")]
         [Validation(Required=false)]
@@ -29,6 +29,13 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string MediaId { get; set; }
 
+        /// <summary>
+        /// <para>Custom stream tags used to identify transcoding streams.</para>
+        /// <para>After the media stream is registered, you can invoke <a href="https://help.aliyun.com/zh/ims/developer-reference/api-ice-2020-11-09-getplayinfo?spm=a2c4g.11186623.help-menu-193643.d_5_0_3_1_4.56dc5a11JzNEVj">GetPlayInfo</a> to retrieve this tag value.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;key1&quot;: &quot;value1&quot;}</para>
+        /// </summary>
         [NameInMap("StreamTags")]
         [Validation(Required=false)]
         public string StreamTags { get; set; }

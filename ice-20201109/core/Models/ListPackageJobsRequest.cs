@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <para>The job ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>7b38a5d86f1e47838927b6e7ccb11cbe</para>
+        /// <para>7b38a5d86f1e47838927b6e7ccb1****</para>
         /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ab4802364a2e49208c99efab82dfa8e8</para>
+        /// <para>ab4802364a2e49208c99efab82df****</para>
         /// </summary>
         [NameInMap("NextPageToken")]
         [Validation(Required=false)]
@@ -42,8 +42,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The order that you use to sort the query results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CreateTimeDesc: sorts the jobs by creation time in descending order.</description></item>
-        /// <item><description>CreateTimeAsc: sorts the jobs by creation time in ascending order.</description></item>
+        /// <item><description><para>CreateTimeDesc: sorts the jobs by creation time in descending order.</para>
+        /// </description></item>
+        /// <item><description><para>CreateTimeAsc: sorts the jobs by creation time in ascending order.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -76,9 +78,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The state of the job.</para>
         /// <list type="bullet">
-        /// <item><description>Init: The job is submitted.</description></item>
-        /// <item><description>Success: The job is successful.</description></item>
-        /// <item><description>Fail: The job failed.</description></item>
+        /// <item><description><para>Init: The job is submitted.</para>
+        /// </description></item>
+        /// <item><description><para>Success: The job is successful.</para>
+        /// </description></item>
+        /// <item><description><para>Fail: The job failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

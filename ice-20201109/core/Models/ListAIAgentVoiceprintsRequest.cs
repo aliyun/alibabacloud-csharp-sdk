@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListAIAgentVoiceprintsRequest : TeaModel {
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number to return. Must be 1 or greater.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Value values: [1,100].</para>
+        /// <para>The number of entries per page. Valid values: 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -29,12 +29,18 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The registration mode for the voiceprint. The default value is <c>Explicit</c>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Explicit</para>
+        /// </summary>
         [NameInMap("RegistrationMode")]
         [Validation(Required=false)]
         public string RegistrationMode { get; set; }
 
         /// <summary>
-        /// <para>A unique identifier for the voiceprint. This parameter is optional. If provided, only the information for that ID is returned. If not specified, all voiceprints under the account are returned.</para>
+        /// <para>The unique voiceprint ID. If specified, this operation returns the details of a single voiceprint. If omitted, it returns a paginated list of all voiceprints under your account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vp_1699123456_8527</para>

@@ -22,6 +22,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         /// <summary>
         /// <para>The channel description. It can be up to 1,000 characters in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>This is a test channel.</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]

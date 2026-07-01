@@ -24,28 +24,41 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <para>The template subtype.</para>
         /// <para>Valid values for transcoding templates:</para>
         /// <list type="bullet">
-        /// <item><description>1 (Normal): regular template.</description></item>
-        /// <item><description>2 (AudioTranscode): audio transcoding template.</description></item>
-        /// <item><description>3 (Remux): container format conversion template.</description></item>
-        /// <item><description>4 (NarrowBandV1): Narrowband HD 1.0 template.</description></item>
-        /// <item><description>5 (NarrowBandV2): Narrowband HD 2.0 template.</description></item>
+        /// <item><description><para>1 (Normal): regular template.</para>
+        /// </description></item>
+        /// <item><description><para>2 (AudioTranscode): audio transcoding template.</para>
+        /// </description></item>
+        /// <item><description><para>3 (Remux): container format conversion template.</para>
+        /// </description></item>
+        /// <item><description><para>4 (NarrowBandV1): Narrowband HD 1.0 template.</para>
+        /// </description></item>
+        /// <item><description><para>5 (NarrowBandV2): Narrowband HD 2.0 template.</para>
+        /// </description></item>
         /// </list>
         /// <para>Valid values for snapshot templates:</para>
         /// <list type="bullet">
-        /// <item><description>1 (Normal): regular template.</description></item>
-        /// <item><description>2 (Sprite): sprite template.</description></item>
-        /// <item><description>3 (WebVtt): WebVTT template.</description></item>
+        /// <item><description><para>1 (Normal): regular template.</para>
+        /// </description></item>
+        /// <item><description><para>2 (Sprite): sprite template.</para>
+        /// </description></item>
+        /// <item><description><para>3 (WebVtt): WebVTT template.</para>
+        /// </description></item>
         /// </list>
         /// <para>Valid values for AI-assisted content moderation templates:</para>
         /// <list type="bullet">
-        /// <item><description>1 (Video): video moderation template.</description></item>
-        /// <item><description>2 (Audio): audio moderation template.</description></item>
-        /// <item><description>3 (Image): image moderation template.</description></item>
+        /// <item><description><para>1 (Video): video moderation template.</para>
+        /// </description></item>
+        /// <item><description><para>2 (Audio): audio moderation template.</para>
+        /// </description></item>
+        /// <item><description><para>3 (Image): image moderation template.</para>
+        /// </description></item>
         /// </list>
         /// <para>Valid values for AI-assisted intelligent erasure templates.</para>
         /// <list type="bullet">
-        /// <item><description>1 (VideoDelogo): logo erasure template.</description></item>
-        /// <item><description>2 (VideoDetext): subtitle erasure template.</description></item>
+        /// <item><description><para>1 (VideoDelogo): logo erasure template.</para>
+        /// </description></item>
+        /// <item><description><para>2 (VideoDetext): subtitle erasure template.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -69,17 +82,28 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The template type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: transcoding template.</description></item>
-        /// <item><description>2: snapshot template.</description></item>
-        /// <item><description>3: animated image template.</description></item>
-        /// <item><description>4\. image watermark template.</description></item>
-        /// <item><description>5: text watermark template.</description></item>
-        /// <item><description>6: subtitle template.</description></item>
-        /// <item><description>7: AI-assisted content moderation template.</description></item>
-        /// <item><description>8: AI-assisted intelligent thumbnail template.</description></item>
-        /// <item><description>9: AI-assisted intelligent erasure template.</description></item>
-        /// <item><description>10: AI-assisted media fingerprint analysis template.</description></item>
-        /// <item><description>11: AI-assisted smart tagging template.</description></item>
+        /// <item><description><para>1: transcoding template.</para>
+        /// </description></item>
+        /// <item><description><para>2: snapshot template.</para>
+        /// </description></item>
+        /// <item><description><para>3: animated image template.</para>
+        /// </description></item>
+        /// <item><description><para>4\. image watermark template.</para>
+        /// </description></item>
+        /// <item><description><para>5: text watermark template.</para>
+        /// </description></item>
+        /// <item><description><para>6: subtitle template.</para>
+        /// </description></item>
+        /// <item><description><para>7: AI-assisted content moderation template.</para>
+        /// </description></item>
+        /// <item><description><para>8: AI-assisted intelligent thumbnail template.</para>
+        /// </description></item>
+        /// <item><description><para>9: AI-assisted intelligent erasure template.</para>
+        /// </description></item>
+        /// <item><description><para>10: AI-assisted media fingerprint analysis template.</para>
+        /// </description></item>
+        /// <item><description><para>11: AI-assisted smart tagging template.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

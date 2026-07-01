@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitCustomizedVoiceJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public SubmitCustomizedVoiceJobResponseBodyData Data { get; set; }
         public class SubmitCustomizedVoiceJobResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the human voice cloning job.</para>
+            /// <para>The unique identifier for the voice cloning job.</para>
             /// 
             /// <b>Example:</b>
             /// <para><b><b>d718e2ff4f018ccf419a7b71</b></b></para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string JobId { get; set; }
 
             /// <summary>
-            /// <para>The voice ID.</para>
+            /// <para>The unique identifier for the voice.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xiaozhuan</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique identifier for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b><b>11-DB8D-4A9A-875B-275798</b></b></b></para>
@@ -51,8 +51,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

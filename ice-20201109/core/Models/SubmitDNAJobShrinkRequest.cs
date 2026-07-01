@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitDNAJobShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The configurations of the media fingerprint analysis job. The value is a JSON object. If you specify this parameter, the template parameters are overwritten.</para>
+        /// <para>The DNA configuration in JSON format. If specified, these settings override the corresponding template parameters.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;SaveType&quot;: &quot;save&quot;,&quot;MediaType&quot;&quot;:&quot;video&quot;}</para>
+        /// <para>{&quot;SaveType&quot;: &quot;save&quot;,&quot;MediaType&quot;:&quot;video&quot;}</para>
         /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
         public string Config { get; set; }
 
         /// <summary>
-        /// <para>The ID of the media fingerprint library. If you do not specify this parameter, the default media fingerprint library is used. For more information about how to create a media fingerprint library, see <a href="https://help.aliyun.com/document_detail/479275.html">CreateDNADB</a>.</para>
+        /// <para>The DNA library ID. To create a DNA library, see <a href="https://help.aliyun.com/document_detail/479275.html">CreateDNADB</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string DBId { get; set; }
 
         /// <summary>
-        /// <para>The input file for media fingerprint analysis.</para>
+        /// <para>The input DNA file.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Input")]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ApsaraVideo Media Processing (MPS) queue to which the media fingerprint analysis job is submitted.</para>
+        /// <para>The pipeline ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5246b8d12a62433ab77845074039****</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string PipelineId { get; set; }
 
         /// <summary>
-        /// <para>The primary key of the video. You must make sure that each primary key is unique.</para>
+        /// <para>The unique primary key for the video. You are responsible for ensuring its uniqueness.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string TemplateId { get; set; }
 
         /// <summary>
-        /// <para>The user-defined data. The data can be up to 128 bytes in length.</para>
+        /// <para>The user-defined data. The maximum length is 128 bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>userData</para>

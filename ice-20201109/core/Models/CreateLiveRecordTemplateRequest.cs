@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class CreateLiveRecordTemplateRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the template.</para>
+        /// <para>The name of the Live Record Template.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Name")]
@@ -26,14 +26,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public List<CreateLiveRecordTemplateRequestRecordFormat> RecordFormat { get; set; }
         public class CreateLiveRecordTemplateRequestRecordFormat : TeaModel {
             /// <summary>
-            /// <para>The duration of the recording cycle. Unit: seconds. If you do not specify this parameter, the default value 6 hours is used.</para>
+            /// <para>The duration of a recording cycle in seconds. If you omit this parameter, it defaults to 6 hours.</para>
             /// <remarks>
+            /// <list type="bullet">
+            /// <item><description>If a stream interruption during a recording cycle lasts less than 3 minutes, the recording continues in the same Recording File.</description></item>
+            /// </list>
             /// </remarks>
             /// <list type="bullet">
-            /// <item><description><para>If a live stream is interrupted during a recording cycle but is resumed within 3 minutes, the stream is recorded in the same recording before and after the interruption.</para>
-            /// </description></item>
-            /// <item><description><para>If a live stream is interrupted for more than 3 minutes, a new recording is generated. To change the default stream interruption time, submit a ticket.</para>
-            /// </description></item>
+            /// <item><description>A Recording File is finalized only after a stream interruption lasts for more than 3 minutes. To change this default 3-minute threshold, submit a ticket.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -44,9 +44,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public int? CycleDuration { get; set; }
 
             /// <summary>
-            /// <para>The format.</para>
+            /// <para>The recording format.</para>
             /// <remarks>
-            /// <para> If you set this parameter to m3u8, you must also specify the SliceOssObjectPrefix and SliceDuration parameters.</para>
+            /// <para>If you set this parameter to <c>m3u8</c>, you must also specify the <c>SliceOssObjectPrefix</c> and <c>SliceDuration</c> parameters.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -58,10 +58,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Format { get; set; }
 
             /// <summary>
-            /// <para>The name of the recording file that is stored in Object Storage Service (OSS).</para>
+            /// <para>The name of the Recording File stored in Object Storage Service (OSS).</para>
             /// <list type="bullet">
-            /// <item><description>The name must be less than 256 bytes in length and can contain the {JobId}, {Sequence}, {StartTime}, {EndTime}, {EscapedStartTime}, and {EscapedEndTime} variables.</description></item>
-            /// <item><description>The name must contain the {StartTime} and {EndTime} variables or the {EscapedStartTime} and {EscapedEndTime} variables.</description></item>
+            /// <item><description><para>The file name must be less than 256 bytes and supports the following variables: {JobId}, {Sequence}, {StartTime}, {EndTime}, {EscapedStartTime}, and {EscapedEndTime}.</para>
+            /// </description></item>
+            /// <item><description><para>The value must include either the {StartTime} or {EscapedStartTime} variable and either the {EndTime} or {EscapedEndTime} variable.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -72,11 +74,11 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string OssObjectPrefix { get; set; }
 
             /// <summary>
-            /// <para>The duration of a single segment. Unit: seconds.</para>
+            /// <para>The duration of each slice in seconds.</para>
             /// <remarks>
-            /// <para> This parameter takes effect only if you set Format to m3u8.</para>
+            /// <para>This parameter is valid only when <c>Format</c> is set to <c>m3u8</c>.</para>
             /// </remarks>
-            /// <para>If you do not specify this parameter, the default value 30 seconds is used. Valid values: 5 to 30.</para>
+            /// <para>The default value is 30. The value must be an integer from 5 to 30.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -86,13 +88,15 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public int? SliceDuration { get; set; }
 
             /// <summary>
-            /// <para>The name of the TS segment.</para>
+            /// <para>The name of the TS slice.</para>
             /// <remarks>
-            /// <para> This parameter is required only if you set Format to m3u8.</para>
+            /// <para>This parameter is required only when <c>Format</c> is set to <c>m3u8</c>.</para>
             /// </remarks>
             /// <list type="bullet">
-            /// <item><description>By default, the duration of a segment is 30 seconds. The segment name must be less than 256 bytes in length and can contain the {JobId}, {UnixTimestamp}, and {Sequence} variables.</description></item>
-            /// <item><description>The segment name must contain the {UnixTimestamp} and {Sequence} variables.</description></item>
+            /// <item><description><para>The file name must be less than 256 bytes and supports the following variables: {JobId}, {UnixTimestamp}, and {Sequence}.</para>
+            /// </description></item>
+            /// <item><description><para>The value must include the {UnixTimestamp} and {Sequence} variables.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <item><description>If Type is set to OSS, set this parameter to the URL of an OSS object. Both the OSS and HTTP protocols are supported.</description></item>
             /// </list>
             /// <remarks>
-            /// <para> Before you use the OSS bucket in the URL, you must add the bucket on the <a href="https://help.aliyun.com/document_detail/609918.html">Storage Management</a> page of the Intelligent Media Services (IMS) console.</para>
+            /// <para>Before you use the OSS bucket in the URL, you must add the bucket on the <a href="https://help.aliyun.com/document_detail/609918.html">Storage Management</a> page of the Intelligent Media Services (IMS) console.</para>
             /// </remarks>
             /// <list type="bullet">
             /// <item><description>If Type is set to Media, set this parameter to the ID of a media asset.</description></item>
@@ -40,8 +40,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <summary>
             /// <para>The type of the media object.</para>
             /// <list type="bullet">
-            /// <item><description>OSS: an Object Storage Service (OSS) object.</description></item>
-            /// <item><description>Media: a media asset.</description></item>
+            /// <item><description><para>OSS: an Object Storage Service (OSS) object.</para>
+            /// </description></item>
+            /// <item><description><para>Media: a media asset.</para>
+            /// </description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 

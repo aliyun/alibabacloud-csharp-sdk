@@ -10,32 +10,65 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListAIAgentDialoguesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The dialog records.</para>
+        /// <para>A list of dialogues.</para>
         /// </summary>
         [NameInMap("Dialogues")]
         [Validation(Required=false)]
         public List<ListAIAgentDialoguesResponseBodyDialogues> Dialogues { get; set; }
         public class ListAIAgentDialoguesResponseBodyDialogues : TeaModel {
+            /// <summary>
+            /// <para>A list of file attachments referenced in the dialogue.</para>
+            /// </summary>
             [NameInMap("AttachedFileList")]
             [Validation(Required=false)]
             public List<ListAIAgentDialoguesResponseBodyDialoguesAttachedFileList> AttachedFileList { get; set; }
             public class ListAIAgentDialoguesResponseBodyDialoguesAttachedFileList : TeaModel {
+                /// <summary>
+                /// <para>The format of the attachment, such as mp3, wav, or pdf.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>mp3</para>
+                /// </summary>
                 [NameInMap("Format")]
                 [Validation(Required=false)]
                 public string Format { get; set; }
 
+                /// <summary>
+                /// <para>The unique identifier of the attachment.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>7B117AF5-***************</para>
+                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
+                /// <summary>
+                /// <para>The file name of the attachment.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>MusicDemix</para>
+                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                /// <summary>
+                /// <para>The attachment type, represented by a numeric value. The meaning of this value is defined by your business logic.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public int? Type { get; set; }
 
+                /// <summary>
+                /// <para>The URL of the attachment.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="https://media.w3.org/2010/05/sintel/trailer.mp3">https://media.w3.org/2010/05/sintel/trailer.mp3</a></para>
+                /// </summary>
                 [NameInMap("Url")]
                 [Validation(Required=false)]
                 public string Url { get; set; }
@@ -43,7 +76,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             }
 
             /// <summary>
-            /// <para>The unique ID of the dialog.</para>
+            /// <para>The unique ID of the dialogue.</para>
             /// 
             /// <b>Example:</b>
             /// <para>19de81b3b3d94abda22****</para>
@@ -52,19 +85,33 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string DialogueId { get; set; }
 
+            /// <summary>
+            /// <para>A JSON-formatted string for extended information. Use this field to store custom data, such as sentiment labels or intent recognition results.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{\&quot;addTransferLock\&quot;:true}</para>
+            /// </summary>
             [NameInMap("Extend")]
             [Validation(Required=false)]
             public string Extend { get; set; }
 
+            /// <summary>
+            /// <para>The ID of the workflow node that generated the dialogue entry, which you can use for tracing.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>e01-cn-to345ikn62o</para>
+            /// </summary>
             [NameInMap("NodeId")]
             [Validation(Required=false)]
             public string NodeId { get; set; }
 
             /// <summary>
-            /// <para>The speaker. Valid values: </para>
+            /// <para>The producer of this message.</para>
             /// <list type="bullet">
-            /// <item><description>user</description></item>
-            /// <item><description>agent</description></item>
+            /// <item><description><para>user: A message from the user.</para>
+            /// </description></item>
+            /// <item><description><para>agent: A message from the agent.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -75,17 +122,17 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Producer { get; set; }
 
             /// <summary>
-            /// <para>The reasoning trace.</para>
+            /// <para>The agent\&quot;s reasoning text, which can reveal its thought process.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>I\&quot;m thinking</para>
+            /// <para>我在思考</para>
             /// </summary>
             [NameInMap("ReasoningText")]
             [Validation(Required=false)]
             public string ReasoningText { get; set; }
 
             /// <summary>
-            /// <para>The ID of the conversational turn.</para>
+            /// <para>The ID of the dialogue round.</para>
             /// 
             /// <b>Example:</b>
             /// <para>f27f9b9be28642a88e18****</para>
@@ -95,9 +142,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string RoundId { get; set; }
 
             /// <summary>
-            /// <para>The source of the message. Valid values:</para>
-            /// <para>chat: messaging conversations.</para>
-            /// <para>call: voice calls.</para>
+            /// <para>The source channel of the message. Valid values:</para>
+            /// <para>chat: The message is from a text chat.</para>
+            /// <para>call: The message is from a voice call.</para>
             /// 
             /// <b>Example:</b>
             /// <para>chat</para>
@@ -107,7 +154,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The specific content.</para>
+            /// <para>The text content of the dialogue entry.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Hello</para>
@@ -117,7 +164,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Text { get; set; }
 
             /// <summary>
-            /// <para>The UNIX timestamp, measured in milliseconds, which indicates the time when the message was generated.</para>
+            /// <para>The Unix timestamp (in milliseconds) when the dialogue entry was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1734511087000</para>
@@ -127,18 +174,24 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public long? Time { get; set; }
 
             /// <summary>
-            /// <para>The message type. Valid values:</para>
-            /// <para>Voice calls:</para>
+            /// <para>The type of the message. Valid values include:</para>
+            /// <para>For a call:</para>
             /// <ol>
-            /// <item><description>greeting: the welcome message.</description></item>
-            /// <item><description>normal: the voice response.</description></item>
-            /// <item><description>speech: the proactive message.</description></item>
+            /// <item><description><para>greeting: A welcome message.</para>
+            /// </description></item>
+            /// <item><description><para>normal: A standard voice response.</para>
+            /// </description></item>
+            /// <item><description><para>speech: A proactive voice broadcast.</para>
+            /// </description></item>
             /// </ol>
-            /// <para>Messaging conversations:</para>
+            /// <para>For a chat:</para>
             /// <ol>
-            /// <item><description>normal: the text reply.</description></item>
-            /// <item><description>announcement: the proactive text message.</description></item>
-            /// <item><description>custom: the custom message.</description></item>
+            /// <item><description><para>normal: A standard text response.</para>
+            /// </description></item>
+            /// <item><description><para>announcement: A proactive text push.</para>
+            /// </description></item>
+            /// <item><description><para>custom: A custom message.</para>
+            /// </description></item>
             /// </ol>
             /// 
             /// <b>Example:</b>

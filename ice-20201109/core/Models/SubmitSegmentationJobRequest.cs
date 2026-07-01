@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitSegmentationJobRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>A client token to ensure request idempotence.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>12e8864746a0a398</b></b></para>
@@ -20,16 +20,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The input configuration. For detailed parameters, see <a href="~~2874121#cc59ad3082jbx~~">InputConfig</a>.</para>
+        /// <para>The input configuration. For more information, see <a href="~~2874121#cc59ad3082jbx~~">InputConfig</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
-        ///     &quot;Type&quot;: &quot;OSS&quot;,
-        ///     &quot;Media&quot;: &quot;<a href="http://test-bucket.oss-cn-shanghai.aliyuncs.com/test.mp4">http://test-bucket.oss-cn-shanghai.aliyuncs.com/test.mp4</a>&quot;
+        /// &quot;Type&quot;: &quot;OSS&quot;,
+        /// &quot;Media&quot;: &quot;<a href="http://test-bucket.oss-cn-shanghai.aliyuncs.com/test.mp4">http://test-bucket.oss-cn-shanghai.aliyuncs.com/test.mp4</a>&quot;
         /// }
         /// or {
-        ///     &quot;Type&quot;: &quot;Media&quot;,
-        ///     &quot;Media&quot;: &quot;ce49a020e****1ef81c1e6f6d5686302&quot;
+        /// &quot;Type&quot;: &quot;Media&quot;,
+        /// &quot;Media&quot;: &quot;ce49a020e****1ef81c1e6f6d5686302&quot;
         /// }</para>
         /// </summary>
         [NameInMap("InputConfig")]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string InputConfig { get; set; }
 
         /// <summary>
-        /// <para>The task parameters. For details, see <a href="~~2874121#a60357f2d5iix~~">JobParams</a>.</para>
+        /// <para>The job parameters. For more information, see <a href="~~2874121#a60357f2d5iix~~">JobParams</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string JobParams { get; set; }
 
         /// <summary>
-        /// <para>The output configuration. For detailed parameters, see <a href="~~2874121#cef23186a8d6w~~">OutputConfig</a>.</para>
+        /// <para>The output configuration. For more information, see <a href="~~2874121#cef23186a8d6w~~">OutputConfig</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string OutputConfig { get; set; }
 
         /// <summary>
-        /// <para>The user-defined data in the JSON format, which can be up to 512 bytes in length.</para>
+        /// <para>Custom user data in JSON format, with a maximum length of 512 bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;test&quot;: &quot;22&quot;}</para>

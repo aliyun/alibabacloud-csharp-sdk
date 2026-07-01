@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the media asset.</para>
+        /// <para>The media ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>2bcbfcfa30fccb36f72dca22</b></b></para>
@@ -40,12 +40,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The job state. Valid values:</para>
+        /// <para>The job status.</para>
         /// <list type="bullet">
-        /// <item><description>Created</description></item>
-        /// <item><description>Executing</description></item>
-        /// <item><description>Finished</description></item>
-        /// <item><description>Failed</description></item>
+        /// <item><description><para>Created</para>
+        /// </description></item>
+        /// <item><description><para>Executing</para>
+        /// </description></item>
+        /// <item><description><para>Finished</para>
+        /// </description></item>
+        /// <item><description><para>Failed</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

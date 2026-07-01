@@ -23,9 +23,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <para>The job type.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>LiveEditingJob: live editing job.</description></item>
-        /// <item><description>EditingJob: regular template-based editing job</description></item>
-        /// <item><description>VETemplateJob: advanced template-based editing job.</description></item>
+        /// <item><description><para>LiveEditingJob: live editing job.</para>
+        /// </description></item>
+        /// <item><description><para>EditingJob: regular template-based editing job</para>
+        /// </description></item>
+        /// <item><description><para>VETemplateJob: advanced template-based editing job.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -90,8 +93,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <para>The sorting parameter. By default, the query results are sorted by creation time in descending order.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CreationTime:Asc: sorted by creation time in ascending order.</description></item>
-        /// <item><description>CreationTime:Desc: sorted by creation time in descending order.</description></item>
+        /// <item><description><para>CreationTime:Asc: sorted by creation time in ascending order.</para>
+        /// </description></item>
+        /// <item><description><para>CreationTime:Desc: sorted by creation time in descending order.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -115,10 +120,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <para>The job state.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Init: The job is initialized.</description></item>
-        /// <item><description>Failed: The job failed.</description></item>
-        /// <item><description>Success: The job is successful.</description></item>
-        /// <item><description>Processing: The job is in progress.</description></item>
+        /// <item><description><para>Init: The job is initialized.</para>
+        /// </description></item>
+        /// <item><description><para>Failed: The job failed.</para>
+        /// </description></item>
+        /// <item><description><para>Success: The job is successful.</para>
+        /// </description></item>
+        /// <item><description><para>Processing: The job is in progress.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

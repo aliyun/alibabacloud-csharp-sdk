@@ -10,18 +10,21 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetPlayInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the media asset.</para>
+        /// <para>The basic information about the media asset.</para>
         /// </summary>
         [NameInMap("MediaBase")]
         [Validation(Required=false)]
         public GetPlayInfoResponseBodyMediaBase MediaBase { get; set; }
         public class GetPlayInfoResponseBodyMediaBase : TeaModel {
             /// <summary>
-            /// <para>The category ID. You can use one of the following methods to obtain the ID:</para>
+            /// <para>The category ID. You can obtain the category ID in one of the following ways:</para>
             /// <list type="bullet">
-            /// <item><description>Log on to the <a href="https://ims.console.aliyun.com">Intelligent Media Services (IMS) console</a> and choose <b>Media Asset Management</b> &gt; <b>Category Management</b> to view the category ID.</description></item>
-            /// <item><description>View the value of the CateId parameter returned by the AddCategory operation that you called to create a category.</description></item>
-            /// <item><description>View the value of the CateId parameter returned by the GetCategories operation that you called to query a category.</description></item>
+            /// <item><description><para>Log on to the <a href="https://ims.console.aliyun.com">IMS console</a> and choose <b>media asset management</b> &gt; <b>category management</b> to view the category ID.</para>
+            /// </description></item>
+            /// <item><description><para>The create category operation returns the category ID in the <c>CateId</c> parameter.</para>
+            /// </description></item>
+            /// <item><description><para>The get category operation returns the category ID in the <c>CateId</c> parameter.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -32,7 +35,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public long? CateId { get; set; }
 
             /// <summary>
-            /// <para>The URL of the thumbnail.</para>
+            /// <para>The cover URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para>https://***.oss-cn-shanghai.aliyuncs.com/cover/281c64d6-b5fb-4c57-97cd-84da56a8b151_large_cover_url.jpg</para>
@@ -52,7 +55,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The content description.</para>
+            /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>desc</para>
@@ -62,7 +65,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the media asset.</para>
+            /// <para>The media asset ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2eea77a61c7b4ddd95bec34a6f65b***</para>
@@ -74,10 +77,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <summary>
             /// <para>The tags.</para>
             /// <list type="bullet">
-            /// <item><description>Up to 16 tags are supported.</description></item>
-            /// <item><description>Multiple tags are separated by commas (,).</description></item>
-            /// <item><description>Each tag can be up to 32 bytes in length.</description></item>
-            /// <item><description>The value is encoded in UTF-8.</description></item>
+            /// <item><description><para>You can add up to 16 tags.</para>
+            /// </description></item>
+            /// <item><description><para>Separate multiple tags with commas (,).</para>
+            /// </description></item>
+            /// <item><description><para>The maximum length of a tag is 32 bytes.</para>
+            /// </description></item>
+            /// <item><description><para>Tags must be UTF-8 encoded.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -88,8 +95,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string MediaTags { get; set; }
 
             /// <summary>
-            /// <para>The type of the media asset. Valid values:</para>
-            /// <para>video audio</para>
+            /// <para>The type of the media file. Valid values:</para>
+            /// <para><c>video</c>: A video file. <c>audio</c>: An audio-only file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>video</para>
@@ -99,11 +106,17 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string MediaType { get; set; }
 
             /// <summary>
-            /// <para>The resource status. Valid values:</para>
-            /// <para>Init: the initial state, which indicates that the source file is not ready.</para>
-            /// <para>Preparing: The source file is being prepared. For example, the file is being uploaded or edited.</para>
-            /// <para>PrepareFail: The source file failed to be prepared. For example, the information of the source file failed to be obtained.</para>
-            /// <para>Normal: The source file is ready.</para>
+            /// <para>The status of the media asset. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><c>Init</c>: The source file is not ready.</para>
+            /// </description></item>
+            /// <item><description><para><c>Preparing</c>: The source file is being prepared. This process may involve uploading or compositing.</para>
+            /// </description></item>
+            /// <item><description><para><c>PrepareFail</c>: Preparation of the source file failed. For example, the system failed to retrieve the source file metadata.</para>
+            /// </description></item>
+            /// <item><description><para><c>Normal</c>: The source file is ready.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Normal</para>
@@ -125,14 +138,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
-        /// <para>The information about the audio or video stream.</para>
+        /// <para>A list of audio or video playback streams.</para>
         /// </summary>
         [NameInMap("PlayInfoList")]
         [Validation(Required=false)]
         public List<GetPlayInfoResponseBodyPlayInfoList> PlayInfoList { get; set; }
         public class GetPlayInfoResponseBodyPlayInfoList : TeaModel {
             /// <summary>
-            /// <para>The color depth.</para>
+            /// <para>The color bit depth.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8</para>
@@ -142,7 +155,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public int? BitDepth { get; set; }
 
             /// <summary>
-            /// <para>The bitrate of the media stream. Unit: Kbit/s.</para>
+            /// <para>The bitrate of the media stream in Kbit/s.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -152,7 +165,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Bitrate { get; set; }
 
             /// <summary>
-            /// <para>The time when the media stream was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The creation time. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-05-10T02:28:49Z</para>
@@ -162,18 +175,28 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The quality of the media stream. Valid values:</para>
+            /// <para>The definition of the video stream. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>FD</b>: low definition</description></item>
-            /// <item><description><b>LD</b>: standard definition</description></item>
-            /// <item><description><b>SD</b>: high definition</description></item>
-            /// <item><description><b>HD</b>: ultra-high definition</description></item>
-            /// <item><description><b>OD</b>: original definition</description></item>
-            /// <item><description><b>2K</b></description></item>
-            /// <item><description><b>4K</b></description></item>
-            /// <item><description><b>SQ</b>: standard sound quality</description></item>
-            /// <item><description><b>HQ</b>: high sound quality</description></item>
-            /// <item><description><b>AUTO</b>: adaptive bitrate</description></item>
+            /// <item><description><para><b>FD</b>: fluent</para>
+            /// </description></item>
+            /// <item><description><para><b>LD</b>: standard definition</para>
+            /// </description></item>
+            /// <item><description><para><b>SD</b>: high definition</para>
+            /// </description></item>
+            /// <item><description><para><b>HD</b>: ultra-high definition</para>
+            /// </description></item>
+            /// <item><description><para><b>OD</b>: original</para>
+            /// </description></item>
+            /// <item><description><para><b>2K</b></para>
+            /// </description></item>
+            /// <item><description><para><b>4K</b></para>
+            /// </description></item>
+            /// <item><description><para><b>SQ</b>: standard-quality audio</para>
+            /// </description></item>
+            /// <item><description><para><b>HQ</b>: high-quality audio</para>
+            /// </description></item>
+            /// <item><description><para><b>AUTO</b>: adaptive bitrate</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -184,7 +207,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Definition { get; set; }
 
             /// <summary>
-            /// <para>The duration of the media stream. Unit: seconds.</para>
+            /// <para>The duration of the media stream in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9.0464</para>
@@ -196,8 +219,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <summary>
             /// <para>Indicates whether the media stream is encrypted. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: The media stream is not encrypted.</description></item>
-            /// <item><description><b>1</b>: The media stream is encrypted.</description></item>
+            /// <item><description><para><b>0</b>: No.</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>: Yes.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -210,11 +235,13 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <summary>
             /// <para>The encryption type of the media stream. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>AliyunVoDEncryption</b>: Alibaba Cloud proprietary cryptography</description></item>
-            /// <item><description><b>HLSEncryption</b>: HTTP Live Streaming (HLS) encryption</description></item>
+            /// <item><description><para><b>AliyunVoDEncryption</b>: Alibaba Cloud VoD Encryption.</para>
+            /// </description></item>
+            /// <item><description><para><b>HLSEncryption</b>: HLS standard encryption.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> If the encryption type is AliyunVoDEncryption, only ApsaraVideo Player SDK can be used to play videos.</para>
+            /// <para>If a stream is encrypted with <b>AliyunVoDEncryption</b>, you can play it only with the Alibaba Cloud Player SDK.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -225,7 +252,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string EncryptType { get; set; }
 
             /// <summary>
-            /// <para>The OSS URL of the file.</para>
+            /// <para>The OSS file URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://outin-***.oss-cn-shanghai.aliyuncs.com/sv/43a68ee9-181809b6aba/43a68ee9-181809b6aba.mpeg">http://outin-***.oss-cn-shanghai.aliyuncs.com/sv/43a68ee9-181809b6aba/43a68ee9-181809b6aba.mpeg</a></para>
@@ -237,8 +264,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <summary>
             /// <para>The format of the media stream.</para>
             /// <list type="bullet">
-            /// <item><description>If the media asset is a video file, the valid values are <b>mp4</b> and <b>m3u8</b>.</description></item>
-            /// <item><description>If the media asset is an audio-only file, the value is <b>mp3</b>.</description></item>
+            /// <item><description><para>For video streams, valid values are <b>mp4</b> and <b>m3u8</b>.</para>
+            /// </description></item>
+            /// <item><description><para>For audio-only streams, the value is <b>mp3</b>.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -249,7 +278,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Format { get; set; }
 
             /// <summary>
-            /// <para>The frame rate of the media stream. Unit: frames per second (FPS).</para>
+            /// <para>The frame rate of the media stream in frames per second.</para>
             /// 
             /// <b>Example:</b>
             /// <para>25</para>
@@ -259,14 +288,20 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Fps { get; set; }
 
             /// <summary>
-            /// <para>The high dynamic range (HDR) type of the media stream. Valid values:</para>
+            /// <para>The High Dynamic Range (HDR) type of the media stream. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>HDR</description></item>
-            /// <item><description>HDR10</description></item>
-            /// <item><description>HLG</description></item>
-            /// <item><description>DolbyVision</description></item>
-            /// <item><description>HDRVivid</description></item>
-            /// <item><description>SDR+</description></item>
+            /// <item><description><para>HDR</para>
+            /// </description></item>
+            /// <item><description><para>HDR10</para>
+            /// </description></item>
+            /// <item><description><para>HLG</para>
+            /// </description></item>
+            /// <item><description><para>DolbyVision</para>
+            /// </description></item>
+            /// <item><description><para>HDRVivid</para>
+            /// </description></item>
+            /// <item><description><para>SDR+</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -277,7 +312,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string HDRType { get; set; }
 
             /// <summary>
-            /// <para>The height of the media stream. Unit: pixels.</para>
+            /// <para>The height of the media stream in pixels.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1080</para>
@@ -287,7 +322,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public long? Height { get; set; }
 
             /// <summary>
-            /// <para>The task ID.</para>
+            /// <para>The job ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>36c9d38e70bf43ed9f7f8f48d6356***</para>
@@ -297,7 +332,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string JobId { get; set; }
 
             /// <summary>
-            /// <para>The time when the media stream was updated. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The last modification time. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-05-13T11:39:41.714+08:00</para>
@@ -307,13 +342,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string ModificationTime { get; set; }
 
             /// <summary>
-            /// <para>The type of Narrowband HD™ transcoding. Valid values:</para>
+            /// <para>The Narrowband HD type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: standard transcoding</description></item>
-            /// <item><description><b>1.0</b>: Narrowband HD™ 1.0 transcoding</description></item>
-            /// <item><description><b>2.0</b>: Narrowband HD™ 2.0 transcoding</description></item>
+            /// <item><description><para><b>0</b>: regular.</para>
+            /// </description></item>
+            /// <item><description><para><b>1.0</b>: Narrowband HD 1.0.</para>
+            /// </description></item>
+            /// <item><description><para><b>2.0</b>: Narrowband HD 2.0.</para>
+            /// </description></item>
             /// </list>
-            /// <para>This parameter is returned only when a definition that is available in the built-in Narrowband HD™ 1.0 transcoding template is specified. For more information, see the <a href="https://help.aliyun.com/document_detail/52839.html">Definition parameter in TranscodeTemplate</a> table.</para>
+            /// <para>This parameter applies only if a definition is configured in the built-in transcoding template for Narrowband HD 1.0. For more information, see <a href="https://help.aliyun.com/document_detail/52839.html">Configure transcoding templates - Definition</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -323,7 +361,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string NarrowBandType { get; set; }
 
             /// <summary>
-            /// <para>The playback URL of the media stream.</para>
+            /// <para>The playback URL of the video stream.</para>
             /// 
             /// <b>Example:</b>
             /// <para>https://***.aliyuncdn.com/sv/756bee1-17f980f0945/756bee1-17f980f0945.mp4</para>
@@ -333,7 +371,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string PlayURL { get; set; }
 
             /// <summary>
-            /// <para>The size of the media stream. Unit: bytes.</para>
+            /// <para>The size of the media stream in bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>418112</para>
@@ -343,10 +381,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public long? Size { get; set; }
 
             /// <summary>
-            /// <para>The status of the media stream. Valid values:</para>
+            /// <para>The media stream status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Normal</b></description></item>
-            /// <item><description><b>Invisible</b></description></item>
+            /// <item><description><para><b>Normal</b>: The stream is available.</para>
+            /// </description></item>
+            /// <item><description><para><b>Invisible</b>: The stream is not visible.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -357,7 +397,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The tags of the media stream, which are used to identify the transcoding type.</para>
+            /// <para>The stream tags, which are used to identify the transcoding type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>&quot;{\&quot;ims.audioServiceType\&quot;: \&quot;AudioEnhancement\&quot;}&quot;</para>
@@ -367,7 +407,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string StreamTags { get; set; }
 
             /// <summary>
-            /// <para>The type of the media stream. If the media stream is a video stream, the value is <b>video</b>. If the media stream is an audio-only stream, the value is <b>audio</b>.</para>
+            /// <para>The type of the media stream. The value is <b>video</b> for video streams or <b>audio</b> for audio-only streams.</para>
             /// 
             /// <b>Example:</b>
             /// <para>video</para>
@@ -379,12 +419,18 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <summary>
             /// <para>The type of the transcoding template. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Normal: standard transcoding</description></item>
-            /// <item><description>AudioTranscode: audio transcoding</description></item>
-            /// <item><description>Remux: container format conversion</description></item>
-            /// <item><description>NarrowBandV1: Narrowband HD™ 1.0</description></item>
-            /// <item><description>NarrowBandV2: Narrowband HD™ 2.0</description></item>
-            /// <item><description>UHD: audio and video enhancement (ultra-high definition)</description></item>
+            /// <item><description><para><c>Normal</c>: regular transcoding</para>
+            /// </description></item>
+            /// <item><description><para><c>AudioTranscode</c>: audio transcoding</para>
+            /// </description></item>
+            /// <item><description><para><c>Remux</c>: remuxing</para>
+            /// </description></item>
+            /// <item><description><para><c>NarrowBandV1</c>: Narrowband HD 1.0</para>
+            /// </description></item>
+            /// <item><description><para><c>NarrowBandV2</c>: Narrowband HD 2.0</para>
+            /// </description></item>
+            /// <item><description><para><c>UHD</c>: audio and video enhancement (ultra-high definition)</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -405,7 +451,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string WatermarkId { get; set; }
 
             /// <summary>
-            /// <para>The width of the media stream. Unit: pixels.</para>
+            /// <para>The width of the media stream in pixels.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1024</para>

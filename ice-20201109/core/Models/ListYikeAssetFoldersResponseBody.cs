@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListYikeAssetFoldersResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The folder list.</para>
+        /// </summary>
         [NameInMap("FolderList")]
         [Validation(Required=false)]
         public List<ListYikeAssetFoldersResponseBodyFolderList> FolderList { get; set; }
         public class ListYikeAssetFoldersResponseBodyFolderList : TeaModel {
             /// <summary>
+            /// <para>The creation time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2026-01-22T02:07:06Z</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The folder ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>fd-EXRyxc5SHY</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string FolderId { get; set; }
 
             /// <summary>
+            /// <para>The folder name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>default</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string FolderName { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the folder is the default folder.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public bool? IsDefault { get; set; }
 
             /// <summary>
+            /// <para>The project ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>pd_183320223010****</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string ProductionId { get; set; }
 
             /// <summary>
+            /// <para>The workspace ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>llm-odl2p61i4vfbph4g</para>
             /// </summary>
@@ -64,6 +79,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
+        /// <para>The maximum number of results per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>50</para>
         /// </summary>
@@ -72,6 +89,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The token used to retrieve the next page of results. If this parameter is not returned, all results have been retrieved.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Token</para>
         /// </summary>
@@ -80,6 +99,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b><b><b>11-DB8D-4A9A-875B-275798</b></b></b></para>
         /// </summary>
@@ -88,6 +109,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total count of folders.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>78</para>
         /// </summary>

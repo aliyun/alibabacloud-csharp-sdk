@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <summary>
             /// <para>The format of recording files.</para>
             /// <remarks>
-            /// <para> If you set this parameter to m3u8, you must also specify the SliceOssObjectPrefix and SliceDuration parameters.</para>
+            /// <para>If you set this parameter to m3u8, you must also specify the SliceOssObjectPrefix and SliceDuration parameters.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -63,8 +63,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <summary>
             /// <para>The name of the recording that is stored in Object Storage Service (OSS).</para>
             /// <list type="bullet">
-            /// <item><description>The name must be less than 256 bytes in length and can contain the {JobId}, {Sequence}, {StartTime}, {EndTime}, {EscapedStartTime}, and {EscapedEndTime} variables.</description></item>
-            /// <item><description>The name must contain the {StartTime} and {EndTime} variables or the {EscapedStartTime} and {EscapedEndTime} variables.</description></item>
+            /// <item><description><para>The name must be less than 256 bytes in length and can contain the {JobId}, {Sequence}, {StartTime}, {EndTime}, {EscapedStartTime}, and {EscapedEndTime} variables.</para>
+            /// </description></item>
+            /// <item><description><para>The name must contain the {StartTime} and {EndTime} variables or the {EscapedStartTime} and {EscapedEndTime} variables.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -77,7 +79,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <summary>
             /// <para>The duration of a single segment. Unit: seconds</para>
             /// <remarks>
-            /// <para> This parameter takes effect only if you set Format to m3u8.</para>
+            /// <para>This parameter takes effect only if you set Format to m3u8.</para>
             /// </remarks>
             /// <para>If you do not specify this parameter, the default value 30 seconds is used. Valid values: 5 to 30.</para>
             /// 
@@ -91,7 +93,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <summary>
             /// <para>The name of the TS segment.</para>
             /// <remarks>
-            /// <para> This parameter is required only if you set Format to m3u8. By default, the duration of a segment is 30 seconds. The segment name must be less than 256 bytes in length and can contain the {JobId}, {UnixTimestamp}, and {Sequence} variables.</para>
+            /// <para>This parameter is required only if you set Format to m3u8. By default, the duration of a segment is 30 seconds. The segment name must be less than 256 bytes in length and can contain the {JobId}, {UnixTimestamp}, and {Sequence} variables.</para>
             /// </remarks>
             /// <para>The segment name must contain the {UnixTimestamp} and {Sequence} variables.</para>
             /// 

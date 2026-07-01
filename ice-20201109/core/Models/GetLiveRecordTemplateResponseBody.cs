@@ -121,8 +121,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <para>The type of the template.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>system</description></item>
-            /// <item><description>custom</description></item>
+            /// <item><description><para>system</para>
+            /// </description></item>
+            /// <item><description><para>custom</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

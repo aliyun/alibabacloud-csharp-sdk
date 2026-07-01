@@ -25,6 +25,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public class GetAvatarResponseBodyDataAvatar : TeaModel {
                 /// <summary>
                 /// <para>The description of the digital human.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>This is a digital human used for a specific scenario.</para>
                 /// </summary>
                 [NameInMap("AvatarDescription")]
                 [Validation(Required=false)]
@@ -42,6 +45,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
                 /// <summary>
                 /// <para>The name of the digital human.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Decimal</para>
                 /// </summary>
                 [NameInMap("AvatarName")]
                 [Validation(Required=false)]
@@ -124,8 +130,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

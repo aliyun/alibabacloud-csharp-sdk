@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class CreateDNADBResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the media fingerprint library.</para>
+        /// <para>The details of the DNA database.</para>
         /// </summary>
         [NameInMap("DBInfo")]
         [Validation(Required=false)]
         public CreateDNADBResponseBodyDBInfo DBInfo { get; set; }
         public class CreateDNADBResponseBodyDBInfo : TeaModel {
             /// <summary>
-            /// <para>The ID of the media fingerprint library. We recommend that you save this ID for subsequent calls of other operations.</para>
+            /// <para>The DNA database ID. Save this ID for use in subsequent API calls.</para>
             /// 
             /// <b>Example:</b>
             /// <para>88c6ca184c0e47098a5b665e2a12****</para>
@@ -27,14 +27,17 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string DBId { get; set; }
 
             /// <summary>
-            /// <para>The description of the media fingerprint library.</para>
+            /// <para>The description of the DNA database.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>这是一个视频DNA库。</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The model of the media fingerprint library.</para>
+            /// <para>The DNA database model.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Video</para>
@@ -44,7 +47,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Model { get; set; }
 
             /// <summary>
-            /// <para>The name of the media fingerprint library.</para>
+            /// <para>The name of the DNA database.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example name</para>
@@ -54,7 +57,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The state of the media fingerprint library. After a media fingerprint library is created, it enters the offline state. After the media fingerprint library is processed at the backend, it enters the active state.</para>
+            /// <para>After you create the database, its status is <c>offline</c> by default. The status automatically changes to <c>active</c> after the backend completes processing.</para>
             /// 
             /// <b>Example:</b>
             /// <para>offline</para>

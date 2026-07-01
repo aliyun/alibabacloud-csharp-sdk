@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
     public class UpdateLiveTranscodeTemplateRequest : TeaModel {
         /// <summary>
         /// <para>The template name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Template1130-2</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -63,10 +66,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <summary>
                 /// <para>The audio codec profile. Valid values when the Codec parameter is set to AAC:</para>
                 /// <list type="bullet">
-                /// <item><description>aac_low</description></item>
-                /// <item><description>aac_he</description></item>
-                /// <item><description>aac_he_v2</description></item>
-                /// <item><description>aac_ld</description></item>
+                /// <item><description><para>aac_low</para>
+                /// </description></item>
+                /// <item><description><para>aac_he</para>
+                /// </description></item>
+                /// <item><description><para>aac_he_v2</para>
+                /// </description></item>
+                /// <item><description><para>aac_ld</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -109,8 +116,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <summary>
                 /// <para>The encoding type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>H.264</description></item>
-                /// <item><description>H.265</description></item>
+                /// <item><description><para>H.264</para>
+                /// </description></item>
+                /// <item><description><para>H.265</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -143,12 +152,15 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <summary>
                 /// <para>The height of the output video. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Height ≥ 128</description></item>
-                /// <item><description>max (Height,Width) ≤ 2560</description></item>
-                /// <item><description>min（Height,Width）≤ 1440</description></item>
+                /// <item><description><para>Height ≥ 128</para>
+                /// </description></item>
+                /// <item><description><para>max (Height,Width) ≤ 2560</para>
+                /// </description></item>
+                /// <item><description><para>min(Height,Width)≤ 1440</para>
+                /// </description></item>
                 /// </list>
                 /// <remarks>
-                /// <para> The resolution of a video transcoded by using the H.265 Narrowband HD template cannot exceed 1,280 × 720 pixels.</para>
+                /// <para>The resolution of a video transcoded by using the H.265 Narrowband HD template cannot exceed 1,280 × 720 pixels.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -161,9 +173,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <summary>
                 /// <para>The video encoding profile. The profile determines how a video is encoded. In most cases, a greater value indicates better image quality and higher resource consumption. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>1: baseline. This value is suitable for mobile devices.</description></item>
-                /// <item><description>2: main. This value is suitable for standard-definition devices.</description></item>
-                /// <item><description>3: high. This value is suitable for high-definition devices.</description></item>
+                /// <item><description><para>1: baseline. This value is suitable for mobile devices.</para>
+                /// </description></item>
+                /// <item><description><para>2: main. This value is suitable for standard-definition devices.</para>
+                /// </description></item>
+                /// <item><description><para>3: high. This value is suitable for high-definition devices.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -176,12 +191,15 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <summary>
                 /// <para>The width of the output video. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Width ≥ 128</description></item>
-                /// <item><description>max (Height,Width) ≤ 2560</description></item>
-                /// <item><description>min（Height,Width）≤ 1440</description></item>
+                /// <item><description><para>Width ≥ 128</para>
+                /// </description></item>
+                /// <item><description><para>max (Height,Width) ≤ 2560</para>
+                /// </description></item>
+                /// <item><description><para>min(Height,Width)≤ 1440</para>
+                /// </description></item>
                 /// </list>
                 /// <remarks>
-                /// <para> The resolution of a video transcoded by using the H.265 Narrowband HD template cannot exceed 1,280 × 720 pixels.</para>
+                /// <para>The resolution of a video transcoded by using the H.265 Narrowband HD template cannot exceed 1,280 × 720 pixels.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>

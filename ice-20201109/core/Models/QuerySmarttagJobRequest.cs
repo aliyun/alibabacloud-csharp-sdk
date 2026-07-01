@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class QuerySmarttagJobRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the smart tagging job that you want to query. You can obtain the job ID from the response parameters of the SubmitSmarttagJob operation.</para>
+        /// <para>The ID of the smart tagging job. You can obtain this ID from the response to the <a href="https://help.aliyun.com/document_detail/478786.html">SubmitSmarttagJob</a> call.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +21,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>The extra parameters that you want to query in the request. The value is a JSON string. Example: {&quot;labelResultType&quot;:&quot;auto&quot;}. The value of labelResultType is of the STRING type. Valid values:</para>
+        /// <para>Additional request parameters, formatted as a JSON string. For example: <c>{&quot;labelResultType&quot;:&quot;auto&quot;}</c>. The <c>labelResultType</c> parameter supports the following values:</para>
         /// <list type="bullet">
-        /// <item><description>auto: machine tagging</description></item>
-        /// <item><description>hmi: tagging by human and machine</description></item>
+        /// <item><description><para><c>auto</c>: machine-generated tagging results</para>
+        /// </description></item>
+        /// <item><description><para><c>hmi</c>: human-in-the-loop tagging results</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -29,8 +29,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <summary>
             /// <para>The clip parameters for submitting a video production job. You can replace mediaId and text with real values to submit a job. References:</para>
             /// <list type="bullet">
-            /// <item><description><a href="https://help.aliyun.com/document_detail/445399.html">Create and use a regular template</a></description></item>
-            /// <item><description><a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a></description></item>
+            /// <item><description><para><a href="https://help.aliyun.com/document_detail/445399.html">Create and use a regular template</a></para>
+            /// </description></item>
+            /// <item><description><para><a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -43,12 +45,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <summary>
             /// <para>The template configurations.</para>
             /// <list type="bullet">
-            /// <item><description>For more information about the configurations of a regular template, see <a href="https://help.aliyun.com/document_detail/456193.html">Config object of a regular template</a>.</description></item>
-            /// <item><description>For more information about the configurations of an advanced template, see <a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a>.</description></item>
+            /// <item><description><para>For more information about the configurations of a regular template, see <a href="https://help.aliyun.com/document_detail/456193.html">Config object of a regular template</a>.</para>
+            /// </description></item>
+            /// <item><description><para>For more information about the configurations of an advanced template, see <a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a>.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>参考Timeline模板配置详解</para>
+            /// <para>See Timeline template configuration details.</para>
             /// </summary>
             [NameInMap("Config")]
             [Validation(Required=false)]
@@ -67,9 +71,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <summary>
             /// <para>The source from which the template was created. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>AliyunConsole</description></item>
-            /// <item><description>OpenAPI</description></item>
-            /// <item><description>WebSDK</description></item>
+            /// <item><description><para>AliyunConsole</para>
+            /// </description></item>
+            /// <item><description><para>OpenAPI</para>
+            /// </description></item>
+            /// <item><description><para>WebSDK</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -92,9 +99,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <summary>
             /// <para>The source from which the template was modified. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>AliyunConsole</description></item>
-            /// <item><description>OpenAPI</description></item>
-            /// <item><description>WebSDK</description></item>
+            /// <item><description><para>AliyunConsole</para>
+            /// </description></item>
+            /// <item><description><para>OpenAPI</para>
+            /// </description></item>
+            /// <item><description><para>WebSDK</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -118,7 +128,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <para>The template name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>视频添加水印模板</para>
+            /// <para>Video watermark template</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -137,10 +147,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <summary>
             /// <para>The state of the preview media asset. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Init: the initial state, which indicates that the source file is not ready.</description></item>
-            /// <item><description>Preparing: The source file is being prepared. For example, the file is being uploaded or edited.</description></item>
-            /// <item><description>PrepareFail: The source file failed to be prepared. For example, the information about the source file failed to be obtained.</description></item>
-            /// <item><description>Normal: The source file is ready.</description></item>
+            /// <item><description><para>Init: the initial state, which indicates that the source file is not ready.</para>
+            /// </description></item>
+            /// <item><description><para>Preparing: The source file is being prepared. For example, the file is being uploaded or edited.</para>
+            /// </description></item>
+            /// <item><description><para>PrepareFail: The source file failed to be prepared. For example, the information about the source file failed to be obtained.</para>
+            /// </description></item>
+            /// <item><description><para>Normal: The source file is ready.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -163,12 +177,18 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <summary>
             /// <para>The template state. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Available</description></item>
-            /// <item><description>Created</description></item>
-            /// <item><description>Uploading</description></item>
-            /// <item><description>Processing</description></item>
-            /// <item><description>UploadFailed</description></item>
-            /// <item><description>ProcessFailed</description></item>
+            /// <item><description><para>Available</para>
+            /// </description></item>
+            /// <item><description><para>Created</para>
+            /// </description></item>
+            /// <item><description><para>Uploading</para>
+            /// </description></item>
+            /// <item><description><para>Processing</para>
+            /// </description></item>
+            /// <item><description><para>UploadFailed</para>
+            /// </description></item>
+            /// <item><description><para>ProcessFailed</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -191,8 +211,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <summary>
             /// <para>The template type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Timeline</description></item>
-            /// <item><description>VETemplate</description></item>
+            /// <item><description><para>Timeline</para>
+            /// </description></item>
+            /// <item><description><para>VETemplate</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

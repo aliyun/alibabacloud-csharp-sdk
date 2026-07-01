@@ -10,13 +10,35 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SearchMediaByAILabelRequest : TeaModel {
         /// <summary>
+        /// <para>Custom filters. A JSON string. The following backing fields are supported: intField1 (integer type), strField1 and strField2 (string type). For the same field, only one matching method can be specified. Filters on different fields are combined with a logical AND relationship.</para>
+        /// <list type="bullet">
+        /// <item><description><para>Exact match, for example: {&quot;intField1&quot;:12,&quot;strField1&quot;:&quot;abc&quot;}</para>
+        /// </description></item>
+        /// <item><description><para>Multi-value match, for example: {&quot;intField1&quot;:[12,13],&quot;strField1&quot;:[&quot;abc&quot;,&quot;cd&quot;]}</para>
+        /// </description></item>
+        /// <item><description><para>Range match, for example: {&quot;intField1&quot;:{&quot;gte&quot;:12,&quot;lte&quot;:13}}</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
-        /// <para>{}</para>
+        /// <para>{&quot;intField1&quot;:{&quot;gte&quot;:12,&quot;lte&quot;:13},&quot;strField2&quot;:[&quot;cd&quot;,&quot;de&quot;],&quot;strField1&quot;:&quot;abc&quot;}</para>
         /// </summary>
         [NameInMap("CustomFilters")]
         [Validation(Required=false)]
         public string CustomFilters { get; set; }
 
+        /// <summary>
+        /// <para>Matching pattern. The default value is fuzzy for Fuzzy Matching. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>fuzzy: Fuzzy Matching</para>
+        /// </description></item>
+        /// <item><description><para>precise: Precise matching. This pattern applies only to newly added media assets.</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>fuzzy</para>
+        /// </summary>
         [NameInMap("MatchingMode")]
         [Validation(Required=false)]
         public string MatchingMode { get; set; }
@@ -34,9 +56,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The type of the media assets. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>image</description></item>
-        /// <item><description>video</description></item>
-        /// <item><description>audio</description></item>
+        /// <item><description><para>image</para>
+        /// </description></item>
+        /// <item><description><para>video</para>
+        /// </description></item>
+        /// <item><description><para>audio</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,10 +74,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The type of query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PersonName: queries media assets based on character names.</description></item>
-        /// <item><description>Ocr: queries media assets based on subtitles.</description></item>
-        /// <item><description>AiCategory: queries media assets based on AI categories.</description></item>
-        /// <item><description>FullSearch (default): queries all media assets.</description></item>
+        /// <item><description><para>PersonName: queries media assets based on character names.</para>
+        /// </description></item>
+        /// <item><description><para>Ocr: queries media assets based on subtitles.</para>
+        /// </description></item>
+        /// <item><description><para>AiCategory: queries media assets based on AI categories.</para>
+        /// </description></item>
+        /// <item><description><para>FullSearch (default): queries all media assets.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -62,6 +91,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string MultimodalSearchType { get; set; }
 
+        /// <summary>
+        /// <para>Namespace.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>name-1</para>
+        /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
@@ -99,8 +134,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The sorting method of the results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CreationTime:Desc (default): sorts results in reverse chronological order.</description></item>
-        /// <item><description>CreationTime:Asc: sorts results in chronological order.</description></item>
+        /// <item><description><para>CreationTime:Desc (default): sorts results in reverse chronological order.</para>
+        /// </description></item>
+        /// <item><description><para>CreationTime:Asc: sorts results in chronological order.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -113,8 +150,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>Specifies whether to query media asset clips. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -126,14 +165,22 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         /// <summary>
         /// <para>The content that you want to query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Kite</para>
         /// </summary>
         [NameInMap("Text")]
         [Validation(Required=false)]
         public string Text { get; set; }
 
         /// <summary>
+        /// <para>Creation time, in milliseconds UNIX timestamp. Use gte for greater than or equal to, and lte for less than or equal to.</para>
+        /// <list type="bullet">
+        /// <item><description>Example range: {&quot;gte&quot;:1761205662998,&quot;lte&quot;:1771205662998}</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
-        /// <para>{}</para>
+        /// <para>{&quot;gte&quot;:1761205662998,&quot;lte&quot;:1771205662998}</para>
         /// </summary>
         [NameInMap("UtcCreate")]
         [Validation(Required=false)]

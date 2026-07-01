@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListMediaConvertJobsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The tasks.</para>
+        /// <para>A list of media convert jobs.</para>
         /// </summary>
         [NameInMap("Jobs")]
         [Validation(Required=false)]
         public List<MediaConvertJobWithoutDetail> Jobs { get; set; }
 
         /// <summary>
-        /// <para>Indicates the read position returned by the current call. An empty value means all data has been read.</para>
+        /// <para>The token to retrieve the next page of results. This value is empty when there are no more results to return.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string NextPageToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b><b>11-DB8D-4A9A-875B-275798</b></b></b></para>

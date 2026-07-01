@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitHighlightExtractionJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the highlight extraction task.</para>
+        /// <para>The ID of the highlight extraction job.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>cdb3e74639973036bc84</b></b></para>

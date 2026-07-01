@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>Specifies whether to append tags. Default value: false. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: updates the MediaTags parameter by appending new tags.</description></item>
-        /// <item><description>false: updates the MediaTags parameter by overwriting existing tags with new tags.</description></item>
+        /// <item><description><para>true: updates the MediaTags parameter by appending new tags.</para>
+        /// </description></item>
+        /// <item><description><para>false: updates the MediaTags parameter by overwriting existing tags with new tags.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,11 +28,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The business type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>subtitles</description></item>
-        /// <item><description>watermark</description></item>
-        /// <item><description>opening</description></item>
-        /// <item><description>ending</description></item>
-        /// <item><description>general</description></item>
+        /// <item><description><para>subtitles</para>
+        /// </description></item>
+        /// <item><description><para>watermark</para>
+        /// </description></item>
+        /// <item><description><para>opening</para>
+        /// </description></item>
+        /// <item><description><para>ending</para>
+        /// </description></item>
+        /// <item><description><para>general</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -53,8 +60,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The category.</para>
         /// <list type="bullet">
-        /// <item><description>The value can be up to 64 bytes in length.</description></item>
-        /// <item><description>The value must be encoded in UTF-8.</description></item>
+        /// <item><description><para>The value can be up to 64 bytes in length.</para>
+        /// </description></item>
+        /// <item><description><para>The value must be encoded in UTF-8.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -67,8 +76,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The URL of the thumbnail.</para>
         /// <list type="bullet">
-        /// <item><description>The value can be up to 128 bytes in length.</description></item>
-        /// <item><description>The value must be encoded in UTF-8.</description></item>
+        /// <item><description><para>The value can be up to 128 bytes in length.</para>
+        /// </description></item>
+        /// <item><description><para>The value must be encoded in UTF-8.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -81,8 +92,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The content description.</para>
         /// <list type="bullet">
-        /// <item><description>The value can be up to 1,024 bytes in length.</description></item>
-        /// <item><description>The value must be encoded in UTF-8.</description></item>
+        /// <item><description><para>The value can be up to 1,024 bytes in length.</para>
+        /// </description></item>
+        /// <item><description><para>The value must be encoded in UTF-8.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -96,7 +109,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <para>The input URL of the media asset in another service. The URL must be bound to the ID of the media asset in IMS. The URL cannot be modified once registered.</para>
         /// <para>For a media asset from Object Storage Service (OSS), the URL may have one of the following formats:</para>
         /// <para>1\. http(s)://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</para>
-        /// <para>2\. oss://example-bucket/example.mp4. This format indicates that the region in which the OSS bucket of the media asset resides is the same as the region in which OSS is activated.</para>
+        /// <para>2\. oss\://example-bucket/example.mp4. This format indicates that the region in which the OSS bucket of the media asset resides is the same as the region in which OSS is activated.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</a></para>
@@ -118,10 +131,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The tags.</para>
         /// <list type="bullet">
-        /// <item><description>Up to 16 tags are supported.</description></item>
-        /// <item><description>Separate multiple tags with commas (,).</description></item>
-        /// <item><description>Each tag can be up to 32 bytes in length.</description></item>
-        /// <item><description>The value must be encoded in UTF-8.</description></item>
+        /// <item><description><para>Up to 16 tags are supported.</para>
+        /// </description></item>
+        /// <item><description><para>Separate multiple tags with commas (,).</para>
+        /// </description></item>
+        /// <item><description><para>Each tag can be up to 32 bytes in length.</para>
+        /// </description></item>
+        /// <item><description><para>The value must be encoded in UTF-8.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -144,8 +161,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The title.</para>
         /// <list type="bullet">
-        /// <item><description>The value can be up to 128 bytes in length.</description></item>
-        /// <item><description>The value must be encoded in UTF-8.</description></item>
+        /// <item><description><para>The value can be up to 128 bytes in length.</para>
+        /// </description></item>
+        /// <item><description><para>The value must be encoded in UTF-8.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

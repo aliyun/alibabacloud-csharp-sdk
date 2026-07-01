@@ -12,11 +12,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The business type of the media asset. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>subtitles</description></item>
-        /// <item><description>watermark</description></item>
-        /// <item><description>opening</description></item>
-        /// <item><description>ending</description></item>
-        /// <item><description>general</description></item>
+        /// <item><description><para>subtitles</para>
+        /// </description></item>
+        /// <item><description><para>watermark</para>
+        /// </description></item>
+        /// <item><description><para>opening</para>
+        /// </description></item>
+        /// <item><description><para>ending</para>
+        /// </description></item>
+        /// <item><description><para>general</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,8 +54,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The thumbnail URL of the media asset.</para>
         /// <list type="bullet">
-        /// <item><description>The value can be up to 128 bytes in length.</description></item>
-        /// <item><description>The value must be encoded in UTF-8.</description></item>
+        /// <item><description><para>The value can be up to 128 bytes in length.</para>
+        /// </description></item>
+        /// <item><description><para>The value must be encoded in UTF-8.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -63,8 +70,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The description of the media asset.</para>
         /// <list type="bullet">
-        /// <item><description>The value can be up to 1,024 bytes in length.</description></item>
-        /// <item><description>The value must be encoded in UTF-8.</description></item>
+        /// <item><description><para>The value can be up to 1,024 bytes in length.</para>
+        /// </description></item>
+        /// <item><description><para>The value must be encoded in UTF-8.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -77,15 +86,22 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The URL of the media asset in another service. The URL is associated with the ID of the media asset in IMS. The URL cannot be modified once registered. The following types of URLs are supported:</para>
         /// <list type="bullet">
-        /// <item><description>OSS URL in one of the following formats:</description></item>
-        /// </list>
-        /// <para>http(s)://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</para>
-        /// <para>oss://example-bucket/example.mp4: In this format, it is considered by default that the region of the OSS bucket in which the media asset resides is the same as the region in which IMS is activated.</para>
+        /// <item><description><para>OSS URL in one of the following formats:</para>
         /// <list type="bullet">
-        /// <item><description>URL of an ApsaraVideo VOD media asset</description></item>
+        /// <item><description><para><c>http(s)://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</c></para>
+        /// </description></item>
+        /// <item><description><para><c>oss://example-bucket/example.mp4</c>: In this format, it is considered by default that the region of the OSS bucket in which the media asset resides is the same as the region in which IMS is activated.</para>
+        /// </description></item>
         /// </list>
-        /// <para>vod://\<em>\</em>\<em>20b48fb04483915d4f2cd8ac\</em>\<em>\</em>\*</para>
+        /// </description></item>
+        /// <item><description><para>URL of an ApsaraVideo VOD media asset</para>
+        /// <para><c>vod://***20b48fb04483915d4f2cd8ac****</c></para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</a>  or  vod://<b><b>20b48fb04483915d4f2cd8ac</b></b></para>
         /// </summary>
         [NameInMap("InputURL")]
         [Validation(Required=false)]
@@ -94,10 +110,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The tags of the media asset.</para>
         /// <list type="bullet">
-        /// <item><description>Up to 16 tags are supported.</description></item>
-        /// <item><description>Separate multiple tags with commas (,).</description></item>
-        /// <item><description>Each tag can be up to 32 bytes in length.</description></item>
-        /// <item><description>The value must be encoded in UTF-8.</description></item>
+        /// <item><description><para>Up to 16 tags are supported.</para>
+        /// </description></item>
+        /// <item><description><para>Separate multiple tags with commas (,).</para>
+        /// </description></item>
+        /// <item><description><para>Each tag can be up to 32 bytes in length.</para>
+        /// </description></item>
+        /// <item><description><para>The value must be encoded in UTF-8.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -110,13 +130,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The type of the media asset. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>image</description></item>
-        /// <item><description>video</description></item>
-        /// <item><description>audio</description></item>
-        /// <item><description>text</description></item>
+        /// <item><description><para>image</para>
+        /// </description></item>
+        /// <item><description><para>video</para>
+        /// </description></item>
+        /// <item><description><para>audio</para>
+        /// </description></item>
+        /// <item><description><para>text</para>
+        /// </description></item>
         /// </list>
-        /// <para>We recommend that you specify this parameter based on your business requirements. If you set InputURL to an OSS URL, the media asset type can be automatically determined based on the file name extension. For more information
-        /// &lt;props=&quot;china&quot;&gt;, see <a href="https://help.aliyun.com/document_detail/466207.html">File formats</a>.</para>
+        /// <para>We recommend that you specify this parameter based on your business requirements. If you set InputURL to an OSS URL, the media asset type can be automatically determined based on the file name extension. Refer to <a href="t2240981.xdita#"></a>for details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>video</para>
@@ -127,8 +150,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         /// <summary>
         /// <para>Specifies whether to overwrite the media asset that has been registered by using the same URL. Default value: false. Valid values:</para>
-        /// <para>\- true: If a media asset has been registered by using the same URL, the original media asset is deleted and the new media asset is registered.</para>
-        /// <para>\- false: If a media asset has been registered by using the same URL, the new media asset is not registered. A URL cannot be used to register multiple media assets.</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: If a media asset has been registered by using the same URL, the original media asset is deleted and the new media asset is registered.</para>
+        /// </description></item>
+        /// <item><description><para>false: If a media asset has been registered by using the same URL, the new media asset is not registered. A URL cannot be used to register multiple media assets.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -154,7 +181,11 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// 
         /// <b>Example:</b>
         /// <para>{
-        ///       &quot;NeedSprite&quot;: &quot;false&quot;
+        ///     &quot;NeedSprite&quot;: &quot;false&quot;,
+        ///     &quot;CoverConfig&quot;: {
+        ///         &quot;StartTime&quot;: 1.0
+        ///     },
+        ///        &quot;SearchLibName&quot;: &quot;test&quot;
         /// }</para>
         /// </summary>
         [NameInMap("RegisterConfig")]
@@ -164,11 +195,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The ID of the smart tagging template. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>S00000101-300080: the system template that supports natural language processing (NLP) for content recognition.</description></item>
-        /// <item><description>S00000103-000001: the system template that supports NLP for content recognition and all tagging capabilities.</description></item>
-        /// <item><description>S00000103-000002: the system template that supports all tagging capabilities but does not support NLP for content recognition.</description></item>
+        /// <item><description><para>S00000101-300080: the system template that supports natural language processing (NLP) for content recognition.</para>
+        /// </description></item>
+        /// <item><description><para>S00000103-000001: the system template that supports NLP for content recognition and all <a href="t2729541.xdita#93b27f536airj">tagging capabilities</a>.</para>
+        /// </description></item>
+        /// <item><description><para>S00000103-000002: the system template that supports all <a href="t2729541.xdita#93b27f536airj">tagging capabilities</a> but does not support NLP for content recognition.</para>
+        /// </description></item>
         /// </list>
-        /// <para>After you configure this parameter, a smart tag analysis task is automatically initiated after the media asset is registered. For more information about the billable items&lt;props=&quot;china&quot;&gt;, see <a href="https://help.aliyun.com/zh/ims/media-ai-billing?spm=a2c4g.11186623.0.0.3147392dWwlSjL#p-k38-3rb-dug">Smart tagging</a>.</para>
+        /// <para>After you configure this parameter, a smart tag analysis task is automatically initiated after the media asset is registered.</para>
         /// 
         /// <b>Example:</b>
         /// <para>S00000101-300080</para>
@@ -180,8 +214,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The title. If you do not specify this parameter, a default title is automatically generated based on the date.</para>
         /// <list type="bullet">
-        /// <item><description>The value can be up to 128 bytes in length.</description></item>
-        /// <item><description>The value must be encoded in UTF-8.</description></item>
+        /// <item><description><para>The value can be up to 128 bytes in length.</para>
+        /// </description></item>
+        /// <item><description><para>The value must be encoded in UTF-8.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -192,12 +228,18 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Title { get; set; }
 
         /// <summary>
-        /// <para>The user data. You can specify a custom callback URL. For more information&lt;props=&quot;china&quot;&gt; ,see <a href="https://help.aliyun.com/document_detail/451631.html">Configure a callback upon editing completion</a>.</para>
+        /// <para>The user data. You can specify a custom callback URL. For more information, see <a href="t2243473.xdita#"></a>.</para>
         /// <list type="bullet">
-        /// <item><description>The value can be up to 1,024 bytes in length.</description></item>
-        /// <item><description>The value must be encoded in UTF-8.</description></item>
-        /// <item><description>The value must be in the JSON format.</description></item>
+        /// <item><description><para>The value can be up to 1,024 bytes in length.</para>
+        /// </description></item>
+        /// <item><description><para>The value must be encoded in UTF-8.</para>
+        /// </description></item>
+        /// <item><description><para>The value must be in the JSON format.</para>
+        /// </description></item>
         /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;NotifyAddress&quot;:&quot;<a href="http://xx.xx.xxx%22%7D">http://xx.xx.xxx&quot;}</a> or{&quot;NotifyAddress&quot;:&quot;<a href="https://xx.xx.xxx%22%7D">https://xx.xx.xxx&quot;}</a> or{&quot;NotifyAddress&quot;:&quot;ice-callback-demo&quot;}</para>
         /// </summary>
         [NameInMap("UserData")]
         [Validation(Required=false)]

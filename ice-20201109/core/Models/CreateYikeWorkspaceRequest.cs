@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class CreateYikeWorkspaceRequest : TeaModel {
         /// <summary>
+        /// <para>The workspace title.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Title { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of users in the workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

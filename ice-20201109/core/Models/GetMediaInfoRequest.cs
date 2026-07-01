@@ -9,17 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetMediaInfoRequest : TeaModel {
+        /// <summary>
+        /// <para>The validity period of the signed URL, in seconds.</para>
+        /// </summary>
         [NameInMap("AuthTimeout")]
         [Validation(Required=false)]
         public long? AuthTimeout { get; set; }
 
         /// <summary>
-        /// <para>The input URL of the media asset in another service. The URL must be registered in the IMS content library and bound to the ID of the media asset in IMS.</para>
+        /// <para>The address of the media asset to query. You must first register the media asset in the IMS media library and bind it to a <c>mediaId</c>.</para>
         /// <list type="bullet">
-        /// <item><description>For a media asset from Object Storage Service (OSS), the URL may have one of the following formats:</description></item>
+        /// <item><description>Object Storage Service (OSS) URL. Two formats are supported:</description></item>
         /// </list>
-        /// <para>http(s)://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4 or</para>
-        /// <para>oss://example-bucket/example.mp4. The second format indicates that the region in which the OSS bucket of the media asset resides is the same as the region in which OSS is activated.</para>
+        /// <para><c>http(s)://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</c></para>
+        /// <para><c>oss://example-bucket/example.mp4</c>. When you use this format, the OSS region defaults to the service endpoint region.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</a></para>
@@ -29,7 +32,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string InputURL { get; set; }
 
         /// <summary>
-        /// <para>The ID of the media asset in IMS. If this parameter is left empty, the InputURL parameter must be specified.</para>
+        /// <para>The ID of the media asset in Intelligent Media Services (IMS). If you omit this parameter, you must specify <c>InputURL</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>20b48fb04483915d4f2cd8ac</b></b></para>
@@ -39,10 +42,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string MediaId { get; set; }
 
         /// <summary>
-        /// <para>The type of the URL of the media asset to return in the response. Valid values:</para>
+        /// <para>The type of URL to return for the media asset file.</para>
         /// <list type="bullet">
-        /// <item><description>oss (default): an OSS URL.</description></item>
-        /// <item><description>cdn: a CDN URL. A CDN URL is returned only if the media asset is imported from ApsaraVideo VOD and the relevant domain name is an accelerated domain name in ApsaraVideo VOD.</description></item>
+        /// <item><description><para><c>oss</c>: Returns the OSS URL. This is the default value.</para>
+        /// </description></item>
+        /// <item><description><para><c>cdn</c>: Returns the Content Delivery Network (CDN) URL. A CDN URL is returned only if the media asset was imported from Video on Demand (VOD) and has a CDN domain name configured in VOD.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -53,10 +58,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string OutputType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return detailed information for specific media asset attributes. Supported attributes: AiRoughData.StandardSmartTagJob, which specifies whether to return detailed tag information if a tagging job has been submitted for the media asset. Valid values for the attribute:</para>
+        /// <para>Whether to return detailed information for specific media asset fields. The only supported field is <c>AiRoughData.StandardSmartTagJob</c>, which specifies how the result of a tag analysis task is returned.</para>
         /// <list type="bullet">
-        /// <item><description>false (default): The job result is returned as a URL.</description></item>
-        /// <item><description>true: The job result is returned as text.</description></item>
+        /// <item><description><para><c>false</c>: The task result is returned as a URL. This is the default value.</para>
+        /// </description></item>
+        /// <item><description><para><c>true</c>: The task result is returned as a string.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

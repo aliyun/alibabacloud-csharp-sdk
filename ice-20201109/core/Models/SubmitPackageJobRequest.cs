@@ -28,8 +28,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <summary>
                 /// <para>The media object.</para>
                 /// <list type="bullet">
-                /// <item><description>If Type is set to OSS, set this parameter to the URL of an OSS object. Both the OSS and HTTP protocols are supported.</description></item>
-                /// <item><description>If Type is set to Media, set this parameter to the ID of a media asset.</description></item>
+                /// <item><description><para>If Type is set to OSS, set this parameter to the URL of an OSS object. Both the OSS and HTTP protocols are supported.</para>
+                /// </description></item>
+                /// <item><description><para>If Type is set to Media, set this parameter to the ID of a media asset.</para>
+                /// </description></item>
                 /// </list>
                 /// <para>This parameter is required.</para>
                 /// 
@@ -43,8 +45,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <summary>
                 /// <para>The type of the media object. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>OSS: an Object Storage Service (OSS) object.</description></item>
-                /// <item><description>Media: a media asset.</description></item>
+                /// <item><description><para>OSS: an Object Storage Service (OSS) object.</para>
+                /// </description></item>
+                /// <item><description><para>Media: a media asset.</para>
+                /// </description></item>
                 /// </list>
                 /// <para>This parameter is required.</para>
                 /// 
@@ -91,8 +95,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <summary>
             /// <para>The type of the media object. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>OSS: an OSS object.</description></item>
-            /// <item><description>Media: a media asset.</description></item>
+            /// <item><description><para>OSS: an OSS object.</para>
+            /// </description></item>
+            /// <item><description><para>Media: a media asset.</para>
+            /// </description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 

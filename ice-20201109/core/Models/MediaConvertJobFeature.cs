@@ -10,18 +10,21 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class MediaConvertJobFeature : TeaModel {
         /// <summary>
-        /// <para>Configuration for clipping from the source video.</para>
+        /// <para>Clip settings.</para>
         /// </summary>
         [NameInMap("Clip")]
         [Validation(Required=false)]
         public MediaConvertJobFeatureClip Clip { get; set; }
         public class MediaConvertJobFeatureClip : TeaModel {
             /// <summary>
-            /// <para>Specifies the order of operations when concatenating multiple files and clipping.</para>
+            /// <para>Specifies whether to clip the first segment before concatenation.</para>
             /// <list type="bullet">
-            /// <item><description>true: Clips the first input file before it is concatenated.</description></item>
-            /// <item><description>false: Concatenates all input files first, then applies clipping.</description></item>
-            /// <item><description>Default value: false.</description></item>
+            /// <item><description><para><c>true</c>: The system clips the first segment before concatenation and transcoding.</para>
+            /// </description></item>
+            /// <item><description><para><c>false</c>: The system first concatenates and transcodes the segments, and then clips the resulting video.</para>
+            /// </description></item>
+            /// <item><description><para>Default value: <c>false</c>.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -32,18 +35,21 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string ConfigToClipFirstPart { get; set; }
 
             /// <summary>
-            /// <para>The time range for the clip.</para>
+            /// <para>The time span for the clip.</para>
             /// </summary>
             [NameInMap("TimeSpan")]
             [Validation(Required=false)]
             public MediaConvertJobFeatureClipTimeSpan TimeSpan { get; set; }
             public class MediaConvertJobFeatureClipTimeSpan : TeaModel {
                 /// <summary>
-                /// <para>The duration of the clip, starting from the Seek time. The default duration is from the Seek time to the end of the video. Duration and End are mutually exclusive. If End is set, Duration is ignored.</para>
+                /// <para>Specifies the duration of the clip, relative to the <c>Seek</c> time. By default, the clip extends to the end of the video. You can specify either <c>Duration</c> or <c>End</c>, but not both. If <c>End</c> is specified, <c>Duration</c> is ignored.</para>
                 /// <list type="bullet">
-                /// <item><description>Format: hh:mm:ss[.SSS] or sssss[.SSS].</description></item>
-                /// <item><description>Valid values: [00:00:00.000,23:59:59.999] or [0.000,86399.999].</description></item>
-                /// <item><description>Example: 00:01:59.99 or 180.30.</description></item>
+                /// <item><description><para>Format: <c>hh:mm:ss[.SSS]</c> or <c>sssss[.SSS]</c>.</para>
+                /// </description></item>
+                /// <item><description><para>Value range: <c>[00:00:00.000, 23:59:59.999]</c> or <c>[0.000, 86399.999]</c>.</para>
+                /// </description></item>
+                /// <item><description><para>Example: <c>00:01:59.999</c> or <c>180.30</c>.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -54,11 +60,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string Duration { get; set; }
 
                 /// <summary>
-                /// <para>Specifies a duration to trim from the end of the video. Duration and End are mutually exclusive. If End is set, Duration is ignored.</para>
+                /// <para>Specifies the end time of the clip. You can specify either <c>End</c> or <c>Duration</c>, but not both. If <c>End</c> is specified, <c>Duration</c> is ignored.</para>
                 /// <list type="bullet">
-                /// <item><description>Format: hh:mm:ss[.SSS] or sssss[.SSS].</description></item>
-                /// <item><description>Valid values: [00:00:00.000,23:59:59.999] or [0.000,86399.999].</description></item>
-                /// <item><description>Example: 00:01:59.99 or 180.30.</description></item>
+                /// <item><description><para>Format: <c>hh:mm:ss[.SSS]</c> or <c>sssss[.SSS]</c>.</para>
+                /// </description></item>
+                /// <item><description><para>Value range: <c>[00:00:00.000, 23:59:59.999]</c> or <c>[0.000, 86399.999]</c>.</para>
+                /// </description></item>
+                /// <item><description><para>Example: <c>00:01:59.999</c> or <c>180.30</c>.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -69,11 +78,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string End { get; set; }
 
                 /// <summary>
-                /// <para>The start time of the clip. It defaults to the beginning of the video.</para>
+                /// <para>Specifies the start time of the clip. If this parameter is not set, the clip starts from the beginning of the video.</para>
                 /// <list type="bullet">
-                /// <item><description>Format: hh:mm:ss[.SSS] or sssss[.SSS].</description></item>
-                /// <item><description>Valid values: [00:00:00.000,23:59:59.999] or [0.000,86399.999].</description></item>
-                /// <item><description>Example: 00:01:59.99 or 180.30.</description></item>
+                /// <item><description><para>Format: <c>hh:mm:ss[.SSS]</c> or <c>sssss[.SSS]</c>.</para>
+                /// </description></item>
+                /// <item><description><para>Value range: <c>[00:00:00.000, 23:59:59.999]</c> or <c>[0.000, 86399.999]</c>.</para>
+                /// </description></item>
+                /// <item><description><para>Example: <c>00:01:59.999</c> or <c>180.30</c>.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -88,21 +100,23 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
-        /// <para>A map of key-value pairs to be embedded as container-level metadata in the output file. Provided as a JSON string. Example: {&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:&quot;value2&quot;}.</para>
+        /// <para>Specifies the metadata for the output video container format, provided as JSON key-value pairs. Example: <c>{&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:&quot;value2&quot;}</c>.</para>
         /// <list type="bullet">
-        /// <item><description>Max key length: 64 characters.</description></item>
-        /// <item><description>Max value length: 512 characters.</description></item>
+        /// <item><description><para>Maximum key length: 64 characters.</para>
+        /// </description></item>
+        /// <item><description><para>Maximum value length: 512 characters.</para>
+        /// </description></item>
         /// </list>
-        /// <para>Max 4 key-value pairs.</para>
+        /// <para>You can add a maximum of four metadata key-value pairs.</para>
         /// </summary>
         [NameInMap("Metadata")]
         [Validation(Required=false)]
         public Dictionary<string, string> Metadata { get; set; }
 
         /// <summary>
-        /// <para>Image or text watermarks to add to the video. These parameters override the corresponding settings from a specified watermark template.</para>
+        /// <para>A list of watermark settings to overlay on the video. If specified, these settings override the corresponding parameters in the specified watermark template.</para>
         /// <list type="bullet">
-        /// <item><description>You can add up to four watermarks to a transcoding task.</description></item>
+        /// <item><description>You can add a maximum of four watermarks per transcoding job.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("Watermarks")]
@@ -110,11 +124,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public List<MediaConvertJobFeatureWatermarks> Watermarks { get; set; }
         public class MediaConvertJobFeatureWatermarks : TeaModel {
             /// <summary>
-            /// <para>Specifies if the font size adapts to the output resolution. Valid values:</para>
+            /// <para>Specifies whether the font size of the text watermark adapts to the output video resolution.</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
-            /// <item><description>Default value: false.</description></item>
+            /// <item><description><para><c>true</c>: The font size is adaptive.</para>
+            /// </description></item>
+            /// <item><description><para><c>false</c>: The font size is fixed.</para>
+            /// </description></item>
+            /// <item><description><para>Default value: <c>false</c>.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -125,9 +142,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Adaptive { get; set; }
 
             /// <summary>
-            /// <para>The color of the font border.</para>
+            /// <para>The border color of the text watermark.</para>
             /// <list type="bullet">
-            /// <item><description>Default value: Black.</description></item>
+            /// <item><description>Default value: <c>black</c>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -138,11 +155,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string BorderColor { get; set; }
 
             /// <summary>
-            /// <para>The width of the font border.</para>
+            /// <para>The border width of the text watermark.</para>
             /// <list type="bullet">
-            /// <item><description>Unit: pixels.</description></item>
-            /// <item><description>Valid values: [0,4096].</description></item>
-            /// <item><description>Default value: 0.</description></item>
+            /// <item><description><para>Unit: pixels.</para>
+            /// </description></item>
+            /// <item><description><para>Value range: [0, 4096].</para>
+            /// </description></item>
+            /// <item><description><para>Default value: <c>0</c>.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -153,7 +173,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string BorderWidth { get; set; }
 
             /// <summary>
-            /// <para>The text to be displayed as the watermark.</para>
+            /// <para>The content of the text watermark.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TextWatarmark</para>
@@ -163,10 +183,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>The font opacity.</para>
+            /// <para>The opacity of the font.</para>
             /// <list type="bullet">
-            /// <item><description>Valid values: (0,1].</description></item>
-            /// <item><description>Default value: 1.0.</description></item>
+            /// <item><description><para>Value range: (0, 1].</para>
+            /// </description></item>
+            /// <item><description><para>Default value: <c>1.0</c>.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -179,7 +201,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <summary>
             /// <para>The font color of the text watermark.</para>
             /// <list type="bullet">
-            /// <item><description>Default value: black.</description></item>
+            /// <item><description>Default value: <c>black</c>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -190,9 +212,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string FontColor { get; set; }
 
             /// <summary>
-            /// <para>The font of the text watermark.</para>
+            /// <para>The font name for the text watermark.</para>
             /// <list type="bullet">
-            /// <item><description>Default value: SimSum.</description></item>
+            /// <item><description>Default value: <c>SimSun</c>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -205,8 +227,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <summary>
             /// <para>The font size of the text watermark.</para>
             /// <list type="bullet">
-            /// <item><description>Valid values: (4,120).</description></item>
-            /// <item><description>Default value: 16.</description></item>
+            /// <item><description><para>Value range: (4, 120).</para>
+            /// </description></item>
+            /// <item><description><para>Default value: <c>16</c>.</para>
+            /// </description></item>
             /// </list>
             /// </summary>
             [NameInMap("FontSize")]
@@ -214,18 +238,22 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string FontSize { get; set; }
 
             /// <summary>
-            /// <para>The height of the image watermark. This parameter overrides the corresponding setting from a specified watermark template. The following value types are supported:</para>
+            /// <para>The height of the watermark. If specified, this value overrides the corresponding parameter in the watermark template. You can specify the value in two ways:</para>
             /// <list type="bullet">
-            /// <item><description><para>Integer: the pixel value of the watermark height.</para>
+            /// <item><description><para>As an integer, representing the height in pixels.</para>
             /// <list type="bullet">
-            /// <item><description></description></item>
-            /// <item><description>Valid values: [8,4096].</description></item>
+            /// <item><description><para>Unit: pixels.</para>
+            /// </description></item>
+            /// <item><description><para>Value range: [8, 4096].</para>
+            /// </description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para>Decimal: A decimal of the output video\&quot;s height.</para>
+            /// <item><description><para>As a decimal, representing the ratio of the height to the height of the output video.</para>
             /// <list type="bullet">
-            /// <item><description>Valid values: (0,1).</description></item>
-            /// <item><description>The decimal number can be accurate to four decimal places, such as 0.9999. Excessive digits are automatically discarded.</description></item>
+            /// <item><description><para>Value range: (0, 1).</para>
+            /// </description></item>
+            /// <item><description><para>Supports up to four decimal places, such as <c>0.9999</c>. The system truncates additional digits.</para>
+            /// </description></item>
             /// </list>
             /// </description></item>
             /// </list>
@@ -248,12 +276,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string TemplateId { get; set; }
 
             /// <summary>
-            /// <para>The watermark type.</para>
+            /// <para>The type of the watermark.</para>
             /// <list type="bullet">
-            /// <item><description>Text: a text watermark. In this case, you must specify the parameters related to the text watermark.</description></item>
-            /// <item><description>Image: an image watermark. In this case, you must specify the parameters related to the image watermark.</description></item>
+            /// <item><description><para><c>Text</c>: A text watermark. You must also set the text watermark parameters.</para>
+            /// </description></item>
+            /// <item><description><para><c>Image</c>: An image watermark. You must also set the image watermark parameters.</para>
+            /// </description></item>
             /// </list>
-            /// <para>If not specified, the type is inferred from the TemplateId.</para>
+            /// <para>Default value: The system automatically determines the type based on the watermark template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Image</para>
@@ -263,18 +293,22 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The width of the image watermark. This parameter overrides the corresponding setting from a specified watermark template. The following value types are supported:</para>
+            /// <para>The width of the watermark. If specified, this value overrides the corresponding parameter in the watermark template. You can specify the value in two ways:</para>
             /// <list type="bullet">
-            /// <item><description><para>Integer: the pixel value of the watermark width.</para>
+            /// <item><description><para>As an integer, representing the width in pixels.</para>
             /// <list type="bullet">
-            /// <item><description></description></item>
-            /// <item><description>Valid values: [8,4096].</description></item>
+            /// <item><description><para>Unit: pixels.</para>
+            /// </description></item>
+            /// <item><description><para>Value range: [8, 4096].</para>
+            /// </description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para>Decimal: A decimal of the output video\&quot;s width.</para>
+            /// <item><description><para>As a decimal, representing the ratio of the width to the width of the output video.</para>
             /// <list type="bullet">
-            /// <item><description>Valid values: (0,1).</description></item>
-            /// <item><description>The decimal number can be accurate to four decimal places, such as 0.9999. Excessive digits are automatically discarded.</description></item>
+            /// <item><description><para>Value range: (0, 1).</para>
+            /// </description></item>
+            /// <item><description><para>Supports up to four decimal places, such as <c>0.9999</c>. The system truncates additional digits.</para>
+            /// </description></item>
             /// </list>
             /// </description></item>
             /// </list>
@@ -287,18 +321,22 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Width { get; set; }
 
             /// <summary>
-            /// <para>The horizontal offset of the image watermark relative to the output video. This parameter overrides the corresponding setting from a specified watermark template. The following value types are supported:</para>
+            /// <para>The horizontal offset of the watermark relative to the output video. If specified, this value overrides the corresponding parameter in the watermark template. You can specify the value in two ways:</para>
             /// <list type="bullet">
-            /// <item><description><para>Integer: the pixel value of the horizontal offset.</para>
+            /// <item><description><para>As an integer, representing the offset in pixels.</para>
             /// <list type="bullet">
-            /// <item><description>Unit: pixels.</description></item>
-            /// <item><description>Valid values: [8,4096].</description></item>
+            /// <item><description><para>Unit: pixels.</para>
+            /// </description></item>
+            /// <item><description><para>Value range: [8, 4096].</para>
+            /// </description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para>Decimal: the ratio of the horizontal offset to the width of the output video.</para>
+            /// <item><description><para>As a decimal, representing the ratio of the offset to the width of the output video.</para>
             /// <list type="bullet">
-            /// <item><description>Valid values: (0,1).</description></item>
-            /// <item><description>The decimal number can be accurate to four decimal places, such as 0.9999. Excessive digits are automatically discarded.</description></item>
+            /// <item><description><para>Value range: (0, 1).</para>
+            /// </description></item>
+            /// <item><description><para>Supports up to four decimal places, such as <c>0.9999</c>. The system truncates additional digits.</para>
+            /// </description></item>
             /// </list>
             /// </description></item>
             /// </list>
@@ -311,18 +349,22 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string X { get; set; }
 
             /// <summary>
-            /// <para>The vertical offset of the image watermark relative to the output video. This parameter overrides the corresponding setting from a specified watermark template. The following value types are supported:</para>
+            /// <para>The vertical offset of the watermark relative to the output video. If specified, this value overrides the corresponding parameter in the watermark template. You can specify the value in two ways:</para>
             /// <list type="bullet">
-            /// <item><description><para>Integer: the pixel value of the vertical offset.</para>
+            /// <item><description><para>As an integer, representing the offset in pixels.</para>
             /// <list type="bullet">
-            /// <item><description>Unit: pixels.</description></item>
-            /// <item><description>Valid values: [8,4096].</description></item>
+            /// <item><description><para>Unit: pixels.</para>
+            /// </description></item>
+            /// <item><description><para>Value range: [8, 4096].</para>
+            /// </description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para>Decimal: the ratio of the vertical offset to the height of the output video.</para>
+            /// <item><description><para>As a decimal, representing the ratio of the offset to the height of the output video.</para>
             /// <list type="bullet">
-            /// <item><description>Valid values: (0,1).</description></item>
-            /// <item><description>The decimal number can be accurate to four decimal places, such as 0.9999. Excessive digits are automatically discarded.</description></item>
+            /// <item><description><para>Value range: (0, 1).</para>
+            /// </description></item>
+            /// <item><description><para>Supports up to four decimal places, such as <c>0.9999</c>. The system truncates additional digits.</para>
+            /// </description></item>
             /// </list>
             /// </description></item>
             /// </list>

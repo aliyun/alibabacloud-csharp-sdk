@@ -86,8 +86,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <summary>
                 /// <para>The input file. If Type is set to OSS, the URL of an OSS object is returned. If Type is set to Media, the ID of a media asset is returned. The URL of an OSS object can be in one of the following formats:</para>
                 /// <ol>
-                /// <item><description>oss://bucket/object</description></item>
-                /// <item><description>http(s)://bucket.oss-[RegionId].aliyuncs.com/object In the URL, bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object URL in OSS.</description></item>
+                /// <item><description><para>oss\://bucket/object</para>
+                /// </description></item>
+                /// <item><description><para>http(s)://bucket.oss-[RegionId].aliyuncs.com/object In the URL, bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object URL in OSS.</para>
+                /// </description></item>
                 /// </ol>
                 /// 
                 /// <b>Example:</b>
@@ -139,8 +141,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <summary>
                 /// <para>The type of the input file. Valid values:</para>
                 /// <ol>
-                /// <item><description>OSS: an Object Storage Service (OSS) object.</description></item>
-                /// <item><description>Media: a media asset.</description></item>
+                /// <item><description><para>OSS: an Object Storage Service (OSS) object.</para>
+                /// </description></item>
+                /// <item><description><para>Media: a media asset.</para>
+                /// </description></item>
                 /// </ol>
                 /// 
                 /// <b>Example:</b>
@@ -184,6 +188,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
             /// <summary>
             /// <para>The name of the job.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Test task</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -199,8 +206,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <summary>
                 /// <para>The output file. If Type is set to OSS, the URL of an OSS object is returned. If Type is set to Media, the ID of a media asset is returned. The URL of an OSS object can be in one of the following formats:</para>
                 /// <ol>
-                /// <item><description>oss://bucket/object</description></item>
-                /// <item><description>http(s)://bucket.oss-[RegionId].aliyuncs.com/object</description></item>
+                /// <item><description><para>oss\://bucket/object</para>
+                /// </description></item>
+                /// <item><description><para>http(s)://bucket.oss-[RegionId].aliyuncs.com/object</para>
+                /// </description></item>
                 /// </ol>
                 /// <para>In the URL, bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object URL in OSS. If multiple static snapshots were captured, the object must contain the &quot;{Count}&quot; placeholder. In the case of a sprite, the object must contain the &quot;{TileCount}&quot; placeholder. The suffix of the WebVTT snapshot objects must be &quot;.vtt&quot;.</para>
                 /// 
@@ -253,8 +262,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <summary>
                 /// <para>The type of the output file. Valid values:</para>
                 /// <ol>
-                /// <item><description>OSS: an OSS object.</description></item>
-                /// <item><description>Media: a media asset.</description></item>
+                /// <item><description><para>OSS: an OSS object.</para>
+                /// </description></item>
+                /// <item><description><para>Media: a media asset.</para>
+                /// </description></item>
                 /// </ol>
                 /// 
                 /// <b>Example:</b>
@@ -280,9 +291,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <para>The state of the job.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Init: The job is submitted.</description></item>
-            /// <item><description>Success: The job is successful.</description></item>
-            /// <item><description>Fail: The job failed.</description></item>
+            /// <item><description><para>Init: The job is submitted.</para>
+            /// </description></item>
+            /// <item><description><para>Success: The job is successful.</para>
+            /// </description></item>
+            /// <item><description><para>Fail: The job failed.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -326,9 +340,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <para>The request trigger source.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Console</description></item>
-            /// <item><description>Workflow</description></item>
-            /// <item><description>API</description></item>
+            /// <item><description><para>Console</para>
+            /// </description></item>
+            /// <item><description><para>Workflow</para>
+            /// </description></item>
+            /// <item><description><para>API</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -342,9 +359,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <para>Snapshot types</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>WebVtt</description></item>
-            /// <item><description>Sprite</description></item>
-            /// <item><description>Normal</description></item>
+            /// <item><description><para>WebVtt</para>
+            /// </description></item>
+            /// <item><description><para>Sprite</para>
+            /// </description></item>
+            /// <item><description><para>Normal</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

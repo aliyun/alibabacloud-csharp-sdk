@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitBatchMediaProducingJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the quick video production job.</para>
+        /// <para>The ID of the batch job for one-click smart video creation.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>d80e4e4044975745c14b</b></b></para>

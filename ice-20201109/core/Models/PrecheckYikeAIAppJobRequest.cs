@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class PrecheckYikeAIAppJobRequest : TeaModel {
         /// <summary>
+        /// <para>The application ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>app-1000000</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>The application\&quot;s runtime parameters, serialized as a JSON string.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{\&quot;LoadImage.1.TargetImage\&quot;:\&quot;794da8a01b8c71f1b973e6e7c7586301\&quot;}</para>
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListLiveSnapshotTemplatesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b><b>11-DB8D-4A9A-875B-275798</b></b></b></para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The sorting order of the results by creation time.</para>
+        /// <para>The sort order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>desc</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The list of the templates.</para>
+        /// <para>The list of templates.</para>
         /// </summary>
         [NameInMap("TemplateList")]
         [Validation(Required=false)]
         public List<ListLiveSnapshotTemplatesResponseBodyTemplateList> TemplateList { get; set; }
         public class ListLiveSnapshotTemplatesResponseBodyTemplateList : TeaModel {
             /// <summary>
-            /// <para>The time when the job was created.</para>
+            /// <para>The time when the template was created. The time format is UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-07-20T02:48:58Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The template ID.</para>
+            /// <para>The ID of the template.</para>
             /// 
             /// <b>Example:</b>
             /// <para><b><b>a046-263c-3560-978a-fb287782</b></b></para>
@@ -77,14 +77,17 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string TemplateId { get; set; }
 
             /// <summary>
-            /// <para>The template name.</para>
+            /// <para>The name of the template.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Template 1</para>
             /// </summary>
             [NameInMap("TemplateName")]
             [Validation(Required=false)]
             public string TemplateName { get; set; }
 
             /// <summary>
-            /// <para>The interval between two adjacent snapshots. Unit: seconds.</para>
+            /// <para>The snapshot interval in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -95,11 +98,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
             /// <summary>
             /// <para>The type of the template.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>system</description></item>
-            /// <item><description>custom</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>custom</para>
@@ -111,7 +109,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

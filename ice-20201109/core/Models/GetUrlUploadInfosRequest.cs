@@ -12,11 +12,13 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The IDs of the upload jobs. You can specify one or more job IDs. You can obtain the job IDs from the response parameter JobId of the <a href="https://help.aliyun.com/document_detail/86311.html">UploadMediaByURL</a> operation.</para>
         /// <list type="bullet">
-        /// <item><description>You can specify a maximum of 10 job IDs.</description></item>
-        /// <item><description>Separate the job IDs with commas (,).</description></item>
+        /// <item><description><para>You can specify a maximum of 10 job IDs.</para>
+        /// </description></item>
+        /// <item><description><para>Separate the job IDs with commas (,).</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> You must specify either JobIds or UploadURLs. If you specify both parameters, only the value of JobIds takes effect.</para>
+        /// <para>You must specify either JobIds or UploadURLs. If you specify both parameters, only the value of JobIds takes effect.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

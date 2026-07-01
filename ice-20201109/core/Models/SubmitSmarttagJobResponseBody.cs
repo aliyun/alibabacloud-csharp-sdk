@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitSmarttagJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the smart tagging job. We recommend that you save this ID for subsequent calls of other operations.</para>
+        /// <para>The ID of the smart tagging job. Save this ID for subsequent API calls.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>d80e4e4044975745c14b</b></b></para>

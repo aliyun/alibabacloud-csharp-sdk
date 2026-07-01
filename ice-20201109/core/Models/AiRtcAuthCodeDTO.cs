@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class AiRtcAuthCodeDTO : TeaModel {
         /// <summary>
+        /// <para>Activation time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-01-01 06:57:43</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string ActivatedTime { get; set; }
 
         /// <summary>
+        /// <para>Authorization code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>iU1IeJech7***</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string AuthCode { get; set; }
 
         /// <summary>
+        /// <para>Creation time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2023-12-23T13:33:49Z</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string CreationTime { get; set; }
 
         /// <summary>
+        /// <para>Device ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>device-***</para>
         /// </summary>
@@ -52,6 +60,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string License { get; set; }
 
         /// <summary>
+        /// <para>Batch ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>11096067***</para>
         /// </summary>
@@ -60,6 +70,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string LicenseItemId { get; set; }
 
         /// <summary>
+        /// <para>Update time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2023-12-23T13:33:49Z</para>
         /// </summary>
@@ -68,6 +80,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string ModificationTime { get; set; }
 
         /// <summary>
+        /// <para>Status:</para>
+        /// <list type="bullet">
+        /// <item><description>1 - Activated</description></item>
+        /// <item><description>2 - Not activated</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -76,6 +94,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? Status { get; set; }
 
         /// <summary>
+        /// <para>Type:</para>
+        /// <list type="bullet">
+        /// <item><description>1 - Voice call</description></item>
+        /// <item><description>2 - Visual understanding</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

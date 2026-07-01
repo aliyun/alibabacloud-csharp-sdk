@@ -20,6 +20,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string FlowId { get; set; }
 
+        /// <summary>
+        /// <para>Input name. Required when primary/standby input is enabled for the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>input</para>
+        /// </summary>
         [NameInMap("InputName")]
         [Validation(Required=false)]
         public string InputName { get; set; }

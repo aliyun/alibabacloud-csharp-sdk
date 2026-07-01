@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? Subtype { get; set; }
 
         /// <summary>
-        /// <para>The template ID.</para>
+        /// <para>The ID of the custom template.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>96e8864746a0b6f3</b></b></para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string TemplateId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the template type that is used to query the default template. This parameter is required if TemplateId is not specified.</para>
+        /// <para>The ID of the template type. This parameter is required if you omit <c>TemplateId</c> to get a default template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

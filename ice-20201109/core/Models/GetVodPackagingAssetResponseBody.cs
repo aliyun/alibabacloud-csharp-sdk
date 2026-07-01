@@ -66,9 +66,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <summary>
                 /// <para>The asset status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Queuing: The asset is waiting for packaging.</description></item>
-                /// <item><description>Playable: The asset is packaged and playable.</description></item>
-                /// <item><description>Failed: The asset fails to be packaged.</description></item>
+                /// <item><description><para>Queuing: The asset is waiting for packaging.</para>
+                /// </description></item>
+                /// <item><description><para>Playable: The asset is packaged and playable.</para>
+                /// </description></item>
+                /// <item><description><para>Failed: The asset fails to be packaged.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

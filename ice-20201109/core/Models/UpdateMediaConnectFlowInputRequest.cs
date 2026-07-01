@@ -40,6 +40,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string InputFromUrl { get; set; }
 
+        /// <summary>
+        /// <para>Input name. This parameter is required only when primary/standby input is enabled for the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>input1</para>
+        /// </summary>
         [NameInMap("InputName")]
         [Validation(Required=false)]
         public string InputName { get; set; }

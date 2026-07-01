@@ -46,8 +46,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <summary>
                 /// <para>The media object.</para>
                 /// <list type="bullet">
-                /// <item><description>If Type is set to OSS, the URL of an OSS object is returned. Both the OSS and HTTP protocols are supported.</description></item>
-                /// <item><description>If Type is set to Media, the ID of a media asset is returned.</description></item>
+                /// <item><description><para>If Type is set to OSS, the URL of an OSS object is returned. Both the OSS and HTTP protocols are supported.</para>
+                /// </description></item>
+                /// <item><description><para>If Type is set to Media, the ID of a media asset is returned.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -60,8 +62,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <summary>
                 /// <para>The type of the media object. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>OSS: an Object Storage Service (OSS) object.</description></item>
-                /// <item><description>Media: a media asset.</description></item>
+                /// <item><description><para>OSS: an Object Storage Service (OSS) object.</para>
+                /// </description></item>
+                /// <item><description><para>Media: a media asset.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -77,7 +81,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <para>The job ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ab4802364a2e49208c99efab82dfa8e8</para>
+            /// <para>ab4802364a2e49208c99efab82df****</para>
             /// </summary>
             [NameInMap("JobId")]
             [Validation(Required=false)]
@@ -350,7 +354,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     /// <para>The ID of the media asset.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>4765337007f571edbfdf81848c016303</para>
+                    /// <para>4765337007f571edbfdf81848c01****</para>
                     /// </summary>
                     [NameInMap("MediaId")]
                     [Validation(Required=false)]
@@ -488,9 +492,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     /// <summary>
                     /// <para>Indicates whether the video stream contains bidirectional frames (B-frames). Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>0: The stream contains no B-frames.</description></item>
-                    /// <item><description>1: The stream contains one B-frame.</description></item>
-                    /// <item><description>2: The stream contains multiple consecutive B-frames.</description></item>
+                    /// <item><description><para>0: The stream contains no B-frames.</para>
+                    /// </description></item>
+                    /// <item><description><para>1: The stream contains one B-frame.</para>
+                    /// </description></item>
+                    /// <item><description><para>2: The stream contains multiple consecutive B-frames.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -573,8 +580,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     /// <summary>
                     /// <para>The rotation angle of the video image.</para>
                     /// <list type="bullet">
-                    /// <item><description>Valid values: 0, 90, 180, and 270.</description></item>
-                    /// <item><description>Default value: 0.</description></item>
+                    /// <item><description><para>Valid values: 0, 90, 180, and 270.</para>
+                    /// </description></item>
+                    /// <item><description><para>Default value: 0.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -659,7 +668,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 /// <para>The ID of the MPS queue to which the job was submitted.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>e37ebee5d98b4781897f6086e89f9c56</para>
+                /// <para>e37ebee5d98b4781897f6086e89f****</para>
                 /// </summary>
                 [NameInMap("PipelineId")]
                 [Validation(Required=false)]
@@ -680,9 +689,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <summary>
             /// <para>The state of the job. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Init: The job is submitted.</description></item>
-            /// <item><description>Success: The job is successful.</description></item>
-            /// <item><description>Fail: The job failed.</description></item>
+            /// <item><description><para>Init: The job is submitted.</para>
+            /// </description></item>
+            /// <item><description><para>Success: The job is successful.</para>
+            /// </description></item>
+            /// <item><description><para>Fail: The job failed.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -712,9 +724,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <summary>
             /// <para>The source of the job. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>API</description></item>
-            /// <item><description>WorkFlow</description></item>
-            /// <item><description>Console</description></item>
+            /// <item><description><para>API</para>
+            /// </description></item>
+            /// <item><description><para>WorkFlow</para>
+            /// </description></item>
+            /// <item><description><para>Console</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

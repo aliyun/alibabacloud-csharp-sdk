@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitScreenMediaHighlightsJobRequest : TeaModel {
         /// <summary>
-        /// <para>The editing configuration. For detailed parameters, see <a href="~~2863940#9b05519d46e0x~~">EditingConfig</a>.</para>
+        /// <para>Specifies the editing configuration. For more information, see <a href="~~2863940#9b05519d46e0x~~">EditingConfig Parameter Description</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string EditingConfig { get; set; }
 
         /// <summary>
-        /// <para>The input configuration. For detailed parameters, see <a href="~~2863940#dda38bf6ec2pk~~">InputConfig</a>.</para>
+        /// <para>Specifies the input configuration. For more information, see <a href="~~2863940#dda38bf6ec2pk~~">InputConfig Parameter Description</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string InputConfig { get; set; }
 
         /// <summary>
-        /// <para>The output configuration. For detailed parameters, see <a href="~~2863940#4111a373d0xbz~~">OutputConfig</a>.</para>
+        /// <para>Specifies the output configuration. For more information, see <a href="~~2863940#4111a373d0xbz~~">OutputConfig Parameter Description</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -58,7 +58,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string OutputConfig { get; set; }
 
         /// <summary>
-        /// <para>The user-defined data, including the business and callback configurations. For more information, see <a href="https://help.aliyun.com/document_detail/357745.html">UserData</a>.</para>
+        /// <para>Specifies the user data and callback configuration. For details about the structure, see <a href="https://help.aliyun.com/document_detail/357745.html">UserData Configuration</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;NotifyAddress&quot;:&quot;<a href="http://xx.xx.xxx%22%7D">http://xx.xx.xxx&quot;}</a> or {&quot;NotifyAddress&quot;:&quot;<a href="https://xx.xx.xxx%22%7D">https://xx.xx.xxx&quot;}</a> or {&quot;NotifyAddress&quot;:&quot;ice-callback-demo&quot;}</para>
         /// </summary>
         [NameInMap("UserData")]
         [Validation(Required=false)]
