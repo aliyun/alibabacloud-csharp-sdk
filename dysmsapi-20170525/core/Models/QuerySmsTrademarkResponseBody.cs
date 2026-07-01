@@ -9,11 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class QuerySmsTrademarkResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The details of the access denial.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>无</para>
+        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
+        /// <para>The status code of the request.</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>OK</c> indicates that the request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -21,22 +35,25 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>A list of trademark details.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<QuerySmsTrademarkResponseBodyData> Data { get; set; }
         public class QuerySmsTrademarkResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>申请人名称</para>
+            /// <para>The applicant name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>示例值示例值</para>
+            /// <para>阿里云</para>
             /// </summary>
             [NameInMap("TrademarkApplicantName")]
             [Validation(Required=false)]
             public string TrademarkApplicantName { get; set; }
 
             /// <summary>
-            /// <para>专用权生失效日期</para>
+            /// <para>The validity period of the trademark.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-11-01~2025-12-19</para>
@@ -46,7 +63,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             public string TrademarkEffExpDate { get; set; }
 
             /// <summary>
-            /// <para>商标材料id</para>
+            /// <para>The trademark ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10000*******</para>
@@ -56,17 +73,17 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             public long? TrademarkId { get; set; }
 
             /// <summary>
-            /// <para>商标名称</para>
+            /// <para>The name of the trademark.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>示例值示例值</para>
+            /// <para>示例商标</para>
             /// </summary>
             [NameInMap("TrademarkName")]
             [Validation(Required=false)]
             public string TrademarkName { get; set; }
 
             /// <summary>
-            /// <para>商标截图Osskey（给签名传工单用）</para>
+            /// <para>The Object Storage Service (OSS) file key for the trademark image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100000*<b><b>802/afdebd46-</b></b>-46e4-899d-b4375826c898_mhk9oz0p_1762****31542.png</para>
@@ -76,7 +93,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             public string TrademarkPic { get; set; }
 
             /// <summary>
-            /// <para>商标截图url地址</para>
+            /// <para>The URL of the trademark screenshot.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://alicom-fc-media.oss-cn-zhangjiakou.aliyuncs.com/100000****50802/afde****-496d-46e4-899d-b43758****8_mhk9oz0p_176224****542.png?Expires=1762****6&OSSAccessKeyId=bypFN****73PsLI&Signature=BygI9X****h7%2FXmFIo****FB2c%3D">https://alicom-fc-media.oss-cn-zhangjiakou.aliyuncs.com/100000****50802/afde****-496d-46e4-899d-b43758****8_mhk9oz0p_176224****542.png?Expires=1762****6&amp;OSSAccessKeyId=bypFN****73PsLI&amp;Signature=BygI9X****h7%2FXmFIo****FB2c%3D</a></para>
@@ -86,7 +103,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             public string TrademarkPicUrl { get; set; }
 
             /// <summary>
-            /// <para>商标注册号</para>
+            /// <para>The trademark registration number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234</para>
@@ -98,6 +115,8 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         }
 
         /// <summary>
+        /// <para>The description of the status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -106,6 +125,8 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>569E9DBD-23FF-1785-99AD-E4B23608C104</para>
         /// </summary>
@@ -114,6 +135,14 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b>: The request is successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The request fails.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

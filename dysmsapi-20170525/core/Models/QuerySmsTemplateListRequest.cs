@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// <para>The current page number. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public int? PageIndex { get; set; }
 
         /// <summary>
-        /// <para>The number of templates per page. Valid values: <b>1 to 50</b>.</para>
+        /// <para>The number of templates displayed per page. Valid values: <b>1 to 50</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

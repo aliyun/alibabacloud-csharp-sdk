@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>15900195***</para>
+        /// <para>示例值示例值</para>
         /// </summary>
         [NameInMap("PhoneNumbers")]
         [Validation(Required=false)]

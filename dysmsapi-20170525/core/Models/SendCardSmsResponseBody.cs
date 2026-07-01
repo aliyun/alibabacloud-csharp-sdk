@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class SendCardSmsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>请求状态码。</para>
         /// <list type="bullet">
-        /// <item><description>If OK is returned, the request is successful.</description></item>
-        /// <item><description>Other values indicate that the request fails. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</description></item>
+        /// <item><description>返回OK代表请求成功。</description></item>
+        /// <item><description>其他错误码，请参见<a href="https://help.aliyun.com/document_detail/101346.html">错误码列表</a>。</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>返回数据。</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public SendCardSmsResponseBodyData Data { get; set; }
         public class SendCardSmsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the card message.</para>
+            /// <para>卡片短信发送ID。</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             public string BizCardId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the digital message.</para>
+            /// <para>数字短信发送ID。</para>
             /// 
             /// <b>Example:</b>
             /// <para>232</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             public string BizDigitalId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the text message.</para>
+            /// <para>文本短信发送ID。</para>
             /// 
             /// <b>Example:</b>
             /// <para>524</para>
@@ -61,15 +61,15 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             public string BizSmsId { get; set; }
 
             /// <summary>
-            /// <para>The review status of the card message template.</para>
+            /// <para>卡片短信模板审核状态。取值：</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: pending approval</description></item>
-            /// <item><description><b>1</b>: approved</description></item>
-            /// <item><description><b>2</b>: rejected</description></item>
-            /// </list>
-            /// <remarks>
-            /// <para>Unapproved card messages are rolled back.</para>
+            /// <item><description><b>0</b>：审核中。</description></item>
+            /// <item><description><b>1</b>：审核通过。</description></item>
+            /// <item><description><b>2</b>：审核不通过。<remarks>
+            /// <para> 审核不通过的短信可通过<b>FallbackType</b>字段设置回落流程。</para>
             /// </remarks>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             public int? CardTmpState { get; set; }
 
             /// <summary>
-            /// <para>The mobile phone number from which the card message is sent.</para>
+            /// <para>接收卡片短信的手机号。</para>
             /// 
             /// <b>Example:</b>
             /// <para>1390000****</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             public string MediaMobiles { get; set; }
 
             /// <summary>
-            /// <para>The mobile phone number whose card message is rolled back.</para>
+            /// <para>回落的手机号。</para>
             /// 
             /// <b>Example:</b>
             /// <para>1390000****</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>请求ID。</para>
         /// 
         /// <b>Example:</b>
         /// <para>F655A8D5-B967-440B-8683-DAD6FF8D28D0</para>
@@ -111,10 +111,12 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>调用接口是否成功。取值：</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>：调用成功。</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>：调用失败。</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

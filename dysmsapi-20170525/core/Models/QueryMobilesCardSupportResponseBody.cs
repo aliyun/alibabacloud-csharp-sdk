@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class QueryMobilesCardSupportResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>请求状态码。</para>
         /// <list type="bullet">
-        /// <item><description>The value OK indicates that the request was successful.</description></item>
-        /// <item><description>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</description></item>
+        /// <item><description>返回OK代表请求成功。</description></item>
+        /// <item><description>其他错误码，请参见<a href="https://help.aliyun.com/document_detail/101346.html">错误码列表</a>。</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,21 +24,21 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>返回数据。</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public QueryMobilesCardSupportResponseBodyData Data { get; set; }
         public class QueryMobilesCardSupportResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of returned results.</para>
+            /// <para>查询值。</para>
             /// </summary>
             [NameInMap("QueryResult")]
             [Validation(Required=false)]
             public List<QueryMobilesCardSupportResponseBodyDataQueryResult> QueryResult { get; set; }
             public class QueryMobilesCardSupportResponseBodyDataQueryResult : TeaModel {
                 /// <summary>
-                /// <para>The mobile phone number.</para>
+                /// <para>查询的手机号码。</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1380000****</para>
@@ -48,10 +48,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
                 public string Mobile { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the mobile phone number supports card messages. Valid values:</para>
+                /// <para>是否支持卡片短信。取值：</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b></description></item>
-                /// <item><description><b>false</b></description></item>
+                /// <item><description><b>true</b>：支持。</description></item>
+                /// <item><description><b>false</b>：不支持。</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>阿里云为该请求生成的唯一标识符。</para>
         /// 
         /// <b>Example:</b>
         /// <para>08C17DFE-2E10-54F4-BAFB-7180039CC217</para>
@@ -76,10 +76,12 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <para>调用接口是否成功。取值：</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>：调用成功。</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>：调用失败。</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

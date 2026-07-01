@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class QueryCardSmsTemplateReportRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</para>
+        /// <para>The end time. Format: yyyy-MM-dd HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-10-11 00:00:01</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string EndDate { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</para>
+        /// <para>The start time. Format: yyyy-MM-dd HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-10-10 00:00:01</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string StartDate { get; set; }
 
         /// <summary>
-        /// <para>The array of message templates.</para>
+        /// <para>The card SMS object.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("TemplateCodes")]

@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class GetSmsTemplateListResponseBody : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>None</para>
-        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }

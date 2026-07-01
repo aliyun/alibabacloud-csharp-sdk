@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class CheckMobilesCardSupportRequest : TeaModel {
         /// <summary>
-        /// <para>The list of mobile phone numbers that receive messages.</para>
+        /// <para>The list of phone numbers to be queried.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Mobiles")]
@@ -18,9 +18,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public List<Dictionary<string, object>> Mobiles { get; set; }
 
         /// <summary>
-        /// <para>The code of the message template. You can view the template code in the <b>Template Code</b> column on the <b>Templates</b> tab of the <b>Go China</b> page in the Alibaba Cloud SMS console.</para>
+        /// <para>The code of the card SMS template.
+        /// Log on to the SMS Service console and go to the <a href="https://dysms.console.aliyun.com/domestic/card">Domestic Card SMS</a> page. On the <b>Template Management</b> tab, you can view the list of card SMS templates.</para>
         /// <remarks>
-        /// <para>Make sure that the message template has been approved.</para>
+        /// <para>The template must be added and approved.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

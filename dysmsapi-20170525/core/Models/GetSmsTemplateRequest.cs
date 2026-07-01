@@ -22,10 +22,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>SMS template code.</para>
+        /// <para>The code of the SMS template.</para>
         /// <list type="bullet">
-        /// <item><description>Obtain the SMS template code from the return parameters of the <a href="https://help.aliyun.com/zh/sms/developer-reference/api-dysmsapi-2017-05-25-createsmstemplate?spm">CreateSmsTemplate</a> API.</description></item>
-        /// <item><description>View the SMS template code on the <a href="https://dysms.console.aliyun.com/domestic/text/template">Template Management</a> page.</description></item>
+        /// <item><description>Obtain the SMS template code from the response parameters of the <a href="https://help.aliyun.com/document_detail/2807431.html">CreateSmsTemplate</a> operation.</description></item>
+        /// <item><description>View the SMS template code on the <a href="https://dysms.console.aliyun.com/domestic/text/template">Templates</a> page.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

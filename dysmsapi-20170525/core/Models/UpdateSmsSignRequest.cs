@@ -9,18 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class UpdateSmsSignRequest : TeaModel {
+        /// <summary>
+        /// <para>The ID of the app\&quot;s ICP filing entity.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description><para>This parameter is required if <c>SignSource</c> is set to 2.</para>
+        /// </description></item>
+        /// <item><description><para>You can obtain the filing entity ID by calling the <a href="~~CreateSmsAppIcpRecord~~">Create ICP Filing Entity</a> operation.</para>
+        /// </description></item>
+        /// </list>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100001***1234</para>
+        /// </summary>
         [NameInMap("AppIcpRecordId")]
         [Validation(Required=false)]
         public long? AppIcpRecordId { get; set; }
 
         /// <summary>
-        /// <para>Application scenarios, instructions as follows:</para>
-        /// <list type="bullet">
-        /// <item><description>For registered websites, please enter the domain name registered with MIIT, including HTTP or HTTPS.</description></item>
-        /// <item><description>For launched apps, provide the display link from the app store with HTTP or HTTPS, ensuring the app is online.</description></item>
-        /// <item><description>For public accounts or mini-programs, fill in the full name, ensuring they are online.</description></item>
-        /// <item><description>For e-commerce platform store names (for enterprise users only), provide the display link with HTTP or HTTPS.</description></item>
-        /// </list>
+        /// <para>The app store link. This parameter is required if the signature source (<c>SignSource</c>) is an app (the value is 2). The link must start with <c>http://</c> or <c>https://</c>, and the app must be published in the app store.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://www.aliyun.com/">http://www.aliyun.com/</a></para>
@@ -29,12 +37,18 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         [Validation(Required=false)]
         public string ApplySceneContent { get; set; }
 
+        /// <summary>
+        /// <para>The authorization letter ID. This parameter is required if the signature is for third-party use (<c>ThirdParty</c> is set to <c>true</c>). The Unified Social Credit Code on the authorization letter must match the code in the selected qualification\&quot;s information.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1000********1234</para>
+        /// </summary>
         [NameInMap("AuthorizationLetterId")]
         [Validation(Required=false)]
         public long? AuthorizationLetterId { get; set; }
 
         /// <summary>
-        /// <para>Additional materials, such as uploading business proof documents or screenshots of business operations, to help reviewers understand your business details.</para>
+        /// <para>Additional supporting materials. You can upload supporting business documents or business screenshots to help with the review. For details on what to upload, see <a href="~~108076#section-xup-k46-yi4~~">Signature application materials</a>.</para>
         /// </summary>
         [NameInMap("MoreData")]
         [Validation(Required=false)]
@@ -45,11 +59,13 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Approved or under-review qualification ID.</para>
+        /// <para>The ID of the approved qualification.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Before applying for an SMS signature, please first <a href="https://help.aliyun.com/zh/sms/user-guide/new-qualification?spm=a2c4g.11186623.0.0.718d187bbkpMRK">apply for qualifications</a>.</description></item>
-        /// <item><description>You can view the qualification ID on the <a href="https://dysms.console.aliyun.com/domestic/text/qualification">Qualification Management</a> page.</description></item>
+        /// <item><description><para>You must <a href="https://help.aliyun.com/zh/sms/user-guide/new-qualification?spm=a2c4g.11186623.0.0.718d187bbkpMRK">apply for a qualification</a> before applying for an SMS signature.</para>
+        /// </description></item>
+        /// <item><description><para>You can find the qualification ID on the <a href="https://dysms.console.aliyun.com/domestic/text/qualification">qualification management</a> page.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// <para>This parameter is required.</para>
@@ -62,10 +78,20 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public long? QualificationId { get; set; }
 
         /// <summary>
-        /// <para>Explanation of the SMS signature scenario, with a maximum length of 200 characters.</para>
+        /// <para>A description of the SMS signature\&quot;s use case. This information is used during the review and must be 200 characters or less.</para>
         /// <remarks>
-        /// <para>The scenario explanation is one of the reference information for signature review. Please provide a detailed description of the usage scenarios of the launched business, along with verifiable information such as website links, registered domain addresses, app store download links, full names of public accounts or mini-programs, etc. For login scenarios, test account credentials are also required. A well-informed application explanation will enhance the efficiency of signature and template reviews. Refer to the <b>Application Scenarios</b> column in the <a href="https://help.aliyun.com/zh/sms/user-guide/signature-specifications-1?spm=a2c4g.11186623.0.i2#section-xup-k46-yi4">Signature Source</a> table for filling in SMS scenarios.</para>
+        /// <list type="bullet">
+        /// <item><description><para>Describe the use case for your live service. Include relevant links, such as a website link or an app store link.</para>
+        /// </description></item>
+        /// <item><description><para>Provide a complete example of an SMS message that reflects your use case.</para>
+        /// </description></item>
+        /// <item><description><para>Provide the values for any variables. Describe the use case in detail and explain why the variables are necessary.</para>
+        /// </description></item>
+        /// <item><description><para>If the signature involves a government agency or public institution, provide its official landline number.</para>
+        /// </description></item>
+        /// </list>
         /// </remarks>
+        /// <para>Providing complete and accurate information accelerates the review process. If you do not provide the required information, your signature application may be rejected.</para>
         /// 
         /// <b>Example:</b>
         /// <para>登录场景申请验证码</para>
@@ -83,7 +109,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Signature not yet approved.</para>
+        /// <para>The name of the rejected SMS signature. You can find rejected SMS signatures on the <a href="https://dysms.console.aliyun.com/domestic/text/sign">Domestic Messages &gt; Signature Management</a> page in the console, or by calling the <a href="~~QuerySmsSignList~~">QuerySmsSignList</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -94,30 +120,34 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string SignName { get; set; }
 
         /// <summary>
-        /// <para>Source of the signature. Values:</para>
+        /// <para>The signature source. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: Full name or abbreviation of enterprises and institutions.</description></item>
-        /// <item><description><b>1</b>: Full name or abbreviation of MIIT-registered websites.</description></item>
-        /// <item><description><b>2</b>: Full name or abbreviation of app applications.</description></item>
-        /// <item><description><b>3</b>: Full name or abbreviation of public accounts or mini-programs.</description></item>
-        /// <item><description><b>4</b>: Full name or abbreviation of e-commerce platform store names.</description></item>
-        /// <item><description><b>5</b>: Full name or abbreviation of trademarks.</description></item>
+        /// <item><description><para><b>0</b>: The full or abbreviated name of an enterprise or public institution. <b>(Recommended)</b></para>
+        /// </description></item>
+        /// <item><description><para><b>5</b>: The full or abbreviated trademark name.</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: The full or abbreviated name of an app. <b>(Not recommended)</b></para>
+        /// </description></item>
         /// </list>
+        /// <para>For more information, see <a href="~~108076#section-fow-bfu-wo9~~">signature source</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("SignSource")]
         [Validation(Required=false)]
         public int? SignSource { get; set; }
 
         /// <summary>
-        /// <para>Signature type. It is recommended to use the default value.</para>
+        /// <para>The signature type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: Verification code</description></item>
-        /// <item><description><b>1</b>: General (default)</description></item>
+        /// <item><description><para><b>0</b>: verification code.</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: general (default).</para>
+        /// </description></item>
         /// </list>
+        /// <para>We recommend that you use the default value, <b>general</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -127,11 +157,13 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public int? SignType { get; set; }
 
         /// <summary>
-        /// <para>Whether the signature is for self-use or others.</para>
+        /// <para>The signature purpose. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false: Self-use</description></item>
-        /// <item><description>true: Others<remarks>
-        /// <para>Notice: When the signature is for self-use, select the self-use qualification ID; when it\&quot;s for others, choose the others\&quot; qualification ID.</para>
+        /// <item><description><para>false: for own use (default). The signature is for a business, website, or product owned by your account\&quot;s verified entity.</para>
+        /// </description></item>
+        /// <item><description><para>true: for third-party use. The signature is for a business, website, or product not owned by your account\&quot;s verified entity.</para>
+        /// <remarks>
+        /// <para>Notice: Ensure the selected qualification ID matches the signature purpose (for own use or for third-party use).</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -143,6 +175,20 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         [Validation(Required=false)]
         public bool? ThirdParty { get; set; }
 
+        /// <summary>
+        /// <para>The trademark entity ID.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description><para>This parameter is required if <c>SignSource</c> is set to 5.</para>
+        /// </description></item>
+        /// <item><description><para>You can obtain the trademark entity ID by calling the <a href="~~CreateSmsTrademark~~">Create Trademark Entity</a> operation.</para>
+        /// </description></item>
+        /// </list>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1000009081***</para>
+        /// </summary>
         [NameInMap("TrademarkId")]
         [Validation(Required=false)]
         public long? TrademarkId { get; set; }

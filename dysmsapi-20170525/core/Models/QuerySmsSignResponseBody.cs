@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class QuerySmsSignResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The status code of the request.</para>
         /// <list type="bullet">
-        /// <item><description>If OK is returned, the request is successful.</description></item>
-        /// <item><description>Other values indicate that the request fails. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</description></item>
+        /// <item><description><para><c>OK</c> indicates that the request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The date and time when the signature was created.</para>
+        /// <para>The date and time when the SMS signature was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-01-08 16:44:13</para>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string CreateDate { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The description of the status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -44,14 +46,16 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The remarks of the review. Valid values:</para>
+        /// <para>The review reason.</para>
         /// <list type="bullet">
-        /// <item><description>If the signature is in the <b>Approved</b> or <b>Pending Approval</b> state, No Remarks is returned.</description></item>
-        /// <item><description>If the signature is in the <b>Not Approved</b> state, the reason why the signature is rejected is returned.</description></item>
+        /// <item><description><para>If the review status is <b>Approved</b> or <b>Pending Review</b>, this parameter is empty.</para>
+        /// </description></item>
+        /// <item><description><para>If the review status is <b>Rejected</b>, this parameter provides the reason for the rejection.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>The document cannot verify the authenticity of the information. Please upload it again.</para>
+        /// <para>文件不能证明信息真实性，请重新上传</para>
         /// </summary>
         [NameInMap("Reason")]
         [Validation(Required=false)]
@@ -68,22 +72,26 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The signature.</para>
+        /// <para>The SMS signature.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Aliyun</para>
+        /// <para>阿里云</para>
         /// </summary>
         [NameInMap("SignName")]
         [Validation(Required=false)]
         public string SignName { get; set; }
 
         /// <summary>
-        /// <para>The status of the signature. Valid values:</para>
+        /// <para>The review status of the SMS signature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: The signature is pending approval.</description></item>
-        /// <item><description><b>1</b>: The signature is approved.</description></item>
-        /// <item><description><b>2</b>: The signature is rejected. The Reason parameter indicates the reason why the signature is rejected.</description></item>
-        /// <item><description><b>10</b>: The signature is cancelled.</description></item>
+        /// <item><description><para><b>0</b>: Pending Review.</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: Approved.</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: Rejected. For details, see the <c>Reason</c> parameter.</para>
+        /// </description></item>
+        /// <item><description><para><b>10</b>: Canceled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

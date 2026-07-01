@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class DeleteSmsQualificationRequest : TeaModel {
         /// <summary>
-        /// <para>工单ID</para>
+        /// <para>The review ticket ID. You can obtain the qualification and its corresponding review ticket ID under the current account by calling the <a href="~~QuerySmsQualificationRecord~~">QuerySmsQualificationRecord</a> operation, or on the <a href="https://dysms.console.aliyun.com/domestic/text/qualification">Qualification Management</a> page of Domestic Messages in the console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>资质组ID</para>
+        /// <para>The qualification ID, which is the ID returned when you <a href="~~SubmitSmsQualification~~">apply for a qualification</a>. You can obtain the qualification ID under the current account by calling the <a href="~~QuerySmsQualificationRecord~~">QuerySmsQualificationRecord</a> operation, or on the <a href="https://dysms.console.aliyun.com/domestic/text/qualification">Qualification Management</a> page of Domestic Messages in the console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

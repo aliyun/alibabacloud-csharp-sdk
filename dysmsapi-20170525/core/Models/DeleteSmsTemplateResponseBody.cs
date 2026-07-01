@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class DeleteSmsTemplateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>请求状态码。</para>
         /// <list type="bullet">
-        /// <item><description>The value OK indicates that the request was successful.</description></item>
-        /// <item><description>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/101346.html">API error codes</a>.</description></item>
+        /// <item><description>返回OK代表请求成功。</description></item>
+        /// <item><description>其他错误码，请参见<a href="https://help.aliyun.com/document_detail/101346.html">API错误码</a>。</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>状态码的描述。</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>请求ID。</para>
         /// 
         /// <b>Example:</b>
         /// <para>CCA2BCFF-2BA7-427C-90EE-AC6994748607</para>
@@ -44,10 +44,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The code of the message template.</para>
+        /// <para>已删除的模板Code。</para>
         /// 
         /// <b>Example:</b>
-        /// <para>SMS_20375****</para>
+        /// <para>SMS_152550****</para>
         /// </summary>
         [NameInMap("TemplateCode")]
         [Validation(Required=false)]

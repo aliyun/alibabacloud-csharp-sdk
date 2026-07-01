@@ -10,7 +10,13 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class ConversionDataIntlResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code. If OK is returned, the request is successful. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html?spm=a2c4g.101345.0.0.74326ff2J5EZyt">Error codes</a>.</para>
+        /// <para>状态码。取值：</para>
+        /// <list type="bullet">
+        /// <item><description><para>OK：代表请求成功。</para>
+        /// </description></item>
+        /// <item><description><para>其他错误码，请参见<a href="https://help.aliyun.com/document_detail/101346.html">错误码列表</a>。</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,7 +26,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>状态码的描述。</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -30,10 +36,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>请求ID。</para>
         /// 
         /// <b>Example:</b>
-        /// <para>F655A8D5-B967-440B-8683-DAD6FF8D****</para>
+        /// <para>819BE656-D2E0-4858-8B21-B2E477085AAF</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

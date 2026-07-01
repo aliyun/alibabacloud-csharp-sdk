@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class GetCardSmsLinkRequest : TeaModel {
         /// <summary>
-        /// <para>The code type of the URLs.</para>
+        /// <para>The encoding type of the short URL for the card message. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: group texting</description></item>
-        /// <item><description><b>2</b>: personalization</description></item>
+        /// <item><description>1: bulk sending.</description></item>
+        /// <item><description>2: personalized.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,13 +24,13 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public int? CardCodeType { get; set; }
 
         /// <summary>
-        /// <para>The type of the short URLs.</para>
+        /// <para>The type of the short URL for the card message. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: standard short code.</description></item>
-        /// <item><description>2: custom short code.</description></item>
+        /// <item><description>1: standard short URL.</description></item>
+        /// <item><description>2: custom short URL.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If the <b>CardLinkType</b> is not specified, standard short codes are generated. If you need to generate custom short codes, contact Alibaba Cloud SMS technical support.</para>
+        /// <para>If <b>CardLinkType</b> is left empty, the default value is standard short URL. To generate a custom short URL, contact Alibaba Cloud operations to register in advance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -41,10 +41,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public int? CardLinkType { get; set; }
 
         /// <summary>
-        /// <para>The code of the message template. You can view the template code in the <b>Template Code</b> column on the <b>Templates</b> tab of the <b>Go China</b> page in the Alibaba Cloud SMS console.</para>
-        /// <remarks>
-        /// <para>Make sure that the message template has been approved.</para>
-        /// </remarks>
+        /// <para>The code of the card message template. In the console, go to the <a href="https://dysms.console.aliyun.com/domestic/card">Card Messages &gt; Template Management</a> page and select the code of an approved card message template.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,19 +52,19 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string CardTemplateCode { get; set; }
 
         /// <summary>
-        /// <para>The variables of the message template.</para>
+        /// <para>The variables of the card message template.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[{},{}]</para>
+        /// <para>[{\&quot;customUrl\&quot;:\&quot;<a href="https://alibaba.com%5C%5C%22,%5C%5C%22dyncParams%5C%5C">https://alibaba.com\\&quot;,\\&quot;dyncParams\\</a>&quot;: \&quot;{\\\&quot;动参key\\\&quot;:\\\&quot;动参value\\\&quot;}\&quot;},{\&quot;customUrl\&quot;:\&quot;<a href="https://alibaba.com%5C%5C%22,%5C%5C%22dyncParams%5C%5C">https://alibaba.com\\&quot;,\\&quot;dyncParams\\</a>&quot;: \&quot;{\\\&quot;动参key\\\&quot;:\\\&quot;动参value\\\&quot;}\&quot;}]</para>
         /// </summary>
         [NameInMap("CardTemplateParamJson")]
         [Validation(Required=false)]
         public string CardTemplateParamJson { get; set; }
 
         /// <summary>
-        /// <para>The custom short code. It can contain 4 to 8 digits or letters.</para>
+        /// <para>The custom short code. The value must be 4 to 8 digits or letters.</para>
         /// <remarks>
-        /// <para>If the CardLinkType parameter is set to 2, the CustomShortCodeJson parameter is required.</para>
+        /// <para>This parameter is required when the generation type is custom short URL.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -78,15 +75,13 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string CustomShortCodeJson { get; set; }
 
         /// <summary>
-        /// <para>The original domain name. You must submit domain names for approval in advance.</para>
+        /// <para>The short URL domain assigned to the sending account. The domain must be registered in advance.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>If the <b>CardLinkType</b> parameter is set to <b>2</b>, the <b>Domain</b> parameter is required.</para>
-        /// </description></item>
-        /// <item><description><para>The <b>Domain</b> parameter cannot exceed 100 characters in length. If the parameter is not specified, a default domain name is used.</para>
-        /// </description></item>
+        /// <item><description>When <b>CardLinkType</b> is set to <b>2</b>, the <b>Domain</b> parameter is required.</description></item>
+        /// <item><description>If the <b>Domain</b> parameter is left empty, the system default domain is used. The value can be up to 100 characters in length.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>xxx.com</para>
@@ -96,7 +91,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string Domain { get; set; }
 
         /// <summary>
-        /// <para>The extension field.</para>
+        /// <para>The external extension field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BC20220608102511660860762****</para>
@@ -106,17 +101,14 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string OutId { get; set; }
 
         /// <summary>
-        /// <para>The mobile phone numbers of recipients, custom identifiers, or system identifiers.</para>
+        /// <para>The phone number, user ID, or internal system identifier.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>A maximum of 10,000 mobile phone numbers are supported.</para>
-        /// </description></item>
-        /// <item><description><para>You can enter custom identifier. Each identifier can be a maximum of 60 characters in length.</para>
-        /// </description></item>
-        /// <item><description><para>You can apply for a maximum of 10 OPPO templates at a time.</para>
-        /// </description></item>
+        /// <item><description>Supports up to 10,000 phone numbers.</description></item>
+        /// <item><description>You can also specify a custom identifier of up to 60 characters.</description></item>
+        /// <item><description>For OPPO templates, you can submit up to 10 requests at a time.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>[\&quot;1390000****
@@ -128,14 +120,15 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string PhoneNumberJson { get; set; }
 
         /// <summary>
-        /// <para>The signature. You can view the template code in the <b>Signature</b> column on the <b>Signaturess</b> tab of the <b>Go China</b> page in the Alibaba Cloud SMS console.</para>
+        /// <para>The signature name of the SMS message.
+        /// In the console, go to the <a href="https://dysms.console.aliyun.com/domestic/text/sign">Domestic Messages &gt; Signature Management</a> tab and view the name in the <b>Signature Name</b> column. You can also call the <a href="https://www.alibabacloud.com/help/en/sms/developer-reference/api-dysmsapi-2017-05-25-querysmssignlist">QuerySmsSignList</a> operation to view SMS signature names.</para>
         /// <remarks>
-        /// <para>The signatures must be approved and correspond to the mobile numbers in sequence.</para>
+        /// <para>The signature must be added and approved. The number of SMS signatures must match the number of phone numbers, and each signature must correspond to a phone number.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[\&quot;aliyun\&quot;, \&quot;aliyun2\&quot;]</para>
+        /// <para>[\&quot;阿里云\&quot;, \&quot;阿里云2\&quot;]</para>
         /// </summary>
         [NameInMap("SignNameJson")]
         [Validation(Required=false)]

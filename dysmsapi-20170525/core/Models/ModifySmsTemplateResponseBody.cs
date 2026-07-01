@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class ModifySmsTemplateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>请求状态码。</para>
         /// <list type="bullet">
-        /// <item><description>The value OK indicates that the request was successful.</description></item>
-        /// <item><description>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</description></item>
+        /// <item><description>返回OK代表请求成功。</description></item>
+        /// <item><description>其他错误码，请参见<a href="https://help.aliyun.com/document_detail/101346.html">错误码列表</a>。</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>状态码的描述。</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>请求ID。</para>
         /// 
         /// <b>Example:</b>
         /// <para>F655A8D5-B967-440B-8683-DAD6FF8DE990</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The code of the message template.</para>
+        /// <para>已修改的模板Code。</para>
         /// 
         /// <b>Example:</b>
         /// <para>SMS_15255****</para>

@@ -10,6 +10,12 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class QueryMobilesCardSupportRequest : TeaModel {
         /// <summary>
+        /// <para>The encryption method for the phone number. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>SHA1: SHA1 encryption.</description></item>
+        /// <item><description>NORMAL: no encryption. The phone number is transmitted in plaintext.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>NORMAL</para>
         /// 
@@ -21,7 +27,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string EncryptType { get; set; }
 
         /// <summary>
-        /// <para>The list of mobile phone numbers.</para>
+        /// <para>The list of phone numbers.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Mobiles")]
@@ -29,14 +35,14 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public List<Dictionary<string, object>> Mobiles { get; set; }
 
         /// <summary>
-        /// <para>The code of the message template. You can view the template code in the <b>Template Code</b> column on the <b>Templates</b> tab of the <b>Go China</b> page in the Alibaba Cloud SMS console.</para>
+        /// <para>The code of the card SMS template. To view the code, log on to the console and choose <b>Domestic Messages</b> &gt; <a href="https://dysms.console.aliyun.com/domestic/text/template">Template Management</a>.</para>
         /// <remarks>
-        /// <para>Make sure that the message template has been approved.</para>
+        /// <para>The template must be added and approved.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>CARD_SMS_0000</para>
+        /// <para>CARD_SMS_2****</para>
         /// </summary>
         [NameInMap("TemplateCode")]
         [Validation(Required=false)]

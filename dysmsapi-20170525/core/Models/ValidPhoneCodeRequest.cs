@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class ValidPhoneCodeRequest : TeaModel {
         /// <summary>
-        /// <para>验证码</para>
+        /// <para>The verification code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>手机号</para>
+        /// <para>The phone number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

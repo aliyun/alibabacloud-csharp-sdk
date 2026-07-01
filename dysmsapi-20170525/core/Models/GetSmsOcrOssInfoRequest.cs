@@ -22,10 +22,13 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>OCR任务类型</para>
+        /// <para>The OCR task type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ICP_DOMAIN: ICP filing screenshot for domain-type links.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值</para>
+        /// <para>ICP_DOMAIN</para>
         /// </summary>
         [NameInMap("TaskType")]
         [Validation(Required=false)]

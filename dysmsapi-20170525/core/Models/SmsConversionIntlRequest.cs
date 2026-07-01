@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class SmsConversionIntlRequest : TeaModel {
         /// <summary>
-        /// <para>The time when the OTP message was delivered. The value is a UNIX timestamp. Unit: milliseconds.</para>
+        /// <para>The timestamp at which the message reached the recipient. Must be a Unix timestamp, expressed as a long integer in milliseconds.</para>
         /// <list type="bullet">
-        /// <item><description>If you leave the parameter empty, the current timestamp is specified by default.</description></item>
-        /// <item><description>If you specify the parameter, the timestamp must be greater than the message sending time and less than the current timestamp.</description></item>
+        /// <item><description><para>If this field is not specified: defaults to the current timestamp.</para>
+        /// </description></item>
+        /// <item><description><para>If this field is specified: the timestamp must be greater than the send time and less than the current timestamp.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public long? ConversionTime { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether customers replied to the OTP message. Valid values: true and false.</para>
+        /// <para>Set to true if your user replied to the message you sent. Otherwise, set to false.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +37,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public bool? Delivered { get; set; }
 
         /// <summary>
-        /// <para>The ID of the message.</para>
+        /// <para>Message ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

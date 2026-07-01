@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class ListTagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The token used to query the next page.</para>
+        /// <para>The token used to query the next page of tags.</para>
         /// 
         /// <b>Example:</b>
         /// <para>23432453245</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The name of the cloud service. Set the value to <b>dysms</b>.</para>
+        /// <para>The product name. Default value: <b>dysms</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dysms</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string ProdCode { get; set; }
 
         /// <summary>
-        /// <para>The region ID. Set the value to <b>cn-hangzhou</b>.</para>
+        /// <para>The region ID. Default value: <b>cn-hangzhou</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The code of the message template. Specify either the Tag or the ResourceId parameter.</para>
+        /// <para>The SMS template code. The SMS template code and the tag list <b>Tag</b> cannot be empty at the same time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SMS_23423423</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource. Set the value to TEMPLATE.</para>
+        /// <para>The resource type. Default value: TEMPLATE.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -84,14 +84,14 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tag list. Specify either the Tag or the ResourceId parameter. You can specify a maximum of 20 tags.</para>
+        /// <para>The tag list. The tag list and <b>ResourceId</b> (SMS template code) cannot be empty at the same time. You can specify up to 20 tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListTagResourcesRequestTag> Tag { get; set; }
         public class ListTagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the tag.</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag.</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>

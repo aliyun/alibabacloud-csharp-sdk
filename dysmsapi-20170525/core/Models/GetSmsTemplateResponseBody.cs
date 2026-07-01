@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class GetSmsTemplateResponseBody : TeaModel {
         /// <summary>
-        /// <para>Application scenario content.</para>
+        /// <para>应用场景内容。</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://www.aliyun.com/">http://www.aliyun.com/</a></para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string ApplyScene { get; set; }
 
         /// <summary>
-        /// <para>Audit information.</para>
+        /// <para>审核信息。</para>
         /// </summary>
         [NameInMap("AuditInfo")]
         [Validation(Required=false)]
         public GetSmsTemplateResponseBodyAuditInfo AuditInfo { get; set; }
         public class GetSmsTemplateResponseBodyAuditInfo : TeaModel {
             /// <summary>
-            /// <para>Audit date and time.</para>
+            /// <para>审核时间。</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-06-03 11:20:34</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             public string AuditDate { get; set; }
 
             /// <summary>
-            /// <para>Reasons for failed audit.</para>
+            /// <para>审核未通过的原因。</para>
             /// 
             /// <b>Example:</b>
             /// <para>模板内容中包含错别字。</para>
@@ -49,10 +49,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         }
 
         /// <summary>
-        /// <para>Request status code.</para>
+        /// <para>请求状态码。取值：</para>
         /// <list type="bullet">
-        /// <item><description>OK indicates a successful request.</description></item>
-        /// <item><description>For other error codes, please refer to <a href="https://help.aliyun.com/document_detail/101346.html">API Error Codes</a>.</description></item>
+        /// <item><description>OK：代表请求成功。</description></item>
+        /// <item><description>其他错误码，请参见<a href="https://help.aliyun.com/document_detail/101346.html">API错误码</a>。</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The time when the SMS template was created.</para>
+        /// <para>创建短信模板的时间。</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-06-03 10:02:34</para>
@@ -83,11 +83,11 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         }
 
         /// <summary>
-        /// <para>International/Hong Kong, Macao, and Taiwan template type. When the <b>TemplateType</b> parameter is <b>3</b>, this parameter is required for international/Hong Kong, Macao, and Taiwan templates, with values:</para>
+        /// <para>国际/港澳台模板类型。当<b>TemplateType</b>参数返回值为<b>3</b>时，此参数取值：</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: Verification code.</description></item>
-        /// <item><description><b>1</b>: SMS notification.</description></item>
-        /// <item><description><b>2</b>: Promotional SMS.</description></item>
+        /// <item><description><b>0</b>：短信通知。</description></item>
+        /// <item><description><b>1</b>：推广短信。</description></item>
+        /// <item><description><b>2</b>：验证码。</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public int? IntlType { get; set; }
 
         /// <summary>
-        /// <para>Description of the status code.</para>
+        /// <para>状态码的描述。</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -118,8 +118,8 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         }
 
         /// <summary>
-        /// <para>Work order number.</para>
-        /// <para>This parameter is used by auditors when querying the audit. You need to provide this work order number when requesting expedited review.</para>
+        /// <para>工单号。</para>
+        /// <para>审核人员查询审核时会用到此参数。您需要审核加急时需要提供此工单号。</para>
         /// 
         /// <b>Example:</b>
         /// <para>2003019****</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>The SMS signature associated with the template when applied.</para>
+        /// <para>申请模板时，关联的短信签名。</para>
         /// 
         /// <b>Example:</b>
         /// <para>阿里云</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string RelatedSignName { get; set; }
 
         /// <summary>
-        /// <para>Explanation for the SMS template application, which is one of the reference information for template review.</para>
+        /// <para>短信模板申请说明，是模板审核的参考信息之一。</para>
         /// 
         /// <b>Example:</b>
         /// <para>申请验证码模板</para>
@@ -149,10 +149,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>The ID of this call request, which is a unique identifier generated by Alibaba Cloud for the request and can be used for troubleshooting and issue定位.</para>
+        /// <para>本次调用请求的ID，是由阿里云为该请求生成的唯一标识符，可用于排查和定位问题。</para>
         /// 
         /// <b>Example:</b>
-        /// <para>819BE656-D2E0-4858-8B21-B2E47708****</para>
+        /// <para>F655A8D5-B967-440B-8683-DAD6FF8DE990</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         }
 
         /// <summary>
-        /// <para>SMS template code.</para>
+        /// <para>短信模板Code。</para>
         /// 
         /// <b>Example:</b>
         /// <para>SMS_20375****</para>
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string TemplateCode { get; set; }
 
         /// <summary>
-        /// <para>Content of the SMS template.</para>
+        /// <para>短信模板内容。</para>
         /// 
         /// <b>Example:</b>
         /// <para>您正在申请手机注册，验证码为：${code}，5分钟内有效！</para>
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string TemplateContent { get; set; }
 
         /// <summary>
-        /// <para>Name of the SMS template.</para>
+        /// <para>短信模板名称。</para>
         /// 
         /// <b>Example:</b>
         /// <para>验证码</para>
@@ -199,12 +199,12 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string TemplateName { get; set; }
 
         /// <summary>
-        /// <para>Template review status. Return values:</para>
+        /// <para>模板审核状态。返回值：</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: Under review.</description></item>
-        /// <item><description><b>1</b>: Approved.</description></item>
-        /// <item><description><b>2</b>: Not approved, with reasons for failure returned. Please refer to <a href="https://help.aliyun.com/zh/sms/user-guide/causes-of-application-failures-and-suggestions?spm=a2c4g.11186623.0.0.41fd339f3bPSCQ">Handling Suggestions for Failed SMS Reviews</a>, invoke the <a href="https://help.aliyun.com/zh/sms/developer-reference/api-dysmsapi-2017-05-25-updatesmstemplate?spm">UpdateSmsTemplate</a> API or modify the SMS template on the <a href="https://dysms.console.aliyun.com/domestic/text/template">Template Management</a> page.</description></item>
-        /// <item><description><b>10</b>: Review canceled.</description></item>
+        /// <item><description><b>0</b>：审核中。</description></item>
+        /// <item><description><b>1</b>：通过审核。</description></item>
+        /// <item><description><b>2</b>：未通过审核，会返回审核失败的原因，请参考<a href="https://www.alibabacloud.com/help/en/sms/user-guide/causes-of-application-failures-and-suggestions">短信审核失败的处理建议</a>，调用<a href="https://www.alibabacloud.com/help/en/sms/developer-reference/api-dysmsapi-2017-05-25-updatesmstemplate">UpdateSmsTemplate</a>接口或在<a href="https://dysms.console.aliyun.com/domestic/text/template">模板管理</a>页面修改短信模板。</description></item>
+        /// <item><description><b>10</b>：取消审核。</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -215,11 +215,13 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string TemplateStatus { get; set; }
 
         /// <summary>
-        /// <para>Template identifier, indicating whether the template is user-defined or system-provided. Values:</para>
+        /// <para>模板标识。取值：</para>
         /// <list type="bullet">
-        /// <item><description><para><b>2</b>: User-defined template.</para>
+        /// <item><description><para>2：用户自定义创建模板。</para>
         /// </description></item>
-        /// <item><description><para><b>3</b>: System-provided template.</para>
+        /// <item><description><para>3：系统赠送模板。</para>
+        /// </description></item>
+        /// <item><description><para>4：测试模板。</para>
         /// </description></item>
         /// </list>
         /// 
@@ -231,15 +233,15 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public int? TemplateTag { get; set; }
 
         /// <summary>
-        /// <para>SMS type. Values:</para>
+        /// <para>短信类型。取值：</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: Verification code.</description></item>
-        /// <item><description><b>1</b>: SMS notification.</description></item>
-        /// <item><description><b>2</b>: Promotional SMS.</description></item>
-        /// <item><description><b>3</b>: International/Hong Kong, Macao, and Taiwan messages.</description></item>
+        /// <item><description><b>0</b>：验证码。</description></item>
+        /// <item><description><b>1</b>：短信通知。</description></item>
+        /// <item><description><b>2</b>：推广短信。</description></item>
+        /// <item><description><b>3</b>：国际/港澳台消息。</description></item>
         /// </list>
         /// <remarks>
-        /// <para>Only enterprise-certified users can apply for promotional SMS and international/Hong Kong, Macao, and Taiwan messages. For details on the differences between personal and enterprise user rights, please refer to <a href="https://help.aliyun.com/zh/sms/user-guide/usage-notes?spm=a2c4g.11186623.0.0.67447f576NJnE8">Usage Notes</a>.</para>
+        /// <para>仅支持企业认证用户申请推广短信和国际/港澳台消息。个人用户与企业用户权益区别详情请参见<a href="https://www.alibabacloud.com/help/en/sms/user-guide/usage-notes">使用须知</a>。</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -250,8 +252,8 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string TemplateType { get; set; }
 
         /// <summary>
-        /// <para>Template variable rules.</para>
-        /// <para>For detailed rules of template variables, refer to the <a href="https://help.aliyun.com/zh/sms/templaterule-template-variable-parameter-filling-example">Example Document</a>.</para>
+        /// <para>模板变量规则。</para>
+        /// <para>模板变量规则详情，请参见<a href="https://www.alibabacloud.com/help/en/sms/templaterule-template-variable-parameter-filling-example">示例文档</a>。</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;code&quot;:&quot;characterWithNumber&quot;}</para>
@@ -260,6 +262,36 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         [Validation(Required=false)]
         public string VariableAttribute { get; set; }
 
+        /// <summary>
+        /// <para>各运营商审核状态，仅数字短信会返回该参数。</para>
+        /// <para>key代表运营商。取值：</para>
+        /// <list type="bullet">
+        /// <item><description><para>MOBILE_VENDOR：中国移动。</para>
+        /// </description></item>
+        /// <item><description><para>TELECOM_VENDOR：中国电信。</para>
+        /// </description></item>
+        /// <item><description><para>UNICOM_VENDOR：中国联通。</para>
+        /// </description></item>
+        /// </list>
+        /// <para> value代表审核状态。取值： </para>
+        /// <list type="bullet">
+        /// <item><description><para>0：审核中。</para>
+        /// </description></item>
+        /// <item><description><para>1：通过。</para>
+        /// </description></item>
+        /// <item><description><para>2：不通过。</para>
+        /// </description></item>
+        /// <item><description><para>15：已失效。</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{
+        ///     &quot;MOBILE_VENDOR&quot;: 0,
+        ///     &quot;TELCOM_VENDOR&quot;: 0,
+        ///     &quot;UNICOM_VENDOR&quot;: 0
+        ///   }</para>
+        /// </summary>
         [NameInMap("VendorAuditStatus")]
         [Validation(Required=false)]
         public Dictionary<string, object> VendorAuditStatus { get; set; }

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class AddSmsSignResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The HTTP status code.</para>
         /// <list type="bullet">
-        /// <item><description>The value OK indicates that the request was successful.</description></item>
-        /// <item><description>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</description></item>
+        /// <item><description>OK is returned if the request is successful.</description></item>
+        /// <item><description>For other error codes, see <a href="https://help.aliyun.com/document_detail/101346.html">API error codes</a>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The description of the status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -44,10 +44,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The name of the signature.</para>
+        /// <para>The signature name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Aliyun</para>
+        /// <para>阿里云</para>
         /// </summary>
         [NameInMap("SignName")]
         [Validation(Required=false)]

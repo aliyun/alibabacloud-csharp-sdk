@@ -22,7 +22,11 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The short URL. You can query the short URL by calling the <a href="https://help.aliyun.com/document_detail/186774.html">AddShortUrl</a> operation.</para>
+        /// <para>The short link to query. Obtain this URL by calling the <a href="https://help.aliyun.com/document_detail/186774.html">AddShortUrl</a> API.</para>
+        /// <remarks>
+        /// <para>Notice: </para>
+        /// </remarks>
+        /// <para>This API is not currently supported by Short Message Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

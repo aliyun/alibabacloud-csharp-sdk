@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class QuerySmsTemplateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The status code of the request.</para>
         /// <list type="bullet">
-        /// <item><description>The value OK indicates that the request was successful.</description></item>
-        /// <item><description>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</description></item>
+        /// <item><description><para>OK indicates that the request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>For a list of other error codes, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,17 +26,17 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The time when the message template was created.</para>
+        /// <para>The time when the template was created.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2019-06-04 11:42:17</para>
+        /// <para>2024-06-03 10:02:34</para>
         /// </summary>
         [NameInMap("CreateDate")]
         [Validation(Required=false)]
         public string CreateDate { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The description of the status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -44,14 +46,16 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The approval remarks.</para>
+        /// <para>The review notes for the template.</para>
         /// <list type="bullet">
-        /// <item><description>If the value of AuditStatus is <b>AUDIT_STATE_PASS</b> or <b>AUDIT_STATE_INIT</b>, the value of Reason is No Approval Remarks.</description></item>
-        /// <item><description>If the value of AuditStatus is <b>AUDIT_STATE_NOT_PASS</b>, the reason why the message template is rejected is returned.</description></item>
+        /// <item><description><para>If the review status is <b>Approved</b> or <b>Reviewing</b>, the message &quot;No review remarks&quot; is returned.</para>
+        /// </description></item>
+        /// <item><description><para>If the review status is <b>Rejected</b>, the reason for the rejection is returned.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>The document cannot verify the authenticity of the information. Please upload it again.</para>
+        /// <para>无审批备注</para>
         /// </summary>
         [NameInMap("Reason")]
         [Validation(Required=false)]
@@ -68,58 +72,66 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The code of the message template.</para>
+        /// <para>The template code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>SMS_16703****</para>
+        /// <para>SMS_1525****</para>
         /// </summary>
         [NameInMap("TemplateCode")]
         [Validation(Required=false)]
         public string TemplateCode { get; set; }
 
         /// <summary>
-        /// <para>The content of the message template.</para>
+        /// <para>The template content.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>You are applying for mobile registration. The verification code is: ${code}, valid for 5 minutes!</para>
+        /// <para>亲爱的会员！阿里云短信服务祝您新年快乐！</para>
         /// </summary>
         [NameInMap("TemplateContent")]
         [Validation(Required=false)]
         public string TemplateContent { get; set; }
 
         /// <summary>
-        /// <para>The name of the message template.</para>
+        /// <para>The template name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>aliyun verification code</para>
+        /// <para>通知短信</para>
         /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]
         public string TemplateName { get; set; }
 
         /// <summary>
-        /// <para>The approval status of the message template. Valid values:</para>
+        /// <para>The review status of the template. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: The message template is pending approval.</description></item>
-        /// <item><description><b>1</b>: The message template is approved.</description></item>
-        /// <item><description><b>AUDIT_STATE_NOT_PASS</b>: The message template is rejected. You can view the reason in the Reason response parameter.</description></item>
-        /// <item><description><b>10</b>: The approval is canceled.</description></item>
+        /// <item><description><para><b>0</b>: Reviewing.</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: Approved.</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: Rejected. The reason for the rejection is returned in the response. For more information, see <a href="https://help.aliyun.com/document_detail/65990.html">Suggestions for handling a failed review</a>. You can then call the <a href="https://help.aliyun.com/document_detail/419287.html">ModifySmsTemplate</a> API or modify the template on the <a href="https://dysms.console.aliyun.com/domestic/text/template">Template Management</a> page.</para>
+        /// </description></item>
+        /// <item><description><para><b>10</b>: Canceled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("TemplateStatus")]
         [Validation(Required=false)]
         public int? TemplateStatus { get; set; }
 
         /// <summary>
-        /// <para>The type of the message. Valid values:</para>
+        /// <para>The message type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: verification code</description></item>
-        /// <item><description><b>1</b>: notification message</description></item>
-        /// <item><description><b>2</b>: promotional message</description></item>
-        /// <item><description><b>3</b>: message sent to countries or regions outside the Chinese mainland</description></item>
+        /// <item><description><para><b>0</b>: Verification code.</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: Message notification.</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: Promotional message.</para>
+        /// </description></item>
+        /// <item><description><para><b>3</b>: International message.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

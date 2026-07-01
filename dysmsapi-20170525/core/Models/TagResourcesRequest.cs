@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The name of the cloud service. Set the value to <b>dysms</b>.</para>
+        /// <para>The product name. Default value: <b>dysms</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dysms</para>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string ProdCode { get; set; }
 
         /// <summary>
-        /// <para>The region ID. Set the value to <b>cn-hangzhou</b>.</para>
+        /// <para>The region ID. Default value: <b>cn-hangzhou</b>. For more region IDs, see <a href="https://help.aliyun.com/document_detail/419270.html">Endpoints</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The code of the message template.</para>
+        /// <para>The SMS template codes. The number of codes cannot exceed 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SMS_23423423</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource. Set the value to <b>TEMPLATE</b>.</para>
+        /// <para>The resource type. Default value: <b>TEMPLATE</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tag.</para>
+        /// <para>The tags. You can add up to 20 tags at a time.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tag")]
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The array of tag keys. Valid values of N: 1 to 20.</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The array of tag values. Valid values of N: 1 to 20.</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>

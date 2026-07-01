@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>商标实体id列表</para>
+        /// <para>A list of trademark IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("TrademarkIdList")]

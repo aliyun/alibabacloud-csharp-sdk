@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class QuerySendStatisticsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The response code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If OK is returned, the request is successful.</description></item>
-        /// <item><description>Other values indicate that the request fails. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</description></item>
+        /// <item><description><para>OK: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>For other values, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -31,14 +33,14 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public QuerySendStatisticsResponseBodyData Data { get; set; }
         public class QuerySendStatisticsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The details of the data returned.</para>
+            /// <para>A list of delivery statistics.</para>
             /// </summary>
             [NameInMap("TargetList")]
             [Validation(Required=false)]
             public List<QuerySendStatisticsResponseBodyDataTargetList> TargetList { get; set; }
             public class QuerySendStatisticsResponseBodyDataTargetList : TeaModel {
                 /// <summary>
-                /// <para>The number of messages without a delivery receipt.</para>
+                /// <para>The number of messages with no delivery receipts.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -48,7 +50,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
                 public long? NoRespondedCount { get; set; }
 
                 /// <summary>
-                /// <para>The number of messages with a delivery receipt that indicates a failure.</para>
+                /// <para>The number of messages with failed delivery receipts.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -58,7 +60,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
                 public long? RespondedFailCount { get; set; }
 
                 /// <summary>
-                /// <para>The number of messages with a delivery receipt that indicates a success.</para>
+                /// <para>The number of messages with successful delivery receipts.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>17</para>
@@ -68,7 +70,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
                 public long? RespondedSuccessCount { get; set; }
 
                 /// <summary>
-                /// <para>The date when the message is sent. Format: yyyyMMdd. Example: 20181225.</para>
+                /// <para>The date the messages were sent. Format: yyyyMMdd.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20201010</para>
@@ -78,7 +80,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
                 public string SendDate { get; set; }
 
                 /// <summary>
-                /// <para>The number of delivered messages.</para>
+                /// <para>The number of successfully sent messages (billable message count).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
@@ -102,7 +104,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The description of the status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -115,7 +117,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>819BE656-D2E0-4858-8B21-B2E47708****</para>
+        /// <para>F655A8D5-B967-440B-8683-DAD6FF8DE990</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

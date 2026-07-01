@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class GetMediaResourceIdResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>请求状态码。</para>
         /// <list type="bullet">
-        /// <item><description>If OK is returned, the request is successful.</description></item>
-        /// <item><description>Other values indicate that the request fails. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</description></item>
+        /// <item><description>返回OK代表请求成功。</description></item>
+        /// <item><description>其他错误码，请参见<a href="https://help.aliyun.com/document_detail/101346.html">错误码列表</a>。</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>返回数据。</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetMediaResourceIdResponseBodyData Data { get; set; }
         public class GetMediaResourceIdResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The download URL of the resource.</para>
+            /// <para>资源下载地址。</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://test-example.com/download.jpg">http://test-example.com/download.jpg</a></para>
@@ -41,10 +41,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             public string ResUrlDownload { get; set; }
 
             /// <summary>
-            /// <para>The resource ID.</para>
+            /// <para>资源ID。</para>
             /// 
             /// <b>Example:</b>
-            /// <para>SMS_14571****</para>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("ResourceId")]
             [Validation(Required=false)]
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>请求ID。</para>
         /// 
         /// <b>Example:</b>
         /// <para>F07CF237-F6E3-5F77-B91B-F9B7C5DE84AB</para>
@@ -63,10 +63,12 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>调用接口是否成功。取值：</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>：调用成功。</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>：调用失败。</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

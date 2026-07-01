@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class GetCardSmsDetailsRequest : TeaModel {
         /// <summary>
-        /// <para>Card SMS sending ID, which is the BizCardId field in the response when calling SendCardSms or SendBatchCardSms.</para>
+        /// <para>The card SMS sending ID. When you send a card SMS by calling the <a href="https://help.aliyun.com/document_detail/434120.html">SendCardSms</a> or <a href="https://help.aliyun.com/document_detail/434119.html">SendBatchCardSms</a> operation, obtain the BizCardId field from the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456^0</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string BizCardId { get; set; }
 
         /// <summary>
-        /// <para>Digital SMS sending ID, which is the BizDigitalId field in the response when calling SendCardSms or SendBatchCardSms.</para>
+        /// <para>The digital SMS sending ID. When you send a card SMS by calling the <a href="https://help.aliyun.com/document_detail/434120.html">SendCardSms</a> or <a href="https://help.aliyun.com/document_detail/434119.html">SendBatchCardSms</a> operation, obtain the BizDigitalId field from the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12346^0</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string BizDigitId { get; set; }
 
         /// <summary>
-        /// <para>Text SMS sending ID, which is the BizSmsId field in the response when calling SendCardSms or SendBatchCardSms.</para>
+        /// <para>The text SMS sending ID. When you send a card SMS by calling the <a href="https://help.aliyun.com/document_detail/434120.html">SendCardSms</a> or <a href="https://help.aliyun.com/document_detail/434119.html">SendBatchCardSms</a> operation, obtain the BizSmsId field from the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234576^0</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string BizSmsId { get; set; }
 
         /// <summary>
-        /// <para>For paginated viewing of sending records, specify the current page number of the sending records.</para>
+        /// <para>The current page number when you paginate sending records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -54,8 +54,8 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>For paginated viewing of sending records, specify the number of card SMS records to display per page.</para>
-        /// <para>The value range is 1~50.</para>
+        /// <para>The number of card SMS records to display on each page when you paginate sending records.</para>
+        /// <para>Valid values: 1 to 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Domestic phone number that received the SMS. Format: 11-digit phone number, for example, 1390000****.</para>
+        /// <para>The domestic mobile phone number that received the SMS. Format: an 11-digit mobile phone number. For example, 1390000****.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -84,8 +84,8 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Card SMS sending date, supports querying records from the last 30 days.</para>
-        /// <para>Format: yyyyMMdd, for example, 20240112.</para>
+        /// <para>The card SMS sending date. Records from the last 30 days can be queried.</para>
+        /// <para>Format: yyyyMMdd. For example, 20240112.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

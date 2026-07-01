@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>01</para>
+        /// <para>示例值</para>
         /// </summary>
         [NameInMap("ExistExtCode")]
         [Validation(Required=false)]
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>02</para>
+        /// <para>示例值示例值</para>
         /// </summary>
         [NameInMap("NewExtCode")]
         [Validation(Required=false)]

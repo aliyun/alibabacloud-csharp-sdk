@@ -9,11 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class QuerySingleSmsQualificationResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The details about the access denial. This parameter is returned only when the RAM check fails.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>无</para>
+        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
+        /// <para>The status code of the request.</para>
+        /// <list type="bullet">
+        /// <item><description>The value OK indicates that the request was successful.</description></item>
+        /// <item><description>For other error codes, see the error code list in this chapter or the product <a href="https://help.aliyun.com/document_detail/101346.html">error code list</a>.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -21,12 +33,15 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The details of a single qualification.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public QuerySingleSmsQualificationResponseBodyData Data { get; set; }
         public class QuerySingleSmsQualificationResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>经办人身份证有效期</para>
+            /// <para>The validity period of the administrator\&quot;s certificate. Format: YYYY-MM-DD~YYYY-MM-DD.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-01-01~2033-01-01</para>
@@ -36,7 +51,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             public string AdminIDCardExpDate { get; set; }
 
             /// <summary>
-            /// <para>经办人身份证国徽面，产品需求，要求身份证可以分正反面上传</para>
+            /// <para>The full URL of the photo of the front side of the administrator\&quot;s certificate (national emblem side of the ID card).</para>
             /// 
             /// <b>Example:</b>
             /// <para>https://<b><b><b>.aliyuncs.com/</b></b></b></para>
@@ -46,7 +61,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             public string AdminIDCardFrontFace { get; set; }
 
             /// <summary>
-            /// <para>经办人身份证号码</para>
+            /// <para>The certificate number of the administrator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>511391********5123</para>
@@ -56,7 +71,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             public string AdminIDCardNo { get; set; }
 
             /// <summary>
-            /// <para>经办人身份证图片地址，正反面合一</para>
+            /// <para>The full URL of the photo of the back side of the administrator\&quot;s certificate (portrait side of the ID card).</para>
             /// 
             /// <b>Example:</b>
             /// <para>https://<b><b><b>.aliyuncs.com/</b></b></b></para>
@@ -66,7 +81,15 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             public string AdminIDCardPic { get; set; }
 
             /// <summary>
-            /// <para>管理员身份证类型</para>
+            /// <para>The type of the administrator\&quot;s certificate. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>identityCard: ID card.</description></item>
+            /// <item><description>passport: Passport.</description></item>
+            /// <item><description>homeReturnPermit: Home return permit for Hong Kong and Macao residents.</description></item>
+            /// <item><description>TaiwanCompatriotPermit: Mainland travel permit for Taiwan residents.</description></item>
+            /// <item><description>residencePermit: Residence permit for residents of Hong Kong, Macao, and Taiwan.</description></item>
+            /// <item><description>other: Other.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>identityCard</para>
@@ -76,17 +99,17 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             public string AdminIDCardType { get; set; }
 
             /// <summary>
-            /// <para>经办人姓名</para>
+            /// <para>The name of the administrator.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>示例值示例值</para>
+            /// <para>李华</para>
             /// </summary>
             [NameInMap("AdminName")]
             [Validation(Required=false)]
             public string AdminName { get; set; }
 
             /// <summary>
-            /// <para>经办人手机号码</para>
+            /// <para>The mobile phone number of the administrator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>137*******</para>
@@ -96,13 +119,15 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             public string AdminPhoneNo { get; set; }
 
             /// <summary>
-            /// <para>证件信息</para>
+            /// <para>The business license information of the enterprise.</para>
             /// </summary>
             [NameInMap("BusinessLicensePics")]
             [Validation(Required=false)]
             public List<QuerySingleSmsQualificationResponseBodyDataBusinessLicensePics> BusinessLicensePics { get; set; }
             public class QuerySingleSmsQualificationResponseBodyDataBusinessLicensePics : TeaModel {
                 /// <summary>
+                /// <para>The file path parameter of the business license.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>123456/111.png</para>
                 /// </summary>
@@ -111,7 +136,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
                 public string LicensePic { get; set; }
 
                 /// <summary>
-                /// <para>文件的完整路径</para>
+                /// <para>The full URL of the business license file.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>https://<b><b><b>.aliyuncs.com/</b></b></b></para>
@@ -121,6 +146,14 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
                 public string PicUrl { get; set; }
 
                 /// <summary>
+                /// <para>The type of business license. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>socialCreditLicense: Unified social credit code certificate.</description></item>
+                /// <item><description>businessLicense: Business license.</description></item>
+                /// <item><description>signLegalLicense: Legal person certificate of a public institution.</description></item>
+                /// <item><description>otherLicense: Other types of license certificates.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>businessLicense</para>
                 /// </summary>
@@ -131,7 +164,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             }
 
             /// <summary>
-            /// <para>行业类型，在当前模式下是可以用产品线code来区分</para>
+            /// <para>The industry type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dysms</para>
@@ -141,17 +174,21 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             public string BusinessType { get; set; }
 
             /// <summary>
-            /// <para>公司名称</para>
+            /// <para>The name of the enterprise.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>示例值示例值</para>
+            /// <para>阿里云云通信有限公司</para>
             /// </summary>
             [NameInMap("CompanyName")]
             [Validation(Required=false)]
             public string CompanyName { get; set; }
 
             /// <summary>
-            /// <para>企业类型, COMPANY:公司，政府或者事业单位:NON_PROFIT_ORGANIZATION</para>
+            /// <para>The type of enterprise. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>COMPANY: Enterprise.</description></item>
+            /// <item><description>NON_PROFIT_ORGANIZATION: Government agency or public institution.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>COMPANY</para>
@@ -161,6 +198,8 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             public string CompanyType { get; set; }
 
             /// <summary>
+            /// <para>The validity period of the business license. Format: YYYY-MM-DD~YYYY-MM-DD.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2023-01-01~2033-01-01</para>
             /// </summary>
@@ -169,7 +208,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             public string EffTimeStr { get; set; }
 
             /// <summary>
-            /// <para>法人身份证号码</para>
+            /// <para>The certificate number of the legal representative.</para>
             /// 
             /// <b>Example:</b>
             /// <para>511391********5123</para>
@@ -179,7 +218,15 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             public string LegalPersonIDCardNo { get; set; }
 
             /// <summary>
-            /// <para>法人身份证类型</para>
+            /// <para>The type of the legal representative\&quot;s certificate. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>identityCard: ID card.</description></item>
+            /// <item><description>passport: Passport.</description></item>
+            /// <item><description>homeReturnPermit: Home return permit for Hong Kong and Macao residents.</description></item>
+            /// <item><description>TaiwanCompatriotPermit: Mainland travel permit for Taiwan residents.</description></item>
+            /// <item><description>residencePermit: Residence permit for residents of Hong Kong, Macao, and Taiwan.</description></item>
+            /// <item><description>other: Other.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>identityCard</para>
@@ -189,7 +236,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             public string LegalPersonIDCardType { get; set; }
 
             /// <summary>
-            /// <para>法人身份证有效期</para>
+            /// <para>The validity period of the legal representative\&quot;s certificate. Format: YYYY-MM-DD~YYYY-MM-DD.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-01-01~2033-01-01</para>
@@ -199,17 +246,17 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             public string LegalPersonIdCardEffTime { get; set; }
 
             /// <summary>
-            /// <para>法人姓名</para>
+            /// <para>The name of the legal representative.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>示例值</para>
+            /// <para>李华</para>
             /// </summary>
             [NameInMap("LegalPersonName")]
             [Validation(Required=false)]
             public string LegalPersonName { get; set; }
 
             /// <summary>
-            /// <para>社会统一信用代码</para>
+            /// <para>The unified social credit code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>910X********0012</para>
@@ -219,13 +266,15 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             public string OrganizationCode { get; set; }
 
             /// <summary>
-            /// <para>更多资料</para>
+            /// <para>Additional materials.</para>
             /// </summary>
             [NameInMap("OtherFiles")]
             [Validation(Required=false)]
             public List<QuerySingleSmsQualificationResponseBodyDataOtherFiles> OtherFiles { get; set; }
             public class QuerySingleSmsQualificationResponseBodyDataOtherFiles : TeaModel {
                 /// <summary>
+                /// <para>The file path parameter of the additional materials.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>123456/111.png</para>
                 /// </summary>
@@ -234,7 +283,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
                 public string LicensePic { get; set; }
 
                 /// <summary>
-                /// <para>文件的完整路径</para>
+                /// <para>The full URL of the additional materials file.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>https://<b><b><b>.aliyuncs.com/</b></b></b></para>
@@ -246,6 +295,8 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             }
 
             /// <summary>
+            /// <para>The qualification ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10000****</para>
             /// </summary>
@@ -254,27 +305,37 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             public long? QualificationGroupId { get; set; }
 
             /// <summary>
-            /// <para>资质名称</para>
+            /// <para>The qualification name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>示例值示例值</para>
+            /// <para>阿里云云通信有限公司资质李华</para>
             /// </summary>
             [NameInMap("QualificationName")]
             [Validation(Required=false)]
             public string QualificationName { get; set; }
 
             /// <summary>
-            /// <para>备注</para>
+            /// <para>The remarks.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>示例值示例值</para>
+            /// <para>无</para>
             /// </summary>
             [NameInMap("Remark")]
             [Validation(Required=false)]
             public string Remark { get; set; }
 
             /// <summary>
-            /// <para>当前审核状态</para>
+            /// <para>The review status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>INT: Under review.</description></item>
+            /// <item><description>FAILED: Review failed.</description></item>
+            /// <item><description>PASSED: Review passed.</description></item>
+            /// <item><description>NOT_FINISH: Materials to be supplemented.</description></item>
+            /// <item><description>CANCELED: Cancelled.</description></item>
+            /// </list>
+            /// <remarks>
+            /// <para>This API does not return review remarks. To query review remarks (<c>AuditRemark</c>), use <a href="~~QuerySmsQualificationRecord~~">QuerySmsQualificationRecord</a>.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>PASSED</para>
@@ -284,7 +345,11 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             public string State { get; set; }
 
             /// <summary>
-            /// <para>是否自用</para>
+            /// <para>The purpose of the qualification application. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b>: For self-use.</description></item>
+            /// <item><description><b>false</b>: For other use.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -294,6 +359,12 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             public bool? UseBySelf { get; set; }
 
             /// <summary>
+            /// <para>Qualification authorization. Indicates whether to allow this qualification to be shared with other cloud communication products (such as Domestic Voice and Domestic Number Privacy Protection). The qualification can be shared and reused only when you apply for a <b>self-use qualification</b> and the qualification information <b>matches the enterprise information authenticated under the current Alibaba Cloud account</b>. Other cases are invalid. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true: Agree. Your qualification information can be invoked in the &quot;qualification authentication step&quot; of other cloud communication products, eliminating duplicate authentication steps.</description></item>
+            /// <item><description>false: Disagree.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>
@@ -302,7 +373,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             public bool? WhetherShare { get; set; }
 
             /// <summary>
-            /// <para>乾坤袋工单ID</para>
+            /// <para>The review ticket ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2001****</para>
@@ -314,6 +385,8 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         }
 
         /// <summary>
+        /// <para>The description of the status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -322,6 +395,8 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The ID of this API call request, which is the unique identifier generated by Alibaba Cloud for this request. It can be used to troubleshoot and locate issues.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>25D5AFDE-8EBC-132E-8909-1FDC071DA</para>
         /// </summary>
@@ -330,6 +405,12 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the API call was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         /// <para>扩展码A3</para>
         /// 
         /// <b>Example:</b>
-        /// <para>01</para>
+        /// <para>示例值</para>
         /// </summary>
         [NameInMap("ExtCode")]
         [Validation(Required=false)]
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>29</para>
         /// </summary>
         [NameInMap("PageNo")]
         [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>20</para>
+        /// <para>11</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

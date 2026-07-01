@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class SendBatchSmsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the delivery receipt. You can use one of the following methods to query the delivery status of a message based on the ID.</para>
+        /// <para>The delivery receipt ID.</para>
         /// <list type="bullet">
-        /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/102352.html">QuerySendDetails</a> operation.</description></item>
-        /// <item><description>Log on to the <a href="https://dysms.console.aliyun.com/dysms.htm#/overview">Alibaba Cloud SMS console</a>. In the left-side navigation pane, choose <b>Analytics</b> &gt; <b>Delivery Report</b>.</description></item>
+        /// <item><description><para>You can use this ID to query the delivery status by calling the <a href="https://help.aliyun.com/document_detail/102352.html">QuerySendDetails</a> operation.</para>
+        /// </description></item>
+        /// <item><description><para>Log on to the <a href="https://dysms.console.aliyun.com/dysms.htm#/overview">Short Message Service console</a> and go to <b>Statistics</b> &gt; <b>Delivery Logs</b> to view delivery details.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,10 +26,12 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The request status code.</para>
         /// <list type="bullet">
-        /// <item><description>If OK is returned, the request is successful.</description></item>
-        /// <item><description>Other values indicate that the request fails. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</description></item>
+        /// <item><description><para>A value of <c>OK</c> indicates a successful request.</para>
+        /// </description></item>
+        /// <item><description><para>For a list of other error codes, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,7 +42,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The description of the request status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>

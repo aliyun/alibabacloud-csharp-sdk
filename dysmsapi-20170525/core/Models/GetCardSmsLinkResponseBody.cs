@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class GetCardSmsLinkResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>请求状态码。取值：</para>
         /// <list type="bullet">
-        /// <item><description>The value OK indicates that the request was successful.</description></item>
-        /// <item><description>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</description></item>
+        /// <item><description>OK：代表请求成功。</description></item>
+        /// <item><description>其他错误码，请参见<a href="https://help.aliyun.com/document_detail/101346.html">错误码列表</a>。</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>返回数据。</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetCardSmsLinkResponseBodyData Data { get; set; }
         public class GetCardSmsLinkResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The mobile phone numbers that support card messages.</para>
+            /// <para>支持卡片短信的手机号码。</para>
             /// 
             /// <b>Example:</b>
             /// <para>[\&quot;1390000****\&quot;,\&quot;1370000****\&quot;]</para>
@@ -41,17 +41,17 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             public string CardPhoneNumbers { get; set; }
 
             /// <summary>
-            /// <para>The signatures must correspond to the mobile numbers and short URLs in sequence.</para>
+            /// <para>用于申请卡片短信短链的短信签名，在发送时签名、接收号码、卡片短信短链要一一对应。</para>
             /// 
             /// <b>Example:</b>
-            /// <para>[&quot;aliyun&quot;,&quot;aliyun2&quot;]</para>
+            /// <para>[&quot;阿里云&quot;,&quot;阿里云2&quot;]</para>
             /// </summary>
             [NameInMap("CardSignNames")]
             [Validation(Required=false)]
             public string CardSignNames { get; set; }
 
             /// <summary>
-            /// <para>The short URLs.</para>
+            /// <para>卡片短信短链。</para>
             /// 
             /// <b>Example:</b>
             /// <para>[\&quot;mw2m.cn/LAaGGa\&quot;,\&quot;mw2m.cn/LAAaes\&quot;]</para>
@@ -61,14 +61,14 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             public string CardSmsLinks { get; set; }
 
             /// <summary>
-            /// <para>The review status of the card message template.</para>
+            /// <para>卡片短信模板审核状态。取值：</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: pending approval</description></item>
-            /// <item><description><b>1</b>: approved</description></item>
-            /// <item><description><b>2</b>: rejected</description></item>
+            /// <item><description><b>0</b>：审核中。</description></item>
+            /// <item><description><b>1</b>：审核通过。</description></item>
+            /// <item><description><b>2</b>：审核不通过。</description></item>
             /// </list>
             /// <remarks>
-            /// <para>Unapproved card messages are rolled back.</para>
+            /// <para>未审核通过的短信走回落流程。</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             public int? CardTmpState { get; set; }
 
             /// <summary>
-            /// <para>The mobile phone numbers that do not support card messages.</para>
+            /// <para>不支持卡片短信的手机号。</para>
             /// 
             /// <b>Example:</b>
             /// <para>1390000****</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>请求ID。</para>
         /// 
         /// <b>Example:</b>
         /// <para>CC89A90C-978F-46AC-B80D-54738371E7CA</para>
@@ -101,10 +101,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <para>接口调用是否成功。取值：</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>：调用成功。</description></item>
+        /// <item><description><b>false</b>：调用失败。</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

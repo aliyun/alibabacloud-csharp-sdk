@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class SubmitSmsQualificationRequest : TeaModel {
         /// <summary>
-        /// <para>经办人身份证有效期，格式示例2023-01-01~2033-01-01</para>
+        /// <para>The administrator\&quot;s ID card validity period. Format: YYYY-MM-DD~YYYY-MM-DD.</para>
+        /// <remarks>
+        /// <para>If the ID card has a long-term validity period, set the end date to 2099-12-31.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +24,12 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string AdminIDCardExpDate { get; set; }
 
         /// <summary>
-        /// <para>经办人身份证照片国徽面</para>
+        /// <para>The front photo of the administrator\&quot;s ID card (national emblem side). Only jpg, png, gif, and jpeg formats are supported. The image must not exceed 5 MB. Specify the file path uploaded to OSS. The file name must not contain Chinese characters or special characters. For upload instructions, see <a href="https://help.aliyun.com/document_detail/2833114.html">Upload files through OSS</a>.</para>
+        /// <remarks>
+        /// <para>Notice: 
+        /// Color originals do not require a stamp. If you upload a photocopy or black-and-white photo, stamp the photocopy with the company seal and take a photo to upload.</para>
+        /// </remarks>
+        /// <para>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +40,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string AdminIDCardFrontFace { get; set; }
 
         /// <summary>
-        /// <para>经办人身份证号码</para>
+        /// <para>The administrator\&quot;s ID card number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +51,12 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string AdminIDCardNo { get; set; }
 
         /// <summary>
-        /// <para>经办人身份证照片人像面</para>
+        /// <para>The back photo of the administrator\&quot;s ID card (portrait side). Only jpg, png, gif, and jpeg formats are supported. The image must not exceed 5 MB. Specify the file path uploaded to OSS. The file name must not contain Chinese characters or special characters. For upload instructions, see <a href="https://help.aliyun.com/document_detail/2833114.html">Upload files through OSS</a>.</para>
+        /// <remarks>
+        /// <para>Notice: 
+        /// Color originals do not require a stamp. If you upload a photocopy or black-and-white photo, stamp the photocopy with the company seal and take a photo to upload.</para>
+        /// </remarks>
+        /// <para>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +67,15 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string AdminIDCardPic { get; set; }
 
         /// <summary>
-        /// <para>管理员身份证类型。identityCard:中国居民身份证;passport:护照;homeReturnPermit:港澳居民来往内地通行证;TaiwanCompatriotPermit:台湾居民来往大陆通行证;residencePermit:港澳台居民居住证&quot;;other:其他</para>
+        /// <para>The administrator\&quot;s ID card type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>identityCard: ID card.</description></item>
+        /// <item><description>passport: passport.</description></item>
+        /// <item><description>homeReturnPermit: Hong Kong/Macao resident travel permit to mainland.</description></item>
+        /// <item><description>TaiwanCompatriotPermit: Taiwan resident travel permit to mainland.</description></item>
+        /// <item><description>residencePermit: Hong Kong/Macao/Taiwan resident residence permit.</description></item>
+        /// <item><description>other: other.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,18 +86,21 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string AdminIDCardType { get; set; }
 
         /// <summary>
-        /// <para>经办人姓名</para>
+        /// <para>The administrator\&quot;s name. Maximum length: 50 characters. <b>Under the current <a href="https://help.aliyun.com/document_detail/2873145.html">SMS signature real-name requirements</a>, if the same administrator applies for qualifications for multiple different enterprises, carrier registration will fail. Ensure one administrator per enterprise to improve the registration success rate.</b></para>
+        /// <remarks>
+        /// <para>The administrator (also called the handler) is the person who logs on to the Alibaba Cloud account and manages SMS services. This person typically manages qualifications, signatures, and templates under this Alibaba Cloud account and performs SMS sending operations. This person\&quot;s phone number must be able to receive verification codes. The administrator does not have to be the Alibaba Cloud account administrator and can be the same person as the legal representative.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>李华</para>
         /// </summary>
         [NameInMap("AdminName")]
         [Validation(Required=false)]
         public string AdminName { get; set; }
 
         /// <summary>
-        /// <para>经办人手机号码</para>
+        /// <para>The administrator\&quot;s phone number. Format: +/+86/0086/86 or a phone number without any prefix, such as 1390000****.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -87,14 +111,24 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string AdminPhoneNo { get; set; }
 
         /// <summary>
-        /// <para>企业营业证件信息，非大客户必填</para>
+        /// <para>The business license information. This parameter is required when the qualification purpose <c>UseBySelf</c> is set to <c>false</c> (third-party use).</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Based on carrier real-name registration regulatory requirements, we strongly recommend that you provide the relevant field information. Otherwise, the probability of &quot;review rejection or carrier registration failure&quot; increases significantly.</description></item>
+        /// </list>
+        /// </remarks>
         /// </summary>
         [NameInMap("BusinessLicensePics")]
         [Validation(Required=false)]
         public List<SubmitSmsQualificationRequestBusinessLicensePics> BusinessLicensePics { get; set; }
         public class SubmitSmsQualificationRequestBusinessLicensePics : TeaModel {
             /// <summary>
-            /// <para>营业证件图片标识的osskey</para>
+            /// <para>The business license image. Only jpg, png, gif, and jpeg formats are supported. The image must not exceed 5 MB. Specify the file path uploaded to OSS. The file name must not contain Chinese characters or special characters. For upload instructions, see <a href="https://help.aliyun.com/document_detail/2833114.html">Upload files through OSS</a>.</para>
+            /// <remarks>
+            /// <para>Notice: </para>
+            /// </remarks>
+            /// <para>Color originals do not require a stamp. If you upload a photocopy or black-and-white photo, stamp the photocopy with the company seal and take a photo to upload.
+            /// .</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456/111.png</para>
@@ -104,7 +138,14 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             public string LicensePic { get; set; }
 
             /// <summary>
-            /// <para>营业证件类型，businessLicense:营业执照;organizationCodeLicense:组织机构代码证;taxRegistrationLicense:税务登记证;socialCreditLicense:社会信用代码证书;newStyleBusinessLicense:三证合一;signLegalLicense:签名归属方的事业单位法人证书;otherLicense:其他类型执照证书</para>
+            /// <para>The business license type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>socialCreditLicense: unified social credit code certificate.</description></item>
+            /// <item><description>businessLicense: business license.</description></item>
+            /// <item><description>signLegalLicense: public institution legal person certificate.</description></item>
+            /// <item><description>otherLicense: other.</description></item>
+            /// </list>
+            /// <para>Upload one type. The certificate must contain the enterprise name, unified social credit code, and certificate validity period.</para>
             /// 
             /// <b>Example:</b>
             /// <para>businessLicense</para>
@@ -116,7 +157,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         }
 
         /// <summary>
-        /// <para>企业营业时间开始和结束字符串，格式示例2023-01-01~2033-01-01</para>
+        /// <para>The business license validity period. Format: YYYY-MM-DD~YYYY-MM-DD.</para>
+        /// <remarks>
+        /// <para>If the certificate has a long-term validity period, set the end date to 2099-12-31.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -127,7 +171,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string BussinessLicenseExpDate { get; set; }
 
         /// <summary>
-        /// <para>手机号验证码</para>
+        /// <para>The phone verification code. Call the <a href="~~RequiredPhoneCode~~">RequiredPhoneCode</a> operation with the <b>administrator\&quot;s phone number</b>, and then enter the SMS verification code received.</para>
+        /// <remarks>
+        /// <para>You can use <a href="~~ValidPhoneCode~~">ValidPhoneCode</a> to verify whether the SMS verification code is correct before passing it in.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -138,18 +185,24 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string CertifyCode { get; set; }
 
         /// <summary>
-        /// <para>公司名称</para>
+        /// <para>The enterprise name. Only the middle dot <c>·</c>, Chinese brackets <c>【】（）</c>, English parentheses <c>()</c>, and <c>spaces</c> are supported as symbols. Other symbols or pure digits are not allowed. Maximum length: 150 characters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>阿里云云通信有限公司</para>
         /// </summary>
         [NameInMap("CompanyName")]
         [Validation(Required=false)]
         public string CompanyName { get; set; }
 
         /// <summary>
-        /// <para>企业类型, COMPANY:公司;NON_PROFIT_ORGANIZATION:政府或者事业单位</para>
+        /// <para>The enterprise type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>COMPANY: enterprise.</para>
+        /// </description></item>
+        /// <item><description><para>NON_PROFIT_ORGANIZATION: government agency or public institution.</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -160,7 +213,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string CompanyType { get; set; }
 
         /// <summary>
-        /// <para>法人身份证号码</para>
+        /// <para>The legal representative\&quot;s ID card number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -171,7 +224,15 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string LegalPersonIDCardNo { get; set; }
 
         /// <summary>
-        /// <para>法人身份证类型。identityCard:中国居民身份证;passport:护照;homeReturnPermit:港澳居民来往内地通行证;TaiwanCompatriotPermit:台湾居民来往大陆通行证;residencePermit:港澳台居民居住证&quot;;other:其他</para>
+        /// <para>The legal representative\&quot;s ID card type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>identityCard: ID card.</description></item>
+        /// <item><description>passport: passport.</description></item>
+        /// <item><description>homeReturnPermit: Hong Kong/Macao resident travel permit to mainland.</description></item>
+        /// <item><description>TaiwanCompatriotPermit: Taiwan resident travel permit to mainland.</description></item>
+        /// <item><description>residencePermit: Hong Kong/Macao/Taiwan resident residence permit.</description></item>
+        /// <item><description>other: other.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -182,7 +243,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string LegalPersonIDCardType { get; set; }
 
         /// <summary>
-        /// <para>法人身份证照片人像面</para>
+        /// <para>The back photo of the legal representative\&quot;s ID card (portrait side). Only jpg, png, gif, and jpeg formats are supported. The image must not exceed 5 MB. Specify the file path uploaded to OSS. The file name must not contain Chinese characters or special characters. For upload instructions, see <a href="https://help.aliyun.com/document_detail/2833114.html">Upload files through OSS</a>.</para>
+        /// <remarks>
+        /// <para>The system verifies the legal representative\&quot;s name and ID number you provide. If verification fails, you must upload photos of the legal representative\&quot;s ID card.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>123456/111.png</para>
@@ -192,7 +256,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string LegalPersonIdCardBackSide { get; set; }
 
         /// <summary>
-        /// <para>法人身份证有效期</para>
+        /// <para>The legal representative\&quot;s ID card validity period. Format: YYYY-MM-DD~YYYY-MM-DD.</para>
+        /// <remarks>
+        /// <para>If the ID card has a long-term validity period, set the end date to 2099-12-31.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -203,7 +270,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string LegalPersonIdCardEffTime { get; set; }
 
         /// <summary>
-        /// <para>法人身份证照片国徽面</para>
+        /// <para>The front photo of the legal representative\&quot;s ID card (national emblem side). Only jpg, png, gif, and jpeg formats are supported. The image must not exceed 5 MB. Specify the file path uploaded to OSS. The file name must not contain Chinese characters or special characters. For upload instructions, see <a href="https://help.aliyun.com/document_detail/2833114.html">Upload files through OSS</a>.</para>
+        /// <remarks>
+        /// <para>The system verifies the legal representative\&quot;s name and ID number you provide. If verification fails, you must upload photos of the legal representative\&quot;s ID card.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>123456/111.png</para>
@@ -213,18 +283,24 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string LegalPersonIdCardFrontSide { get; set; }
 
         /// <summary>
-        /// <para>法人姓名</para>
+        /// <para>The legal representative\&quot;s name. Maximum length: 50 characters.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>If the organization certificate does not contain legal representative information but includes a person in charge or chief representative, prepare the ID card photos of the corresponding person in charge or chief representative listed on the certificate.</description></item>
+        /// <item><description>If the organization certificate contains neither legal representative information nor any person in charge, prepare the name and ID card photos of the primary business contact.</description></item>
+        /// </list>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>李华</para>
         /// </summary>
         [NameInMap("LegalPersonName")]
         [Validation(Required=false)]
         public string LegalPersonName { get; set; }
 
         /// <summary>
-        /// <para>社会统一信用代码</para>
+        /// <para>The unified social credit code. Maximum length: 150 characters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -235,13 +311,15 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string OrganizationCode { get; set; }
 
         /// <summary>
-        /// <para>更多资料</para>
+        /// <para>Additional materials. If you have other supporting documents, notes, or photos, upload them here.</para>
         /// </summary>
         [NameInMap("OtherFiles")]
         [Validation(Required=false)]
         public List<SubmitSmsQualificationRequestOtherFiles> OtherFiles { get; set; }
         public class SubmitSmsQualificationRequestOtherFiles : TeaModel {
             /// <summary>
+            /// <para>The additional material file. Only png, jpg, jpeg, doc, docx, and pdf formats are supported. The file must not exceed 5 MB. Specify the file path uploaded to OSS. The file name must not contain Chinese characters or special characters. For upload instructions, see <a href="https://help.aliyun.com/document_detail/2833114.html">Upload files through OSS</a>.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123456/111.png</para>
             /// </summary>
@@ -256,21 +334,21 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>资质名称,名称不能重复</para>
+        /// <para>The qualification name, used to manage and distinguish multiple qualifications you apply for. It does not appear in SMS content. The name must be unique among your existing qualifications. Only Chinese characters, English letters, or combinations with digits are supported. Symbols or pure digits are not supported. Maximum length: 100 characters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值示例值</para>
+        /// <para>阿里云云通信有限公司资质李华</para>
         /// </summary>
         [NameInMap("QualificationName")]
         [Validation(Required=false)]
         public string QualificationName { get; set; }
 
         /// <summary>
-        /// <para>备注</para>
+        /// <para>Remarks. If you have additional information to provide or notes for the qualification verification reviewer, add a description here.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>无</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]
@@ -285,7 +363,11 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>资质是自用还是他用，true：自用，false：他用</para>
+        /// <para>The purpose of the qualification application. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: <b>Self-use</b>. The entity that owns the signature is the same as the entity verified for this account.</description></item>
+        /// <item><description><b>false</b>: <b>Third-party use</b>. The entity that owns the signature is different from the entity verified for this account.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -296,7 +378,11 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public bool? UseBySelf { get; set; }
 
         /// <summary>
-        /// <para>是否同意与其他业务线共享</para>
+        /// <para>Qualification authorization. Specifies whether to share the qualification with other cloud communication products (such as domestic voice services and domestic number privacy protection). Sharing is available only when you apply for a <b>self-use qualification</b> and the qualification information <b>matches the enterprise information verified for the current Alibaba Cloud account</b>. Otherwise, this setting has no effect. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Agree. Your qualification information can be referenced during the qualification verification process of other cloud communication products, eliminating redundant verification.</description></item>
+        /// <item><description>false: Disagree.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

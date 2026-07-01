@@ -22,11 +22,11 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The signature.</para>
+        /// <para>The name of an existing SMS signature in your account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Aliyun</para>
+        /// <para>阿里云</para>
         /// </summary>
         [NameInMap("SignName")]
         [Validation(Required=false)]

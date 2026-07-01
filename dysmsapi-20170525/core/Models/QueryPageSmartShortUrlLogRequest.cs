@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>20181225</para>
+        /// <para>14</para>
         /// </summary>
         [NameInMap("CreateDateEnd")]
         [Validation(Required=false)]
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>20181225</para>
+        /// <para>31</para>
         /// </summary>
         [NameInMap("CreateDateStart")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>99</para>
         /// </summary>
         [NameInMap("PageNo")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10</para>
+        /// <para>84</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>1390000****</para>
+        /// <para>示例值示例值示例值</para>
         /// </summary>
         [NameInMap("PhoneNumber")]
         [Validation(Required=false)]
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para><a href="http://ays.cn/">http://ays.cn/</a>****</para>
+        /// <para>示例值示例值示例值</para>
         /// </summary>
         [NameInMap("ShortUrl")]
         [Validation(Required=false)]

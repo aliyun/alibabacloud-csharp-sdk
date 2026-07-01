@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class AddShortUrlRequest : TeaModel {
         /// <summary>
-        /// <para>The validity period of the short URL. Unit: days. The maximum validity period is 90 days.</para>
+        /// <para>The validity period of the short URL, in days. The maximum value is 90.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -33,18 +33,22 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The service name of the short URL. The name cannot exceed 13 characters in length.</para>
+        /// <para>The name of the short URL. Maximum length: 13 characters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The Alibaba Cloud Short Link service.</para>
+        /// <para>阿里短链测试</para>
         /// </summary>
         [NameInMap("ShortUrlName")]
         [Validation(Required=false)]
         public string ShortUrlName { get; set; }
 
         /// <summary>
-        /// <para>The source URL. The URL cannot exceed 1,000 characters in length.</para>
+        /// <para>The URL that you want to shorten. Maximum length: 1,000 characters.</para>
+        /// <remarks>
+        /// <para>Notice: </para>
+        /// </remarks>
+        /// <para>Short Message Service does not currently support this API operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

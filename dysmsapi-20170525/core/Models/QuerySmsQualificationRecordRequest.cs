@@ -10,20 +10,20 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class QuerySmsQualificationRecordRequest : TeaModel {
         /// <summary>
-        /// <para>公司名</para>
+        /// <para>The company name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值</para>
+        /// <para>阿里云云通信有限公司</para>
         /// </summary>
         [NameInMap("CompanyName")]
         [Validation(Required=false)]
         public string CompanyName { get; set; }
 
         /// <summary>
-        /// <para>法人姓名</para>
+        /// <para>The name of the legal representative.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>李华</para>
         /// </summary>
         [NameInMap("LegalPersonName")]
         [Validation(Required=false)]
@@ -34,6 +34,8 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The page number. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -42,6 +44,8 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public long? PageNo { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Valid values: <b>1 to 50</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -50,10 +54,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>资质组名称</para>
+        /// <para>The qualification name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>阿里云云通信有限公司李华</para>
         /// </summary>
         [NameInMap("QualificationGroupName")]
         [Validation(Required=false)]
@@ -68,17 +72,28 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>审核状态。INT:审核中FAILED:审核失败,PASSED:审核通过,NOT_FINISH:资料待补充,CANCELED:已撤回</para>
+        /// <para>The review status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>INIT: Under review.</description></item>
+        /// <item><description>NOT_PASS: Review rejected. </description></item>
+        /// <item><description>PASS: Review approved.</description></item>
+        /// <item><description>NOT_FINISH: Additional information required.</description></item>
+        /// <item><description>CANCEL: Withdrawn.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>PASSED</para>
+        /// <para>PASS</para>
         /// </summary>
         [NameInMap("State")]
         [Validation(Required=false)]
         public string State { get; set; }
 
         /// <summary>
-        /// <para>是否自用</para>
+        /// <para>The purpose of the qualification application. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: For self-use.</description></item>
+        /// <item><description><b>false</b>: For use by others.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -88,7 +103,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public bool? UseBySelf { get; set; }
 
         /// <summary>
-        /// <para>工单ID</para>
+        /// <para>The review ticket ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2001****</para>

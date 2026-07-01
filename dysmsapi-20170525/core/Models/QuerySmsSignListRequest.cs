@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public int? PageIndex { get; set; }
 
         /// <summary>
-        /// <para>The number of signatures per page. Valid values: <b>1 to 50</b>.</para>
+        /// <para>The number of signatures to return on each page. Default value: <b>10</b>. Valid values: <b>1 to 50</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

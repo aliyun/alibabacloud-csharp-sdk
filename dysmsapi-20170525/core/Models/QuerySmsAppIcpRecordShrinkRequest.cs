@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class QuerySmsAppIcpRecordShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>app-icp备案实体id列表</para>
+        /// <para>A list of icp record entity IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AppIcpRecordIdList")]

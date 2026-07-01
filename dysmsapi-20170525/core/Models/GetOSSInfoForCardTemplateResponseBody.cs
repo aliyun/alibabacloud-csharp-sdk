@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class GetOSSInfoForCardTemplateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>请求状态码。</para>
         /// <list type="bullet">
-        /// <item><description>The value OK indicates that the request was successful.</description></item>
-        /// <item><description>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/101346.html">API error codes</a>.</description></item>
+        /// <item><description>OK：代表请求成功。</description></item>
+        /// <item><description>其他错误码，请参见<a href="https://help.aliyun.com/document_detail/101346.html">API错误码</a>。</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,34 +24,34 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>返回数据。</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetOSSInfoForCardTemplateResponseBodyData Data { get; set; }
         public class GetOSSInfoForCardTemplateResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The AccessKey ID.</para>
+            /// <para>签名使用的AccessKey ID。</para>
             /// 
             /// <b>Example:</b>
-            /// <para>LTAIxetqt1Dg****</para>
+            /// <para>LTAI************</para>
             /// </summary>
             [NameInMap("AccessKeyId")]
             [Validation(Required=false)]
             public string AccessKeyId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account.</para>
+            /// <para>阿里云账号ID。</para>
             /// 
             /// <b>Example:</b>
-            /// <para>599333677478****</para>
+            /// <para>168**********184</para>
             /// </summary>
             [NameInMap("AliUid")]
             [Validation(Required=false)]
             public string AliUid { get; set; }
 
             /// <summary>
-            /// <para>The name of the OSS bucket.</para>
+            /// <para>OSS文件保存桶名称。</para>
             /// 
             /// <b>Example:</b>
             /// <para>alicom-cardsms-resources</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             public string Bucket { get; set; }
 
             /// <summary>
-            /// <para>The timeout period.</para>
+            /// <para>超时时间戳。单位：秒。</para>
             /// 
             /// <b>Example:</b>
             /// <para>1634209418</para>
@@ -71,40 +71,40 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             public string ExpireTime { get; set; }
 
             /// <summary>
-            /// <para>The hostname.</para>
+            /// <para>访问地址。</para>
             /// 
             /// <b>Example:</b>
-            /// <para><a href="https://alicom-cardsms-resources.oss-cn-zhangjiakou.aliyuncs.com">https://alicom-cardsms-resources.oss-cn-zhangjiakou.aliyuncs.com</a></para>
+            /// <para>http://***.aliyuncs.com</para>
             /// </summary>
             [NameInMap("Host")]
             [Validation(Required=false)]
             public string Host { get; set; }
 
             /// <summary>
-            /// <para>The signature policy.</para>
+            /// <para>签名策略。</para>
             /// 
             /// <b>Example:</b>
-            /// <para>eyJxxx0=</para>
+            /// <para>eyJleHBpcmF0aW9uIjoiMjAyNS0wMy0yNlQwMzo0NDoyMy4xNTlaIiwiY29uZGl0aW9ucyI6W1siY29udGVudC1sZW5ndGgtcmFuZ2UiLDAsMTA0ODU3NjAwMF0sWyJzdGFydHMtd2l0aCIsIiRrZXkiLCIxNDIwNjM0******************</para>
             /// </summary>
             [NameInMap("Policy")]
             [Validation(Required=false)]
             public string Policy { get; set; }
 
             /// <summary>
-            /// <para>The signature.</para>
+            /// <para>短信签名。</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Aliyun</para>
+            /// <para>阿里云</para>
             /// </summary>
             [NameInMap("Signature")]
             [Validation(Required=false)]
             public string Signature { get; set; }
 
             /// <summary>
-            /// <para>The path of the policy.</para>
+            /// <para>策略路径。</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1631792777</para>
+            /// <para>168**********184</para>
             /// </summary>
             [NameInMap("StartPath")]
             [Validation(Required=false)]
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>请求ID。</para>
         /// 
         /// <b>Example:</b>
         /// <para>A90E4451-FED7-49D2-87C8-00700A8C4D0D</para>
@@ -123,10 +123,12 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <para>调用接口是否成功。取值：</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>：调用成功。</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>：调用失败。</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

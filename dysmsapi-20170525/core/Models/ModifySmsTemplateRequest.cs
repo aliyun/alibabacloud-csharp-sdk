@@ -14,11 +14,19 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The description of the message template. It is one of the reference information for template review. The description cannot exceed 100 characters in length.</para>
+        /// <para>The description of the SMS template application. The description cannot exceed 100 characters in length.</para>
+        /// <para>This information helps reviewers understand your business scenarios and improves review efficiency. Guidelines:</para>
+        /// <list type="bullet">
+        /// <item><description>Provide the use case of your live business.</description></item>
+        /// <item><description>Provide SMS examples for real scenarios to reflect your business scenarios.</description></item>
+        /// <item><description>Provide variable values and describe in detail the business use case and the reason for choosing the variable attributes.</description></item>
+        /// <item><description>Provide the website URL, registered domain name, or application marketplace download link of the actual business.</description></item>
+        /// <item><description>For logon scenarios, provide the test account and password.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Modify the parameters of the template.</para>
+        /// <para>手机注册登录</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]
@@ -33,8 +41,11 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The code of the message template.</para>
-        /// <para>You can log on to the <a href="https://dysms.console.aliyun.com/dysms.htm">Short Message Service (SMS) console</a>, click <b>Go China</b> or <b>Go Globe</b> in the left-side navigation pane, and then view the template code on the <b>Templates</b> tab. You can also call the <a href="https://help.aliyun.com/document_detail/121208.html">AddSmsTemplate</a> operation to obtain the template code.</para>
+        /// <para>The code of the SMS template that failed the review.</para>
+        /// <list type="bullet">
+        /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/419288.html">QuerySmsTemplateList</a> operation to obtain the code of the SMS template that failed the review.</description></item>
+        /// <item><description>View the code of the SMS template that failed the review on the <a href="https://dysms.console.aliyun.com/domestic/text/template">Templates</a> page.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -45,42 +56,40 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string TemplateCode { get; set; }
 
         /// <summary>
-        /// <para>The content of the template. The content must be 1 to 500 characters in length.</para>
-        /// <remarks>
-        /// <para>When you modify a template, design the template content based on the review comments.</para>
-        /// </remarks>
+        /// <para>The template content. The content cannot exceed 500 characters in length.</para>
+        /// <para>The template content and variable content must comply with the <a href="https://help.aliyun.com/document_detail/463161.html">SMS template specifications</a>. Otherwise, the template fails the review. You can view common template examples on the <a href="https://dysms.console.aliyun.com/domestic/text/template/add">Apply for Template</a> page. Using sample templates can improve review efficiency and success rate. For variable specifications, see <a href="https://help.aliyun.com/document_detail/2806243.html">TemplateContent variable specifications</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>You are applying for mobile registration. The verification code is: ${code}, valid for 5 minutes!</para>
+        /// <para>您正在申请手机注册，验证码为：${code}，5分钟内有效！</para>
         /// </summary>
         [NameInMap("TemplateContent")]
         [Validation(Required=false)]
         public string TemplateContent { get; set; }
 
         /// <summary>
-        /// <para>The name of the template. The name must be 1 to 30 characters in length.</para>
+        /// <para>The template name. The name must be 1 to 30 characters in length.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>aliyun verification code</para>
+        /// <para>验证码模板</para>
         /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]
         public string TemplateName { get; set; }
 
         /// <summary>
-        /// <para>The type of the message. Valid values:</para>
+        /// <para>The SMS type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: verification code</description></item>
-        /// <item><description><b>1</b>: text message</description></item>
-        /// <item><description><b>2</b>: promotional message</description></item>
-        /// <item><description><b>3</b>: message sent to countries or regions outside the Chinese mainland</description></item>
+        /// <item><description><b>0</b>: verification code.</description></item>
+        /// <item><description><b>1</b>: SMS notification.</description></item>
+        /// <item><description><b>2</b>: promotional message.</description></item>
+        /// <item><description><b>3</b>: international or Hong Kong, Macao, and Taiwan message.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("TemplateType")]
         [Validation(Required=false)]

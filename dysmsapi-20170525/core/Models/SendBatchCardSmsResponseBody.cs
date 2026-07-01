@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class SendBatchCardSmsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The request status code.</para>
         /// <list type="bullet">
-        /// <item><description>The value OK indicates that the request was successful.</description></item>
-        /// <item><description>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/101346.html">API error codes</a>.</description></item>
+        /// <item><description>If <b>OK</b> is returned, the request is successful.</description></item>
+        /// <item><description>For information about other error codes, see <a href="https://help.aliyun.com/document_detail/101346.html">API error codes</a>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public SendBatchCardSmsResponseBodyData Data { get; set; }
         public class SendBatchCardSmsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the card message.</para>
+            /// <para>The ID of the card SMS sending task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             public string BizCardId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the digital message.</para>
+            /// <para>The ID of the digital SMS sending task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3214</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             public string BizDigitalId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the text message.</para>
+            /// <para>The ID of the text SMS sending task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3256</para>
@@ -61,15 +61,15 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             public string BizSmsId { get; set; }
 
             /// <summary>
-            /// <para>The review status of the card message template.</para>
+            /// <para>The review status of the card SMS template. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: pending approval</description></item>
-            /// <item><description><b>1</b>: approved</description></item>
-            /// <item><description><b>2</b>: rejected</description></item>
-            /// </list>
-            /// <remarks>
-            /// <para>Unapproved card messages are rolled back.</para>
+            /// <item><description><b>0</b>: Under review.</description></item>
+            /// <item><description><b>1</b>: Approved.</description></item>
+            /// <item><description><b>2</b>: Rejected.<remarks>
+            /// <para>For SMS messages that are rejected, you can configure the fallback process by using the <b>FallbackType</b> parameter.</para>
             /// </remarks>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             public int? CardTmpState { get; set; }
 
             /// <summary>
-            /// <para>The mobile phone number from which the card message is sent.</para>
+            /// <para>The mobile phone numbers that receive the card SMS messages.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1390000****</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             public string MediaMobiles { get; set; }
 
             /// <summary>
-            /// <para>The mobile phone number whose card message is rolled back.</para>
+            /// <para>The fallback phone numbers.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1390000****</para>
@@ -111,10 +111,12 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <para>Indicates whether the call is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: The call is successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The call fails.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

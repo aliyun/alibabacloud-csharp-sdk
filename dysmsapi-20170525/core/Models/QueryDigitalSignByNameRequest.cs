@@ -22,8 +22,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The name of the digital SMS signature. The signature must belong to your Alibaba Cloud account.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>阿里云数字商城</para>
         /// </summary>
         [NameInMap("SignName")]
         [Validation(Required=false)]

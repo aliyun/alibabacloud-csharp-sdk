@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>OK</para>
+        /// <para>示例值示例值示例值</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
                 /// <para>是否可回收</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>1</para>
+                /// <para>9</para>
                 /// </summary>
                 [NameInMap("Active")]
                 [Validation(Required=false)]
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
                 /// <para>扩展码A3</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>01</para>
+                /// <para>示例值示例值示例值</para>
                 /// </summary>
                 [NameInMap("ExtCode")]
                 [Validation(Required=false)]
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>1</para>
+            /// <para>33</para>
             /// </summary>
             [NameInMap("PageNo")]
             [Validation(Required=false)]
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>20</para>
+            /// <para>41</para>
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>5</para>
+            /// <para>90</para>
             /// </summary>
             [NameInMap("Total")]
             [Validation(Required=false)]
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>OK</para>
+        /// <para>示例值示例值示例值</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>90E63D28-E31D-1EB2-8939-A9486641****</para>
+        /// <para>示例值示例值</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

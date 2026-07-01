@@ -10,15 +10,17 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class QueryCardSmsTemplateRequest : TeaModel {
         /// <summary>
-        /// <para>The code of the message template.</para>
-        /// <para>You can view the template code in the <b>Template Code</b> column on the <b>Templates</b> tab of the <b>Go China</b> page in the Alibaba Cloud SMS console.</para>
-        /// <remarks>
-        /// <para>Make sure that the message template has been approved.</para>
-        /// </remarks>
+        /// <para>The code of the card SMS template. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>After you call the <a href="~~CreateCardSmsTemplate~~">CreateCardSmsTemplate</a> operation, the value of the <b>TemplateCode</b> response parameter is the code of the newly created card SMS template.</para>
+        /// </description></item>
+        /// <item><description><para>You can also log on to the <a href="https://dysms.console.aliyun.com/domestic/card">Domestic Card SMS</a> page in the console and view the card SMS template code on the <b>Template Management</b> tab.</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>CARD_SMS_4139</para>
+        /// <para>CARD_SMS_2****</para>
         /// </summary>
         [NameInMap("TemplateCode")]
         [Validation(Required=false)]

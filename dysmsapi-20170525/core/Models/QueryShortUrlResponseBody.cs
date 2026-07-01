@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class QueryShortUrlResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The request status code.</para>
         /// <list type="bullet">
-        /// <item><description>If OK is returned, the request is successful.</description></item>
-        /// <item><description>Other values indicate that the request fails. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</description></item>
+        /// <item><description><para>A successful request returns <c>OK</c>.</para>
+        /// </description></item>
+        /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,14 +26,14 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The details of the short URL.</para>
+        /// <para>The details of the short link.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public QueryShortUrlResponseBodyData Data { get; set; }
         public class QueryShortUrlResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The time when the short URL was created.</para>
+            /// <para>The creation date and time of the short link.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-01-08 16:44:13</para>
@@ -41,7 +43,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             public string CreateDate { get; set; }
 
             /// <summary>
-            /// <para>The time when the short URL expires.</para>
+            /// <para>The expiration date and time of the short link.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-01-22 11:21:11</para>
@@ -51,7 +53,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             public string ExpireDate { get; set; }
 
             /// <summary>
-            /// <para>The PV.</para>
+            /// <para>The page view (PV) count for the short link.</para>
             /// 
             /// <b>Example:</b>
             /// <para>300</para>
@@ -61,7 +63,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             public string PageViewCount { get; set; }
 
             /// <summary>
-            /// <para>The short URL.</para>
+            /// <para>The generated short link.</para>
             /// 
             /// <b>Example:</b>
             /// <para>http://****.cn/6y8uy7</para>
@@ -71,22 +73,26 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             public string ShortUrl { get; set; }
 
             /// <summary>
-            /// <para>The service name of the short URL.</para>
+            /// <para>The name of the service that generated the short link.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The Alibaba Cloud Short Link service.</para>
+            /// <para>阿里短链测试</para>
             /// </summary>
             [NameInMap("ShortUrlName")]
             [Validation(Required=false)]
             public string ShortUrlName { get; set; }
 
             /// <summary>
-            /// <para>The status of the short URL. Valid values:</para>
+            /// <para>The short link status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>expired</b></description></item>
-            /// <item><description><b>effective</b></description></item>
-            /// <item><description><b>audit</b></description></item>
-            /// <item><description><b>reject</b></description></item>
+            /// <item><description><para><b>expired</b>: The short link has expired.</para>
+            /// </description></item>
+            /// <item><description><para><b>effective</b>: The short link is active.</para>
+            /// </description></item>
+            /// <item><description><para><b>audit</b>: The short link is under review.</para>
+            /// </description></item>
+            /// <item><description><para><b>reject</b>: The short link was rejected.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -97,7 +103,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             public string ShortUrlStatus { get; set; }
 
             /// <summary>
-            /// <para>The source address.</para>
+            /// <para>The source URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://www.****.com/product/sms">https://www.****.com/product/sms</a></para>
@@ -107,7 +113,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             public string SourceUrl { get; set; }
 
             /// <summary>
-            /// <para>The UV.</para>
+            /// <para>The unique visitor (UV) count for the short link.</para>
             /// 
             /// <b>Example:</b>
             /// <para>23</para>
@@ -119,7 +125,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The description of the status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>

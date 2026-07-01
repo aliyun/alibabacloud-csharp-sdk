@@ -22,8 +22,16 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The code of the message template.</para>
-        /// <para>You can log on to the <a href="https://dysms.console.aliyun.com/dysms.htm">Alibaba Cloud SMS console</a> and obtain the message template code on the <b>Message Templates</b> tab. You can also obtain the message template code by calling the <a href="https://help.aliyun.com/document_detail/121208.html">AddSmsTemplate</a> operation.</para>
+        /// <para>The SMS template code. You can delete SMS templates that are recalled, rejected, or approved. You cannot delete SMS templates that are being reviewed.</para>
+        /// <list type="bullet">
+        /// <item><description><para>You can call the <a href="https://help.aliyun.com/document_detail/419288.html">QuerySmsTemplateList</a> operation to obtain the SMS template code.</para>
+        /// </description></item>
+        /// <item><description><para>You can also obtain the SMS template code on the <a href="https://dysms.console.aliyun.com/domestic/text/template">Template Management</a> page of the Short Message Service (SMS) console.</para>
+        /// <remarks>
+        /// <para>Notice: Deleted SMS templates cannot be recovered and cannot be used to send messages. Proceed with caution..</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

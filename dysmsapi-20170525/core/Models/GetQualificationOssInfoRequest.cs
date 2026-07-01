@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class GetQualificationOssInfoRequest : TeaModel {
         /// <summary>
-        /// <para>业务，非空</para>
+        /// <para>The business type. When applying for a qualification or creating an authorization letter file, enter <b>dysms</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

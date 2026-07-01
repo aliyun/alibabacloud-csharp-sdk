@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         /// <para>模板审核状态</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>53</para>
         /// </summary>
         [NameInMap("AuditStatus")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         /// <para>页码, 默认1</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>75</para>
         /// </summary>
         [NameInMap("PageIndex")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         /// <para>每页数量，默认10</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10</para>
+        /// <para>72</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         /// <para>模板code</para>
         /// 
         /// <b>Example:</b>
-        /// <para>SMS_1688168</para>
+        /// <para>示例值示例值</para>
         /// </summary>
         [NameInMap("TemplateCode")]
         [Validation(Required=false)]
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         /// <para>模板类型</para>
         /// 
         /// <b>Example:</b>
-        /// <para>0</para>
+        /// <para>52</para>
         /// </summary>
         [NameInMap("TemplateType")]
         [Validation(Required=false)]

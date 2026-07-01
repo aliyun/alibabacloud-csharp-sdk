@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class ChangeSignatureQualificationRequest : TeaModel {
         /// <summary>
-        /// <para>授权委托书id</para>
+        /// <para>The ID of the authorization letter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000********1234</para>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>资质id</para>
+        /// <para>The ID of the qualification, which is returned when you apply for it. You can also find this ID on the <a href="https://dysms.console.aliyun.com/domestic/text/qualification">Qualification Management</a> page in the console for messages to the Chinese mainland.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,11 +43,11 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>签名</para>
+        /// <para>The signature.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>阿里云</para>
         /// </summary>
         [NameInMap("SignatureName")]
         [Validation(Required=false)]

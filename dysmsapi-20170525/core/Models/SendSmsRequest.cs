@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class SendSmsRequest : TeaModel {
         /// <summary>
-        /// <para>The extension field.</para>
+        /// <para>The external transaction ID.</para>
         /// <remarks>
         /// <para>You can ignore this parameter if you do not have special requirements.</para>
         /// </remarks>
@@ -27,14 +27,17 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The mobile numbers of the recipients. Format:</para>
+        /// <para>The recipient\&quot;s mobile number. The format varies based on the destination region:</para>
         /// <list type="bullet">
-        /// <item><description>If you send messages to the Chinese mainland, specify mobile numbers that are prefixed with +, +86, 0086, or 86, or 11-digit mobile numbers without prefixes. Example: 1390000\<em>\</em>\<em>\</em>.</description></item>
-        /// <item><description>If you send messages to countries or regions outside the Chinese mainland, specify this parameter in the \<Area code>\<Mobile number> format. Example: 852000012\<em>\</em>\<em>\</em>.</description></item>
+        /// <item><description><para>For messages to the Chinese mainland: A mobile number, with or without a country code. Valid prefixes are +, +86, 0086, and 86. Example: 1390000\<em>\</em>\<em>\</em>.</para>
+        /// </description></item>
+        /// <item><description><para>For international messages or messages to Hong Kong, Macao, or Taiwan: Use the format [Country code][Mobile number]. Example: 852000012\<em>\</em>\<em>\</em>.</para>
+        /// </description></item>
+        /// <item><description><para>To send a test message, bind a test mobile number in the <a href="https://dysms.console.aliyun.com/quickstart">console</a>.</para>
+        /// </description></item>
         /// </list>
-        /// <para>You can send messages to multiple mobile numbers, separate the mobile numbers with commas (,). You can specify up to 1,000 mobile numbers in each request. Compared with sending messages to a single mobile number, sending messages to multiple mobile numbers requires longer response time.</para>
         /// <remarks>
-        /// <para>We recommend that you send one verification code message to a mobile number in each request.</para>
+        /// <para>To send a message to multiple numbers, separate them with commas (,). You can specify up to 1,000 mobile numbers per request. Bulk sending may have higher latency than sending single messages. For time-sensitive messages such as verification codes, we recommend sending them individually.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -54,24 +57,29 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The signature.</para>
-        /// <para>You can log on to the <a href="https://dysms.console.aliyun.com/dysms.htm?spm=5176.12818093.categories-n-products.ddysms.3b2816d0xml2NA#/overview">Short Message Service (SMS) console</a>, click <b>Go China</b> or <b>Go Globe</b> in the left-side navigation pane, and then view the signature on the <b>Signatures</b> tab.</para>
+        /// <para>The signature name.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/419282.html">QuerySmsSignList</a> API or view your list of signatures in the <a href="https://dysms.console.aliyun.com/domestic/text/sign">Short Message Service console</a>. You must use a signature that has been <b>approved</b>.</para>
         /// <remarks>
-        /// <para>You must specify a signature that is created in the SMS console and approved by Alibaba Cloud. For more information about SMS signature specifications, see <a href="https://help.aliyun.com/document_detail/108076.html">SMS signature specifications</a>.</para>
+        /// <list type="bullet">
+        /// <item><description><para>1\. If a verification code signature and a general-purpose signature share the same name, the general-purpose signature is used by default.</para>
+        /// </description></item>
+        /// <item><description><para>2\. The system uses the specified signature to send the message.</para>
+        /// </description></item>
+        /// </list>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Aliyun</para>
+        /// <para>阿里云</para>
         /// </summary>
         [NameInMap("SignName")]
         [Validation(Required=false)]
         public string SignName { get; set; }
 
         /// <summary>
-        /// <para>The extension code of the upstream message. Upstream messages are messages sent to the communication service provider. Upstream messages are used to customize a service, complete an inquiry, or send a request. You are charged for sending upstream messages based on the billing standards of the service provider.</para>
+        /// <para>The upstream SMS extension code. An upstream SMS message is a message sent from a user to a service provider to subscribe to a service, make a query, or perform other tasks. Such messages are charged by the carrier at standard rates.</para>
         /// <remarks>
-        /// <para>The extension code is automatically generated by the system when the signature is generated. You do not need to specify the extension code. You can ignore this parameter if you do not have special requirements.</para>
+        /// <para>The system assigns a default extension code when a signature is created. Use this parameter to specify a different code. You can ignore this parameter if you do not have special requirements.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -82,11 +90,8 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string SmsUpExtendCode { get; set; }
 
         /// <summary>
-        /// <para>The code of the message template.</para>
-        /// <para>You can log on to the <a href="https://dysms.console.aliyun.com/dysms.htm?spm=5176.12818093.categories-n-products.ddysms.3b2816d0xml2NA#/overview">Short Message Service (SMS) console</a>, click <b>Go China</b> or <b>Go Globe</b> in the left-side navigation pane, and then view the <b>template code</b> on the <b>Templates</b> tab.</para>
-        /// <remarks>
-        /// <para>You must specify a message template that is created in the SMS console and approved by Alibaba Cloud. If you send messages to countries or regions outside the Chinese mainland, use the corresponding message templates.</para>
-        /// </remarks>
+        /// <para>The code of the template.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/419288.html">QuerySmsTemplateList</a> API or view your list of templates in the <a href="https://dysms.console.aliyun.com/domestic/text/template">Short Message Service console</a>. You must use the code of a template that has been <b>approved</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -97,18 +102,18 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string TemplateCode { get; set; }
 
         /// <summary>
-        /// <para>The value of the variable in the message template. You can specify multiple parameter values. Example:{&quot;name&quot;:&quot;Sam&quot;,&quot;number&quot;:&quot;1390000\<em>\</em>\<em>\</em>&quot;}.</para>
+        /// <para>The values for the template variables, specified as a <b>JSON string</b>. This parameter is required if the template contains variables. The JSON string must provide a value for each variable.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>If line breaks are required in JSON-formatted data, they must meet the relevant requirements that are specified in the standard JSON protocol.</para>
+        /// <item><description><para>If the JSON string needs to include line breaks, format it according to standard JSON specifications.</para>
         /// </description></item>
-        /// <item><description><para>For more information about template variables, see <a href="https://help.aliyun.com/document_detail/108253.html">SMS template specifications</a>.</para>
+        /// <item><description><para>For more information about template variable formatting, see <a href="https://help.aliyun.com/document_detail/463161.html">SMS template specifications</a>.</para>
         /// </description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;code&quot;:&quot;1111&quot;}</para>
+        /// <para>{&quot;name&quot;:&quot;张三&quot;,&quot;number&quot;:&quot;1390000****&quot;}</para>
         /// </summary>
         [NameInMap("TemplateParam")]
         [Validation(Required=false)]

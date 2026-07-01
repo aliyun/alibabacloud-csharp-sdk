@@ -22,12 +22,17 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The code of the message template.</para>
-        /// <para>You can log on to the <a href="https://dysms.console.aliyun.com/dysms.htm">Short Message Service (SMS) console</a>, click <b>Go China</b> or <b>Go Globe</b> in the left-side navigation pane, and then view the template code on the <b>Templates</b> tab. You can also call the <a href="https://help.aliyun.com/document_detail/121208.html">AddSmsTemplate</a> operation to obtain the template code.</para>
+        /// <para>The template code.</para>
+        /// <list type="bullet">
+        /// <item><description><para>The template code is returned in the response of the <a href="https://help.aliyun.com/document_detail/121208.html">AddSmsTemplate</a> API.</para>
+        /// </description></item>
+        /// <item><description><para>The template code is available on the <a href="https://dysms.console.aliyun.com/domestic/text/template">Template Management</a> page.</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>SMS_1525***</para>
+        /// <para>SMS_1525****</para>
         /// </summary>
         [NameInMap("TemplateCode")]
         [Validation(Required=false)]

@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class AddShortUrlResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The status code of the request.</para>
         /// <list type="bullet">
-        /// <item><description>The value OK indicates that the request was successful.</description></item>
-        /// <item><description>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</description></item>
+        /// <item><description><para>A value of <c>OK</c> indicates that the request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/101346.html">Error Code List</a>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -31,9 +33,9 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public AddShortUrlResponseBodyData Data { get; set; }
         public class AddShortUrlResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The time when the short URL expires.</para>
+            /// <para>The expiration time of the short URL.</para>
             /// <remarks>
-            /// <para>The value of <b>ExpireDate</b> is on the hour.</para>
+            /// <para>The value of <b>ExpireDate</b> is always on the hour.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             public string ExpireDate { get; set; }
 
             /// <summary>
-            /// <para>The short URL.</para>
+            /// <para>The generated short URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para>http://****.cn/6y8uy7</para>
@@ -54,7 +56,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             public string ShortUrl { get; set; }
 
             /// <summary>
-            /// <para>The source URL.</para>
+            /// <para>The source URL that was shortened.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://www.****.com/product/sms">https://www.****.com/product/sms</a></para>
@@ -66,7 +68,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The message that describes the status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>

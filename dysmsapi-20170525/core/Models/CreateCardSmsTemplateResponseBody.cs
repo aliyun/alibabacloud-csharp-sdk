@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class CreateCardSmsTemplateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The request status code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If OK is returned, the request is successful.</description></item>
-        /// <item><description>Other values indicate that the request fails. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</description></item>
+        /// <item><description><para>OK: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>For a list of other error codes, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,21 +26,20 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The data returned by the operation.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateCardSmsTemplateResponseBodyData Data { get; set; }
         public class CreateCardSmsTemplateResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The code of the message template.</para>
-            /// <para>You can view the template code in the <b>Template Code</b> column on the <b>Templates</b> tab of the <b>Go China</b> page in the <a href="https://dysms.console.aliyun.com/dysms.htm?spm=5176.12818093.categories-n-products.ddysms.3b2816d0xml2NA#/overview">Alibaba Cloud SMS console</a>.</para>
+            /// <para>The code for the card SMS template. You can view the <b>Template Code</b> on the <b>Card SMS</b> &gt; <a href="https://dysms.console.aliyun.com/domestic/card">template management</a> page in the console.</para>
             /// <remarks>
-            /// <para>Make sure that the message template has been approved.</para>
+            /// <para>The card SMS template must be approved before it can be used.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>CARD_SMS_60000****</para>
+            /// <para>CARD_SMS_2****</para>
             /// </summary>
             [NameInMap("TemplateCode")]
             [Validation(Required=false)]
@@ -59,8 +60,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: The call was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The call failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

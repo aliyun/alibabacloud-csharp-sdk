@@ -22,15 +22,15 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Signature name. Must be an SMS signature already applied for by this account.</para>
+        /// <para>The signature name. The signature must be applied for by your account.</para>
         /// <list type="bullet">
-        /// <item><description>Obtain from the return parameters after calling the <a href="https://help.aliyun.com/zh/sms/developer-reference/api-dysmsapi-2017-05-25-createsmssign?spm">CreateSmsSign</a> API.</description></item>
-        /// <item><description>View the signature on the <a href="https://dysms.console.aliyun.com/domestic/text/sign">Signature Management</a> page.</description></item>
+        /// <item><description>After you call the <a href="https://help.aliyun.com/document_detail/2807427.html">CreateSmsSign</a> operation, obtain the signature name from the response.</description></item>
+        /// <item><description>View the signature on the <a href="https://dysms.console.aliyun.com/domestic/text/sign">Signatures</a> page.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Aliyun</para>
+        /// <para>阿里云</para>
         /// </summary>
         [NameInMap("SignName")]
         [Validation(Required=false)]

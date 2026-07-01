@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class QuerySingleSmsQualificationRequest : TeaModel {
         /// <summary>
-        /// <para>工单id</para>
+        /// <para>The review ticket ID. You can call the <a href="~~QuerySmsQualificationRecord~~">QuerySmsQualificationRecord</a> operation to obtain the qualifications and corresponding review ticket IDs under your current account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2001****</para>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>资质id</para>
+        /// <para>The qualification ID, which is the ID returned when you <a href="~~SubmitSmsQualification~~">apply for a qualification</a>. You can call the <a href="~~QuerySmsQualificationRecord~~">QuerySmsQualificationRecord</a> operation to obtain the qualification IDs under your current account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

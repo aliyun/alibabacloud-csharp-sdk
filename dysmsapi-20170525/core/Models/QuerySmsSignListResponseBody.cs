@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class QuerySmsSignListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The HTTP status code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>The value OK indicates that the request was successful.</description></item>
-        /// <item><description>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</description></item>
+        /// <item><description><para>OK: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The description of the status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The number of signatures per page. Valid values: <b>1 to 50</b>.</para>
+        /// <para>The number of signatures to return on each page. Default value: <b>10</b>. Valid values: <b>1 to 50</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -57,30 +59,40 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>819BE656-D2E0-4858-8B21-B2E47708****</para>
+        /// <para>F655A8D5-B967-440B-8683-DAD6FF8DE990</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The queried message signatures.</para>
+        /// <para>The list of returned results.</para>
         /// </summary>
         [NameInMap("SmsSignList")]
         [Validation(Required=false)]
         public List<QuerySmsSignListResponseBodySmsSignList> SmsSignList { get; set; }
         public class QuerySmsSignListResponseBodySmsSignList : TeaModel {
+            /// <summary>
+            /// <para>The APP-ICP filing entity ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1000001***123</para>
+            /// </summary>
             [NameInMap("AppIcpRecordId")]
             [Validation(Required=false)]
             public long? AppIcpRecordId { get; set; }
 
             /// <summary>
-            /// <para>The approval status of the signature. Valid values:</para>
+            /// <para>The audit status of the signature. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>AUDIT_STATE_INIT</b>: The signature is pending approval.</description></item>
-            /// <item><description><b>AUDIT_STATE_PASS</b>: The signature is approved.</description></item>
-            /// <item><description><b>AUDIT_STATE_NOT_PASS</b>: The signature is rejected. You can view the reason in the Reason response parameter.</description></item>
-            /// <item><description><b>AUDIT_STATE_CANCEL</b>: The approval is canceled.</description></item>
+            /// <item><description><para><b>AUDIT_STATE_INIT</b>: under review.</para>
+            /// </description></item>
+            /// <item><description><para><b>AUDIT_STATE_PASS</b>: approved.</para>
+            /// </description></item>
+            /// <item><description><para><b>AUDIT_STATE_NOT_PASS</b>: rejected. You can view the rejection reason in the Reason response parameter.</para>
+            /// </description></item>
+            /// <item><description><para><b>AUDIT_STATE_CANCEL</b>: review canceled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -90,49 +102,60 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             [Validation(Required=false)]
             public string AuditStatus { get; set; }
 
+            /// <summary>
+            /// <para>The ID of the letter of authorization.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1000********1234</para>
+            /// </summary>
             [NameInMap("AuthorizationLetterId")]
             [Validation(Required=false)]
             public long? AuthorizationLetterId { get; set; }
 
             /// <summary>
-            /// <para>The type of the signature scenario. The return value ends with &quot;type&quot;. Valid values:</para>
+            /// <para>The scenario type of the signature. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Verification code type</description></item>
-            /// <item><description>General-purpose type</description></item>
+            /// <item><description><para>Verification code.</para>
+            /// </description></item>
+            /// <item><description><para>General-purpose.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>Verification code type</para>
+            /// <para>验证码类型</para>
             /// </summary>
             [NameInMap("BusinessType")]
             [Validation(Required=false)]
             public string BusinessType { get; set; }
 
             /// <summary>
-            /// <para>The time when the signature was created. Format: yyyy-MM-dd HH:mm:ss.</para>
+            /// <para>The time when the SMS signature was created. The format is yyyy-MM-dd HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2020-01-08 16:44:13</para>
+            /// <para>2020-06-04 11:42:17</para>
             /// </summary>
             [NameInMap("CreateDate")]
             [Validation(Required=false)]
             public string CreateDate { get; set; }
 
             /// <summary>
-            /// <para>The ticket ID.</para>
+            /// <para>The order ID.</para>
+            /// <para>This parameter is used by auditors when querying the audit. You must provide this order ID if you need to expedite the audit.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>236****5</para>
+            /// <para>2005098****</para>
             /// </summary>
             [NameInMap("OrderId")]
             [Validation(Required=false)]
             public string OrderId { get; set; }
 
             /// <summary>
-            /// <para>The approval remarks.</para>
+            /// <para>The audit remarks.</para>
             /// <list type="bullet">
-            /// <item><description>If the value of AuditStatus is <b>AUDIT_STATE_PASS</b> or <b>AUDIT_STATE_INIT</b>, the value of Reason is No Approval Remarks.</description></item>
-            /// <item><description>If the value of AuditStatus is <b>AUDIT_STATE_NOT_PASS</b>, the reason why the signature is rejected is returned.</description></item>
+            /// <item><description><para>If the audit status is <b>approved</b> or <b>under review</b>, the Reason parameter is displayed as &quot;No audit remarks&quot;.</para>
+            /// </description></item>
+            /// <item><description><para>If the audit status is <b>rejected</b>, the Reason parameter displays the specific reason for the rejection.</para>
+            /// </description></item>
             /// </list>
             /// </summary>
             [NameInMap("Reason")]
@@ -140,30 +163,30 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             public QuerySmsSignListResponseBodySmsSignListReason Reason { get; set; }
             public class QuerySmsSignListResponseBodySmsSignListReason : TeaModel {
                 /// <summary>
-                /// <para>The time when the signature was rejected. Format: yyyy-MM-dd HH:mm:ss.</para>
+                /// <para>The time when the signature was rejected. The format is yyyy-MM-dd HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>2020-01-08 19:02:13</para>
+                /// <para>2020-06-04 13:35:10</para>
                 /// </summary>
                 [NameInMap("RejectDate")]
                 [Validation(Required=false)]
                 public string RejectDate { get; set; }
 
                 /// <summary>
-                /// <para>The reason why the signature was rejected.</para>
+                /// <para>The reason for the rejection.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>The document cannot verify the authenticity of the information. Please upload it again.</para>
+                /// <para>文件不能证明信息真实性，请重新上传。</para>
                 /// </summary>
                 [NameInMap("RejectInfo")]
                 [Validation(Required=false)]
                 public string RejectInfo { get; set; }
 
                 /// <summary>
-                /// <para>The remarks about the rejection.</para>
+                /// <para>The remarks for the rejection.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>The document cannot verify the authenticity of the information. Please upload it again.</para>
+                /// <para>文件不能证明信息真实性，请重新上传。</para>
                 /// </summary>
                 [NameInMap("RejectSubInfo")]
                 [Validation(Required=false)]
@@ -172,19 +195,35 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             }
 
             /// <summary>
-            /// <para>The name of the signature.</para>
+            /// <para>The signature name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Aliyun</para>
+            /// <para>阿里云</para>
             /// </summary>
             [NameInMap("SignName")]
             [Validation(Required=false)]
             public string SignName { get; set; }
 
+            /// <summary>
+            /// <para>The trademark entity ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1000009081***</para>
+            /// </summary>
             [NameInMap("TrademarkId")]
             [Validation(Required=false)]
             public long? TrademarkId { get; set; }
 
+            /// <summary>
+            /// <para>The audit status of the letter of authorization. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true: approved.</description></item>
+            /// <item><description>false: not approved (includes all statuses other than approved).</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("authorizationLetterAuditPass")]
             [Validation(Required=false)]
             public bool? AuthorizationLetterAuditPass { get; set; }
