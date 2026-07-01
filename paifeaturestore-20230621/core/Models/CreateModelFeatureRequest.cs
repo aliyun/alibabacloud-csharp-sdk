@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public List<CreateModelFeatureRequestFeatures> Features { get; set; }
         public class CreateModelFeatureRequestFeatures : TeaModel {
             /// <summary>
-            /// <para>The alias of the feature.</para>
+            /// <para>The feature alias.</para>
             /// 
             /// <b>Example:</b>
             /// <para>userid</para>
@@ -59,15 +59,13 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 
             /// <summary>
             /// <para>The feature type. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>INT32</description></item>
-            /// <item><description>INT64</description></item>
-            /// <item><description>FLOAT</description></item>
-            /// <item><description>DOUBLE</description></item>
-            /// <item><description>STRING</description></item>
-            /// <item><description>BOOLEAN</description></item>
-            /// <item><description>TIMESTAMP.</description></item>
-            /// </list>
+            /// <para>● INT32</para>
+            /// <para>● INT64</para>
+            /// <para>● FLOAT</para>
+            /// <para>● DOUBLE</para>
+            /// <para>● STRING</para>
+            /// <para>● BOOLEAN</para>
+            /// <para>● TIMESTAMP.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

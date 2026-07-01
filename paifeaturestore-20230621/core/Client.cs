@@ -18,7 +18,20 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"us-west-1", "paifeaturestore.us-west-1.aliyuncs.com"},
+                {"us-east-1", "paifeaturestore.us-east-1.aliyuncs.com"},
+                {"eu-central-1", "paifeaturestore.eu-central-1.aliyuncs.com"},
+                {"cn-shenzhen", "paifeaturestore.cn-shenzhen.aliyuncs.com"},
+                {"cn-shanghai", "paifeaturestore.cn-shanghai.aliyuncs.com"},
+                {"cn-hongkong", "paifeaturestore.cn-hongkong.aliyuncs.com"},
+                {"cn-hangzhou", "paifeaturestore.cn-hangzhou.aliyuncs.com"},
+                {"cn-beijing", "paifeaturestore.cn-beijing.aliyuncs.com"},
+                {"ap-southeast-5", "paifeaturestore.ap-southeast-5.aliyuncs.com"},
+                {"ap-southeast-1", "paifeaturestore.ap-southeast-1.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("paifeaturestore", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -1323,7 +1336,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a model feature. A model feature associates a label table with a set of feature view fields. It is used to generate the training dataset table required for model training and to specify the feature set used for model inference.</para>
+        /// <para>Creates a model feature. A model feature associates a label table with a set of feature view fields to generate the training dataset table required for model training and to specify the feature set used for model inference.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1389,7 +1402,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a model feature. A model feature associates a label table with a set of feature view fields. It is used to generate the training dataset table required for model training and to specify the feature set used for model inference.</para>
+        /// <para>Creates a model feature. A model feature associates a label table with a set of feature view fields to generate the training dataset table required for model training and to specify the feature set used for model inference.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1455,7 +1468,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a model feature. A model feature associates a label table with a set of feature view fields. It is used to generate the training dataset table required for model training and to specify the feature set used for model inference.</para>
+        /// <para>Creates a model feature. A model feature associates a label table with a set of feature view fields to generate the training dataset table required for model training and to specify the feature set used for model inference.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1474,7 +1487,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a model feature. A model feature associates a label table with a set of feature view fields. It is used to generate the training dataset table required for model training and to specify the feature set used for model inference.</para>
+        /// <para>Creates a model feature. A model feature associates a label table with a set of feature view fields to generate the training dataset table required for model training and to specify the feature set used for model inference.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3383,7 +3396,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves detailed information about a model feature, including the selected feature list, lineage relationships, and training set export script.</para>
+        /// <para>Gets detailed information about a model feature, including the selected feature list, lineage relations, and training set export script.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3419,7 +3432,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves detailed information about a model feature, including the selected feature list, lineage relationships, and training set export script.</para>
+        /// <para>Gets detailed information about a model feature, including the selected feature list, lineage relations, and training set export script.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3455,7 +3468,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves detailed information about a model feature, including the selected feature list, lineage relationships, and training set export script.</para>
+        /// <para>Gets detailed information about a model feature, including the selected feature list, lineage relations, and training set export script.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3470,7 +3483,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves detailed information about a model feature, including the selected feature list, lineage relationships, and training set export script.</para>
+        /// <para>Gets detailed information about a model feature, including the selected feature list, lineage relations, and training set export script.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7997,7 +8010,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information of a model feature, including the associated label table, selected feature fields, and conflict priority policy. The update is a full replacement. The specified Features value overwrites the existing value.</para>
+        /// <para>Updates the information of a model feature, including the associated label table, selected feature fields, and conflict priority policy. The update performs a full replacement. The specified Features overwrite the existing values.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8055,7 +8068,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information of a model feature, including the associated label table, selected feature fields, and conflict priority policy. The update is a full replacement. The specified Features value overwrites the existing value.</para>
+        /// <para>Updates the information of a model feature, including the associated label table, selected feature fields, and conflict priority policy. The update performs a full replacement. The specified Features overwrite the existing values.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8113,7 +8126,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information of a model feature, including the associated label table, selected feature fields, and conflict priority policy. The update is a full replacement. The specified Features value overwrites the existing value.</para>
+        /// <para>Updates the information of a model feature, including the associated label table, selected feature fields, and conflict priority policy. The update performs a full replacement. The specified Features overwrite the existing values.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8132,7 +8145,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information of a model feature, including the associated label table, selected feature fields, and conflict priority policy. The update is a full replacement. The specified Features value overwrites the existing value.</para>
+        /// <para>Updates the information of a model feature, including the associated label table, selected feature fields, and conflict priority policy. The update performs a full replacement. The specified Features overwrite the existing values.</para>
         /// </summary>
         /// 
         /// <param name="request">

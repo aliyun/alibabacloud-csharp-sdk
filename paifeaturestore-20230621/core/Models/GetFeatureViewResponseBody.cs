@@ -57,6 +57,14 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
             public List<string> Attributes { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>512</para>
+            /// </summary>
+            [NameInMap("Dimension")]
+            [Validation(Required=false)]
+            public int? Dimension { get; set; }
+
+            /// <summary>
             /// <para>The field name.</para>
             /// 
             /// <b>Example:</b>

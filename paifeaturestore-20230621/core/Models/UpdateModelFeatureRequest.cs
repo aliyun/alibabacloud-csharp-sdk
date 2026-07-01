@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
             public string AliasName { get; set; }
 
             /// <summary>
-            /// <para>The feature view ID. You can call the ListFeatureViews operation to query the feature view ID.</para>
+            /// <para>The feature view ID. You can call the ListFeatureViews operation to obtain the feature view ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public long? LabelPriorityLevel { get; set; }
 
         /// <summary>
-        /// <para>The label table ID. You can call the ListLabelTables operation to query the label table ID.</para>
+        /// <para>The label table ID. You can call the ListLabelTables operation to obtain the label table ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
