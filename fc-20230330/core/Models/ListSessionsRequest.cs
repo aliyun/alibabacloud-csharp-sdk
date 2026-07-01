@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class ListSessionsRequest : TeaModel {
         /// <summary>
-        /// <para>The number of sessions to be returned. If this parameter is not specified, 20 sessions are returned by default.</para>
+        /// <para>The number of sessions to return. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public int? Limit { get; set; }
 
         /// <summary>
-        /// <para>The token for the next page.</para>
+        /// <para>The pagination token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MTIzNCNhYmM=</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The function alias or version.</para>
+        /// <para>The function alias or version information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aliasName1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string Qualifier { get; set; }
 
         /// <summary>
-        /// <para>The SessionId value to filter. If specified, all session information associated with this session ID in Active or Expired states is returned.</para>
+        /// <para>The session ID to filter by. If specified, all Active or Expired status information associated with this session is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-session-id-1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string SessionId { get; set; }
 
         /// <summary>
-        /// <para>The session status to filter. By default, information for all sessions in the Active and Expired states is returned. You can specify Active to retrieve only active sessions, or Expired to retrieve only expired sessions.</para>
+        /// <para>The session status to filter by. By default, all session information in Active or Expired status is returned. Set this parameter to Active to retrieve only active session information, or to Expired to retrieve only expired session information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Active</para>

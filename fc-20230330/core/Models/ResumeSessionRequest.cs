@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public bool? FileSystemOnly { get; set; }
 
         /// <summary>
-        /// <para>Alias or version of the function associated with the session ID</para>
+        /// <para>The function alias or version associated with the session ID to resume.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aliasName1</para>

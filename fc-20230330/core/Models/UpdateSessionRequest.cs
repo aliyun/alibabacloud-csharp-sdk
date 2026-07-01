@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public UpdateSessionInput Body { get; set; }
 
         /// <summary>
-        /// <para>The function alias or version associated with the session to be updated.</para>
+        /// <para>The function alias or version associated with the session ID to update.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aliasName1</para>

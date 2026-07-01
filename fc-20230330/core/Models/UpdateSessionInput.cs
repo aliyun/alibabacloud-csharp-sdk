@@ -10,7 +10,12 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class UpdateSessionInput : TeaModel {
         /// <summary>
-        /// <para>Defaults to <c>false</c>. If set to <c>false</c>, you can reuse a <c>SessionID</c> to start a new session on a new instance after the original session expires. If set to <c>true</c>, you cannot reuse a <c>SessionID</c> after its session expires.</para>
+        /// <para>Specifies whether to disable session ID reuse after the session expires. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>False: After the session associated with a SessionID expires, you can use the same SessionID to initiate requests. The system treats this as a new session and binds it to a new instance.</description></item>
+        /// <item><description>True: After the session associated with a SessionID expires, the SessionID cannot be reused.
+        /// Default value: False.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -19,36 +24,32 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public bool? DisableSessionIdReuse { get; set; }
 
-        /// <summary>
-        /// <para>The JuiceFS configuration.</para>
-        /// </summary>
+        [NameInMap("enableAutoPause")]
+        [Validation(Required=false)]
+        public bool? EnableAutoPause { get; set; }
+
+        [NameInMap("enableAutoResume")]
+        [Validation(Required=false)]
+        public bool? EnableAutoResume { get; set; }
+
         [NameInMap("juiceFsConfig")]
         [Validation(Required=false)]
         public JuiceFsConfig JuiceFsConfig { get; set; }
 
-        /// <summary>
-        /// <para>The NAS configuration.</para>
-        /// </summary>
         [NameInMap("nasConfig")]
         [Validation(Required=false)]
         public NASConfig NasConfig { get; set; }
 
-        /// <summary>
-        /// <para>The OSS mount configuration.</para>
-        /// </summary>
         [NameInMap("ossMountConfig")]
         [Validation(Required=false)]
         public OSSMountConfig OssMountConfig { get; set; }
 
-        /// <summary>
-        /// <para>The PolarFS configuration.</para>
-        /// </summary>
         [NameInMap("polarFsConfig")]
         [Validation(Required=false)]
         public PolarFsConfig PolarFsConfig { get; set; }
 
         /// <summary>
-        /// <para>The session idle timeout, in seconds.</para>
+        /// <para>The session idle timeout period.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1800</para>
@@ -58,7 +59,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public long? SessionIdleTimeoutInSeconds { get; set; }
 
         /// <summary>
-        /// <para>The session duration, in seconds.</para>
+        /// <para>The session lifetime.</para>
         /// 
         /// <b>Example:</b>
         /// <para>21600</para>
