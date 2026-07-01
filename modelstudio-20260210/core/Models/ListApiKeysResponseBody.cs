@@ -44,20 +44,29 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public ListApiKeysResponseBodyApiKeysAuth Auth { get; set; }
             public class ListApiKeysResponseBodyApiKeysAuth : TeaModel {
                 /// <summary>
-                /// <para>The IP address whitelist.</para>
+                /// <para>The IP access whitelist.</para>
                 /// </summary>
                 [NameInMap("accessIps")]
                 [Validation(Required=false)]
                 public List<string> AccessIps { get; set; }
 
+                /// <summary>
+                /// <para>The model access scope.</para>
+                /// </summary>
                 [NameInMap("modelAccessScope")]
                 [Validation(Required=false)]
                 public ListApiKeysResponseBodyApiKeysAuthModelAccessScope ModelAccessScope { get; set; }
                 public class ListApiKeysResponseBodyApiKeysAuthModelAccessScope : TeaModel {
+                    /// <summary>
+                    /// <para>The list of accessible models.</para>
+                    /// </summary>
                     [NameInMap("accessibleModels")]
                     [Validation(Required=false)]
                     public List<string> AccessibleModels { get; set; }
 
+                    /// <summary>
+                    /// <para>Indicates whether access to all models with inference permissions in the workspace is allowed.</para>
+                    /// </summary>
                     [NameInMap("allowAllModels")]
                     [Validation(Required=false)]
                     public bool? AllowAllModels { get; set; }
@@ -153,7 +162,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -173,7 +182,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The token used to retrieve more results. You do not need to provide this parameter for the first query. For subsequent queries, use the token obtained from the previous response.</para>
+        /// <para>The token used to retrieve more results. This parameter is not required for the first query. For subsequent queries, use the token obtained from the previous response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>lwytFRtLdNk=</para>

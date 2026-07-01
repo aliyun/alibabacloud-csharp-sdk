@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public long? ApiKeyId { get; set; }
 
         /// <summary>
-        /// <para>The keyword for fuzzy match against the description.</para>
+        /// <para>The keyword for fuzzy match by description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token used to retrieve more results. You do not need to provide this parameter for the first query. For subsequent queries, use the token obtained from the previous response.</para>
+        /// <para>The token used to retrieve more results. This parameter is not required for the first query. For subsequent queries, use the token obtained from the previous response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>w9Z+S5+TZyw=</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         /// <list type="bullet">
         /// <item><description><para>DESC (default)</para>
         /// </description></item>
-        /// <item><description><para>ASC.</para>
+        /// <item><description><para>ASC</para>
         /// </description></item>
         /// </list>
         /// 
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         /// <list type="bullet">
         /// <item><description><para>apiKeyId (default)</para>
         /// </description></item>
-        /// <item><description><para>gmtCreate.</para>
+        /// <item><description><para>gmtCreate</para>
         /// </description></item>
         /// </list>
         /// 

@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             /// <summary>
             /// <para>The value of the API key.</para>
             /// <remarks>
-            /// <para>Notice: Copy your API key immediately. Keep it secure. Anyone who obtains this key can initiate service requests on your behalf and incur charges. If you lose the key, you can reset it or create a new one..</para>
+            /// <para>Notice: Copy your API key immediately. Store it securely. Anyone who obtains this key can initiate service requests on your behalf and incur charges. If you lose the key, you can reset it or create a new one.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Successful.</description></item>
+        /// <item><description>true: Succeeded.</description></item>
         /// <item><description>false: Failed.</description></item>
         /// </list>
         /// 

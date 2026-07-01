@@ -52,8 +52,8 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         /// <summary>
         /// <para>Indicates whether the API call is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The call succeeded.</description></item>
-        /// <item><description>false: The call failed.</description></item>
+        /// <item><description>true: Successful.</description></item>
+        /// <item><description>false: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

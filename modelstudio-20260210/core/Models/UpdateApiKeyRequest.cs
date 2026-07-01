@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
     public class UpdateApiKeyRequest : TeaModel {
         /// <summary>
         /// <para>The API key permission settings.</para>
+        /// <remarks>
+        /// <para>Do not fill in this section or fill it in completely for each UpdateApiKey operation. Otherwise, the configuration may not match your expectations.</para>
+        /// </remarks>
         /// </summary>
         [NameInMap("auth")]
         [Validation(Required=false)]
@@ -20,7 +23,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             /// <para>The IP access whitelist.</para>
             /// <remarks>
             /// <list type="bullet">
-            /// <item><description>When you set custom permissions and do not specify the IP access whitelist, the server sets the whitelist to IPv4 (0.0.0.0/0) and IPv6 (::/0) by default, which allows all traffic.</description></item>
+            /// <item><description>When you customize the permission scope, if the IP access whitelist is not specified, the server sets it to IPv4 (0.0.0.0/0) and IPv6 (::/0) by default, which allows all traffic.</description></item>
             /// </list>
             /// </remarks>
             /// </summary>
@@ -28,14 +31,30 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             [Validation(Required=false)]
             public List<string> AccessIps { get; set; }
 
+            /// <summary>
+            /// <para>The model access scope.</para>
+            /// </summary>
             [NameInMap("modelAccessScope")]
             [Validation(Required=false)]
             public UpdateApiKeyRequestAuthModelAccessScope ModelAccessScope { get; set; }
             public class UpdateApiKeyRequestAuthModelAccessScope : TeaModel {
+                /// <summary>
+                /// <para>The list of accessible models.</para>
+                /// <remarks>
+                /// <para>Notice: The content takes effect only when allowAllModels is set to false.</para>
+                /// </remarks>
+                /// </summary>
                 [NameInMap("accessibleModels")]
                 [Validation(Required=false)]
                 public List<string> AccessibleModels { get; set; }
 
+                /// <summary>
+                /// <para>Specifies whether to allow access to all models with granted inference permissions in the workspace. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>true</description></item>
+                /// <item><description>false</description></item>
+                /// </list>
+                /// </summary>
                 [NameInMap("allowAllModels")]
                 [Validation(Required=false)]
                 public bool? AllowAllModels { get; set; }

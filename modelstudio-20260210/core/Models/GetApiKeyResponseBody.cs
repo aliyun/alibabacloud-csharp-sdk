@@ -44,20 +44,36 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public GetApiKeyResponseBodyApiKeyAuth Auth { get; set; }
             public class GetApiKeyResponseBodyApiKeyAuth : TeaModel {
                 /// <summary>
-                /// <para>The IP address whitelist.</para>
+                /// <para>The IP access whitelist.</para>
                 /// </summary>
                 [NameInMap("accessIps")]
                 [Validation(Required=false)]
                 public List<string> AccessIps { get; set; }
 
+                /// <summary>
+                /// <para>The model access scope.</para>
+                /// </summary>
                 [NameInMap("modelAccessScope")]
                 [Validation(Required=false)]
                 public GetApiKeyResponseBodyApiKeyAuthModelAccessScope ModelAccessScope { get; set; }
                 public class GetApiKeyResponseBodyApiKeyAuthModelAccessScope : TeaModel {
+                    /// <summary>
+                    /// <para>The list of accessible models.</para>
+                    /// </summary>
                     [NameInMap("accessibleModels")]
                     [Validation(Required=false)]
                     public List<string> AccessibleModels { get; set; }
 
+                    /// <summary>
+                    /// <para>Indicates whether all models with granted inference permissions in the workspace can be accessed. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>true</description></item>
+                    /// <item><description>false</description></item>
+                    /// </list>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>false</para>
+                    /// </summary>
                     [NameInMap("allowAllModels")]
                     [Validation(Required=false)]
                     public bool? AllowAllModels { get; set; }
@@ -65,7 +81,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                 }
 
                 /// <summary>
-                /// <para>The permission type. Valid values: All: all permissions. Custom: custom permissions.</para>
+                /// <para>All: all permissions. Custom: custom permissions.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Custom</para>
@@ -97,7 +113,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the API key is disabled. Valid values:</para>
+            /// <para>Indicates whether the API key is disabled.</para>
             /// <list type="bullet">
             /// <item><description><b>0</b>: Active.</description></item>
             /// <item><description><b>1</b>: Disabled.</description></item>
@@ -111,7 +127,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public int? Disabled { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The time when the API key was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1774338222000</para>
@@ -173,7 +189,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// <list type="bullet">
         /// <item><description>true: The request was successful.</description></item>
         /// <item><description>false: The request failed.</description></item>

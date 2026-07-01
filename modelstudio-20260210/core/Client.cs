@@ -1369,7 +1369,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>An API key cannot be disabled if it is already disabled.</para>
+        /// <para>An API key that is already disabled cannot be disabled again.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1414,7 +1414,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>An API key cannot be disabled if it is already disabled.</para>
+        /// <para>An API key that is already disabled cannot be disabled again.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1459,7 +1459,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>An API key cannot be disabled if it is already disabled.</para>
+        /// <para>An API key that is already disabled cannot be disabled again.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1483,7 +1483,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>An API key cannot be disabled if it is already disabled.</para>
+        /// <para>An API key that is already disabled cannot be disabled again.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1640,7 +1640,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the information of a specified authentication credential API key.</para>
+        /// <para>Retrieves the information about a specified API key.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -1676,7 +1676,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the information of a specified authentication credential API key.</para>
+        /// <para>Retrieves the information about a specified API key.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -1712,7 +1712,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the information of a specified authentication credential API key.</para>
+        /// <para>Retrieves the information about a specified API key.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -1727,7 +1727,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the information of a specified authentication credential API key.</para>
+        /// <para>Retrieves the information about a specified API key.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2696,7 +2696,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of API key authentication credentials.</para>
+        /// <para>Retrieves a list of API key information for authentication credentials.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2766,7 +2766,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of API key authentication credentials.</para>
+        /// <para>Retrieves a list of API key information for authentication credentials.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2836,7 +2836,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of API key authentication credentials.</para>
+        /// <para>Retrieves a list of API key information for authentication credentials.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2855,7 +2855,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of API key authentication credentials.</para>
+        /// <para>Retrieves a list of API key information for authentication credentials.</para>
         /// </summary>
         /// 
         /// <param name="request">
