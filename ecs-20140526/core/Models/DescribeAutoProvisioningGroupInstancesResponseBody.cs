@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of queried instances in the auto provisioning group.</para>
+        /// <para>The total number of instances in the auto provisioning group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

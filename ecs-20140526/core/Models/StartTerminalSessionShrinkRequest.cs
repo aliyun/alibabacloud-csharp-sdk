@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class StartTerminalSessionShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The value of <b>ClientToken</b> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The <b>ClientToken</b> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The command to run after the session is initiated. The command can be up to 512 characters in length.</para>
         /// <remarks>
-        /// <para>After you specify CommandLine, you cannot specify PortNumber or TargetServer.</para>
+        /// <para>After you specify <c>CommandLine</c>, you cannot specify <c>PortNumber</c> or <c>TargetServer</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,10 +33,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string CommandLine { get; set; }
 
         /// <summary>
-        /// <para>The network type of the WebSocket URL for the remote connection to the instance. Valid values:</para>
+        /// <para>The network type of the WebSocket URL required for the remote connection to the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Internet: public network. This is the default value.</description></item>
-        /// <item><description>Intranet: internal network.</description></item>
+        /// <item><description>Internet: the Internet. This is the default value.</description></item>
+        /// <item><description>Intranet: the internal network.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -70,8 +70,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The name of the password used by the user when using Session Manager on a Windows instance. The name can be up to 255 characters in length.
-        /// When you want to use Session Manager on a Windows instance as a non-default user (System), you must specify both Username and this parameter. To reduce the risk of password leaks, store the plaintext password in the parameter repository of operations management and specify only the password name here. For more information, see <a href="https://help.aliyun.com/document_detail/186828.html">Encryption parameters</a>.</para>
+        /// <para>The name of the password for the user when you use Session Manager on a Windows instance. The name can be up to 255 characters in length.
+        /// When you want to use Session Manager on a Windows instance as a non-default user (System), specify both Username and this parameter. To reduce the risk of password leaks, store the plaintext password in the parameter repository of operations management and specify only the password name here. For more information, see <a href="https://help.aliyun.com/document_detail/186828.html">Encryption parameters</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>axtSecretPassword</para>
@@ -81,8 +81,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PasswordName { get; set; }
 
         /// <summary>
-        /// <para>The port number of the ECS instance for data forwarding. After this parameter is set, Cloud Assistant Agent forwards data to the specified port for port forwarding. For example, SSH uses port 22.</para>
-        /// <para>Default value: empty, which indicates that no port number is set for data forwarding.</para>
+        /// <para>The port number of the ECS instance for data forwarding. After this parameter is specified, Cloud Assistant Agent forwards data to the specified port for port forwarding. For example, SSH uses port 22.</para>
+        /// <para>Default value: empty, which indicates that no port number is specified for data forwarding.</para>
         /// 
         /// <b>Example:</b>
         /// <para>22</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PortNumber { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent list of regions.</para>
+        /// <para>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The address of the destination server in the VPC that you want to access through the instance.</para>
         /// <remarks>
-        /// <para>When this parameter is not empty, PortNumber specifies the port number of the destination server in the VPC that you want to access through the managed instance.</para>
+        /// <para>If this parameter is not empty, <c>PortNumber</c> specifies the port number of the destination server in the VPC that you want to access through the managed instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

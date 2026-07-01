@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeSecurityGroupsRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to perform only a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: performs only a dry run. The system checks the request for potential issues, including AccessKey validity, RAM user authorization, and required parameters. If the check fails, the corresponding error is returned. If the check succeeds, the DryRunOperation error code is returned.</description></item>
-        /// <item><description>false: performs a dry run and performs the actual request. If the check succeeds, a 2XX HTTP status code is returned and the resource status is queried.</description></item>
+        /// <item><description>true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized Resource Access Management (RAM) users, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</description></item>
+        /// <item><description>false: performs a dry run and sends the Normal request. If the request passes the dry run, a 2xx HTTP status code is returned and the authorization is verified.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? FuzzyQuery { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query the capacity information of the security group. When set to True, the <c>EcsCount</c> and <c>AvailableInstanceAmount</c> values in the response are valid.</para>
+        /// <para>Specifies whether to query the capacity information of the security group. If you set this parameter to True, the <c>EcsCount</c> and <c>AvailableInstanceAmount</c> values in the response are valid.</para>
         /// <remarks>
         /// <para>This parameter is deprecated.</para>
         /// </remarks>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? IsQueryEcsCount { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page for a paged query. Once this parameter is set, the query uses the combination of <c>MaxResults</c> and <c>NextToken</c> parameters.</para>
+        /// <para>The maximum number of entries per page for paging query. If you set this parameter, the <c>MaxResults</c> and <c>NextToken</c> paging method is used.</para>
         /// <para>Maximum value: 100.</para>
         /// <para>Default value: 10.</para>
         /// 
@@ -64,8 +64,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The network type of the security group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>vpc: Virtual Private Cloud (VPC).</description></item>
-        /// <item><description>classic: classic network.</description></item>
+        /// <item><description>vpc: VPC.</description></item>
+        /// <item><description>classic: classic network. The classic network is deprecated. For more information, see <a href="https://help.aliyun.com/document_detail/2833134.html">Deprecation notice</a>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string NetworkType { get; set; }
 
         /// <summary>
-        /// <para>The query token. Set the value to the NextToken value returned in the previous call to this operation. You do not need to set this parameter for the first call.</para>
+        /// <para>The pagination token. Set this parameter to the NextToken value returned in the previous request. You do not need to set this parameter for the first request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e71d8a535bd9cc11</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is about to be deprecated. We recommend that you use NextToken and MaxResults for paged queries.</para>
+        /// <para>This parameter will be offline. Use NextToken and MaxResults for paging.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is about to be deprecated. We recommend that you use NextToken and MaxResults for paged queries.</para>
+        /// <para>This parameter will be offline. Use NextToken and MaxResults for paging.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the latest region list of Alibaba Cloud.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the security group belongs. When you use this parameter to filter resources, the number of resources cannot exceed 1000. You can call <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> to query the list of resource groups.</para>
+        /// <para>The ID of the resource group to which the security group belongs. When you use this parameter to filter resources, the resource count cannot exceed 1,000. You can invoke <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> to query resource groups.</para>
         /// <remarks>
         /// <para>Filtering by the default resource group is not supported.</para>
         /// </remarks>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// <para>The list of security group IDs. A maximum of 100 security group IDs are supported at a time. The IDs are separated by commas (,) in the format of a JSON array.</para>
+        /// <para>The IDs of security groups. You can specify up to 100 security group IDs. Separate multiple IDs with commas (,) in a JSON array format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;sg-bp67acfmxazb4p****&quot;, &quot;sg-bp67acfmxazb4p****&quot;, &quot;sg-bp67acfmxazb4p****&quot;,....]</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description>enterprise: advanced security group.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you do not specify this parameter, all types of security groups are queried.</para>
+        /// <para>If you do not specify this parameter, security groups of all types are queried.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -197,10 +197,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SecurityGroupType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the security group is managed. Valid values:</para>
+        /// <para>Specifies whether managed security group is managed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The security group is managed.</description></item>
-        /// <item><description>false: The security group is not managed.</description></item>
+        /// <item><description>true: Managed security group is managed.</description></item>
+        /// <item><description>false: Managed security group is not managed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -214,7 +214,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? ServiceManaged { get; set; }
 
         /// <summary>
-        /// <para>The list of tags.</para>
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -222,7 +222,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public class DescribeSecurityGroupsRequestTag : TeaModel {
             /// <summary>
             /// <para>The tag key of the security group. Valid values of N: 1 to 20.</para>
-            /// <para>When you use a single tag to filter resources, the number of resources with the tag cannot exceed 1000. When you use multiple tags to filter resources, the number of resources bound with all specified tags cannot exceed 1000. If the number of resources exceeds 1000, use the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query.</para>
+            /// <para>If you use a single tag to filter resources, the resource count with the specified tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count that have all specified tags attached cannot exceed 1,000. If the resource count exceeds 1,000, call <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> to query resources.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -244,7 +244,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The ID of the VPC to which the security group belongs.</para>
+        /// <para>The ID of the virtual private cloud (VPC) to which the security group belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp67acfmxazb4p****</para>

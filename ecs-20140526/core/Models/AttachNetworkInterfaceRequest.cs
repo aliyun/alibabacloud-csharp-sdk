@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The index of the network interface controller (NIC).</para>
+        /// <para>The index of the network card specified for the ENI.</para>
         /// <remarks>
-        /// <para>The value of this parameter varies based on the instance family of the specified instance. If the instance type of the specified instance does not support NICs, leave this parameter empty. If the instance type of the specified instance supports NICs, set this parameter to a valid value. For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</para>
+        /// <para>Valid values of NetworkCardIndex depend on the instance family. If the instance type does not support network cards, you cannot specify this parameter. If the instance type supports network cards, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> for valid values.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? NetworkCardIndex { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ENI.</para>
+        /// <para>The network interface controller (NIC) ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The ID of the trunk ENI.</para>
         /// <remarks>
-        /// <para>This parameter is unavailable.</para>
+        /// <para>This parameter is not yet available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is no longer supported.</para>
+        /// <para>This parameter is deprecated.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

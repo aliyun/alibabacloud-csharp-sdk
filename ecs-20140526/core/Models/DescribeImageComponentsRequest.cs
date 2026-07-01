@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ComponentType { get; set; }
 
         /// <summary>
-        /// <para>The component version number in the format of major.minor.patch. All values are non-negative integers. You can also use the wildcard character (*) to replace one of the values for fuzzy matching.</para>
+        /// <para>The component version number in the major.minor.patch format. Each part must be a non-negative integer. You can also use the wildcard character (*) to replace one part for fuzzy matching.</para>
         /// <remarks>
         /// <para>This parameter takes effect only when Name is specified.</para>
         /// </remarks>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Set this parameter to the value of <c>NextToken</c> returned in the previous call. You do not need to set this parameter for the first request.</para>
+        /// <para>The pagination token. Set this parameter to the value of NextToken returned by the previous call. You do not need to set this parameter for the first request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2****</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. If you use this parameter to filter resources, the resource count cannot exceed 1000.</para>
+        /// <para>The resource group ID. If you use this parameter to filter resources, the resource count cannot exceed 1,000.</para>
         /// <remarks>
         /// <para>Filtering by the default resource group is not supported.</para>
         /// </remarks>

@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string CommandId { get; set; }
 
         /// <summary>
-        /// <para>The encoding type of the CommandContent and Output fields in the response. Valid values:</para>
+        /// <para>The encoding method of the <c>CommandContent</c> and <c>Output</c> fields in the response. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>PlainText: Returns the original command content and output.</description></item>
-        /// <item><description>Base64: Returns Base64-encoded command content and output.</description></item>
+        /// <item><description>Base64: Returns the Base64-encoded command content and output.</description></item>
         /// </list>
         /// <para>Default value: Base64.</para>
         /// 
@@ -35,10 +35,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ContentEncoding { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return the history records of scheduled command executions. Valid values:</para>
+        /// <para>Specifies whether to return the execution history of scheduled commands. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Returns the results of scheduled command executions. When this parameter is set to true, InvokeId cannot be empty and must be the execution ID of a scheduled command (RepeatMode is Period) or a command that executes at each system startup (RepeatMode is EveryReboot).</description></item>
-        /// <item><description>false: Does not return the history.</description></item>
+        /// <item><description>true: Returns the execution results of scheduled commands. When this parameter is set to true, the InvokeId parameter is required and must be the execution ID of a scheduled command (RepeatMode is Period) or a command that runs at each system startup (RepeatMode is EveryReboot).</description></item>
+        /// <item><description>false: Does not return the execution history.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -89,12 +89,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </description></item>
         /// <item><description>Failed: The command execution failed.<list type="bullet">
         /// <item><description>Scheduled execution: The command process cannot have a status of failed.</description></item>
-        /// <item><description>One-time execution: All instances failed to execute the command.</description></item>
+        /// <item><description>One-time execution: The command execution failed on all instances.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>PartialFailed: The command execution partially failed.<list type="bullet">
         /// <item><description>Scheduled execution: The command process cannot have a status of partially failed.</description></item>
-        /// <item><description>One-time execution: Some instances have failed command processes, so the overall execution status is partially failed.</description></item>
+        /// <item><description>One-time execution: The command execution failed on some instances, so the overall execution status is partially failed.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Stopped: The command execution has been stopped.</description></item>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InvokeRecordStatus { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page for a paging query.</para>
+        /// <para>The maximum number of entries per page in a paging query.</para>
         /// <para>Maximum value: 50.</para>
         /// <para>Default value: 10.</para>
         /// 
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is about to be deprecated. Use NextToken and MaxResults to complete paging query operations.</para>
+        /// <para>This parameter is about to go offline. Use NextToken and MaxResults to complete paging query operations.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is about to be deprecated. Use NextToken and MaxResults to complete paging query operations.</para>
+        /// <para>This parameter is about to go offline. Use NextToken and MaxResults to complete paging query operations.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the command execution belongs. After you specify this parameter, you must also specify ResourceGroupId when running the command. This parameter filters the corresponding command execution results.</para>
+        /// <para>The resource group ID of the command execution. After you specify this parameter, the resource group ID must also be specified when you run the command. This parameter filters the corresponding command execution results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-bp67acfmxazb4p****</para>
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public class DescribeInvocationResultsRequestTag : TeaModel {
             /// <summary>
             /// <para>The tag key of the command execution. Valid values of N: 1 to 20. The tag key cannot be an empty string.</para>
-            /// <para>If you use a single tag to filter resources, the resource count with this tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count with all specified tags attached cannot exceed 1,000. If the resource count exceeds 1,000, call <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> to execute the query.</para>
+            /// <para>If you use a single tag to filter resources, the number of resources with this tag cannot exceed 1,000. If you use multiple tags to filter resources, the number of resources with all specified tags attached cannot exceed 1,000. If the number of resources exceeds 1,000, call <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> to execute the query.</para>
             /// <para>The tag key can be up to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>

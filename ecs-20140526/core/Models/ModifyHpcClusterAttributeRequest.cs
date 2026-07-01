@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string HpcClusterId { get; set; }
 
         /// <summary>
-        /// <para>The name of the HPC cluster. The name must be 2 to 128 characters in length. The name must start with a letter or a Chinese character and cannot start with http:// or https://. The name can contain digits, underscores (_), or hyphens (-).</para>
+        /// <para>The name of the HPC cluster. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with http:// or https://. It can contain digits, underscores (_), or hyphens (-).</para>
         /// <para>Default value: empty.</para>
         /// 
         /// <b>Example:</b>

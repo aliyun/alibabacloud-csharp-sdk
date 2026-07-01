@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SessionId { get; set; }
 
         /// <summary>
-        /// <para>The URL of the WebSocket session for the remote connection to the ECS instance. The URL contains the session ID (SessionId) and the SecurityToken used for system verification.</para>
+        /// <para>The URL of the WebSocket session for the remote connection to the ECS instance. The URL contains the session ID (<c>SessionId</c>) and the <c>SecurityToken</c> for system verification.</para>
         /// 
         /// <b>Example:</b>
         /// <para>wss://cn-hangzhou.axt.aliyuncs.com/session?sessionId=s-hz023od0x9****&amp;token=d86c2df2-d19c-4bd8-b817-a19ef123****</para>

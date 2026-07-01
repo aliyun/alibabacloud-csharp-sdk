@@ -14,16 +14,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public ModifyPrepayInstanceSpecRequestSystemDisk SystemDisk { get; set; }
         public class ModifyPrepayInstanceSpecRequestSystemDisk : TeaModel {
             /// <summary>
-            /// <para>The new category of the system disk. Valid values:</para>
+            /// <para>The new system disk category. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>cloud_efficiency: utra disk</para>
-            /// </description></item>
-            /// <item><description><para>cloud_ssd: standard SSD</para>
+            /// <item><description>cloud_efficiency: ultra disk.</description></item>
+            /// <item><description>cloud_ssd: standard SSD.<remarks>
+            /// <para>This parameter is valid only when you perform an Increase Quota from a <a href="https://help.aliyun.com/document_detail/55263.html">retired instance type</a> to a <a href="https://help.aliyun.com/document_detail/25378.html">Normal instance family</a> and change a non-I/O optimization instance to an I/O optimization instance.</para>
+            /// </remarks>
             /// </description></item>
             /// </list>
-            /// <remarks>
-            /// <para>This parameter takes effect on an instance only when you change from a <a href="https://help.aliyun.com/document_detail/55263.html">retired instance type</a> to an instance type in an <a href="https://help.aliyun.com/document_detail/25378.html">instance family available for purchase</a> and upgrade the instance from a non-I/O optimized instance type to an I/O optimized instance type.</para>
-            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>cloud_efficiency</para>
@@ -35,24 +33,19 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to enable automatic payment when you upgrade the instance type. Valid values:</para>
+        /// <para>Specifies whether to automatically complete the payment when you upgrade the instance type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The payment is automatically completed.</para>
-        /// </description></item>
-        /// <item><description><para>false: An order is generated but no payment is made.</para>
-        /// </description></item>
+        /// <item><description>true: The payment is automatically completed.</description></item>
+        /// <item><description>false: Only an order is created. No payment is made.</description></item>
         /// </list>
         /// <para>Default value: true.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>Make sure that your account balance is sufficient. Otherwise, your order becomes invalid and must be canceled.</para>
-        /// </description></item>
-        /// <item><description><para>If your account balance is insufficient, you can set <c>AutoPay</c> to <c>false</c> to generate an unpaid order. Then, you can log on to the ECS console to pay for the order.</para>
-        /// </description></item>
-        /// <item><description><para>If you set <c>OperatorType</c> to <c>downgrade</c>, <c>AutoPay</c> is ignored.</para>
-        /// </description></item>
+        /// <item><description>If automatic payment is enabled, make sure that your payment method has a sufficient balance. Otherwise, an abnormal order is generated, and you can only cancel the order.</description></item>
+        /// <item><description>If your payment method balance is insufficient, you can set <c>AutoPay</c> to <c>false</c> to generate an unpaid order. Then, you can logon to the ECS console to pay for the order.</description></item>
+        /// <item><description>When <c>OperatorType</c> is set to <c>downgrade</c>, the <c>AutoPay</c> parameter is ignored.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -62,7 +55,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>The client token that you want to use to ensure the idempotency of the request. You can use the client to generate the value, but make sure that the value is unique among different requests. This value allows only ASCII characters and is up to 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How do I ensure the idempotence of a request?</a></para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -119,7 +112,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The end time of the temporary change. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The end time of the temporary instance type change. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2018-01-01T12:05Z</para>
@@ -140,7 +133,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The new instance type. For information about available instance types, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> or call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation.</para>
+        /// <para>The target instance type for the Upgrade/Downgrade. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance family</a> or invoke <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -151,23 +144,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to allow cross-cluster instance type upgrade. Valid values:</para>
+        /// <para>Specifies whether to support cross-cluster instance type changes. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// </description></item>
+        /// <item><description>true: supported.</description></item>
+        /// <item><description>false: not supported.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
-        /// <para>When you set <c>MigrateAcrossZone</c> to <c>true</c> and you upgrade the instance type of an instance based on the returned information, take note of the following items:</para>
-        /// <para>Instance that resides in the classic network:</para>
-        /// <list type="bullet">
-        /// <item><description><para>For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when a non-I/O optimized instance is upgraded to an I/O optimized instance, the private IP address, disk device names, and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\* such as vda and vdb.</para>
-        /// </description></item>
-        /// <item><description><para>For <a href="https://help.aliyun.com/document_detail/25378.html">instance families available for purchase</a>, when the instance type of an instance is changed, the private IP address of the instance changes.</para>
-        /// </description></item>
-        /// </list>
-        /// <para>Instance that resides in a virtual private cloud (VPC): For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when a non-I/O optimized instance is upgraded to an I/O optimized instance, the disk device names and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\* such as vda and vdb.</para>
+        /// <para>When the <c>MigrateAcrossZone</c> parameter is set to <c>true</c>, take note of the following items after you perform the optimization on the Elastic Compute Service instance based on the response:</para>
+        /// <para>VPC-type instances: For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when a non-I/O optimized instance is changed to an I/O optimized instance, the disk device names and software authorization codes of the server change. For Linux instances, basic disks (cloud) are identified as xvda or xvdb. Ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vda or vdb.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -189,18 +173,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ModifyMode { get; set; }
 
         /// <summary>
-        /// <para>The type of the change to the instance. Valid values:</para>
+        /// <para>The type of the operation. Valid values:</para>
         /// <remarks>
-        /// <para>This parameter is optional. The system can automatically determine whether the instance change is an upgrade or a downgrade. If you want to specify this parameter, refer to the following valid values of the parameter.</para>
+        /// <para>This parameter is optional. The system can automatically determine whether the operation is an upgrade or a downgrade. If you upload this parameter, follow the rules below.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>upgrade: upgrades the instance type. Make sure that the balance in your account is sufficient.</para>
+        /// <item><description><para>upgrade: upgrades the instance type. Make sure that your account payment method has a sufficient balance.</para>
         /// </description></item>
-        /// <item><description><para>downgrade: downgrades the instance type. When the new instance type specified by the <c>InstanceType</c> parameter has lower specifications than the current instance type, set <c>OperatorType</c> to downgrade.</para>
+        /// <item><description><para>downgrade: decrease the quota of the instance type. When the instance type specified by <c>InstanceType</c> is lower than the current instance type, set <c>OperatorType</c> to <c>downgrade</c>.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>You can refer to the preceding usage notes on how to upgrade or downgrade the instance type.</para>
+        /// <para>For precautions about upgrading or downgrading instance types, see the operation description section above.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -219,7 +203,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The restart time of the instance. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The restart time of the instance. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2018-01-01T12:05Z</para>
@@ -229,16 +213,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RebootTime { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to restart the instance immediately after the instance type is changed. Valid values:</para>
+        /// <para>Specifies whether to immediately restart the instance after the instance type change is complete. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// </description></item>
+        /// <item><description>true: The instance is immediately restarted.</description></item>
+        /// <item><description>false: The instance is not restarted.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// <remarks>
-        /// <para>If the instance is in the <b>Stopped</b> state, the instance remains in the Stopped state and no operations are performed, regardless of whether <c>RebootWhenFinished</c> is set to true.</para>
+        /// <para>If the instance is in the <b>Stopped</b> state, the instance remains stopped even if you set <c>RebootWhenFinished</c> to <c>true</c>. No operation is performed.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -249,7 +231,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? RebootWhenFinished { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

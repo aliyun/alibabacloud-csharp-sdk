@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public long? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page in the paging query.</para>
+            /// <para>The number of entries per page. This value is the PageSize value specified in the paging query settings.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

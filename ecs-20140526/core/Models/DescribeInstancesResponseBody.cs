@@ -682,7 +682,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The total number of queried instances.</para>
         /// <remarks>
-        /// <para>When you use the MaxResults and NextToken parameters for paging query, the returned TotalCount parameter value is meaningless.</para>
+        /// <para>When you use <c>MaxResults</c> and <c>NextToken</c> parameters for paging query, the returned <c>TotalCount</c> parameter value is meaningless.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -14,9 +14,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public ModifyInstanceAttributeRequestCpuOptions CpuOptions { get; set; }
         public class ModifyInstanceAttributeRequestCpuOptions : TeaModel {
             /// <summary>
-            /// <para>The number of CPU cores. This parameter is not customizable and uses a default value.</para>
-            /// <para>&lt;props=&quot;china&quot;&gt;</para>
-            /// <para>For information about the default value, see <a href="https://help.aliyun.com/document_detail/145895.html">Custom CPU options</a>.</para>
+            /// <para>The number of CPU cores. This parameter does not support custom values and can only use the default value.</para>
+            /// <para>&lt;props=&quot;china&quot;&gt;Default value: see <a href="https://help.aliyun.com/document_detail/145895.html">Customize CPU options</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -26,15 +25,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? Core { get; set; }
 
             /// <summary>
-            /// <para>The number of threads per core. The total number of vCPUs for an ECS instance is the value of <c>CpuOptions.Core</c> multiplied by the value of <c>CpuOptions.ThreadsPerCore</c>.</para>
+            /// <para>The number of threads per CPU core. The number of vCPUs of the ECS instance = CpuOptions.Core value × CpuOptions.ThreadsPerCore value.</para>
             /// <list type="bullet">
-            /// <item><description><para>Setting <c>CpuOptions.ThreadsPerCore</c> to 1 disables hyper-threading.</para>
+            /// <item><description><para>CpuOptions.ThreadsPerCore=1 indicates that hyper-threading is disabled.</para>
             /// </description></item>
-            /// <item><description><para>Only some instance types support specifying the number of threads per core.</para>
+            /// <item><description><para>Only some instance types support custom thread counts.</para>
             /// </description></item>
             /// </list>
-            /// <para>&lt;props=&quot;china&quot;&gt;</para>
-            /// <para>For information about the valid values and default value, see <a href="https://help.aliyun.com/document_detail/145895.html">Custom CPU options</a>.</para>
+            /// <para>&lt;props=&quot;china&quot;&gt;Valid values and default value: see <a href="https://help.aliyun.com/document_detail/145895.html">Customize CPU options</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -46,18 +44,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The CPU topology type of the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>ContinuousCoreToHTMapping: The hyper-threads of the same core are contiguous.</para>
-            /// </description></item>
-            /// <item><description><para>DiscreteCoreToHTMapping: The hyper-threads of the same core are discrete.</para>
-            /// </description></item>
+            /// <item><description>ContinuousCoreToHTMapping: the hyper-threads of the same core in the CPU topology are continuous.</description></item>
+            /// <item><description>DiscreteCoreToHTMapping: the hyper-threads of the same core are discrete.</description></item>
             /// </list>
-            /// <para>Default value: None.</para>
-            /// <para>Note the following when you use this parameter:</para>
+            /// <para>Default value: none.</para>
+            /// <para>Take note of the following items:</para>
             /// <list type="bullet">
-            /// <item><description>The instance must be in the <c>Stopped</c> state.</description></item>
+            /// <item><description>The instance must be in the Stopped state.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>This parameter is supported by only some instance families. See <a href="https://help.aliyun.com/document_detail/2636059.html">View and modify the CPU topology</a> for a list of supported families.</para>
+            /// <para>Only some instance families support this parameter. For information about the supported instance families, see <a href="https://help.aliyun.com/document_detail/2636059.html">View and modify the CPU topology structure</a>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -69,7 +65,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <remarks>
-            /// <para>This parameter is in invitation-only preview and is not publicly available.</para>
+            /// <para>This parameter is in invitational preview and is not publicly available.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -82,14 +78,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The performance mode of the burstable performance instance. Valid values:</para>
+        /// <para>The running mode of the burstable instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Standard: standard mode.</para>
-        /// </description></item>
-        /// <item><description><para>Unlimited: unlimited mode.</para>
-        /// </description></item>
+        /// <item><description>Standard: standard mode.</description></item>
+        /// <item><description>Unlimited: unlimited mode.</description></item>
         /// </list>
-        /// <para>For more information about the performance modes of burstable performance instances, see <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable performance instances</a>.</para>
+        /// <para>For more information about the running modes of burstable instances, see <a href="https://help.aliyun.com/document_detail/59977.html">What are burstable instances?</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Standard</para>
@@ -99,9 +93,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string CreditSpecification { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable deletion protection for the instance. This setting prevents the instance from being released from the console or by calling the <a href="https://help.aliyun.com/document_detail/25507.html">DeleteInstance</a> operation.</para>
+        /// <para>The release protection attribute of the instance. Specifies whether the instance can be released from the console or by calling <a href="https://help.aliyun.com/document_detail/25507.html">DeleteInstance</a>.</para>
         /// <remarks>
-        /// <para>This feature applies only to pay-as-you-go instances and protects instances only from manual release operations. It does not affect system-initiated release operations.</para>
+        /// <para>This attribute applies only to pay-as-you-go instances and only prevents manual release operations. It does not apply to system-initiated release operations.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -112,7 +106,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? DeletionProtection { get; set; }
 
         /// <summary>
-        /// <para>The instance description. The description must be 2 to 256 characters long and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The description of the instance. The description must be 2 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testInstanceDescription</para>
@@ -122,21 +116,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable jumbo frames. When jumbo frames are enabled, the MTU of the instance is 8500. When jumbo frames are disabled, the MTU of the instance is 1500. Valid values:</para>
+        /// <para>Specifies whether to enable the Jumbo Frame feature for the instance MTU. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// </description></item>
+        /// <item><description>true: enables the feature.</description></item>
+        /// <item><description>false: does not enable the feature.</description></item>
         /// </list>
-        /// <para>Note the following when you use this parameter:</para>
+        /// <para>Take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description><para>The instance must be in the <c>Running</c> or <c>Stopped</c> state.</para>
-        /// </description></item>
-        /// <item><description><para>The instance must be in a VPC.</para>
-        /// </description></item>
-        /// <item><description><para>Only some instance types support jumbo frames. For more information, see <a href="https://help.aliyun.com/document_detail/200512.html">ECS instance MTU</a>.</para>
-        /// </description></item>
+        /// <item><description>The instance must be in the Running or Stopped state.</description></item>
+        /// <item><description>The instance must be a VPC-connected instance.</description></item>
+        /// <item><description>After the Jumbo Frame feature is enabled, the MTU value of the instance changes to 8500. After the feature is disabled, the MTU value reverts to 1500.
+        /// Only some instance types support the Jumbo Frame feature. For more information, see <a href="https://help.aliyun.com/document_detail/200512.html">ECS instance MTU</a>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -149,14 +139,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to enable VPC network traffic encryption. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// </description></item>
-        /// <item><description><para>false</para>
+        /// <item><description>true: enables the encryption.</description></item>
+        /// <item><description>false: disables the encryption.<remarks>
+        /// <para>This parameter is in invitational preview and is not publicly available.</para>
+        /// </remarks>
         /// </description></item>
         /// </list>
-        /// <remarks>
-        /// <para>This parameter is in invitation-only preview and is not publicly available.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -166,18 +154,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? EnableNetworkEncryption { get; set; }
 
         /// <summary>
-        /// <para>The hostname of the operating system. Note the following when you use this parameter:</para>
+        /// <para>The hostname of the operating system. Take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description><para>The instance cannot be in the <c>Pending</c> or <c>Starting</c> state. Otherwise, the specified hostname and the <c>/etc/hosts</c> configuration may not take effect. You can call the <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> operation to query the current state of the instance.</para>
+        /// <item><description><para>The instance cannot be in the Pending or Starting state. Otherwise, the hostname and <c>/etc/hosts</c> configuration may not take effect. You can call <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> to query the current status of the instance.</para>
         /// </description></item>
-        /// <item><description><para>The new hostname takes effect after you restart the instance from the ECS console (see <a href="https://help.aliyun.com/document_detail/25440.html">Restart an instance</a>) or by calling the <a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a> operation. Restarting the instance from within its operating system does not apply the change.</para>
+        /// <item><description><para>The new hostname takes effect after you restart the instance. You can restart the instance in the ECS console (for more information, see <a href="https://help.aliyun.com/document_detail/25440.html">Restart an instance</a>) or by calling <a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a>. Restarting the instance from within the operating system does not take effect.</para>
         /// </description></item>
         /// </list>
-        /// <para>The hostname must meet the following requirements for different operating systems:</para>
+        /// <para>The hostname has the following limits for different operating systems:</para>
         /// <list type="bullet">
-        /// <item><description><para>For Windows Server instances: The hostname must be 2 to 15 characters long and contain letters, digits, and hyphens (-). It cannot start or end with a hyphen, contain consecutive hyphens, or consist of only digits.</para>
+        /// <item><description><para>Windows Server: The hostname must be 2 to 15 characters in length and can contain uppercase letters, lowercase letters, digits, and hyphens (-). It cannot start or end with a hyphen (-), cannot contain consecutive hyphens (-), and cannot contain only digits.</para>
         /// </description></item>
-        /// <item><description><para>For other types of instances (such as Linux): The hostname must be 2 to 64 characters long. You can use periods (.) to separate the hostname into segments. Each segment can contain letters, digits, and hyphens (-). The hostname cannot start or end with a period or hyphen, and cannot contain consecutive periods or hyphens.</para>
+        /// <item><description><para>Other instances (such as Linux): The hostname must be 2 to 64 characters in length. You can use periods (.) to separate the hostname into multiple segments. Each segment can contain uppercase letters, lowercase letters, digits, and hyphens (-), but cannot contain consecutive periods (.) or hyphens (-). The hostname cannot start or end with a period (.) or hyphen (-).</para>
         /// </description></item>
         /// </list>
         /// 
@@ -189,7 +177,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string HostName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -200,7 +188,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The instance name. The name must be 2 to 128 characters long. It must start with a letter or a Chinese character and cannot start with <c>http://</c> or <c>https://</c>. The name can contain digits, colons (:), underscores (_), and hyphens (-).</para>
+        /// <para>The name of the instance. The name must be 2 to 128 characters in length. It must start with an uppercase letter, lowercase letter, or Chinese character and cannot start with <c>http://</c> or <c>https://</c>. The name can contain digits, colons (:), underscores (_), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>testInstanceName</para>
@@ -210,14 +198,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The number of queues for the primary network interface. Note the following when you use this parameter:</para>
+        /// <para>The number of queues for the primary network interface controller (NIC). Take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description><para>The instance must be in the <c>Stopped</c> state.</para>
-        /// </description></item>
-        /// <item><description><para>The value cannot exceed the maximum number of queues that the instance type supports for a single network interface. The total number of queues across all network interfaces of the instance cannot exceed the total queue quota that the instance type supports. You can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the maximum number of queues per network interface and the total queue quota for an instance type.</para>
-        /// </description></item>
-        /// <item><description><para>If you set this parameter to -1, the number of queues for the primary network interface is reset to the default value for the instance type. You can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the default number of queues for an elastic network interface of an instance type.</para>
-        /// </description></item>
+        /// <item><description>The instance must be in the Stopped state.</description></item>
+        /// <item><description>The value cannot exceed the maximum number of queues per NIC allowed by the instance type. The total number of queues for all NICs on the instance cannot exceed the total queue quota allowed by the instance type. You can call <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> to query the maximum number of queues per NIC and the total queue quota for an instance type.</description></item>
+        /// <item><description>If you set this parameter to -1, the number of queues for the primary NIC is reset to the default value for the instance type. You can call <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> to query the default number of Elastic Network Interface (ENI) queues for an instance type.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -236,15 +221,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The password of the instance. The password must be 8 to 30 characters long and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The supported special characters are <b>()\~!@#$%^&amp;\*-_+=|{}[]:;\&quot;&lt;&gt;,.?/</b>. For a Windows instance, the password cannot start with a forward slash (/). Note the following when you use this parameter:</para>
+        /// <para>The password of the instance. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The following special characters are supported: <b>()`~!@#$%^&amp;*-_+=|{}[]:;\&quot;&lt;&gt;,.?/</b>
+        /// . For Windows instances, the password cannot start with a forward slash (/). Take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description><para>The instance cannot be in the <c>Starting</c> state.</para>
-        /// </description></item>
-        /// <item><description><para>The new password takes effect after you restart the instance from the ECS console (see <a href="https://help.aliyun.com/document_detail/25440.html">Restart an instance</a>) or by calling the <a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a> operation. Restarting the instance from within its operating system does not apply the change.</para>
-        /// </description></item>
+        /// <item><description>The instance cannot be in the Starting state.</description></item>
+        /// <item><description>The new password takes effect after you restart the instance. You can restart the instance in the ECS console (for more information, see <a href="https://help.aliyun.com/document_detail/25440.html">Restart an instance</a>) or by calling <a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a>. Restarting the instance from within the operating system does not take effect.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>To prevent password exposure, send requests that include the <c>Password</c> parameter over HTTPS.</para>
+        /// <para>If you specify the Password parameter, use HTTPS to send the request to avoid password leaks.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -255,21 +239,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Password { get; set; }
 
         /// <summary>
-        /// <para>The private DNS name settings for the instance.</para>
-        /// <para>For more information about private DNS name resolution, see <a href="https://help.aliyun.com/document_detail/2844797.html">ECS private DNS resolution
-        /// </a>.</para>
+        /// <para>The private domain name configuration of the instance.</para>
+        /// <para>For more information about private private domain resolution, see <a href="https://help.aliyun.com/document_detail/2844797.html">ECS private private domain resolution</a>.</para>
         /// </summary>
         [NameInMap("PrivateDnsNameOptions")]
         [Validation(Required=false)]
         public ModifyInstanceAttributeRequestPrivateDnsNameOptions PrivateDnsNameOptions { get; set; }
         public class ModifyInstanceAttributeRequestPrivateDnsNameOptions : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to enable resolution of the instance ID-based domain name to an IPv6 address. Valid values:</para>
+            /// <para>Specifies whether to enable DNS resolution from the instance ID-based domain name to the IPv6 address. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>true</para>
-            /// </description></item>
-            /// <item><description><para>false</para>
-            /// </description></item>
+            /// <item><description>true: enables the resolution.</description></item>
+            /// <item><description>false: disables the resolution.</description></item>
             /// </list>
             /// <para>Default value: false.</para>
             /// 
@@ -281,12 +262,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public bool? EnableInstanceIdDnsAAAARecord { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable resolution of the instance ID-based domain name to an IPv4 address. Valid values:</para>
+            /// <para>Specifies whether to enable DNS resolution from the instance ID-based domain name to the IPv4 address. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>true</para>
-            /// </description></item>
-            /// <item><description><para>false</para>
-            /// </description></item>
+            /// <item><description>true: enables the resolution.</description></item>
+            /// <item><description>false: disables the resolution.</description></item>
             /// </list>
             /// <para>Default value: false.</para>
             /// 
@@ -298,12 +277,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public bool? EnableInstanceIdDnsARecord { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable resolution of the IP address-based domain name to an IPv4 address. Valid values:</para>
+            /// <para>Specifies whether to enable DNS resolution from the IP-based domain name to the IPv4 address. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>true</para>
-            /// </description></item>
-            /// <item><description><para>false</para>
-            /// </description></item>
+            /// <item><description>true: enables the resolution.</description></item>
+            /// <item><description>false: disables the resolution.</description></item>
             /// </list>
             /// <para>Default value: false.</para>
             /// 
@@ -315,12 +292,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public bool? EnableIpDnsARecord { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable reverse DNS resolution of an IPv4 address to an IP address-based domain name. Valid values:</para>
+            /// <para>Specifies whether to enable reverse DNS resolution from the IPv4 address to the IP-based domain name. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>true</para>
-            /// </description></item>
-            /// <item><description><para>false</para>
-            /// </description></item>
+            /// <item><description>true: enables the resolution.</description></item>
+            /// <item><description>false: disables the resolution.</description></item>
             /// </list>
             /// <para>Default value: false.</para>
             /// 
@@ -334,12 +309,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The hostname type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Custom: a custom hostname.</para>
-            /// </description></item>
-            /// <item><description><para>IpBased: an IP address-based hostname.</para>
-            /// </description></item>
-            /// <item><description><para>InstanceIdBased: an instance ID-based hostname.</para>
-            /// </description></item>
+            /// <item><description>Custom: custom.</description></item>
+            /// <item><description>IpBased: IP-based hostname.</description></item>
+            /// <item><description>InstanceIdBased: instance ID-based hostname.</description></item>
             /// </list>
             /// <para>Default value: Custom.</para>
             /// 
@@ -354,7 +326,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is in invitation-only preview and is not publicly available.</para>
+        /// <para>This parameter is in invitational preview and is not publicly available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -366,7 +338,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is in invitation-only preview and is not publicly available.</para>
+        /// <para>This parameter is in invitational preview and is not publicly available.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("RemoteConnectionOptions")]
@@ -375,7 +347,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public class ModifyInstanceAttributeRequestRemoteConnectionOptions : TeaModel {
             /// <summary>
             /// <remarks>
-            /// <para>This parameter is in invitation-only preview and is not publicly available.</para>
+            /// <para>This parameter is in invitational preview and is not publicly available.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -387,7 +359,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <remarks>
-            /// <para>This parameter is in invitation-only preview and is not publicly available.</para>
+            /// <para>This parameter is in invitational preview and is not publicly available.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -408,21 +380,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of security groups to assign to the instance. Note the following when you use this parameter:</para>
+        /// <para>The IDs of the security groups to which the instance is reassigned. Take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description><para>The security group IDs in the array must be unique. The number of security groups that an instance can join is limited. For more information, see <a href="~~25412#SecurityGroupQuota1~~">Limits</a>.</para>
-        /// </description></item>
-        /// <item><description><para>Specifying this parameter removes the instance from its current security groups. To retain existing security group associations, you must include their IDs in this array.</para>
-        /// </description></item>
-        /// <item><description><para>You can switch the security group type. However, the specified security groups cannot include both basic and enterprise security groups.</para>
-        /// </description></item>
-        /// <item><description><para>The security groups must belong to the same VPC as the instance.</para>
-        /// </description></item>
-        /// <item><description><para>This parameter is not supported for instances in the classic network.</para>
-        /// </description></item>
+        /// <item><description>Security group IDs in the array cannot be duplicated. The maximum length of the array depends on the maximum number of security groups to which the instance can belong. For more information, see <a href="~~25412#SecurityGroupQuota1~~">Limits</a>.</description></item>
+        /// <item><description>The instance leaves its current security groups. To retain the current security groups, add their IDs to the array.</description></item>
+        /// <item><description>You can switch between security group types, but the list cannot contain both basic security groups and advanced security groups at the same time.</description></item>
+        /// <item><description>The security groups must belong to the same VPC as the instance.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>The change takes effect on the instance after a short delay.</para>
+        /// <para>Changes to security groups take effect on the instance shortly after the modification, but a slight delay may occur.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -433,15 +399,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> SecurityGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The user data of the instance. User data should be Base64-encoded before it is passed. Note the following when you use this parameter:</para>
+        /// <para>The instance user data. We recommend that you Base64-encode the data before you pass it in. Take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description><para>The user data must comply with the limits described in <a href="https://help.aliyun.com/document_detail/49121.html">Generate user data</a>.</para>
-        /// </description></item>
-        /// <item><description><para>After you restart the instance, the new user data is available on the instance but is not executed.</para>
-        /// </description></item>
+        /// <item><description>The instance must meet the usage limits for instance user data. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">Create instance user data</a>.</description></item>
+        /// <item><description>After you restart the instance, the new user data is displayed on the instance but is not run.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>The raw data cannot exceed 32 KB before being encoded. Do not pass confidential information, such as passwords and private keys, in plaintext. If you must pass confidential information, encrypt and then Base64-encode it. On the instance, decrypt the information by using the corresponding decryption method.</para>
+        /// <para>Before Base64 encoding, the raw data cannot exceed 32 KB. Do not pass in sensitive information such as passwords and private keys in plaintext. If you must pass in sensitive information, encrypt the information, Base64-encode it, and then decrypt it in the same way within the instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class AssignIpv6AddressesRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The <b>ClientToken</b> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. <b>ClientToken</b> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>One or more IPv6 addresses to assign to the ENI. You can set up to 10 IPv6 addresses. Valid values of N: 1 to 10.</para>
+        /// <para>One or more IPv6 addresses to assign to the network interface controller (NIC). You can set up to 10 IPv6 addresses. Valid values of N: 1 to 10.</para>
         /// <para>Example: Ipv6Address.1=2001:db8:1234:1a00::\<em>\</em>\<em>\</em></para>
         /// <remarks>
         /// <para>When you invoke this operation, you must set either the <c>Ipv6Addresses.N</c> parameter or the <c>Ipv6AddressCount</c> parameter, but not both.</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> Ipv6Address { get; set; }
 
         /// <summary>
-        /// <para>The number of IPv6 addresses to randomly generate for the ENI. Valid values: 1 to 10.</para>
+        /// <para>The number of IPv6 addresses to randomly generate for the network interface controller (NIC). Valid values: 1 to 10.</para>
         /// <remarks>
         /// <para>When you invoke this operation, you must set either the <c>Ipv6Addresses.N</c> parameter or the <c>Ipv6AddressCount</c> parameter, but not both.</para>
         /// </remarks>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? Ipv6AddressCount { get; set; }
 
         /// <summary>
-        /// <para>One or more IPv6 prefixes to assign to the ENI. Valid values of N: 1 to 10.</para>
+        /// <para>One or more IPv6 prefixes to assign to the network interface controller (NIC). Valid values of N: 1 to 10.</para>
         /// <remarks>
         /// <para>To set IPv6 prefixes for the ENI, you must set either the Ipv6Prefix.N parameter or the Ipv6PrefixCount parameter, but not both.</para>
         /// </remarks>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> Ipv6Prefix { get; set; }
 
         /// <summary>
-        /// <para>The number of IPv6 prefixes to assign to the ENI. Valid values: 1 to 10.</para>
+        /// <para>The number of IPv6 prefixes to assign to the network interface controller (NIC). Valid values: 1 to 10.</para>
         /// <remarks>
         /// <para>To set IPv6 prefixes for the ENI, you must set either the Ipv6Prefix.N parameter or the Ipv6PrefixCount parameter, but not both.</para>
         /// </remarks>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? Ipv6PrefixCount { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ENI.</para>
+        /// <para>The ID of the network interface controller (NIC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the ENI. You can invoke <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>The region ID of the network interface controller (NIC). You can invoke <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateCommandResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the command.</para>
+        /// <para>The command ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c-7d2a745b412b4601b2d47f6a768d****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string CommandId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</para>

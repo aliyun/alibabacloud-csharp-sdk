@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateImageComponentResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the image component.</para>
+        /// <para>The image component ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ic-bp67acfmxazb4p****</para>

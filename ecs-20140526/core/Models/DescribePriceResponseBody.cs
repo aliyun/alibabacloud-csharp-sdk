@@ -10,23 +10,23 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribePriceResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the price and promotional rules.</para>
+        /// <para>The price information, including the price and promotion rules.</para>
         /// </summary>
         [NameInMap("PriceInfo")]
         [Validation(Required=false)]
         public DescribePriceResponseBodyPriceInfo PriceInfo { get; set; }
         public class DescribePriceResponseBodyPriceInfo : TeaModel {
             /// <summary>
-            /// <para>The price details.</para>
+            /// <para>The price.</para>
             /// </summary>
             [NameInMap("Price")]
             [Validation(Required=false)]
             public DescribePriceResponseBodyPriceInfoPrice Price { get; set; }
             public class DescribePriceResponseBodyPriceInfoPrice : TeaModel {
                 /// <summary>
-                /// <para>The currency.</para>
-                /// <para>CNY for sites in the Chinese mainland.</para>
-                /// <para>USD for international sites.</para>
+                /// <para>The currency unit.</para>
+                /// <para>China site: CNY.</para>
+                /// <para>International site: USD.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CNY</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// <para>The discount amount.</para>
+                /// <para>The discount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>655.2</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public float? OriginalPrice { get; set; }
 
                 /// <summary>
-                /// <para>The hourly price of a No Upfront or Partial Upfront Reserved Instance Voucher.</para>
+                /// <para>The hourly price of a reserved instance with the no upfront or partial upfront payment option.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public float? ReservedInstanceHourPrice { get; set; }
 
                 /// <summary>
-                /// <para>The trade price, calculated as <c>OriginalPrice</c> - <c>DiscountPrice</c>.</para>
+                /// <para>The transaction price, which is the original price minus the discount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3712.8</para>
@@ -126,23 +126,23 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             }
 
             /// <summary>
-            /// <para>The related prices.</para>
+            /// <para>The related price.</para>
             /// </summary>
             [NameInMap("RelatedPrice")]
             [Validation(Required=false)]
             public DescribePriceResponseBodyPriceInfoRelatedPrice RelatedPrice { get; set; }
             public class DescribePriceResponseBodyPriceInfoRelatedPrice : TeaModel {
                 /// <summary>
-                /// <para>The price of the marketplace image.</para>
+                /// <para>The Alibaba Cloud Marketplace image price.</para>
                 /// </summary>
                 [NameInMap("MarketplaceImagePrice")]
                 [Validation(Required=false)]
                 public DescribePriceResponseBodyPriceInfoRelatedPriceMarketplaceImagePrice MarketplaceImagePrice { get; set; }
                 public class DescribePriceResponseBodyPriceInfoRelatedPriceMarketplaceImagePrice : TeaModel {
                     /// <summary>
-                    /// <para>The currency.</para>
-                    /// <para>CNY for sites in the Chinese mainland.</para>
-                    /// <para>USD for international sites.</para>
+                    /// <para>The currency unit.</para>
+                    /// <para>China site: CNY.</para>
+                    /// <para>International site: USD.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>CNY</para>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public string Currency { get; set; }
 
                     /// <summary>
-                    /// <para>The discount amount.</para>
+                    /// <para>The discount.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public float? OriginalPrice { get; set; }
 
                     /// <summary>
-                    /// <para>The trade price, calculated as <c>OriginalPrice</c> - <c>DiscountPrice</c>.</para>
+                    /// <para>The transaction price, which is the original price minus the discount.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>100</para>

@@ -438,7 +438,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -448,7 +448,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page in a paged query. Settings this parameter for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -458,7 +458,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3989ED0C-20A1-4351-A127-2067FF8390AX</para>

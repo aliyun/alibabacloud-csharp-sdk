@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeRecommendInstanceTypeRequest : TeaModel {
         /// <summary>
-        /// <para>The number of vCPU cores of the instance type.</para>
+        /// <para>The number of vCPUs of the ECS instance.</para>
         /// <remarks>
-        /// <para>If you specify both <c>Cores</c> and <c>Memory</c>, the system returns all instance types that match the values of the parameters.</para>
+        /// <para>If you specify both the Cores and Memory parameters, the system matches all instance types that meet the specified vCPU and memory requirements.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,14 +23,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? Cores { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the ECS instance. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>. Valid values:</para>
+        /// <para>The billing method of the ECS instance. For details, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>PrePaid: subscription.</para>
-        /// </description></item>
-        /// <item><description><para>PostPaid: pay-as-you-go</para>
-        /// </description></item>
+        /// <item><description>PrePaid: subscription.</description></item>
+        /// <item><description>PostPaid: pay-as-you-go.</description></item>
         /// </list>
-        /// <para>Default value: PostPaid</para>
+        /// <para>Default value: PostPaid.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PostPaid</para>
@@ -42,12 +40,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The level of the instance family. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>EntryLevel: entry level.</para>
-        /// </description></item>
-        /// <item><description><para>EnterpriseLevel: enterprise level.</para>
-        /// </description></item>
-        /// <item><description><para>CreditEntryLevel: credit-based entry level. For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Burstable instance families</a>.</para>
-        /// </description></item>
+        /// <item><description>EntryLevel: entry level.</description></item>
+        /// <item><description>EnterpriseLevel: enterprise level.</description></item>
+        /// <item><description>CreditEntryLevel: credit-based entry level. For details, see <a href="https://help.aliyun.com/document_detail/59977.html">Burstable instances</a>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,9 +53,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceFamilyLevel { get; set; }
 
         /// <summary>
-        /// <para>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the most recent instance type list.</para>
+        /// <para>The specified instance type. For details, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>. You can also call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the most recent instance type list.</para>
         /// <remarks>
-        /// <para>If you specify <c>InstanceType</c>, you cannot specify <c>Cores</c> or <c>Memory</c>.</para>
+        /// <para>If you specify InstanceType, you cannot specify Cores or Memory.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -71,7 +66,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The instance families from which the alternative instance types are selected. You can specify up to 10 instance families.</para>
+        /// <para>The collection of alternative instance families from which alternative instance types are selected. You can set up to 10 instance families in this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs.hfg6</para>
@@ -81,15 +76,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> InstanceTypeFamily { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether instances of the instance type are I/O optimized. You cannot specify IoOptimized if the instance type supports only non-I/O optimized instances. Valid values:</para>
+        /// <para>Specifies whether the instance is I/O optimized. If the instance type supports only non-I/O optimized instances, you cannot set the IoOptimized parameter. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>optimized: The instances are I/O optimized.</para>
-        /// </description></item>
-        /// <item><description><para>none: The instances are non-I/O optimized.</para>
-        /// </description></item>
+        /// <item><description>optimized: I/O optimized.</description></item>
+        /// <item><description>none: non-I/O optimized.</description></item>
         /// </list>
         /// <para>Default value: optimized.</para>
-        /// <para>If you query alternative instance types for retired instance types, this parameter is set to none by default.</para>
+        /// <para>If you specify a retired instance type, the default value is none.</para>
         /// 
         /// <b>Example:</b>
         /// <para>optimized</para>
@@ -99,9 +92,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string IoOptimized { get; set; }
 
         /// <summary>
-        /// <para>The maximum hourly price for pay-as-you-go instances or spot instances.</para>
+        /// <para>The maximum acceptable hourly price for pay-as-you-go or spot instances.</para>
         /// <remarks>
-        /// <para>This parameter takes effect only when <c>SpotStrategy</c> is set to <c>SpotWithPriceLimit</c>.</para>
+        /// <para>To set the maximum hourly price for a spot instance, set SpotStrategy to SpotWithPriceLimit.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -112,9 +105,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public float? MaxPrice { get; set; }
 
         /// <summary>
-        /// <para>The memory size of the instance type. Unit: GiB.</para>
+        /// <para>The memory size of the ECS instance. Unit: GiB.</para>
         /// <remarks>
-        /// <para>If you specify both <c>Cores</c> and <c>Memory</c>, the system returns all instance types that match the values of the parameters.</para>
+        /// <para>If you specify both the Cores and Memory parameters, the system matches all instance types that meet the specified vCPU and memory requirements.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -125,12 +118,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public float? Memory { get; set; }
 
         /// <summary>
-        /// <para>The network type of ECS instances. Valid values:</para>
+        /// <para>The network type of the ECS instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>classic</para>
-        /// </description></item>
-        /// <item><description><para>vpc</para>
-        /// </description></item>
+        /// <item><description>vpc: virtual private cloud (VPC).</description></item>
+        /// <item><description>classic: classic network. The classic network is no longer available. For more information, see <a href="https://help.aliyun.com/document_detail/2833134.html">Retirement notice</a>.</description></item>
         /// </list>
         /// <para>Default value: vpc.</para>
         /// <para>This parameter is required.</para>
@@ -151,14 +142,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The policy for recommending instance types. Valid values:</para>
+        /// <para>The priority recommendation strategy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>InventoryFirst: recommends instance types in descending order of resource availability.</para>
-        /// </description></item>
-        /// <item><description><para>PriceFirst: recommends the most cost-effective instance types. Recommended instance types appear based on the hourly prices of vCPUs in ascending order.</para>
-        /// </description></item>
-        /// <item><description><para>NewProductFirst: recommends the latest instance types first.</para>
-        /// </description></item>
+        /// <item><description>InventoryFirst: inventory first.</description></item>
+        /// <item><description>PriceFirst: price first. Instance types are sorted by the hourly vCPU unit price in ascending order.</description></item>
+        /// <item><description>NewProductFirst: newest product first.</description></item>
         /// </list>
         /// <para>Default value: InventoryFirst.</para>
         /// 
@@ -170,7 +158,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PriorityStrategy { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -189,12 +177,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies the scenarios in which instance types are recommended. Valid values:</para>
+        /// <para>The scenario in which instance types are recommended. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>UPGRADE: instance type upgrade or downgrade</para>
-        /// </description></item>
-        /// <item><description><para>CREATE: instance creation</para>
-        /// </description></item>
+        /// <item><description>UPGRADE: upgrade or downgrade an instance type.</description></item>
+        /// <item><description>CREATE: create an instance.</description></item>
         /// </list>
         /// <para>Default value: CREATE.</para>
         /// 
@@ -206,17 +192,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Scene { get; set; }
 
         /// <summary>
-        /// <para>The bidding policy of the spot instance. Valid values:</para>
+        /// <para>The bidding policy for the spot instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>NoSpot: The instance is created as a pay-as-you-go instance.</para>
-        /// </description></item>
-        /// <item><description><para>SpotWithPriceLimit: The instance is a spot instance that has a user-defined maximum hourly price.</para>
-        /// </description></item>
-        /// <item><description><para>SpotAsPriceGo: The instance is a spot instance for which the market price at the time of purchase is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</para>
-        /// </description></item>
+        /// <item><description>NoSpot: a pay-as-you-go instance.</description></item>
+        /// <item><description>SpotWithPriceLimit: a spot instance with a maximum hourly price.</description></item>
+        /// <item><description>SpotAsPriceGo: a spot instance for which the system automatically bids at up to the pay-as-you-go price.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you specify <c>SpotStrategy</c>, you must set <c>InstanceChargeType</c> to <c>PostPaid</c>.</para>
+        /// <para>When you use SpotStrategy, set InstanceChargeType to PostPaid.</para>
         /// </remarks>
         /// <para>Default value: NoSpot.</para>
         /// 
@@ -230,17 +213,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The category of the system disk. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>cloud_efficiency: ultra disk</para>
-        /// </description></item>
-        /// <item><description><para>cloud_ssd: standard SSD</para>
-        /// </description></item>
-        /// <item><description><para>cloud_essd: Enterprise SSD (ESSD)</para>
-        /// </description></item>
-        /// <item><description><para>cloud: basic disk</para>
-        /// </description></item>
+        /// <item><description>cloud_efficiency: ultra disk.</description></item>
+        /// <item><description>cloud_ssd: standard SSD.</description></item>
+        /// <item><description>cloud_essd: enterprise SSD (ESSD).</description></item>
+        /// <item><description>cloud: basic disk.</description></item>
         /// </list>
-        /// <para>For non-I/O optimized instances, the default value is cloud.</para>
-        /// <para>For I/O optimized instances, the default value is cloud_efficiency.</para>
+        /// <para>Default value for non-I/O optimized instances: cloud.</para>
+        /// <para>Default value for I/O optimized instances: cloud_efficiency.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cloud_ssd</para>
@@ -250,8 +229,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SystemDiskCategory { get; set; }
 
         /// <summary>
-        /// <para>The zone ID. You can call the <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operation to query the most recent zone list.</para>
-        /// <para>We recommend that you set ZoneMatchMode to Include, which is the default value. This way, the system recommends instance types that are available in the zone specified by ZoneId based on the priority policy. The system also recommends instance types that are available in other zones within the same region.</para>
+        /// <para>The zone ID. You can call <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> to query the most recent zone list.</para>
+        /// <para>Set ZoneMatchMode to Include (default value) to preferentially recommend instance types in the zone specified by ZoneId and also list instance types in other zones within the same region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-f</para>
@@ -263,12 +242,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to recommend only instance types in the zone specified by ZoneId. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Strict: recommends only instance types that are available in the zone specified by ZoneId.</para>
+        /// <item><description><para>Strict: recommends only instance types in the zone specified by ZoneId.</para>
         /// </description></item>
-        /// <item><description><para>Include: recommends instance types that are available in the zone specified by ZoneId and instance types that are available in other zones within the same region.</para>
+        /// <item><description><para>Include: recommends instance types in other zones within the same region.</para>
         /// </description></item>
         /// </list>
-        /// <para>If <c>ZoneId</c> is specified, the default value of this parameter is Strict, which indicates that only instance types in the zone specified by ZoneId are recommended.</para>
+        /// <para>When ZoneId is specified, the default value of this parameter is Strict, which indicates that only instance types in the zone specified by ZoneId are recommended.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Strict</para>

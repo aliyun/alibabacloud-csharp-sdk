@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeSpotPriceHistoryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instance type of the spot instance.</para>
+        /// <para>The currency unit of the price.</para>
+        /// <para>China site: CNY.</para>
+        /// <para>International site: USD.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CNY</para>
@@ -20,7 +22,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Currency { get; set; }
 
         /// <summary>
-        /// <para>The network type of the spot instance.</para>
+        /// <para>The start row of the next page. Set the <c>Offset</c> parameter to this value to query the next page of data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -30,7 +32,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? NextOffset { get; set; }
 
         /// <summary>
-        /// <para>The instance type of the spot instance.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>

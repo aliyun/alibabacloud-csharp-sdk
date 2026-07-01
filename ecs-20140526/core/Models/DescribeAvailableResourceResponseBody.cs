@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeAvailableResourceResponseBody : TeaModel {
-        /// <summary>
-        /// <para>Information about the availability zones.</para>
-        /// </summary>
         [NameInMap("AvailableZones")]
         [Validation(Required=false)]
         public DescribeAvailableResourceResponseBodyAvailableZones AvailableZones { get; set; }

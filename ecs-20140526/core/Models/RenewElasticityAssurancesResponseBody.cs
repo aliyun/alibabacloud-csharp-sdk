@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class RenewElasticityAssurancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the renewal order.</para>
+        /// <para>The renewal order ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>182372800****</para>

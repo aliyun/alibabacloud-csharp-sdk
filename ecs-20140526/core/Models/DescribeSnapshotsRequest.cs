@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<DescribeSnapshotsRequestFilter> Filter { get; set; }
         public class DescribeSnapshotsRequestFilter : TeaModel {
             /// <summary>
-            /// <para>The filter key for querying resources. The value must be <c>CreationStartTime</c>. If you specify <c>Filter.1.Key</c> and <c>Filter.1.Value</c>, you can query for resources that were created after the specified point in time.</para>
+            /// <para>The filter key used to query resources. Set the value to <c>CreationStartTime</c>. When you specify both <c>Filter.1.Key</c> and <c>Filter.1.Value</c>, you can query resources created after the specified point in time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CreationStartTime</para>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The filter value. If you specify this parameter, you must also specify <c>Filter.1.Key</c>. The value must be in the <c>yyyy-MM-ddTHH:mmZ</c> format and in UTC.</para>
+            /// <para>The filter value used to query resources. When you specify this parameter, you must also specify <c>Filter.1.Key</c>. Specify the time in the <c>yyyy-MM-ddTHH:mmZ</c> format in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-12-13T17:00Z</para>
@@ -38,21 +38,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The category of the snapshot. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>Standard</c>: A standard snapshot.</para>
-        /// </description></item>
-        /// <item><description><para><c>Flash</c>: A local snapshot. This value is deprecated because the local snapshot feature has been replaced by the instant access feature.</para>
-        /// <list type="bullet">
-        /// <item><description><para>If you have used local snapshots before December 14, 2020, you can continue to use this value.</para>
-        /// </description></item>
-        /// <item><description><para>If you have not used local snapshots before December 14, 2020, you cannot use this value.</para>
-        /// </description></item>
+        /// <item><description>Standard: standard snapshot.</description></item>
+        /// <item><description>Flash: local snapshot. This value is about to be deprecated. Local snapshots have been replaced by the snapshot instant access feature. The metric description is as follows:<list type="bullet">
+        /// <item><description>If you used local snapshots before December 14, 2020, you can use this parameter. The parameter is active.</description></item>
+        /// <item><description>If you did not use local snapshots before December 14, 2020, you cannot use this parameter.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><c>archive</c>: An archive snapshot.</para>
-        /// </description></item>
+        /// <item><description>archive: archive snapshot.</description></item>
         /// </list>
-        /// <para>&lt;props=&quot;china&quot;&gt;</para>
-        /// <para>For more information, see <a href="https://help.aliyun.com/noticelist/articleid/1060755542.html">December 14: Alibaba Cloud snapshot service upgrade and new billing items notice</a>.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;For more information, see <a href="https://help.aliyun.com/noticelist/articleid/1060755542.html">Chinese site notice on snapshot service upgrade and new billing items on December 14</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Standard</para>
@@ -62,7 +56,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Category { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud disk.</para>
+        /// <para>The ID of the disk.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d-bp67acfmxazb4p****</para>
@@ -72,12 +66,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DiskId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run.</para>
+        /// <para>Specifies whether to perform only a dry run, without performing the actual request.</para>
         /// <list type="bullet">
-        /// <item><description><para><c>true</c>: Performs a dry run but does not query resources. The system checks the request for potential issues, including missing required parameters, invalid parameter values, and insufficient permissions. If the request is invalid, an error is returned. If the request is valid, the <c>DryRunOperation</c> error code is returned.</para>
-        /// </description></item>
-        /// <item><description><para><c>false</c> (Default): Sends a normal request. If the request is valid, the system returns a 2xx HTTP status code and the query results.</para>
-        /// </description></item>
+        /// <item><description>true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized RAM users, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</description></item>
+        /// <item><description>false (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -88,7 +80,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return only encrypted snapshots. Default value: false.</para>
+        /// <para>Specifies whether to filter encrypted snapshots. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -98,7 +90,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? Encrypted { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance. When you specify this ID, the operation returns snapshots of cloud disks attached to the instance.</para>
+        /// <para>The instance ID. Specify this parameter to query snapshot information of disks attached to the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-bp67acfmxazb4p****</para>
@@ -108,7 +100,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the KMS key used to encrypt the snapshot.</para>
+        /// <para>The ID of the Key Management Service (KMS) key used by the data disk.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0e478b7a-4262-4802-b8cb-00d3fb40****</para>
@@ -118,7 +110,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string KMSKeyId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Maximum value: 100.</para>
+        /// <para>The maximum number of entries per page for paging. Maximum value: 100.</para>
         /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -129,7 +121,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token to start the next page of results. You can obtain this token from the response to a previous query.</para>
+        /// <para>The pagination token. Obtained from the response of the previous request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -148,7 +140,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is deprecated. We recommend that you use the <c>NextToken</c> and <c>MaxResults</c> parameters for paged queries.</para>
+        /// <para>This parameter is about to be deprecated. Use NextToken and MaxResults for paging instead.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -160,7 +152,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is deprecated. We recommend that you use the <c>NextToken</c> and <c>MaxResults</c> parameters for paged queries.</para>
+        /// <para>This parameter is about to be deprecated. Use NextToken and MaxResults for paging instead.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -171,7 +163,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to view the latest list of Alibaba Cloud regions.</para>
+        /// <para>The region ID of the disk. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -182,9 +174,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the snapshot belongs. When you filter by this parameter, the query can return a maximum of 1,000 snapshots.</para>
+        /// <para>The ID of the resource group. When you use this parameter to filter resources, the resource count cannot exceed 1000.</para>
         /// <remarks>
-        /// <para>You cannot filter resources that are in the default resource group.</para>
+        /// <para>Filtering by default resource group is not supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -203,7 +195,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>A JSON array that contains the IDs of up to 100 snapshots to query.</para>
+        /// <para>The IDs of snapshots. The value is a JSON array that consists of up to 100 snapshot IDs. Separate the IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;s-bp67acfmxazb4p****&quot;, &quot;s-bp67acfmxazb5p****&quot;, … &quot;s-bp67acfmxazb6p****&quot;]</para>
@@ -223,7 +215,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SnapshotLinkId { get; set; }
 
         /// <summary>
-        /// <para>The snapshot name.</para>
+        /// <para>The name of the snapshot.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testSnapshotName</para>
@@ -233,14 +225,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SnapshotName { get; set; }
 
         /// <summary>
-        /// <para>The snapshot creation type. Valid values:</para>
+        /// <para>The type of automatic creation. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><para><c>auto</c>: An automatically created snapshot.</para>
-        /// </description></item>
-        /// <item><description><para><c>user</c>: A manually created snapshot.</para>
-        /// </description></item>
-        /// <item><description><para><c>all</c> (Default): All snapshot creation types.</para>
-        /// </description></item>
+        /// <item><description>auto: automatic snapshot.</description></item>
+        /// <item><description>user: manual snapshot.</description></item>
+        /// <item><description>all (default): All automatic creation types.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -251,12 +240,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SnapshotType { get; set; }
 
         /// <summary>
-        /// <para>The type of the source disk of the snapshot. Valid values:</para>
+        /// <para>The type of the source disk. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><para><c>system</c>: The snapshot was created from a system disk.</para>
-        /// </description></item>
-        /// <item><description><para><c>data</c>: The snapshot was created from a data disk.</para>
-        /// </description></item>
+        /// <item><description>system: system disk.</description></item>
+        /// <item><description>data: data disk.</description></item>
         /// </list>
         /// <remarks>
         /// <para>The value is case-insensitive.</para>
@@ -270,16 +257,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SourceDiskType { get; set; }
 
         /// <summary>
-        /// <para>The status of the snapshot. Valid values:</para>
+        /// <para>The status of the snapshot. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><para><c>progressing</c>: The snapshot is being created.</para>
-        /// </description></item>
-        /// <item><description><para><c>accomplished</c>: The snapshot is complete.</para>
-        /// </description></item>
-        /// <item><description><para><c>failed</c>: Snapshot creation failed.</para>
-        /// </description></item>
-        /// <item><description><para><c>all</c> (Default): All snapshot statuses.</para>
-        /// </description></item>
+        /// <item><description>progressing: The snapshot is being created.</description></item>
+        /// <item><description>accomplished: The snapshot is created.</description></item>
+        /// <item><description>failed: The snapshot failed to be created.</description></item>
+        /// <item><description>all (default): All snapshot statuses.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -290,17 +273,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The tags by which to filter snapshots.</para>
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeSnapshotsRequestTag> Tag { get; set; }
         public class DescribeSnapshotsRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key.</para>
-            /// <remarks>
-            /// <para>For better compatibility, use the <c>Tag.N.Key</c> parameter.</para>
-            /// </remarks>
+            /// <para>The tag key of the snapshot. Valid values of N: 1 to 20.</para>
+            /// <para>If you use a single tag to filter resources, the resource count with the specified tag cannot exceed 1000. If you use multiple tags to filter resources, the resource count with all specified tags attached cannot exceed 1000. If the resource count exceeds 1000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -310,7 +291,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value.</para>
+            /// <para>The tag value of the snapshot. Valid values of N: 1 to 20.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>
@@ -322,16 +303,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The usage of the snapshot. Valid values:</para>
+        /// <para>Specifies whether the snapshot has been used to create images or disks. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><para><c>image</c>: The snapshot is used to create a custom image.</para>
-        /// </description></item>
-        /// <item><description><para><c>disk</c>: The snapshot is used to create a cloud disk.</para>
-        /// </description></item>
-        /// <item><description><para><c>image_disk</c>: The snapshot is used to create a custom image and a data disk.</para>
-        /// </description></item>
-        /// <item><description><para><c>none</c>: The snapshot is not used.</para>
-        /// </description></item>
+        /// <item><description>image: The snapshot has been used to create custom images.</description></item>
+        /// <item><description>disk: The snapshot has been used to create disks.</description></item>
+        /// <item><description>image_disk: The snapshot has been used to create both data disks and custom images.</description></item>
+        /// <item><description>none: The snapshot has not been used.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -20,12 +20,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The access control policy of the security group. Valid values:</para>
+        /// <para>The internal network connectivity policy of the security group. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><para>Accept: All instances in the security group can communicate with each other.</para>
-        /// </description></item>
-        /// <item><description><para>Drop: All instances in the security group are isolated from each other.</para>
-        /// </description></item>
+        /// <item><description>Accept: service interconnection.</description></item>
+        /// <item><description>Drop: internal isolation.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,7 +34,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InnerAccessPolicy { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. If the return value of this parameter is empty when you specify <c>MaxResults</c> and <c>NextToken</c> for a paged query, no more results are to be returned.</para>
+        /// <para>The paging token returned in this call. When you use <c>MaxResults</c> and <c>NextToken</c> for paging query, if this value is empty, no more data is available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2****</para>
@@ -162,7 +160,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -172,7 +170,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
@@ -182,7 +180,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the security group.</para>
+        /// <para>The security group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sg-bp1gxw6bznjjvhu3****</para>
@@ -212,7 +210,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The ID of the VPC. If a VPC ID is returned, the network type of the security group is VPC. If no VPC ID is returned, the network type of the security group is classic network.</para>
+        /// <para>The VPC ID. If a VPC ID is returned, the network type of the security group is VPC. Otherwise, the security group belongs to the classic network.</para>
+        /// <remarks>
+        /// <para>The classic network feature has been offline. For details, see <a href="https://help.aliyun.com/document_detail/2833134.html">Retirement announcement</a>.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp1opxu1zkhn00gzv****</para>

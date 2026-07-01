@@ -14,9 +14,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public RenewElasticityAssurancesRequestPrivatePoolOptions PrivatePoolOptions { get; set; }
         public class RenewElasticityAssurancesRequestPrivatePoolOptions : TeaModel {
             /// <summary>
-            /// <para>The IDs of elasticity assurances.</para>
-            /// <para><b>Limits</b>: You can renew up to 20 elasticity assurances at a time.</para>
-            /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2679748.html">DescribeElasticityAssurances</a> operation to query the elasticity assurances that you purchased.</para>
+            /// <para>The list of elasticity assurance service IDs.</para>
+            /// <para><b>Limit</b>: You can renew up to 20 elasticity assurance services at a time.</para>
+            /// <para>You can call <a href="https://help.aliyun.com/document_detail/2679748.html">DescribeElasticityAssurances</a> to query purchased elasticity assurance services.</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
@@ -27,10 +27,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// </description></item>
+        /// <item><description>true: Automatic payment is enabled.</description></item>
+        /// <item><description>false: Automatic payment is not enabled.</description></item>
         /// </list>
         /// <para>Default value: true.</para>
         /// 
@@ -42,11 +40,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable auto-renewal for the elasticity assurance. Valid values:</para>
+        /// <para>Specifies whether to enable auto-renewal. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true</para>
+        /// <item><description><para>true: Auto-renewal is enabled.</para>
         /// </description></item>
-        /// <item><description><para>false</para>
+        /// <item><description><para>false: Auto-renewal is not enabled.</para>
         /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
@@ -59,15 +57,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The auto-renewal period. Unit: month. Valid values: 1, 2, 3, 6, 12, 24, and 36.</para>
+        /// <para>The auto-renewal period. Unit: months. Valid values: 1, 2, 3, 6, 12, 24, and 36.</para>
         /// <list type="bullet">
-        /// <item><description><para>If you set <c>PeriodUnit</c> to Month, the default value is 1.</para>
+        /// <item><description><para>When <c>PeriodUnit=Month</c>, the default value is 1.</para>
         /// </description></item>
-        /// <item><description><para>If you set <c>PeriodUnit</c> to Year, the default value is 12.</para>
+        /// <item><description><para>When <c>PeriodUnit=Year</c>, the default value is 12.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is required if you set <c>AutoRenew</c> to <c>true</c>.</para>
+        /// <para>This parameter is required when <c>AutoRenew</c> is set to <c>true</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -78,8 +76,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? AutoRenewPeriod { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</para>
-        /// <para>The <c>token</c> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests.</para>
+        /// <para><c>ClientToken</c> supports only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -97,11 +95,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The renewal duration. The unit of the renewal duration is determined by the <c>PeriodUnit</c> value. Valid values:</para>
+        /// <para>The renewal period. The unit of the renewal period is determined by the <c>PeriodUnit</c> parameter. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Valid values if you set <c>PeriodUnit</c> to <c>Month</c>: 1, 2, 3, 4, 5, 6, 7, 8, and 9.</para>
+        /// <item><description><para>When <c>PeriodUnit</c> is set to <c>Weekly</c>: 1, 2, and 3.</para>
         /// </description></item>
-        /// <item><description><para>Valid values if you set <c>PeriodUnit</c> to <c>Year</c>: 1, 2, and 3.</para>
+        /// <item><description><para>When <c>PeriodUnit</c> is set to <c>Month</c>: 1, 2, 3, 4, 5, 6, 7, 8, and 9.</para>
+        /// </description></item>
+        /// <item><description><para>When <c>PeriodUnit</c> is set to <c>Year</c>: 1, 2, 3, 4, and 5.</para>
         /// </description></item>
         /// </list>
         /// <para>Default value: 1.</para>
@@ -114,11 +114,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The unit of the renewal duration. Valid values:</para>
+        /// <para>The unit of the renewal period. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Month</para>
+        /// <item><description><para>Weekly: week</para>
         /// </description></item>
-        /// <item><description><para>Year</para>
+        /// <item><description><para>Month: month</para>
+        /// </description></item>
+        /// <item><description><para>Year: year</para>
         /// </description></item>
         /// </list>
         /// <para>Default value: Year.</para>
@@ -131,8 +133,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the elasticity assurance.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2680071.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the elasticity assurance service.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/2680071.html">DescribeRegions</a> to query the most recent region list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeSpotPriceHistoryRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601 standard</a> in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time must be in UTC.</para>
-        /// <para>This parameter is empty by default. If this parameter is empty, the current time is used.</para>
+        /// <para>The end of the time range to query the historical prices of spot instances. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time must be in UTC.</para>
+        /// <para>Default value: null, which indicates the current time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2017-08-22T08:45:08Z</para>
@@ -21,8 +21,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time must be in UTC. The specified time can be up to 30 days earlier than the specified EndTime value.</para>
-        /// <para>This parameter is empty by default. If this parameter is empty, the time that is 3 hours earlier than the specified EndTime value is used.</para>
+        /// <para>The instance type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -33,15 +32,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the instance is I/O optimized. Valid values:</para>
+        /// <para>Specifies whether the spot instance is I/O optimized. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>optimized: The instance is I/O optimized.</para>
+        /// <item><description><para>optimized: The spot instance is an I/O optimization instance.</para>
         /// </description></item>
-        /// <item><description><para>none: The instance is not I/O optimized.</para>
+        /// <item><description><para>none: The spot instance is not an I/O optimization instance.</para>
         /// </description></item>
         /// </list>
-        /// <para>For instances of generation I instance families, the default value is none.</para>
-        /// <para>For instances of other instance families, the default value is optimized.</para>
+        /// <para>Default value for Generation I instance families: none.</para>
+        /// <para>Default value for other instance families: optimized.</para>
         /// 
         /// <b>Example:</b>
         /// <para>optimized</para>
@@ -53,10 +52,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The network type of the spot instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>classic: classic network</para>
-        /// </description></item>
-        /// <item><description><para>vpc: Virtual Private Cloud (VPC)</para>
-        /// </description></item>
+        /// <item><description>vpc: virtual private cloud (VPC).</description></item>
+        /// <item><description>classic: classic network. This feature has been retired. For more information, see <a href="https://help.aliyun.com/document_detail/2833134.html">Retirement notice</a>.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -70,10 +67,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The type of the operating system platform. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>linux</para>
-        /// </description></item>
-        /// <item><description><para>windows</para>
-        /// </description></item>
+        /// <item><description>linux.</description></item>
+        /// <item><description>windows.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -84,8 +79,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string OSType { get; set; }
 
         /// <summary>
-        /// <para>The line from which the query starts.</para>
-        /// <para>Default value: 0</para>
+        /// <para>The row from which the query starts.</para>
+        /// <para>Default value: 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -103,7 +98,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The zone ID of the spot instance.</para>
+        /// <para>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -124,14 +119,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The protection period of the spot instance. Unit: hours. Default value: 1. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>1: After a spot instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</para>
-        /// </description></item>
-        /// <item><description><para>0: After a spot instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</para>
-        /// </description></item>
+        /// <item><description>1: After a spot instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After 1 hour, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain automatic release the instance.</description></item>
+        /// <item><description>0: After a spot instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain automatic release the instance.</description></item>
         /// </list>
-        /// <para>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. Spot instances are billed by second. We recommend that you specify a protection period based on your business requirements.</para>
+        /// <para>Alibaba Cloud sends an ECS system event notification 5 minutes before the instance is released. Spot instances are billed by second. Specify an appropriate protection period based on the expected task execution duration.</para>
         /// <remarks>
-        /// <para>This parameter takes effect only if you set SpotStrategy to SpotWithPriceLimit or SpotAsPriceGo.</para>
+        /// <para>This parameter takes effect only when SpotStrategy is set to SpotWithPriceLimit or SpotAsPriceGo.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -142,8 +135,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? SpotDuration { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. The value of this parameter and the value of EndTime can be up to 30 days apart. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601 standard</a> in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time must be in UTC.</para>
-        /// <para>This parameter is left empty by default. If this parameter is empty, the time that is 3 hours earlier than the value of EndTime is used.</para>
+        /// <para>The beginning of the time range to query the historical prices of spot instances. The maximum time range between the start time and end time is 30 days. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time must be in UTC.</para>
+        /// <para>Default value: null, which indicates 3 hours before the end time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2017-08-22T08:45:08Z</para>
@@ -153,7 +146,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The spot price (market price) of the spot instance.</para>
+        /// <para>The zone ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-g</para>

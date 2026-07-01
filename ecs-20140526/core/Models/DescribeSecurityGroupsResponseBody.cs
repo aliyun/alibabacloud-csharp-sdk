@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeSecurityGroupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The query token returned in this call. When you use the MaxResults and NextToken method for paged queries and this return value is empty, no more data is available.</para>
+        /// <para>The pagination token returned in this call. If this value is empty when you use MaxResults and NextToken for paging, no more data is available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e71d8a535bd9cc11</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The current page number.</para>
         /// <remarks>
-        /// <para>This parameter is about to be deprecated. We recommend that you use NextToken and MaxResults for paged queries.</para>
+        /// <para>This parameter will be offline. Use NextToken and MaxResults for paging.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The number of entries per page.</para>
         /// <remarks>
-        /// <para>This parameter is about to be deprecated. We recommend that you use NextToken and MaxResults for paged queries.</para>
+        /// <para>This parameter will be offline. Use NextToken and MaxResults for paging.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The total number of security groups. This parameter value is not returned when you use the <c>MaxResults</c> and <c>NextToken</c> parameters for queries.</para>
+        /// <para>The total number of security groups. This parameter is not returned when you use <c>MaxResults</c> and <c>NextToken</c> for parameter query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

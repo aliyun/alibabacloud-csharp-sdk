@@ -14,15 +14,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public ModifyInstanceSpecRequestSystemDisk SystemDisk { get; set; }
         public class ModifyInstanceSpecRequestSystemDisk : TeaModel {
             /// <summary>
-            /// <para>更换系统盘类型。取值范围：</para>
+            /// <para>The new system disk category. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>cloud_efficiency：高效云盘</para>
+            /// <item><description><para>cloud_efficiency: ultra disk</para>
             /// </description></item>
-            /// <item><description><para>cloud_ssd：SSD云盘</para>
+            /// <item><description><para>cloud_ssd: standard SSD</para>
             /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para>该参数只有在从<a href="https://help.aliyun.com/document_detail/55263.html">已停售的实例规格</a>升级到<a href="https://help.aliyun.com/document_detail/25378.html">正常售卖的实例规格族</a>，并将非I/O优化实例规格升级为I/O优化实例规格时有效。</para>
+            /// <para>This parameter is valid only when you upgrade from a <a href="https://help.aliyun.com/document_detail/55263.html">retired instance type</a> to an <a href="https://help.aliyun.com/document_detail/25378.html">instance family that is available for purchase</a> and change a non-I/O optimized instance to an I/O optimized instance.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public class ModifyInstanceSpecRequestTemporary : TeaModel {
             /// <summary>
             /// <remarks>
-            /// <para>该参数正在邀测中，暂未开放使用。</para>
+            /// <para>This parameter is in invitational preview and is not publicly available.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <remarks>
-            /// <para>该参数正在邀测中，暂未开放使用。</para>
+            /// <para>This parameter is in invitational preview and is not publicly available.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <remarks>
-            /// <para>该参数正在邀测中，暂未开放使用。</para>
+            /// <para>This parameter is in invitational preview and is not publicly available.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -77,13 +77,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to support cross-cluster instance type upgrade. Valid values:</para>
+        /// <para>Specifies whether cross-cluster upgrade of instance types is supported.</para>
         /// <list type="bullet">
-        /// <item><description>true: Cross-cluster instance type upgrade is supported.</description></item>
-        /// <item><description>false: Cross-cluster instance type upgrade is not supported.</description></item>
+        /// <item><description>true: supported.</description></item>
+        /// <item><description>false: not supported.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
-        /// <para>If you set the parameter <c>AllowMigrateAcrossZone</c> to true and upgrade the Elastic Compute Service instance based on the response, take note of the following items:</para>
+        /// <para>If you set the <c>AllowMigrateAcrossZone</c> parameter to true and upgrade the Elastic Compute Service instance based on the response, note the following:</para>
         /// <para>Classic network type instances:</para>
         /// <list type="bullet">
         /// <item><description><para>For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when a non-I/O optimized instance is changed to an I/O optimized instance, the private IP address, disk device names, and software authorization codes of the instance change. For Linux instances, basic disks (<c>cloud</c>) are identified as <b>xvda</b> or <b>xvdb</b>, and ultra disks (<c>cloud_efficiency</c>) and standard SSDs (<c>cloud_ssd</c>) are identified as <b>vda</b> or <b>vdb</b>.</para>
@@ -175,8 +175,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to perform only a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: performs only a dry run. The instance type and public bandwidth are not changed. The system checks whether the required parameters are specified, whether the request format is valid, whether business restrictions are met, and whether ECS resources are sufficient. If the check fails, the corresponding error is returned. If the check succeeds, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description>false (default): performs a dry run and sends the request. If the check succeeds, the instance type and public bandwidth are changed.</description></item>
+        /// <item><description>true: performs only a dry run. The instance type and public bandwidth are not modified. The system checks whether the required parameters are specified, whether the request format is valid, whether business restrictions are met, and whether ECS resources are sufficient. If the check fails, the corresponding error is returned. If the check succeeds, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description>false (default): performs a dry run and sends the request. If the check succeeds, the instance type and public bandwidth are modified.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The target instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance family</a>. You can also call <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> to query the most recent instance type list.</para>
+        /// <para>The target instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>. You can also invoke <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> to query the most recent instance type list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs.g6.large</para>
@@ -214,7 +214,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description>If the purchased outbound public bandwidth is greater than 10 Mbit/s: 1 to the value of <c>InternetMaxBandwidthOut</c>. Default value: the value of <c>InternetMaxBandwidthOut</c>.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>In <b>pay-by-traffic</b> mode, the peak inbound and outbound bandwidths are used as upper limits of bandwidths instead of guaranteed performance. When resource contention occurs, the peak bandwidths may be limited. If your business requires guaranteed bandwidth, use the <b>pay-by-bandwidth</b> mode.</para>
+        /// <para>In <b>pay-by-traffic</b> mode, the peak inbound and outbound bandwidths are upper limits and are not guaranteed. When resource contention occurs, the peak bandwidths may be throttled. If your workloads require guaranteed bandwidth, use the <b>pay-by-bandwidth</b> mode.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -227,7 +227,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The maximum outbound public bandwidth. Unit: Mbit/s. Valid values: 0 to 100.</para>
         /// <remarks>
-        /// <para>In <b>pay-by-traffic</b> mode, the peak inbound and outbound bandwidths are used as upper limits of bandwidths instead of guaranteed performance. When resource contention occurs, the peak bandwidths may be limited. If your business requires guaranteed bandwidth, use the <b>pay-by-bandwidth</b> mode.</para>
+        /// <para>In <b>pay-by-traffic</b> mode, the peak inbound and outbound bandwidths are upper limits and are not guaranteed. When resource contention occurs, the peak bandwidths may be throttled. If your workloads require guaranteed bandwidth, use the <b>pay-by-bandwidth</b> mode.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

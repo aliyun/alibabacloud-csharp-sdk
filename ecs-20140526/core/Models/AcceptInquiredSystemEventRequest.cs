@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
     public class AcceptInquiredSystemEventRequest : TeaModel {
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is in invitational preview and is not supported for use.</para>
+        /// <para>This parameter is in invitational preview and is not publicly available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Choice { get; set; }
 
         /// <summary>
-        /// <para>The ID of the system event.</para>
+        /// <para>The system event ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID where the system event is located. You can invoke <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to view the latest list of Alibaba Cloud regions.</para>
+        /// <para>The region ID of the system event. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

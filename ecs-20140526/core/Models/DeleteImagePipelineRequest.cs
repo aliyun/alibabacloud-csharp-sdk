@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DeleteImagePipelineRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the image template.</para>
+        /// <para>The image template ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

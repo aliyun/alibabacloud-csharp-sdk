@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class UnassignIpv6AddressesRequest : TeaModel {
         /// <summary>
-        /// <para>One or more IPv6 addresses to delete. Valid values of N: 1 to 10.</para>
+        /// <para>One or more IPv6 addresses to unassign. Valid values of N: 1 to 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2001:db8:1234:1a00::***</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> Ipv6Prefix { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ENI.</para>
+        /// <para>The ID of the network interface controller (NIC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the ENI. You can invoke <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>The region ID of the network interface controller (NIC). You can invoke <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

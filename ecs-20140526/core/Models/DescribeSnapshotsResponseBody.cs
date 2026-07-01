@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeSnapshotsResponseBody : TeaModel {
         /// <summary>
-        /// <para>A pagination token used to retrieve the next page of results.</para>
+        /// <para>The pagination token for the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is deprecated. Use the <c>NextToken</c> and <c>MaxResults</c> parameters for pagination instead.</para>
+        /// <para>This parameter is about to be deprecated. Use NextToken and MaxResults for paging instead.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is deprecated. Use the <c>NextToken</c> and <c>MaxResults</c> parameters for pagination instead.</para>
+        /// <para>This parameter is about to be deprecated. Use NextToken and MaxResults for paging instead.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -53,9 +53,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>Details about the snapshots.</para>
-        /// </summary>
         [NameInMap("Snapshots")]
         [Validation(Required=false)]
         public DescribeSnapshotsResponseBodySnapshots Snapshots { get; set; }
@@ -219,7 +216,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The total number of snapshots.</para>
         /// <remarks>
-        /// <para>The <c>TotalCount</c> value is invalid if you use the <c>MaxResults</c> and <c>NextToken</c> parameters for pagination.</para>
+        /// <para>When you use <c>MaxResults</c> and <c>NextToken</c> parameters for paging, the returned <c>TotalCount</c> parameter value is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

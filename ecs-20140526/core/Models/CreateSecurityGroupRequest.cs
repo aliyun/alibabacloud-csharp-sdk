@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateSecurityGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. <b>The token can contain only ASCII characters and cannot exceed 64 characters in length.</b> For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The <b>ClientToken</b> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -20,8 +20,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The description of the security group. The description must be 2 to 256 characters in length. It cannot start with <c>http://</c> or <c>https://</c>.</para>
-        /// <para>By default, this parameter is left empty.</para>
+        /// <para>The description of the security group. The description must be 2 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>Default value: empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testDescription</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the security group. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the security group. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The name of the security group. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <c>http://</c> or <c>https://</c>. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</para>
+        /// <para>The name of the security group. The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It cannot start with <c>http://</c> or <c>https://</c>. The name can contain characters that are categorized as letter in Unicode, including Chinese characters and English letters, and digits. The name can also contain colons (:), underscores (_), periods (.), or hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>testSecurityGroupName</para>
@@ -80,10 +80,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The type of the security group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>normal: basic security group</para>
-        /// </description></item>
-        /// <item><description><para>enterprise: advanced security group For more information, see <a href="https://help.aliyun.com/document_detail/120621.html">Advanced security groups</a>.</para>
-        /// </description></item>
+        /// <item><description>normal: basic security group.</description></item>
+        /// <item><description>enterprise: advanced security group. For more information, see <a href="https://help.aliyun.com/document_detail/120621.html">Overview of advanced security groups</a>.</description></item>
         /// </list>
         /// <para>Default value: normal.</para>
         /// 
@@ -105,15 +103,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? ServiceManaged { get; set; }
 
         /// <summary>
-        /// <para>The tags to add to the security group. You can add up to 20 tags.</para>
+        /// <para>The tags to bind to the security group. Array length: 0 to 20.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateSecurityGroupRequestTag> Tag { get; set; }
         public class CreateSecurityGroupRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the tag to add to the security group.</para>
-            /// <para>The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <c>acs:</c> or <c>aliyun</c>. The tag key cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key of the security group.</para>
+            /// <para>The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -123,8 +121,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag to add to the security group.</para>
-            /// <para>The tag value can be an empty string. The tag key can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value of the security group.</para>
+            /// <para>The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>
@@ -136,10 +134,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The ID of the VPC in which you want to create the security group.</para>
-        /// <remarks>
-        /// <para>The VpcId parameter is required only if you want to create security groups of the VPC type. In regions that support the classic network, you can create security groups of the classic network type without the need to specify the VpcId parameter.</para>
-        /// </remarks>
+        /// <para>The ID of the VPC to which the security group belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp1opxu1zkhn00gzv****</para>

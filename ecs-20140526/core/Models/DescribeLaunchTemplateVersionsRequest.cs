@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? DefaultVersion { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query the configurations of the launch template. Valid values:</para>
+        /// <para>Specifies whether to query detailed template configuration information. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: queries the basic information and other details of the launch template. The details include the image ID and system disk size.</para>
+        /// <item><description><para>true: Queries detailed template configuration information. In addition to basic template information, detailed configuration such as image ID and system disk size is returned.</para>
         /// </description></item>
-        /// <item><description><para>false: queries only the basic information of the launch template. The basic information includes the template ID, template name, and default version.</para>
+        /// <item><description><para>false: Queries only basic template information, such as template ID, template name, and default version.</para>
         /// </description></item>
         /// </list>
         /// <para>Default value: true.</para>
@@ -37,8 +37,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? DetailFlag { get; set; }
 
         /// <summary>
-        /// <para>The ID of the launch template.</para>
-        /// <para>You must set <c>LaunchTemplateId</c> or <c>LaunchTemplateName</c> to specify a launch template.</para>
+        /// <para>The launch template ID.</para>
+        /// <para>You must specify <c>LaunchTemplateId</c> or <c>LaunchTemplateName</c> to determine the template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>lt-bp168lnahrdwl39p****</para>
@@ -48,8 +48,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string LaunchTemplateId { get; set; }
 
         /// <summary>
-        /// <para>The name of the launch template.</para>
-        /// <para>You must set <c>LaunchTemplateId</c> or <c>LaunchTemplateName</c> to specify a launch template.</para>
+        /// <para>The launch template name.</para>
+        /// <para>You must specify <c>LaunchTemplateId</c> or <c>LaunchTemplateName</c> to determine the template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testLaunchTemplateName</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string LaunchTemplateName { get; set; }
 
         /// <summary>
-        /// <para>The versions of the launch template.</para>
+        /// <para>One or more launch template version numbers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<long?> LaunchTemplateVersion { get; set; }
 
         /// <summary>
-        /// <para>The maximum version number in the version range to query. This parameter is used together with <c>MinVersion</c> to specify a version range to query.</para>
+        /// <para>The maximum version number used to filter query results. Used together with <c>MinVersion</c> to query version information within the range between the minimum and maximum version numbers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? MaxVersion { get; set; }
 
         /// <summary>
-        /// <para>The minimum version number in the version range to query. This parameter is used together with <c>MaxVersion</c> to specify a version range to query.</para>
+        /// <para>The minimum version number used to filter query results. Used together with <c>MaxVersion</c> to query version information within the range between the minimum and maximum version numbers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -97,8 +97,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
-        /// <para>Pages start from page 1.</para>
+        /// <para>The page number of the launch template list.</para>
+        /// <para>Minimum value: 1. </para>
         /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries per page in a paged query. Settings this parameter for paging. </para>
         /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The region ID of the launch template.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

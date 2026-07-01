@@ -29,8 +29,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
-        /// <para>Pages start from page 1.</para>
+        /// <para>The page number for the paging query.</para>
+        /// <para>Minimum value: 1.</para>
         /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -41,8 +41,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
-        /// <para>Valid values: 1 to 100.</para>
+        /// <para>The number of entries per page in the paging query. You can use this parameter to configure paging settings.</para>
+        /// <para>Maximum value: 100.</para>
         /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the auto provisioning group. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The ID of the region where the auto provisioning group resides. You can invoke <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

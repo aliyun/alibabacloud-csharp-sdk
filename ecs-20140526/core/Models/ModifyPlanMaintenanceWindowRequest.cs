@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The resource type for the O&amp;M window.</para>
+            /// <para>The resource type for the O&amp;M window configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Tag</para>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string PeriodUnit { get; set; }
 
             /// <summary>
-            /// <para>The time ranges of the recurring O&amp;M window cycle (UTC time zone).</para>
+            /// <para>The time ranges of the O&amp;M window recurring cycle (UTC time zone).</para>
             /// </summary>
             [NameInMap("RangeList")]
             [Validation(Required=false)]
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <list type="bullet">
                 /// <item><description>If PeriodUnit is set to Weekly, the format is Monday,22:00. Monday can be replaced with Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday.</description></item>
                 /// <item><description>If PeriodUnit is set to Daily, the format is 22:00.</description></item>
-                /// <item><description>The comma delimiter separates two parts. The first part represents the hour, with valid values from 00 to 23. The second part represents the minutes, which currently supports only 00.</description></item>
+                /// <item><description>The comma delimiter separates two parts. The first part represents the hour, with valid values from 00 to 23. The second part represents the minute, which currently supports only 00.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <list type="bullet">
                 /// <item><description>If PeriodUnit is set to Weekly, the format is Monday,22:00. Monday can be replaced with Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday.</description></item>
                 /// <item><description>If PeriodUnit is set to Daily, the format is 22:00.</description></item>
-                /// <item><description>The comma delimiter separates two parts. The first part represents the hour, with valid values from 00 to 23. The second part represents the minutes, which currently supports only 00.</description></item>
+                /// <item><description>The comma delimiter separates two parts. The first part represents the hour, with valid values from 00 to 23. The second part represents the minute, which currently supports only 00.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
