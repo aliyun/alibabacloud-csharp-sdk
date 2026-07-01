@@ -6608,6 +6608,166 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries all change records of credits.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCreditDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCreditDetailResponse
+        /// </returns>
+        public DescribeCreditDetailResponse DescribeCreditDetailWithOptions(DescribeCreditDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
+            {
+                query["InstanceIds"] = request.InstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PackageIds))
+            {
+                query["PackageIds"] = request.PackageIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeCreditDetail",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeCreditDetailResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all change records of credits.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCreditDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCreditDetailResponse
+        /// </returns>
+        public async Task<DescribeCreditDetailResponse> DescribeCreditDetailWithOptionsAsync(DescribeCreditDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
+            {
+                query["InstanceIds"] = request.InstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PackageIds))
+            {
+                query["PackageIds"] = request.PackageIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeCreditDetail",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeCreditDetailResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all change records of credits.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCreditDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCreditDetailResponse
+        /// </returns>
+        public DescribeCreditDetailResponse DescribeCreditDetail(DescribeCreditDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeCreditDetailWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all change records of credits.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCreditDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCreditDetailResponse
+        /// </returns>
+        public async Task<DescribeCreditDetailResponse> DescribeCreditDetailAsync(DescribeCreditDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeCreditDetailWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Retrieves the details of one or more credit packages.</para>
         /// </summary>
         /// 
