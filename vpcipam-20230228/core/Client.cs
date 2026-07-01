@@ -18,7 +18,43 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"us-west-1", "vpcipam.us-west-1.aliyuncs.com"},
+                {"us-east-1", "vpcipam.us-east-1.aliyuncs.com"},
+                {"me-east-1", "vpcipam.me-east-1.aliyuncs.com"},
+                {"me-central-1", "vpcipam.me-central-1.aliyuncs.com"},
+                {"eu-west-1", "vpcipam.eu-west-1.aliyuncs.com"},
+                {"eu-central-1", "vpcipam.eu-central-1.aliyuncs.com"},
+                {"cn-zhangjiakou", "vpcipam.cn-zhangjiakou.aliyuncs.com"},
+                {"cn-wulanchabu", "vpcipam.cn-wulanchabu.aliyuncs.com"},
+                {"cn-wuhan-lr", "vpcipam.cn-wuhan-lr.aliyuncs.com"},
+                {"cn-shenzhen-finance-1", "vpcipam.cn-shenzhen-finance-1.aliyuncs.com"},
+                {"cn-shenzhen", "vpcipam.cn-shenzhen.aliyuncs.com"},
+                {"cn-shanghai-finance-1", "vpcipam.cn-shanghai-finance-1.aliyuncs.com"},
+                {"cn-shanghai", "vpcipam.cn-shanghai.aliyuncs.com"},
+                {"cn-qingdao", "vpcipam.cn-qingdao.aliyuncs.com"},
+                {"cn-nanjing", "vpcipam.cn-nanjing.aliyuncs.com"},
+                {"cn-huhehaote", "vpcipam.cn-huhehaote.aliyuncs.com"},
+                {"cn-hongkong", "vpcipam.cn-hongkong.aliyuncs.com"},
+                {"cn-heyuan", "vpcipam.cn-heyuan.aliyuncs.com"},
+                {"cn-hangzhou-finance", "vpcipam.cn-hangzhou-finance.aliyuncs.com"},
+                {"cn-hangzhou", "vpcipam.cn-hangzhou.aliyuncs.com"},
+                {"cn-guangzhou", "vpcipam.cn-guangzhou.aliyuncs.com"},
+                {"cn-fuzhou", "vpcipam.cn-fuzhou.aliyuncs.com"},
+                {"cn-chengdu", "vpcipam.cn-chengdu.aliyuncs.com"},
+                {"cn-beijing-finance-1", "vpcipam.cn-beijing-finance-1.aliyuncs.com"},
+                {"cn-beijing", "vpcipam.cn-beijing.aliyuncs.com"},
+                {"ap-southeast-7", "vpcipam.ap-southeast-7.aliyuncs.com"},
+                {"ap-southeast-6", "vpcipam.ap-southeast-6.aliyuncs.com"},
+                {"ap-southeast-5", "vpcipam.ap-southeast-5.aliyuncs.com"},
+                {"ap-southeast-3", "vpcipam.ap-southeast-3.aliyuncs.com"},
+                {"ap-southeast-2", "vpcipam.ap-southeast-2.aliyuncs.com"},
+                {"ap-southeast-1", "vpcipam.ap-southeast-1.aliyuncs.com"},
+                {"ap-northeast-2", "vpcipam.ap-northeast-2.aliyuncs.com"},
+                {"ap-northeast-1", "vpcipam.ap-northeast-1.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("vpcipam", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -215,21 +251,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provisions a CIDR block to an IP Address Manager (IPAM) pool.</para>
+        /// <para>为IPAM地址池预置CIDR</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  Before you provision a CIDR block, make sure that an IPAM pool is created. You can call the <b>CreateIpamPool</b> operation to create an IPAM pool.</para>
-        /// <list type="bullet">
-        /// <item><description>If no CIDR block is provisioned to a parent pool, you cannot provision CIDR blocks to its subpools.</description></item>
-        /// <item><description>If a CIDR block is provisioned to a parent pool, you can provision CIDR blocks to its subpools and the CIDR blocks must be subsets of the CIDR block provisioned to the parent pool.</description></item>
-        /// <item><description>If a CIDR block is provisioned to a parent pool and allocations are created, CIDR blocks provisioned to its subpools cannot overlap with existing allocated CIDR blocks.</description></item>
-        /// <item><description>You can provision CIDR blocks to a pool only in the region where the IPAM is hosted.</description></item>
-        /// <item><description>CIDR blocks provisioned to an IPAM pool cannot overlap with the CIDR blocks provisioned to other pools in the same scope.</description></item>
-        /// <item><description>A maximum of 1 CIDR block can be provisioned to a public IPv6 top-level pool, while up to 50 CIDR blocks can be provisioned to other types of address pools.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// AddIpamPoolCidrRequest
@@ -290,21 +313,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provisions a CIDR block to an IP Address Manager (IPAM) pool.</para>
+        /// <para>为IPAM地址池预置CIDR</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  Before you provision a CIDR block, make sure that an IPAM pool is created. You can call the <b>CreateIpamPool</b> operation to create an IPAM pool.</para>
-        /// <list type="bullet">
-        /// <item><description>If no CIDR block is provisioned to a parent pool, you cannot provision CIDR blocks to its subpools.</description></item>
-        /// <item><description>If a CIDR block is provisioned to a parent pool, you can provision CIDR blocks to its subpools and the CIDR blocks must be subsets of the CIDR block provisioned to the parent pool.</description></item>
-        /// <item><description>If a CIDR block is provisioned to a parent pool and allocations are created, CIDR blocks provisioned to its subpools cannot overlap with existing allocated CIDR blocks.</description></item>
-        /// <item><description>You can provision CIDR blocks to a pool only in the region where the IPAM is hosted.</description></item>
-        /// <item><description>CIDR blocks provisioned to an IPAM pool cannot overlap with the CIDR blocks provisioned to other pools in the same scope.</description></item>
-        /// <item><description>A maximum of 1 CIDR block can be provisioned to a public IPv6 top-level pool, while up to 50 CIDR blocks can be provisioned to other types of address pools.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// AddIpamPoolCidrRequest
@@ -365,21 +375,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provisions a CIDR block to an IP Address Manager (IPAM) pool.</para>
+        /// <para>为IPAM地址池预置CIDR</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  Before you provision a CIDR block, make sure that an IPAM pool is created. You can call the <b>CreateIpamPool</b> operation to create an IPAM pool.</para>
-        /// <list type="bullet">
-        /// <item><description>If no CIDR block is provisioned to a parent pool, you cannot provision CIDR blocks to its subpools.</description></item>
-        /// <item><description>If a CIDR block is provisioned to a parent pool, you can provision CIDR blocks to its subpools and the CIDR blocks must be subsets of the CIDR block provisioned to the parent pool.</description></item>
-        /// <item><description>If a CIDR block is provisioned to a parent pool and allocations are created, CIDR blocks provisioned to its subpools cannot overlap with existing allocated CIDR blocks.</description></item>
-        /// <item><description>You can provision CIDR blocks to a pool only in the region where the IPAM is hosted.</description></item>
-        /// <item><description>CIDR blocks provisioned to an IPAM pool cannot overlap with the CIDR blocks provisioned to other pools in the same scope.</description></item>
-        /// <item><description>A maximum of 1 CIDR block can be provisioned to a public IPv6 top-level pool, while up to 50 CIDR blocks can be provisioned to other types of address pools.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// AddIpamPoolCidrRequest
@@ -396,21 +393,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provisions a CIDR block to an IP Address Manager (IPAM) pool.</para>
+        /// <para>为IPAM地址池预置CIDR</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  Before you provision a CIDR block, make sure that an IPAM pool is created. You can call the <b>CreateIpamPool</b> operation to create an IPAM pool.</para>
-        /// <list type="bullet">
-        /// <item><description>If no CIDR block is provisioned to a parent pool, you cannot provision CIDR blocks to its subpools.</description></item>
-        /// <item><description>If a CIDR block is provisioned to a parent pool, you can provision CIDR blocks to its subpools and the CIDR blocks must be subsets of the CIDR block provisioned to the parent pool.</description></item>
-        /// <item><description>If a CIDR block is provisioned to a parent pool and allocations are created, CIDR blocks provisioned to its subpools cannot overlap with existing allocated CIDR blocks.</description></item>
-        /// <item><description>You can provision CIDR blocks to a pool only in the region where the IPAM is hosted.</description></item>
-        /// <item><description>CIDR blocks provisioned to an IPAM pool cannot overlap with the CIDR blocks provisioned to other pools in the same scope.</description></item>
-        /// <item><description>A maximum of 1 CIDR block can be provisioned to a public IPv6 top-level pool, while up to 50 CIDR blocks can be provisioned to other types of address pools.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// AddIpamPoolCidrRequest
@@ -427,13 +411,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates resource discovery with an IPAM instance.</para>
+        /// <para>关联资源发现和IPAM实例。</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  The specified resource discovery instance can only be associated with one IPAM instance and associations cannot be duplicated.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// AssociateIpamResourceDiscoveryRequest
@@ -506,13 +485,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates resource discovery with an IPAM instance.</para>
+        /// <para>关联资源发现和IPAM实例。</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  The specified resource discovery instance can only be associated with one IPAM instance and associations cannot be duplicated.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// AssociateIpamResourceDiscoveryRequest
@@ -585,13 +559,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates resource discovery with an IPAM instance.</para>
+        /// <para>关联资源发现和IPAM实例。</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  The specified resource discovery instance can only be associated with one IPAM instance and associations cannot be duplicated.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// AssociateIpamResourceDiscoveryRequest
@@ -608,13 +577,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates resource discovery with an IPAM instance.</para>
+        /// <para>关联资源发现和IPAM实例。</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  The specified resource discovery instance can only be associated with one IPAM instance and associations cannot be duplicated.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// AssociateIpamResourceDiscoveryRequest
@@ -629,11 +593,6 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return await AssociateIpamResourceDiscoveryWithOptionsAsync(request, runtime);
         }
 
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Changes the resource group of an IPAM resource.</para>
-        /// </summary>
-        /// 
         /// <param name="request">
         /// ChangeResourceGroupRequest
         /// </param>
@@ -699,11 +658,6 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return TeaModel.ToObject<ChangeResourceGroupResponse>(CallApi(params_, req, runtime));
         }
 
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Changes the resource group of an IPAM resource.</para>
-        /// </summary>
-        /// 
         /// <param name="request">
         /// ChangeResourceGroupRequest
         /// </param>
@@ -769,11 +723,6 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return TeaModel.ToObject<ChangeResourceGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Changes the resource group of an IPAM resource.</para>
-        /// </summary>
-        /// 
         /// <param name="request">
         /// ChangeResourceGroupRequest
         /// </param>
@@ -787,11 +736,6 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return ChangeResourceGroupWithOptions(request, runtime);
         }
 
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Changes the resource group of an IPAM resource.</para>
-        /// </summary>
-        /// 
         /// <param name="request">
         /// ChangeResourceGroupRequest
         /// </param>
@@ -807,21 +751,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an IP Address Manager (IPAM).</para>
+        /// <para>创建IPAM实例。</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <list type="bullet">
-        /// <item><description>You can create only one IPAM with each Alibaba Cloud account in each region.</description></item>
-        /// <item><description>Only IPv4 IP addresses can be allocated.</description></item>
-        /// <item><description>When you create an IPAM instance:<list type="bullet">
-        /// <item><description>If there is no custom resource discovery in the region, the system creates a default resource discovery associated with the IPAM instance.</description></item>
-        /// <item><description>If there is a custom resource discovery in the region, the system converts it to a default resource discovery and associates it with the IPAM instance.</description></item>
-        /// </list>
-        /// </description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// CreateIpamRequest
@@ -906,21 +837,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an IP Address Manager (IPAM).</para>
+        /// <para>创建IPAM实例。</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <list type="bullet">
-        /// <item><description>You can create only one IPAM with each Alibaba Cloud account in each region.</description></item>
-        /// <item><description>Only IPv4 IP addresses can be allocated.</description></item>
-        /// <item><description>When you create an IPAM instance:<list type="bullet">
-        /// <item><description>If there is no custom resource discovery in the region, the system creates a default resource discovery associated with the IPAM instance.</description></item>
-        /// <item><description>If there is a custom resource discovery in the region, the system converts it to a default resource discovery and associates it with the IPAM instance.</description></item>
-        /// </list>
-        /// </description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// CreateIpamRequest
@@ -1005,21 +923,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an IP Address Manager (IPAM).</para>
+        /// <para>创建IPAM实例。</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <list type="bullet">
-        /// <item><description>You can create only one IPAM with each Alibaba Cloud account in each region.</description></item>
-        /// <item><description>Only IPv4 IP addresses can be allocated.</description></item>
-        /// <item><description>When you create an IPAM instance:<list type="bullet">
-        /// <item><description>If there is no custom resource discovery in the region, the system creates a default resource discovery associated with the IPAM instance.</description></item>
-        /// <item><description>If there is a custom resource discovery in the region, the system converts it to a default resource discovery and associates it with the IPAM instance.</description></item>
-        /// </list>
-        /// </description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// CreateIpamRequest
@@ -1036,21 +941,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an IP Address Manager (IPAM).</para>
+        /// <para>创建IPAM实例。</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <list type="bullet">
-        /// <item><description>You can create only one IPAM with each Alibaba Cloud account in each region.</description></item>
-        /// <item><description>Only IPv4 IP addresses can be allocated.</description></item>
-        /// <item><description>When you create an IPAM instance:<list type="bullet">
-        /// <item><description>If there is no custom resource discovery in the region, the system creates a default resource discovery associated with the IPAM instance.</description></item>
-        /// <item><description>If there is a custom resource discovery in the region, the system converts it to a default resource discovery and associates it with the IPAM instance.</description></item>
-        /// </list>
-        /// </description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// CreateIpamRequest
@@ -1067,13 +959,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an IP Address Manager (IPAM) pool.</para>
+        /// <para>创建地址池。</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>The number of public IPv6 IPAM top pool for a specific ISP that a user is allowed to create per region is limited to 1.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// CreateIpamPoolRequest
@@ -1190,13 +1077,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an IP Address Manager (IPAM) pool.</para>
+        /// <para>创建地址池。</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>The number of public IPv6 IPAM top pool for a specific ISP that a user is allowed to create per region is limited to 1.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// CreateIpamPoolRequest
@@ -1313,13 +1195,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an IP Address Manager (IPAM) pool.</para>
+        /// <para>创建地址池。</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>The number of public IPv6 IPAM top pool for a specific ISP that a user is allowed to create per region is limited to 1.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// CreateIpamPoolRequest
@@ -1336,13 +1213,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an IP Address Manager (IPAM) pool.</para>
+        /// <para>创建地址池。</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>The number of public IPv6 IPAM top pool for a specific ISP that a user is allowed to create per region is limited to 1.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// CreateIpamPoolRequest
@@ -1359,18 +1231,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reserves a custom CIDR block from an IP Address Manager (IPAM) pool.</para>
+        /// <para>从IPAM地址池创建自定义预留网段</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  Before you reserve a custom CIDR block, make sure that an IPAM pool is created and CIDR blocks are added to the pool. You can call <b>CreateIpamPool</b> to create an IPAM pool and call <b>AddIpamPoolCidr</b> to add CIDR blocks to the pool.</para>
-        /// <list type="bullet">
-        /// <item><description>When you specify Cidr or CidrMask to reserve a custom CIDR block, the mask must fall within the range specified by the IPAM pool.</description></item>
-        /// <item><description>If the IPAM pool has the region attribute, you must reserve a custom CIDR block in the region to which the IPAM pool belongs.</description></item>
-        /// <item><description>The custom CIDR block that you want to reserve cannot overlap with existing CIDR blocks created from the IPAM pool.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// CreateIpamPoolAllocationRequest
@@ -1439,18 +1301,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reserves a custom CIDR block from an IP Address Manager (IPAM) pool.</para>
+        /// <para>从IPAM地址池创建自定义预留网段</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  Before you reserve a custom CIDR block, make sure that an IPAM pool is created and CIDR blocks are added to the pool. You can call <b>CreateIpamPool</b> to create an IPAM pool and call <b>AddIpamPoolCidr</b> to add CIDR blocks to the pool.</para>
-        /// <list type="bullet">
-        /// <item><description>When you specify Cidr or CidrMask to reserve a custom CIDR block, the mask must fall within the range specified by the IPAM pool.</description></item>
-        /// <item><description>If the IPAM pool has the region attribute, you must reserve a custom CIDR block in the region to which the IPAM pool belongs.</description></item>
-        /// <item><description>The custom CIDR block that you want to reserve cannot overlap with existing CIDR blocks created from the IPAM pool.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// CreateIpamPoolAllocationRequest
@@ -1519,18 +1371,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reserves a custom CIDR block from an IP Address Manager (IPAM) pool.</para>
+        /// <para>从IPAM地址池创建自定义预留网段</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  Before you reserve a custom CIDR block, make sure that an IPAM pool is created and CIDR blocks are added to the pool. You can call <b>CreateIpamPool</b> to create an IPAM pool and call <b>AddIpamPoolCidr</b> to add CIDR blocks to the pool.</para>
-        /// <list type="bullet">
-        /// <item><description>When you specify Cidr or CidrMask to reserve a custom CIDR block, the mask must fall within the range specified by the IPAM pool.</description></item>
-        /// <item><description>If the IPAM pool has the region attribute, you must reserve a custom CIDR block in the region to which the IPAM pool belongs.</description></item>
-        /// <item><description>The custom CIDR block that you want to reserve cannot overlap with existing CIDR blocks created from the IPAM pool.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// CreateIpamPoolAllocationRequest
@@ -1547,18 +1389,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reserves a custom CIDR block from an IP Address Manager (IPAM) pool.</para>
+        /// <para>从IPAM地址池创建自定义预留网段</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  Before you reserve a custom CIDR block, make sure that an IPAM pool is created and CIDR blocks are added to the pool. You can call <b>CreateIpamPool</b> to create an IPAM pool and call <b>AddIpamPoolCidr</b> to add CIDR blocks to the pool.</para>
-        /// <list type="bullet">
-        /// <item><description>When you specify Cidr or CidrMask to reserve a custom CIDR block, the mask must fall within the range specified by the IPAM pool.</description></item>
-        /// <item><description>If the IPAM pool has the region attribute, you must reserve a custom CIDR block in the region to which the IPAM pool belongs.</description></item>
-        /// <item><description>The custom CIDR block that you want to reserve cannot overlap with existing CIDR blocks created from the IPAM pool.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// CreateIpamPoolAllocationRequest
@@ -1575,16 +1407,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom resource discovery instance.</para>
+        /// <para>创建自定义类型资源发现。</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  Each Alibaba Cloud account can create only one resource discovery instance in each region.</para>
-        /// <list type="bullet">
-        /// <item><description>You can create only custom resource discovery instances.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// CreateIpamResourceDiscoveryRequest
@@ -1669,16 +1493,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom resource discovery instance.</para>
+        /// <para>创建自定义类型资源发现。</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  Each Alibaba Cloud account can create only one resource discovery instance in each region.</para>
-        /// <list type="bullet">
-        /// <item><description>You can create only custom resource discovery instances.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// CreateIpamResourceDiscoveryRequest
@@ -1763,16 +1579,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom resource discovery instance.</para>
+        /// <para>创建自定义类型资源发现。</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  Each Alibaba Cloud account can create only one resource discovery instance in each region.</para>
-        /// <list type="bullet">
-        /// <item><description>You can create only custom resource discovery instances.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// CreateIpamResourceDiscoveryRequest
@@ -1789,16 +1597,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom resource discovery instance.</para>
+        /// <para>创建自定义类型资源发现。</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  Each Alibaba Cloud account can create only one resource discovery instance in each region.</para>
-        /// <list type="bullet">
-        /// <item><description>You can create only custom resource discovery instances.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// CreateIpamResourceDiscoveryRequest
@@ -1813,11 +1613,6 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return await CreateIpamResourceDiscoveryWithOptionsAsync(request, runtime);
         }
 
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Creates a public scope and private scope to respectively manage public and private IP addresses.</para>
-        /// </summary>
-        /// 
         /// <param name="request">
         /// CreateIpamScopeRequest
         /// </param>
@@ -1903,11 +1698,6 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return TeaModel.ToObject<CreateIpamScopeResponse>(CallApi(params_, req, runtime));
         }
 
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Creates a public scope and private scope to respectively manage public and private IP addresses.</para>
-        /// </summary>
-        /// 
         /// <param name="request">
         /// CreateIpamScopeRequest
         /// </param>
@@ -1993,11 +1783,6 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return TeaModel.ToObject<CreateIpamScopeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Creates a public scope and private scope to respectively manage public and private IP addresses.</para>
-        /// </summary>
-        /// 
         /// <param name="request">
         /// CreateIpamScopeRequest
         /// </param>
@@ -2011,11 +1796,6 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return CreateIpamScopeWithOptions(request, runtime);
         }
 
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Creates a public scope and private scope to respectively manage public and private IP addresses.</para>
-        /// </summary>
-        /// 
         /// <param name="request">
         /// CreateIpamScopeRequest
         /// </param>
@@ -2031,17 +1811,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an IP Address Manager (IPAM).</para>
+        /// <para>删除IPAM实例。</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h2><a href="#"></a>Prerequisites</h2>
-        /// <list type="bullet">
-        /// <item><description>Before you delete an IPAM, make sure that all IPAM pools of the IPAM are deleted. You can call <b>DeleteIpamPool</b> to delete IPAM pools.</description></item>
-        /// <item><description>Before you delete an IPAM, make sure that all IPAM scopes of the IPAM are deleted. You can call <b>DeleteIpamScope</b> to delete IPAM scopes.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// DeleteIpamRequest
@@ -2110,17 +1881,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an IP Address Manager (IPAM).</para>
+        /// <para>删除IPAM实例。</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h2><a href="#"></a>Prerequisites</h2>
-        /// <list type="bullet">
-        /// <item><description>Before you delete an IPAM, make sure that all IPAM pools of the IPAM are deleted. You can call <b>DeleteIpamPool</b> to delete IPAM pools.</description></item>
-        /// <item><description>Before you delete an IPAM, make sure that all IPAM scopes of the IPAM are deleted. You can call <b>DeleteIpamScope</b> to delete IPAM scopes.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// DeleteIpamRequest
@@ -2189,17 +1951,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an IP Address Manager (IPAM).</para>
+        /// <para>删除IPAM实例。</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h2><a href="#"></a>Prerequisites</h2>
-        /// <list type="bullet">
-        /// <item><description>Before you delete an IPAM, make sure that all IPAM pools of the IPAM are deleted. You can call <b>DeleteIpamPool</b> to delete IPAM pools.</description></item>
-        /// <item><description>Before you delete an IPAM, make sure that all IPAM scopes of the IPAM are deleted. You can call <b>DeleteIpamScope</b> to delete IPAM scopes.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// DeleteIpamRequest
@@ -2216,17 +1969,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an IP Address Manager (IPAM).</para>
+        /// <para>删除IPAM实例。</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h2><a href="#"></a>Prerequisites</h2>
-        /// <list type="bullet">
-        /// <item><description>Before you delete an IPAM, make sure that all IPAM pools of the IPAM are deleted. You can call <b>DeleteIpamPool</b> to delete IPAM pools.</description></item>
-        /// <item><description>Before you delete an IPAM, make sure that all IPAM scopes of the IPAM are deleted. You can call <b>DeleteIpamScope</b> to delete IPAM scopes.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// DeleteIpamRequest
@@ -2243,18 +1987,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an IP Address Manager (IPAM) scope.</para>
+        /// <para>删除地址池。</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h3><a href="#"></a>Usage notes</h3>
-        /// <list type="bullet">
-        /// <item><description>Before you delete a parent pool, make sure that all subpools of the parent pool are deleted.</description></item>
-        /// <item><description>If an effective region is specified for a parent pool and IP addresses are allocated from the parent pool, you cannot delete the parent pool.</description></item>
-        /// <item><description>If an effective region is specified for a subpool and IP addresses are allocated from the subpool, you cannot delete the subpool.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// DeleteIpamPoolRequest
@@ -2323,18 +2057,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an IP Address Manager (IPAM) scope.</para>
+        /// <para>删除地址池。</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h3><a href="#"></a>Usage notes</h3>
-        /// <list type="bullet">
-        /// <item><description>Before you delete a parent pool, make sure that all subpools of the parent pool are deleted.</description></item>
-        /// <item><description>If an effective region is specified for a parent pool and IP addresses are allocated from the parent pool, you cannot delete the parent pool.</description></item>
-        /// <item><description>If an effective region is specified for a subpool and IP addresses are allocated from the subpool, you cannot delete the subpool.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// DeleteIpamPoolRequest
@@ -2403,18 +2127,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an IP Address Manager (IPAM) scope.</para>
+        /// <para>删除地址池。</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h3><a href="#"></a>Usage notes</h3>
-        /// <list type="bullet">
-        /// <item><description>Before you delete a parent pool, make sure that all subpools of the parent pool are deleted.</description></item>
-        /// <item><description>If an effective region is specified for a parent pool and IP addresses are allocated from the parent pool, you cannot delete the parent pool.</description></item>
-        /// <item><description>If an effective region is specified for a subpool and IP addresses are allocated from the subpool, you cannot delete the subpool.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// DeleteIpamPoolRequest
@@ -2431,18 +2145,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an IP Address Manager (IPAM) scope.</para>
+        /// <para>删除地址池。</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h3><a href="#"></a>Usage notes</h3>
-        /// <list type="bullet">
-        /// <item><description>Before you delete a parent pool, make sure that all subpools of the parent pool are deleted.</description></item>
-        /// <item><description>If an effective region is specified for a parent pool and IP addresses are allocated from the parent pool, you cannot delete the parent pool.</description></item>
-        /// <item><description>If an effective region is specified for a subpool and IP addresses are allocated from the subpool, you cannot delete the subpool.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// DeleteIpamPoolRequest
@@ -2459,7 +2163,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a custom reserved CIDR block from an IP Address Manager (IPAM) pool.</para>
+        /// <para>释放IPAM地址池的CIDR分配</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2513,7 +2217,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a custom reserved CIDR block from an IP Address Manager (IPAM) pool.</para>
+        /// <para>释放IPAM地址池的CIDR分配</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2567,7 +2271,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a custom reserved CIDR block from an IP Address Manager (IPAM) pool.</para>
+        /// <para>释放IPAM地址池的CIDR分配</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2585,7 +2289,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a custom reserved CIDR block from an IP Address Manager (IPAM) pool.</para>
+        /// <para>释放IPAM地址池的CIDR分配</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2603,18 +2307,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a CIDR block provisioned to an IP Address Manager (IPAM) pool.</para>
+        /// <para>删除Ipam地址池Cidr</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  If CIDR blocks are provisioned to a parent pool and its subpools, you must first delete the CIDR blocks provisioned to the subpools before you delete the ones provisioned to the parent pool.</para>
-        /// <list type="bullet">
-        /// <item><description>If CIDR blocks are provisioned only to the parent pool, directly delete them.</description></item>
-        /// <item><description>If CIDR blocks are allocated from provisioned ones, you must first delete the allocated CIDR blocks before you delete the provisioned ones.</description></item>
-        /// <item><description>You can delete CIDR blocks provisioned to an IPAM pool only in the region where the IPAM is hosted.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// DeleteIpamPoolCidrRequest
@@ -2671,18 +2365,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a CIDR block provisioned to an IP Address Manager (IPAM) pool.</para>
+        /// <para>删除Ipam地址池Cidr</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  If CIDR blocks are provisioned to a parent pool and its subpools, you must first delete the CIDR blocks provisioned to the subpools before you delete the ones provisioned to the parent pool.</para>
-        /// <list type="bullet">
-        /// <item><description>If CIDR blocks are provisioned only to the parent pool, directly delete them.</description></item>
-        /// <item><description>If CIDR blocks are allocated from provisioned ones, you must first delete the allocated CIDR blocks before you delete the provisioned ones.</description></item>
-        /// <item><description>You can delete CIDR blocks provisioned to an IPAM pool only in the region where the IPAM is hosted.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// DeleteIpamPoolCidrRequest
@@ -2739,18 +2423,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a CIDR block provisioned to an IP Address Manager (IPAM) pool.</para>
+        /// <para>删除Ipam地址池Cidr</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  If CIDR blocks are provisioned to a parent pool and its subpools, you must first delete the CIDR blocks provisioned to the subpools before you delete the ones provisioned to the parent pool.</para>
-        /// <list type="bullet">
-        /// <item><description>If CIDR blocks are provisioned only to the parent pool, directly delete them.</description></item>
-        /// <item><description>If CIDR blocks are allocated from provisioned ones, you must first delete the allocated CIDR blocks before you delete the provisioned ones.</description></item>
-        /// <item><description>You can delete CIDR blocks provisioned to an IPAM pool only in the region where the IPAM is hosted.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// DeleteIpamPoolCidrRequest
@@ -2767,18 +2441,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a CIDR block provisioned to an IP Address Manager (IPAM) pool.</para>
+        /// <para>删除Ipam地址池Cidr</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  If CIDR blocks are provisioned to a parent pool and its subpools, you must first delete the CIDR blocks provisioned to the subpools before you delete the ones provisioned to the parent pool.</para>
-        /// <list type="bullet">
-        /// <item><description>If CIDR blocks are provisioned only to the parent pool, directly delete them.</description></item>
-        /// <item><description>If CIDR blocks are allocated from provisioned ones, you must first delete the allocated CIDR blocks before you delete the provisioned ones.</description></item>
-        /// <item><description>You can delete CIDR blocks provisioned to an IPAM pool only in the region where the IPAM is hosted.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// DeleteIpamPoolCidrRequest
@@ -2795,13 +2459,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a custom resource discovery instance.</para>
+        /// <para>删除自定义类型的资源发现。</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  If a resource discovery instance is shared, it cannot be deleted.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// DeleteIpamResourceDiscoveryRequest
@@ -2870,13 +2529,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a custom resource discovery instance.</para>
+        /// <para>删除自定义类型的资源发现。</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  If a resource discovery instance is shared, it cannot be deleted.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// DeleteIpamResourceDiscoveryRequest
@@ -2945,13 +2599,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a custom resource discovery instance.</para>
+        /// <para>删除自定义类型的资源发现。</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  If a resource discovery instance is shared, it cannot be deleted.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// DeleteIpamResourceDiscoveryRequest
@@ -2968,13 +2617,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a custom resource discovery instance.</para>
+        /// <para>删除自定义类型的资源发现。</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  If a resource discovery instance is shared, it cannot be deleted.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// DeleteIpamResourceDiscoveryRequest
@@ -2989,20 +2633,6 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return await DeleteIpamResourceDiscoveryWithOptionsAsync(request, runtime);
         }
 
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Deletes an IP Address Manager (IPAM) scope.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h3><a href="#"></a>Usage notes</h3>
-        /// <list type="bullet">
-        /// <item><description>You cannot delete the private scope and public scope created by the system.</description></item>
-        /// <item><description>Before you delete an IPAM scope, make sure that all pools within the scope are deleted. You can call <b>DeleteIpamPool</b> to delete IPAM pools.</description></item>
-        /// </list>
-        /// </description>
-        /// 
         /// <param name="request">
         /// DeleteIpamScopeRequest
         /// </param>
@@ -3068,20 +2698,6 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return TeaModel.ToObject<DeleteIpamScopeResponse>(CallApi(params_, req, runtime));
         }
 
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Deletes an IP Address Manager (IPAM) scope.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h3><a href="#"></a>Usage notes</h3>
-        /// <list type="bullet">
-        /// <item><description>You cannot delete the private scope and public scope created by the system.</description></item>
-        /// <item><description>Before you delete an IPAM scope, make sure that all pools within the scope are deleted. You can call <b>DeleteIpamPool</b> to delete IPAM pools.</description></item>
-        /// </list>
-        /// </description>
-        /// 
         /// <param name="request">
         /// DeleteIpamScopeRequest
         /// </param>
@@ -3147,20 +2763,6 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return TeaModel.ToObject<DeleteIpamScopeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Deletes an IP Address Manager (IPAM) scope.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h3><a href="#"></a>Usage notes</h3>
-        /// <list type="bullet">
-        /// <item><description>You cannot delete the private scope and public scope created by the system.</description></item>
-        /// <item><description>Before you delete an IPAM scope, make sure that all pools within the scope are deleted. You can call <b>DeleteIpamPool</b> to delete IPAM pools.</description></item>
-        /// </list>
-        /// </description>
-        /// 
         /// <param name="request">
         /// DeleteIpamScopeRequest
         /// </param>
@@ -3174,20 +2776,6 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return DeleteIpamScopeWithOptions(request, runtime);
         }
 
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Deletes an IP Address Manager (IPAM) scope.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h3><a href="#"></a>Usage notes</h3>
-        /// <list type="bullet">
-        /// <item><description>You cannot delete the private scope and public scope created by the system.</description></item>
-        /// <item><description>Before you delete an IPAM scope, make sure that all pools within the scope are deleted. You can call <b>DeleteIpamPool</b> to delete IPAM pools.</description></item>
-        /// </list>
-        /// </description>
-        /// 
         /// <param name="request">
         /// DeleteIpamScopeRequest
         /// </param>
@@ -3203,7 +2791,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates resource discovery and IPAM instances.</para>
+        /// <para>解关联资源发现和IPAM实例。</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3277,7 +2865,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates resource discovery and IPAM instances.</para>
+        /// <para>解关联资源发现和IPAM实例。</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3351,7 +2939,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates resource discovery and IPAM instances.</para>
+        /// <para>解关联资源发现和IPAM实例。</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3369,7 +2957,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates resource discovery and IPAM instances.</para>
+        /// <para>解关联资源发现和IPAM实例。</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3387,7 +2975,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries CIDR block allocations of an IP Address Manager (IPAM) pool.</para>
+        /// <para>查询指定IPAM地址池CIDR分配的信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3425,7 +3013,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries CIDR block allocations of an IP Address Manager (IPAM) pool.</para>
+        /// <para>查询指定IPAM地址池CIDR分配的信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3463,7 +3051,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries CIDR block allocations of an IP Address Manager (IPAM) pool.</para>
+        /// <para>查询指定IPAM地址池CIDR分配的信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3481,7 +3069,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries CIDR block allocations of an IP Address Manager (IPAM) pool.</para>
+        /// <para>查询指定IPAM地址池CIDR分配的信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3499,7 +3087,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the available CIDR blocks of the IPAM pool.</para>
+        /// <para>获取地址池可用CIDR。</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3537,7 +3125,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the available CIDR blocks of the IPAM pool.</para>
+        /// <para>获取地址池可用CIDR。</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3575,7 +3163,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the available CIDR blocks of the IPAM pool.</para>
+        /// <para>获取地址池可用CIDR。</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3593,7 +3181,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the available CIDR blocks of the IPAM pool.</para>
+        /// <para>获取地址池可用CIDR。</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3611,7 +3199,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether IP Address Manager (IPAM) is activated.</para>
+        /// <para>查询IPAM功能的开通状态。</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3673,7 +3261,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether IP Address Manager (IPAM) is activated.</para>
+        /// <para>查询IPAM功能的开通状态。</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3735,7 +3323,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether IP Address Manager (IPAM) is activated.</para>
+        /// <para>查询IPAM功能的开通状态。</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3753,7 +3341,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether IP Address Manager (IPAM) is activated.</para>
+        /// <para>查询IPAM功能的开通状态。</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3947,7 +3535,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries discovered resources.</para>
+        /// <para>查询资源发现下的资源信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4009,7 +3597,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries discovered resources.</para>
+        /// <para>查询资源发现下的资源信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4071,7 +3659,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries discovered resources.</para>
+        /// <para>查询资源发现下的资源信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4089,7 +3677,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries discovered resources.</para>
+        /// <para>查询资源发现下的资源信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4283,7 +3871,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries CIDR block allocations of an IP Address Manager (IPAM) pool.</para>
+        /// <para>查询IPAM地址池的CIDR分配信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4349,7 +3937,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries CIDR block allocations of an IP Address Manager (IPAM) pool.</para>
+        /// <para>查询IPAM地址池的CIDR分配信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4415,7 +4003,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries CIDR block allocations of an IP Address Manager (IPAM) pool.</para>
+        /// <para>查询IPAM地址池的CIDR分配信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4433,7 +4021,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries CIDR block allocations of an IP Address Manager (IPAM) pool.</para>
+        /// <para>查询IPAM地址池的CIDR分配信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4451,7 +4039,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries CIDR blocks provisioned to an IP Address Manager (IPAM) pool.</para>
+        /// <para>查询Ipam地址池Cidr列表</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4509,7 +4097,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries CIDR blocks provisioned to an IP Address Manager (IPAM) pool.</para>
+        /// <para>查询Ipam地址池Cidr列表</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4567,7 +4155,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries CIDR blocks provisioned to an IP Address Manager (IPAM) pool.</para>
+        /// <para>查询Ipam地址池Cidr列表</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4585,7 +4173,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries CIDR blocks provisioned to an IP Address Manager (IPAM) pool.</para>
+        /// <para>查询Ipam地址池Cidr列表</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4603,7 +4191,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries IP Address Manager (IPAM) pools.</para>
+        /// <para>查询IPAM地址池信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4709,7 +4297,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries IP Address Manager (IPAM) pools.</para>
+        /// <para>查询IPAM地址池信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4815,7 +4403,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries IP Address Manager (IPAM) pools.</para>
+        /// <para>查询IPAM地址池信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4833,7 +4421,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries IP Address Manager (IPAM) pools.</para>
+        /// <para>查询IPAM地址池信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4851,7 +4439,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries resources in an IP Address Manager (IPAM) pool.</para>
+        /// <para>查询IPAM作用范围内的资源</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4925,7 +4513,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries resources in an IP Address Manager (IPAM) pool.</para>
+        /// <para>查询IPAM作用范围内的资源</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4999,7 +4587,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries resources in an IP Address Manager (IPAM) pool.</para>
+        /// <para>查询IPAM作用范围内的资源</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5017,7 +4605,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries resources in an IP Address Manager (IPAM) pool.</para>
+        /// <para>查询IPAM作用范围内的资源</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5035,7 +4623,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries IPAM resource discovery instances.</para>
+        /// <para>查询ipam资源发现实例</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5125,7 +4713,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries IPAM resource discovery instances.</para>
+        /// <para>查询ipam资源发现实例</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5215,7 +4803,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries IPAM resource discovery instances.</para>
+        /// <para>查询ipam资源发现实例</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5233,7 +4821,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries IPAM resource discovery instances.</para>
+        /// <para>查询ipam资源发现实例</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5251,7 +4839,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the association between resource discovery and IPAM.</para>
+        /// <para>查看资源发现和IPAM的关联关系。</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5325,7 +4913,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the association between resource discovery and IPAM.</para>
+        /// <para>查看资源发现和IPAM的关联关系。</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5399,7 +4987,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the association between resource discovery and IPAM.</para>
+        /// <para>查看资源发现和IPAM的关联关系。</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5417,7 +5005,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the association between resource discovery and IPAM.</para>
+        /// <para>查看资源发现和IPAM的关联关系。</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5433,11 +5021,6 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return await ListIpamResourceDiscoveryAssociationsWithOptionsAsync(request, runtime);
         }
 
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Queries IP Address Manager (IPAM) scopes.</para>
-        /// </summary>
-        /// 
         /// <param name="request">
         /// ListIpamScopesRequest
         /// </param>
@@ -5523,11 +5106,6 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return TeaModel.ToObject<ListIpamScopesResponse>(CallApi(params_, req, runtime));
         }
 
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Queries IP Address Manager (IPAM) scopes.</para>
-        /// </summary>
-        /// 
         /// <param name="request">
         /// ListIpamScopesRequest
         /// </param>
@@ -5613,11 +5191,6 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return TeaModel.ToObject<ListIpamScopesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Queries IP Address Manager (IPAM) scopes.</para>
-        /// </summary>
-        /// 
         /// <param name="request">
         /// ListIpamScopesRequest
         /// </param>
@@ -5631,11 +5204,6 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return ListIpamScopesWithOptions(request, runtime);
         }
 
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Queries IP Address Manager (IPAM) scopes.</para>
-        /// </summary>
-        /// 
         /// <param name="request">
         /// ListIpamScopesRequest
         /// </param>
@@ -5651,7 +5219,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries IP Address Managers (IPAMs).</para>
+        /// <para>查询ipam</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5733,7 +5301,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries IP Address Managers (IPAMs).</para>
+        /// <para>查询ipam</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5815,7 +5383,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries IP Address Managers (IPAMs).</para>
+        /// <para>查询ipam</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5833,7 +5401,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries IP Address Managers (IPAMs).</para>
+        /// <para>查询ipam</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5851,19 +5419,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of resource tags.</para>
+        /// <para>查询资源标签列表</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h3><a href="#"></a>Usage notes</h3>
-        /// <list type="bullet">
-        /// <item><description>You must specify <b>ResourceId.N</b> or <b>Tag.N</b> that consists of <b>Tag.N.Key</b> and <b>Tag.N.Value</b> in the request to specify the object that you want to query.</description></item>
-        /// <item><description><b>Tag.N</b> is a resource tag that consists of a key-value pair. If you specify only <b>Tag.N.Key</b>, all tag values that are associated with the specified key are returned. If you specify only <b>Tag.N.Value</b>, an error message is returned.</description></item>
-        /// <item><description>If you specify <b>Tag.N</b> and <b>ResourceId.N</b> to filter tags, <b>ResourceId.N</b> must match all specified key-value pairs.</description></item>
-        /// <item><description>If you specify multiple key-value pairs, resources that contain these key-value pairs are returned.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListTagResourcesRequest
@@ -5940,19 +5497,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of resource tags.</para>
+        /// <para>查询资源标签列表</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h3><a href="#"></a>Usage notes</h3>
-        /// <list type="bullet">
-        /// <item><description>You must specify <b>ResourceId.N</b> or <b>Tag.N</b> that consists of <b>Tag.N.Key</b> and <b>Tag.N.Value</b> in the request to specify the object that you want to query.</description></item>
-        /// <item><description><b>Tag.N</b> is a resource tag that consists of a key-value pair. If you specify only <b>Tag.N.Key</b>, all tag values that are associated with the specified key are returned. If you specify only <b>Tag.N.Value</b>, an error message is returned.</description></item>
-        /// <item><description>If you specify <b>Tag.N</b> and <b>ResourceId.N</b> to filter tags, <b>ResourceId.N</b> must match all specified key-value pairs.</description></item>
-        /// <item><description>If you specify multiple key-value pairs, resources that contain these key-value pairs are returned.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListTagResourcesRequest
@@ -6029,19 +5575,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of resource tags.</para>
+        /// <para>查询资源标签列表</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h3><a href="#"></a>Usage notes</h3>
-        /// <list type="bullet">
-        /// <item><description>You must specify <b>ResourceId.N</b> or <b>Tag.N</b> that consists of <b>Tag.N.Key</b> and <b>Tag.N.Value</b> in the request to specify the object that you want to query.</description></item>
-        /// <item><description><b>Tag.N</b> is a resource tag that consists of a key-value pair. If you specify only <b>Tag.N.Key</b>, all tag values that are associated with the specified key are returned. If you specify only <b>Tag.N.Value</b>, an error message is returned.</description></item>
-        /// <item><description>If you specify <b>Tag.N</b> and <b>ResourceId.N</b> to filter tags, <b>ResourceId.N</b> must match all specified key-value pairs.</description></item>
-        /// <item><description>If you specify multiple key-value pairs, resources that contain these key-value pairs are returned.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListTagResourcesRequest
@@ -6058,19 +5593,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of resource tags.</para>
+        /// <para>查询资源标签列表</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h3><a href="#"></a>Usage notes</h3>
-        /// <list type="bullet">
-        /// <item><description>You must specify <b>ResourceId.N</b> or <b>Tag.N</b> that consists of <b>Tag.N.Key</b> and <b>Tag.N.Value</b> in the request to specify the object that you want to query.</description></item>
-        /// <item><description><b>Tag.N</b> is a resource tag that consists of a key-value pair. If you specify only <b>Tag.N.Key</b>, all tag values that are associated with the specified key are returned. If you specify only <b>Tag.N.Value</b>, an error message is returned.</description></item>
-        /// <item><description>If you specify <b>Tag.N</b> and <b>ResourceId.N</b> to filter tags, <b>ResourceId.N</b> must match all specified key-value pairs.</description></item>
-        /// <item><description>If you specify multiple key-value pairs, resources that contain these key-value pairs are returned.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListTagResourcesRequest
@@ -6087,7 +5611,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Activates IP Address Manager (IPAM).</para>
+        /// <para>开通IPAM功能。</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6149,7 +5673,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Activates IP Address Manager (IPAM).</para>
+        /// <para>开通IPAM功能。</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6211,7 +5735,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Activates IP Address Manager (IPAM).</para>
+        /// <para>开通IPAM功能。</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6229,7 +5753,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Activates IP Address Manager (IPAM).</para>
+        /// <para>开通IPAM功能。</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6423,19 +5947,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a tag to a resource.</para>
+        /// <para>为资源实例绑定资源标签</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h3><a href="#"></a>Usage notes</h3>
-        /// <para>Tags are used to classify instances. Each tag consists of a key-value pair. Before you use tags, take note of the following items:</para>
-        /// <list type="bullet">
-        /// <item><description>Each tag key that is added to an instance must be unique.</description></item>
-        /// <item><description>You cannot create tags without adding them to instances. All tags must be added to instances.</description></item>
-        /// <item><description>You can add at most 20 tags to each instance. Before you add a tag to an instance, the system automatically checks the number of existing tags. An error message is returned if the maximum number of tags is reached.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// TagResourcesRequest
@@ -6504,19 +6017,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a tag to a resource.</para>
+        /// <para>为资源实例绑定资源标签</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h3><a href="#"></a>Usage notes</h3>
-        /// <para>Tags are used to classify instances. Each tag consists of a key-value pair. Before you use tags, take note of the following items:</para>
-        /// <list type="bullet">
-        /// <item><description>Each tag key that is added to an instance must be unique.</description></item>
-        /// <item><description>You cannot create tags without adding them to instances. All tags must be added to instances.</description></item>
-        /// <item><description>You can add at most 20 tags to each instance. Before you add a tag to an instance, the system automatically checks the number of existing tags. An error message is returned if the maximum number of tags is reached.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// TagResourcesRequest
@@ -6585,19 +6087,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a tag to a resource.</para>
+        /// <para>为资源实例绑定资源标签</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h3><a href="#"></a>Usage notes</h3>
-        /// <para>Tags are used to classify instances. Each tag consists of a key-value pair. Before you use tags, take note of the following items:</para>
-        /// <list type="bullet">
-        /// <item><description>Each tag key that is added to an instance must be unique.</description></item>
-        /// <item><description>You cannot create tags without adding them to instances. All tags must be added to instances.</description></item>
-        /// <item><description>You can add at most 20 tags to each instance. Before you add a tag to an instance, the system automatically checks the number of existing tags. An error message is returned if the maximum number of tags is reached.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// TagResourcesRequest
@@ -6614,19 +6105,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a tag to a resource.</para>
+        /// <para>为资源实例绑定资源标签</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h3><a href="#"></a>Usage notes</h3>
-        /// <para>Tags are used to classify instances. Each tag consists of a key-value pair. Before you use tags, take note of the following items:</para>
-        /// <list type="bullet">
-        /// <item><description>Each tag key that is added to an instance must be unique.</description></item>
-        /// <item><description>You cannot create tags without adding them to instances. All tags must be added to instances.</description></item>
-        /// <item><description>You can add at most 20 tags to each instance. Before you add a tag to an instance, the system automatically checks the number of existing tags. An error message is returned if the maximum number of tags is reached.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// TagResourcesRequest
@@ -6643,7 +6123,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a tag from a resource.</para>
+        /// <para>为资源解绑资源标签</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6717,7 +6197,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a tag from a resource.</para>
+        /// <para>为资源解绑资源标签</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6791,7 +6271,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a tag from a resource.</para>
+        /// <para>为资源解绑资源标签</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6809,7 +6289,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a tag from a resource.</para>
+        /// <para>为资源解绑资源标签</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6827,7 +6307,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an IPAM instance.</para>
+        /// <para>更新ipam</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6913,7 +6393,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an IPAM instance.</para>
+        /// <para>更新ipam</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6999,7 +6479,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an IPAM instance.</para>
+        /// <para>更新ipam</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7017,7 +6497,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an IPAM instance.</para>
+        /// <para>更新ipam</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7033,11 +6513,6 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return await UpdateIpamWithOptionsAsync(request, runtime);
         }
 
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Modifies the basic information about an IP Address Manager (IPAM) pool.</para>
-        /// </summary>
-        /// 
         /// <param name="request">
         /// UpdateIpamPoolRequest
         /// </param>
@@ -7131,11 +6606,6 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return TeaModel.ToObject<UpdateIpamPoolResponse>(CallApi(params_, req, runtime));
         }
 
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Modifies the basic information about an IP Address Manager (IPAM) pool.</para>
-        /// </summary>
-        /// 
         /// <param name="request">
         /// UpdateIpamPoolRequest
         /// </param>
@@ -7229,11 +6699,6 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return TeaModel.ToObject<UpdateIpamPoolResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Modifies the basic information about an IP Address Manager (IPAM) pool.</para>
-        /// </summary>
-        /// 
         /// <param name="request">
         /// UpdateIpamPoolRequest
         /// </param>
@@ -7247,11 +6712,6 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return UpdateIpamPoolWithOptions(request, runtime);
         }
 
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Modifies the basic information about an IP Address Manager (IPAM) pool.</para>
-        /// </summary>
-        /// 
         /// <param name="request">
         /// UpdateIpamPoolRequest
         /// </param>
@@ -7267,7 +6727,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies CIDR block allocations of an IP Address Manager (IPAM) pool.</para>
+        /// <para>更新IPAM地址池分配信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7329,7 +6789,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies CIDR block allocations of an IP Address Manager (IPAM) pool.</para>
+        /// <para>更新IPAM地址池分配信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7391,7 +6851,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies CIDR block allocations of an IP Address Manager (IPAM) pool.</para>
+        /// <para>更新IPAM地址池分配信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7409,7 +6869,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies CIDR block allocations of an IP Address Manager (IPAM) pool.</para>
+        /// <para>更新IPAM地址池分配信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7427,16 +6887,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a resource discovery instance.</para>
+        /// <para>更新自定义类型资源发现。</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  You can add or remove effective regions only for custom resource discovery instances.</para>
-        /// <list type="bullet">
-        /// <item><description>When removing effective regions from a resource discovery instance, the hosted region cannot be included.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// UpdateIpamResourceDiscoveryRequest
@@ -7521,16 +6973,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a resource discovery instance.</para>
+        /// <para>更新自定义类型资源发现。</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  You can add or remove effective regions only for custom resource discovery instances.</para>
-        /// <list type="bullet">
-        /// <item><description>When removing effective regions from a resource discovery instance, the hosted region cannot be included.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// UpdateIpamResourceDiscoveryRequest
@@ -7615,16 +7059,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a resource discovery instance.</para>
+        /// <para>更新自定义类型资源发现。</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  You can add or remove effective regions only for custom resource discovery instances.</para>
-        /// <list type="bullet">
-        /// <item><description>When removing effective regions from a resource discovery instance, the hosted region cannot be included.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// UpdateIpamResourceDiscoveryRequest
@@ -7641,16 +7077,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a resource discovery instance.</para>
+        /// <para>更新自定义类型资源发现。</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  You can add or remove effective regions only for custom resource discovery instances.</para>
-        /// <list type="bullet">
-        /// <item><description>When removing effective regions from a resource discovery instance, the hosted region cannot be included.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// UpdateIpamResourceDiscoveryRequest
@@ -7665,11 +7093,6 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return await UpdateIpamResourceDiscoveryWithOptionsAsync(request, runtime);
         }
 
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Modifies the basic information about an IP Address Manager (IPAM) scope.</para>
-        /// </summary>
-        /// 
         /// <param name="request">
         /// UpdateIpamScopeRequest
         /// </param>
@@ -7743,11 +7166,6 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return TeaModel.ToObject<UpdateIpamScopeResponse>(CallApi(params_, req, runtime));
         }
 
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Modifies the basic information about an IP Address Manager (IPAM) scope.</para>
-        /// </summary>
-        /// 
         /// <param name="request">
         /// UpdateIpamScopeRequest
         /// </param>
@@ -7821,11 +7239,6 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return TeaModel.ToObject<UpdateIpamScopeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Modifies the basic information about an IP Address Manager (IPAM) scope.</para>
-        /// </summary>
-        /// 
         /// <param name="request">
         /// UpdateIpamScopeRequest
         /// </param>
@@ -7839,11 +7252,6 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return UpdateIpamScopeWithOptions(request, runtime);
         }
 
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Modifies the basic information about an IP Address Manager (IPAM) scope.</para>
-        /// </summary>
-        /// 
         /// <param name="request">
         /// UpdateIpamScopeRequest
         /// </param>

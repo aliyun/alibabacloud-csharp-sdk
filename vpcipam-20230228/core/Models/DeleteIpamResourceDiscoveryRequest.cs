@@ -9,39 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.VpcIpam20230228.Models
 {
     public class DeleteIpamResourceDiscoveryRequest : TeaModel {
-        /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
-        /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</para>
-        /// </remarks>
-        /// 
-        /// <b>Example:</b>
-        /// <para>123e4567-e89b-12d3-a456-426655440000</para>
-        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
-        /// <summary>
-        /// <para>Specifies whether to perform the dry run. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>true</b>: Performs a dry run without deleting the resource discovery instance. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the DryRunOperation error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): Performs a dry run and the actual request. If the request passes the check, an HTTP 2xx status code is returned and the resource discovery instance is deleted.</description></item>
-        /// </list>
-        /// 
-        /// <b>Example:</b>
-        /// <para>false</para>
-        /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The ID of resource discovery instance.</para>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>ipam-res-disco-jt5f2af2u6nk2z321****</para>
         /// </summary>
         [NameInMap("IpamResourceDiscoveryId")]
         [Validation(Required=false)]
@@ -56,11 +33,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The request region.</para>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -9,22 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.VpcIpam20230228.Models
 {
     public class CreateIpamScopeResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The ID of the IPAM scope.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>ipam-scope-glfmcyldpm8lsy****</para>
-        /// </summary>
         [NameInMap("IpamScopeId")]
         [Validation(Required=false)]
         public string IpamScopeId { get; set; }
 
-        /// <summary>
-        /// <para>The request ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>E897D16A-50EB-543F-B002-C5A26AB818FF</para>
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

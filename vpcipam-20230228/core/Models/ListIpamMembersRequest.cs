@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.VpcIpam20230228.Models
 {
     public class ListIpamMembersRequest : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>20</para>
-        /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
@@ -21,10 +17,6 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
         [Validation(Required=false)]
         public List<string> MemberIds { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>FFmyTO70tTpLG6I3FmYAXGKPd****</para>
-        /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
@@ -39,9 +31,6 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
