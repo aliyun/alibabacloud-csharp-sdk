@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
     public class Table : TeaModel {
         /// <summary>
         /// <para>The comment.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>测试订单表</para>
         /// </summary>
         [NameInMap("comment")]
         [Validation(Required=false)]
@@ -53,9 +56,6 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public Schema Schema { get; set; }
 
         /// <summary>
-        /// <para>TABLE;
-        ///   MATERIALIZED_TABLE;
-        ///   VIEW;</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("tableType")]

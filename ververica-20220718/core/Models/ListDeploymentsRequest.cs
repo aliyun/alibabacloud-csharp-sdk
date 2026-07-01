@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class ListDeploymentsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the user who creates the deployment.</para>
+        /// <para>Creator UID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>183899668*******</para>
@@ -20,12 +20,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string Creator { get; set; }
 
         /// <summary>
-        /// <para>The execution mode of the deployment.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>BATCH</description></item>
-        /// <item><description>STREAMING</description></item>
-        /// </list>
+        /// <para>Deployment execution mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>STREAMING</para>
@@ -35,7 +30,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string ExecutionMode { get; set; }
 
         /// <summary>
-        /// <para>The tag key.</para>
+        /// <para>Label name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>key</para>
@@ -45,7 +40,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string LabelKey { get; set; }
 
         /// <summary>
-        /// <para>The tag value. Separate multiple values with semicolon (;).</para>
+        /// <para>Tag values. Multiple values are separated by semicolons.</para>
         /// 
         /// <b>Example:</b>
         /// <para>value1,value2</para>
@@ -55,7 +50,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string LabelValueArray { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user who modifies the deployment.</para>
+        /// <para>Modifier UID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>183899668*******</para>
@@ -65,7 +60,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string Modifier { get; set; }
 
         /// <summary>
-        /// <para>The name of the deployment.</para>
+        /// <para>Deployment name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vvp_ds_0522</para>
@@ -75,7 +70,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The page number. Minimum value: 1. Default value: 1.</para>
+        /// <para>Pagination parameter. Page index indicating the requested page number. Minimum value is 1. Default value is 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -85,7 +80,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public int? PageIndex { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 10.</para>
+        /// <para>Pagination parameter. Number of elements on the requested page. Maximum value is 100, minimum value is 1, and default value is 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -94,20 +89,18 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>Sorting method. Supports returning data in descending order by creation time or updated time.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>gmt_create</para>
+        /// </summary>
         [NameInMap("sortName")]
         [Validation(Required=false)]
         public string SortName { get; set; }
 
         /// <summary>
-        /// <para>The latest status of the deployment.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>CANCELLED</description></item>
-        /// <item><description>FAILED</description></item>
-        /// <item><description>RUNNING</description></item>
-        /// <item><description>TRANSITIONING</description></item>
-        /// <item><description>FINISHED</description></item>
-        /// </list>
+        /// <para>The status of the latest job for the deployment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RUNNING</para>

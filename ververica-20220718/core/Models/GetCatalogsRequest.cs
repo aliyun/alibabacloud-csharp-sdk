@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class GetCatalogsRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the catalog. If this parameter is left empty, all catalogs are listed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>paimon</para>
         /// </summary>

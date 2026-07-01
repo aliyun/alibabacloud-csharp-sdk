@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class ListScheduledPlanExecutedHistoryRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the deployed job.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string DeploymentId { get; set; }
 
         /// <summary>
+        /// <para>The execution source.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SCHEDULED_PLAN</para>
         /// </summary>

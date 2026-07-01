@@ -9,14 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class StartJobResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The detailed information about the access denial.</para>
+        /// </summary>
         [NameInMap("accessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>If the value of success was true, the job that you created was returned.</description></item>
-        /// <item><description>If the value of success was false, a null value was returned.</description></item>
+        /// <item><description><para>When \<c>success\\</c> is \<c>true\\</c>, the created instance information is returned.</para>
+        /// </description></item>
+        /// <item><description><para>Returns an empty value if \<c>success\\</c> is false.</para>
+        /// </description></item>
         /// </list>
         /// </summary>
         [NameInMap("data")]
@@ -25,8 +30,10 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>If the value of success was false, an error code was returned.</description></item>
-        /// <item><description>If the value of success was true, a null value was returned.</description></item>
+        /// <item><description><para>If success is false, the call returns a business error code.If success is true, the call returns business data. The following table describes the data format.If success is true, the call returns business data. The following table describes the data format.</para>
+        /// </description></item>
+        /// <item><description><para>When success is true, an empty value is returned.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,8 +45,10 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>If the value of success was false, an error message was returned.</description></item>
-        /// <item><description>If the value of success was true, a null value was returned.</description></item>
+        /// <item><description><para>If success is false, a business error message is returned.</para>
+        /// </description></item>
+        /// <item><description><para>When \<c>success\\</c> is true, an empty value is returned.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -50,7 +59,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The value was fixed to 200.</para>
+        /// <para>Fixed value: 200.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -60,7 +69,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public int? HttpCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CBC799F0-AS7S-1D30-8A4F-882ED4DD****</para>
@@ -70,7 +79,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the service request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

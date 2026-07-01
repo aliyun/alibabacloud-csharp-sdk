@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class ValidateDeploymentDraftAsyncRequest : TeaModel {
+        /// <summary>
+        /// <para>The parameter object for the job draft.</para>
+        /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public DraftValidateParams Body { get; set; }

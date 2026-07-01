@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class GetFolderRequest : TeaModel {
         /// <summary>
+        /// <para>Folder ID. If empty, the root folder is returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>89097</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string FolderId { get; set; }
 
         /// <summary>
+        /// <para>The type of the root folder.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>DEVELOPMENT</para>
         /// </summary>

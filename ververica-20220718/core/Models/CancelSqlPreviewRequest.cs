@@ -11,9 +11,6 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
     public class CancelSqlPreviewRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>19426537348647121698828223472</para>
         /// </summary>
         [NameInMap("queryId")]
         [Validation(Required=false)]
@@ -21,9 +18,6 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>test-session</para>
         /// </summary>
         [NameInMap("sessionClusterName")]
         [Validation(Required=false)]
@@ -31,9 +25,6 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>a737f33bbdb7419db9ee8037bb51e73a</para>
         /// </summary>
         [NameInMap("sessionId")]
         [Validation(Required=false)]

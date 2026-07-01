@@ -13,18 +13,18 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         /// <para>The description of the variable.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>This is a variable description</para>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The type of the variable. Valid value: Plain.</para>
+        /// <para>The type of the variable. <c>Clear</c> indicates plaintext and <c>Encrypted</c> indicates ciphertext.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Plain</para>
+        /// <para>Encrypted</para>
         /// </summary>
         [NameInMap("kind")]
         [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>variableName</para>
+        /// <para>mysqlPassword</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>variableValue</para>
+        /// <para>myPassword</para>
         /// </summary>
         [NameInMap("value")]
         [Validation(Required=false)]

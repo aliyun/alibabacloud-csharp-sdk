@@ -32,9 +32,12 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         /// <summary>
         /// <para>The status of the ticket that applies for an asynchronous operation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>EXECUTING</description></item>
-        /// <item><description>FINISHED</description></item>
-        /// <item><description>FAILED</description></item>
+        /// <item><description><para>EXECUTING</para>
+        /// </description></item>
+        /// <item><description><para>FINISHED</para>
+        /// </description></item>
+        /// <item><description><para>FAILED</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

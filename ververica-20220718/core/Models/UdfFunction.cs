@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class UdfFunction : TeaModel {
         /// <summary>
+        /// <para>The class name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>myFunctionTest</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string ClassName { get; set; }
 
         /// <summary>
+        /// <para>The function name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>myFunction</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string FunctionName { get; set; }
 
         /// <summary>
+        /// <para>The UDF artifact name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>udfCollection.jar</para>
         /// </summary>

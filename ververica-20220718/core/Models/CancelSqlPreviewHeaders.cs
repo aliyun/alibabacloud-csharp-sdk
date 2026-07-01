@@ -15,9 +15,6 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>a14bd5d90a****</para>
         /// </summary>
         [NameInMap("workspace")]
         [Validation(Required=false)]

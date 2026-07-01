@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class RescaleJobParam : TeaModel {
         /// <summary>
+        /// <para>The parallelism.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

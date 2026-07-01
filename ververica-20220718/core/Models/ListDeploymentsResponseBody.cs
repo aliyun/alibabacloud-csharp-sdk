@@ -11,8 +11,10 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
     public class ListDeploymentsResponseBody : TeaModel {
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>If the value of success was true, the list of all deployments was returned.</description></item>
-        /// <item><description>If the value of success was false, a null value was returned.</description></item>
+        /// <item><description><para>When success is true, returns a list of jobs that meet the query conditions;</para>
+        /// </description></item>
+        /// <item><description><para>When success is false, returns an empty value.</para>
+        /// </description></item>
         /// </list>
         /// </summary>
         [NameInMap("data")]
@@ -21,8 +23,10 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>If the value of success was false, an error code was returned.</description></item>
-        /// <item><description>If the value of success was true, a null value was returned.</description></item>
+        /// <item><description><para>When success is false, returns a business error code;</para>
+        /// </description></item>
+        /// <item><description><para>When success is true, returns an empty value.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,8 +38,10 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>If the value of success was false, an error message was returned.</description></item>
-        /// <item><description>If the value of success was true, a null value was returned.</description></item>
+        /// <item><description><para>When success is false, returns a business error message;</para>
+        /// </description></item>
+        /// <item><description><para>When success is true, returns an empty value.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,7 +52,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The value was fixed to 200.</para>
+        /// <para>Static field with a fixed value of 200.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -56,7 +62,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public int? HttpCode { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>Pagination parameter: page index, indicating the requested page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -66,7 +72,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public int? PageIndex { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>Pagination parameter: the number of elements on the requested page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -76,7 +82,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CBC799F0-AS7S-1D30-8A4F-882ED4DD****</para>
@@ -86,7 +92,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the business request succeeded.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -96,7 +102,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of elements that meet the query conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

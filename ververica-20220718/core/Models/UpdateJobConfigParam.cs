@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class UpdateJobConfigParam : TeaModel {
         /// <summary>
+        /// <para>The job parameter configuration.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;table.exec.parallelism：4&quot;}</para>
         /// </summary>

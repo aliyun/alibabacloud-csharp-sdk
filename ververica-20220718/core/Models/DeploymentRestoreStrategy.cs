@@ -32,10 +32,14 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         /// <summary>
         /// <para>The type of the start offset. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>NONE: The deployment is started without states.</description></item>
-        /// <item><description>LATEST_SAVEPOINT: The deployment is started from the latest savepoint.</description></item>
-        /// <item><description>FROM_SAVEPOINT: The deployment is started from the specified savepoint.</description></item>
-        /// <item><description>LATEST_STATE: The deployment is started from the latest state of the deployment.</description></item>
+        /// <item><description><para>NONE: The deployment is started without states.</para>
+        /// </description></item>
+        /// <item><description><para>LATEST_SAVEPOINT: The deployment is started from the latest savepoint.</para>
+        /// </description></item>
+        /// <item><description><para>FROM_SAVEPOINT: The deployment is started from the specified savepoint.</para>
+        /// </description></item>
+        /// <item><description><para>LATEST_STATE: The deployment is started from the latest state of the deployment.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

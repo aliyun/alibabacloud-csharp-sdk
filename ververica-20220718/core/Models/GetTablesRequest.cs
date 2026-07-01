@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class GetTablesRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the table. If this parameter is left empty, information about all tables is returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>item</para>
         /// </summary>

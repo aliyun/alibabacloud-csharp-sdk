@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         /// <para>Indicates whether the connector can be used as the source.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>flase</para>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("source")]
         [Validation(Required=false)]

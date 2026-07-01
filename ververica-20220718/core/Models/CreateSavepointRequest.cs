@@ -22,6 +22,9 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 
         /// <summary>
         /// <para>The description of the savepoint.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Job snapshot description</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
@@ -30,8 +33,10 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         /// <summary>
         /// <para>Specifies whether to use the native format mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The native format mode is used.</description></item>
-        /// <item><description>false: The native format mode is not used.</description></item>
+        /// <item><description><para>true: The native format mode is used.</para>
+        /// </description></item>
+        /// <item><description><para>false: The native format mode is not used.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

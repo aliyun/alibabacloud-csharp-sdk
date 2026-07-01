@@ -31,6 +31,9 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 
         /// <summary>
         /// <para>The description of the parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>用户名</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]

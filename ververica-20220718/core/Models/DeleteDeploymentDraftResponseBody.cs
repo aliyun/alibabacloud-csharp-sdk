@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class DeleteDeploymentDraftResponseBody : TeaModel {
         /// <summary>
+        /// <list type="bullet">
+        /// <item><description><para>If \<c>success\\</c> is \<c>false\\</c>, an error code is returned.</para>
+        /// </description></item>
+        /// <item><description><para>If \<c>success\\</c> is \<c>true\\</c>, this parameter is empty.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
         /// </summary>
@@ -18,6 +25,13 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
+        /// <list type="bullet">
+        /// <item><description><para>If \<c>success\\</c> is \<c>false\\</c>, an error message is returned.</para>
+        /// </description></item>
+        /// <item><description><para>If \<c>success\\</c> is \<c>true\\</c>, this parameter is empty.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
         /// </summary>
@@ -26,6 +40,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code. A value other than 200 indicates that the request failed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -34,6 +50,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public int? HttpCode { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CBC799F0-AS7S-1D30-8A4F-882ED4DD****</para>
         /// </summary>
@@ -42,6 +60,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

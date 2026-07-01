@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>19426537348647121698828223472</para>
+        /// <para>00000000-0000-0000-0000-00000022****</para>
         /// </summary>
         [NameInMap("queryId")]
         [Validation(Required=false)]
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test-session</para>
+        /// <para>session-test</para>
         /// </summary>
         [NameInMap("sessionClusterName")]
         [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>5f581795-4c5b-43f1-bdae-d7b0871080a1</para>
+        /// <para>00000000-0000-0000-0000-00000033****</para>
         /// </summary>
         [NameInMap("sessionId")]
         [Validation(Required=false)]

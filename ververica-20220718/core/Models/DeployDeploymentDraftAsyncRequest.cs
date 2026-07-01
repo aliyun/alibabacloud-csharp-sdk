@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class DeployDeploymentDraftAsyncRequest : TeaModel {
         /// <summary>
+        /// <para>The job draft and deployment information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]

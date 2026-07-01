@@ -9,11 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class GetHotUpdateJobResultResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The result of the dynamic update.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public HotUpdateJobResult Data { get; set; }
 
         /// <summary>
+        /// <list type="bullet">
+        /// <item><description><para>If the success parameter is false, an error code is returned.</para>
+        /// </description></item>
+        /// <item><description><para>If the success parameter is true, this parameter is empty.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
         /// </summary>
@@ -22,6 +32,13 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
+        /// <list type="bullet">
+        /// <item><description><para>If the success parameter is false, an error message is returned.</para>
+        /// </description></item>
+        /// <item><description><para>If the success parameter is true, this parameter is empty.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
         /// </summary>
@@ -30,6 +47,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code. A value of 200 is always returned. The success parameter indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -38,6 +57,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public int? HttpCode { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CBC799F0-ABCF-1D30-8A4F-882ED4DD****</para>
         /// </summary>
@@ -46,6 +67,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

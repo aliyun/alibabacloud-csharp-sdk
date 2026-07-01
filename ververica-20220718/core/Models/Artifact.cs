@@ -9,23 +9,31 @@ using Tea;
 namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class Artifact : TeaModel {
+        /// <summary>
+        /// <para>Required for a data ingestion job.</para>
+        /// </summary>
         [NameInMap("cdcYamlArtifact")]
         [Validation(Required=false)]
         public CdcYamlArtifact CdcYamlArtifact { get; set; }
 
         /// <summary>
-        /// <para>The information required for the SQL deployment.</para>
+        /// <para>Required for a JAR job.</para>
         /// </summary>
         [NameInMap("jarArtifact")]
         [Validation(Required=false)]
         public JarArtifact JarArtifact { get; set; }
 
         /// <summary>
-        /// <para>The type of the deployment. This parameter is required and cannot be modified after the deployment is created.</para>
+        /// <para>Specifies the kind of job. This field is required and cannot be changed after creation.</para>
         /// <list type="bullet">
-        /// <item><description>SQLSCRIPT</description></item>
-        /// <item><description>JAR</description></item>
-        /// <item><description>PYTHON</description></item>
+        /// <item><description><para>SQLSCRIPT: An SQL job.</para>
+        /// </description></item>
+        /// <item><description><para>JAR: A JAR job.</para>
+        /// </description></item>
+        /// <item><description><para>PYTHON: A Python job.</para>
+        /// </description></item>
+        /// <item><description><para>CDCYAML: A CDC data ingestion job.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,14 +44,14 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string Kind { get; set; }
 
         /// <summary>
-        /// <para>The information required for the Python deployment.</para>
+        /// <para>Required for a Python job.</para>
         /// </summary>
         [NameInMap("pythonArtifact")]
         [Validation(Required=false)]
         public PythonArtifact PythonArtifact { get; set; }
 
         /// <summary>
-        /// <para>The information required for the JAR deployment.</para>
+        /// <para>Required for an SQL job.</para>
         /// </summary>
         [NameInMap("sqlArtifact")]
         [Validation(Required=false)]

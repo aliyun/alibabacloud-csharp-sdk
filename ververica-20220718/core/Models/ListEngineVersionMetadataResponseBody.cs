@@ -11,8 +11,10 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
     public class ListEngineVersionMetadataResponseBody : TeaModel {
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>If the value of success was true, the engine versions that are supported by Realtime Compute for Apache Flink were returned.</description></item>
-        /// <item><description>If the value of success was false, a null value was returned.</description></item>
+        /// <item><description><para>If the value of success was true, the engine versions that are supported by Realtime Compute for Apache Flink were returned.</para>
+        /// </description></item>
+        /// <item><description><para>If the value of success was false, a null value was returned.</para>
+        /// </description></item>
         /// </list>
         /// </summary>
         [NameInMap("data")]
@@ -21,8 +23,10 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>If the value of success was false, an error code was returned.</description></item>
-        /// <item><description>If the value of success was true, a null value was returned.</description></item>
+        /// <item><description><para>If the value of success was false, an error code was returned.</para>
+        /// </description></item>
+        /// <item><description><para>If the value of success was true, a null value was returned.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,8 +38,10 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>If the value of success was false, an error message was returned.</description></item>
-        /// <item><description>If the value of success was true, a null value was returned.</description></item>
+        /// <item><description><para>If the value of success was false, an error message was returned.</para>
+        /// </description></item>
+        /// <item><description><para>If the value of success was true, a null value was returned.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test-session</para>
+        /// <para>sessioncluster-test</para>
         /// </summary>
         [NameInMap("sessionClusterName")]
         [Validation(Required=false)]

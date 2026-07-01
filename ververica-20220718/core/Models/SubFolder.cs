@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class SubFolder : TeaModel {
         /// <summary>
+        /// <para>The folder ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>a579aec9-1d5e-3382-9d65-9887ff6cfaff</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string FolderId { get; set; }
 
         /// <summary>
+        /// <para>The folder name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The parent folder ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>95c0787c-408f-4e1f-88ba-ef0a84a2c2ee</para>
         /// </summary>

@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
     public class Database : TeaModel {
         /// <summary>
         /// <para>The comment.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>测试数据库。</para>
         /// </summary>
         [NameInMap("comment")]
         [Validation(Required=false)]

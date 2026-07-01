@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class PrimaryKey : TeaModel {
         /// <summary>
+        /// <para>The primary key column group.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("columns")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public List<string> Columns { get; set; }
 
         /// <summary>
+        /// <para>The constraint name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

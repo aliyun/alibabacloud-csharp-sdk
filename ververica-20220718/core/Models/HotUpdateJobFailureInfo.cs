@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class HotUpdateJobFailureInfo : TeaModel {
         /// <summary>
+        /// <para>The error level.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>LOW</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string FailureSeverity { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>“”</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The error cause.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>“”</para>
         /// </summary>

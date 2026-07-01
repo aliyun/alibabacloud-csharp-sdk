@@ -15,8 +15,10 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>If the value of success was true, the details of the job was returned.</description></item>
-        /// <item><description>If the value of success was false, a null value was returned.</description></item>
+        /// <item><description><para>The job instance information if <c>success</c> is <c>true</c>.</para>
+        /// </description></item>
+        /// <item><description><para>An empty object if <c>success</c> is <c>false</c>.</para>
+        /// </description></item>
         /// </list>
         /// </summary>
         [NameInMap("data")]
@@ -25,8 +27,10 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>If the value of success was false, an error code was returned.</description></item>
-        /// <item><description>If the value of success was true, a null value was returned.</description></item>
+        /// <item><description><para>An error code if <c>success</c> is <c>false</c>.</para>
+        /// </description></item>
+        /// <item><description><para>An empty string if <c>success</c> is <c>true</c>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,8 +42,10 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>If the value of success was false, an error message was returned.</description></item>
-        /// <item><description>If the value of success was true, a null value was returned.</description></item>
+        /// <item><description><para>An error message if <c>success</c> is <c>false</c>.</para>
+        /// </description></item>
+        /// <item><description><para>An empty string if <c>success</c> is <c>true</c>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -50,7 +56,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The value was fixed to 200.</para>
+        /// <para>A fixed value of 200.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>

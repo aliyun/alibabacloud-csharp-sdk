@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class WatermarkSpec : TeaModel {
         /// <summary>
+        /// <para>The column of the event time attribute.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>time</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string Column { get; set; }
 
         /// <summary>
+        /// <para>The watermark expression.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>INTERVAL \&quot;5\&quot; SECOND</para>
         /// </summary>

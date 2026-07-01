@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class Relation : TeaModel {
         /// <summary>
+        /// <para>The destination table information.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>TableB</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string Destination { get; set; }
 
         /// <summary>
+        /// <para>The job instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>664cc64d-5dea-4ad3-9ee4-8432a874****</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string JobId { get; set; }
 
         /// <summary>
+        /// <para>The source table information.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>TableA</para>
         /// </summary>

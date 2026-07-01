@@ -15,8 +15,10 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>If the value of success was true, all jobs that meet the condition were returned.</description></item>
-        /// <item><description>If the value of success was false, a null value was returned.</description></item>
+        /// <item><description><para>An array of job instances for a successful request (when <c>success</c> is <c>true</c>).</para>
+        /// </description></item>
+        /// <item><description><para>An empty array for a failed request (when <c>success</c> is <c>false</c>).</para>
+        /// </description></item>
         /// </list>
         /// </summary>
         [NameInMap("data")]
@@ -25,8 +27,10 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>If the value of success was false, an error code was returned.</description></item>
-        /// <item><description>If the value of success was true, a null value was returned.</description></item>
+        /// <item><description><para>The error code for a failed request (when <c>success</c> is <c>false</c>).</para>
+        /// </description></item>
+        /// <item><description><para>An empty string if the request is successful (when <c>success</c> is <c>true</c>).</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,8 +42,10 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>If the value of success was false, an error message was returned.</description></item>
-        /// <item><description>If the value of success was true, a null value was returned.</description></item>
+        /// <item><description><para>The error message for a failed request (when <c>success</c> is <c>false</c>).</para>
+        /// </description></item>
+        /// <item><description><para>An empty string if the request is successful (when <c>success</c> is <c>true</c>).</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -50,7 +56,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The value was fixed to 200.</para>
+        /// <para>A fixed value of 200.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -60,7 +66,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public int? HttpCode { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the returned results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -70,7 +76,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public int? PageIndex { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries returned on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -80,7 +86,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CBC799F0-AS7S-1D30-8A4F-882ED4DD****</para>
@@ -100,7 +106,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries that match the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

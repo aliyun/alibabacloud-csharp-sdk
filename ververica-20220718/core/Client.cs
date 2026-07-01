@@ -19,6 +19,27 @@ namespace AlibabaCloud.SDK.Ververica20220718
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"us-west-1", "ververica.us-west-1.aliyuncs.com"},
+                {"us-east-1", "ververica.us-east-1.aliyuncs.com"},
+                {"eu-west-1", "ververica.eu-west-1.aliyuncs.com"},
+                {"eu-central-1", "ververica.eu-central-1.aliyuncs.com"},
+                {"cn-zhangjiakou", "ververica.cn-zhangjiakou.aliyuncs.com"},
+                {"cn-wulanchabu", "ververica.cn-wulanchabu.aliyuncs.com"},
+                {"cn-shenzhen", "ververica.cn-shenzhen.aliyuncs.com"},
+                {"cn-shanghai-finance-1", "ververica.cn-shanghai-finance-1.aliyuncs.com"},
+                {"cn-shanghai", "ververica.cn-shanghai.aliyuncs.com"},
+                {"cn-qingdao", "ververica.cn-qingdao.aliyuncs.com"},
+                {"cn-hongkong", "ververica.cn-hongkong.aliyuncs.com"},
+                {"cn-hangzhou", "ververica.cn-hangzhou.aliyuncs.com"},
+                {"cn-chengdu", "ververica.cn-chengdu.aliyuncs.com"},
+                {"cn-beijing", "ververica.cn-beijing.aliyuncs.com"},
+                {"ap-southeast-5", "ververica.ap-southeast-5.aliyuncs.com"},
+                {"ap-southeast-3", "ververica.ap-southeast-3.aliyuncs.com"},
+                {"ap-southeast-1", "ververica.ap-southeast-1.aliyuncs.com"},
+                {"ap-northeast-1", "ververica.ap-northeast-1.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("ververica", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -39,7 +60,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes a scheduled plan.</para>
+        /// <para>This operation applies a scheduled plan.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -84,7 +105,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes a scheduled plan.</para>
+        /// <para>This operation applies a scheduled plan.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -129,7 +150,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes a scheduled plan.</para>
+        /// <para>This operation applies a scheduled plan.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -144,7 +165,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes a scheduled plan.</para>
+        /// <para>This operation applies a scheduled plan.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -461,7 +482,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an SQL draft.</para>
+        /// <para>Creates a draft for an SQL or data ingestion job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -511,7 +532,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an SQL draft.</para>
+        /// <para>Creates a draft for an SQL or data ingestion job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -561,7 +582,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an SQL draft.</para>
+        /// <para>Creates a draft for an SQL or data ingestion job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -580,7 +601,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an SQL draft.</para>
+        /// <para>Creates a draft for an SQL or data ingestion job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -749,8 +770,13 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建部署目标V2</para>
+        /// <para>Creates a deployment target.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The previous API for creating deployment targets supported only fixed or elastic resources. This new API supports fixed resources, elastic resources, and mixed mode.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDeploymentTargetV2Request
@@ -805,8 +831,13 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建部署目标V2</para>
+        /// <para>Creates a deployment target.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The previous API for creating deployment targets supported only fixed or elastic resources. This new API supports fixed resources, elastic resources, and mixed mode.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDeploymentTargetV2Request
@@ -861,8 +892,13 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建部署目标V2</para>
+        /// <para>Creates a deployment target.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The previous API for creating deployment targets supported only fixed or elastic resources. This new API supports fixed resources, elastic resources, and mixed mode.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDeploymentTargetV2Request
@@ -880,8 +916,13 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建部署目标V2</para>
+        /// <para>Creates a deployment target.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The previous API for creating deployment targets supported only fixed or elastic resources. This new API supports fixed resources, elastic resources, and mixed mode.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDeploymentTargetV2Request
@@ -1339,7 +1380,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a scheduled tuning plan.</para>
+        /// <para>Creates a scheduled plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1389,7 +1430,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a scheduled tuning plan.</para>
+        /// <para>Creates a scheduled plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1439,7 +1480,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a scheduled tuning plan.</para>
+        /// <para>Creates a scheduled plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1458,7 +1499,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a scheduled tuning plan.</para>
+        /// <para>Creates a scheduled plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1477,7 +1518,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a session cluster</para>
+        /// <para>Creates a session cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1527,7 +1568,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a session cluster</para>
+        /// <para>Creates a session cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1577,7 +1618,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a session cluster</para>
+        /// <para>Creates a session cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1596,7 +1637,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a session cluster</para>
+        /// <para>Creates a session cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2131,7 +2172,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an SQL draft. If the draft is deployed as a deployment and the deployment is published or the deployment status is RUNNING, the deployment for the draft cannot be deleted.</para>
+        /// <para>Deletes a draft of an SQL or data ingestion job. The draft cannot be deleted if it has any published or running deployment.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2176,7 +2217,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an SQL draft. If the draft is deployed as a deployment and the deployment is published or the deployment status is RUNNING, the deployment for the draft cannot be deleted.</para>
+        /// <para>Deletes a draft of an SQL or data ingestion job. The draft cannot be deleted if it has any published or running deployment.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2221,7 +2262,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an SQL draft. If the draft is deployed as a deployment and the deployment is published or the deployment status is RUNNING, the deployment for the draft cannot be deleted.</para>
+        /// <para>Deletes a draft of an SQL or data ingestion job. The draft cannot be deleted if it has any published or running deployment.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2236,7 +2277,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an SQL draft. If the draft is deployed as a deployment and the deployment is published or the deployment status is RUNNING, the deployment for the draft cannot be deleted.</para>
+        /// <para>Deletes a draft of an SQL or data ingestion job. The draft cannot be deleted if it has any published or running deployment.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2851,7 +2892,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a scheduled tuning plan.</para>
+        /// <para>Deletes a scheduled plan.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2896,7 +2937,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a scheduled tuning plan.</para>
+        /// <para>Deletes a scheduled plan.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2941,7 +2982,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a scheduled tuning plan.</para>
+        /// <para>Deletes a scheduled plan.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2956,7 +2997,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a scheduled tuning plan.</para>
+        /// <para>Deletes a scheduled plan.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3091,7 +3132,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes resources of a user-defined function (UDF) from a namespace. Before you delete the resources of a UDF, you must delete the UDF.</para>
+        /// <para>Deletes a user-defined function (UDF) resource. You must delete all UDFs registered with the resource before you can delete the resource.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3136,7 +3177,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes resources of a user-defined function (UDF) from a namespace. Before you delete the resources of a UDF, you must delete the UDF.</para>
+        /// <para>Deletes a user-defined function (UDF) resource. You must delete all UDFs registered with the resource before you can delete the resource.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3181,7 +3222,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes resources of a user-defined function (UDF) from a namespace. Before you delete the resources of a UDF, you must delete the UDF.</para>
+        /// <para>Deletes a user-defined function (UDF) resource. You must delete all UDFs registered with the resource before you can delete the resource.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3196,7 +3237,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes resources of a user-defined function (UDF) from a namespace. Before you delete the resources of a UDF, you must delete the UDF.</para>
+        /// <para>Deletes a user-defined function (UDF) resource. You must delete all UDFs registered with the resource before you can delete the resource.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3487,7 +3528,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deploys an SQL draft.</para>
+        /// <para>Deploys a draft of an SQL job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3537,7 +3578,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deploys an SQL draft.</para>
+        /// <para>Deploys a draft of an SQL job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3587,7 +3628,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deploys an SQL draft.</para>
+        /// <para>Deploys a draft of an SQL job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3606,7 +3647,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deploys an SQL draft.</para>
+        /// <para>Deploys a draft of an SQL job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3625,7 +3666,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes SQL statements to query the metadata. Only DDL and DML statements are supported. DQL statements are not supported.</para>
+        /// <para>Executes Data Definition Language (DDL) and Data Manipulation Language (DML) statements on metadata. Data Query Language (DQL) is not supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3675,7 +3716,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes SQL statements to query the metadata. Only DDL and DML statements are supported. DQL statements are not supported.</para>
+        /// <para>Executes Data Definition Language (DDL) and Data Manipulation Language (DML) statements on metadata. Data Query Language (DQL) is not supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3725,7 +3766,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes SQL statements to query the metadata. Only DDL and DML statements are supported. DQL statements are not supported.</para>
+        /// <para>Executes Data Definition Language (DDL) and Data Manipulation Language (DML) statements on metadata. Data Query Language (DQL) is not supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3744,7 +3785,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes SQL statements to query the metadata. Only DDL and DML statements are supported. DQL statements are not supported.</para>
+        /// <para>Executes Data Definition Language (DDL) and Data Manipulation Language (DML) statements on metadata. Data Query Language (DQL) is not supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4237,7 +4278,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the scheduled plan of an application.</para>
+        /// <para>Retrieves the execution plan for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4292,7 +4333,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the scheduled plan of an application.</para>
+        /// <para>Retrieves the execution plan for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4347,7 +4388,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the scheduled plan of an application.</para>
+        /// <para>Retrieves the execution plan for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4366,7 +4407,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the scheduled plan of an application.</para>
+        /// <para>Retrieves the execution plan for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4385,7 +4426,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains details of the specified catalog or all catalogs.</para>
+        /// <para>Retrieves the details of a specified catalog or all catalogs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4440,7 +4481,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains details of the specified catalog or all catalogs.</para>
+        /// <para>Retrieves the details of a specified catalog or all catalogs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4495,7 +4536,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains details of the specified catalog or all catalogs.</para>
+        /// <para>Retrieves the details of a specified catalog or all catalogs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4514,7 +4555,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains details of the specified catalog or all catalogs.</para>
+        /// <para>Retrieves the details of a specified catalog or all catalogs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4533,7 +4574,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the information about a database in a specified catalog or lists all databases in a specified catalog.</para>
+        /// <para>Retrieves information about one or more databases in a specified catalog.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4588,7 +4629,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the information about a database in a specified catalog or lists all databases in a specified catalog.</para>
+        /// <para>Retrieves information about one or more databases in a specified catalog.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4643,7 +4684,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the information about a database in a specified catalog or lists all databases in a specified catalog.</para>
+        /// <para>Retrieves information about one or more databases in a specified catalog.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4662,7 +4703,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the information about a database in a specified catalog or lists all databases in a specified catalog.</para>
+        /// <para>Retrieves information about one or more databases in a specified catalog.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4681,7 +4722,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the deployment result based on the ID of the asynchronous ticket.</para>
+        /// <para>Checks the deployment result of a job draft.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -4726,7 +4767,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the deployment result based on the ID of the asynchronous ticket.</para>
+        /// <para>Checks the deployment result of a job draft.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -4771,7 +4812,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the deployment result based on the ID of the asynchronous ticket.</para>
+        /// <para>Checks the deployment result of a job draft.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4786,7 +4827,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the deployment result based on the ID of the asynchronous ticket.</para>
+        /// <para>Checks the deployment result of a job draft.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4921,7 +4962,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the details of an SQL draft.</para>
+        /// <para>Retrieves the details of an SQL or data ingestion job draft.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -4966,7 +5007,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the details of an SQL draft.</para>
+        /// <para>Retrieves the details of an SQL or data ingestion job draft.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -5011,7 +5052,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the details of an SQL draft.</para>
+        /// <para>Retrieves the details of an SQL or data ingestion job draft.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -5026,7 +5067,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the details of an SQL draft.</para>
+        /// <para>Retrieves the details of an SQL or data ingestion job draft.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -5041,7 +5082,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the lock that is used to edit a draft. This can prevent operations performed on the page and API operations from affecting each other.</para>
+        /// <para>Before using an API to edit, validate, or deploy a job draft, you must acquire an edit lock to prevent conflicts between user interface (UI) and API operations. Acquiring this lock requires either the &quot;Develop SQL/YAML Job (Create, Edit)&quot; or &quot;Unlock SQL/YAML Job Draft&quot; permission.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5096,7 +5137,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the lock that is used to edit a draft. This can prevent operations performed on the page and API operations from affecting each other.</para>
+        /// <para>Before using an API to edit, validate, or deploy a job draft, you must acquire an edit lock to prevent conflicts between user interface (UI) and API operations. Acquiring this lock requires either the &quot;Develop SQL/YAML Job (Create, Edit)&quot; or &quot;Unlock SQL/YAML Job Draft&quot; permission.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5151,7 +5192,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the lock that is used to edit a draft. This can prevent operations performed on the page and API operations from affecting each other.</para>
+        /// <para>Before using an API to edit, validate, or deploy a job draft, you must acquire an edit lock to prevent conflicts between user interface (UI) and API operations. Acquiring this lock requires either the &quot;Develop SQL/YAML Job (Create, Edit)&quot; or &quot;Unlock SQL/YAML Job Draft&quot; permission.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5170,7 +5211,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the lock that is used to edit a draft. This can prevent operations performed on the page and API operations from affecting each other.</para>
+        /// <para>Before using an API to edit, validate, or deploy a job draft, you must acquire an edit lock to prevent conflicts between user interface (UI) and API operations. Acquiring this lock requires either the &quot;Develop SQL/YAML Job (Create, Edit)&quot; or &quot;Unlock SQL/YAML Job Draft&quot; permission.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5189,8 +5230,13 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过Ip获取已部署作业</para>
+        /// <para>Gets a list of deployed jobs and their information on a node by a specified IP address.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Use this operation to query for associated Flink deployments based on the source or destination IP address and port of a network connection.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDeploymentsByIpRequest
@@ -5264,8 +5310,13 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过Ip获取已部署作业</para>
+        /// <para>Gets a list of deployed jobs and their information on a node by a specified IP address.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Use this operation to query for associated Flink deployments based on the source or destination IP address and port of a network connection.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDeploymentsByIpRequest
@@ -5339,8 +5390,13 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过Ip获取已部署作业</para>
+        /// <para>Gets a list of deployed jobs and their information on a node by a specified IP address.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Use this operation to query for associated Flink deployments based on the source or destination IP address and port of a network connection.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDeploymentsByIpRequest
@@ -5358,8 +5414,13 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过Ip获取已部署作业</para>
+        /// <para>Gets a list of deployed jobs and their information on a node by a specified IP address.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Use this operation to query for associated Flink deployments based on the source or destination IP address and port of a network connection.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDeploymentsByIpRequest
@@ -5377,8 +5438,13 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过标签获取已部署作业</para>
+        /// <para>Queries a list of deployed jobs and their information by a specified label.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries a list of deployed jobs and their details by a specified job label. The query performs an exact match on the <c>labelKey</c> and <c>labelValue</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDeploymentsByLabelRequest
@@ -5444,8 +5510,13 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过标签获取已部署作业</para>
+        /// <para>Queries a list of deployed jobs and their information by a specified label.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries a list of deployed jobs and their details by a specified job label. The query performs an exact match on the <c>labelKey</c> and <c>labelValue</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDeploymentsByLabelRequest
@@ -5511,8 +5582,13 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过标签获取已部署作业</para>
+        /// <para>Queries a list of deployed jobs and their information by a specified label.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries a list of deployed jobs and their details by a specified job label. The query performs an exact match on the <c>labelKey</c> and <c>labelValue</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDeploymentsByLabelRequest
@@ -5530,8 +5606,13 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过标签获取已部署作业</para>
+        /// <para>Queries a list of deployed jobs and their information by a specified label.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries a list of deployed jobs and their details by a specified job label. The query performs an exact match on the <c>labelKey</c> and <c>labelValue</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDeploymentsByLabelRequest
@@ -5549,7 +5630,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过名称获取已部署作业</para>
+        /// <para>Retrieves deployed job instances by name from a specified workspace and namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5608,7 +5689,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过名称获取已部署作业</para>
+        /// <para>Retrieves deployed job instances by name from a specified workspace and namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5667,7 +5748,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过名称获取已部署作业</para>
+        /// <para>Retrieves deployed job instances by name from a specified workspace and namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5686,7 +5767,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过名称获取已部署作业</para>
+        /// <para>Retrieves deployed job instances by name from a specified workspace and namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5705,7 +5786,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries events.</para>
+        /// <para>Retrieves runtime events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5772,7 +5853,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries events.</para>
+        /// <para>Retrieves runtime events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5839,7 +5920,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries events.</para>
+        /// <para>Retrieves runtime events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5858,7 +5939,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries events.</para>
+        /// <para>Retrieves runtime events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5877,7 +5958,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the details of a folder.</para>
+        /// <para>Retrieves specific folder information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5936,7 +6017,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the details of a folder.</para>
+        /// <para>Retrieves specific folder information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5995,7 +6076,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the details of a folder.</para>
+        /// <para>Retrieves specific folder information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6014,7 +6095,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the details of a folder.</para>
+        /// <para>Retrieves specific folder information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6153,7 +6234,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the dynamic update result of a deployment when you dynamically update the deployment.</para>
+        /// <para>Retrieves the result of a hot update for a job.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -6198,7 +6279,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the dynamic update result of a deployment when you dynamically update the deployment.</para>
+        /// <para>Retrieves the result of a hot update for a job.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -6243,7 +6324,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the dynamic update result of a deployment when you dynamically update the deployment.</para>
+        /// <para>Retrieves the result of a hot update for a job.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6258,7 +6339,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the dynamic update result of a deployment when you dynamically update the deployment.</para>
+        /// <para>Retrieves the result of a hot update for a job.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6273,7 +6354,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the details of a job.</para>
+        /// <para>Retrieves detailed information about a job instance.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -6318,7 +6399,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the details of a job.</para>
+        /// <para>Retrieves detailed information about a job instance.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -6363,7 +6444,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the details of a job.</para>
+        /// <para>Retrieves detailed information about a job instance.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6378,7 +6459,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the details of a job.</para>
+        /// <para>Retrieves detailed information about a job instance.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6393,7 +6474,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about abnormal diagnostic items based on the intelligent deployment diagnostics feature.</para>
+        /// <para>Performs intelligent diagnostics on a job and retrieves information about abnormal diagnostic items.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -6438,7 +6519,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about abnormal diagnostic items based on the intelligent deployment diagnostics feature.</para>
+        /// <para>Performs intelligent diagnostics on a job and retrieves information about abnormal diagnostic items.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -6483,7 +6564,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about abnormal diagnostic items based on the intelligent deployment diagnostics feature.</para>
+        /// <para>Performs intelligent diagnostics on a job and retrieves information about abnormal diagnostic items.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6498,7 +6579,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about abnormal diagnostic items based on the intelligent deployment diagnostics feature.</para>
+        /// <para>Performs intelligent diagnostics on a job and retrieves information about abnormal diagnostic items.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7159,7 +7240,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a session cluster.</para>
+        /// <para>Retrieves a session cluster.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -7204,7 +7285,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a session cluster.</para>
+        /// <para>Retrieves a session cluster.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -7249,7 +7330,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a session cluster.</para>
+        /// <para>Retrieves a session cluster.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7264,7 +7345,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a session cluster.</para>
+        /// <para>Retrieves a session cluster.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7279,7 +7360,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the details of a specific table in a database of a specific catalog or the information about all tables in a database.</para>
+        /// <para>Retrieves the details of a specific table or all tables in a database within a specified catalog.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7334,7 +7415,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the details of a specific table in a database of a specific catalog or the information about all tables in a database.</para>
+        /// <para>Retrieves the details of a specific table or all tables in a database within a specified catalog.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7389,7 +7470,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the details of a specific table in a database of a specific catalog or the information about all tables in a database.</para>
+        /// <para>Retrieves the details of a specific table or all tables in a database within a specified catalog.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7408,7 +7489,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the details of a specific table in a database of a specific catalog or the information about all tables in a database.</para>
+        /// <para>Retrieves the details of a specific table or all tables in a database within a specified catalog.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7575,7 +7656,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get validate DeploymentDraft result</para>
+        /// <para>Queries the depth validation result of a job draft by ticket ID.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -7620,7 +7701,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get validate DeploymentDraft result</para>
+        /// <para>Queries the depth validation result of a job draft by ticket ID.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -7665,7 +7746,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get validate DeploymentDraft result</para>
+        /// <para>Queries the depth validation result of a job draft by ticket ID.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7680,7 +7761,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get validate DeploymentDraft result</para>
+        /// <para>Queries the depth validation result of a job draft by ticket ID.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7935,7 +8016,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of SQL drafts.</para>
+        /// <para>Retrieves a list of SQL or data ingestion job drafts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7994,7 +8075,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of SQL drafts.</para>
+        /// <para>Retrieves a list of SQL or data ingestion job drafts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8053,7 +8134,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of SQL drafts.</para>
+        /// <para>Retrieves a list of SQL or data ingestion job drafts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8072,7 +8153,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of SQL drafts.</para>
+        /// <para>Retrieves a list of SQL or data ingestion job drafts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8247,7 +8328,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains information about all deployments.</para>
+        /// <para>Retrieve information about all deployed jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8338,7 +8419,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains information about all deployments.</para>
+        /// <para>Retrieve information about all deployed jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8429,7 +8510,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains information about all deployments.</para>
+        /// <para>Retrieve information about all deployed jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8448,7 +8529,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains information about all deployments.</para>
+        /// <para>Retrieve information about all deployed jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8749,7 +8830,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about all jobs in a deployment.</para>
+        /// <para>Retrieves information about all job instances for a specified deployment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8820,7 +8901,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about all jobs in a deployment.</para>
+        /// <para>Retrieves information about all job instances for a specified deployment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8891,7 +8972,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about all jobs in a deployment.</para>
+        /// <para>Retrieves information about all job instances for a specified deployment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8910,7 +8991,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about all jobs in a deployment.</para>
+        /// <para>Retrieves information about all job instances for a specified deployment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9257,7 +9338,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a list of scheduled tuning plans.</para>
+        /// <para>Lists scheduled plans.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9320,7 +9401,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a list of scheduled tuning plans.</para>
+        /// <para>Lists scheduled plans.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9383,7 +9464,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a list of scheduled tuning plans.</para>
+        /// <para>Lists scheduled plans.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9402,7 +9483,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a list of scheduled tuning plans.</para>
+        /// <para>Lists scheduled plans.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9421,7 +9502,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution history of a scheduled plan.</para>
+        /// <para>Retrieves the execution history of a scheduled plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9480,7 +9561,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution history of a scheduled plan.</para>
+        /// <para>Retrieves the execution history of a scheduled plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9539,7 +9620,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution history of a scheduled plan.</para>
+        /// <para>Retrieves the execution history of a scheduled plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9558,7 +9639,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution history of a scheduled plan.</para>
+        /// <para>Retrieves the execution history of a scheduled plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9577,7 +9658,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of session clusters.</para>
+        /// <para>This operation lists session clusters.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -9622,7 +9703,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of session clusters.</para>
+        /// <para>This operation lists session clusters.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -9667,7 +9748,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of session clusters.</para>
+        /// <para>This operation lists session clusters.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -9682,7 +9763,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of session clusters.</para>
+        /// <para>This operation lists session clusters.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -10169,7 +10250,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates and starts a job.</para>
+        /// <para>Create and start a job instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10225,7 +10306,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates and starts a job.</para>
+        /// <para>Create and start a job instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10281,7 +10362,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates and starts a job.</para>
+        /// <para>Create and start a job instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10306,7 +10387,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates and starts a job.</para>
+        /// <para>Create and start a job instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10327,7 +10408,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a job.</para>
+        /// <para>Starts a job instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10377,7 +10458,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a job.</para>
+        /// <para>Starts a job instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10427,7 +10508,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a job.</para>
+        /// <para>Starts a job instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10446,7 +10527,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a job.</para>
+        /// <para>Starts a job instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10585,7 +10666,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops the scheduled plan of an application.</para>
+        /// <para>Stops the application of a scheduled plan.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -10630,7 +10711,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops the scheduled plan of an application.</para>
+        /// <para>Stops the application of a scheduled plan.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -10675,7 +10756,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops the scheduled plan of an application.</para>
+        /// <para>Stops the application of a scheduled plan.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -10690,7 +10771,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops the scheduled plan of an application.</para>
+        /// <para>Stops the application of a scheduled plan.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -10705,7 +10786,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a job.</para>
+        /// <para>Stops a job instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10755,7 +10836,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a job.</para>
+        /// <para>Stops a job instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10805,7 +10886,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a job.</para>
+        /// <para>Stops a job instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10824,7 +10905,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a job.</para>
+        /// <para>Stops a job instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11251,7 +11332,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an SQL draft.</para>
+        /// <para>Updates the draft of an SQL or data ingestion job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11301,7 +11382,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an SQL draft.</para>
+        /// <para>Updates the draft of an SQL or data ingestion job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11351,7 +11432,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an SQL draft.</para>
+        /// <para>Updates the draft of an SQL or data ingestion job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11370,7 +11451,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an SQL draft.</para>
+        /// <para>Updates the draft of an SQL or data ingestion job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11389,7 +11470,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a cluster on which the deployment is deployed.</para>
+        /// <para>Updates a deployment target.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11439,7 +11520,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a cluster on which the deployment is deployed.</para>
+        /// <para>Updates a deployment target.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11489,7 +11570,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a cluster on which the deployment is deployed.</para>
+        /// <para>Updates a deployment target.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11508,7 +11589,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a cluster on which the deployment is deployed.</para>
+        /// <para>Updates a deployment target.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11527,8 +11608,13 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新部署目标</para>
+        /// <para>Updates a deployment target.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This new API operation updates deployment targets that use fixed resources, elastic resources, or mixed mode. The previous operation supported only fixed and elastic resources.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDeploymentTargetV2Request
@@ -11577,8 +11663,13 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新部署目标</para>
+        /// <para>Updates a deployment target.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This new API operation updates deployment targets that use fixed resources, elastic resources, or mixed mode. The previous operation supported only fixed and elastic resources.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDeploymentTargetV2Request
@@ -11627,8 +11718,13 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新部署目标</para>
+        /// <para>Updates a deployment target.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This new API operation updates deployment targets that use fixed resources, elastic resources, or mixed mode. The previous operation supported only fixed and elastic resources.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDeploymentTargetV2Request
@@ -11646,8 +11742,13 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新部署目标</para>
+        /// <para>Updates a deployment target.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This new API operation updates deployment targets that use fixed resources, elastic resources, or mixed mode. The previous operation supported only fixed and elastic resources.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDeploymentTargetV2Request
@@ -11941,7 +12042,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update a scheduled tuning plan.</para>
+        /// <para>Updates a scheduled plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11991,7 +12092,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update a scheduled tuning plan.</para>
+        /// <para>Updates a scheduled plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12041,7 +12142,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update a scheduled tuning plan.</para>
+        /// <para>Updates a scheduled plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12060,7 +12161,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update a scheduled tuning plan.</para>
+        /// <para>Updates a scheduled plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12493,8 +12594,13 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>validate DeploymentDraft async</para>
+        /// <para>Asynchronously performs an in-depth check of a Flink job draft to validate its syntax and resource configuration.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API asynchronously validates a job draft. It conducts end-to-end compliance and compatibility checks on the draft\&quot;s configuration before it is submitted for deployment.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ValidateDeploymentDraftAsyncRequest
@@ -12543,8 +12649,13 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>validate DeploymentDraft async</para>
+        /// <para>Asynchronously performs an in-depth check of a Flink job draft to validate its syntax and resource configuration.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API asynchronously validates a job draft. It conducts end-to-end compliance and compatibility checks on the draft\&quot;s configuration before it is submitted for deployment.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ValidateDeploymentDraftAsyncRequest
@@ -12593,8 +12704,13 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>validate DeploymentDraft async</para>
+        /// <para>Asynchronously performs an in-depth check of a Flink job draft to validate its syntax and resource configuration.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API asynchronously validates a job draft. It conducts end-to-end compliance and compatibility checks on the draft\&quot;s configuration before it is submitted for deployment.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ValidateDeploymentDraftAsyncRequest
@@ -12612,8 +12728,13 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>validate DeploymentDraft async</para>
+        /// <para>Asynchronously performs an in-depth check of a Flink job draft to validate its syntax and resource configuration.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API asynchronously validates a job draft. It conducts end-to-end compliance and compatibility checks on the draft\&quot;s configuration before it is submitted for deployment.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ValidateDeploymentDraftAsyncRequest

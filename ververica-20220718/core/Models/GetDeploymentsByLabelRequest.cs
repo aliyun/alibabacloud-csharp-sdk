@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class GetDeploymentsByLabelRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to exclude job summary information, such as jobName and status, from the response. If set to true, the response includes only the JobId. This improves performance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public bool? IgnoreJobSummary { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to exclude resource configuration information, such as parallelism and the number of CUs, from the response. This reduces the size of the returned data.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -26,6 +30,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public bool? IgnoreResourceSetting { get; set; }
 
         /// <summary>
+        /// <para>The label key used for filtering.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,6 +41,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string LabelKey { get; set; }
 
         /// <summary>
+        /// <para>The label value. You can specify multiple values separated by commas (,) to create an OR condition.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

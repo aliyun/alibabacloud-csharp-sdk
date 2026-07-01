@@ -9,11 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class CreateDeploymentTargetV2Request : TeaModel {
+        /// <summary>
+        /// <para>The resources for the deployment target.</para>
+        /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public Resource Body { get; set; }
 
         /// <summary>
+        /// <para>The name of the deployment target.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

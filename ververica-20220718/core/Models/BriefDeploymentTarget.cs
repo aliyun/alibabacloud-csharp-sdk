@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         /// <para>The name of the queue used for the deployment.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>vvp-workload</para>
+        /// <para>default-queue</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]

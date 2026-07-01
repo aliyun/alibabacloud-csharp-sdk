@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class Deployment : TeaModel {
         /// <summary>
-        /// <para>The parameters that are required for starting a deployment.</para>
+        /// <para>The data structure required to start the deployed job.</para>
         /// </summary>
         [NameInMap("artifact")]
         [Validation(Required=false)]
         public Artifact Artifact { get; set; }
 
         /// <summary>
-        /// <para>The resource configuration of the batch deployment.</para>
+        /// <para>Resource settings for a batch job.</para>
         /// </summary>
         [NameInMap("batchResourceSetting")]
         [Validation(Required=false)]
         public BatchResourceSetting BatchResourceSetting { get; set; }
 
         /// <summary>
-        /// <para>The time at which the deployment was created.</para>
+        /// <para>Creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1714058507</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string CreatedAt { get; set; }
 
         /// <summary>
-        /// <para>The ID of the account that is used to create the deployment.</para>
+        /// <para>Creator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>27846363877456****</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string Creator { get; set; }
 
         /// <summary>
-        /// <para>The name of the account that is used to create the deployment.</para>
+        /// <para>Name of the creator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>****@streamcompute.onaliyun.com</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string CreatorName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the deployment is modified after the deployment is started.</para>
+        /// <para>Indicates whether the deployed job has been modified after it was started.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public bool? DeploymentHasChanged { get; set; }
 
         /// <summary>
-        /// <para>The ID of the deployment.</para>
+        /// <para>Deployed job ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>00000000-0000-0000-0000-0000012312****</para>
@@ -74,14 +74,14 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string DeploymentId { get; set; }
 
         /// <summary>
-        /// <para>The cluster on which the deployment is deployed.</para>
+        /// <para>Deployment target.</para>
         /// </summary>
         [NameInMap("deploymentTarget")]
         [Validation(Required=false)]
         public BriefDeploymentTarget DeploymentTarget { get; set; }
 
         /// <summary>
-        /// <para>The description of the deployment.</para>
+        /// <para>Description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>this is a deployment description</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The engine version of the deployment.</para>
+        /// <para>Engine version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vvr-6.0.0-flink-1.15</para>
@@ -101,10 +101,12 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// <para>The execution mode of the deployment. Valid values:</para>
+        /// <para>Execution mode.</para>
         /// <list type="bullet">
-        /// <item><description>STREAMING</description></item>
-        /// <item><description>BATCH</description></item>
+        /// <item><description><para>STREAMING: stream mode.</para>
+        /// </description></item>
+        /// <item><description><para>BATCH: batch mode.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -115,7 +117,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string ExecutionMode { get; set; }
 
         /// <summary>
-        /// <para>The Realtime Compute for Apache Flink configuration.</para>
+        /// <para>Flink configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;taskmanager.numberOfTaskSlots&quot;:&quot;1&quot;}</para>
@@ -125,32 +127,35 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public Dictionary<string, object> FlinkConf { get; set; }
 
         /// <summary>
-        /// <para>The summary of jobs in the deployment.</para>
+        /// <para>A summary of information about the job instances under the deployed job.</para>
         /// </summary>
         [NameInMap("jobSummary")]
         [Validation(Required=false)]
         public JobSummary JobSummary { get; set; }
 
+        /// <summary>
+        /// <para>Job labels.</para>
+        /// </summary>
         [NameInMap("labels")]
         [Validation(Required=false)]
         public Dictionary<string, object> Labels { get; set; }
 
         /// <summary>
-        /// <para>The variables of the deployment.</para>
+        /// <para>Job variables.</para>
         /// </summary>
         [NameInMap("localVariables")]
         [Validation(Required=false)]
         public List<LocalVariable> LocalVariables { get; set; }
 
         /// <summary>
-        /// <para>The logging configuration.</para>
+        /// <para>Log configuration.</para>
         /// </summary>
         [NameInMap("logging")]
         [Validation(Required=false)]
         public Logging Logging { get; set; }
 
         /// <summary>
-        /// <para>The time at which the deployment was modified.</para>
+        /// <para>Modification time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1714058843</para>
@@ -160,7 +165,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string ModifiedAt { get; set; }
 
         /// <summary>
-        /// <para>The ID of the account that is used to modify the deployment.</para>
+        /// <para>Modifier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>27846363877456****</para>
@@ -170,7 +175,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string Modifier { get; set; }
 
         /// <summary>
-        /// <para>The name of the account that is used to modify the deployment.</para>
+        /// <para>Name of the modifier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>****@streamcompute.onaliyun.com</para>
@@ -180,7 +185,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string ModifierName { get; set; }
 
         /// <summary>
-        /// <para>The name of the deployment.</para>
+        /// <para>Deployed job name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>deploymentName</para>
@@ -200,6 +205,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string Namespace { get; set; }
 
         /// <summary>
+        /// <para>Associated job draft ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>00000000-0000-0000-0000-000000000003</para>
         /// </summary>
@@ -208,14 +215,14 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string ReferencedDeploymentDraftId { get; set; }
 
         /// <summary>
-        /// <para>The resource configuration of the streaming deployment.</para>
+        /// <para>Resource settings for a stream job.</para>
         /// </summary>
         [NameInMap("streamingResourceSetting")]
         [Validation(Required=false)]
         public StreamingResourceSetting StreamingResourceSetting { get; set; }
 
         /// <summary>
-        /// <para>The workspace to which the deployment belongs.</para>
+        /// <para>Workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>edcef******b4f</para>

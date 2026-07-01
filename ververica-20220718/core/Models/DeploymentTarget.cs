@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class DeploymentTarget : TeaModel {
         /// <summary>
+        /// <para>The name of the perjob deployment target.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>deployment target</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The namespace name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>namespace</para>
         /// </summary>
@@ -25,6 +29,9 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
+        /// <summary>
+        /// <para>The resource quota.</para>
+        /// </summary>
         [NameInMap("quota")]
         [Validation(Required=false)]
         public ResourceQuota Quota { get; set; }

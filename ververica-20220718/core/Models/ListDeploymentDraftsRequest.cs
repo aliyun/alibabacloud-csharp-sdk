@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class ListDeploymentDraftsRequest : TeaModel {
         /// <summary>
+        /// <para>The page number to return. The default value is 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public int? PageIndex { get; set; }
 
         /// <summary>
+        /// <para>The number of entries to return on each page. The default value is 10. The maximum value is 100.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

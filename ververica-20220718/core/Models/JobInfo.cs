@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class JobInfo : TeaModel {
         /// <summary>
+        /// <para>The job instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>664cc64d-5dea-4ad3-9ee4-8432a874****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string Id { get; set; }
 
         /// <summary>
+        /// <para>The job details.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;id:xxx&quot;,&quot;createTime:v&quot;}</para>
         /// </summary>

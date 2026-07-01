@@ -14,14 +14,14 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The details of the job of the deployment returned.</para>
+        /// <para>Details of the job instance created from the deployment.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public Job Data { get; set; }
 
         /// <summary>
-        /// <para>If the value of success was false, an error code was returned. If the value of success was true, a null value was returned.</para>
+        /// <para>The error code. This field is populated only when <c>success</c> is <c>false</c> and is empty otherwise.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>If the value of success was false, an error message was returned. If the value of success was true, a null value was returned.</para>
+        /// <para>The error message. This field is populated only when <c>success</c> is <c>false</c> and is empty otherwise.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The status code returned. The value was fixed to 200. The status code 200 indicates that the request was successful.</para>
+        /// <para>The HTTP status code. This value is always 200. Use the <c>success</c> field to determine whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public int? HttpCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CBC799F0-AS7S-1D30-8A4F-882ED4DD****</para>

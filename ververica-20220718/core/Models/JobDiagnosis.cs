@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class JobDiagnosis : TeaModel {
         /// <summary>
-        /// <para>The diagnostic task ID.</para>
+        /// <para>The diagnostic ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ba30cd99-37a5-4a20-8cd9-ed4b*****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string DiagnoseId { get; set; }
 
         /// <summary>
-        /// <para>The time when the deployment is diagnosed.</para>
+        /// <para>The diagnostic time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1740389560871</para>
@@ -28,6 +28,10 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         [NameInMap("diagnoseTime")]
         [Validation(Required=false)]
         public long? DiagnoseTime { get; set; }
+
+        [NameInMap("healthScore")]
+        [Validation(Required=false)]
+        public int? HealthScore { get; set; }
 
         /// <summary>
         /// <para>The namespace.</para>
@@ -40,13 +44,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The severity level of the risk.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>RISK_LEVEL_HIGH</description></item>
-        /// <item><description>RISK_LEVEL_MID</description></item>
-        /// <item><description>RISK_LEVEL_LOW</description></item>
-        /// </list>
+        /// <para>The risk level.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RISK_LEVEL_LOW</para>
@@ -63,7 +61,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public JobDiagnosisSymptoms Symptoms { get; set; }
 
         /// <summary>
-        /// <para>The workspace to which the deployment belongs.</para>
+        /// <para>The workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a14bd5d90a****</para>

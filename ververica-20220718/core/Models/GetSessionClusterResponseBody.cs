@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class GetSessionClusterResponseBody : TeaModel {
+        /// <summary>
+        /// <para>This data structure represents the retrieved session cluster.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public SessionCluster Data { get; set; }
 
         /// <summary>
+        /// <para>The error code. This parameter is returned when \<c>success\\</c> is \<c>false\\</c>. If \<c>success\\</c> is \<c>true\\</c>, this parameter is empty.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
         /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
+        /// <para>The error message. This parameter is returned when \<c>success\\</c> is \<c>false\\</c>. If \<c>success\\</c> is \<c>true\\</c>, this parameter is empty.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
         /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code. This parameter is always 200. Use the success parameter to determine whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public int? HttpCode { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CBC799F0-AS7S-1D30-8A4F-882ED4DD****</para>
         /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

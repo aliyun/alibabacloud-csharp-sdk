@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class ListScheduledPlanRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the job.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>737d0921-c5ac-47fc-9ba9-07a1e0b4****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string DeploymentId { get; set; }
 
         /// <summary>
+        /// <para>The page number to return. The default value is 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public int? PageIndex { get; set; }
 
         /// <summary>
+        /// <para>The number of entries to return on each page. The default value is 10. The maximum value is 100.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

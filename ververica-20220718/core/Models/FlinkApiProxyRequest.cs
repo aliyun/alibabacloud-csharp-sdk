@@ -12,9 +12,6 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         /// <summary>
         /// <para>The path of the Flink UI.</para>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>/jobs/4df35f8e54554b23bf7dcd38a151****</para>
         /// </summary>
         [NameInMap("flinkApiPath")]
         [Validation(Required=false)]
@@ -45,8 +42,10 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         /// <summary>
         /// <para>The type of the resource. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>jobs</description></item>
-        /// <item><description>sessionclusters</description></item>
+        /// <item><description><para>jobs</para>
+        /// </description></item>
+        /// <item><description><para>sessionclusters</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -31,6 +31,9 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 
         /// <summary>
         /// <para>The description of the savepoint.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>作业快照1</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
@@ -99,9 +102,12 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         /// <summary>
         /// <para>The method that is used to create a savepoint.</para>
         /// <list type="bullet">
-        /// <item><description><c>USER_REQUEST</c>: The savepoint is manually created.</description></item>
-        /// <item><description><c>STOP_WITH_SAVEPOINT</c>: The savepoint is created when you cancel the deployment.</description></item>
-        /// <item><description><c>RETAINED_CHECKPOINT</c>: The savepoint is created based on the returned checkpoint.</description></item>
+        /// <item><description><para><c>USER_REQUEST</c>: The savepoint is manually created.</para>
+        /// </description></item>
+        /// <item><description><para><c>STOP_WITH_SAVEPOINT</c>: The savepoint is created when you cancel the deployment.</para>
+        /// </description></item>
+        /// <item><description><para><c>RETAINED_CHECKPOINT</c>: The savepoint is created based on the returned checkpoint.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

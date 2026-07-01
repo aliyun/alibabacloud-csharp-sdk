@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class TableMeta : TeaModel {
         /// <summary>
+        /// <para>The catalog name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>paimon</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string CatalogName { get; set; }
 
         /// <summary>
+        /// <para>The database name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>paimon-ods</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string DatabaseName { get; set; }
 
         /// <summary>
+        /// <para>The table name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>order-table</para>
         /// </summary>

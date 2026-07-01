@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class ListJobsRequest : TeaModel {
         /// <summary>
-        /// <para>The deployment ID.</para>
+        /// <para>The ID of the deployment.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string DeploymentId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Minimum value: 1. Default value: 1.</para>
+        /// <para>The page number to return. Minimum value: 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public int? PageIndex { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 10.</para>
+        /// <para>The number of entries per page. Maximum value: 100. Minimum value: 1. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -41,13 +41,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The collation.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>gmt_create</description></item>
-        /// <item><description>job_id</description></item>
-        /// <item><description>status</description></item>
-        /// </list>
+        /// <para>The field to sort the results by.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gmt_create</para>

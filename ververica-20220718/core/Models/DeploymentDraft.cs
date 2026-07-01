@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class DeploymentDraft : TeaModel {
         /// <summary>
-        /// <para>The script of the SQL deployment.</para>
+        /// <para>The artifact. Supported types include SQLSCRIPT and CDCYAML.</para>
         /// </summary>
         [NameInMap("artifact")]
         [Validation(Required=false)]
         public Artifact Artifact { get; set; }
 
         /// <summary>
-        /// <para>The time when the draft was created.</para>
+        /// <para>Output only. The creation time, represented as a Unix timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1723537978</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public long? CreatedAt { get; set; }
 
         /// <summary>
-        /// <para>The ID of the account that is used to create the draft.</para>
+        /// <para>Output only. The ID of the creator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>27846363877456****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string Creator { get; set; }
 
         /// <summary>
-        /// <para>The name of the account that is used to create the draft.</para>
+        /// <para>Output only. The name of the creator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>****@streamcompute.onaliyun.com</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string CreatorName { get; set; }
 
         /// <summary>
-        /// <para>The draft ID.</para>
+        /// <para>The deployment draft ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>00000000-0000-0000-0000-00000012****</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string DeploymentDraftId { get; set; }
 
         /// <summary>
-        /// <para>The engine version of the deployment.</para>
+        /// <para>The engine version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vvr-6.0.7-flink-1.15</para>
@@ -77,28 +77,28 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string ExecutionMode { get; set; }
 
         /// <summary>
-        /// <para>The labels of the deployment.</para>
+        /// <para>Key-value pairs to apply as labels.</para>
         /// </summary>
         [NameInMap("labels")]
         [Validation(Required=false)]
         public Dictionary<string, object> Labels { get; set; }
 
         /// <summary>
-        /// <para>The variables.</para>
+        /// <para>The local variables.</para>
         /// </summary>
         [NameInMap("localVariables")]
         [Validation(Required=false)]
         public List<LocalVariable> LocalVariables { get; set; }
 
         /// <summary>
-        /// <para>The lock of the draft.</para>
+        /// <para>The deployment draft lock.</para>
         /// </summary>
         [NameInMap("lock")]
         [Validation(Required=false)]
         public Lock Lock { get; set; }
 
         /// <summary>
-        /// <para>The time when the draft was modified.</para>
+        /// <para>Output only. The modification time, represented as a Unix timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1723537978</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public long? ModifiedAt { get; set; }
 
         /// <summary>
-        /// <para>The ID of the account that is used to modify the draft.</para>
+        /// <para>Output only. The ID of the modifier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>27846363877456****</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string Modifier { get; set; }
 
         /// <summary>
-        /// <para>The name of the account that is used to modify the draft.</para>
+        /// <para>Output only. The name of the modifier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>****@streamcompute.onaliyun.com</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string ModifierName { get; set; }
 
         /// <summary>
-        /// <para>The name of the draft.</para>
+        /// <para>The deployment draft name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-draft</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The name of the namespace.</para>
+        /// <para>The namespace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default-namespace</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The ID of the parent folder.</para>
+        /// <para>The parent ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>00000000-0000-0000-0000-00000013****</para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string ParentId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the associated deployment.</para>
+        /// <para>The referenced deployment ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>00000000-0000-0000-0000-0000012312****</para>

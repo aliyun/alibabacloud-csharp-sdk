@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class SubmitSqlPreviewResponseBody : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>&quot;[main] INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - --------------------------------------------------------------------------------\n2024-05-22 11:46:39,871 [main] INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint&quot;</para>
-        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public SubmitPreviewResult Data { get; set; }
@@ -49,10 +45,6 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>true</para>
-        /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

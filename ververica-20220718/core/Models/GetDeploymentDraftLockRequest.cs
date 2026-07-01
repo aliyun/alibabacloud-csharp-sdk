@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class GetDeploymentDraftLockRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the job draft. You can get this ID by calling the ListDeploymentDrafts operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

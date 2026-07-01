@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class UpdateSessionClusterRequest : TeaModel {
+        /// <summary>
+        /// <para>The data structure of the session cluster to be updated.</para>
+        /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public SessionCluster Body { get; set; }
