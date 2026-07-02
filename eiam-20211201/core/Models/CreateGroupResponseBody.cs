@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The group ID.</para>
+        /// <para>Group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>group_d6sbsuumeta4h66ec3il7yxxxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>

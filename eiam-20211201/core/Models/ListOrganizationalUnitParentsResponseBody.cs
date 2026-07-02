@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListOrganizationalUnitParentsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of parent organizational units.</para>
+        /// <para>The list of parent organizations.</para>
         /// </summary>
         [NameInMap("Parents")]
         [Validation(Required=false)]
         public List<ListOrganizationalUnitParentsResponseBodyParents> Parents { get; set; }
         public class ListOrganizationalUnitParentsResponseBodyParents : TeaModel {
             /// <summary>
-            /// <para>The organizational unit ID.</para>
+            /// <para>The organization ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ou_4lag76zc2km5ssg5vsmm2lznvu</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string OrganizationalUnitId { get; set; }
 
             /// <summary>
-            /// <para>The parent organizational unit ID.</para>
+            /// <para>The parent organization ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ou_x3beoyepv2ls5iwuge3xhjkwbm</para>

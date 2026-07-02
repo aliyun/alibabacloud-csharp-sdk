@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListApplicationsForOrganizationalUnitResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of applications that are granted access.</para>
+        /// <para>The list of applications that are authorized for access.</para>
         /// </summary>
         [NameInMap("Applications")]
         [Validation(Required=false)]
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationId { get; set; }
 
             /// <summary>
-            /// <para>A list of application roles.</para>
+            /// <para>The list of application roles.</para>
             /// </summary>
             [NameInMap("ApplicationRoles")]
             [Validation(Required=false)]
             public List<ListApplicationsForOrganizationalUnitResponseBodyApplicationsApplicationRoles> ApplicationRoles { get; set; }
             public class ListApplicationsForOrganizationalUnitResponseBodyApplicationsApplicationRoles : TeaModel {
                 /// <summary>
-                /// <para>The ID of the application role.</para>
+                /// <para>The application role ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

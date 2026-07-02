@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetUserResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The data object of the account.</para>
+        /// <para>The account object data.</para>
         /// </summary>
         [NameInMap("User")]
         [Validation(Required=false)]
         public GetUserResponseBodyUser User { get; set; }
         public class GetUserResponseBodyUser : TeaModel {
             /// <summary>
-            /// <para>The time when the account expires. This value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The expiration time of the account, in UNIX timestamp format. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1652085686179</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? AccountExpireTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the account was created. This value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The creation time of the account, in UNIX timestamp format. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1652085686179</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The list of custom fields that describe the account.</para>
+            /// <para>The list of custom fields of the account.</para>
             /// </summary>
             [NameInMap("CustomFields")]
             [Validation(Required=false)]
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The email address of the user who owns the account.</para>
+            /// <para>The email address of the account.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:user@example.com">user@example.com</a></para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Email { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the email address has been verified. A value of true indicates that the email address has been verified by the user or has been set to the verified status by the administrator. A value of false indicates that the email address has not been verified.</para>
+            /// <para>Indicates whether the email address is verified. A value of true indicates that the email address has been verified by the user or set as verified by the administrator. A value of false indicates that the email address is not verified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -116,14 +116,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public bool? EmailVerified { get; set; }
 
             /// <summary>
-            /// <para>The organizational units to which the account belongs.</para>
+            /// <para>The list of groups to which the account belongs.</para>
             /// </summary>
             [NameInMap("Groups")]
             [Validation(Required=false)]
             public List<GetUserResponseBodyUserGroups> Groups { get; set; }
             public class GetUserResponseBodyUserGroups : TeaModel {
                 /// <summary>
-                /// <para>The description of the organizational unit.</para>
+                /// <para>The group description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>this is a test.</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the organizational unit.</para>
+                /// <para>The group ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>group_d6sbsuumeta4h66ec3il7yxxxx</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string GroupId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the organizational unit.</para>
+                /// <para>The group name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>group_test_name</para>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The ID of the instance</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The time when the account lock expires. This value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The lock expiration time, in UNIX timestamp format. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1652085686179</para>
@@ -175,14 +175,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? LockExpireTime { get; set; }
 
             /// <summary>
-            /// <para>The organizational units to which the account belongs.</para>
+            /// <para>The list of organizational units to which the account belongs.</para>
             /// </summary>
             [NameInMap("OrganizationalUnits")]
             [Validation(Required=false)]
             public List<GetUserResponseBodyUserOrganizationalUnits> OrganizationalUnits { get; set; }
             public class GetUserResponseBodyUserOrganizationalUnits : TeaModel {
                 /// <summary>
-                /// <para>The ID of the organizational unit.</para>
+                /// <para>The organizational unit ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ou_wovwffm62xifdziem7an7xxxxx</para>
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string OrganizationalUnitId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the organizational unit.</para>
+                /// <para>The organizational unit name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test_ou_name</para>
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string OrganizationalUnitName { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the organization is the primary organization.</para>
+                /// <para>Indicates whether this is the primary organizational unit.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -214,13 +214,13 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The time when the password of the account expires. This value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The expiration time of the password, in UNIX timestamp format. Unit: milliseconds.</para>
             /// <list type="bullet">
-            /// <item><description><para>If the value -1 is returned, the password does not expire.</para>
+            /// <item><description><para>A return value of -1 indicates that the password does not expire.</para>
             /// </description></item>
-            /// <item><description><para>If no value is returned, the password does not expire.</para>
+            /// <item><description><para>No return value indicates that the password does not expire.</para>
             /// </description></item>
-            /// <item><description><para>If a UNIX timestamp is returned, the password expires at the indicated point of time.</para>
+            /// <item><description><para>A specific timestamp value indicates the exact password expiration time.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -232,7 +232,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? PasswordExpireTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether a password is set.</para>
+            /// <para>Indicates whether the password is set.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -242,7 +242,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public bool? PasswordSet { get; set; }
 
             /// <summary>
-            /// <para>The mobile number of the user who owns the account.</para>
+            /// <para>The phone number of the account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>156xxxxxxx</para>
@@ -252,7 +252,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string PhoneNumber { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the mobile number has been verified. A value of true indicates that the mobile number has been verified by the user or has been set to the verified status by the administrator. A value of false indicates that the mobile number has not been verified.</para>
+            /// <para>Indicates whether the phone number is verified. A value of true indicates that the phone number has been verified by the user or set as verified by the administrator. A value of false indicates that the phone number is not verified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -262,7 +262,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public bool? PhoneNumberVerified { get; set; }
 
             /// <summary>
-            /// <para>The country code of the mobile number. For example, the country code of China is 86 without 00 or +.</para>
+            /// <para>The country calling code of the phone number. Example: 86 for the Chinese mainland. The code does not include the 00 or + prefix.</para>
             /// 
             /// <b>Example:</b>
             /// <para>86</para>
@@ -272,7 +272,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string PhoneRegion { get; set; }
 
             /// <summary>
-            /// <para>Preferred language</para>
+            /// <para>The preferred language.</para>
             /// 
             /// <b>Example:</b>
             /// <para>en-US</para>
@@ -292,7 +292,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string PrimaryOrganizationalUnitId { get; set; }
 
             /// <summary>
-            /// <para>The time when the account was registered. This value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The registration time of the account, in UNIX timestamp format. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1652085686179</para>
@@ -304,9 +304,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The status of the account. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>enabled: The account is enabled.</para>
+            /// <item><description><para>enabled: enabled.</para>
             /// </description></item>
-            /// <item><description><para>disabled: The account is disabled.</para>
+            /// <item><description><para>disabled: disabled.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -318,7 +318,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The time when the account was last updated. The value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The most recent update time of the account, in UNIX timestamp format. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1652085686179</para>
@@ -328,8 +328,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The external ID of the account. The external ID can be used by external data to map the data of the account in IDaaS EIAM. By default, the external ID is the account ID.</para>
-            /// <para>For accounts with the same source type and source ID, each account has a unique external ID.</para>
+            /// <para>The external ID of the account. This ID is used to associate external data with the IDaaS account. The default value is the IDaaS account ID.</para>
+            /// <remarks>
+            /// <para>Note: The external ID must be unique within the same source type and source ID.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>user_d6sbsuumeta4h66ec3il7yxxxx</para>
@@ -339,7 +341,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string UserExternalId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the account.</para>
+            /// <para>The account ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user_d6sbsuumeta4h66ec3il7yxxxx</para>
@@ -350,7 +352,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 
             /// <summary>
             /// <para>The source ID of the account.</para>
-            /// <para>If the account was created in IDaaS, its source ID is the ID of the IDaaS instance. If the account was imported, its source ID is the enterprise ID in the source. For example, if the account was imported from DingTalk, its source ID is the corpId value of the enterprise in DingTalk.</para>
+            /// <para>For the self-built type, the default value is the instance ID. For other types, the value corresponds to the enterprise ID of the respective source. For example, the DingTalk source corresponds to the corpId of the DingTalk enterprise.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
@@ -362,13 +364,15 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The source type of the account. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>build_in: The account was created in IDaaS.</para>
+            /// <item><description><para>build_in: self-built.</para>
             /// </description></item>
-            /// <item><description><para>ding_talk: The account was imported from DingTalk.</para>
+            /// <item><description><para>ding_talk: imported from DingTalk.</para>
             /// </description></item>
-            /// <item><description><para>ad: The account was imported from Microsoft Active Directory (AD).</para>
+            /// <item><description><para>ad: imported from AD.</para>
             /// </description></item>
-            /// <item><description><para>ldap: The account was imported from a Lightweight Directory Access Protocol (LDAP) service.</para>
+            /// <item><description><para>ldap: imported from LDAP.</para>
+            /// </description></item>
+            /// <item><description><para>we_com: imported from WeCom.</para>
             /// </description></item>
             /// </list>
             /// 

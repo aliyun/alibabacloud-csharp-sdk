@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<ListInstancesResponseBodyInstances> Instances { get; set; }
         public class ListInstancesResponseBodyInstances : TeaModel {
             /// <summary>
-            /// <para>The time when the instance was created. The value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The instance creation time, in UNIX timestamp format. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1550115455000</para>
@@ -27,6 +27,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether cross-region replication is enabled. Valid values: enabled or disabled.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>enabled</para>
             /// </summary>
@@ -35,6 +37,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CrossRegionReplication { get; set; }
 
             /// <summary>
+            /// <para>The cross-region replication role. Valid values: primary (primary instance) or backup (backup instance).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>primary</para>
             /// </summary>
@@ -60,10 +64,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string Endpoint { get; set; }
 
                 /// <summary>
-                /// <para>The status of the instance endpoint. Valid values:</para>
+                /// <para>The endpoint status. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>resolved: Resolved.</description></item>
-                /// <item><description>unresolved: Unresolved.</description></item>
+                /// <item><description>unresolved: Not resolved.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -76,7 +80,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The description of the instance.</para>
+            /// <para>The instance description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>instance_for_test</para>
@@ -86,6 +90,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The instance failover activation status. Valid values: active (activated) or inactive (not activated).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>inactive</para>
             /// </summary>
@@ -113,11 +119,16 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public string ManagedServiceCode { get; set; }
 
+            /// <summary>
+            /// <para>The replication configuration. This parameter is returned only when CrossRegionReplication is set to enabled.</para>
+            /// </summary>
             [NameInMap("ReplicationConfiguration")]
             [Validation(Required=false)]
             public ListInstancesResponseBodyInstancesReplicationConfiguration ReplicationConfiguration { get; set; }
             public class ListInstancesResponseBodyInstancesReplicationConfiguration : TeaModel {
                 /// <summary>
+                /// <para>The instance ID of the backup instance.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>idaas_xxxxxx</para>
                 /// </summary>
@@ -126,6 +137,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string BackupInstanceId { get; set; }
 
                 /// <summary>
+                /// <para>The region ID of the backup instance.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>cn-beijing</para>
                 /// </summary>
@@ -134,6 +147,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string BackupInstanceRegionId { get; set; }
 
                 /// <summary>
+                /// <para>The instance ID of the primary instance.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>idaas_xxxxxx</para>
                 /// </summary>
@@ -142,6 +157,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string PrimaryInstanceId { get; set; }
 
                 /// <summary>
+                /// <para>The region ID of the primary instance.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou</para>
                 /// </summary>
@@ -150,6 +167,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string PrimaryInstanceRegionId { get; set; }
 
                 /// <summary>
+                /// <para>The time when the disaster recovery data replication was created, in UNIX timestamp format. Unit: milliseconds.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1778499337000</para>
                 /// </summary>
@@ -196,7 +215,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries in the list.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

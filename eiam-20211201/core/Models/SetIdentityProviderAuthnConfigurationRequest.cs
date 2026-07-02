@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class SetIdentityProviderAuthnConfigurationRequest : TeaModel {
         /// <summary>
-        /// <para>Automatic Account Creation Rule Configuration.</para>
+        /// <para>Automatic account creation rule configuration.</para>
         /// </summary>
         [NameInMap("AutoCreateUserConfig")]
         [Validation(Required=false)]
         public SetIdentityProviderAuthnConfigurationRequestAutoCreateUserConfig AutoCreateUserConfig { get; set; }
         public class SetIdentityProviderAuthnConfigurationRequestAutoCreateUserConfig : TeaModel {
             /// <summary>
-            /// <para>Automatic account creation status.</para>
+            /// <para>Indicates whether automatic account creation is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>disabled</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AutoCreateUserStatus { get; set; }
 
             /// <summary>
-            /// <para>Organization ID</para>
+            /// <para>The organizational unit IDs.</para>
             /// </summary>
             [NameInMap("TargetOrganizationalUnitIds")]
             [Validation(Required=false)]
@@ -36,14 +36,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>Automatic Account Update Configuration</para>
+        /// <para>Automatic account update configuration.</para>
         /// </summary>
         [NameInMap("AutoUpdateUserConfig")]
         [Validation(Required=false)]
         public SetIdentityProviderAuthnConfigurationRequestAutoUpdateUserConfig AutoUpdateUserConfig { get; set; }
         public class SetIdentityProviderAuthnConfigurationRequestAutoUpdateUserConfig : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to enable automatic account updates.</para>
+            /// <para>Indicates whether automatic account update is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>disabled</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>Account Binding Rule Configuration</para>
+        /// <para>Account binding rule configuration.</para>
         /// </summary>
         [NameInMap("BindingConfig")]
         [Validation(Required=false)]
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public List<SetIdentityProviderAuthnConfigurationRequestBindingConfigAutoMatchUserProfileExpressions> AutoMatchUserProfileExpressions { get; set; }
             public class SetIdentityProviderAuthnConfigurationRequestBindingConfigAutoMatchUserProfileExpressions : TeaModel {
                 /// <summary>
-                /// <para>Type of expression.</para>
+                /// <para>The type of the expression.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string ExpressionMappingType { get; set; }
 
                 /// <summary>
-                /// <para>Expression for mapping attribute value.</para>
+                /// <para>The value expression of the mapping attribute.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string SourceValueExpression { get; set; }
 
                 /// <summary>
-                /// <para>Target attribute name for mapping.</para>
+                /// <para>The name of the mapping target attribute.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string TargetField { get; set; }
 
                 /// <summary>
-                /// <para>Target attribute name for mapping.</para>
+                /// <para>The description of the mapping target attribute.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>username</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>Automatic account matching status.</para>
+            /// <para>Indicates whether automatic account matching is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>disabled</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AutoMatchUserStatus { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the manual account binding feature is enabled.</para>
+            /// <para>Indicates whether the manual account binding feature is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>enabled</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>Identity Provider ID</para>
+        /// <para>Identity provider ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string IdentityProviderId { get; set; }
 
         /// <summary>
-        /// <para>Instance ID</para>
+        /// <para>Instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -158,14 +158,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>AD/LDAP Authentication Configuration</para>
+        /// <para>AD/LDAP authentication configuration.</para>
         /// </summary>
         [NameInMap("LdapAuthnConfig")]
         [Validation(Required=false)]
         public SetIdentityProviderAuthnConfigurationRequestLdapAuthnConfig LdapAuthnConfig { get; set; }
         public class SetIdentityProviderAuthnConfigurationRequestLdapAuthnConfig : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to automatically update passwords.</para>
+            /// <para>Indicates whether automatic password update is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>enabled</para>
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AutoUpdatePasswordStatus { get; set; }
 
             /// <summary>
-            /// <para>User Login Identifier</para>
+            /// <para>The user login identifier.</para>
             /// 
             /// <b>Example:</b>
             /// <para>email</para>
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string UserLoginIdentifier { get; set; }
 
             /// <summary>
-            /// <para>User ObjectClass</para>
+            /// <para>The user ObjectClass.</para>
             /// 
             /// <b>Example:</b>
             /// <para>posixAccount</para>

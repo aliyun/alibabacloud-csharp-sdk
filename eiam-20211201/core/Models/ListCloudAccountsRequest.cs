@@ -19,12 +19,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The name of the filter field. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>CloudAccountId: The ID of the Alibaba Cloud account.</para>
-            /// </description></item>
-            /// <item><description><para>CloudAccountExternalId: The external unique ID of the Alibaba Cloud account.</para>
-            /// </description></item>
-            /// <item><description><para>CloudAccountVendorType: The type of the Alibaba Cloud account.</para>
-            /// </description></item>
+            /// <item><description>CloudAccountId: the cloud account ID.</description></item>
+            /// <item><description>CloudAccountExternalId: the external unique identifier of the cloud account.</description></item>
+            /// <item><description>CloudAccountVendorType: the cloud account type.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -35,7 +32,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>A list of values for the filter field.</para>
+            /// <para>The values of the filter field.</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -55,11 +52,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of records to return on each page.</para>
+        /// <para>The maximum number of records per page.</para>
         /// <list type="bullet">
-        /// <item><description><para>The default value is 20.</para>
+        /// <item><description><para>Default value: 20.</para>
         /// </description></item>
-        /// <item><description><para>The maximum value is 100.</para>
+        /// <item><description><para>Maximum value: 100.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -71,9 +68,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that specifies the start of the next page.</para>
+        /// <para>The token that marks the starting position of the next page.</para>
         /// <list type="bullet">
-        /// <item><description>If you leave this parameter empty, the query starts from the first page.</description></item>
+        /// <item><description>If you do not specify this parameter, the query starts from the first page.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

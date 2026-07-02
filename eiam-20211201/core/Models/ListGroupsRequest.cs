@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListGroupsRequest : TeaModel {
         /// <summary>
-        /// <para>The external ID of the group.</para>
+        /// <para>Group external ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>group_external_id</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string GroupExternalId { get; set; }
 
         /// <summary>
-        /// <para>The group IDs.</para>
+        /// <para>Group ID list.</para>
         /// </summary>
         [NameInMap("GroupIds")]
         [Validation(Required=false)]
         public List<string> GroupIds { get; set; }
 
         /// <summary>
-        /// <para>The name of the group. If you specify this parameter, the query is based on an exact match.</para>
+        /// <para>Group name. The query uses exact matching.</para>
         /// 
         /// <b>Example:</b>
         /// <para>name_test</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string GroupName { get; set; }
 
         /// <summary>
-        /// <para>The prefix of the group name. If you specify this parameter, the query follows the leftmost matching principle.</para>
+        /// <para>Group name prefix. The query uses prefix matching.</para>
         /// 
         /// <b>Example:</b>
         /// <para>name</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string GroupNameStartsWith { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>Instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>Page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>Page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

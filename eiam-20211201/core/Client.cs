@@ -820,7 +820,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a specified EIAM account to one or more EIAM organizations. If the account already exists in one of the specified organizations, the request succeeds.</para>
+        /// <para>Adds a specified EIAM account to multiple EIAM organizations. If the account already exists in an organization, the operation returns a success response directly.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -870,7 +870,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a specified EIAM account to one or more EIAM organizations. If the account already exists in one of the specified organizations, the request succeeds.</para>
+        /// <para>Adds a specified EIAM account to multiple EIAM organizations. If the account already exists in an organization, the operation returns a success response directly.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -920,7 +920,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a specified EIAM account to one or more EIAM organizations. If the account already exists in one of the specified organizations, the request succeeds.</para>
+        /// <para>Adds a specified EIAM account to multiple EIAM organizations. If the account already exists in an organization, the operation returns a success response directly.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -938,7 +938,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a specified EIAM account to one or more EIAM organizations. If the account already exists in one of the specified organizations, the request succeeds.</para>
+        /// <para>Adds a specified EIAM account to multiple EIAM organizations. If the account already exists in an organization, the operation returns a success response directly.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -956,7 +956,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds Employee Identity and Access Management (EIAM) accounts to an EIAM group of Identity as a Service (IDaaS).</para>
+        /// <para>Adds multiple Employee Identity and Access Management (EIAM) accounts to a specified EIAM account group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1006,7 +1006,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds Employee Identity and Access Management (EIAM) accounts to an EIAM group of Identity as a Service (IDaaS).</para>
+        /// <para>Adds multiple Employee Identity and Access Management (EIAM) accounts to a specified EIAM account group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1056,7 +1056,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds Employee Identity and Access Management (EIAM) accounts to an EIAM group of Identity as a Service (IDaaS).</para>
+        /// <para>Adds multiple Employee Identity and Access Management (EIAM) accounts to a specified EIAM account group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1074,7 +1074,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds Employee Identity and Access Management (EIAM) accounts to an EIAM group of Identity as a Service (IDaaS).</para>
+        /// <para>Adds multiple Employee Identity and Access Management (EIAM) accounts to a specified EIAM account group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6008,7 +6008,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an account group in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM).</para>
+        /// <para>Create an EIAM account group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6062,7 +6062,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an account group in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM).</para>
+        /// <para>Create an EIAM account group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6116,7 +6116,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an account group in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM).</para>
+        /// <para>Create an EIAM account group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6134,7 +6134,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an account group in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM).</para>
+        /// <para>Create an EIAM account group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6152,7 +6152,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an identity provider.</para>
+        /// <para>Create an identity provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6262,7 +6262,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an identity provider.</para>
+        /// <para>Create an identity provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6372,7 +6372,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an identity provider.</para>
+        /// <para>Create an identity provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6390,7 +6390,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an identity provider.</para>
+        /// <para>Create an identity provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7112,7 +7112,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an organization in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM).</para>
+        /// <para>Creates an EIAM organization under a specified organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7170,7 +7170,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an organization in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM).</para>
+        /// <para>Creates an EIAM organization under a specified organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7228,7 +7228,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an organization in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM).</para>
+        /// <para>Creates an EIAM organization under a specified organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7246,7 +7246,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an organization in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM).</para>
+        /// <para>Creates an EIAM organization under a specified organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7424,7 +7424,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create an EIAM account in a specific EIAM instance.</para>
+        /// <para>Creates an EIAM account in a specified EIAM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7526,7 +7526,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create an EIAM account in a specific EIAM instance.</para>
+        /// <para>Creates an EIAM account in a specified EIAM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7628,7 +7628,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create an EIAM account in a specific EIAM instance.</para>
+        /// <para>Creates an EIAM account in a specified EIAM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7646,7 +7646,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create an EIAM account in a specific EIAM instance.</para>
+        /// <para>Creates an EIAM account in a specified EIAM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10220,7 +10220,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the information of an account group in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM).</para>
+        /// <para>Delete an EIAM account group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10266,7 +10266,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the information of an account group in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM).</para>
+        /// <para>Delete an EIAM account group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10312,7 +10312,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the information of an account group in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM).</para>
+        /// <para>Delete an EIAM account group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10330,7 +10330,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the information of an account group in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM).</para>
+        /// <para>Delete an EIAM account group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10348,7 +10348,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete identity provider</para>
+        /// <para>Deletes an identity provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10394,7 +10394,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete identity provider</para>
+        /// <para>Deletes an identity provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10440,7 +10440,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete identity provider</para>
+        /// <para>Deletes an identity provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10458,7 +10458,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete identity provider</para>
+        /// <para>Deletes an identity provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10872,7 +10872,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an organization in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM). If the organization has EIAM accounts or child organizations, the delete operation fails.</para>
+        /// <para>Deletes a specified EIAM organizational unit. The deletion fails if the organizational unit contains EIAM accounts or child organizational units.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10918,7 +10918,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an organization in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM). If the organization has EIAM accounts or child organizations, the delete operation fails.</para>
+        /// <para>Deletes a specified EIAM organizational unit. The deletion fails if the organizational unit contains EIAM accounts or child organizational units.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10964,7 +10964,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an organization in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM). If the organization has EIAM accounts or child organizations, the delete operation fails.</para>
+        /// <para>Deletes a specified EIAM organizational unit. The deletion fails if the organizational unit contains EIAM accounts or child organizational units.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10982,7 +10982,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an organization in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM). If the organization has EIAM accounts or child organizations, the delete operation fails.</para>
+        /// <para>Deletes a specified EIAM organizational unit. The deletion fails if the organizational unit contains EIAM accounts or child organizational units.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11000,7 +11000,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes information about an organization and forcefully deletes all accounts and sub-organizations in the organization.</para>
+        /// <para>Deletes all data of a specified organization. This operation can force delete all accounts and sub-organizations under the specified organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11046,7 +11046,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes information about an organization and forcefully deletes all accounts and sub-organizations in the organization.</para>
+        /// <para>Deletes all data of a specified organization. This operation can force delete all accounts and sub-organizations under the specified organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11092,7 +11092,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes information about an organization and forcefully deletes all accounts and sub-organizations in the organization.</para>
+        /// <para>Deletes all data of a specified organization. This operation can force delete all accounts and sub-organizations under the specified organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11110,7 +11110,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes information about an organization and forcefully deletes all accounts and sub-organizations in the organization.</para>
+        /// <para>Deletes all data of a specified organization. This operation can force delete all accounts and sub-organizations under the specified organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11264,7 +11264,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified EIAM user and purges all related information.</para>
+        /// <para>Deletes a specified EIAM account and purges all information associated with the account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11310,7 +11310,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified EIAM user and purges all related information.</para>
+        /// <para>Deletes a specified EIAM account and purges all information associated with the account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11356,7 +11356,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified EIAM user and purges all related information.</para>
+        /// <para>Deletes a specified EIAM account and purges all information associated with the account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11374,7 +11374,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified EIAM user and purges all related information.</para>
+        /// <para>Deletes a specified EIAM account and purges all information associated with the account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14493,7 +14493,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you disable an application, all its features, such as single sign-on (SSO) and account synchronization, become unavailable. Before you perform this operation, make sure that you understand the associated risks.</para>
+        /// <para>When you change an application from the enabled state to the disabled state, all features of the application become unavailable, such as SSO and account synchronization. Make sure that you are aware of the risks that this operation may cause.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14544,7 +14544,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you disable an application, all its features, such as single sign-on (SSO) and account synchronization, become unavailable. Before you perform this operation, make sure that you understand the associated risks.</para>
+        /// <para>When you change an application from the enabled state to the disabled state, all features of the application become unavailable, such as SSO and account synchronization. Make sure that you are aware of the risks that this operation may cause.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14595,7 +14595,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you disable an application, all its features, such as single sign-on (SSO) and account synchronization, become unavailable. Before you perform this operation, make sure that you understand the associated risks.</para>
+        /// <para>When you change an application from the enabled state to the disabled state, all features of the application become unavailable, such as SSO and account synchronization. Make sure that you are aware of the risks that this operation may cause.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14618,7 +14618,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you disable an application, all its features, such as single sign-on (SSO) and account synchronization, become unavailable. Before you perform this operation, make sure that you understand the associated risks.</para>
+        /// <para>When you change an application from the enabled state to the disabled state, all features of the application become unavailable, such as SSO and account synchronization. Make sure that you are aware of the risks that this operation may cause.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14636,7 +14636,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disable identity provider synchronization</para>
+        /// <para>Disables the inbound synchronization feature of an identity provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14682,7 +14682,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disable identity provider synchronization</para>
+        /// <para>Disables the inbound synchronization feature of an identity provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14728,7 +14728,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disable identity provider synchronization</para>
+        /// <para>Disables the inbound synchronization feature of an identity provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14746,7 +14746,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disable identity provider synchronization</para>
+        /// <para>Disables the inbound synchronization feature of an identity provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15140,7 +15140,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables an Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM) account. If the account is disabled, a success message is returned.</para>
+        /// <para>Sets an account status to disabled. If the account is already disabled, the operation returns success directly.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15186,7 +15186,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables an Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM) account. If the account is disabled, a success message is returned.</para>
+        /// <para>Sets an account status to disabled. If the account is already disabled, the operation returns success directly.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15232,7 +15232,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables an Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM) account. If the account is disabled, a success message is returned.</para>
+        /// <para>Sets an account status to disabled. If the account is already disabled, the operation returns success directly.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15250,7 +15250,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables an Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM) account. If the account is disabled, a success message is returned.</para>
+        /// <para>Sets an account status to disabled. If the account is already disabled, the operation returns success directly.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18085,7 +18085,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When a conditional access policy is disabled, it no longer blocks access. Ensure that you understand the potential security threats before you perform this operation.</para>
+        /// <para>When you change a conditional access policy from enabled to disabled, the policy no longer intercepts requests. Make sure that you are aware of the risks that this operation may cause.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18136,7 +18136,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When a conditional access policy is disabled, it no longer blocks access. Ensure that you understand the potential security threats before you perform this operation.</para>
+        /// <para>When you change a conditional access policy from enabled to disabled, the policy no longer intercepts requests. Make sure that you are aware of the risks that this operation may cause.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18187,7 +18187,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When a conditional access policy is disabled, it no longer blocks access. Ensure that you understand the potential security threats before you perform this operation.</para>
+        /// <para>When you change a conditional access policy from enabled to disabled, the policy no longer intercepts requests. Make sure that you are aware of the risks that this operation may cause.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18210,7 +18210,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When a conditional access policy is disabled, it no longer blocks access. Ensure that you understand the potential security threats before you perform this operation.</para>
+        /// <para>When you change a conditional access policy from enabled to disabled, the policy no longer intercepts requests. Make sure that you are aware of the risks that this operation may cause.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18228,7 +18228,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enable identity provider synchronization.</para>
+        /// <para>Enables the inbound synchronization feature for an identity provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18274,7 +18274,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enable identity provider synchronization.</para>
+        /// <para>Enables the inbound synchronization feature for an identity provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18320,7 +18320,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enable identity provider synchronization.</para>
+        /// <para>Enables the inbound synchronization feature for an identity provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18338,7 +18338,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enable identity provider synchronization.</para>
+        /// <para>Enables the inbound synchronization feature for an identity provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18732,7 +18732,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables an Employee Identity and Access Management (EIAM) account of Identity as a Service (IDaaS).</para>
+        /// <para>Sets an account to the enabled state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18778,7 +18778,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables an Employee Identity and Access Management (EIAM) account of Identity as a Service (IDaaS).</para>
+        /// <para>Sets an account to the enabled state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18824,7 +18824,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables an Employee Identity and Access Management (EIAM) account of Identity as a Service (IDaaS).</para>
+        /// <para>Sets an account to the enabled state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18842,7 +18842,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables an Employee Identity and Access Management (EIAM) account of Identity as a Service (IDaaS).</para>
+        /// <para>Sets an account to the enabled state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21236,7 +21236,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询授权服务器</para>
+        /// <para>Queries an authorization server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21282,7 +21282,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询授权服务器</para>
+        /// <para>Queries an authorization server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21328,7 +21328,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询授权服务器</para>
+        /// <para>Queries an authorization server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21346,7 +21346,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询授权服务器</para>
+        /// <para>Queries an authorization server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21628,7 +21628,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about resources in an Alibaba Cloud account.</para>
+        /// <para>Queries the resource information of a cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21674,7 +21674,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about resources in an Alibaba Cloud account.</para>
+        /// <para>Queries the resource information of a cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21720,7 +21720,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about resources in an Alibaba Cloud account.</para>
+        /// <para>Queries the resource information of a cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21738,7 +21738,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about resources in an Alibaba Cloud account.</para>
+        /// <para>Queries the resource information of a cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23056,7 +23056,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the information about an account group in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM).</para>
+        /// <para>Queries the details of an EIAM account group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23102,7 +23102,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the information about an account group in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM).</para>
+        /// <para>Queries the details of an EIAM account group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23148,7 +23148,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the information about an account group in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM).</para>
+        /// <para>Queries the details of an EIAM account group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23166,7 +23166,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the information about an account group in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM).</para>
+        /// <para>Queries the details of an EIAM account group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23184,7 +23184,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get an identity provider.</para>
+        /// <para>Retrieves an identity provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23230,7 +23230,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get an identity provider.</para>
+        /// <para>Retrieves an identity provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23276,7 +23276,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get an identity provider.</para>
+        /// <para>Retrieves an identity provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23294,7 +23294,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get an identity provider.</para>
+        /// <para>Retrieves an identity provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23576,7 +23576,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get IdP Inbound Synchronization Configuration Information</para>
+        /// <para>Retrieves the inbound synchronization configuration of an identity provider (IdP).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23622,7 +23622,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get IdP Inbound Synchronization Configuration Information</para>
+        /// <para>Retrieves the inbound synchronization configuration of an identity provider (IdP).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23668,7 +23668,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get IdP Inbound Synchronization Configuration Information</para>
+        /// <para>Retrieves the inbound synchronization configuration of an identity provider (IdP).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23686,7 +23686,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get IdP Inbound Synchronization Configuration Information</para>
+        /// <para>Retrieves the inbound synchronization configuration of an identity provider (IdP).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25100,7 +25100,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an organizational unit in Identity as a Service (IDaaS) Employee IAM (EIAM).</para>
+        /// <para>Queries the information of an EIAM organizational unit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25146,7 +25146,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an organizational unit in Identity as a Service (IDaaS) Employee IAM (EIAM).</para>
+        /// <para>Queries the information of an EIAM organizational unit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25192,7 +25192,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an organizational unit in Identity as a Service (IDaaS) Employee IAM (EIAM).</para>
+        /// <para>Queries the information of an EIAM organizational unit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25210,7 +25210,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an organizational unit in Identity as a Service (IDaaS) Employee IAM (EIAM).</para>
+        /// <para>Queries the information of an EIAM organizational unit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25708,7 +25708,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the permission scopes for a specified resource server.</para>
+        /// <para>Queries the scope permissions under a specified ResourceServer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25758,7 +25758,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the permission scopes for a specified resource server.</para>
+        /// <para>Queries the scope permissions under a specified ResourceServer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25808,7 +25808,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the permission scopes for a specified resource server.</para>
+        /// <para>Queries the scope permissions under a specified ResourceServer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25826,7 +25826,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the permission scopes for a specified resource server.</para>
+        /// <para>Queries the scope permissions under a specified ResourceServer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26212,7 +26212,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an account in Identity as a Service (IDaaS) Employee IAM (EIAM).</para>
+        /// <para>Queries the details of an EIAM account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26258,7 +26258,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an account in Identity as a Service (IDaaS) Employee IAM (EIAM).</para>
+        /// <para>Queries the details of an EIAM account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26304,7 +26304,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an account in Identity as a Service (IDaaS) Employee IAM (EIAM).</para>
+        /// <para>Queries the details of an EIAM account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26322,7 +26322,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an account in Identity as a Service (IDaaS) Employee IAM (EIAM).</para>
+        /// <para>Queries the details of an EIAM account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28008,7 +28008,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of applications that an EIAM group can access.</para>
+        /// <para>Query the list of applications accessible to an EIAM group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28066,7 +28066,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of applications that an EIAM group can access.</para>
+        /// <para>Query the list of applications accessible to an EIAM group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28124,7 +28124,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of applications that an EIAM group can access.</para>
+        /// <para>Query the list of applications accessible to an EIAM group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28142,7 +28142,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of applications that an EIAM group can access.</para>
+        /// <para>Query the list of applications accessible to an EIAM group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28456,12 +28456,12 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation queries a paginated list of applications that an EIAM organization can access. The response includes application IDs. To retrieve detailed information about an application, call the GetApplication operation.</para>
+        /// <para>Queries the list of applications accessible to an EIAM organizational unit by paging. The response includes application IDs. To obtain detailed application information, call the GetApplication operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries only the applications that are directly assigned to an organization. You can use the <b>ApplicationIds</b> parameter to filter the applications.</para>
+        /// <para>This operation queries only the direct permissions of the organizational unit, that is, applications directly assigned to the organizational unit. When you call this operation, you can use the <b>ApplicationIds</b> parameter to filter applications.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28519,12 +28519,12 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation queries a paginated list of applications that an EIAM organization can access. The response includes application IDs. To retrieve detailed information about an application, call the GetApplication operation.</para>
+        /// <para>Queries the list of applications accessible to an EIAM organizational unit by paging. The response includes application IDs. To obtain detailed application information, call the GetApplication operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries only the applications that are directly assigned to an organization. You can use the <b>ApplicationIds</b> parameter to filter the applications.</para>
+        /// <para>This operation queries only the direct permissions of the organizational unit, that is, applications directly assigned to the organizational unit. When you call this operation, you can use the <b>ApplicationIds</b> parameter to filter applications.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28582,12 +28582,12 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation queries a paginated list of applications that an EIAM organization can access. The response includes application IDs. To retrieve detailed information about an application, call the GetApplication operation.</para>
+        /// <para>Queries the list of applications accessible to an EIAM organizational unit by paging. The response includes application IDs. To obtain detailed application information, call the GetApplication operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries only the applications that are directly assigned to an organization. You can use the <b>ApplicationIds</b> parameter to filter the applications.</para>
+        /// <para>This operation queries only the direct permissions of the organizational unit, that is, applications directly assigned to the organizational unit. When you call this operation, you can use the <b>ApplicationIds</b> parameter to filter applications.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28605,12 +28605,12 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation queries a paginated list of applications that an EIAM organization can access. The response includes application IDs. To retrieve detailed information about an application, call the GetApplication operation.</para>
+        /// <para>Queries the list of applications accessible to an EIAM organizational unit by paging. The response includes application IDs. To obtain detailed application information, call the GetApplication operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries only the applications that are directly assigned to an organization. You can use the <b>ApplicationIds</b> parameter to filter the applications.</para>
+        /// <para>This operation queries only the direct permissions of the organizational unit, that is, applications directly assigned to the organizational unit. When you call this operation, you can use the <b>ApplicationIds</b> parameter to filter applications.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -30092,7 +30092,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns a paginated list of information about one or more Alibaba Cloud accounts.</para>
+        /// <para>Queries information about one or more cloud accounts by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30146,7 +30146,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns a paginated list of information about one or more Alibaba Cloud accounts.</para>
+        /// <para>Queries information about one or more cloud accounts by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30200,7 +30200,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns a paginated list of information about one or more Alibaba Cloud accounts.</para>
+        /// <para>Queries information about one or more cloud accounts by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30218,7 +30218,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns a paginated list of information about one or more Alibaba Cloud accounts.</para>
+        /// <para>Queries information about one or more cloud accounts by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30400,7 +30400,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the conditional access policies associated with an application.</para>
+        /// <para>List conditional access policies associated with an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30446,7 +30446,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the conditional access policies associated with an application.</para>
+        /// <para>List conditional access policies associated with an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30492,7 +30492,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the conditional access policies associated with an application.</para>
+        /// <para>List conditional access policies associated with an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30510,7 +30510,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the conditional access policies associated with an application.</para>
+        /// <para>List conditional access policies associated with an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31932,7 +31932,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View the event list.</para>
+        /// <para>Queries the event list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31978,7 +31978,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View the event list.</para>
+        /// <para>Queries the event list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32024,7 +32024,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View the event list.</para>
+        /// <para>Queries the event list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32042,7 +32042,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View the event list.</para>
+        /// <para>Queries the event list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32220,7 +32220,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of account groups in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM).</para>
+        /// <para>List EIAM account groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32286,7 +32286,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of account groups in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM).</para>
+        /// <para>List EIAM account groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32352,7 +32352,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of account groups in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM).</para>
+        /// <para>List EIAM account groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32370,7 +32370,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of account groups in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM).</para>
+        /// <para>List EIAM account groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32860,7 +32860,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of account groups to which an Employee Identity and Access Management (EIAM) account of Identity as a Service (IDaaS) belongs.</para>
+        /// <para>Queries the list of account groups to which a specified EIAM account belongs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32914,7 +32914,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of account groups to which an Employee Identity and Access Management (EIAM) account of Identity as a Service (IDaaS) belongs.</para>
+        /// <para>Queries the list of account groups to which a specified EIAM account belongs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32968,7 +32968,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of account groups to which an Employee Identity and Access Management (EIAM) account of Identity as a Service (IDaaS) belongs.</para>
+        /// <para>Queries the list of account groups to which a specified EIAM account belongs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32986,7 +32986,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of account groups to which an Employee Identity and Access Management (EIAM) account of Identity as a Service (IDaaS) belongs.</para>
+        /// <para>Queries the list of account groups to which a specified EIAM account belongs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33004,7 +33004,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of identity providers.</para>
+        /// <para>Query the list of identity providers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33058,7 +33058,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of identity providers.</para>
+        /// <para>Query the list of identity providers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33112,7 +33112,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of identity providers.</para>
+        /// <para>Query the list of identity providers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33130,7 +33130,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of identity providers.</para>
+        /// <para>Query the list of identity providers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33292,7 +33292,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about one or more Employee Identity and Access Management (EIAM) instances.</para>
+        /// <para>Queries information about one or more EIAM instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33354,7 +33354,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about one or more Employee Identity and Access Management (EIAM) instances.</para>
+        /// <para>Queries information about one or more EIAM instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33416,7 +33416,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about one or more Employee Identity and Access Management (EIAM) instances.</para>
+        /// <para>Queries information about one or more EIAM instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33434,7 +33434,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about one or more Employee Identity and Access Management (EIAM) instances.</para>
+        /// <para>Queries information about one or more EIAM instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34108,7 +34108,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all parent organizational units of a specified EIAM organizational unit. The returned organizational units are sorted in hierarchical order from the highest level to the lowest level.</para>
+        /// <para>Queries all ancestor organizations of a specified EIAM organization. The organizations in the result list are sorted in hierarchical order from the top level to the bottom level.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34154,7 +34154,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all parent organizational units of a specified EIAM organizational unit. The returned organizational units are sorted in hierarchical order from the highest level to the lowest level.</para>
+        /// <para>Queries all ancestor organizations of a specified EIAM organization. The organizations in the result list are sorted in hierarchical order from the top level to the bottom level.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34200,7 +34200,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all parent organizational units of a specified EIAM organizational unit. The returned organizational units are sorted in hierarchical order from the highest level to the lowest level.</para>
+        /// <para>Queries all ancestor organizations of a specified EIAM organization. The organizations in the result list are sorted in hierarchical order from the top level to the bottom level.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34218,7 +34218,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all parent organizational units of a specified EIAM organizational unit. The returned organizational units are sorted in hierarchical order from the highest level to the lowest level.</para>
+        /// <para>Queries all ancestor organizations of a specified EIAM organization. The organizations in the result list are sorted in hierarchical order from the top level to the bottom level.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35592,12 +35592,12 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a paginated list of EIAM accounts.</para>
+        /// <para>Queries EIAM account information by using paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API retrieves only applications directly assigned to an organization. Use the <b>ApplicationIds</b> parameter to filter applications.</para>
+        /// <para>This operation queries only the direct permissions of an organizational unit, which are the applications directly assigned to the organizational unit. When you call this operation, you can use the <b>ApplicationIds</b> parameter to filter applications.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -35699,12 +35699,12 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a paginated list of EIAM accounts.</para>
+        /// <para>Queries EIAM account information by using paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API retrieves only applications directly assigned to an organization. Use the <b>ApplicationIds</b> parameter to filter applications.</para>
+        /// <para>This operation queries only the direct permissions of an organizational unit, which are the applications directly assigned to the organizational unit. When you call this operation, you can use the <b>ApplicationIds</b> parameter to filter applications.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -35806,12 +35806,12 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a paginated list of EIAM accounts.</para>
+        /// <para>Queries EIAM account information by using paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API retrieves only applications directly assigned to an organization. Use the <b>ApplicationIds</b> parameter to filter applications.</para>
+        /// <para>This operation queries only the direct permissions of an organizational unit, which are the applications directly assigned to the organizational unit. When you call this operation, you can use the <b>ApplicationIds</b> parameter to filter applications.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -35829,12 +35829,12 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a paginated list of EIAM accounts.</para>
+        /// <para>Queries EIAM account information by using paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API retrieves only applications directly assigned to an organization. Use the <b>ApplicationIds</b> parameter to filter applications.</para>
+        /// <para>This operation queries only the direct permissions of an organizational unit, which are the applications directly assigned to the organizational unit. When you call this operation, you can use the <b>ApplicationIds</b> parameter to filter applications.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -36896,7 +36896,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the proxy token for a domain name in an EIAM instance.</para>
+        /// <para>Queries the proxy token of an EIAM instance domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36946,7 +36946,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the proxy token for a domain name in an EIAM instance.</para>
+        /// <para>Queries the proxy token of an EIAM instance domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36996,7 +36996,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the proxy token for a domain name in an EIAM instance.</para>
+        /// <para>Queries the proxy token of an EIAM instance domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37014,7 +37014,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the proxy token for a domain name in an EIAM instance.</para>
+        /// <para>Queries the proxy token of an EIAM instance domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40360,7 +40360,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the default domain name for a specified EIAM instance.</para>
+        /// <para>Sets a specified domain name of an EIAM instance as the default domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40406,7 +40406,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the default domain name for a specified EIAM instance.</para>
+        /// <para>Sets a specified domain name of an EIAM instance as the default domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40452,7 +40452,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the default domain name for a specified EIAM instance.</para>
+        /// <para>Sets a specified domain name of an EIAM instance as the default domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40470,7 +40470,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the default domain name for a specified EIAM instance.</para>
+        /// <para>Sets a specified domain name of an EIAM instance as the default domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40624,7 +40624,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update authentication information</para>
+        /// <para>Modify Authentication Information</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40686,7 +40686,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update authentication information</para>
+        /// <para>Modify Authentication Information</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40748,7 +40748,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update authentication information</para>
+        /// <para>Modify Authentication Information</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40766,7 +40766,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update authentication information</para>
+        /// <para>Modify Authentication Information</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40784,7 +40784,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the inbound synchronization configuration for an IdP.</para>
+        /// <para>Modifies the inbound synchronization configuration of an Identity Provider (IdP).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40858,7 +40858,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the inbound synchronization configuration for an IdP.</para>
+        /// <para>Modifies the inbound synchronization configuration of an Identity Provider (IdP).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40932,7 +40932,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the inbound synchronization configuration for an IdP.</para>
+        /// <para>Modifies the inbound synchronization configuration of an Identity Provider (IdP).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40950,7 +40950,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the inbound synchronization configuration for an IdP.</para>
+        /// <para>Modifies the inbound synchronization configuration of an Identity Provider (IdP).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42856,7 +42856,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unlocks an Employee Identity and Access Management (EIAM) account of Identity as a Service (IDaaS) that is locked.</para>
+        /// <para>Unlocks a locked EIAM account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42902,7 +42902,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unlocks an Employee Identity and Access Management (EIAM) account of Identity as a Service (IDaaS) that is locked.</para>
+        /// <para>Unlocks a locked EIAM account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42948,7 +42948,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unlocks an Employee Identity and Access Management (EIAM) account of Identity as a Service (IDaaS) that is locked.</para>
+        /// <para>Unlocks a locked EIAM account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42966,7 +42966,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unlocks an Employee Identity and Access Management (EIAM) account of Identity as a Service (IDaaS) that is locked.</para>
+        /// <para>Unlocks a locked EIAM account.</para>
         /// </summary>
         /// 
         /// <param name="request">

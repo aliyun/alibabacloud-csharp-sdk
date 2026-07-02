@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class EnableIdentityProviderAuthnRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the identity provider (IdP).</para>
+        /// <para>The identity provider ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

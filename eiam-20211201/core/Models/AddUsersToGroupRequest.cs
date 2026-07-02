@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The account IDs.</para>
+        /// <para>The list of account IDs. The list can contain up to 100 elements.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

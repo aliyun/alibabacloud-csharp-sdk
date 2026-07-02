@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the scope permission of the resource server.</para>
+        /// <para>The scope permission information under the ResourceServer.</para>
         /// </summary>
         [NameInMap("ResourceServerScope")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the scope permission.</para>
+            /// <para>The scope permission ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rss_xxxxxxxxxxx</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ResourceServerScopeId { get; set; }
 
             /// <summary>
-            /// <para>The name of the scope permission.</para>
+            /// <para>The scope permission name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Read User Info</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ResourceServerScopeName { get; set; }
 
             /// <summary>
-            /// <para>The type of the scope permission.</para>
+            /// <para>The scope permission type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>urn:alibaba:idaas:resourceserver:scope:delegated</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ResourceServerScopeType { get; set; }
 
             /// <summary>
-            /// <para>The value of the scope permission.</para>
+            /// <para>The scope permission value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>User:Read:ALL</para>

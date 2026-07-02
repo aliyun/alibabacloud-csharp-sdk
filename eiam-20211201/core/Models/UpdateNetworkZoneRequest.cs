@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NetworkZoneId { get; set; }
 
         /// <summary>
-        /// <para>The name of the network zone.</para>
+        /// <para>The network zone name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NetworkZoneName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the virtual private cloud (VPC).</para>
+        /// <para>The VPC ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc_xxxxx</para>

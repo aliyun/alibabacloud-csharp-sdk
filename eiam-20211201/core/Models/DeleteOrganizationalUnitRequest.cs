@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The organization ID.</para>
+        /// <para>The organizational unit ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

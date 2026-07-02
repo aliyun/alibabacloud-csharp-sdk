@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the group. The value can be up to 256 characters in length.</para>
+        /// <para>Description. The maximum length is 256 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>this is a test.</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The external ID of the group, which can be used to associate the group with an external system. By default, the external ID is the group ID. The value can be up to 64 characters in length.</para>
+        /// <para>Group external ID, used for association with external systems. The default value is the group ID. The maximum length is 64 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>group_d6sbsuumeta4h66ec3il7yxxxx</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string GroupExternalId { get; set; }
 
         /// <summary>
-        /// <para>The name of the group. The name can be up to 64 characters in length.</para>
+        /// <para>Group name. The maximum length is 64 characters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string GroupName { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>Instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

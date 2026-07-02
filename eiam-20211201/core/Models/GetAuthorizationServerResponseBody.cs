@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetAuthorizationServerResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The authorization server.</para>
+        /// </summary>
         [NameInMap("AuthorizationServer")]
         [Validation(Required=false)]
         public GetAuthorizationServerResponseBodyAuthorizationServer AuthorizationServer { get; set; }
         public class GetAuthorizationServerResponseBodyAuthorizationServer : TeaModel {
             /// <summary>
-            /// <para>IDaaS EIAM 授权服务器ID</para>
+            /// <para>The authorization server ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>iauths_system</para>
@@ -24,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AuthorizationServerId { get; set; }
 
             /// <summary>
-            /// <para>IDaaS EIAM 授权服务器名称</para>
+            /// <para>The name of the authorization server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>System_Default</para>
@@ -34,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AuthorizationServerName { get; set; }
 
             /// <summary>
-            /// <para>IDaaS EIAM 授权服务器创建时间</para>
+            /// <para>The time when the authorization server was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1754620108295</para>
@@ -44,7 +47,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>创建类型：system_init-系统默认创建，jwt_credential_provider-JWT凭据提供商创建，user_custom-用户创建</para>
+            /// <para>The creation type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>system_init</para>
@@ -54,7 +57,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CreationType { get; set; }
 
             /// <summary>
-            /// <para>授权服务器描述</para>
+            /// <para>The description of the authorization server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>description of authorization server</para>
@@ -64,7 +67,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>IDaaS EIAM 实例Id</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_qzljgbhtwnnsywtdbz7yzy2any</para>
@@ -74,7 +77,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>IDaaS EIAM 授权token颁发者</para>
+            /// <para>The issuer of the authorization token.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://xxxx.aliyunidaas.com/api/v2/iauths_system/oauth2">https://xxxx.aliyunidaas.com/api/v2/iauths_system/oauth2</a></para>
@@ -84,7 +87,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Issuer { get; set; }
 
             /// <summary>
-            /// <para>Issuer使用的域名，可为初始化域名或已添加的自定义域名</para>
+            /// <para>The domain name used by the issuer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxxx.aliyunidaas.com</para>
@@ -94,7 +97,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string IssuerDomain { get; set; }
 
             /// <summary>
-            /// <para>Issuer模式：dynamic-动态基于请求域名，static-使用固定域名</para>
+            /// <para>The issuer mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>static</para>
@@ -104,7 +107,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string IssuerMode { get; set; }
 
             /// <summary>
-            /// <para>IDaaS EIAM 授权服务器最近更新时间</para>
+            /// <para>The time when the authorization server was last updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1781608572164</para>
@@ -113,11 +116,16 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public long? LastUpdateTime { get; set; }
 
+            /// <summary>
+            /// <para>The endpoint configuration of the authorization server.</para>
+            /// </summary>
             [NameInMap("ProtocolEndpoint")]
             [Validation(Required=false)]
             public GetAuthorizationServerResponseBodyAuthorizationServerProtocolEndpoint ProtocolEndpoint { get; set; }
             public class GetAuthorizationServerResponseBodyAuthorizationServerProtocolEndpoint : TeaModel {
                 /// <summary>
+                /// <para>The token endpoint of the authorization server.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://xxxx.aliyunidaas.com/api/v2/iauths_system/oauth2/token">https://xxxx.aliyunidaas.com/api/v2/iauths_system/oauth2/token</a></para>
                 /// </summary>
@@ -126,6 +134,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string Oauth2TokenEndpoint { get; set; }
 
                 /// <summary>
+                /// <para>The JWKS endpoint of the authorization server.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://xxxx.aliyunidaas.com/api/v2/iauths_system/oauth2/jwks">https://xxxx.aliyunidaas.com/api/v2/iauths_system/oauth2/jwks</a></para>
                 /// </summary>
@@ -136,7 +146,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>IDaaS EIAM 授权服务器状态，enabled启用，disabled禁用</para>
+            /// <para>The status of the authorization server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ENABLE</para>
@@ -148,6 +158,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>

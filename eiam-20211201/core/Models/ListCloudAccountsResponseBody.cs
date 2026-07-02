@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListCloudAccountsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of Alibaba Cloud accounts.</para>
+        /// <para>The list of cloud accounts.</para>
         /// </summary>
         [NameInMap("CloudAccounts")]
         [Validation(Required=false)]
         public List<ListCloudAccountsResponseBodyCloudAccounts> CloudAccounts { get; set; }
         public class ListCloudAccountsResponseBodyCloudAccounts : TeaModel {
             /// <summary>
-            /// <para>The external unique ID of the Alibaba Cloud account.</para>
+            /// <para>The external unique identifier of the cloud account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234567</para>
@@ -27,14 +27,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudAccountExternalId { get; set; }
 
             /// <summary>
-            /// <para>The health check status of the Alibaba Cloud account. Valid values:</para>
+            /// <para>The health status of the cloud account. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>healthy: The account is healthy.</para>
-            /// </description></item>
-            /// <item><description><para>unhealthy: The account is unhealthy.</para>
-            /// </description></item>
-            /// <item><description><para>unknown: The status is unknown.</para>
-            /// </description></item>
+            /// <item><description>healthy: Healthy.</description></item>
+            /// <item><description>unhealthy: Unhealthy.</description></item>
+            /// <item><description>unknown: Unknown.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -45,14 +42,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudAccountHealth { get; set; }
 
             /// <summary>
-            /// <para>The result of the health check for the Alibaba Cloud account.</para>
+            /// <para>The health check result of the cloud account.</para>
             /// </summary>
             [NameInMap("CloudAccountHealthCheckResult")]
             [Validation(Required=false)]
             public ListCloudAccountsResponseBodyCloudAccountsCloudAccountHealthCheckResult CloudAccountHealthCheckResult { get; set; }
             public class ListCloudAccountsResponseBodyCloudAccountsCloudAccountHealthCheckResult : TeaModel {
                 /// <summary>
-                /// <para>The reason for the error. This field is returned when the health check status is unhealthy.</para>
+                /// <para>The error reason. This field is returned when the health check status is unhealthy.</para>
                 /// </summary>
                 [NameInMap("ErrorReason")]
                 [Validation(Required=false)]
@@ -81,7 +78,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 }
 
                 /// <summary>
-                /// <para>The time of the last health check. This is a UNIX timestamp in milliseconds.</para>
+                /// <para>The time of the last health check. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1649830226000</para>
@@ -91,12 +88,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public long? LastCheckTime { get; set; }
 
                 /// <summary>
-                /// <para>The result of the health check. Valid values:</para>
+                /// <para>The health check result of the cloud account. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>success: The check was successful.</para>
-                /// </description></item>
-                /// <item><description><para>failed: The check failed.</para>
-                /// </description></item>
+                /// <item><description>success: Succeeded.</description></item>
+                /// <item><description>failed: Failed.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -109,7 +104,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account.</para>
+            /// <para>The cloud account ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ca_01kmegjc11qa1txxxxx</para>
@@ -119,7 +114,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudAccountId { get; set; }
 
             /// <summary>
-            /// <para>The name of the Alibaba Cloud account.</para>
+            /// <para>The cloud account name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cloud_accout_xxxx</para>
@@ -129,7 +124,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudAccountName { get; set; }
 
             /// <summary>
-            /// <para>The name of the identity provider.</para>
+            /// <para>The identity provider name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas-eiam-oidc-provider</para>
@@ -138,10 +133,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public string CloudAccountProviderName { get; set; }
 
+            [NameInMap("CloudAccountSite")]
+            [Validation(Required=false)]
+            public string CloudAccountSite { get; set; }
+
             /// <summary>
-            /// <para>The type of the Alibaba Cloud account. Valid values:</para>
+            /// <para>The cloud account type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>alibaba_cloud: Alibaba Cloud</description></item>
+            /// <item><description>alibaba_cloud: Alibaba Cloud.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -152,7 +151,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudAccountVendorType { get; set; }
 
             /// <summary>
-            /// <para>The time when the account was created. This is a UNIX timestamp in milliseconds.</para>
+            /// <para>The time when the cloud account was created. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830225000</para>
@@ -162,7 +161,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The description of the Alibaba Cloud account.</para>
+            /// <para>The description of the cloud account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cloud_accout_description</para>
@@ -182,7 +181,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The time when the account was last updated. This is a UNIX timestamp in milliseconds.</para>
+            /// <para>The time when the cloud account was last updated. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830227000</para>
@@ -194,7 +193,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of rows per page for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -204,7 +203,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token returned from this call.</para>
+        /// <para>The token returned for the current call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -224,7 +223,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

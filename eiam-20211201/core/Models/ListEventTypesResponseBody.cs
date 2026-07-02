@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListEventTypesResponseBody : TeaModel {
         /// <summary>
-        /// <para>List of event types</para>
+        /// <para>The list of event types.</para>
         /// </summary>
         [NameInMap("EventTypes")]
         [Validation(Required=false)]
         public List<ListEventTypesResponseBodyEventTypes> EventTypes { get; set; }
         public class ListEventTypesResponseBodyEventTypes : TeaModel {
             /// <summary>
-            /// <para>Event type</para>
+            /// <para>The event type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>urn:alibaba:idaas:event:user:create</para>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Total number of items in the list</para>
+        /// <para>The total number of entries in the list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

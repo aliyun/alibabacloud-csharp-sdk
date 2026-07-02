@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetCloudAccountRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account.</para>
+        /// <para>The cloud account ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

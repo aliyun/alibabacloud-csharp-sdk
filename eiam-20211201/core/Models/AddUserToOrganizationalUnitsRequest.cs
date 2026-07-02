@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The list of organization IDs. The list can contain up to 100 IDs.</para>
+        /// <para>The list of organization IDs. The list can contain up to 100 elements.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("OrganizationalUnitIds")]

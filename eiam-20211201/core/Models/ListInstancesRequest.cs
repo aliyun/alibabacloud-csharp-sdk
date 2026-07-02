@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListInstancesRequest : TeaModel {
         /// <summary>
+        /// <para>The cross-region replication status.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>disabled</para>
         /// </summary>
@@ -22,7 +24,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         /// <list type="bullet">
         /// <item><description>free: Free Edition.</description></item>
         /// <item><description>trial: Trial Edition.</description></item>
-        /// <item><description>scalability: Capability Expansion Edition.</description></item>
+        /// <item><description>scalability: Scalability Edition.</description></item>
         /// <item><description>standard: Standard Edition.</description></item>
         /// <item><description>enterprise: Enterprise Edition.</description></item>
         /// </list>
