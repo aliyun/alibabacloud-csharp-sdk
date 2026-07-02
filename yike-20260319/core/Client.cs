@@ -4291,6 +4291,134 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>提交一刻数字人口播视频生成任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitYikeVideoCloneJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitYikeVideoCloneJobResponse
+        /// </returns>
+        public SubmitYikeVideoCloneJobResponse SubmitYikeVideoCloneJobWithOptions(SubmitYikeVideoCloneJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobParams))
+            {
+                body["JobParams"] = request.JobParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                body["UserData"] = request.UserData;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitYikeVideoCloneJob",
+                Version = "2026-03-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitYikeVideoCloneJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交一刻数字人口播视频生成任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitYikeVideoCloneJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitYikeVideoCloneJobResponse
+        /// </returns>
+        public async Task<SubmitYikeVideoCloneJobResponse> SubmitYikeVideoCloneJobWithOptionsAsync(SubmitYikeVideoCloneJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobParams))
+            {
+                body["JobParams"] = request.JobParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                body["UserData"] = request.UserData;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitYikeVideoCloneJob",
+                Version = "2026-03-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitYikeVideoCloneJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交一刻数字人口播视频生成任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitYikeVideoCloneJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitYikeVideoCloneJobResponse
+        /// </returns>
+        public SubmitYikeVideoCloneJobResponse SubmitYikeVideoCloneJob(SubmitYikeVideoCloneJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitYikeVideoCloneJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交一刻数字人口播视频生成任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitYikeVideoCloneJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitYikeVideoCloneJobResponse
+        /// </returns>
+        public async Task<SubmitYikeVideoCloneJobResponse> SubmitYikeVideoCloneJobAsync(SubmitYikeVideoCloneJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitYikeVideoCloneJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates an intelligent video generation task for a voiceover-only scenario (without a digital human). This task is applicable to video scenarios such as product showcases and news broadcasts.</para>
         /// </summary>
         /// 
