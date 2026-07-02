@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
-    public class CreateTicketResponseBody : TeaModel {
+    public class IpWhiteListConfigResponseBody : TeaModel {
         /// <summary>
         /// <para>The request ID.</para>
         /// 
@@ -20,21 +20,23 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The generated ticket value.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>ccd3428c-<b><b>-</b></b>-a608-26bae29dffee</para>
+        /// <para>The IP address whitelist.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
-        public string Result { get; set; }
+        public IpWhiteListConfigResponseBodyResult Result { get; set; }
+        public class IpWhiteListConfigResponseBodyResult : TeaModel {
+            /// <summary>
+            /// <para>The IP address whitelist array.</para>
+            /// </summary>
+            [NameInMap("IpWhiteList")]
+            [Validation(Required=false)]
+            public List<string> IpWhiteList { get; set; }
+
+        }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: The request was successful.</description></item>
-        /// <item><description>false: The request failed.</description></item>
-        /// </list>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -8,26 +8,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
-    public class CreateTicketResponseBody : TeaModel {
+    public class TransferUsergroupResponseBody : TeaModel {
         /// <summary>
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>D787E1A3-A93C-424A-B626-C2B05DF8D885</para>
+        /// <para>DC4E1E63-B337-44F8-8C22-6F00DF67E2C3</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The generated ticket value.</para>
+        /// <para>Indicates whether the migration was successful.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ccd3428c-<b><b>-</b></b>-a608-26bae29dffee</para>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
-        public string Result { get; set; }
+        public bool? Result { get; set; }
 
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>

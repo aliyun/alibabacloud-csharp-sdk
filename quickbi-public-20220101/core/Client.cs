@@ -18,7 +18,20 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"us-east-1", "quickbi-public.us-east-1.aliyuncs.com"},
+                {"me-central-1", "quickbi-public.me-central-1.aliyuncs.com"},
+                {"eu-central-1", "quickbi-public.eu-central-1.aliyuncs.com"},
+                {"cn-shanghai-finance-1", "quickbi-public.cn-shanghai-finance-1.aliyuncs.com"},
+                {"cn-hongkong", "quickbi-public.cn-hongkong.aliyuncs.com"},
+                {"cn-hangzhou", "quickbi-public.cn-hangzhou.aliyuncs.com"},
+                {"ap-southeast-5", "quickbi-public.ap-southeast-5.aliyuncs.com"},
+                {"ap-southeast-3", "quickbi-public.ap-southeast-3.aliyuncs.com"},
+                {"ap-southeast-1", "quickbi-public.ap-southeast-1.aliyuncs.com"},
+                {"ap-northeast-1", "quickbi-public.ap-northeast-1.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("quickbi-public", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -1911,7 +1924,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch add Feishu users.</para>
+        /// <para>Adds Lark users in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1975,7 +1988,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch add Feishu users.</para>
+        /// <para>Adds Lark users in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2039,7 +2052,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch add Feishu users.</para>
+        /// <para>Adds Lark users in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2063,7 +2076,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch add Feishu users.</para>
+        /// <para>Adds Lark users in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3115,7 +3128,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a dataset from a custom SQL statement.</para>
+        /// <para>Creates a dataset based on a custom SQL statement.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3152,9 +3165,15 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             {
                 query["WorkspaceId"] = request.WorkspaceId;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Placeholders))
+            {
+                body["Placeholders"] = request.Placeholders;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3173,7 +3192,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a dataset from a custom SQL statement.</para>
+        /// <para>Creates a dataset based on a custom SQL statement.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3210,9 +3229,15 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             {
                 query["WorkspaceId"] = request.WorkspaceId;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Placeholders))
+            {
+                body["Placeholders"] = request.Placeholders;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3231,7 +3256,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a dataset from a custom SQL statement.</para>
+        /// <para>Creates a dataset based on a custom SQL statement.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3249,7 +3274,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a dataset from a custom SQL statement.</para>
+        /// <para>Creates a dataset based on a custom SQL statement.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3427,12 +3452,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generate a ticket for third-party embedding.</para>
+        /// <para>Generates a ticket required for embedded report access.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For detailed usage, please refer to <a href="https://help.aliyun.com/document_detail/391291.html">Report Embedding Data Permission Control and Parameter Passing Security Enhancement Solution</a>.</para>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/391291.html">Security enhancement for data permission control and parameter passing in embedded reports</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3465,10 +3490,6 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             {
                 query["ExpireTime"] = request.ExpireTime;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GlobalParam))
-            {
-                query["GlobalParam"] = request.GlobalParam;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TicketNum))
             {
                 query["TicketNum"] = request.TicketNum;
@@ -3485,9 +3506,15 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             {
                 query["WorksId"] = request.WorksId;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GlobalParam))
+            {
+                body["GlobalParam"] = request.GlobalParam;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3506,12 +3533,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generate a ticket for third-party embedding.</para>
+        /// <para>Generates a ticket required for embedded report access.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For detailed usage, please refer to <a href="https://help.aliyun.com/document_detail/391291.html">Report Embedding Data Permission Control and Parameter Passing Security Enhancement Solution</a>.</para>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/391291.html">Security enhancement for data permission control and parameter passing in embedded reports</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3544,10 +3571,6 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             {
                 query["ExpireTime"] = request.ExpireTime;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GlobalParam))
-            {
-                query["GlobalParam"] = request.GlobalParam;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TicketNum))
             {
                 query["TicketNum"] = request.TicketNum;
@@ -3564,9 +3587,15 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             {
                 query["WorksId"] = request.WorksId;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GlobalParam))
+            {
+                body["GlobalParam"] = request.GlobalParam;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3585,12 +3614,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generate a ticket for third-party embedding.</para>
+        /// <para>Generates a ticket required for embedded report access.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For detailed usage, please refer to <a href="https://help.aliyun.com/document_detail/391291.html">Report Embedding Data Permission Control and Parameter Passing Security Enhancement Solution</a>.</para>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/391291.html">Security enhancement for data permission control and parameter passing in embedded reports</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3608,12 +3637,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generate a ticket for third-party embedding.</para>
+        /// <para>Generates a ticket required for embedded report access.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For detailed usage, please refer to <a href="https://help.aliyun.com/document_detail/391291.html">Report Embedding Data Permission Control and Parameter Passing Security Enhancement Solution</a>.</para>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/391291.html">Security enhancement for data permission control and parameter passing in embedded reports</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4643,6 +4672,142 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DelayTicketExpireTimeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the collaborative authorization record of a specified user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAuthorizationByUserIdRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAuthorizationByUserIdResponse
+        /// </returns>
+        public DeleteAuthorizationByUserIdResponse DeleteAuthorizationByUserIdWithOptions(DeleteAuthorizationByUserIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QbiUserId))
+            {
+                query["QbiUserId"] = request.QbiUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAuthorizationByUserId",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAuthorizationByUserIdResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the collaborative authorization record of a specified user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAuthorizationByUserIdRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAuthorizationByUserIdResponse
+        /// </returns>
+        public async Task<DeleteAuthorizationByUserIdResponse> DeleteAuthorizationByUserIdWithOptionsAsync(DeleteAuthorizationByUserIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QbiUserId))
+            {
+                query["QbiUserId"] = request.QbiUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAuthorizationByUserId",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAuthorizationByUserIdResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the collaborative authorization record of a specified user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAuthorizationByUserIdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAuthorizationByUserIdResponse
+        /// </returns>
+        public DeleteAuthorizationByUserIdResponse DeleteAuthorizationByUserId(DeleteAuthorizationByUserIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteAuthorizationByUserIdWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the collaborative authorization record of a specified user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAuthorizationByUserIdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAuthorizationByUserIdResponse
+        /// </returns>
+        public async Task<DeleteAuthorizationByUserIdResponse> DeleteAuthorizationByUserIdAsync(DeleteAuthorizationByUserIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteAuthorizationByUserIdWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6483,6 +6648,134 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetWorksEmbedListWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures the IP address whitelist for data security.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// IpWhiteListConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// IpWhiteListConfigResponse
+        /// </returns>
+        public IpWhiteListConfigResponse IpWhiteListConfigWithOptions(IpWhiteListConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpWhiteList))
+            {
+                query["IpWhiteList"] = request.IpWhiteList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Operation))
+            {
+                query["Operation"] = request.Operation;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "IpWhiteListConfig",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<IpWhiteListConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures the IP address whitelist for data security.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// IpWhiteListConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// IpWhiteListConfigResponse
+        /// </returns>
+        public async Task<IpWhiteListConfigResponse> IpWhiteListConfigWithOptionsAsync(IpWhiteListConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpWhiteList))
+            {
+                query["IpWhiteList"] = request.IpWhiteList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Operation))
+            {
+                query["Operation"] = request.Operation;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "IpWhiteListConfig",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<IpWhiteListConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures the IP address whitelist for data security.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// IpWhiteListConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// IpWhiteListConfigResponse
+        /// </returns>
+        public IpWhiteListConfigResponse IpWhiteListConfig(IpWhiteListConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return IpWhiteListConfigWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures the IP address whitelist for data security.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// IpWhiteListConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// IpWhiteListConfigResponse
+        /// </returns>
+        public async Task<IpWhiteListConfigResponse> IpWhiteListConfigAsync(IpWhiteListConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await IpWhiteListConfigWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -13887,7 +14180,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据绑定的第三方账号ID查询UserId</para>
+        /// <para>Queries a UserId by the bound third-party account ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13933,7 +14226,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据绑定的第三方账号ID查询UserId</para>
+        /// <para>Queries a UserId by the bound third-party account ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13979,7 +14272,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据绑定的第三方账号ID查询UserId</para>
+        /// <para>Queries a UserId by the bound third-party account ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13997,7 +14290,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据绑定的第三方账号ID查询UserId</para>
+        /// <para>Queries a UserId by the bound third-party account ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16963,7 +17256,135 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a dataset that is based on a custom SQL statement.</para>
+        /// <para>Migrates a user group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TransferUsergroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TransferUsergroupResponse
+        /// </returns>
+        public TransferUsergroupResponse TransferUsergroupWithOptions(TransferUsergroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentUserGroupId))
+            {
+                query["ParentUserGroupId"] = request.ParentUserGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupId))
+            {
+                query["UserGroupId"] = request.UserGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TransferUsergroup",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TransferUsergroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Migrates a user group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TransferUsergroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TransferUsergroupResponse
+        /// </returns>
+        public async Task<TransferUsergroupResponse> TransferUsergroupWithOptionsAsync(TransferUsergroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentUserGroupId))
+            {
+                query["ParentUserGroupId"] = request.ParentUserGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupId))
+            {
+                query["UserGroupId"] = request.UserGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TransferUsergroup",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TransferUsergroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Migrates a user group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TransferUsergroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TransferUsergroupResponse
+        /// </returns>
+        public TransferUsergroupResponse TransferUsergroup(TransferUsergroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return TransferUsergroupWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Migrates a user group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TransferUsergroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TransferUsergroupResponse
+        /// </returns>
+        public async Task<TransferUsergroupResponse> TransferUsergroupAsync(TransferUsergroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await TransferUsergroupWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a custom SQL dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16991,6 +17412,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DsId))
             {
                 query["DsId"] = request.DsId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Placeholders))
+            {
+                query["Placeholders"] = request.Placeholders;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
             {
@@ -17021,7 +17446,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a dataset that is based on a custom SQL statement.</para>
+        /// <para>Updates a custom SQL dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17049,6 +17474,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DsId))
             {
                 query["DsId"] = request.DsId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Placeholders))
+            {
+                query["Placeholders"] = request.Placeholders;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
             {
@@ -17079,7 +17508,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a dataset that is based on a custom SQL statement.</para>
+        /// <para>Updates a custom SQL dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17097,7 +17526,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a dataset that is based on a custom SQL statement.</para>
+        /// <para>Updates a custom SQL dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class BatchAddFeishuUsersResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D8749D65-E80A-433C-AF1B-CE9C180FF3B4</para>
@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Result of adding members to the user group. Possible values:</para>
+        /// <para>The result of adding user group members. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Addition successful</description></item>
-        /// <item><description>false: Addition failed</description></item>
+        /// <item><description><para>true: The users were added.</para>
+        /// </description></item>
+        /// <item><description><para>false: The users failed to be added.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public BatchAddFeishuUsersResponseBodyResult Result { get; set; }
         public class BatchAddFeishuUsersResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>Number of failed validations.</para>
+            /// <para>The number of users that failed validation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -44,21 +46,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public int? FailCount { get; set; }
 
             /// <summary>
-            /// <para>Details of the failures.</para>
+            /// <para>The details of the failures.</para>
             /// </summary>
             [NameInMap("FailResults")]
             [Validation(Required=false)]
             public List<BatchAddFeishuUsersResponseBodyResultFailResults> FailResults { get; set; }
             public class BatchAddFeishuUsersResponseBodyResultFailResults : TeaModel {
                 /// <summary>
-                /// <para>Reasons for errors.</para>
+                /// <para>The error causes.</para>
                 /// </summary>
                 [NameInMap("FailInfos")]
                 [Validation(Required=false)]
                 public List<BatchAddFeishuUsersResponseBodyResultFailResultsFailInfos> FailInfos { get; set; }
                 public class BatchAddFeishuUsersResponseBodyResultFailResultsFailInfos : TeaModel {
                     /// <summary>
-                    /// <para>Error code.</para>
+                    /// <para>The error code.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>ACCOUNT_EXIST</para>
@@ -68,17 +70,17 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                     public string Code { get; set; }
 
                     /// <summary>
-                    /// <para>Description of the error code.</para>
+                    /// <para>The error code description.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>账号已存在</para>
+                    /// <para>test</para>
                     /// </summary>
                     [NameInMap("CodeDesc")]
                     [Validation(Required=false)]
                     public string CodeDesc { get; set; }
 
                     /// <summary>
-                    /// <para>Incorrect input value.</para>
+                    /// <para>The invalid input value.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>20</para>
@@ -92,7 +94,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             }
 
             /// <summary>
-            /// <para>Count of successes.</para>
+            /// <para>The number of users that were added.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -104,10 +106,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         }
 
         /// <summary>
-        /// <para>Whether the request was successful. Possible values:</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Request successful</description></item>
-        /// <item><description>false: Request failed</description></item>
+        /// <item><description>true: The request was successful.</description></item>
+        /// <item><description>false: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

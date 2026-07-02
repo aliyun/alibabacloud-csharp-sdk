@@ -8,33 +8,29 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
-    public class CreateTicketResponseBody : TeaModel {
+    public class DeleteAuthorizationByUserIdResponseBody : TeaModel {
         /// <summary>
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>D787E1A3-A93C-424A-B626-C2B05DF8D885</para>
+        /// <para>46e53***********70</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The generated ticket value.</para>
+        /// <para>Indicates whether the deletion was successful.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ccd3428c-<b><b>-</b></b>-a608-26bae29dffee</para>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
-        public string Result { get; set; }
+        public bool? Result { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: The request was successful.</description></item>
-        /// <item><description>false: The request failed.</description></item>
-        /// </list>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
