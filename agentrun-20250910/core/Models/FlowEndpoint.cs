@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         /// <para>The Alibaba Cloud Resource Name (ARN) of the flow endpoint.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>acs:agentrun:cn-hangzhou:1760720386195983:workspaces/ws-xxx/flows/flow-xxx/endpoints/fe-xxx</para>
+        /// <para>acs:agentrun:cn-hangzhou:123456789012:workspaces/ws-xxx/flows/flow-xxx/endpoints/fe-xxx</para>
         /// </summary>
         [NameInMap("flowEndpointArn")]
         [Validation(Required=false)]

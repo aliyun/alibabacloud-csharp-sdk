@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class CreateTemplateInput : TeaModel {
         /// <summary>
-        /// <para>Controls whether data plane calls can create, stop, or delete the sandbox.</para>
+        /// <para>Whether to allow data channel to call create/stop/delete sandbox APIs</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -23,21 +23,21 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public bool? AllowAnonymousManage { get; set; }
 
         /// <summary>
-        /// <para>The Application Real-Time Monitoring Service (ARMS) configuration.</para>
+        /// <para>ARMS configuration</para>
         /// </summary>
         [NameInMap("armsConfiguration")]
         [Validation(Required=false)]
         public ArmsConfiguration ArmsConfiguration { get; set; }
 
         /// <summary>
-        /// <para>The container configuration. You can only use images based on the Browser or Code Interpreter base images.</para>
+        /// <para>Container configuration, only images based on Browser/Code Interpreter base images are allowed</para>
         /// </summary>
         [NameInMap("containerConfiguration")]
         [Validation(Required=false)]
         public ContainerConfiguration ContainerConfiguration { get; set; }
 
         /// <summary>
-        /// <para>The number of CPU cores.</para>
+        /// <para>CPU resource configuration (unit: cores)</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,14 +48,14 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public float? Cpu { get; set; }
 
         /// <summary>
-        /// <para>The credential configuration.</para>
+        /// <para>Credential configuration</para>
         /// </summary>
         [NameInMap("credentialConfiguration")]
         [Validation(Required=false)]
         public CredentialConfiguration CredentialConfiguration { get; set; }
 
         /// <summary>
-        /// <para>The template description.</para>
+        /// <para>Template description</para>
         /// 
         /// <b>Example:</b>
         /// <para>模板描述</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The disk size in MB.</para>
+        /// <para>Disk size</para>
         /// 
         /// <b>Example:</b>
         /// <para>10240</para>
@@ -75,28 +75,25 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public int? DiskSize { get; set; }
 
         /// <summary>
-        /// <para>Controls whether to enable the Sandbox Agent.</para>
+        /// <para>Sandbox Agent switch</para>
         /// </summary>
         [NameInMap("enableAgent")]
         [Validation(Required=false)]
         public bool? EnableAgent { get; set; }
 
-        /// <summary>
-        /// <para>Specifies whether to enable the pre-stop hook.</para>
-        /// </summary>
         [NameInMap("enablePreStop")]
         [Validation(Required=false)]
         public bool? EnablePreStop { get; set; }
 
         /// <summary>
-        /// <para>The environment variables for the sandbox.</para>
+        /// <para>Environment variables</para>
         /// </summary>
         [NameInMap("environmentVariables")]
         [Validation(Required=false)]
         public Dictionary<string, string> EnvironmentVariables { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud Resource Name (ARN) of the execution role.</para>
+        /// <para>Execution role ARN</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:ram::123456789:role/aliyunfcdefaultrole</para>
@@ -106,14 +103,14 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string ExecutionRoleArn { get; set; }
 
         /// <summary>
-        /// <para>The log configuration.</para>
+        /// <para>Log configuration</para>
         /// </summary>
         [NameInMap("logConfiguration")]
         [Validation(Required=false)]
         public LogConfiguration LogConfiguration { get; set; }
 
         /// <summary>
-        /// <para>The memory size in MB.</para>
+        /// <para>Memory resource configuration (unit: MB)</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -124,14 +121,14 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public int? Memory { get; set; }
 
         /// <summary>
-        /// <para>The Network Attached Storage (NAS) mount configuration.</para>
+        /// <para>NAS mount configuration</para>
         /// </summary>
         [NameInMap("nasConfig")]
         [Validation(Required=false)]
         public NASConfig NasConfig { get; set; }
 
         /// <summary>
-        /// <para>The network configuration.</para>
+        /// <para>Network configuration</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("networkConfiguration")]
@@ -139,21 +136,18 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public NetworkConfiguration NetworkConfiguration { get; set; }
 
         /// <summary>
-        /// <para>A list of Object Storage Service (OSS) configurations.</para>
+        /// <para>OSS configuration</para>
         /// </summary>
         [NameInMap("ossConfiguration")]
         [Validation(Required=false)]
         public List<OssConfiguration> OssConfiguration { get; set; }
 
-        /// <summary>
-        /// <para>The timeout for the pre-stop hook, in seconds. This parameter applies only when <c>enablePreStop</c> is set to <c>true</c>.</para>
-        /// </summary>
         [NameInMap("preStopTimeoutInSeconds")]
         [Validation(Required=false)]
         public int? PreStopTimeoutInSeconds { get; set; }
 
         /// <summary>
-        /// <para>The duration in seconds that a sandbox can be idle before it is automatically stopped.</para>
+        /// <para>Sandbox idle timeout (in seconds)</para>
         /// 
         /// <b>Example:</b>
         /// <para>1800</para>
@@ -163,7 +157,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public int? SandboxIdleTimeoutInSeconds { get; set; }
 
         /// <summary>
-        /// <para>The maximum time-to-live (TTL) in seconds for the sandbox. The sandbox is terminated after this duration, regardless of activity.</para>
+        /// <para>Sandbox time-to-live (in seconds)</para>
         /// 
         /// <b>Example:</b>
         /// <para>26000</para>
@@ -173,21 +167,21 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public int? SandboxTTLInSeconds { get; set; }
 
         /// <summary>
-        /// <para>The scaling configuration.</para>
+        /// <para>Scaling configuration</para>
         /// </summary>
         [NameInMap("scalingConfig")]
         [Validation(Required=false)]
         public ScalingConfig ScalingConfig { get; set; }
 
         /// <summary>
-        /// <para>The template configuration. This is a flexible object whose structure varies depending on the <c>templateType</c>.</para>
+        /// <para>Template configuration (flexible object structure that varies depending on templateType)</para>
         /// </summary>
         [NameInMap("templateConfiguration")]
         [Validation(Required=false)]
         public Dictionary<string, object> TemplateConfiguration { get; set; }
 
         /// <summary>
-        /// <para>A unique name for the template within your account.</para>
+        /// <para>Template name (must be unique within the account)</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -198,7 +192,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string TemplateName { get; set; }
 
         /// <summary>
-        /// <para>The template type.</para>
+        /// <para>Template type</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -208,9 +202,6 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public string TemplateType { get; set; }
 
-        /// <summary>
-        /// <para>The ID of the workspace.</para>
-        /// </summary>
         [NameInMap("workspaceId")]
         [Validation(Required=false)]
         public string WorkspaceId { get; set; }

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class CreateTemplateRequest : TeaModel {
         /// <summary>
-        /// <para>Contains the parameters for creating the template.</para>
+        /// <para>CreateTemplate request parameters</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]

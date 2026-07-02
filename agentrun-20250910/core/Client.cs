@@ -2250,7 +2250,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a template for launching sandboxes. A template defines the runtime environment, resource configuration, and other settings for a sandbox.</para>
+        /// <para>Creates a new template for subsequently creating sandboxes. A template defines the runtime environment, resource configuration, and other settings for sandboxes.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2296,7 +2296,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a template for launching sandboxes. A template defines the runtime environment, resource configuration, and other settings for a sandbox.</para>
+        /// <para>Creates a new template for subsequently creating sandboxes. A template defines the runtime environment, resource configuration, and other settings for sandboxes.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2342,7 +2342,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a template for launching sandboxes. A template defines the runtime environment, resource configuration, and other settings for a sandbox.</para>
+        /// <para>Creates a new template for subsequently creating sandboxes. A template defines the runtime environment, resource configuration, and other settings for sandboxes.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2366,7 +2366,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a template for launching sandboxes. A template defines the runtime environment, resource configuration, and other settings for a sandbox.</para>
+        /// <para>Creates a new template for subsequently creating sandboxes. A template defines the runtime environment, resource configuration, and other settings for sandboxes.</para>
         /// </description>
         /// 
         /// <param name="request">

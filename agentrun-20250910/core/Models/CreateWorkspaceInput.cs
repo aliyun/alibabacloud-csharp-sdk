@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("enablePresetModel")]
+        [Validation(Required=false)]
+        public bool? EnablePresetModel { get; set; }
+
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
