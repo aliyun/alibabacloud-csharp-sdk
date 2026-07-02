@@ -10,77 +10,91 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeBackupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The following parameters are no longer used. Ignore the parameters.</para>
+        /// <para>This parameter is deprecated.</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public DescribeBackupsResponseBodyAccessDeniedDetail AccessDeniedDetail { get; set; }
         public class DescribeBackupsResponseBodyAccessDeniedDetail : TeaModel {
             /// <summary>
-            /// <para>This parameter is no longer used. Ignore this parameter.</para>
+            /// <para>This parameter is deprecated.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>_</para>
+            /// <list type="bullet">
+            /// <item><description></description></item>
+            /// </list>
             /// </summary>
             [NameInMap("AuthAction")]
             [Validation(Required=false)]
             public string AuthAction { get; set; }
 
             /// <summary>
-            /// <para>This parameter is no longer used. Ignore this parameter.</para>
+            /// <para>This parameter is deprecated.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>_</para>
+            /// <list type="bullet">
+            /// <item><description></description></item>
+            /// </list>
             /// </summary>
             [NameInMap("AuthPrincipalDisplayName")]
             [Validation(Required=false)]
             public string AuthPrincipalDisplayName { get; set; }
 
             /// <summary>
-            /// <para>This parameter is no longer used. Ignore this parameter.</para>
+            /// <para>This parameter is deprecated.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>_</para>
+            /// <list type="bullet">
+            /// <item><description></description></item>
+            /// </list>
             /// </summary>
             [NameInMap("AuthPrincipalOwnerId")]
             [Validation(Required=false)]
             public string AuthPrincipalOwnerId { get; set; }
 
             /// <summary>
-            /// <para>This parameter is no longer used. Ignore this parameter.</para>
+            /// <para>This parameter is deprecated.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>_</para>
+            /// <list type="bullet">
+            /// <item><description></description></item>
+            /// </list>
             /// </summary>
             [NameInMap("AuthPrincipalType")]
             [Validation(Required=false)]
             public string AuthPrincipalType { get; set; }
 
             /// <summary>
-            /// <para>This parameter is no longer used. Ignore this parameter.</para>
+            /// <para>This parameter is deprecated.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>_</para>
+            /// <list type="bullet">
+            /// <item><description></description></item>
+            /// </list>
             /// </summary>
             [NameInMap("EncodedDiagnosticMessage")]
             [Validation(Required=false)]
             public string EncodedDiagnosticMessage { get; set; }
 
             /// <summary>
-            /// <para>This parameter is no longer used. Ignore this parameter.</para>
+            /// <para>This parameter is deprecated.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>_</para>
+            /// <list type="bullet">
+            /// <item><description></description></item>
+            /// </list>
             /// </summary>
             [NameInMap("NoPermissionType")]
             [Validation(Required=false)]
             public string NoPermissionType { get; set; }
 
             /// <summary>
-            /// <para>This parameter is no longer used. Ignore this parameter.</para>
+            /// <para>This parameter is deprecated.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>_</para>
+            /// <list type="bullet">
+            /// <item><description></description></item>
+            /// </list>
             /// </summary>
             [NameInMap("PolicyType")]
             [Validation(Required=false)]
@@ -88,6 +102,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         }
 
+        /// <summary>
+        /// <para>Details about the backup sets.</para>
+        /// </summary>
         [NameInMap("Backups")]
         [Validation(Required=false)]
         public DescribeBackupsResponseBodyBackups Backups { get; set; }
@@ -165,7 +182,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         }
 
         /// <summary>
-        /// <para>This parameter does not take effect. Ignore this parameter.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;The free backup quota for the instance, in bytes. The free quota is equal to the default memory size of the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/2664017.html">Changes to the free backup quota policy</a>.
+        /// Full backups and log backups share this free quota. When the instance type is changed, the free quota also changes.
+        /// &lt;props=&quot;intl&quot;&gt;This parameter is not in effect. Ignore this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100000</para>
@@ -175,9 +194,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? FreeSize { get; set; }
 
         /// <summary>
-        /// <para>The size of the full backup file of the instance. Unit: bytes. Full backups originate from scheduled backups, manual backups, and backups generated during cache analysis.</para>
+        /// <para>The total size of full backups for the instance, in bytes. Full backups are generated from scheduled daily backups, manual backups, or cache analysis.</para>
         /// <remarks>
-        /// <para> The value of this parameter is independent of the number and size of the returned backup sets. Instead, it reflects the total size of all valid full backups of the instance.</para>
+        /// <para>This value represents the total size of all valid full backups for the instance, regardless of the backup sets returned in this request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -188,9 +207,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? FullStorageSize { get; set; }
 
         /// <summary>
-        /// <para>The size of the log backup file of the instance. Unit: bytes. This value is valid only when flashback is enabled.</para>
+        /// <para>The total size of log backups for the instance, in bytes. This parameter is returned only if flashback is enabled.</para>
         /// <remarks>
-        /// <para> The value of this parameter is independent of the number and size of the returned backup sets. Instead, it reflects the total size of all valid log backups of the instance.</para>
+        /// <para>This value represents the total size of all valid log backups for the instance, regardless of the backup sets returned in this request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -201,7 +220,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? LogStorageSize { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -211,7 +230,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned on each page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -221,7 +240,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>963C20F0-7CE1-4591-AAF3-6F3CD1CE****</para>
@@ -231,7 +250,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of backup files that were returned.</para>
+        /// <para>The total number of backup sets.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

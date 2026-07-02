@@ -11,9 +11,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
     public class RestartTairKVCacheCustomInstanceRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>r-bp1zxszhcgatnx****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

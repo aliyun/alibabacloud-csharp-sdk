@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <para>The parameter template ID, which is globally unique.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>sys-001*****</para>
+        /// <para>rpg-sys-00*****</para>
         /// </summary>
         [NameInMap("ParamGroupId")]
         [Validation(Required=false)]

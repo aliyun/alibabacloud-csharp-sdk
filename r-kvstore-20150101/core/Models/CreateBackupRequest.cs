@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class CreateBackupRequest : TeaModel {
+        /// <summary>
+        /// <para>The expiration period of this manual backup, in days. Valid values range from 7 to 730. If you specify -1, the backup data will not expire during the instance lifetime. If you do not specify a value (default), the expiration period follows the current automatic backup policy.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>60</para>
+        /// </summary>
         [NameInMap("BackupRetentionPeriod")]
         [Validation(Required=false)]
         public long? BackupRetentionPeriod { get; set; }

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeTairSkvDdbTableSchemaResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID. For more information, see common parameters.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>A1604E1B-6825-1577-BBDA-2A64E8D5F126</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The table schema information in JSON format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;attributeDefinitions&quot;:[{&quot;attributeType&quot;:&quot;S&quot;,&quot;attributeName&quot;:&quot;pk&quot;},{&quot;attributeType&quot;:&quot;S&quot;,&quot;attributeName&quot;:&quot;sk&quot;}],&quot;keySchema&quot;:[{&quot;attributeName&quot;:&quot;pk&quot;,&quot;keyType&quot;:&quot;HASH&quot;},{&quot;attributeName&quot;:&quot;sk&quot;,&quot;keyType&quot;:&quot;RANGE&quot;}]}</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string Schema { get; set; }
 
         /// <summary>
+        /// <para>The TTL property. The parameter settings toggle in JSON format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;attributeName&quot;:&quot;Expiretime&quot;,&quot;enabled&quot;:true}</para>
         /// </summary>

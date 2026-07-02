@@ -117,34 +117,18 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>1</para>
-        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>30</para>
-        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>B79C1A90-495B-4E99-A2AA-A4DB13B8****</para>
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>40</para>
-        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }

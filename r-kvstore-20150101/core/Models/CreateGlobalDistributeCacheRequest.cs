@@ -10,13 +10,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class CreateGlobalDistributeCacheRequest : TeaModel {
         /// <summary>
-        /// <para>The time when you want to perform the conversion. Valid values:</para>
+        /// <para>Specifies when to perform the operation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Immediately</b>: immediately performs the conversion.</description></item>
-        /// <item><description><b>MaintainTime</b> (default): performs the conversion during the maintenance window.</description></item>
+        /// <item><description><para><b>Immediately</b>: Performs the operation immediately.</para>
+        /// </description></item>
+        /// <item><description><para><b>MaintainTime</b>: Performs the operation during the maintenance window. This is the default value.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/473775.html">ModifyInstanceMaintainTime</a> operation to modify the maintenance window of an instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/473775.html">ModifyInstanceMaintainTime</a> operation to change the maintenance window of the instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -37,11 +39,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The ID of the resource group.</para>
         /// <remarks>
-        /// <para> You do not need to specify system parameters.</para>
+        /// <para>This is a system parameter. You do not need to specify it.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>rg-acfmyiu4ekp****</para>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -60,7 +64,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the existing instance.</para>
+        /// <para>The ID of the source instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

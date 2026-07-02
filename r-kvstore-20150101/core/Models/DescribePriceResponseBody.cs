@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                     /// <para>The activity name.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>contract promotion_order_xxx discount</para>
+                    /// <para>合同优惠_整单_xxx折</para>
                     /// </summary>
                     [NameInMap("ActivityName")]
                     [Validation(Required=false)]

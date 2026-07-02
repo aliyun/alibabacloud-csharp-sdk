@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DeleteBackupRequest : TeaModel {
         /// <summary>
+        /// <para>The backup file ID of the instance. You can invoke <a href="https://help.aliyun.com/document_detail/473823.html">DescribeBackups</a> to query it.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>-bp1zxszhcgatnx****</para>
+        /// <para>r-bp1zxszhcgatnx****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>-bp1zxszhcgatnx****-db-0</para>
+        /// <para>r-bp1zxszhcgatnx****-db-0</para>
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]

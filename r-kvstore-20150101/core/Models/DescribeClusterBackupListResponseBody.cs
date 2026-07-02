@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 /// <para>The instance name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>hins100322105_data_20240108012127.rdb</para>
+                /// <para>r-bp1y4is8svonly****-db-0</para>
                 /// </summary>
                 [NameInMap("InstanceName")]
                 [Validation(Required=false)]
@@ -240,6 +240,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             [Validation(Required=false)]
             public string ClusterBackupStatus { get; set; }
 
+            /// <summary>
+            /// <para>The time-to-live (TTL) of the backup set, in the format yyyy-MM-ddTHH:mmZ (UTC time).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2025-06-01T21:51:22Z</para>
+            /// </summary>
             [NameInMap("ExpectExpireTime")]
             [Validation(Required=false)]
             public string ExpectExpireTime { get; set; }

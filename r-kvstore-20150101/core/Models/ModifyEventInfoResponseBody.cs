@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyEventInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code that is returned if the request failed.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mst.errorcode.success.errormessage</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error ID.</para>
+        /// <para>The IDs of the events that failed to be processed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12343</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of successful records.</para>
+        /// <para>The number of events that were successfully processed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? SuccessCount { get; set; }
 
         /// <summary>
-        /// <para>The ID of the successful event.</para>
+        /// <para>The IDs of the events that were successfully processed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>234221</para>

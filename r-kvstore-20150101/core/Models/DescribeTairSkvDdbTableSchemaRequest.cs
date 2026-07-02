@@ -9,11 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeTairSkvDdbTableSchemaRequest : TeaModel {
+        /// <summary>
+        /// <para>The ID of the backup file.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>78241****</para>
+        /// </summary>
         [NameInMap("BackupId")]
         [Validation(Required=false)]
         public string BackupId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the instance to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

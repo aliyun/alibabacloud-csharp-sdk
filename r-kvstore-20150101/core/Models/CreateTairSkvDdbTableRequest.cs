@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class CreateTairSkvDdbTableRequest : TeaModel {
         /// <summary>
+        /// <para>The cluster backup set ID. Some new cluster architectures support cluster backup set IDs. You can call <a href="https://www.alibabacloud.com/help/en/redis/developer-reference/api-r-kvstore-2015-01-01-describeclusterbackuplist-redis">DescribeClusterBackupList</a> to obtain the ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cb-hyxdof5x9kqb**</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string BackupId { get; set; }
 
         /// <summary>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value. Make sure that the value is unique among different requests. The token is case-sensitive and can contain up to 64 ASCII characters.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz**</para>
         /// </summary>
@@ -26,6 +30,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>The instance type. Set the value to tair_skv_ddb_table.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,6 +49,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/61012.htm">DescribeRegions</a> to query available regions. Use this parameter to specify the region in which to create the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,6 +68,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The table schema configuration in JSON format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;AttributeDefinitions&quot;:[{&quot;AttributeType&quot;:&quot;S&quot;,&quot;AttributeName&quot;:&quot;pk&quot;},{&quot;AttributeType&quot;:&quot;S&quot;,&quot;AttributeName&quot;:&quot;sk&quot;}],&quot;KeySchema&quot;:[{&quot;KeyType&quot;:&quot;HASH&quot;,&quot;AttributeName&quot;:&quot;pk&quot;},{&quot;KeyType&quot;:&quot;RANGE&quot;,&quot;AttributeName&quot;:&quot;sk&quot;}]}</para>
         /// </summary>
@@ -74,6 +82,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
+        /// <para>To create an instance from a backup set of an existing instance, specify the ID of the source instance in this parameter.</para>
+        /// <remarks>
+        /// <para>This parameter must be used together with BackupId.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>r-bp1zxszhcgatnx**</para>
         /// </summary>
@@ -82,6 +95,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SrcDBInstanceId { get; set; }
 
         /// <summary>
+        /// <para>The table name. The name must be 2 to 128 characters in length and must start with an uppercase letter, a lowercase letter, or a Chinese character. The name cannot contain the following characters: @/:=&quot;&lt;&gt;{}[] or spaces.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -92,6 +106,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string TableName { get; set; }
 
         /// <summary>
+        /// <para>The parameter settings switch in JSON format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;attributeName&quot;:&quot;Expiretime&quot;,&quot;enabled&quot;:true}</para>
         /// </summary>
@@ -100,6 +116,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string TtlSpec { get; set; }
 
         /// <summary>
+        /// <para>The ID of the workspace instance. You can call <a href="https://www.alibabacloud.com/help/en/redis/developer-reference/api-r-kvstore-2015-01-01-describeinstances-redis">DescribeInstances</a> to obtain the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class RestoreInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the backup file. You can call the <a href="https://help.aliyun.com/document_detail/473823.html">DescribeBackups</a>operation to query the IDs of backup files.</para>
+        /// <para>The ID of the backup file. You can find backup file IDs by calling the <a href="https://help.aliyun.com/document_detail/473823.html">DescribeBackups</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>78241****</para>
@@ -20,13 +20,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string BackupId { get; set; }
 
         /// <summary>
-        /// <para>The key that you want to restore. You can specify multiple keys. Separate multiple keys with commas (,). Regular expressions are supported.</para>
+        /// <para>The keys to restore, which can be specified as a regular expression. To specify multiple keys, separate them with commas (,).</para>
         /// <list type="bullet">
-        /// <item><description>If you do not specify this parameter, the entire instance is restored.</description></item>
-        /// <item><description>If you specify this parameter, only the involved keys are restored. Only classic instances support this feature.</description></item>
+        /// <item><description><para>If you do not specify this parameter, the entire instance is restored.</para>
+        /// </description></item>
+        /// <item><description><para>If you specify this parameter, only the specified keys are restored. This feature is available only for instances that use the classic architecture.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> In a regular expression, an asterisk (<c>*</c>) matches zero or more occurrences of a subexpression that occurs before. For example, if you set this parameter to <c>h.*llo</c>, strings such as <c>hllo</c> and <c>heeeello</c> are matched.</para>
+        /// <para>In a regular expression, the asterisk (<c>*</c>) matches the preceding element zero or more times. For example, if you set this parameter to <c>h.*llo</c>, strings such as <c>hllo</c> and <c>heeeello</c> are matched.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -64,9 +66,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The point in time to which you want to restore data. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</para>
+        /// <para>The restore point in time. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format (UTC).</para>
         /// <remarks>
-        /// <para> The point in time cannot be earlier than the point in time when the data flashback feature is enabled.</para>
+        /// <para>This point in time cannot be earlier than the time when the Data Flashback feature was enabled.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -77,10 +79,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string RestoreTime { get; set; }
 
         /// <summary>
-        /// <para>The restoration mode. Valid values:</para>
+        /// <para>The restore method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b> (default): The parameter is invalid.</description></item>
-        /// <item><description><b>1</b>: restores data to a specified point in time. You can specify this value only if the <a href="https://help.aliyun.com/document_detail/148479.html">data flashback</a> feature is enabled for the instance. If you specify this value, you also need to set the <b>RestoreTime</b> parameter.</description></item>
+        /// <item><description><para><b>0</b> (default): This value is deprecated.</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: Restores data to a specific point in time. You can set this parameter to 1 only if the <a href="https://help.aliyun.com/document_detail/148479.html">Data Flashback</a> feature is enabled for the instance. If you set this parameter to 1, you must also specify the <b>RestoreTime</b> parameter.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -95,15 +99,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>When you restore a classic instance, regardless of whether you choose to restore all data or specific keys, you can apply an offset to the expiration time of the keys. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC. A key expires after the remaining validity period of the key elapses based on the expiration offset time point.</para>
+        /// <para>For instances that use the classic architecture, you can apply an offset to the expiration time of restored keys. This applies whether you restore the entire instance or only specific keys. The system calculates a key\&quot;s remaining time-to-live (TTL) at the specified flashback point in time and then adds this TTL to the <c>TimeShift</c> value to set the key\&quot;s new expiration time. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>This feature applies only to keys and does not work on elements in the self-developed data structures of Tair, such as fields in exHash and skeys in TairTS.</para>
+        /// <item><description><para>This feature adjusts the expiration time for top-level keys only. It does not apply to the expiration times of elements within Tair-specific data structures, such as fields in an exHash or secondary keys (Skeys) in a Time Series (TS) data structure.</para>
         /// </description></item>
-        /// <item><description><para>This time point must be between the specified flashback time point and the submission time of the data restoration task.</para>
+        /// <item><description><para>The specified time must be later than <c>RestoreTime</c> and earlier than the task submission time.</para>
         /// </description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>2021-07-06T08:25:57Z</para>

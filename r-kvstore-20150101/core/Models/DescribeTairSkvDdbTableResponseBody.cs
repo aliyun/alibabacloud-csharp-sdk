@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeTairSkvDdbTableResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID, which is used to locate logs and troubleshoot issues.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2363CEDF-C697-14B6-AB9E-C57A4AA0EAD4</para>
         /// </summary>

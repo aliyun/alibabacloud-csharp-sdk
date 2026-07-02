@@ -55,7 +55,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>1024</para>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
         /// </summary>
         [NameInMap("Capacity")]
         [Validation(Required=false)]
@@ -65,7 +67,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token is case-sensitive. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>TF-ModifyInstanceSpec-1686645570-7dac7257-4a14-4811-939c-51a282f</para>
+        /// <para>0.6823317918435086</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -98,7 +100,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>redis.master.small.default</para>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
         /// </summary>
         [NameInMap("InstanceClass")]
         [Validation(Required=false)]

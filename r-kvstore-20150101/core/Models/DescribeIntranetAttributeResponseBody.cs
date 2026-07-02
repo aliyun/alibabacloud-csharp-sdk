@@ -10,13 +10,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeIntranetAttributeResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether auto-renewal is enabled for the extra internal bandwidth that you purchased. Valid values:</para>
+        /// <para>Indicates whether auto-renewal is enabled for the bandwidth package. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Auto-renewal is enabled.</description></item>
-        /// <item><description><b>false</b>: Auto-renewal is disabled.</description></item>
+        /// <item><description><para><b>true</b>: Auto-renewal is enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Auto-renewal is disabled.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>If no extra internal bandwidth is purchased, this parameter is not returned.</para>
+        /// <para>This parameter is not returned if no additional bandwidth is purchased.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -27,9 +29,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public bool? AutoRenewal { get; set; }
 
         /// <summary>
-        /// <para>The expiration time of the purchased bandwidth. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em> T <em>HH:mm:ss</em> Z format.</para>
+        /// <para>The expiration time of the bandwidth package. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format.</para>
         /// <remarks>
-        /// <para>If no extra internal bandwidth is purchased, this parameter is not returned.</para>
+        /// <para>This parameter is not returned if no additional bandwidth is purchased.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -40,10 +42,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string BandwidthExpireTime { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the bandwidth plan. Valid values:</para>
+        /// <para>The billing method of the bandwidth package. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: pay-as-you-go</description></item>
-        /// <item><description><b>1</b>: subscription</description></item>
+        /// <item><description><para><b>0</b>: pay-as-you-go.</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: subscription.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -54,9 +58,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string BandwidthPrePaid { get; set; }
 
         /// <summary>
-        /// <para>The time when the extra internal bandwidth that you purchased for temporary use expires. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+        /// <para>The expiration time of the temporary bandwidth. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format.</para>
         /// <remarks>
-        /// <para>If no extra internal bandwidth for temporary use is purchased or the extra internal bandwidth that you purchased for temporary use has expired, <b>0</b> is returned for this parameter.</para>
+        /// <para>This parameter returns <b>0</b> if the instance has no temporary bandwidth or if the temporary bandwidth has expired.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -67,13 +71,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ExpireTime { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the instance has unexpired bandwidth plans. Valid values:</para>
+        /// <para>Indicates whether the instance has an unexpired bandwidth package. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The instance has unexpired bandwidth plans.</description></item>
-        /// <item><description><b>false</b>: The instance does not have unexpired bandwidth plans.</description></item>
+        /// <item><description><para><b>true</b>: An unexpired bandwidth package exists.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: No unexpired bandwidth package exists.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>If no extra internal bandwidth is purchased, this parameter is not returned.</para>
+        /// <para>This parameter is not returned if no additional bandwidth is purchased.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -88,7 +94,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? IntranetBandWidthBurst { get; set; }
 
         /// <summary>
-        /// <para>The internal bandwidth of the instance. This parameter indicates the combined bandwidth of all shards in the instance. Unit: Mbit/s.</para>
+        /// <para>The total intranet bandwidth across all shards in the instance, in MB/s.</para>
         /// 
         /// <b>Example:</b>
         /// <para>102</para>
@@ -98,7 +104,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? IntranetBandwidth { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>25D42CC3-FBA1-4AEC-BCE2-B8DD3137****</para>

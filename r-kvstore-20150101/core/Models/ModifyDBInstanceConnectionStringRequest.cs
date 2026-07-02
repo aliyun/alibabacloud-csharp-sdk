@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>standardredis</para>
+        /// <para>standardredis123</para>
         /// </summary>
         [NameInMap("NewConnectionString")]
         [Validation(Required=false)]

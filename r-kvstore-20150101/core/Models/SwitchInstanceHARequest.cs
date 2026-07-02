@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class SwitchInstanceHARequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query the ID of the instance.</para>
+        /// <para>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data shard. You can call the <a href="https://help.aliyun.com/document_detail/473782.html">DescribeRoleZoneInfo</a> operation to obtain the value of the CustinsId parameter. Separate multiple data shard IDs with commas (,). <c>all</c> indicates that all data shards are specified.</para>
+        /// <para>The ID of the data shard node. You can call <a href="https://help.aliyun.com/document_detail/473782.html">DescribeRoleZoneInfo</a> to obtain the CustinsId parameter. Separate multiple data shard node IDs with commas (,). To specify all nodes, enter <c>all</c>.</para>
         /// <remarks>
-        /// <para>This parameter is available and required only for read/write splitting and cluster instances.</para>
+        /// <para>This parameter is available and required only when the instance uses the cluster or read/write splitting architecture.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -54,13 +54,23 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The time when to perform the switchover. Default value: 0. Valid values:</para>
+        /// <para>The node ID of the original MASTER node in the shard.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>52717408</para>
+        /// </summary>
+        [NameInMap("SourceNodeId")]
+        [Validation(Required=false)]
+        public string SourceNodeId { get; set; }
+
+        /// <summary>
+        /// <para>The execution time. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: immediately performs the switchover.</description></item>
-        /// <item><description><b>1</b>: performs the switchover during the maintenance window.</description></item>
+        /// <item><description><b>0</b>: immediately. This is the default value.</description></item>
+        /// <item><description><b>1</b>: during the maintenance window.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/473775.html">ModifyInstanceMaintainTime</a> operation to modify the maintenance window of a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/473775.html">ModifyInstanceMaintainTime</a> to modify the maintenance window of the instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -71,21 +81,41 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? SwitchMode { get; set; }
 
         /// <summary>
-        /// <para>The switching mode. Valid values:</para>
+        /// <para>The switchover mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>AvailablePriority</b>: immediately performs a switchover by prioritizing availability. No latency of data synchronization between the master and replica nodes is considered. This may cause data loss.</description></item>
-        /// <item><description><b>ReliabilityPriority</b>: performs a switchover by prioritizing reliability. Make sure that no latency of data synchronization between the master and replica nodes exists. This ensures data integrity. This mode may cause switchover failures in scenarios where a large volume of data is written and data synchronization latency consistently exists.</description></item>
+        /// <item><description><b>ReliabilityPriority (default)</b>: Reliability is prioritized. The primary/secondary switchover is performed only when primary/secondary synchronization has no latency, which prevents data loss. In scenarios with heavy write workloads and persistent synchronization latency, this mode may cause the primary/secondary switchover to fail.</description></item>
+        /// <item><description><b>AvailablePriority</b>: Availability is prioritized. The primary/secondary switchover is performed immediately regardless of primary/secondary latency, which may cause minor data loss.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> You must evaluate the requirements for data and services based on your business scenarios and then select a switching mode.</para>
+        /// <para>Evaluate your business requirements for data integrity and service availability before selecting a switchover mode.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>AvailablePriority</para>
+        /// <para>ReliabilityPriority</para>
         /// </summary>
         [NameInMap("SwitchType")]
         [Validation(Required=false)]
         public string SwitchType { get; set; }
+
+        /// <summary>
+        /// <para>The node ID of the target MASTER node after the switchover.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>52717403</para>
+        /// </summary>
+        [NameInMap("TargetNodeId")]
+        [Validation(Required=false)]
+        public string TargetNodeId { get; set; }
+
+        /// <summary>
+        /// <para>The shard name of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>r-2zegk3jyxxxwixfo6c-db-1</para>
+        /// </summary>
+        [NameInMap("TargetShardName")]
+        [Validation(Required=false)]
+        public string TargetShardName { get; set; }
 
     }
 

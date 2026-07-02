@@ -11,44 +11,26 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
     public class DescribeTairKVCacheCustomInstanceHistoryMonitorValuesRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>2024-09-20T00:00:00Z</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>{\&quot;extend\&quot;:{\&quot;workers\&quot;:\&quot;avg_dispatchers\&quot;}}</para>
-        /// </summary>
         [NameInMap("Express")]
         [Validation(Required=false)]
         public string Express { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>tc-bp1zxszhcgatnx****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>1000</para>
-        /// </summary>
         [NameInMap("Length")]
         [Validation(Required=false)]
         public string Length { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>CPUUtilization</para>
-        /// </summary>
         [NameInMap("MetricName")]
         [Validation(Required=false)]
         public string MetricName { get; set; }
@@ -61,10 +43,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>60</para>
-        /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
         public string Period { get; set; }
@@ -83,9 +61,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>2024-09-05T08:49:27Z</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

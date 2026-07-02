@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <para>If you want to query cloud-native read/write splitting instances, Tair ESSD-based instances, or instances of different specifications, you must specify this parameter as a JSON string. For more information, see the <b>Additional description of the Instances parameter</b> section.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Instances=[{&quot;RegionId&quot;: &quot;cn-hangzhou&quot;,&quot;ZoneId&quot;: &quot;cn-hangzhou-b&quot;,&quot;InstanceClass&quot;: &quot;redis.master.small.default&quot;,&quot;Period&quot;: &quot;1&quot;,&quot;Quantity&quot;: &quot;1&quot;,&quot;Capacity&quot;: &quot;4096&quot;}]</para>
+        /// <para>[{&quot;RegionId&quot;: &quot;cn-hangzhou&quot;,&quot;ZoneId&quot;: &quot;cn-hangzhou-b&quot;,&quot;ShardClass&quot;: &quot;tair.scm.with.proxy.standard.2m.8d&quot;,&quot;ShardCount&quot;: &quot;3&quot;,&quot;Period&quot;: &quot;1&quot;,&quot;Quantity&quot;: &quot;1&quot;}]</para>
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
@@ -223,6 +223,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the secondary zone. You can call the <a href="https://help.aliyun.com/document_detail/473764.html">DescribeZones</a> API to query it.</para>
+        /// <remarks>
+        /// <para>The values passed for this parameter and the ZoneId parameter must be different.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou-g</para>
+        /// </summary>
         [NameInMap("SecondaryZoneId")]
         [Validation(Required=false)]
         public string SecondaryZoneId { get; set; }

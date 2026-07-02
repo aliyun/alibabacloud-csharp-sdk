@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>4.0</para>
+        /// <para>6.0</para>
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]

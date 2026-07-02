@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>all</para>
+        /// <para>rds_apsradb_transfer</para>
         /// </summary>
         [NameInMap("TaskType")]
         [Validation(Required=false)]

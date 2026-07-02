@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>redis</para>
+            /// <para>tair_pena</para>
             /// </summary>
             [NameInMap("Engine")]
             [Validation(Required=false)]

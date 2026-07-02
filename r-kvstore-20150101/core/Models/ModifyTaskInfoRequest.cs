@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;recoverMode\&quot;:\&quot;immediate\&quot;}</para>
+        /// <para>{&quot;recoverMode&quot;:&quot;immediate&quot;}</para>
         /// </summary>
         [NameInMap("ActionParams")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <para>The name of the current step.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>exec_task</para>
+        /// <para>do_pause</para>
         /// </summary>
         [NameInMap("StepName")]
         [Validation(Required=false)]

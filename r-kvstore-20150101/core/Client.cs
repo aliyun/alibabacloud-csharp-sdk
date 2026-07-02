@@ -58,6 +58,36 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 {"cn-zhengzhou-nebula-1", "r-kvstore.aliyuncs.com"},
                 {"eu-west-1-oxs", "r-kvstore.aliyuncs.com"},
                 {"rus-west-1-pop", "r-kvstore.aliyuncs.com"},
+                {"us-west-1", "r-kvstore.us-west-1.aliyuncs.com"},
+                {"us-southeast-1", "r-kvstore.us-southeast-1.aliyuncs.com"},
+                {"us-east-1", "r-kvstore.us-east-1.aliyuncs.com"},
+                {"na-south-1", "r-kvstore.na-south-1.aliyuncs.com"},
+                {"me-east-1", "r-kvstore.me-east-1.aliyuncs.com"},
+                {"me-central-1", "r-kvstore.me-central-1.aliyuncs.com"},
+                {"eu-west-1", "r-kvstore.eu-west-1.aliyuncs.com"},
+                {"eu-central-1", "r-kvstore.eu-central-1.aliyuncs.com"},
+                {"cn-zhengzhou-jva", "r-kvstore.cn-zhengzhou-jva.aliyuncs.com"},
+                {"cn-zhangjiakou", "r-kvstore.cn-zhangjiakou.aliyuncs.com"},
+                {"cn-wuhan-lr", "r-kvstore.cn-wuhan-lr.aliyuncs.com"},
+                {"cn-shenzhen-finance-1", "r-kvstore.cn-shenzhen-finance-1.aliyuncs.com"},
+                {"cn-shenzhen", "r-kvstore.cn-shenzhen.aliyuncs.com"},
+                {"cn-shanghai-finance-1", "r-kvstore.cn-shanghai-finance-1.aliyuncs.com"},
+                {"cn-nanjing", "r-kvstore.cn-nanjing.aliyuncs.com"},
+                {"cn-huhehaote", "r-kvstore.cn-huhehaote.aliyuncs.com"},
+                {"cn-hongkong", "r-kvstore.cn-hongkong.aliyuncs.com"},
+                {"cn-guangzhou", "r-kvstore.cn-guangzhou.aliyuncs.com"},
+                {"cn-fuzhou", "r-kvstore.cn-fuzhou.aliyuncs.com"},
+                {"cn-chengdu", "r-kvstore.cn-chengdu.aliyuncs.com"},
+                {"cn-beijing-finance-1", "r-kvstore.cn-beijing-finance-1.aliyuncs.com"},
+                {"ap-southeast-7", "r-kvstore.ap-southeast-7.aliyuncs.com"},
+                {"ap-southeast-6", "r-kvstore.ap-southeast-6.aliyuncs.com"},
+                {"ap-southeast-5", "r-kvstore.ap-southeast-5.aliyuncs.com"},
+                {"ap-southeast-3", "r-kvstore.ap-southeast-3.aliyuncs.com"},
+                {"ap-southeast-2", "r-kvstore.ap-southeast-2.aliyuncs.com"},
+                {"ap-southeast-1", "r-kvstore.ap-southeast-1.aliyuncs.com"},
+                {"ap-south-1", "r-kvstore.ap-south-1.aliyuncs.com"},
+                {"ap-northeast-2", "r-kvstore.ap-northeast-2.aliyuncs.com"},
+                {"ap-northeast-1", "r-kvstore.ap-northeast-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("r-kvstore", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -1135,16 +1165,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an account that has specific permissions for a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Create an account for an ApsaraDB for Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  This operation is supported only for instances that are compatible with Redis 4.0 or later.</para>
+        /// <para>This API supports only instances compatible with Redis 4.0 or later versions.  </para>
         /// <list type="bullet">
-        /// <item><description>The instance must be in the running state.</description></item>
-        /// <item><description>You can create up to 18 accounts for an instance.<remarks>
-        /// <para> For more information about how to create an account in the console, see <a href="https://help.aliyun.com/document_detail/92665.html">Manage database accounts</a>.</para>
+        /// <item><description>The instance must be in the running status to use this API.  </description></item>
+        /// <item><description>You can create up to 18 accounts for an instance.  <remarks>
+        /// <para>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/92665.html">Account Management</a>.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -1233,16 +1263,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an account that has specific permissions for a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Create an account for an ApsaraDB for Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  This operation is supported only for instances that are compatible with Redis 4.0 or later.</para>
+        /// <para>This API supports only instances compatible with Redis 4.0 or later versions.  </para>
         /// <list type="bullet">
-        /// <item><description>The instance must be in the running state.</description></item>
-        /// <item><description>You can create up to 18 accounts for an instance.<remarks>
-        /// <para> For more information about how to create an account in the console, see <a href="https://help.aliyun.com/document_detail/92665.html">Manage database accounts</a>.</para>
+        /// <item><description>The instance must be in the running status to use this API.  </description></item>
+        /// <item><description>You can create up to 18 accounts for an instance.  <remarks>
+        /// <para>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/92665.html">Account Management</a>.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -1331,16 +1361,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an account that has specific permissions for a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Create an account for an ApsaraDB for Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  This operation is supported only for instances that are compatible with Redis 4.0 or later.</para>
+        /// <para>This API supports only instances compatible with Redis 4.0 or later versions.  </para>
         /// <list type="bullet">
-        /// <item><description>The instance must be in the running state.</description></item>
-        /// <item><description>You can create up to 18 accounts for an instance.<remarks>
-        /// <para> For more information about how to create an account in the console, see <a href="https://help.aliyun.com/document_detail/92665.html">Manage database accounts</a>.</para>
+        /// <item><description>The instance must be in the running status to use this API.  </description></item>
+        /// <item><description>You can create up to 18 accounts for an instance.  <remarks>
+        /// <para>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/92665.html">Account Management</a>.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -1361,16 +1391,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an account that has specific permissions for a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Create an account for an ApsaraDB for Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  This operation is supported only for instances that are compatible with Redis 4.0 or later.</para>
+        /// <para>This API supports only instances compatible with Redis 4.0 or later versions.  </para>
         /// <list type="bullet">
-        /// <item><description>The instance must be in the running state.</description></item>
-        /// <item><description>You can create up to 18 accounts for an instance.<remarks>
-        /// <para> For more information about how to create an account in the console, see <a href="https://help.aliyun.com/document_detail/92665.html">Manage database accounts</a>.</para>
+        /// <item><description>The instance must be in the running status to use this API.  </description></item>
+        /// <item><description>You can create up to 18 accounts for an instance.  <remarks>
+        /// <para>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/92665.html">Account Management</a>.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -1391,12 +1421,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Backs up a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Create a data backup for an ApsaraDB Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can also back up an instance in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/43886.html">Backup and recovery</a>.</para>
+        /// <para>For the corresponding console operation of this API, see <a href="https://help.aliyun.com/document_detail/43886.html">backup and recovery</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1462,12 +1492,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Backs up a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Create a data backup for an ApsaraDB Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can also back up an instance in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/43886.html">Backup and recovery</a>.</para>
+        /// <para>For the corresponding console operation of this API, see <a href="https://help.aliyun.com/document_detail/43886.html">backup and recovery</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1533,12 +1563,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Backs up a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Create a data backup for an ApsaraDB Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can also back up an instance in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/43886.html">Backup and recovery</a>.</para>
+        /// <para>For the corresponding console operation of this API, see <a href="https://help.aliyun.com/document_detail/43886.html">backup and recovery</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1556,12 +1586,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Backs up a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Create a data backup for an ApsaraDB Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can also back up an instance in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/43886.html">Backup and recovery</a>.</para>
+        /// <para>For the corresponding console operation of this API, see <a href="https://help.aliyun.com/document_detail/43886.html">backup and recovery</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1759,16 +1789,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Converts an existing Tair DRAM-based classic instance to the first child instance of a distributed instance.</para>
+        /// <para>Converts an existing classic Tair memory-enhanced instance into the first sub-instance of a distributed instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to convert an existing instance to the first child instance of a distributed instance. After the instance is converted, the distributed instance is created. Before you call this operation, make sure that the following requirements are met:</para>
+        /// <para>This operation converts an existing instance into the first sub-instance of a distributed instance. The conversion also creates the distributed instance. The source instance must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>The instance that you want to convert must be a Tair <a href="https://help.aliyun.com/document_detail/126164.html">DRAM-based</a> instance that uses the classic deployment mode.</description></item>
-        /// <item><description>If the existing instance is a cluster instance, the direct connection mode must be disabled for the instance. For more information, see <a href="https://help.aliyun.com/document_detail/150047.html">Release a private endpoint</a>.<remarks>
-        /// <para> You can also call the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> operation to create an instance that is specified as the first child instance of a distributed instance. After the child instance is created, the distributed instance to which the child instance belongs is created.</para>
+        /// <item><description>The source instance must be a classic Tair <a href="https://help.aliyun.com/document_detail/126164.html">memory-enhanced</a> instance.</description></item>
+        /// <item><description>If the source instance uses the cluster architecture, you must disable the direct connection mode. For more information, see <a href="https://help.aliyun.com/document_detail/150047.html">ReleasePublicConnection</a>.<remarks>
+        /// <para>Alternatively, you can call the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> operation to create a new instance to use as the first sub-instance. This action also creates the distributed instance.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -1841,16 +1871,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Converts an existing Tair DRAM-based classic instance to the first child instance of a distributed instance.</para>
+        /// <para>Converts an existing classic Tair memory-enhanced instance into the first sub-instance of a distributed instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to convert an existing instance to the first child instance of a distributed instance. After the instance is converted, the distributed instance is created. Before you call this operation, make sure that the following requirements are met:</para>
+        /// <para>This operation converts an existing instance into the first sub-instance of a distributed instance. The conversion also creates the distributed instance. The source instance must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>The instance that you want to convert must be a Tair <a href="https://help.aliyun.com/document_detail/126164.html">DRAM-based</a> instance that uses the classic deployment mode.</description></item>
-        /// <item><description>If the existing instance is a cluster instance, the direct connection mode must be disabled for the instance. For more information, see <a href="https://help.aliyun.com/document_detail/150047.html">Release a private endpoint</a>.<remarks>
-        /// <para> You can also call the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> operation to create an instance that is specified as the first child instance of a distributed instance. After the child instance is created, the distributed instance to which the child instance belongs is created.</para>
+        /// <item><description>The source instance must be a classic Tair <a href="https://help.aliyun.com/document_detail/126164.html">memory-enhanced</a> instance.</description></item>
+        /// <item><description>If the source instance uses the cluster architecture, you must disable the direct connection mode. For more information, see <a href="https://help.aliyun.com/document_detail/150047.html">ReleasePublicConnection</a>.<remarks>
+        /// <para>Alternatively, you can call the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> operation to create a new instance to use as the first sub-instance. This action also creates the distributed instance.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -1923,16 +1953,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Converts an existing Tair DRAM-based classic instance to the first child instance of a distributed instance.</para>
+        /// <para>Converts an existing classic Tair memory-enhanced instance into the first sub-instance of a distributed instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to convert an existing instance to the first child instance of a distributed instance. After the instance is converted, the distributed instance is created. Before you call this operation, make sure that the following requirements are met:</para>
+        /// <para>This operation converts an existing instance into the first sub-instance of a distributed instance. The conversion also creates the distributed instance. The source instance must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>The instance that you want to convert must be a Tair <a href="https://help.aliyun.com/document_detail/126164.html">DRAM-based</a> instance that uses the classic deployment mode.</description></item>
-        /// <item><description>If the existing instance is a cluster instance, the direct connection mode must be disabled for the instance. For more information, see <a href="https://help.aliyun.com/document_detail/150047.html">Release a private endpoint</a>.<remarks>
-        /// <para> You can also call the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> operation to create an instance that is specified as the first child instance of a distributed instance. After the child instance is created, the distributed instance to which the child instance belongs is created.</para>
+        /// <item><description>The source instance must be a classic Tair <a href="https://help.aliyun.com/document_detail/126164.html">memory-enhanced</a> instance.</description></item>
+        /// <item><description>If the source instance uses the cluster architecture, you must disable the direct connection mode. For more information, see <a href="https://help.aliyun.com/document_detail/150047.html">ReleasePublicConnection</a>.<remarks>
+        /// <para>Alternatively, you can call the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> operation to create a new instance to use as the first sub-instance. This action also creates the distributed instance.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -1953,16 +1983,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Converts an existing Tair DRAM-based classic instance to the first child instance of a distributed instance.</para>
+        /// <para>Converts an existing classic Tair memory-enhanced instance into the first sub-instance of a distributed instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to convert an existing instance to the first child instance of a distributed instance. After the instance is converted, the distributed instance is created. Before you call this operation, make sure that the following requirements are met:</para>
+        /// <para>This operation converts an existing instance into the first sub-instance of a distributed instance. The conversion also creates the distributed instance. The source instance must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>The instance that you want to convert must be a Tair <a href="https://help.aliyun.com/document_detail/126164.html">DRAM-based</a> instance that uses the classic deployment mode.</description></item>
-        /// <item><description>If the existing instance is a cluster instance, the direct connection mode must be disabled for the instance. For more information, see <a href="https://help.aliyun.com/document_detail/150047.html">Release a private endpoint</a>.<remarks>
-        /// <para> You can also call the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> operation to create an instance that is specified as the first child instance of a distributed instance. After the child instance is created, the distributed instance to which the child instance belongs is created.</para>
+        /// <item><description>The source instance must be a classic Tair <a href="https://help.aliyun.com/document_detail/126164.html">memory-enhanced</a> instance.</description></item>
+        /// <item><description>If the source instance uses the cluster architecture, you must disable the direct connection mode. For more information, see <a href="https://help.aliyun.com/document_detail/150047.html">ReleasePublicConnection</a>.<remarks>
+        /// <para>Alternatively, you can call the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> operation to create a new instance to use as the first sub-instance. This action also creates the distributed instance.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -2167,15 +2197,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Tair (Redis OSS-compatible) instance. If you want to create a Tair (Enterprise Edition) cloud-native instance, you can call the CreateTairInstance operation.</para>
+        /// <para>Create a Redis (open-source) instance with a classic or cloud-native architecture, or a Tair memory-optimized instance with a classic architecture. To create a Tair instance with a cloud-native architecture, use the <c>CreateTairInstance</c> API.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of Tair (Redis OSS-compatible).
-        /// You can call this operation to create a Tair (Redis OSS-compatible) instance or a classic Tair DRAM-based instance. To create a cloud-native Tair instance, call the <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a> operation.</para>
+        /// <para>Before you call this API, make sure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of ApsaraDB for Tair.
+        /// This API is used to create a Redis Community Edition instance or a Tair Memory Type (Classic) instance. To create a Tair Cloud-native Edition instance, call the <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a> API.</para>
         /// <remarks>
-        /// <para>For more information about how to create an instance that meets your requirements in the Tair (Redis OSS-compatible) console, see <a href="https://help.aliyun.com/document_detail/26351.html">Step 1: Create an instance</a>.</para>
+        /// <para>For instructions on how to perform this operation in the console and for guidance on instance selection, see <a href="https://help.aliyun.com/document_detail/26351.html">Create a Redis instance</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -2276,6 +2306,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
             {
                 query["InstanceType"] = request.InstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaintainEndTime))
+            {
+                query["MaintainEndTime"] = request.MaintainEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaintainStartTime))
+            {
+                query["MaintainStartTime"] = request.MaintainStartTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkType))
             {
@@ -2410,15 +2448,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Tair (Redis OSS-compatible) instance. If you want to create a Tair (Enterprise Edition) cloud-native instance, you can call the CreateTairInstance operation.</para>
+        /// <para>Create a Redis (open-source) instance with a classic or cloud-native architecture, or a Tair memory-optimized instance with a classic architecture. To create a Tair instance with a cloud-native architecture, use the <c>CreateTairInstance</c> API.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of Tair (Redis OSS-compatible).
-        /// You can call this operation to create a Tair (Redis OSS-compatible) instance or a classic Tair DRAM-based instance. To create a cloud-native Tair instance, call the <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a> operation.</para>
+        /// <para>Before you call this API, make sure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of ApsaraDB for Tair.
+        /// This API is used to create a Redis Community Edition instance or a Tair Memory Type (Classic) instance. To create a Tair Cloud-native Edition instance, call the <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a> API.</para>
         /// <remarks>
-        /// <para>For more information about how to create an instance that meets your requirements in the Tair (Redis OSS-compatible) console, see <a href="https://help.aliyun.com/document_detail/26351.html">Step 1: Create an instance</a>.</para>
+        /// <para>For instructions on how to perform this operation in the console and for guidance on instance selection, see <a href="https://help.aliyun.com/document_detail/26351.html">Create a Redis instance</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -2519,6 +2557,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
             {
                 query["InstanceType"] = request.InstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaintainEndTime))
+            {
+                query["MaintainEndTime"] = request.MaintainEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaintainStartTime))
+            {
+                query["MaintainStartTime"] = request.MaintainStartTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkType))
             {
@@ -2653,15 +2699,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Tair (Redis OSS-compatible) instance. If you want to create a Tair (Enterprise Edition) cloud-native instance, you can call the CreateTairInstance operation.</para>
+        /// <para>Create a Redis (open-source) instance with a classic or cloud-native architecture, or a Tair memory-optimized instance with a classic architecture. To create a Tair instance with a cloud-native architecture, use the <c>CreateTairInstance</c> API.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of Tair (Redis OSS-compatible).
-        /// You can call this operation to create a Tair (Redis OSS-compatible) instance or a classic Tair DRAM-based instance. To create a cloud-native Tair instance, call the <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a> operation.</para>
+        /// <para>Before you call this API, make sure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of ApsaraDB for Tair.
+        /// This API is used to create a Redis Community Edition instance or a Tair Memory Type (Classic) instance. To create a Tair Cloud-native Edition instance, call the <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a> API.</para>
         /// <remarks>
-        /// <para>For more information about how to create an instance that meets your requirements in the Tair (Redis OSS-compatible) console, see <a href="https://help.aliyun.com/document_detail/26351.html">Step 1: Create an instance</a>.</para>
+        /// <para>For instructions on how to perform this operation in the console and for guidance on instance selection, see <a href="https://help.aliyun.com/document_detail/26351.html">Create a Redis instance</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -2680,15 +2726,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Tair (Redis OSS-compatible) instance. If you want to create a Tair (Enterprise Edition) cloud-native instance, you can call the CreateTairInstance operation.</para>
+        /// <para>Create a Redis (open-source) instance with a classic or cloud-native architecture, or a Tair memory-optimized instance with a classic architecture. To create a Tair instance with a cloud-native architecture, use the <c>CreateTairInstance</c> API.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of Tair (Redis OSS-compatible).
-        /// You can call this operation to create a Tair (Redis OSS-compatible) instance or a classic Tair DRAM-based instance. To create a cloud-native Tair instance, call the <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a> operation.</para>
+        /// <para>Before you call this API, make sure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of ApsaraDB for Tair.
+        /// This API is used to create a Redis Community Edition instance or a Tair Memory Type (Classic) instance. To create a Tair Cloud-native Edition instance, call the <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a> API.</para>
         /// <remarks>
-        /// <para>For more information about how to create an instance that meets your requirements in the Tair (Redis OSS-compatible) console, see <a href="https://help.aliyun.com/document_detail/26351.html">Step 1: Create an instance</a>.</para>
+        /// <para>For instructions on how to perform this operation in the console and for guidance on instance selection, see <a href="https://help.aliyun.com/document_detail/26351.html">Create a Redis instance</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -2707,19 +2753,176 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates multiple Tair (Redis OSS-compatible) instances at a time.</para>
+        /// <para>创建实例多VIP</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateInstanceMultiVIPRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceMultiVIPResponse
+        /// </returns>
+        public CreateInstanceMultiVIPResponse CreateInstanceMultiVIPWithOptions(CreateInstanceMultiVIPRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddCount))
+            {
+                query["AddCount"] = request.AddCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateInstanceMultiVIP",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateInstanceMultiVIPResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建实例多VIP</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateInstanceMultiVIPRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceMultiVIPResponse
+        /// </returns>
+        public async Task<CreateInstanceMultiVIPResponse> CreateInstanceMultiVIPWithOptionsAsync(CreateInstanceMultiVIPRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddCount))
+            {
+                query["AddCount"] = request.AddCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateInstanceMultiVIP",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateInstanceMultiVIPResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建实例多VIP</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateInstanceMultiVIPRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceMultiVIPResponse
+        /// </returns>
+        public CreateInstanceMultiVIPResponse CreateInstanceMultiVIP(CreateInstanceMultiVIPRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateInstanceMultiVIPWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建实例多VIP</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateInstanceMultiVIPRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceMultiVIPResponse
+        /// </returns>
+        public async Task<CreateInstanceMultiVIPResponse> CreateInstanceMultiVIPAsync(CreateInstanceMultiVIPRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateInstanceMultiVIPWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates classic edition instances of ApsaraDB for Tair (Redis-compatible) in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of Tair (Redis OSS-compatible).</para>
-        /// <remarks>
-        /// <para> You can call this operation to create classic Redis Open-Source Edition instances or classic Tair DRAM-based instances. We recommend that you use an API operation for creating a single instance:</para>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description><a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a>: creates a Redis Open-Source instance or a classic Tair DRAM-based instance.</description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a>: creates a Tair (Enterprise Edition) instance. The instance can be a DRAM-based, persistent memory-optimized, or ESSD/SSD-based instance.</description></item>
-        /// </list>
+        /// <para>Before calling this API, review the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of ApsaraDB for Tair (Redis-compatible).
+        /// \&gt; This API supports only creating Classic Edition instances.
+        /// To create a single instance, use one of the following APIs:
+        /// \&gt; - <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a>: Creates open source Redis instances or DRAM-based Classic Edition instances of Tair.
+        /// \&gt; - <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a>: Creates Cloud-native Edition instances of Tair, including DRAM-based, persistent memory-optimized, and ESSD-based instances.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2813,19 +3016,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates multiple Tair (Redis OSS-compatible) instances at a time.</para>
+        /// <para>Creates classic edition instances of ApsaraDB for Tair (Redis-compatible) in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of Tair (Redis OSS-compatible).</para>
-        /// <remarks>
-        /// <para> You can call this operation to create classic Redis Open-Source Edition instances or classic Tair DRAM-based instances. We recommend that you use an API operation for creating a single instance:</para>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description><a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a>: creates a Redis Open-Source instance or a classic Tair DRAM-based instance.</description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a>: creates a Tair (Enterprise Edition) instance. The instance can be a DRAM-based, persistent memory-optimized, or ESSD/SSD-based instance.</description></item>
-        /// </list>
+        /// <para>Before calling this API, review the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of ApsaraDB for Tair (Redis-compatible).
+        /// \&gt; This API supports only creating Classic Edition instances.
+        /// To create a single instance, use one of the following APIs:
+        /// \&gt; - <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a>: Creates open source Redis instances or DRAM-based Classic Edition instances of Tair.
+        /// \&gt; - <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a>: Creates Cloud-native Edition instances of Tair, including DRAM-based, persistent memory-optimized, and ESSD-based instances.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2919,19 +3119,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates multiple Tair (Redis OSS-compatible) instances at a time.</para>
+        /// <para>Creates classic edition instances of ApsaraDB for Tair (Redis-compatible) in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of Tair (Redis OSS-compatible).</para>
-        /// <remarks>
-        /// <para> You can call this operation to create classic Redis Open-Source Edition instances or classic Tair DRAM-based instances. We recommend that you use an API operation for creating a single instance:</para>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description><a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a>: creates a Redis Open-Source instance or a classic Tair DRAM-based instance.</description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a>: creates a Tair (Enterprise Edition) instance. The instance can be a DRAM-based, persistent memory-optimized, or ESSD/SSD-based instance.</description></item>
-        /// </list>
+        /// <para>Before calling this API, review the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of ApsaraDB for Tair (Redis-compatible).
+        /// \&gt; This API supports only creating Classic Edition instances.
+        /// To create a single instance, use one of the following APIs:
+        /// \&gt; - <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a>: Creates open source Redis instances or DRAM-based Classic Edition instances of Tair.
+        /// \&gt; - <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a>: Creates Cloud-native Edition instances of Tair, including DRAM-based, persistent memory-optimized, and ESSD-based instances.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2949,19 +3146,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates multiple Tair (Redis OSS-compatible) instances at a time.</para>
+        /// <para>Creates classic edition instances of ApsaraDB for Tair (Redis-compatible) in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of Tair (Redis OSS-compatible).</para>
-        /// <remarks>
-        /// <para> You can call this operation to create classic Redis Open-Source Edition instances or classic Tair DRAM-based instances. We recommend that you use an API operation for creating a single instance:</para>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description><a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a>: creates a Redis Open-Source instance or a classic Tair DRAM-based instance.</description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a>: creates a Tair (Enterprise Edition) instance. The instance can be a DRAM-based, persistent memory-optimized, or ESSD/SSD-based instance.</description></item>
-        /// </list>
+        /// <para>Before calling this API, review the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of ApsaraDB for Tair (Redis-compatible).
+        /// \&gt; This API supports only creating Classic Edition instances.
+        /// To create a single instance, use one of the following APIs:
+        /// \&gt; - <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a>: Creates open source Redis instances or DRAM-based Classic Edition instances of Tair.
+        /// \&gt; - <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a>: Creates Cloud-native Edition instances of Tair, including DRAM-based, persistent memory-optimized, and ESSD-based instances.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2981,6 +3175,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <summary>
         /// <para>Creates a parameter template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>参数模板仅适用于云原生部署模式实例（原云盘实例）。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateParameterGroupRequest
@@ -3068,6 +3267,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <para>Creates a parameter template.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>参数模板仅适用于云原生部署模式实例（原云盘实例）。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateParameterGroupRequest
         /// </param>
@@ -3154,6 +3358,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <para>Creates a parameter template.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>参数模板仅适用于云原生部署模式实例（原云盘实例）。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateParameterGroupRequest
         /// </param>
@@ -3172,6 +3381,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <para>Creates a parameter template.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>参数模板仅适用于云原生部署模式实例（原云盘实例）。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateParameterGroupRequest
         /// </param>
@@ -3187,7 +3401,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a TairCustom instance.</para>
+        /// <para>创建TairCustom实例</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3333,7 +3547,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a TairCustom instance.</para>
+        /// <para>创建TairCustom实例</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3479,7 +3693,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a TairCustom instance.</para>
+        /// <para>创建TairCustom实例</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3497,7 +3711,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a TairCustom instance.</para>
+        /// <para>创建TairCustom实例</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3515,19 +3729,21 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Tair (Enterprise Edition) cloud-native instance.</para>
+        /// <para>Create a cloud-native Tair Enterprise Edition instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about instance selection, see <a href="https://help.aliyun.com/document_detail/223808.html">Instructions for selecting an appropriate Tair (Redis OSS-compatible) instance</a>.
-        /// Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of Tair (Redis OSS-compatible).</para>
+        /// <para>For information about instance selection, see <a href="https://help.aliyun.com/document_detail/223808.html">ApsaraDB for Tair (Redis-compatible) instance selection guide</a>.
+        /// Before you call this API, ensure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> for ApsaraDB for Tair (Redis-compatible).</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description>For information about how to create an instance in the console, see <a href="https://help.aliyun.com/document_detail/26351.html">Step 1: Create an instance</a>.</description></item>
-        /// <item><description>To create other types of instances, such as Redis Open-Source Edition instances or <a href="https://help.aliyun.com/document_detail/126164.html">Tair DRAM-based</a> instances, you can call the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> operation.</description></item>
+        /// <item><description><para>To create an instance in the console, see <a href="https://help.aliyun.com/document_detail/26351.html">Create a Tair instance</a>.</para>
+        /// </description></item>
+        /// <item><description><para>To create other instance types, such as open-source or <a href="https://help.aliyun.com/document_detail/126164.html">Tair memory-enhanced</a> classic edition, call the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> API.</para>
+        /// </description></item>
         /// </list>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -3619,6 +3835,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
             {
                 query["InstanceType"] = request.InstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaintainEndTime))
+            {
+                query["MaintainEndTime"] = request.MaintainEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaintainStartTime))
+            {
+                query["MaintainStartTime"] = request.MaintainStartTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -3753,19 +3977,21 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Tair (Enterprise Edition) cloud-native instance.</para>
+        /// <para>Create a cloud-native Tair Enterprise Edition instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about instance selection, see <a href="https://help.aliyun.com/document_detail/223808.html">Instructions for selecting an appropriate Tair (Redis OSS-compatible) instance</a>.
-        /// Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of Tair (Redis OSS-compatible).</para>
+        /// <para>For information about instance selection, see <a href="https://help.aliyun.com/document_detail/223808.html">ApsaraDB for Tair (Redis-compatible) instance selection guide</a>.
+        /// Before you call this API, ensure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> for ApsaraDB for Tair (Redis-compatible).</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description>For information about how to create an instance in the console, see <a href="https://help.aliyun.com/document_detail/26351.html">Step 1: Create an instance</a>.</description></item>
-        /// <item><description>To create other types of instances, such as Redis Open-Source Edition instances or <a href="https://help.aliyun.com/document_detail/126164.html">Tair DRAM-based</a> instances, you can call the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> operation.</description></item>
+        /// <item><description><para>To create an instance in the console, see <a href="https://help.aliyun.com/document_detail/26351.html">Create a Tair instance</a>.</para>
+        /// </description></item>
+        /// <item><description><para>To create other instance types, such as open-source or <a href="https://help.aliyun.com/document_detail/126164.html">Tair memory-enhanced</a> classic edition, call the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> API.</para>
+        /// </description></item>
         /// </list>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -3857,6 +4083,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
             {
                 query["InstanceType"] = request.InstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaintainEndTime))
+            {
+                query["MaintainEndTime"] = request.MaintainEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaintainStartTime))
+            {
+                query["MaintainStartTime"] = request.MaintainStartTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -3991,19 +4225,21 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Tair (Enterprise Edition) cloud-native instance.</para>
+        /// <para>Create a cloud-native Tair Enterprise Edition instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about instance selection, see <a href="https://help.aliyun.com/document_detail/223808.html">Instructions for selecting an appropriate Tair (Redis OSS-compatible) instance</a>.
-        /// Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of Tair (Redis OSS-compatible).</para>
+        /// <para>For information about instance selection, see <a href="https://help.aliyun.com/document_detail/223808.html">ApsaraDB for Tair (Redis-compatible) instance selection guide</a>.
+        /// Before you call this API, ensure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> for ApsaraDB for Tair (Redis-compatible).</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description>For information about how to create an instance in the console, see <a href="https://help.aliyun.com/document_detail/26351.html">Step 1: Create an instance</a>.</description></item>
-        /// <item><description>To create other types of instances, such as Redis Open-Source Edition instances or <a href="https://help.aliyun.com/document_detail/126164.html">Tair DRAM-based</a> instances, you can call the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> operation.</description></item>
+        /// <item><description><para>To create an instance in the console, see <a href="https://help.aliyun.com/document_detail/26351.html">Create a Tair instance</a>.</para>
+        /// </description></item>
+        /// <item><description><para>To create other instance types, such as open-source or <a href="https://help.aliyun.com/document_detail/126164.html">Tair memory-enhanced</a> classic edition, call the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> API.</para>
+        /// </description></item>
         /// </list>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -4021,19 +4257,21 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Tair (Enterprise Edition) cloud-native instance.</para>
+        /// <para>Create a cloud-native Tair Enterprise Edition instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about instance selection, see <a href="https://help.aliyun.com/document_detail/223808.html">Instructions for selecting an appropriate Tair (Redis OSS-compatible) instance</a>.
-        /// Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of Tair (Redis OSS-compatible).</para>
+        /// <para>For information about instance selection, see <a href="https://help.aliyun.com/document_detail/223808.html">ApsaraDB for Tair (Redis-compatible) instance selection guide</a>.
+        /// Before you call this API, ensure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> for ApsaraDB for Tair (Redis-compatible).</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description>For information about how to create an instance in the console, see <a href="https://help.aliyun.com/document_detail/26351.html">Step 1: Create an instance</a>.</description></item>
-        /// <item><description>To create other types of instances, such as Redis Open-Source Edition instances or <a href="https://help.aliyun.com/document_detail/126164.html">Tair DRAM-based</a> instances, you can call the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> operation.</description></item>
+        /// <item><description><para>To create an instance in the console, see <a href="https://help.aliyun.com/document_detail/26351.html">Create a Tair instance</a>.</para>
+        /// </description></item>
+        /// <item><description><para>To create other instance types, such as open-source or <a href="https://help.aliyun.com/document_detail/126164.html">Tair memory-enhanced</a> classic edition, call the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> API.</para>
+        /// </description></item>
         /// </list>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -4051,7 +4289,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Tair VNode instance.</para>
+        /// <para>Create a Tair VNode instance</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4193,7 +4431,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Tair VNode instance.</para>
+        /// <para>Create a Tair VNode instance</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4335,7 +4573,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Tair VNode instance.</para>
+        /// <para>Create a Tair VNode instance</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4353,7 +4591,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Tair VNode instance.</para>
+        /// <para>Create a Tair VNode instance</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4371,8 +4609,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Tair Serverless 类型实例的Workspace</para>
+        /// <para>Creates a Tair Serverless KV table instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.htm">pricing</a> of ApsaraDB for Redis.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateTairSkvDdbTableRequest
@@ -4465,8 +4711,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Tair Serverless 类型实例的Workspace</para>
+        /// <para>Creates a Tair Serverless KV table instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.htm">pricing</a> of ApsaraDB for Redis.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateTairSkvDdbTableRequest
@@ -4559,8 +4813,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Tair Serverless 类型实例的Workspace</para>
+        /// <para>Creates a Tair Serverless KV table instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.htm">pricing</a> of ApsaraDB for Redis.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateTairSkvDdbTableRequest
@@ -4577,8 +4839,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Tair Serverless 类型实例的Workspace</para>
+        /// <para>Creates a Tair Serverless KV table instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.htm">pricing</a> of ApsaraDB for Redis.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateTairSkvDdbTableRequest
@@ -4595,8 +4865,17 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Tair Serverless 类型实例的Workspace</para>
+        /// <para>Creates a Tair Serverless KV workspace instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.htm">pricing</a> of ApsaraDB for Redis.</description></item>
+        /// <item><description>To create a Tair Serverless KV table instance, call the <c>CreateTairSkvDdbTable</c> operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateTairSkvDdbWorkspaceRequest
@@ -4693,8 +4972,17 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Tair Serverless 类型实例的Workspace</para>
+        /// <para>Creates a Tair Serverless KV workspace instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.htm">pricing</a> of ApsaraDB for Redis.</description></item>
+        /// <item><description>To create a Tair Serverless KV table instance, call the <c>CreateTairSkvDdbTable</c> operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateTairSkvDdbWorkspaceRequest
@@ -4791,8 +5079,17 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Tair Serverless 类型实例的Workspace</para>
+        /// <para>Creates a Tair Serverless KV workspace instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.htm">pricing</a> of ApsaraDB for Redis.</description></item>
+        /// <item><description>To create a Tair Serverless KV table instance, call the <c>CreateTairSkvDdbTable</c> operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateTairSkvDdbWorkspaceRequest
@@ -4809,8 +5106,17 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Tair Serverless 类型实例的Workspace</para>
+        /// <para>Creates a Tair Serverless KV workspace instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.htm">pricing</a> of ApsaraDB for Redis.</description></item>
+        /// <item><description>To create a Tair Serverless KV table instance, call the <c>CreateTairSkvDdbTable</c> operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateTairSkvDdbWorkspaceRequest
@@ -5035,8 +5341,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified backup set. However, you can delete only backup sets that are manually backed up.</para>
+        /// <para>Delete the specified backup set. Only manual backup sets can be deleted.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation supports only cloud-native instances.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteBackupRequest
@@ -5097,8 +5408,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified backup set. However, you can delete only backup sets that are manually backed up.</para>
+        /// <para>Delete the specified backup set. Only manual backup sets can be deleted.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation supports only cloud-native instances.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteBackupRequest
@@ -5159,8 +5475,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified backup set. However, you can delete only backup sets that are manually backed up.</para>
+        /// <para>Delete the specified backup set. Only manual backup sets can be deleted.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation supports only cloud-native instances.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteBackupRequest
@@ -5177,8 +5498,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified backup set. However, you can delete only backup sets that are manually backed up.</para>
+        /// <para>Delete the specified backup set. Only manual backup sets can be deleted.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation supports only cloud-native instances.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteBackupRequest
@@ -5782,16 +6108,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <para>Removes one or more data shards from a Tair (Redis OSS-compatible) cluster instance.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>You can also remove data shards from an instance in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/198082.html">Adjust the number of shards for an instance with cloud disks</a>.\
-        /// Before you call this operation, make sure that the instance meets the following requirements:</para>
-        /// <list type="bullet">
-        /// <item><description>The instance is a persistent memory-optimized instance in the cluster architecture. For more information about persistent memory-optimized instances, see <a href="https://help.aliyun.com/document_detail/183956.html">Persistent memory-optimized instances</a>.</description></item>
-        /// <item><description>The instance has more than one data shard.</description></item>
-        /// </list>
-        /// </description>
-        /// 
         /// <param name="request">
         /// DeleteShardingNodeRequest
         /// </param>
@@ -5869,16 +6185,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <summary>
         /// <para>Removes one or more data shards from a Tair (Redis OSS-compatible) cluster instance.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>You can also remove data shards from an instance in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/198082.html">Adjust the number of shards for an instance with cloud disks</a>.\
-        /// Before you call this operation, make sure that the instance meets the following requirements:</para>
-        /// <list type="bullet">
-        /// <item><description>The instance is a persistent memory-optimized instance in the cluster architecture. For more information about persistent memory-optimized instances, see <a href="https://help.aliyun.com/document_detail/183956.html">Persistent memory-optimized instances</a>.</description></item>
-        /// <item><description>The instance has more than one data shard.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// DeleteShardingNodeRequest
@@ -5958,16 +6264,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <para>Removes one or more data shards from a Tair (Redis OSS-compatible) cluster instance.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>You can also remove data shards from an instance in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/198082.html">Adjust the number of shards for an instance with cloud disks</a>.\
-        /// Before you call this operation, make sure that the instance meets the following requirements:</para>
-        /// <list type="bullet">
-        /// <item><description>The instance is a persistent memory-optimized instance in the cluster architecture. For more information about persistent memory-optimized instances, see <a href="https://help.aliyun.com/document_detail/183956.html">Persistent memory-optimized instances</a>.</description></item>
-        /// <item><description>The instance has more than one data shard.</description></item>
-        /// </list>
-        /// </description>
-        /// 
         /// <param name="request">
         /// DeleteShardingNodeRequest
         /// </param>
@@ -5986,16 +6282,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <para>Removes one or more data shards from a Tair (Redis OSS-compatible) cluster instance.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>You can also remove data shards from an instance in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/198082.html">Adjust the number of shards for an instance with cloud disks</a>.\
-        /// Before you call this operation, make sure that the instance meets the following requirements:</para>
-        /// <list type="bullet">
-        /// <item><description>The instance is a persistent memory-optimized instance in the cluster architecture. For more information about persistent memory-optimized instances, see <a href="https://help.aliyun.com/document_detail/183956.html">Persistent memory-optimized instances</a>.</description></item>
-        /// <item><description>The instance has more than one data shard.</description></item>
-        /// </list>
-        /// </description>
-        /// 
         /// <param name="request">
         /// DeleteShardingNodeRequest
         /// </param>
@@ -6011,15 +6297,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a specified account of a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Queries information about a specific account in a specified ApsaraDB for Redis (Tair-compatible) instance.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// <para> Only Tair (Redis OSS-compatible) instances of Redis 4.0 or later are supported.</para>
-        /// </remarks>
-        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAccountsRequest
@@ -6084,15 +6363,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a specified account of a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Queries information about a specific account in a specified ApsaraDB for Redis (Tair-compatible) instance.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// <para> Only Tair (Redis OSS-compatible) instances of Redis 4.0 or later are supported.</para>
-        /// </remarks>
-        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAccountsRequest
@@ -6157,15 +6429,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a specified account of a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Queries information about a specific account in a specified ApsaraDB for Redis (Tair-compatible) instance.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// <para> Only Tair (Redis OSS-compatible) instances of Redis 4.0 or later are supported.</para>
-        /// </remarks>
-        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAccountsRequest
@@ -6182,15 +6447,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a specified account of a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Queries information about a specific account in a specified ApsaraDB for Redis (Tair-compatible) instance.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// <para> Only Tair (Redis OSS-compatible) instances of Redis 4.0 or later are supported.</para>
-        /// </remarks>
-        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAccountsRequest
@@ -7987,8 +8245,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the backup files of the Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Queries information about backup files for a Redis-compatible ApsaraDB for Tair instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation does not apply to cloud-native cluster instances. Instead, use the <a href="https://help.aliyun.com/document_detail/2679168.html">DescribeClusterBackupList</a> operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeBackupsRequest
@@ -8077,8 +8340,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the backup files of the Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Queries information about backup files for a Redis-compatible ApsaraDB for Tair instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation does not apply to cloud-native cluster instances. Instead, use the <a href="https://help.aliyun.com/document_detail/2679168.html">DescribeClusterBackupList</a> operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeBackupsRequest
@@ -8167,8 +8435,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the backup files of the Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Queries information about backup files for a Redis-compatible ApsaraDB for Tair instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation does not apply to cloud-native cluster instances. Instead, use the <a href="https://help.aliyun.com/document_detail/2679168.html">DescribeClusterBackupList</a> operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeBackupsRequest
@@ -8185,8 +8458,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the backup files of the Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Queries information about backup files for a Redis-compatible ApsaraDB for Tair instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation does not apply to cloud-native cluster instances. Instead, use the <a href="https://help.aliyun.com/document_detail/2679168.html">DescribeClusterBackupList</a> operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeBackupsRequest
@@ -8691,12 +8969,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the backup sets of a Tair (Redis OSS-compatible) cluster instance.</para>
+        /// <para>Queries the backup list of a Tair (Redis OSS-compatible) cluster instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is applicable only to cloud-native instances.</para>
+        /// <para>This API is applicable only to cloud-native instances.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8734,12 +9012,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the backup sets of a Tair (Redis OSS-compatible) cluster instance.</para>
+        /// <para>Queries the backup list of a Tair (Redis OSS-compatible) cluster instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is applicable only to cloud-native instances.</para>
+        /// <para>This API is applicable only to cloud-native instances.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8777,12 +9055,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the backup sets of a Tair (Redis OSS-compatible) cluster instance.</para>
+        /// <para>Queries the backup list of a Tair (Redis OSS-compatible) cluster instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is applicable only to cloud-native instances.</para>
+        /// <para>This API is applicable only to cloud-native instances.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8800,12 +9078,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the backup sets of a Tair (Redis OSS-compatible) cluster instance.</para>
+        /// <para>Queries the backup list of a Tair (Redis OSS-compatible) cluster instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is applicable only to cloud-native instances.</para>
+        /// <para>This API is applicable only to cloud-native instances.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9187,7 +9465,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the network information of a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Queries the network information of an ApsaraDB for Tair instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9253,7 +9531,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the network information of a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Queries the network information of an ApsaraDB for Tair instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9319,7 +9597,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the network information of a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Queries the network information of an ApsaraDB for Tair instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9337,7 +9615,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the network information of a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Queries the network information of an ApsaraDB for Tair instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11571,12 +11849,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the performance monitoring data of a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>View performance monitoring data for an ApsaraDB for Tair (Redis-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can also query the performance monitoring data of an instance in the Tair console. For more information, see <a href="https://help.aliyun.com/document_detail/43887.html">Metrics</a>.</para>
+        /// <para>For the console equivalent, see <a href="https://help.aliyun.com/document_detail/43887.html">performance monitoring</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11666,12 +11944,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the performance monitoring data of a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>View performance monitoring data for an ApsaraDB for Tair (Redis-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can also query the performance monitoring data of an instance in the Tair console. For more information, see <a href="https://help.aliyun.com/document_detail/43887.html">Metrics</a>.</para>
+        /// <para>For the console equivalent, see <a href="https://help.aliyun.com/document_detail/43887.html">performance monitoring</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11761,12 +12039,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the performance monitoring data of a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>View performance monitoring data for an ApsaraDB for Tair (Redis-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can also query the performance monitoring data of an instance in the Tair console. For more information, see <a href="https://help.aliyun.com/document_detail/43887.html">Metrics</a>.</para>
+        /// <para>For the console equivalent, see <a href="https://help.aliyun.com/document_detail/43887.html">performance monitoring</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11784,12 +12062,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the performance monitoring data of a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>View performance monitoring data for an ApsaraDB for Tair (Redis-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can also query the performance monitoring data of an instance in the Tair console. For more information, see <a href="https://help.aliyun.com/document_detail/43887.html">Metrics</a>.</para>
+        /// <para>For the console equivalent, see <a href="https://help.aliyun.com/document_detail/43887.html">performance monitoring</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12239,7 +12517,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attribute of Tair (Redis OSS-compatible) instances.</para>
+        /// <para>Retrieves the details of a Tair (Redis-compatible) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12301,7 +12579,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attribute of Tair (Redis OSS-compatible) instances.</para>
+        /// <para>Retrieves the details of a Tair (Redis-compatible) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12363,7 +12641,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attribute of Tair (Redis OSS-compatible) instances.</para>
+        /// <para>Retrieves the details of a Tair (Redis-compatible) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12381,7 +12659,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attribute of Tair (Redis OSS-compatible) instances.</para>
+        /// <para>Retrieves the details of a Tair (Redis-compatible) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12583,16 +12861,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the default parameter configurations of a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Queries some of the default configuration parameters for a Tair (Redis-compatible) instance.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This operation is available only for instances that use cloud disks.</para>
-        /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/473847.html">DescribeParameters</a> operation to query the parameter settings of instances that use local disks.</para>
-        /// </remarks>
-        /// </description>
         /// 
         /// <param name="request">
         /// DescribeInstanceConfigRequest
@@ -12653,16 +12923,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the default parameter configurations of a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Queries some of the default configuration parameters for a Tair (Redis-compatible) instance.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This operation is available only for instances that use cloud disks.</para>
-        /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/473847.html">DescribeParameters</a> operation to query the parameter settings of instances that use local disks.</para>
-        /// </remarks>
-        /// </description>
         /// 
         /// <param name="request">
         /// DescribeInstanceConfigRequest
@@ -12723,16 +12985,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the default parameter configurations of a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Queries some of the default configuration parameters for a Tair (Redis-compatible) instance.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This operation is available only for instances that use cloud disks.</para>
-        /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/473847.html">DescribeParameters</a> operation to query the parameter settings of instances that use local disks.</para>
-        /// </remarks>
-        /// </description>
         /// 
         /// <param name="request">
         /// DescribeInstanceConfigRequest
@@ -12749,16 +13003,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the default parameter configurations of a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Queries some of the default configuration parameters for a Tair (Redis-compatible) instance.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This operation is available only for instances that use cloud disks.</para>
-        /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/473847.html">DescribeParameters</a> operation to query the parameter settings of instances that use local disks.</para>
-        /// </remarks>
-        /// </description>
         /// 
         /// <param name="request">
         /// DescribeInstanceConfigRequest
@@ -12771,6 +13017,178 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeInstanceConfigWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例的多 VIP 信息</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>关于多LB，详情参见</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceMultiVIPRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceMultiVIPResponse
+        /// </returns>
+        public DescribeInstanceMultiVIPResponse DescribeInstanceMultiVIPWithOptions(DescribeInstanceMultiVIPRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeInstanceMultiVIP",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeInstanceMultiVIPResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例的多 VIP 信息</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>关于多LB，详情参见</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceMultiVIPRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceMultiVIPResponse
+        /// </returns>
+        public async Task<DescribeInstanceMultiVIPResponse> DescribeInstanceMultiVIPWithOptionsAsync(DescribeInstanceMultiVIPRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeInstanceMultiVIP",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeInstanceMultiVIPResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例的多 VIP 信息</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>关于多LB，详情参见</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceMultiVIPRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceMultiVIPResponse
+        /// </returns>
+        public DescribeInstanceMultiVIPResponse DescribeInstanceMultiVIP(DescribeInstanceMultiVIPRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeInstanceMultiVIPWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例的多 VIP 信息</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>关于多LB，详情参见</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceMultiVIPRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceMultiVIPResponse
+        /// </returns>
+        public async Task<DescribeInstanceMultiVIPResponse> DescribeInstanceMultiVIPAsync(DescribeInstanceMultiVIPRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeInstanceMultiVIPWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -13179,7 +13597,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about one or more Tair (Redis OSS-compatible) instances.</para>
+        /// <para>Queries information about one or more ApsaraDB for Redis (Tair-compatible) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13325,7 +13743,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about one or more Tair (Redis OSS-compatible) instances.</para>
+        /// <para>Queries information about one or more ApsaraDB for Redis (Tair-compatible) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13471,7 +13889,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about one or more Tair (Redis OSS-compatible) instances.</para>
+        /// <para>Queries information about one or more ApsaraDB for Redis (Tair-compatible) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13489,7 +13907,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about one or more Tair (Redis OSS-compatible) instances.</para>
+        /// <para>Queries information about one or more ApsaraDB for Redis (Tair-compatible) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13819,12 +14237,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the current bandwidth of a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Describes the current bandwidth of a Tair (Redis-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/473771.html">EnableAdditionalBandwidth</a> operation to increase the internal bandwidth of an instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/473771.html">EnableAdditionalBandwidth</a> operation to purchase additional bandwidth for an instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13890,12 +14308,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the current bandwidth of a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Describes the current bandwidth of a Tair (Redis-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/473771.html">EnableAdditionalBandwidth</a> operation to increase the internal bandwidth of an instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/473771.html">EnableAdditionalBandwidth</a> operation to purchase additional bandwidth for an instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13961,12 +14379,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the current bandwidth of a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Describes the current bandwidth of a Tair (Redis-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/473771.html">EnableAdditionalBandwidth</a> operation to increase the internal bandwidth of an instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/473771.html">EnableAdditionalBandwidth</a> operation to purchase additional bandwidth for an instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13984,12 +14402,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the current bandwidth of a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Describes the current bandwidth of a Tair (Redis-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/473771.html">EnableAdditionalBandwidth</a> operation to increase the internal bandwidth of an instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/473771.html">EnableAdditionalBandwidth</a> operation to purchase additional bandwidth for an instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14007,12 +14425,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the logical topology of a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Queries the logical topology structure of an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This parameter is supported only for cluster and read/write splitting instances.</para>
+        /// <para>This operation is supported only for cluster and read/write splitting instances.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14074,12 +14492,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the logical topology of a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Queries the logical topology structure of an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This parameter is supported only for cluster and read/write splitting instances.</para>
+        /// <para>This operation is supported only for cluster and read/write splitting instances.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14141,12 +14559,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the logical topology of a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Queries the logical topology structure of an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This parameter is supported only for cluster and read/write splitting instances.</para>
+        /// <para>This operation is supported only for cluster and read/write splitting instances.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14164,12 +14582,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the logical topology of a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Queries the logical topology structure of an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This parameter is supported only for cluster and read/write splitting instances.</para>
+        /// <para>This operation is supported only for cluster and read/write splitting instances.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15471,16 +15889,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration parameters and running parameters of a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Queries the configuration parameters and running parameters of a Tair (Redis® OSS-Compatible) instance.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This operation is applicable only to classic instances.</para>
-        /// <remarks>
-        /// <para> If the instance is deployed in cloud-native mode, you can use the <a href="https://help.aliyun.com/document_detail/473846.html">DescribeInstanceConfig</a> operation to query the configuration and operational parameters of the instance.</para>
-        /// </remarks>
-        /// </description>
         /// 
         /// <param name="request">
         /// DescribeParametersRequest
@@ -15549,16 +15959,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration parameters and running parameters of a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Queries the configuration parameters and running parameters of a Tair (Redis® OSS-Compatible) instance.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This operation is applicable only to classic instances.</para>
-        /// <remarks>
-        /// <para> If the instance is deployed in cloud-native mode, you can use the <a href="https://help.aliyun.com/document_detail/473846.html">DescribeInstanceConfig</a> operation to query the configuration and operational parameters of the instance.</para>
-        /// </remarks>
-        /// </description>
         /// 
         /// <param name="request">
         /// DescribeParametersRequest
@@ -15627,16 +16029,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration parameters and running parameters of a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Queries the configuration parameters and running parameters of a Tair (Redis® OSS-Compatible) instance.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This operation is applicable only to classic instances.</para>
-        /// <remarks>
-        /// <para> If the instance is deployed in cloud-native mode, you can use the <a href="https://help.aliyun.com/document_detail/473846.html">DescribeInstanceConfig</a> operation to query the configuration and operational parameters of the instance.</para>
-        /// </remarks>
-        /// </description>
         /// 
         /// <param name="request">
         /// DescribeParametersRequest
@@ -15653,16 +16047,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration parameters and running parameters of a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Queries the configuration parameters and running parameters of a Tair (Redis® OSS-Compatible) instance.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This operation is applicable only to classic instances.</para>
-        /// <remarks>
-        /// <para> If the instance is deployed in cloud-native mode, you can use the <a href="https://help.aliyun.com/document_detail/473846.html">DescribeInstanceConfig</a> operation to query the configuration and operational parameters of the instance.</para>
-        /// </remarks>
-        /// </description>
         /// 
         /// <param name="request">
         /// DescribeParametersRequest
@@ -15679,7 +16065,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the fees that you must pay when you create, upgrade, or renew a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Query the fees incurred by operations such as creation, configuration upgrade, or renewal of ApsaraDB for Tair (Redis OSS-compatible) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15809,7 +16195,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the fees that you must pay when you create, upgrade, or renew a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Query the fees incurred by operations such as creation, configuration upgrade, or renewal of ApsaraDB for Tair (Redis OSS-compatible) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15939,7 +16325,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the fees that you must pay when you create, upgrade, or renew a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Query the fees incurred by operations such as creation, configuration upgrade, or renewal of ApsaraDB for Tair (Redis OSS-compatible) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15957,7 +16343,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the fees that you must pay when you create, upgrade, or renew a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Query the fees incurred by operations such as creation, configuration upgrade, or renewal of ApsaraDB for Tair (Redis OSS-compatible) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17527,7 +17913,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a TairKVCache instance.</para>
+        /// <para>查看TairCustom实例</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17565,7 +17951,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a TairKVCache instance.</para>
+        /// <para>查看TairCustom实例</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17603,7 +17989,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a TairKVCache instance.</para>
+        /// <para>查看TairCustom实例</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17621,7 +18007,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a TairKVCache instance.</para>
+        /// <para>查看TairCustom实例</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17639,7 +18025,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the monitoring data of a Tair-KVCache instance.</para>
+        /// <para>查询TairCustom主机监控</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17677,7 +18063,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the monitoring data of a Tair-KVCache instance.</para>
+        /// <para>查询TairCustom主机监控</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17715,7 +18101,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the monitoring data of a Tair-KVCache instance.</para>
+        /// <para>查询TairCustom主机监控</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17733,7 +18119,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the monitoring data of a Tair-KVCache instance.</para>
+        /// <para>查询TairCustom主机监控</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17751,7 +18137,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Tair-KVCache instances.</para>
+        /// <para>查看TairCustom实例</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17789,7 +18175,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Tair-KVCache instances.</para>
+        /// <para>查看TairCustom实例</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17827,7 +18213,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Tair-KVCache instances.</para>
+        /// <para>查看TairCustom实例</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17845,7 +18231,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Tair-KVCache instances.</para>
+        /// <para>查看TairCustom实例</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17975,12 +18361,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of one or more Tair (Redis OSS-compatible) KVCache instances.</para>
+        /// <para>Queries information about one or more Tair KVCache instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the following Tair (Redis OSS-compatible) KVCache instances: inference operator instances, virtual cluster instances, and cache service instances.</para>
+        /// <para>This operation supports querying Tair KVCache inference operator instances, virtual cluster instances, and cache service instances.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18018,12 +18404,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of one or more Tair (Redis OSS-compatible) KVCache instances.</para>
+        /// <para>Queries information about one or more Tair KVCache instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the following Tair (Redis OSS-compatible) KVCache instances: inference operator instances, virtual cluster instances, and cache service instances.</para>
+        /// <para>This operation supports querying Tair KVCache inference operator instances, virtual cluster instances, and cache service instances.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18061,12 +18447,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of one or more Tair (Redis OSS-compatible) KVCache instances.</para>
+        /// <para>Queries information about one or more Tair KVCache instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the following Tair (Redis OSS-compatible) KVCache instances: inference operator instances, virtual cluster instances, and cache service instances.</para>
+        /// <para>This operation supports querying Tair KVCache inference operator instances, virtual cluster instances, and cache service instances.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18084,12 +18470,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of one or more Tair (Redis OSS-compatible) KVCache instances.</para>
+        /// <para>Queries information about one or more Tair KVCache instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the following Tair (Redis OSS-compatible) KVCache instances: inference operator instances, virtual cluster instances, and cache service instances.</para>
+        /// <para>This operation supports querying Tair KVCache inference operator instances, virtual cluster instances, and cache service instances.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18107,8 +18493,17 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Tair Serverless KV DDB实例的table</para>
+        /// <para>Queries all Tair Serverless KV table instances in a specified workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>You must specify the InstanceId parameter when you call this operation.</description></item>
+        /// <item><description>The response includes basic information about each table, such as the table ID, name, bandwidth, and maximum number of connections.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeTairSkvDdbTableRequest
@@ -18169,8 +18564,17 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Tair Serverless KV DDB实例的table</para>
+        /// <para>Queries all Tair Serverless KV table instances in a specified workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>You must specify the InstanceId parameter when you call this operation.</description></item>
+        /// <item><description>The response includes basic information about each table, such as the table ID, name, bandwidth, and maximum number of connections.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeTairSkvDdbTableRequest
@@ -18231,8 +18635,17 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Tair Serverless KV DDB实例的table</para>
+        /// <para>Queries all Tair Serverless KV table instances in a specified workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>You must specify the InstanceId parameter when you call this operation.</description></item>
+        /// <item><description>The response includes basic information about each table, such as the table ID, name, bandwidth, and maximum number of connections.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeTairSkvDdbTableRequest
@@ -18249,8 +18662,17 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Tair Serverless KV DDB实例的table</para>
+        /// <para>Queries all Tair Serverless KV table instances in a specified workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>You must specify the InstanceId parameter when you call this operation.</description></item>
+        /// <item><description>The response includes basic information about each table, such as the table ID, name, bandwidth, and maximum number of connections.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeTairSkvDdbTableRequest
@@ -18267,8 +18689,20 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Tair Serverless KV DDB实例的table schema</para>
+        /// <para>Retrieves the table schema and configuration information of a specified instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation queries the table schema and configuration information of a Tair Serverless KV table instance.</description></item>
+        /// <item><description>You must specify the InstanceId parameter. Set this parameter to the instance ID of the instance that you want to query.</description></item>
+        /// <item><description>The BackupId parameter specifies the backup set of the table to query.</description></item>
+        /// <item><description>The response packet includes the time-to-live (TTL) specifications and detailed table schema definition.
+        /// To invoke this operation, see the request parameters below.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeTairSkvDdbTableSchemaRequest
@@ -18333,8 +18767,20 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Tair Serverless KV DDB实例的table schema</para>
+        /// <para>Retrieves the table schema and configuration information of a specified instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation queries the table schema and configuration information of a Tair Serverless KV table instance.</description></item>
+        /// <item><description>You must specify the InstanceId parameter. Set this parameter to the instance ID of the instance that you want to query.</description></item>
+        /// <item><description>The BackupId parameter specifies the backup set of the table to query.</description></item>
+        /// <item><description>The response packet includes the time-to-live (TTL) specifications and detailed table schema definition.
+        /// To invoke this operation, see the request parameters below.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeTairSkvDdbTableSchemaRequest
@@ -18399,8 +18845,20 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Tair Serverless KV DDB实例的table schema</para>
+        /// <para>Retrieves the table schema and configuration information of a specified instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation queries the table schema and configuration information of a Tair Serverless KV table instance.</description></item>
+        /// <item><description>You must specify the InstanceId parameter. Set this parameter to the instance ID of the instance that you want to query.</description></item>
+        /// <item><description>The BackupId parameter specifies the backup set of the table to query.</description></item>
+        /// <item><description>The response packet includes the time-to-live (TTL) specifications and detailed table schema definition.
+        /// To invoke this operation, see the request parameters below.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeTairSkvDdbTableSchemaRequest
@@ -18417,8 +18875,20 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Tair Serverless KV DDB实例的table schema</para>
+        /// <para>Retrieves the table schema and configuration information of a specified instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation queries the table schema and configuration information of a Tair Serverless KV table instance.</description></item>
+        /// <item><description>You must specify the InstanceId parameter. Set this parameter to the instance ID of the instance that you want to query.</description></item>
+        /// <item><description>The BackupId parameter specifies the backup set of the table to query.</description></item>
+        /// <item><description>The response packet includes the time-to-live (TTL) specifications and detailed table schema definition.
+        /// To invoke this operation, see the request parameters below.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeTairSkvDdbTableSchemaRequest
@@ -18931,14 +19401,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adjusts the bandwidth of a Tair (Redis OSS-compatible) instance. Only the pay-as-you-go billing method is supported for bandwidth adjustment. You need to specify the InstanceId, NodeId (optional), Bandwidth, and ChargeType parameters.</para>
+        /// <para>This operation adjusts the bandwidth for an ApsaraDB for Redis instance that uses the pay-as-you-go billing method. You need to specify only the InstanceId, NodeId (optional), Bandwidth, and ChargeType parameters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you enable the bandwidth auto scaling feature and call this operation at the same time, bandwidth auto scaling takes precedence. During bandwidth scale-back, the instance is scaled back to the default bandwidth of the instance type. For more information about the limits, costs, and FAQ about this feature, see <a href="https://help.aliyun.com/document_detail/102588.html">Adjust the bandwidth of an instance</a>.</para>
+        /// <para>If auto scaling of bandwidth is enabled when you call this operation, the auto scaling feature takes precedence. When the bandwidth scales back, it reverts to the default bandwidth of the instance type. For more information about the feature\&quot;s limitations, billing details, and FAQ, see <a href="https://help.aliyun.com/document_detail/102588.html">Adjust instance bandwidth</a>.</para>
         /// <remarks>
-        /// <para> Before you call this operation, you can call the <a href="https://help.aliyun.com/document_detail/473782.html">DescribeRoleZoneInfo</a> operation to query the current bandwidth of each data node in an instance.</para>
+        /// <para>Before you call this operation, you can call the <a href="https://help.aliyun.com/document_detail/473782.html">DescribeRoleZoneInfo</a> operation to query the current bandwidth for each data node of the instance.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -19041,14 +19511,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adjusts the bandwidth of a Tair (Redis OSS-compatible) instance. Only the pay-as-you-go billing method is supported for bandwidth adjustment. You need to specify the InstanceId, NodeId (optional), Bandwidth, and ChargeType parameters.</para>
+        /// <para>This operation adjusts the bandwidth for an ApsaraDB for Redis instance that uses the pay-as-you-go billing method. You need to specify only the InstanceId, NodeId (optional), Bandwidth, and ChargeType parameters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you enable the bandwidth auto scaling feature and call this operation at the same time, bandwidth auto scaling takes precedence. During bandwidth scale-back, the instance is scaled back to the default bandwidth of the instance type. For more information about the limits, costs, and FAQ about this feature, see <a href="https://help.aliyun.com/document_detail/102588.html">Adjust the bandwidth of an instance</a>.</para>
+        /// <para>If auto scaling of bandwidth is enabled when you call this operation, the auto scaling feature takes precedence. When the bandwidth scales back, it reverts to the default bandwidth of the instance type. For more information about the feature\&quot;s limitations, billing details, and FAQ, see <a href="https://help.aliyun.com/document_detail/102588.html">Adjust instance bandwidth</a>.</para>
         /// <remarks>
-        /// <para> Before you call this operation, you can call the <a href="https://help.aliyun.com/document_detail/473782.html">DescribeRoleZoneInfo</a> operation to query the current bandwidth of each data node in an instance.</para>
+        /// <para>Before you call this operation, you can call the <a href="https://help.aliyun.com/document_detail/473782.html">DescribeRoleZoneInfo</a> operation to query the current bandwidth for each data node of the instance.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -19151,14 +19621,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adjusts the bandwidth of a Tair (Redis OSS-compatible) instance. Only the pay-as-you-go billing method is supported for bandwidth adjustment. You need to specify the InstanceId, NodeId (optional), Bandwidth, and ChargeType parameters.</para>
+        /// <para>This operation adjusts the bandwidth for an ApsaraDB for Redis instance that uses the pay-as-you-go billing method. You need to specify only the InstanceId, NodeId (optional), Bandwidth, and ChargeType parameters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you enable the bandwidth auto scaling feature and call this operation at the same time, bandwidth auto scaling takes precedence. During bandwidth scale-back, the instance is scaled back to the default bandwidth of the instance type. For more information about the limits, costs, and FAQ about this feature, see <a href="https://help.aliyun.com/document_detail/102588.html">Adjust the bandwidth of an instance</a>.</para>
+        /// <para>If auto scaling of bandwidth is enabled when you call this operation, the auto scaling feature takes precedence. When the bandwidth scales back, it reverts to the default bandwidth of the instance type. For more information about the feature\&quot;s limitations, billing details, and FAQ, see <a href="https://help.aliyun.com/document_detail/102588.html">Adjust instance bandwidth</a>.</para>
         /// <remarks>
-        /// <para> Before you call this operation, you can call the <a href="https://help.aliyun.com/document_detail/473782.html">DescribeRoleZoneInfo</a> operation to query the current bandwidth of each data node in an instance.</para>
+        /// <para>Before you call this operation, you can call the <a href="https://help.aliyun.com/document_detail/473782.html">DescribeRoleZoneInfo</a> operation to query the current bandwidth for each data node of the instance.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -19177,14 +19647,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adjusts the bandwidth of a Tair (Redis OSS-compatible) instance. Only the pay-as-you-go billing method is supported for bandwidth adjustment. You need to specify the InstanceId, NodeId (optional), Bandwidth, and ChargeType parameters.</para>
+        /// <para>This operation adjusts the bandwidth for an ApsaraDB for Redis instance that uses the pay-as-you-go billing method. You need to specify only the InstanceId, NodeId (optional), Bandwidth, and ChargeType parameters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you enable the bandwidth auto scaling feature and call this operation at the same time, bandwidth auto scaling takes precedence. During bandwidth scale-back, the instance is scaled back to the default bandwidth of the instance type. For more information about the limits, costs, and FAQ about this feature, see <a href="https://help.aliyun.com/document_detail/102588.html">Adjust the bandwidth of an instance</a>.</para>
+        /// <para>If auto scaling of bandwidth is enabled when you call this operation, the auto scaling feature takes precedence. When the bandwidth scales back, it reverts to the default bandwidth of the instance type. For more information about the feature\&quot;s limitations, billing details, and FAQ, see <a href="https://help.aliyun.com/document_detail/102588.html">Adjust instance bandwidth</a>.</para>
         /// <remarks>
-        /// <para> Before you call this operation, you can call the <a href="https://help.aliyun.com/document_detail/473782.html">DescribeRoleZoneInfo</a> operation to query the current bandwidth of each data node in an instance.</para>
+        /// <para>Before you call this operation, you can call the <a href="https://help.aliyun.com/document_detail/473782.html">DescribeRoleZoneInfo</a> operation to query the current bandwidth for each data node of the instance.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -19406,6 +19876,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <para>Clears the data of a Tair (Redis OSS-compatible) instance. The cleared data cannot be restored.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该API对应的控制台操作请参见<a href="https://help.aliyun.com/document_detail/43881.html">清除数据</a>。</para>
+        /// <remarks>
+        /// <para>调用此API删除数据前请妥善备份数据或确认数据无需备份。</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlushInstanceRequest
         /// </param>
@@ -19467,6 +19945,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <summary>
         /// <para>Clears the data of a Tair (Redis OSS-compatible) instance. The cleared data cannot be restored.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该API对应的控制台操作请参见<a href="https://help.aliyun.com/document_detail/43881.html">清除数据</a>。</para>
+        /// <remarks>
+        /// <para>调用此API删除数据前请妥善备份数据或确认数据无需备份。</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// FlushInstanceRequest
@@ -19530,6 +20016,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <para>Clears the data of a Tair (Redis OSS-compatible) instance. The cleared data cannot be restored.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该API对应的控制台操作请参见<a href="https://help.aliyun.com/document_detail/43881.html">清除数据</a>。</para>
+        /// <remarks>
+        /// <para>调用此API删除数据前请妥善备份数据或确认数据无需备份。</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlushInstanceRequest
         /// </param>
@@ -19547,6 +20041,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <summary>
         /// <para>Clears the data of a Tair (Redis OSS-compatible) instance. The cleared data cannot be restored.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该API对应的控制台操作请参见<a href="https://help.aliyun.com/document_detail/43881.html">清除数据</a>。</para>
+        /// <remarks>
+        /// <para>调用此API删除数据前请妥善备份数据或确认数据无需备份。</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// FlushInstanceRequest
@@ -20534,6 +21036,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <para>Simulates database node failures.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口时，指定的节点会关闭。实例会自动触发主备切换，将备节点提升为主节点。</description></item>
+        /// <item><description>模拟故障的节点会在稍后自动恢复。</description></item>
+        /// <item><description>单节点（单副本）不支持调用本接口。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// MasterNodeShutDownFailOverRequest
         /// </param>
@@ -20599,6 +21110,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <summary>
         /// <para>Simulates database node failures.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口时，指定的节点会关闭。实例会自动触发主备切换，将备节点提升为主节点。</description></item>
+        /// <item><description>模拟故障的节点会在稍后自动恢复。</description></item>
+        /// <item><description>单节点（单副本）不支持调用本接口。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// MasterNodeShutDownFailOverRequest
@@ -20666,6 +21186,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <para>Simulates database node failures.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口时，指定的节点会关闭。实例会自动触发主备切换，将备节点提升为主节点。</description></item>
+        /// <item><description>模拟故障的节点会在稍后自动恢复。</description></item>
+        /// <item><description>单节点（单副本）不支持调用本接口。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// MasterNodeShutDownFailOverRequest
         /// </param>
@@ -20683,6 +21212,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <summary>
         /// <para>Simulates database node failures.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口时，指定的节点会关闭。实例会自动触发主备切换，将备节点提升为主节点。</description></item>
+        /// <item><description>模拟故障的节点会在稍后自动恢复。</description></item>
+        /// <item><description>单节点（单副本）不支持调用本接口。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// MasterNodeShutDownFailOverRequest
@@ -22875,7 +23413,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the monitoring granularity of a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Modifies the monitoring granularity for a Tair instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22941,7 +23479,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the monitoring granularity of a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Modifies the monitoring granularity for a Tair instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23007,7 +23545,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the monitoring granularity of a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Modifies the monitoring granularity for a Tair instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23025,7 +23563,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the monitoring granularity of a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Modifies the monitoring granularity for a Tair instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23043,7 +23581,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>事件中心修改事件信息</para>
+        /// <para>Modify event information in Event Center</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23101,7 +23639,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>事件中心修改事件信息</para>
+        /// <para>Modify event information in Event Center</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23159,7 +23697,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>事件中心修改事件信息</para>
+        /// <para>Modify event information in Event Center</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23177,7 +23715,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>事件中心修改事件信息</para>
+        /// <para>Modify event information in Event Center</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24371,7 +24909,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the parameter settings of a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Modifies the parameter settings of an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24461,7 +24999,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the parameter settings of a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Modifies the parameter settings of an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24551,7 +25089,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the parameter settings of a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Modifies the parameter settings of an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24569,7 +25107,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the parameter settings of a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Modifies the parameter settings of an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25598,7 +26136,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <description>
         /// <para>You can also configure SSL encryption in the console. For more information, see <a href="https://help.aliyun.com/document_detail/84898.html">Configure SSL encryption</a>.</para>
         /// <remarks>
-        /// <para> To specify the earliest supported SSL version, you can call the <a href="https://help.aliyun.com/document_detail/473844.html">ModifyInstanceConfig</a> operation to modify the required parameter.</para>
+        /// <para>To specify the earliest supported SSL version, you can call the <a href="https://help.aliyun.com/document_detail/473844.html">ModifyInstanceConfig</a> operation to modify the required parameter.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -25672,7 +26210,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <description>
         /// <para>You can also configure SSL encryption in the console. For more information, see <a href="https://help.aliyun.com/document_detail/84898.html">Configure SSL encryption</a>.</para>
         /// <remarks>
-        /// <para> To specify the earliest supported SSL version, you can call the <a href="https://help.aliyun.com/document_detail/473844.html">ModifyInstanceConfig</a> operation to modify the required parameter.</para>
+        /// <para>To specify the earliest supported SSL version, you can call the <a href="https://help.aliyun.com/document_detail/473844.html">ModifyInstanceConfig</a> operation to modify the required parameter.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -25746,7 +26284,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <description>
         /// <para>You can also configure SSL encryption in the console. For more information, see <a href="https://help.aliyun.com/document_detail/84898.html">Configure SSL encryption</a>.</para>
         /// <remarks>
-        /// <para> To specify the earliest supported SSL version, you can call the <a href="https://help.aliyun.com/document_detail/473844.html">ModifyInstanceConfig</a> operation to modify the required parameter.</para>
+        /// <para>To specify the earliest supported SSL version, you can call the <a href="https://help.aliyun.com/document_detail/473844.html">ModifyInstanceConfig</a> operation to modify the required parameter.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -25772,7 +26310,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <description>
         /// <para>You can also configure SSL encryption in the console. For more information, see <a href="https://help.aliyun.com/document_detail/84898.html">Configure SSL encryption</a>.</para>
         /// <remarks>
-        /// <para> To specify the earliest supported SSL version, you can call the <a href="https://help.aliyun.com/document_detail/473844.html">ModifyInstanceConfig</a> operation to modify the required parameter.</para>
+        /// <para>To specify the earliest supported SSL version, you can call the <a href="https://help.aliyun.com/document_detail/473844.html">ModifyInstanceConfig</a> operation to modify the required parameter.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -27587,7 +28125,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic parameters of a Tair-KVCache instance.</para>
+        /// <para>修改TairCustom实例基本参数</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27657,7 +28195,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic parameters of a Tair-KVCache instance.</para>
+        /// <para>修改TairCustom实例基本参数</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27727,7 +28265,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic parameters of a Tair-KVCache instance.</para>
+        /// <para>修改TairCustom实例基本参数</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27745,7 +28283,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic parameters of a Tair-KVCache instance.</para>
+        /// <para>修改TairCustom实例基本参数</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29367,7 +29905,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic parameters of a Tair-KVCache instance.</para>
+        /// <para>重置TairCustom上主机密码</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29437,7 +29975,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic parameters of a Tair-KVCache instance.</para>
+        /// <para>重置TairCustom上主机密码</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29507,7 +30045,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic parameters of a Tair-KVCache instance.</para>
+        /// <para>重置TairCustom上主机密码</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29525,7 +30063,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic parameters of a Tair-KVCache instance.</para>
+        /// <para>重置TairCustom上主机密码</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29543,7 +30081,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the disk size of a Tair-KVCache instance.</para>
+        /// <para>变配TairCustom的主机的磁盘</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29617,7 +30155,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the disk size of a Tair-KVCache instance.</para>
+        /// <para>变配TairCustom的主机的磁盘</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29691,7 +30229,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the disk size of a Tair-KVCache instance.</para>
+        /// <para>变配TairCustom的主机的磁盘</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29709,7 +30247,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the disk size of a Tair-KVCache instance.</para>
+        /// <para>变配TairCustom的主机的磁盘</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29903,7 +30441,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts a Tair-KVCache instance.</para>
+        /// <para>重启TairCustom的主机</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29965,7 +30503,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts a Tair-KVCache instance.</para>
+        /// <para>重启TairCustom的主机</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30027,7 +30565,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts a Tair-KVCache instance.</para>
+        /// <para>重启TairCustom的主机</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30045,7 +30583,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts a Tair-KVCache instance.</para>
+        /// <para>重启TairCustom的主机</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30063,14 +30601,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restores the data in a backup file to a specified Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Restores data from a specified backup file to a Tair (Redis-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  If your instance is a <a href="https://help.aliyun.com/document_detail/126164.html">DRAM-based instance</a> or a <a href="https://help.aliyun.com/document_detail/183956.html">persistent memory-optimized instance</a> and has the <a href="https://help.aliyun.com/document_detail/148479.html">data flashback</a> feature enabled, you can call this operation to restore the entire instance or specific keys to a specific point in time accurate to the second. This way, you can achieve more fine-grained data restoration.</para>
         /// <list type="bullet">
-        /// <item><description>For other types of instances, we recommend that you call the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> or <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a> operation to restore the backup data to a new instance.</description></item>
+        /// <item><description>For Tair memory-enhanced enterprise edition instances that use the classic architecture, you can restore specified keys to a point in time with precision to the second for granular data recovery.</description></item>
+        /// <item><description>For all other instance types, use the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> or <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a> operation to restore backup data to a new instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -30153,14 +30691,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restores the data in a backup file to a specified Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Restores data from a specified backup file to a Tair (Redis-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  If your instance is a <a href="https://help.aliyun.com/document_detail/126164.html">DRAM-based instance</a> or a <a href="https://help.aliyun.com/document_detail/183956.html">persistent memory-optimized instance</a> and has the <a href="https://help.aliyun.com/document_detail/148479.html">data flashback</a> feature enabled, you can call this operation to restore the entire instance or specific keys to a specific point in time accurate to the second. This way, you can achieve more fine-grained data restoration.</para>
         /// <list type="bullet">
-        /// <item><description>For other types of instances, we recommend that you call the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> or <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a> operation to restore the backup data to a new instance.</description></item>
+        /// <item><description>For Tair memory-enhanced enterprise edition instances that use the classic architecture, you can restore specified keys to a point in time with precision to the second for granular data recovery.</description></item>
+        /// <item><description>For all other instance types, use the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> or <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a> operation to restore backup data to a new instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -30243,14 +30781,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restores the data in a backup file to a specified Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Restores data from a specified backup file to a Tair (Redis-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  If your instance is a <a href="https://help.aliyun.com/document_detail/126164.html">DRAM-based instance</a> or a <a href="https://help.aliyun.com/document_detail/183956.html">persistent memory-optimized instance</a> and has the <a href="https://help.aliyun.com/document_detail/148479.html">data flashback</a> feature enabled, you can call this operation to restore the entire instance or specific keys to a specific point in time accurate to the second. This way, you can achieve more fine-grained data restoration.</para>
         /// <list type="bullet">
-        /// <item><description>For other types of instances, we recommend that you call the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> or <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a> operation to restore the backup data to a new instance.</description></item>
+        /// <item><description>For Tair memory-enhanced enterprise edition instances that use the classic architecture, you can restore specified keys to a point in time with precision to the second for granular data recovery.</description></item>
+        /// <item><description>For all other instance types, use the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> or <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a> operation to restore backup data to a new instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -30269,14 +30807,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restores the data in a backup file to a specified Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Restores data from a specified backup file to a Tair (Redis-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  If your instance is a <a href="https://help.aliyun.com/document_detail/126164.html">DRAM-based instance</a> or a <a href="https://help.aliyun.com/document_detail/183956.html">persistent memory-optimized instance</a> and has the <a href="https://help.aliyun.com/document_detail/148479.html">data flashback</a> feature enabled, you can call this operation to restore the entire instance or specific keys to a specific point in time accurate to the second. This way, you can achieve more fine-grained data restoration.</para>
         /// <list type="bullet">
-        /// <item><description>For other types of instances, we recommend that you call the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> or <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a> operation to restore the backup data to a new instance.</description></item>
+        /// <item><description>For Tair memory-enhanced enterprise edition instances that use the classic architecture, you can restore specified keys to a point in time with precision to the second for granular data recovery.</description></item>
+        /// <item><description>For all other instance types, use the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> or <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a> operation to restore backup data to a new instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -30295,7 +30833,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a Tair-KVCache instance.</para>
+        /// <para>启动TairCustom的主机</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30357,7 +30895,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a Tair-KVCache instance.</para>
+        /// <para>启动TairCustom的主机</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30419,7 +30957,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a Tair-KVCache instance.</para>
+        /// <para>启动TairCustom的主机</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30437,7 +30975,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a Tair-KVCache instance.</para>
+        /// <para>启动TairCustom的主机</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30455,7 +30993,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a Tair-KVCache instance.</para>
+        /// <para>停止TairCustom的主机</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30517,7 +31055,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a Tair-KVCache instance.</para>
+        /// <para>停止TairCustom的主机</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30579,7 +31117,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a Tair-KVCache instance.</para>
+        /// <para>停止TairCustom的主机</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30597,7 +31135,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a Tair-KVCache instance.</para>
+        /// <para>停止TairCustom的主机</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30615,19 +31153,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a master-replica switchover to switch node roles. This operation is applicable to disaster recovery drills and nearby access to applications that are deployed across zones.</para>
+        /// <para>Performs a primary/secondary switchover (switches node roles). This operation can be used for disaster recovery drills and nearest access for applications in multi-zone deployment scenarios.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>For more information about nearby access to applications that are deployed across zones, see <a href="https://help.aliyun.com/document_detail/164222.html">Switch node roles</a>.
-        /// The instance must be a Redis Open-Source Edition instance or Tair (Enterprise Edition) <a href="https://help.aliyun.com/document_detail/126164.html">DRAM-based</a> instance that uses local disks.
-        /// A call to this operation has the following impacts on your instance:</para>
+        /// <para>For more information about nearest access for applications in multi-zone deployment scenarios, see <a href="https://help.aliyun.com/document_detail/164222.html">Scenario examples</a>.
+        /// When you call this operation, the instance must be of the high-availability or dual-replica type.
+        /// Calling this operation has the following impacts:</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>The data shards in the instance may change to the read-only state and experience transient connections within seconds. Make sure that your application is configured to automatically reconnect to the instance.</description></item>
-        /// <item><description>If the instance enters the switching state, you cannot manage this instance. For example, you cannot modify the instance configurations or migrate the instance to another zone.</description></item>
+        /// <item><description>After a node role switchover is triggered, the data node being switched enters a read-only state for a few seconds and experiences a transient connection. Make sure that your application has a reconnection mechanism.</description></item>
+        /// <item><description>While the instance is in the switching state, you cannot perform instance-level operations such as configuration changes or zone migration.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -30673,6 +31211,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["SecurityToken"] = request.SecurityToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceNodeId))
+            {
+                query["SourceNodeId"] = request.SourceNodeId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SwitchMode))
             {
                 query["SwitchMode"] = request.SwitchMode;
@@ -30680,6 +31222,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SwitchType))
             {
                 query["SwitchType"] = request.SwitchType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetNodeId))
+            {
+                query["TargetNodeId"] = request.TargetNodeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetShardName))
+            {
+                query["TargetShardName"] = request.TargetShardName;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -30702,19 +31252,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a master-replica switchover to switch node roles. This operation is applicable to disaster recovery drills and nearby access to applications that are deployed across zones.</para>
+        /// <para>Performs a primary/secondary switchover (switches node roles). This operation can be used for disaster recovery drills and nearest access for applications in multi-zone deployment scenarios.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>For more information about nearby access to applications that are deployed across zones, see <a href="https://help.aliyun.com/document_detail/164222.html">Switch node roles</a>.
-        /// The instance must be a Redis Open-Source Edition instance or Tair (Enterprise Edition) <a href="https://help.aliyun.com/document_detail/126164.html">DRAM-based</a> instance that uses local disks.
-        /// A call to this operation has the following impacts on your instance:</para>
+        /// <para>For more information about nearest access for applications in multi-zone deployment scenarios, see <a href="https://help.aliyun.com/document_detail/164222.html">Scenario examples</a>.
+        /// When you call this operation, the instance must be of the high-availability or dual-replica type.
+        /// Calling this operation has the following impacts:</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>The data shards in the instance may change to the read-only state and experience transient connections within seconds. Make sure that your application is configured to automatically reconnect to the instance.</description></item>
-        /// <item><description>If the instance enters the switching state, you cannot manage this instance. For example, you cannot modify the instance configurations or migrate the instance to another zone.</description></item>
+        /// <item><description>After a node role switchover is triggered, the data node being switched enters a read-only state for a few seconds and experiences a transient connection. Make sure that your application has a reconnection mechanism.</description></item>
+        /// <item><description>While the instance is in the switching state, you cannot perform instance-level operations such as configuration changes or zone migration.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -30760,6 +31310,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["SecurityToken"] = request.SecurityToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceNodeId))
+            {
+                query["SourceNodeId"] = request.SourceNodeId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SwitchMode))
             {
                 query["SwitchMode"] = request.SwitchMode;
@@ -30767,6 +31321,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SwitchType))
             {
                 query["SwitchType"] = request.SwitchType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetNodeId))
+            {
+                query["TargetNodeId"] = request.TargetNodeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetShardName))
+            {
+                query["TargetShardName"] = request.TargetShardName;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -30789,19 +31351,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a master-replica switchover to switch node roles. This operation is applicable to disaster recovery drills and nearby access to applications that are deployed across zones.</para>
+        /// <para>Performs a primary/secondary switchover (switches node roles). This operation can be used for disaster recovery drills and nearest access for applications in multi-zone deployment scenarios.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>For more information about nearby access to applications that are deployed across zones, see <a href="https://help.aliyun.com/document_detail/164222.html">Switch node roles</a>.
-        /// The instance must be a Redis Open-Source Edition instance or Tair (Enterprise Edition) <a href="https://help.aliyun.com/document_detail/126164.html">DRAM-based</a> instance that uses local disks.
-        /// A call to this operation has the following impacts on your instance:</para>
+        /// <para>For more information about nearest access for applications in multi-zone deployment scenarios, see <a href="https://help.aliyun.com/document_detail/164222.html">Scenario examples</a>.
+        /// When you call this operation, the instance must be of the high-availability or dual-replica type.
+        /// Calling this operation has the following impacts:</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>The data shards in the instance may change to the read-only state and experience transient connections within seconds. Make sure that your application is configured to automatically reconnect to the instance.</description></item>
-        /// <item><description>If the instance enters the switching state, you cannot manage this instance. For example, you cannot modify the instance configurations or migrate the instance to another zone.</description></item>
+        /// <item><description>After a node role switchover is triggered, the data node being switched enters a read-only state for a few seconds and experiences a transient connection. Make sure that your application has a reconnection mechanism.</description></item>
+        /// <item><description>While the instance is in the switching state, you cannot perform instance-level operations such as configuration changes or zone migration.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -30820,19 +31382,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a master-replica switchover to switch node roles. This operation is applicable to disaster recovery drills and nearby access to applications that are deployed across zones.</para>
+        /// <para>Performs a primary/secondary switchover (switches node roles). This operation can be used for disaster recovery drills and nearest access for applications in multi-zone deployment scenarios.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>For more information about nearby access to applications that are deployed across zones, see <a href="https://help.aliyun.com/document_detail/164222.html">Switch node roles</a>.
-        /// The instance must be a Redis Open-Source Edition instance or Tair (Enterprise Edition) <a href="https://help.aliyun.com/document_detail/126164.html">DRAM-based</a> instance that uses local disks.
-        /// A call to this operation has the following impacts on your instance:</para>
+        /// <para>For more information about nearest access for applications in multi-zone deployment scenarios, see <a href="https://help.aliyun.com/document_detail/164222.html">Scenario examples</a>.
+        /// When you call this operation, the instance must be of the high-availability or dual-replica type.
+        /// Calling this operation has the following impacts:</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>The data shards in the instance may change to the read-only state and experience transient connections within seconds. Make sure that your application is configured to automatically reconnect to the instance.</description></item>
-        /// <item><description>If the instance enters the switching state, you cannot manage this instance. For example, you cannot modify the instance configurations or migrate the instance to another zone.</description></item>
+        /// <item><description>After a node role switchover is triggered, the data node being switched enters a read-only state for a few seconds and experiences a transient connection. Make sure that your application has a reconnection mechanism.</description></item>
+        /// <item><description>While the instance is in the switching state, you cannot perform instance-level operations such as configuration changes or zone migration.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -31062,6 +31624,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <para>Switches an instance from the current zone to the specified zone in the event of a fault.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>本接口仅适用于多（双）可用区集群架构实例。</description></item>
+        /// <item><description>模拟故障的节点会在稍后自动恢复。但主节点位于备可用区、备节点位于主可用区，此时可能产生实例与其他业务跨机房访问的情况。如需解决该问题，您可以在控制台服务可用性页面手动切换可用区。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SwitchInstanceZoneFailOverRequest
         /// </param>
@@ -31111,6 +31681,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <summary>
         /// <para>Switches an instance from the current zone to the specified zone in the event of a fault.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>本接口仅适用于多（双）可用区集群架构实例。</description></item>
+        /// <item><description>模拟故障的节点会在稍后自动恢复。但主节点位于备可用区、备节点位于主可用区，此时可能产生实例与其他业务跨机房访问的情况。如需解决该问题，您可以在控制台服务可用性页面手动切换可用区。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SwitchInstanceZoneFailOverRequest
@@ -31162,6 +31740,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <para>Switches an instance from the current zone to the specified zone in the event of a fault.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>本接口仅适用于多（双）可用区集群架构实例。</description></item>
+        /// <item><description>模拟故障的节点会在稍后自动恢复。但主节点位于备可用区、备节点位于主可用区，此时可能产生实例与其他业务跨机房访问的情况。如需解决该问题，您可以在控制台服务可用性页面手动切换可用区。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SwitchInstanceZoneFailOverRequest
         /// </param>
@@ -31179,6 +31765,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <summary>
         /// <para>Switches an instance from the current zone to the specified zone in the event of a fault.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>本接口仅适用于多（双）可用区集群架构实例。</description></item>
+        /// <item><description>模拟故障的节点会在稍后自动恢复。但主节点位于备可用区、备节点位于主可用区，此时可能产生实例与其他业务跨机房访问的情况。如需解决该问题，您可以在控制台服务可用性页面手动切换可用区。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SwitchInstanceZoneFailOverRequest
@@ -31398,6 +31992,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <para>Disables configuration changes for a Tair (Redis OSS-compatible) instance before you use Data Transmission Service (DTS) to migrate or synchronize data of the instance. This prevents migration and synchronization task failures due to configuration changes.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>本接口仅适用于经典版实例。</description></item>
+        /// <item><description>数据迁移或同步任务完成后，您可以再次调用本接口，解除变配限制。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SyncDtsStatusRequest
         /// </param>
@@ -31471,6 +32073,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <summary>
         /// <para>Disables configuration changes for a Tair (Redis OSS-compatible) instance before you use Data Transmission Service (DTS) to migrate or synchronize data of the instance. This prevents migration and synchronization task failures due to configuration changes.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>本接口仅适用于经典版实例。</description></item>
+        /// <item><description>数据迁移或同步任务完成后，您可以再次调用本接口，解除变配限制。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SyncDtsStatusRequest
@@ -31546,6 +32156,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <para>Disables configuration changes for a Tair (Redis OSS-compatible) instance before you use Data Transmission Service (DTS) to migrate or synchronize data of the instance. This prevents migration and synchronization task failures due to configuration changes.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>本接口仅适用于经典版实例。</description></item>
+        /// <item><description>数据迁移或同步任务完成后，您可以再次调用本接口，解除变配限制。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SyncDtsStatusRequest
         /// </param>
@@ -31563,6 +32181,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <summary>
         /// <para>Disables configuration changes for a Tair (Redis OSS-compatible) instance before you use Data Transmission Service (DTS) to migrate or synchronize data of the instance. This prevents migration and synchronization task failures due to configuration changes.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>本接口仅适用于经典版实例。</description></item>
+        /// <item><description>数据迁移或同步任务完成后，您可以再次调用本接口，解除变配限制。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SyncDtsStatusRequest
@@ -31807,15 +32433,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the billing method of a Tair (Redis OSS-compatible) instance from subscription to pay-as-you-go or from pay-as-you-go to subscription.</para>
+        /// <para>Changes the billing method for a Tair instance between subscription and pay-as-you-go.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand relevant precautions and billing rules. For more information, see the following topics:</para>
+        /// <para>Before you call this operation, ensure you understand the billing implications and usage notes. For more information, see:</para>
         /// <list type="bullet">
-        /// <item><description><a href="https://help.aliyun.com/document_detail/54542.html">Change the billing method to subscription</a>.</description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/211549.html">Change the billing method to pay-as-you-go</a>.</description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/54542.html">Change a pay-as-you-go instance to subscription</a>.</description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/211549.html">Change a subscription instance to pay-as-you-go</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -31902,15 +32528,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the billing method of a Tair (Redis OSS-compatible) instance from subscription to pay-as-you-go or from pay-as-you-go to subscription.</para>
+        /// <para>Changes the billing method for a Tair instance between subscription and pay-as-you-go.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand relevant precautions and billing rules. For more information, see the following topics:</para>
+        /// <para>Before you call this operation, ensure you understand the billing implications and usage notes. For more information, see:</para>
         /// <list type="bullet">
-        /// <item><description><a href="https://help.aliyun.com/document_detail/54542.html">Change the billing method to subscription</a>.</description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/211549.html">Change the billing method to pay-as-you-go</a>.</description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/54542.html">Change a pay-as-you-go instance to subscription</a>.</description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/211549.html">Change a subscription instance to pay-as-you-go</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -31997,15 +32623,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the billing method of a Tair (Redis OSS-compatible) instance from subscription to pay-as-you-go or from pay-as-you-go to subscription.</para>
+        /// <para>Changes the billing method for a Tair instance between subscription and pay-as-you-go.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand relevant precautions and billing rules. For more information, see the following topics:</para>
+        /// <para>Before you call this operation, ensure you understand the billing implications and usage notes. For more information, see:</para>
         /// <list type="bullet">
-        /// <item><description><a href="https://help.aliyun.com/document_detail/54542.html">Change the billing method to subscription</a>.</description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/211549.html">Change the billing method to pay-as-you-go</a>.</description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/54542.html">Change a pay-as-you-go instance to subscription</a>.</description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/211549.html">Change a subscription instance to pay-as-you-go</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -32024,15 +32650,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the billing method of a Tair (Redis OSS-compatible) instance from subscription to pay-as-you-go or from pay-as-you-go to subscription.</para>
+        /// <para>Changes the billing method for a Tair instance between subscription and pay-as-you-go.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand relevant precautions and billing rules. For more information, see the following topics:</para>
+        /// <para>Before you call this operation, ensure you understand the billing implications and usage notes. For more information, see:</para>
         /// <list type="bullet">
-        /// <item><description><a href="https://help.aliyun.com/document_detail/54542.html">Change the billing method to subscription</a>.</description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/211549.html">Change the billing method to pay-as-you-go</a>.</description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/54542.html">Change a pay-as-you-go instance to subscription</a>.</description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/211549.html">Change a subscription instance to pay-as-you-go</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -32051,7 +32677,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Converts an instance use local disks to a cloud-native instance.</para>
+        /// <para>Converts an instance that uses local disk to a cloud-native instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32100,6 +32726,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsAcrossZone))
+            {
+                query["IsAcrossZone"] = request.IsAcrossZone;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IzNo))
+            {
+                query["IzNo"] = request.IzNo;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -32120,9 +32754,17 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecondaryIzNo))
+            {
+                query["SecondaryIzNo"] = request.SecondaryIzNo;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShardCount))
             {
                 query["ShardCount"] = request.ShardCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -32145,7 +32787,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Converts an instance use local disks to a cloud-native instance.</para>
+        /// <para>Converts an instance that uses local disk to a cloud-native instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32194,6 +32836,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsAcrossZone))
+            {
+                query["IsAcrossZone"] = request.IsAcrossZone;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IzNo))
+            {
+                query["IzNo"] = request.IzNo;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -32214,9 +32864,17 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecondaryIzNo))
+            {
+                query["SecondaryIzNo"] = request.SecondaryIzNo;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShardCount))
             {
                 query["ShardCount"] = request.ShardCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -32239,7 +32897,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Converts an instance use local disks to a cloud-native instance.</para>
+        /// <para>Converts an instance that uses local disk to a cloud-native instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32257,7 +32915,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Converts an instance use local disks to a cloud-native instance.</para>
+        /// <para>Converts an instance that uses local disk to a cloud-native instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32275,15 +32933,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes a pay-as-you-go Tair (Redis OSS-compatible) instance to a subscription instance.</para>
+        /// <para>Converts a pay-as-you-go ApsaraDB for Tair (Redis-compatible) instance to the subscription billing method.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For more information about how to change the billing method in the Tair (Redis OSS-compatible) console, see <a href="https://help.aliyun.com/document_detail/54542.html">Switch to subscription</a>.</para>
-        /// <remarks>
-        /// <para> You cannot change the billing method of a Tair (Redis OSS-compatible) instance from subscription to pay-as-you-go.</para>
-        /// </remarks>
+        /// <para>To perform the equivalent operation in the console, see <a href="https://help.aliyun.com/document_detail/54542.html">Change the billing method to subscription</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -32365,15 +33020,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes a pay-as-you-go Tair (Redis OSS-compatible) instance to a subscription instance.</para>
+        /// <para>Converts a pay-as-you-go ApsaraDB for Tair (Redis-compatible) instance to the subscription billing method.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For more information about how to change the billing method in the Tair (Redis OSS-compatible) console, see <a href="https://help.aliyun.com/document_detail/54542.html">Switch to subscription</a>.</para>
-        /// <remarks>
-        /// <para> You cannot change the billing method of a Tair (Redis OSS-compatible) instance from subscription to pay-as-you-go.</para>
-        /// </remarks>
+        /// <para>To perform the equivalent operation in the console, see <a href="https://help.aliyun.com/document_detail/54542.html">Change the billing method to subscription</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -32455,15 +33107,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes a pay-as-you-go Tair (Redis OSS-compatible) instance to a subscription instance.</para>
+        /// <para>Converts a pay-as-you-go ApsaraDB for Tair (Redis-compatible) instance to the subscription billing method.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For more information about how to change the billing method in the Tair (Redis OSS-compatible) console, see <a href="https://help.aliyun.com/document_detail/54542.html">Switch to subscription</a>.</para>
-        /// <remarks>
-        /// <para> You cannot change the billing method of a Tair (Redis OSS-compatible) instance from subscription to pay-as-you-go.</para>
-        /// </remarks>
+        /// <para>To perform the equivalent operation in the console, see <a href="https://help.aliyun.com/document_detail/54542.html">Change the billing method to subscription</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -32481,15 +33130,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes a pay-as-you-go Tair (Redis OSS-compatible) instance to a subscription instance.</para>
+        /// <para>Converts a pay-as-you-go ApsaraDB for Tair (Redis-compatible) instance to the subscription billing method.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For more information about how to change the billing method in the Tair (Redis OSS-compatible) console, see <a href="https://help.aliyun.com/document_detail/54542.html">Switch to subscription</a>.</para>
-        /// <remarks>
-        /// <para> You cannot change the billing method of a Tair (Redis OSS-compatible) instance from subscription to pay-as-you-go.</para>
-        /// </remarks>
+        /// <para>To perform the equivalent operation in the console, see <a href="https://help.aliyun.com/document_detail/54542.html">Change the billing method to subscription</a>.</para>
         /// </description>
         /// 
         /// <param name="request">

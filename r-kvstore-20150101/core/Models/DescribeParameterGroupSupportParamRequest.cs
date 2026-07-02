@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>5</para>
+        /// <para>5.0</para>
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]

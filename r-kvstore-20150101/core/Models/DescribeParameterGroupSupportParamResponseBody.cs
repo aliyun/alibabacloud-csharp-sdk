@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <para>The engine version.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>5</para>
+            /// <para>5.0</para>
             /// </summary>
             [NameInMap("DbVersion")]
             [Validation(Required=false)]

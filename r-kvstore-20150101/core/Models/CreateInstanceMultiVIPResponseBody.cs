@@ -8,12 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
-    public class InitializeKvstorePermissionResponseBody : TeaModel {
+    public class CreateInstanceMultiVIPResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>5D622714-AEDD-4609-9167-F5DDD3D2****</para>
+        /// <para>52D901ED-E0A5-42FB-B9DB-39C295C3****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

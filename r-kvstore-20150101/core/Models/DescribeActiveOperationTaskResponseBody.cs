@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <para>The time when the O\&amp;M task was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2018-07-15 23:59:59</para>
+            /// <para>2023-02-24T06:00:11Z</para>
             /// </summary>
             [NameInMap("CreatedTime")]
             [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <para>The deadline before which the time to preform the O&amp;M task can be modified. The time in UTC is displayed in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2018-07-19 23:59:59</para>
+            /// <para>2023-03-29T13:59:59Z</para>
             /// </summary>
             [NameInMap("Deadline")]
             [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <para>The ID of the O&amp;M task.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>114111</para>
+            /// <para>1****1</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <para>The time when the O\&amp;M task was modified. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2018-07-19 14:00:00</para>
+            /// <para>2023-02-24T08:18:53Z</para>
             /// </summary>
             [NameInMap("ModifiedTime")]
             [Validation(Required=false)]
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <para>The time when the O\&amp;M task was preformed. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2018-07-19 10:00:00</para>
+            /// <para>2023-03-20T02:40:00Z</para>
             /// </summary>
             [NameInMap("StartTime")]
             [Validation(Required=false)]
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <para>The time when the system performs the switchover operation. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2018-07-19 14:00:00</para>
+            /// <para>2023-03-20T03:10:00Z</para>
             /// </summary>
             [NameInMap("SwitchTime")]
             [Validation(Required=false)]

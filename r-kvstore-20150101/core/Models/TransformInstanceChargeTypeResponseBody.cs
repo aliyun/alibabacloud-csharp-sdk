@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class TransformInstanceChargeTypeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The time when the instance expires.</para>
+        /// <para>The expiration time of the instance.</para>
         /// <remarks>
-        /// <para> A value is returned for this parameter only if the instance was changed from pay-as-you-go to subscription.</para>
+        /// <para>This parameter is returned only when you change the billing method of an instance from pay-as-you-go to subscription.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the order.</para>
+        /// <para>The order ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20881824000****</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>82C791FB-8979-489E-853D-706D7743****</para>

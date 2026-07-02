@@ -12,11 +12,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The time when you want to delete the proxy nodes for instance in the proxy mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0 or Immediately</b> (default): immediately delete the proxy nodes.</description></item>
-        /// <item><description><b>1 or MaintainTime</b>: delete the proxy nodes during the maintenance window.</description></item>
+        /// <item><description><para><b>0 or Immediately</b> (default): immediately delete the proxy nodes.</para>
+        /// </description></item>
+        /// <item><description><para><b>1 or MaintainTime</b>: delete the proxy nodes during the maintenance window.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/473775.html">ModifyInstanceMaintainTime</a> operation to modify the maintenance window of an instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/473775.html">ModifyInstanceMaintainTime</a> operation to modify the maintenance window of an instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -29,8 +31,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>Specifies whether to enable forced transmission during a configuration change. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (default): Before the configuration change, the system checks the minor version of the instance. If the minor version of the instance is outdated, an error is reported. You must update the minor version of the instance and try again.</description></item>
-        /// <item><description><b>true</b>: The system skips the version check and directly performs the configuration change.</description></item>
+        /// <item><description><para><b>false</b> (default): Before the configuration change, the system checks the minor version of the instance. If the minor version of the instance is outdated, an error is reported. You must update the minor version of the instance and try again.</para>
+        /// </description></item>
+        /// <item><description><para><b>true</b>: The system skips the version check and directly performs the configuration change.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

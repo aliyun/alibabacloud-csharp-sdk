@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rpg-sys-00*****</para>
+        /// <para>g-sysa00*****</para>
         /// </summary>
         [NameInMap("ParameterGroupId")]
         [Validation(Required=false)]

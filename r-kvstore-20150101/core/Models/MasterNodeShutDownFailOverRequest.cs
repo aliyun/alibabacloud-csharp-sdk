@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>Safe</para>
+        /// <para>Hard</para>
         /// </summary>
         [NameInMap("FailMode")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyDBInstanceMonitorRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,11 +21,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The interval at which monitoring data is collected. Valid values: 5 and 60. Unit: seconds.</para>
+        /// <para>This parameter is deprecated. The monitoring granularity is fixed at 60 seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>5</para>
+        /// <para>60</para>
         /// </summary>
         [NameInMap("Interval")]
         [Validation(Required=false)]

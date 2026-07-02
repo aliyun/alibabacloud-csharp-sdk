@@ -11,9 +11,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
     public class ResetTairKVCacheCustomInstancePasswordRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>r-bp1zxszhcgatnx****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -29,9 +26,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>Pass!123456</para>
         /// </summary>
         [NameInMap("Password")]
         [Validation(Required=false)]
@@ -49,10 +43,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>SDK</para>
-        /// </summary>
         [NameInMap("SourceBiz")]
         [Validation(Required=false)]
         public string SourceBiz { get; set; }

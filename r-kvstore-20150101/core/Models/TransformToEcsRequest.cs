@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class TransformToEcsRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable the auto-renewal feature. Valid values:</para>
+        /// <para>Specifies whether to enable auto-renewal. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enables auto-renewal.</description></item>
-        /// <item><description><b>false</b>: does not enable auto-renewal.</description></item>
+        /// <item><description><para><b>true</b>: enables auto-renewal.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: disables auto-renewal.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,9 +26,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration that is supported by auto-renewal. Unit: month. Valid values: <b>1</b>, <b>2</b>, <b>3</b>, <b>6</b>, and <b>12</b>.</para>
+        /// <para>The auto-renewal cycle. Unit: month. Valid values: <b>1</b>, <b>2</b>, <b>3</b>, <b>6</b>, and <b>12</b>.</para>
         /// <remarks>
-        /// <para>This parameter is required if the <b>AutoRenew</b> parameter is set to <b>true</b>.</para>
+        /// <para>This parameter is required if you set <b>AutoRenew</b> to <b>true</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -37,10 +39,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? AutoRenewPeriod { get; set; }
 
         /// <summary>
-        /// <para>The new billing method. Valid values:</para>
+        /// <para>The billing method of the target instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>PostPaid:</b> pay-as-you-go</description></item>
-        /// <item><description><b>PrePaid</b>: subscription. If you set this parameter to PrePaid, you must also specify the <b>Period</b> parameter.</description></item>
+        /// <item><description><para><b>PostPaid</b>: pay-as-you-go</para>
+        /// </description></item>
+        /// <item><description><para><b>PrePaid</b>: subscription. If you set this parameter to PrePaid, you must also specify the <b>Period</b> parameter.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -51,10 +55,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a precheck before the system creates the instance. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The system performs a dry run and does not create the cloud-native instance. The system prechecks the request parameters, request format, service limits, and available resources. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b>: performs a dry run and sends the request. If the request passes the dry run, the instance is created.</description></item>
+        /// <item><description><para><b>true</b>: performs a dry run to check the request. The check items include the required parameters, request format, service limits, and available resources. If the check fails, the corresponding error is returned. If the check passes, the <c>DryRunOperation</c> error code is returned.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): sends a normal request and creates an instance after the request passes the check.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -65,13 +71,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The time when a database switchover is performed after data is migrated. Valid values:</para>
+        /// <para>The time when to switch the database after data migration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Immediately</b>: A database switchover is performed immediately after data is migrated.</description></item>
-        /// <item><description><b>MaintainTime</b>: A database switchover is performed during the maintenance window.</description></item>
+        /// <item><description><para><b>Immediately</b>: The database is immediately switched after the migration is complete.</para>
+        /// </description></item>
+        /// <item><description><para><b>MaintainTime</b>: The database is switched within the maintenance window.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>Default value: Immediately.</para>
+        /// <para>Default value: <b>Immediately</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -82,7 +90,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string EffectiveTime { get; set; }
 
         /// <summary>
-        /// <para>The database engine version of the instance. Valid values: <b>5.0</b>, <b>6.0</b>, and <b>7.0</b>.</para>
+        /// <para>The Redis-compatible version of the instance. Valid values: <b>5.0</b>, <b>6.0</b>, and <b>7.0</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -93,18 +101,25 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// <para>The instance specification of the cloud-native instance. For more information, see <a href="https://help.aliyun.com/document_detail/26350.html">Overview</a>.</para>
+        /// <para>The instance type of the target cloud-native instance. For more information, see <a href="https://help.aliyun.com/document_detail/26350.html">Instance types</a>.</para>
+        /// <remarks>
+        /// <para>If you want to convert a cluster instance, you must specify the corresponding cloud-native cluster instance type that includes .with.proxy in its name and specify the ShardCount parameter.</para>
+        /// <list type="bullet">
+        /// <item><description>For a cluster instance, you must provide the corresponding cloud-native cluster specification that includes <c>.proxy</c>. You must also specify the number of shards by using the <c>ShardCount</c> parameter.</description></item>
+        /// </list>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>tair.rdb.1g</para>
+        /// <para>tair.rdb.1g
+        /// tair.rdb.with.proxy.1g</para>
         /// </summary>
         [NameInMap("InstanceClass")]
         [Validation(Required=false)]
         public string InstanceClass { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance that you want to convert.</para>
+        /// <para>The ID of the classic instance that you want to convert.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -113,6 +128,20 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to deploy the instance across availability zones. This feature is supported only for cluster instances.</para>
+        /// </summary>
+        [NameInMap("IsAcrossZone")]
+        [Validation(Required=false)]
+        public bool? IsAcrossZone { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the availability zone.</para>
+        /// </summary>
+        [NameInMap("IzNo")]
+        [Validation(Required=false)]
+        public string IzNo { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -123,9 +152,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration of the instance. Unit: months. Valid values: <b>1</b>, 2, 3, 4, 5, 6, 7, 8, <b>9</b>, <b>12</b>, <b>24</b>, <b>36</b>.</para>
+        /// <para>The subscription duration. Unit: month. Valid values: <b>1</b>, <b>2</b>, <b>3</b>, <b>4</b>, <b>5</b>, 6, 7, 8, 9, 12, 24, and 36.</para>
         /// <remarks>
-        /// <para>This parameter is available and required only if the <b>ChargeType</b> parameter is set to <b>PrePaid</b>.</para>
+        /// <para>This parameter is available and required only if you set the <b>ChargeType</b> parameter to <b>PrePaid</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -144,6 +173,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the secondary availability zone.</para>
+        /// </summary>
+        [NameInMap("SecondaryIzNo")]
+        [Validation(Required=false)]
+        public string SecondaryIzNo { get; set; }
+
+        /// <summary>
         /// <para>The number of data shards in the cloud-native cluster instance.</para>
         /// 
         /// <b>Example:</b>
@@ -152,6 +188,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [NameInMap("ShardCount")]
         [Validation(Required=false)]
         public long? ShardCount { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the vSwitch.</para>
+        /// </summary>
+        [NameInMap("VSwitchId")]
+        [Validation(Required=false)]
+        public string VSwitchId { get; set; }
 
     }
 

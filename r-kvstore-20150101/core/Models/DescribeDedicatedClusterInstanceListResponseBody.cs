@@ -392,7 +392,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>30</para>
+        /// <para>25</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -412,7 +412,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

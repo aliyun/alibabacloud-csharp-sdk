@@ -20,7 +20,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <para>This parameter is no longer used. Ignore this parameter.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>_</para>
+            /// <list type="bullet">
+            /// <item><description></description></item>
+            /// </list>
             /// </summary>
             [NameInMap("AuthAction")]
             [Validation(Required=false)]
@@ -30,7 +32,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <para>This parameter is no longer used. Ignore this parameter.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>_</para>
+            /// <list type="bullet">
+            /// <item><description></description></item>
+            /// </list>
             /// </summary>
             [NameInMap("AuthPrincipalDisplayName")]
             [Validation(Required=false)]
@@ -40,7 +44,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <para>This parameter is no longer used. Ignore this parameter.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>_</para>
+            /// <list type="bullet">
+            /// <item><description></description></item>
+            /// </list>
             /// </summary>
             [NameInMap("AuthPrincipalOwnerId")]
             [Validation(Required=false)]
@@ -50,7 +56,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <para>This parameter is no longer used. Ignore this parameter.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>_</para>
+            /// <list type="bullet">
+            /// <item><description></description></item>
+            /// </list>
             /// </summary>
             [NameInMap("AuthPrincipalType")]
             [Validation(Required=false)]
@@ -60,7 +68,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <para>This parameter is no longer used. Ignore this parameter.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>_</para>
+            /// <list type="bullet">
+            /// <item><description></description></item>
+            /// </list>
             /// </summary>
             [NameInMap("EncodedDiagnosticMessage")]
             [Validation(Required=false)]
@@ -70,7 +80,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <para>This parameter is no longer used. Ignore this parameter.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>_</para>
+            /// <list type="bullet">
+            /// <item><description></description></item>
+            /// </list>
             /// </summary>
             [NameInMap("NoPermissionType")]
             [Validation(Required=false)]
@@ -80,7 +92,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <para>This parameter is no longer used. Ignore this parameter.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>_</para>
+            /// <list type="bullet">
+            /// <item><description></description></item>
+            /// </list>
             /// </summary>
             [NameInMap("PolicyType")]
             [Validation(Required=false)]
@@ -99,7 +113,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <para>The ID of the backup task.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>8491111</para>
+            /// <para>29****10</para>
             /// </summary>
             [NameInMap("BackupJobID")]
             [Validation(Required=false)]
@@ -117,7 +131,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>Automated</para>
+            /// <para>NoStart</para>
             /// </summary>
             [NameInMap("BackupProgressStatus")]
             [Validation(Required=false)]

@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>all</para>
+        /// <para>rds_apsaradb_ha</para>
         /// </summary>
         [NameInMap("TaskType")]
         [Validation(Required=false)]

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <para>The IP addresses in the IP whitelist template.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>192.168.0.1</para>
+            /// <para>192.168.0.1,10.10.10.10,172.16.0.1</para>
             /// </summary>
             [NameInMap("GIpList")]
             [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <para>The name of the IP whitelist template.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>white_list_test_sg</para>
+            /// <para>test_123</para>
             /// </summary>
             [NameInMap("GlobalIgName")]
             [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <para>The ID of the IP whitelist template.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>g-sdgwqyp4f5j1x3qk7yvm</para>
+            /// <para>g-sdgwqyp4f5j1x3qk****</para>
             /// </summary>
             [NameInMap("GlobalSecurityGroupId")]
             [Validation(Required=false)]

@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <para>The regular expression used to validate input.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>&quot;\\d+\\s+\\d+\\s+\\d+&quot;</para>
+            /// <para>[0|1]</para>
             /// </summary>
             [NameInMap("CheckingCode")]
             [Validation(Required=false)]
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <para>The description of the parameter.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Open AOF persistence mode</para>
+            /// <para>开启Aof持久化模式。</para>
             /// </summary>
             [NameInMap("ParameterDescription")]
             [Validation(Required=false)]

@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2019-03-22T14:11Z</para>
+        /// <para>2019-03-10T15:00Z</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2019-03-10T14:11Z</para>
+        /// <para>2019-03-10T14:00Z</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

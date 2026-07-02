@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;steps\&quot;:[{\&quot;action_info\&quot;:{\&quot;Waiting\&quot;:[\&quot;modifySwitchTime\&quot;]},\&quot;step_name\&quot;:\&quot;exec_task\&quot;}]}</para>
+            /// <para>{&quot;steps&quot;:[{&quot;action_info&quot;:{&quot;Waiting&quot;:[&quot;modifySwitchTime&quot;]},&quot;step_name&quot;:&quot;exec_task&quot;}]}</para>
             /// </summary>
             [NameInMap("ActionInfo")]
             [Validation(Required=false)]
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <para>The reason why the current task was initiated.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>UpgradeMinorVersion</para>
+            /// <para>小版本升级</para>
             /// </summary>
             [NameInMap("ReasonCode")]
             [Validation(Required=false)]

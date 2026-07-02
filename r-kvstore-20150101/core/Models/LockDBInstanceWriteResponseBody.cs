@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <para>The reason why write operations on the instance are locked.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>lock reason</para>
+        /// <para>锁定写操作测试。</para>
         /// </summary>
         [NameInMap("LockReason")]
         [Validation(Required=false)]

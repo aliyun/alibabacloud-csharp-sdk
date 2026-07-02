@@ -39,9 +39,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>Specifies whether to enable TLS (SSL) encryption. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Disable</b>: disables SSL encryption.</description></item>
-        /// <item><description><b>Enable</b>: enables SSL encryption.</description></item>
-        /// <item><description><b>Update</b>: updates the SSL certificate.</description></item>
+        /// <item><description><para><b>Disable</b>: disables SSL encryption.</para>
+        /// </description></item>
+        /// <item><description><para><b>Enable</b>: enables SSL encryption.</para>
+        /// </description></item>
+        /// <item><description><para><b>Update</b>: updates the SSL certificate.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

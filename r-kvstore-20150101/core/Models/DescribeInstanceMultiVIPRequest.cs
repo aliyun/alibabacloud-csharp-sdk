@@ -8,28 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
-    public class LockDBInstanceWriteRequest : TeaModel {
+    public class DescribeInstanceMultiVIPRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>r-bp1zxszhcgatnx****</para>
         /// </summary>
-        [NameInMap("DBInstanceId")]
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public string DBInstanceId { get; set; }
-
-        /// <summary>
-        /// <para>The reason why write operations on the instance are locked.</para>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>锁写操作验证。</para>
-        /// </summary>
-        [NameInMap("LockReason")]
-        [Validation(Required=false)]
-        public string LockReason { get; set; }
+        public string InstanceId { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -46,10 +34,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("SecurityToken")]
-        [Validation(Required=false)]
-        public string SecurityToken { get; set; }
 
     }
 

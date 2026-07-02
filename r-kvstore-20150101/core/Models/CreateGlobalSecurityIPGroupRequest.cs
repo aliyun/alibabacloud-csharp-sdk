@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>111.175.56.206,47.253.88.168,111.181.0.162</para>
+        /// <para>192.168.0.1,10.10.10.10,172.16.0.1</para>
         /// </summary>
         [NameInMap("GIpList")]
         [Validation(Required=false)]

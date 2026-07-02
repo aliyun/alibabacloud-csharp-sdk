@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>PostPaid</para>
+            /// <para>PrePaid</para>
             /// </summary>
             [NameInMap("ChargeType")]
             [Validation(Required=false)]
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <para>The engine version of the instance. Valid values: <b>2.8</b>, <b>4.0</b>, <b>5.0</b>, <b>6.0</b>, and <b>7.0</b>.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>4.0</para>
+            /// <para>6.0</para>
             /// </summary>
             [NameInMap("EngineVersion")]
             [Validation(Required=false)]

@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <para>The start time of the query.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2019-03-10T13:11Z</para>
+        /// <para>2019-03-10T14:00Z</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

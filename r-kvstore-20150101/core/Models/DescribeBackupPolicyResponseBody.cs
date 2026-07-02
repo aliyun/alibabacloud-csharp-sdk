@@ -20,7 +20,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <para>This parameter is no longer used. Ignore this parameter.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>_</para>
+            /// <list type="bullet">
+            /// <item><description></description></item>
+            /// </list>
             /// </summary>
             [NameInMap("AuthAction")]
             [Validation(Required=false)]
@@ -30,7 +32,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <para>This parameter is no longer used. Ignore this parameter.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>_</para>
+            /// <list type="bullet">
+            /// <item><description></description></item>
+            /// </list>
             /// </summary>
             [NameInMap("AuthPrincipalDisplayName")]
             [Validation(Required=false)]
@@ -40,7 +44,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <para>This parameter is no longer used. Ignore this parameter.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>_</para>
+            /// <list type="bullet">
+            /// <item><description></description></item>
+            /// </list>
             /// </summary>
             [NameInMap("AuthPrincipalOwnerId")]
             [Validation(Required=false)]
@@ -50,7 +56,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <para>This parameter is no longer used. Ignore this parameter.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>_</para>
+            /// <list type="bullet">
+            /// <item><description></description></item>
+            /// </list>
             /// </summary>
             [NameInMap("AuthPrincipalType")]
             [Validation(Required=false)]
@@ -60,7 +68,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <para>This parameter is no longer used. Ignore this parameter.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>_</para>
+            /// <list type="bullet">
+            /// <item><description></description></item>
+            /// </list>
             /// </summary>
             [NameInMap("EncodedDiagnosticMessage")]
             [Validation(Required=false)]
@@ -70,7 +80,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <para>This parameter is no longer used. Ignore this parameter.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>_</para>
+            /// <list type="bullet">
+            /// <item><description></description></item>
+            /// </list>
             /// </summary>
             [NameInMap("NoPermissionType")]
             [Validation(Required=false)]
@@ -80,7 +92,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <para>This parameter is no longer used. Ignore this parameter.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>_</para>
+            /// <list type="bullet">
+            /// <item><description></description></item>
+            /// </list>
             /// </summary>
             [NameInMap("PolicyType")]
             [Validation(Required=false)]

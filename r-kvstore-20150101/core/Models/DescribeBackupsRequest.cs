@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? BackupId { get; set; }
 
         /// <summary>
-        /// <para>The backup task ID, returned by CreateBackup. If CreateBackup returns multiple BackupJobIds, you need to use this interface to query each of them separately.</para>
+        /// <para>The ID of the backup job returned by the <c>CreateBackup</c> operation. If <c>CreateBackup</c> returns multiple backup job IDs, call this operation for each ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10001</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? BackupJobId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC. The end time must be later than the start time.</para>
+        /// <para>The end time for the query. The end time must be later than the start time. Specify the time in UTC using the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance whose backup files you want to query.</para>
+        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,13 +52,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable append-only files (AOFs) persistence. Valid values:</para>
+        /// <para>Specifies whether to enable AOF persistence. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: no</description></item>
-        /// <item><description><b>1</b>: yes</description></item>
+        /// <item><description><para><b>0</b>: Disabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: Enabled.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> The default value is <b>0</b>.</para>
+        /// <para>The default value is <b>0</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -77,7 +79,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. The value must be an integer that is greater than <b>0</b>. Default value: <b>1</b>.</para>
+        /// <para>The page number to return. The value must be greater than <b>0</b>. The default value is <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -87,7 +89,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page. Valid values: 30, 50, 100, 200, and 300.</para>
+        /// <para>The maximum number of entries to return per page. Valid values: <c>30</c>, <c>50</c>, <c>100</c>, <c>200</c>, and <c>300</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -109,7 +111,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</para>
+        /// <para>The start time for the query. Specify the time in UTC using the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

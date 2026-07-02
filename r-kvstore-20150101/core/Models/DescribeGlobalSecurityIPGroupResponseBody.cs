@@ -10,34 +10,34 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeGlobalSecurityIPGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the IP whitelist template.</para>
+        /// <para>An array of global IP whitelist templates.</para>
         /// </summary>
         [NameInMap("GlobalSecurityIPGroup")]
         [Validation(Required=false)]
         public List<DescribeGlobalSecurityIPGroupResponseBodyGlobalSecurityIPGroup> GlobalSecurityIPGroup { get; set; }
         public class DescribeGlobalSecurityIPGroupResponseBodyGlobalSecurityIPGroup : TeaModel {
             /// <summary>
-            /// <para>The IDs of the instances that are associated with the IP whitelist template.</para>
+            /// <para>An array of instance IDs that are associated with the global IP whitelist template.</para>
             /// </summary>
             [NameInMap("DBInstances")]
             [Validation(Required=false)]
             public List<string> DBInstances { get; set; }
 
             /// <summary>
-            /// <para>The IP address in the IP whitelist template.</para>
+            /// <para>The IP addresses in the global IP whitelist template.</para>
             /// <remarks>
-            /// <para> Multiple IP addresses are separated by commas (,).</para>
+            /// <para>Separate multiple IP addresses with a comma.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>125.38.177.62,221.197.232.185</para>
+            /// <para>192.168.0.1,10.10.10.10</para>
             /// </summary>
             [NameInMap("GIpList")]
             [Validation(Required=false)]
             public string GIpList { get; set; }
 
             /// <summary>
-            /// <para>The name of the IP whitelist template.</para>
+            /// <para>The name of the global IP whitelist template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test_123</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string GlobalIgName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the IP whitelist template.</para>
+            /// <para>The ID of the global IP whitelist template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>g-zsldxfiwjmti0kcm****</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string GlobalSecurityGroupId { get; set; }
 
             /// <summary>
-            /// <para>The region ID.</para>
+            /// <para>The ID of the region.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2FF6158E-3394-4A90-B634-79C49184****</para>
