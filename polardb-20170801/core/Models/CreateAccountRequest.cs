@@ -12,10 +12,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The description of the account. The description must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description><para>It cannot start with <c>http://</c> or <c>https://</c>.</para>
-        /// </description></item>
-        /// <item><description><para>It must be 2 to 256 characters in length.</para>
-        /// </description></item>
+        /// <item><description>Cannot start with <c>http://</c> or <c>https://</c>.</description></item>
+        /// <item><description>Is 2 to 256 characters in length.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,16 +24,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AccountDescription { get; set; }
 
         /// <summary>
-        /// <para>The name of the database account. The name must meet the following requirements:</para>
+        /// <para>The account name. The name must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description><para>It must start with a lowercase letter and end with a letter or a digit.</para>
-        /// </description></item>
-        /// <item><description><para>It can contain lowercase letters, digits, and underscores (_).</para>
-        /// </description></item>
-        /// <item><description><para>It must be 2 to 16 characters in length.</para>
-        /// </description></item>
-        /// <item><description><para>It cannot be a reserved keyword, such as root or admin.</para>
-        /// </description></item>
+        /// <item><description>Starts with a lowercase letter and ends with a letter or digit.</description></item>
+        /// <item><description>Contains only lowercase letters, digits, or underscores (_).</description></item>
+        /// <item><description>Is 2 to 16 characters in length.</description></item>
+        /// <item><description>Cannot use certain reserved usernames such as root or admin.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -47,14 +41,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The password of the database account. The password must meet the following requirements:</para>
+        /// <para>The account password. The password must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description><para>It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</para>
-        /// </description></item>
-        /// <item><description><para>It must be 8 to 32 characters in length.</para>
-        /// </description></item>
-        /// <item><description><para>The special characters are <c>!@#$%^&amp;*()_+-=</c>.</para>
-        /// </description></item>
+        /// <item><description>Contains at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</description></item>
+        /// <item><description>Is 8 to 32 characters in length.</description></item>
+        /// <item><description>Special characters include <c>!@#$%^&amp;*()_+-=</c>.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -66,27 +57,19 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AccountPassword { get; set; }
 
         /// <summary>
-        /// <para>The privilege level to grant on the specified databases. Valid values:</para>
+        /// <para>The permissions of the account. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><para><b>ReadWrite</b>: read and write permissions</para>
-        /// </description></item>
-        /// <item><description><para><b>ReadOnly</b>: read-only permissions</para>
-        /// </description></item>
-        /// <item><description><para><b>DMLOnly</b>: DML permissions only</para>
-        /// </description></item>
-        /// <item><description><para><b>DDLOnly</b>: DDL permissions only</para>
-        /// </description></item>
-        /// <item><description><para><b>ReadIndex</b>: read-only and index permissions</para>
-        /// </description></item>
+        /// <item><description><b>ReadWrite</b>: read and write</description></item>
+        /// <item><description><b>ReadOnly</b>: read-only</description></item>
+        /// <item><description><b>DMLOnly</b>: DML only</description></item>
+        /// <item><description><b>DDLOnly</b>: DDL only</description></item>
+        /// <item><description><b>ReadIndex</b>: read-only and index</description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>This parameter takes effect only when you specify the <c>DBName</c> parameter.</para>
-        /// </description></item>
-        /// <item><description><para>If you specify multiple databases in <c>DBName</c>, you must specify a corresponding permission for each in <c>AccountPrivilege</c>, separated by commas. The <c>AccountPrivilege</c> string cannot exceed 900 characters. For example, to grant read and write permissions to database DB1 and read-only permissions to database DB2, set <c>DBName</c> to <c>DB1,DB2</c> and set <c>AccountPrivilege</c> to <c>ReadWrite,ReadOnly</c>.</para>
-        /// </description></item>
-        /// <item><description><para>This parameter applies only to standard accounts on PolarDB for MySQL clusters.</para>
-        /// </description></item>
+        /// <item><description>The DBName parameter must be specified for AccountPrivilege to take effect.</description></item>
+        /// <item><description>If you specify multiple database names for the DBName parameter, you must grant the corresponding permissions to each database. Separate multiple permissions with commas (,) and make sure that the total length of the AccountPrivilege string does not exceed 900 characters. For example, to grant read and write permissions on database DB1 and read-only permissions on database DB2, set DBName to <c>DB1,DB2</c> and set AccountPrivilege to <c>ReadWrite,ReadOnly</c>.</description></item>
+        /// <item><description>This parameter is supported only for standard accounts of PolarDB for MySQL clusters.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -98,21 +81,18 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AccountPrivilege { get; set; }
 
         /// <summary>
-        /// <para>The type of the account. Valid values:</para>
+        /// <para>The account type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Normal</b>: a standard account.</para>
-        /// </description></item>
-        /// <item><description><para><b>Super</b>: a privileged account.</para>
-        /// </description></item>
+        /// <item><description><b>Normal</b>: standard account. </description></item>
+        /// <item><description><b>Super</b>: privileged account. </description></item>
+        /// <item><description><b>DynamoDB</b>: DynamoDB account.</description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>If you do not specify this parameter, the system creates a <b>Super</b> account by default.</para>
-        /// </description></item>
-        /// <item><description><para>You can create multiple privileged accounts on PolarDB for PostgreSQL (Oracle-Compatible) and PolarDB for PostgreSQL clusters. A privileged account has more permissions than a standard account. For more information, see <a href="https://help.aliyun.com/document_detail/68508.html">Create database accounts</a>.</para>
-        /// </description></item>
-        /// <item><description><para>For a PolarDB for MySQL cluster, you can create only one privileged account. For more information, see <a href="https://help.aliyun.com/document_detail/68508.html">Create database accounts</a>.</para>
-        /// </description></item>
+        /// <item><description>If this parameter is left empty, a <b>Super</b> account is created by default.</description></item>
+        /// <item><description>If the cluster is a PolarDB for PostgreSQL (Compatible with Oracle) or PolarDB for PostgreSQL cluster, you can create multiple privileged accounts for each cluster. Privileged accounts have more permissions than standard accounts. For more information, see <a href="https://help.aliyun.com/document_detail/68508.html">Create a database account</a>.</description></item>
+        /// <item><description>If the cluster is a PolarDB for MySQL cluster, you can create at most one privileged account for each cluster. Privileged accounts have more permissions than standard accounts. For more information, see <a href="https://help.aliyun.com/document_detail/68508.html">Create a database account</a>.</description></item>
+        /// <item><description>DynamoDB accounts are dedicated accounts created for the DynamoDB compatibility feature of PolarDB for PostgreSQL. For more information, see <a href="https://help.aliyun.com/document_detail/2979941.html">DynamoDB usage instructions</a>.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -124,7 +104,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AccountType { get; set; }
 
         /// <summary>
-        /// <para>A client-generated token to ensure request idempotency. The token must be unique across requests. It is case-sensitive and can be up to 64 ASCII characters long.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value. Make sure that the value is unique among different requests. The token is case-sensitive and cannot exceed 64 ASCII characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6000170000591aed949d0f54a343f1a4233c1e7d1c5c******</para>
@@ -145,9 +125,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The name of the database that the account can access. To specify multiple databases, separate the database names with a comma (,).</para>
+        /// <para>The name of the database that the account is authorized to access. You can specify multiple database names separated by commas (,).</para>
         /// <remarks>
-        /// <para>This parameter applies only to standard accounts on PolarDB for MySQL clusters.</para>
+        /// <para>This parameter is supported only for standard accounts of PolarDB for MySQL clusters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -158,9 +138,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBName { get; set; }
 
         /// <summary>
-        /// <para>The type of the node. Valid values:</para>
+        /// <para>The node type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Search</b>: For creating an account on a PolarDB Search node.</description></item>
+        /// <item><description>Search: required when creating an account for a PolarDB Search node</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -179,21 +159,19 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to grant the account permissions on all current and future databases in the cluster. Valid values:</para>
+        /// <para>Specifies whether to grant permissions on all existing databases and all new databases in the current cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>0 or do not specify</b>: The specified permissions are not granted to all databases.</para>
+        /// <item><description><para><b>0 or empty</b>: does not grant permissions.</para>
         /// </description></item>
-        /// <item><description><para><b>1</b>: Grants the specified permissions to all current and future databases.</para>
-        /// </description></item>
-        /// </list>
+        /// <item><description><para><b>1</b>: grants permissions.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>This parameter takes effect only when you specify the <c>AccountPrivilege</c> parameter.</para>
-        /// </description></item>
-        /// <item><description><para>If you set this parameter to <c>1</c>, the permissions specified in <c>AccountPrivilege</c> are granted to all databases.</para>
-        /// </description></item>
+        /// <item><description>The AccountPrivilege parameter must be specified for this parameter to take effect.</description></item>
+        /// <item><description>If this parameter is set to <c>1</c>, the permissions specified by AccountPrivilege are granted on all databases.</description></item>
         /// </list>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

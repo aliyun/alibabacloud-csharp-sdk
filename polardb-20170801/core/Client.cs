@@ -5644,7 +5644,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a database account for a PolarDB cluster.</para>
+        /// <para>Creates a PolarDB database account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5738,7 +5738,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a database account for a PolarDB cluster.</para>
+        /// <para>Creates a PolarDB database account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5832,7 +5832,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a database account for a PolarDB cluster.</para>
+        /// <para>Creates a PolarDB database account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5850,7 +5850,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a database account for a PolarDB cluster.</para>
+        /// <para>Creates a PolarDB database account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25900,7 +25900,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 AgenticDB 计算实例列表</para>
+        /// <para>Queries the list of AgenticDB compute instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25962,7 +25962,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 AgenticDB 计算实例列表</para>
+        /// <para>Queries the list of AgenticDB compute instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26024,7 +26024,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 AgenticDB 计算实例列表</para>
+        /// <para>Queries the list of AgenticDB compute instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26042,7 +26042,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 AgenticDB 计算实例列表</para>
+        /// <para>Queries the list of AgenticDB compute instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44912,6 +44912,190 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribePolarClawTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看polarfs信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePolarFsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePolarFsResponse
+        /// </returns>
+        public DescribePolarFsResponse DescribePolarFsWithOptions(DescribePolarFsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarFsInstanceDescription))
+            {
+                query["PolarFsInstanceDescription"] = request.PolarFsInstanceDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarFsInstanceIds))
+            {
+                query["PolarFsInstanceIds"] = request.PolarFsInstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarFsType))
+            {
+                query["PolarFsType"] = request.PolarFsType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelativeDbClusterId))
+            {
+                query["RelativeDbClusterId"] = request.RelativeDbClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePolarFs",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePolarFsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看polarfs信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePolarFsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePolarFsResponse
+        /// </returns>
+        public async Task<DescribePolarFsResponse> DescribePolarFsWithOptionsAsync(DescribePolarFsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarFsInstanceDescription))
+            {
+                query["PolarFsInstanceDescription"] = request.PolarFsInstanceDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarFsInstanceIds))
+            {
+                query["PolarFsInstanceIds"] = request.PolarFsInstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarFsType))
+            {
+                query["PolarFsType"] = request.PolarFsType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelativeDbClusterId))
+            {
+                query["RelativeDbClusterId"] = request.RelativeDbClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePolarFs",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePolarFsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看polarfs信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePolarFsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePolarFsResponse
+        /// </returns>
+        public DescribePolarFsResponse DescribePolarFs(DescribePolarFsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribePolarFsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看polarfs信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePolarFsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePolarFsResponse
+        /// </returns>
+        public async Task<DescribePolarFsResponse> DescribePolarFsAsync(DescribePolarFsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribePolarFsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -75080,7 +75264,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>校验 AgenticDB 租户 API Key</para>
+        /// <para>Validates an AgenticDB tenant API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -75126,7 +75310,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>校验 AgenticDB 租户 API Key</para>
+        /// <para>Validates an AgenticDB tenant API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -75172,7 +75356,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>校验 AgenticDB 租户 API Key</para>
+        /// <para>Validates an AgenticDB tenant API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -75190,7 +75374,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>校验 AgenticDB 租户 API Key</para>
+        /// <para>Validates an AgenticDB tenant API key.</para>
         /// </summary>
         /// 
         /// <param name="request">

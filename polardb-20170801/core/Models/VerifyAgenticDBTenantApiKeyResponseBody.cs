@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class VerifyAgenticDBTenantApiKeyResponseBody : TeaModel {
         /// <summary>
+        /// <para>The key ID. This parameter is empty if the API key is invalid.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ak-71304e39c7e841a1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApiKeyId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the associated AgenticDB cluster.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pagc-bp1abcdef1234567</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The expiration time of the API key. This parameter is empty if the API key is permanently valid.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2027-01-01T00:00:00Z</para>
         /// </summary>
@@ -33,6 +39,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string ExpireTime { get; set; }
 
+        /// <summary>
+        /// <para>The reason why the validation failed. Valid values: NotFound, Expired, and Revoked. This parameter is empty if the API key is valid.</para>
+        /// </summary>
         [NameInMap("Reason")]
         [Validation(Required=false)]
         public string Reason { get; set; }
@@ -46,6 +55,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>D4E5F6A7-B8C9-0123-DEFA-234567890123</para>
         /// </summary>
@@ -54,6 +65,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the tenant to which the API key belongs. This parameter is empty if the API key is invalid.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>t-4b83e0da66674951</para>
         /// </summary>
@@ -62,6 +75,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string TenantId { get; set; }
 
         /// <summary>
+        /// <para>The name of the tenant to which the API key belongs. This parameter is empty if the API key is invalid.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>my-saas-app</para>
         /// </summary>
@@ -70,6 +85,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string TenantName { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the API key is valid.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
