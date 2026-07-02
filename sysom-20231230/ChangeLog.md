@@ -1,3 +1,7 @@
+2026-07-02 Version: 1.18.0
+- Support API InstallAgentWithType.
+
+
 2026-07-02 Version: 1.17.2
 - Update API GetListRecord: add request parameters analysisId.
 - Update API GetListRecord: add request parameters customId.
