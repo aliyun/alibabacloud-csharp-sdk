@@ -8,22 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Yike20260319.Models
 {
-    public class SubmitYikeVideoCloneJobResponseBody : TeaModel {
+    public class SubmitImageGenerationJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The task ID.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>task_abc123def456</para>
+        /// <para><b><b><b>3B0E1A586AAC29742247</b></b></b></para>
         /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>req_create_20260420_001</para>
+        /// <para><b><b><b>3B-0E1A-586A-AC29-742247</b></b></b></para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
