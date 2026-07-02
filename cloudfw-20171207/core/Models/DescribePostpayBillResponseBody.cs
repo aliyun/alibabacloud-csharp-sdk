@@ -97,9 +97,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public float? InternetTraffic { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the bill is waived. A value of 0 indicates that the bill is not waived. Any value greater than 0 indicates that the bill is waived. If the bill is waived, it will not be issued.</para>
+            /// <para>Indicates whether a deduction is applied. A value of 0 indicates that no deduction is applied. Any value greater than 0 indicates that a deduction is applied. If a deduction is applied, the bill is not generated.</para>
             /// <remarks>
-            /// <para>This field is meaningful only when you query hourly data.</para>
+            /// <para>This field is meaningful only when you query data at the hourly level.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? IsDerated { get; set; }
 
             /// <summary>
-            /// <para>The log service usage duration, in TB*h.</para>
+            /// <para>The log service usage duration, in TB × hours.</para>
             /// 
             /// <b>Example:</b>
             /// <para>24</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public float? NatTraffic { get; set; }
 
             /// <summary>
-            /// <para>The data leak detection usage duration, in hours.</para>
+            /// <para>The sensitive data leak detection usage duration, in hours.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>

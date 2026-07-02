@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string AssetInstanceName { get; set; }
 
             /// <summary>
-            /// <para>The inbound traffic. Unit: bytes.</para>
+            /// <para>The inbound traffic, in bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.0</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? IpsHitCnt { get; set; }
 
             /// <summary>
-            /// <para>The outbound traffic. Unit: bytes.</para>
+            /// <para>The outbound traffic, in bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.0</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? OutBytes { get; set; }
 
             /// <summary>
-            /// <para>The list of ports.</para>
+            /// <para>The port list.</para>
             /// </summary>
             [NameInMap("PortList")]
             [Validation(Required=false)]

@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribePrepayBillTotalResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The bill list, aggregated by day.</para>
+        /// </summary>
         [NameInMap("BillList")]
         [Validation(Required=false)]
         public List<DescribePrepayBillTotalResponseBodyBillList> BillList { get; set; }
         public class DescribePrepayBillTotalResponseBodyBillList : TeaModel {
             /// <summary>
+            /// <para>The actual billed traffic for sensitive data leak detection.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>5</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public float? BilledDetectionTraffic { get; set; }
 
             /// <summary>
+            /// <para>The sensitive data detection traffic for the day.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>8</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public float? DailyDetectionTraffic { get; set; }
 
             /// <summary>
+            /// <para>The total elastic traffic for the day. Unit: GB.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public float? DailyOverflowTraffic { get; set; }
 
             /// <summary>
+            /// <para>The default bandwidth of the edition. Unit: Mbit/s.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>200</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? DefaultBandwidth { get; set; }
 
             /// <summary>
+            /// <para>The elastic bandwidth. Unit: Mbit/s.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>200</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? ElasticBandwidth { get; set; }
 
             /// <summary>
+            /// <para>The end time of the day. The value is a UNIX timestamp in seconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1761667200</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? EndTime { get; set; }
 
             /// <summary>
+            /// <para>The extended bandwidth. Unit: Mbit/s.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? ExtensionBandwidth { get; set; }
 
             /// <summary>
+            /// <para>The Internet traffic bandwidth. Unit: Gbit/s.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public float? InternetTrafficBandwidth { get; set; }
 
             /// <summary>
+            /// <para>The monthly free traffic quota for sensitive data detection. Unit: GB.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -86,6 +107,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public float? MonthlyRemainingFreeTraffic { get; set; }
 
             /// <summary>
+            /// <para>The NAT traffic bandwidth. Unit: Gbit/s.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -94,6 +117,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public float? NatTrafficBandwidth { get; set; }
 
             /// <summary>
+            /// <para>The timestamp when the maximum combined bandwidth (Internet + VPC + NAT) occurred on that day.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1761588300</para>
             /// </summary>
@@ -102,6 +127,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? OverflowTime { get; set; }
 
             /// <summary>
+            /// <para>The start time of the day. The value is a UNIX timestamp in seconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1761580800</para>
             /// </summary>
@@ -110,6 +137,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? StartTime { get; set; }
 
             /// <summary>
+            /// <para>The temporary upgrade bandwidth. Unit: Mbit/s.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -118,6 +147,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? TemporaryBandwidth { get; set; }
 
             /// <summary>
+            /// <para>The VPC traffic bandwidth. Unit: Gbit/s.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -128,6 +159,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>450D47F5-956E-543E-8502-***********</para>
         /// </summary>
@@ -136,6 +169,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>132</para>
         /// </summary>

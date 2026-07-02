@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Domain { get; set; }
 
             /// <summary>
-            /// <para>The first access time, as a Unix timestamp in seconds.</para>
+            /// <para>The time of the first access. The value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1738548990</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? InBytes { get; set; }
 
             /// <summary>
-            /// <para>The IPS hit count.</para>
+            /// <para>The number of IPS hits.</para>
             /// 
             /// <b>Example:</b>
             /// <para>32</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? IpsHitCnt { get; set; }
 
             /// <summary>
-            /// <para>The last access time, as a Unix timestamp in seconds.</para>
+            /// <para>The time of the most recent access. The value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1739326614</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? LastTime { get; set; }
 
             /// <summary>
-            /// <para>The NAT Gateway ID.</para>
+            /// <para>The NAT gateway ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ngw-bp1utx6wj4x9qu9tl****</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string NatGatewayId { get; set; }
 
             /// <summary>
-            /// <para>The NAT Gateway name.</para>
+            /// <para>The NAT gateway name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ngw-test</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string RegionNo { get; set; }
 
             /// <summary>
-            /// <para>The asset instance ID.</para>
+            /// <para>The ID of the asset instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-uf63wjhyoohc1g4z****</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string ResourceInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The asset instance name.</para>
+            /// <para>The name of the asset instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string ResourceInstanceName { get; set; }
 
             /// <summary>
-            /// <para>The type of the asset\&quot;s public IP address.</para>
+            /// <para>The type of the public IP address of the asset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NatEIP</para>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The ACL rule ID.</para>
+            /// <para>The ID of the ACL rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>08a58465-ff4d-4c47-8782-eb008301****</para>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string RuleId { get; set; }
 
             /// <summary>
-            /// <para>The rule name.</para>
+            /// <para>The name of the rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string RuleName { get; set; }
 
             /// <summary>
-            /// <para>The session count.</para>
+            /// <para>The number of access sessions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -204,14 +204,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? SessionCount { get; set; }
 
             /// <summary>
-            /// <para>The list of tags.</para>
+            /// <para>The list of tag names.</para>
             /// </summary>
             [NameInMap("TagList")]
             [Validation(Required=false)]
             public List<DescribeOutgoingDomainDetailResponseBodyAssetListTagList> TagList { get; set; }
             public class DescribeOutgoingDomainDetailResponseBodyAssetListTagList : TeaModel {
                 /// <summary>
-                /// <para>The risk classification ID.</para>
+                /// <para>The risk category ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -263,7 +263,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             }
 
             /// <summary>
-            /// <para>The total traffic, in bytes.</para>
+            /// <para>The total traffic.</para>
             /// 
             /// <b>Example:</b>
             /// <para>321120825843</para>
@@ -273,7 +273,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string TotalBytes { get; set; }
 
             /// <summary>
-            /// <para>The VPC ID.</para>
+            /// <para>The instance ID of the VPC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-9dp16jgwgyvn****</para>
@@ -295,7 +295,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>

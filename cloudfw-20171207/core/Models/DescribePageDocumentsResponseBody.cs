@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribePageDocumentsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The document list.</para>
+        /// <para>The list of documents.</para>
         /// </summary>
         [NameInMap("Docs")]
         [Validation(Required=false)]

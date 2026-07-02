@@ -214,7 +214,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <para>The language type of the received message. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b> (default): Chinese</description></item>
-        /// <item><description><b>en</b>: English.</description></item>
+        /// <item><description><b>en</b>: English</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -386,7 +386,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SrcVpcRegionNo { get; set; }
 
         /// <summary>
-        /// <para>The start time. Specify a UNIX timestamp in seconds. Only data within the last 7 days can be queried. We recommend that a single query does not exceed one day.</para>
+        /// <para>The start time. Specify a UNIX timestamp in seconds. Only data within the last 7 days can be queried. A single query should not exceed one day.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

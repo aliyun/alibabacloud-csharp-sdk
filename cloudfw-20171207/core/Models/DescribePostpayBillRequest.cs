@@ -31,10 +31,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The time interval for querying data. This is an enumerated value. Valid values:</para>
+        /// <para>The time interval for querying data. This is an enumeration value. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>3600: queries hourly data.</description></item>
-        /// <item><description>86400: queries daily data.</description></item>
+        /// <item><description>3600: queries data at the hourly level.</description></item>
+        /// <item><description>86400: queries data at the daily level.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? Interval { get; set; }
 
         /// <summary>
-        /// <para>The language. This is an enumerated value.
+        /// <para>The language. This is an enumeration value.
         /// Default value: zh.
         /// Valid values: en.</para>
         /// 

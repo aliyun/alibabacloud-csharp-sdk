@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AssetIP { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string EcsInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The end time. The value is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The end time. The value is a UNIX timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the peer VPC.</para>
+        /// <para>The instance ID of the peer VPC instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-90rq0anm6t8vbwbo****</para>
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Sort { get; set; }
 
         /// <summary>
-        /// <para>The start time. The value is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The start time. The value is a UNIX timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

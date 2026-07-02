@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<DescribeUnprotectedPortTrendResponseBodyDataList> DataList { get; set; }
         public class DescribeUnprotectedPortTrendResponseBodyDataList : TeaModel {
             /// <summary>
-            /// <para>The number of blocked requests.</para>
+            /// <para>The number of interceptions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

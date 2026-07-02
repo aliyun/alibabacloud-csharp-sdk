@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeOutgoingDomainDetailRequest : TeaModel {
         /// <summary>
-        /// <para>The policy coverage status to filter by.</para>
+        /// <para>The policy coverage status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FullCoverage</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AclCoverage { get; set; }
 
         /// <summary>
-        /// <para>The page number to return.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The domain name to query.</para>
+        /// <para>The domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.com</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Domain { get; set; }
 
         /// <summary>
-        /// <para>A list of domain names to query.</para>
+        /// <para>The list of domain names.</para>
         /// </summary>
         [NameInMap("DomainList")]
         [Validation(Required=false)]
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The IP address type. Set to <c>NatPrivate</c> to query details for outbound connections that originate from a private IP address via a NAT Gateway.</para>
+        /// <para>Specifies whether to query NAT private network outbound connections.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NatPrivate</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string IPType { get; set; }
 
         /// <summary>
-        /// <para>The language of the response.</para>
+        /// <para>The language type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The ID of the NAT Gateway.</para>
+        /// <para>The ID of the NAT gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ngw-uf62zzi7000bca7zn****</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The private IP address to query.</para>
+        /// <para>The private IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.210.0.XXX</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PrivateIP { get; set; }
 
         /// <summary>
-        /// <para>The public IP address to query.</para>
+        /// <para>The public IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>47.96.181.XXX</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PublicIP { get; set; }
 
         /// <summary>
-        /// <para>The field to sort the results by.</para>
+        /// <para>The field by which to sort the results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OutBytes</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Sort { get; set; }
 
         /// <summary>
-        /// <para>The source IP address.</para>
+        /// <para>The source IP address of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>121.15.137.XXX</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The start of the time range to query. The value is a UNIX timestamp in seconds.</para>
+        /// <para>The beginning of the time range to query. The value is a UNIX timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The tag ID to filter by.</para>
+        /// <para>The tag ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FirstFlow</para>

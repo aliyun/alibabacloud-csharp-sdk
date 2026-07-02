@@ -20,11 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>en</b>: English</description></item>
-        /// <item><description><b>zh</b>: Chinese.</description></item>
-        /// </list>
+        /// <para>The language type of the received message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -34,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The source IP address of the request.</para>
+        /// <para>The source IP address of the visitor.</para>
         /// 
         /// <b>Example:</b>
         /// <para>61.155.60.XXX</para>

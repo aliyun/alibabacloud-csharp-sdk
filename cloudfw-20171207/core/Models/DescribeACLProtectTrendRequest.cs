@@ -22,9 +22,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The type of the firewall border. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>internet</b> (default): Internet Border firewall, which detects and controls traffic between your assets and the Internet.</description></item>
-        /// <item><description><b>vpc</b>: virtual private cloud (VPC) firewalls, which detect and control traffic between VPCs.</description></item>
-        /// <item><description><b>nat</b>: NAT firewalls, which detect and control traffic from internal-facing assets to the Internet.</description></item>
+        /// <item><description><b>internet</b> (default): Internet Border firewall, which monitors traffic between the Internet and your assets.</description></item>
+        /// <item><description><b>vpc</b>: virtual private cloud (VPC) firewalls, which monitor traffic between VPCs.</description></item>
+        /// <item><description><b>nat</b>: NAT firewalls, which monitor traffic from internal-facing assets to the Internet.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallType { get; set; }
 
         /// <summary>
-        /// <para>The time aggregation granularity for trend data. Unit: seconds. Valid values:</para>
+        /// <para>The time aggregation granularity for trend data, in seconds. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>60</b>: 1-minute granularity (uses the minute-level detail table).</description></item>
         /// <item><description><b>1800</b>: 30-minute granularity.</description></item>

@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public bool? AutoResourceEnable { get; set; }
 
         /// <summary>
-        /// <para>The general instance specifications for version 2.0.</para>
+        /// <para>The general instance specifications for the 2.0 billing model.</para>
         /// </summary>
         [NameInMap("GeneralInstanceSpecStatistic")]
         [Validation(Required=false)]
         public DescribeAssetStatisticResponseBodyGeneralInstanceSpecStatistic GeneralInstanceSpecStatistic { get; set; }
         public class DescribeAssetStatisticResponseBodyGeneralInstanceSpecStatistic : TeaModel {
             /// <summary>
-            /// <para>The region-specific statistics for the Internet firewall.</para>
+            /// <para>The region-specific statistics of Internet firewall instances.</para>
             /// </summary>
             [NameInMap("CfwGeneralInstanceRegionStatistic")]
             [Validation(Required=false)]
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             }
 
             /// <summary>
-            /// <para>The region-specific statistics for all Internet firewall instances.</para>
+            /// <para>The full region-specific statistics of Internet firewall instances.</para>
             /// </summary>
             [NameInMap("CfwTotalGeneralInstanceRegionStatistic")]
             [Validation(Required=false)]
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? TotalCfwGeneralInstanceUsedCnt { get; set; }
 
             /// <summary>
-            /// <para>The total quota.</para>
+            /// <para>The total quota of general instances.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The consumed quota statistics information.</para>
+        /// <para>The quota usage statistics information.</para>
         /// </summary>
         [NameInMap("ResourceSpecStatistic")]
         [Validation(Required=false)]
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? IpNumUsed { get; set; }
 
             /// <summary>
-            /// <para>The quota for sensitive data IP addresses.</para>
+            /// <para>The quota for IP addresses with sensitive data protection.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? SensitiveDataIpNumSpec { get; set; }
 
             /// <summary>
-            /// <para>The number of sensitive data IP addresses with protection enabled.</para>
+            /// <para>The number of IP addresses with sensitive data protection enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>

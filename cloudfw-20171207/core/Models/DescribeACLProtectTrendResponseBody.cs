@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? InterVPCProtectCnt { get; set; }
 
         /// <summary>
-        /// <para>The interval at which data is returned. Unit: seconds. A result is returned at each interval.</para>
+        /// <para>The step size of the returned data, in seconds. This indicates the interval between consecutive data points.</para>
         /// 
         /// <b>Example:</b>
         /// <para>86400</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The cumulative total of AlertCnt across all time points within the query time range. This value indicates the total number of sessions that matched an ACL policy and triggered the monitor (alert) action during the entire time period.</para>
+        /// <para>The cumulative sum of AlertCnt across all time points within the query time range. This represents the total number of sessions that matched an ACL policy and triggered the monitor (alert) action during the entire time period.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? TotalAlertCnt { get; set; }
 
         /// <summary>
-        /// <para>The cumulative total of PassCnt across all time points within the query time range. This value indicates the total number of sessions that matched an ACL policy and were allowed during the entire time period.</para>
+        /// <para>The cumulative sum of PassCnt across all time points within the query time range. This represents the total number of sessions that matched an ACL policy and were allowed during the entire time period.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -93,14 +93,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? TotalProtectCnt { get; set; }
 
         /// <summary>
-        /// <para>The list of Internet access control intercept trend data.</para>
+        /// <para>The list of Internet access control interception trend data.</para>
         /// </summary>
         [NameInMap("TrendList")]
         [Validation(Required=false)]
         public List<DescribeACLProtectTrendResponseBodyTrendList> TrendList { get; set; }
         public class DescribeACLProtectTrendResponseBodyTrendList : TeaModel {
             /// <summary>
-            /// <para>The total number of sessions that matched an ACL policy and triggered the monitor (alert) action at this point in time.</para>
+            /// <para>The total number of sessions that matched an ACL policy and triggered the monitor (alert) action during the time interval.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? AlertCnt { get; set; }
 
             /// <summary>
-            /// <para>The total number of sessions that matched an ACL policy and were allowed at this point in time.</para>
+            /// <para>The total number of sessions that matched an ACL policy and were allowed during the time interval.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? ProtectCnt { get; set; }
 
             /// <summary>
-            /// <para>The timestamp of 00:00 on each day. Unit: seconds. Indicates the date.</para>
+            /// <para>The timestamp of 00:00 of each day, in seconds. This indicates the date.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1697299200</para>

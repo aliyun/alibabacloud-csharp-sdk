@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The number of inbound access control policies for the NAT firewall.&gt;Notice: This field is deprecated..</para>
+        /// <para>The number of inbound access control policies for the NAT firewall.&gt;Notice: This field is deprecated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? TotalAclCount { get; set; }
 
         /// <summary>
-        /// <para>The number of access control policies for the VPC firewall.</para>
+        /// <para>The number of access control policies for VPC firewalls.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

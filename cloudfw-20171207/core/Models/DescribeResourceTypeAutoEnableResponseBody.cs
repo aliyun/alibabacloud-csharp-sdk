@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether traffic redirection is enabled by default.</para>
+        /// <para>Indicates whether default traffic redirection is enabled.</para>
         /// </summary>
         [NameInMap("ResourceTypeAutoEnable")]
         [Validation(Required=false)]

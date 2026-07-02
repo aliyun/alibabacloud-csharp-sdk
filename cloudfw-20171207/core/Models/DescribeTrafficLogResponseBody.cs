@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<DescribeTrafficLogResponseBodyDataList> DataList { get; set; }
         public class DescribeTrafficLogResponseBodyDataList : TeaModel {
             /// <summary>
-            /// <para>The policy ID of the ACL pre-match. If this parameter is empty, all policies are included.</para>
+            /// <para>The policy ID of the ACL pre-match. If this parameter is not specified, all policies are included.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <para>The ACL pre-match status. Valid values:</para>
             /// <para><b>app_unknown</b>: application not identified</para>
             /// <para><b>domain_unknown</b>: domain name not identified</para>
-            /// <para><b>normal</b>: normal.</para>
+            /// <para><b>normal</b>: normal</para>
             /// 
             /// <b>Example:</b>
             /// <para>normal</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <para><b>analysing</b>: identification in progress</para>
             /// <para><b>unknown_loose</b>: loose mode, identification failed, continuing identification</para>
             /// <para><b>unknown_strict</b>: strict mode, identification failed</para>
-            /// <para><b>success</b>: identification succeeded.</para>
+            /// <para><b>success</b>: identification succeeded</para>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>
@@ -219,7 +219,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string RegionNo { get; set; }
 
                 /// <summary>
-                /// <para>The VPC instance ID.</para>
+                /// <para>The VPC-connected instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc-8vba1c1em97h0ji71b****</para>
@@ -251,7 +251,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// <para>The additional extension data.</para>
+            /// <para>Other extended data.</para>
             /// 
             /// <b>Example:</b>
             /// <para>None</para>
@@ -261,7 +261,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Ext { get; set; }
 
             /// <summary>
-            /// <para>The inbound traffic in bytes.</para>
+            /// <para>The inbound traffic.</para>
             /// 
             /// <b>Example:</b>
             /// <para>125</para>
@@ -331,7 +331,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string MemberUid { get; set; }
 
             /// <summary>
-            /// <para>The outbound traffic in bytes.</para>
+            /// <para>The outbound traffic.</para>
             /// 
             /// <b>Example:</b>
             /// <para>230</para>
@@ -502,7 +502,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string SrcIP { get; set; }
 
             /// <summary>
-            /// <para>The source port.</para>
+            /// <para>The port of the data source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20206</para>

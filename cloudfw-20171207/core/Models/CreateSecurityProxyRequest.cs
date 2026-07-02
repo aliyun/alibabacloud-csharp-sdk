@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? StrictMode { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the VPC.</para>
+        /// <para>The VPC-connected instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
