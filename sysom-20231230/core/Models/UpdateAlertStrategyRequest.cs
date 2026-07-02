@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class UpdateAlertStrategyRequest : TeaModel {
         /// <summary>
-        /// <para>Whether the alert policy is enabled</para>
+        /// <para>Specifies whether the alert policy is enabled.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public bool? Enabled { get; set; }
 
         /// <summary>
-        /// <para>Alert policy ID</para>
+        /// <para>The ID of the alert policy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public bool? K8sLabel { get; set; }
 
         /// <summary>
-        /// <para>Alert policy name</para>
+        /// <para>The Policy Name of the alerting policy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Alert policy details</para>
+        /// <para>The details of the alert policy.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("strategy")]
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public UpdateAlertStrategyRequestStrategy Strategy { get; set; }
         public class UpdateAlertStrategyRequestStrategy : TeaModel {
             /// <summary>
-            /// <para>Set of clusters that receive alerts</para>
+            /// <para>The collection of clusters for which alerts are received.</para>
             /// </summary>
             [NameInMap("clusters")]
             [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public List<int?> Destinations { get; set; }
 
             /// <summary>
-            /// <para>Set of abnormal items that receive alerts</para>
+            /// <para>接收告警的异常项合计</para>
             /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]

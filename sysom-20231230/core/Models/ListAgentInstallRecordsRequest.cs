@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class ListAgentInstallRecordsRequest : TeaModel {
         /// <summary>
-        /// <para>Current page number (starting from 1)</para>
+        /// <para>The current page number. Pages start from page 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public long? Current { get; set; }
 
         /// <summary>
-        /// <para>If this field is specified, the response filters the Agent installation status for the specified instance.</para>
+        /// <para>The ID of the instance. If you specify this parameter, only the Agent installation records for the specified instance are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-bp118piqcio9tiwgh84b</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Page size</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>If this parameter is specified, the response filters the installation list for the specified Agent. It can be used together with the plugin_version parameter.</para>
+        /// <para>The ID of the Agent. If you specify this parameter, only the installation records for the specified Agent are returned. You can use this parameter together with the plugin_version parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>74a86327-3170-412c-8e67-da3389ec56a9</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string PluginId { get; set; }
 
         /// <summary>
-        /// <para>This parameter cannot be used alone. It must be used together with plugin_id to filter the installation list for a specified version of the specified Agent.</para>
+        /// <para>The version of the Agent. This parameter cannot be used alone. Use this parameter together with the plugin_id parameter to filter installation records for a specific version of the specified Agent.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3.4.0-1</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string PluginVersion { get; set; }
 
         /// <summary>
-        /// <para>Region ID.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>Filter widget installation records by status</para>
+        /// <para>Filters component installation records by status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Installed</para>

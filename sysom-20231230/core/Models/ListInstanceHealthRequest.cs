@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class ListInstanceHealthRequest : TeaModel {
         /// <summary>
-        /// <para>cluster ID</para>
+        /// <para>The cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2dc6f3be-bf24-4070-8d3a-c03c26850532</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Cluster { get; set; }
 
         /// <summary>
-        /// <para>Current page number for paging</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public int? Current { get; set; }
 
         /// <summary>
-        /// <para>End Time</para>
+        /// <para>The end time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public float? End { get; set; }
 
         /// <summary>
-        /// <para>instance ID.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-wz9d00ut2ska3mlyhn6j</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Instance { get; set; }
 
         /// <summary>
-        /// <para>Page size. Default value is 5. Valid range: [1,100]</para>
+        /// <para>The number of entries per page. Default value: 5. Valid values: 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Start Time</para>
+        /// <para>The start time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

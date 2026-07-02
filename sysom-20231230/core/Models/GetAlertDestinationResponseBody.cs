@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetAlertDestinationResponseBody : TeaModel {
         /// <summary>
-        /// <para>Status code.  </para>
+        /// <para>The status code.</para>
         /// <list type="bullet">
-        /// <item><description>If <c>code == Success</c>, authorization succeeded.  </description></item>
-        /// <item><description>Other status codes indicate authorization failed. When authorization fails, check the <c>message</c> field for detailed error information.</description></item>
+        /// <item><description>If <c>code == Success</c>, the authorization is successful.</description></item>
+        /// <item><description>Other status codes indicate authorization failed. Check the <c>message</c> field for the detailed fault information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Returned data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetAlertDestinationResponseBodyData Data { get; set; }
         public class GetAlertDestinationResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Creation Time.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1751520976660</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>Alert contact ID</para>
+            /// <para>The alert contact ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public int? Id { get; set; }
 
             /// <summary>
-            /// <para>Alert contact name</para>
+            /// <para>The alert contact name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>name1</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Configuration Parameter</para>
+            /// <para>The configuration parameters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public object Params { get; set; }
 
             /// <summary>
-            /// <para>Configuration source</para>
+            /// <para>The configuration source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>console</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>Alert push target. Currently, only DingTalk Robot is supported.</para>
+            /// <para>The alert notification target. Currently, only DingTalk chatbots are supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dingtalk</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Target { get; set; }
 
             /// <summary>
-            /// <para>User ID</para>
+            /// <para>The user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234123412352311</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Uid { get; set; }
 
             /// <summary>
-            /// <para>Update Time.</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1751254826285</para>
@@ -116,10 +116,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
-        /// <para>Error message.  </para>
+        /// <para>The error message.</para>
         /// <list type="bullet">
-        /// <item><description>If <c>code == Success</c>, this field is empty.  </description></item>
-        /// <item><description>Otherwise, this field contains the request error message.</description></item>
+        /// <item><description>If <c>code == Success</c>, this field is empty.</description></item>
+        /// <item><description>Otherwise, this field contains the request error information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2D693121-C925-5154-8DF6-C09A8B369822</para>

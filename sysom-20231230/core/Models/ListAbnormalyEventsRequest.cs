@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class ListAbnormalyEventsRequest : TeaModel {
         /// <summary>
-        /// <para>Cluster ID</para>
+        /// <para>The cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2d33d4be-bf54-4070-82ca-c1dc2d8b1562</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Cluster { get; set; }
 
         /// <summary>
-        /// <para>This field is present when paging is used and indicates the current page.</para>
+        /// <para>The current page number. This parameter is present during paginated queries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public int? Current { get; set; }
 
         /// <summary>
-        /// <para>End time</para>
+        /// <para>The end time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1725801327754</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public float? End { get; set; }
 
         /// <summary>
-        /// <para>Anomalous activity name</para>
+        /// <para>The name of the anomaly event.</para>
         /// 
         /// <b>Example:</b>
         /// <para>节点根文件系统使用检测</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Event { get; set; }
 
         /// <summary>
-        /// <para>Instance ID.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-wz9d00ut2ska3mlyhn6j</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Instance { get; set; }
 
         /// <summary>
-        /// <para>Level of the anomalous activity</para>
+        /// <para>The level of the anomaly event.</para>
         /// 
         /// <b>Example:</b>
         /// <para>potential</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Level { get; set; }
 
         /// <summary>
-        /// <para>Namespace where the pod is located</para>
+        /// <para>The namespace of the pod.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>Page size. The default value is 5. Valid values are in the range [1,100].</para>
+        /// <para>The number of entries per page. Default value: 5. Valid values: 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Pod name</para>
+        /// <para>The pod name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-pod</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Pod { get; set; }
 
         /// <summary>
-        /// <para>Whether to display anomalous activities of the pod</para>
+        /// <para>Specifies whether to display pod anomaly events.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public int? ShowPod { get; set; }
 
         /// <summary>
-        /// <para>Start time</para>
+        /// <para>The start time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1725797727754</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class UpdateEventsAttentionRequest : TeaModel {
         /// <summary>
-        /// <para>Sensitivity of the anomalous activity. Valid values are -1 to 3. A value of -1 decreases sensitivity by 1 degree, and a value of 0 increases sensitivity by 1 degree.</para>
+        /// <para>The sensitivity of the anomaly event. Valid values: -1 to 3. A value of -1 indicates that the sensitivity is decreased by 1. A value of 0 indicates that the sensitivity is increased by 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public int? Mode { get; set; }
 
         /// <summary>
-        /// <para>Scope of effect: cluster or edge zone</para>
+        /// <para>The scope in which the update takes effect. Valid values: cluster and node.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cluster</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Range { get; set; }
 
         /// <summary>
-        /// <para>UUID corresponding to the anomalous activity</para>
+        /// <para>The UUID of the anomaly event.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

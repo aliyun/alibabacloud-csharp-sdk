@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class DeleteAlertDestinationRequest : TeaModel {
         /// <summary>
-        /// <para>Alert contact ID</para>
+        /// <para>The ID of the alert contact.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

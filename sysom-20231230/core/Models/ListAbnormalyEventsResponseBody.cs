@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class ListAbnormalyEventsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Status code.  </para>
+        /// <para>The status code.</para>
         /// <list type="bullet">
-        /// <item><description>If <c>code == Success</c>, authorization succeeded.  </description></item>
-        /// <item><description>Any other status code indicates authorization failed. When authorization fails, check the <c>message</c> field for detailed error message.</description></item>
+        /// <item><description><c>code == Success</c> indicates that the authorization was successful.</description></item>
+        /// <item><description>Other status codes indicate that the authorization failed. Check the <c>message</c> field for the detailed fault information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Return Result.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<ListAbnormalyEventsResponseBodyData> Data { get; set; }
         public class ListAbnormalyEventsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Creation Time</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1725801090000</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public long? CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>Detailed description of the anomalous item.</para>
+            /// <para>The detailed description of the anomaly item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>节点发生OOM, 可查看OOM发生原因</para>
@@ -51,7 +51,14 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Diagnosis status (1 indicates diagnosis ready, 2 indicates running, 3 indicates completed, 4 indicates undiagnosable, 5 indicates failed)</para>
+            /// <para>The diagnostic status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>1: diagnosis ready.</description></item>
+            /// <item><description>2: diagnosis in progress.</description></item>
+            /// <item><description>3: diagnosis completed.</description></item>
+            /// <item><description>4: not diagnosable.</description></item>
+            /// <item><description>5: diagnosis failed.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -61,7 +68,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public int? DiagStatus { get; set; }
 
             /// <summary>
-            /// <para>End time of the anomalous activity.</para>
+            /// <para>The end time of the anomaly event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1725797727754</para>
@@ -71,7 +78,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public long? EndAt { get; set; }
 
             /// <summary>
-            /// <para>Instance ID.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-wz9d00ut2ska3mlyhn6j</para>
@@ -81,7 +88,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Instance { get; set; }
 
             /// <summary>
-            /// <para>Name of the anomalous item.</para>
+            /// <para>The name of the anomaly item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>节点CPU使用率检测</para>
@@ -91,7 +98,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Item { get; set; }
 
             /// <summary>
-            /// <para>Level of the anomalous item.</para>
+            /// <para>The level of the anomaly item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>potential</para>
@@ -101,7 +108,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Level { get; set; }
 
             /// <summary>
-            /// <para>Namespace where the pod is located</para>
+            /// <para>The namespace of the pod.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default</para>
@@ -111,14 +118,14 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Namespace { get; set; }
 
             /// <summary>
-            /// <para>List of operations for the abnormal item</para>
+            /// <para>The list of operations for the anomaly item.</para>
             /// </summary>
             [NameInMap("opts")]
             [Validation(Required=false)]
             public List<ListAbnormalyEventsResponseBodyDataOpts> Opts { get; set; }
             public class ListAbnormalyEventsResponseBodyDataOpts : TeaModel {
                 /// <summary>
-                /// <para>Operation Type</para>
+                /// <para>The operation type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>diagnose</para>
@@ -128,14 +135,14 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public string Label { get; set; }
 
                 /// <summary>
-                /// <para>Diagnosis result of the abnormal item</para>
+                /// <para>The diagnostic result of the anomaly item.</para>
                 /// </summary>
                 [NameInMap("result")]
                 [Validation(Required=false)]
                 public ListAbnormalyEventsResponseBodyDataOptsResult Result { get; set; }
                 public class ListAbnormalyEventsResponseBodyDataOptsResult : TeaModel {
                     /// <summary>
-                    /// <para>Diagnosis status</para>
+                    /// <para>The diagnostic status.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>success</para>
@@ -145,7 +152,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                     public string Status { get; set; }
 
                     /// <summary>
-                    /// <para>Diagnosis details URL</para>
+                    /// <para>The URL of the diagnostic details.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>/diagnose/result/PhfFg456</para>
@@ -157,7 +164,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 }
 
                 /// <summary>
-                /// <para>Diagnosis Type</para>
+                /// <para>The diagnostic type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>auto</para>
@@ -169,7 +176,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             }
 
             /// <summary>
-            /// <para>Pod name.</para>
+            /// <para>The pod name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-pod</para>
@@ -179,14 +186,14 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Pod { get; set; }
 
             /// <summary>
-            /// <para>Raw metrics</para>
+            /// <para>The raw metrics.</para>
             /// </summary>
             [NameInMap("raw_metrics")]
             [Validation(Required=false)]
             public ListAbnormalyEventsResponseBodyDataRawMetrics RawMetrics { get; set; }
             public class ListAbnormalyEventsResponseBodyDataRawMetrics : TeaModel {
                 /// <summary>
-                /// <para>End Time</para>
+                /// <para>The end time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1761814928</para>
@@ -196,14 +203,14 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public float? EndTime { get; set; }
 
                 /// <summary>
-                /// <para>List of metric values.</para>
+                /// <para>The list of metric values.</para>
                 /// </summary>
                 [NameInMap("metrics")]
                 [Validation(Required=false)]
                 public List<string> Metrics { get; set; }
 
                 /// <summary>
-                /// <para>Start Time</para>
+                /// <para>The start time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1761814928</para>
@@ -215,7 +222,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             }
 
             /// <summary>
-            /// <para>Region ID.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai</para>
@@ -225,7 +232,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>Type of abnormal item</para>
+            /// <para>The type of the anomaly item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>saturation</para>
@@ -235,7 +242,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>UUID corresponding to the anomalous activity</para>
+            /// <para>The UUID of the anomaly event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>43f05b46-1034-42e8-a528-6e5ca1108277</para>
@@ -247,7 +254,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
-        /// <para>Error code description; empty if no error</para>
+        /// <para>The error code description. This value is empty if no error occurred.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -257,7 +264,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Total number of records.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>

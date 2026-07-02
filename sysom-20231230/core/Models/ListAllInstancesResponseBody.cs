@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class ListAllInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Status code</para>
+        /// <para>Status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Returned data</para>
+        /// <para>Returned data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<ListAllInstancesResponseBodyData> Data { get; set; }
         public class ListAllInstancesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Agent configuration ID</para>
+            /// <para>Agent configuration ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test_id</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string AgentConfigId { get; set; }
 
             /// <summary>
-            /// <para>Agent configuration name</para>
+            /// <para>Agent configuration name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test_name</para>
@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string AgentConfigName { get; set; }
 
             /// <summary>
-            /// <para>Extension information.</para>
+            /// <para>Extended information.</para>
             /// </summary>
             [NameInMap("attributes")]
             [Validation(Required=false)]
             public List<ListAllInstancesResponseBodyDataAttributes> Attributes { get; set; }
             public class ListAllInstancesResponseBodyDataAttributes : TeaModel {
                 /// <summary>
-                /// <para>information key</para>
+                /// <para>Information key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sysom</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public string InfoKey { get; set; }
 
                 /// <summary>
-                /// <para>information type</para>
+                /// <para>Information type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>instance_tag</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public string InfoType { get; set; }
 
                 /// <summary>
-                /// <para>information value</para>
+                /// <para>Information value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>diagnosis</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             }
 
             /// <summary>
-            /// <para>Cluster ID</para>
+            /// <para>Cluster ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3b24a621-acb3-11ef-8c90-00163e1029af</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>Cluster name</para>
+            /// <para>Cluster name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>zjk_vpc_domain_1</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string ImageId { get; set; }
 
             /// <summary>
-            /// <para>Installation level</para>
+            /// <para>Installation level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Cluster</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string InstallLevel { get; set; }
 
             /// <summary>
-            /// <para>Installation type</para>
+            /// <para>Installation type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>console</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string InstallType { get; set; }
 
             /// <summary>
-            /// <para>Instance ID</para>
+            /// <para>Instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-bp17uabeke9v7n30abm2</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// <para>Instance type</para>
+            /// <para>Instance type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecs</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// <para>Milvus version</para>
+            /// <para>Kernel version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5.10.134-18.al8.x86_64</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string KernelVersion { get; set; }
 
             /// <summary>
-            /// <para>Management level</para>
+            /// <para>Management level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cluster</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string ManageLevel { get; set; }
 
             /// <summary>
-            /// <para>Management type</para>
+            /// <para>Management type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>managed</para>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string ManageType { get; set; }
 
             /// <summary>
-            /// <para>Operating system architecture</para>
+            /// <para>Operating system architecture.</para>
             /// 
             /// <b>Example:</b>
             /// <para>x86_64</para>
@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string OsArch { get; set; }
 
             /// <summary>
-            /// <para>Operating system health score</para>
+            /// <para>Operating system health score.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public int? OsHealthScore { get; set; }
 
             /// <summary>
-            /// <para>Operating system name</para>
+            /// <para>Operating system name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alios</para>
@@ -246,7 +246,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string PublicIp { get; set; }
 
             /// <summary>
-            /// <para>The resource group ID.</para>
+            /// <para>Resource group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3b24a621-acb3-11ef-8c90-00163e1029af</para>
@@ -256,7 +256,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>Resource group name</para>
+            /// <para>Resource group name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxxx</para>
@@ -266,13 +266,13 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string ResourceGroupName { get; set; }
 
             /// <summary>
-            /// <para>The running status of the instance. Valid values:</para>
+            /// <para>Running status of the instance. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Running</b>: The instance is running.</description></item>
             /// <item><description><b>Offline</b>: The instance is offline.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>An instance in the Offline state indicates that the heartbeat from the edge zone to the SysOM Server has been lost. It does not mean that the corresponding ECS instance is not running.</para>
+            /// <para>An instance in the Offline status indicates that the heartbeat from the node to the SysOM server is lost. It does not necessarily mean that the corresponding ECS instance is not running.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -285,7 +285,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
-        /// <para>Maximum number of returned items</para>
+        /// <para>Maximum number of results returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -295,10 +295,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Error message:</para>
+        /// <para>Error message.</para>
         /// <list type="bullet">
         /// <item><description>If <c>code == Success</c>, this field is empty.</description></item>
-        /// <item><description>Otherwise, this field contains the error message of the request.</description></item>
+        /// <item><description>Otherwise, this field contains the request error message.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -309,9 +309,9 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Paging cursor.</para>
+        /// <para>Pagination token.</para>
         /// <remarks>
-        /// <para>If not empty, more data is available.</para>
+        /// <para>A non-empty value indicates that more data is available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

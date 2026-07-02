@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetHostCountRequest : TeaModel {
         /// <summary>
-        /// <para>Cluster ID</para>
+        /// <para>The cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1808078950770264</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Cluster { get; set; }
 
         /// <summary>
-        /// <para>End Time</para>
+        /// <para>The end time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1725801327754</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public float? End { get; set; }
 
         /// <summary>
-        /// <para>Instance ID.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-wz9d00ut2ska3mlyhn6j</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Instance { get; set; }
 
         /// <summary>
-        /// <para>Start Time</para>
+        /// <para>The start time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1725797727754</para>

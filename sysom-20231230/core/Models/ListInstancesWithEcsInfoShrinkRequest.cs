@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class ListInstancesWithEcsInfoShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>This field exists when using paging and indicates the current page.</para>
+        /// <para>The page number for pagination. This parameter specifies the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public int? Current { get; set; }
 
         /// <summary>
-        /// <para>Filter instances by health status.</para>
+        /// <para>Filters instances by health status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>healthy</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string HealthStatus { get; set; }
 
         /// <summary>
-        /// <para>If this field is specified, filter the Agent installation status for the specified instance.</para>
+        /// <para>Specifies an instance ID to filter the Agent installation status of the specified instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-bp118piqcio9tiwgh84b</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Filter by instance name or instance ID. Fuzzy query is supported.</para>
+        /// <para>Filters instances by instance name or instance ID. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>84b</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string InstanceIdName { get; set; }
 
         /// <summary>
-        /// <para>Widget instance name.</para>
+        /// <para>The name of the component instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>block-load-balancer-hjdm9</para>
@@ -60,14 +60,14 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>Filter by tags of instances.</para>
+        /// <para>Filters instances by instance tag.</para>
         /// </summary>
         [NameInMap("instance_tag")]
         [Validation(Required=false)]
         public string InstanceTagShrink { get; set; }
 
         /// <summary>
-        /// <para>Filter instances by managed status.</para>
+        /// <para>Filters instances by management status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public int? IsManaged { get; set; }
 
         /// <summary>
-        /// <para>Filter instances by operating system name.</para>
+        /// <para>Filters instances by operating system name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Alibaba Cloud Linux  3.2104 LTS 64bit</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string OsName { get; set; }
 
         /// <summary>
-        /// <para>Page size. Default value is 10.</para>
+        /// <para>The number of entries per page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Filter instances by private IP address.</para>
+        /// <para>Filters instances by private IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.1.1.1</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string PrivateIp { get; set; }
 
         /// <summary>
-        /// <para>Filter instances by public IP address.</para>
+        /// <para>Filters instances by public IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.1.1.1</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string PublicIp { get; set; }
 
         /// <summary>
-        /// <para>Filter instances by region.</para>
+        /// <para>Filters instances by region.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>Filter instances by resource group ID.</para>
+        /// <para>Filters instances by resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-xxxxxxx</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>Filter by resource group name or resource group ID. Fuzzy query is supported.</para>
+        /// <para>Filters instances by resource group name or resource group ID. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string ResourceGroupIdName { get; set; }
 
         /// <summary>
-        /// <para>Filter instances by resource group name.</para>
+        /// <para>Filters instances by resource group name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default resource group</para>

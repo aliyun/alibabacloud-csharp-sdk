@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class CheckInstanceSupportRequest : TeaModel {
         /// <summary>
-        /// <para>List of instance IDs to check</para>
+        /// <para>The list of instance IDs to check.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;i-2zxxxxxx&quot;]</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public List<string> Instances { get; set; }
 
         /// <summary>
-        /// <para>Region to which the instances belong. Ensure that all instance IDs passed in the instances list belong to the same region.</para>
+        /// <para>The region to which the instances belong. All instance IDs specified in instances must belong to the same region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetVmcoreDiagnosisTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>Status code  </para>
+        /// <para>The status code.</para>
         /// <list type="bullet">
-        /// <item><description><c>code == Success</c> indicates successful authorization;  </description></item>
-        /// <item><description>Other status codes indicate authorization failure. When authorization fails, view the <c>message</c> field to obtain detailed error information.</description></item>
+        /// <item><description><c>code == Success</c> indicates that the authorization is successful.</description></item>
+        /// <item><description>Other status codes indicate that the authorization failed. Check the <c>message</c> field for the detailed fault information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Return Result</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetVmcoreDiagnosisTaskResponseBodyData Data { get; set; }
         public class GetVmcoreDiagnosisTaskResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Creation Time</para>
+            /// <para>The time when the task was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-12-02T17:36:12</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>Diagnosis Result</para>
+            /// <para>The diagnostic result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>result</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string DiagnoseResult { get; set; }
 
             /// <summary>
-            /// <para>Diagnosis error message</para>
+            /// <para>The diagnostic error message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>error message</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string ErrorMsg { get; set; }
 
             /// <summary>
-            /// <para>Job ID</para>
+            /// <para>The task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>bbe94a98-4192-4172-b856-95777e0a55d7</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>Task Status</para>
+            /// <para>The task status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>running</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string TaskStatus { get; set; }
 
             /// <summary>
-            /// <para>Task Type</para>
+            /// <para>The task type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vmcore</para>
@@ -91,14 +91,14 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string TaskType { get; set; }
 
             /// <summary>
-            /// <para>Download links for files associated with the job</para>
+            /// <para>The download URLs of related files associated with the task.</para>
             /// </summary>
             [NameInMap("urls")]
             [Validation(Required=false)]
             public GetVmcoreDiagnosisTaskResponseBodyDataUrls Urls { get; set; }
             public class GetVmcoreDiagnosisTaskResponseBodyDataUrls : TeaModel {
                 /// <summary>
-                /// <para>Download link for the debuginfo-common RPM package</para>
+                /// <para>The download URL of the debuginfo-common RPM package.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/debuginfo-common/file/path">https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/debuginfo-common/file/path</a></para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public string DebuginfoCommonUrl { get; set; }
 
                 /// <summary>
-                /// <para>Link to download the debuginfo RPM package</para>
+                /// <para>The download URL of the debuginfo RPM package.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/debuginfo/file/path">https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/debuginfo/file/path</a></para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public string DebuginfoUrl { get; set; }
 
                 /// <summary>
-                /// <para>Download link for the dmesg log</para>
+                /// <para>The download URL of the dmesg log.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/dmesg/file/path">https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/dmesg/file/path</a></para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public string DmesgUrl { get; set; }
 
                 /// <summary>
-                /// <para>Download link for the vmcore file</para>
+                /// <para>The download URL of the vmcore file.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/vmcore/file/path">https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/vmcore/file/path</a></para>
@@ -142,10 +142,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
-        /// <para>Error message  </para>
+        /// <para>The error message.</para>
         /// <list type="bullet">
-        /// <item><description>If <c>code == Success</c>, this field is empty.  </description></item>
-        /// <item><description>Otherwise, this field contains the request error message.</description></item>
+        /// <item><description>If <c>code == Success</c>, this field is empty.</description></item>
+        /// <item><description>Otherwise, this field contains the request error information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

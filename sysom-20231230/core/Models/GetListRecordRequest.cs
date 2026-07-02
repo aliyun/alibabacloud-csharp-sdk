@@ -9,8 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetListRecordRequest : TeaModel {
+        [NameInMap("analysisId")]
+        [Validation(Required=false)]
+        public string AnalysisId { get; set; }
+
         /// <summary>
-        /// <para>Current page number</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -19,8 +23,12 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [Validation(Required=false)]
         public long? Current { get; set; }
 
+        [NameInMap("customId")]
+        [Validation(Required=false)]
+        public long? CustomId { get; set; }
+
         /// <summary>
-        /// <para>Number of data entries per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +38,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Region ID.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

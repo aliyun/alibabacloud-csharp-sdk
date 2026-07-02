@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class InstallAgentResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID, which can be used for end-to-end diagnosis</para>
+        /// <para>The request ID, which can be used for end-to-end diagnostics.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1D8887FC-4BDB-5A1C-AB19-135C29A9E481</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Status code  </para>
+        /// <para>The status code.</para>
         /// <list type="bullet">
-        /// <item><description><c>code == Success</c> indicates that authorization succeeded.  </description></item>
-        /// <item><description>Any other status code indicates that authorization failed. If authorization fails, view the <c>message</c> field to obtain detailed error information.</description></item>
+        /// <item><description>If <c>code == Success</c>, the authorization is successful.</description></item>
+        /// <item><description>Other status codes indicate authorization failed. Check the <c>message</c> field for the detailed fault information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,15 +34,15 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Returned data</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public InstallAgentResponseBodyData Data { get; set; }
         public class InstallAgentResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Job ID.  </para>
-            /// <para>You can use this job ID to invoke the GetAgentTask API to view the job execution status.</para>
+            /// <para>The task ID.</para>
+            /// <para>You can use this task ID to call the GetAgentTask operation to retrieve the task execution status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>26b3cd97389c43dcad6bc4901c36fcec</para>
@@ -54,10 +54,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
-        /// <para>Error message  </para>
+        /// <para>The error message.</para>
         /// <list type="bullet">
-        /// <item><description>If <c>code == Success</c>, this field is empty.  </description></item>
-        /// <item><description>Otherwise, this field contains the request error message.</description></item>
+        /// <item><description>If <c>code == Success</c>, this field is empty.</description></item>
+        /// <item><description>Otherwise, this field contains the request error information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

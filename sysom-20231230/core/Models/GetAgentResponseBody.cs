@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetAgentResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID, which can be used for end-to-end Diagnosis</para>
+        /// <para>Request ID, which can be used for end-to-end diagnostics</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-09-14T20:46:08</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Status code  </para>
+        /// <para>Status code</para>
         /// <list type="bullet">
-        /// <item><description><c>code == Success</c> indicates that authorization succeeded.  </description></item>
-        /// <item><description>Other status codes indicate that authorization failed. When authorization fails, view the <c>message</c> field to obtain detailed error message.</description></item>
+        /// <item><description><c>code == Success</c> indicates the authorization is successful;</description></item>
+        /// <item><description>Other status codes indicate authorization failure. Check the <c>message</c> field for detailed error information when authorization fails;</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Returned data.</para>
+        /// <para>Response data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetAgentResponseBodyData Data { get; set; }
         public class GetAgentResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Creation Time of the widget</para>
+            /// <para>Agent creation time</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-09-14T20:46:08</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>Description of the widget</para>
+            /// <para>Agent description</para>
             /// 
             /// <b>Example:</b>
             /// <para>SysOM Agent</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Widget ID</para>
+            /// <para>Agent ID</para>
             /// 
             /// <b>Example:</b>
             /// <para>74a86327-3170-412c-8e67-da3389ec56a9</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>Name of the widget</para>
+            /// <para>Agent name</para>
             /// 
             /// <b>Example:</b>
             /// <para>SysOM</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Supported architecture</para>
+            /// <para>Supported architectures</para>
             /// 
             /// <b>Example:</b>
             /// <para>x86</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string SupportArch { get; set; }
 
             /// <summary>
-            /// <para>Type of the Agent</para>
+            /// <para>Agent type</para>
             /// 
             /// <b>Example:</b>
             /// <para>control</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>Update Time</para>
+            /// <para>Update time</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-09-14T20:46:08</para>
@@ -111,14 +111,14 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string UpdatedAt { get; set; }
 
             /// <summary>
-            /// <para>Widget version information</para>
+            /// <para>Agent version information</para>
             /// </summary>
             [NameInMap("versions")]
             [Validation(Required=false)]
             public List<GetAgentResponseBodyDataVersions> Versions { get; set; }
             public class GetAgentResponseBodyDataVersions : TeaModel {
                 /// <summary>
-                /// <para>Creation Time of the Agent version</para>
+                /// <para>Agent version creation time</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-09-14T20:46:08</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public string CreatedAt { get; set; }
 
                 /// <summary>
-                /// <para>Installation script for this version of the Agent</para>
+                /// <para>Installation script for this agent version</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sysom.sh install</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public string InstallScript { get; set; }
 
                 /// <summary>
-                /// <para>Uninstall script for this Agent version</para>
+                /// <para>Uninstallation script for this agent version</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sysom.sh uninstall</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public string UninstallScript { get; set; }
 
                 /// <summary>
-                /// <para>Update Time of the Agent version</para>
+                /// <para>Agent version update time</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-09-14T20:46:08</para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public string UpdatedAt { get; set; }
 
                 /// <summary>
-                /// <para>Upgrade script for this Agent version</para>
+                /// <para>Upgrade script for this agent version</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sysom.sh upgrade</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public string UpgradeScript { get; set; }
 
                 /// <summary>
-                /// <para>Version number of the Agent</para>
+                /// <para>Agent version number</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3.4.0-1</para>
@@ -182,10 +182,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
-        /// <para>Error message  </para>
+        /// <para>Error message</para>
         /// <list type="bullet">
-        /// <item><description>If <c>code == Success</c>, this field is empty;  </description></item>
-        /// <item><description>Otherwise, this field contains the Request error message.</description></item>
+        /// <item><description>If <c>code == Success</c>, this field is empty;</description></item>
+        /// <item><description>Otherwise, this field contains the request error message.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

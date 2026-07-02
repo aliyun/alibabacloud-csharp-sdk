@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class ListDiagnosisResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID, which can be used for end-to-end diagnosis</para>
+        /// <para>Request ID, which can be used for full-link diagnostics</para>
         /// 
         /// <b>Example:</b>
         /// <para>44841312-7227-55C9-AE03-D59729BFAE38</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Status code  </para>
+        /// <para>Status code</para>
         /// <list type="bullet">
-        /// <item><description><c>code == Success</c> indicates successful authorization;  </description></item>
-        /// <item><description>Other status codes indicate failed authorization. When authorization fails, view the <c>message</c> field to obtain detailed error information;</description></item>
+        /// <item><description>If <c>code == Success</c>, the authorization is successful.</description></item>
+        /// <item><description>Other status codes indicate authorization failure. When authorization fails, check the <c>message</c> field for detailed error information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public List<ListDiagnosisResponseBodyData> Data { get; set; }
         public class ListDiagnosisResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Diagnosis error code; 0 indicates no error</para>
+            /// <para>Diagnostic error code. 0 indicates no error.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public object Command { get; set; }
 
             /// <summary>
-            /// <para>Creation Time</para>
+            /// <para>Creation time</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-12-25T15:08:19</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string ErrMsg { get; set; }
 
             /// <summary>
-            /// <para>Diagnosis parameters</para>
+            /// <para>Diagnostic parameters</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public object Params { get; set; }
 
             /// <summary>
-            /// <para>Diagnosis result</para>
+            /// <para>Diagnostic result</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -338,7 +338,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public object Result { get; set; }
 
             /// <summary>
-            /// <para>Diagnosis Type</para>
+            /// <para>Diagnostic type</para>
             /// 
             /// <b>Example:</b>
             /// <para>memgraph</para>
@@ -348,12 +348,13 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string ServiceName { get; set; }
 
             /// <summary>
-            /// <para>Status of the diagnostic task execution.<br>Valid values:  </para>
+            /// <para>Execution status of the diagnostic task.
+            /// Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Ready</b>: Ready  </description></item>
-            /// <item><description><b>Running</b>: Running  </description></item>
-            /// <item><description><b>Success</b>: Succeeded  </description></item>
-            /// <item><description><b>Fail</b>: Failed</description></item>
+            /// <item><description><b>Ready</b>: Ready</description></item>
+            /// <item><description><b>Running</b>: Running</description></item>
+            /// <item><description><b>Success</b>: Execution succeeded</description></item>
+            /// <item><description><b>Fail</b>: Execution failed</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -364,7 +365,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Job ID.</para>
+            /// <para>Task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>grcuU21a</para>
@@ -374,7 +375,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>Update Time</para>
+            /// <para>Update time</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-12-25T15:08:19</para>
@@ -384,7 +385,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string UpdatedAt { get; set; }
 
             /// <summary>
-            /// <para>Diagnostic details URL</para>
+            /// <para>URL for diagnostic details</para>
             /// 
             /// <b>Example:</b>
             /// <para>/diagnose/detail/qe3Z34sa</para>
@@ -396,9 +397,9 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
-        /// <para>Error message  </para>
+        /// <para>Error message</para>
         /// <list type="bullet">
-        /// <item><description>If <c>code == Success</c>, this field is empty.  </description></item>
+        /// <item><description>If <c>code == Success</c>, this field is empty.</description></item>
         /// <item><description>Otherwise, this field contains the request error message.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -411,7 +412,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Total count</para>
+        /// <para>Total</para>
         /// 
         /// <b>Example:</b>
         /// <para>319</para>

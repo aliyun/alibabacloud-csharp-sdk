@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class CreateVmcoreDiagnosisTaskRequest : TeaModel {
         /// <summary>
-        /// <para>Download link for the debuginfo-common file. This parameter is optional when the diagnosis type is vmcore.  </para>
-        /// <para>For CentOS or Alinux kernel diagnosis, the corresponding debuginfo-common file is automatically downloaded, so you do not need to provide this parameter. For kernels of other distributions, you must manually provide the download link for the debuginfo-common file that matches the kernel version.</para>
+        /// <para>The download URL of the debuginfo-common file. This parameter is optional when the diagnostic type is vmcore.</para>
+        /// <para>For CentOS or Alinux kernels, the corresponding debuginfo-common file is automatically downloaded, and you do not need to specify this parameter. For other distribution kernels, manually provide the download URL of the debuginfo-common file that corresponds to the kernel version.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/debuginfo-common/file/path">https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/debuginfo-common/file/path</a></para>
@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string DebuginfoCommonUrl { get; set; }
 
         /// <summary>
-        /// <para>The download link of the debuginfo file corresponding to the vmcore file. This parameter is optional when the diagnosis type is vmcore.</para>
-        /// <para>For CentOS or Alinux kernel diagnosis, the corresponding debuginfo file is automatically downloaded, so you do not need to provide this parameter. For kernels from other distributions, you must manually provide the download link for the debuginfo file that matches the kernel version.</para>
+        /// <para>The download URL of the debuginfo file. This parameter is optional when the diagnostic type is vmcore.</para>
+        /// <para>For CentOS or Alinux kernels, the corresponding debuginfo file is automatically downloaded, and you do not need to specify this parameter. For other distribution kernels, manually provide the download URL of the debuginfo file that corresponds to the kernel version.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/debuginfo/file/path">https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/debuginfo/file/path</a></para>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string DebuginfoUrl { get; set; }
 
         /// <summary>
-        /// <para>Download link for the dmesg log file. This parameter is required when the diagnosis type is dmesg.</para>
+        /// <para>The download URL of the dmesg log file. This parameter is required when the diagnostic type is dmesg.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/dmesg/file/path">https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/dmesg/file/path</a></para>
@@ -42,9 +42,11 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string DmesgUrl { get; set; }
 
         /// <summary>
-        /// <para>Task Type  </para>
-        /// <para>vmcore: vmcore file diagnosis task  </para>
-        /// <para>dmesg: dmesg log diagnosis task</para>
+        /// <para>The task type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>vmcore: vmcore file diagnostic task.</description></item>
+        /// <item><description>dmesg: dmesg log diagnostic task.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,7 +57,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string TaskType { get; set; }
 
         /// <summary>
-        /// <para>The download link of the vmcore file. This parameter is required when the diagnosis type is vmcore.</para>
+        /// <para>The download URL of the vmcore file. This parameter is required when the diagnostic type is vmcore.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/vmcore/file/path">https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/vmcore/file/path</a></para>

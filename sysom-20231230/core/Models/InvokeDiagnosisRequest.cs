@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class InvokeDiagnosisRequest : TeaModel {
         /// <summary>
-        /// <para>Diagnosis channel (currently fixed as the ECS channel)</para>
+        /// <para>Diagnosis channel (currently fixed as the ECS channel).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Channel { get; set; }
 
         /// <summary>
-        /// <para>Diagnosis parameters. Different diagnosis types require different parameters. For the required parameters of each diagnosis type, see the Request Parameters supplement below.  </para>
+        /// <para>Diagnosis parameters. Different types of diagnoses require different diagnosis parameters. For the parameters required by each diagnosis type, refer to the supplementary request parameter description below.</para>
         /// <remarks>
-        /// <para>Notice: Please pass a string in JSON format</para>
+        /// <para>Notice: Please pass a JSON-formatted string.</notice></para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Params { get; set; }
 
         /// <summary>
-        /// <para>Diagnosis type, used to distinguish between different types of diagnosis</para>
+        /// <para>Diagnosis type, used to distinguish different types of diagnoses.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

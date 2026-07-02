@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class ListInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Status code  </para>
+        /// <para>The status code.</para>
         /// <list type="bullet">
-        /// <item><description><c>code == Success</c> indicates that authorization succeeded.  </description></item>
-        /// <item><description>Any other status code indicates that authorization failed. When authorization fails, check the <c>message</c> field for detailed error information.</description></item>
+        /// <item><description><c>code == Success</c> indicates that the authorization is successful.</description></item>
+        /// <item><description>Other status codes indicate that the authorization failed. Check the <c>message</c> field for the detailed fault information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Return Result.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<ListInstancesResponseBodyData> Data { get; set; }
         public class ListInstancesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Cluster ID</para>
+            /// <para>The cluster ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c2218ca2b76ec45e7b7ee1693f6fcd374</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>ECS instance ID</para>
+            /// <para>The ECS instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-wz9d00ut2ska3mlyhn6j</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Instance { get; set; }
 
             /// <summary>
-            /// <para>Milvus version of the instance</para>
+            /// <para>The current kernel version of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5.10.134-16.1.an8.x86_64</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string KernelVersion { get; set; }
 
             /// <summary>
-            /// <para>Metadata of the instance</para>
+            /// <para>The metadata of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public object Meta { get; set; }
 
             /// <summary>
-            /// <para>Architecture of the ECS instance</para>
+            /// <para>The architecture of the ECS instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>x86</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string OsArch { get; set; }
 
             /// <summary>
-            /// <para>Health score of the instance</para>
+            /// <para>The health score of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string OsHealthScore { get; set; }
 
             /// <summary>
-            /// <para>Operating system name of the instance (retrieved from /etc/os-release)</para>
+            /// <para>The operating system name of the instance (obtained from /etc/os-release).</para>
             /// 
             /// <b>Example:</b>
             /// <para>Anolis OS</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string OsName { get; set; }
 
             /// <summary>
-            /// <para>Operating system name ID of the instance (retrieved from /etc/os-release)</para>
+            /// <para>The operating system name ID of the instance (obtained from /etc/os-release).</para>
             /// 
             /// <b>Example:</b>
             /// <para>anolis</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string OsNameId { get; set; }
 
             /// <summary>
-            /// <para>Operating system version of the instance (obtained from /etc/os-release)</para>
+            /// <para>The operating system version of the instance (obtained from /etc/os-release).</para>
             /// 
             /// <b>Example:</b>
             /// <para>8.9</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string OsVersion { get; set; }
 
             /// <summary>
-            /// <para>Operating system version ID of the instance (retrieved from /etc/os-release)</para>
+            /// <para>The operating system version ID of the instance (obtained from /etc/os-release).</para>
             /// 
             /// <b>Example:</b>
             /// <para>rhel fedora centos</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string OsVersionId { get; set; }
 
             /// <summary>
-            /// <para>Region where the instance is located</para>
+            /// <para>The region where the instance resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// <para>Status of the instance</para>
+            /// <para>The status of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -169,10 +169,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
-        /// <para>Error message  </para>
+        /// <para>The error message.</para>
         /// <list type="bullet">
-        /// <item><description>If <c>code == Success</c>, this field is empty.  </description></item>
-        /// <item><description>Otherwise, this field contains the request error message.</description></item>
+        /// <item><description>If <c>code == Success</c>, this field is empty.</description></item>
+        /// <item><description>Otherwise, this field contains the request error information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request RequestId</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9515E5A0-8905-59B0-9BBF-5F0BE568C3A0</para>
@@ -193,7 +193,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Total number of records</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>623</para>

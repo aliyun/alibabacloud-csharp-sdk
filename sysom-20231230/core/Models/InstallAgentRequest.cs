@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class InstallAgentRequest : TeaModel {
         /// <summary>
-        /// <para>ID of the widget to install</para>
+        /// <para>The ID of the component to install.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string AgentId { get; set; }
 
         /// <summary>
-        /// <para>Version of the widget to install</para>
+        /// <para>The version of the component to install.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,11 +32,12 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string AgentVersion { get; set; }
 
         /// <summary>
-        /// <para>Installation Type:  </para>
+        /// <para>The installation type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>InstallAndUpgrade: Install if not present; update if present.  </description></item>
-        /// <item><description>OnlyInstallNotHasAgent: Install if not present; do nothing if present.  </description></item>
-        /// <item><description>OnlyUpgradeHasAgent: Do nothing if not present; update if present.</description></item>
+        /// <item><description>InstallAndUpgrade: installs the component if it does not exist, or updates it if it exists.</description></item>
+        /// <item><description>OnlyInstallNotHasAgent: installs the component if it does not exist, or takes no action if it exists.</description></item>
+        /// <item><description>OnlyUpgradeHasAgent: takes no action if the component does not exist, or updates it if it exists.</description></item>
+        /// <item><description>OnlyInstallWithoutStart: installs the component only without starting the service.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -48,7 +49,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string InstallType { get; set; }
 
         /// <summary>
-        /// <para>List of instances on which to install the widget</para>
+        /// <para>The list of instances on which to install the component.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("instances")]
@@ -56,7 +57,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public List<InstallAgentRequestInstances> Instances { get; set; }
         public class InstallAgentRequestInstances : TeaModel {
             /// <summary>
-            /// <para>Instance ID.</para>
+            /// <para>The instance ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -67,7 +68,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Instance { get; set; }
 
             /// <summary>
-            /// <para>Region ID.</para>
+            /// <para>The region ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

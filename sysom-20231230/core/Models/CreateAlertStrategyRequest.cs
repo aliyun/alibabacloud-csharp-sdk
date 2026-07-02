@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class CreateAlertStrategyRequest : TeaModel {
         /// <summary>
-        /// <para>Whether the alert policy is enabled</para>
+        /// <para>Specifies whether the alert strategy is enabled.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public bool? K8sLabel { get; set; }
 
         /// <summary>
-        /// <para>Alert policy name</para>
+        /// <para>The name of the alert strategy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Details of the alert policy</para>
+        /// <para>The details of the alert strategy.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("strategy")]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public CreateAlertStrategyRequestStrategy Strategy { get; set; }
         public class CreateAlertStrategyRequestStrategy : TeaModel {
             /// <summary>
-            /// <para>Set of clusters that receive alerts</para>
+            /// <para>The collection of clusters for which alerts are received.</para>
             /// </summary>
             [NameInMap("clusters")]
             [Validation(Required=false)]
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public List<int?> Destinations { get; set; }
 
             /// <summary>
-            /// <para>Set of abnormal items that trigger alerts</para>
+            /// <para>The collection of anomaly items for which alerts are received.</para>
             /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]

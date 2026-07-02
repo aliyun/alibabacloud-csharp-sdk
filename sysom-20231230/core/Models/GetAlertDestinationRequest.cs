@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetAlertDestinationRequest : TeaModel {
         /// <summary>
-        /// <para>Alert contact ID</para>
+        /// <para>The alert contact ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

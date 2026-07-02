@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class InitialSysomRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to only check if the service role exists</para>
+        /// <para>Specifies whether to only check whether the service-linked role exists.</para>
         /// </summary>
         [NameInMap("check_only")]
         [Validation(Required=false)]
         public bool? CheckOnly { get; set; }
 
         /// <summary>
-        /// <para>Source, which is fixed as console.</para>
+        /// <para>The source. Set this parameter to console.</para>
         /// 
         /// <b>Example:</b>
         /// <para>console</para>

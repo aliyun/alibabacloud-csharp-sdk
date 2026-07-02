@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class InitialSysomResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID, which can be used for end-to-end diagnosis</para>
+        /// <para>The request ID, which can be used for end-to-end diagnostics.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3FCA2E38-2A8E-5501-93BD-5CE1BA58F2EF</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Status code  </para>
+        /// <para>The status code.</para>
         /// <list type="bullet">
-        /// <item><description>If <c>code == Success</c>, authorization succeeded.  </description></item>
-        /// <item><description>Any other status code indicates a failed authorization. In such cases, view the <c>message</c> field for detailed error information.</description></item>
+        /// <item><description><c>code == Success</c>: The authorization is successful.</description></item>
+        /// <item><description>Other status codes indicate that the authorization failed. Check the <c>message</c> field for the detailed fault information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Return Result.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public InitialSysomResponseBodyData Data { get; set; }
         public class InitialSysomResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the service role exists</para>
+            /// <para>Indicates whether the service-linked role exists.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -53,10 +53,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
-        /// <para>Error message  </para>
+        /// <para>The error message.</para>
         /// <list type="bullet">
-        /// <item><description>If <c>code == Success</c>, this field is empty.  </description></item>
-        /// <item><description>Otherwise, this field contains the error message.</description></item>
+        /// <item><description>If <c>code == Success</c>, this field is empty.</description></item>
+        /// <item><description>Otherwise, this field contains the request error information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

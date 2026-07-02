@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class ListClustersRequest : TeaModel {
         /// <summary>
-        /// <para>Filter by cluster ID  </para>
+        /// <para>Filter by cluster ID.</para>
         /// <remarks>
-        /// <para>This cluster ID is not the ACK cluster ID, but the <c>id</c> field in the data returned by this API</para>
+        /// <para>This cluster ID is not the ACK cluster ID, but the <c>id</c> field in the data returned by this API.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description><c>Running</c>: Cluster management is Normal;  </description></item>
-        /// <item><description><c>Installing</c>: An install Job is in progress for the cluster;  </description></item>
-        /// <item><description><c>Uninstalling</c>: An uninstall Job is in progress for the cluster;  </description></item>
-        /// <item><description><c>Upgrading</c>: An Update Job is in progress for the cluster;  </description></item>
+        /// <item><description><c>Running</c>: The cluster is managed normally.</description></item>
+        /// <item><description><c>Installing</c>: The cluster has an installation task in progress.</description></item>
+        /// <item><description><c>Uninstalling</c>: The cluster has an uninstallation task in progress.</description></item>
+        /// <item><description><c>Upgrading</c>: The cluster has an upgrade task in progress.</description></item>
         /// <item><description><c>Offline</c>: The cluster is offline and management is abnormal.</description></item>
         /// </list>
         /// 
@@ -40,8 +40,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description><c>ACK</c>: ACK cluster  </description></item>
-        /// <item><description><c>CUSTOM</c>: Custom cluster (default clusters are classified as custom clusters)</description></item>
+        /// <item><description><c>ACK</c>: ACK cluster.</description></item>
+        /// <item><description><c>CUSTOM</c>: Custom cluster (the default cluster belongs to custom clusters).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public long? Current { get; set; }
 
         /// <summary>
-        /// <para>This field is deprecated. Use the <c>cluster_id</c> field for filtering instead.</para>
+        /// <para>This field is deprecated. Use the cluster_id field to filter instead.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cb7d4cc26c8f845fb8a8255ffd394820e</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>Filter plugins by plugin name</para>
+        /// <para>Filter by plugin name</para>
         /// 
         /// <b>Example:</b>
         /// <para>proxy-next-upstream</para>

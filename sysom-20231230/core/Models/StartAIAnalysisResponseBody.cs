@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class StartAIAnalysisResponseBody : TeaModel {
         /// <summary>
-        /// <para>Return code.</para>
+        /// <para>Response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Returned data</para>
+        /// <para>Response data</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]

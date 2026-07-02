@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class AuthDiagnosisRequest : TeaModel {
         /// <summary>
-        /// <para>Automatic creation of role</para>
+        /// <para>Specifies whether to enable automatic creation of the service-linked role.</para>
         /// </summary>
         [NameInMap("autoCreateRole")]
         [Validation(Required=false)]
         public bool? AutoCreateRole { get; set; }
 
         /// <summary>
-        /// <para>Automatic installation of agent</para>
+        /// <para>Specifies whether to automatically install the agent.</para>
         /// </summary>
         [NameInMap("autoInstallAgent")]
         [Validation(Required=false)]
         public bool? AutoInstallAgent { get; set; }
 
         /// <summary>
-        /// <para>List of instances to authorize for diagnosis</para>
+        /// <para>The list of instances to authorize for diagnostics.</para>
         /// </summary>
         [NameInMap("instances")]
         [Validation(Required=false)]
         public List<AuthDiagnosisRequestInstances> Instances { get; set; }
         public class AuthDiagnosisRequestInstances : TeaModel {
             /// <summary>
-            /// <para>Instance ID.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-wz9b9vucz1iubsz8sjqo</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Instance { get; set; }
 
             /// <summary>
-            /// <para>Region ID.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>

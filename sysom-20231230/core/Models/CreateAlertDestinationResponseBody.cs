@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class CreateAlertDestinationResponseBody : TeaModel {
         /// <summary>
-        /// <para>error code</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Returned data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public CreateAlertDestinationResponseBodyData Data { get; set; }
         public class CreateAlertDestinationResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Creation Time.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1753669116286</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public long? CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>Policy ID</para>
+            /// <para>The policy ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public int? Id { get; set; }
 
             /// <summary>
-            /// <para>Policy Name</para>
+            /// <para>The policy name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SysOM</para>
@@ -57,14 +57,14 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Configuration Parameter of alert contact</para>
+            /// <para>The configuration parameters of the alert contact.</para>
             /// </summary>
             [NameInMap("params")]
             [Validation(Required=false)]
             public CreateAlertDestinationResponseBodyDataParams Params { get; set; }
             public class CreateAlertDestinationResponseBodyDataParams : TeaModel {
                 /// <summary>
-                /// <para>mailbox</para>
+                /// <para>The email address.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="mailto:xxx@email.com">xxx@email.com</a></para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public string Email { get; set; }
 
                 /// <summary>
-                /// <para>Phone</para>
+                /// <para>The phone number.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1xxx</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public string Phone { get; set; }
 
                 /// <summary>
-                /// <para>Robot key</para>
+                /// <para>The secret key of the chatbot.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SECxxx</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public string Sec { get; set; }
 
                 /// <summary>
-                /// <para>Robot address</para>
+                /// <para>The webhook URL of the chatbot.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://oapi.dingtalk.com/robot/send?access_token=xxx">https://oapi.dingtalk.com/robot/send?access_token=xxx</a></para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             }
 
             /// <summary>
-            /// <para>Configuration Source</para>
+            /// <para>The configuration source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>console</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>Push Target. Currently, only DingTalk Robot is supported.</para>
+            /// <para>The notification target. Currently, only DingTalk chatbots are supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dingtalk</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Target { get; set; }
 
             /// <summary>
-            /// <para>User ID</para>
+            /// <para>The user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1222933234714935</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Uid { get; set; }
 
             /// <summary>
-            /// <para>Update Time</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1751254826285</para>
@@ -148,10 +148,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
-        /// <para>Error message  </para>
+        /// <para>The error message.</para>
         /// <list type="bullet">
-        /// <item><description>If <c>code == Success</c>, this field is empty.  </description></item>
-        /// <item><description>Otherwise, this field contains the request error message.</description></item>
+        /// <item><description>If <c>code == Success</c>, this field is empty.</description></item>
+        /// <item><description>Otherwise, this field contains the error message of the request.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2D693121-C925-5154-8DF6-C09A8B369822</para>

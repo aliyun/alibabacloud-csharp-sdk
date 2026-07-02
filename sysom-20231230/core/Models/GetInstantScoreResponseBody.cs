@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetInstantScoreResponseBody : TeaModel {
         /// <summary>
-        /// <para>Status code  </para>
+        /// <para>Status code.</para>
         /// <list type="bullet">
-        /// <item><description>If <c>code == Success</c>, authorization succeeded.  </description></item>
-        /// <item><description>Other status codes indicate authorization failed. When authorization fails, view the <c>message</c> field to obtain detailed error message.</description></item>
+        /// <item><description>If <c>code == Success</c>, the authorization is successful.</description></item>
+        /// <item><description>Other status codes indicate authorization failure. Check the <c>message</c> field for detailed error information when authorization fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Returned data.</para>
+        /// <para>Response data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetInstantScoreResponseBodyData Data { get; set; }
         public class GetInstantScoreResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Error score</para>
+            /// <para>Error score.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public float? Error { get; set; }
 
             /// <summary>
-            /// <para>Latency score</para>
+            /// <para>Latency score.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public float? Latency { get; set; }
 
             /// <summary>
-            /// <para>Load score</para>
+            /// <para>Load score.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public float? Load { get; set; }
 
             /// <summary>
-            /// <para>Saturation score</para>
+            /// <para>Saturation score.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public float? Saturation { get; set; }
 
             /// <summary>
-            /// <para>Total score</para>
+            /// <para>Total score.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -83,9 +83,9 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
-        /// <para>Error message  </para>
+        /// <para>Error message.</para>
         /// <list type="bullet">
-        /// <item><description>If <c>code == Success</c>, this field is empty.  </description></item>
+        /// <item><description>If <c>code == Success</c>, this field is empty.</description></item>
         /// <item><description>Otherwise, this field contains the request error message.</description></item>
         /// </list>
         /// 

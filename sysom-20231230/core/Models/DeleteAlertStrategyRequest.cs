@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class DeleteAlertStrategyRequest : TeaModel {
         /// <summary>
-        /// <para>Alert policy ID</para>
+        /// <para>The ID of the alert policy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class StartAIDiffAnalysisRequest : TeaModel {
         /// <summary>
-        /// <para>task1 parameters</para>
+        /// <para>The task1 parameters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public StartAIDiffAnalysisRequestTask1 Task1 { get; set; }
         public class StartAIDiffAnalysisRequestTask1 : TeaModel {
             /// <summary>
-            /// <para>AI analysis ID</para>
+            /// <para>The AI analysis ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16896fa8-37f6-4c70-bb32-67fa9817d426</para>
@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string AnalysisId { get; set; }
 
             /// <summary>
-            /// <para>PIDs of AI job processes; batch input is supported, separated by commas</para>
+            /// <para>The pids of AI job processes. Batch input is supported. Separate multiple pids with commas.</para>
             /// </summary>
             [NameInMap("pids")]
             [Validation(Required=false)]
             public List<string> Pids { get; set; }
 
             /// <summary>
-            /// <para>Step end time, computed based on the selected step number</para>
+            /// <para>The step end time, calculated based on the selected step number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4660551334179.955</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public float? StepEnd { get; set; }
 
             /// <summary>
-            /// <para>Step start time, computed based on the selected step number</para>
+            /// <para>The step start time, calculated based on the selected step number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4660550379415.497</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
-        /// <para>task2 parameters</para>
+        /// <para>The task2 parameters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public StartAIDiffAnalysisRequestTask2 Task2 { get; set; }
         public class StartAIDiffAnalysisRequestTask2 : TeaModel {
             /// <summary>
-            /// <para>AI analysis ID</para>
+            /// <para>The AI analysis ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string AnalysisId { get; set; }
 
             /// <summary>
-            /// <para>Process IDs (PIDs) of AI jobs. Batch input is supported, with PIDs separated by commas.</para>
+            /// <para>The pids of AI job processes. Batch input is supported. Separate multiple pids with commas.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public List<string> Pids { get; set; }
 
             /// <summary>
-            /// <para>Step end time, computed based on the selected step number.</para>
+            /// <para>The step end time, calculated based on the selected step number.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public float? StepEnd { get; set; }
 
             /// <summary>
-            /// <para>Step start time, computed based on the selected step number.</para>
+            /// <para>The step start time, calculated based on the selected step number.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

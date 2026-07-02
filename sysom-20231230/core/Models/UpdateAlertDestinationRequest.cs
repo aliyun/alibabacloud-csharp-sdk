@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class UpdateAlertDestinationRequest : TeaModel {
         /// <summary>
-        /// <para>ID of the alert contact</para>
+        /// <para>The ID of the alert contact.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>Name of the alert contact</para>
+        /// <para>The name of the alert contact.</para>
         /// 
         /// <b>Example:</b>
         /// <para>name1</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Configuration Parameter</para>
+        /// <para>The configuration parameters.</para>
         /// </summary>
         [NameInMap("params")]
         [Validation(Required=false)]
         public UpdateAlertDestinationRequestParams Params { get; set; }
         public class UpdateAlertDestinationRequestParams : TeaModel {
             /// <summary>
-            /// <para>mailbox</para>
+            /// <para>The email address.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:xxx@email.com">xxx@email.com</a></para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Email { get; set; }
 
             /// <summary>
-            /// <para>Phone number</para>
+            /// <para>The phone number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1xxx</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Phone { get; set; }
 
             /// <summary>
-            /// <para>Robot key</para>
+            /// <para>The secret key of the chatbot.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SECxxx</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Sec { get; set; }
 
             /// <summary>
-            /// <para>Robot webhook address</para>
+            /// <para>The webhook URL of the chatbot.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://oapi.dingtalk.com/robot/send?access_token=xxx">https://oapi.dingtalk.com/robot/send?access_token=xxx</a></para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
-        /// <para>Source of the configuration</para>
+        /// <para>The configuration source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>console</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>Push Target for alerts. Currently, only DingTalk contacts are supported.</para>
+        /// <para>The alert notification target. Currently, only DingTalk contacts are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dingtalk</para>

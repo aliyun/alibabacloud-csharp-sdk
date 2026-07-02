@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetServiceFuncStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>Status code  </para>
+        /// <para>The status code.</para>
         /// <list type="bullet">
-        /// <item><description><c>code == Success</c> indicates that authorization succeeded.  </description></item>
-        /// <item><description>Any other status code indicates that authorization failed. When authorization fails, view the <c>message</c> field to obtain detailed error message.</description></item>
+        /// <item><description><c>code == Success</c> indicates that the authorization is successful.</description></item>
+        /// <item><description>Other status codes indicate that the authorization failed. Check the <c>message</c> field for the detailed fault information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,21 +24,21 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Return Result</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetServiceFuncStatusResponseBodyData Data { get; set; }
         public class GetServiceFuncStatusResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Configuration Parameter</para>
+            /// <para>The configuration parameters.</para>
             /// </summary>
             [NameInMap("args")]
             [Validation(Required=false)]
             public GetServiceFuncStatusResponseBodyDataArgs Args { get; set; }
             public class GetServiceFuncStatusResponseBodyDataArgs : TeaModel {
                 /// <summary>
-                /// <para>Configuration process</para>
+                /// <para>The configuration process.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>java</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public string AddCmd { get; set; }
 
                 /// <summary>
-                /// <para>ONCPU tracing Toggle</para>
+                /// <para>The ONCPU tracing switch.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public string Cpu { get; set; }
 
                 /// <summary>
-                /// <para>Storage Path</para>
+                /// <para>The storage path.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/tmp/sysom/java-profiler</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public string JavaStorePath { get; set; }
 
                 /// <summary>
-                /// <para>Edit Lock tracing Toggle</para>
+                /// <para>The lock tracing switch.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public string Locks { get; set; }
 
                 /// <summary>
-                /// <para>Tracing epoch</para>
+                /// <para>The tracing cycle.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>-1</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public int? Loop { get; set; }
 
                 /// <summary>
-                /// <para>Memory tracing Toggle</para>
+                /// <para>The memory tracing switch.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public string Mem { get; set; }
 
                 /// <summary>
-                /// <para>System profiling Toggle</para>
+                /// <para>The system profiling switch.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -112,10 +112,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
-        /// <para>error message  </para>
+        /// <para>The error message.</para>
         /// <list type="bullet">
-        /// <item><description>If <c>code == Success</c>, this field is empty;  </description></item>
-        /// <item><description>Otherwise, this field contains the request error message.</description></item>
+        /// <item><description>If <c>code == Success</c>, this field is empty.</description></item>
+        /// <item><description>Otherwise, this field contains the request error information.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("message")]

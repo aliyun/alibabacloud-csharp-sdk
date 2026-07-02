@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>error code</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Data returned</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<ListPodsOfInstanceResponseBodyData> Data { get; set; }
         public class ListPodsOfInstanceResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Namespace where the pod resides</para>
+            /// <para>The namespace in which the pod resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Namespace { get; set; }
 
             /// <summary>
-            /// <para>Pod Name</para>
+            /// <para>The pod name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-pod</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
-        /// <para>Error message; empty indicates that data reading is complete</para>
+        /// <para>The error message. An empty value indicates that all data has been read.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of records returned by this request</para>
+        /// <para>The maximum number of entries returned for this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>42</para>

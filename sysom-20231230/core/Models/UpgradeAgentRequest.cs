@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class UpgradeAgentRequest : TeaModel {
         /// <summary>
-        /// <para>ID of the widget to update</para>
+        /// <para>The ID of the component to update.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string AgentId { get; set; }
 
         /// <summary>
-        /// <para>Version of the widget to update</para>
+        /// <para>The version to which the component is updated.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string AgentVersion { get; set; }
 
         /// <summary>
-        /// <para>List of instances on which to update the widget</para>
+        /// <para>The list of instances for which you want to update the component.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("instances")]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public List<UpgradeAgentRequestInstances> Instances { get; set; }
         public class UpgradeAgentRequestInstances : TeaModel {
             /// <summary>
-            /// <para>Instance ID.</para>
+            /// <para>The instance ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Instance { get; set; }
 
             /// <summary>
-            /// <para>Region ID.</para>
+            /// <para>The region ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

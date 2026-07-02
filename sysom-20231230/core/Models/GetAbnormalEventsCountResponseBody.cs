@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Returned data.</para>
+        /// <para>Response data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<GetAbnormalEventsCountResponseBodyData> Data { get; set; }
         public class GetAbnormalEventsCountResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Event List</para>
+            /// <para>List of abnormal events.</para>
             /// </summary>
             [NameInMap("eventList")]
             [Validation(Required=false)]
             public List<string> EventList { get; set; }
 
             /// <summary>
-            /// <para>Type of anomaly</para>
+            /// <para>Abnormal event type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>health</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>Quantity of the anomaly type</para>
+            /// <para>Count of abnormal event type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
-        /// <para>When success is false, this value is Not Empty and indicates the error message.</para>
+        /// <para>When success is false, this value is not empty, indicating a business error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>result: code=1 msg=(Request failed, status_code != 200)</para>

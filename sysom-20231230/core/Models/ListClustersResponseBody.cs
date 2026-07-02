@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class ListClustersResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID, which can be used for end-to-end diagnosis</para>
+        /// <para>Request ID, which can be used for end-to-end diagnostics.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B149FD9C-ED5C-5765-B3AD-05AA4A4D64D7</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Status code  </para>
+        /// <para>Status code.</para>
         /// <list type="bullet">
-        /// <item><description>If <c>code == Success</c>, authorization succeeded.  </description></item>
-        /// <item><description>Any other status code indicates authorization failed. When authorization fails, check the <c>message</c> field for detailed error message.</description></item>
+        /// <item><description>If <c>code == Success</c>, the authorization is successful.</description></item>
+        /// <item><description>Other status codes indicate authorization failure. Check the <c>message</c> field for detailed error information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,18 +34,18 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Returned data</para>
+        /// <para>Response data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<ListClustersResponseBodyData> Data { get; set; }
         public class ListClustersResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Actual cluster ID.  </para>
+            /// <para>Actual cluster ID.</para>
             /// <remarks>
             /// <list type="bullet">
-            /// <item><description>For <c>ACK</c> type clusters, this ID is the ACK cluster ID.  </description></item>
-            /// <item><description>For <c>CUSTOM</c> type clusters, this ID serves as a UUID and has no additional meaning.</description></item>
+            /// <item><description>For <c>ACK</c> type clusters, this cluster ID is the ACK cluster ID.</description></item>
+            /// <item><description>For <c>CUSTOM</c> type clusters, this cluster ID serves as a unique identifier with no additional meaning.</description></item>
             /// </list>
             /// </remarks>
             /// 
@@ -58,11 +58,11 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 
             /// <summary>
             /// <list type="bullet">
-            /// <item><description><c>Running</c>: Cluster management is normal.  </description></item>
-            /// <item><description><c>Installing</c>: An install job is in progress for the cluster.  </description></item>
-            /// <item><description><c>Uninstalling</c>: An uninstall job is in progress for the cluster.  </description></item>
-            /// <item><description><c>Upgrading</c>: An update job is in progress for the cluster.  </description></item>
-            /// <item><description><c>Offline</c>: The cluster is offline and cluster management is abnormal.</description></item>
+            /// <item><description><c>Running</c>: The cluster is managed normally.</description></item>
+            /// <item><description><c>Installing</c>: The cluster has an installation task in progress.</description></item>
+            /// <item><description><c>Uninstalling</c>: The cluster has an uninstallation task in progress.</description></item>
+            /// <item><description><c>Upgrading</c>: The cluster has an upgrade task in progress.</description></item>
+            /// <item><description><c>Offline</c>: The cluster is offline and management is abnormal.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -74,8 +74,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 
             /// <summary>
             /// <list type="bullet">
-            /// <item><description><c>ACK</c>: ACK cluster  </description></item>
-            /// <item><description><c>CUSTOM</c>: Custom cluster (default clusters are classified as custom clusters)</description></item>
+            /// <item><description><c>ACK</c>: ACK cluster.</description></item>
+            /// <item><description><c>CUSTOM</c>: Custom cluster (the default cluster belongs to custom clusters).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string ClusterType { get; set; }
 
             /// <summary>
-            /// <para>Creation Time</para>
+            /// <para>Creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-12-25T15:08:19</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>Cluster ID</para>
+            /// <para>Cluster ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5389fba5-92a1-4ff4-9b26-773b97828144</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>Cluster Name</para>
+            /// <para>Cluster name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>auto-name-sbvCT</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// <para>Update Time</para>
+            /// <para>Update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-12-25T15:08:19</para>
@@ -138,10 +138,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
-        /// <para>Error message  </para>
+        /// <para>Error message.</para>
         /// <list type="bullet">
-        /// <item><description>If <c>code == Success</c>, this field is empty;  </description></item>
-        /// <item><description>Otherwise, this field contains the request error message.</description></item>
+        /// <item><description>If <c>code == Success</c>, this field is empty.</description></item>
+        /// <item><description>Otherwise, this field contains the request error information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Total number of records</para>
+        /// <para>Total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>64</para>

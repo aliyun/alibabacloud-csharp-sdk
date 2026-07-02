@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetHotspotInstanceListRequest : TeaModel {
         /// <summary>
-        /// <para>stop time</para>
+        /// <para>End time</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public long? BegEnd { get; set; }
 
         /// <summary>
-        /// <para>start time</para>
+        /// <para>Start time</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

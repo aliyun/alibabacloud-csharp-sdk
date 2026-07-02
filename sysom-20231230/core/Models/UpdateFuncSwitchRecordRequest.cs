@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class UpdateFuncSwitchRecordRequest : TeaModel {
         /// <summary>
-        /// <para>Diagnosis channel (currently fixed to the ecs channel)</para>
+        /// <para>The diagnostic channel. Currently, this parameter is fixed to the ECS channel.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Channel { get; set; }
 
         /// <summary>
-        /// <para>Diagnosis parameters. Different diagnosis types require different diagnosis parameters. You can use this field to filter records whose parameters match specified values.</para>
+        /// <para>The diagnostic parameters. Different types of diagnostics require different diagnostic parameters. You can use this field to filter records whose parameters match the specified values.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("params")]
@@ -29,14 +29,14 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public UpdateFuncSwitchRecordRequestParams Params { get; set; }
         public class UpdateFuncSwitchRecordRequestParams : TeaModel {
             /// <summary>
-            /// <para>Configuration Parameter</para>
+            /// <para>The configuration parameters.</para>
             /// </summary>
             [NameInMap("args")]
             [Validation(Required=false)]
             public UpdateFuncSwitchRecordRequestParamsArgs Args { get; set; }
             public class UpdateFuncSwitchRecordRequestParamsArgs : TeaModel {
                 /// <summary>
-                /// <para>Configuration process</para>
+                /// <para>The configuration process.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>java</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public string AddCmd { get; set; }
 
                 /// <summary>
-                /// <para>ONCPU tracing Toggle</para>
+                /// <para>The ONCPU tracing switch.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public string Cpu { get; set; }
 
                 /// <summary>
-                /// <para>Duration in seconds (s)</para>
+                /// <para>The start duration, in seconds (s).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3600</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public int? Duration { get; set; }
 
                 /// <summary>
-                /// <para>Storage Path</para>
+                /// <para>The storage path.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/tmp/sysom/java-profiler</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public string JavaStorePath { get; set; }
 
                 /// <summary>
-                /// <para>Edit Lock tracing Toggle</para>
+                /// <para>The lock tracing switch.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public string Locks { get; set; }
 
                 /// <summary>
-                /// <para>Tracing epoch</para>
+                /// <para>The tracing cycle.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>-1</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public int? Loop { get; set; }
 
                 /// <summary>
-                /// <para>Memory tracing Toggle</para>
+                /// <para>The memory tracing switch.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public string Mem { get; set; }
 
                 /// <summary>
-                /// <para>Process PID</para>
+                /// <para>The process PID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1243</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public int? Pid { get; set; }
 
                 /// <summary>
-                /// <para>System tracing toggle</para>
+                /// <para>The system tracing switch.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             }
 
             /// <summary>
-            /// <para>Feature Name</para>
+            /// <para>The feature name.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string FunctionName { get; set; }
 
             /// <summary>
-            /// <para>Instance ID</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-2zei55fwj8nnu31h3z46</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Instance { get; set; }
 
             /// <summary>
-            /// <para>Operation Type</para>
+            /// <para>The operation type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>restart</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Op { get; set; }
 
             /// <summary>
-            /// <para>Region to which the instance belongs. Ensure that all instance IDs passed in the instances field belong to the same region.</para>
+            /// <para>The region to which the instance belongs. All instance IDs passed in instances must belong to the same region.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-beijing</para>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// <para>User ID</para>
+            /// <para>The user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1664516888213680</para>
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
-        /// <para>Service Name</para>
+        /// <para>The service name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

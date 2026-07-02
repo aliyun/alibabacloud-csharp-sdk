@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class StartAIAnalysisRequest : TeaModel {
         /// <summary>
-        /// <para>Analysis tool. This field does not need to be filled in when using OpenAPI.</para>
+        /// <para>Analysis tool. Not required for OpenAPI access.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gp/pyki/analysis</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Channel { get; set; }
 
         /// <summary>
-        /// <para>Process name. This is an optional parameter.</para>
+        /// <para>Process name, optional parameter</para>
         /// 
         /// <b>Example:</b>
         /// <para>python_test</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Comms { get; set; }
 
         /// <summary>
-        /// <para>Creator. You do not need to specify this parameter when using OpenAPI.</para>
+        /// <para>Creator. Not required for OpenAPI access.</para>
         /// 
         /// <b>Example:</b>
         /// <para>445333</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Instance { get; set; }
 
         /// <summary>
-        /// <para>Instance type. This field does not need to be filled in when using OpenAPI.</para>
+        /// <para>Instance type. Not required for OpenAPI access.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ip/sn/hostname</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>Iteration entry function. Required only in iteration mode. This parameter is optional.</para>
+        /// <para>Iteration entry function. Required only in iteration mode. Can be left blank.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Class.function</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string IterationFunc { get; set; }
 
         /// <summary>
-        /// <para>Iteration entry module. Required only in iteration mode. This parameter is optional.</para>
+        /// <para>Iteration entry module. Required only in iteration mode. Can be left blank.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a.b.module</para>
@@ -97,14 +97,14 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string IterationMod { get; set; }
 
         /// <summary>
-        /// <para>Iteration range (iteration count: the number of iterations when the data collection module is activated, independent of the AI job\&quot;s iteration count)</para>
+        /// <para>Iteration range (iteration count: refers to the number of iterations when the data collection module is activated, independent of the AI job\&quot;s iteration count)</para>
         /// </summary>
         [NameInMap("iteration_range")]
         [Validation(Required=false)]
         public List<int?> IterationRange { get; set; }
 
         /// <summary>
-        /// <para>Process IDs (PIDs) of the AI job. Batch input is supported, separated by commas.</para>
+        /// <para>AI job process PIDs. Supports batch input, separated by commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2421,36547,10043</para>
@@ -124,7 +124,9 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>AI Infra analysis duration.<br>Unit: milliseconds.<br>Default value: 2000.</para>
+        /// <para>AI Infra analysis time;
+        /// Unit: milliseconds;
+        /// Default value: 2000;</para>
         /// 
         /// <b>Example:</b>
         /// <para>2000</para>
@@ -134,7 +136,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public int? Timeout { get; set; }
 
         /// <summary>
-        /// <para>Alibaba Cloud User ID. You do not need to specify this parameter when using OpenAPI.</para>
+        /// <para>Alibaba Cloud user ID. Not required for OpenAPI access.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123423414</para>

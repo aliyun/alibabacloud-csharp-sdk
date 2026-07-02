@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetHealthPercentageResponseBody : TeaModel {
         /// <summary>
-        /// <para>Status code  </para>
+        /// <para>The status code.</para>
         /// <list type="bullet">
-        /// <item><description><c>code == Success</c> indicates that authorization succeeded.  </description></item>
-        /// <item><description>Other status codes indicate that authorization failed. When authorization fails, view the <c>message</c> field to obtain detailed error information.</description></item>
+        /// <item><description><c>code == Success</c> indicates that the authorization was successful.</description></item>
+        /// <item><description>Other status codes indicate that the authorization failed. Check the <c>message</c> field for the detailed fault message.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Returned data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<GetHealthPercentageResponseBodyData> Data { get; set; }
         public class GetHealthPercentageResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Health level of the edge zone/pod</para>
+            /// <para>The health level of the node or pod.</para>
             /// 
             /// <b>Example:</b>
             /// <para>health</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>Quantity</para>
+            /// <para>The quantity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
-        /// <para>Error Details</para>
+        /// <para>The error details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>

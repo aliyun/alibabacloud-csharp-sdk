@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class ListAgentsRequest : TeaModel {
         /// <summary>
-        /// <para>Current page number (starting from page 1)</para>
+        /// <para>The current page number. Pages start from page 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public long? Current { get; set; }
 
         /// <summary>
-        /// <para>Filter plugins by plugin name</para>
+        /// <para>Filters plug-ins by plug-in name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SysOM</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Page size</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Retrieve the list based on the Agent Type. For example, passing &quot;control&quot; retrieves all control-type Agents.</para>
+        /// <para>The agent type used to filter the list. For example, set this parameter to control to retrieve all agents of the control type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>control</para>

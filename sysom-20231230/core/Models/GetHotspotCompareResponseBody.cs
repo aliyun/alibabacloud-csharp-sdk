@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetHotspotCompareResponseBody : TeaModel {
         /// <summary>
-        /// <para>error code</para>
+        /// <para>Error code</para>
         /// 
         /// <b>Example:</b>
         /// <para>SysomOpenAPI.ServerError</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Returned data</para>
+        /// <para>Response data</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public GetHotspotCompareResponseBodyDataFlame Flame { get; set; }
             public class GetHotspotCompareResponseBodyDataFlame : TeaModel {
                 /// <summary>
-                /// <para>List of column names</para>
+                /// <para>Field name list</para>
                 /// </summary>
                 [NameInMap("columns")]
                 [Validation(Required=false)]
                 public List<string> Columns { get; set; }
 
                 /// <summary>
-                /// <para>List of flame graph data</para>
+                /// <para>Flame graph data list</para>
                 /// </summary>
                 [NameInMap("values")]
                 [Validation(Required=false)]
@@ -50,21 +50,21 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             }
 
             /// <summary>
-            /// <para>Hot spot timing series 1</para>
+            /// <para>Hotspot time series 1</para>
             /// </summary>
             [NameInMap("series_instance1")]
             [Validation(Required=false)]
             public GetHotspotCompareResponseBodyDataSeriesInstance1 SeriesInstance1 { get; set; }
             public class GetHotspotCompareResponseBodyDataSeriesInstance1 : TeaModel {
                 /// <summary>
-                /// <para>List of column names</para>
+                /// <para>Field name list</para>
                 /// </summary>
                 [NameInMap("columns")]
                 [Validation(Required=false)]
                 public List<string> Columns { get; set; }
 
                 /// <summary>
-                /// <para>List of hot spot metric data</para>
+                /// <para>Hotspot time series data list</para>
                 /// </summary>
                 [NameInMap("values")]
                 [Validation(Required=false)]
@@ -73,21 +73,21 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             }
 
             /// <summary>
-            /// <para>Hot spot metric series 2</para>
+            /// <para>Hotspot time series 2</para>
             /// </summary>
             [NameInMap("series_instance2")]
             [Validation(Required=false)]
             public GetHotspotCompareResponseBodyDataSeriesInstance2 SeriesInstance2 { get; set; }
             public class GetHotspotCompareResponseBodyDataSeriesInstance2 : TeaModel {
                 /// <summary>
-                /// <para>List of column names</para>
+                /// <para>Field name list</para>
                 /// </summary>
                 [NameInMap("columns")]
                 [Validation(Required=false)]
                 public List<string> Columns { get; set; }
 
                 /// <summary>
-                /// <para>List of hot spot metric data</para>
+                /// <para>Hotspot time series data list</para>
                 /// </summary>
                 [NameInMap("values")]
                 [Validation(Required=false)]
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
-        /// <para>Return message</para>
+        /// <para>Response message</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>true indicates that the API call succeeded; false indicates that the API call failed.</para>
+        /// <para>true: API call succeeded; false: API call failed</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

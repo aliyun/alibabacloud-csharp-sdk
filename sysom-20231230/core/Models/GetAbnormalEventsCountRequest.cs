@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetAbnormalEventsCountRequest : TeaModel {
         /// <summary>
-        /// <para>cluster ID</para>
+        /// <para>Cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2ijff4be-bf24-4070-89ca-c47c879b0g32</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Cluster { get; set; }
 
         /// <summary>
-        /// <para>End time</para>
+        /// <para>End time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1725801327754</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public float? End { get; set; }
 
         /// <summary>
-        /// <para>instance ID.</para>
+        /// <para>Instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-wz9d00ut2ska3mlyhn6j</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Instance { get; set; }
 
         /// <summary>
-        /// <para>Level of the anomalous activity</para>
+        /// <para>Level of abnormal events.</para>
         /// 
         /// <b>Example:</b>
         /// <para>potential</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Level { get; set; }
 
         /// <summary>
-        /// <para>Namespace where the pod is located</para>
+        /// <para>The namespace where the Pod resides.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>Name of the pod</para>
+        /// <para>Pod name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-pod</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Pod { get; set; }
 
         /// <summary>
-        /// <para>is whether to display pod anomalous activity</para>
+        /// <para>Whether to display Pod abnormal events.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public int? ShowPod { get; set; }
 
         /// <summary>
-        /// <para>Start time</para>
+        /// <para>Start time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1725797727754</para>

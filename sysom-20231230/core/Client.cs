@@ -18,7 +18,11 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"cn-hangzhou", "sysom.cn-hangzhou.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("sysom", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -39,19 +43,19 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API is used to authorize SysOM to diagnose ECS instances under your account. You can only invoke the InvokeDiagnosis API to initiate diagnosis on a specific ECS instance after authorizing it through this API.</para>
+        /// <para>Authorizes SysOM to diagnose ECS instances under the current account. You must call this operation to authorize diagnostics for a specific ECS instance before you can call the InvokeDiagnosis operation to initiate diagnostics on it.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: The diagnosis feature requires a service-linked role to be created under a Resource Access Management (RAM) user. When you call this API, it automatically checks whether the service-linked role exists. If the role does not exist, the API automatically creates it. This requires the RAM user invoking this API to have the ram:CreateServiceLinkedRole permission.</notice>
-        /// When calling this API to authorize SysOM to diagnose ECS instances, note the following:</para>
+        /// <para>Notice: The diagnostics feature requires a service-linked role to be created under the Resource Access Management (RAM) user. This operation automatically checks whether the service-linked role exists and creates it if it does not. The RAM user that invokes this operation must have the ram:CreateServiceLinkedRole permission.</notice>
+        /// Note the following when you invoke this operation to authorize SysOM to diagnose ECS instances:</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>Each authorization is valid for 7 days. After 7 days, the authorization expires, and you must call this API again to re-authorize.</description></item>
-        /// <item><description>If the SysOM service-linked role (AliyunServiceRoleForSysom) does not exist when you call this API, it will be automatically created. This requires the RAM user invoking this API to have the <c>ram:CreateServiceLinkedRole</c> permission.</description></item>
-        /// <item><description>When you authorize a specific instance through this API, the system automatically adds the label <c>sysom:diagnosis</c> to the target ECS instance. SysOM can only diagnose instances that have this label.</description></item>
+        /// <item><description>Each authorization is valid for 7 days. After the authorization expires, invoke this operation again to re-authorize.</description></item>
+        /// <item><description>If the SysOM service-linked role (AliyunServiceRoleForSysom) does not exist when you invoke this operation, automatic creation is performed. The RAM user that invokes this operation must have the <c>ram:CreateServiceLinkedRole</c> permission.</description></item>
+        /// <item><description>When you invoke this operation to authorize diagnostics for a specific instance, the label <c>sysom:diagnosis</c> is automatically associated with the target ECS instance. SysOM only allows diagnostics on instances that have this label.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -106,19 +110,19 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API is used to authorize SysOM to diagnose ECS instances under your account. You can only invoke the InvokeDiagnosis API to initiate diagnosis on a specific ECS instance after authorizing it through this API.</para>
+        /// <para>Authorizes SysOM to diagnose ECS instances under the current account. You must call this operation to authorize diagnostics for a specific ECS instance before you can call the InvokeDiagnosis operation to initiate diagnostics on it.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: The diagnosis feature requires a service-linked role to be created under a Resource Access Management (RAM) user. When you call this API, it automatically checks whether the service-linked role exists. If the role does not exist, the API automatically creates it. This requires the RAM user invoking this API to have the ram:CreateServiceLinkedRole permission.</notice>
-        /// When calling this API to authorize SysOM to diagnose ECS instances, note the following:</para>
+        /// <para>Notice: The diagnostics feature requires a service-linked role to be created under the Resource Access Management (RAM) user. This operation automatically checks whether the service-linked role exists and creates it if it does not. The RAM user that invokes this operation must have the ram:CreateServiceLinkedRole permission.</notice>
+        /// Note the following when you invoke this operation to authorize SysOM to diagnose ECS instances:</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>Each authorization is valid for 7 days. After 7 days, the authorization expires, and you must call this API again to re-authorize.</description></item>
-        /// <item><description>If the SysOM service-linked role (AliyunServiceRoleForSysom) does not exist when you call this API, it will be automatically created. This requires the RAM user invoking this API to have the <c>ram:CreateServiceLinkedRole</c> permission.</description></item>
-        /// <item><description>When you authorize a specific instance through this API, the system automatically adds the label <c>sysom:diagnosis</c> to the target ECS instance. SysOM can only diagnose instances that have this label.</description></item>
+        /// <item><description>Each authorization is valid for 7 days. After the authorization expires, invoke this operation again to re-authorize.</description></item>
+        /// <item><description>If the SysOM service-linked role (AliyunServiceRoleForSysom) does not exist when you invoke this operation, automatic creation is performed. The RAM user that invokes this operation must have the <c>ram:CreateServiceLinkedRole</c> permission.</description></item>
+        /// <item><description>When you invoke this operation to authorize diagnostics for a specific instance, the label <c>sysom:diagnosis</c> is automatically associated with the target ECS instance. SysOM only allows diagnostics on instances that have this label.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -173,19 +177,19 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API is used to authorize SysOM to diagnose ECS instances under your account. You can only invoke the InvokeDiagnosis API to initiate diagnosis on a specific ECS instance after authorizing it through this API.</para>
+        /// <para>Authorizes SysOM to diagnose ECS instances under the current account. You must call this operation to authorize diagnostics for a specific ECS instance before you can call the InvokeDiagnosis operation to initiate diagnostics on it.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: The diagnosis feature requires a service-linked role to be created under a Resource Access Management (RAM) user. When you call this API, it automatically checks whether the service-linked role exists. If the role does not exist, the API automatically creates it. This requires the RAM user invoking this API to have the ram:CreateServiceLinkedRole permission.</notice>
-        /// When calling this API to authorize SysOM to diagnose ECS instances, note the following:</para>
+        /// <para>Notice: The diagnostics feature requires a service-linked role to be created under the Resource Access Management (RAM) user. This operation automatically checks whether the service-linked role exists and creates it if it does not. The RAM user that invokes this operation must have the ram:CreateServiceLinkedRole permission.</notice>
+        /// Note the following when you invoke this operation to authorize SysOM to diagnose ECS instances:</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>Each authorization is valid for 7 days. After 7 days, the authorization expires, and you must call this API again to re-authorize.</description></item>
-        /// <item><description>If the SysOM service-linked role (AliyunServiceRoleForSysom) does not exist when you call this API, it will be automatically created. This requires the RAM user invoking this API to have the <c>ram:CreateServiceLinkedRole</c> permission.</description></item>
-        /// <item><description>When you authorize a specific instance through this API, the system automatically adds the label <c>sysom:diagnosis</c> to the target ECS instance. SysOM can only diagnose instances that have this label.</description></item>
+        /// <item><description>Each authorization is valid for 7 days. After the authorization expires, invoke this operation again to re-authorize.</description></item>
+        /// <item><description>If the SysOM service-linked role (AliyunServiceRoleForSysom) does not exist when you invoke this operation, automatic creation is performed. The RAM user that invokes this operation must have the <c>ram:CreateServiceLinkedRole</c> permission.</description></item>
+        /// <item><description>When you invoke this operation to authorize diagnostics for a specific instance, the label <c>sysom:diagnosis</c> is automatically associated with the target ECS instance. SysOM only allows diagnostics on instances that have this label.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -205,19 +209,19 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API is used to authorize SysOM to diagnose ECS instances under your account. You can only invoke the InvokeDiagnosis API to initiate diagnosis on a specific ECS instance after authorizing it through this API.</para>
+        /// <para>Authorizes SysOM to diagnose ECS instances under the current account. You must call this operation to authorize diagnostics for a specific ECS instance before you can call the InvokeDiagnosis operation to initiate diagnostics on it.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: The diagnosis feature requires a service-linked role to be created under a Resource Access Management (RAM) user. When you call this API, it automatically checks whether the service-linked role exists. If the role does not exist, the API automatically creates it. This requires the RAM user invoking this API to have the ram:CreateServiceLinkedRole permission.</notice>
-        /// When calling this API to authorize SysOM to diagnose ECS instances, note the following:</para>
+        /// <para>Notice: The diagnostics feature requires a service-linked role to be created under the Resource Access Management (RAM) user. This operation automatically checks whether the service-linked role exists and creates it if it does not. The RAM user that invokes this operation must have the ram:CreateServiceLinkedRole permission.</notice>
+        /// Note the following when you invoke this operation to authorize SysOM to diagnose ECS instances:</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>Each authorization is valid for 7 days. After 7 days, the authorization expires, and you must call this API again to re-authorize.</description></item>
-        /// <item><description>If the SysOM service-linked role (AliyunServiceRoleForSysom) does not exist when you call this API, it will be automatically created. This requires the RAM user invoking this API to have the <c>ram:CreateServiceLinkedRole</c> permission.</description></item>
-        /// <item><description>When you authorize a specific instance through this API, the system automatically adds the label <c>sysom:diagnosis</c> to the target ECS instance. SysOM can only diagnose instances that have this label.</description></item>
+        /// <item><description>Each authorization is valid for 7 days. After the authorization expires, invoke this operation again to re-authorize.</description></item>
+        /// <item><description>If the SysOM service-linked role (AliyunServiceRoleForSysom) does not exist when you invoke this operation, automatic creation is performed. The RAM user that invokes this operation must have the <c>ram:CreateServiceLinkedRole</c> permission.</description></item>
+        /// <item><description>When you invoke this operation to authorize diagnostics for a specific instance, the label <c>sysom:diagnosis</c> is automatically associated with the target ECS instance. SysOM only allows diagnostics on instances that have this label.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -237,12 +241,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check whether the target instance is supported by SysOM</para>
+        /// <para>Checks whether a target instance is supported by SysOM.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The instance list returned by this API includes only machines that are already managed by SysOM. If an ECS instance exists but is not managed by SysOM, it will not appear in the list.</para>
+        /// <para>This operation retrieves the list of instances that are already managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -292,12 +296,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check whether the target instance is supported by SysOM</para>
+        /// <para>Checks whether a target instance is supported by SysOM.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The instance list returned by this API includes only machines that are already managed by SysOM. If an ECS instance exists but is not managed by SysOM, it will not appear in the list.</para>
+        /// <para>This operation retrieves the list of instances that are already managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -347,12 +351,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check whether the target instance is supported by SysOM</para>
+        /// <para>Checks whether a target instance is supported by SysOM.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The instance list returned by this API includes only machines that are already managed by SysOM. If an ECS instance exists but is not managed by SysOM, it will not appear in the list.</para>
+        /// <para>This operation retrieves the list of instances that are already managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -371,12 +375,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check whether the target instance is supported by SysOM</para>
+        /// <para>Checks whether a target instance is supported by SysOM.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The instance list returned by this API includes only machines that are already managed by SysOM. If an ECS instance exists but is not managed by SysOM, it will not appear in the list.</para>
+        /// <para>This operation retrieves the list of instances that are already managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -395,7 +399,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>High-CPU agent streaming API</para>
+        /// <para>Calls the CPU High Agent streaming SSE interface.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -441,7 +445,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>High-CPU agent streaming API</para>
+        /// <para>Calls the CPU High Agent streaming SSE interface.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -487,7 +491,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>High-CPU agent streaming API</para>
+        /// <para>Calls the CPU High Agent streaming SSE interface.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -506,7 +510,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>High-CPU agent streaming API</para>
+        /// <para>Calls the CPU High Agent streaming SSE interface.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -525,7 +529,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API is used to create an alert contact for push notifications.</para>
+        /// <para>Creates a contact for alert notifications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -583,7 +587,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API is used to create an alert contact for push notifications.</para>
+        /// <para>Creates a contact for alert notifications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -641,7 +645,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API is used to create an alert contact for push notifications.</para>
+        /// <para>Creates a contact for alert notifications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -660,7 +664,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API is used to create an alert contact for push notifications.</para>
+        /// <para>Creates a contact for alert notifications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -679,7 +683,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create an alert policy for push notifications</para>
+        /// <para>Creates an alert push strategy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -737,7 +741,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create an alert policy for push notifications</para>
+        /// <para>Creates an alert push strategy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -795,7 +799,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create an alert policy for push notifications</para>
+        /// <para>Creates an alert push strategy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -814,7 +818,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create an alert policy for push notifications</para>
+        /// <para>Creates an alert push strategy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1015,7 +1019,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实例巡检</para>
+        /// <para>Creates a SysOM instance inspection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1077,7 +1081,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实例巡检</para>
+        /// <para>Creates a SysOM instance inspection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1139,7 +1143,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实例巡检</para>
+        /// <para>Creates a SysOM instance inspection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1158,7 +1162,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实例巡检</para>
+        /// <para>Creates a SysOM instance inspection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1177,7 +1181,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API creates an intelligent breakdown diagnosis task to diagnose the vmcore or dmesg log file provided in the parameters.</para>
+        /// <para>Creates an intelligent breakdown diagnostic node that diagnoses the specified vmcore or dmesg log file based on the input parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1239,7 +1243,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API creates an intelligent breakdown diagnosis task to diagnose the vmcore or dmesg log file provided in the parameters.</para>
+        /// <para>Creates an intelligent breakdown diagnostic node that diagnoses the specified vmcore or dmesg log file based on the input parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1301,7 +1305,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API creates an intelligent breakdown diagnosis task to diagnose the vmcore or dmesg log file provided in the parameters.</para>
+        /// <para>Creates an intelligent breakdown diagnostic node that diagnoses the specified vmcore or dmesg log file based on the input parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1320,7 +1324,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API creates an intelligent breakdown diagnosis task to diagnose the vmcore or dmesg log file provided in the parameters.</para>
+        /// <para>Creates an intelligent breakdown diagnostic node that diagnoses the specified vmcore or dmesg log file based on the input parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1339,7 +1343,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API is used to delete an alert contact.</para>
+        /// <para>Deletes an alert contact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1385,7 +1389,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API is used to delete an alert contact.</para>
+        /// <para>Deletes an alert contact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1431,7 +1435,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API is used to delete an alert contact.</para>
+        /// <para>Deletes an alert contact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1450,7 +1454,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API is used to delete an alert contact.</para>
+        /// <para>Deletes an alert contact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1469,7 +1473,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>User deletes the alert policy for push notifications.</para>
+        /// <para>Deletes an alert policy for push notifications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1515,7 +1519,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>User deletes the alert policy for push notifications.</para>
+        /// <para>Deletes an alert policy for push notifications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1561,7 +1565,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>User deletes the alert policy for push notifications.</para>
+        /// <para>Deletes an alert policy for push notifications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1580,7 +1584,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>User deletes the alert policy for push notifications.</para>
+        /// <para>Deletes an alert policy for push notifications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1599,12 +1603,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query metrics</para>
+        /// <para>Queries metric data.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The instance list obtained by this API includes only the machines that are already managed by SysOM. If an ECS instance exists but is not managed by SysOM, it will not appear in the list.</para>
+        /// <para>The instance list returned by this operation contains only instances that are managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1662,12 +1666,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query metrics</para>
+        /// <para>Queries metric data.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The instance list obtained by this API includes only the machines that are already managed by SysOM. If an ECS instance exists but is not managed by SysOM, it will not appear in the list.</para>
+        /// <para>The instance list returned by this operation contains only instances that are managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1725,12 +1729,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query metrics</para>
+        /// <para>Queries metric data.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The instance list obtained by this API includes only the machines that are already managed by SysOM. If an ECS instance exists but is not managed by SysOM, it will not appear in the list.</para>
+        /// <para>The instance list returned by this operation contains only instances that are managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1749,12 +1753,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query metrics</para>
+        /// <para>Queries metric data.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The instance list obtained by this API includes only the machines that are already managed by SysOM. If an ECS instance exists but is not managed by SysOM, it will not appear in the list.</para>
+        /// <para>The instance list returned by this operation contains only instances that are managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1773,14 +1777,14 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the Return Result of the copilot service</para>
+        /// <para>Get the response result of the copilot service</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You must fill in the input parameters according to the standard LLM service input parameters, convert them into a string, and assign the result to llmParamString.  </description></item>
-        /// <item><description>The returned data must be converted from a string to a dict before use. Refer to the standard LLM service return format.</description></item>
+        /// <item><description>Parameters need to be filled in according to the standard LLM service input parameters, converted to a string, and assigned to llmParamString</description></item>
+        /// <item><description>The returned data needs to be converted from string to dict before use. Refer to the standard LLM service response format</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1827,14 +1831,14 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the Return Result of the copilot service</para>
+        /// <para>Get the response result of the copilot service</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You must fill in the input parameters according to the standard LLM service input parameters, convert them into a string, and assign the result to llmParamString.  </description></item>
-        /// <item><description>The returned data must be converted from a string to a dict before use. Refer to the standard LLM service return format.</description></item>
+        /// <item><description>Parameters need to be filled in according to the standard LLM service input parameters, converted to a string, and assigned to llmParamString</description></item>
+        /// <item><description>The returned data needs to be converted from string to dict before use. Refer to the standard LLM service response format</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1881,14 +1885,14 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the Return Result of the copilot service</para>
+        /// <para>Get the response result of the copilot service</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You must fill in the input parameters according to the standard LLM service input parameters, convert them into a string, and assign the result to llmParamString.  </description></item>
-        /// <item><description>The returned data must be converted from a string to a dict before use. Refer to the standard LLM service return format.</description></item>
+        /// <item><description>Parameters need to be filled in according to the standard LLM service input parameters, converted to a string, and assigned to llmParamString</description></item>
+        /// <item><description>The returned data needs to be converted from string to dict before use. Refer to the standard LLM service response format</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1908,14 +1912,14 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the Return Result of the copilot service</para>
+        /// <para>Get the response result of the copilot service</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You must fill in the input parameters according to the standard LLM service input parameters, convert them into a string, and assign the result to llmParamString.  </description></item>
-        /// <item><description>The returned data must be converted from a string to a dict before use. Refer to the standard LLM service return format.</description></item>
+        /// <item><description>Parameters need to be filled in according to the standard LLM service input parameters, converted to a string, and assigned to llmParamString</description></item>
+        /// <item><description>The returned data needs to be converted from string to dict before use. Refer to the standard LLM service response format</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1935,15 +1939,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stream Copilot service API</para>
+        /// <para>Calls the streaming SSE endpoint of the OS Copilot service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Must be used together with the call_sseapi API of the aliyun-tea-openapi-inner package.  </description></item>
-        /// <item><description>You must populate the input parameters according to the standard LLM service input parameters, convert them into a string, and assign the result to llmParamString.  </description></item>
-        /// <item><description>The returned data is a string that you must convert into a dictionary for use, following the standard LLM service response format.</description></item>
+        /// <item><description>Use this operation together with the call_sseapi operation in the aliyun-tea-openapi-inner package.</description></item>
+        /// <item><description>Populate the parameters based on the standard LLM service input parameters, convert them to a string, and assign the string to llmParamString.</description></item>
+        /// <item><description>Convert the returned string to a dictionary before use. Refer to the standard LLM service response format.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1990,15 +1994,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stream Copilot service API</para>
+        /// <para>Calls the streaming SSE endpoint of the OS Copilot service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Must be used together with the call_sseapi API of the aliyun-tea-openapi-inner package.  </description></item>
-        /// <item><description>You must populate the input parameters according to the standard LLM service input parameters, convert them into a string, and assign the result to llmParamString.  </description></item>
-        /// <item><description>The returned data is a string that you must convert into a dictionary for use, following the standard LLM service response format.</description></item>
+        /// <item><description>Use this operation together with the call_sseapi operation in the aliyun-tea-openapi-inner package.</description></item>
+        /// <item><description>Populate the parameters based on the standard LLM service input parameters, convert them to a string, and assign the string to llmParamString.</description></item>
+        /// <item><description>Convert the returned string to a dictionary before use. Refer to the standard LLM service response format.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2045,15 +2049,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stream Copilot service API</para>
+        /// <para>Calls the streaming SSE endpoint of the OS Copilot service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Must be used together with the call_sseapi API of the aliyun-tea-openapi-inner package.  </description></item>
-        /// <item><description>You must populate the input parameters according to the standard LLM service input parameters, convert them into a string, and assign the result to llmParamString.  </description></item>
-        /// <item><description>The returned data is a string that you must convert into a dictionary for use, following the standard LLM service response format.</description></item>
+        /// <item><description>Use this operation together with the call_sseapi operation in the aliyun-tea-openapi-inner package.</description></item>
+        /// <item><description>Populate the parameters based on the standard LLM service input parameters, convert them to a string, and assign the string to llmParamString.</description></item>
+        /// <item><description>Convert the returned string to a dictionary before use. Refer to the standard LLM service response format.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2073,15 +2077,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stream Copilot service API</para>
+        /// <para>Calls the streaming SSE endpoint of the OS Copilot service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Must be used together with the call_sseapi API of the aliyun-tea-openapi-inner package.  </description></item>
-        /// <item><description>You must populate the input parameters according to the standard LLM service input parameters, convert them into a string, and assign the result to llmParamString.  </description></item>
-        /// <item><description>The returned data is a string that you must convert into a dictionary for use, following the standard LLM service response format.</description></item>
+        /// <item><description>Use this operation together with the call_sseapi operation in the aliyun-tea-openapi-inner package.</description></item>
+        /// <item><description>Populate the parameters based on the standard LLM service input parameters, convert them to a string, and assign the string to llmParamString.</description></item>
+        /// <item><description>Convert the returned string to a dictionary before use. Refer to the standard LLM service response format.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2101,7 +2105,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View AI Infra Analysis Result</para>
+        /// <para>Queries the AI Infra analysis results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2147,7 +2151,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View AI Infra Analysis Result</para>
+        /// <para>Queries the AI Infra analysis results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2193,7 +2197,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View AI Infra Analysis Result</para>
+        /// <para>Queries the AI Infra analysis results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2212,7 +2216,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View AI Infra Analysis Result</para>
+        /// <para>Queries the AI Infra analysis results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2231,7 +2235,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the quantity of unprocessed (undiagnosed) anomalous activity at different Levels for edge zones/pods.</para>
+        /// <para>Get the count of unhandled (undiagnosed) abnormal events of different levels for nodes/Pods</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2305,7 +2309,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the quantity of unprocessed (undiagnosed) anomalous activity at different Levels for edge zones/pods.</para>
+        /// <para>Get the count of unhandled (undiagnosed) abnormal events of different levels for nodes/Pods</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2379,7 +2383,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the quantity of unprocessed (undiagnosed) anomalous activity at different Levels for edge zones/pods.</para>
+        /// <para>Get the count of unhandled (undiagnosed) abnormal events of different levels for nodes/Pods</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2398,7 +2402,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the quantity of unprocessed (undiagnosed) anomalous activity at different Levels for edge zones/pods.</para>
+        /// <para>Get the count of unhandled (undiagnosed) abnormal events of different levels for nodes/Pods</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2417,7 +2421,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the details of a widget</para>
+        /// <para>Get details of a specific agent</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2463,7 +2467,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the details of a widget</para>
+        /// <para>Get details of a specific agent</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2509,7 +2513,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the details of a widget</para>
+        /// <para>Get details of a specific agent</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2528,7 +2532,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the details of a widget</para>
+        /// <para>Get details of a specific agent</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2547,7 +2551,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the task execution status of Agent installation</para>
+        /// <para>Retrieves the execution status of an Agent installation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2593,7 +2597,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the task execution status of Agent installation</para>
+        /// <para>Retrieves the execution status of an Agent installation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2639,7 +2643,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the task execution status of Agent installation</para>
+        /// <para>Retrieves the execution status of an Agent installation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2658,7 +2662,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the task execution status of Agent installation</para>
+        /// <para>Retrieves the execution status of an Agent installation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2677,7 +2681,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API is used to obtain the specified alert contact information.</para>
+        /// <para>Retrieves the information of a specified alert contact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2723,7 +2727,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API is used to obtain the specified alert contact information.</para>
+        /// <para>Retrieves the information of a specified alert contact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2769,7 +2773,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API is used to obtain the specified alert contact information.</para>
+        /// <para>Retrieves the information of a specified alert contact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2788,7 +2792,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API is used to obtain the specified alert contact information.</para>
+        /// <para>Retrieves the information of a specified alert contact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2807,7 +2811,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain an alert for a user by policy ID.</para>
+        /// <para>Retrieves an alert for a user based on the policy ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2853,7 +2857,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain an alert for a user by policy ID.</para>
+        /// <para>Retrieves an alert for a user based on the policy ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2899,7 +2903,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain an alert for a user by policy ID.</para>
+        /// <para>Retrieves an alert for a user based on the policy ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2918,7 +2922,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain an alert for a user by policy ID.</para>
+        /// <para>Retrieves an alert for a user based on the policy ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2937,7 +2941,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve copilot chat history</para>
+        /// <para>Retrieves the chat history of Copilot.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2983,7 +2987,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve copilot chat history</para>
+        /// <para>Retrieves the chat history of Copilot.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3029,7 +3033,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve copilot chat history</para>
+        /// <para>Retrieves the chat history of Copilot.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3048,7 +3052,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve copilot chat history</para>
+        /// <para>Retrieves the chat history of Copilot.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3067,12 +3071,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the diagnosis result.</para>
+        /// <para>Retrieves the diagnostic result.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The diagnosis flow is asynchronous. Therefore, when you invoke this API, the diagnosis may still be executing and not yet ended. You can check the <c>data.status</c> field in the returned data to determine the status. When <c>data.status == &quot;Success&quot;</c>, it indicates that the diagnosis succeeded, and you can read the diagnosis result from <c>data.result</c>.</para>
+        /// <para>The diagnostic process is asynchronous. When you call this operation, the diagnosis may still be in progress. You can check the <c>data.status</c> field in the response to determine the status. When <c>data.status == Success</c>, the diagnosis is complete and you can read the diagnostic result from <c>data.result</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3118,12 +3122,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the diagnosis result.</para>
+        /// <para>Retrieves the diagnostic result.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The diagnosis flow is asynchronous. Therefore, when you invoke this API, the diagnosis may still be executing and not yet ended. You can check the <c>data.status</c> field in the returned data to determine the status. When <c>data.status == &quot;Success&quot;</c>, it indicates that the diagnosis succeeded, and you can read the diagnosis result from <c>data.result</c>.</para>
+        /// <para>The diagnostic process is asynchronous. When you call this operation, the diagnosis may still be in progress. You can check the <c>data.status</c> field in the response to determine the status. When <c>data.status == Success</c>, the diagnosis is complete and you can read the diagnostic result from <c>data.result</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3169,12 +3173,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the diagnosis result.</para>
+        /// <para>Retrieves the diagnostic result.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The diagnosis flow is asynchronous. Therefore, when you invoke this API, the diagnosis may still be executing and not yet ended. You can check the <c>data.status</c> field in the returned data to determine the status. When <c>data.status == &quot;Success&quot;</c>, it indicates that the diagnosis succeeded, and you can read the diagnosis result from <c>data.result</c>.</para>
+        /// <para>The diagnostic process is asynchronous. When you call this operation, the diagnosis may still be in progress. You can check the <c>data.status</c> field in the response to determine the status. When <c>data.status == Success</c>, the diagnosis is complete and you can read the diagnostic result from <c>data.result</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3193,12 +3197,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the diagnosis result.</para>
+        /// <para>Retrieves the diagnostic result.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The diagnosis flow is asynchronous. Therefore, when you invoke this API, the diagnosis may still be executing and not yet ended. You can check the <c>data.status</c> field in the returned data to determine the status. When <c>data.status == &quot;Success&quot;</c>, it indicates that the diagnosis succeeded, and you can read the diagnosis result from <c>data.result</c>.</para>
+        /// <para>The diagnostic process is asynchronous. When you call this operation, the diagnosis may still be in progress. You can check the <c>data.status</c> field in the response to determine the status. When <c>data.status == Success</c>, the diagnosis is complete and you can read the diagnostic result from <c>data.result</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3217,7 +3221,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the proportion of edge zone/pod health statuses over a period of time</para>
+        /// <para>Retrieves the health status distribution of nodes or pods over a specified time period.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3275,7 +3279,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the proportion of edge zone/pod health statuses over a period of time</para>
+        /// <para>Retrieves the health status distribution of nodes or pods over a specified time period.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3333,7 +3337,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the proportion of edge zone/pod health statuses over a period of time</para>
+        /// <para>Retrieves the health status distribution of nodes or pods over a specified time period.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3352,7 +3356,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the proportion of edge zone/pod health statuses over a period of time</para>
+        /// <para>Retrieves the health status distribution of nodes or pods over a specified time period.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3371,7 +3375,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the number of edge zones in a cluster or the number of pods in an edge zone</para>
+        /// <para>Retrieves the number of nodes or the number of Pods on nodes in a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3429,7 +3433,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the number of edge zones in a cluster or the number of pods in an edge zone</para>
+        /// <para>Retrieves the number of nodes or the number of Pods on nodes in a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3487,7 +3491,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the number of edge zones in a cluster or the number of pods in an edge zone</para>
+        /// <para>Retrieves the number of nodes or the number of Pods on nodes in a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3506,7 +3510,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the number of edge zones in a cluster or the number of pods in an edge zone</para>
+        /// <para>Retrieves the number of nodes or the number of Pods on nodes in a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3525,7 +3529,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the list of a specific field under an instance.</para>
+        /// <para>Get the list of a specific field under an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3591,7 +3595,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the list of a specific field under an instance.</para>
+        /// <para>Get the list of a specific field under an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3657,7 +3661,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the list of a specific field under an instance.</para>
+        /// <para>Get the list of a specific field under an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3676,7 +3680,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the list of a specific field under an instance.</para>
+        /// <para>Get the list of a specific field under an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3695,7 +3699,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain hot spot analysis results</para>
+        /// <para>Retrieves hot spot analysis results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3761,7 +3765,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain hot spot analysis results</para>
+        /// <para>Retrieves hot spot analysis results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3827,7 +3831,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain hot spot analysis results</para>
+        /// <para>Retrieves hot spot analysis results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3846,7 +3850,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain hot spot analysis results</para>
+        /// <para>Retrieves hot spot analysis results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3865,7 +3869,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain hot spot comparison tracing results</para>
+        /// <para>Get Hotspot Comparison Tracing Results</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3947,7 +3951,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain hot spot comparison tracing results</para>
+        /// <para>Get Hotspot Comparison Tracing Results</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4029,7 +4033,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain hot spot comparison tracing results</para>
+        /// <para>Get Hotspot Comparison Tracing Results</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4048,7 +4052,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain hot spot comparison tracing results</para>
+        /// <para>Get Hotspot Comparison Tracing Results</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4067,7 +4071,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the hot spot instance list</para>
+        /// <para>Get Hotspot Instance List</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4121,7 +4125,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the hot spot instance list</para>
+        /// <para>Get Hotspot Instance List</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4175,7 +4179,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the hot spot instance list</para>
+        /// <para>Get Hotspot Instance List</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4194,7 +4198,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the hot spot instance list</para>
+        /// <para>Get Hotspot Instance List</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4213,7 +4217,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the PID list of a specific instance</para>
+        /// <para>Retrieves the PID list of a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4271,7 +4275,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the PID list of a specific instance</para>
+        /// <para>Retrieves the PID list of a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4329,7 +4333,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the PID list of a specific instance</para>
+        /// <para>Retrieves the PID list of a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4348,7 +4352,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the PID list of a specific instance</para>
+        /// <para>Retrieves the PID list of a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4367,7 +4371,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain hot spot tracing results</para>
+        /// <para>Retrieves hot spot tracking results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4433,7 +4437,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain hot spot tracing results</para>
+        /// <para>Retrieves hot spot tracking results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4499,7 +4503,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain hot spot tracing results</para>
+        /// <para>Retrieves hot spot tracking results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4518,7 +4522,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain hot spot tracing results</para>
+        /// <para>Retrieves hot spot tracking results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4537,7 +4541,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取巡检报告</para>
+        /// <para>Retrieves a SysOM inspection report.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4583,7 +4587,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取巡检报告</para>
+        /// <para>Retrieves a SysOM inspection report.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4629,7 +4633,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取巡检报告</para>
+        /// <para>Retrieves a SysOM inspection report.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4648,7 +4652,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取巡检报告</para>
+        /// <para>Retrieves a SysOM inspection report.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4667,7 +4671,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain real-time cluster/edge zone health degree score</para>
+        /// <para>Get real-time cluster/node health score</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4717,7 +4721,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain real-time cluster/edge zone health degree score</para>
+        /// <para>Get real-time cluster/node health score</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4767,7 +4771,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain real-time cluster/edge zone health degree score</para>
+        /// <para>Get real-time cluster/node health score</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4786,7 +4790,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain real-time cluster/edge zone health degree score</para>
+        /// <para>Get real-time cluster/node health score</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4805,7 +4809,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AI Infra retrieves the list of analysis records</para>
+        /// <para>Retrieves a list of AI Infra analysis records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4825,9 +4829,17 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AnalysisId))
+            {
+                query["analysisId"] = request.AnalysisId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Current))
             {
                 query["current"] = request.Current;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomId))
+            {
+                query["customId"] = request.CustomId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
@@ -4859,7 +4871,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AI Infra retrieves the list of analysis records</para>
+        /// <para>Retrieves a list of AI Infra analysis records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4879,9 +4891,17 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AnalysisId))
+            {
+                query["analysisId"] = request.AnalysisId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Current))
             {
                 query["current"] = request.Current;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomId))
+            {
+                query["customId"] = request.CustomId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
@@ -4913,7 +4933,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AI Infra retrieves the list of analysis records</para>
+        /// <para>Retrieves a list of AI Infra analysis records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4932,7 +4952,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AI Infra retrieves the list of analysis records</para>
+        /// <para>Retrieves a list of AI Infra analysis records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4951,7 +4971,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the proportion of abnormal issues in pods within edge zones or in an edge zone within a cluster over a specified period of time.</para>
+        /// <para>Get the proportion of abnormal issues in cluster nodes/pods within a specified time range</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5009,7 +5029,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the proportion of abnormal issues in pods within edge zones or in an edge zone within a cluster over a specified period of time.</para>
+        /// <para>Get the proportion of abnormal issues in cluster nodes/pods within a specified time range</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5067,7 +5087,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the proportion of abnormal issues in pods within edge zones or in an edge zone within a cluster over a specified period of time.</para>
+        /// <para>Get the proportion of abnormal issues in cluster nodes/pods within a specified time range</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5086,7 +5106,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the proportion of abnormal issues in pods within edge zones or in an edge zone within a cluster over a specified period of time.</para>
+        /// <para>Get the proportion of abnormal issues in cluster nodes/pods within a specified time range</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5105,7 +5125,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the health score trend</para>
+        /// <para>Retrieves the health score trend.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5163,7 +5183,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the health score trend</para>
+        /// <para>Retrieves the health score trend.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5221,7 +5241,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the health score trend</para>
+        /// <para>Retrieves the health score trend.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5240,7 +5260,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the health score trend</para>
+        /// <para>Retrieves the health score trend.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5259,7 +5279,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain real-time resource usage of clusters or edge zones</para>
+        /// <para>Retrieves the real-time resource usage of a cluster or node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5313,7 +5333,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain real-time resource usage of clusters or edge zones</para>
+        /// <para>Retrieves the real-time resource usage of a cluster or node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5367,7 +5387,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain real-time resource usage of clusters or edge zones</para>
+        /// <para>Retrieves the real-time resource usage of a cluster or node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5386,7 +5406,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain real-time resource usage of clusters or edge zones</para>
+        /// <para>Retrieves the real-time resource usage of a cluster or node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5405,12 +5425,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain Function Modules Configuration</para>
+        /// <para>Retrieves the configuration of a feature module.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is used to retrieve the service configuration status.</para>
+        /// <para>Retrieves the service configuration status.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -5470,12 +5490,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain Function Modules Configuration</para>
+        /// <para>Retrieves the configuration of a feature module.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is used to retrieve the service configuration status.</para>
+        /// <para>Retrieves the service configuration status.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -5535,12 +5555,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain Function Modules Configuration</para>
+        /// <para>Retrieves the configuration of a feature module.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is used to retrieve the service configuration status.</para>
+        /// <para>Retrieves the service configuration status.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5559,12 +5579,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain Function Modules Configuration</para>
+        /// <para>Retrieves the configuration of a feature module.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is used to retrieve the service configuration status.</para>
+        /// <para>Retrieves the service configuration status.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5583,7 +5603,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API queries the task execution status and diagnosis result based on the job ID.</para>
+        /// <para>Queries the execution status and diagnostic result of a diagnostic task by task ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5629,7 +5649,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API queries the task execution status and diagnosis result based on the job ID.</para>
+        /// <para>Queries the execution status and diagnostic result of a diagnostic task by task ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5675,7 +5695,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API queries the task execution status and diagnosis result based on the job ID.</para>
+        /// <para>Queries the execution status and diagnostic result of a diagnostic task by task ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5694,7 +5714,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API queries the task execution status and diagnosis result based on the job ID.</para>
+        /// <para>Queries the execution status and diagnostic result of a diagnostic task by task ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5713,15 +5733,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initialize SysOM and ensure that the service role exists.</para>
+        /// <para>Initializes SysOM to ensure that the service-linked role exists.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Some SysOM APIs require role assumption based on the <c>AliyunServiceRoleForSysom</c> service role. Therefore, before using SysOM features, you must invoke this API to perform initialization and ensure that the service role has been created.  </para>
+        /// <para>Some SysOM API operations require role assumption based on the <c>AliyunServiceRoleForSysom</c> service-linked role. Before using SysOM features, invoke this operation to perform initialization and ensure that the service-linked role has been created.</para>
         /// <list type="bullet">
-        /// <item><description><c>check_only</c>: If this parameter is set to True, the API only checks whether the service role exists and does not create it. If this parameter is set to False or omitted, the API automatically creates the service role if it does not exist.<remarks>
-        /// <para>Note: When you invoke this API to initialize the role, you are deemed to have accepted the User Agreement of the operating system console by default. For more information, see <a href="https://help.aliyun.com/zh/alinux/product-overview/os-console-overview?spm=a2c4g.11186623.help-menu-2632541.d_0_7.35a829ffLjQtgg">Overview of the Operating System Console</a> and <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud202001091714_51956.html">Alibaba Cloud Service Trial Terms</a>.</para>
+        /// <item><description><c>check_only</c>: If this parameter is set to True, the operation only checks whether the service-linked role exists and does not create it. If this parameter is set to False or left empty, the operation performs automatic creation of the service-linked role if it does not exist.<remarks>
+        /// <para>Note: When you call this operation to initialize the role through the API, you agree to the user agreement of the operating system console by default. For more information, see <a href="https://www.alibabacloud.com/help/en/alinux/product-overview/os-console-overview">Operating system console overview</a> and <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud202001091714_51956.html">Alibaba Cloud Service Trial Terms</a>.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -5774,15 +5794,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initialize SysOM and ensure that the service role exists.</para>
+        /// <para>Initializes SysOM to ensure that the service-linked role exists.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Some SysOM APIs require role assumption based on the <c>AliyunServiceRoleForSysom</c> service role. Therefore, before using SysOM features, you must invoke this API to perform initialization and ensure that the service role has been created.  </para>
+        /// <para>Some SysOM API operations require role assumption based on the <c>AliyunServiceRoleForSysom</c> service-linked role. Before using SysOM features, invoke this operation to perform initialization and ensure that the service-linked role has been created.</para>
         /// <list type="bullet">
-        /// <item><description><c>check_only</c>: If this parameter is set to True, the API only checks whether the service role exists and does not create it. If this parameter is set to False or omitted, the API automatically creates the service role if it does not exist.<remarks>
-        /// <para>Note: When you invoke this API to initialize the role, you are deemed to have accepted the User Agreement of the operating system console by default. For more information, see <a href="https://help.aliyun.com/zh/alinux/product-overview/os-console-overview?spm=a2c4g.11186623.help-menu-2632541.d_0_7.35a829ffLjQtgg">Overview of the Operating System Console</a> and <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud202001091714_51956.html">Alibaba Cloud Service Trial Terms</a>.</para>
+        /// <item><description><c>check_only</c>: If this parameter is set to True, the operation only checks whether the service-linked role exists and does not create it. If this parameter is set to False or left empty, the operation performs automatic creation of the service-linked role if it does not exist.<remarks>
+        /// <para>Note: When you call this operation to initialize the role through the API, you agree to the user agreement of the operating system console by default. For more information, see <a href="https://www.alibabacloud.com/help/en/alinux/product-overview/os-console-overview">Operating system console overview</a> and <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud202001091714_51956.html">Alibaba Cloud Service Trial Terms</a>.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -5835,15 +5855,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initialize SysOM and ensure that the service role exists.</para>
+        /// <para>Initializes SysOM to ensure that the service-linked role exists.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Some SysOM APIs require role assumption based on the <c>AliyunServiceRoleForSysom</c> service role. Therefore, before using SysOM features, you must invoke this API to perform initialization and ensure that the service role has been created.  </para>
+        /// <para>Some SysOM API operations require role assumption based on the <c>AliyunServiceRoleForSysom</c> service-linked role. Before using SysOM features, invoke this operation to perform initialization and ensure that the service-linked role has been created.</para>
         /// <list type="bullet">
-        /// <item><description><c>check_only</c>: If this parameter is set to True, the API only checks whether the service role exists and does not create it. If this parameter is set to False or omitted, the API automatically creates the service role if it does not exist.<remarks>
-        /// <para>Note: When you invoke this API to initialize the role, you are deemed to have accepted the User Agreement of the operating system console by default. For more information, see <a href="https://help.aliyun.com/zh/alinux/product-overview/os-console-overview?spm=a2c4g.11186623.help-menu-2632541.d_0_7.35a829ffLjQtgg">Overview of the Operating System Console</a> and <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud202001091714_51956.html">Alibaba Cloud Service Trial Terms</a>.</para>
+        /// <item><description><c>check_only</c>: If this parameter is set to True, the operation only checks whether the service-linked role exists and does not create it. If this parameter is set to False or left empty, the operation performs automatic creation of the service-linked role if it does not exist.<remarks>
+        /// <para>Note: When you call this operation to initialize the role through the API, you agree to the user agreement of the operating system console by default. For more information, see <a href="https://www.alibabacloud.com/help/en/alinux/product-overview/os-console-overview">Operating system console overview</a> and <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud202001091714_51956.html">Alibaba Cloud Service Trial Terms</a>.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -5865,15 +5885,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initialize SysOM and ensure that the service role exists.</para>
+        /// <para>Initializes SysOM to ensure that the service-linked role exists.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Some SysOM APIs require role assumption based on the <c>AliyunServiceRoleForSysom</c> service role. Therefore, before using SysOM features, you must invoke this API to perform initialization and ensure that the service role has been created.  </para>
+        /// <para>Some SysOM API operations require role assumption based on the <c>AliyunServiceRoleForSysom</c> service-linked role. Before using SysOM features, invoke this operation to perform initialization and ensure that the service-linked role has been created.</para>
         /// <list type="bullet">
-        /// <item><description><c>check_only</c>: If this parameter is set to True, the API only checks whether the service role exists and does not create it. If this parameter is set to False or omitted, the API automatically creates the service role if it does not exist.<remarks>
-        /// <para>Note: When you invoke this API to initialize the role, you are deemed to have accepted the User Agreement of the operating system console by default. For more information, see <a href="https://help.aliyun.com/zh/alinux/product-overview/os-console-overview?spm=a2c4g.11186623.help-menu-2632541.d_0_7.35a829ffLjQtgg">Overview of the Operating System Console</a> and <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud202001091714_51956.html">Alibaba Cloud Service Trial Terms</a>.</para>
+        /// <item><description><c>check_only</c>: If this parameter is set to True, the operation only checks whether the service-linked role exists and does not create it. If this parameter is set to False or left empty, the operation performs automatic creation of the service-linked role if it does not exist.<remarks>
+        /// <para>Note: When you call this operation to initialize the role through the API, you agree to the user agreement of the operating system console by default. For more information, see <a href="https://www.alibabacloud.com/help/en/alinux/product-overview/os-console-overview">Operating system console overview</a> and <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud202001091714_51956.html">Alibaba Cloud Service Trial Terms</a>.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -5895,12 +5915,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Install an agent on the specified instance</para>
+        /// <para>Installs an Agent on a specified instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The API call to install an agent is asynchronous. After invoking this API, a task_id is returned. You can use this ID to invoke the GetAgentTask API to retrieve the job execution status.</para>
+        /// <para>Calling this operation to install an Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the task execution status.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5958,12 +5978,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Install an agent on the specified instance</para>
+        /// <para>Installs an Agent on a specified instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The API call to install an agent is asynchronous. After invoking this API, a task_id is returned. You can use this ID to invoke the GetAgentTask API to retrieve the job execution status.</para>
+        /// <para>Calling this operation to install an Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the task execution status.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6021,12 +6041,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Install an agent on the specified instance</para>
+        /// <para>Installs an Agent on a specified instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The API call to install an agent is asynchronous. After invoking this API, a task_id is returned. You can use this ID to invoke the GetAgentTask API to retrieve the job execution status.</para>
+        /// <para>Calling this operation to install an Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the task execution status.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6045,12 +6065,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Install an agent on the specified instance</para>
+        /// <para>Installs an Agent on a specified instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The API call to install an agent is asynchronous. After invoking this API, a task_id is returned. You can use this ID to invoke the GetAgentTask API to retrieve the job execution status.</para>
+        /// <para>Calling this operation to install an Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the task execution status.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6069,15 +6089,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Install widgets on a cluster</para>
+        /// <para>Install component for cluster</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you install widgets on the specified ACK cluster:  </para>
+        /// <para>After installing a component for the target ACK cluster:</para>
         /// <ol>
-        /// <item><description>When the cluster is first enrolled, widgets are installed on all ECS instances in the cluster (if the cluster contains more than 50 nodes, widgets are installed on only 50 nodes in the first batch).  </description></item>
-        /// <item><description>The operating system console periodically checks for scale-in or scale-out events in the enrolled cluster. Whenever new ECS instances are added to the cluster, the operating system console automatically installs widgets on them without requiring user intervention.</description></item>
+        /// <item><description>First, when the cluster is managed for the first time, the component will be installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only 50 instances will be covered in the first batch.</description></item>
+        /// <item><description>Then, the SysOM console periodically checks the scaling status of the managed cluster. Once a new ECS instance is added to the cluster, the SysOM console automatically installs the component on it without user intervention.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -6140,15 +6160,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Install widgets on a cluster</para>
+        /// <para>Install component for cluster</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you install widgets on the specified ACK cluster:  </para>
+        /// <para>After installing a component for the target ACK cluster:</para>
         /// <ol>
-        /// <item><description>When the cluster is first enrolled, widgets are installed on all ECS instances in the cluster (if the cluster contains more than 50 nodes, widgets are installed on only 50 nodes in the first batch).  </description></item>
-        /// <item><description>The operating system console periodically checks for scale-in or scale-out events in the enrolled cluster. Whenever new ECS instances are added to the cluster, the operating system console automatically installs widgets on them without requiring user intervention.</description></item>
+        /// <item><description>First, when the cluster is managed for the first time, the component will be installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only 50 instances will be covered in the first batch.</description></item>
+        /// <item><description>Then, the SysOM console periodically checks the scaling status of the managed cluster. Once a new ECS instance is added to the cluster, the SysOM console automatically installs the component on it without user intervention.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -6211,15 +6231,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Install widgets on a cluster</para>
+        /// <para>Install component for cluster</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you install widgets on the specified ACK cluster:  </para>
+        /// <para>After installing a component for the target ACK cluster:</para>
         /// <ol>
-        /// <item><description>When the cluster is first enrolled, widgets are installed on all ECS instances in the cluster (if the cluster contains more than 50 nodes, widgets are installed on only 50 nodes in the first batch).  </description></item>
-        /// <item><description>The operating system console periodically checks for scale-in or scale-out events in the enrolled cluster. Whenever new ECS instances are added to the cluster, the operating system console automatically installs widgets on them without requiring user intervention.</description></item>
+        /// <item><description>First, when the cluster is managed for the first time, the component will be installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only 50 instances will be covered in the first batch.</description></item>
+        /// <item><description>Then, the SysOM console periodically checks the scaling status of the managed cluster. Once a new ECS instance is added to the cluster, the SysOM console automatically installs the component on it without user intervention.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -6239,15 +6259,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Install widgets on a cluster</para>
+        /// <para>Install component for cluster</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you install widgets on the specified ACK cluster:  </para>
+        /// <para>After installing a component for the target ACK cluster:</para>
         /// <ol>
-        /// <item><description>When the cluster is first enrolled, widgets are installed on all ECS instances in the cluster (if the cluster contains more than 50 nodes, widgets are installed on only 50 nodes in the first batch).  </description></item>
-        /// <item><description>The operating system console periodically checks for scale-in or scale-out events in the enrolled cluster. Whenever new ECS instances are added to the cluster, the operating system console automatically installs widgets on them without requiring user intervention.</description></item>
+        /// <item><description>First, when the cluster is managed for the first time, the component will be installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only 50 instances will be covered in the first batch.</description></item>
+        /// <item><description>Then, the SysOM console periodically checks the scaling status of the managed cluster. Once a new ECS instance is added to the cluster, the SysOM console automatically installs the component on it without user intervention.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -6267,7 +6287,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initiate diagnosis for anomalous activity</para>
+        /// <para>Initiates an anomaly diagnostics task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6313,7 +6333,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initiate diagnosis for anomalous activity</para>
+        /// <para>Initiates an anomaly diagnostics task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6359,7 +6379,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initiate diagnosis for anomalous activity</para>
+        /// <para>Initiates an anomaly diagnostics task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6378,7 +6398,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initiate diagnosis for anomalous activity</para>
+        /// <para>Initiates an anomaly diagnostics task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6397,17 +6417,17 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initiate a diagnosis.</para>
+        /// <para>Initiate Diagnosis.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Diagnosing the target ECS instance has the following requirements:  </para>
+        /// <para>The following requirements must be met to diagnose a target ECS instance:</para>
         /// <list type="bullet">
-        /// <item><description>The instance status of the target ECS instance must be running.  </description></item>
-        /// <item><description>The Cloud Assistant Agent must already be installed on the target ECS instance. If it is not installed, install it by referring to <a href="https://help.aliyun.com/zh/ecs/user-guide/install-the-cloud-assistant-agent">Install the Cloud Assistant Agent</a>.  </description></item>
-        /// <item><description>You must invoke the AuthDiagnosis API to authorize SysOM to diagnose the target ECS instance. If this authorization is not granted, the API call will fail immediately.  </description></item>
-        /// <item><description>This API depends on the existence of the SysOM service-linked role (AliyunServiceRoleForSysom). This API does not create the service-linked role automatically. If the service-linked role does not exist, you must first call AuthDiagnosis to perform authorization, which will create the aforementioned service-linked role.</description></item>
+        /// <item><description>The target ECS instance must be in the Running state.</description></item>
+        /// <item><description>The Cloud Assistant must be installed on the target ECS instance. If it is not installed, refer to <a href="https://help.aliyun.com/zh/ecs/user-guide/install-the-cloud-assistant-agent">Install the Cloud Assistant Agent</a> for installation.</description></item>
+        /// <item><description>You must call the AuthDiagnosis API to authorize SysOM to diagnose the target ECS instance. If authorization is not granted, this API will fail directly.</description></item>
+        /// <item><description>This API requires that the SysOM service-linked role (AliyunServiceRoleForSysom) has been created. This API does not automatically create the service role. If the service role does not exist, you must first call AuthDiagnosis for authorization, which will create the aforementioned service role.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6462,17 +6482,17 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initiate a diagnosis.</para>
+        /// <para>Initiate Diagnosis.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Diagnosing the target ECS instance has the following requirements:  </para>
+        /// <para>The following requirements must be met to diagnose a target ECS instance:</para>
         /// <list type="bullet">
-        /// <item><description>The instance status of the target ECS instance must be running.  </description></item>
-        /// <item><description>The Cloud Assistant Agent must already be installed on the target ECS instance. If it is not installed, install it by referring to <a href="https://help.aliyun.com/zh/ecs/user-guide/install-the-cloud-assistant-agent">Install the Cloud Assistant Agent</a>.  </description></item>
-        /// <item><description>You must invoke the AuthDiagnosis API to authorize SysOM to diagnose the target ECS instance. If this authorization is not granted, the API call will fail immediately.  </description></item>
-        /// <item><description>This API depends on the existence of the SysOM service-linked role (AliyunServiceRoleForSysom). This API does not create the service-linked role automatically. If the service-linked role does not exist, you must first call AuthDiagnosis to perform authorization, which will create the aforementioned service-linked role.</description></item>
+        /// <item><description>The target ECS instance must be in the Running state.</description></item>
+        /// <item><description>The Cloud Assistant must be installed on the target ECS instance. If it is not installed, refer to <a href="https://help.aliyun.com/zh/ecs/user-guide/install-the-cloud-assistant-agent">Install the Cloud Assistant Agent</a> for installation.</description></item>
+        /// <item><description>You must call the AuthDiagnosis API to authorize SysOM to diagnose the target ECS instance. If authorization is not granted, this API will fail directly.</description></item>
+        /// <item><description>This API requires that the SysOM service-linked role (AliyunServiceRoleForSysom) has been created. This API does not automatically create the service role. If the service role does not exist, you must first call AuthDiagnosis for authorization, which will create the aforementioned service role.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6527,17 +6547,17 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initiate a diagnosis.</para>
+        /// <para>Initiate Diagnosis.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Diagnosing the target ECS instance has the following requirements:  </para>
+        /// <para>The following requirements must be met to diagnose a target ECS instance:</para>
         /// <list type="bullet">
-        /// <item><description>The instance status of the target ECS instance must be running.  </description></item>
-        /// <item><description>The Cloud Assistant Agent must already be installed on the target ECS instance. If it is not installed, install it by referring to <a href="https://help.aliyun.com/zh/ecs/user-guide/install-the-cloud-assistant-agent">Install the Cloud Assistant Agent</a>.  </description></item>
-        /// <item><description>You must invoke the AuthDiagnosis API to authorize SysOM to diagnose the target ECS instance. If this authorization is not granted, the API call will fail immediately.  </description></item>
-        /// <item><description>This API depends on the existence of the SysOM service-linked role (AliyunServiceRoleForSysom). This API does not create the service-linked role automatically. If the service-linked role does not exist, you must first call AuthDiagnosis to perform authorization, which will create the aforementioned service-linked role.</description></item>
+        /// <item><description>The target ECS instance must be in the Running state.</description></item>
+        /// <item><description>The Cloud Assistant must be installed on the target ECS instance. If it is not installed, refer to <a href="https://help.aliyun.com/zh/ecs/user-guide/install-the-cloud-assistant-agent">Install the Cloud Assistant Agent</a> for installation.</description></item>
+        /// <item><description>You must call the AuthDiagnosis API to authorize SysOM to diagnose the target ECS instance. If authorization is not granted, this API will fail directly.</description></item>
+        /// <item><description>This API requires that the SysOM service-linked role (AliyunServiceRoleForSysom) has been created. This API does not automatically create the service role. If the service role does not exist, you must first call AuthDiagnosis for authorization, which will create the aforementioned service role.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6557,17 +6577,17 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initiate a diagnosis.</para>
+        /// <para>Initiate Diagnosis.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Diagnosing the target ECS instance has the following requirements:  </para>
+        /// <para>The following requirements must be met to diagnose a target ECS instance:</para>
         /// <list type="bullet">
-        /// <item><description>The instance status of the target ECS instance must be running.  </description></item>
-        /// <item><description>The Cloud Assistant Agent must already be installed on the target ECS instance. If it is not installed, install it by referring to <a href="https://help.aliyun.com/zh/ecs/user-guide/install-the-cloud-assistant-agent">Install the Cloud Assistant Agent</a>.  </description></item>
-        /// <item><description>You must invoke the AuthDiagnosis API to authorize SysOM to diagnose the target ECS instance. If this authorization is not granted, the API call will fail immediately.  </description></item>
-        /// <item><description>This API depends on the existence of the SysOM service-linked role (AliyunServiceRoleForSysom). This API does not create the service-linked role automatically. If the service-linked role does not exist, you must first call AuthDiagnosis to perform authorization, which will create the aforementioned service-linked role.</description></item>
+        /// <item><description>The target ECS instance must be in the Running state.</description></item>
+        /// <item><description>The Cloud Assistant must be installed on the target ECS instance. If it is not installed, refer to <a href="https://help.aliyun.com/zh/ecs/user-guide/install-the-cloud-assistant-agent">Install the Cloud Assistant Agent</a> for installation.</description></item>
+        /// <item><description>You must call the AuthDiagnosis API to authorize SysOM to diagnose the target ECS instance. If authorization is not granted, this API will fail directly.</description></item>
+        /// <item><description>This API requires that the SysOM service-linked role (AliyunServiceRoleForSysom) has been created. This API does not automatically create the service role. If the service role does not exist, you must first call AuthDiagnosis for authorization, which will create the aforementioned service role.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6587,7 +6607,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain anomalous activity information for clusters, edge zones, or pods within a specified time period.</para>
+        /// <para>Retrieves anomaly event information for a cluster, node, or pod within a specified time range.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6673,7 +6693,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain anomalous activity information for clusters, edge zones, or pods within a specified time period.</para>
+        /// <para>Retrieves anomaly event information for a cluster, node, or pod within a specified time range.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6759,7 +6779,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain anomalous activity information for clusters, edge zones, or pods within a specified time period.</para>
+        /// <para>Retrieves anomaly event information for a cluster, node, or pod within a specified time range.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6778,7 +6798,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain anomalous activity information for clusters, edge zones, or pods within a specified time period.</para>
+        /// <para>Retrieves anomaly event information for a cluster, node, or pod within a specified time range.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6797,7 +6817,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List installation records of the agent</para>
+        /// <para>Lists the installation records of an Agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6867,7 +6887,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List installation records of the agent</para>
+        /// <para>Lists the installation records of an Agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6937,7 +6957,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List installation records of the agent</para>
+        /// <para>Lists the installation records of an Agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6956,7 +6976,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List installation records of the agent</para>
+        /// <para>Lists the installation records of an Agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6975,7 +6995,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the Agent List</para>
+        /// <para>Retrieves a list of agents.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7033,7 +7053,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the Agent List</para>
+        /// <para>Retrieves a list of agents.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7091,7 +7111,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the Agent List</para>
+        /// <para>Retrieves a list of agents.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7110,7 +7130,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the Agent List</para>
+        /// <para>Retrieves a list of agents.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7129,7 +7149,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API is used to obtain the alert contact list.</para>
+        /// <para>This API is used to get the list of alert contacts</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7191,7 +7211,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API is used to obtain the alert contact list.</para>
+        /// <para>This API is used to get the list of alert contacts</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7253,7 +7273,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API is used to obtain the alert contact list.</para>
+        /// <para>This API is used to get the list of alert contacts</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7272,7 +7292,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API is used to obtain the alert contact list.</para>
+        /// <para>This API is used to get the list of alert contacts</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7291,7 +7311,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve all alerting items</para>
+        /// <para>Retrieves all alert metrics.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -7327,7 +7347,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve all alerting items</para>
+        /// <para>Retrieves all alert metrics.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -7363,7 +7383,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve all alerting items</para>
+        /// <para>Retrieves all alert metrics.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7378,7 +7398,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve all alerting items</para>
+        /// <para>Retrieves all alert metrics.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7393,7 +7413,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Used to obtain all alert policies for push notifications of a user</para>
+        /// <para>Retrieves all push alert policies for the current user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7455,7 +7475,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Used to obtain all alert policies for push notifications of a user</para>
+        /// <para>Retrieves all push alert policies for the current user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7517,7 +7537,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Used to obtain all alert policies for push notifications of a user</para>
+        /// <para>Retrieves all push alert policies for the current user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7536,7 +7556,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Used to obtain all alert policies for push notifications of a user</para>
+        /// <para>Retrieves all push alert policies for the current user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7555,7 +7575,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API is used to obtain a list of managed or unmanaged instances along with instance information.</para>
+        /// <para>This API is used to retrieve a list of managed/unmanaged instances along with their instance information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7633,7 +7653,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API is used to obtain a list of managed or unmanaged instances along with instance information.</para>
+        /// <para>This API is used to retrieve a list of managed/unmanaged instances along with their instance information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7711,7 +7731,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API is used to obtain a list of managed or unmanaged instances along with instance information.</para>
+        /// <para>This API is used to retrieve a list of managed/unmanaged instances along with their instance information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7730,7 +7750,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API is used to obtain a list of managed or unmanaged instances along with instance information.</para>
+        /// <para>This API is used to retrieve a list of managed/unmanaged instances along with their instance information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7749,7 +7769,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain cluster widget installation records</para>
+        /// <para>Get cluster component installation records</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7815,7 +7835,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain cluster widget installation records</para>
+        /// <para>Get cluster component installation records</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7881,7 +7901,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain cluster widget installation records</para>
+        /// <para>Get cluster component installation records</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7900,7 +7920,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain cluster widget installation records</para>
+        /// <para>Get cluster component installation records</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7919,7 +7939,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve all clusters managed by the current user</para>
+        /// <para>Retrieve all managed clusters of the current user</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7989,7 +8009,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve all clusters managed by the current user</para>
+        /// <para>Retrieve all managed clusters of the current user</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8059,7 +8079,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve all clusters managed by the current user</para>
+        /// <para>Retrieve all managed clusters of the current user</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8078,7 +8098,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve all clusters managed by the current user</para>
+        /// <para>Retrieve all managed clusters of the current user</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8097,7 +8117,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the diagnosis history list.</para>
+        /// <para>Obtain the list of diagnostic history.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8159,7 +8179,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the diagnosis history list.</para>
+        /// <para>Obtain the list of diagnostic history.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8221,7 +8241,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the diagnosis history list.</para>
+        /// <para>Obtain the list of diagnostic history.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8240,7 +8260,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the diagnosis history list.</para>
+        /// <para>Obtain the list of diagnostic history.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8259,7 +8279,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain a list of cluster node or pod health scores within a specified time period.</para>
+        /// <para>Retrieves the health status list of cluster nodes or Pods within a specified time range.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8325,7 +8345,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain a list of cluster node or pod health scores within a specified time period.</para>
+        /// <para>Retrieves the health status list of cluster nodes or Pods within a specified time range.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8391,7 +8411,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain a list of cluster node or pod health scores within a specified time period.</para>
+        /// <para>Retrieves the health status list of cluster nodes or Pods within a specified time range.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8410,7 +8430,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain a list of cluster node or pod health scores within a specified time period.</para>
+        /// <para>Retrieves the health status list of cluster nodes or Pods within a specified time range.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8429,12 +8449,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain instance status</para>
+        /// <para>Retrieves instance statuses.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is used to obtain the list of machines managed by SysOM.</para>
+        /// <para>Retrieves the list of machines managed by SysOM.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8496,12 +8516,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain instance status</para>
+        /// <para>Retrieves instance statuses.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is used to obtain the list of machines managed by SysOM.</para>
+        /// <para>Retrieves the list of machines managed by SysOM.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8563,12 +8583,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain instance status</para>
+        /// <para>Retrieves instance statuses.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is used to obtain the list of machines managed by SysOM.</para>
+        /// <para>Retrieves the list of machines managed by SysOM.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8587,12 +8607,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain instance status</para>
+        /// <para>Retrieves instance statuses.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is used to obtain the list of machines managed by SysOM.</para>
+        /// <para>Retrieves the list of machines managed by SysOM.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8611,12 +8631,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the instance list</para>
+        /// <para>Retrieves a list of instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The instance list returned by this API includes only the machines that have been managed by SysOM. If an ECS instance exists but has not been managed by SysOM, it will not appear in the list.</para>
+        /// <para>This operation retrieves the list of instances that are already managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8682,12 +8702,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the instance list</para>
+        /// <para>Retrieves a list of instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The instance list returned by this API includes only the machines that have been managed by SysOM. If an ECS instance exists but has not been managed by SysOM, it will not appear in the list.</para>
+        /// <para>This operation retrieves the list of instances that are already managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8753,12 +8773,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the instance list</para>
+        /// <para>Retrieves a list of instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The instance list returned by this API includes only the machines that have been managed by SysOM. If an ECS instance exists but has not been managed by SysOM, it will not appear in the list.</para>
+        /// <para>This operation retrieves the list of instances that are already managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8777,12 +8797,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the instance list</para>
+        /// <para>Retrieves a list of instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The instance list returned by this API includes only the machines that have been managed by SysOM. If an ECS instance exists but has not been managed by SysOM, it will not appear in the list.</para>
+        /// <para>This operation retrieves the list of instances that are already managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8801,12 +8821,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain a list of ECS information, such as the tag list, public IP address list, and so on.</para>
+        /// <para>Retrieves lists of ECS information for instances, such as tag lists and public IP address lists.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The instance list returned by this API includes only machines that are already managed by SysOM. If an ECS instance exists but is not managed by SysOM, it will not appear in the list.</para>
+        /// <para>The instance list retrieved by this operation contains only machines that are managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8868,12 +8888,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain a list of ECS information, such as the tag list, public IP address list, and so on.</para>
+        /// <para>Retrieves lists of ECS information for instances, such as tag lists and public IP address lists.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The instance list returned by this API includes only machines that are already managed by SysOM. If an ECS instance exists but is not managed by SysOM, it will not appear in the list.</para>
+        /// <para>The instance list retrieved by this operation contains only machines that are managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8935,12 +8955,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain a list of ECS information, such as the tag list, public IP address list, and so on.</para>
+        /// <para>Retrieves lists of ECS information for instances, such as tag lists and public IP address lists.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The instance list returned by this API includes only machines that are already managed by SysOM. If an ECS instance exists but is not managed by SysOM, it will not appear in the list.</para>
+        /// <para>The instance list retrieved by this operation contains only machines that are managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8959,12 +8979,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain a list of ECS information, such as the tag list, public IP address list, and so on.</para>
+        /// <para>Retrieves lists of ECS information for instances, such as tag lists and public IP address lists.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The instance list returned by this API includes only machines that are already managed by SysOM. If an ECS instance exists but is not managed by SysOM, it will not appear in the list.</para>
+        /// <para>The instance list retrieved by this operation contains only machines that are managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8983,12 +9003,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain information about managed or unmanaged instances, including ECS information.</para>
+        /// <para>Retrieves information about managed and unmanaged instances, including ECS information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The current API returns a list of instances that have already been managed by SysOM. If an ECS instance exists but has not been managed by SysOM, it will not appear in the list.</para>
+        /// <para>The instance list returned by this operation contains only machines that are managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -9096,12 +9116,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain information about managed or unmanaged instances, including ECS information.</para>
+        /// <para>Retrieves information about managed and unmanaged instances, including ECS information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The current API returns a list of instances that have already been managed by SysOM. If an ECS instance exists but has not been managed by SysOM, it will not appear in the list.</para>
+        /// <para>The instance list returned by this operation contains only machines that are managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -9209,12 +9229,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain information about managed or unmanaged instances, including ECS information.</para>
+        /// <para>Retrieves information about managed and unmanaged instances, including ECS information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The current API returns a list of instances that have already been managed by SysOM. If an ECS instance exists but has not been managed by SysOM, it will not appear in the list.</para>
+        /// <para>The instance list returned by this operation contains only machines that are managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9233,12 +9253,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain information about managed or unmanaged instances, including ECS information.</para>
+        /// <para>Retrieves information about managed and unmanaged instances, including ECS information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The current API returns a list of instances that have already been managed by SysOM. If an ECS instance exists but has not been managed by SysOM, it will not appear in the list.</para>
+        /// <para>The instance list returned by this operation contains only machines that are managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9257,12 +9277,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the list of instances for plugin installation, update, or uninstallation</para>
+        /// <para>Retrieves the list of instances for plug-in installation, update, or uninstallation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The instance list returned by this API consists of machines that are already managed by SysOM. If an ECS instance exists but is not managed by SysOM, it will not appear in the list.</para>
+        /// <para>The instance list retrieved by this operation contains only machines that are managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9332,12 +9352,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the list of instances for plugin installation, update, or uninstallation</para>
+        /// <para>Retrieves the list of instances for plug-in installation, update, or uninstallation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The instance list returned by this API consists of machines that are already managed by SysOM. If an ECS instance exists but is not managed by SysOM, it will not appear in the list.</para>
+        /// <para>The instance list retrieved by this operation contains only machines that are managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9407,12 +9427,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the list of instances for plugin installation, update, or uninstallation</para>
+        /// <para>Retrieves the list of instances for plug-in installation, update, or uninstallation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The instance list returned by this API consists of machines that are already managed by SysOM. If an ECS instance exists but is not managed by SysOM, it will not appear in the list.</para>
+        /// <para>The instance list retrieved by this operation contains only machines that are managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9431,12 +9451,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the list of instances for plugin installation, update, or uninstallation</para>
+        /// <para>Retrieves the list of instances for plug-in installation, update, or uninstallation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The instance list returned by this API consists of machines that are already managed by SysOM. If an ECS instance exists but is not managed by SysOM, it will not appear in the list.</para>
+        /// <para>The instance list retrieved by this operation contains only machines that are managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9455,7 +9475,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the list of pods in a cluster or instance</para>
+        /// <para>Retrieves the list of pods in a cluster or instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9513,7 +9533,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the list of pods in a cluster or instance</para>
+        /// <para>Retrieves the list of pods in a cluster or instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9571,7 +9591,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the list of pods in a cluster or instance</para>
+        /// <para>Retrieves the list of pods in a cluster or instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9590,7 +9610,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the list of pods in a cluster or instance</para>
+        /// <para>Retrieves the list of pods in a cluster or instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9609,12 +9629,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List all areas where machines are managed</para>
+        /// <para>Lists all regions that contain managed instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API retrieves the list of areas where the current user has machines managed by SysOM. If the user has ECS instances in an area but those instances are not managed by SysOM, that area will not appear in the API response.</para>
+        /// <para>This operation retrieves the list of regions where the current user has instances managed by SysOM. If a user has ECS instances in a region but none of them are managed by SysOM, that region is not included in the response.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -9650,12 +9670,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List all areas where machines are managed</para>
+        /// <para>Lists all regions that contain managed instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API retrieves the list of areas where the current user has machines managed by SysOM. If the user has ECS instances in an area but those instances are not managed by SysOM, that area will not appear in the API response.</para>
+        /// <para>This operation retrieves the list of regions where the current user has instances managed by SysOM. If a user has ECS instances in a region but none of them are managed by SysOM, that region is not included in the response.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -9691,12 +9711,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List all areas where machines are managed</para>
+        /// <para>Lists all regions that contain managed instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API retrieves the list of areas where the current user has machines managed by SysOM. If the user has ECS instances in an area but those instances are not managed by SysOM, that area will not appear in the API response.</para>
+        /// <para>This operation retrieves the list of regions where the current user has instances managed by SysOM. If a user has ECS instances in a region but none of them are managed by SysOM, that region is not included in the response.</para>
         /// </description>
         /// 
         /// <returns>
@@ -9711,12 +9731,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List all areas where machines are managed</para>
+        /// <para>Lists all regions that contain managed instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API retrieves the list of areas where the current user has machines managed by SysOM. If the user has ECS instances in an area but those instances are not managed by SysOM, that area will not appear in the API response.</para>
+        /// <para>This operation retrieves the list of regions where the current user has instances managed by SysOM. If a user has ECS instances in a region but none of them are managed by SysOM, that region is not included in the response.</para>
         /// </description>
         /// 
         /// <returns>
@@ -9731,7 +9751,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the history list of breakdown diagnosis jobs.</para>
+        /// <para>Query the historical crash diagnosis task list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9777,7 +9797,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the history list of breakdown diagnosis jobs.</para>
+        /// <para>Query the historical crash diagnosis task list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9823,7 +9843,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the history list of breakdown diagnosis jobs.</para>
+        /// <para>Query the historical crash diagnosis task list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9842,7 +9862,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the history list of breakdown diagnosis jobs.</para>
+        /// <para>Query the historical crash diagnosis task list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9861,7 +9881,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Start an AI job analysis.</para>
+        /// <para>Start AI job analysis.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9959,7 +9979,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Start an AI job analysis.</para>
+        /// <para>Start AI job analysis.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10057,7 +10077,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Start an AI job analysis.</para>
+        /// <para>Start AI job analysis.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10076,7 +10096,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Start an AI job analysis.</para>
+        /// <para>Start AI job analysis.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10095,12 +10115,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Start AI Infra differential analysis.</para>
+        /// <para>Starts an AI Infra differential analysis.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Currently, only comparative analysis between different steps under the same AI Infra analysis record and the same pid is supported.</para>
+        /// <para>Currently, only comparative analysis of the same pid across different steps within the same AI Infra analysis record is supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10150,12 +10170,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Start AI Infra differential analysis.</para>
+        /// <para>Starts an AI Infra differential analysis.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Currently, only comparative analysis between different steps under the same AI Infra analysis record and the same pid is supported.</para>
+        /// <para>Currently, only comparative analysis of the same pid across different steps within the same AI Infra analysis record is supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10205,12 +10225,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Start AI Infra differential analysis.</para>
+        /// <para>Starts an AI Infra differential analysis.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Currently, only comparative analysis between different steps under the same AI Infra analysis record and the same pid is supported.</para>
+        /// <para>Currently, only comparative analysis of the same pid across different steps within the same AI Infra analysis record is supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10229,12 +10249,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Start AI Infra differential analysis.</para>
+        /// <para>Starts an AI Infra differential analysis.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Currently, only comparative analysis between different steps under the same AI Infra analysis record and the same pid is supported.</para>
+        /// <para>Currently, only comparative analysis of the same pid across different steps within the same AI Infra analysis record is supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10253,12 +10273,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uninstall a specified version of the widget</para>
+        /// <para>Uninstalls a specified version of a component.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The API call to uninstall an Agent is asynchronous. After invoking this API, a task_id is returned. You can use this ID to invoke the GetAgentTask API to retrieve the execution status of the job.</para>
+        /// <para>Calling this operation to uninstall an Agent is asynchronous. After the call, a task_id is returned. Use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10312,12 +10332,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uninstall a specified version of the widget</para>
+        /// <para>Uninstalls a specified version of a component.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The API call to uninstall an Agent is asynchronous. After invoking this API, a task_id is returned. You can use this ID to invoke the GetAgentTask API to retrieve the execution status of the job.</para>
+        /// <para>Calling this operation to uninstall an Agent is asynchronous. After the call, a task_id is returned. Use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10371,12 +10391,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uninstall a specified version of the widget</para>
+        /// <para>Uninstalls a specified version of a component.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The API call to uninstall an Agent is asynchronous. After invoking this API, a task_id is returned. You can use this ID to invoke the GetAgentTask API to retrieve the execution status of the job.</para>
+        /// <para>Calling this operation to uninstall an Agent is asynchronous. After the call, a task_id is returned. Use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10395,12 +10415,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uninstall a specified version of the widget</para>
+        /// <para>Uninstalls a specified version of a component.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The API call to uninstall an Agent is asynchronous. After invoking this API, a task_id is returned. You can use this ID to invoke the GetAgentTask API to retrieve the execution status of the job.</para>
+        /// <para>Calling this operation to uninstall an Agent is asynchronous. After the call, a task_id is returned. Use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10419,7 +10439,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uninstall a widget from a cluster</para>
+        /// <para>Uninstalls a component from a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10473,7 +10493,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uninstall a widget from a cluster</para>
+        /// <para>Uninstalls a component from a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10527,7 +10547,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uninstall a widget from a cluster</para>
+        /// <para>Uninstalls a component from a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10546,7 +10566,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uninstall a widget from a cluster</para>
+        /// <para>Uninstalls a component from a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10565,12 +10585,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API is used to update an alert contact.</para>
+        /// <para>Updates an alert contact.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>、</para>
+        /// <para>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10632,12 +10652,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API is used to update an alert contact.</para>
+        /// <para>Updates an alert contact.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>、</para>
+        /// <para>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10699,12 +10719,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API is used to update an alert contact.</para>
+        /// <para>Updates an alert contact.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>、</para>
+        /// <para>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10723,12 +10743,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API is used to update an alert contact.</para>
+        /// <para>Updates an alert contact.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>、</para>
+        /// <para>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10747,7 +10767,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>User updates the status of a push alert policy</para>
+        /// <para>Updates the status of a push alert policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10797,7 +10817,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>User updates the status of a push alert policy</para>
+        /// <para>Updates the status of a push alert policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10847,7 +10867,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>User updates the status of a push alert policy</para>
+        /// <para>Updates the status of a push alert policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10866,7 +10886,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>User updates the status of a push alert policy</para>
+        /// <para>Updates the status of a push alert policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10885,7 +10905,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update push alert policy</para>
+        /// <para>Updates a push alert policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10947,7 +10967,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update push alert policy</para>
+        /// <para>Updates a push alert policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11009,7 +11029,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update push alert policy</para>
+        /// <para>Updates a push alert policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11028,7 +11048,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update push alert policy</para>
+        /// <para>Updates a push alert policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11047,7 +11067,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update the follow level of an anomalous activity to adjust the sensitivity of the anomaly detection algorithm by modifying the follow level.</para>
+        /// <para>Updates the attention level of an anomaly item. Adjusting the attention level affects the sensitivity of the anomaly detection algorithm.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11101,7 +11121,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update the follow level of an anomalous activity to adjust the sensitivity of the anomaly detection algorithm by modifying the follow level.</para>
+        /// <para>Updates the attention level of an anomaly item. Adjusting the attention level affects the sensitivity of the anomaly detection algorithm.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11155,7 +11175,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update the follow level of an anomalous activity to adjust the sensitivity of the anomaly detection algorithm by modifying the follow level.</para>
+        /// <para>Updates the attention level of an anomaly item. Adjusting the attention level affects the sensitivity of the anomaly detection algorithm.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11174,7 +11194,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update the follow level of an anomalous activity to adjust the sensitivity of the anomaly detection algorithm by modifying the follow level.</para>
+        /// <para>Updates the attention level of an anomaly item. Adjusting the attention level affects the sensitivity of the anomaly detection algorithm.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11193,14 +11213,14 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update the service function module configuration.</para>
+        /// <para>Updates the configuration of a service feature module.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You must fill in the parameters according to the input parameters of the general LLM service, convert them to a string, and assign the result to <c>llmParamString</c>.  </description></item>
-        /// <item><description>To use the returned data, convert the string back to a dictionary, following the response format of the general LLM service.</description></item>
+        /// <item><description>Populate parameters according to the general LLM service input parameters, convert them to a string, and assign the string to llmParamString.</description></item>
+        /// <item><description>Convert the returned data from a string to a dict before use. Refer to the general LLM service response format.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11261,14 +11281,14 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update the service function module configuration.</para>
+        /// <para>Updates the configuration of a service feature module.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You must fill in the parameters according to the input parameters of the general LLM service, convert them to a string, and assign the result to <c>llmParamString</c>.  </description></item>
-        /// <item><description>To use the returned data, convert the string back to a dictionary, following the response format of the general LLM service.</description></item>
+        /// <item><description>Populate parameters according to the general LLM service input parameters, convert them to a string, and assign the string to llmParamString.</description></item>
+        /// <item><description>Convert the returned data from a string to a dict before use. Refer to the general LLM service response format.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11329,14 +11349,14 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update the service function module configuration.</para>
+        /// <para>Updates the configuration of a service feature module.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You must fill in the parameters according to the input parameters of the general LLM service, convert them to a string, and assign the result to <c>llmParamString</c>.  </description></item>
-        /// <item><description>To use the returned data, convert the string back to a dictionary, following the response format of the general LLM service.</description></item>
+        /// <item><description>Populate parameters according to the general LLM service input parameters, convert them to a string, and assign the string to llmParamString.</description></item>
+        /// <item><description>Convert the returned data from a string to a dict before use. Refer to the general LLM service response format.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11356,14 +11376,14 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update the service function module configuration.</para>
+        /// <para>Updates the configuration of a service feature module.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You must fill in the parameters according to the input parameters of the general LLM service, convert them to a string, and assign the result to <c>llmParamString</c>.  </description></item>
-        /// <item><description>To use the returned data, convert the string back to a dictionary, following the response format of the general LLM service.</description></item>
+        /// <item><description>Populate parameters according to the general LLM service input parameters, convert them to a string, and assign the string to llmParamString.</description></item>
+        /// <item><description>Convert the returned data from a string to a dict before use. Refer to the general LLM service response format.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11383,12 +11403,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update the version of the installed widget to the specified version.</para>
+        /// <para>Updates an installed component to a specified version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The API call to update the Agent is asynchronous. After invoking this API, a task_id is returned. You can use this ID to invoke the GetAgentTask API to retrieve the execution status of the job.</para>
+        /// <para>Updating the Agent by calling this operation is asynchronous. After you call this operation, a task_id is returned. You can use this ID to call the GetAgentTask operation to query the execution status of the task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11442,12 +11462,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update the version of the installed widget to the specified version.</para>
+        /// <para>Updates an installed component to a specified version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The API call to update the Agent is asynchronous. After invoking this API, a task_id is returned. You can use this ID to invoke the GetAgentTask API to retrieve the execution status of the job.</para>
+        /// <para>Updating the Agent by calling this operation is asynchronous. After you call this operation, a task_id is returned. You can use this ID to call the GetAgentTask operation to query the execution status of the task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11501,12 +11521,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update the version of the installed widget to the specified version.</para>
+        /// <para>Updates an installed component to a specified version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The API call to update the Agent is asynchronous. After invoking this API, a task_id is returned. You can use this ID to invoke the GetAgentTask API to retrieve the execution status of the job.</para>
+        /// <para>Updating the Agent by calling this operation is asynchronous. After you call this operation, a task_id is returned. You can use this ID to call the GetAgentTask operation to query the execution status of the task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11525,12 +11545,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update the version of the installed widget to the specified version.</para>
+        /// <para>Updates an installed component to a specified version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The API call to update the Agent is asynchronous. After invoking this API, a task_id is returned. You can use this ID to invoke the GetAgentTask API to retrieve the execution status of the job.</para>
+        /// <para>Updating the Agent by calling this operation is asynchronous. After you call this operation, a task_id is returned. You can use this ID to call the GetAgentTask operation to query the execution status of the task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11549,7 +11569,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update widget for cluster</para>
+        /// <para>Updates components for a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11603,7 +11623,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update widget for cluster</para>
+        /// <para>Updates components for a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11657,7 +11677,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update widget for cluster</para>
+        /// <para>Updates components for a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11676,7 +11696,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update widget for cluster</para>
+        /// <para>Updates components for a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">

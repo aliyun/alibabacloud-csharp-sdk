@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class ListInstanceHealthResponseBody : TeaModel {
         /// <summary>
-        /// <para>Status code.  </para>
+        /// <para>The status code.</para>
         /// <list type="bullet">
-        /// <item><description><c>code == Success</c> indicates that authorization succeeded.  </description></item>
-        /// <item><description>Other status codes indicate that authorization failed. When authorization fails, check the <c>message</c> field for detailed error message.</description></item>
+        /// <item><description>If <c>code == Success</c>, the authorization is successful.</description></item>
+        /// <item><description>Other status codes indicate authorization failed. Check the <c>message</c> field for the detailed fault information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,21 +24,21 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Returned data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<ListInstanceHealthResponseBodyData> Data { get; set; }
         public class ListInstanceHealthResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>List of container image names in the pod.</para>
+            /// <para>The list of container image names in the Pod.</para>
             /// </summary>
             [NameInMap("images")]
             [Validation(Required=false)]
             public List<string> Images { get; set; }
 
             /// <summary>
-            /// <para>Instance ID.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-wz9d00ut2ska3mlyhn6j</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Instance { get; set; }
 
             /// <summary>
-            /// <para>Namespace where the pod resides.</para>
+            /// <para>The namespace of the Pod.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Namespace { get; set; }
 
             /// <summary>
-            /// <para>Pod name.</para>
+            /// <para>The Pod name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-pod</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Pod { get; set; }
 
             /// <summary>
-            /// <para>Region ID.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>Health score value.</para>
+            /// <para>The health score.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -88,13 +88,13 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public float? Score { get; set; }
 
             /// <summary>
-            /// <para>Running status of the instance. Valid values:  </para>
+            /// <para>The running status of the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Running</b>: The instance is running.  </description></item>
-            /// <item><description><b>Offline</b>: The instance is offline.</description></item>
+            /// <item><description><b>Running</b>: running.</description></item>
+            /// <item><description><b>Offline</b>: offline.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>An instance in the Offline state indicates that the heartbeat from the edge zone to the SysOM server has been lost. This does not mean that the corresponding ECS instance is not running.</para>
+            /// <para>An instance in the Offline status indicates that the heartbeat between the node and the SysOM server is lost. It does not mean that the corresponding ECS instance is not running.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -107,10 +107,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
-        /// <para>error message  </para>
+        /// <para>The error message.</para>
         /// <list type="bullet">
-        /// <item><description>If <c>code == Success</c>, this field is empty;  </description></item>
-        /// <item><description>Otherwise, this field contains the request error message.</description></item>
+        /// <item><description>If <c>code == Success</c>, this field is empty.</description></item>
+        /// <item><description>Otherwise, this field contains the request error information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request RequestId</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>35F91AAB-5FDF-5A22-B211-C7C6B00817D0</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Total number of query results.</para>
+        /// <para>The total number of query results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>42</para>

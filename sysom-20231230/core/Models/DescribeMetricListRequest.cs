@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class DescribeMetricListRequest : TeaModel {
         /// <summary>
-        /// <para>End time, in seconds as a UNIX timestamp</para>
+        /// <para>The end time as a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1683618245000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>Instance ID.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-wz9d00ut2ska3mlyhn6j</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Instance { get; set; }
 
         /// <summary>
-        /// <para>Metric name</para>
+        /// <para>The metric name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sysom_cpu_graph</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string MetricName { get; set; }
 
         /// <summary>
-        /// <para>Start time, in seconds as a UNIX timestamp</para>
+        /// <para>The start time as a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1709740800000</para>

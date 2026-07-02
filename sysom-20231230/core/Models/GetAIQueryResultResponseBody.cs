@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetAIQueryResultResponseBody : TeaModel {
         /// <summary>
-        /// <para>error code</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Return Result, with large Data Volume</para>
+        /// <para>The returned results. The data volume can be large.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;task_id\&quot;: \&quot;y4ba8uRV\&quot;}</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Data { get; set; }
 
         /// <summary>
-        /// <para>error message.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>分析ID: 56dae746-ef55-4f77-8373-cb3594c41457

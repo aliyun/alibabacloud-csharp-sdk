@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Table { get; set; }
 
         /// <summary>
-        /// <para>Identity flag</para>
+        /// <para>Identifier flag</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

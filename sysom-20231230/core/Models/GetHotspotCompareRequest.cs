@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public long? Beg2Start { get; set; }
 
         /// <summary>
-        /// <para>Hot spot type</para>
+        /// <para>Hotspot type</para>
         /// 
         /// <b>Example:</b>
         /// <para>alloc</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Instance2 { get; set; }
 
         /// <summary>
-        /// <para>Process of instance 1</para>
+        /// <para>Instance 1 process</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public long? Pid1 { get; set; }
 
         /// <summary>
-        /// <para>Process of instance 2</para>
+        /// <para>Instance 2 process</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-2zei55fwj8nnu31h3z46</para>

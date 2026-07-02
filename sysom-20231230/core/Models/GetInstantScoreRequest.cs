@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetInstantScoreRequest : TeaModel {
         /// <summary>
-        /// <para>Cluster ID</para>
+        /// <para>Cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2ijff4be-bf24-4070-89ca-c47c879b0g32</para>

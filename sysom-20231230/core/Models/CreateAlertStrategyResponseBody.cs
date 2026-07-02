@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class CreateAlertStrategyResponseBody : TeaModel {
         /// <summary>
-        /// <para>Status code  </para>
+        /// <para>The status code.</para>
         /// <list type="bullet">
-        /// <item><description>If <c>code == Success</c>, authorization succeeded.  </description></item>
-        /// <item><description>Any other status code indicates authorization failed. When authorization fails, view the <c>message</c> field to obtain detailed error message.</description></item>
+        /// <item><description>If <c>code == Success</c>, the request is successful.</description></item>
+        /// <item><description>Other status codes indicate a failed request. If the request fails, check the <c>message</c> field for detailed error information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Returned data.</para>
+        /// <para>The response data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -43,10 +43,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public object Data { get; set; }
 
         /// <summary>
-        /// <para>Error message  </para>
+        /// <para>The error message.</para>
         /// <list type="bullet">
-        /// <item><description>If <c>code == Success</c>, this field is empty.  </description></item>
-        /// <item><description>Otherwise, this field contains the request error message.</description></item>
+        /// <item><description>If <c>code == Success</c>, this field is empty.</description></item>
+        /// <item><description>Otherwise, this field contains the error information of the request.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetHotSpotUniqListResponseBody : TeaModel {
         /// <summary>
-        /// <para>Status code  </para>
+        /// <para>Status code</para>
         /// <list type="bullet">
-        /// <item><description><c>code == Success</c> indicates successful authorization;  </description></item>
-        /// <item><description>Other status codes indicate failed authorization. When authorization fails, view the <c>message</c> field to obtain detailed error information.</description></item>
+        /// <item><description><c>code == Success</c> indicates that the authorization is successful;</description></item>
+        /// <item><description>Other status codes indicate that the authorization has failed. When authorization fails, check the <c>message</c> field for detailed error information;</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Returned data</para>
+        /// <para>Response data</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetHotSpotUniqListResponseBodyData Data { get; set; }
         public class GetHotSpotUniqListResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>List of data names</para>
+            /// <para>List of data column names</para>
             /// </summary>
             [NameInMap("columns")]
             [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
-        /// <para>Return message</para>
+        /// <para>Response message</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>true if the API call succeeded; false if the API call failed</para>
+        /// <para>true indicates the API call succeeded, false indicates the API call failed</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

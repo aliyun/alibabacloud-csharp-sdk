@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetProblemPercentageRequest : TeaModel {
         /// <summary>
-        /// <para>Cluster ID</para>
+        /// <para>Cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2ijff4be-bf24-4070-89ca-c47c879b0g32</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Cluster { get; set; }
 
         /// <summary>
-        /// <para>End Time</para>
+        /// <para>End time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Instance { get; set; }
 
         /// <summary>
-        /// <para>Start Time</para>
+        /// <para>Start time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

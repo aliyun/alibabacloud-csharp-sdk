@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetCopilotHistoryRequest : TeaModel {
         /// <summary>
-        /// <para>Quantity of historical chat records to request, typically fewer than 100 records</para>
+        /// <para>The number of historical chat records to retrieve. The value is generally less than 100.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

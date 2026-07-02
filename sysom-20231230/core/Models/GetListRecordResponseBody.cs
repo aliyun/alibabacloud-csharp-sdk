@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetListRecordResponseBody : TeaModel {
         /// <summary>
-        /// <para>Status code.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Returned data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<GetListRecordResponseBodyData> Data { get; set; }
         public class GetListRecordResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>AI analysis ID</para>
+            /// <para>The AI analysis ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16896fa8-37f6-4c70-bb32-67fa9817d426</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string AnalysisId { get; set; }
 
             /// <summary>
-            /// <para>Analysis time</para>
+            /// <para>The analysis time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-12-24 12:02:05</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string AnalysisTime { get; set; }
 
             /// <summary>
-            /// <para>Analysis parameters for the AI job</para>
+            /// <para>The analysis parameters of the AI job analysis.</para>
             /// 
             /// <b>Example:</b>
             /// <para>timeout=2000 ms</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Arguments { get; set; }
 
             /// <summary>
-            /// <para>Analysis failure log</para>
+            /// <para>The analysis failure log.</para>
             /// 
             /// <b>Example:</b>
             /// <para>机器i-wz9dej066kii4goqpnze分析失败, 失败原因: Not get GPU trace data for \&quot;e59ce870-dbd4-4c44-a814-174ac6ab5bcf\&quot; \&quot;[\&quot;118534\&quot;]\&quot;!</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string FailedLog { get; set; }
 
             /// <summary>
-            /// <para>Analysis status</para>
+            /// <para>The analysis status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>已完成/分析失败</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
-        /// <para>Description of the status code.</para>
+        /// <para>The description of the status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Total number of records</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>19</para>

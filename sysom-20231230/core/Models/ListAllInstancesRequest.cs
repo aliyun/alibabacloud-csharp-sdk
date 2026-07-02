@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class ListAllInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>Current page</para>
+        /// <para>Current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>Managed type.</para>
+        /// <para>Management type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>managed</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string ManagedType { get; set; }
 
         /// <summary>
-        /// <para>Maximum number of records to retrieve in a single request.</para>
+        /// <para>Maximum number of records to retrieve at a time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -60,9 +60,9 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Paging cursor.  </para>
+        /// <para>Pagination token.</para>
         /// <remarks>
-        /// <para>If this parameter is not empty, it indicates that more data is available.</para>
+        /// <para>If this parameter is not empty, more data is available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>Plugin ID</para>
+        /// <para>Plugin ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>01fc4a0b-f199-4885-9861-b4054a310fe7</para>

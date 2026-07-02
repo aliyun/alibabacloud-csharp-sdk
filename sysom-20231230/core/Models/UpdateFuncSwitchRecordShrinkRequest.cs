@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class UpdateFuncSwitchRecordShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Diagnosis channel (currently fixed to the ecs channel)</para>
+        /// <para>The diagnostic channel. Currently, this parameter is fixed to the ECS channel.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Channel { get; set; }
 
         /// <summary>
-        /// <para>Diagnosis parameters. Different diagnosis types require different diagnosis parameters. You can use this field to filter records whose parameters match specified values.</para>
+        /// <para>The diagnostic parameters. Different types of diagnostics require different diagnostic parameters. You can use this field to filter records whose parameters match the specified values.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("params")]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string ParamsShrink { get; set; }
 
         /// <summary>
-        /// <para>Service Name</para>
+        /// <para>The service name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

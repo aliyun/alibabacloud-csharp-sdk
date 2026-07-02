@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class DescribeMetricListResponseBody : TeaModel {
         /// <summary>
-        /// <para>Status code  </para>
+        /// <para>The status code.</para>
         /// <list type="bullet">
-        /// <item><description><c>code == Success</c> indicates successful authorization;  </description></item>
-        /// <item><description>Any other status code indicates authorization failure. When authorization fails, check the <c>message</c> field for detailed error information.</description></item>
+        /// <item><description>If <c>code == Success</c>, the authorization is successful.</description></item>
+        /// <item><description>Other status codes indicate that the authorization failed. Check the <c>message</c> field for the detailed fault information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Returned data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<DescribeMetricListResponseBodyData> Data { get; set; }
         public class DescribeMetricListResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Metric labels</para>
+            /// <para>The metric labels.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{\&quot;taskExecName\&quot;: \&quot;build-and-deploy\&quot;, \&quot;pipelineName\&quot;: \&quot;pipeline-run-1722909642357\&quot;}</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Labels { get; set; }
 
             /// <summary>
-            /// <para>Metric name</para>
+            /// <para>The metric name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sysom_cpu_usage_idle</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string MetricName { get; set; }
 
             /// <summary>
-            /// <para>Metric data</para>
+            /// <para>The metric data.</para>
             /// </summary>
             [NameInMap("values")]
             [Validation(Required=false)]
@@ -60,9 +60,9 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
-        /// <para>Error message  </para>
+        /// <para>The error message.</para>
         /// <list type="bullet">
-        /// <item><description>If <c>code == Success</c>, this field is empty.  </description></item>
+        /// <item><description>If <c>code == Success</c>, this field is empty.</description></item>
         /// <item><description>Otherwise, this field contains the request error message.</description></item>
         /// </list>
         /// 

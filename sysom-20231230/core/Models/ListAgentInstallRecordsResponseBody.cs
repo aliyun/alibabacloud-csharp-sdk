@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class ListAgentInstallRecordsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID, which can be used for end-to-end Diagnosis</para>
+        /// <para>The request ID, which is active for end-to-end diagnostics.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E8CDFBA1-0564-5897-B070-D3C85002AF2F</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Status code  </para>
+        /// <para>The status code.</para>
         /// <list type="bullet">
-        /// <item><description><c>code == Success</c> indicates successful authorization;  </description></item>
-        /// <item><description>Other status codes indicate failed authorization. When authorization fails, view the <c>message</c> field to obtain detailed error message;</description></item>
+        /// <item><description>If <c>code == Success</c>, the authorization is successful.</description></item>
+        /// <item><description>Other status codes indicate that the authorization has failed. Check the <c>message</c> field for the detailed fault information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Return Result.</para>
+        /// <para>The returned results.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<ListAgentInstallRecordsResponseBodyData> Data { get; set; }
         public class ListAgentInstallRecordsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Creation Time</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-11-27T16:37:53</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>instance ID</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-bp118piqcio9tiwgh84b</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>widget ID</para>
+            /// <para>The component ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>74a86327-3170-412c-8e67-da3389ec56a9</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string PluginId { get; set; }
 
             /// <summary>
-            /// <para>plugin Version</para>
+            /// <para>The plug-in version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3.4.0-1</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string PluginVersion { get; set; }
 
             /// <summary>
-            /// <para>widget status</para>
+            /// <para>The component status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Installed</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Updated At</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-11-27T16:37:53</para>
@@ -103,10 +103,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
-        /// <para>error message  </para>
+        /// <para>The error message.</para>
         /// <list type="bullet">
-        /// <item><description>If <c>code == Success</c>, this field is empty;  </description></item>
-        /// <item><description>Otherwise, this field contains the request error message.</description></item>
+        /// <item><description>If <c>code == Success</c>, this field is empty.</description></item>
+        /// <item><description>Otherwise, this field contains the error message for the request.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Total number of records.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>64</para>

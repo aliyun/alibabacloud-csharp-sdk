@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetAgentRequest : TeaModel {
         /// <summary>
-        /// <para>Widget ID</para>
+        /// <para>Agent ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>74a86327-3170-412c-8e67-da3389ec56a9</para>

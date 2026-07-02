@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class UninstallAgentRequest : TeaModel {
         /// <summary>
-        /// <para>ID of the widget to uninstall</para>
+        /// <para>The ID of the component to uninstall.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string AgentId { get; set; }
 
         /// <summary>
-        /// <para>Version of the widget to uninstall</para>
+        /// <para>The version of the component to uninstall.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string AgentVersion { get; set; }
 
         /// <summary>
-        /// <para>List of instances from which to uninstall the widget</para>
+        /// <para>The list of instances from which to uninstall the component.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("instances")]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public List<UninstallAgentRequestInstances> Instances { get; set; }
         public class UninstallAgentRequestInstances : TeaModel {
             /// <summary>
-            /// <para>Instance ID.</para>
+            /// <para>The instance ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Instance { get; set; }
 
             /// <summary>
-            /// <para>Region ID.</para>
+            /// <para>The region ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

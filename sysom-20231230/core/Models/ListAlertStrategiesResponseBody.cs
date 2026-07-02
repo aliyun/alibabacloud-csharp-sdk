@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class ListAlertStrategiesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Status code  </para>
+        /// <para>The status code.</para>
         /// <list type="bullet">
-        /// <item><description>If <c>code == Success</c>, authorization succeeded.  </description></item>
-        /// <item><description>Other status codes indicate authorization failed. When authorization fails, view the <c>message</c> field to obtain detailed error message.</description></item>
+        /// <item><description>If <c>code == Success</c>, the authorization is successful.</description></item>
+        /// <item><description>Other status codes indicate that the authorization has failed. Check the <c>message</c> field for the detailed fault information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Return Result.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<ListAlertStrategiesResponseBodyData> Data { get; set; }
         public class ListAlertStrategiesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Creation Time.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1753669116286</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>Whether the alert policy is enabled</para>
+            /// <para>Indicates whether the alert policy is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// <para>Policy ID</para>
+            /// <para>The policy ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public bool? K8sLabel { get; set; }
 
             /// <summary>
-            /// <para>Policy Name</para>
+            /// <para>The policy name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>strategy1</para>
@@ -75,14 +75,14 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Details of the alert policy</para>
+            /// <para>The alert policy details.</para>
             /// </summary>
             [NameInMap("strategy")]
             [Validation(Required=false)]
             public ListAlertStrategiesResponseBodyDataStrategy Strategy { get; set; }
             public class ListAlertStrategiesResponseBodyDataStrategy : TeaModel {
                 /// <summary>
-                /// <para>Set of clusters that accept alerts</para>
+                /// <para>The collection of clusters for which alerts are received.</para>
                 /// </summary>
                 [NameInMap("clusters")]
                 [Validation(Required=false)]
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public List<int?> Destinations { get; set; }
 
                 /// <summary>
-                /// <para>List of abnormal items that accept alerts</para>
+                /// <para>接收告警的异常项列表</para>
                 /// </summary>
                 [NameInMap("items")]
                 [Validation(Required=false)]
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             }
 
             /// <summary>
-            /// <para>User ID</para>
+            /// <para>The user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1880327028143673</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Uid { get; set; }
 
             /// <summary>
-            /// <para>Update Time</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1753237017710</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
-        /// <para>Maximum number of returned records</para>
+        /// <para>The maximum number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -134,10 +134,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Error message  </para>
+        /// <para>The error message.</para>
         /// <list type="bullet">
-        /// <item><description>If <c>code == Success</c>, this field is empty;  </description></item>
-        /// <item><description>Otherwise, this field contains the request error message.</description></item>
+        /// <item><description>If <c>code == Success</c>, this field is empty.</description></item>
+        /// <item><description>Otherwise, this field contains the error information for the request.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Pagination token for the next request.</para>
+        /// <para>The pagination token for the next request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c2f78a783f49457caba6bace6f6f79e4</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Total number of records</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>92</para>

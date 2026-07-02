@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class InstallAgentForClusterRequest : TeaModel {
         /// <summary>
-        /// <para>Widget ID</para>
+        /// <para>The component ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>74a86327-3170-412c-8e67-da3389ec56a9</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string AgentId { get; set; }
 
         /// <summary>
-        /// <para>Widget version</para>
+        /// <para>The component version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3.4.0-1</para>
@@ -30,9 +30,9 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string AgentVersion { get; set; }
 
         /// <summary>
-        /// <para>Cluster ID.  </para>
+        /// <para>The cluster ID.</para>
         /// <remarks>
-        /// <para>You must pass the ID of the ACK cluster here.</para>
+        /// <para>The cluster ID here must be an ACK cluster ID.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>Widget configuration ID</para>
+        /// <para>The component configuration ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8gj86wrt7-3170-412c-8e67-da3389ecg6a9</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string ConfigId { get; set; }
 
         /// <summary>
-        /// <para>Canary release environment</para>
+        /// <para>The canary release configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;type&quot;:&quot;numeric&quot;,&quot;config&quot;:{&quot;value&quot;:2}}</para>

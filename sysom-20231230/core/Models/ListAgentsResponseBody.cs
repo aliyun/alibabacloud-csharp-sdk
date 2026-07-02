@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class ListAgentsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID, which can be used for end-to-end Diagnosis</para>
+        /// <para>The request ID, which can be used for end-to-end diagnostics.</para>
         /// 
         /// <b>Example:</b>
         /// <para>66EAED72-542B-583B-BCED-64433DC27AD7</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Status code  </para>
+        /// <para>The status code.</para>
         /// <list type="bullet">
-        /// <item><description><c>code == Success</c> indicates successful authorization;  </description></item>
-        /// <item><description>Other status codes indicate authorization failure. When authorization fails, view the <c>message</c> field to obtain detailed error message;</description></item>
+        /// <item><description>If code is Success, the authorization is successful.</description></item>
+        /// <item><description>Other status codes indicate authorization failed. Check the message field for the detailed fault information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Returned Data</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<ListAgentsResponseBodyData> Data { get; set; }
         public class ListAgentsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Widget creation time</para>
+            /// <para>The time when the component was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-09-14T20:46:08</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>Widget description</para>
+            /// <para>The component description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SysOM Agent</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Widget ID</para>
+            /// <para>The component ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>74a86327-3170-412c-8e67-da3389ec56a9</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>Widget name</para>
+            /// <para>The component name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SysOM Agent</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Supported architecture (multiple architectures separated by commas)</para>
+            /// <para>The supported architectures. Multiple architectures are separated by commas.</para>
             /// 
             /// <b>Example:</b>
             /// <para>x86</para>
@@ -91,10 +91,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string SupportArch { get; set; }
 
             /// <summary>
-            /// <para>Widget type  </para>
+            /// <para>The type of the component. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Control: control-type widget  </description></item>
-            /// <item><description>AI: AI widget</description></item>
+            /// <item><description>Control: control-type component.</description></item>
+            /// <item><description>AI: AI component.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>Widget Update Time</para>
+            /// <para>The time when the component was last updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-09-14T20:46:08</para>
@@ -115,14 +115,14 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string UpdatedAt { get; set; }
 
             /// <summary>
-            /// <para>Widget Version List</para>
+            /// <para>The list of component versions.</para>
             /// </summary>
             [NameInMap("versions")]
             [Validation(Required=false)]
             public List<ListAgentsResponseBodyDataVersions> Versions { get; set; }
             public class ListAgentsResponseBodyDataVersions : TeaModel {
                 /// <summary>
-                /// <para>Widget version creation time</para>
+                /// <para>The time when the component version was created.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-09-14T20:46:08</para>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public string CreatedAt { get; set; }
 
                 /// <summary>
-                /// <para>The widget\&quot;s install script</para>
+                /// <para>The installation script of the component.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sysom.sh install</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public string InstallScript { get; set; }
 
                 /// <summary>
-                /// <para>Widget uninstall script</para>
+                /// <para>The uninstallation script of the component.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sysom.sh uninstall</para>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public string UninstallScript { get; set; }
 
                 /// <summary>
-                /// <para>Widget version update time</para>
+                /// <para>The time when the component version was last updated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-09-14T20:46:08</para>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public string UpdatedAt { get; set; }
 
                 /// <summary>
-                /// <para>Widget upgrade script</para>
+                /// <para>The update script of the component.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sysom.sh upgrade</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public string UpgradeScript { get; set; }
 
                 /// <summary>
-                /// <para>Widget version number</para>
+                /// <para>The component version number.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3.4.0-1</para>
@@ -186,9 +186,9 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
-        /// <para>Error message  </para>
+        /// <para>The error message.</para>
         /// <list type="bullet">
-        /// <item><description>If <c>code == Success</c>, this field is empty.  </description></item>
+        /// <item><description>If code is Success, this field is empty.</description></item>
         /// <item><description>Otherwise, this field contains the request error message.</description></item>
         /// </list>
         /// 
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Total number of records.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

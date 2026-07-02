@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class InvokeDiagnosisResponseBody : TeaModel {
         /// <summary>
-        /// <para>Status code  </para>
+        /// <para>Status code.</para>
         /// <list type="bullet">
-        /// <item><description>If <c>code == Success</c>, authorization succeeded.  </description></item>
+        /// <item><description>If <c>code == Success</c>, the authorization is successful.</description></item>
         /// <item><description>Other status codes indicate authorization failure. When authorization fails, check the <c>message</c> field for detailed error information.</description></item>
         /// </list>
         /// 
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Return Result.</para>
+        /// <para>Response result.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public InvokeDiagnosisResponseBodyData Data { get; set; }
         public class InvokeDiagnosisResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Diagnostic task ID. You can use this ID to invoke the <c>GetDiagnosisResult</c> API to query the diagnosis result.</para>
+            /// <para>Diagnosis task ID. You can use this ID to call the <c>GetDiagnosisResult</c> API to query the diagnosis result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ihqhAcrt</para>
@@ -43,10 +43,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
-        /// <para>Error message  </para>
+        /// <para>Error message.</para>
         /// <list type="bullet">
-        /// <item><description>If <c>code == Success</c>, this field is empty.  </description></item>
-        /// <item><description>Otherwise, this field contains the request error message.</description></item>
+        /// <item><description>If <c>code == Success</c>, this field is empty.</description></item>
+        /// <item><description>Otherwise, this field contains the request error information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request RequestId</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>43A910E9-A739-525E-855D-A32C257F1826</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetAgentTaskRequest : TeaModel {
         /// <summary>
-        /// <para>Job ID.</para>
+        /// <para>The task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>42172120177e4b3abd6fabb3a6b5e2dd</para>
