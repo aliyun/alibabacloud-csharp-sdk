@@ -1521,14 +1521,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of audit alert logs.</para>
+        /// <para>Queries the list of audit alert logs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries a list of data audit alert logs, allowing you to search for and handle alerts.</para>
+        /// <para>This operation is used to query the list of data audit alert logs, which facilitates alerting search and alerting handling.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The QPS limit for a single user is 10. If you exceed this limit, the system throttles your API calls. Plan your calls accordingly.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Invoke this operation at an appropriate frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1637,10 +1637,6 @@ namespace AlibabaCloud.SDK.Sddp20190103
             {
                 query["RuleCategory"] = request.RuleCategory;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleID))
-            {
-                query["RuleID"] = request.RuleID;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleId))
             {
                 query["RuleId"] = request.RuleId;
@@ -1682,14 +1678,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of audit alert logs.</para>
+        /// <para>Queries the list of audit alert logs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries a list of data audit alert logs, allowing you to search for and handle alerts.</para>
+        /// <para>This operation is used to query the list of data audit alert logs, which facilitates alerting search and alerting handling.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The QPS limit for a single user is 10. If you exceed this limit, the system throttles your API calls. Plan your calls accordingly.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Invoke this operation at an appropriate frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1798,10 +1794,6 @@ namespace AlibabaCloud.SDK.Sddp20190103
             {
                 query["RuleCategory"] = request.RuleCategory;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleID))
-            {
-                query["RuleID"] = request.RuleID;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleId))
             {
                 query["RuleId"] = request.RuleId;
@@ -1843,14 +1835,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of audit alert logs.</para>
+        /// <para>Queries the list of audit alert logs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries a list of data audit alert logs, allowing you to search for and handle alerts.</para>
+        /// <para>This operation is used to query the list of data audit alert logs, which facilitates alerting search and alerting handling.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The QPS limit for a single user is 10. If you exceed this limit, the system throttles your API calls. Plan your calls accordingly.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Invoke this operation at an appropriate frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1868,14 +1860,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of audit alert logs.</para>
+        /// <para>Queries the list of audit alert logs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries a list of data audit alert logs, allowing you to search for and handle alerts.</para>
+        /// <para>This operation is used to query the list of data audit alert logs, which facilitates alerting search and alerting handling.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The QPS limit for a single user is 10. If you exceed this limit, the system throttles your API calls. Plan your calls accordingly.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Invoke this operation at an appropriate frequency.</para>
         /// </description>
         /// 
         /// <param name="request">

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string AsyncRequestId { get; set; }
 
         /// <summary>
-        /// <para>The client IP address.</para>
+        /// <para>The IP address of the request client.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.<em>.</em>.94</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string ClientUa { get; set; }
 
         /// <summary>
-        /// <para>The page number to return. Default value: 1.</para>
+        /// <para>The page number in a paged query. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string EffectRowRange { get; set; }
 
         /// <summary>
-        /// <para>The end time for querying alert logs, provided as a UNIX timestamp in milliseconds.</para>
+        /// <para>The end time of the alert log. The value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1583856000000</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The execution time range.</para>
+        /// <para>The range of execution time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>in[1000 2000]</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string ExecuteTimeRange { get; set; }
 
         /// <summary>
-        /// <para>The name of the data asset instance.</para>
+        /// <para>The name of the asset instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-2zeftaaq4gqcqb9kfkzg</para>
@@ -102,9 +102,9 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         /// <summary>
         /// <para>The network type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>default</b>: The IP address is from outside of Alibaba Cloud. This is the default value.</para>
+        /// <item><description><para><b>default</b> (default): non-Alibaba Cloud service</para>
         /// </description></item>
-        /// <item><description><para><b>aliyun</b>: The IP address is from within Alibaba Cloud.</para>
+        /// <item><description><para><b>aliyun</b>: Alibaba Cloud service</para>
         /// </description></item>
         /// </list>
         /// 
@@ -116,12 +116,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string IpType { get; set; }
 
         /// <summary>
-        /// <para>Specifies the language of the request and response. Default value: <b>zh_cn</b>. Valid values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh_cn</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh_cn</b>: Chinese.</para>
-        /// </description></item>
-        /// <item><description><para><b>en_us</b>: English.</para>
-        /// </description></item>
+        /// <item><description><b>zh_cn</b>: Chinese.</description></item>
+        /// <item><description><b>en_us</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -132,7 +130,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to retrieve the whitelist status.</para>
+        /// <para>Specifies whether to load the whitelist status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -142,7 +140,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public bool? LoadWhiteList { get; set; }
 
         /// <summary>
-        /// <para>A JSON string that specifies which query conditions to include or exclude.</para>
+        /// <para>The JSON string that specifies whether the query conditions are included.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[ {   &quot;isContain&quot; : false,   &quot;queryKey&quot; : &quot;effectRowRange&quot; }, {   &quot;isContain&quot; : false,   &quot;queryKey&quot; : &quot;remoteClientIp&quot; } ]</para>
@@ -162,7 +160,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string LogSource { get; set; }
 
         /// <summary>
-        /// <para>The UID of the member account.</para>
+        /// <para>The UID of the member accounts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>**********8103</para>
@@ -202,7 +200,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string OssObjectKey { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page in a paged query. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -212,7 +210,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The service to which the data asset belongs. Valid values include <b>MaxCompute, OSS, AnalyticDB for MySQL, TableStore, and RDS</b>.</para>
+        /// <para>The name of the product to which the data asset belongs. Valid values: <b>MaxCompute, OSS, ADS, OTS, RDS</b>, and more.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RDS</para>
@@ -222,32 +220,20 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the service to which the data object belongs. Valid values:</para>
+        /// <para>The ID that corresponds to the product name to which the data object belongs. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>1</b>: MaxCompute</para>
-        /// </description></item>
-        /// <item><description><para><b>2</b>: OSS</para>
-        /// </description></item>
-        /// <item><description><para><b>3</b>: AnalyticDB for MySQL</para>
-        /// </description></item>
-        /// <item><description><para><b>4</b>: TableStore</para>
-        /// </description></item>
-        /// <item><description><para><b>5</b>: RDS</para>
-        /// </description></item>
-        /// <item><description><para><b>6</b>: SELF_DB</para>
-        /// </description></item>
-        /// <item><description><para><b>7</b>: PolarDB-X</para>
-        /// </description></item>
-        /// <item><description><para><b>8</b>: PolarDB</para>
-        /// </description></item>
-        /// <item><description><para><b>9</b>: AnalyticDB for PostgreSQL</para>
-        /// </description></item>
-        /// <item><description><para><b>10</b>: OceanBase</para>
-        /// </description></item>
-        /// <item><description><para><b>11</b>: MongoDB</para>
-        /// </description></item>
-        /// <item><description><para><b>25</b>: Redis</para>
-        /// </description></item>
+        /// <item><description><b>1</b>: MaxCompute</description></item>
+        /// <item><description><b>2</b>: OSS</description></item>
+        /// <item><description><b>3</b>: ADB-MYSQL</description></item>
+        /// <item><description><b>4</b>: TableStore</description></item>
+        /// <item><description><b>5</b>: RDS</description></item>
+        /// <item><description><b>6</b>: SELF_DB</description></item>
+        /// <item><description><b>7</b>: PolarDB-X</description></item>
+        /// <item><description><b>8</b>: PolarDB</description></item>
+        /// <item><description><b>9</b>: ADB-PG</description></item>
+        /// <item><description><b>10</b>: OceanBase</description></item>
+        /// <item><description><b>11</b>: MongoDB</description></item>
+        /// <item><description><b>25</b>: Redis</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -278,17 +264,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string RuleCategory { get; set; }
 
         /// <summary>
-        /// <para>The ID of the audit rule.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>994007</para>
-        /// </summary>
-        [NameInMap("RuleID")]
-        [Validation(Required=false)]
-        public string RuleID { get; set; }
-
-        /// <summary>
-        /// <para>The ID of the audit rule.</para>
+        /// <para>The ID of the audit policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>867028</para>
@@ -298,7 +274,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string RuleId { get; set; }
 
         /// <summary>
-        /// <para>The name of the audit rule.</para>
+        /// <para>The name of the audit policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_rule</para>
@@ -308,7 +284,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>The SQL statement.</para>
+        /// <para>The content of the SQL statement.</para>
         /// 
         /// <b>Example:</b>
         /// <para>select * from test03</para>
@@ -318,7 +294,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string SqlText { get; set; }
 
         /// <summary>
-        /// <para>The start time for querying alert logs, provided as a UNIX timestamp in milliseconds.</para>
+        /// <para>The start time of the alert log, in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1616068534877</para>
