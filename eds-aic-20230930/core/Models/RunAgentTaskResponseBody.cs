@@ -93,6 +93,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string RunningAt { get; set; }
 
+            [NameInMap("SessionId")]
+            [Validation(Required=false)]
+            public string SessionId { get; set; }
+
             /// <summary>
             /// <para>The task ID, which is globally unique.</para>
             /// 

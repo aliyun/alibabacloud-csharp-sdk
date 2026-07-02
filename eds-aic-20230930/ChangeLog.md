@@ -1,3 +1,8 @@
+2026-07-02 Version: 4.26.1
+- Update API RunAgentTask: add request parameters Targets.
+- Update API RunAgentTask: add response parameters Body.Tasks.$.SessionId.
+
+
 2026-07-01 Version: 4.26.0
 - Support API DescribeCreditDetail.
 

@@ -21,7 +21,6 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 
         /// <summary>
         /// <para>The list of Mobile node IDs. A maximum of 100 nodes are supported per request.</para>
-        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
@@ -40,6 +39,20 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [NameInMap("ScheduleId")]
         [Validation(Required=false)]
         public string ScheduleId { get; set; }
+
+        [NameInMap("Targets")]
+        [Validation(Required=false)]
+        public List<RunAgentTaskRequestTargets> Targets { get; set; }
+        public class RunAgentTaskRequestTargets : TeaModel {
+            [NameInMap("InstanceId")]
+            [Validation(Required=false)]
+            public string InstanceId { get; set; }
+
+            [NameInMap("SessionId")]
+            [Validation(Required=false)]
+            public string SessionId { get; set; }
+
+        }
 
         [NameInMap("TaskConfigId")]
         [Validation(Required=false)]
