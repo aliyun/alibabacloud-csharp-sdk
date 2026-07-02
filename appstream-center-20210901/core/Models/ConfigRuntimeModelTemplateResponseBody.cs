@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<ConfigRuntimeModelTemplateResponseBodyData> Data { get; set; }
         public class ConfigRuntimeModelTemplateResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The error code returned if the execution fails.</para>
+            /// <para>The error code returned when the execution fails.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>The HTTP status code returned if the execution fails.</para>
+            /// <para>The HTTP status code returned when the execution fails.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public int? HttpStatusCode { get; set; }
 
             /// <summary>
-            /// <para>The error message returned if the execution fails.</para>
+            /// <para>The error message returned when the execution fails.</para>
             /// 
             /// <b>Example:</b>
             /// <para>The parameter callerUid may not be null.</para>

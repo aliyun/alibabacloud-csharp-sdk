@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<RemoveRuntimeModelTemplateResponseBodyData> Data { get; set; }
         public class RemoveRuntimeModelTemplateResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The error code returned upon failure.</para>
+            /// <para>The error code returned if the operation fails.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Runtime.NotFound</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>The HTTP status code returned upon failure.</para>
+            /// <para>The HTTP status code returned if the operation fails.</para>
             /// 
             /// <b>Example:</b>
             /// <para>404</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public int? HttpStatusCode { get; set; }
 
             /// <summary>
-            /// <para>The error message returned upon failure.</para>
+            /// <para>The error message returned if the operation fails.</para>
             /// 
             /// <b>Example:</b>
             /// <para>The runtime is not found.</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string RuntimeId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the operation was successful.</para>
+            /// <para>Indicates whether the operation is successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of results.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

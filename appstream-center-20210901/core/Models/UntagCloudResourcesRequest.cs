@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         /// <summary>
         /// <para>The list of tags. System tags and custom tags are supported. You can specify up to 10 tags.</para>
-        /// <para>Enumerated values for system tags:</para>
+        /// <para>Valid values of system tags:</para>
         /// <list type="bullet">
         /// <item><description><c>System/Scheduler/GRAYSCALE</c>: canary release tag</description></item>
         /// <item><description><c>System/Scheduler/STOP_NEW_USER_CONNECTION</c>: tag that prevents newly bound users in a delivery group from establishing connections.</description></item>

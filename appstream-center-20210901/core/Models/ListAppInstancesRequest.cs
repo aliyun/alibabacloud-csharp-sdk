@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The list of application instance IDs. A maximum of 100 IDs can be specified.</para>
+        /// <para>The list of application instance IDs. Maximum length: 100.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>false</c>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<string> Status { get; set; }
 
         /// <summary>
-        /// <para>The list of user IDs. A maximum of 100 IDs can be specified.</para>
+        /// <para>The list of user IDs. Maximum length: 100.</para>
         /// </summary>
         [NameInMap("UserIdList")]
         [Validation(Required=false)]

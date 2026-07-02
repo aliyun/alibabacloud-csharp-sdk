@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public ListAppInstancesResponseBodyAppInstanceModelsBindInfo BindInfo { get; set; }
             public class ListAppInstancesResponseBodyAppInstanceModelsBindInfo : TeaModel {
                 /// <summary>
-                /// <para>The ID of the end user bound to the instance.</para>
+                /// <para>The end user ID bound to the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>app.test</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             /// <list type="bullet">
             /// <item><description><b>PrePaid</b>: subscription.</description></item>
             /// <item><description><b>PostPaid</b>: pay-as-you-go.<remarks>
-            /// <para>This parameter is returned only when the billing mode of the delivery group to which the instance belongs is set to resource-based billing (ChargeResourceMode=Node).</para>
+            /// <para>This parameter is returned only when the billing mode of the delivery group to which this instance belongs is resource-based billing (ChargeResourceMode=Node).</para>
             /// </remarks>
             /// </description></item>
             /// </list>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The public IP address of the primary network interface controller (NIC). This value is returned only when the network policy (<c>StrategyType</c>) of the delivery group is set to mixed mode pattern (<c>Mixed</c>). Otherwise, this value is empty.</para>
+            /// <para>The public IP address of the primary network interface controller (NIC). This value is returned only when the network policy (<c>StrategyType</c>) of the delivery group is set to the mixed pattern (<c>Mixed</c>). Otherwise, this value is empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.13.13.211</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             /// <summary>
             /// <para>The ID of the node on which the instance runs.</para>
             /// <remarks>
-            /// <para>This parameter is returned only when the billing mode of the delivery group to which the instance belongs is set to resource-based billing (ChargeResourceMode=Node).</para>
+            /// <para>This parameter is returned only when the billing mode of the delivery group to which this instance belongs is resource-based billing (ChargeResourceMode=Node).</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

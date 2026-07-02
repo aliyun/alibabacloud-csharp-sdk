@@ -27,7 +27,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public ListTenantConfigResponseBodyTenantConfigModel TenantConfigModel { get; set; }
         public class ListTenantConfigResponseBodyTenantConfigModel : TeaModel {
             /// <summary>
-            /// <para>Indicates whether resource expiration reminders are enabled.</para>
+            /// <para>Indicates whether resource expiration reminders are enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true: Enabled.</description></item>
+            /// <item><description>false: Not enabled.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -35,6 +39,18 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [NameInMap("AppInstanceGroupExpireRemind")]
             [Validation(Required=false)]
             public bool? AppInstanceGroupExpireRemind { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>None</para>
+            /// </summary>
+            [NameInMap("MultiSessionSupportType")]
+            [Validation(Required=false)]
+            public string MultiSessionSupportType { get; set; }
+
+            [NameInMap("MultiSessionSupportedRegions")]
+            [Validation(Required=false)]
+            public List<string> MultiSessionSupportedRegions { get; set; }
 
         }
 

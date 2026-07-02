@@ -17,14 +17,18 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<GetRuntimeChannelResponseBodyData> Data { get; set; }
         public class GetRuntimeChannelResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The channel avatar URL.</para>
+            /// <para>The URL of the channel avatar.</para>
             /// </summary>
             [NameInMap("AvatarUrl")]
             [Validation(Required=false)]
             public string AvatarUrl { get; set; }
 
             /// <summary>
-            /// <para>The channel type. Valid values: System: a system-supported channel. Custom: a custom channel.</para>
+            /// <para>The channel type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>System: a channel supported by the system.</description></item>
+            /// <item><description>Custom: a custom channel.</description></item>
+            /// </list>
             /// </summary>
             [NameInMap("ChannelType")]
             [Validation(Required=false)]
@@ -42,7 +46,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
             /// <summary>
             /// <para>The channel configuration JSON string.</para>
-            /// <para>Currently, only the simple configuration mode is supported. You must pass in AppKey and AppSecret.</para>
+            /// <para>Currently, only the simple configuration mode is supported. You must pass the AppKey and AppSecret parameters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -55,14 +59,18 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string Config { get; set; }
 
             /// <summary>
-            /// <para>The configuration mode. Valid values: Simple: simple configuration mode. Custom: custom configuration mode.</para>
+            /// <para>The configuration mode. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Simple: simple configuration mode.</description></item>
+            /// <item><description>Custom: custom configuration mode.</description></item>
+            /// </list>
             /// </summary>
             [NameInMap("ConfigMode")]
             [Validation(Required=false)]
             public string ConfigMode { get; set; }
 
             /// <summary>
-            /// <para>The QR code configuration notification page URL. This parameter is returned only for the ENTERPRISE or ENTERPRISE_JVS platform.</para>
+            /// <para>The URL of the QR code configuration notification page. This parameter is returned only for the ENTERPRISE or ENTERPRISE_JVS platform.</para>
             /// </summary>
             [NameInMap("QrCodeNotifyUrl")]
             [Validation(Required=false)]
