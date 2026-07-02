@@ -9,12 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class GetPublicKeyRequest : TeaModel {
+        /// <summary>
+        /// <para>Specifies whether to enable the DryRun mode.</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: enables the DryRun mode.</para>
+        /// </description></item>
+        /// <item><description><para>false (default): disables the DryRun mode.</para>
+        /// </description></item>
+        /// </list>
+        /// <para>The DryRun mode is used to test API calls, verify your permissions on resources, and check whether the parameters are valid. If you enable the DryRun mode, KMS always returns a failed response and a failure reason. The failure reasons include the following:</para>
+        /// <list type="bullet">
+        /// <item><description><para>DryRunOperationError: The request would have succeeded if the DryRun parameter is not specified.</para>
+        /// </description></item>
+        /// <item><description><para>ValidationError: The specified parameters in the request are invalid.</para>
+        /// </description></item>
+        /// <item><description><para>AccessDeniedError: You are not authorized to perform the operation on the KMS resource.</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public string DryRun { get; set; }
 
         /// <summary>
-        /// <para>The globally unique ID of the CMK. You can also set this parameter to an alias that is bound to the CMK. For more information, see <a href="https://help.aliyun.com/document_detail/68522.html">Use aliases</a>.</para>
+        /// <para>The globally unique identifier of the customer master key (CMK). This parameter can also be an alias that is bound to the CMK. For more information, see <a href="https://help.aliyun.com/document_detail/68522.html">Use of aliases</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,7 +46,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public string KeyId { get; set; }
 
         /// <summary>
-        /// <para>The globally unique ID of the CMK version.</para>
+        /// <para>The globally unique identifier of the key version.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

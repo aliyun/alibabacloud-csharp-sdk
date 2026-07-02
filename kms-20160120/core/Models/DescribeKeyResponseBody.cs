@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
             /// <para>The Alibaba Cloud Resource Name (ARN) of the CMK.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>acs:kms:cn-hangzhou:154035569884****:key/05754286-3ba2-4fa6-8d41-4323aca6****</para>
+            /// <para>acs:kms:cn-hangzhou:154035569884****:key/key-hzz630494463ejqjx****</para>
             /// </summary>
             [NameInMap("Arn")]
             [Validation(Required=false)]
@@ -29,13 +29,16 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
             /// <summary>
             /// <para>Indicates whether automatic key rotation is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Enabled</description></item>
-            /// <item><description>Disabled</description></item>
-            /// <item><description>Suspended</description></item>
+            /// <item><description><para>Enabled</para>
+            /// </description></item>
+            /// <item><description><para>Disabled</para>
+            /// </description></item>
+            /// <item><description><para>Suspended</para>
+            /// </description></item>
             /// </list>
             /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/134270.html">Automatic key rotation</a>.</para>
             /// <remarks>
-            /// <para> Only symmetric CMKs support automatic key rotation.</para>
+            /// <para>Only symmetric CMKs support automatic key rotation.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -49,7 +52,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
             /// <para>The time when the CMK was created. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2021-05-20T06:34:21Z</para>
+            /// <para>2024-05-20T06:34:21Z</para>
             /// </summary>
             [NameInMap("CreationDate")]
             [Validation(Required=false)]
@@ -79,11 +82,11 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
             /// <para>The time at which the CMK is scheduled for deletion. The time is displayed in UTC.</para>
             /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/44196.html">ScheduleKeyDeletion</a>.</para>
             /// <remarks>
-            /// <para> This parameter is returned only when the value of the KeyState parameter is PendingDeletion.</para>
+            /// <para>This parameter is returned only when the value of the KeyState parameter is PendingDeletion.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>2021-05-26T18:22:03Z</para>
+            /// <para>2024-05-26T18:22:03Z</para>
             /// </summary>
             [NameInMap("DeleteDate")]
             [Validation(Required=false)]
@@ -92,8 +95,10 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
             /// <summary>
             /// <para>Indicates whether deletion protection is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Enabled</description></item>
-            /// <item><description>Disabled</description></item>
+            /// <item><description><para>Enabled</para>
+            /// </description></item>
+            /// <item><description><para>Disabled</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -127,7 +132,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
             /// <para>The ID of the CMK. The ID must be globally unique.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>05754286-3ba2-4fa6-8d41-4323aca6****</para>
+            /// <para>key-hzz630494463ejqjx****</para>
             /// </summary>
             [NameInMap("KeyId")]
             [Validation(Required=false)]
@@ -168,7 +173,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
             /// <para>The time when the last rotation was performed. The time is displayed in UTC. For a new CMK, the value of this parameter is the time when the initial version of the CMK was generated.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2021-05-20T06:34:21Z</para>
+            /// <para>2024-05-20T06:34:21Z</para>
             /// </summary>
             [NameInMap("LastRotationDate")]
             [Validation(Required=false)]
@@ -178,7 +183,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
             /// <para>The time when the key material expires. The time is displayed in UTC. If this parameter value is empty, the key material does not expire.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2021-07-06T18:22:03Z</para>
+            /// <para>2024-07-06T18:22:03Z</para>
             /// </summary>
             [NameInMap("MaterialExpireTime")]
             [Validation(Required=false)]
@@ -187,7 +192,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
             /// <summary>
             /// <para>The time when the next rotation will be performed.</para>
             /// <remarks>
-            /// <para> This parameter is returned only when the value of the AutomaticRotation parameter is Enabled or Suspended.</para>
+            /// <para>This parameter is returned only when the value of the AutomaticRotation parameter is Enabled or Suspended.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -232,7 +237,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
             /// <para>Unit: seconds.</para>
             /// <para>For example, if the value is 604800s, automatic key rotation is performed at a 7-day interval.</para>
             /// <remarks>
-            /// <para> This parameter is returned only when the value of the AutomaticRotation parameter is Enabled or Suspended.</para>
+            /// <para>This parameter is returned only when the value of the AutomaticRotation parameter is Enabled or Suspended.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -245,7 +250,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>f1fdfa9d-bd49-418b-942f-8f3e3ec00a4f</para>

@@ -10,13 +10,14 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class ListSecretVersionIdsRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to return deprecated secret versions.</para>
+        /// <para>Specifies whether to include credential versions that have no version stages in the response.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false: no</description></item>
-        /// <item><description>true: yes</description></item>
+        /// <item><description><para>false (default): No</para>
+        /// </description></item>
+        /// <item><description><para>true: Yes</para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -26,7 +27,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public string IncludeDeprecated { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: 1.</para>
+        /// <para>The number of the page to return for a paged query. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -36,7 +37,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: 10.</para>
+        /// <para>The number of entries to return on each page for a paged query. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -46,7 +47,10 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The name of the secret.</para>
+        /// <para>The name or Alibaba Cloud Resource Name (ARN) of the credential.</para>
+        /// <remarks>
+        /// <para>When you access a credential that belongs to another Alibaba Cloud account, you must specify the ARN of the credential. The ARN of a credential is in the format of <c>acs:kms:${region}:${account}:secret/${secret-name}</c>.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

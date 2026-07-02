@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
             /// <para>The date and time when the CMK version was created. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2016-03-25T10:42:40Z</para>
+            /// <para>2024-03-25T10:42:40Z</para>
             /// </summary>
             [NameInMap("CreationDate")]
             [Validation(Required=false)]
@@ -29,11 +29,11 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
             /// <summary>
             /// <para>The globally unique ID of the CMK.</para>
             /// <remarks>
-            /// <para> If you set the KeyId parameter in the request to an alias of the CMK, the ID of the CMK to which the alias is bound is returned.</para>
+            /// <para>If you set the KeyId parameter in the request to an alias of the CMK, the ID of the CMK to which the alias is bound is returned.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>1234abcd-12ab-34cd-56ef-12345678****</para>
+            /// <para>key-hzz630494463ejqjx****</para>
             /// </summary>
             [NameInMap("KeyId")]
             [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7021b6ec-4be7-4d3c-8a68-1e85d4d515a0</para>

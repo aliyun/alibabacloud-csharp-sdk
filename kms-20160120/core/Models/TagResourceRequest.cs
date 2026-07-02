@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// <summary>
         /// <para>The ID of the certificate.</para>
         /// <remarks>
-        /// <para> You can configure only one of the KeyId, SecretName, and CertificateId parameters.</para>
+        /// <para>You can configure only one of the KeyId, SecretName, and CertificateId parameters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -25,11 +25,11 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// <summary>
         /// <para>The ID of the customer master key (CMK). The ID must be globally unique.</para>
         /// <remarks>
-        /// <para> You can configure only one of the KeyId, SecretName, and CertificateId parameters.</para>
+        /// <para>You can configure only one of the KeyId, SecretName, and CertificateId parameters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>08c33a6f-4e0a-4a1b-a3fa-7ddf****</para>
+        /// <para>key-hzz630494463ejqjx****</para>
         /// </summary>
         [NameInMap("KeyId")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// <summary>
         /// <para>The name of the secret.</para>
         /// <remarks>
-        /// <para> You can configure only one of the KeyId, SecretName, and CertificateId parameters.</para>
+        /// <para>You can configure only one of the KeyId, SecretName, and CertificateId parameters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -52,8 +52,10 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// <para>One or more tags that you want to add. The value is in the array format.</para>
         /// <para>Tag attributes:</para>
         /// <list type="bullet">
-        /// <item><description>TagKey: the tag key.</description></item>
-        /// <item><description>TagValue: the tag value.</description></item>
+        /// <item><description><para>TagKey: the tag key.</para>
+        /// </description></item>
+        /// <item><description><para>TagValue: the tag value.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

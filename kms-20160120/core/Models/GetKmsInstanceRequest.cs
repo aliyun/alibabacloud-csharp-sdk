@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class GetKmsInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the KMS instance that you want to query.</para>
+        /// <para>The ID of the KMS instance to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

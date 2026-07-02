@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class UpdateRotationPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>efb1cbbd-a093-4278-bc03-639dd4fcc207</para>

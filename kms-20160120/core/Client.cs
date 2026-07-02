@@ -22,6 +22,43 @@ namespace AlibabaCloud.SDK.Kms20160120
             AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
             this._spi = gatewayClient;
             this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"us-west-1", "kms.us-west-1.aliyuncs.com"},
+                {"us-east-1", "kms.us-east-1.aliyuncs.com"},
+                {"me-east-1", "kms.me-east-1.aliyuncs.com"},
+                {"me-central-1", "kms.me-central-1.aliyuncs.com"},
+                {"eu-west-1", "kms.eu-west-1.aliyuncs.com"},
+                {"eu-central-1", "kms.eu-central-1.aliyuncs.com"},
+                {"cn-zhengzhou-jva", "kms.cn-zhengzhou-jva.aliyuncs.com"},
+                {"cn-zhangjiakou", "kms.cn-zhangjiakou.aliyuncs.com"},
+                {"cn-wulanchabu", "kms.cn-wulanchabu.aliyuncs.com"},
+                {"cn-wuhan-lr", "kms.cn-wuhan-lr.aliyuncs.com"},
+                {"cn-shenzhen-finance-1", "kms.cn-shenzhen-finance-1.aliyuncs.com"},
+                {"cn-shenzhen", "kms.cn-shenzhen.aliyuncs.com"},
+                {"cn-shanghai-finance-1", "kms.cn-shanghai-finance-1.aliyuncs.com"},
+                {"cn-shanghai", "kms.cn-shanghai.aliyuncs.com"},
+                {"cn-qingdao", "kms.cn-qingdao.aliyuncs.com"},
+                {"cn-huhehaote", "kms.cn-huhehaote.aliyuncs.com"},
+                {"cn-hongkong", "kms.cn-hongkong.aliyuncs.com"},
+                {"cn-heyuan", "kms.cn-heyuan.aliyuncs.com"},
+                {"cn-hangzhou-finance", "kms.cn-hangzhou-finance.aliyuncs.com"},
+                {"cn-hangzhou", "kms.cn-hangzhou.aliyuncs.com"},
+                {"cn-guangzhou", "kms.cn-guangzhou.aliyuncs.com"},
+                {"cn-fuzhou", "kms.cn-fuzhou.aliyuncs.com"},
+                {"cn-chengdu", "kms.cn-chengdu.aliyuncs.com"},
+                {"cn-beijing-finance-1", "kms.cn-beijing-finance-1.aliyuncs.com"},
+                {"cn-beijing", "kms.cn-beijing.aliyuncs.com"},
+                {"ap-southeast-7", "kms.ap-southeast-7.aliyuncs.com"},
+                {"ap-southeast-6", "kms.ap-southeast-6.aliyuncs.com"},
+                {"ap-southeast-5", "kms.ap-southeast-5.aliyuncs.com"},
+                {"ap-southeast-3", "kms.ap-southeast-3.aliyuncs.com"},
+                {"ap-southeast-2", "kms.ap-southeast-2.aliyuncs.com"},
+                {"ap-southeast-1", "kms.ap-southeast-1.aliyuncs.com"},
+                {"ap-south-1", "kms.ap-south-1.aliyuncs.com"},
+                {"ap-northeast-2", "kms.ap-northeast-2.aliyuncs.com"},
+                {"ap-northeast-1", "kms.ap-northeast-1.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("kms", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -42,19 +79,34 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Decrypts data by using an asymmetric key.</para>
+        /// <para>Decrypts data by using the private key of an asymmetric CMK.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation supports only asymmetric keys for which the <b>Usage</b> parameter is set to <b>ENCRYPT/DECRYPT</b>. The following table lists supported encryption algorithms. </para>
+        /// <h3>Usage notes</h3>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy required for a RAM user or RAM role to call this API operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation can be called through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: You can access KMS over the Internet or a VPC. To access KMS over the Internet, you must enable the public endpoint. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: You can access KMS using the private endpoint of KMS (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h3>QPS limits</h3>
+        /// <list type="bullet">
+        /// <item><description>If you use a shared gateway, the queries per second (QPS) limit for each Alibaba Cloud account is 200. If the QPS exceeds the limit, the API call is throttled. This can affect your business. We recommend that you plan your calls to avoid exceeding this limit.</description></item>
+        /// <item><description>If you use a dedicated gateway, the QPS limit for each Alibaba Cloud account is subject to the performance specifications of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance metrics</a>.</description></item>
+        /// </list>
+        /// <h3>Description</h3>
+        /// <para>This operation supports only asymmetric keys for which the <b>Usage</b> parameter is set to <b>ENCRYPT/DECRYPT</b>. The following table describes the supported encryption algorithms.</para>
         /// <table>
         /// <thead>
         /// <tr>
         /// <th>KeySpec</th>
         /// <th>Algorithm</th>
         /// <th>Description</th>
-        /// <th>Maximum length in bytes</th>
+        /// <th>Ciphertext length (bytes)</th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
@@ -84,11 +136,11 @@ namespace AlibabaCloud.SDK.Kms20160120
         /// <tr>
         /// <td>EC_SM2</td>
         /// <td>SM2PKE</td>
-        /// <td>SM2 public key encryption algorithm based on elliptic curves</td>
-        /// <td>6144</td>
+        /// <td>SM2 elliptic curve public key encryption algorithm</td>
+        /// <td>Maximum 6,144</td>
         /// </tr>
         /// <tr>
-        /// <td>In this example, the asymmetric key whose ID is <c>5c438b18-05be-40ad-b6c2-3be6752c****</c> and version ID is <c>2ab1a983-7072-4bbc-a582-584b5bd8****</c> and the decryption algorithm <c>RSAES_OAEP_SHA_1</c> are used to decrypt the ciphertext <c>BQKP+1zK6+ZEMxTP5qaVzcsgXtWplYBKm0NXdSnB5FzliFxE1bSiu4dnEIlca2JpeH7yz1/S6fed630H+hIH6DoM25fTLNcKj+mFB0Xnh9m2+HN59Mn4qyTfcUeadnfCXSWcGBouhXFwcdd2rJ3n337bzTf4jm659gZu3L0i6PLuxM9p7mqdwO0cKJPfGVfhnfMz+f4alMg79WB/NNyE2lyX7/qxvV49ObNrrJbKSFiz8Djocaf0IESNLMbfYI5bXjWkJlX92DQbKhibtQW8ZOJ//ZC6t0AWcUoKL6QDm/dg5koQalcleRinpB+QadFm894sLbVZ9+N4GVsv1W****==</c>.</td>
+        /// <td>This topic provides an example of how to use the asymmetric key whose ID is <c>key-hzz630494463ejqjx****</c> and version ID is <c>2ab1a983-7072-4bbc-a582-584b5bd8****</c> to decrypt the ciphertext <c>BQKP+1zK6+ZEMxTP5qaVzcsgXtWplYBKm0NXdSnB5FzliFxE1bSiu4dnEIlca2JpeH7yz1/S6fed630H+hIH6DoM25fTLNcKj+mFB0Xnh9m2+HN59Mn4qyTfcUeadnfCXSWcGBouhXFwcdd2rJ3n337bzTf4jm659gZu3L0i6PLuxM9p7mqdwO0cKJPfGVfhnfMz+f4alMg79WB/NNyE2lyX7/qxvV49ObNrrJbKSFiz8Djocaf0IESNLMbfYI5bXjWkJlX92DQbKhibtQW8ZOJ//ZC6t0AWcUoKL6QDm/dg5koQalcleRinpB+QadFm894sLbVZ9+N4GVsv1W****==</c> using the <c>RSAES_OAEP_SHA_1</c> decryption algorithm.</td>
         /// <td></td>
         /// <td></td>
         /// <td></td>
@@ -151,19 +203,34 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Decrypts data by using an asymmetric key.</para>
+        /// <para>Decrypts data by using the private key of an asymmetric CMK.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation supports only asymmetric keys for which the <b>Usage</b> parameter is set to <b>ENCRYPT/DECRYPT</b>. The following table lists supported encryption algorithms. </para>
+        /// <h3>Usage notes</h3>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy required for a RAM user or RAM role to call this API operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation can be called through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: You can access KMS over the Internet or a VPC. To access KMS over the Internet, you must enable the public endpoint. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: You can access KMS using the private endpoint of KMS (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h3>QPS limits</h3>
+        /// <list type="bullet">
+        /// <item><description>If you use a shared gateway, the queries per second (QPS) limit for each Alibaba Cloud account is 200. If the QPS exceeds the limit, the API call is throttled. This can affect your business. We recommend that you plan your calls to avoid exceeding this limit.</description></item>
+        /// <item><description>If you use a dedicated gateway, the QPS limit for each Alibaba Cloud account is subject to the performance specifications of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance metrics</a>.</description></item>
+        /// </list>
+        /// <h3>Description</h3>
+        /// <para>This operation supports only asymmetric keys for which the <b>Usage</b> parameter is set to <b>ENCRYPT/DECRYPT</b>. The following table describes the supported encryption algorithms.</para>
         /// <table>
         /// <thead>
         /// <tr>
         /// <th>KeySpec</th>
         /// <th>Algorithm</th>
         /// <th>Description</th>
-        /// <th>Maximum length in bytes</th>
+        /// <th>Ciphertext length (bytes)</th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
@@ -193,11 +260,11 @@ namespace AlibabaCloud.SDK.Kms20160120
         /// <tr>
         /// <td>EC_SM2</td>
         /// <td>SM2PKE</td>
-        /// <td>SM2 public key encryption algorithm based on elliptic curves</td>
-        /// <td>6144</td>
+        /// <td>SM2 elliptic curve public key encryption algorithm</td>
+        /// <td>Maximum 6,144</td>
         /// </tr>
         /// <tr>
-        /// <td>In this example, the asymmetric key whose ID is <c>5c438b18-05be-40ad-b6c2-3be6752c****</c> and version ID is <c>2ab1a983-7072-4bbc-a582-584b5bd8****</c> and the decryption algorithm <c>RSAES_OAEP_SHA_1</c> are used to decrypt the ciphertext <c>BQKP+1zK6+ZEMxTP5qaVzcsgXtWplYBKm0NXdSnB5FzliFxE1bSiu4dnEIlca2JpeH7yz1/S6fed630H+hIH6DoM25fTLNcKj+mFB0Xnh9m2+HN59Mn4qyTfcUeadnfCXSWcGBouhXFwcdd2rJ3n337bzTf4jm659gZu3L0i6PLuxM9p7mqdwO0cKJPfGVfhnfMz+f4alMg79WB/NNyE2lyX7/qxvV49ObNrrJbKSFiz8Djocaf0IESNLMbfYI5bXjWkJlX92DQbKhibtQW8ZOJ//ZC6t0AWcUoKL6QDm/dg5koQalcleRinpB+QadFm894sLbVZ9+N4GVsv1W****==</c>.</td>
+        /// <td>This topic provides an example of how to use the asymmetric key whose ID is <c>key-hzz630494463ejqjx****</c> and version ID is <c>2ab1a983-7072-4bbc-a582-584b5bd8****</c> to decrypt the ciphertext <c>BQKP+1zK6+ZEMxTP5qaVzcsgXtWplYBKm0NXdSnB5FzliFxE1bSiu4dnEIlca2JpeH7yz1/S6fed630H+hIH6DoM25fTLNcKj+mFB0Xnh9m2+HN59Mn4qyTfcUeadnfCXSWcGBouhXFwcdd2rJ3n337bzTf4jm659gZu3L0i6PLuxM9p7mqdwO0cKJPfGVfhnfMz+f4alMg79WB/NNyE2lyX7/qxvV49ObNrrJbKSFiz8Djocaf0IESNLMbfYI5bXjWkJlX92DQbKhibtQW8ZOJ//ZC6t0AWcUoKL6QDm/dg5koQalcleRinpB+QadFm894sLbVZ9+N4GVsv1W****==</c> using the <c>RSAES_OAEP_SHA_1</c> decryption algorithm.</td>
         /// <td></td>
         /// <td></td>
         /// <td></td>
@@ -260,19 +327,34 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Decrypts data by using an asymmetric key.</para>
+        /// <para>Decrypts data by using the private key of an asymmetric CMK.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation supports only asymmetric keys for which the <b>Usage</b> parameter is set to <b>ENCRYPT/DECRYPT</b>. The following table lists supported encryption algorithms. </para>
+        /// <h3>Usage notes</h3>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy required for a RAM user or RAM role to call this API operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation can be called through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: You can access KMS over the Internet or a VPC. To access KMS over the Internet, you must enable the public endpoint. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: You can access KMS using the private endpoint of KMS (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h3>QPS limits</h3>
+        /// <list type="bullet">
+        /// <item><description>If you use a shared gateway, the queries per second (QPS) limit for each Alibaba Cloud account is 200. If the QPS exceeds the limit, the API call is throttled. This can affect your business. We recommend that you plan your calls to avoid exceeding this limit.</description></item>
+        /// <item><description>If you use a dedicated gateway, the QPS limit for each Alibaba Cloud account is subject to the performance specifications of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance metrics</a>.</description></item>
+        /// </list>
+        /// <h3>Description</h3>
+        /// <para>This operation supports only asymmetric keys for which the <b>Usage</b> parameter is set to <b>ENCRYPT/DECRYPT</b>. The following table describes the supported encryption algorithms.</para>
         /// <table>
         /// <thead>
         /// <tr>
         /// <th>KeySpec</th>
         /// <th>Algorithm</th>
         /// <th>Description</th>
-        /// <th>Maximum length in bytes</th>
+        /// <th>Ciphertext length (bytes)</th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
@@ -302,11 +384,11 @@ namespace AlibabaCloud.SDK.Kms20160120
         /// <tr>
         /// <td>EC_SM2</td>
         /// <td>SM2PKE</td>
-        /// <td>SM2 public key encryption algorithm based on elliptic curves</td>
-        /// <td>6144</td>
+        /// <td>SM2 elliptic curve public key encryption algorithm</td>
+        /// <td>Maximum 6,144</td>
         /// </tr>
         /// <tr>
-        /// <td>In this example, the asymmetric key whose ID is <c>5c438b18-05be-40ad-b6c2-3be6752c****</c> and version ID is <c>2ab1a983-7072-4bbc-a582-584b5bd8****</c> and the decryption algorithm <c>RSAES_OAEP_SHA_1</c> are used to decrypt the ciphertext <c>BQKP+1zK6+ZEMxTP5qaVzcsgXtWplYBKm0NXdSnB5FzliFxE1bSiu4dnEIlca2JpeH7yz1/S6fed630H+hIH6DoM25fTLNcKj+mFB0Xnh9m2+HN59Mn4qyTfcUeadnfCXSWcGBouhXFwcdd2rJ3n337bzTf4jm659gZu3L0i6PLuxM9p7mqdwO0cKJPfGVfhnfMz+f4alMg79WB/NNyE2lyX7/qxvV49ObNrrJbKSFiz8Djocaf0IESNLMbfYI5bXjWkJlX92DQbKhibtQW8ZOJ//ZC6t0AWcUoKL6QDm/dg5koQalcleRinpB+QadFm894sLbVZ9+N4GVsv1W****==</c>.</td>
+        /// <td>This topic provides an example of how to use the asymmetric key whose ID is <c>key-hzz630494463ejqjx****</c> and version ID is <c>2ab1a983-7072-4bbc-a582-584b5bd8****</c> to decrypt the ciphertext <c>BQKP+1zK6+ZEMxTP5qaVzcsgXtWplYBKm0NXdSnB5FzliFxE1bSiu4dnEIlca2JpeH7yz1/S6fed630H+hIH6DoM25fTLNcKj+mFB0Xnh9m2+HN59Mn4qyTfcUeadnfCXSWcGBouhXFwcdd2rJ3n337bzTf4jm659gZu3L0i6PLuxM9p7mqdwO0cKJPfGVfhnfMz+f4alMg79WB/NNyE2lyX7/qxvV49ObNrrJbKSFiz8Djocaf0IESNLMbfYI5bXjWkJlX92DQbKhibtQW8ZOJ//ZC6t0AWcUoKL6QDm/dg5koQalcleRinpB+QadFm894sLbVZ9+N4GVsv1W****==</c> using the <c>RSAES_OAEP_SHA_1</c> decryption algorithm.</td>
         /// <td></td>
         /// <td></td>
         /// <td></td>
@@ -329,19 +411,34 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Decrypts data by using an asymmetric key.</para>
+        /// <para>Decrypts data by using the private key of an asymmetric CMK.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation supports only asymmetric keys for which the <b>Usage</b> parameter is set to <b>ENCRYPT/DECRYPT</b>. The following table lists supported encryption algorithms. </para>
+        /// <h3>Usage notes</h3>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy required for a RAM user or RAM role to call this API operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation can be called through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: You can access KMS over the Internet or a VPC. To access KMS over the Internet, you must enable the public endpoint. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: You can access KMS using the private endpoint of KMS (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h3>QPS limits</h3>
+        /// <list type="bullet">
+        /// <item><description>If you use a shared gateway, the queries per second (QPS) limit for each Alibaba Cloud account is 200. If the QPS exceeds the limit, the API call is throttled. This can affect your business. We recommend that you plan your calls to avoid exceeding this limit.</description></item>
+        /// <item><description>If you use a dedicated gateway, the QPS limit for each Alibaba Cloud account is subject to the performance specifications of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance metrics</a>.</description></item>
+        /// </list>
+        /// <h3>Description</h3>
+        /// <para>This operation supports only asymmetric keys for which the <b>Usage</b> parameter is set to <b>ENCRYPT/DECRYPT</b>. The following table describes the supported encryption algorithms.</para>
         /// <table>
         /// <thead>
         /// <tr>
         /// <th>KeySpec</th>
         /// <th>Algorithm</th>
         /// <th>Description</th>
-        /// <th>Maximum length in bytes</th>
+        /// <th>Ciphertext length (bytes)</th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
@@ -371,11 +468,11 @@ namespace AlibabaCloud.SDK.Kms20160120
         /// <tr>
         /// <td>EC_SM2</td>
         /// <td>SM2PKE</td>
-        /// <td>SM2 public key encryption algorithm based on elliptic curves</td>
-        /// <td>6144</td>
+        /// <td>SM2 elliptic curve public key encryption algorithm</td>
+        /// <td>Maximum 6,144</td>
         /// </tr>
         /// <tr>
-        /// <td>In this example, the asymmetric key whose ID is <c>5c438b18-05be-40ad-b6c2-3be6752c****</c> and version ID is <c>2ab1a983-7072-4bbc-a582-584b5bd8****</c> and the decryption algorithm <c>RSAES_OAEP_SHA_1</c> are used to decrypt the ciphertext <c>BQKP+1zK6+ZEMxTP5qaVzcsgXtWplYBKm0NXdSnB5FzliFxE1bSiu4dnEIlca2JpeH7yz1/S6fed630H+hIH6DoM25fTLNcKj+mFB0Xnh9m2+HN59Mn4qyTfcUeadnfCXSWcGBouhXFwcdd2rJ3n337bzTf4jm659gZu3L0i6PLuxM9p7mqdwO0cKJPfGVfhnfMz+f4alMg79WB/NNyE2lyX7/qxvV49ObNrrJbKSFiz8Djocaf0IESNLMbfYI5bXjWkJlX92DQbKhibtQW8ZOJ//ZC6t0AWcUoKL6QDm/dg5koQalcleRinpB+QadFm894sLbVZ9+N4GVsv1W****==</c>.</td>
+        /// <td>This topic provides an example of how to use the asymmetric key whose ID is <c>key-hzz630494463ejqjx****</c> and version ID is <c>2ab1a983-7072-4bbc-a582-584b5bd8****</c> to decrypt the ciphertext <c>BQKP+1zK6+ZEMxTP5qaVzcsgXtWplYBKm0NXdSnB5FzliFxE1bSiu4dnEIlca2JpeH7yz1/S6fed630H+hIH6DoM25fTLNcKj+mFB0Xnh9m2+HN59Mn4qyTfcUeadnfCXSWcGBouhXFwcdd2rJ3n337bzTf4jm659gZu3L0i6PLuxM9p7mqdwO0cKJPfGVfhnfMz+f4alMg79WB/NNyE2lyX7/qxvV49ObNrrJbKSFiz8Djocaf0IESNLMbfYI5bXjWkJlX92DQbKhibtQW8ZOJ//ZC6t0AWcUoKL6QDm/dg5koQalcleRinpB+QadFm894sLbVZ9+N4GVsv1W****==</c> using the <c>RSAES_OAEP_SHA_1</c> decryption algorithm.</td>
         /// <td></td>
         /// <td></td>
         /// <td></td>
@@ -398,12 +495,27 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Encrypts data by using an asymmetric customer master key (CMK).</para>
+        /// <para>Encrypts data by using the public key of an asymmetric CMK.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is supported only for asymmetric keys for which the <b>Usage</b> parameter is set to <b>ENCRYPT/DECRYPT</b>. The following table lists the supported encryption algorithms: </para>
+        /// <h3>Precautions</h3>
+        /// <list type="bullet">
+        /// <item><description>For information about the permissions that are required to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation can be called through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: You can access KMS over the Internet or using a VPC domain name. To access KMS over the Internet, you must enable Internet access. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access a key in a KMS instance over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: You can access KMS using the private endpoint of KMS (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h3>QPS limits</h3>
+        /// <list type="bullet">
+        /// <item><description>If you use a shared gateway: The number of queries per second (QPS) for a single user is limited to 200. If the limit is exceeded, API calls are throttled. This may affect your business. We recommend that you plan your API calls to avoid exceeding this limit.</description></item>
+        /// <item><description>If you use a dedicated gateway: The QPS limit for a single user depends on the computing performance specifications of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance metrics</a>.</description></item>
+        /// </list>
+        /// <h3>Description</h3>
+        /// <para>This operation supports only asymmetric keys that have the <b>Usage</b> parameter set to <b>ENCRYPT/DECRYPT</b>. The following table describes the supported encryption algorithms.</para>
         /// <table>
         /// <thead>
         /// <tr>
@@ -440,11 +552,11 @@ namespace AlibabaCloud.SDK.Kms20160120
         /// <tr>
         /// <td>EC_SM2</td>
         /// <td>SM2PKE</td>
-        /// <td>SM2 public key encryption algorithm based on elliptic curves</td>
+        /// <td>SM2 elliptic curve public key encryption algorithm</td>
         /// <td>6047</td>
         /// </tr>
         /// <tr>
-        /// <td>You can use the asymmetric CMK whose ID is <c>5c438b18-05be-40ad-b6c2-3be6752c****</c> and version ID is <c>2ab1a983-7072-4bbc-a582-584b5bd8****</c> and the algorithm <c>RSAES_OAEP_SHA_1</c> to encrypt the plaintext <c>SGVsbG8gd29ybGQ=</c> based on the parameter settings provided in this topic.</td>
+        /// <td>In this example, the plaintext <c>SGVsbG8gd29ybGQ=</c> is encrypted using an asymmetric key with the key ID <c>key-hzz630494463ejqjx****</c>, the key version ID <c>2ab1a983-7072-4bbc-a582-584b5bd8****</c>, and the <c>RSAES_OAEP_SHA_1</c> encryption algorithm.</td>
         /// <td></td>
         /// <td></td>
         /// <td></td>
@@ -507,12 +619,27 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Encrypts data by using an asymmetric customer master key (CMK).</para>
+        /// <para>Encrypts data by using the public key of an asymmetric CMK.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is supported only for asymmetric keys for which the <b>Usage</b> parameter is set to <b>ENCRYPT/DECRYPT</b>. The following table lists the supported encryption algorithms: </para>
+        /// <h3>Precautions</h3>
+        /// <list type="bullet">
+        /// <item><description>For information about the permissions that are required to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation can be called through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: You can access KMS over the Internet or using a VPC domain name. To access KMS over the Internet, you must enable Internet access. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access a key in a KMS instance over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: You can access KMS using the private endpoint of KMS (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h3>QPS limits</h3>
+        /// <list type="bullet">
+        /// <item><description>If you use a shared gateway: The number of queries per second (QPS) for a single user is limited to 200. If the limit is exceeded, API calls are throttled. This may affect your business. We recommend that you plan your API calls to avoid exceeding this limit.</description></item>
+        /// <item><description>If you use a dedicated gateway: The QPS limit for a single user depends on the computing performance specifications of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance metrics</a>.</description></item>
+        /// </list>
+        /// <h3>Description</h3>
+        /// <para>This operation supports only asymmetric keys that have the <b>Usage</b> parameter set to <b>ENCRYPT/DECRYPT</b>. The following table describes the supported encryption algorithms.</para>
         /// <table>
         /// <thead>
         /// <tr>
@@ -549,11 +676,11 @@ namespace AlibabaCloud.SDK.Kms20160120
         /// <tr>
         /// <td>EC_SM2</td>
         /// <td>SM2PKE</td>
-        /// <td>SM2 public key encryption algorithm based on elliptic curves</td>
+        /// <td>SM2 elliptic curve public key encryption algorithm</td>
         /// <td>6047</td>
         /// </tr>
         /// <tr>
-        /// <td>You can use the asymmetric CMK whose ID is <c>5c438b18-05be-40ad-b6c2-3be6752c****</c> and version ID is <c>2ab1a983-7072-4bbc-a582-584b5bd8****</c> and the algorithm <c>RSAES_OAEP_SHA_1</c> to encrypt the plaintext <c>SGVsbG8gd29ybGQ=</c> based on the parameter settings provided in this topic.</td>
+        /// <td>In this example, the plaintext <c>SGVsbG8gd29ybGQ=</c> is encrypted using an asymmetric key with the key ID <c>key-hzz630494463ejqjx****</c>, the key version ID <c>2ab1a983-7072-4bbc-a582-584b5bd8****</c>, and the <c>RSAES_OAEP_SHA_1</c> encryption algorithm.</td>
         /// <td></td>
         /// <td></td>
         /// <td></td>
@@ -616,12 +743,27 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Encrypts data by using an asymmetric customer master key (CMK).</para>
+        /// <para>Encrypts data by using the public key of an asymmetric CMK.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is supported only for asymmetric keys for which the <b>Usage</b> parameter is set to <b>ENCRYPT/DECRYPT</b>. The following table lists the supported encryption algorithms: </para>
+        /// <h3>Precautions</h3>
+        /// <list type="bullet">
+        /// <item><description>For information about the permissions that are required to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation can be called through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: You can access KMS over the Internet or using a VPC domain name. To access KMS over the Internet, you must enable Internet access. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access a key in a KMS instance over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: You can access KMS using the private endpoint of KMS (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h3>QPS limits</h3>
+        /// <list type="bullet">
+        /// <item><description>If you use a shared gateway: The number of queries per second (QPS) for a single user is limited to 200. If the limit is exceeded, API calls are throttled. This may affect your business. We recommend that you plan your API calls to avoid exceeding this limit.</description></item>
+        /// <item><description>If you use a dedicated gateway: The QPS limit for a single user depends on the computing performance specifications of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance metrics</a>.</description></item>
+        /// </list>
+        /// <h3>Description</h3>
+        /// <para>This operation supports only asymmetric keys that have the <b>Usage</b> parameter set to <b>ENCRYPT/DECRYPT</b>. The following table describes the supported encryption algorithms.</para>
         /// <table>
         /// <thead>
         /// <tr>
@@ -658,11 +800,11 @@ namespace AlibabaCloud.SDK.Kms20160120
         /// <tr>
         /// <td>EC_SM2</td>
         /// <td>SM2PKE</td>
-        /// <td>SM2 public key encryption algorithm based on elliptic curves</td>
+        /// <td>SM2 elliptic curve public key encryption algorithm</td>
         /// <td>6047</td>
         /// </tr>
         /// <tr>
-        /// <td>You can use the asymmetric CMK whose ID is <c>5c438b18-05be-40ad-b6c2-3be6752c****</c> and version ID is <c>2ab1a983-7072-4bbc-a582-584b5bd8****</c> and the algorithm <c>RSAES_OAEP_SHA_1</c> to encrypt the plaintext <c>SGVsbG8gd29ybGQ=</c> based on the parameter settings provided in this topic.</td>
+        /// <td>In this example, the plaintext <c>SGVsbG8gd29ybGQ=</c> is encrypted using an asymmetric key with the key ID <c>key-hzz630494463ejqjx****</c>, the key version ID <c>2ab1a983-7072-4bbc-a582-584b5bd8****</c>, and the <c>RSAES_OAEP_SHA_1</c> encryption algorithm.</td>
         /// <td></td>
         /// <td></td>
         /// <td></td>
@@ -685,12 +827,27 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Encrypts data by using an asymmetric customer master key (CMK).</para>
+        /// <para>Encrypts data by using the public key of an asymmetric CMK.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is supported only for asymmetric keys for which the <b>Usage</b> parameter is set to <b>ENCRYPT/DECRYPT</b>. The following table lists the supported encryption algorithms: </para>
+        /// <h3>Precautions</h3>
+        /// <list type="bullet">
+        /// <item><description>For information about the permissions that are required to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation can be called through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: You can access KMS over the Internet or using a VPC domain name. To access KMS over the Internet, you must enable Internet access. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access a key in a KMS instance over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: You can access KMS using the private endpoint of KMS (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h3>QPS limits</h3>
+        /// <list type="bullet">
+        /// <item><description>If you use a shared gateway: The number of queries per second (QPS) for a single user is limited to 200. If the limit is exceeded, API calls are throttled. This may affect your business. We recommend that you plan your API calls to avoid exceeding this limit.</description></item>
+        /// <item><description>If you use a dedicated gateway: The QPS limit for a single user depends on the computing performance specifications of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance metrics</a>.</description></item>
+        /// </list>
+        /// <h3>Description</h3>
+        /// <para>This operation supports only asymmetric keys that have the <b>Usage</b> parameter set to <b>ENCRYPT/DECRYPT</b>. The following table describes the supported encryption algorithms.</para>
         /// <table>
         /// <thead>
         /// <tr>
@@ -727,11 +884,11 @@ namespace AlibabaCloud.SDK.Kms20160120
         /// <tr>
         /// <td>EC_SM2</td>
         /// <td>SM2PKE</td>
-        /// <td>SM2 public key encryption algorithm based on elliptic curves</td>
+        /// <td>SM2 elliptic curve public key encryption algorithm</td>
         /// <td>6047</td>
         /// </tr>
         /// <tr>
-        /// <td>You can use the asymmetric CMK whose ID is <c>5c438b18-05be-40ad-b6c2-3be6752c****</c> and version ID is <c>2ab1a983-7072-4bbc-a582-584b5bd8****</c> and the algorithm <c>RSAES_OAEP_SHA_1</c> to encrypt the plaintext <c>SGVsbG8gd29ybGQ=</c> based on the parameter settings provided in this topic.</td>
+        /// <td>In this example, the plaintext <c>SGVsbG8gd29ybGQ=</c> is encrypted using an asymmetric key with the key ID <c>key-hzz630494463ejqjx****</c>, the key version ID <c>2ab1a983-7072-4bbc-a582-584b5bd8****</c>, and the <c>RSAES_OAEP_SHA_1</c> encryption algorithm.</td>
         /// <td></td>
         /// <td></td>
         /// <td></td>
@@ -754,12 +911,75 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AsymmetricSign</para>
+        /// <para>Generates a digital signature by using an asymmetric CMK.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Generates a signature by using an asymmetric key.</para>
+        /// <h3>Precautions</h3>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policies that are required for a RAM user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation can be called through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: You can access KMS over the Internet or a VPC. This method requires you to enable Internet access. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: You can access KMS using the private endpoint of KMS (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h3>QPS limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Shared gateway: This operation is limited to 200 queries per second (QPS) for each user. If the limit is exceeded, API calls are throttled, which may affect your business. We recommend that you call this operation at a reasonable rate.</description></item>
+        /// <item><description>Dedicated gateway: The QPS for each user is limited by the performance specifications of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance metrics</a>.</description></item>
+        /// </list>
+        /// <h3>Description</h3>
+        /// <para>This operation supports only asymmetric keys for which the <b>Usage</b> parameter is set to <b>SIGN/VERIFY</b>. The following table describes the supported signature algorithms.</para>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>KeySpec</th>
+        /// <th>Algorithm</th>
+        /// <th>Description</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>RSA_2048</td>
+        /// <td>RSA_PSS_SHA_256</td>
+        /// <td>RSASSA-PSS using SHA-256 and MGF1 with SHA-256</td>
+        /// </tr>
+        /// <tr>
+        /// <td>RSA_2048</td>
+        /// <td>RSA_PKCS1_SHA_256</td>
+        /// <td>RSASSA-PKCS1-v1_5 using SHA-256</td>
+        /// </tr>
+        /// <tr>
+        /// <td>RSA_3072</td>
+        /// <td>RSA_PSS_SHA_256</td>
+        /// <td>RSASSA-PSS using SHA-256 and MGF1 with SHA-256</td>
+        /// </tr>
+        /// <tr>
+        /// <td>RSA_3072</td>
+        /// <td>RSA_PKCS1_SHA_256</td>
+        /// <td>RSASSA-PKCS1-v1_5 using SHA-256</td>
+        /// </tr>
+        /// <tr>
+        /// <td>EC_P256</td>
+        /// <td>ECDSA_SHA_256</td>
+        /// <td>ECDSA on the P-256 Curve(secp256r1) with a SHA-256 digest</td>
+        /// </tr>
+        /// <tr>
+        /// <td>EC_P256K</td>
+        /// <td>ECDSA_SHA_256</td>
+        /// <td>ECDSA on the P-256K Curve(secp256k1) with a SHA-256 digest</td>
+        /// </tr>
+        /// <tr>
+        /// <td>EC_SM2</td>
+        /// <td>SM2DSA</td>
+        /// <td>SM2 elliptic curve digital signature algorithm</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <remarks>
+        /// <para>According to the GB/T 32918.2 standard &quot;Information security technology - SM2 elliptic curve public key cryptography - Part 2: Digital signature algorithm&quot;, when you calculate an SM2 signature, the value of the <b>Digest</b> parameter is not the SM3 hash value of the original message. Instead, the value is the SM3 hash value of the result of concatenating Z(A) and M. M is the original message to be signed. Z(A) is the hash value of user A, as defined in GB/T 32918.2.
+        /// This topic provides an example of how to use an asymmetric key with the key ID <c>5c438b18-05be-40ad-b6c2-3be6752c****</c> and the key version ID <c>2ab1a983-7072-4bbc-a582-584b5bd8****</c> to sign the digest <c>ZOyIygCyaOW6GjVnihtTFtIS9PNmskdyMlNKiuy****=</c> using the <c>RSA_PSS_SHA_256</c> signature algorithm.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -817,12 +1037,75 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AsymmetricSign</para>
+        /// <para>Generates a digital signature by using an asymmetric CMK.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Generates a signature by using an asymmetric key.</para>
+        /// <h3>Precautions</h3>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policies that are required for a RAM user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation can be called through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: You can access KMS over the Internet or a VPC. This method requires you to enable Internet access. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: You can access KMS using the private endpoint of KMS (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h3>QPS limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Shared gateway: This operation is limited to 200 queries per second (QPS) for each user. If the limit is exceeded, API calls are throttled, which may affect your business. We recommend that you call this operation at a reasonable rate.</description></item>
+        /// <item><description>Dedicated gateway: The QPS for each user is limited by the performance specifications of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance metrics</a>.</description></item>
+        /// </list>
+        /// <h3>Description</h3>
+        /// <para>This operation supports only asymmetric keys for which the <b>Usage</b> parameter is set to <b>SIGN/VERIFY</b>. The following table describes the supported signature algorithms.</para>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>KeySpec</th>
+        /// <th>Algorithm</th>
+        /// <th>Description</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>RSA_2048</td>
+        /// <td>RSA_PSS_SHA_256</td>
+        /// <td>RSASSA-PSS using SHA-256 and MGF1 with SHA-256</td>
+        /// </tr>
+        /// <tr>
+        /// <td>RSA_2048</td>
+        /// <td>RSA_PKCS1_SHA_256</td>
+        /// <td>RSASSA-PKCS1-v1_5 using SHA-256</td>
+        /// </tr>
+        /// <tr>
+        /// <td>RSA_3072</td>
+        /// <td>RSA_PSS_SHA_256</td>
+        /// <td>RSASSA-PSS using SHA-256 and MGF1 with SHA-256</td>
+        /// </tr>
+        /// <tr>
+        /// <td>RSA_3072</td>
+        /// <td>RSA_PKCS1_SHA_256</td>
+        /// <td>RSASSA-PKCS1-v1_5 using SHA-256</td>
+        /// </tr>
+        /// <tr>
+        /// <td>EC_P256</td>
+        /// <td>ECDSA_SHA_256</td>
+        /// <td>ECDSA on the P-256 Curve(secp256r1) with a SHA-256 digest</td>
+        /// </tr>
+        /// <tr>
+        /// <td>EC_P256K</td>
+        /// <td>ECDSA_SHA_256</td>
+        /// <td>ECDSA on the P-256K Curve(secp256k1) with a SHA-256 digest</td>
+        /// </tr>
+        /// <tr>
+        /// <td>EC_SM2</td>
+        /// <td>SM2DSA</td>
+        /// <td>SM2 elliptic curve digital signature algorithm</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <remarks>
+        /// <para>According to the GB/T 32918.2 standard &quot;Information security technology - SM2 elliptic curve public key cryptography - Part 2: Digital signature algorithm&quot;, when you calculate an SM2 signature, the value of the <b>Digest</b> parameter is not the SM3 hash value of the original message. Instead, the value is the SM3 hash value of the result of concatenating Z(A) and M. M is the original message to be signed. Z(A) is the hash value of user A, as defined in GB/T 32918.2.
+        /// This topic provides an example of how to use an asymmetric key with the key ID <c>5c438b18-05be-40ad-b6c2-3be6752c****</c> and the key version ID <c>2ab1a983-7072-4bbc-a582-584b5bd8****</c> to sign the digest <c>ZOyIygCyaOW6GjVnihtTFtIS9PNmskdyMlNKiuy****=</c> using the <c>RSA_PSS_SHA_256</c> signature algorithm.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -880,58 +1163,27 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AsymmetricSign</para>
+        /// <para>Generates a digital signature by using an asymmetric CMK.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Generates a signature by using an asymmetric key.</para>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// AsymmetricSignRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// AsymmetricSignResponse
-        /// </returns>
-        public AsymmetricSignResponse AsymmetricSign(AsymmetricSignRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return AsymmetricSignWithOptions(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>AsymmetricSign</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Generates a signature by using an asymmetric key.</para>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// AsymmetricSignRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// AsymmetricSignResponse
-        /// </returns>
-        public async Task<AsymmetricSignResponse> AsymmetricSignAsync(AsymmetricSignRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await AsymmetricSignWithOptionsAsync(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Verifies a signature by using an asymmetric key.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This operation supports only asymmetric keys for which the <b>Usage</b> parameter is set to <b>SIGN/VERIFY</b>. The following table describes the supported signature algorithms. </para>
+        /// <h3>Precautions</h3>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policies that are required for a RAM user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation can be called through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: You can access KMS over the Internet or a VPC. This method requires you to enable Internet access. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: You can access KMS using the private endpoint of KMS (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h3>QPS limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Shared gateway: This operation is limited to 200 queries per second (QPS) for each user. If the limit is exceeded, API calls are throttled, which may affect your business. We recommend that you call this operation at a reasonable rate.</description></item>
+        /// <item><description>Dedicated gateway: The QPS for each user is limited by the performance specifications of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance metrics</a>.</description></item>
+        /// </list>
+        /// <h3>Description</h3>
+        /// <para>This operation supports only asymmetric keys for which the <b>Usage</b> parameter is set to <b>SIGN/VERIFY</b>. The following table describes the supported signature algorithms.</para>
         /// <table>
         /// <thead>
         /// <tr>
@@ -973,11 +1225,184 @@ namespace AlibabaCloud.SDK.Kms20160120
         /// <tr>
         /// <td>EC_SM2</td>
         /// <td>SM2DSA</td>
-        /// <td>SM2 elliptic curve public key encryption algorithm</td>
+        /// <td>SM2 elliptic curve digital signature algorithm</td>
         /// </tr>
         /// </tbody></table>
         /// <remarks>
-        /// <para> When you calculate the SM2 signature based on GB/T 32918, the <b>Digest</b> parameter is used to calculate the digest value of the combination of Z(A) and M, rather than the SM3 digest value. M indicates the original message to be signed. Z(A) indicates the hash value for User A. The hash value is defined in GB/T 32918.  In this example, the asymmetric key whose ID is <c>5c438b18-05be-40ad-b6c2-3be6752c****</c> and version ID is <c>2ab1a983-7072-4bbc-a582-584b5bd8****</c> and the signature algorithm RSA_PSS_SHA_256 are used to verify the signature <c>M2CceNZH00ZgL9ED/ZHFp21YRAvYeZHknJUc207OCZ0N9wNn9As4z2bON3FF3je+1Nu+2+/8Zj50HpMTpzYpMp2R93cYmACCmhaYoKydxylbyGzJR8y9likZRCrkD38lRoS40aBBvv/6iRKzQuo9EGYVcel36cMNg00VmYNBy3pa1rwg3gA4l3cy6kjayZja1WGPkVhrVKsrJMdbpl0ApLjXKuD8rw1n1XLCwCUEL5eLPljTZaAveqdOFQOiZnZEGI27qIiZe7I1fN8tcz6anS/gTM7xRKE++5egEvRWlTQQTJeApnPSiUPA+8ZykNdelQsOQh5SrGoyI4A5pq****==</c> of the digest <c>ZOyIygCyaOW6GjVnihtTFtIS9PNmskdyMlNKiuyjfzw=</c>.</para>
+        /// <para>According to the GB/T 32918.2 standard &quot;Information security technology - SM2 elliptic curve public key cryptography - Part 2: Digital signature algorithm&quot;, when you calculate an SM2 signature, the value of the <b>Digest</b> parameter is not the SM3 hash value of the original message. Instead, the value is the SM3 hash value of the result of concatenating Z(A) and M. M is the original message to be signed. Z(A) is the hash value of user A, as defined in GB/T 32918.2.
+        /// This topic provides an example of how to use an asymmetric key with the key ID <c>5c438b18-05be-40ad-b6c2-3be6752c****</c> and the key version ID <c>2ab1a983-7072-4bbc-a582-584b5bd8****</c> to sign the digest <c>ZOyIygCyaOW6GjVnihtTFtIS9PNmskdyMlNKiuy****=</c> using the <c>RSA_PSS_SHA_256</c> signature algorithm.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AsymmetricSignRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AsymmetricSignResponse
+        /// </returns>
+        public AsymmetricSignResponse AsymmetricSign(AsymmetricSignRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AsymmetricSignWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generates a digital signature by using an asymmetric CMK.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Precautions</h3>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policies that are required for a RAM user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation can be called through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: You can access KMS over the Internet or a VPC. This method requires you to enable Internet access. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: You can access KMS using the private endpoint of KMS (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h3>QPS limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Shared gateway: This operation is limited to 200 queries per second (QPS) for each user. If the limit is exceeded, API calls are throttled, which may affect your business. We recommend that you call this operation at a reasonable rate.</description></item>
+        /// <item><description>Dedicated gateway: The QPS for each user is limited by the performance specifications of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance metrics</a>.</description></item>
+        /// </list>
+        /// <h3>Description</h3>
+        /// <para>This operation supports only asymmetric keys for which the <b>Usage</b> parameter is set to <b>SIGN/VERIFY</b>. The following table describes the supported signature algorithms.</para>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>KeySpec</th>
+        /// <th>Algorithm</th>
+        /// <th>Description</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>RSA_2048</td>
+        /// <td>RSA_PSS_SHA_256</td>
+        /// <td>RSASSA-PSS using SHA-256 and MGF1 with SHA-256</td>
+        /// </tr>
+        /// <tr>
+        /// <td>RSA_2048</td>
+        /// <td>RSA_PKCS1_SHA_256</td>
+        /// <td>RSASSA-PKCS1-v1_5 using SHA-256</td>
+        /// </tr>
+        /// <tr>
+        /// <td>RSA_3072</td>
+        /// <td>RSA_PSS_SHA_256</td>
+        /// <td>RSASSA-PSS using SHA-256 and MGF1 with SHA-256</td>
+        /// </tr>
+        /// <tr>
+        /// <td>RSA_3072</td>
+        /// <td>RSA_PKCS1_SHA_256</td>
+        /// <td>RSASSA-PKCS1-v1_5 using SHA-256</td>
+        /// </tr>
+        /// <tr>
+        /// <td>EC_P256</td>
+        /// <td>ECDSA_SHA_256</td>
+        /// <td>ECDSA on the P-256 Curve(secp256r1) with a SHA-256 digest</td>
+        /// </tr>
+        /// <tr>
+        /// <td>EC_P256K</td>
+        /// <td>ECDSA_SHA_256</td>
+        /// <td>ECDSA on the P-256K Curve(secp256k1) with a SHA-256 digest</td>
+        /// </tr>
+        /// <tr>
+        /// <td>EC_SM2</td>
+        /// <td>SM2DSA</td>
+        /// <td>SM2 elliptic curve digital signature algorithm</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <remarks>
+        /// <para>According to the GB/T 32918.2 standard &quot;Information security technology - SM2 elliptic curve public key cryptography - Part 2: Digital signature algorithm&quot;, when you calculate an SM2 signature, the value of the <b>Digest</b> parameter is not the SM3 hash value of the original message. Instead, the value is the SM3 hash value of the result of concatenating Z(A) and M. M is the original message to be signed. Z(A) is the hash value of user A, as defined in GB/T 32918.2.
+        /// This topic provides an example of how to use an asymmetric key with the key ID <c>5c438b18-05be-40ad-b6c2-3be6752c****</c> and the key version ID <c>2ab1a983-7072-4bbc-a582-584b5bd8****</c> to sign the digest <c>ZOyIygCyaOW6GjVnihtTFtIS9PNmskdyMlNKiuy****=</c> using the <c>RSA_PSS_SHA_256</c> signature algorithm.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AsymmetricSignRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AsymmetricSignResponse
+        /// </returns>
+        public async Task<AsymmetricSignResponse> AsymmetricSignAsync(AsymmetricSignRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AsymmetricSignWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Verifies a digital signature by using the public key of an asymmetric CMK.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Precautions</h3>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy required for a RAM user or RAM role to call this API operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation can be called through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: You can access KMS over the Internet or through a VPC. To access KMS over the Internet, you must enable the public endpoint. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access KMS instances over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: You can access KMS using the private endpoint of KMS (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h3>QPS limits</h3>
+        /// <list type="bullet">
+        /// <item><description>If you use a shared gateway, the queries per second (QPS) limit for this operation is 200 for a single user. If you exceed this limit, API calls are throttled, which may impact your business. We recommend that you manage your call frequency to stay within the QPS limit.</description></item>
+        /// <item><description>If you use a dedicated gateway, the QPS limit for this operation for a single user is determined by the computing performance specifications of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance metrics</a>.</description></item>
+        /// </list>
+        /// <h3>Description</h3>
+        /// <para>This operation supports only asymmetric keys for which the <b>Usage</b> parameter is set to <b>SIGN/VERIFY</b>. The following table lists the supported signature algorithms.</para>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>KeySpec</th>
+        /// <th>Algorithm</th>
+        /// <th>Description</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>RSA_2048</td>
+        /// <td>RSA_PSS_SHA_256</td>
+        /// <td>RSASSA-PSS using SHA-256 and MGF1 with SHA-256</td>
+        /// </tr>
+        /// <tr>
+        /// <td>RSA_2048</td>
+        /// <td>RSA_PKCS1_SHA_256</td>
+        /// <td>RSASSA-PKCS1-v1_5 using SHA-256</td>
+        /// </tr>
+        /// <tr>
+        /// <td>RSA_3072</td>
+        /// <td>RSA_PSS_SHA_256</td>
+        /// <td>RSASSA-PSS using SHA-256 and MGF1 with SHA-256</td>
+        /// </tr>
+        /// <tr>
+        /// <td>RSA_3072</td>
+        /// <td>RSA_PKCS1_SHA_256</td>
+        /// <td>RSASSA-PKCS1-v1_5 using SHA-256</td>
+        /// </tr>
+        /// <tr>
+        /// <td>EC_P256</td>
+        /// <td>ECDSA_SHA_256</td>
+        /// <td>ECDSA on the P-256 Curve(secp256r1) with a SHA-256 digest</td>
+        /// </tr>
+        /// <tr>
+        /// <td>EC_P256K</td>
+        /// <td>ECDSA_SHA_256</td>
+        /// <td>ECDSA on the P-256K Curve(secp256k1) with a SHA-256 digest</td>
+        /// </tr>
+        /// <tr>
+        /// <td>EC_SM2</td>
+        /// <td>SM2DSA</td>
+        /// <td>SM2 elliptic curve digital signature algorithm</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <remarks>
+        /// <para>In accordance with the GBT32918 standard, when an SM2 signature is calculated, the value of the <b>Digest</b> parameter is not the SM3 hash value of the original message. Instead, the value is the SM3 hash value of the result generated by concatenating Z(A) and M. In this formula, M is the original message to be signed, and Z(A) is the hash value of user A as defined in GBT32918.
+        /// This topic provides an example of how to use an asymmetric key with the key ID \<c>5c438b18-05be-40ad-b6c2-3be6752c\\*\\*\\*\\*\\</c> and the key version ID \<c>2ab1a983-7072-4bbc-a582-584b5bd8\\*\\*\\*\\*\\</c> to verify the signature \<c>M2CceNZH00ZgL9ED/ZHFp21YRAvYeZHknJUc207OCZ0N9wNn9As4z2bON3FF3je+1Nu+2+/8Zj50HpMTpzYpMp2R93cYmACCmhaYoKydxylbyGzJR8y9likZRCrkD38lRoS40aBBvv/6iRKzQuo9EGYVcel36cMNg00VmYNBy3pa1rwg3gA4l3cy6kjayZja1WGPkVhrVKsrJMdbpl0ApLjXKuD8rw1n1XLCwCUEL5eLPljTZaAveqdOFQOiZnZEGI27qIiZe7I1fN8tcz6anS/gTM7xRKE++5egEvRWlTQQTJeApnPSiUPA+8ZykNdelQsOQh5SrGoyI4A5pq\\*\\*\\*\\*==\\</c> for the digest \<c>ZOyIygCyaOW6GjVnihtTFtIS9PNmskdyMlNKiuyjfzw=\\</c> using the RSA_PSS_SHA_256 signature algorithm.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -1040,12 +1465,27 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies a signature by using an asymmetric key.</para>
+        /// <para>Verifies a digital signature by using the public key of an asymmetric CMK.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation supports only asymmetric keys for which the <b>Usage</b> parameter is set to <b>SIGN/VERIFY</b>. The following table describes the supported signature algorithms. </para>
+        /// <h3>Precautions</h3>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy required for a RAM user or RAM role to call this API operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation can be called through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: You can access KMS over the Internet or through a VPC. To access KMS over the Internet, you must enable the public endpoint. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access KMS instances over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: You can access KMS using the private endpoint of KMS (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h3>QPS limits</h3>
+        /// <list type="bullet">
+        /// <item><description>If you use a shared gateway, the queries per second (QPS) limit for this operation is 200 for a single user. If you exceed this limit, API calls are throttled, which may impact your business. We recommend that you manage your call frequency to stay within the QPS limit.</description></item>
+        /// <item><description>If you use a dedicated gateway, the QPS limit for this operation for a single user is determined by the computing performance specifications of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance metrics</a>.</description></item>
+        /// </list>
+        /// <h3>Description</h3>
+        /// <para>This operation supports only asymmetric keys for which the <b>Usage</b> parameter is set to <b>SIGN/VERIFY</b>. The following table lists the supported signature algorithms.</para>
         /// <table>
         /// <thead>
         /// <tr>
@@ -1087,11 +1527,12 @@ namespace AlibabaCloud.SDK.Kms20160120
         /// <tr>
         /// <td>EC_SM2</td>
         /// <td>SM2DSA</td>
-        /// <td>SM2 elliptic curve public key encryption algorithm</td>
+        /// <td>SM2 elliptic curve digital signature algorithm</td>
         /// </tr>
         /// </tbody></table>
         /// <remarks>
-        /// <para> When you calculate the SM2 signature based on GB/T 32918, the <b>Digest</b> parameter is used to calculate the digest value of the combination of Z(A) and M, rather than the SM3 digest value. M indicates the original message to be signed. Z(A) indicates the hash value for User A. The hash value is defined in GB/T 32918.  In this example, the asymmetric key whose ID is <c>5c438b18-05be-40ad-b6c2-3be6752c****</c> and version ID is <c>2ab1a983-7072-4bbc-a582-584b5bd8****</c> and the signature algorithm RSA_PSS_SHA_256 are used to verify the signature <c>M2CceNZH00ZgL9ED/ZHFp21YRAvYeZHknJUc207OCZ0N9wNn9As4z2bON3FF3je+1Nu+2+/8Zj50HpMTpzYpMp2R93cYmACCmhaYoKydxylbyGzJR8y9likZRCrkD38lRoS40aBBvv/6iRKzQuo9EGYVcel36cMNg00VmYNBy3pa1rwg3gA4l3cy6kjayZja1WGPkVhrVKsrJMdbpl0ApLjXKuD8rw1n1XLCwCUEL5eLPljTZaAveqdOFQOiZnZEGI27qIiZe7I1fN8tcz6anS/gTM7xRKE++5egEvRWlTQQTJeApnPSiUPA+8ZykNdelQsOQh5SrGoyI4A5pq****==</c> of the digest <c>ZOyIygCyaOW6GjVnihtTFtIS9PNmskdyMlNKiuyjfzw=</c>.</para>
+        /// <para>In accordance with the GBT32918 standard, when an SM2 signature is calculated, the value of the <b>Digest</b> parameter is not the SM3 hash value of the original message. Instead, the value is the SM3 hash value of the result generated by concatenating Z(A) and M. In this formula, M is the original message to be signed, and Z(A) is the hash value of user A as defined in GBT32918.
+        /// This topic provides an example of how to use an asymmetric key with the key ID \<c>5c438b18-05be-40ad-b6c2-3be6752c\\*\\*\\*\\*\\</c> and the key version ID \<c>2ab1a983-7072-4bbc-a582-584b5bd8\\*\\*\\*\\*\\</c> to verify the signature \<c>M2CceNZH00ZgL9ED/ZHFp21YRAvYeZHknJUc207OCZ0N9wNn9As4z2bON3FF3je+1Nu+2+/8Zj50HpMTpzYpMp2R93cYmACCmhaYoKydxylbyGzJR8y9likZRCrkD38lRoS40aBBvv/6iRKzQuo9EGYVcel36cMNg00VmYNBy3pa1rwg3gA4l3cy6kjayZja1WGPkVhrVKsrJMdbpl0ApLjXKuD8rw1n1XLCwCUEL5eLPljTZaAveqdOFQOiZnZEGI27qIiZe7I1fN8tcz6anS/gTM7xRKE++5egEvRWlTQQTJeApnPSiUPA+8ZykNdelQsOQh5SrGoyI4A5pq\\*\\*\\*\\*==\\</c> for the digest \<c>ZOyIygCyaOW6GjVnihtTFtIS9PNmskdyMlNKiuyjfzw=\\</c> using the RSA_PSS_SHA_256 signature algorithm.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -1154,12 +1595,27 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies a signature by using an asymmetric key.</para>
+        /// <para>Verifies a digital signature by using the public key of an asymmetric CMK.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation supports only asymmetric keys for which the <b>Usage</b> parameter is set to <b>SIGN/VERIFY</b>. The following table describes the supported signature algorithms. </para>
+        /// <h3>Precautions</h3>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy required for a RAM user or RAM role to call this API operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation can be called through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: You can access KMS over the Internet or through a VPC. To access KMS over the Internet, you must enable the public endpoint. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access KMS instances over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: You can access KMS using the private endpoint of KMS (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h3>QPS limits</h3>
+        /// <list type="bullet">
+        /// <item><description>If you use a shared gateway, the queries per second (QPS) limit for this operation is 200 for a single user. If you exceed this limit, API calls are throttled, which may impact your business. We recommend that you manage your call frequency to stay within the QPS limit.</description></item>
+        /// <item><description>If you use a dedicated gateway, the QPS limit for this operation for a single user is determined by the computing performance specifications of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance metrics</a>.</description></item>
+        /// </list>
+        /// <h3>Description</h3>
+        /// <para>This operation supports only asymmetric keys for which the <b>Usage</b> parameter is set to <b>SIGN/VERIFY</b>. The following table lists the supported signature algorithms.</para>
         /// <table>
         /// <thead>
         /// <tr>
@@ -1201,11 +1657,12 @@ namespace AlibabaCloud.SDK.Kms20160120
         /// <tr>
         /// <td>EC_SM2</td>
         /// <td>SM2DSA</td>
-        /// <td>SM2 elliptic curve public key encryption algorithm</td>
+        /// <td>SM2 elliptic curve digital signature algorithm</td>
         /// </tr>
         /// </tbody></table>
         /// <remarks>
-        /// <para> When you calculate the SM2 signature based on GB/T 32918, the <b>Digest</b> parameter is used to calculate the digest value of the combination of Z(A) and M, rather than the SM3 digest value. M indicates the original message to be signed. Z(A) indicates the hash value for User A. The hash value is defined in GB/T 32918.  In this example, the asymmetric key whose ID is <c>5c438b18-05be-40ad-b6c2-3be6752c****</c> and version ID is <c>2ab1a983-7072-4bbc-a582-584b5bd8****</c> and the signature algorithm RSA_PSS_SHA_256 are used to verify the signature <c>M2CceNZH00ZgL9ED/ZHFp21YRAvYeZHknJUc207OCZ0N9wNn9As4z2bON3FF3je+1Nu+2+/8Zj50HpMTpzYpMp2R93cYmACCmhaYoKydxylbyGzJR8y9likZRCrkD38lRoS40aBBvv/6iRKzQuo9EGYVcel36cMNg00VmYNBy3pa1rwg3gA4l3cy6kjayZja1WGPkVhrVKsrJMdbpl0ApLjXKuD8rw1n1XLCwCUEL5eLPljTZaAveqdOFQOiZnZEGI27qIiZe7I1fN8tcz6anS/gTM7xRKE++5egEvRWlTQQTJeApnPSiUPA+8ZykNdelQsOQh5SrGoyI4A5pq****==</c> of the digest <c>ZOyIygCyaOW6GjVnihtTFtIS9PNmskdyMlNKiuyjfzw=</c>.</para>
+        /// <para>In accordance with the GBT32918 standard, when an SM2 signature is calculated, the value of the <b>Digest</b> parameter is not the SM3 hash value of the original message. Instead, the value is the SM3 hash value of the result generated by concatenating Z(A) and M. In this formula, M is the original message to be signed, and Z(A) is the hash value of user A as defined in GBT32918.
+        /// This topic provides an example of how to use an asymmetric key with the key ID \<c>5c438b18-05be-40ad-b6c2-3be6752c\\*\\*\\*\\*\\</c> and the key version ID \<c>2ab1a983-7072-4bbc-a582-584b5bd8\\*\\*\\*\\*\\</c> to verify the signature \<c>M2CceNZH00ZgL9ED/ZHFp21YRAvYeZHknJUc207OCZ0N9wNn9As4z2bON3FF3je+1Nu+2+/8Zj50HpMTpzYpMp2R93cYmACCmhaYoKydxylbyGzJR8y9likZRCrkD38lRoS40aBBvv/6iRKzQuo9EGYVcel36cMNg00VmYNBy3pa1rwg3gA4l3cy6kjayZja1WGPkVhrVKsrJMdbpl0ApLjXKuD8rw1n1XLCwCUEL5eLPljTZaAveqdOFQOiZnZEGI27qIiZe7I1fN8tcz6anS/gTM7xRKE++5egEvRWlTQQTJeApnPSiUPA+8ZykNdelQsOQh5SrGoyI4A5pq\\*\\*\\*\\*==\\</c> for the digest \<c>ZOyIygCyaOW6GjVnihtTFtIS9PNmskdyMlNKiuyjfzw=\\</c> using the RSA_PSS_SHA_256 signature algorithm.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -1224,12 +1681,27 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies a signature by using an asymmetric key.</para>
+        /// <para>Verifies a digital signature by using the public key of an asymmetric CMK.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation supports only asymmetric keys for which the <b>Usage</b> parameter is set to <b>SIGN/VERIFY</b>. The following table describes the supported signature algorithms. </para>
+        /// <h3>Precautions</h3>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy required for a RAM user or RAM role to call this API operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation can be called through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: You can access KMS over the Internet or through a VPC. To access KMS over the Internet, you must enable the public endpoint. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access KMS instances over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: You can access KMS using the private endpoint of KMS (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h3>QPS limits</h3>
+        /// <list type="bullet">
+        /// <item><description>If you use a shared gateway, the queries per second (QPS) limit for this operation is 200 for a single user. If you exceed this limit, API calls are throttled, which may impact your business. We recommend that you manage your call frequency to stay within the QPS limit.</description></item>
+        /// <item><description>If you use a dedicated gateway, the QPS limit for this operation for a single user is determined by the computing performance specifications of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance metrics</a>.</description></item>
+        /// </list>
+        /// <h3>Description</h3>
+        /// <para>This operation supports only asymmetric keys for which the <b>Usage</b> parameter is set to <b>SIGN/VERIFY</b>. The following table lists the supported signature algorithms.</para>
         /// <table>
         /// <thead>
         /// <tr>
@@ -1271,11 +1743,12 @@ namespace AlibabaCloud.SDK.Kms20160120
         /// <tr>
         /// <td>EC_SM2</td>
         /// <td>SM2DSA</td>
-        /// <td>SM2 elliptic curve public key encryption algorithm</td>
+        /// <td>SM2 elliptic curve digital signature algorithm</td>
         /// </tr>
         /// </tbody></table>
         /// <remarks>
-        /// <para> When you calculate the SM2 signature based on GB/T 32918, the <b>Digest</b> parameter is used to calculate the digest value of the combination of Z(A) and M, rather than the SM3 digest value. M indicates the original message to be signed. Z(A) indicates the hash value for User A. The hash value is defined in GB/T 32918.  In this example, the asymmetric key whose ID is <c>5c438b18-05be-40ad-b6c2-3be6752c****</c> and version ID is <c>2ab1a983-7072-4bbc-a582-584b5bd8****</c> and the signature algorithm RSA_PSS_SHA_256 are used to verify the signature <c>M2CceNZH00ZgL9ED/ZHFp21YRAvYeZHknJUc207OCZ0N9wNn9As4z2bON3FF3je+1Nu+2+/8Zj50HpMTpzYpMp2R93cYmACCmhaYoKydxylbyGzJR8y9likZRCrkD38lRoS40aBBvv/6iRKzQuo9EGYVcel36cMNg00VmYNBy3pa1rwg3gA4l3cy6kjayZja1WGPkVhrVKsrJMdbpl0ApLjXKuD8rw1n1XLCwCUEL5eLPljTZaAveqdOFQOiZnZEGI27qIiZe7I1fN8tcz6anS/gTM7xRKE++5egEvRWlTQQTJeApnPSiUPA+8ZykNdelQsOQh5SrGoyI4A5pq****==</c> of the digest <c>ZOyIygCyaOW6GjVnihtTFtIS9PNmskdyMlNKiuyjfzw=</c>.</para>
+        /// <para>In accordance with the GBT32918 standard, when an SM2 signature is calculated, the value of the <b>Digest</b> parameter is not the SM3 hash value of the original message. Instead, the value is the SM3 hash value of the result generated by concatenating Z(A) and M. In this formula, M is the original message to be signed, and Z(A) is the hash value of user A as defined in GBT32918.
+        /// This topic provides an example of how to use an asymmetric key with the key ID \<c>5c438b18-05be-40ad-b6c2-3be6752c\\*\\*\\*\\*\\</c> and the key version ID \<c>2ab1a983-7072-4bbc-a582-584b5bd8\\*\\*\\*\\*\\</c> to verify the signature \<c>M2CceNZH00ZgL9ED/ZHFp21YRAvYeZHknJUc207OCZ0N9wNn9As4z2bON3FF3je+1Nu+2+/8Zj50HpMTpzYpMp2R93cYmACCmhaYoKydxylbyGzJR8y9likZRCrkD38lRoS40aBBvv/6iRKzQuo9EGYVcel36cMNg00VmYNBy3pa1rwg3gA4l3cy6kjayZja1WGPkVhrVKsrJMdbpl0ApLjXKuD8rw1n1XLCwCUEL5eLPljTZaAveqdOFQOiZnZEGI27qIiZe7I1fN8tcz6anS/gTM7xRKE++5egEvRWlTQQTJeApnPSiUPA+8ZykNdelQsOQh5SrGoyI4A5pq\\*\\*\\*\\*==\\</c> for the digest \<c>ZOyIygCyaOW6GjVnihtTFtIS9PNmskdyMlNKiuyjfzw=\\</c> using the RSA_PSS_SHA_256 signature algorithm.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -1292,6 +1765,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return await AsymmetricVerifyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels the deletion task of a CMK.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>If the deletion task of a CMK is canceled, the CMK returns to the Enabled state.</para>
@@ -1334,6 +1812,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<CancelKeyDeletionResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels the deletion task of a CMK.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>If the deletion task of a CMK is canceled, the CMK returns to the Enabled state.</para>
@@ -1376,6 +1859,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<CancelKeyDeletionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels the deletion task of a CMK.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>If the deletion task of a CMK is canceled, the CMK returns to the Enabled state.</para>
@@ -1394,6 +1882,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return CancelKeyDeletionWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels the deletion task of a CMK.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>If the deletion task of a CMK is canceled, the CMK returns to the Enabled state.</para>
@@ -1410,1078 +1903,6 @@ namespace AlibabaCloud.SDK.Kms20160120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CancelKeyDeletionWithOptionsAsync(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Decrypts data by using a specific certificate.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Limit: The encryption algorithm in the request parameters must match the key type. 
-        /// The following table describes the mapping between encryption algorithms and key types.</para>
-        /// <table>
-        /// <thead>
-        /// <tr>
-        /// <th>Algorithm</th>
-        /// <th>Key Spec</th>
-        /// </tr>
-        /// </thead>
-        /// <tbody><tr>
-        /// <td>RSAES_OAEP_SHA_1</td>
-        /// <td>RSA_2048</td>
-        /// </tr>
-        /// <tr>
-        /// <td>RSAES_OAEP_SHA_256</td>
-        /// <td>RSA_2048</td>
-        /// </tr>
-        /// <tr>
-        /// <td>SM2PKE</td>
-        /// <td>EC_SM2</td>
-        /// </tr>
-        /// <tr>
-        /// <td>In this example, the certificate whose ID is <c>12345678-1234-1234-1234-12345678****</c> and the encryption algorithm <c>RSAES_OAEP_SHA_256</c> are used to decrypt the data <c>ZOyIygCyaOW6Gj****MlNKiuyjfzw=</c>.</td>
-        /// <td></td>
-        /// </tr>
-        /// </tbody></table>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// CertificatePrivateKeyDecryptRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// CertificatePrivateKeyDecryptResponse
-        /// </returns>
-        public CertificatePrivateKeyDecryptResponse CertificatePrivateKeyDecryptWithOptions(CertificatePrivateKeyDecryptRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Algorithm))
-            {
-                query["Algorithm"] = request.Algorithm;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertificateId))
-            {
-                query["CertificateId"] = request.CertificateId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CiphertextBlob))
-            {
-                query["CiphertextBlob"] = request.CiphertextBlob;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CertificatePrivateKeyDecrypt",
-                Version = "2016-01-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CertificatePrivateKeyDecryptResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Decrypts data by using a specific certificate.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Limit: The encryption algorithm in the request parameters must match the key type. 
-        /// The following table describes the mapping between encryption algorithms and key types.</para>
-        /// <table>
-        /// <thead>
-        /// <tr>
-        /// <th>Algorithm</th>
-        /// <th>Key Spec</th>
-        /// </tr>
-        /// </thead>
-        /// <tbody><tr>
-        /// <td>RSAES_OAEP_SHA_1</td>
-        /// <td>RSA_2048</td>
-        /// </tr>
-        /// <tr>
-        /// <td>RSAES_OAEP_SHA_256</td>
-        /// <td>RSA_2048</td>
-        /// </tr>
-        /// <tr>
-        /// <td>SM2PKE</td>
-        /// <td>EC_SM2</td>
-        /// </tr>
-        /// <tr>
-        /// <td>In this example, the certificate whose ID is <c>12345678-1234-1234-1234-12345678****</c> and the encryption algorithm <c>RSAES_OAEP_SHA_256</c> are used to decrypt the data <c>ZOyIygCyaOW6Gj****MlNKiuyjfzw=</c>.</td>
-        /// <td></td>
-        /// </tr>
-        /// </tbody></table>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// CertificatePrivateKeyDecryptRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// CertificatePrivateKeyDecryptResponse
-        /// </returns>
-        public async Task<CertificatePrivateKeyDecryptResponse> CertificatePrivateKeyDecryptWithOptionsAsync(CertificatePrivateKeyDecryptRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Algorithm))
-            {
-                query["Algorithm"] = request.Algorithm;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertificateId))
-            {
-                query["CertificateId"] = request.CertificateId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CiphertextBlob))
-            {
-                query["CiphertextBlob"] = request.CiphertextBlob;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CertificatePrivateKeyDecrypt",
-                Version = "2016-01-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CertificatePrivateKeyDecryptResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Decrypts data by using a specific certificate.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Limit: The encryption algorithm in the request parameters must match the key type. 
-        /// The following table describes the mapping between encryption algorithms and key types.</para>
-        /// <table>
-        /// <thead>
-        /// <tr>
-        /// <th>Algorithm</th>
-        /// <th>Key Spec</th>
-        /// </tr>
-        /// </thead>
-        /// <tbody><tr>
-        /// <td>RSAES_OAEP_SHA_1</td>
-        /// <td>RSA_2048</td>
-        /// </tr>
-        /// <tr>
-        /// <td>RSAES_OAEP_SHA_256</td>
-        /// <td>RSA_2048</td>
-        /// </tr>
-        /// <tr>
-        /// <td>SM2PKE</td>
-        /// <td>EC_SM2</td>
-        /// </tr>
-        /// <tr>
-        /// <td>In this example, the certificate whose ID is <c>12345678-1234-1234-1234-12345678****</c> and the encryption algorithm <c>RSAES_OAEP_SHA_256</c> are used to decrypt the data <c>ZOyIygCyaOW6Gj****MlNKiuyjfzw=</c>.</td>
-        /// <td></td>
-        /// </tr>
-        /// </tbody></table>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// CertificatePrivateKeyDecryptRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// CertificatePrivateKeyDecryptResponse
-        /// </returns>
-        public CertificatePrivateKeyDecryptResponse CertificatePrivateKeyDecrypt(CertificatePrivateKeyDecryptRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return CertificatePrivateKeyDecryptWithOptions(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Decrypts data by using a specific certificate.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Limit: The encryption algorithm in the request parameters must match the key type. 
-        /// The following table describes the mapping between encryption algorithms and key types.</para>
-        /// <table>
-        /// <thead>
-        /// <tr>
-        /// <th>Algorithm</th>
-        /// <th>Key Spec</th>
-        /// </tr>
-        /// </thead>
-        /// <tbody><tr>
-        /// <td>RSAES_OAEP_SHA_1</td>
-        /// <td>RSA_2048</td>
-        /// </tr>
-        /// <tr>
-        /// <td>RSAES_OAEP_SHA_256</td>
-        /// <td>RSA_2048</td>
-        /// </tr>
-        /// <tr>
-        /// <td>SM2PKE</td>
-        /// <td>EC_SM2</td>
-        /// </tr>
-        /// <tr>
-        /// <td>In this example, the certificate whose ID is <c>12345678-1234-1234-1234-12345678****</c> and the encryption algorithm <c>RSAES_OAEP_SHA_256</c> are used to decrypt the data <c>ZOyIygCyaOW6Gj****MlNKiuyjfzw=</c>.</td>
-        /// <td></td>
-        /// </tr>
-        /// </tbody></table>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// CertificatePrivateKeyDecryptRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// CertificatePrivateKeyDecryptResponse
-        /// </returns>
-        public async Task<CertificatePrivateKeyDecryptResponse> CertificatePrivateKeyDecryptAsync(CertificatePrivateKeyDecryptRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await CertificatePrivateKeyDecryptWithOptionsAsync(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Generates a signature by using a specified certificate.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>The signature algorithm in the request parameters must match the key type. The following table describes the mapping between signature algorithms and key types.  </para>
-        /// <table>
-        /// <thead>
-        /// <tr>
-        /// <th>Algorithm</th>
-        /// <th>Key Spec</th>
-        /// </tr>
-        /// </thead>
-        /// <tbody><tr>
-        /// <td>RSA_PKCS1_SHA_256</td>
-        /// <td>RSA_2048</td>
-        /// </tr>
-        /// <tr>
-        /// <td>RSA_PSS_SHA_256</td>
-        /// <td>RSA_2048</td>
-        /// </tr>
-        /// <tr>
-        /// <td>ECDSA_SHA_256</td>
-        /// <td>EC_P256</td>
-        /// </tr>
-        /// <tr>
-        /// <td>SM2DSA</td>
-        /// <td>EC_SM2</td>
-        /// </tr>
-        /// <tr>
-        /// <td>In this example, the certificate whose ID is <c>12345678-1234-1234-1234-12345678****</c> and the signature algorithm <c>ECDSA_SHA_256</c> are used to generate a signature for the raw data <c>VGhlIHF1aWNrIGJyb3duIGZveCBqdW1wcyBvdmVyIHRoZSBsYXp5IGRvZy4=</c>.</td>
-        /// <td></td>
-        /// </tr>
-        /// </tbody></table>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// CertificatePrivateKeySignRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// CertificatePrivateKeySignResponse
-        /// </returns>
-        public CertificatePrivateKeySignResponse CertificatePrivateKeySignWithOptions(CertificatePrivateKeySignRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Algorithm))
-            {
-                query["Algorithm"] = request.Algorithm;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertificateId))
-            {
-                query["CertificateId"] = request.CertificateId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Message))
-            {
-                query["Message"] = request.Message;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageType))
-            {
-                query["MessageType"] = request.MessageType;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CertificatePrivateKeySign",
-                Version = "2016-01-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CertificatePrivateKeySignResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Generates a signature by using a specified certificate.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>The signature algorithm in the request parameters must match the key type. The following table describes the mapping between signature algorithms and key types.  </para>
-        /// <table>
-        /// <thead>
-        /// <tr>
-        /// <th>Algorithm</th>
-        /// <th>Key Spec</th>
-        /// </tr>
-        /// </thead>
-        /// <tbody><tr>
-        /// <td>RSA_PKCS1_SHA_256</td>
-        /// <td>RSA_2048</td>
-        /// </tr>
-        /// <tr>
-        /// <td>RSA_PSS_SHA_256</td>
-        /// <td>RSA_2048</td>
-        /// </tr>
-        /// <tr>
-        /// <td>ECDSA_SHA_256</td>
-        /// <td>EC_P256</td>
-        /// </tr>
-        /// <tr>
-        /// <td>SM2DSA</td>
-        /// <td>EC_SM2</td>
-        /// </tr>
-        /// <tr>
-        /// <td>In this example, the certificate whose ID is <c>12345678-1234-1234-1234-12345678****</c> and the signature algorithm <c>ECDSA_SHA_256</c> are used to generate a signature for the raw data <c>VGhlIHF1aWNrIGJyb3duIGZveCBqdW1wcyBvdmVyIHRoZSBsYXp5IGRvZy4=</c>.</td>
-        /// <td></td>
-        /// </tr>
-        /// </tbody></table>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// CertificatePrivateKeySignRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// CertificatePrivateKeySignResponse
-        /// </returns>
-        public async Task<CertificatePrivateKeySignResponse> CertificatePrivateKeySignWithOptionsAsync(CertificatePrivateKeySignRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Algorithm))
-            {
-                query["Algorithm"] = request.Algorithm;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertificateId))
-            {
-                query["CertificateId"] = request.CertificateId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Message))
-            {
-                query["Message"] = request.Message;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageType))
-            {
-                query["MessageType"] = request.MessageType;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CertificatePrivateKeySign",
-                Version = "2016-01-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CertificatePrivateKeySignResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Generates a signature by using a specified certificate.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>The signature algorithm in the request parameters must match the key type. The following table describes the mapping between signature algorithms and key types.  </para>
-        /// <table>
-        /// <thead>
-        /// <tr>
-        /// <th>Algorithm</th>
-        /// <th>Key Spec</th>
-        /// </tr>
-        /// </thead>
-        /// <tbody><tr>
-        /// <td>RSA_PKCS1_SHA_256</td>
-        /// <td>RSA_2048</td>
-        /// </tr>
-        /// <tr>
-        /// <td>RSA_PSS_SHA_256</td>
-        /// <td>RSA_2048</td>
-        /// </tr>
-        /// <tr>
-        /// <td>ECDSA_SHA_256</td>
-        /// <td>EC_P256</td>
-        /// </tr>
-        /// <tr>
-        /// <td>SM2DSA</td>
-        /// <td>EC_SM2</td>
-        /// </tr>
-        /// <tr>
-        /// <td>In this example, the certificate whose ID is <c>12345678-1234-1234-1234-12345678****</c> and the signature algorithm <c>ECDSA_SHA_256</c> are used to generate a signature for the raw data <c>VGhlIHF1aWNrIGJyb3duIGZveCBqdW1wcyBvdmVyIHRoZSBsYXp5IGRvZy4=</c>.</td>
-        /// <td></td>
-        /// </tr>
-        /// </tbody></table>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// CertificatePrivateKeySignRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// CertificatePrivateKeySignResponse
-        /// </returns>
-        public CertificatePrivateKeySignResponse CertificatePrivateKeySign(CertificatePrivateKeySignRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return CertificatePrivateKeySignWithOptions(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Generates a signature by using a specified certificate.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>The signature algorithm in the request parameters must match the key type. The following table describes the mapping between signature algorithms and key types.  </para>
-        /// <table>
-        /// <thead>
-        /// <tr>
-        /// <th>Algorithm</th>
-        /// <th>Key Spec</th>
-        /// </tr>
-        /// </thead>
-        /// <tbody><tr>
-        /// <td>RSA_PKCS1_SHA_256</td>
-        /// <td>RSA_2048</td>
-        /// </tr>
-        /// <tr>
-        /// <td>RSA_PSS_SHA_256</td>
-        /// <td>RSA_2048</td>
-        /// </tr>
-        /// <tr>
-        /// <td>ECDSA_SHA_256</td>
-        /// <td>EC_P256</td>
-        /// </tr>
-        /// <tr>
-        /// <td>SM2DSA</td>
-        /// <td>EC_SM2</td>
-        /// </tr>
-        /// <tr>
-        /// <td>In this example, the certificate whose ID is <c>12345678-1234-1234-1234-12345678****</c> and the signature algorithm <c>ECDSA_SHA_256</c> are used to generate a signature for the raw data <c>VGhlIHF1aWNrIGJyb3duIGZveCBqdW1wcyBvdmVyIHRoZSBsYXp5IGRvZy4=</c>.</td>
-        /// <td></td>
-        /// </tr>
-        /// </tbody></table>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// CertificatePrivateKeySignRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// CertificatePrivateKeySignResponse
-        /// </returns>
-        public async Task<CertificatePrivateKeySignResponse> CertificatePrivateKeySignAsync(CertificatePrivateKeySignRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await CertificatePrivateKeySignWithOptionsAsync(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Encrypts data by using a specific certificate.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Limit: The encryption algorithm in the request parameters must match the key type. 
-        /// The following table describes the mapping between encryption algorithms and key types.</para>
-        /// <table>
-        /// <thead>
-        /// <tr>
-        /// <th>Algorithm</th>
-        /// <th>Key Spec</th>
-        /// </tr>
-        /// </thead>
-        /// <tbody><tr>
-        /// <td>RSAES_OAEP_SHA_1</td>
-        /// <td>RSA_2048</td>
-        /// </tr>
-        /// <tr>
-        /// <td>RSAES_OAEP_SHA_256</td>
-        /// <td>RSA_2048</td>
-        /// </tr>
-        /// <tr>
-        /// <td>SM2PKE</td>
-        /// <td>EC_SM2</td>
-        /// </tr>
-        /// <tr>
-        /// <td>In this example, the certificate whose ID is <c>12345678-1234-1234-1234-12345678****</c> and the encryption algorithm <c>RSAES_OAEP_SHA_256</c> are used to encrypt the data <c>VGhlIHF1aWNrIGJyb3duIGZveCBqdW1wcyBvdmVyIHRoZSBsYXp5IGRvZy4=</c>.</td>
-        /// <td></td>
-        /// </tr>
-        /// </tbody></table>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// CertificatePublicKeyEncryptRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// CertificatePublicKeyEncryptResponse
-        /// </returns>
-        public CertificatePublicKeyEncryptResponse CertificatePublicKeyEncryptWithOptions(CertificatePublicKeyEncryptRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Algorithm))
-            {
-                query["Algorithm"] = request.Algorithm;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertificateId))
-            {
-                query["CertificateId"] = request.CertificateId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Plaintext))
-            {
-                query["Plaintext"] = request.Plaintext;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CertificatePublicKeyEncrypt",
-                Version = "2016-01-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CertificatePublicKeyEncryptResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Encrypts data by using a specific certificate.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Limit: The encryption algorithm in the request parameters must match the key type. 
-        /// The following table describes the mapping between encryption algorithms and key types.</para>
-        /// <table>
-        /// <thead>
-        /// <tr>
-        /// <th>Algorithm</th>
-        /// <th>Key Spec</th>
-        /// </tr>
-        /// </thead>
-        /// <tbody><tr>
-        /// <td>RSAES_OAEP_SHA_1</td>
-        /// <td>RSA_2048</td>
-        /// </tr>
-        /// <tr>
-        /// <td>RSAES_OAEP_SHA_256</td>
-        /// <td>RSA_2048</td>
-        /// </tr>
-        /// <tr>
-        /// <td>SM2PKE</td>
-        /// <td>EC_SM2</td>
-        /// </tr>
-        /// <tr>
-        /// <td>In this example, the certificate whose ID is <c>12345678-1234-1234-1234-12345678****</c> and the encryption algorithm <c>RSAES_OAEP_SHA_256</c> are used to encrypt the data <c>VGhlIHF1aWNrIGJyb3duIGZveCBqdW1wcyBvdmVyIHRoZSBsYXp5IGRvZy4=</c>.</td>
-        /// <td></td>
-        /// </tr>
-        /// </tbody></table>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// CertificatePublicKeyEncryptRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// CertificatePublicKeyEncryptResponse
-        /// </returns>
-        public async Task<CertificatePublicKeyEncryptResponse> CertificatePublicKeyEncryptWithOptionsAsync(CertificatePublicKeyEncryptRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Algorithm))
-            {
-                query["Algorithm"] = request.Algorithm;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertificateId))
-            {
-                query["CertificateId"] = request.CertificateId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Plaintext))
-            {
-                query["Plaintext"] = request.Plaintext;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CertificatePublicKeyEncrypt",
-                Version = "2016-01-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CertificatePublicKeyEncryptResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Encrypts data by using a specific certificate.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Limit: The encryption algorithm in the request parameters must match the key type. 
-        /// The following table describes the mapping between encryption algorithms and key types.</para>
-        /// <table>
-        /// <thead>
-        /// <tr>
-        /// <th>Algorithm</th>
-        /// <th>Key Spec</th>
-        /// </tr>
-        /// </thead>
-        /// <tbody><tr>
-        /// <td>RSAES_OAEP_SHA_1</td>
-        /// <td>RSA_2048</td>
-        /// </tr>
-        /// <tr>
-        /// <td>RSAES_OAEP_SHA_256</td>
-        /// <td>RSA_2048</td>
-        /// </tr>
-        /// <tr>
-        /// <td>SM2PKE</td>
-        /// <td>EC_SM2</td>
-        /// </tr>
-        /// <tr>
-        /// <td>In this example, the certificate whose ID is <c>12345678-1234-1234-1234-12345678****</c> and the encryption algorithm <c>RSAES_OAEP_SHA_256</c> are used to encrypt the data <c>VGhlIHF1aWNrIGJyb3duIGZveCBqdW1wcyBvdmVyIHRoZSBsYXp5IGRvZy4=</c>.</td>
-        /// <td></td>
-        /// </tr>
-        /// </tbody></table>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// CertificatePublicKeyEncryptRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// CertificatePublicKeyEncryptResponse
-        /// </returns>
-        public CertificatePublicKeyEncryptResponse CertificatePublicKeyEncrypt(CertificatePublicKeyEncryptRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return CertificatePublicKeyEncryptWithOptions(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Encrypts data by using a specific certificate.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Limit: The encryption algorithm in the request parameters must match the key type. 
-        /// The following table describes the mapping between encryption algorithms and key types.</para>
-        /// <table>
-        /// <thead>
-        /// <tr>
-        /// <th>Algorithm</th>
-        /// <th>Key Spec</th>
-        /// </tr>
-        /// </thead>
-        /// <tbody><tr>
-        /// <td>RSAES_OAEP_SHA_1</td>
-        /// <td>RSA_2048</td>
-        /// </tr>
-        /// <tr>
-        /// <td>RSAES_OAEP_SHA_256</td>
-        /// <td>RSA_2048</td>
-        /// </tr>
-        /// <tr>
-        /// <td>SM2PKE</td>
-        /// <td>EC_SM2</td>
-        /// </tr>
-        /// <tr>
-        /// <td>In this example, the certificate whose ID is <c>12345678-1234-1234-1234-12345678****</c> and the encryption algorithm <c>RSAES_OAEP_SHA_256</c> are used to encrypt the data <c>VGhlIHF1aWNrIGJyb3duIGZveCBqdW1wcyBvdmVyIHRoZSBsYXp5IGRvZy4=</c>.</td>
-        /// <td></td>
-        /// </tr>
-        /// </tbody></table>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// CertificatePublicKeyEncryptRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// CertificatePublicKeyEncryptResponse
-        /// </returns>
-        public async Task<CertificatePublicKeyEncryptResponse> CertificatePublicKeyEncryptAsync(CertificatePublicKeyEncryptRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await CertificatePublicKeyEncryptWithOptionsAsync(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Verifies a digital signature by using a specified certificate.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>The signature algorithm in the request parameters must match the key type. The following table describes the mapping between signature algorithms and key types.  </para>
-        /// <table>
-        /// <thead>
-        /// <tr>
-        /// <th>Algorithm</th>
-        /// <th>Key Spec</th>
-        /// </tr>
-        /// </thead>
-        /// <tbody><tr>
-        /// <td>RSA_PKCS1_SHA_256</td>
-        /// <td>RSA_2048</td>
-        /// </tr>
-        /// <tr>
-        /// <td>RSA_PSS_SHA_256</td>
-        /// <td>RSA_2048</td>
-        /// </tr>
-        /// <tr>
-        /// <td>ECDSA_SHA_256</td>
-        /// <td>EC_P256</td>
-        /// </tr>
-        /// <tr>
-        /// <td>SM2DSA</td>
-        /// <td>EC_SM2</td>
-        /// </tr>
-        /// <tr>
-        /// <td>In this example, the certificate whose ID is <c>12345678-1234-1234-1234-12345678****</c> and the signature algorithm <c>ECDSA_SHA_256</c> are used to verify the digital signature <c>ZOyIygCyaOW6Gj****MlNKiuyjfzw=</c> of the raw data <c>VGhlIHF1aWNrIGJyb3duIGZveCBqdW1wcyBvdmVyIHRoZSBsYXp5IGRvZy4=</c>.</td>
-        /// <td></td>
-        /// </tr>
-        /// </tbody></table>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// CertificatePublicKeyVerifyRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// CertificatePublicKeyVerifyResponse
-        /// </returns>
-        public CertificatePublicKeyVerifyResponse CertificatePublicKeyVerifyWithOptions(CertificatePublicKeyVerifyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Algorithm))
-            {
-                query["Algorithm"] = request.Algorithm;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertificateId))
-            {
-                query["CertificateId"] = request.CertificateId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Message))
-            {
-                query["Message"] = request.Message;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageType))
-            {
-                query["MessageType"] = request.MessageType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignatureValue))
-            {
-                query["SignatureValue"] = request.SignatureValue;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CertificatePublicKeyVerify",
-                Version = "2016-01-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CertificatePublicKeyVerifyResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Verifies a digital signature by using a specified certificate.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>The signature algorithm in the request parameters must match the key type. The following table describes the mapping between signature algorithms and key types.  </para>
-        /// <table>
-        /// <thead>
-        /// <tr>
-        /// <th>Algorithm</th>
-        /// <th>Key Spec</th>
-        /// </tr>
-        /// </thead>
-        /// <tbody><tr>
-        /// <td>RSA_PKCS1_SHA_256</td>
-        /// <td>RSA_2048</td>
-        /// </tr>
-        /// <tr>
-        /// <td>RSA_PSS_SHA_256</td>
-        /// <td>RSA_2048</td>
-        /// </tr>
-        /// <tr>
-        /// <td>ECDSA_SHA_256</td>
-        /// <td>EC_P256</td>
-        /// </tr>
-        /// <tr>
-        /// <td>SM2DSA</td>
-        /// <td>EC_SM2</td>
-        /// </tr>
-        /// <tr>
-        /// <td>In this example, the certificate whose ID is <c>12345678-1234-1234-1234-12345678****</c> and the signature algorithm <c>ECDSA_SHA_256</c> are used to verify the digital signature <c>ZOyIygCyaOW6Gj****MlNKiuyjfzw=</c> of the raw data <c>VGhlIHF1aWNrIGJyb3duIGZveCBqdW1wcyBvdmVyIHRoZSBsYXp5IGRvZy4=</c>.</td>
-        /// <td></td>
-        /// </tr>
-        /// </tbody></table>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// CertificatePublicKeyVerifyRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// CertificatePublicKeyVerifyResponse
-        /// </returns>
-        public async Task<CertificatePublicKeyVerifyResponse> CertificatePublicKeyVerifyWithOptionsAsync(CertificatePublicKeyVerifyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Algorithm))
-            {
-                query["Algorithm"] = request.Algorithm;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertificateId))
-            {
-                query["CertificateId"] = request.CertificateId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Message))
-            {
-                query["Message"] = request.Message;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageType))
-            {
-                query["MessageType"] = request.MessageType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignatureValue))
-            {
-                query["SignatureValue"] = request.SignatureValue;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CertificatePublicKeyVerify",
-                Version = "2016-01-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CertificatePublicKeyVerifyResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Verifies a digital signature by using a specified certificate.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>The signature algorithm in the request parameters must match the key type. The following table describes the mapping between signature algorithms and key types.  </para>
-        /// <table>
-        /// <thead>
-        /// <tr>
-        /// <th>Algorithm</th>
-        /// <th>Key Spec</th>
-        /// </tr>
-        /// </thead>
-        /// <tbody><tr>
-        /// <td>RSA_PKCS1_SHA_256</td>
-        /// <td>RSA_2048</td>
-        /// </tr>
-        /// <tr>
-        /// <td>RSA_PSS_SHA_256</td>
-        /// <td>RSA_2048</td>
-        /// </tr>
-        /// <tr>
-        /// <td>ECDSA_SHA_256</td>
-        /// <td>EC_P256</td>
-        /// </tr>
-        /// <tr>
-        /// <td>SM2DSA</td>
-        /// <td>EC_SM2</td>
-        /// </tr>
-        /// <tr>
-        /// <td>In this example, the certificate whose ID is <c>12345678-1234-1234-1234-12345678****</c> and the signature algorithm <c>ECDSA_SHA_256</c> are used to verify the digital signature <c>ZOyIygCyaOW6Gj****MlNKiuyjfzw=</c> of the raw data <c>VGhlIHF1aWNrIGJyb3duIGZveCBqdW1wcyBvdmVyIHRoZSBsYXp5IGRvZy4=</c>.</td>
-        /// <td></td>
-        /// </tr>
-        /// </tbody></table>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// CertificatePublicKeyVerifyRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// CertificatePublicKeyVerifyResponse
-        /// </returns>
-        public CertificatePublicKeyVerifyResponse CertificatePublicKeyVerify(CertificatePublicKeyVerifyRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return CertificatePublicKeyVerifyWithOptions(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Verifies a digital signature by using a specified certificate.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>The signature algorithm in the request parameters must match the key type. The following table describes the mapping between signature algorithms and key types.  </para>
-        /// <table>
-        /// <thead>
-        /// <tr>
-        /// <th>Algorithm</th>
-        /// <th>Key Spec</th>
-        /// </tr>
-        /// </thead>
-        /// <tbody><tr>
-        /// <td>RSA_PKCS1_SHA_256</td>
-        /// <td>RSA_2048</td>
-        /// </tr>
-        /// <tr>
-        /// <td>RSA_PSS_SHA_256</td>
-        /// <td>RSA_2048</td>
-        /// </tr>
-        /// <tr>
-        /// <td>ECDSA_SHA_256</td>
-        /// <td>EC_P256</td>
-        /// </tr>
-        /// <tr>
-        /// <td>SM2DSA</td>
-        /// <td>EC_SM2</td>
-        /// </tr>
-        /// <tr>
-        /// <td>In this example, the certificate whose ID is <c>12345678-1234-1234-1234-12345678****</c> and the signature algorithm <c>ECDSA_SHA_256</c> are used to verify the digital signature <c>ZOyIygCyaOW6Gj****MlNKiuyjfzw=</c> of the raw data <c>VGhlIHF1aWNrIGJyb3duIGZveCBqdW1wcyBvdmVyIHRoZSBsYXp5IGRvZy4=</c>.</td>
-        /// <td></td>
-        /// </tr>
-        /// </tbody></table>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// CertificatePublicKeyVerifyRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// CertificatePublicKeyVerifyResponse
-        /// </returns>
-        public async Task<CertificatePublicKeyVerifyResponse> CertificatePublicKeyVerifyAsync(CertificatePublicKeyVerifyRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await CertificatePublicKeyVerifyWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2660,6 +2081,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return await ConnectKmsInstanceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an alias for a key.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>  Each alias can be bound to only one CMK at a time.</para>
@@ -2710,6 +2136,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<CreateAliasResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an alias for a key.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>  Each alias can be bound to only one CMK at a time.</para>
@@ -2760,6 +2191,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<CreateAliasResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an alias for a key.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>  Each alias can be bound to only one CMK at a time.</para>
@@ -2782,6 +2218,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return CreateAliasWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an alias for a key.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>  Each alias can be bound to only one CMK at a time.</para>
@@ -3174,12 +2615,15 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a customer master key (CMK).</para>
+        /// <para>Creates a customer master key (CMK) for envelope encryption, digital signatures, or other cryptographic operations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>KMS supports common symmetric keys and asymmetric keys. For more information, see <a href="https://help.aliyun.com/document_detail/480161.html">Key types and specifications</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policies required for a RAM user or RAM role to call this OpenAPI operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>Alibaba Cloud Key Management Service (KMS) supports common specifications for symmetric and asymmetric keys. For more information, see <a href="https://help.aliyun.com/document_detail/480161.html">Key management types and key specifications</a>.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -3261,12 +2705,15 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a customer master key (CMK).</para>
+        /// <para>Creates a customer master key (CMK) for envelope encryption, digital signatures, or other cryptographic operations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>KMS supports common symmetric keys and asymmetric keys. For more information, see <a href="https://help.aliyun.com/document_detail/480161.html">Key types and specifications</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policies required for a RAM user or RAM role to call this OpenAPI operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>Alibaba Cloud Key Management Service (KMS) supports common specifications for symmetric and asymmetric keys. For more information, see <a href="https://help.aliyun.com/document_detail/480161.html">Key management types and key specifications</a>.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -3348,12 +2795,15 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a customer master key (CMK).</para>
+        /// <para>Creates a customer master key (CMK) for envelope encryption, digital signatures, or other cryptographic operations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>KMS supports common symmetric keys and asymmetric keys. For more information, see <a href="https://help.aliyun.com/document_detail/480161.html">Key types and specifications</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policies required for a RAM user or RAM role to call this OpenAPI operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>Alibaba Cloud Key Management Service (KMS) supports common specifications for symmetric and asymmetric keys. For more information, see <a href="https://help.aliyun.com/document_detail/480161.html">Key management types and key specifications</a>.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -3371,12 +2821,15 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a customer master key (CMK).</para>
+        /// <para>Creates a customer master key (CMK) for envelope encryption, digital signatures, or other cryptographic operations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>KMS supports common symmetric keys and asymmetric keys. For more information, see <a href="https://help.aliyun.com/document_detail/480161.html">Key types and specifications</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policies required for a RAM user or RAM role to call this OpenAPI operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>Alibaba Cloud Key Management Service (KMS) supports common specifications for symmetric and asymmetric keys. For more information, see <a href="https://help.aliyun.com/document_detail/480161.html">Key management types and key specifications</a>.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -3394,17 +2847,18 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为密钥创建新的密钥版本。</para>
+        /// <para>Creates a version for a customer master key (CMK).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can create a version only for an asymmetric CMK that is in the Enabled state. You can call the <a href="https://help.aliyun.com/document_detail/28947.html">CreateKey</a> operation to create an asymmetric CMK and the <a href="https://help.aliyun.com/document_detail/28952.html">DescribeKey</a> operation to query the status of the CMK. The status is specified by the KeyState parameter.</para>
         /// <list type="bullet">
+        /// <item><description>You can create a version only for an asymmetric CMK that is in the Enabled state. You can call the <a href="https://help.aliyun.com/document_detail/28947.html">CreateKey</a> operation to create an asymmetric CMK and the <a href="https://help.aliyun.com/document_detail/28952.html">DescribeKey</a> operation to query the status of the CMK. The status is specified by the KeyState parameter.</description></item>
         /// <item><description>The minimum interval for creating a version of the same CMK is seven days. You can call the <a href="https://help.aliyun.com/document_detail/28952.html">DescribeKey</a> operation to query the time when the last version of a CMK was created. The time is specified by the LastRotationDate parameter.</description></item>
         /// <item><description>If a CMK is in a private key store, you cannot create a version for the CMK.</description></item>
         /// <item><description>You can create a maximum of 50 versions for a CMK in the same region.
-        /// You can create a version for the CMK whose ID is <c>0b30658a-ed1a-4922-b8f7-a673ca9c****</c> by using the parameter settings provided in this topic.</description></item>
+        /// You can create a version for the CMK whose ID is <c>0b30658a-ed1a-4922-b8f7-a673ca9c****</c> by using the parameter settings provided in this topic.
+        /// For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3447,17 +2901,18 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为密钥创建新的密钥版本。</para>
+        /// <para>Creates a version for a customer master key (CMK).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can create a version only for an asymmetric CMK that is in the Enabled state. You can call the <a href="https://help.aliyun.com/document_detail/28947.html">CreateKey</a> operation to create an asymmetric CMK and the <a href="https://help.aliyun.com/document_detail/28952.html">DescribeKey</a> operation to query the status of the CMK. The status is specified by the KeyState parameter.</para>
         /// <list type="bullet">
+        /// <item><description>You can create a version only for an asymmetric CMK that is in the Enabled state. You can call the <a href="https://help.aliyun.com/document_detail/28947.html">CreateKey</a> operation to create an asymmetric CMK and the <a href="https://help.aliyun.com/document_detail/28952.html">DescribeKey</a> operation to query the status of the CMK. The status is specified by the KeyState parameter.</description></item>
         /// <item><description>The minimum interval for creating a version of the same CMK is seven days. You can call the <a href="https://help.aliyun.com/document_detail/28952.html">DescribeKey</a> operation to query the time when the last version of a CMK was created. The time is specified by the LastRotationDate parameter.</description></item>
         /// <item><description>If a CMK is in a private key store, you cannot create a version for the CMK.</description></item>
         /// <item><description>You can create a maximum of 50 versions for a CMK in the same region.
-        /// You can create a version for the CMK whose ID is <c>0b30658a-ed1a-4922-b8f7-a673ca9c****</c> by using the parameter settings provided in this topic.</description></item>
+        /// You can create a version for the CMK whose ID is <c>0b30658a-ed1a-4922-b8f7-a673ca9c****</c> by using the parameter settings provided in this topic.
+        /// For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3500,17 +2955,18 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为密钥创建新的密钥版本。</para>
+        /// <para>Creates a version for a customer master key (CMK).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can create a version only for an asymmetric CMK that is in the Enabled state. You can call the <a href="https://help.aliyun.com/document_detail/28947.html">CreateKey</a> operation to create an asymmetric CMK and the <a href="https://help.aliyun.com/document_detail/28952.html">DescribeKey</a> operation to query the status of the CMK. The status is specified by the KeyState parameter.</para>
         /// <list type="bullet">
+        /// <item><description>You can create a version only for an asymmetric CMK that is in the Enabled state. You can call the <a href="https://help.aliyun.com/document_detail/28947.html">CreateKey</a> operation to create an asymmetric CMK and the <a href="https://help.aliyun.com/document_detail/28952.html">DescribeKey</a> operation to query the status of the CMK. The status is specified by the KeyState parameter.</description></item>
         /// <item><description>The minimum interval for creating a version of the same CMK is seven days. You can call the <a href="https://help.aliyun.com/document_detail/28952.html">DescribeKey</a> operation to query the time when the last version of a CMK was created. The time is specified by the LastRotationDate parameter.</description></item>
         /// <item><description>If a CMK is in a private key store, you cannot create a version for the CMK.</description></item>
         /// <item><description>You can create a maximum of 50 versions for a CMK in the same region.
-        /// You can create a version for the CMK whose ID is <c>0b30658a-ed1a-4922-b8f7-a673ca9c****</c> by using the parameter settings provided in this topic.</description></item>
+        /// You can create a version for the CMK whose ID is <c>0b30658a-ed1a-4922-b8f7-a673ca9c****</c> by using the parameter settings provided in this topic.
+        /// For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3529,17 +2985,18 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为密钥创建新的密钥版本。</para>
+        /// <para>Creates a version for a customer master key (CMK).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can create a version only for an asymmetric CMK that is in the Enabled state. You can call the <a href="https://help.aliyun.com/document_detail/28947.html">CreateKey</a> operation to create an asymmetric CMK and the <a href="https://help.aliyun.com/document_detail/28952.html">DescribeKey</a> operation to query the status of the CMK. The status is specified by the KeyState parameter.</para>
         /// <list type="bullet">
+        /// <item><description>You can create a version only for an asymmetric CMK that is in the Enabled state. You can call the <a href="https://help.aliyun.com/document_detail/28947.html">CreateKey</a> operation to create an asymmetric CMK and the <a href="https://help.aliyun.com/document_detail/28952.html">DescribeKey</a> operation to query the status of the CMK. The status is specified by the KeyState parameter.</description></item>
         /// <item><description>The minimum interval for creating a version of the same CMK is seven days. You can call the <a href="https://help.aliyun.com/document_detail/28952.html">DescribeKey</a> operation to query the time when the last version of a CMK was created. The time is specified by the LastRotationDate parameter.</description></item>
         /// <item><description>If a CMK is in a private key store, you cannot create a version for the CMK.</description></item>
         /// <item><description>You can create a maximum of 50 versions for a CMK in the same region.
-        /// You can create a version for the CMK whose ID is <c>0b30658a-ed1a-4922-b8f7-a673ca9c****</c> by using the parameter settings provided in this topic.</description></item>
+        /// You can create a version for the CMK whose ID is <c>0b30658a-ed1a-4922-b8f7-a673ca9c****</c> by using the parameter settings provided in this topic.
+        /// For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3558,7 +3015,7 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an access control rule to configure the private IP addresses or CIDR blocks that are allowed to access a Key Management Service (KMS) instance.</para>
+        /// <para>Creates a network access rule to configure the private IP addresses or private CIDR blocks that are allowed to access a Key Management Service (KMS) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3621,7 +3078,7 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an access control rule to configure the private IP addresses or CIDR blocks that are allowed to access a Key Management Service (KMS) instance.</para>
+        /// <para>Creates a network access rule to configure the private IP addresses or private CIDR blocks that are allowed to access a Key Management Service (KMS) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3684,7 +3141,7 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an access control rule to configure the private IP addresses or CIDR blocks that are allowed to access a Key Management Service (KMS) instance.</para>
+        /// <para>Creates a network access rule to configure the private IP addresses or private CIDR blocks that are allowed to access a Key Management Service (KMS) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3711,7 +3168,7 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an access control rule to configure the private IP addresses or CIDR blocks that are allowed to access a Key Management Service (KMS) instance.</para>
+        /// <para>Creates a network access rule to configure the private IP addresses or private CIDR blocks that are allowed to access a Key Management Service (KMS) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3934,17 +3391,20 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建凭据并存入凭据的初始版本。</para>
+        /// <para>Creates a secret and stores its initial version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The name of the secret.
-        /// The value must be 1 to 64 characters in length and can contain letters, digits, underscores (_), forward slashes (/), plus signs (+), equal signs (=), periods (.), hyphens (-), and at signs (@). The following list describes the name requirements for different types of secrets:</para>
         /// <list type="bullet">
-        /// <item><description>If the SecretType parameter is set to Generic or Rds, the name cannot start with <c>acs/</c>.</description></item>
-        /// <item><description>If the SecretType parameter is set to RAMCredentials, set the SecretName parameter to <c>$Auto</c>. In this case, KMS automatically generates a secret name that starts with <c>acs/ram/user/</c>. The name includes the display name of RAM user.</description></item>
-        /// <item><description>If the SecretType parameter is set to ECS, the name must start with <c>acs/ecs/</c>.</description></item>
+        /// <item><description>For information about the access policy required for a Resource Access Management (RAM) user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>Specify the secret name, the secret value for the initial version, and the version number. The initial version is marked with the ACSCurrent stage label.</description></item>
+        /// <item><description>Key Management Service (KMS) uses the key that you specify to encrypt the secret value. The key and the secret must be in the same KMS instance. The key must be a symmetric key.<remarks>
+        /// <para>KMS encrypts the secret value of each version. Metadata such as the secret name, version number, and version stage labels are not encrypted.</para>
+        /// </remarks>
+        /// </description></item>
+        /// <item><description>Before you encrypt the secret value, you must have the <c>kms:GenerateDataKey</c> permission on the key.
+        /// This topic provides an example of how to create an RDS secret. The secret is named <c>mydbconninfo</c>. The <c>VersionId</c> of the initial version is <c>v1</c>. The <c>SecretData</c> is <c>{&quot;Accounts&quot;:[{&quot;AccountName&quot;:&quot;user1&quot;,&quot;AccountPassword&quot;:&quot;****&quot;}]}</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4041,17 +3501,20 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建凭据并存入凭据的初始版本。</para>
+        /// <para>Creates a secret and stores its initial version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The name of the secret.
-        /// The value must be 1 to 64 characters in length and can contain letters, digits, underscores (_), forward slashes (/), plus signs (+), equal signs (=), periods (.), hyphens (-), and at signs (@). The following list describes the name requirements for different types of secrets:</para>
         /// <list type="bullet">
-        /// <item><description>If the SecretType parameter is set to Generic or Rds, the name cannot start with <c>acs/</c>.</description></item>
-        /// <item><description>If the SecretType parameter is set to RAMCredentials, set the SecretName parameter to <c>$Auto</c>. In this case, KMS automatically generates a secret name that starts with <c>acs/ram/user/</c>. The name includes the display name of RAM user.</description></item>
-        /// <item><description>If the SecretType parameter is set to ECS, the name must start with <c>acs/ecs/</c>.</description></item>
+        /// <item><description>For information about the access policy required for a Resource Access Management (RAM) user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>Specify the secret name, the secret value for the initial version, and the version number. The initial version is marked with the ACSCurrent stage label.</description></item>
+        /// <item><description>Key Management Service (KMS) uses the key that you specify to encrypt the secret value. The key and the secret must be in the same KMS instance. The key must be a symmetric key.<remarks>
+        /// <para>KMS encrypts the secret value of each version. Metadata such as the secret name, version number, and version stage labels are not encrypted.</para>
+        /// </remarks>
+        /// </description></item>
+        /// <item><description>Before you encrypt the secret value, you must have the <c>kms:GenerateDataKey</c> permission on the key.
+        /// This topic provides an example of how to create an RDS secret. The secret is named <c>mydbconninfo</c>. The <c>VersionId</c> of the initial version is <c>v1</c>. The <c>SecretData</c> is <c>{&quot;Accounts&quot;:[{&quot;AccountName&quot;:&quot;user1&quot;,&quot;AccountPassword&quot;:&quot;****&quot;}]}</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4148,17 +3611,20 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建凭据并存入凭据的初始版本。</para>
+        /// <para>Creates a secret and stores its initial version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The name of the secret.
-        /// The value must be 1 to 64 characters in length and can contain letters, digits, underscores (_), forward slashes (/), plus signs (+), equal signs (=), periods (.), hyphens (-), and at signs (@). The following list describes the name requirements for different types of secrets:</para>
         /// <list type="bullet">
-        /// <item><description>If the SecretType parameter is set to Generic or Rds, the name cannot start with <c>acs/</c>.</description></item>
-        /// <item><description>If the SecretType parameter is set to RAMCredentials, set the SecretName parameter to <c>$Auto</c>. In this case, KMS automatically generates a secret name that starts with <c>acs/ram/user/</c>. The name includes the display name of RAM user.</description></item>
-        /// <item><description>If the SecretType parameter is set to ECS, the name must start with <c>acs/ecs/</c>.</description></item>
+        /// <item><description>For information about the access policy required for a Resource Access Management (RAM) user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>Specify the secret name, the secret value for the initial version, and the version number. The initial version is marked with the ACSCurrent stage label.</description></item>
+        /// <item><description>Key Management Service (KMS) uses the key that you specify to encrypt the secret value. The key and the secret must be in the same KMS instance. The key must be a symmetric key.<remarks>
+        /// <para>KMS encrypts the secret value of each version. Metadata such as the secret name, version number, and version stage labels are not encrypted.</para>
+        /// </remarks>
+        /// </description></item>
+        /// <item><description>Before you encrypt the secret value, you must have the <c>kms:GenerateDataKey</c> permission on the key.
+        /// This topic provides an example of how to create an RDS secret. The secret is named <c>mydbconninfo</c>. The <c>VersionId</c> of the initial version is <c>v1</c>. The <c>SecretData</c> is <c>{&quot;Accounts&quot;:[{&quot;AccountName&quot;:&quot;user1&quot;,&quot;AccountPassword&quot;:&quot;****&quot;}]}</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4177,17 +3643,20 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建凭据并存入凭据的初始版本。</para>
+        /// <para>Creates a secret and stores its initial version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The name of the secret.
-        /// The value must be 1 to 64 characters in length and can contain letters, digits, underscores (_), forward slashes (/), plus signs (+), equal signs (=), periods (.), hyphens (-), and at signs (@). The following list describes the name requirements for different types of secrets:</para>
         /// <list type="bullet">
-        /// <item><description>If the SecretType parameter is set to Generic or Rds, the name cannot start with <c>acs/</c>.</description></item>
-        /// <item><description>If the SecretType parameter is set to RAMCredentials, set the SecretName parameter to <c>$Auto</c>. In this case, KMS automatically generates a secret name that starts with <c>acs/ram/user/</c>. The name includes the display name of RAM user.</description></item>
-        /// <item><description>If the SecretType parameter is set to ECS, the name must start with <c>acs/ecs/</c>.</description></item>
+        /// <item><description>For information about the access policy required for a Resource Access Management (RAM) user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>Specify the secret name, the secret value for the initial version, and the version number. The initial version is marked with the ACSCurrent stage label.</description></item>
+        /// <item><description>Key Management Service (KMS) uses the key that you specify to encrypt the secret value. The key and the secret must be in the same KMS instance. The key must be a symmetric key.<remarks>
+        /// <para>KMS encrypts the secret value of each version. Metadata such as the secret name, version number, and version stage labels are not encrypted.</para>
+        /// </remarks>
+        /// </description></item>
+        /// <item><description>Before you encrypt the secret value, you must have the <c>kms:GenerateDataKey</c> permission on the key.
+        /// This topic provides an example of how to create an RDS secret. The secret is named <c>mydbconninfo</c>. The <c>VersionId</c> of the initial version is <c>v1</c>. The <c>SecretData</c> is <c>{&quot;Accounts&quot;:[{&quot;AccountName&quot;:&quot;user1&quot;,&quot;AccountPassword&quot;:&quot;****&quot;}]}</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4206,8 +3675,26 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用Decrypt接口解密CiphertextBlob中的密文。</para>
+        /// <para>Decrypts ciphertext that was encrypted by using a CMK.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Precautions</h3>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy required for a RAM user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation can be called through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: You can access KMS over the Internet or using a VPC domain name. To use a shared gateway, you must enable Internet access. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: You can access KMS using the private endpoint of KMS (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h3>QPS limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Shared gateway: The queries per second (QPS) limit for a single user for this operation is 1,000. If this limit is exceeded, API calls are throttled, which may affect your business. We recommend that you plan your calls accordingly.</description></item>
+        /// <item><description>Dedicated gateway: The QPS limit for a single user for this operation is subject to the performance specifications of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance metrics</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DecryptRequest
@@ -4241,6 +3728,10 @@ namespace AlibabaCloud.SDK.Kms20160120
             {
                 query["EncryptionContext"] = request.EncryptionContextShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Recipient))
+            {
+                query["Recipient"] = request.Recipient;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -4262,8 +3753,26 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用Decrypt接口解密CiphertextBlob中的密文。</para>
+        /// <para>Decrypts ciphertext that was encrypted by using a CMK.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Precautions</h3>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy required for a RAM user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation can be called through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: You can access KMS over the Internet or using a VPC domain name. To use a shared gateway, you must enable Internet access. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: You can access KMS using the private endpoint of KMS (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h3>QPS limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Shared gateway: The queries per second (QPS) limit for a single user for this operation is 1,000. If this limit is exceeded, API calls are throttled, which may affect your business. We recommend that you plan your calls accordingly.</description></item>
+        /// <item><description>Dedicated gateway: The QPS limit for a single user for this operation is subject to the performance specifications of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance metrics</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DecryptRequest
@@ -4297,6 +3806,10 @@ namespace AlibabaCloud.SDK.Kms20160120
             {
                 query["EncryptionContext"] = request.EncryptionContextShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Recipient))
+            {
+                query["Recipient"] = request.Recipient;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -4318,8 +3831,26 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用Decrypt接口解密CiphertextBlob中的密文。</para>
+        /// <para>Decrypts ciphertext that was encrypted by using a CMK.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Precautions</h3>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy required for a RAM user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation can be called through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: You can access KMS over the Internet or using a VPC domain name. To use a shared gateway, you must enable Internet access. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: You can access KMS using the private endpoint of KMS (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h3>QPS limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Shared gateway: The queries per second (QPS) limit for a single user for this operation is 1,000. If this limit is exceeded, API calls are throttled, which may affect your business. We recommend that you plan your calls accordingly.</description></item>
+        /// <item><description>Dedicated gateway: The QPS limit for a single user for this operation is subject to the performance specifications of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance metrics</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DecryptRequest
@@ -4336,8 +3867,26 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用Decrypt接口解密CiphertextBlob中的密文。</para>
+        /// <para>Decrypts ciphertext that was encrypted by using a CMK.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Precautions</h3>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy required for a RAM user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation can be called through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: You can access KMS over the Internet or using a VPC domain name. To use a shared gateway, you must enable Internet access. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: You can access KMS using the private endpoint of KMS (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h3>QPS limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Shared gateway: The queries per second (QPS) limit for a single user for this operation is 1,000. If this limit is exceeded, API calls are throttled, which may affect your business. We recommend that you plan your calls accordingly.</description></item>
+        /// <item><description>Dedicated gateway: The QPS limit for a single user for this operation is subject to the performance specifications of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance metrics</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DecryptRequest
@@ -4352,6 +3901,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return await DecryptWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an alias.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteAliasRequest
         /// </param>
@@ -4389,6 +3943,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<DeleteAliasResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an alias.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteAliasRequest
         /// </param>
@@ -4426,6 +3985,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<DeleteAliasResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an alias.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteAliasRequest
         /// </param>
@@ -4439,6 +4003,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return DeleteAliasWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an alias.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteAliasRequest
         /// </param>
@@ -4459,7 +4028,10 @@ namespace AlibabaCloud.SDK.Kms20160120
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you delete an AAP, make sure that the AAP is no longer in use. If you delete an AAP that is in use, applications that use the AAP cannot access Key Management Service (KMS). Exercise caution when you delete an AAP.</para>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy that a RAM user or RAM role requires to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>Before you delete an AAP, make sure that it is no longer in use. If you delete an AAP that is in use, related applications cannot access KMS. Proceed with caution.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -4506,7 +4078,10 @@ namespace AlibabaCloud.SDK.Kms20160120
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you delete an AAP, make sure that the AAP is no longer in use. If you delete an AAP that is in use, applications that use the AAP cannot access Key Management Service (KMS). Exercise caution when you delete an AAP.</para>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy that a RAM user or RAM role requires to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>Before you delete an AAP, make sure that it is no longer in use. If you delete an AAP that is in use, related applications cannot access KMS. Proceed with caution.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -4553,7 +4128,10 @@ namespace AlibabaCloud.SDK.Kms20160120
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you delete an AAP, make sure that the AAP is no longer in use. If you delete an AAP that is in use, applications that use the AAP cannot access Key Management Service (KMS). Exercise caution when you delete an AAP.</para>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy that a RAM user or RAM role requires to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>Before you delete an AAP, make sure that it is no longer in use. If you delete an AAP that is in use, related applications cannot access KMS. Proceed with caution.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -4576,7 +4154,10 @@ namespace AlibabaCloud.SDK.Kms20160120
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you delete an AAP, make sure that the AAP is no longer in use. If you delete an AAP that is in use, applications that use the AAP cannot access Key Management Service (KMS). Exercise caution when you delete an AAP.</para>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy that a RAM user or RAM role requires to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>Before you delete an AAP, make sure that it is no longer in use. If you delete an AAP that is in use, related applications cannot access KMS. Proceed with caution.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -4592,133 +4173,17 @@ namespace AlibabaCloud.SDK.Kms20160120
             return await DeleteApplicationAccessPointWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a client key.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After the certificate and its private key and certificate chain are deleted, they cannot be restored. Proceed with caution.
-        /// In this example, the certificate whose ID is <c>9a28de48-8d8b-484d-a766-dec4****</c> and its private key and certificate chain are deleted.</para>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// DeleteCertificateRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// DeleteCertificateResponse
-        /// </returns>
-        public DeleteCertificateResponse DeleteCertificateWithOptions(DeleteCertificateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertificateId))
-            {
-                query["CertificateId"] = request.CertificateId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DeleteCertificate",
-                Version = "2016-01-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DeleteCertificateResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>After the certificate and its private key and certificate chain are deleted, they cannot be restored. Proceed with caution.
-        /// In this example, the certificate whose ID is <c>9a28de48-8d8b-484d-a766-dec4****</c> and its private key and certificate chain are deleted.</para>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// DeleteCertificateRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// DeleteCertificateResponse
-        /// </returns>
-        public async Task<DeleteCertificateResponse> DeleteCertificateWithOptionsAsync(DeleteCertificateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertificateId))
-            {
-                query["CertificateId"] = request.CertificateId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DeleteCertificate",
-                Version = "2016-01-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DeleteCertificateResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>After the certificate and its private key and certificate chain are deleted, they cannot be restored. Proceed with caution.
-        /// In this example, the certificate whose ID is <c>9a28de48-8d8b-484d-a766-dec4****</c> and its private key and certificate chain are deleted.</para>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// DeleteCertificateRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// DeleteCertificateResponse
-        /// </returns>
-        public DeleteCertificateResponse DeleteCertificate(DeleteCertificateRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DeleteCertificateWithOptions(request, runtime);
-        }
-
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>After the certificate and its private key and certificate chain are deleted, they cannot be restored. Proceed with caution.
-        /// In this example, the certificate whose ID is <c>9a28de48-8d8b-484d-a766-dec4****</c> and its private key and certificate chain are deleted.</para>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// DeleteCertificateRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// DeleteCertificateResponse
-        /// </returns>
-        public async Task<DeleteCertificateResponse> DeleteCertificateAsync(DeleteCertificateRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DeleteCertificateWithOptionsAsync(request, runtime);
-        }
-
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Before you delete a client key, make sure that the client key is no longer in use. If you delete a client key that is in use, applications that use the client key cannot access Key Management Service (KMS). Exercise caution when you delete a client key.</para>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy required for a RAM user or RAM role to call this API operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>Before you delete a ClientKey, make sure that it is no longer in use. Deleting a ClientKey that is in use prevents related applications from accessing KMS. Proceed with caution.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -4758,9 +4223,17 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<DeleteClientKeyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a client key.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you delete a client key, make sure that the client key is no longer in use. If you delete a client key that is in use, applications that use the client key cannot access Key Management Service (KMS). Exercise caution when you delete a client key.</para>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy required for a RAM user or RAM role to call this API operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>Before you delete a ClientKey, make sure that it is no longer in use. Deleting a ClientKey that is in use prevents related applications from accessing KMS. Proceed with caution.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -4800,9 +4273,17 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<DeleteClientKeyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a client key.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you delete a client key, make sure that the client key is no longer in use. If you delete a client key that is in use, applications that use the client key cannot access Key Management Service (KMS). Exercise caution when you delete a client key.</para>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy required for a RAM user or RAM role to call this API operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>Before you delete a ClientKey, make sure that it is no longer in use. Deleting a ClientKey that is in use prevents related applications from accessing KMS. Proceed with caution.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -4818,9 +4299,17 @@ namespace AlibabaCloud.SDK.Kms20160120
             return DeleteClientKeyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a client key.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you delete a client key, make sure that the client key is no longer in use. If you delete a client key that is in use, applications that use the client key cannot access Key Management Service (KMS). Exercise caution when you delete a client key.</para>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy required for a RAM user or RAM role to call this API operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>Before you delete a ClientKey, make sure that it is no longer in use. Deleting a ClientKey that is in use prevents related applications from accessing KMS. Proceed with caution.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -4836,11 +4325,17 @@ namespace AlibabaCloud.SDK.Kms20160120
             return await DeleteClientKeyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the imported key material from a CMK. After deletion, the CMK enters the PendingImport state until you re-import key material.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This operation does not delete the CMK that is created by using the key material.
         /// If the CMK is in the PendingDeletion state, the state of the CMK and the scheduled deletion time do not change after you call this operation. If the CMK is not in the PendingDeletion state, the state of the CMK changes to PendingImport after you call this operation.
-        /// After you delete the key material, you can upload only the same key material into the CMK.</para>
+        /// After you delete the key material, you can upload only the same key material into the CMK.
+        /// For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4880,11 +4375,17 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<DeleteKeyMaterialResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the imported key material from a CMK. After deletion, the CMK enters the PendingImport state until you re-import key material.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This operation does not delete the CMK that is created by using the key material.
         /// If the CMK is in the PendingDeletion state, the state of the CMK and the scheduled deletion time do not change after you call this operation. If the CMK is not in the PendingDeletion state, the state of the CMK changes to PendingImport after you call this operation.
-        /// After you delete the key material, you can upload only the same key material into the CMK.</para>
+        /// After you delete the key material, you can upload only the same key material into the CMK.
+        /// For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4924,11 +4425,17 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<DeleteKeyMaterialResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the imported key material from a CMK. After deletion, the CMK enters the PendingImport state until you re-import key material.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This operation does not delete the CMK that is created by using the key material.
         /// If the CMK is in the PendingDeletion state, the state of the CMK and the scheduled deletion time do not change after you call this operation. If the CMK is not in the PendingDeletion state, the state of the CMK changes to PendingImport after you call this operation.
-        /// After you delete the key material, you can upload only the same key material into the CMK.</para>
+        /// After you delete the key material, you can upload only the same key material into the CMK.
+        /// For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4944,11 +4451,17 @@ namespace AlibabaCloud.SDK.Kms20160120
             return DeleteKeyMaterialWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the imported key material from a CMK. After deletion, the CMK enters the PendingImport state until you re-import key material.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This operation does not delete the CMK that is created by using the key material.
         /// If the CMK is in the PendingDeletion state, the state of the CMK and the scheduled deletion time do not change after you call this operation. If the CMK is not in the PendingDeletion state, the state of the CMK changes to PendingImport after you call this operation.
-        /// After you delete the key material, you can upload only the same key material into the CMK.</para>
+        /// After you delete the key material, you can upload only the same key material into the CMK.
+        /// For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4971,7 +4484,10 @@ namespace AlibabaCloud.SDK.Kms20160120
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you delete a network access rule, make sure that the network access rule is not bound to permission policies. Otherwise, related applications cannot access Key Management Service (KMS).</para>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy that is required to call this OpenAPI as a Resource Access Management (RAM) user or RAM role, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>Before deleting the network control rule, ensure that it is not attached to any access policies. Otherwise, related applications cannot access KMS as expected.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -5018,7 +4534,10 @@ namespace AlibabaCloud.SDK.Kms20160120
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you delete a network access rule, make sure that the network access rule is not bound to permission policies. Otherwise, related applications cannot access Key Management Service (KMS).</para>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy that is required to call this OpenAPI as a Resource Access Management (RAM) user or RAM role, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>Before deleting the network control rule, ensure that it is not attached to any access policies. Otherwise, related applications cannot access KMS as expected.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -5065,7 +4584,10 @@ namespace AlibabaCloud.SDK.Kms20160120
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you delete a network access rule, make sure that the network access rule is not bound to permission policies. Otherwise, related applications cannot access Key Management Service (KMS).</para>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy that is required to call this OpenAPI as a Resource Access Management (RAM) user or RAM role, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>Before deleting the network control rule, ensure that it is not attached to any access policies. Otherwise, related applications cannot access KMS as expected.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -5088,7 +4610,10 @@ namespace AlibabaCloud.SDK.Kms20160120
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you delete a network access rule, make sure that the network access rule is not bound to permission policies. Otherwise, related applications cannot access Key Management Service (KMS).</para>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy that is required to call this OpenAPI as a Resource Access Management (RAM) user or RAM role, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>Before deleting the network control rule, ensure that it is not attached to any access policies. Otherwise, related applications cannot access KMS as expected.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -5244,6 +4769,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return await DeletePolicyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a secret.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>If you call this operation without specifying a recovery period, the deleted secret can be recovered within 30 days.
@@ -5295,6 +4825,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<DeleteSecretResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a secret.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>If you call this operation without specifying a recovery period, the deleted secret can be recovered within 30 days.
@@ -5346,6 +4881,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<DeleteSecretResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a secret.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>If you call this operation without specifying a recovery period, the deleted secret can be recovered within 30 days.
@@ -5365,6 +4905,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return DeleteSecretWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a secret.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>If you call this operation without specifying a recovery period, the deleted secret can be recovered within 30 days.
@@ -5384,9 +4929,16 @@ namespace AlibabaCloud.SDK.Kms20160120
             return await DeleteSecretWithOptionsAsync(request, runtime);
         }
 
-        /// <param name="request">
-        /// DescribeAccountKmsStatusRequest
-        /// </param>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of Key Management Service (KMS) within your Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
+        /// 
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -5412,9 +4964,16 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<DescribeAccountKmsStatusResponse>(CallApi(params_, req, runtime));
         }
 
-        /// <param name="request">
-        /// DescribeAccountKmsStatusRequest
-        /// </param>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of Key Management Service (KMS) within your Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
+        /// 
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -5440,6 +4999,16 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<DescribeAccountKmsStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of Key Management Service (KMS) within your Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
+        /// 
         /// <returns>
         /// DescribeAccountKmsStatusResponse
         /// </returns>
@@ -5449,6 +5018,16 @@ namespace AlibabaCloud.SDK.Kms20160120
             return DescribeAccountKmsStatusWithOptions(runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of Key Management Service (KMS) within your Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
+        /// 
         /// <returns>
         /// DescribeAccountKmsStatusResponse
         /// </returns>
@@ -5460,8 +5039,13 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an application access point (AAP).</para>
+        /// <para>Retrieves the details of an application access point (AAP).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For information about the access policy that a Resource Access Management (RAM) user or RAM role must have to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeApplicationAccessPointRequest
@@ -5502,8 +5086,13 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an application access point (AAP).</para>
+        /// <para>Retrieves the details of an application access point (AAP).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For information about the access policy that a Resource Access Management (RAM) user or RAM role must have to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeApplicationAccessPointRequest
@@ -5544,8 +5133,13 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an application access point (AAP).</para>
+        /// <para>Retrieves the details of an application access point (AAP).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For information about the access policy that a Resource Access Management (RAM) user or RAM role must have to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeApplicationAccessPointRequest
@@ -5562,8 +5156,13 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an application access point (AAP).</para>
+        /// <para>Retrieves the details of an application access point (AAP).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For information about the access policy that a Resource Access Management (RAM) user or RAM role must have to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeApplicationAccessPointRequest
@@ -5578,134 +5177,15 @@ namespace AlibabaCloud.SDK.Kms20160120
             return await DescribeApplicationAccessPointWithOptionsAsync(request, runtime);
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the information about the certificate whose ID is <c>9a28de48-8d8b-484d-a766-dec4****</c> is queried. The certificate information includes the certificate ID, creation time, certificate issuer, validity period, serial number, and signature algorithm.</para>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// DescribeCertificateRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeCertificateResponse
-        /// </returns>
-        public DescribeCertificateResponse DescribeCertificateWithOptions(DescribeCertificateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertificateId))
-            {
-                query["CertificateId"] = request.CertificateId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeCertificate",
-                Version = "2016-01-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeCertificateResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the information about the certificate whose ID is <c>9a28de48-8d8b-484d-a766-dec4****</c> is queried. The certificate information includes the certificate ID, creation time, certificate issuer, validity period, serial number, and signature algorithm.</para>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// DescribeCertificateRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeCertificateResponse
-        /// </returns>
-        public async Task<DescribeCertificateResponse> DescribeCertificateWithOptionsAsync(DescribeCertificateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertificateId))
-            {
-                query["CertificateId"] = request.CertificateId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeCertificate",
-                Version = "2016-01-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeCertificateResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the information about the certificate whose ID is <c>9a28de48-8d8b-484d-a766-dec4****</c> is queried. The certificate information includes the certificate ID, creation time, certificate issuer, validity period, serial number, and signature algorithm.</para>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// DescribeCertificateRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeCertificateResponse
-        /// </returns>
-        public DescribeCertificateResponse DescribeCertificate(DescribeCertificateRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribeCertificateWithOptions(request, runtime);
-        }
-
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the information about the certificate whose ID is <c>9a28de48-8d8b-484d-a766-dec4****</c> is queried. The certificate information includes the certificate ID, creation time, certificate issuer, validity period, serial number, and signature algorithm.</para>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// DescribeCertificateRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeCertificateResponse
-        /// </returns>
-        public async Task<DescribeCertificateResponse> DescribeCertificateAsync(DescribeCertificateRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribeCertificateWithOptionsAsync(request, runtime);
-        }
-
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a customer master key (CMK).</para>
+        /// <para>Queries the metadata of a CMK, such as the key state, usage, and rotation configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query the information about the CMK <c>05754286-3ba2-4fa6-8d41-4323aca6****</c> by using parameter settings provided in this topic. The information includes the creator, creation time, status, and deletion protection status of the CMK.</para>
+        /// <para>You can query the information about the CMK <c>05754286-3ba2-4fa6-8d41-4323aca6****</c> by using parameter settings provided in this topic. The information includes the creator, creation time, status, and deletion protection status of the CMK.
+        /// For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5747,12 +5227,13 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a customer master key (CMK).</para>
+        /// <para>Queries the metadata of a CMK, such as the key state, usage, and rotation configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query the information about the CMK <c>05754286-3ba2-4fa6-8d41-4323aca6****</c> by using parameter settings provided in this topic. The information includes the creator, creation time, status, and deletion protection status of the CMK.</para>
+        /// <para>You can query the information about the CMK <c>05754286-3ba2-4fa6-8d41-4323aca6****</c> by using parameter settings provided in this topic. The information includes the creator, creation time, status, and deletion protection status of the CMK.
+        /// For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5794,12 +5275,13 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a customer master key (CMK).</para>
+        /// <para>Queries the metadata of a CMK, such as the key state, usage, and rotation configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query the information about the CMK <c>05754286-3ba2-4fa6-8d41-4323aca6****</c> by using parameter settings provided in this topic. The information includes the creator, creation time, status, and deletion protection status of the CMK.</para>
+        /// <para>You can query the information about the CMK <c>05754286-3ba2-4fa6-8d41-4323aca6****</c> by using parameter settings provided in this topic. The information includes the creator, creation time, status, and deletion protection status of the CMK.
+        /// For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5817,12 +5299,13 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a customer master key (CMK).</para>
+        /// <para>Queries the metadata of a CMK, such as the key state, usage, and rotation configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query the information about the CMK <c>05754286-3ba2-4fa6-8d41-4323aca6****</c> by using parameter settings provided in this topic. The information includes the creator, creation time, status, and deletion protection status of the CMK.</para>
+        /// <para>You can query the information about the CMK <c>05754286-3ba2-4fa6-8d41-4323aca6****</c> by using parameter settings provided in this topic. The information includes the creator, creation time, status, and deletion protection status of the CMK.
+        /// For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5838,9 +5321,15 @@ namespace AlibabaCloud.SDK.Kms20160120
             return await DescribeKeyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the metadata of a specific CMK version.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the information about a version of the CMK <c>1234abcd-12ab-34cd-56ef-12345678****</c>. The ID of the CMK version is <c>2ab1a983-7072-4bbc-a582-584b5bd8****</c>. The response shows that the creation time of the CMK version is <c>2016-03-25T10:42:40Z</c>.</para>
+        /// <para>This topic provides an example on how to query the information about a version of the CMK <c>1234abcd-12ab-34cd-56ef-12345678****</c>. The ID of the CMK version is <c>2ab1a983-7072-4bbc-a582-584b5bd8****</c>. The response shows that the creation time of the CMK version is <c>2016-03-25T10:42:40Z</c>.
+        /// For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5884,9 +5373,15 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<DescribeKeyVersionResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the metadata of a specific CMK version.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the information about a version of the CMK <c>1234abcd-12ab-34cd-56ef-12345678****</c>. The ID of the CMK version is <c>2ab1a983-7072-4bbc-a582-584b5bd8****</c>. The response shows that the creation time of the CMK version is <c>2016-03-25T10:42:40Z</c>.</para>
+        /// <para>This topic provides an example on how to query the information about a version of the CMK <c>1234abcd-12ab-34cd-56ef-12345678****</c>. The ID of the CMK version is <c>2ab1a983-7072-4bbc-a582-584b5bd8****</c>. The response shows that the creation time of the CMK version is <c>2016-03-25T10:42:40Z</c>.
+        /// For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5930,9 +5425,15 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<DescribeKeyVersionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the metadata of a specific CMK version.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the information about a version of the CMK <c>1234abcd-12ab-34cd-56ef-12345678****</c>. The ID of the CMK version is <c>2ab1a983-7072-4bbc-a582-584b5bd8****</c>. The response shows that the creation time of the CMK version is <c>2016-03-25T10:42:40Z</c>.</para>
+        /// <para>This topic provides an example on how to query the information about a version of the CMK <c>1234abcd-12ab-34cd-56ef-12345678****</c>. The ID of the CMK version is <c>2ab1a983-7072-4bbc-a582-584b5bd8****</c>. The response shows that the creation time of the CMK version is <c>2016-03-25T10:42:40Z</c>.
+        /// For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5948,9 +5449,15 @@ namespace AlibabaCloud.SDK.Kms20160120
             return DescribeKeyVersionWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the metadata of a specific CMK version.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the information about a version of the CMK <c>1234abcd-12ab-34cd-56ef-12345678****</c>. The ID of the CMK version is <c>2ab1a983-7072-4bbc-a582-584b5bd8****</c>. The response shows that the creation time of the CMK version is <c>2016-03-25T10:42:40Z</c>.</para>
+        /// <para>This topic provides an example on how to query the information about a version of the CMK <c>1234abcd-12ab-34cd-56ef-12345678****</c>. The ID of the CMK version is <c>2ab1a983-7072-4bbc-a582-584b5bd8****</c>. The response shows that the creation time of the CMK version is <c>2016-03-25T10:42:40Z</c>.
+        /// For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5968,8 +5475,13 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an access control rule.</para>
+        /// <para>Retrieves the details of a network access rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For information about the required access policy for a Resource Access Management (RAM) user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeNetworkRuleRequest
@@ -6010,8 +5522,13 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an access control rule.</para>
+        /// <para>Retrieves the details of a network access rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For information about the required access policy for a Resource Access Management (RAM) user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeNetworkRuleRequest
@@ -6052,8 +5569,13 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an access control rule.</para>
+        /// <para>Retrieves the details of a network access rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For information about the required access policy for a Resource Access Management (RAM) user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeNetworkRuleRequest
@@ -6070,8 +5592,13 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an access control rule.</para>
+        /// <para>Retrieves the details of a network access rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For information about the required access policy for a Resource Access Management (RAM) user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeNetworkRuleRequest
@@ -6088,8 +5615,13 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a permission policy.</para>
+        /// <para>Retrieves the details of a permission policy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribePolicyRequest
@@ -6130,8 +5662,13 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a permission policy.</para>
+        /// <para>Retrieves the details of a permission policy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribePolicyRequest
@@ -6172,8 +5709,13 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a permission policy.</para>
+        /// <para>Retrieves the details of a permission policy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribePolicyRequest
@@ -6190,8 +5732,13 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a permission policy.</para>
+        /// <para>Retrieves the details of a permission policy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribePolicyRequest
@@ -6208,18 +5755,9 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries available regions.</para>
+        /// <para>Queries the regions where KMS is available.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h2>Debugging</h2>
-        /// <para><a href="https://api.aliyun.com/#product=Kms%5C&api=DescribeRegions%5C&type=RPC%5C&version=2016-01-20">OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.</a></para>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// DescribeRegionsRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -6247,18 +5785,9 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries available regions.</para>
+        /// <para>Queries the regions where KMS is available.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h2>Debugging</h2>
-        /// <para><a href="https://api.aliyun.com/#product=Kms%5C&api=DescribeRegions%5C&type=RPC%5C&version=2016-01-20">OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.</a></para>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// DescribeRegionsRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -6286,14 +5815,8 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries available regions.</para>
+        /// <para>Queries the regions where KMS is available.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h2>Debugging</h2>
-        /// <para><a href="https://api.aliyun.com/#product=Kms%5C&api=DescribeRegions%5C&type=RPC%5C&version=2016-01-20">OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.</a></para>
-        /// </description>
         /// 
         /// <returns>
         /// DescribeRegionsResponse
@@ -6306,14 +5829,8 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries available regions.</para>
+        /// <para>Queries the regions where KMS is available.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h2>Debugging</h2>
-        /// <para><a href="https://api.aliyun.com/#product=Kms%5C&api=DescribeRegions%5C&type=RPC%5C&version=2016-01-20">OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.</a></para>
-        /// </description>
         /// 
         /// <returns>
         /// DescribeRegionsResponse
@@ -6324,6 +5841,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return await DescribeRegionsWithOptionsAsync(runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the metadata of a secret.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This operation returns the metadata of a secret. This operation does not return the secret value.
@@ -6371,6 +5893,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<DescribeSecretResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the metadata of a secret.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This operation returns the metadata of a secret. This operation does not return the secret value.
@@ -6418,6 +5945,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<DescribeSecretResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the metadata of a secret.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This operation returns the metadata of a secret. This operation does not return the secret value.
@@ -6437,6 +5969,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return DescribeSecretWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the metadata of a secret.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This operation returns the metadata of a secret. This operation does not return the secret value.
@@ -6456,6 +5993,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return await DescribeSecretWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables a key.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>If a customer master key (CMK) is disabled, the ciphertext encrypted by using this CMK cannot be decrypted until you re-enable it. You can call the <a href="https://help.aliyun.com/document_detail/35150.html">EnableKey</a> operation to enable the CMK.
@@ -6499,6 +6041,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<DisableKeyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables a key.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>If a customer master key (CMK) is disabled, the ciphertext encrypted by using this CMK cannot be decrypted until you re-enable it. You can call the <a href="https://help.aliyun.com/document_detail/35150.html">EnableKey</a> operation to enable the CMK.
@@ -6542,6 +6089,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<DisableKeyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables a key.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>If a customer master key (CMK) is disabled, the ciphertext encrypted by using this CMK cannot be decrypted until you re-enable it. You can call the <a href="https://help.aliyun.com/document_detail/35150.html">EnableKey</a> operation to enable the CMK.
@@ -6561,6 +6113,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return DisableKeyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables a key.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>If a customer master key (CMK) is disabled, the ciphertext encrypted by using this CMK cannot be decrypted until you re-enable it. You can call the <a href="https://help.aliyun.com/document_detail/35150.html">EnableKey</a> operation to enable the CMK.
@@ -6580,6 +6137,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return await DisableKeyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a key to encrypt and decrypt data.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableKeyRequest
         /// </param>
@@ -6617,6 +6179,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<EnableKeyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a key to encrypt and decrypt data.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableKeyRequest
         /// </param>
@@ -6654,6 +6221,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<EnableKeyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a key to encrypt and decrypt data.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableKeyRequest
         /// </param>
@@ -6667,6 +6239,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return EnableKeyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a key to encrypt and decrypt data.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableKeyRequest
         /// </param>
@@ -6680,12 +6257,32 @@ namespace AlibabaCloud.SDK.Kms20160120
             return await EnableKeyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Encrypts plaintext by using a symmetric CMK.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  KMS uses the primary version of a specified CMK to encrypt data.</para>
+        /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description>Only data of 6 KB or less can be encrypted. For example, you can call this operation to encrypt RSA keys, database access passwords, or other sensitive information.</description></item>
-        /// <item><description>When you migrate encrypted data across regions, you can call this operation in the destination region to encrypt the plaintext of the data key that is used to encrypt the migrated data in the source region. This way, the ciphertext of the data key is generated in the destination region. You can also call the <a href="https://help.aliyun.com/document_detail/28950.html">Decrypt</a> operation to decrypt the data key.</description></item>
+        /// <item><description>For information about the access policy required to allow a RAM user or RAM role to use this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation is accessible through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: You can access KMS over the Internet or a VPC. To use this method, you must enable Internet access. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: You can access KMS using the private endpoint of KMS (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h3>QPS limits</h3>
+        /// <list type="bullet">
+        /// <item><description>When accessed through a shared gateway, the queries per second (QPS) limit for a single user is 1,000. If the limit is exceeded, requests are throttled, which can affect your business. We recommend that you stay within this limit to avoid throttling.</description></item>
+        /// <item><description>When accessed through a dedicated gateway, the QPS limit for a single user is subject to the computing performance specifications of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance metrics</a>.</description></item>
+        /// </list>
+        /// <h3>Description</h3>
+        /// <list type="bullet">
+        /// <item><description>KMS encrypts the specified data using the primary version of a specified key.</description></item>
+        /// <item><description>You can encrypt a maximum of 6 KB of data, such as an RSA key, a database password, or other sensitive information.</description></item>
+        /// <item><description>If you migrate encrypted data from one region to another, you can call the Encrypt operation in the destination region to re-encrypt the plaintext data key from the source region. This generates a new encrypted data key. You can then call the <a href="https://help.aliyun.com/document_detail/28950.html">Decrypt</a> operation to decrypt this new key in the destination region.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6744,12 +6341,32 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<EncryptResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Encrypts plaintext by using a symmetric CMK.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  KMS uses the primary version of a specified CMK to encrypt data.</para>
+        /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description>Only data of 6 KB or less can be encrypted. For example, you can call this operation to encrypt RSA keys, database access passwords, or other sensitive information.</description></item>
-        /// <item><description>When you migrate encrypted data across regions, you can call this operation in the destination region to encrypt the plaintext of the data key that is used to encrypt the migrated data in the source region. This way, the ciphertext of the data key is generated in the destination region. You can also call the <a href="https://help.aliyun.com/document_detail/28950.html">Decrypt</a> operation to decrypt the data key.</description></item>
+        /// <item><description>For information about the access policy required to allow a RAM user or RAM role to use this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation is accessible through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: You can access KMS over the Internet or a VPC. To use this method, you must enable Internet access. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: You can access KMS using the private endpoint of KMS (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h3>QPS limits</h3>
+        /// <list type="bullet">
+        /// <item><description>When accessed through a shared gateway, the queries per second (QPS) limit for a single user is 1,000. If the limit is exceeded, requests are throttled, which can affect your business. We recommend that you stay within this limit to avoid throttling.</description></item>
+        /// <item><description>When accessed through a dedicated gateway, the QPS limit for a single user is subject to the computing performance specifications of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance metrics</a>.</description></item>
+        /// </list>
+        /// <h3>Description</h3>
+        /// <list type="bullet">
+        /// <item><description>KMS encrypts the specified data using the primary version of a specified key.</description></item>
+        /// <item><description>You can encrypt a maximum of 6 KB of data, such as an RSA key, a database password, or other sensitive information.</description></item>
+        /// <item><description>If you migrate encrypted data from one region to another, you can call the Encrypt operation in the destination region to re-encrypt the plaintext data key from the source region. This generates a new encrypted data key. You can then call the <a href="https://help.aliyun.com/document_detail/28950.html">Decrypt</a> operation to decrypt this new key in the destination region.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6808,12 +6425,32 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<EncryptResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Encrypts plaintext by using a symmetric CMK.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  KMS uses the primary version of a specified CMK to encrypt data.</para>
+        /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description>Only data of 6 KB or less can be encrypted. For example, you can call this operation to encrypt RSA keys, database access passwords, or other sensitive information.</description></item>
-        /// <item><description>When you migrate encrypted data across regions, you can call this operation in the destination region to encrypt the plaintext of the data key that is used to encrypt the migrated data in the source region. This way, the ciphertext of the data key is generated in the destination region. You can also call the <a href="https://help.aliyun.com/document_detail/28950.html">Decrypt</a> operation to decrypt the data key.</description></item>
+        /// <item><description>For information about the access policy required to allow a RAM user or RAM role to use this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation is accessible through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: You can access KMS over the Internet or a VPC. To use this method, you must enable Internet access. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: You can access KMS using the private endpoint of KMS (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h3>QPS limits</h3>
+        /// <list type="bullet">
+        /// <item><description>When accessed through a shared gateway, the queries per second (QPS) limit for a single user is 1,000. If the limit is exceeded, requests are throttled, which can affect your business. We recommend that you stay within this limit to avoid throttling.</description></item>
+        /// <item><description>When accessed through a dedicated gateway, the QPS limit for a single user is subject to the computing performance specifications of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance metrics</a>.</description></item>
+        /// </list>
+        /// <h3>Description</h3>
+        /// <list type="bullet">
+        /// <item><description>KMS encrypts the specified data using the primary version of a specified key.</description></item>
+        /// <item><description>You can encrypt a maximum of 6 KB of data, such as an RSA key, a database password, or other sensitive information.</description></item>
+        /// <item><description>If you migrate encrypted data from one region to another, you can call the Encrypt operation in the destination region to re-encrypt the plaintext data key from the source region. This generates a new encrypted data key. You can then call the <a href="https://help.aliyun.com/document_detail/28950.html">Decrypt</a> operation to decrypt this new key in the destination region.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6830,12 +6467,32 @@ namespace AlibabaCloud.SDK.Kms20160120
             return EncryptWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Encrypts plaintext by using a symmetric CMK.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  KMS uses the primary version of a specified CMK to encrypt data.</para>
+        /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description>Only data of 6 KB or less can be encrypted. For example, you can call this operation to encrypt RSA keys, database access passwords, or other sensitive information.</description></item>
-        /// <item><description>When you migrate encrypted data across regions, you can call this operation in the destination region to encrypt the plaintext of the data key that is used to encrypt the migrated data in the source region. This way, the ciphertext of the data key is generated in the destination region. You can also call the <a href="https://help.aliyun.com/document_detail/28950.html">Decrypt</a> operation to decrypt the data key.</description></item>
+        /// <item><description>For information about the access policy required to allow a RAM user or RAM role to use this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation is accessible through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: You can access KMS over the Internet or a VPC. To use this method, you must enable Internet access. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: You can access KMS using the private endpoint of KMS (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h3>QPS limits</h3>
+        /// <list type="bullet">
+        /// <item><description>When accessed through a shared gateway, the queries per second (QPS) limit for a single user is 1,000. If the limit is exceeded, requests are throttled, which can affect your business. We recommend that you stay within this limit to avoid throttling.</description></item>
+        /// <item><description>When accessed through a dedicated gateway, the QPS limit for a single user is subject to the computing performance specifications of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance metrics</a>.</description></item>
+        /// </list>
+        /// <h3>Description</h3>
+        /// <list type="bullet">
+        /// <item><description>KMS encrypts the specified data using the primary version of a specified key.</description></item>
+        /// <item><description>You can encrypt a maximum of 6 KB of data, such as an RSA key, a database password, or other sensitive information.</description></item>
+        /// <item><description>If you migrate encrypted data from one region to another, you can call the Encrypt operation in the destination region to re-encrypt the plaintext data key from the source region. This generates a new encrypted data key. You can then call the <a href="https://help.aliyun.com/document_detail/28950.html">Decrypt</a> operation to decrypt this new key in the destination region.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6852,10 +6509,25 @@ namespace AlibabaCloud.SDK.Kms20160120
             return await EncryptWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Exports a data key encrypted by a CMK. The data key is re-encrypted by a public key that you specify for secure transmission.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/134043.html">GenerateDataKeyWithoutPlaintext</a> operation to generate a data key, which is encrypted by a CMK. If you want to distribute the data key to other regions or cryptographic modules, you can call the ExportDataKey operation to use a public key to encrypt the data key.
-        /// Then, you can import the ciphertext of the data key to the cryptographic module where the private key is stored. This way, the data key is securely distributed from KMS to the cryptographic module. After the data key is imported to the cryptographic module, you can use it to encrypt or decrypt data.</para>
+        /// <h3>Precautions</h3>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy required for a RAM user or RAM role to use this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation is accessible through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: You can access KMS using the public endpoint or a VPC endpoint. To use the public endpoint, you must first enable it. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access the key in a KMS instance over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: You can access KMS using the private endpoint of the KMS instance: <c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h3>Description</h3>
+        /// <para>After you call the <a href="https://help.aliyun.com/document_detail/134043.html">GenerateDataKeyWithoutPlaintext</a> operation to obtain a data key encrypted by a master key (CMK), you can use the ExportDataKey operation to distribute the data key to other regions or cryptographic modules. The ExportDataKey operation returns the ciphertext of the data key, re-encrypted with the specified public key.
+        /// You can import the exported ciphertext into the cryptographic module that holds the corresponding private key. This process lets you securely distribute the data key from KMS to a cryptographic module. After the data key is imported into the cryptographic module, you can use it to encrypt or decrypt data.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -6921,10 +6593,25 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<ExportDataKeyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Exports a data key encrypted by a CMK. The data key is re-encrypted by a public key that you specify for secure transmission.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/134043.html">GenerateDataKeyWithoutPlaintext</a> operation to generate a data key, which is encrypted by a CMK. If you want to distribute the data key to other regions or cryptographic modules, you can call the ExportDataKey operation to use a public key to encrypt the data key.
-        /// Then, you can import the ciphertext of the data key to the cryptographic module where the private key is stored. This way, the data key is securely distributed from KMS to the cryptographic module. After the data key is imported to the cryptographic module, you can use it to encrypt or decrypt data.</para>
+        /// <h3>Precautions</h3>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy required for a RAM user or RAM role to use this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation is accessible through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: You can access KMS using the public endpoint or a VPC endpoint. To use the public endpoint, you must first enable it. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access the key in a KMS instance over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: You can access KMS using the private endpoint of the KMS instance: <c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h3>Description</h3>
+        /// <para>After you call the <a href="https://help.aliyun.com/document_detail/134043.html">GenerateDataKeyWithoutPlaintext</a> operation to obtain a data key encrypted by a master key (CMK), you can use the ExportDataKey operation to distribute the data key to other regions or cryptographic modules. The ExportDataKey operation returns the ciphertext of the data key, re-encrypted with the specified public key.
+        /// You can import the exported ciphertext into the cryptographic module that holds the corresponding private key. This process lets you securely distribute the data key from KMS to a cryptographic module. After the data key is imported into the cryptographic module, you can use it to encrypt or decrypt data.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -6990,10 +6677,25 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<ExportDataKeyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Exports a data key encrypted by a CMK. The data key is re-encrypted by a public key that you specify for secure transmission.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/134043.html">GenerateDataKeyWithoutPlaintext</a> operation to generate a data key, which is encrypted by a CMK. If you want to distribute the data key to other regions or cryptographic modules, you can call the ExportDataKey operation to use a public key to encrypt the data key.
-        /// Then, you can import the ciphertext of the data key to the cryptographic module where the private key is stored. This way, the data key is securely distributed from KMS to the cryptographic module. After the data key is imported to the cryptographic module, you can use it to encrypt or decrypt data.</para>
+        /// <h3>Precautions</h3>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy required for a RAM user or RAM role to use this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation is accessible through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: You can access KMS using the public endpoint or a VPC endpoint. To use the public endpoint, you must first enable it. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access the key in a KMS instance over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: You can access KMS using the private endpoint of the KMS instance: <c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h3>Description</h3>
+        /// <para>After you call the <a href="https://help.aliyun.com/document_detail/134043.html">GenerateDataKeyWithoutPlaintext</a> operation to obtain a data key encrypted by a master key (CMK), you can use the ExportDataKey operation to distribute the data key to other regions or cryptographic modules. The ExportDataKey operation returns the ciphertext of the data key, re-encrypted with the specified public key.
+        /// You can import the exported ciphertext into the cryptographic module that holds the corresponding private key. This process lets you securely distribute the data key from KMS to a cryptographic module. After the data key is imported into the cryptographic module, you can use it to encrypt or decrypt data.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7009,10 +6711,25 @@ namespace AlibabaCloud.SDK.Kms20160120
             return ExportDataKeyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Exports a data key encrypted by a CMK. The data key is re-encrypted by a public key that you specify for secure transmission.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/134043.html">GenerateDataKeyWithoutPlaintext</a> operation to generate a data key, which is encrypted by a CMK. If you want to distribute the data key to other regions or cryptographic modules, you can call the ExportDataKey operation to use a public key to encrypt the data key.
-        /// Then, you can import the ciphertext of the data key to the cryptographic module where the private key is stored. This way, the data key is securely distributed from KMS to the cryptographic module. After the data key is imported to the cryptographic module, you can use it to encrypt or decrypt data.</para>
+        /// <h3>Precautions</h3>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy required for a RAM user or RAM role to use this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation is accessible through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: You can access KMS using the public endpoint or a VPC endpoint. To use the public endpoint, you must first enable it. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access the key in a KMS instance over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: You can access KMS using the private endpoint of the KMS instance: <c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h3>Description</h3>
+        /// <para>After you call the <a href="https://help.aliyun.com/document_detail/134043.html">GenerateDataKeyWithoutPlaintext</a> operation to obtain a data key encrypted by a master key (CMK), you can use the ExportDataKey operation to distribute the data key to other regions or cryptographic modules. The ExportDataKey operation returns the ciphertext of the data key, re-encrypted with the specified public key.
+        /// You can import the exported ciphertext into the cryptographic module that holds the corresponding private key. This process lets you securely distribute the data key from KMS to a cryptographic module. After the data key is imported into the cryptographic module, you can use it to encrypt or decrypt data.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7028,17 +6745,30 @@ namespace AlibabaCloud.SDK.Kms20160120
             return await ExportDataKeyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generates a random data key, encrypts it by using a CMK and a public key that you specify, and returns both ciphertexts.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>We recommend that you perform the following steps to import your data key to a cryptographic module:</para>
+        /// <h3>Notes</h3>
         /// <list type="bullet">
-        /// <item><description>Call the GenerateAndExportDataKey operation to generate a data key and obtain both the ciphertext of the data key encrypted by using the CMK and that encrypted by using the public key.</description></item>
-        /// <item><description>Store the ciphertext of the data key encrypted by using the CMK in KMS Secrets Manager or in a storage service such as ApsaraDB. This ciphertext is used for backup and restoration.</description></item>
-        /// <item><description>Import the ciphertext of the data key encrypted by using the public key to the cryptographic module where the private key is stored. Then, you can use the data key to encrypt or decrypt data.<remarks>
-        /// <para> The CMK that you specify in the request of this operation is only used to encrypt the data key and is not involved in the generation of the data key. KMS does not record or store the data keys randomly generated by calling this operation. You must take note of the data keys and the returned ciphertext.</para>
-        /// </remarks>
+        /// <item><description>For more information about the access policy required for a RAM user or RAM role to use this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation is accessible through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: You can access KMS over the Internet or a VPC. To access KMS over the Internet, you must enable Internet access. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access KMS instances over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: You can access KMS using the private endpoint of KMS (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
+        /// </list>
         /// </description></item>
         /// </list>
+        /// <h3>Description</h3>
+        /// <para>We recommend that you import the data key to a cryptographic module for data encryption and data decryption as follows:
+        /// 1\. Call the GenerateAndExportDataKey operation to obtain the data key encrypted by a KMS key and a specified public key.
+        /// 2\. Save the ciphertext of the data key that is encrypted by the KMS key to KMS or a storage service, such as ApsaraDB, for key backup and recovery.
+        /// 3\. Import the ciphertext of the data key that is encrypted by the public key to the cryptographic module that contains the corresponding private key. This process distributes the key from KMS to the cryptographic module. You can then use the data key to encrypt and decrypt data.</para>
+        /// <remarks>
+        /// <para>The KMS key that you specify in the request is used only to encrypt the data key and is not used to generate the data key. KMS does not record or store the randomly generated data key. You are responsible for recording the data key or its ciphertext.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -7112,17 +6842,30 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<GenerateAndExportDataKeyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generates a random data key, encrypts it by using a CMK and a public key that you specify, and returns both ciphertexts.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>We recommend that you perform the following steps to import your data key to a cryptographic module:</para>
+        /// <h3>Notes</h3>
         /// <list type="bullet">
-        /// <item><description>Call the GenerateAndExportDataKey operation to generate a data key and obtain both the ciphertext of the data key encrypted by using the CMK and that encrypted by using the public key.</description></item>
-        /// <item><description>Store the ciphertext of the data key encrypted by using the CMK in KMS Secrets Manager or in a storage service such as ApsaraDB. This ciphertext is used for backup and restoration.</description></item>
-        /// <item><description>Import the ciphertext of the data key encrypted by using the public key to the cryptographic module where the private key is stored. Then, you can use the data key to encrypt or decrypt data.<remarks>
-        /// <para> The CMK that you specify in the request of this operation is only used to encrypt the data key and is not involved in the generation of the data key. KMS does not record or store the data keys randomly generated by calling this operation. You must take note of the data keys and the returned ciphertext.</para>
-        /// </remarks>
+        /// <item><description>For more information about the access policy required for a RAM user or RAM role to use this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation is accessible through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: You can access KMS over the Internet or a VPC. To access KMS over the Internet, you must enable Internet access. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access KMS instances over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: You can access KMS using the private endpoint of KMS (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
+        /// </list>
         /// </description></item>
         /// </list>
+        /// <h3>Description</h3>
+        /// <para>We recommend that you import the data key to a cryptographic module for data encryption and data decryption as follows:
+        /// 1\. Call the GenerateAndExportDataKey operation to obtain the data key encrypted by a KMS key and a specified public key.
+        /// 2\. Save the ciphertext of the data key that is encrypted by the KMS key to KMS or a storage service, such as ApsaraDB, for key backup and recovery.
+        /// 3\. Import the ciphertext of the data key that is encrypted by the public key to the cryptographic module that contains the corresponding private key. This process distributes the key from KMS to the cryptographic module. You can then use the data key to encrypt and decrypt data.</para>
+        /// <remarks>
+        /// <para>The KMS key that you specify in the request is used only to encrypt the data key and is not used to generate the data key. KMS does not record or store the randomly generated data key. You are responsible for recording the data key or its ciphertext.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -7196,17 +6939,30 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<GenerateAndExportDataKeyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generates a random data key, encrypts it by using a CMK and a public key that you specify, and returns both ciphertexts.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>We recommend that you perform the following steps to import your data key to a cryptographic module:</para>
+        /// <h3>Notes</h3>
         /// <list type="bullet">
-        /// <item><description>Call the GenerateAndExportDataKey operation to generate a data key and obtain both the ciphertext of the data key encrypted by using the CMK and that encrypted by using the public key.</description></item>
-        /// <item><description>Store the ciphertext of the data key encrypted by using the CMK in KMS Secrets Manager or in a storage service such as ApsaraDB. This ciphertext is used for backup and restoration.</description></item>
-        /// <item><description>Import the ciphertext of the data key encrypted by using the public key to the cryptographic module where the private key is stored. Then, you can use the data key to encrypt or decrypt data.<remarks>
-        /// <para> The CMK that you specify in the request of this operation is only used to encrypt the data key and is not involved in the generation of the data key. KMS does not record or store the data keys randomly generated by calling this operation. You must take note of the data keys and the returned ciphertext.</para>
-        /// </remarks>
+        /// <item><description>For more information about the access policy required for a RAM user or RAM role to use this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation is accessible through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: You can access KMS over the Internet or a VPC. To access KMS over the Internet, you must enable Internet access. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access KMS instances over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: You can access KMS using the private endpoint of KMS (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
+        /// </list>
         /// </description></item>
         /// </list>
+        /// <h3>Description</h3>
+        /// <para>We recommend that you import the data key to a cryptographic module for data encryption and data decryption as follows:
+        /// 1\. Call the GenerateAndExportDataKey operation to obtain the data key encrypted by a KMS key and a specified public key.
+        /// 2\. Save the ciphertext of the data key that is encrypted by the KMS key to KMS or a storage service, such as ApsaraDB, for key backup and recovery.
+        /// 3\. Import the ciphertext of the data key that is encrypted by the public key to the cryptographic module that contains the corresponding private key. This process distributes the key from KMS to the cryptographic module. You can then use the data key to encrypt and decrypt data.</para>
+        /// <remarks>
+        /// <para>The KMS key that you specify in the request is used only to encrypt the data key and is not used to generate the data key. KMS does not record or store the randomly generated data key. You are responsible for recording the data key or its ciphertext.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -7222,17 +6978,30 @@ namespace AlibabaCloud.SDK.Kms20160120
             return GenerateAndExportDataKeyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generates a random data key, encrypts it by using a CMK and a public key that you specify, and returns both ciphertexts.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>We recommend that you perform the following steps to import your data key to a cryptographic module:</para>
+        /// <h3>Notes</h3>
         /// <list type="bullet">
-        /// <item><description>Call the GenerateAndExportDataKey operation to generate a data key and obtain both the ciphertext of the data key encrypted by using the CMK and that encrypted by using the public key.</description></item>
-        /// <item><description>Store the ciphertext of the data key encrypted by using the CMK in KMS Secrets Manager or in a storage service such as ApsaraDB. This ciphertext is used for backup and restoration.</description></item>
-        /// <item><description>Import the ciphertext of the data key encrypted by using the public key to the cryptographic module where the private key is stored. Then, you can use the data key to encrypt or decrypt data.<remarks>
-        /// <para> The CMK that you specify in the request of this operation is only used to encrypt the data key and is not involved in the generation of the data key. KMS does not record or store the data keys randomly generated by calling this operation. You must take note of the data keys and the returned ciphertext.</para>
-        /// </remarks>
+        /// <item><description>For more information about the access policy required for a RAM user or RAM role to use this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation is accessible through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: You can access KMS over the Internet or a VPC. To access KMS over the Internet, you must enable Internet access. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access KMS instances over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: You can access KMS using the private endpoint of KMS (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
+        /// </list>
         /// </description></item>
         /// </list>
+        /// <h3>Description</h3>
+        /// <para>We recommend that you import the data key to a cryptographic module for data encryption and data decryption as follows:
+        /// 1\. Call the GenerateAndExportDataKey operation to obtain the data key encrypted by a KMS key and a specified public key.
+        /// 2\. Save the ciphertext of the data key that is encrypted by the KMS key to KMS or a storage service, such as ApsaraDB, for key backup and recovery.
+        /// 3\. Import the ciphertext of the data key that is encrypted by the public key to the cryptographic module that contains the corresponding private key. This process distributes the key from KMS to the cryptographic module. You can then use the data key to encrypt and decrypt data.</para>
+        /// <remarks>
+        /// <para>The KMS key that you specify in the request is used only to encrypt the data key and is not used to generate the data key. KMS does not record or store the randomly generated data key. You are responsible for recording the data key or its ciphertext.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -7250,22 +7019,36 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成一个数据密钥</para>
+        /// <para>Generates a random data key for envelope encryption. The data key is returned in both plaintext and ciphertext forms.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation creates a random data key, encrypts the data key by using the specified customer master key (CMK), and returns the plaintext and ciphertext of the data key. You can use the plaintext of the data key to locally encrypt your data without using KMS and store the encrypted data together with the ciphertext of the data key. You can obtain the plaintext of the data key from the Plaintext parameter in the response and the ciphertext of the data key from the CiphertextBlob parameter in the response.
-        /// The CMK that you specify in the request of this operation is only used to encrypt the data key and is not involved in the generation of the data key. KMS does not record or store the generated data key. Therefore, you need to store the ciphertext of the data key in persistent storage.
-        /// We recommend that you locally encrypt data by performing the following steps:
-        /// 1\. Call the GenerateDataKey operation.
-        /// 2\. Use the plaintext of the data key that you obtain to locally encrypt data without using KMS. Then, delete the plaintext of the data key from the memory.
-        /// 3\. Store the encrypted data together with the ciphertext of the data key that you obtain.
-        /// We recommend that you locally decrypt data by performing the following steps:</para>
         /// <list type="bullet">
-        /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/28950.html">Decrypt</a> operation to decrypt the locally stored ciphertext of the data key. The plaintext of data key is then returned.</description></item>
-        /// <item><description>Use the plaintext of the data key to locally decrypt data and then delete the plaintext of the data key from the memory.
-        /// In this example, a random data key is generated for the CMK whose ID is <c>7906979c-8e06-46a2-be2d-68e3ccbc****</c>.</description></item>
+        /// <item><description>For information about the permissions that are required to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation can be called using a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: You can access KMS over the Internet or a VPC. To access KMS over the Internet, you must enable the public endpoint. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: You can access KMS using the private endpoint of KMS (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h3>QPS limits</h3>
+        /// <list type="bullet">
+        /// <item><description>If you use a shared gateway to call this operation, the queries per second (QPS) limit for a single user is 1,000. If the limit is exceeded, API calls are throttled. This may affect your business. We recommend that you call this operation at a reasonable rate.</description></item>
+        /// <item><description>If you use a dedicated gateway to call this operation, the QPS limit for a single user is based on the computing performance of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance metrics</a>.</description></item>
+        /// </list>
+        /// <h3>Description</h3>
+        /// <para>This operation generates a random data key, encrypts the data key using the specified customer master key (CMK), and returns the plaintext and ciphertext of the data key. You can use the plaintext of the data key to encrypt data locally and outside of KMS. When you store the encrypted data, you must also store the ciphertext of the data key. You can obtain the plaintext of the data key from the Plaintext field and the ciphertext of the data key from the CiphertextBlob field in the response.
+        /// The CMK that you specify in the request is used only to encrypt the data key. It is not involved in the generation of the data key. KMS does not record or store the randomly generated data key. You are responsible for the persistence of the ciphertext of the data key.
+        /// We recommend that you perform the following steps to encrypt data locally:
+        /// 1\. Call the GenerateDataKey operation to obtain a data key for data encryption.
+        /// 2\. Use the plaintext of the data key returned in the Plaintext field of the response to encrypt data locally. Then, clear the plaintext of the data key from memory.
+        /// 3\. Store the ciphertext of the data key returned in the CiphertextBlob field of the response together with the encrypted data.
+        /// To decrypt data locally:</para>
+        /// <list type="bullet">
+        /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/28950.html">Decrypt</a> operation to decrypt the stored ciphertext of the data key. This operation returns the plaintext of the data key.</description></item>
+        /// <item><description>Use the plaintext of the data key to decrypt data locally. Then, clear the plaintext of the data key from memory.
+        /// This topic provides an example of how to generate a random data key for a key with the ID <c>key-hzz630494463ejqjx****</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7309,6 +7092,10 @@ namespace AlibabaCloud.SDK.Kms20160120
             {
                 query["NumberOfBytes"] = request.NumberOfBytes;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Recipient))
+            {
+                query["Recipient"] = request.Recipient;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -7330,22 +7117,36 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成一个数据密钥</para>
+        /// <para>Generates a random data key for envelope encryption. The data key is returned in both plaintext and ciphertext forms.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation creates a random data key, encrypts the data key by using the specified customer master key (CMK), and returns the plaintext and ciphertext of the data key. You can use the plaintext of the data key to locally encrypt your data without using KMS and store the encrypted data together with the ciphertext of the data key. You can obtain the plaintext of the data key from the Plaintext parameter in the response and the ciphertext of the data key from the CiphertextBlob parameter in the response.
-        /// The CMK that you specify in the request of this operation is only used to encrypt the data key and is not involved in the generation of the data key. KMS does not record or store the generated data key. Therefore, you need to store the ciphertext of the data key in persistent storage.
-        /// We recommend that you locally encrypt data by performing the following steps:
-        /// 1\. Call the GenerateDataKey operation.
-        /// 2\. Use the plaintext of the data key that you obtain to locally encrypt data without using KMS. Then, delete the plaintext of the data key from the memory.
-        /// 3\. Store the encrypted data together with the ciphertext of the data key that you obtain.
-        /// We recommend that you locally decrypt data by performing the following steps:</para>
         /// <list type="bullet">
-        /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/28950.html">Decrypt</a> operation to decrypt the locally stored ciphertext of the data key. The plaintext of data key is then returned.</description></item>
-        /// <item><description>Use the plaintext of the data key to locally decrypt data and then delete the plaintext of the data key from the memory.
-        /// In this example, a random data key is generated for the CMK whose ID is <c>7906979c-8e06-46a2-be2d-68e3ccbc****</c>.</description></item>
+        /// <item><description>For information about the permissions that are required to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation can be called using a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: You can access KMS over the Internet or a VPC. To access KMS over the Internet, you must enable the public endpoint. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: You can access KMS using the private endpoint of KMS (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h3>QPS limits</h3>
+        /// <list type="bullet">
+        /// <item><description>If you use a shared gateway to call this operation, the queries per second (QPS) limit for a single user is 1,000. If the limit is exceeded, API calls are throttled. This may affect your business. We recommend that you call this operation at a reasonable rate.</description></item>
+        /// <item><description>If you use a dedicated gateway to call this operation, the QPS limit for a single user is based on the computing performance of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance metrics</a>.</description></item>
+        /// </list>
+        /// <h3>Description</h3>
+        /// <para>This operation generates a random data key, encrypts the data key using the specified customer master key (CMK), and returns the plaintext and ciphertext of the data key. You can use the plaintext of the data key to encrypt data locally and outside of KMS. When you store the encrypted data, you must also store the ciphertext of the data key. You can obtain the plaintext of the data key from the Plaintext field and the ciphertext of the data key from the CiphertextBlob field in the response.
+        /// The CMK that you specify in the request is used only to encrypt the data key. It is not involved in the generation of the data key. KMS does not record or store the randomly generated data key. You are responsible for the persistence of the ciphertext of the data key.
+        /// We recommend that you perform the following steps to encrypt data locally:
+        /// 1\. Call the GenerateDataKey operation to obtain a data key for data encryption.
+        /// 2\. Use the plaintext of the data key returned in the Plaintext field of the response to encrypt data locally. Then, clear the plaintext of the data key from memory.
+        /// 3\. Store the ciphertext of the data key returned in the CiphertextBlob field of the response together with the encrypted data.
+        /// To decrypt data locally:</para>
+        /// <list type="bullet">
+        /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/28950.html">Decrypt</a> operation to decrypt the stored ciphertext of the data key. This operation returns the plaintext of the data key.</description></item>
+        /// <item><description>Use the plaintext of the data key to decrypt data locally. Then, clear the plaintext of the data key from memory.
+        /// This topic provides an example of how to generate a random data key for a key with the ID <c>key-hzz630494463ejqjx****</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7389,6 +7190,10 @@ namespace AlibabaCloud.SDK.Kms20160120
             {
                 query["NumberOfBytes"] = request.NumberOfBytes;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Recipient))
+            {
+                query["Recipient"] = request.Recipient;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -7410,22 +7215,36 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成一个数据密钥</para>
+        /// <para>Generates a random data key for envelope encryption. The data key is returned in both plaintext and ciphertext forms.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation creates a random data key, encrypts the data key by using the specified customer master key (CMK), and returns the plaintext and ciphertext of the data key. You can use the plaintext of the data key to locally encrypt your data without using KMS and store the encrypted data together with the ciphertext of the data key. You can obtain the plaintext of the data key from the Plaintext parameter in the response and the ciphertext of the data key from the CiphertextBlob parameter in the response.
-        /// The CMK that you specify in the request of this operation is only used to encrypt the data key and is not involved in the generation of the data key. KMS does not record or store the generated data key. Therefore, you need to store the ciphertext of the data key in persistent storage.
-        /// We recommend that you locally encrypt data by performing the following steps:
-        /// 1\. Call the GenerateDataKey operation.
-        /// 2\. Use the plaintext of the data key that you obtain to locally encrypt data without using KMS. Then, delete the plaintext of the data key from the memory.
-        /// 3\. Store the encrypted data together with the ciphertext of the data key that you obtain.
-        /// We recommend that you locally decrypt data by performing the following steps:</para>
         /// <list type="bullet">
-        /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/28950.html">Decrypt</a> operation to decrypt the locally stored ciphertext of the data key. The plaintext of data key is then returned.</description></item>
-        /// <item><description>Use the plaintext of the data key to locally decrypt data and then delete the plaintext of the data key from the memory.
-        /// In this example, a random data key is generated for the CMK whose ID is <c>7906979c-8e06-46a2-be2d-68e3ccbc****</c>.</description></item>
+        /// <item><description>For information about the permissions that are required to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation can be called using a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: You can access KMS over the Internet or a VPC. To access KMS over the Internet, you must enable the public endpoint. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: You can access KMS using the private endpoint of KMS (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h3>QPS limits</h3>
+        /// <list type="bullet">
+        /// <item><description>If you use a shared gateway to call this operation, the queries per second (QPS) limit for a single user is 1,000. If the limit is exceeded, API calls are throttled. This may affect your business. We recommend that you call this operation at a reasonable rate.</description></item>
+        /// <item><description>If you use a dedicated gateway to call this operation, the QPS limit for a single user is based on the computing performance of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance metrics</a>.</description></item>
+        /// </list>
+        /// <h3>Description</h3>
+        /// <para>This operation generates a random data key, encrypts the data key using the specified customer master key (CMK), and returns the plaintext and ciphertext of the data key. You can use the plaintext of the data key to encrypt data locally and outside of KMS. When you store the encrypted data, you must also store the ciphertext of the data key. You can obtain the plaintext of the data key from the Plaintext field and the ciphertext of the data key from the CiphertextBlob field in the response.
+        /// The CMK that you specify in the request is used only to encrypt the data key. It is not involved in the generation of the data key. KMS does not record or store the randomly generated data key. You are responsible for the persistence of the ciphertext of the data key.
+        /// We recommend that you perform the following steps to encrypt data locally:
+        /// 1\. Call the GenerateDataKey operation to obtain a data key for data encryption.
+        /// 2\. Use the plaintext of the data key returned in the Plaintext field of the response to encrypt data locally. Then, clear the plaintext of the data key from memory.
+        /// 3\. Store the ciphertext of the data key returned in the CiphertextBlob field of the response together with the encrypted data.
+        /// To decrypt data locally:</para>
+        /// <list type="bullet">
+        /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/28950.html">Decrypt</a> operation to decrypt the stored ciphertext of the data key. This operation returns the plaintext of the data key.</description></item>
+        /// <item><description>Use the plaintext of the data key to decrypt data locally. Then, clear the plaintext of the data key from memory.
+        /// This topic provides an example of how to generate a random data key for a key with the ID <c>key-hzz630494463ejqjx****</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7444,22 +7263,36 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成一个数据密钥</para>
+        /// <para>Generates a random data key for envelope encryption. The data key is returned in both plaintext and ciphertext forms.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation creates a random data key, encrypts the data key by using the specified customer master key (CMK), and returns the plaintext and ciphertext of the data key. You can use the plaintext of the data key to locally encrypt your data without using KMS and store the encrypted data together with the ciphertext of the data key. You can obtain the plaintext of the data key from the Plaintext parameter in the response and the ciphertext of the data key from the CiphertextBlob parameter in the response.
-        /// The CMK that you specify in the request of this operation is only used to encrypt the data key and is not involved in the generation of the data key. KMS does not record or store the generated data key. Therefore, you need to store the ciphertext of the data key in persistent storage.
-        /// We recommend that you locally encrypt data by performing the following steps:
-        /// 1\. Call the GenerateDataKey operation.
-        /// 2\. Use the plaintext of the data key that you obtain to locally encrypt data without using KMS. Then, delete the plaintext of the data key from the memory.
-        /// 3\. Store the encrypted data together with the ciphertext of the data key that you obtain.
-        /// We recommend that you locally decrypt data by performing the following steps:</para>
         /// <list type="bullet">
-        /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/28950.html">Decrypt</a> operation to decrypt the locally stored ciphertext of the data key. The plaintext of data key is then returned.</description></item>
-        /// <item><description>Use the plaintext of the data key to locally decrypt data and then delete the plaintext of the data key from the memory.
-        /// In this example, a random data key is generated for the CMK whose ID is <c>7906979c-8e06-46a2-be2d-68e3ccbc****</c>.</description></item>
+        /// <item><description>For information about the permissions that are required to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation can be called using a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: You can access KMS over the Internet or a VPC. To access KMS over the Internet, you must enable the public endpoint. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: You can access KMS using the private endpoint of KMS (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h3>QPS limits</h3>
+        /// <list type="bullet">
+        /// <item><description>If you use a shared gateway to call this operation, the queries per second (QPS) limit for a single user is 1,000. If the limit is exceeded, API calls are throttled. This may affect your business. We recommend that you call this operation at a reasonable rate.</description></item>
+        /// <item><description>If you use a dedicated gateway to call this operation, the QPS limit for a single user is based on the computing performance of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance metrics</a>.</description></item>
+        /// </list>
+        /// <h3>Description</h3>
+        /// <para>This operation generates a random data key, encrypts the data key using the specified customer master key (CMK), and returns the plaintext and ciphertext of the data key. You can use the plaintext of the data key to encrypt data locally and outside of KMS. When you store the encrypted data, you must also store the ciphertext of the data key. You can obtain the plaintext of the data key from the Plaintext field and the ciphertext of the data key from the CiphertextBlob field in the response.
+        /// The CMK that you specify in the request is used only to encrypt the data key. It is not involved in the generation of the data key. KMS does not record or store the randomly generated data key. You are responsible for the persistence of the ciphertext of the data key.
+        /// We recommend that you perform the following steps to encrypt data locally:
+        /// 1\. Call the GenerateDataKey operation to obtain a data key for data encryption.
+        /// 2\. Use the plaintext of the data key returned in the Plaintext field of the response to encrypt data locally. Then, clear the plaintext of the data key from memory.
+        /// 3\. Store the ciphertext of the data key returned in the CiphertextBlob field of the response together with the encrypted data.
+        /// To decrypt data locally:</para>
+        /// <list type="bullet">
+        /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/28950.html">Decrypt</a> operation to decrypt the stored ciphertext of the data key. This operation returns the plaintext of the data key.</description></item>
+        /// <item><description>Use the plaintext of the data key to decrypt data locally. Then, clear the plaintext of the data key from memory.
+        /// This topic provides an example of how to generate a random data key for a key with the ID <c>key-hzz630494463ejqjx****</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7478,17 +7311,34 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates a random data key, which can be used to encrypt local data.</para>
+        /// <para>Generates a random data key in only ciphertext form, without the plaintext copy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation creates a random data key, encrypts the data key by using a specific symmetric CMK, and returns the ciphertext of the data key. This operation serves the same purpose as the <a href="https://help.aliyun.com/document_detail/28948.html">GenerateDataKey</a> operation. The only difference is that this operation does not return the plaintext of the data key.
-        /// The CMK that you specify in the request of this operation is only used to encrypt the data key and is not involved in the generation of the data key. KMS does not record or store the generated data key.</para>
+        /// <h3>Precautions</h3>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy that a RAM user or RAM role needs to use this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation is accessible through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: Access KMS over the Internet or through a VPC domain name. This method requires Internet access to be enabled. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: Access KMS through a KMS private endpoint (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h3>QPS limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Calls through a shared gateway: The queries per second (QPS) limit for a single user is 1,000. If you exceed this limit, requests are throttled, which may affect your business. We recommend that you stay within this limit.</description></item>
+        /// <item><description>Calls through a dedicated gateway: The QPS limit for a single user depends on the computing performance of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance metrics</a>.</description></item>
+        /// </list>
+        /// <h3>Details</h3>
+        /// <para>This operation generates a random data key, encrypts it with a specified symmetric customer master key (CMK), and returns the ciphertext of the data key. This operation provides the same features as <a href="https://help.aliyun.com/document_detail/28948.html">GenerateDataKey</a>. The only difference is that this operation does not return the plaintext of the data key.
+        /// The CMK that you specify in the request is used only to encrypt the data key. It is not used to generate the data key. KMS does not record or store the randomly generated data key.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This operation applies to the scenario when you do not need to use the data key to immediately encrypt data. Before you can use the data key to encrypt data, you must call the <a href="https://help.aliyun.com/document_detail/28950.html">Decrypt</a> operation to decrypt the ciphertext of the data key.</description></item>
-        /// <item><description>This operation is also suitable for a distributed system with different trust levels. For example, a system stores data in different partitions based on a preset trust policy. A module creates different partitions and generates different data keys for each partition in advance. This module is not involved in data production and consumption after it completes initialization of the control plane. This module is the key provider. When producing and consuming data, modules on the control plane obtain the ciphertext of the data key for a partition first. After decrypting the ciphertext of the data key, modules on the control plane use the plaintext of the data key to encrypt or decrypt data and then clear the plaintext of the data key from the memory. In such a system, the key provider does not need to obtain the plaintext of the data key. It only needs to have the permissions to call the GenerateDataKeyWithoutPlaintext operation. The data producers or consumers do not need to generate new data keys. They only need to have the permissions to call the Decrypt operation.</description></item>
+        /// <item><description><para>This operation is suitable for systems that do not need to immediately use the data key for data encryption. When encryption is required, the system calls the <a href="https://help.aliyun.com/document_detail/28950.html">Decrypt</a> API to decrypt the ciphertext of the data key.</para>
+        /// </description></item>
+        /// <item><description><para>This operation is also suitable for distributed systems with different trust levels. For example, your system stores data in different partitions based on a defined policy. A module pre-creates these data partitions and generates a unique data key for each one. After this module initializes the control plane, it acts as a key distributor and does not produce or consume data. When data plane modules produce and consume data, they first retrieve the ciphertext of the data key for a partition. They then decrypt the ciphertext and use the plaintext data key to encrypt or decrypt data. Finally, they purge the plaintext data key from memory. In such a system, the key distributor does not need to access the plaintext of the data key. It only requires the \<c>GenerateDataKeyWithoutPlaintext\\</c> permission for the relevant CMK. Data producers and consumers do not need to generate new data keys. They only require the \<c>Decrypt\\</c> permission for the relevant CMK.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// </description>
@@ -7554,17 +7404,34 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates a random data key, which can be used to encrypt local data.</para>
+        /// <para>Generates a random data key in only ciphertext form, without the plaintext copy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation creates a random data key, encrypts the data key by using a specific symmetric CMK, and returns the ciphertext of the data key. This operation serves the same purpose as the <a href="https://help.aliyun.com/document_detail/28948.html">GenerateDataKey</a> operation. The only difference is that this operation does not return the plaintext of the data key.
-        /// The CMK that you specify in the request of this operation is only used to encrypt the data key and is not involved in the generation of the data key. KMS does not record or store the generated data key.</para>
+        /// <h3>Precautions</h3>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy that a RAM user or RAM role needs to use this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation is accessible through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: Access KMS over the Internet or through a VPC domain name. This method requires Internet access to be enabled. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: Access KMS through a KMS private endpoint (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h3>QPS limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Calls through a shared gateway: The queries per second (QPS) limit for a single user is 1,000. If you exceed this limit, requests are throttled, which may affect your business. We recommend that you stay within this limit.</description></item>
+        /// <item><description>Calls through a dedicated gateway: The QPS limit for a single user depends on the computing performance of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance metrics</a>.</description></item>
+        /// </list>
+        /// <h3>Details</h3>
+        /// <para>This operation generates a random data key, encrypts it with a specified symmetric customer master key (CMK), and returns the ciphertext of the data key. This operation provides the same features as <a href="https://help.aliyun.com/document_detail/28948.html">GenerateDataKey</a>. The only difference is that this operation does not return the plaintext of the data key.
+        /// The CMK that you specify in the request is used only to encrypt the data key. It is not used to generate the data key. KMS does not record or store the randomly generated data key.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This operation applies to the scenario when you do not need to use the data key to immediately encrypt data. Before you can use the data key to encrypt data, you must call the <a href="https://help.aliyun.com/document_detail/28950.html">Decrypt</a> operation to decrypt the ciphertext of the data key.</description></item>
-        /// <item><description>This operation is also suitable for a distributed system with different trust levels. For example, a system stores data in different partitions based on a preset trust policy. A module creates different partitions and generates different data keys for each partition in advance. This module is not involved in data production and consumption after it completes initialization of the control plane. This module is the key provider. When producing and consuming data, modules on the control plane obtain the ciphertext of the data key for a partition first. After decrypting the ciphertext of the data key, modules on the control plane use the plaintext of the data key to encrypt or decrypt data and then clear the plaintext of the data key from the memory. In such a system, the key provider does not need to obtain the plaintext of the data key. It only needs to have the permissions to call the GenerateDataKeyWithoutPlaintext operation. The data producers or consumers do not need to generate new data keys. They only need to have the permissions to call the Decrypt operation.</description></item>
+        /// <item><description><para>This operation is suitable for systems that do not need to immediately use the data key for data encryption. When encryption is required, the system calls the <a href="https://help.aliyun.com/document_detail/28950.html">Decrypt</a> API to decrypt the ciphertext of the data key.</para>
+        /// </description></item>
+        /// <item><description><para>This operation is also suitable for distributed systems with different trust levels. For example, your system stores data in different partitions based on a defined policy. A module pre-creates these data partitions and generates a unique data key for each one. After this module initializes the control plane, it acts as a key distributor and does not produce or consume data. When data plane modules produce and consume data, they first retrieve the ciphertext of the data key for a partition. They then decrypt the ciphertext and use the plaintext data key to encrypt or decrypt data. Finally, they purge the plaintext data key from memory. In such a system, the key distributor does not need to access the plaintext of the data key. It only requires the \<c>GenerateDataKeyWithoutPlaintext\\</c> permission for the relevant CMK. Data producers and consumers do not need to generate new data keys. They only require the \<c>Decrypt\\</c> permission for the relevant CMK.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// </description>
@@ -7630,17 +7497,34 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates a random data key, which can be used to encrypt local data.</para>
+        /// <para>Generates a random data key in only ciphertext form, without the plaintext copy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation creates a random data key, encrypts the data key by using a specific symmetric CMK, and returns the ciphertext of the data key. This operation serves the same purpose as the <a href="https://help.aliyun.com/document_detail/28948.html">GenerateDataKey</a> operation. The only difference is that this operation does not return the plaintext of the data key.
-        /// The CMK that you specify in the request of this operation is only used to encrypt the data key and is not involved in the generation of the data key. KMS does not record or store the generated data key.</para>
+        /// <h3>Precautions</h3>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy that a RAM user or RAM role needs to use this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation is accessible through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: Access KMS over the Internet or through a VPC domain name. This method requires Internet access to be enabled. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: Access KMS through a KMS private endpoint (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h3>QPS limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Calls through a shared gateway: The queries per second (QPS) limit for a single user is 1,000. If you exceed this limit, requests are throttled, which may affect your business. We recommend that you stay within this limit.</description></item>
+        /// <item><description>Calls through a dedicated gateway: The QPS limit for a single user depends on the computing performance of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance metrics</a>.</description></item>
+        /// </list>
+        /// <h3>Details</h3>
+        /// <para>This operation generates a random data key, encrypts it with a specified symmetric customer master key (CMK), and returns the ciphertext of the data key. This operation provides the same features as <a href="https://help.aliyun.com/document_detail/28948.html">GenerateDataKey</a>. The only difference is that this operation does not return the plaintext of the data key.
+        /// The CMK that you specify in the request is used only to encrypt the data key. It is not used to generate the data key. KMS does not record or store the randomly generated data key.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This operation applies to the scenario when you do not need to use the data key to immediately encrypt data. Before you can use the data key to encrypt data, you must call the <a href="https://help.aliyun.com/document_detail/28950.html">Decrypt</a> operation to decrypt the ciphertext of the data key.</description></item>
-        /// <item><description>This operation is also suitable for a distributed system with different trust levels. For example, a system stores data in different partitions based on a preset trust policy. A module creates different partitions and generates different data keys for each partition in advance. This module is not involved in data production and consumption after it completes initialization of the control plane. This module is the key provider. When producing and consuming data, modules on the control plane obtain the ciphertext of the data key for a partition first. After decrypting the ciphertext of the data key, modules on the control plane use the plaintext of the data key to encrypt or decrypt data and then clear the plaintext of the data key from the memory. In such a system, the key provider does not need to obtain the plaintext of the data key. It only needs to have the permissions to call the GenerateDataKeyWithoutPlaintext operation. The data producers or consumers do not need to generate new data keys. They only need to have the permissions to call the Decrypt operation.</description></item>
+        /// <item><description><para>This operation is suitable for systems that do not need to immediately use the data key for data encryption. When encryption is required, the system calls the <a href="https://help.aliyun.com/document_detail/28950.html">Decrypt</a> API to decrypt the ciphertext of the data key.</para>
+        /// </description></item>
+        /// <item><description><para>This operation is also suitable for distributed systems with different trust levels. For example, your system stores data in different partitions based on a defined policy. A module pre-creates these data partitions and generates a unique data key for each one. After this module initializes the control plane, it acts as a key distributor and does not produce or consume data. When data plane modules produce and consume data, they first retrieve the ciphertext of the data key for a partition. They then decrypt the ciphertext and use the plaintext data key to encrypt or decrypt data. Finally, they purge the plaintext data key from memory. In such a system, the key distributor does not need to access the plaintext of the data key. It only requires the \<c>GenerateDataKeyWithoutPlaintext\\</c> permission for the relevant CMK. Data producers and consumers do not need to generate new data keys. They only require the \<c>Decrypt\\</c> permission for the relevant CMK.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// </description>
@@ -7660,17 +7544,34 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates a random data key, which can be used to encrypt local data.</para>
+        /// <para>Generates a random data key in only ciphertext form, without the plaintext copy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation creates a random data key, encrypts the data key by using a specific symmetric CMK, and returns the ciphertext of the data key. This operation serves the same purpose as the <a href="https://help.aliyun.com/document_detail/28948.html">GenerateDataKey</a> operation. The only difference is that this operation does not return the plaintext of the data key.
-        /// The CMK that you specify in the request of this operation is only used to encrypt the data key and is not involved in the generation of the data key. KMS does not record or store the generated data key.</para>
+        /// <h3>Precautions</h3>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy that a RAM user or RAM role needs to use this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation is accessible through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: Access KMS over the Internet or through a VPC domain name. This method requires Internet access to be enabled. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: Access KMS through a KMS private endpoint (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h3>QPS limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Calls through a shared gateway: The queries per second (QPS) limit for a single user is 1,000. If you exceed this limit, requests are throttled, which may affect your business. We recommend that you stay within this limit.</description></item>
+        /// <item><description>Calls through a dedicated gateway: The QPS limit for a single user depends on the computing performance of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance metrics</a>.</description></item>
+        /// </list>
+        /// <h3>Details</h3>
+        /// <para>This operation generates a random data key, encrypts it with a specified symmetric customer master key (CMK), and returns the ciphertext of the data key. This operation provides the same features as <a href="https://help.aliyun.com/document_detail/28948.html">GenerateDataKey</a>. The only difference is that this operation does not return the plaintext of the data key.
+        /// The CMK that you specify in the request is used only to encrypt the data key. It is not used to generate the data key. KMS does not record or store the randomly generated data key.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This operation applies to the scenario when you do not need to use the data key to immediately encrypt data. Before you can use the data key to encrypt data, you must call the <a href="https://help.aliyun.com/document_detail/28950.html">Decrypt</a> operation to decrypt the ciphertext of the data key.</description></item>
-        /// <item><description>This operation is also suitable for a distributed system with different trust levels. For example, a system stores data in different partitions based on a preset trust policy. A module creates different partitions and generates different data keys for each partition in advance. This module is not involved in data production and consumption after it completes initialization of the control plane. This module is the key provider. When producing and consuming data, modules on the control plane obtain the ciphertext of the data key for a partition first. After decrypting the ciphertext of the data key, modules on the control plane use the plaintext of the data key to encrypt or decrypt data and then clear the plaintext of the data key from the memory. In such a system, the key provider does not need to obtain the plaintext of the data key. It only needs to have the permissions to call the GenerateDataKeyWithoutPlaintext operation. The data producers or consumers do not need to generate new data keys. They only need to have the permissions to call the Decrypt operation.</description></item>
+        /// <item><description><para>This operation is suitable for systems that do not need to immediately use the data key for data encryption. When encryption is required, the system calls the <a href="https://help.aliyun.com/document_detail/28950.html">Decrypt</a> API to decrypt the ciphertext of the data key.</para>
+        /// </description></item>
+        /// <item><description><para>This operation is also suitable for distributed systems with different trust levels. For example, your system stores data in different partitions based on a defined policy. A module pre-creates these data partitions and generates a unique data key for each one. After this module initializes the control plane, it acts as a key distributor and does not produce or consume data. When data plane modules produce and consume data, they first retrieve the ciphertext of the data key for a partition. They then decrypt the ciphertext and use the plaintext data key to encrypt or decrypt data. Finally, they purge the plaintext data key from memory. In such a system, the key distributor does not need to access the plaintext of the data key. It only requires the \<c>GenerateDataKeyWithoutPlaintext\\</c> permission for the relevant CMK. Data producers and consumers do not need to generate new data keys. They only require the \<c>Decrypt\\</c> permission for the relevant CMK.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// </description>
@@ -7688,28 +7589,50 @@ namespace AlibabaCloud.SDK.Kms20160120
             return await GenerateDataKeyWithoutPlaintextWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generates an HMAC message authentication code for a message by using a specified key.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>In this example, the certificate whose ID is <c>9a28de48-8d8b-484d-a766-dec4****</c> is queried. The certificate, certificate chain, certificate ID, and certificate signing request (CSR) are returned.</para>
+        /// <para>For details about the access policy required when a RAM user or RAM role invokes this operation, refer to access control.
+        /// This operation can be invoked through a shared gateway or a dedicated gateway. For more information, refer to Alibaba Cloud SDK.</para>
+        /// <list type="bullet">
+        /// <item><description>Shared gateway: Access KMS through a public or VPC endpoint. This method requires you to enable the public network access switch. For more information, refer to accessing keys in a KMS instance over the Internet.</description></item>
+        /// <item><description>Dedicated gateway: Access KMS through a KMS private endpoint (<YOUR_KMS_INSTANCE_ID>.cryptoservice.kms.aliyuncs.com).</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
-        /// GetCertificateRequest
+        /// GenerateMacRequest
         /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
         /// 
         /// <returns>
-        /// GetCertificateResponse
+        /// GenerateMacResponse
         /// </returns>
-        public GetCertificateResponse GetCertificateWithOptions(GetCertificateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GenerateMacResponse GenerateMacWithOptions(GenerateMacRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertificateId))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Algorithm))
             {
-                query["CertificateId"] = request.CertificateId;
+                query["Algorithm"] = request.Algorithm;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyId))
+            {
+                query["KeyId"] = request.KeyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Message))
+            {
+                query["Message"] = request.Message;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -7717,7 +7640,7 @@ namespace AlibabaCloud.SDK.Kms20160120
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "GetCertificate",
+                Action = "GenerateMac",
                 Version = "2016-01-20",
                 Protocol = "HTTPS",
                 Pathname = "/",
@@ -7727,91 +7650,138 @@ namespace AlibabaCloud.SDK.Kms20160120
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetCertificateResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the certificate whose ID is <c>9a28de48-8d8b-484d-a766-dec4****</c> is queried. The certificate, certificate chain, certificate ID, and certificate signing request (CSR) are returned.</para>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// GetCertificateRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// GetCertificateResponse
-        /// </returns>
-        public async Task<GetCertificateResponse> GetCertificateWithOptionsAsync(GetCertificateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertificateId))
-            {
-                query["CertificateId"] = request.CertificateId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetCertificate",
-                Version = "2016-01-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<GetCertificateResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the certificate whose ID is <c>9a28de48-8d8b-484d-a766-dec4****</c> is queried. The certificate, certificate chain, certificate ID, and certificate signing request (CSR) are returned.</para>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// GetCertificateRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// GetCertificateResponse
-        /// </returns>
-        public GetCertificateResponse GetCertificate(GetCertificateRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return GetCertificateWithOptions(request, runtime);
-        }
-
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the certificate whose ID is <c>9a28de48-8d8b-484d-a766-dec4****</c> is queried. The certificate, certificate chain, certificate ID, and certificate signing request (CSR) are returned.</para>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// GetCertificateRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// GetCertificateResponse
-        /// </returns>
-        public async Task<GetCertificateResponse> GetCertificateAsync(GetCertificateRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await GetCertificateWithOptionsAsync(request, runtime);
+            return TeaModel.ToObject<GenerateMacResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a client key.</para>
+        /// <para>Generates an HMAC message authentication code for a message by using a specified key.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For details about the access policy required when a RAM user or RAM role invokes this operation, refer to access control.
+        /// This operation can be invoked through a shared gateway or a dedicated gateway. For more information, refer to Alibaba Cloud SDK.</para>
+        /// <list type="bullet">
+        /// <item><description>Shared gateway: Access KMS through a public or VPC endpoint. This method requires you to enable the public network access switch. For more information, refer to accessing keys in a KMS instance over the Internet.</description></item>
+        /// <item><description>Dedicated gateway: Access KMS through a KMS private endpoint (<YOUR_KMS_INSTANCE_ID>.cryptoservice.kms.aliyuncs.com).</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GenerateMacRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateMacResponse
+        /// </returns>
+        public async Task<GenerateMacResponse> GenerateMacWithOptionsAsync(GenerateMacRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Algorithm))
+            {
+                query["Algorithm"] = request.Algorithm;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyId))
+            {
+                query["KeyId"] = request.KeyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Message))
+            {
+                query["Message"] = request.Message;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GenerateMac",
+                Version = "2016-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GenerateMacResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generates an HMAC message authentication code for a message by using a specified key.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For details about the access policy required when a RAM user or RAM role invokes this operation, refer to access control.
+        /// This operation can be invoked through a shared gateway or a dedicated gateway. For more information, refer to Alibaba Cloud SDK.</para>
+        /// <list type="bullet">
+        /// <item><description>Shared gateway: Access KMS through a public or VPC endpoint. This method requires you to enable the public network access switch. For more information, refer to accessing keys in a KMS instance over the Internet.</description></item>
+        /// <item><description>Dedicated gateway: Access KMS through a KMS private endpoint (<YOUR_KMS_INSTANCE_ID>.cryptoservice.kms.aliyuncs.com).</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GenerateMacRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateMacResponse
+        /// </returns>
+        public GenerateMacResponse GenerateMac(GenerateMacRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GenerateMacWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generates an HMAC message authentication code for a message by using a specified key.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For details about the access policy required when a RAM user or RAM role invokes this operation, refer to access control.
+        /// This operation can be invoked through a shared gateway or a dedicated gateway. For more information, refer to Alibaba Cloud SDK.</para>
+        /// <list type="bullet">
+        /// <item><description>Shared gateway: Access KMS through a public or VPC endpoint. This method requires you to enable the public network access switch. For more information, refer to accessing keys in a KMS instance over the Internet.</description></item>
+        /// <item><description>Dedicated gateway: Access KMS through a KMS private endpoint (<YOUR_KMS_INSTANCE_ID>.cryptoservice.kms.aliyuncs.com).</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GenerateMacRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateMacResponse
+        /// </returns>
+        public async Task<GenerateMacResponse> GenerateMacAsync(GenerateMacRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GenerateMacWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves information about a client key.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For information about the access policy required for a RAM user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetClientKeyRequest
@@ -7848,8 +7818,13 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a client key.</para>
+        /// <para>Retrieves information about a client key.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For information about the access policy required for a RAM user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetClientKeyRequest
@@ -7886,8 +7861,13 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a client key.</para>
+        /// <para>Retrieves information about a client key.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For information about the access policy required for a RAM user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetClientKeyRequest
@@ -7904,8 +7884,13 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a client key.</para>
+        /// <para>Retrieves information about a client key.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For information about the access policy required for a RAM user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetClientKeyRequest
@@ -7922,12 +7907,17 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取默认KMS实例</para>
+        /// <para>Queries the default KMS instance in a specified region.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetDefaultKmsInstanceRequest
-        /// </param>
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy that is required to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This API is for users who migrate from KMS 1.0 to KMS 3.0. After the migration is complete, if you create an Asset without specifying a KMS instance, the Asset is created in the default KMS instance.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -7955,12 +7945,17 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取默认KMS实例</para>
+        /// <para>Queries the default KMS instance in a specified region.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetDefaultKmsInstanceRequest
-        /// </param>
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy that is required to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This API is for users who migrate from KMS 1.0 to KMS 3.0. After the migration is complete, if you create an Asset without specifying a KMS instance, the Asset is created in the default KMS instance.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -7988,8 +7983,16 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取默认KMS实例</para>
+        /// <para>Queries the default KMS instance in a specified region.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy that is required to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This API is for users who migrate from KMS 1.0 to KMS 3.0. After the migration is complete, if you create an Asset without specifying a KMS instance, the Asset is created in the default KMS instance.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <returns>
         /// GetDefaultKmsInstanceResponse
@@ -8002,8 +8005,16 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取默认KMS实例</para>
+        /// <para>Queries the default KMS instance in a specified region.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy that is required to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This API is for users who migrate from KMS 1.0 to KMS 3.0. After the migration is complete, if you create an Asset without specifying a KMS instance, the Asset is created in the default KMS instance.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <returns>
         /// GetDefaultKmsInstanceResponse
@@ -8016,8 +8027,16 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>仅可查询名称为 default 的 Key Policy，否则提示 Not Found。</para>
+        /// <para>Queries the key policy of a CMK in a KMS instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>For more information about the access policy required for a Resource Access Management (RAM) user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>Because the key policy name can only be set to default, you must set the PolicyName parameter to default when you query the key policy. Otherwise, a <c>Not Found</c> error is returned.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetKeyPolicyRequest
@@ -8062,8 +8081,16 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>仅可查询名称为 default 的 Key Policy，否则提示 Not Found。</para>
+        /// <para>Queries the key policy of a CMK in a KMS instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>For more information about the access policy required for a Resource Access Management (RAM) user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>Because the key policy name can only be set to default, you must set the PolicyName parameter to default when you query the key policy. Otherwise, a <c>Not Found</c> error is returned.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetKeyPolicyRequest
@@ -8108,8 +8135,16 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>仅可查询名称为 default 的 Key Policy，否则提示 Not Found。</para>
+        /// <para>Queries the key policy of a CMK in a KMS instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>For more information about the access policy required for a Resource Access Management (RAM) user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>Because the key policy name can only be set to default, you must set the PolicyName parameter to default when you query the key policy. Otherwise, a <c>Not Found</c> error is returned.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetKeyPolicyRequest
@@ -8126,8 +8161,16 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>仅可查询名称为 default 的 Key Policy，否则提示 Not Found。</para>
+        /// <para>Queries the key policy of a CMK in a KMS instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>For more information about the access policy required for a Resource Access Management (RAM) user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>Because the key policy name can only be set to default, you must set the PolicyName parameter to default when you query the key policy. Otherwise, a <c>Not Found</c> error is returned.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetKeyPolicyRequest
@@ -8144,8 +8187,13 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a Key Management Service (KMS) instance.</para>
+        /// <para>Retrieves the details of a KMS instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Refer to <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a> for the access policy required to call this OpenAPI as a RAM user or RAM role.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetKmsInstanceRequest
@@ -8186,8 +8234,13 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a Key Management Service (KMS) instance.</para>
+        /// <para>Retrieves the details of a KMS instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Refer to <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a> for the access policy required to call this OpenAPI as a RAM user or RAM role.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetKmsInstanceRequest
@@ -8228,8 +8281,13 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a Key Management Service (KMS) instance.</para>
+        /// <para>Retrieves the details of a KMS instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Refer to <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a> for the access policy required to call this OpenAPI as a RAM user or RAM role.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetKmsInstanceRequest
@@ -8246,8 +8304,13 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a Key Management Service (KMS) instance.</para>
+        /// <para>Retrieves the details of a KMS instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Refer to <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a> for the access policy required to call this OpenAPI as a RAM user or RAM role.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetKmsInstanceRequest
@@ -8264,7 +8327,7 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例配额信息</para>
+        /// <para>Queries the quota usage and limits for a KMS instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8310,7 +8373,7 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例配额信息</para>
+        /// <para>Queries the quota usage and limits for a KMS instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8356,7 +8419,7 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例配额信息</para>
+        /// <para>Queries the quota usage and limits for a KMS instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8374,7 +8437,7 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例配额信息</para>
+        /// <para>Queries the quota usage and limits for a KMS instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8726,6 +8789,23 @@ namespace AlibabaCloud.SDK.Kms20160120
             return await GetParametersForImportWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the public key of an asymmetric key. You can use the public key to encrypt data or verify a signature on your device.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>For more information about the access policy required for a RAM user or RAM role to call this OpenAPI operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation supports both shared gateways and dedicated gateways. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: You can access KMS over the Internet or using a VPC domain name. If you access KMS over the Internet, you must enable Internet access. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: You can access KMS using the private endpoint of KMS (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetPublicKeyRequest
         /// </param>
@@ -8771,6 +8851,23 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<GetPublicKeyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the public key of an asymmetric key. You can use the public key to encrypt data or verify a signature on your device.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>For more information about the access policy required for a RAM user or RAM role to call this OpenAPI operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation supports both shared gateways and dedicated gateways. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: You can access KMS over the Internet or using a VPC domain name. If you access KMS over the Internet, you must enable Internet access. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: You can access KMS using the private endpoint of KMS (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetPublicKeyRequest
         /// </param>
@@ -8816,6 +8913,23 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<GetPublicKeyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the public key of an asymmetric key. You can use the public key to encrypt data or verify a signature on your device.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>For more information about the access policy required for a RAM user or RAM role to call this OpenAPI operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation supports both shared gateways and dedicated gateways. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: You can access KMS over the Internet or using a VPC domain name. If you access KMS over the Internet, you must enable Internet access. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: You can access KMS using the private endpoint of KMS (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetPublicKeyRequest
         /// </param>
@@ -8829,6 +8943,23 @@ namespace AlibabaCloud.SDK.Kms20160120
             return GetPublicKeyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the public key of an asymmetric key. You can use the public key to encrypt data or verify a signature on your device.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>For more information about the access policy required for a RAM user or RAM role to call this OpenAPI operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation supports both shared gateways and dedicated gateways. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: You can access KMS over the Internet or using a VPC domain name. If you access KMS over the Internet, you must enable Internet access. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: You can access KMS using the private endpoint of KMS (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetPublicKeyRequest
         /// </param>
@@ -8842,6 +8973,16 @@ namespace AlibabaCloud.SDK.Kms20160120
             return await GetPublicKeyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generates a random password string.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetRandomPasswordRequest
         /// </param>
@@ -8903,6 +9044,16 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<GetRandomPasswordResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generates a random password string.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetRandomPasswordRequest
         /// </param>
@@ -8964,6 +9115,16 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<GetRandomPasswordResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generates a random password string.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetRandomPasswordRequest
         /// </param>
@@ -8977,6 +9138,16 @@ namespace AlibabaCloud.SDK.Kms20160120
             return GetRandomPasswordWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generates a random password string.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetRandomPasswordRequest
         /// </param>
@@ -8992,8 +9163,16 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>仅可查询名称为 default 的 Secret Policy，否则提示 Not Found。</para>
+        /// <para>Queries the access policy of a specified secret in a KMS instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy required for a RAM user or RAM role to call this OpenAPI, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>A credential policy name can be set only to default. Therefore, you must set the PolicyName parameter to default when you query the credential policy. Otherwise, a <c>Not Found</c> error is returned.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSecretPolicyRequest
@@ -9038,8 +9217,16 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>仅可查询名称为 default 的 Secret Policy，否则提示 Not Found。</para>
+        /// <para>Queries the access policy of a specified secret in a KMS instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy required for a RAM user or RAM role to call this OpenAPI, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>A credential policy name can be set only to default. Therefore, you must set the PolicyName parameter to default when you query the credential policy. Otherwise, a <c>Not Found</c> error is returned.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSecretPolicyRequest
@@ -9084,8 +9271,16 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>仅可查询名称为 default 的 Secret Policy，否则提示 Not Found。</para>
+        /// <para>Queries the access policy of a specified secret in a KMS instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy required for a RAM user or RAM role to call this OpenAPI, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>A credential policy name can be set only to default. Therefore, you must set the PolicyName parameter to default when you query the credential policy. Otherwise, a <c>Not Found</c> error is returned.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSecretPolicyRequest
@@ -9102,8 +9297,16 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>仅可查询名称为 default 的 Secret Policy，否则提示 Not Found。</para>
+        /// <para>Queries the access policy of a specified secret in a KMS instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy required for a RAM user or RAM role to call this OpenAPI, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>A credential policy name can be set only to default. Therefore, you must set the PolicyName parameter to default when you query the credential policy. Otherwise, a <c>Not Found</c> error is returned.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSecretPolicyRequest
@@ -9120,14 +9323,17 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用GetSecretValue接口获取凭据值。</para>
+        /// <para>Retrieve the credential value.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you do not specify a version number or stage label, Secrets Manager returns the secret value of the version marked with ACSCurrent.
-        /// If a customer master key (CMK) is specified to encrypt the secret value, you must also have the <c>kms:Decrypt</c> permission on the CMK to call the GetSecretValue operation.
-        /// In this example, the value of the secret named <c>secret001</c> is obtained. The secret value is returned in the <c>SecretData</c> parameter. The secret value is <c>testdata1</c>.</para>
+        /// <list type="bullet">
+        /// <item><description>For details about the access policy that must be granted to a Resource Access Management (RAM) user or RAM role to invoke this OpenAPI operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>If you do not specify a version number or version status, Key Management Service (KMS) returns the credential value of the version marked as ACSCurrent by default.</description></item>
+        /// <item><description>If a customer-managed key is used to protect the credential value, the caller must also have the <c>kms:Decrypt</c> permission on the corresponding master key.
+        /// This topic provides a sample request to retrieve the credential value of a credential named <c>secret001</c>. The returned result shows that the credential value <c>SecretData</c> is <c>testdata1</c>.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -9185,14 +9391,17 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用GetSecretValue接口获取凭据值。</para>
+        /// <para>Retrieve the credential value.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you do not specify a version number or stage label, Secrets Manager returns the secret value of the version marked with ACSCurrent.
-        /// If a customer master key (CMK) is specified to encrypt the secret value, you must also have the <c>kms:Decrypt</c> permission on the CMK to call the GetSecretValue operation.
-        /// In this example, the value of the secret named <c>secret001</c> is obtained. The secret value is returned in the <c>SecretData</c> parameter. The secret value is <c>testdata1</c>.</para>
+        /// <list type="bullet">
+        /// <item><description>For details about the access policy that must be granted to a Resource Access Management (RAM) user or RAM role to invoke this OpenAPI operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>If you do not specify a version number or version status, Key Management Service (KMS) returns the credential value of the version marked as ACSCurrent by default.</description></item>
+        /// <item><description>If a customer-managed key is used to protect the credential value, the caller must also have the <c>kms:Decrypt</c> permission on the corresponding master key.
+        /// This topic provides a sample request to retrieve the credential value of a credential named <c>secret001</c>. The returned result shows that the credential value <c>SecretData</c> is <c>testdata1</c>.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -9250,14 +9459,17 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用GetSecretValue接口获取凭据值。</para>
+        /// <para>Retrieve the credential value.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you do not specify a version number or stage label, Secrets Manager returns the secret value of the version marked with ACSCurrent.
-        /// If a customer master key (CMK) is specified to encrypt the secret value, you must also have the <c>kms:Decrypt</c> permission on the CMK to call the GetSecretValue operation.
-        /// In this example, the value of the secret named <c>secret001</c> is obtained. The secret value is returned in the <c>SecretData</c> parameter. The secret value is <c>testdata1</c>.</para>
+        /// <list type="bullet">
+        /// <item><description>For details about the access policy that must be granted to a Resource Access Management (RAM) user or RAM role to invoke this OpenAPI operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>If you do not specify a version number or version status, Key Management Service (KMS) returns the credential value of the version marked as ACSCurrent by default.</description></item>
+        /// <item><description>If a customer-managed key is used to protect the credential value, the caller must also have the <c>kms:Decrypt</c> permission on the corresponding master key.
+        /// This topic provides a sample request to retrieve the credential value of a credential named <c>secret001</c>. The returned result shows that the credential value <c>SecretData</c> is <c>testdata1</c>.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -9275,14 +9487,17 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用GetSecretValue接口获取凭据值。</para>
+        /// <para>Retrieve the credential value.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you do not specify a version number or stage label, Secrets Manager returns the secret value of the version marked with ACSCurrent.
-        /// If a customer master key (CMK) is specified to encrypt the secret value, you must also have the <c>kms:Decrypt</c> permission on the CMK to call the GetSecretValue operation.
-        /// In this example, the value of the secret named <c>secret001</c> is obtained. The secret value is returned in the <c>SecretData</c> parameter. The secret value is <c>testdata1</c>.</para>
+        /// <list type="bullet">
+        /// <item><description>For details about the access policy that must be granted to a Resource Access Management (RAM) user or RAM role to invoke this OpenAPI operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>If you do not specify a version number or version status, Key Management Service (KMS) returns the credential value of the version marked as ACSCurrent by default.</description></item>
+        /// <item><description>If a customer-managed key is used to protect the credential value, the caller must also have the <c>kms:Decrypt</c> permission on the corresponding master key.
+        /// This topic provides a sample request to retrieve the credential value of a credential named <c>secret001</c>. The returned result shows that the credential value <c>SecretData</c> is <c>testdata1</c>.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -9300,21 +9515,27 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the ImportKeyMaterial operation to import the key material.</para>
+        /// <para>Imports externally generated key material into a CMK whose origin is EXTERNAL.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Call <a href="https://help.aliyun.com/document_detail/28947.html">CreateKey</a> when creating a CMK, you can select its key material source as external. <b>Origin</b> set to <b>EXTERNAL</b>. This API is used to import the key material into the CMK.</para>
+        /// <para>When you call <a href="https://help.aliyun.com/document_detail/28947.html">CreateKey</a> to create a CMK, you can set <b>Origin</b> to <b>EXTERNAL</b> to specify that the key material comes from an external source. Use this operation to import the key material into such a CMK.</para>
         /// <list type="bullet">
         /// <item><description>To view the CMK <b>Origin</b>, see <a href="https://help.aliyun.com/document_detail/28952.html">DescribeKey</a>.</description></item>
-        /// <item><description>Before importing key material, you need to call the <a href="https://help.aliyun.com/document_detail/68621.html">GetParametersForImport</a> obtain the parameters required to import the key material, including the public key and import token.<remarks>
+        /// <item><description>Before importing key material, call <a href="https://help.aliyun.com/document_detail/68621.html">GetParametersForImport</a> to obtain the parameters required for the import, including the public key and import token.<remarks>
         /// <list type="bullet">
-        /// <item><description>The key type of the pair is <b>Aliyun_AES_256</b> the key material must be 256 bits. The key type must be <b>Aliyun_SM4</b> the CMK and key material must be 128 bits.</description></item>
-        /// <item><description>You can set the expiration time for the key material, or you can set it to never expire.</description></item>
-        /// <item><description>You can reimport the key material and reset the expiration time for the specified CMK at any time, but the same key material must be imported.</description></item>
-        /// <item><description>After the imported key material expires or is deleted, the specified CMK is unavailable until the same key material are imported again.</description></item>
-        /// <item><description>A Key material can be imported to multiple cmks, but any Data or Data Key encrypted by one CMK cannot be decrypted by another CMK.</description></item>
+        /// <item><description><para>For a CMK of type <b>Aliyun_AES_256</b>, the key material must be 256 bits. For a CMK of type <b>Aliyun_SM4</b>, the key material must be 128 bits.</para>
+        /// </description></item>
+        /// <item><description><para>You can set the expiration time for the key material, or you can set it to never expire.</para>
+        /// </description></item>
+        /// <item><description><para>You can reimport the key material and reset the expiration time for the specified CMK at any time, but the same key material must be imported.</para>
+        /// </description></item>
+        /// <item><description><para>After the imported key material expires or is deleted, the specified CMK becomes unavailable until the same key material is imported again.</para>
+        /// </description></item>
+        /// <item><description><para>The same key material can be imported into multiple CMKs, but data or data keys encrypted by one CMK cannot be decrypted by another CMK.
+        /// For more information about the access policy required for a RAM user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// </description></item>
@@ -9372,21 +9593,27 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the ImportKeyMaterial operation to import the key material.</para>
+        /// <para>Imports externally generated key material into a CMK whose origin is EXTERNAL.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Call <a href="https://help.aliyun.com/document_detail/28947.html">CreateKey</a> when creating a CMK, you can select its key material source as external. <b>Origin</b> set to <b>EXTERNAL</b>. This API is used to import the key material into the CMK.</para>
+        /// <para>When you call <a href="https://help.aliyun.com/document_detail/28947.html">CreateKey</a> to create a CMK, you can set <b>Origin</b> to <b>EXTERNAL</b> to specify that the key material comes from an external source. Use this operation to import the key material into such a CMK.</para>
         /// <list type="bullet">
         /// <item><description>To view the CMK <b>Origin</b>, see <a href="https://help.aliyun.com/document_detail/28952.html">DescribeKey</a>.</description></item>
-        /// <item><description>Before importing key material, you need to call the <a href="https://help.aliyun.com/document_detail/68621.html">GetParametersForImport</a> obtain the parameters required to import the key material, including the public key and import token.<remarks>
+        /// <item><description>Before importing key material, call <a href="https://help.aliyun.com/document_detail/68621.html">GetParametersForImport</a> to obtain the parameters required for the import, including the public key and import token.<remarks>
         /// <list type="bullet">
-        /// <item><description>The key type of the pair is <b>Aliyun_AES_256</b> the key material must be 256 bits. The key type must be <b>Aliyun_SM4</b> the CMK and key material must be 128 bits.</description></item>
-        /// <item><description>You can set the expiration time for the key material, or you can set it to never expire.</description></item>
-        /// <item><description>You can reimport the key material and reset the expiration time for the specified CMK at any time, but the same key material must be imported.</description></item>
-        /// <item><description>After the imported key material expires or is deleted, the specified CMK is unavailable until the same key material are imported again.</description></item>
-        /// <item><description>A Key material can be imported to multiple cmks, but any Data or Data Key encrypted by one CMK cannot be decrypted by another CMK.</description></item>
+        /// <item><description><para>For a CMK of type <b>Aliyun_AES_256</b>, the key material must be 256 bits. For a CMK of type <b>Aliyun_SM4</b>, the key material must be 128 bits.</para>
+        /// </description></item>
+        /// <item><description><para>You can set the expiration time for the key material, or you can set it to never expire.</para>
+        /// </description></item>
+        /// <item><description><para>You can reimport the key material and reset the expiration time for the specified CMK at any time, but the same key material must be imported.</para>
+        /// </description></item>
+        /// <item><description><para>After the imported key material expires or is deleted, the specified CMK becomes unavailable until the same key material is imported again.</para>
+        /// </description></item>
+        /// <item><description><para>The same key material can be imported into multiple CMKs, but data or data keys encrypted by one CMK cannot be decrypted by another CMK.
+        /// For more information about the access policy required for a RAM user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// </description></item>
@@ -9444,21 +9671,27 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the ImportKeyMaterial operation to import the key material.</para>
+        /// <para>Imports externally generated key material into a CMK whose origin is EXTERNAL.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Call <a href="https://help.aliyun.com/document_detail/28947.html">CreateKey</a> when creating a CMK, you can select its key material source as external. <b>Origin</b> set to <b>EXTERNAL</b>. This API is used to import the key material into the CMK.</para>
+        /// <para>When you call <a href="https://help.aliyun.com/document_detail/28947.html">CreateKey</a> to create a CMK, you can set <b>Origin</b> to <b>EXTERNAL</b> to specify that the key material comes from an external source. Use this operation to import the key material into such a CMK.</para>
         /// <list type="bullet">
         /// <item><description>To view the CMK <b>Origin</b>, see <a href="https://help.aliyun.com/document_detail/28952.html">DescribeKey</a>.</description></item>
-        /// <item><description>Before importing key material, you need to call the <a href="https://help.aliyun.com/document_detail/68621.html">GetParametersForImport</a> obtain the parameters required to import the key material, including the public key and import token.<remarks>
+        /// <item><description>Before importing key material, call <a href="https://help.aliyun.com/document_detail/68621.html">GetParametersForImport</a> to obtain the parameters required for the import, including the public key and import token.<remarks>
         /// <list type="bullet">
-        /// <item><description>The key type of the pair is <b>Aliyun_AES_256</b> the key material must be 256 bits. The key type must be <b>Aliyun_SM4</b> the CMK and key material must be 128 bits.</description></item>
-        /// <item><description>You can set the expiration time for the key material, or you can set it to never expire.</description></item>
-        /// <item><description>You can reimport the key material and reset the expiration time for the specified CMK at any time, but the same key material must be imported.</description></item>
-        /// <item><description>After the imported key material expires or is deleted, the specified CMK is unavailable until the same key material are imported again.</description></item>
-        /// <item><description>A Key material can be imported to multiple cmks, but any Data or Data Key encrypted by one CMK cannot be decrypted by another CMK.</description></item>
+        /// <item><description><para>For a CMK of type <b>Aliyun_AES_256</b>, the key material must be 256 bits. For a CMK of type <b>Aliyun_SM4</b>, the key material must be 128 bits.</para>
+        /// </description></item>
+        /// <item><description><para>You can set the expiration time for the key material, or you can set it to never expire.</para>
+        /// </description></item>
+        /// <item><description><para>You can reimport the key material and reset the expiration time for the specified CMK at any time, but the same key material must be imported.</para>
+        /// </description></item>
+        /// <item><description><para>After the imported key material expires or is deleted, the specified CMK becomes unavailable until the same key material is imported again.</para>
+        /// </description></item>
+        /// <item><description><para>The same key material can be imported into multiple CMKs, but data or data keys encrypted by one CMK cannot be decrypted by another CMK.
+        /// For more information about the access policy required for a RAM user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// </description></item>
@@ -9480,21 +9713,27 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the ImportKeyMaterial operation to import the key material.</para>
+        /// <para>Imports externally generated key material into a CMK whose origin is EXTERNAL.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Call <a href="https://help.aliyun.com/document_detail/28947.html">CreateKey</a> when creating a CMK, you can select its key material source as external. <b>Origin</b> set to <b>EXTERNAL</b>. This API is used to import the key material into the CMK.</para>
+        /// <para>When you call <a href="https://help.aliyun.com/document_detail/28947.html">CreateKey</a> to create a CMK, you can set <b>Origin</b> to <b>EXTERNAL</b> to specify that the key material comes from an external source. Use this operation to import the key material into such a CMK.</para>
         /// <list type="bullet">
         /// <item><description>To view the CMK <b>Origin</b>, see <a href="https://help.aliyun.com/document_detail/28952.html">DescribeKey</a>.</description></item>
-        /// <item><description>Before importing key material, you need to call the <a href="https://help.aliyun.com/document_detail/68621.html">GetParametersForImport</a> obtain the parameters required to import the key material, including the public key and import token.<remarks>
+        /// <item><description>Before importing key material, call <a href="https://help.aliyun.com/document_detail/68621.html">GetParametersForImport</a> to obtain the parameters required for the import, including the public key and import token.<remarks>
         /// <list type="bullet">
-        /// <item><description>The key type of the pair is <b>Aliyun_AES_256</b> the key material must be 256 bits. The key type must be <b>Aliyun_SM4</b> the CMK and key material must be 128 bits.</description></item>
-        /// <item><description>You can set the expiration time for the key material, or you can set it to never expire.</description></item>
-        /// <item><description>You can reimport the key material and reset the expiration time for the specified CMK at any time, but the same key material must be imported.</description></item>
-        /// <item><description>After the imported key material expires or is deleted, the specified CMK is unavailable until the same key material are imported again.</description></item>
-        /// <item><description>A Key material can be imported to multiple cmks, but any Data or Data Key encrypted by one CMK cannot be decrypted by another CMK.</description></item>
+        /// <item><description><para>For a CMK of type <b>Aliyun_AES_256</b>, the key material must be 256 bits. For a CMK of type <b>Aliyun_SM4</b>, the key material must be 128 bits.</para>
+        /// </description></item>
+        /// <item><description><para>You can set the expiration time for the key material, or you can set it to never expire.</para>
+        /// </description></item>
+        /// <item><description><para>You can reimport the key material and reset the expiration time for the specified CMK at any time, but the same key material must be imported.</para>
+        /// </description></item>
+        /// <item><description><para>After the imported key material expires or is deleted, the specified CMK becomes unavailable until the same key material is imported again.</para>
+        /// </description></item>
+        /// <item><description><para>The same key material can be imported into multiple CMKs, but data or data keys encrypted by one CMK cannot be decrypted by another CMK.
+        /// For more information about the access policy required for a RAM user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// </description></item>
@@ -9518,6 +9757,11 @@ namespace AlibabaCloud.SDK.Kms20160120
         /// <summary>
         /// <para>Queries all aliases in the current region for the current account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAliasesRequest
@@ -9565,6 +9809,11 @@ namespace AlibabaCloud.SDK.Kms20160120
         /// <para>Queries all aliases in the current region for the current account.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListAliasesRequest
         /// </param>
@@ -9611,6 +9860,11 @@ namespace AlibabaCloud.SDK.Kms20160120
         /// <para>Queries all aliases in the current region for the current account.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListAliasesRequest
         /// </param>
@@ -9629,6 +9883,11 @@ namespace AlibabaCloud.SDK.Kms20160120
         /// <para>Queries all aliases in the current region for the current account.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListAliasesRequest
         /// </param>
@@ -9642,6 +9901,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return await ListAliasesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all aliases that are bound to a key.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListAliasesByKeyIdRequest
         /// </param>
@@ -9687,6 +9951,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<ListAliasesByKeyIdResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all aliases that are bound to a key.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListAliasesByKeyIdRequest
         /// </param>
@@ -9732,6 +10001,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<ListAliasesByKeyIdResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all aliases that are bound to a key.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListAliasesByKeyIdRequest
         /// </param>
@@ -9745,6 +10019,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return ListAliasesByKeyIdWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all aliases that are bound to a key.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListAliasesByKeyIdRequest
         /// </param>
@@ -9760,8 +10039,13 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of application access points (AAPs).</para>
+        /// <para>Queries all application access points (AAPs) in the current region.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListApplicationAccessPointsRequest
@@ -9806,8 +10090,13 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of application access points (AAPs).</para>
+        /// <para>Queries all application access points (AAPs) in the current region.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListApplicationAccessPointsRequest
@@ -9852,8 +10141,13 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of application access points (AAPs).</para>
+        /// <para>Queries all application access points (AAPs) in the current region.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListApplicationAccessPointsRequest
@@ -9870,8 +10164,13 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of application access points (AAPs).</para>
+        /// <para>Queries all application access points (AAPs) in the current region.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListApplicationAccessPointsRequest
@@ -9886,6 +10185,16 @@ namespace AlibabaCloud.SDK.Kms20160120
             return await ListApplicationAccessPointsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all client keys within an AAP.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListClientKeysRequest
         /// </param>
@@ -9919,6 +10228,16 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<ListClientKeysResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all client keys within an AAP.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListClientKeysRequest
         /// </param>
@@ -9952,6 +10271,16 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<ListClientKeysResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all client keys within an AAP.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListClientKeysRequest
         /// </param>
@@ -9965,6 +10294,16 @@ namespace AlibabaCloud.SDK.Kms20160120
             return ListClientKeysWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all client keys within an AAP.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListClientKeysRequest
         /// </param>
@@ -9982,6 +10321,11 @@ namespace AlibabaCloud.SDK.Kms20160120
         /// <summary>
         /// <para>Queries all versions of a specified CMK.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListKeyVersionsRequest
@@ -10033,6 +10377,11 @@ namespace AlibabaCloud.SDK.Kms20160120
         /// <para>Queries all versions of a specified CMK.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListKeyVersionsRequest
         /// </param>
@@ -10083,6 +10432,11 @@ namespace AlibabaCloud.SDK.Kms20160120
         /// <para>Queries all versions of a specified CMK.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListKeyVersionsRequest
         /// </param>
@@ -10101,6 +10455,11 @@ namespace AlibabaCloud.SDK.Kms20160120
         /// <para>Queries all versions of a specified CMK.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListKeyVersionsRequest
         /// </param>
@@ -10116,8 +10475,13 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all customer master keys (CMKs) of the current Alibaba Cloud account in the current region.</para>
+        /// <para>Queries the IDs and ARNs of all CMKs in the current region.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListKeysRequest
@@ -10166,8 +10530,13 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all customer master keys (CMKs) of the current Alibaba Cloud account in the current region.</para>
+        /// <para>Queries the IDs and ARNs of all CMKs in the current region.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListKeysRequest
@@ -10216,8 +10585,13 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all customer master keys (CMKs) of the current Alibaba Cloud account in the current region.</para>
+        /// <para>Queries the IDs and ARNs of all CMKs in the current region.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListKeysRequest
@@ -10234,8 +10608,13 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all customer master keys (CMKs) of the current Alibaba Cloud account in the current region.</para>
+        /// <para>Queries the IDs and ARNs of all CMKs in the current region.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListKeysRequest
@@ -10252,8 +10631,13 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of Key Management Service (KMS) instances.</para>
+        /// <para>Queries all KMS instances in the current region.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about the access policy required for a RAM user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListKmsInstancesRequest
@@ -10302,8 +10686,13 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of Key Management Service (KMS) instances.</para>
+        /// <para>Queries all KMS instances in the current region.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about the access policy required for a RAM user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListKmsInstancesRequest
@@ -10352,8 +10741,13 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of Key Management Service (KMS) instances.</para>
+        /// <para>Queries all KMS instances in the current region.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about the access policy required for a RAM user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListKmsInstancesRequest
@@ -10370,8 +10764,13 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of Key Management Service (KMS) instances.</para>
+        /// <para>Queries all KMS instances in the current region.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about the access policy required for a RAM user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListKmsInstancesRequest
@@ -10388,8 +10787,13 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of access control rules.</para>
+        /// <para>Queries all network access rules in the current region.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListNetworkRulesRequest
@@ -10434,8 +10838,13 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of access control rules.</para>
+        /// <para>Queries all network access rules in the current region.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListNetworkRulesRequest
@@ -10480,8 +10889,13 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of access control rules.</para>
+        /// <para>Queries all network access rules in the current region.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListNetworkRulesRequest
@@ -10498,8 +10912,13 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of access control rules.</para>
+        /// <para>Queries all network access rules in the current region.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListNetworkRulesRequest
@@ -10516,8 +10935,13 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of permission policies.</para>
+        /// <para>Queries all permission policies in the current region.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListPoliciesRequest
@@ -10562,8 +10986,13 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of permission policies.</para>
+        /// <para>Queries all permission policies in the current region.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListPoliciesRequest
@@ -10608,8 +11037,13 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of permission policies.</para>
+        /// <para>Queries all permission policies in the current region.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListPoliciesRequest
@@ -10626,8 +11060,13 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of permission policies.</para>
+        /// <para>Queries all permission policies in the current region.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListPoliciesRequest
@@ -10642,6 +11081,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return await ListPoliciesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tags of a customer master key (CMK).</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Request format: KeyId=&quot;string&quot;</para>
@@ -10684,6 +11128,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<ListResourceTagsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tags of a customer master key (CMK).</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Request format: KeyId=&quot;string&quot;</para>
@@ -10726,6 +11175,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<ListResourceTagsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tags of a customer master key (CMK).</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Request format: KeyId=&quot;string&quot;</para>
@@ -10744,6 +11198,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return ListResourceTagsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tags of a customer master key (CMK).</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Request format: KeyId=&quot;string&quot;</para>
@@ -10762,9 +11221,17 @@ namespace AlibabaCloud.SDK.Kms20160120
             return await ListResourceTagsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all version IDs and stage labels of a specified secret.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The secret value is not included in the returned version information. By default, deprecated secret versions are not returned.</para>
+        /// <list type="bullet">
+        /// <item><description>For more information about the access policy required for a RAM user or RAM role to call this OpenAPI, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>The version information does not include the secret value. By default, this operation returns only the secret versions that are marked with a version stage.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -10816,9 +11283,17 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<ListSecretVersionIdsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all version IDs and stage labels of a specified secret.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The secret value is not included in the returned version information. By default, deprecated secret versions are not returned.</para>
+        /// <list type="bullet">
+        /// <item><description>For more information about the access policy required for a RAM user or RAM role to call this OpenAPI, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>The version information does not include the secret value. By default, this operation returns only the secret versions that are marked with a version stage.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -10870,9 +11345,17 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<ListSecretVersionIdsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all version IDs and stage labels of a specified secret.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The secret value is not included in the returned version information. By default, deprecated secret versions are not returned.</para>
+        /// <list type="bullet">
+        /// <item><description>For more information about the access policy required for a RAM user or RAM role to call this OpenAPI, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>The version information does not include the secret value. By default, this operation returns only the secret versions that are marked with a version stage.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -10888,9 +11371,17 @@ namespace AlibabaCloud.SDK.Kms20160120
             return ListSecretVersionIdsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all version IDs and stage labels of a specified secret.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The secret value is not included in the returned version information. By default, deprecated secret versions are not returned.</para>
+        /// <list type="bullet">
+        /// <item><description>For more information about the access policy required for a RAM user or RAM role to call this OpenAPI, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>The version information does not include the secret value. By default, this operation returns only the secret versions that are marked with a version stage.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -10906,12 +11397,17 @@ namespace AlibabaCloud.SDK.Kms20160120
             return await ListSecretVersionIdsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all secrets in the current region.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Specifies whether to return the resource tags of the secret. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: returns the resource tags.</description></item>
-        /// <item><description>false: does not return the resource tags. This is the default value.</description></item>
+        /// <item><description>To call this operation, the RAM user or RAM role must be granted the required policy. For more information, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation returns only secret metadata, not the secret values.
+        /// This example shows how to query secrets created by the current user in the current region. <c>PageNumber</c> is set to <c>1</c> and <c>PageSize</c> is set to <c>2</c>, returning metadata for two secrets.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10964,12 +11460,17 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<ListSecretsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all secrets in the current region.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Specifies whether to return the resource tags of the secret. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: returns the resource tags.</description></item>
-        /// <item><description>false: does not return the resource tags. This is the default value.</description></item>
+        /// <item><description>To call this operation, the RAM user or RAM role must be granted the required policy. For more information, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation returns only secret metadata, not the secret values.
+        /// This example shows how to query secrets created by the current user in the current region. <c>PageNumber</c> is set to <c>1</c> and <c>PageSize</c> is set to <c>2</c>, returning metadata for two secrets.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11022,12 +11523,17 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<ListSecretsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all secrets in the current region.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Specifies whether to return the resource tags of the secret. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: returns the resource tags.</description></item>
-        /// <item><description>false: does not return the resource tags. This is the default value.</description></item>
+        /// <item><description>To call this operation, the RAM user or RAM role must be granted the required policy. For more information, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation returns only secret metadata, not the secret values.
+        /// This example shows how to query secrets created by the current user in the current region. <c>PageNumber</c> is set to <c>1</c> and <c>PageSize</c> is set to <c>2</c>, returning metadata for two secrets.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11044,12 +11550,17 @@ namespace AlibabaCloud.SDK.Kms20160120
             return ListSecretsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all secrets in the current region.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Specifies whether to return the resource tags of the secret. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: returns the resource tags.</description></item>
-        /// <item><description>false: does not return the resource tags. This is the default value.</description></item>
+        /// <item><description>To call this operation, the RAM user or RAM role must be granted the required policy. For more information, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation returns only secret metadata, not the secret values.
+        /// This example shows how to query secrets created by the current user in the current region. <c>PageNumber</c> is set to <c>1</c> and <c>PageSize</c> is set to <c>2</c>, returning metadata for two secrets.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11068,8 +11579,13 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags of a key or a secret.</para>
+        /// <para>Lists the tags that are bound to a key or a secret.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about the access policy required for a RAM user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTagResourcesRequest
@@ -11126,8 +11642,13 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags of a key or a secret.</para>
+        /// <para>Lists the tags that are bound to a key or a secret.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about the access policy required for a RAM user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTagResourcesRequest
@@ -11184,8 +11705,13 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags of a key or a secret.</para>
+        /// <para>Lists the tags that are bound to a key or a secret.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about the access policy required for a RAM user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTagResourcesRequest
@@ -11202,8 +11728,13 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags of a key or a secret.</para>
+        /// <para>Lists the tags that are bound to a key or a secret.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about the access policy required for a RAM user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTagResourcesRequest
@@ -11220,22 +11751,19 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Activates Key Management Service (KMS) under your Alibaba cloud account.</para>
+        /// <para>Activates Key Management Service (KMS) for your Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, note that:</para>
         /// <list type="bullet">
-        /// <item><description>KMS is a paid service. For more information about the billing method, see <a href="https://www.alibabacloud.com/help/en/key-management-service/latest/billing-billing">Billing description</a>.</description></item>
-        /// <item><description>An Alibaba Cloud account can activate KMS only once.</description></item>
-        /// <item><description>Make sure that your Alibaba Cloud account has passed real-name authentication.</description></item>
+        /// <item><description>For more information about the access policies that a RAM user or RAM role needs to call this OpenAPI, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>KMS is a paid service. For more information about billing, see <a href="https://help.aliyun.com/document_detail/52608.html">Billing</a>.</description></item>
+        /// <item><description>You can activate the service for an Alibaba Cloud account only once.</description></item>
+        /// <item><description>Make sure that your Alibaba Cloud account has completed real-name verification.</description></item>
         /// </list>
         /// </description>
         /// 
-        /// <param name="request">
-        /// OpenKmsServiceRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -11263,22 +11791,19 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Activates Key Management Service (KMS) under your Alibaba cloud account.</para>
+        /// <para>Activates Key Management Service (KMS) for your Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, note that:</para>
         /// <list type="bullet">
-        /// <item><description>KMS is a paid service. For more information about the billing method, see <a href="https://www.alibabacloud.com/help/en/key-management-service/latest/billing-billing">Billing description</a>.</description></item>
-        /// <item><description>An Alibaba Cloud account can activate KMS only once.</description></item>
-        /// <item><description>Make sure that your Alibaba Cloud account has passed real-name authentication.</description></item>
+        /// <item><description>For more information about the access policies that a RAM user or RAM role needs to call this OpenAPI, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>KMS is a paid service. For more information about billing, see <a href="https://help.aliyun.com/document_detail/52608.html">Billing</a>.</description></item>
+        /// <item><description>You can activate the service for an Alibaba Cloud account only once.</description></item>
+        /// <item><description>Make sure that your Alibaba Cloud account has completed real-name verification.</description></item>
         /// </list>
         /// </description>
         /// 
-        /// <param name="request">
-        /// OpenKmsServiceRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -11306,16 +11831,16 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Activates Key Management Service (KMS) under your Alibaba cloud account.</para>
+        /// <para>Activates Key Management Service (KMS) for your Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, note that:</para>
         /// <list type="bullet">
-        /// <item><description>KMS is a paid service. For more information about the billing method, see <a href="https://www.alibabacloud.com/help/en/key-management-service/latest/billing-billing">Billing description</a>.</description></item>
-        /// <item><description>An Alibaba Cloud account can activate KMS only once.</description></item>
-        /// <item><description>Make sure that your Alibaba Cloud account has passed real-name authentication.</description></item>
+        /// <item><description>For more information about the access policies that a RAM user or RAM role needs to call this OpenAPI, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>KMS is a paid service. For more information about billing, see <a href="https://help.aliyun.com/document_detail/52608.html">Billing</a>.</description></item>
+        /// <item><description>You can activate the service for an Alibaba Cloud account only once.</description></item>
+        /// <item><description>Make sure that your Alibaba Cloud account has completed real-name verification.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11330,16 +11855,16 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Activates Key Management Service (KMS) under your Alibaba cloud account.</para>
+        /// <para>Activates Key Management Service (KMS) for your Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, note that:</para>
         /// <list type="bullet">
-        /// <item><description>KMS is a paid service. For more information about the billing method, see <a href="https://www.alibabacloud.com/help/en/key-management-service/latest/billing-billing">Billing description</a>.</description></item>
-        /// <item><description>An Alibaba Cloud account can activate KMS only once.</description></item>
-        /// <item><description>Make sure that your Alibaba Cloud account has passed real-name authentication.</description></item>
+        /// <item><description>For more information about the access policies that a RAM user or RAM role needs to call this OpenAPI, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>KMS is a paid service. For more information about billing, see <a href="https://help.aliyun.com/document_detail/52608.html">Billing</a>.</description></item>
+        /// <item><description>You can activate the service for an Alibaba Cloud account only once.</description></item>
+        /// <item><description>Make sure that your Alibaba Cloud account has completed real-name verification.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11352,17 +11877,23 @@ namespace AlibabaCloud.SDK.Kms20160120
             return await OpenKmsServiceWithOptionsAsync(runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stores a new version of a secret value for a generic secret.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is used to store the secret values of new versions. It cannot be used to modify the secret value of an existing version.
-        /// By default, the newly stored secret value is marked with ACSCurrent, and the mark for the previous version of the secret value is changed from ACSCurrent to ACSPrevious. If you specify the VersionStage parameter, the newly stored secret value is marked with the stage label that you specify.
-        /// You must specify a version number when you call the operation. Secrets Manager performs operations based on the following rules:</para>
         /// <list type="bullet">
-        /// <item><description>If the specified version number does not exist in the secret, Secrets Manager creates the version and stores the secret value.</description></item>
-        /// <item><description>If the specified version number already exists in the secret and the secret value of the existing version is the same as the secret value that you specify, Secrets Manager ignores the request and returns a success message. The request is idempotent.</description></item>
-        /// <item><description>If the specified version number already exists in the secret but the secret value of the existing version is different from the secret value that you specify, Secrets Manager rejects the request and returns a failure message.
-        /// Limits: This operation is available only for standard secrets.
-        /// In this example, the secret value of a new version is stored into the <c>secret001</c> secret. The <c>VersionId</c> parameter is set to <c>00000000000000000000000000000000203</c> as the new version, and the <c>SecretData</c> parameter is set to <c>importantdata</c>.</description></item>
+        /// <item><description>For information about the access policy required for a RAM user or RAM role to call this OpenAPI operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation supports only generic secrets. Each generic secret can have a maximum of 10 versions. If the number of versions exceeds the limit, KMS deletes the earliest version.</description></item>
+        /// <item><description>By default, the new secret value is marked with ACSCurrent, and the previous version that was marked with ACSCurrent is marked with ACSPrevious. You can specify the VersionStage parameter to overwrite this default behavior.</description></item>
+        /// <item><description>This operation stores a new version of a secret value. You cannot use it to modify an existing version of a secret value. You must specify a version number when you store a new version. KMS processes requests based on the following rules:<list type="bullet">
+        /// <item><description>If the version number does not exist in the secret, KMS creates a new version and stores the secret value.</description></item>
+        /// <item><description>If the version number already exists in the secret, KMS compares the secret value in the request with the stored value. If the values are the same, the request is ignored and a success message is returned. This makes the operation idempotent. If the values are different, the request is rejected.
+        /// This topic provides an example of how to store a new version of a secret value for the secret named <c>secret001</c>. The new version number (<c>VersionId</c>) is <c>v3</c> and the secret value (<c>SecretData</c>) is <c>importantdata</c>.</description></item>
+        /// </list>
+        /// </description></item>
         /// </list>
         /// </description>
         /// 
@@ -11419,17 +11950,23 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<PutSecretValueResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stores a new version of a secret value for a generic secret.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is used to store the secret values of new versions. It cannot be used to modify the secret value of an existing version.
-        /// By default, the newly stored secret value is marked with ACSCurrent, and the mark for the previous version of the secret value is changed from ACSCurrent to ACSPrevious. If you specify the VersionStage parameter, the newly stored secret value is marked with the stage label that you specify.
-        /// You must specify a version number when you call the operation. Secrets Manager performs operations based on the following rules:</para>
         /// <list type="bullet">
-        /// <item><description>If the specified version number does not exist in the secret, Secrets Manager creates the version and stores the secret value.</description></item>
-        /// <item><description>If the specified version number already exists in the secret and the secret value of the existing version is the same as the secret value that you specify, Secrets Manager ignores the request and returns a success message. The request is idempotent.</description></item>
-        /// <item><description>If the specified version number already exists in the secret but the secret value of the existing version is different from the secret value that you specify, Secrets Manager rejects the request and returns a failure message.
-        /// Limits: This operation is available only for standard secrets.
-        /// In this example, the secret value of a new version is stored into the <c>secret001</c> secret. The <c>VersionId</c> parameter is set to <c>00000000000000000000000000000000203</c> as the new version, and the <c>SecretData</c> parameter is set to <c>importantdata</c>.</description></item>
+        /// <item><description>For information about the access policy required for a RAM user or RAM role to call this OpenAPI operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation supports only generic secrets. Each generic secret can have a maximum of 10 versions. If the number of versions exceeds the limit, KMS deletes the earliest version.</description></item>
+        /// <item><description>By default, the new secret value is marked with ACSCurrent, and the previous version that was marked with ACSCurrent is marked with ACSPrevious. You can specify the VersionStage parameter to overwrite this default behavior.</description></item>
+        /// <item><description>This operation stores a new version of a secret value. You cannot use it to modify an existing version of a secret value. You must specify a version number when you store a new version. KMS processes requests based on the following rules:<list type="bullet">
+        /// <item><description>If the version number does not exist in the secret, KMS creates a new version and stores the secret value.</description></item>
+        /// <item><description>If the version number already exists in the secret, KMS compares the secret value in the request with the stored value. If the values are the same, the request is ignored and a success message is returned. This makes the operation idempotent. If the values are different, the request is rejected.
+        /// This topic provides an example of how to store a new version of a secret value for the secret named <c>secret001</c>. The new version number (<c>VersionId</c>) is <c>v3</c> and the secret value (<c>SecretData</c>) is <c>importantdata</c>.</description></item>
+        /// </list>
+        /// </description></item>
         /// </list>
         /// </description>
         /// 
@@ -11486,17 +12023,23 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<PutSecretValueResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stores a new version of a secret value for a generic secret.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is used to store the secret values of new versions. It cannot be used to modify the secret value of an existing version.
-        /// By default, the newly stored secret value is marked with ACSCurrent, and the mark for the previous version of the secret value is changed from ACSCurrent to ACSPrevious. If you specify the VersionStage parameter, the newly stored secret value is marked with the stage label that you specify.
-        /// You must specify a version number when you call the operation. Secrets Manager performs operations based on the following rules:</para>
         /// <list type="bullet">
-        /// <item><description>If the specified version number does not exist in the secret, Secrets Manager creates the version and stores the secret value.</description></item>
-        /// <item><description>If the specified version number already exists in the secret and the secret value of the existing version is the same as the secret value that you specify, Secrets Manager ignores the request and returns a success message. The request is idempotent.</description></item>
-        /// <item><description>If the specified version number already exists in the secret but the secret value of the existing version is different from the secret value that you specify, Secrets Manager rejects the request and returns a failure message.
-        /// Limits: This operation is available only for standard secrets.
-        /// In this example, the secret value of a new version is stored into the <c>secret001</c> secret. The <c>VersionId</c> parameter is set to <c>00000000000000000000000000000000203</c> as the new version, and the <c>SecretData</c> parameter is set to <c>importantdata</c>.</description></item>
+        /// <item><description>For information about the access policy required for a RAM user or RAM role to call this OpenAPI operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation supports only generic secrets. Each generic secret can have a maximum of 10 versions. If the number of versions exceeds the limit, KMS deletes the earliest version.</description></item>
+        /// <item><description>By default, the new secret value is marked with ACSCurrent, and the previous version that was marked with ACSCurrent is marked with ACSPrevious. You can specify the VersionStage parameter to overwrite this default behavior.</description></item>
+        /// <item><description>This operation stores a new version of a secret value. You cannot use it to modify an existing version of a secret value. You must specify a version number when you store a new version. KMS processes requests based on the following rules:<list type="bullet">
+        /// <item><description>If the version number does not exist in the secret, KMS creates a new version and stores the secret value.</description></item>
+        /// <item><description>If the version number already exists in the secret, KMS compares the secret value in the request with the stored value. If the values are the same, the request is ignored and a success message is returned. This makes the operation idempotent. If the values are different, the request is rejected.
+        /// This topic provides an example of how to store a new version of a secret value for the secret named <c>secret001</c>. The new version number (<c>VersionId</c>) is <c>v3</c> and the secret value (<c>SecretData</c>) is <c>importantdata</c>.</description></item>
+        /// </list>
+        /// </description></item>
         /// </list>
         /// </description>
         /// 
@@ -11513,17 +12056,23 @@ namespace AlibabaCloud.SDK.Kms20160120
             return PutSecretValueWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stores a new version of a secret value for a generic secret.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is used to store the secret values of new versions. It cannot be used to modify the secret value of an existing version.
-        /// By default, the newly stored secret value is marked with ACSCurrent, and the mark for the previous version of the secret value is changed from ACSCurrent to ACSPrevious. If you specify the VersionStage parameter, the newly stored secret value is marked with the stage label that you specify.
-        /// You must specify a version number when you call the operation. Secrets Manager performs operations based on the following rules:</para>
         /// <list type="bullet">
-        /// <item><description>If the specified version number does not exist in the secret, Secrets Manager creates the version and stores the secret value.</description></item>
-        /// <item><description>If the specified version number already exists in the secret and the secret value of the existing version is the same as the secret value that you specify, Secrets Manager ignores the request and returns a success message. The request is idempotent.</description></item>
-        /// <item><description>If the specified version number already exists in the secret but the secret value of the existing version is different from the secret value that you specify, Secrets Manager rejects the request and returns a failure message.
-        /// Limits: This operation is available only for standard secrets.
-        /// In this example, the secret value of a new version is stored into the <c>secret001</c> secret. The <c>VersionId</c> parameter is set to <c>00000000000000000000000000000000203</c> as the new version, and the <c>SecretData</c> parameter is set to <c>importantdata</c>.</description></item>
+        /// <item><description>For information about the access policy required for a RAM user or RAM role to call this OpenAPI operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation supports only generic secrets. Each generic secret can have a maximum of 10 versions. If the number of versions exceeds the limit, KMS deletes the earliest version.</description></item>
+        /// <item><description>By default, the new secret value is marked with ACSCurrent, and the previous version that was marked with ACSCurrent is marked with ACSPrevious. You can specify the VersionStage parameter to overwrite this default behavior.</description></item>
+        /// <item><description>This operation stores a new version of a secret value. You cannot use it to modify an existing version of a secret value. You must specify a version number when you store a new version. KMS processes requests based on the following rules:<list type="bullet">
+        /// <item><description>If the version number does not exist in the secret, KMS creates a new version and stores the secret value.</description></item>
+        /// <item><description>If the version number already exists in the secret, KMS compares the secret value in the request with the stored value. If the values are the same, the request is ignored and a success message is returned. This makes the operation idempotent. If the values are different, the request is rejected.
+        /// This topic provides an example of how to store a new version of a secret value for the secret named <c>secret001</c>. The new version number (<c>VersionId</c>) is <c>v3</c> and the secret value (<c>SecretData</c>) is <c>importantdata</c>.</description></item>
+        /// </list>
+        /// </description></item>
         /// </list>
         /// </description>
         /// 
@@ -11540,17 +12089,31 @@ namespace AlibabaCloud.SDK.Kms20160120
             return await PutSecretValueWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Re-encrypts ciphertext under a different CMK without exposing the plaintext.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation in the following scenarios:</para>
+        /// <h3>Notes</h3>
         /// <list type="bullet">
-        /// <item><description>After the CMK that was used to encrypt your data is rotated, you can call this operation to use the latest CMK version to re-encrypt the data. For more information about automatic key rotation, see <a href="https://help.aliyun.com/document_detail/134270.html">Configure automatic key rotation</a>.</description></item>
-        /// <item><description>The CMK that was used to encrypt your data remains unchanged, but EncryptionContext is changed. In this scenario, you can call this operation to re-encrypt the data.</description></item>
-        /// <item><description>You can call this operation to use a CMK in KMS to re-encrypt data or a data key that was previously encrypted by a different CMK.
-        /// To use the ReEncrypt operation, you must have two permissions:</description></item>
-        /// <item><description>kms:ReEncryptFrom on the source CMK</description></item>
-        /// <item><description>kms:ReEncryptTo on the destination CMK</description></item>
-        /// <item><description>For simplicity, you can specify kms:ReEncrypt\* to allow both of the preceding permissions.</description></item>
+        /// <item><description>For more information about the access policy required to grant a RAM user or RAM role the permission to use this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation is accessible only through a shared gateway, not a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.
+        /// When using a shared gateway, you access KMS through an Internet or a VPC domain name. This method requires Internet access to be enabled. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
+        /// </list>
+        /// <h3>QPS limits</h3>
+        /// <para>This operation is accessible only through a shared gateway. The single-user queries per second (QPS) limit is 750. If this limit is exceeded, requests are throttled, which may affect your business. We recommend that you stay within the specified limit.</para>
+        /// <h3>Details</h3>
+        /// <para>You can use the ReEncrypt operation in the following scenarios:</para>
+        /// <list type="bullet">
+        /// <item><description>After a customer master key (CMK) is rotated, you can use the latest key version to re-encrypt data. For more information about automatic key rotation, see <a href="https://help.aliyun.com/document_detail/134270.html">Automatic key rotation</a>.</description></item>
+        /// <item><description>You can re-encrypt data by changing the encryption context without changing the master key.</description></item>
+        /// <item><description>You can re-encrypt data or a data key that is encrypted by one master key with another master key in KMS.
+        /// The ReEncrypt operation requires the following permissions:</description></item>
+        /// <item><description>The kms:ReEncryptFrom permission for the source master key.</description></item>
+        /// <item><description>The kms:ReEncryptTo permission for the destination master key.</description></item>
+        /// <item><description>You can use kms:ReEncrypt\* to grant both permissions.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11629,17 +12192,31 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<ReEncryptResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Re-encrypts ciphertext under a different CMK without exposing the plaintext.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation in the following scenarios:</para>
+        /// <h3>Notes</h3>
         /// <list type="bullet">
-        /// <item><description>After the CMK that was used to encrypt your data is rotated, you can call this operation to use the latest CMK version to re-encrypt the data. For more information about automatic key rotation, see <a href="https://help.aliyun.com/document_detail/134270.html">Configure automatic key rotation</a>.</description></item>
-        /// <item><description>The CMK that was used to encrypt your data remains unchanged, but EncryptionContext is changed. In this scenario, you can call this operation to re-encrypt the data.</description></item>
-        /// <item><description>You can call this operation to use a CMK in KMS to re-encrypt data or a data key that was previously encrypted by a different CMK.
-        /// To use the ReEncrypt operation, you must have two permissions:</description></item>
-        /// <item><description>kms:ReEncryptFrom on the source CMK</description></item>
-        /// <item><description>kms:ReEncryptTo on the destination CMK</description></item>
-        /// <item><description>For simplicity, you can specify kms:ReEncrypt\* to allow both of the preceding permissions.</description></item>
+        /// <item><description>For more information about the access policy required to grant a RAM user or RAM role the permission to use this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation is accessible only through a shared gateway, not a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.
+        /// When using a shared gateway, you access KMS through an Internet or a VPC domain name. This method requires Internet access to be enabled. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
+        /// </list>
+        /// <h3>QPS limits</h3>
+        /// <para>This operation is accessible only through a shared gateway. The single-user queries per second (QPS) limit is 750. If this limit is exceeded, requests are throttled, which may affect your business. We recommend that you stay within the specified limit.</para>
+        /// <h3>Details</h3>
+        /// <para>You can use the ReEncrypt operation in the following scenarios:</para>
+        /// <list type="bullet">
+        /// <item><description>After a customer master key (CMK) is rotated, you can use the latest key version to re-encrypt data. For more information about automatic key rotation, see <a href="https://help.aliyun.com/document_detail/134270.html">Automatic key rotation</a>.</description></item>
+        /// <item><description>You can re-encrypt data by changing the encryption context without changing the master key.</description></item>
+        /// <item><description>You can re-encrypt data or a data key that is encrypted by one master key with another master key in KMS.
+        /// The ReEncrypt operation requires the following permissions:</description></item>
+        /// <item><description>The kms:ReEncryptFrom permission for the source master key.</description></item>
+        /// <item><description>The kms:ReEncryptTo permission for the destination master key.</description></item>
+        /// <item><description>You can use kms:ReEncrypt\* to grant both permissions.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11718,17 +12295,31 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<ReEncryptResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Re-encrypts ciphertext under a different CMK without exposing the plaintext.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation in the following scenarios:</para>
+        /// <h3>Notes</h3>
         /// <list type="bullet">
-        /// <item><description>After the CMK that was used to encrypt your data is rotated, you can call this operation to use the latest CMK version to re-encrypt the data. For more information about automatic key rotation, see <a href="https://help.aliyun.com/document_detail/134270.html">Configure automatic key rotation</a>.</description></item>
-        /// <item><description>The CMK that was used to encrypt your data remains unchanged, but EncryptionContext is changed. In this scenario, you can call this operation to re-encrypt the data.</description></item>
-        /// <item><description>You can call this operation to use a CMK in KMS to re-encrypt data or a data key that was previously encrypted by a different CMK.
-        /// To use the ReEncrypt operation, you must have two permissions:</description></item>
-        /// <item><description>kms:ReEncryptFrom on the source CMK</description></item>
-        /// <item><description>kms:ReEncryptTo on the destination CMK</description></item>
-        /// <item><description>For simplicity, you can specify kms:ReEncrypt\* to allow both of the preceding permissions.</description></item>
+        /// <item><description>For more information about the access policy required to grant a RAM user or RAM role the permission to use this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation is accessible only through a shared gateway, not a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.
+        /// When using a shared gateway, you access KMS through an Internet or a VPC domain name. This method requires Internet access to be enabled. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
+        /// </list>
+        /// <h3>QPS limits</h3>
+        /// <para>This operation is accessible only through a shared gateway. The single-user queries per second (QPS) limit is 750. If this limit is exceeded, requests are throttled, which may affect your business. We recommend that you stay within the specified limit.</para>
+        /// <h3>Details</h3>
+        /// <para>You can use the ReEncrypt operation in the following scenarios:</para>
+        /// <list type="bullet">
+        /// <item><description>After a customer master key (CMK) is rotated, you can use the latest key version to re-encrypt data. For more information about automatic key rotation, see <a href="https://help.aliyun.com/document_detail/134270.html">Automatic key rotation</a>.</description></item>
+        /// <item><description>You can re-encrypt data by changing the encryption context without changing the master key.</description></item>
+        /// <item><description>You can re-encrypt data or a data key that is encrypted by one master key with another master key in KMS.
+        /// The ReEncrypt operation requires the following permissions:</description></item>
+        /// <item><description>The kms:ReEncryptFrom permission for the source master key.</description></item>
+        /// <item><description>The kms:ReEncryptTo permission for the destination master key.</description></item>
+        /// <item><description>You can use kms:ReEncrypt\* to grant both permissions.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11745,17 +12336,31 @@ namespace AlibabaCloud.SDK.Kms20160120
             return ReEncryptWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Re-encrypts ciphertext under a different CMK without exposing the plaintext.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation in the following scenarios:</para>
+        /// <h3>Notes</h3>
         /// <list type="bullet">
-        /// <item><description>After the CMK that was used to encrypt your data is rotated, you can call this operation to use the latest CMK version to re-encrypt the data. For more information about automatic key rotation, see <a href="https://help.aliyun.com/document_detail/134270.html">Configure automatic key rotation</a>.</description></item>
-        /// <item><description>The CMK that was used to encrypt your data remains unchanged, but EncryptionContext is changed. In this scenario, you can call this operation to re-encrypt the data.</description></item>
-        /// <item><description>You can call this operation to use a CMK in KMS to re-encrypt data or a data key that was previously encrypted by a different CMK.
-        /// To use the ReEncrypt operation, you must have two permissions:</description></item>
-        /// <item><description>kms:ReEncryptFrom on the source CMK</description></item>
-        /// <item><description>kms:ReEncryptTo on the destination CMK</description></item>
-        /// <item><description>For simplicity, you can specify kms:ReEncrypt\* to allow both of the preceding permissions.</description></item>
+        /// <item><description>For more information about the access policy required to grant a RAM user or RAM role the permission to use this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation is accessible only through a shared gateway, not a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.
+        /// When using a shared gateway, you access KMS through an Internet or a VPC domain name. This method requires Internet access to be enabled. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
+        /// </list>
+        /// <h3>QPS limits</h3>
+        /// <para>This operation is accessible only through a shared gateway. The single-user queries per second (QPS) limit is 750. If this limit is exceeded, requests are throttled, which may affect your business. We recommend that you stay within the specified limit.</para>
+        /// <h3>Details</h3>
+        /// <para>You can use the ReEncrypt operation in the following scenarios:</para>
+        /// <list type="bullet">
+        /// <item><description>After a customer master key (CMK) is rotated, you can use the latest key version to re-encrypt data. For more information about automatic key rotation, see <a href="https://help.aliyun.com/document_detail/134270.html">Automatic key rotation</a>.</description></item>
+        /// <item><description>You can re-encrypt data by changing the encryption context without changing the master key.</description></item>
+        /// <item><description>You can re-encrypt data or a data key that is encrypted by one master key with another master key in KMS.
+        /// The ReEncrypt operation requires the following permissions:</description></item>
+        /// <item><description>The kms:ReEncryptFrom permission for the source master key.</description></item>
+        /// <item><description>The kms:ReEncryptTo permission for the destination master key.</description></item>
+        /// <item><description>You can use kms:ReEncrypt\* to grant both permissions.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11774,8 +12379,20 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>仅后付费实例支持释放，预付费实例需要从用户中心-退订管理释放。</para>
+        /// <para>Releases a pay-as-you-go KMS instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy that is required to allow a RAM user or RAM role to call this OpenAPI operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>Subscription instances cannot be manually released. You can only unsubscribe from them under specific conditions. To unsubscribe, go to the Expenses and Costs page in the console and choose Unsubscribe. For more information, see <a href="https://help.aliyun.com/document_detail/600418.html">Unsubscription policy</a>.</description></item>
+        /// <item><description>After you release an instance, all resources in the instance are also released. Resources that are encrypted using keys in the instance cannot be decrypted, and credentials cannot be retrieved. Before you release an instance, make sure that no data is encrypted by the keys in the instance and no services call the credentials. This prevents service interruptions.</description></item>
+        /// <item><description>If your instance is a software key management instance, we recommend that you back up the resources of the instance before you release it. The backed-up resources can be recovered. For more information, see <a href="https://help.aliyun.com/document_detail/2357488.html">Backup management</a>.</description></item>
+        /// <item><description>The billing epoch is daily. Therefore, after you release a pay-as-you-go instance, the bill for the previous day is pushed before 12:00 on the next day.</description></item>
+        /// <item><description>Before you release a KMS instance, we recommend that you check whether deletion protection is enabled for the instance in the console. If deletion protection is enabled, disable it in the console before you release the instance. For more information, see <a href="https://help.aliyun.com/document_detail/604735.html">Manage a KMS instance</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ReleaseKmsInstanceRequest
@@ -11820,8 +12437,20 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>仅后付费实例支持释放，预付费实例需要从用户中心-退订管理释放。</para>
+        /// <para>Releases a pay-as-you-go KMS instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy that is required to allow a RAM user or RAM role to call this OpenAPI operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>Subscription instances cannot be manually released. You can only unsubscribe from them under specific conditions. To unsubscribe, go to the Expenses and Costs page in the console and choose Unsubscribe. For more information, see <a href="https://help.aliyun.com/document_detail/600418.html">Unsubscription policy</a>.</description></item>
+        /// <item><description>After you release an instance, all resources in the instance are also released. Resources that are encrypted using keys in the instance cannot be decrypted, and credentials cannot be retrieved. Before you release an instance, make sure that no data is encrypted by the keys in the instance and no services call the credentials. This prevents service interruptions.</description></item>
+        /// <item><description>If your instance is a software key management instance, we recommend that you back up the resources of the instance before you release it. The backed-up resources can be recovered. For more information, see <a href="https://help.aliyun.com/document_detail/2357488.html">Backup management</a>.</description></item>
+        /// <item><description>The billing epoch is daily. Therefore, after you release a pay-as-you-go instance, the bill for the previous day is pushed before 12:00 on the next day.</description></item>
+        /// <item><description>Before you release a KMS instance, we recommend that you check whether deletion protection is enabled for the instance in the console. If deletion protection is enabled, disable it in the console before you release the instance. For more information, see <a href="https://help.aliyun.com/document_detail/604735.html">Manage a KMS instance</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ReleaseKmsInstanceRequest
@@ -11866,8 +12495,20 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>仅后付费实例支持释放，预付费实例需要从用户中心-退订管理释放。</para>
+        /// <para>Releases a pay-as-you-go KMS instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy that is required to allow a RAM user or RAM role to call this OpenAPI operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>Subscription instances cannot be manually released. You can only unsubscribe from them under specific conditions. To unsubscribe, go to the Expenses and Costs page in the console and choose Unsubscribe. For more information, see <a href="https://help.aliyun.com/document_detail/600418.html">Unsubscription policy</a>.</description></item>
+        /// <item><description>After you release an instance, all resources in the instance are also released. Resources that are encrypted using keys in the instance cannot be decrypted, and credentials cannot be retrieved. Before you release an instance, make sure that no data is encrypted by the keys in the instance and no services call the credentials. This prevents service interruptions.</description></item>
+        /// <item><description>If your instance is a software key management instance, we recommend that you back up the resources of the instance before you release it. The backed-up resources can be recovered. For more information, see <a href="https://help.aliyun.com/document_detail/2357488.html">Backup management</a>.</description></item>
+        /// <item><description>The billing epoch is daily. Therefore, after you release a pay-as-you-go instance, the bill for the previous day is pushed before 12:00 on the next day.</description></item>
+        /// <item><description>Before you release a KMS instance, we recommend that you check whether deletion protection is enabled for the instance in the console. If deletion protection is enabled, disable it in the console before you release the instance. For more information, see <a href="https://help.aliyun.com/document_detail/604735.html">Manage a KMS instance</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ReleaseKmsInstanceRequest
@@ -11884,8 +12525,20 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>仅后付费实例支持释放，预付费实例需要从用户中心-退订管理释放。</para>
+        /// <para>Releases a pay-as-you-go KMS instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy that is required to allow a RAM user or RAM role to call this OpenAPI operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>Subscription instances cannot be manually released. You can only unsubscribe from them under specific conditions. To unsubscribe, go to the Expenses and Costs page in the console and choose Unsubscribe. For more information, see <a href="https://help.aliyun.com/document_detail/600418.html">Unsubscription policy</a>.</description></item>
+        /// <item><description>After you release an instance, all resources in the instance are also released. Resources that are encrypted using keys in the instance cannot be decrypted, and credentials cannot be retrieved. Before you release an instance, make sure that no data is encrypted by the keys in the instance and no services call the credentials. This prevents service interruptions.</description></item>
+        /// <item><description>If your instance is a software key management instance, we recommend that you back up the resources of the instance before you release it. The backed-up resources can be recovered. For more information, see <a href="https://help.aliyun.com/document_detail/2357488.html">Backup management</a>.</description></item>
+        /// <item><description>The billing epoch is daily. Therefore, after you release a pay-as-you-go instance, the bill for the previous day is pushed before 12:00 on the next day.</description></item>
+        /// <item><description>Before you release a KMS instance, we recommend that you check whether deletion protection is enabled for the instance in the console. If deletion protection is enabled, disable it in the console before you release the instance. For more information, see <a href="https://help.aliyun.com/document_detail/604735.html">Manage a KMS instance</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ReleaseKmsInstanceRequest
@@ -11900,6 +12553,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return await ReleaseKmsInstanceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restores a deleted secret.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can only use this operation to restore a deleted secret that is within its recovery period. If you set <b>ForceDeleteWithoutRecovery</b> to <b>true</b> when you delete the secret, you cannot restore it.</para>
@@ -11942,6 +12600,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<RestoreSecretResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restores a deleted secret.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can only use this operation to restore a deleted secret that is within its recovery period. If you set <b>ForceDeleteWithoutRecovery</b> to <b>true</b> when you delete the secret, you cannot restore it.</para>
@@ -11984,6 +12647,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<RestoreSecretResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restores a deleted secret.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can only use this operation to restore a deleted secret that is within its recovery period. If you set <b>ForceDeleteWithoutRecovery</b> to <b>true</b> when you delete the secret, you cannot restore it.</para>
@@ -12002,6 +12670,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return RestoreSecretWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restores a deleted secret.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can only use this operation to restore a deleted secret that is within its recovery period. If you set <b>ForceDeleteWithoutRecovery</b> to <b>true</b> when you delete the secret, you cannot restore it.</para>
@@ -12020,12 +12693,18 @@ namespace AlibabaCloud.SDK.Kms20160120
             return await RestoreSecretWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Immediately rotates a secret.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Limits:
         /// • A secret of each Alibaba Cloud account can be rotated for a maximum of 50 times per hour.
         /// • The RotateSecret operation is unavailable for standard secrets.
-        /// In this example, the <c>RdsSecret/Mysql5.4/MyCred</c> secret is manually rotated, and the version number of the secret is set to <c>000000123</c> after the secret is rotated.</para>
+        /// In this example, the <c>RdsSecret/Mysql5.4/MyCred</c> secret is manually rotated, and the version number of the secret is set to <c>000000123</c> after the secret is rotated.
+        /// For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12069,12 +12748,18 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<RotateSecretResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Immediately rotates a secret.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Limits:
         /// • A secret of each Alibaba Cloud account can be rotated for a maximum of 50 times per hour.
         /// • The RotateSecret operation is unavailable for standard secrets.
-        /// In this example, the <c>RdsSecret/Mysql5.4/MyCred</c> secret is manually rotated, and the version number of the secret is set to <c>000000123</c> after the secret is rotated.</para>
+        /// In this example, the <c>RdsSecret/Mysql5.4/MyCred</c> secret is manually rotated, and the version number of the secret is set to <c>000000123</c> after the secret is rotated.
+        /// For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12118,12 +12803,18 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<RotateSecretResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Immediately rotates a secret.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Limits:
         /// • A secret of each Alibaba Cloud account can be rotated for a maximum of 50 times per hour.
         /// • The RotateSecret operation is unavailable for standard secrets.
-        /// In this example, the <c>RdsSecret/Mysql5.4/MyCred</c> secret is manually rotated, and the version number of the secret is set to <c>000000123</c> after the secret is rotated.</para>
+        /// In this example, the <c>RdsSecret/Mysql5.4/MyCred</c> secret is manually rotated, and the version number of the secret is set to <c>000000123</c> after the secret is rotated.
+        /// For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12139,12 +12830,18 @@ namespace AlibabaCloud.SDK.Kms20160120
             return RotateSecretWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Immediately rotates a secret.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Limits:
         /// • A secret of each Alibaba Cloud account can be rotated for a maximum of 50 times per hour.
         /// • The RotateSecret operation is unavailable for standard secrets.
-        /// In this example, the <c>RdsSecret/Mysql5.4/MyCred</c> secret is manually rotated, and the version number of the secret is set to <c>000000123</c> after the secret is rotated.</para>
+        /// In this example, the <c>RdsSecret/Mysql5.4/MyCred</c> secret is manually rotated, and the version number of the secret is set to <c>000000123</c> after the secret is rotated.
+        /// For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12160,6 +12857,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return await RotateSecretWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified customer master key (CMK).</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>During the scheduled period, the CMK is in the PendingDeletion state and cannot be used to encrypt data, decrypt data, or generate data keys.
@@ -12208,6 +12910,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<ScheduleKeyDeletionResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified customer master key (CMK).</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>During the scheduled period, the CMK is in the PendingDeletion state and cannot be used to encrypt data, decrypt data, or generate data keys.
@@ -12256,6 +12963,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<ScheduleKeyDeletionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified customer master key (CMK).</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>During the scheduled period, the CMK is in the PendingDeletion state and cannot be used to encrypt data, decrypt data, or generate data keys.
@@ -12276,6 +12988,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return ScheduleKeyDeletionWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified customer master key (CMK).</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>During the scheduled period, the CMK is in the PendingDeletion state and cannot be used to encrypt data, decrypt data, or generate data keys.
@@ -12303,10 +13020,10 @@ namespace AlibabaCloud.SDK.Kms20160120
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  After you enable deletion protection for a CMK, you cannot delete the CMK. If you want to delete the CMK, you must first disable deletion protection for the CMK.</para>
         /// <list type="bullet">
-        /// <item><description>Before you can call the SetDeletionProtection operation, make sure that the required CMK is not in the Pending Deletion state. You can call the <a href="https://help.aliyun.com/document_detail/28952.html">DescribeKey</a> operation to query the CMK status, which is specified by the KeyState parameter.
-        /// You can enable deletion protection for the CMK whose Alibaba Cloud Resource Name (ARN) is <c>acs:kms:cn-hangzhou:123213123****:key/0225f411-b21d-46d1-be5b-93931c82****</c> by using parameter settings provided in this topic. The CMK ARN is specified by the ProtectedResourceArn parameter.</description></item>
+        /// <item><description>For more information about the access policy required for a RAM user or RAM role to call this API operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>After you enable deletion protection for a CMK, you cannot delete it. To delete the CMK, you must first disable deletion protection.</description></item>
+        /// <item><description>Before you call the SetDeletionProtection operation, ensure that the CMK is not in the PendingDeletion state. You can call the <a href="https://help.aliyun.com/document_detail/28952.html">DescribeKey</a> operation to query the status of the CMK.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12335,6 +13052,10 @@ namespace AlibabaCloud.SDK.Kms20160120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyId))
             {
                 query["KeyId"] = request.KeyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KmsInstanceId))
+            {
+                query["KmsInstanceId"] = request.KmsInstanceId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProtectedResourceArn))
             {
@@ -12366,10 +13087,10 @@ namespace AlibabaCloud.SDK.Kms20160120
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  After you enable deletion protection for a CMK, you cannot delete the CMK. If you want to delete the CMK, you must first disable deletion protection for the CMK.</para>
         /// <list type="bullet">
-        /// <item><description>Before you can call the SetDeletionProtection operation, make sure that the required CMK is not in the Pending Deletion state. You can call the <a href="https://help.aliyun.com/document_detail/28952.html">DescribeKey</a> operation to query the CMK status, which is specified by the KeyState parameter.
-        /// You can enable deletion protection for the CMK whose Alibaba Cloud Resource Name (ARN) is <c>acs:kms:cn-hangzhou:123213123****:key/0225f411-b21d-46d1-be5b-93931c82****</c> by using parameter settings provided in this topic. The CMK ARN is specified by the ProtectedResourceArn parameter.</description></item>
+        /// <item><description>For more information about the access policy required for a RAM user or RAM role to call this API operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>After you enable deletion protection for a CMK, you cannot delete it. To delete the CMK, you must first disable deletion protection.</description></item>
+        /// <item><description>Before you call the SetDeletionProtection operation, ensure that the CMK is not in the PendingDeletion state. You can call the <a href="https://help.aliyun.com/document_detail/28952.html">DescribeKey</a> operation to query the status of the CMK.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12398,6 +13119,10 @@ namespace AlibabaCloud.SDK.Kms20160120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyId))
             {
                 query["KeyId"] = request.KeyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KmsInstanceId))
+            {
+                query["KmsInstanceId"] = request.KmsInstanceId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProtectedResourceArn))
             {
@@ -12429,10 +13154,10 @@ namespace AlibabaCloud.SDK.Kms20160120
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  After you enable deletion protection for a CMK, you cannot delete the CMK. If you want to delete the CMK, you must first disable deletion protection for the CMK.</para>
         /// <list type="bullet">
-        /// <item><description>Before you can call the SetDeletionProtection operation, make sure that the required CMK is not in the Pending Deletion state. You can call the <a href="https://help.aliyun.com/document_detail/28952.html">DescribeKey</a> operation to query the CMK status, which is specified by the KeyState parameter.
-        /// You can enable deletion protection for the CMK whose Alibaba Cloud Resource Name (ARN) is <c>acs:kms:cn-hangzhou:123213123****:key/0225f411-b21d-46d1-be5b-93931c82****</c> by using parameter settings provided in this topic. The CMK ARN is specified by the ProtectedResourceArn parameter.</description></item>
+        /// <item><description>For more information about the access policy required for a RAM user or RAM role to call this API operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>After you enable deletion protection for a CMK, you cannot delete it. To delete the CMK, you must first disable deletion protection.</description></item>
+        /// <item><description>Before you call the SetDeletionProtection operation, ensure that the CMK is not in the PendingDeletion state. You can call the <a href="https://help.aliyun.com/document_detail/28952.html">DescribeKey</a> operation to query the status of the CMK.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12456,10 +13181,10 @@ namespace AlibabaCloud.SDK.Kms20160120
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  After you enable deletion protection for a CMK, you cannot delete the CMK. If you want to delete the CMK, you must first disable deletion protection for the CMK.</para>
         /// <list type="bullet">
-        /// <item><description>Before you can call the SetDeletionProtection operation, make sure that the required CMK is not in the Pending Deletion state. You can call the <a href="https://help.aliyun.com/document_detail/28952.html">DescribeKey</a> operation to query the CMK status, which is specified by the KeyState parameter.
-        /// You can enable deletion protection for the CMK whose Alibaba Cloud Resource Name (ARN) is <c>acs:kms:cn-hangzhou:123213123****:key/0225f411-b21d-46d1-be5b-93931c82****</c> by using parameter settings provided in this topic. The CMK ARN is specified by the ProtectedResourceArn parameter.</description></item>
+        /// <item><description>For more information about the access policy required for a RAM user or RAM role to call this API operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>After you enable deletion protection for a CMK, you cannot delete it. To delete the CMK, you must first disable deletion protection.</description></item>
+        /// <item><description>Before you call the SetDeletionProtection operation, ensure that the CMK is not in the PendingDeletion state. You can call the <a href="https://help.aliyun.com/document_detail/28952.html">DescribeKey</a> operation to query the status of the CMK.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12478,8 +13203,16 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>可以设置一条 Key Policy，且名称必须为 default。</para>
+        /// <para>Sets the key policy for a CMK in a KMS instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy required for a RAM user or RAM role to call this API operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>For more information about key policies, see <a href="https://help.aliyun.com/document_detail/2716468.html">Key policy overview</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetKeyPolicyRequest
@@ -12528,8 +13261,16 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>可以设置一条 Key Policy，且名称必须为 default。</para>
+        /// <para>Sets the key policy for a CMK in a KMS instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy required for a RAM user or RAM role to call this API operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>For more information about key policies, see <a href="https://help.aliyun.com/document_detail/2716468.html">Key policy overview</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetKeyPolicyRequest
@@ -12578,8 +13319,16 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>可以设置一条 Key Policy，且名称必须为 default。</para>
+        /// <para>Sets the key policy for a CMK in a KMS instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy required for a RAM user or RAM role to call this API operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>For more information about key policies, see <a href="https://help.aliyun.com/document_detail/2716468.html">Key policy overview</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetKeyPolicyRequest
@@ -12596,8 +13345,16 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>可以设置一条 Key Policy，且名称必须为 default。</para>
+        /// <para>Sets the key policy for a CMK in a KMS instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy required for a RAM user or RAM role to call this API operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>For more information about key policies, see <a href="https://help.aliyun.com/document_detail/2716468.html">Key policy overview</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetKeyPolicyRequest
@@ -12614,8 +13371,16 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>可以设置一条 Secret Policy，且名称必须为 default。</para>
+        /// <para>Sets the access policy for a secret in a KMS instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy that a RAM user or RAM role requires to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>For more information about secret policies, see <a href="https://help.aliyun.com/document_detail/2716465.html">Secret policy overview</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetSecretPolicyRequest
@@ -12664,8 +13429,16 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>可以设置一条 Secret Policy，且名称必须为 default。</para>
+        /// <para>Sets the access policy for a secret in a KMS instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy that a RAM user or RAM role requires to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>For more information about secret policies, see <a href="https://help.aliyun.com/document_detail/2716465.html">Secret policy overview</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetSecretPolicyRequest
@@ -12714,8 +13487,16 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>可以设置一条 Secret Policy，且名称必须为 default。</para>
+        /// <para>Sets the access policy for a secret in a KMS instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy that a RAM user or RAM role requires to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>For more information about secret policies, see <a href="https://help.aliyun.com/document_detail/2716465.html">Secret policy overview</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetSecretPolicyRequest
@@ -12732,8 +13513,16 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>可以设置一条 Secret Policy，且名称必须为 default。</para>
+        /// <para>Sets the access policy for a secret in a KMS instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy that a RAM user or RAM role requires to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>For more information about secret policies, see <a href="https://help.aliyun.com/document_detail/2716465.html">Secret policy overview</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetSecretPolicyRequest
@@ -12748,10 +13537,16 @@ namespace AlibabaCloud.SDK.Kms20160120
             return await SetSecretPolicyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds tags to a CMK, secret, or certificate.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can add up to 10 tags to a CMK, secret, or certificate.
-        /// In this example, the tags <c>[{&quot;TagKey&quot;:&quot;S1key1&quot;,&quot;TagValue&quot;:&quot;S1val1&quot;},{&quot;TagKey&quot;:&quot;S1key2&quot;,&quot;TagValue&quot;:&quot;S2val2&quot;}]</c> are added to the CMK whose ID is <c>08c33a6f-4e0a-4a1b-a3fa-7ddf****</c>.</para>
+        /// In this example, the tags <c>[{&quot;TagKey&quot;:&quot;S1key1&quot;,&quot;TagValue&quot;:&quot;S1val1&quot;},{&quot;TagKey&quot;:&quot;S1key2&quot;,&quot;TagValue&quot;:&quot;S2val2&quot;}]</c> are added to the CMK whose ID is <c>08c33a6f-4e0a-4a1b-a3fa-7ddf****</c>.
+        /// For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12803,10 +13598,16 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<TagResourceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds tags to a CMK, secret, or certificate.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can add up to 10 tags to a CMK, secret, or certificate.
-        /// In this example, the tags <c>[{&quot;TagKey&quot;:&quot;S1key1&quot;,&quot;TagValue&quot;:&quot;S1val1&quot;},{&quot;TagKey&quot;:&quot;S1key2&quot;,&quot;TagValue&quot;:&quot;S2val2&quot;}]</c> are added to the CMK whose ID is <c>08c33a6f-4e0a-4a1b-a3fa-7ddf****</c>.</para>
+        /// In this example, the tags <c>[{&quot;TagKey&quot;:&quot;S1key1&quot;,&quot;TagValue&quot;:&quot;S1val1&quot;},{&quot;TagKey&quot;:&quot;S1key2&quot;,&quot;TagValue&quot;:&quot;S2val2&quot;}]</c> are added to the CMK whose ID is <c>08c33a6f-4e0a-4a1b-a3fa-7ddf****</c>.
+        /// For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12858,10 +13659,16 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<TagResourceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds tags to a CMK, secret, or certificate.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can add up to 10 tags to a CMK, secret, or certificate.
-        /// In this example, the tags <c>[{&quot;TagKey&quot;:&quot;S1key1&quot;,&quot;TagValue&quot;:&quot;S1val1&quot;},{&quot;TagKey&quot;:&quot;S1key2&quot;,&quot;TagValue&quot;:&quot;S2val2&quot;}]</c> are added to the CMK whose ID is <c>08c33a6f-4e0a-4a1b-a3fa-7ddf****</c>.</para>
+        /// In this example, the tags <c>[{&quot;TagKey&quot;:&quot;S1key1&quot;,&quot;TagValue&quot;:&quot;S1val1&quot;},{&quot;TagKey&quot;:&quot;S1key2&quot;,&quot;TagValue&quot;:&quot;S2val2&quot;}]</c> are added to the CMK whose ID is <c>08c33a6f-4e0a-4a1b-a3fa-7ddf****</c>.
+        /// For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12877,10 +13684,16 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TagResourceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds tags to a CMK, secret, or certificate.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can add up to 10 tags to a CMK, secret, or certificate.
-        /// In this example, the tags <c>[{&quot;TagKey&quot;:&quot;S1key1&quot;,&quot;TagValue&quot;:&quot;S1val1&quot;},{&quot;TagKey&quot;:&quot;S1key2&quot;,&quot;TagValue&quot;:&quot;S2val2&quot;}]</c> are added to the CMK whose ID is <c>08c33a6f-4e0a-4a1b-a3fa-7ddf****</c>.</para>
+        /// In this example, the tags <c>[{&quot;TagKey&quot;:&quot;S1key1&quot;,&quot;TagValue&quot;:&quot;S1val1&quot;},{&quot;TagKey&quot;:&quot;S1key2&quot;,&quot;TagValue&quot;:&quot;S2val2&quot;}]</c> are added to the CMK whose ID is <c>08c33a6f-4e0a-4a1b-a3fa-7ddf****</c>.
+        /// For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12898,12 +13711,13 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds tags to keys or secrets.</para>
+        /// <para>Adds tags to one or more keys or secrets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can add multiple tags to multiple keys or multiple secrets at a time.</para>
+        /// <para>You can add multiple tags to multiple keys or multiple secrets at a time.
+        /// For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12957,12 +13771,13 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds tags to keys or secrets.</para>
+        /// <para>Adds tags to one or more keys or secrets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can add multiple tags to multiple keys or multiple secrets at a time.</para>
+        /// <para>You can add multiple tags to multiple keys or multiple secrets at a time.
+        /// For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13016,12 +13831,13 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds tags to keys or secrets.</para>
+        /// <para>Adds tags to one or more keys or secrets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can add multiple tags to multiple keys or multiple secrets at a time.</para>
+        /// <para>You can add multiple tags to multiple keys or multiple secrets at a time.
+        /// For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13039,12 +13855,13 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds tags to keys or secrets.</para>
+        /// <para>Adds tags to one or more keys or secrets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can add multiple tags to multiple keys or multiple secrets at a time.</para>
+        /// <para>You can add multiple tags to multiple keys or multiple secrets at a time.
+        /// For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13060,11 +13877,15 @@ namespace AlibabaCloud.SDK.Kms20160120
             return await TagResourcesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes tags from a CMK, secret, or certificate.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>One or more tag keys. Separate multiple tag keys with commas (,).
-        /// You need to specify only the tag keys, not the tag values.
-        /// Each tag key must be 1 to 128 bytes in length.</para>
+        /// <para>For information about the access policy that is required for a RAM user or RAM role to call this OpenAPI operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.
+        /// This topic provides an example of how to detach tags with the tag keys tagkey1 and tagkey2 from the key with the ID <c>08c33a6f-4e0a-4a1b-a3fa-7ddf****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13116,11 +13937,15 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<UntagResourceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes tags from a CMK, secret, or certificate.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>One or more tag keys. Separate multiple tag keys with commas (,).
-        /// You need to specify only the tag keys, not the tag values.
-        /// Each tag key must be 1 to 128 bytes in length.</para>
+        /// <para>For information about the access policy that is required for a RAM user or RAM role to call this OpenAPI operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.
+        /// This topic provides an example of how to detach tags with the tag keys tagkey1 and tagkey2 from the key with the ID <c>08c33a6f-4e0a-4a1b-a3fa-7ddf****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13172,11 +13997,15 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<UntagResourceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes tags from a CMK, secret, or certificate.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>One or more tag keys. Separate multiple tag keys with commas (,).
-        /// You need to specify only the tag keys, not the tag values.
-        /// Each tag key must be 1 to 128 bytes in length.</para>
+        /// <para>For information about the access policy that is required for a RAM user or RAM role to call this OpenAPI operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.
+        /// This topic provides an example of how to detach tags with the tag keys tagkey1 and tagkey2 from the key with the ID <c>08c33a6f-4e0a-4a1b-a3fa-7ddf****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13192,11 +14021,15 @@ namespace AlibabaCloud.SDK.Kms20160120
             return UntagResourceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes tags from a CMK, secret, or certificate.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>One or more tag keys. Separate multiple tag keys with commas (,).
-        /// You need to specify only the tag keys, not the tag values.
-        /// Each tag key must be 1 to 128 bytes in length.</para>
+        /// <para>For information about the access policy that is required for a RAM user or RAM role to call this OpenAPI operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.
+        /// This topic provides an example of how to detach tags with the tag keys tagkey1 and tagkey2 from the key with the ID <c>08c33a6f-4e0a-4a1b-a3fa-7ddf****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13388,6 +14221,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return await UntagResourcesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds an existing alias to a different customer master key (CMK) ID.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateAliasRequest
         /// </param>
@@ -13429,6 +14267,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<UpdateAliasResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds an existing alias to a different customer master key (CMK) ID.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateAliasRequest
         /// </param>
@@ -13470,6 +14313,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<UpdateAliasResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds an existing alias to a different customer master key (CMK) ID.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateAliasRequest
         /// </param>
@@ -13483,6 +14331,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return UpdateAliasWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds an existing alias to a different customer master key (CMK) ID.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateAliasRequest
         /// </param>
@@ -13496,6 +14349,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return await UpdateAliasWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the information about an application access point (AAP).</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>The update takes effect immediately after an AAP information is updated. Exercise caution when you perform this operation. You can update the description of an AAP and the permission policies that are associated with the AAP. You cannot update the name of the AAP.</para>
@@ -13546,6 +14404,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<UpdateApplicationAccessPointResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the information about an application access point (AAP).</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>The update takes effect immediately after an AAP information is updated. Exercise caution when you perform this operation. You can update the description of an AAP and the permission policies that are associated with the AAP. You cannot update the name of the AAP.</para>
@@ -13596,6 +14459,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<UpdateApplicationAccessPointResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the information about an application access point (AAP).</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>The update takes effect immediately after an AAP information is updated. Exercise caution when you perform this operation. You can update the description of an AAP and the permission policies that are associated with the AAP. You cannot update the name of the AAP.</para>
@@ -13614,6 +14482,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return UpdateApplicationAccessPointWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the information about an application access point (AAP).</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>The update takes effect immediately after an AAP information is updated. Exercise caution when you perform this operation. You can update the description of an AAP and the permission policies that are associated with the AAP. You cannot update the name of the AAP.</para>
@@ -13632,142 +14505,15 @@ namespace AlibabaCloud.SDK.Kms20160120
             return await UpdateApplicationAccessPointWithOptionsAsync(request, runtime);
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the status of the certificate whose ID is <c>9a28de48-8d8b-484d-a766-dec4****</c> is updated to INACTIVE.</para>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// UpdateCertificateStatusRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// UpdateCertificateStatusResponse
-        /// </returns>
-        public UpdateCertificateStatusResponse UpdateCertificateStatusWithOptions(UpdateCertificateStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertificateId))
-            {
-                query["CertificateId"] = request.CertificateId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
-            {
-                query["Status"] = request.Status;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "UpdateCertificateStatus",
-                Version = "2016-01-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<UpdateCertificateStatusResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the status of the certificate whose ID is <c>9a28de48-8d8b-484d-a766-dec4****</c> is updated to INACTIVE.</para>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// UpdateCertificateStatusRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// UpdateCertificateStatusResponse
-        /// </returns>
-        public async Task<UpdateCertificateStatusResponse> UpdateCertificateStatusWithOptionsAsync(UpdateCertificateStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertificateId))
-            {
-                query["CertificateId"] = request.CertificateId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
-            {
-                query["Status"] = request.Status;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "UpdateCertificateStatus",
-                Version = "2016-01-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<UpdateCertificateStatusResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the status of the certificate whose ID is <c>9a28de48-8d8b-484d-a766-dec4****</c> is updated to INACTIVE.</para>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// UpdateCertificateStatusRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// UpdateCertificateStatusResponse
-        /// </returns>
-        public UpdateCertificateStatusResponse UpdateCertificateStatus(UpdateCertificateStatusRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return UpdateCertificateStatusWithOptions(request, runtime);
-        }
-
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the status of the certificate whose ID is <c>9a28de48-8d8b-484d-a766-dec4****</c> is updated to INACTIVE.</para>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// UpdateCertificateStatusRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// UpdateCertificateStatusResponse
-        /// </returns>
-        public async Task<UpdateCertificateStatusResponse> UpdateCertificateStatusAsync(UpdateCertificateStatusRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await UpdateCertificateStatusWithOptionsAsync(request, runtime);
-        }
-
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用UpdateKeyDescription接口更新主密钥的描述信息。</para>
+        /// <para>Updates the description of a CMK.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation replaces the description of a customer master key (CMK) with the description that you specify. The original description of the CMK is specified by the Description parameter when you call the <a href="https://help.aliyun.com/document_detail/28952.html">DescribeKey</a> operation. You can call this operation to add, modify, or delete the description of a CMK.</para>
+        /// <para>This operation replaces the description of a customer master key (CMK) with the description that you specify. The original description of the CMK is specified by the Description parameter when you call the <a href="https://help.aliyun.com/document_detail/28952.html">DescribeKey</a> operation. Use this operation to add, modify, or delete the description of a CMK.
+        /// For more information about the access policy required for a RAM user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13813,12 +14559,13 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用UpdateKeyDescription接口更新主密钥的描述信息。</para>
+        /// <para>Updates the description of a CMK.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation replaces the description of a customer master key (CMK) with the description that you specify. The original description of the CMK is specified by the Description parameter when you call the <a href="https://help.aliyun.com/document_detail/28952.html">DescribeKey</a> operation. You can call this operation to add, modify, or delete the description of a CMK.</para>
+        /// <para>This operation replaces the description of a customer master key (CMK) with the description that you specify. The original description of the CMK is specified by the Description parameter when you call the <a href="https://help.aliyun.com/document_detail/28952.html">DescribeKey</a> operation. Use this operation to add, modify, or delete the description of a CMK.
+        /// For more information about the access policy required for a RAM user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13864,12 +14611,13 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用UpdateKeyDescription接口更新主密钥的描述信息。</para>
+        /// <para>Updates the description of a CMK.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation replaces the description of a customer master key (CMK) with the description that you specify. The original description of the CMK is specified by the Description parameter when you call the <a href="https://help.aliyun.com/document_detail/28952.html">DescribeKey</a> operation. You can call this operation to add, modify, or delete the description of a CMK.</para>
+        /// <para>This operation replaces the description of a customer master key (CMK) with the description that you specify. The original description of the CMK is specified by the Description parameter when you call the <a href="https://help.aliyun.com/document_detail/28952.html">DescribeKey</a> operation. Use this operation to add, modify, or delete the description of a CMK.
+        /// For more information about the access policy required for a RAM user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13887,12 +14635,13 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用UpdateKeyDescription接口更新主密钥的描述信息。</para>
+        /// <para>Updates the description of a CMK.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation replaces the description of a customer master key (CMK) with the description that you specify. The original description of the CMK is specified by the Description parameter when you call the <a href="https://help.aliyun.com/document_detail/28952.html">DescribeKey</a> operation. You can call this operation to add, modify, or delete the description of a CMK.</para>
+        /// <para>This operation replaces the description of a customer master key (CMK) with the description that you specify. The original description of the CMK is specified by the Description parameter when you call the <a href="https://help.aliyun.com/document_detail/28952.html">DescribeKey</a> operation. Use this operation to add, modify, or delete the description of a CMK.
+        /// For more information about the access policy required for a RAM user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13910,16 +14659,19 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the virtual private cloud (VPC) that is associated with a Key Management Service (KMS) instance.</para>
+        /// <para>Updates the VPC bindings of a KMS instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If your own applications are deployed in multiple VPCs in the same region, you can associate the VPCs except the VPC in which the KMS instance resides with the KMS instance. This topic describes how to configure the VPCs.
-        /// The VPCs can belong to the same Alibaba Cloud account or different Alibaba Cloud accounts. After the configuration is complete, the applications in these VPCs can access the KMS instance.</para>
-        /// <remarks>
-        /// <para>If the VPCs belong to different Alibaba Cloud accounts, you must first configure resource sharing to share the vSwitches of other Alibaba Cloud accounts with the Alibaba Cloud account to which the KMS instance belongs. For more information, see <a href="https://help.aliyun.com/document_detail/2393236.html">Access a KMS instance from multiple VPCs in the same region</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy required for a Resource Access Management (RAM) user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>If your self-managed application is deployed in multiple VPCs in the same region, you can bind the KMS instance to additional VPCs. These VPCs are in addition to the one that you specified when you enabled the instance.
+        /// These VPCs can belong to the same Alibaba Cloud account or different Alibaba Cloud accounts. After the configuration is complete, self-managed applications in these VPCs can access the specified KMS instance.<remarks>
+        /// <para>If the VPCs belong to different Alibaba Cloud accounts, you must first configure resource sharing to share the vSwitch resources from those accounts with the Alibaba Cloud account that owns the KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/2393236.html">Access a KMS instance from multiple VPCs in the same region</a>.</para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -13965,16 +14717,19 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the virtual private cloud (VPC) that is associated with a Key Management Service (KMS) instance.</para>
+        /// <para>Updates the VPC bindings of a KMS instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If your own applications are deployed in multiple VPCs in the same region, you can associate the VPCs except the VPC in which the KMS instance resides with the KMS instance. This topic describes how to configure the VPCs.
-        /// The VPCs can belong to the same Alibaba Cloud account or different Alibaba Cloud accounts. After the configuration is complete, the applications in these VPCs can access the KMS instance.</para>
-        /// <remarks>
-        /// <para>If the VPCs belong to different Alibaba Cloud accounts, you must first configure resource sharing to share the vSwitches of other Alibaba Cloud accounts with the Alibaba Cloud account to which the KMS instance belongs. For more information, see <a href="https://help.aliyun.com/document_detail/2393236.html">Access a KMS instance from multiple VPCs in the same region</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy required for a Resource Access Management (RAM) user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>If your self-managed application is deployed in multiple VPCs in the same region, you can bind the KMS instance to additional VPCs. These VPCs are in addition to the one that you specified when you enabled the instance.
+        /// These VPCs can belong to the same Alibaba Cloud account or different Alibaba Cloud accounts. After the configuration is complete, self-managed applications in these VPCs can access the specified KMS instance.<remarks>
+        /// <para>If the VPCs belong to different Alibaba Cloud accounts, you must first configure resource sharing to share the vSwitch resources from those accounts with the Alibaba Cloud account that owns the KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/2393236.html">Access a KMS instance from multiple VPCs in the same region</a>.</para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -14020,16 +14775,19 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the virtual private cloud (VPC) that is associated with a Key Management Service (KMS) instance.</para>
+        /// <para>Updates the VPC bindings of a KMS instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If your own applications are deployed in multiple VPCs in the same region, you can associate the VPCs except the VPC in which the KMS instance resides with the KMS instance. This topic describes how to configure the VPCs.
-        /// The VPCs can belong to the same Alibaba Cloud account or different Alibaba Cloud accounts. After the configuration is complete, the applications in these VPCs can access the KMS instance.</para>
-        /// <remarks>
-        /// <para>If the VPCs belong to different Alibaba Cloud accounts, you must first configure resource sharing to share the vSwitches of other Alibaba Cloud accounts with the Alibaba Cloud account to which the KMS instance belongs. For more information, see <a href="https://help.aliyun.com/document_detail/2393236.html">Access a KMS instance from multiple VPCs in the same region</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy required for a Resource Access Management (RAM) user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>If your self-managed application is deployed in multiple VPCs in the same region, you can bind the KMS instance to additional VPCs. These VPCs are in addition to the one that you specified when you enabled the instance.
+        /// These VPCs can belong to the same Alibaba Cloud account or different Alibaba Cloud accounts. After the configuration is complete, self-managed applications in these VPCs can access the specified KMS instance.<remarks>
+        /// <para>If the VPCs belong to different Alibaba Cloud accounts, you must first configure resource sharing to share the vSwitch resources from those accounts with the Alibaba Cloud account that owns the KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/2393236.html">Access a KMS instance from multiple VPCs in the same region</a>.</para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -14047,16 +14805,19 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the virtual private cloud (VPC) that is associated with a Key Management Service (KMS) instance.</para>
+        /// <para>Updates the VPC bindings of a KMS instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If your own applications are deployed in multiple VPCs in the same region, you can associate the VPCs except the VPC in which the KMS instance resides with the KMS instance. This topic describes how to configure the VPCs.
-        /// The VPCs can belong to the same Alibaba Cloud account or different Alibaba Cloud accounts. After the configuration is complete, the applications in these VPCs can access the KMS instance.</para>
-        /// <remarks>
-        /// <para>If the VPCs belong to different Alibaba Cloud accounts, you must first configure resource sharing to share the vSwitches of other Alibaba Cloud accounts with the Alibaba Cloud account to which the KMS instance belongs. For more information, see <a href="https://help.aliyun.com/document_detail/2393236.html">Access a KMS instance from multiple VPCs in the same region</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>For information about the access policy required for a Resource Access Management (RAM) user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>If your self-managed application is deployed in multiple VPCs in the same region, you can bind the KMS instance to additional VPCs. These VPCs are in addition to the one that you specified when you enabled the instance.
+        /// These VPCs can belong to the same Alibaba Cloud account or different Alibaba Cloud accounts. After the configuration is complete, self-managed applications in these VPCs can access the specified KMS instance.<remarks>
+        /// <para>If the VPCs belong to different Alibaba Cloud accounts, you must first configure resource sharing to share the vSwitch resources from those accounts with the Alibaba Cloud account that owns the KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/2393236.html">Access a KMS instance from multiple VPCs in the same region</a>.</para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -14074,14 +14835,15 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an access control rule.</para>
+        /// <para>Updates a network access rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can update only private IP addresses and description of an access control rule. You cannot update the name and network type of an access control rule.</description></item>
-        /// <item><description>Updating an access control rule affects all permission policies that are bound to the access control rule. Exercise caution when you perform this operation.</description></item>
+        /// <item><description>For more information about the access policy required for a Resource Access Management (RAM) user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</description></item>
+        /// <item><description>You can only modify the private IP addresses and description of a network control rule. The name and network type cannot be modified.</description></item>
+        /// <item><description>When you update a network control rule, the access policies attached to it are also updated. Proceed with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14132,14 +14894,15 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an access control rule.</para>
+        /// <para>Updates a network access rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can update only private IP addresses and description of an access control rule. You cannot update the name and network type of an access control rule.</description></item>
-        /// <item><description>Updating an access control rule affects all permission policies that are bound to the access control rule. Exercise caution when you perform this operation.</description></item>
+        /// <item><description>For more information about the access policy required for a Resource Access Management (RAM) user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</description></item>
+        /// <item><description>You can only modify the private IP addresses and description of a network control rule. The name and network type cannot be modified.</description></item>
+        /// <item><description>When you update a network control rule, the access policies attached to it are also updated. Proceed with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14190,14 +14953,15 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an access control rule.</para>
+        /// <para>Updates a network access rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can update only private IP addresses and description of an access control rule. You cannot update the name and network type of an access control rule.</description></item>
-        /// <item><description>Updating an access control rule affects all permission policies that are bound to the access control rule. Exercise caution when you perform this operation.</description></item>
+        /// <item><description>For more information about the access policy required for a Resource Access Management (RAM) user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</description></item>
+        /// <item><description>You can only modify the private IP addresses and description of a network control rule. The name and network type cannot be modified.</description></item>
+        /// <item><description>When you update a network control rule, the access policies attached to it are also updated. Proceed with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14216,14 +14980,15 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an access control rule.</para>
+        /// <para>Updates a network access rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can update only private IP addresses and description of an access control rule. You cannot update the name and network type of an access control rule.</description></item>
-        /// <item><description>Updating an access control rule affects all permission policies that are bound to the access control rule. Exercise caution when you perform this operation.</description></item>
+        /// <item><description>For more information about the access policy required for a Resource Access Management (RAM) user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</description></item>
+        /// <item><description>You can only modify the private IP addresses and description of a network control rule. The name and network type cannot be modified.</description></item>
+        /// <item><description>When you update a network control rule, the access policies attached to it are also updated. Proceed with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14242,7 +15007,7 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新一个权限策略</para>
+        /// <para>Updates a permission policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14308,7 +15073,7 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新一个权限策略</para>
+        /// <para>Updates a permission policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14374,7 +15139,7 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新一个权限策略</para>
+        /// <para>Updates a permission policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14400,7 +15165,7 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新一个权限策略</para>
+        /// <para>Updates a permission policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14424,6 +15189,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return await UpdatePolicyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the automatic rotation policy of a CMK.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>When automatic key rotation is enabled, KMS automatically creates a key version after the preset rotation period arrives. In addition, KMS sets the new key version as the primary key version.
@@ -14433,7 +15203,8 @@ namespace AlibabaCloud.SDK.Kms20160120
         /// <item><description>Service-managed key</description></item>
         /// <item><description>Bring your own key (BYOK) that is imported into KMS</description></item>
         /// <item><description>Key that is not in the <b>Enabled</b> state
-        /// In this example, automatic key rotation is enabled for a CMK whose ID is <c>1234abcd-12ab-34cd-56ef-12345678****</c>. The automatic rotation period is 30 days.</description></item>
+        /// In this example, automatic key rotation is enabled for a CMK whose ID is <c>1234abcd-12ab-34cd-56ef-12345678****</c>. The automatic rotation period is 30 days.
+        /// For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14482,6 +15253,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<UpdateRotationPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the automatic rotation policy of a CMK.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>When automatic key rotation is enabled, KMS automatically creates a key version after the preset rotation period arrives. In addition, KMS sets the new key version as the primary key version.
@@ -14491,7 +15267,8 @@ namespace AlibabaCloud.SDK.Kms20160120
         /// <item><description>Service-managed key</description></item>
         /// <item><description>Bring your own key (BYOK) that is imported into KMS</description></item>
         /// <item><description>Key that is not in the <b>Enabled</b> state
-        /// In this example, automatic key rotation is enabled for a CMK whose ID is <c>1234abcd-12ab-34cd-56ef-12345678****</c>. The automatic rotation period is 30 days.</description></item>
+        /// In this example, automatic key rotation is enabled for a CMK whose ID is <c>1234abcd-12ab-34cd-56ef-12345678****</c>. The automatic rotation period is 30 days.
+        /// For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14540,6 +15317,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<UpdateRotationPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the automatic rotation policy of a CMK.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>When automatic key rotation is enabled, KMS automatically creates a key version after the preset rotation period arrives. In addition, KMS sets the new key version as the primary key version.
@@ -14549,7 +15331,8 @@ namespace AlibabaCloud.SDK.Kms20160120
         /// <item><description>Service-managed key</description></item>
         /// <item><description>Bring your own key (BYOK) that is imported into KMS</description></item>
         /// <item><description>Key that is not in the <b>Enabled</b> state
-        /// In this example, automatic key rotation is enabled for a CMK whose ID is <c>1234abcd-12ab-34cd-56ef-12345678****</c>. The automatic rotation period is 30 days.</description></item>
+        /// In this example, automatic key rotation is enabled for a CMK whose ID is <c>1234abcd-12ab-34cd-56ef-12345678****</c>. The automatic rotation period is 30 days.
+        /// For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14566,6 +15349,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return UpdateRotationPolicyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the automatic rotation policy of a CMK.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>When automatic key rotation is enabled, KMS automatically creates a key version after the preset rotation period arrives. In addition, KMS sets the new key version as the primary key version.
@@ -14575,7 +15363,8 @@ namespace AlibabaCloud.SDK.Kms20160120
         /// <item><description>Service-managed key</description></item>
         /// <item><description>Bring your own key (BYOK) that is imported into KMS</description></item>
         /// <item><description>Key that is not in the <b>Enabled</b> state
-        /// In this example, automatic key rotation is enabled for a CMK whose ID is <c>1234abcd-12ab-34cd-56ef-12345678****</c>. The automatic rotation period is 30 days.</description></item>
+        /// In this example, automatic key rotation is enabled for a CMK whose ID is <c>1234abcd-12ab-34cd-56ef-12345678****</c>. The automatic rotation period is 30 days.
+        /// For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14748,6 +15537,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return await UpdateSecretWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the rotation policy of a secret.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>After automatic rotation is enabled, Secrets Manager schedules the first automatic rotation by adding the preset rotation interval to the timestamp of the last rotation.
@@ -14804,6 +15598,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<UpdateSecretRotationPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the rotation policy of a secret.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>After automatic rotation is enabled, Secrets Manager schedules the first automatic rotation by adding the preset rotation interval to the timestamp of the last rotation.
@@ -14860,6 +15659,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return TeaModel.ToObject<UpdateSecretRotationPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the rotation policy of a secret.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>After automatic rotation is enabled, Secrets Manager schedules the first automatic rotation by adding the preset rotation interval to the timestamp of the last rotation.
@@ -14884,6 +15688,11 @@ namespace AlibabaCloud.SDK.Kms20160120
             return UpdateSecretRotationPolicyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the rotation policy of a secret.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>After automatic rotation is enabled, Secrets Manager schedules the first automatic rotation by adding the preset rotation interval to the timestamp of the last rotation.
@@ -14910,12 +15719,22 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>UpdateSecretVersionStage</para>
+        /// <para>Moves a version stage label to a different version of a secret.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the stage label that marks a secret version.</para>
+        /// <list type="bullet">
+        /// <item><description>For more information about the access policy that is required to call this operation as a Resource Access Management (RAM) user or RAM role, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation supports only generic secrets. You can perform the following operations:<list type="bullet">
+        /// <item><description>Add a version stage to a specified secret version.</description></item>
+        /// <item><description>Remove a version stage from a specified secret version.</description></item>
+        /// <item><description>Remove a version stage from a specified secret version and attach it to another secret version.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>The total number of version stages for each generic secret cannot exceed 8.
+        /// This topic provides an example of how to update the version stage of the secret named <c>secret001</c>. In this example, the <c>ACSCurrent</c> stage is used to mark version <c>002</c>.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -14969,12 +15788,22 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>UpdateSecretVersionStage</para>
+        /// <para>Moves a version stage label to a different version of a secret.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the stage label that marks a secret version.</para>
+        /// <list type="bullet">
+        /// <item><description>For more information about the access policy that is required to call this operation as a Resource Access Management (RAM) user or RAM role, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation supports only generic secrets. You can perform the following operations:<list type="bullet">
+        /// <item><description>Add a version stage to a specified secret version.</description></item>
+        /// <item><description>Remove a version stage from a specified secret version.</description></item>
+        /// <item><description>Remove a version stage from a specified secret version and attach it to another secret version.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>The total number of version stages for each generic secret cannot exceed 8.
+        /// This topic provides an example of how to update the version stage of the secret named <c>secret001</c>. In this example, the <c>ACSCurrent</c> stage is used to mark version <c>002</c>.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -15028,12 +15857,22 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>UpdateSecretVersionStage</para>
+        /// <para>Moves a version stage label to a different version of a secret.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the stage label that marks a secret version.</para>
+        /// <list type="bullet">
+        /// <item><description>For more information about the access policy that is required to call this operation as a Resource Access Management (RAM) user or RAM role, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation supports only generic secrets. You can perform the following operations:<list type="bullet">
+        /// <item><description>Add a version stage to a specified secret version.</description></item>
+        /// <item><description>Remove a version stage from a specified secret version.</description></item>
+        /// <item><description>Remove a version stage from a specified secret version and attach it to another secret version.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>The total number of version stages for each generic secret cannot exceed 8.
+        /// This topic provides an example of how to update the version stage of the secret named <c>secret001</c>. In this example, the <c>ACSCurrent</c> stage is used to mark version <c>002</c>.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -15051,12 +15890,22 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>UpdateSecretVersionStage</para>
+        /// <para>Moves a version stage label to a different version of a secret.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the stage label that marks a secret version.</para>
+        /// <list type="bullet">
+        /// <item><description>For more information about the access policy that is required to call this operation as a Resource Access Management (RAM) user or RAM role, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
+        /// <item><description>This operation supports only generic secrets. You can perform the following operations:<list type="bullet">
+        /// <item><description>Add a version stage to a specified secret version.</description></item>
+        /// <item><description>Remove a version stage from a specified secret version.</description></item>
+        /// <item><description>Remove a version stage from a specified secret version and attach it to another secret version.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>The total number of version stages for each generic secret cannot exceed 8.
+        /// This topic provides an example of how to update the version stage of the secret named <c>secret001</c>. In this example, the <c>ACSCurrent</c> stage is used to mark version <c>002</c>.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -15072,36 +15921,54 @@ namespace AlibabaCloud.SDK.Kms20160120
             return await UpdateSecretVersionStageWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Verifies the HMAC message authentication code of a specific message by using a specified key.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>In this example, a certificate issued by a CA is imported into Certificates Manager. The ID of the certificate in Certificates Manager is <c>12345678-1234-1234-1234-12345678****</c>.</para>
+        /// <para>For details about the access policy required when a RAM user or RAM role invokes this operation, refer to access control.
+        /// This operation can be invoked through a shared gateway or a dedicated gateway. For more information, refer to Alibaba Cloud SDK.</para>
+        /// <list type="bullet">
+        /// <item><description>Shared gateway: Access KMS through a public or VPC endpoint. This method requires you to enable the public network access switch. For more information, refer to accessing keys in a KMS instance over the Internet.</description></item>
+        /// <item><description>Dedicated gateway: Access KMS through a KMS private endpoint (<YOUR_KMS_INSTANCE_ID>.cryptoservice.kms.aliyuncs.com).</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
-        /// UploadCertificateRequest
+        /// VerifyMacRequest
         /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
         /// 
         /// <returns>
-        /// UploadCertificateResponse
+        /// VerifyMacResponse
         /// </returns>
-        public UploadCertificateResponse UploadCertificateWithOptions(UploadCertificateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public VerifyMacResponse VerifyMacWithOptions(VerifyMacRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Certificate))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Algorithm))
             {
-                query["Certificate"] = request.Certificate;
+                query["Algorithm"] = request.Algorithm;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertificateChain))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
             {
-                query["CertificateChain"] = request.CertificateChain;
+                query["DryRun"] = request.DryRun;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertificateId))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyId))
             {
-                query["CertificateId"] = request.CertificateId;
+                query["KeyId"] = request.KeyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mac))
+            {
+                query["Mac"] = request.Mac;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Message))
+            {
+                query["Message"] = request.Message;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -15109,7 +15976,7 @@ namespace AlibabaCloud.SDK.Kms20160120
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "UploadCertificate",
+                Action = "VerifyMac",
                 Version = "2016-01-20",
                 Protocol = "HTTPS",
                 Pathname = "/",
@@ -15119,39 +15986,57 @@ namespace AlibabaCloud.SDK.Kms20160120
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UploadCertificateResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<VerifyMacResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Verifies the HMAC message authentication code of a specific message by using a specified key.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>In this example, a certificate issued by a CA is imported into Certificates Manager. The ID of the certificate in Certificates Manager is <c>12345678-1234-1234-1234-12345678****</c>.</para>
+        /// <para>For details about the access policy required when a RAM user or RAM role invokes this operation, refer to access control.
+        /// This operation can be invoked through a shared gateway or a dedicated gateway. For more information, refer to Alibaba Cloud SDK.</para>
+        /// <list type="bullet">
+        /// <item><description>Shared gateway: Access KMS through a public or VPC endpoint. This method requires you to enable the public network access switch. For more information, refer to accessing keys in a KMS instance over the Internet.</description></item>
+        /// <item><description>Dedicated gateway: Access KMS through a KMS private endpoint (<YOUR_KMS_INSTANCE_ID>.cryptoservice.kms.aliyuncs.com).</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
-        /// UploadCertificateRequest
+        /// VerifyMacRequest
         /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
         /// 
         /// <returns>
-        /// UploadCertificateResponse
+        /// VerifyMacResponse
         /// </returns>
-        public async Task<UploadCertificateResponse> UploadCertificateWithOptionsAsync(UploadCertificateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<VerifyMacResponse> VerifyMacWithOptionsAsync(VerifyMacRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Certificate))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Algorithm))
             {
-                query["Certificate"] = request.Certificate;
+                query["Algorithm"] = request.Algorithm;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertificateChain))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
             {
-                query["CertificateChain"] = request.CertificateChain;
+                query["DryRun"] = request.DryRun;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertificateId))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyId))
             {
-                query["CertificateId"] = request.CertificateId;
+                query["KeyId"] = request.KeyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mac))
+            {
+                query["Mac"] = request.Mac;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Message))
+            {
+                query["Message"] = request.Message;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -15159,7 +16044,7 @@ namespace AlibabaCloud.SDK.Kms20160120
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "UploadCertificate",
+                Action = "VerifyMac",
                 Version = "2016-01-20",
                 Protocol = "HTTPS",
                 Pathname = "/",
@@ -15169,43 +16054,63 @@ namespace AlibabaCloud.SDK.Kms20160120
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UploadCertificateResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<VerifyMacResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Verifies the HMAC message authentication code of a specific message by using a specified key.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>In this example, a certificate issued by a CA is imported into Certificates Manager. The ID of the certificate in Certificates Manager is <c>12345678-1234-1234-1234-12345678****</c>.</para>
+        /// <para>For details about the access policy required when a RAM user or RAM role invokes this operation, refer to access control.
+        /// This operation can be invoked through a shared gateway or a dedicated gateway. For more information, refer to Alibaba Cloud SDK.</para>
+        /// <list type="bullet">
+        /// <item><description>Shared gateway: Access KMS through a public or VPC endpoint. This method requires you to enable the public network access switch. For more information, refer to accessing keys in a KMS instance over the Internet.</description></item>
+        /// <item><description>Dedicated gateway: Access KMS through a KMS private endpoint (<YOUR_KMS_INSTANCE_ID>.cryptoservice.kms.aliyuncs.com).</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
-        /// UploadCertificateRequest
+        /// VerifyMacRequest
         /// </param>
         /// 
         /// <returns>
-        /// UploadCertificateResponse
+        /// VerifyMacResponse
         /// </returns>
-        public UploadCertificateResponse UploadCertificate(UploadCertificateRequest request)
+        public VerifyMacResponse VerifyMac(VerifyMacRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return UploadCertificateWithOptions(request, runtime);
+            return VerifyMacWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Verifies the HMAC message authentication code of a specific message by using a specified key.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>In this example, a certificate issued by a CA is imported into Certificates Manager. The ID of the certificate in Certificates Manager is <c>12345678-1234-1234-1234-12345678****</c>.</para>
+        /// <para>For details about the access policy required when a RAM user or RAM role invokes this operation, refer to access control.
+        /// This operation can be invoked through a shared gateway or a dedicated gateway. For more information, refer to Alibaba Cloud SDK.</para>
+        /// <list type="bullet">
+        /// <item><description>Shared gateway: Access KMS through a public or VPC endpoint. This method requires you to enable the public network access switch. For more information, refer to accessing keys in a KMS instance over the Internet.</description></item>
+        /// <item><description>Dedicated gateway: Access KMS through a KMS private endpoint (<YOUR_KMS_INSTANCE_ID>.cryptoservice.kms.aliyuncs.com).</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
-        /// UploadCertificateRequest
+        /// VerifyMacRequest
         /// </param>
         /// 
         /// <returns>
-        /// UploadCertificateResponse
+        /// VerifyMacResponse
         /// </returns>
-        public async Task<UploadCertificateResponse> UploadCertificateAsync(UploadCertificateRequest request)
+        public async Task<VerifyMacResponse> VerifyMacAsync(VerifyMacRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await UploadCertificateWithOptionsAsync(request, runtime);
+            return await VerifyMacWithOptionsAsync(request, runtime);
         }
 
     }

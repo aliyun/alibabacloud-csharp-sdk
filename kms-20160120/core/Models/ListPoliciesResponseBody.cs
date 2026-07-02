@@ -29,9 +29,6 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        /// <summary>
-        /// <para>A list of permission policies.</para>
-        /// </summary>
         [NameInMap("Policies")]
         [Validation(Required=false)]
         public ListPoliciesResponseBodyPolicies Policies { get; set; }
@@ -40,12 +37,6 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
             [Validation(Required=false)]
             public List<ListPoliciesResponseBodyPoliciesPolicy> Policy { get; set; }
             public class ListPoliciesResponseBodyPoliciesPolicy : TeaModel {
-                /// <summary>
-                /// <para>The name of the permission policy.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>policy_test</para>
-                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
@@ -55,7 +46,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>b66ad557-9c00-4064-9c8d-b621c3263308</para>

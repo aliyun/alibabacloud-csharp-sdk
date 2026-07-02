@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1234abcd-12ab-34cd-56ef-12345678****</para>
+        /// <para>key-hzz630494463ejqjx****</para>
         /// </summary>
         [NameInMap("KeyId")]
         [Validation(Required=false)]

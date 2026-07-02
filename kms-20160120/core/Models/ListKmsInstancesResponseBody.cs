@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class ListKmsInstancesResponseBody : TeaModel {
-        /// <summary>
-        /// <para>A list of KMS instances.</para>
-        /// </summary>
         [NameInMap("KmsInstances")]
         [Validation(Required=false)]
         public ListKmsInstancesResponseBodyKmsInstances KmsInstances { get; set; }
@@ -20,22 +17,10 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
             [Validation(Required=false)]
             public List<ListKmsInstancesResponseBodyKmsInstancesKmsInstance> KmsInstance { get; set; }
             public class ListKmsInstancesResponseBodyKmsInstancesKmsInstance : TeaModel {
-                /// <summary>
-                /// <para>The ARN of the KMS instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>acs:kms:pre-hangzhou:120708975881****:keystore/kst-phzz64c9f84eo32dbs****</para>
-                /// </summary>
                 [NameInMap("KmsInstanceArn")]
                 [Validation(Required=false)]
                 public string KmsInstanceArn { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the KMS instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>kst-phzz64c9f84eo32dbs****</para>
-                /// </summary>
                 [NameInMap("KmsInstanceId")]
                 [Validation(Required=false)]
                 public string KmsInstanceId { get; set; }
@@ -45,7 +30,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the returned page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -55,7 +40,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of KMS instances returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -65,7 +50,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d3eca5c8-a856-4347-8eb6-e1898c3fda2e</para>

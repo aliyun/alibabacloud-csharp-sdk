@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class DeleteClientKeyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID. This is a unique identifier that Alibaba Cloud generates for the request. Use this ID to troubleshoot and locate issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2312e45f-b2fa-4c34-ad94-3eca50932916</para>

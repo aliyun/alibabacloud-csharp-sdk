@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// <summary>
         /// <para>The region ID of the resource.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/601478.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/601478.html">DescribeRegions</a> to query the most recent region list.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -35,8 +35,10 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// <summary>
         /// <para>The type of the resource to which you want to add tags. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>key</description></item>
-        /// <item><description>secret</description></item>
+        /// <item><description><para>key</para>
+        /// </description></item>
+        /// <item><description><para>secret</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -59,9 +61,9 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
             /// <summary>
             /// <para>The key of the tag. A tag consists of a key-value pair.</para>
             /// <para>You can enter up to 20 tags. Enter multiple tags in the <c>[{&quot;Key&quot;:&quot;key1&quot;,&quot;Value&quot;:&quot;value1&quot;},{&quot;Key&quot;:&quot;key2&quot;,&quot;Value&quot;:&quot;value2&quot;},..]</c> format.</para>
-            /// <para>Each key can be up to 128 characters in length and can contain letters, digits, forward slashes (/), backslashes (\\), underscores (_), hyphens (-), periods (.), plus signs (+), equal signs (=), colons (:), and at signs (@).</para>
+            /// <para>Each key can be up to 128 characters in length and can contain letters, digits, forward slashes (/), backslashes (\), underscores (_), hyphens (-), periods (.), plus signs (+), equal signs (=), colons (:), and at signs (@).</para>
             /// <remarks>
-            /// <para> The key cannot start with aliyun or acs:.</para>
+            /// <para>The key cannot start with aliyun or acs:.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -74,7 +76,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
             /// <summary>
             /// <para>The value of the tag. A tag consists of a key-value pair.</para>
             /// <para>You can enter up to 20 tags. Enter multiple tags in the <c>[{&quot;Key&quot;:&quot;key1&quot;,&quot;Value&quot;:&quot;value1&quot;},{&quot;Key&quot;:&quot;key2&quot;,&quot;Value&quot;:&quot;value2&quot;},..]</c> format.</para>
-            /// <para>Each value can be up to 128 characters in length and can contain letters, digits, forward slashes (/), backslashes (\\), underscores (_), hyphens (-), periods (.), plus signs (+), equal signs (=), colons (:), and at signs (@).</para>
+            /// <para>Each value can be up to 128 characters in length and can contain letters, digits, forward slashes (/), backslashes (\), underscores (_), hyphens (-), periods (.), plus signs (+), equal signs (=), colons (:), and at signs (@).</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>

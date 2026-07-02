@@ -9,18 +9,34 @@ using Tea;
 namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class GetSecretValueRequest : TeaModel {
+        /// <summary>
+        /// <para>Indicates whether to enable DryRun mode.</para>
+        /// <list type="bullet">
+        /// <item><description>true: Enabled  </description></item>
+        /// <item><description>false (Default Value): Disabled</description></item>
+        /// </list>
+        /// <para>DryRun mode is used for Testing API Calls to authenticate whether you have the required permissions on the specified resource and whether the Request Parameters are correctly configured. When DryRun mode is enabled, KMS always returns a failed response along with the failure reason. Possible failure reasons include:</para>
+        /// <list type="bullet">
+        /// <item><description>DryRunOperationError: The request would succeed if the DryRun parameter were not specified.  </description></item>
+        /// <item><description>ValidationError: One or more parameters in the request are invalid.  </description></item>
+        /// <item><description>AccessDeniedError: You do not have permission to execute this operation on the KMS resource.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public string DryRun { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to obtain the extended configuration of the secret. Valid values:</para>
+        /// <para>Indicates whether to retrieve the extended configuration of the credential. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false: This is the default value.</description></item>
+        /// <item><description>true: Retrieve  </description></item>
+        /// <item><description>false (Default Value): Do not retrieve</description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is ignored for a generic secret.</para>
+        /// <para>Generic secrets do not support extended configuration. If you specify this parameter, it will be ignored.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -31,7 +47,10 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public bool? FetchExtendedConfig { get; set; }
 
         /// <summary>
-        /// <para>The name of the secret.</para>
+        /// <para>The name or ARN of the credential.  </para>
+        /// <remarks>
+        /// <para>When accessing a credential under another Alibaba Cloud account, you must specify the credential ARN. The ARN format is <c>acs:kms:${region}:${account}:secret/${secret-name}</c>.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,23 +61,23 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public string SecretName { get; set; }
 
         /// <summary>
-        /// <para>The version number of the secret value. If you specify this parameter, Secrets Manager returns the secret value of the specified version.</para>
+        /// <para>Version number.</para>
         /// <remarks>
-        /// <para> This parameter is ignored for a managed ApsaraDB RDS secret, a managed RAM secret, or a managed ECS secret.</para>
+        /// <para>The VersionId parameter is not supported for RDS credentials, PolarDB credentials, Redis/Tair credentials, RAM credentials, and ECS credentials. If you specify this parameter, it will be ignored.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>00000000000000000000000000000001</para>
+        /// <para>v1</para>
         /// </summary>
         [NameInMap("VersionId")]
         [Validation(Required=false)]
         public string VersionId { get; set; }
 
         /// <summary>
-        /// <para>The stage label that marks the secret version. If you specify this parameter, Secrets Manager returns the secret value of the version that is marked with the specified stage label.</para>
-        /// <para>Default value: ACSCurrent.</para>
+        /// <para>The version stage. Default value: ACSCurrent.  </para>
+        /// <para>If you specify this parameter, the credential value of the specified version stage is returned. If you do not specify this parameter, the credential value of the ACSCurrent version stage is returned.  </para>
         /// <remarks>
-        /// <para> For a managed ApsaraDB RDS secret, a managed RAM secret, or a managed ECS secret, Secrets Manager can return only the secret value of the version marked with ACSPrevious or ACSCurrent.</para>
+        /// <para>For RDS credentials, PolarDB credentials, Redis/Tair credentials, RAM credentials, and ECS credentials, you can retrieve only the credential values corresponding to the ACSPrevious or ACSCurrent version stages.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

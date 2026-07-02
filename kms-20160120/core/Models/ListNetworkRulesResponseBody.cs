@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class ListNetworkRulesResponseBody : TeaModel {
-        /// <summary>
-        /// <para>A list of access control rules.</para>
-        /// </summary>
         [NameInMap("NetworkRules")]
         [Validation(Required=false)]
         public ListNetworkRulesResponseBodyNetworkRules NetworkRules { get; set; }
@@ -20,22 +17,10 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
             [Validation(Required=false)]
             public List<ListNetworkRulesResponseBodyNetworkRulesNetworkRule> NetworkRule { get; set; }
             public class ListNetworkRulesResponseBodyNetworkRulesNetworkRule : TeaModel {
-                /// <summary>
-                /// <para>The name of the access control rule.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>networkrule_test</para>
-                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
-                /// <summary>
-                /// <para>The network type. The value is fixed as Private. Self-managed applications can access KMS instances only over a private virtual private cloud (VPC).</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Private</para>
-                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
@@ -65,7 +50,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3bf02f7a-015b-4f34-be0f-cc043fda2d33</para>

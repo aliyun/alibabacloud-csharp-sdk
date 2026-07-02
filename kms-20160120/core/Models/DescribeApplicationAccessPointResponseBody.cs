@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class DescribeApplicationAccessPointResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ARN of the AAP.</para>
+        /// <para>The Alibaba Cloud Resource Name (ARN) of the AAP.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:kms:cn-hangzhou:119285303511****:applicationaccesspoint/aap_test</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The permission policy that is bound to the AAP.</para>
+        /// <para>The attached access policies.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;kst-hzz62ee817bvyyr5x****.efkd&quot;,&quot;kst-hzz62ee817bvyyr5x****.eyyp&quot;]</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public string Policies { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The ID of the request. Alibaba Cloud generates a unique ID for each request. Use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bcfefe15-46f0-44a3-bd96-3d422474b71a</para>

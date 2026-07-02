@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public string Algorithm { get; set; }
 
         /// <summary>
-        /// <para>The digest that is generated for the original message by using a hash algorithm. The hash algorithm is specified by the <b>Algorithm</b> parameter.</para>
+        /// <para>The digest that is generated using the hash algorithm that corresponds to the value of <b>Algorithm</b> to hash the original message.</para>
         /// <remarks>
-        /// <para> The value is encoded in Base64.</para>
+        /// <para>The value is Base64-encoded.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -34,14 +34,35 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         [Validation(Required=false)]
         public string Digest { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to perform a dry run.</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: performs a dry run.</para>
+        /// </description></item>
+        /// <item><description><para>false (default): does not perform a dry run.</para>
+        /// </description></item>
+        /// </list>
+        /// <para>A dry run is used to test API calls and verify whether you have the permissions to access the specified resources and whether the request parameters are valid. If you perform a dry run, KMS always returns a failure response that indicates the cause of the failure. The following failure causes are included:</para>
+        /// <list type="bullet">
+        /// <item><description><para>DryRunOperationError: The request would have succeeded if the DryRun parameter is not specified.</para>
+        /// </description></item>
+        /// <item><description><para>ValidationError: The specified parameters in the request are invalid.</para>
+        /// </description></item>
+        /// <item><description><para>AccessDeniedError: You are not authorized to perform this operation on the KMS resource.</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public string DryRun { get; set; }
 
         /// <summary>
-        /// <para>The ID of the CMK. The ID must be globally unique.</para>
+        /// <para>The globally unique identifier (GUID) of the customer master key (CMK).</para>
         /// <remarks>
-        /// <para> You can also set this parameter to an alias that is bound to the CMK. For more information, see <a href="https://help.aliyun.com/document_detail/68522.html">Overview of aliases</a>.</para>
+        /// <para>You can also specify the alias that is bound to the CMK. For more information, see <a href="https://help.aliyun.com/document_detail/68522.html">Overview of aliases</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -53,7 +74,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public string KeyId { get; set; }
 
         /// <summary>
-        /// <para>The version ID of the CMK. The ID must be globally unique.</para>
+        /// <para>The ID of the key version. The ID must be the GUID of the key version.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,7 +87,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// <summary>
         /// <para>The signature value to be verified.</para>
         /// <remarks>
-        /// <para> The value is encoded in Base64.</para>
+        /// <para>The value is Base64-encoded.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

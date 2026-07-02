@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public string Arn { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10257c86-269d-43aa-aaf3-90ed4144bb7c</para>

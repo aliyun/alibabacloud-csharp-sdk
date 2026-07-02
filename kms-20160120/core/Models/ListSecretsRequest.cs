@@ -10,9 +10,13 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class ListSecretsRequest : TeaModel {
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
-        /// <para>Valid values: 1 to 100.</para>
-        /// <para>Default value: 10.</para>
+        /// <para>Specifies whether to return resource tags for each secret. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>true</c>: Resource tags are returned.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c> (default): Resource tags are not returned.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -22,7 +26,45 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public string FetchTags { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>Filters secrets based on specified conditions. The value is a list of up to 10 key-value pairs. When you filter by tag, the query returns a maximum of 4,000 resources. If more than 4,000 resources match the filter, call the <a href="https://help.aliyun.com/document_detail/120090.html">ListResourceTags</a> operation.</para>
+        /// <list type="bullet">
+        /// <item><description><para>Key</para>
+        /// <list type="bullet">
+        /// <item><description><para>Description: The filter property.</para>
+        /// </description></item>
+        /// <item><description><para>Type: String.</para>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para>Values</para>
+        /// <list type="bullet">
+        /// <item><description><para>Description: The filter value.</para>
+        /// </description></item>
+        /// <item><description><para>Type: String.</para>
+        /// </description></item>
+        /// <item><description><para>You can specify up to 10 items.</para>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <para>Valid values for Key:</para>
+        /// <list type="bullet">
+        /// <item><description><para>Set <c>Key</c> to <b>SecretName</b> to filter by secret name.</para>
+        /// </description></item>
+        /// <item><description><para>Set <c>Key</c> to <b>Description</b> to filter by secret description.</para>
+        /// </description></item>
+        /// <item><description><para>Set <c>Key</c> to <b>TagKey</b> to filter by tag key.</para>
+        /// </description></item>
+        /// <item><description><para>Set <c>Key</c> to <b>TagValue</b> to filter by tag value.</para>
+        /// </description></item>
+        /// <item><description><para>Set <c>Key</c> to <b>DKMSInstanceId</b> to filter by KMS instance ID.</para>
+        /// </description></item>
+        /// <item><description><para>Set Key to <b>SecretType</b> to filter by secret type. <c>Values</c> can be <c>Generic</c>, <c>RDS</c>, <c>Redis</c>, <c>RAMCredentials</c>, <c>ECS</c>, or <c>PolarDB</c>.</para>
+        /// </description></item>
+        /// <item><description><para>Set <c>Key</c> to <b>Creator</b> to filter by the creator of the secret.</para>
+        /// </description></item>
+        /// </list>
+        /// <para>If you specify multiple values for a key, the filter applies a logical OR. For example, if you enter <c>[ {&quot;Key&quot;:&quot;SecretName&quot;, &quot;Values&quot;:[&quot;sec1&quot;,&quot;sec2&quot;]} ]</c>, this means: <c>(SecretName=sec1 OR SecretName=sec2)</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;Key&quot;:&quot;SecretName&quot;, &quot;Values&quot;:[&quot;Val1&quot;,&quot;Val2&quot;]}]</para>
@@ -32,44 +74,9 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public string Filters { get; set; }
 
         /// <summary>
-        /// <para>The secret filter. The filter consists of one or more key-value pairs. You can specify one key-value pair or leave this parameter empty. If you use one tag key or tag value to filter resources, up to 4,000 resources can be queried. If you want to query more than 4,000 resources, call the <a href="https://help.aliyun.com/document_detail/120090.html">ListResourceTags</a> operation.</para>
-        /// <list type="bullet">
-        /// <item><description><para>Key</para>
-        /// <list type="bullet">
-        /// <item><description><para>Description: the property that you want to filter.</para>
-        /// </description></item>
-        /// <item><description><para>Type: string.</para>
-        /// </description></item>
-        /// <item><description><para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>SecretName: the secret name.</description></item>
-        /// <item><description>Description: the description of the secret.</description></item>
-        /// <item><description>TagKey: the tag key.</description></item>
-        /// <item><description>TagValue: the tag value.</description></item>
-        /// </list>
-        /// </description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><para>Values</para>
-        /// <list type="bullet">
-        /// <item><description><para>Description: the value to be included after filtering.</para>
-        /// </description></item>
-        /// <item><description><para>Type: string.</para>
-        /// </description></item>
-        /// <item><description><para>Length: 0 to 10.</para>
-        /// </description></item>
-        /// <item><description><para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>If the Key field is set to SecretName, the value must be 1 to 192 characters in length and can contain letters, digits, and special characters <c>_ / + = . @ -</c>.</description></item>
-        /// <item><description>If the Key field is set to Description, the value must be 1 to 256 characters in length.</description></item>
-        /// <item><description>If the Key field is set to TagKey, the value must be 1 to 256 characters in length and can contain letters, digits, and special characters <c>/ _ - . + = @ :</c>.</description></item>
-        /// <item><description>If the Key field is set to TagValue, the value must be 1 to 256 characters in length and can contain letters, numbers, and special characters <c>/ _ - . + = @ :</c>.</description></item>
-        /// </list>
-        /// </description></item>
-        /// </list>
-        /// </description></item>
-        /// </list>
-        /// <para>The logical relationship between values of the Values field in a key-value pair is OR. Example: <c>[ {&quot;Key&quot;:&quot;SecretName&quot;, &quot;Values&quot;:[&quot;sec1&quot;,&quot;sec2&quot;]}]</c>. In this example, the semantics are <c>SecretName=sec 1 OR SecretName=sec 2</c>.</para>
+        /// <para>The page number.<br>
+        /// The value must be greater than 0.<br>
+        /// Default: 1.<br><br></para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -79,7 +86,9 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page size.<br>
+        /// The value must be between 1 and 100.<br>
+        /// Default: 10.<br><br></para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

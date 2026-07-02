@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class ListAliasesResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The alias of the user.</para>
-        /// </summary>
         [NameInMap("Aliases")]
         [Validation(Required=false)]
         public ListAliasesResponseBodyAliases Aliases { get; set; }
@@ -20,32 +17,14 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
             [Validation(Required=false)]
             public List<ListAliasesResponseBodyAliasesAlias> Alias { get; set; }
             public class ListAliasesResponseBodyAliasesAlias : TeaModel {
-                /// <summary>
-                /// <para>The Alibaba Cloud Resource Name (ARN) of the alias.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>acs:kms:cn-hangzhou:123456:alias/ExampleAlias1</para>
-                /// </summary>
                 [NameInMap("AliasArn")]
                 [Validation(Required=false)]
                 public string AliasArn { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the alias.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>alias/ExampleAlias1</para>
-                /// </summary>
                 [NameInMap("AliasName")]
                 [Validation(Required=false)]
                 public string AliasName { get; set; }
 
-                /// <summary>
-                /// <para>The CMK to which the alias belongs.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>08c33a6f-4e0a-4a1b-a3fa-7ddfa1d****</para>
-                /// </summary>
                 [NameInMap("KeyId")]
                 [Validation(Required=false)]
                 public string KeyId { get; set; }
@@ -75,7 +54,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1b57992c-834b-4811-a889-f8bac1ba0353</para>

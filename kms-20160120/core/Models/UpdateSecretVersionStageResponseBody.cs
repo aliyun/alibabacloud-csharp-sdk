@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class UpdateSecretVersionStageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The name of the secret.</para>
+        /// <para>The ID of the request. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8cad259f-4d77-40ec-bbd7-b9c47a423bb9</para>
@@ -20,13 +20,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The version to which you want to apply the specified stage label.</para>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>You must specify at least one of the RemoveFromVersion and MoveToVersion parameters.</description></item>
-        /// <item><description>If the VersionStage parameter is set to ACSCurrent or ACSPrevious, this parameter is required.</description></item>
-        /// </list>
-        /// </remarks>
+        /// <para>The name of the secret.</para>
         /// 
         /// <b>Example:</b>
         /// <para>secret001</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
             /// <para>The date and time when the version was created. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2019-08-02T10:38:27Z</para>
+            /// <para>2023-07-02T10:38:27Z</para>
             /// </summary>
             [NameInMap("CreationDate")]
             [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
             /// <para>The ID of the CMK. The ID must be globally unique.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>0b30658a-ed1a-4922-b8f7-a673ca9c****</para>
+            /// <para>key-hzz62f1cb66fa42qo****</para>
             /// </summary>
             [NameInMap("KeyId")]
             [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
             /// <para>The ID of the version.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>c0a3d5dc-0b47-4199-a050-b289349a****</para>
+            /// <para>key-hzz62f1cb66fa42qo****-20v29b****</para>
             /// </summary>
             [NameInMap("KeyVersionId")]
             [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>b96f250a-4b75-498c-91be-22c6928f85be</para>

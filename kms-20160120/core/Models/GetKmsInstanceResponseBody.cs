@@ -11,17 +11,14 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
     public class GetKmsInstanceResponseBody : TeaModel {
         /// <summary>
         /// <para>The details of the KMS instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("KmsInstance")]
         [Validation(Required=false)]
         public GetKmsInstanceResponseBodyKmsInstance KmsInstance { get; set; }
         public class GetKmsInstanceResponseBodyKmsInstance : TeaModel {
-            /// <summary>
-            /// <para>A list of associated VPCs.</para>
-            /// <remarks>
-            /// <para> If your self-managed applications are deployed in multiple VPCs in the same region, you can associate VPCs with the KMS instance beyond the VPC that you specify when you enable the KMS instance. The VPCs can belong to the same Alibaba Cloud account or different Alibaba Cloud accounts. After the configuration is complete, self-managed applications in the VPCs can access the specified KMS instance.</para>
-            /// </remarks>
-            /// </summary>
             [NameInMap("BindVpcs")]
             [Validation(Required=false)]
             public GetKmsInstanceResponseBodyKmsInstanceBindVpcs BindVpcs { get; set; }
@@ -30,42 +27,18 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
                 [Validation(Required=false)]
                 public List<GetKmsInstanceResponseBodyKmsInstanceBindVpcsBindVpc> BindVpc { get; set; }
                 public class GetKmsInstanceResponseBodyKmsInstanceBindVpcsBindVpc : TeaModel {
-                    /// <summary>
-                    /// <para>The region to which the VPC belongs.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>cn-hangzhou</para>
-                    /// </summary>
                     [NameInMap("RegionId")]
                     [Validation(Required=false)]
                     public string RegionId { get; set; }
 
-                    /// <summary>
-                    /// <para>The vSwitch in the VPC.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>vsw-bp1i512amhdje10f1****</para>
-                    /// </summary>
                     [NameInMap("VSwitchId")]
                     [Validation(Required=false)]
                     public string VSwitchId { get; set; }
 
-                    /// <summary>
-                    /// <para>The ID of the VPC.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>vpc-bp19z7djuhtad5dff****</para>
-                    /// </summary>
                     [NameInMap("VpcId")]
                     [Validation(Required=false)]
                     public string VpcId { get; set; }
 
-                    /// <summary>
-                    /// <para>The Alibaba Cloud account to which the VPC belongs.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>190325303126****</para>
-                    /// </summary>
                     [NameInMap("VpcOwnerId")]
                     [Validation(Required=false)]
                     public string VpcOwnerId { get; set; }
@@ -75,7 +48,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
             }
 
             /// <summary>
-            /// <para>The content of the certificate authority (CA) certificate of the KMS instance.</para>
+            /// <para>The CA certificate chain for the KMS instance in PEM format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>-----BEGIN CERTIFICATE-----\r\nMIIDuzCCAqOgAwIBAgIJALTKwWAjvbMiMA0GCSqGSIb3DQEBCwUAMHQxCzAJBgNV****-----END CERTIFICATE-----</para>
@@ -84,12 +57,24 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
             [Validation(Required=false)]
             public string CaCertificateChainPem { get; set; }
 
+            /// <summary>
+            /// <para>The billing method of the instance. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><c>PREPAY</c>: subscription</para>
+            /// </description></item>
+            /// <item><description><para><c>POSTPAY</c>: pay-as-you-go</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>POSTPAY</para>
+            /// </summary>
             [NameInMap("ChargeType")]
             [Validation(Required=false)]
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// <para>The time when the KMS instance is created.</para>
+            /// <para>The creation time of the KMS instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-09-05T12:44:20Z</para>
@@ -97,6 +82,14 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
+
+            [NameInMap("DeletionProtection")]
+            [Validation(Required=false)]
+            public bool? DeletionProtection { get; set; }
+
+            [NameInMap("DeletionProtectionDescription")]
+            [Validation(Required=false)]
+            public string DeletionProtectionDescription { get; set; }
 
             /// <summary>
             /// <para>The expiration time of the KMS instance.</para>
@@ -129,7 +122,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// <para>The number of keys that can be created for the KMS instance.</para>
+            /// <para>The maximum number of keys that can be created in the KMS instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -138,28 +131,58 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
             [Validation(Required=false)]
             public long? KeyNum { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether logging is enabled for the KMS instance. Valid values: <c>1</c> (enabled) and <c>0</c> (disabled).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("Log")]
             [Validation(Required=false)]
             public long? Log { get; set; }
 
+            /// <summary>
+            /// <para>The log storage capacity. Unit: GB.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100</para>
+            /// </summary>
             [NameInMap("LogStorage")]
             [Validation(Required=false)]
             public long? LogStorage { get; set; }
 
+            /// <summary>
+            /// <para>The product type.<br>Subscription:<br><c>kms_ddi_public_cn</c>: China site<br><c>kms_ddi_public_intl</c>: international site<br>Pay-as-you-go:<br><c>kms_ppi_public_cn</c>: China site<br><c>kms_ppi_public_intl</c>: international site<br><br><br><br><br><br></para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>kms_ddi_public_cn</para>
+            /// </summary>
             [NameInMap("ProductType")]
             [Validation(Required=false)]
             public string ProductType { get; set; }
 
+            /// <summary>
+            /// <para>The version of the KMS instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3</para>
+            /// </summary>
             [NameInMap("ProductVersion")]
             [Validation(Required=false)]
             public string ProductVersion { get; set; }
 
+            /// <summary>
+            /// <para>The sales status of the instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Normal</para>
+            /// </summary>
             [NameInMap("SaleStatus")]
             [Validation(Required=false)]
             public string SaleStatus { get; set; }
 
             /// <summary>
-            /// <para>The number of secrets that can be created for the KMS instance.</para>
+            /// <para>The maximum number of credentials that can be created in the KMS instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -179,7 +202,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
             public long? Spec { get; set; }
 
             /// <summary>
-            /// <para>The time when the KMS instance is enabled.</para>
+            /// <para>The time when the KMS instance was enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-09-05T12:44:19Z</para>
@@ -191,11 +214,16 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
             /// <summary>
             /// <para>The status of the KMS instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Uninitialized: The KMS instance is not enabled.</description></item>
-            /// <item><description>Connecting: The KMS instance is being connected.</description></item>
-            /// <item><description>Connected: The KMS instance is enabled.</description></item>
-            /// <item><description>Disconnected: The KMS instance is disconnected.</description></item>
-            /// <item><description>Error: The KMS instance is abnormal.</description></item>
+            /// <item><description><para><c>Uninitialized</c>: The instance is not enabled.</para>
+            /// </description></item>
+            /// <item><description><para><c>Connecting</c>: The instance is connecting.</para>
+            /// </description></item>
+            /// <item><description><para><c>Connected</c>: The instance is enabled.</para>
+            /// </description></item>
+            /// <item><description><para><c>Disconnected</c>: The instance is disconnected.</para>
+            /// </description></item>
+            /// <item><description><para><c>Error</c>: The instance is in an error state.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -206,7 +234,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The virtual private cloud (VPC) with which the KMS instance is associated.</para>
+            /// <para>The VPC to which the KMS instance is attached.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-bp19z7cwmltad5dff****</para>
@@ -216,7 +244,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
             public string VpcId { get; set; }
 
             /// <summary>
-            /// <para>The access management quota for the KMS instance.</para>
+            /// <para>The maximum number of VPCs that can be associated with the KMS instance for access control.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -226,7 +254,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
             public long? VpcNum { get; set; }
 
             /// <summary>
-            /// <para>The vSwitch in the VPC.</para>
+            /// <para>The vSwitches in the VPC to which the KMS instance is attached.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-bp1i512amda6d10a0****</para>
@@ -236,7 +264,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
             public List<string> VswitchIds { get; set; }
 
             /// <summary>
-            /// <para>The zone with which the KMS instance is associated.</para>
+            /// <para>The zones to which the KMS instance is attached.</para>
             /// 
             /// <b>Example:</b>
             /// <para>&quot;cn-hangzhou-k&quot;,       &quot;cn-hangzhou-j&quot;</para>
@@ -248,7 +276,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use this ID to locate and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>46b4a94a-57d2-44b4-9810-1e87d31abb33</para>

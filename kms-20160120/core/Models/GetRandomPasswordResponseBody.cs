@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public string RandomPassword { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6b0cbe25-5e33-467e-972e-7a83c6c97604</para>

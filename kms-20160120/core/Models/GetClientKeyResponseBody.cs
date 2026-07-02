@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The private key algorithm of the client key.</para>
+        /// <para>The algorithm of the private key for the client key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RSA_2048</para>
@@ -50,8 +50,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public string KeyAlgorithm { get; set; }
 
         /// <summary>
-        /// <para>The provider of the client key.</para>
-        /// <para>Currently, only Key Management Service (KMS) is supported. The value is fixed as KMS_PROVIDED.</para>
+        /// <para>The creator of the client key.</para>
+        /// <para>Currently, client keys are generated only by KMS. The value is \<c>KMS_PROVIDED\\</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>KMS_PROVIDED</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public string KeyOrigin { get; set; }
 
         /// <summary>
-        /// <para>The end of the validity period of the client key.</para>
+        /// <para>The time when the client key expires.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2028-08-31T17:14:33Z</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public string NotAfter { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the validity period of the client key.</para>
+        /// <para>The time when the validity period of the client key starts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-08-31T17:14:33Z</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public string NotBefore { get; set; }
 
         /// <summary>
-        /// <para>The content of the public key of the client key.</para>
+        /// <para>The content of the public key for the client key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN CERTIFICATE-----\nMIIDcjCCAlqgAwIBAgIQT/sAVRxwYp54mrw****-----END CERTIFICATE-----</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public string PublicKeyData { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The ID of the request. Alibaba Cloud generates this unique ID for each request. Use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>63d849a6-045b-4a57-ad9f-c5f756cea9e9</para>

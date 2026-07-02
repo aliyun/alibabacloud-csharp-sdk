@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class PutSecretValueRequest : TeaModel {
         /// <summary>
-        /// <para>The secret value. The value is encrypted and then stored in the new version.</para>
+        /// <para>The secret value. The value is encrypted and stored in the specified new version.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -23,8 +23,10 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// <summary>
         /// <para>The type of the secret value. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>text: This is the default value.</description></item>
-        /// <item><description>binary</description></item>
+        /// <item><description><para>text (default)</para>
+        /// </description></item>
+        /// <item><description><para>binary</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,7 +37,10 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public string SecretDataType { get; set; }
 
         /// <summary>
-        /// <para>The name of the secret.</para>
+        /// <para>The name or Alibaba Cloud Resource Name (ARN) of the secret.</para>
+        /// <remarks>
+        /// <para>When you access a secret in another Alibaba Cloud account, you must specify the ARN of the secret. The ARN of a secret is in the format of <c>acs:kms:${region}:${account}:secret/${secret-name}</c>.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,18 +51,18 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public string SecretName { get; set; }
 
         /// <summary>
-        /// <para>The new version of the secret value. Version numbers must be unique in each secret.</para>
+        /// <para>The version number of the secret. The value must be unique in the secret.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>00000000000000000000000000000000203</para>
+        /// <para>v3</para>
         /// </summary>
         [NameInMap("VersionId")]
         [Validation(Required=false)]
         public string VersionId { get; set; }
 
         /// <summary>
-        /// <para>The stage labels that are used to mark the new version. If you do not specify this parameter, Secrets Manager marks the new version with ACSCurrent.</para>
+        /// <para>The stage labels that are used to mark the new version. If you do not specify this parameter, KMS marks the new version with ACSCurrent.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;ACSCurrent&quot;,&quot;ACSNext&quot;]</para>

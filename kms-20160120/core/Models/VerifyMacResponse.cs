@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Kms20160120.Models
 {
-    public class DescribeCertificateResponse : TeaModel {
+    public class VerifyMacResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public DescribeCertificateResponseBody Body { get; set; }
+        public VerifyMacResponseBody Body { get; set; }
 
     }
 

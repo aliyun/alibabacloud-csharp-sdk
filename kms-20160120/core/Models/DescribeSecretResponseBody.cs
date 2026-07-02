@@ -180,10 +180,6 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         [Validation(Required=false)]
         public string SecretType { get; set; }
 
-        /// <summary>
-        /// <para>The resource tags of the secret.</para>
-        /// <para>This parameter is not returned if you set the FetchTags parameter to false or you do not specify the FetchTags parameter.</para>
-        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public DescribeSecretResponseBodyTags Tags { get; set; }
@@ -192,22 +188,10 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
             [Validation(Required=false)]
             public List<DescribeSecretResponseBodyTagsTag> Tag { get; set; }
             public class DescribeSecretResponseBodyTagsTag : TeaModel {
-                /// <summary>
-                /// <para>The tag key.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>key1</para>
-                /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
-                /// <summary>
-                /// <para>The tag value.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>val1</para>
-                /// </summary>
                 [NameInMap("TagValue")]
                 [Validation(Required=false)]
                 public string TagValue { get; set; }

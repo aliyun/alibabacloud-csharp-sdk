@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// <summary>
         /// <para>The ID of the KMS instance.</para>
         /// <remarks>
-        /// <para>You must specify this parameter if you need to create a key for a KMS instance. If you need to create a default key of the CMK type, you do not need to specify this parameter.</para>
+        /// <para>This parameter is required when you create a key for a KMS instance. This parameter is not required when you create a default key (master key).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,8 +23,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public string DKMSInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The description of the key.</para>
-        /// <para>The description can be 0 to 8,192 characters in length.</para>
+        /// <para>The description of the key.<br> The description can be 0 to 8,192 characters in length.<br></para>
         /// 
         /// <b>Example:</b>
         /// <para>key description example</para>
@@ -36,10 +35,12 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// <summary>
         /// <para>Specifies whether to enable automatic key rotation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false (default)</description></item>
+        /// <item><description><para>true: enables automatic key rotation.</para>
+        /// </description></item>
+        /// <item><description><para>false (default): disables automatic key rotation.</para>
+        /// </description></item>
         /// </list>
-        /// <para>This parameter is valid only when the key belongs to an instance type that supports automatic rotation. For more information, see <a href="https://help.aliyun.com/document_detail/2358146.html">Key rotation</a>.</para>
+        /// <para>This parameter is valid only when the key management type of the key supports automatic rotation. For more information, see <a href="https://help.aliyun.com/document_detail/2358146.html">Key rotation</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -49,9 +50,9 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public bool? EnableAutomaticRotation { get; set; }
 
         /// <summary>
-        /// <para>The key specification. The valid values vary based on the KMS instance type. For more information, see <a href="https://help.aliyun.com/document_detail/480159.html">Overview</a>.</para>
+        /// <para>The specification of the key. The valid values vary based on the key management type. For more information about key specifications, supported standards, and algorithms, see <a href="https://help.aliyun.com/document_detail/480161.html">Key management types and key specifications</a>.</para>
         /// <remarks>
-        /// <para>If you do not specify a value for this parameter, the default key specification is Aliyun_AES_256.</para>
+        /// <para>If you do not specify this parameter, the key specification is Aliyun_AES_256 by default.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -61,6 +62,24 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         [Validation(Required=false)]
         public string KeySpec { get; set; }
 
+        /// <summary>
+        /// <para>The key storage location. This parameter is valid only when DKMSInstanceId is specified for a hardware key management instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>HsmInternal (default): The key is stored in an HSM and does not support rotation.</para>
+        /// </description></item>
+        /// <item><description><para>HsmEncryptedDatabase: The key is stored in a database.</para>
+        /// <list type="bullet">
+        /// <item><description><para>Symmetric keys: Rotation is supported.</para>
+        /// </description></item>
+        /// <item><description><para>Asymmetric keys: Rotation is not supported.</para>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>HsmInternal</para>
+        /// </summary>
         [NameInMap("KeyStorageMechanism")]
         [Validation(Required=false)]
         public string KeyStorageMechanism { get; set; }
@@ -68,10 +87,12 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// <summary>
         /// <para>The usage of the key. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ENCRYPT/DECRYPT</description></item>
-        /// <item><description>SIGN/VERIFY</description></item>
+        /// <item><description><para>ENCRYPT/DECRYPT: encrypts and decrypts data.</para>
+        /// </description></item>
+        /// <item><description><para>SIGN/VERIFY: generates and verifies digital signatures.</para>
+        /// </description></item>
         /// </list>
-        /// <para>If the key supports signing and verification, the default value is SIGN/VERIFY. If the key does not support signing and verification, the default value is ENCRYPT/DECRYPT.</para>
+        /// <para>Default value: If the key supports signature verification, the default value is SIGN/VERIFY. Otherwise, the default value is ENCRYPT/DECRYPT.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ENCRYPT/DECRYPT</para>
@@ -81,18 +102,21 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public string KeyUsage { get; set; }
 
         /// <summary>
-        /// <para>The key material origin. Valid values:</para>
+        /// <para>The source of the key material. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Aliyun_KMS (default): KMS generates key material.</description></item>
-        /// <item><description>EXTERNAL: You import key material.</description></item>
+        /// <item><description><para>Aliyun_KMS (default): The key material is generated by Alibaba Cloud KMS.</para>
+        /// </description></item>
+        /// <item><description><para>EXTERNAL: The key material is imported.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>The value of this parameter is case-sensitive.</description></item>
-        /// <item><description>Default keys of the customer master key (CMK) type support Aliyun_KMS and EXTERNAL. Keys in instances of the software key management type support only Aliyun_KMS. Keys in instances of the hardware key management type support Aliyun_KMS and EXTERNAL.</description></item>
-        /// <item><description>If you set Origin to EXTERNAL, you must import key material. For more information, see <a href="https://help.aliyun.com/document_detail/607841.html">Import key material into a symmetric key</a> or <a href="https://help.aliyun.com/document_detail/608827.html">Import key material into an asymmetric key</a>.</description></item>
+        /// <item><description>The value is case-sensitive.</description></item>
         /// </list>
         /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>If you set this parameter to EXTERNAL, import key material. For more information, see <a href="https://help.aliyun.com/document_detail/607841.html">Import key material for a symmetric key</a> or <a href="https://help.aliyun.com/document_detail/608827.html">Import key material for an asymmetric key</a>.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Aliyun_KMS</para>
@@ -101,23 +125,83 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         [Validation(Required=false)]
         public string Origin { get; set; }
 
+        /// <summary>
+        /// <para>The content of the key policy. The value is in the JSON format. The policy can be up to 32,768 bytes in length. For more information about key policies, see <a href="https://help.aliyun.com/document_detail/2716468.html">Key policy overview</a>. If you do not specify this parameter, the default credential policy is used.</para>
+        /// <para>A key policy contains the following content:</para>
+        /// <list type="bullet">
+        /// <item><description><para>Version: The version of the key policy. Only version 1 is supported.</para>
+        /// </description></item>
+        /// <item><description><para>Statement: The statements of the key policy. Each key policy contains one or more statements.</para>
+        /// </description></item>
+        /// </list>
+        /// <para>The following is the format of a key policy:</para>
+        /// <pre><c>{
+        ///   &quot;Version&quot;: &quot;1&quot;,
+        ///   &quot;Statement&quot;: [
+        ///     {
+        ///       &quot;Sid&quot;: &quot;Enable RAM User Permissions&quot;,
+        ///       &quot;Effect&quot;: &quot;Allow&quot;,
+        ///       &quot;Principal&quot;: {
+        ///         &quot;RAM&quot;: [&quot;acs:ram::112890462****:root&quot;]
+        ///       },
+        ///       &quot;Action&quot;: [
+        ///         &quot;kms:*&quot;
+        ///       ],
+        ///       &quot;Resource&quot;: [
+        ///         &quot;*&quot;
+        ///       ],
+        ///       &quot;Condition&quot;: {
+        ///         &quot;condition operator&quot;: {
+        ///           &quot;condition key&quot;: &quot;condition value&quot;
+        ///         }
+        ///       }
+        ///     }
+        ///   ]
+        /// }
+        /// </c></pre>
+        /// <para>Details about a statement:</para>
+        /// <list type="bullet">
+        /// <item><description><para>Sid: (Optional) The custom statement identifier. The identifier can be up to 128 characters in length and can contain uppercase letters (A-Z), lowercase letters (a-z), digits (0-9), and special characters, including underscores (_), forward slashes (/), plus signs (+), equal signs (=), periods (.), at signs (@), and hyphens (-).</para>
+        /// </description></item>
+        /// <item><description><para>Effect: (Required) The effect of the policy statement. Valid values: Allow and Deny.</para>
+        /// </description></item>
+        /// <item><description><para>Principal: (Required) The principal to which the permission is granted. Set this parameter to the current Alibaba Cloud account (the Alibaba Cloud account to which the key belongs), a RAM user or RAM role of the current Alibaba Cloud account, or a RAM user or RAM role of another Alibaba Cloud account.</para>
+        /// </description></item>
+        /// <item><description><para>Action: (Required) The API operations that are allowed or denied. The value must start with &quot;kms:&quot;. For a list of supported operations, see <a href="https://help.aliyun.com/document_detail/2716468.html">Key policy overview</a>. If you specify an operation that is not in the list, the setting does not take effect.</para>
+        /// </description></item>
+        /// <item><description><para>Resource: (Required) The value can only be \*, which indicates the current KMS key.</para>
+        /// </description></item>
+        /// <item><description><para>Condition: (Optional) The conditions for the authorization to take effect. Use conditions to evaluate the context of an API request to determine whether to apply the policy statement. The format is <c>&quot;Condition&quot;: {&quot;condition operator&quot;: {&quot;condition key&quot;: &quot;condition value&quot;}}</c>. For more information, see <a href="https://help.aliyun.com/document_detail/2716468.html">Key policy overview</a>.</para>
+        /// </description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>After granting permissions to a RAM user or RAM role of another Alibaba Cloud account, use that account to grant the RAM user or RAM role permissions to use the key in the RAM console. The RAM user or RAM role can use the key only after this is complete. For more information, see <a href="https://help.aliyun.com/document_detail/480682.html">Custom policies for Key Management Service</a>, <a href="https://help.aliyun.com/document_detail/116146.html">Grant permissions to a RAM user</a>, and <a href="https://help.aliyun.com/document_detail/116147.html">Grant permissions to a RAM role</a>.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;Statement&quot;:[{&quot;Action&quot;:[&quot;kms:<em>&quot;],&quot;Effect&quot;:&quot;Allow&quot;,&quot;Principal&quot;:{&quot;RAM&quot;:[&quot;acs:ram::119285303511</em><em>**:<em>&quot;]},&quot;Resource&quot;:[&quot;</em>&quot;],&quot;Sid&quot;:&quot;kms default key policy&quot;},{&quot;Action&quot;:[&quot;kms:List</em>&quot;,&quot;kms:Describe*&quot;,&quot;kms:Create*&quot;,&quot;kms:Enable*&quot;,&quot;kms:Disable*&quot;,&quot;kms:Get*&quot;,&quot;kms:Set*&quot;,&quot;kms:Update*&quot;,&quot;kms:Delete*&quot;,&quot;kms:Cancel*&quot;,&quot;kms:TagResource&quot;,&quot;kms:UntagResource&quot;,&quot;kms:ImportKeyMaterial&quot;,&quot;kms:ScheduleKeyDeletion&quot;],&quot;Effect&quot;:&quot;Allow&quot;,&quot;Principal&quot;:{&quot;RAM&quot;:[&quot;acs:ram::119285303511****:user/for_test_policy&quot;]},&quot;Resource&quot;:[&quot;*&quot;]}],&quot;Version&quot;:&quot;1&quot;}</para>
+        /// </summary>
         [NameInMap("Policy")]
         [Validation(Required=false)]
         public string Policy { get; set; }
 
         /// <summary>
-        /// <para>You do not need to specify this parameter. KMS sets a protection level for your key.</para>
+        /// <para>You do not need to specify this parameter. KMS automatically sets an appropriate protection level for your key.</para>
         /// <para>The protection level of the key. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SOFTWARE</description></item>
-        /// <item><description>HSM</description></item>
+        /// <item><description><para>SOFTWARE</para>
+        /// </description></item>
+        /// <item><description><para>HSM</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>If DKMSInstanceId is specified, this parameter does not take effect. If your instance is an instance of the software key management type, set the value to SOFTWARE. If your instance is an instance of the hardware key management type, set the value to HSM.</description></item>
-        /// <item><description>If you do not specify DKMSInstanceId, we recommend that you do not specify this parameter. KMS sets a protection level for your key. If managed hardware security modules (HSMs) exist in the region of your KMS instance, set the value to HSM. If managed HSMs do not exist in the region of your KMS instance, set the value to SOFTWARE. For more information, see Managed HSM overview.</description></item>
+        /// <item><description>If you specify DKMSInstanceId, this parameter is ignored. If the instance is a software key management instance, the protection level is SOFTWARE. If the instance is a hardware key management instance, the protection level is HSM.</description></item>
         /// </list>
         /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>If you do not specify DKMSInstanceId, leave this parameter empty. KMS sets the protection level. If a managed HSM is available in the region, KMS sets this parameter to HSM. Otherwise, KMS sets this parameter to SOFTWARE. For more information, see <a href="https://help.aliyun.com/document_detail/125803.html">Managed HSM overview</a>.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>SOFTWARE</para>
@@ -127,14 +211,17 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public string ProtectionLevel { get; set; }
 
         /// <summary>
-        /// <para>The period of automatic key rotation. Format: integer[unit]. Unit: d (day), h (hour), m (minute), or s (second). For example, both 7d and 604800s represent a seven-day interval.</para>
+        /// <para>The automatic rotation period. The format is \<c>integer[unit]\\</c>. \<c>integer\\</c> indicates the length of the period. \<c>unit\\</c> indicates the unit of time. Valid units: d (day), h (hour), m (minute), and s (second). For example, both 7d and 604800s represent a period of 7 days.</para>
         /// <list type="bullet">
-        /// <item><description>For a default key, set the value to 365 days.</description></item>
-        /// <item><description>For a software-protected key, set a value that ranges from 7 to 365 days.</description></item>
-        /// <item><description>A hardware-protected key does not support automatic rotation.</description></item>
+        /// <item><description><para>If the key is a default key, the value is 365d.</para>
+        /// </description></item>
+        /// <item><description><para>If the key is a software-protected key, the value can be from 7d to 365d.</para>
+        /// </description></item>
+        /// <item><description><para>If the key is a hardware-protected key, automatic rotation is not supported.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>If EnableAutomaticRotation is set to true, this parameter is required.</para>
+        /// <para>This parameter is required if you set EnableAutomaticRotation to true.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -145,9 +232,9 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public string RotationInterval { get; set; }
 
         /// <summary>
-        /// <para>The tag that is added to the key. A tag consists of a key-value pair.</para>
-        /// <para>You can enter up to 20 tags. Enter multiple tags in the [{&quot;TagKey&quot;:&quot;key1&quot;,&quot;TagValue&quot;:&quot;value1&quot;},{&quot;TagKey&quot;:&quot;key2&quot;,&quot;TagValue&quot;:&quot;value2&quot;},..] format.</para>
-        /// <para>Each tag key or tag value can be up to 128 characters in length and can contain letters, digits, forward slashes (/), backslashes (\), underscores (_), hyphens (-), periods (.), plus signs (+), equal signs (=), colons (:), and at signs (@).</para>
+        /// <para>The tags to bind to the key. Each tag consists of a key-value pair (Key:Value), which includes a tag key and a tag value.</para>
+        /// <para>Specify a maximum of 20 tags. To specify multiple tags, use the following format: <c>[{&quot;TagKey&quot;:&quot;key1&quot;,&quot;TagValue&quot;:&quot;value1&quot;},{&quot;TagKey&quot;:&quot;key2&quot;,&quot;TagValue&quot;:&quot;value2&quot;},...]</c>.</para>
+        /// <para>Each tag key and tag value can be up to 128 characters in length and can contain uppercase letters, lowercase letters, digits, forward slashes (/), backslashes (\), underscores (_), hyphens (-), periods (.), plus signs (+), equal signs (=), colons (:), and at signs (@).</para>
         /// <remarks>
         /// <para>The tag key cannot start with aliyun or acs:.</para>
         /// </remarks>

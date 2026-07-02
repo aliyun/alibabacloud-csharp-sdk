@@ -10,54 +10,53 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class ListKeysRequest : TeaModel {
         /// <summary>
-        /// <para>The CMK filter. The filter consists of one or more key-value pairs. You can specify a maximum of 10 key-value pairs.</para>
+        /// <para>A filter for master keys. The filter consists of 0 to 10 key-value pairs.</para>
         /// <list type="bullet">
         /// <item><description><para>Key</para>
         /// <list type="bullet">
-        /// <item><description><para>Description: the property that you want to filter.</para>
+        /// <item><description><para>Description: The property to filter.</para>
         /// </description></item>
-        /// <item><description><para>Type: string.</para>
-        /// </description></item>
-        /// <item><description><para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>KeyState: the status of the CMK.</description></item>
-        /// <item><description>KeySpec: the type of the CMK.</description></item>
-        /// <item><description>KeyUsage: the usage of the CMK.</description></item>
-        /// <item><description>ProtectionLevel: the protection level.</description></item>
-        /// <item><description>CreatorType: the type of the creator.</description></item>
-        /// </list>
+        /// <item><description><para>Type: String.</para>
         /// </description></item>
         /// </list>
         /// </description></item>
         /// <item><description><para>Values</para>
         /// <list type="bullet">
-        /// <item><description><para>Description: the value to be included after filtering.</para>
+        /// <item><description><para>Description: The value to be included after filtering.</para>
         /// </description></item>
-        /// <item><description><para>Format: string array.</para>
+        /// <item><description><para>Type: String array.</para>
         /// </description></item>
         /// <item><description><para>Length: 0 to 10.</para>
         /// </description></item>
-        /// <item><description><para>Valid values:</para>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>When Key is set to KeyState, the value can be Enabled, Disabled, PendingDeletion, or PendingImport.</para>
+        /// <item><description><para>If \<c>Key\\</c> is set to \<c>KeyState\\</c>, it specifies the key status. Valid values for \<c>Value\\</c> are \<c>Enabled\\</c>, \<c>Disabled\\</c>, \<c>PendingDeletion\\</c>, and \<c>PendingImport\\</c>.</para>
         /// </description></item>
-        /// <item><description><para>When Key is set to KeySpec, the value can be Aliyun_AES_256, Aliyun_SM4, RSA_2048, EC_P256, EC_P256K, or EC_SM2.</para>
-        /// <para>Note: You can create CMKs of the EC_SM2 or Aliyun_SM4 type only in regions where State Cryptography Administration (SCA)-certified managed HSMs reside. For more information about the regions, see <a href="https://help.aliyun.com/document_detail/125803.html">Supported regions</a>. If your region does not support EC_SM2 or Aliyun_SM4, the two values are ignored if they are specified.</para>
+        /// <item><description><para>If \<c>Key\\</c> is set to \<c>KeySpec\\</c>, it specifies the key type. Valid values for \<c>Value\\</c> are \<c>Aliyun_AES_256\\</c>, \<c>Aliyun_SM4\\</c>, \<c>RSA_2048\\</c>, \<c>EC_P256\\</c>, \<c>EC_P256K\\</c>, \<c>EC_SM2\\</c>, and \<c>Aliyun_SM4\\</c>.<br> Note: You can create keys of the \<c>EC_SM2\\</c> and \<c>Aliyun_SM4\\</c> types only in regions that support managed HSMs and have passed the compliance assessment of the Office of State Commercial Cryptography Administration (OSCCA). For more information about the supported regions, see <a href="https://help.aliyun.com/document_detail/125803.html">Supported regions</a>. If you specify \<c>EC_SM2\\</c> or \<c>Aliyun_SM4\\</c> in a region that does not support these key types, the parameters are ignored.<br></para>
         /// </description></item>
-        /// <item><description><para>When Key is set to KeyUsage, the value can be ENCRYPT/DECRYPT or SIGN/VERIFY. ENCRYPT/DECRYPT indicates that the CMK is used to encrypt and decrypt data. SIGN/VERIFY indicates that the CMK is used to generate and verify digital signatures.</para>
+        /// <item><description><para>If \<c>Key\\</c> is set to \<c>KeyUsage\\</c>, it specifies the key usage. Valid values for \<c>Value\\</c> are \<c>ENCRYPT/DECRYPT\\</c> (for data encryption and decryption) and \<c>SIGN/VERIFY\\</c> (for generating and verifying digital signatures).</para>
         /// </description></item>
-        /// <item><description><para>When Key is set to ProtectionLevel, the value can be SOFTWARE (software) or HSM (hardware).</para>
-        /// <para>You can set ProtectionLevel to HSM in only specific regions. For more information about the regions, see <a href="https://help.aliyun.com/document_detail/125803.html">Supported regions</a>. If your region does not support the value HSM, the value is ignored if the value is specified.</para>
+        /// <item><description><para>If \<c>Key\\</c> is set to \<c>ProtectionLevel\\</c>, it specifies the protection level of the key. Valid values for \<c>Value\\</c> are \<c>SOFTWARE\\</c> and \<c>HSM\\</c>.<br> Note: The HSM protection level is supported only in specific regions. For more information about the supported regions, see <a href="https://help.aliyun.com/document_detail/125803.html">Supported regions</a>. If you specify \<c>HSM\\</c> in a region that does not support it, the parameter is ignored.<br></para>
         /// </description></item>
-        /// <item><description><para>If Key is set to CreatorType, the value can be User or Service. User indicates that CMKs created by the current account are queried. Service indicates that CMKs automatically created by other cloud services authorized by the current account are queried.</para>
+        /// <item><description><para>If \<c>Key\\</c> is set to \<c>CreatorType\\</c>, it specifies the creator type. Valid values for \<c>Value\\</c> are \<c>User\\</c> (returns master keys created by users) and \<c>Service\\</c> (returns master keys that are automatically created by other Alibaba Cloud services based on your authorization).</para>
+        /// </description></item>
+        /// <item><description><para>If \<c>Key\\</c> is set to \<c>DKMSInstanceId\\</c>, it specifies the ID of the KMS instance. Set \<c>Value\\</c> as needed.</para>
+        /// </description></item>
+        /// <item><description><para>If \<c>Key\\</c> is set to \<c>keyId\\</c>, it specifies the key ID. Set \<c>Value\\</c> as needed.</para>
+        /// </description></item>
+        /// <item><description><para>If \<c>Key\\</c> is set to \<c>AliasName\\</c>, it specifies the key alias. Set \<c>Value\\</c> as needed.</para>
+        /// </description></item>
+        /// <item><description><para>If \<c>Key\\</c> is set to \<c>Creator\\</c>, it specifies the key creator. Set \<c>Value\\</c> as needed.</para>
+        /// </description></item>
+        /// <item><description><para>If \<c>Key\\</c> is set to \<c>TagKey\\</c>, it specifies the key of a key tag. Set \<c>Value\\</c> as needed.</para>
+        /// </description></item>
+        /// <item><description><para>If \<c>Key\\</c> is set to \<c>TagValue\\</c>, it specifies the value of a key tag. Set \<c>Value\\</c> as needed.</para>
         /// </description></item>
         /// </list>
-        /// </description></item>
-        /// </list>
-        /// </description></item>
-        /// </list>
-        /// <para>The logical relationship between different keys is AND, and the logical relationship between multiple items in the same key is OR. Example:</para>
-        /// <para><c>[ {&quot;Key&quot;:&quot;KeyState&quot;, &quot;Values&quot;:[&quot;Enabled&quot;,&quot;Disabled&quot;]}, {&quot;Key&quot;:&quot;KeyState&quot;, &quot;Values&quot;:[&quot;PendingDeletion&quot;]}, {&quot;Key&quot;:&quot;KeySpec&quot;, &quot;Values&quot;:[&quot;Aliyun_AES_256&quot;]}]</c>. In this example, the semantics are:<c>(KeyState=Enabled OR KeyState=Disabled OR KeyState=PendingDeletion) AND (KeySpec=Aliyun_AES_ 256)</c>.</para>
+        /// <para>The logical relationship between different keys in \<c>Filters\\</c> is \<c>AND\\</c>. The logical relationship between multiple values for the same key is \<c>OR\\</c>. For example, if you enter <c>[ {&quot;Key&quot;:&quot;KeyState&quot;, &quot;Values&quot;:[&quot;Enabled&quot;,&quot;Disabled&quot;]}, {&quot;Key&quot;:&quot;KeyState&quot;, &quot;Values&quot;:[&quot;PendingDeletion&quot;]}, {&quot;Key&quot;:&quot;KeySpec&quot;, &quot;Values&quot;:[&quot;Aliyun_AES_256&quot;]} ]</c>, the semantics are: <c>(KeyState=Enabled OR KeyState=Disabled OR KeyState=PendingDeletion) AND (KeySpec=Aliyun_AES_256)</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;Key&quot;:&quot;KeyState&quot;, &quot;Values&quot;:[&quot;Enabled&quot;,&quot;Disabled&quot;]}]</para>
@@ -67,9 +66,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public string Filters { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
-        /// <para>Pages start from page 1.</para>
-        /// <para>Default value: 1.</para>
+        /// <para>The page number.<br> Valid values: greater than 0.<br> Default value: 1.<br><br></para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -79,9 +76,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
-        /// <para>Valid values: 1 to 100.</para>
-        /// <para>Default value: 10</para>
+        /// <para>The number of entries to return on each page.<br> Valid values: 1 to 100.<br> Default value: 10.<br><br></para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

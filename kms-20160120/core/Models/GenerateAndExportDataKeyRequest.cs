@@ -9,12 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class GenerateAndExportDataKeyRequest : TeaModel {
+        /// <summary>
+        /// <para>Specifies whether to enable the dry run feature.</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: enables the feature.</para>
+        /// </description></item>
+        /// <item><description><para>false (default): disables the feature.</para>
+        /// </description></item>
+        /// </list>
+        /// <para>The DryRun mode is used to test API calls and verify the permissions on the resources that you have access to and the validity of the request parameters. If you enable the DryRun mode, KMS always returns a failure response and the cause of the failure. The following failure causes are included:</para>
+        /// <list type="bullet">
+        /// <item><description><para>DryRunOperationError: The request would have succeeded if the DryRun parameter is not specified.</para>
+        /// </description></item>
+        /// <item><description><para>ValidationError: The parameters specified in the request are invalid.</para>
+        /// </description></item>
+        /// <item><description><para>AccessDeniedError: You are not authorized to perform this operation on the KMS resource.</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public string DryRun { get; set; }
 
         /// <summary>
-        /// <para>A JSON string of key-value pairs. If you specify this parameter here, an equivalent value is required when you decrypt or re-encrypt the data key. For more information, see <a href="https://help.aliyun.com/document_detail/42975.html">EncryptionContext</a>.</para>
+        /// <para>A JSON string that consists of key-value pairs. If you specify this parameter, you must specify the same parameter when you call the Decrypt operation or other operations to re-encrypt the data key. For more information, see <a href="https://help.aliyun.com/document_detail/42975.html">EncryptionContext</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;Example&quot;:&quot;Example&quot;}</para>
@@ -24,7 +45,10 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public Dictionary<string, object> EncryptionContext { get; set; }
 
         /// <summary>
-        /// <para>The globally unique ID of the CMK. You can also set this parameter to an alias that is bound to the CMK. For more information, see <a href="https://help.aliyun.com/document_detail/68522.html">Use aliases</a>.</para>
+        /// <para>The ID of the key. You can also specify the alias or Amazon Resource Name (ARN) of the key. For more information about aliases, see <a href="https://help.aliyun.com/document_detail/480655.html">Manage aliases</a>.</para>
+        /// <remarks>
+        /// <para>To access a key in another Alibaba Cloud account, you must specify the ARN of the key. The key ARN is in the format of <c>acs:kms:${region}:${account}:key/${keyid}</c>.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,11 +61,13 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// <summary>
         /// <para>The length of the data key that you want to generate. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>AES_256: a 256-bit symmetric key</description></item>
-        /// <item><description>AES_128: a 128-bit symmetric key</description></item>
+        /// <item><description><para>AES_256: a 256-bit symmetric key.</para>
+        /// </description></item>
+        /// <item><description><para>AES_128: a 128-bit symmetric key.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> We recommend that you use the KeySpec or NumberOfBytes parameter to specify the length of a data key. If both parameters are not specified, KMS generates a 256-bit data key. If both parameters are specified, KMS ignores the KeySpec parameter.</para>
+        /// <para>We recommend that you use the KeySpec or NumberOfBytes parameter to specify the length of a data key. If you do not specify either of the parameters, KMS generates a 256-bit data key. If you specify both parameters, KMS ignores the KeySpec parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -64,7 +90,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public int? NumberOfBytes { get; set; }
 
         /// <summary>
-        /// <para>A Base64-encoded public key.</para>
+        /// <para>The public key that is encoded in Base64.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -75,12 +101,14 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public string PublicKeyBlob { get; set; }
 
         /// <summary>
-        /// <para>The encryption algorithm based on which you want to use the public key specified by PublicKeyBlob to encrypt the data key. For more information about encryption algorithms, see <a href="https://help.aliyun.com/document_detail/148130.html">AsymmetricDecrypt</a>.</para>
-        /// <para>Valid values:</para>
+        /// <para>The encryption algorithm that is used to encrypt the data key using the public key specified by PublicKeyBlob. For more information about encryption algorithms, see <a href="https://help.aliyun.com/document_detail/148130.html">AsymmetricDecrypt</a>.<br> Valid values:<br><br></para>
         /// <list type="bullet">
-        /// <item><description>RSAES_OAEP_SHA_256</description></item>
-        /// <item><description>RSAES_OAEP_SHA_1</description></item>
-        /// <item><description>SM2PKE</description></item>
+        /// <item><description><para>RSAES_OAEP_SHA_256</para>
+        /// </description></item>
+        /// <item><description><para>RSAES_OAEP_SHA_1</para>
+        /// </description></item>
+        /// <item><description><para>SM2PKE</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -92,11 +120,12 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public string WrappingAlgorithm { get; set; }
 
         /// <summary>
-        /// <para>The key type of the public key specified by PublicKeyBlob. For more information about key types, see <a href="https://help.aliyun.com/document_detail/148147.html">Introduction to asymmetric keys</a>.</para>
-        /// <para>Valid values:</para>
+        /// <para>The type of the key specified by PublicKeyBlob. For more information about key types, see <a href="https://help.aliyun.com/document_detail/148147.html">Introduction to asymmetric keys</a>.<br> Valid values:<br><br></para>
         /// <list type="bullet">
-        /// <item><description>RSA_2048</description></item>
-        /// <item><description>EC_SM2</description></item>
+        /// <item><description><para>RSA_2048</para>
+        /// </description></item>
+        /// <item><description><para>EC_SM2</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

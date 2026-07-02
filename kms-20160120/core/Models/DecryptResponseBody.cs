@@ -9,9 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class DecryptResponseBody : TeaModel {
+        [NameInMap("CiphertextForRecipient")]
+        [Validation(Required=false)]
+        public string CiphertextForRecipient { get; set; }
+
         /// <summary>
-        /// <para>The ID of the customer master key (CMK) that is used to decrypt the ciphertext.</para>
-        /// <para>It is the GUID of the CMK.</para>
+        /// <para>The ID of the master key that is used to decrypt the ciphertext.<br> The globally unique identifier of the master key.<br></para>
         /// 
         /// <b>Example:</b>
         /// <para>202b9877-5a25-46e3-a763-e20791b5****</para>
@@ -21,7 +24,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public string KeyId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the CMK version that is used to decrypt the ciphertext.</para>
+        /// <para>The ID of the key version that is used to decrypt the ciphertext. This key version is a version of the master key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2ab1a983-7072-4bbc-a582-584b5bd8****</para>
@@ -31,7 +34,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public string KeyVersionId { get; set; }
 
         /// <summary>
-        /// <para>The plaintext that is generated after decryption.</para>
+        /// <para>The decrypted plaintext.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tRYXuCwgja12xxO1N/gZERDDCLw9doZEQiPDk/Bv****</para>
@@ -41,7 +44,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public string Plaintext { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>207596a2-36d3-4840-b1bd-f87044699bd7</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class ImportKeyMaterialRequest : TeaModel {
         /// <summary>
-        /// <para>Use <b>GetParametersForImport</b> the Returned public key and the base64-encoded key material.</para>
+        /// <para>The key material encrypted with the public key returned by <b>GetParametersForImport</b>, and then Base64-encoded.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public string EncryptedKeyMaterial { get; set; }
 
         /// <summary>
-        /// <para>By calling <b>GetParametersForImport</b> the import token.</para>
+        /// <para>The import token obtained by calling <b>GetParametersForImport</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// <para>The time when the key material expires.</para>
         /// <para>If this parameter is not specified or set this parameter to 0, the key material does not expire.</para>
         /// <remarks>
-        /// <para> The value cannot be earlier than the time when the API is called (based on the server time).</para>
+        /// <para>The value cannot be earlier than the time when the operation is called (based on the server time).</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public string AccountStatus { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3ac84333-d64d-4784-a8bc-997834a7ac6c</para>

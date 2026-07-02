@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class GetSecretValueResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether automatic rotation is enabled. Valid values:</para>
+        /// <para>Indicates whether automatic rotation is enabled. Valid values:  </para>
         /// <list type="bullet">
-        /// <item><description>Enabled: indicates that automatic rotation is enabled.</description></item>
-        /// <item><description>Disabled: indicates that automatic rotation is disabled.</description></item>
-        /// <item><description>Invalid: indicates that the status of automatic rotation is abnormal. In this case, Secrets Manager cannot automatically rotate the secret.</description></item>
+        /// <item><description>Enabled: Automatic rotation is enabled.  </description></item>
+        /// <item><description>Disabled: Automatic rotation is disabled.  </description></item>
+        /// <item><description>Invalid: The rotation status is abnormal, and KMS cannot automatically rotate the credential for you.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is returned only for a managed ApsaraDB RDS secret, a managed RAM secret, or a managed ECS secret.</para>
+        /// <para>This parameter is returned only for RDS credentials, PolarDB credentials, Redis/Tair credentials, RAM credentials, or ECS credentials.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -28,19 +28,19 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public string AutomaticRotation { get; set; }
 
         /// <summary>
-        /// <para>The time when the secret was created.</para>
+        /// <para>The time when the credential was created.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2020-02-21T15:39:26Z</para>
+        /// <para>2024-02-21T15:39:26Z</para>
         /// </summary>
         [NameInMap("CreateTime")]
         [Validation(Required=false)]
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The extended configuration of the secret.</para>
+        /// <para>The extended configuration of the credential.  </para>
         /// <remarks>
-        /// <para> This parameter is returned if you set the FetchExtendedConfig parameter to true. This parameter is returned only for a managed ApsaraDB RDS secret, a managed RAM secret, or a managed ECS secret.</para>
+        /// <para>This parameter is returned only for RDS credentials, PolarDB credentials, Redis/Tair credentials, RAM credentials, or ECS credentials when FetchExtendedConfig is set to true.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -51,33 +51,33 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public string ExtendedConfig { get; set; }
 
         /// <summary>
-        /// <para>The time when the last rotation was performed.</para>
+        /// <para>The time of the most recent rotation.  </para>
         /// <remarks>
-        /// <para> This parameter is returned if the secret was rotated.</para>
+        /// <para>This parameter is returned only if the credential has been rotated.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>2020-07-05T08:22:03Z</para>
+        /// <para>2023-07-05T08:22:03Z</para>
         /// </summary>
         [NameInMap("LastRotationDate")]
         [Validation(Required=false)]
         public string LastRotationDate { get; set; }
 
         /// <summary>
-        /// <para>The time when the next rotation will be performed.</para>
+        /// <para>The time of the next rotation.  </para>
         /// <remarks>
-        /// <para> This parameter is returned if automatic rotation is enabled.</para>
+        /// <para>This parameter is returned only when automatic rotation is enabled.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>2020-07-06T18:22:03Z</para>
+        /// <para>2024-07-06T18:22:03Z</para>
         /// </summary>
         [NameInMap("NextRotationDate")]
         [Validation(Required=false)]
         public string NextRotationDate { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The ID of the current request. Alibaba Cloud generates a unique identifier for each request, which can be used for troubleshooting and issue tracking.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6a3e9c36-1150-4881-84d3-eb8672fcafad</para>
@@ -87,10 +87,9 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The interval for automatic rotation.</para>
-        /// <para>The value is in the <c>integer[unit]</c> format. The <c>unit</c> field has a fixed value of s. For example, if the value is 604800s, automatic rotation is performed at a 7-day interval.</para>
+        /// <para>The epoch for automatic credential rotation.<br>The format is <c>integer[unit]</c>, where <c>integer</c> indicates the time duration and <c>unit</c> indicates the time unit. Valid value for <c>unit</c>: s (seconds). For example, a 7-day rotation epoch is 604800s.</para>
         /// <remarks>
-        /// <para> This parameter is returned if automatic rotation is enabled.</para>
+        /// <para>This parameter is returned only when automatic rotation is enabled.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -101,19 +100,21 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public string RotationInterval { get; set; }
 
         /// <summary>
-        /// <para>The secret value. Secrets Manager decrypts the ciphertext of the secret value and returns the plaintext of the secret value in this parameter.</para>
+        /// <para>The value of the credential. KMS decrypts the stored ciphertext and returns this parameter.  </para>
         /// <list type="bullet">
-        /// <item><description><para>For a generic secret, the secret value of the specified version is returned.</para>
+        /// <item><description><para>For generic secrets, the credential value you specified is returned.  </para>
         /// </description></item>
-        /// <item><description><para>For a managed ApsaraDB RDS secret, the value is returned in the following format:<c>{&quot;AccountName&quot;:&quot;&quot;,&quot;AccountPassword&quot;:&quot;&quot;}</c> .</para>
+        /// <item><description><para>For RDS credentials and Redis/Tair credentials, the credential value is in the format: <c>{&quot;AccountName&quot;:&quot;&quot;,&quot;AccountPassword&quot;:&quot;&quot;}</c>.  </para>
         /// </description></item>
-        /// <item><description><para>For a managed RAM secret, the secret value is returned in the following format: <c>{&quot;AccessKeyId&quot;:&quot;Adfdsfd&quot;,&quot;AccessKeySecret&quot;:&quot;fdsfdsf&quot;,&quot;GenerateTimestamp&quot;: &quot;2016-03-25T10:42:40Z&quot;}</c>.</para>
+        /// <item><description><para>For RAM credentials, the credential value is in the format: <c>{&quot;AccessKeyId&quot;:&quot;Adfdsfd&quot;,&quot;AccessKeySecret&quot;:&quot;fdsfdsf&quot;,&quot;GenerateTimestamp&quot;: &quot;2023-03-25T10:42:40Z&quot;}</c>.  </para>
         /// </description></item>
-        /// <item><description><para>For a managed ECS secret, the secret value is returned in one of the following formats:</para>
+        /// <item><description><para>For ECS credentials, the credential value is in one of the following formats:  </para>
         /// <list type="bullet">
-        /// <item><description><c>{&quot;UserName&quot;:&quot;root&quot;,&quot;Password&quot;:&quot;H5asdasdsads****&quot;}</c>: The secret value is returned in this format if the ECS secret is a password.</description></item>
-        /// <item><description><c>{&quot;UserName&quot;:&quot;root&quot;,&quot;PublicKey&quot;:&quot;ssh-rsa ****mKwnVix9YTFY9Rs= imported-openssh-key&quot;,&quot;PrivateKey&quot;: &quot;d6bee1cb-2e14-4277-ba6b-73786b21****&quot;}</c>: The secret value is returned in this format is the ECS secret is a pair of SSH keys. The private key is in the Privacy Enhanced Mail (PEM) format.</description></item>
+        /// <item><description>Security token type: <c>{&quot;UserName&quot;:&quot;ecs-user&quot;,&quot;Password&quot;:&quot;H5asdasdsads****&quot;}</c>.  </description></item>
+        /// <item><description>Public-private key pair type (private key in PEM format): <c>{&quot;UserName&quot;:&quot;ecs-user&quot;,&quot;PublicKey&quot;:&quot;ssh-rsa ****mKwnVix9YTFY9Rs= imported-openssh-key&quot;,&quot;PrivateKey&quot;: &quot;d6bee1cb-2e14-4277-ba6b-73786b21****&quot;}</c>.</description></item>
         /// </list>
+        /// </description></item>
+        /// <item><description><para>For PolarDB credentials, the credential value is in the format: <c>{&quot;AccountName&quot;:&quot;&quot;,&quot;AccountPassword&quot;:&quot;&quot;}</c>.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -125,7 +126,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public string SecretData { get; set; }
 
         /// <summary>
-        /// <para>The type of the secret value. Valid values:</para>
+        /// <para>The value type of the credential. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>text</description></item>
         /// <item><description>binary</description></item>
@@ -139,7 +140,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public string SecretDataType { get; set; }
 
         /// <summary>
-        /// <para>The name of the secret.</para>
+        /// <para>The name of the credential.</para>
         /// 
         /// <b>Example:</b>
         /// <para>secret001</para>
@@ -149,12 +150,14 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public string SecretName { get; set; }
 
         /// <summary>
-        /// <para>The type of the secret. Valid values:</para>
+        /// <para>The type of the credential. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Generic: indicates a generic secret.</description></item>
-        /// <item><description>Rds: indicates a managed ApsaraDB RDS secret.</description></item>
-        /// <item><description>RAMCredentials: indicates a managed RAM secret.</description></item>
-        /// <item><description>ECS: indicates a managed ECS secret.</description></item>
+        /// <item><description>Generic: generic secret.  </description></item>
+        /// <item><description>Rds: RDS credential.  </description></item>
+        /// <item><description>Redis: Redis/Tair credential.</description></item>
+        /// <item><description>RAMCredentials: RAM credential.  </description></item>
+        /// <item><description>ECS: ECS credential.</description></item>
+        /// <item><description>PolarDB: PolarDB credential.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -165,18 +168,15 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public string SecretType { get; set; }
 
         /// <summary>
-        /// <para>The version number of the secret value.</para>
+        /// <para>The version number of the credential.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>00000000000000000000000000000001</para>
+        /// <para>v1</para>
         /// </summary>
         [NameInMap("VersionId")]
         [Validation(Required=false)]
         public string VersionId { get; set; }
 
-        /// <summary>
-        /// <para>The stage labels that mark the secret versions.</para>
-        /// </summary>
         [NameInMap("VersionStages")]
         [Validation(Required=false)]
         public GetSecretValueResponseBodyVersionStages VersionStages { get; set; }

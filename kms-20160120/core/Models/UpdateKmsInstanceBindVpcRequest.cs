@@ -10,14 +10,18 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class UpdateKmsInstanceBindVpcRequest : TeaModel {
         /// <summary>
-        /// <para>The VPC configuration. The configuration of each VPC contains the following content:</para>
+        /// <para>The VPC configuration. Each VPC configuration contains the following parameters:</para>
         /// <list type="bullet">
-        /// <item><description>VpcId: the ID of the VPC.</description></item>
-        /// <item><description>VSwitchId: the vSwitch in the VPC.</description></item>
-        /// <item><description>RegionID: the ID of the region to which the VPC belongs.</description></item>
-        /// <item><description>VpcOwnerId: the Alibaba Cloud account to which the VPC belongs.</description></item>
+        /// <item><description><para>VpcId: The ID of the VPC.</para>
+        /// </description></item>
+        /// <item><description><para>VSwitchId: The vSwitch in the VPC.</para>
+        /// </description></item>
+        /// <item><description><para>RegionID: The region where the VPC resides.</para>
+        /// </description></item>
+        /// <item><description><para>VpcOwnerId: The Alibaba Cloud account that owns the VPC.</para>
+        /// </description></item>
         /// </list>
-        /// <para>Format: <c>[{&quot;VpcId&quot;:&quot;${VpcId}&quot;,&quot;VSwitchId&quot;:&quot;${VSwitchId}&quot;,&quot;RegionId&quot;:&quot;${RegionId}&quot;,&quot;VpcOwnerId&quot;:${VpcOwnerId}},..]</c>.</para>
+        /// <para>The value is a JSON string in the following format: <c>[{&quot;VpcId&quot;:&quot;${VpcId}&quot;,&quot;VSwitchId&quot;:&quot;${VSwitchId}&quot;,&quot;RegionId&quot;:&quot;${RegionId}&quot;,&quot;VpcOwnerId&quot;:${VpcOwnerId}},...]</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
