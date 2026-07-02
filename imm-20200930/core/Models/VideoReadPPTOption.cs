@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class VideoReadPPTOption : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to extract content from the presentation slides. Set this parameter to <c>true</c> to enable extraction.</para>
+        /// <para>Specifies whether to fetch.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Extract")]
         [Validation(Required=false)]

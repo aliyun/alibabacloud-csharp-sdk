@@ -3402,16 +3402,16 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a dataset.</para>
+        /// <para>Creates a dataset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>You must understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management before using this API.</b></description></item>
-        /// <item><description>Dataset names must be unique within a project.</description></item>
-        /// <item><description>The number of datasets you can create is limited. You can query this limit using <a href="https://help.aliyun.com/document_detail/478155.html">GetProject</a>.</description></item>
-        /// <item><description>After creating a dataset, you can use <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> to index object metadata. This enables diverse <a href="https://help.aliyun.com/document_detail/478175.html">data retrieval and statistics</a> and intelligent management.</description></item>
+        /// <item><description><b>Before you use this operation, make sure that you fully understand the billing of Intelligent Media Management (IMM) and its <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a></b>.</description></item>
+        /// <item><description>Dataset names must be unique within the same project.</description></item>
+        /// <item><description>The number of datasets that can be created is limited. You can call <a href="https://help.aliyun.com/document_detail/478155.html">GetProjcet</a> to query this limit.</description></item>
+        /// <item><description>After you create a dataset, you can call <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> to create file metadata indexes for diversified <a href="https://help.aliyun.com/document_detail/478175.html">data retrieval, statistics</a>, and intelligent management.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3430,19 +3430,11 @@ namespace AlibabaCloud.SDK.Imm20200930
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateDatasetShrinkRequest request = new CreateDatasetShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DatasetConfig))
-            {
-                request.DatasetConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DatasetConfig, "DatasetConfig", "json");
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WorkflowParameters))
             {
                 request.WorkflowParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WorkflowParameters, "WorkflowParameters", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetConfigShrink))
-            {
-                query["DatasetConfig"] = request.DatasetConfigShrink;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetMaxBindCount))
             {
                 query["DatasetMaxBindCount"] = request.DatasetMaxBindCount;
@@ -3504,16 +3496,16 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a dataset.</para>
+        /// <para>Creates a dataset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>You must understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management before using this API.</b></description></item>
-        /// <item><description>Dataset names must be unique within a project.</description></item>
-        /// <item><description>The number of datasets you can create is limited. You can query this limit using <a href="https://help.aliyun.com/document_detail/478155.html">GetProject</a>.</description></item>
-        /// <item><description>After creating a dataset, you can use <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> to index object metadata. This enables diverse <a href="https://help.aliyun.com/document_detail/478175.html">data retrieval and statistics</a> and intelligent management.</description></item>
+        /// <item><description><b>Before you use this operation, make sure that you fully understand the billing of Intelligent Media Management (IMM) and its <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a></b>.</description></item>
+        /// <item><description>Dataset names must be unique within the same project.</description></item>
+        /// <item><description>The number of datasets that can be created is limited. You can call <a href="https://help.aliyun.com/document_detail/478155.html">GetProjcet</a> to query this limit.</description></item>
+        /// <item><description>After you create a dataset, you can call <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> to create file metadata indexes for diversified <a href="https://help.aliyun.com/document_detail/478175.html">data retrieval, statistics</a>, and intelligent management.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3532,19 +3524,11 @@ namespace AlibabaCloud.SDK.Imm20200930
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateDatasetShrinkRequest request = new CreateDatasetShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DatasetConfig))
-            {
-                request.DatasetConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DatasetConfig, "DatasetConfig", "json");
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WorkflowParameters))
             {
                 request.WorkflowParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WorkflowParameters, "WorkflowParameters", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetConfigShrink))
-            {
-                query["DatasetConfig"] = request.DatasetConfigShrink;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetMaxBindCount))
             {
                 query["DatasetMaxBindCount"] = request.DatasetMaxBindCount;
@@ -3606,16 +3590,16 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a dataset.</para>
+        /// <para>Creates a dataset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>You must understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management before using this API.</b></description></item>
-        /// <item><description>Dataset names must be unique within a project.</description></item>
-        /// <item><description>The number of datasets you can create is limited. You can query this limit using <a href="https://help.aliyun.com/document_detail/478155.html">GetProject</a>.</description></item>
-        /// <item><description>After creating a dataset, you can use <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> to index object metadata. This enables diverse <a href="https://help.aliyun.com/document_detail/478175.html">data retrieval and statistics</a> and intelligent management.</description></item>
+        /// <item><description><b>Before you use this operation, make sure that you fully understand the billing of Intelligent Media Management (IMM) and its <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a></b>.</description></item>
+        /// <item><description>Dataset names must be unique within the same project.</description></item>
+        /// <item><description>The number of datasets that can be created is limited. You can call <a href="https://help.aliyun.com/document_detail/478155.html">GetProjcet</a> to query this limit.</description></item>
+        /// <item><description>After you create a dataset, you can call <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> to create file metadata indexes for diversified <a href="https://help.aliyun.com/document_detail/478175.html">data retrieval, statistics</a>, and intelligent management.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3634,16 +3618,16 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a dataset.</para>
+        /// <para>Creates a dataset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>You must understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management before using this API.</b></description></item>
-        /// <item><description>Dataset names must be unique within a project.</description></item>
-        /// <item><description>The number of datasets you can create is limited. You can query this limit using <a href="https://help.aliyun.com/document_detail/478155.html">GetProject</a>.</description></item>
-        /// <item><description>After creating a dataset, you can use <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> to index object metadata. This enables diverse <a href="https://help.aliyun.com/document_detail/478175.html">data retrieval and statistics</a> and intelligent management.</description></item>
+        /// <item><description><b>Before you use this operation, make sure that you fully understand the billing of Intelligent Media Management (IMM) and its <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a></b>.</description></item>
+        /// <item><description>Dataset names must be unique within the same project.</description></item>
+        /// <item><description>The number of datasets that can be created is limited. You can call <a href="https://help.aliyun.com/document_detail/478155.html">GetProjcet</a> to query this limit.</description></item>
+        /// <item><description>After you create a dataset, you can call <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> to create file metadata indexes for diversified <a href="https://help.aliyun.com/document_detail/478175.html">data retrieval, statistics</a>, and intelligent management.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7546,7 +7530,7 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// <item><description><a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a></description></item>
         /// <item><description><a href="https://help.aliyun.com/document_detail/479912.html">Create a trigger</a></description></item>
         /// <item><description><a href="https://help.aliyun.com/document_detail/606694.html">Create a batch task</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/478202.html">Create a binding task</a>.</description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/478202.html">Create a binding task</a></description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -7567,19 +7551,11 @@ namespace AlibabaCloud.SDK.Imm20200930
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateProjectShrinkRequest request = new CreateProjectShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DatasetConfig))
-            {
-                request.DatasetConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DatasetConfig, "DatasetConfig", "json");
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tag))
             {
                 request.TagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tag, "Tag", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetConfigShrink))
-            {
-                query["DatasetConfig"] = request.DatasetConfigShrink;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetMaxBindCount))
             {
                 query["DatasetMaxBindCount"] = request.DatasetMaxBindCount;
@@ -7657,7 +7633,7 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// <item><description><a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a></description></item>
         /// <item><description><a href="https://help.aliyun.com/document_detail/479912.html">Create a trigger</a></description></item>
         /// <item><description><a href="https://help.aliyun.com/document_detail/606694.html">Create a batch task</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/478202.html">Create a binding task</a>.</description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/478202.html">Create a binding task</a></description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -7678,19 +7654,11 @@ namespace AlibabaCloud.SDK.Imm20200930
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateProjectShrinkRequest request = new CreateProjectShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DatasetConfig))
-            {
-                request.DatasetConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DatasetConfig, "DatasetConfig", "json");
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tag))
             {
                 request.TagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tag, "Tag", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetConfigShrink))
-            {
-                query["DatasetConfig"] = request.DatasetConfigShrink;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetMaxBindCount))
             {
                 query["DatasetMaxBindCount"] = request.DatasetMaxBindCount;
@@ -7768,7 +7736,7 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// <item><description><a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a></description></item>
         /// <item><description><a href="https://help.aliyun.com/document_detail/479912.html">Create a trigger</a></description></item>
         /// <item><description><a href="https://help.aliyun.com/document_detail/606694.html">Create a batch task</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/478202.html">Create a binding task</a>.</description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/478202.html">Create a binding task</a></description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -7801,7 +7769,7 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// <item><description><a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a></description></item>
         /// <item><description><a href="https://help.aliyun.com/document_detail/479912.html">Create a trigger</a></description></item>
         /// <item><description><a href="https://help.aliyun.com/document_detail/606694.html">Create a batch task</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/478202.html">Create a binding task</a>.</description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/478202.html">Create a binding task</a></description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -15306,12 +15274,12 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about a specified project, including basic information and statistics related to datasets and files.</para>
+        /// <para>Queries information about a specified project, including basic information and statistics information related to datasets and files.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Querying project information supports real-time retrieval of file statistics. Enable this feature through parameter settings. For details, see the request parameters section.</para>
+        /// <para>Querying project information supports real-time retrieval of file statistics information. You can enable this feature through parameter settings. For details, see the request parameters section.</para>
         /// <remarks>
         /// <para>Notice: Only files in datasets created before December 20, 2025 can be counted.</para>
         /// </remarks>
@@ -15360,12 +15328,12 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about a specified project, including basic information and statistics related to datasets and files.</para>
+        /// <para>Queries information about a specified project, including basic information and statistics information related to datasets and files.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Querying project information supports real-time retrieval of file statistics. Enable this feature through parameter settings. For details, see the request parameters section.</para>
+        /// <para>Querying project information supports real-time retrieval of file statistics information. You can enable this feature through parameter settings. For details, see the request parameters section.</para>
         /// <remarks>
         /// <para>Notice: Only files in datasets created before December 20, 2025 can be counted.</para>
         /// </remarks>
@@ -15414,12 +15382,12 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about a specified project, including basic information and statistics related to datasets and files.</para>
+        /// <para>Queries information about a specified project, including basic information and statistics information related to datasets and files.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Querying project information supports real-time retrieval of file statistics. Enable this feature through parameter settings. For details, see the request parameters section.</para>
+        /// <para>Querying project information supports real-time retrieval of file statistics information. You can enable this feature through parameter settings. For details, see the request parameters section.</para>
         /// <remarks>
         /// <para>Notice: Only files in datasets created before December 20, 2025 can be counted.</para>
         /// </remarks>
@@ -15440,12 +15408,12 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about a specified project, including basic information and statistics related to datasets and files.</para>
+        /// <para>Queries information about a specified project, including basic information and statistics information related to datasets and files.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Querying project information supports real-time retrieval of file statistics. Enable this feature through parameter settings. For details, see the request parameters section.</para>
+        /// <para>Querying project information supports real-time retrieval of file statistics information. You can enable this feature through parameter settings. For details, see the request parameters section.</para>
         /// <remarks>
         /// <para>Notice: Only files in datasets created before December 20, 2025 can be counted.</para>
         /// </remarks>
@@ -21214,15 +21182,15 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates information for a dataset.</para>
+        /// <para>Updates the information of a dataset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before calling this operation, review</b> the billing model and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management (IMM).</description></item>
-        /// <item><description>The dataset must exist before you can update it.</description></item>
-        /// <item><description>You only need to specify the parameters that you want to update. Unspecified parameters remain unchanged.</description></item>
+        /// <item><description><b>Before you use this operation, make sure that you fully understand the billing of Intelligent Media Management (IMM) and its <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a></b>.</description></item>
+        /// <item><description>Before you update dataset information, make sure that the dataset has been created. To create a dataset, refer to the request parameter descriptions.</description></item>
+        /// <item><description>When you update dataset information, specify only the fields that you want to update. Fields that are not specified remain unchanged.</description></item>
         /// <item><description>After a dataset is updated, the changes may take up to 5 minutes to take effect.</description></item>
         /// </list>
         /// </description>
@@ -21242,19 +21210,11 @@ namespace AlibabaCloud.SDK.Imm20200930
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             UpdateDatasetShrinkRequest request = new UpdateDatasetShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DatasetConfig))
-            {
-                request.DatasetConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DatasetConfig, "DatasetConfig", "json");
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WorkflowParameters))
             {
                 request.WorkflowParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WorkflowParameters, "WorkflowParameters", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetConfigShrink))
-            {
-                query["DatasetConfig"] = request.DatasetConfigShrink;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetMaxBindCount))
             {
                 query["DatasetMaxBindCount"] = request.DatasetMaxBindCount;
@@ -21316,15 +21276,15 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates information for a dataset.</para>
+        /// <para>Updates the information of a dataset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before calling this operation, review</b> the billing model and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management (IMM).</description></item>
-        /// <item><description>The dataset must exist before you can update it.</description></item>
-        /// <item><description>You only need to specify the parameters that you want to update. Unspecified parameters remain unchanged.</description></item>
+        /// <item><description><b>Before you use this operation, make sure that you fully understand the billing of Intelligent Media Management (IMM) and its <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a></b>.</description></item>
+        /// <item><description>Before you update dataset information, make sure that the dataset has been created. To create a dataset, refer to the request parameter descriptions.</description></item>
+        /// <item><description>When you update dataset information, specify only the fields that you want to update. Fields that are not specified remain unchanged.</description></item>
         /// <item><description>After a dataset is updated, the changes may take up to 5 minutes to take effect.</description></item>
         /// </list>
         /// </description>
@@ -21344,19 +21304,11 @@ namespace AlibabaCloud.SDK.Imm20200930
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             UpdateDatasetShrinkRequest request = new UpdateDatasetShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DatasetConfig))
-            {
-                request.DatasetConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DatasetConfig, "DatasetConfig", "json");
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WorkflowParameters))
             {
                 request.WorkflowParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WorkflowParameters, "WorkflowParameters", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetConfigShrink))
-            {
-                query["DatasetConfig"] = request.DatasetConfigShrink;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetMaxBindCount))
             {
                 query["DatasetMaxBindCount"] = request.DatasetMaxBindCount;
@@ -21418,15 +21370,15 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates information for a dataset.</para>
+        /// <para>Updates the information of a dataset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before calling this operation, review</b> the billing model and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management (IMM).</description></item>
-        /// <item><description>The dataset must exist before you can update it.</description></item>
-        /// <item><description>You only need to specify the parameters that you want to update. Unspecified parameters remain unchanged.</description></item>
+        /// <item><description><b>Before you use this operation, make sure that you fully understand the billing of Intelligent Media Management (IMM) and its <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a></b>.</description></item>
+        /// <item><description>Before you update dataset information, make sure that the dataset has been created. To create a dataset, refer to the request parameter descriptions.</description></item>
+        /// <item><description>When you update dataset information, specify only the fields that you want to update. Fields that are not specified remain unchanged.</description></item>
         /// <item><description>After a dataset is updated, the changes may take up to 5 minutes to take effect.</description></item>
         /// </list>
         /// </description>
@@ -21446,15 +21398,15 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates information for a dataset.</para>
+        /// <para>Updates the information of a dataset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before calling this operation, review</b> the billing model and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management (IMM).</description></item>
-        /// <item><description>The dataset must exist before you can update it.</description></item>
-        /// <item><description>You only need to specify the parameters that you want to update. Unspecified parameters remain unchanged.</description></item>
+        /// <item><description><b>Before you use this operation, make sure that you fully understand the billing of Intelligent Media Management (IMM) and its <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a></b>.</description></item>
+        /// <item><description>Before you update dataset information, make sure that the dataset has been created. To create a dataset, refer to the request parameter descriptions.</description></item>
+        /// <item><description>When you update dataset information, specify only the fields that you want to update. Fields that are not specified remain unchanged.</description></item>
         /// <item><description>After a dataset is updated, the changes may take up to 5 minutes to take effect.</description></item>
         /// </list>
         /// </description>
@@ -22073,19 +22025,11 @@ namespace AlibabaCloud.SDK.Imm20200930
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             UpdateProjectShrinkRequest request = new UpdateProjectShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DatasetConfig))
-            {
-                request.DatasetConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DatasetConfig, "DatasetConfig", "json");
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tag))
             {
                 request.TagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tag, "Tag", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetConfigShrink))
-            {
-                query["DatasetConfig"] = request.DatasetConfigShrink;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetMaxBindCount))
             {
                 query["DatasetMaxBindCount"] = request.DatasetMaxBindCount;
@@ -22178,19 +22122,11 @@ namespace AlibabaCloud.SDK.Imm20200930
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             UpdateProjectShrinkRequest request = new UpdateProjectShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DatasetConfig))
-            {
-                request.DatasetConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DatasetConfig, "DatasetConfig", "json");
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tag))
             {
                 request.TagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tag, "Tag", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetConfigShrink))
-            {
-                query["DatasetConfig"] = request.DatasetConfigShrink;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetMaxBindCount))
             {
                 query["DatasetMaxBindCount"] = request.DatasetMaxBindCount;

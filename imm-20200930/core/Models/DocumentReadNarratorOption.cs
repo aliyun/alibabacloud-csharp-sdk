@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class DocumentReadNarratorOption : TeaModel {
         /// <summary>
-        /// <para>Whether to enable the document narration feature. Set to <c>true</c> to enable narration. Defaults to <c>false</c>.</para>
+        /// <para>Specifies whether to fetch.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Narrate")]
         [Validation(Required=false)]

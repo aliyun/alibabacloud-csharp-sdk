@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class DocumentReadKeywordOption : TeaModel {
         /// <summary>
-        /// <para>The maximum number of keywords to return.</para>
+        /// <para>The number of keywords. Valid values: 0 to 10.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Count")]
         [Validation(Required=false)]
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>Whether to extract keywords from the document.</para>
+        /// <para>Specifies whether to extract keywords.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Extract")]
         [Validation(Required=false)]

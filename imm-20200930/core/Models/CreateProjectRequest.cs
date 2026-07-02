@@ -9,12 +9,8 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class CreateProjectRequest : TeaModel {
-        [NameInMap("DatasetConfig")]
-        [Validation(Required=false)]
-        public DatasetConfig DatasetConfig { get; set; }
-
         /// <summary>
-        /// <para>The maximum number of bindings for each dataset. Valid values: 1 to 10. Default value: 10.</para>
+        /// <para>The maximum number of bindings per dataset. Valid values: 1 to 10. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -24,7 +20,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? DatasetMaxBindCount { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of metadata entities in each dataset. Default value: 10000000000.</para>
+        /// <para>The maximum number of metadata entities per dataset. Default value: 10000000000.</para>
         /// <remarks>
         /// <para>This parameter is reserved for future use and is not enforced.</para>
         /// </remarks>
@@ -37,7 +33,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? DatasetMaxEntityCount { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of files in each dataset. Valid values: 1 to 100000000. Default value: 10000000000.</para>
+        /// <para>The maximum number of files per dataset. Valid values: 1 to 100000000. Default value: 10000000000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100000000</para>
@@ -47,7 +43,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? DatasetMaxFileCount { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of metadata relationships in each dataset. Default value: 100000000000.</para>
+        /// <para>The maximum number of metadata relationships per dataset. Default value: 100000000000.</para>
         /// <remarks>
         /// <para>This parameter is reserved for future use and is not enforced.</para>
         /// </remarks>
@@ -60,7 +56,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? DatasetMaxRelationCount { get; set; }
 
         /// <summary>
-        /// <para>The maximum total file size in each dataset. After the limit is exceeded, no more indexes can be added. Unit: bytes. Default value: 90000000000000000.</para>
+        /// <para>The maximum total file size per dataset. After this limit is reached, no more indexes can be added. Unit: bytes. Default value: 90000000000000000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>90000000000000000</para>
@@ -90,7 +86,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? ProjectMaxDatasetCount { get; set; }
 
         /// <summary>
-        /// <para>The project name. The naming rules are as follows:</para>
+        /// <para>The project name. The following naming rules apply:</para>
         /// <list type="bullet">
         /// <item><description><para>The name must be 1 to 128 characters in length.</para>
         /// </description></item>

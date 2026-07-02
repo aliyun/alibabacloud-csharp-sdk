@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public ImageInsightsConfig Image { get; set; }
 
         /// <summary>
-        /// <para>The language of the source content.</para>
+        /// <para>The language.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh-Hans</para>
@@ -23,6 +23,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string Language { get; set; }
 
+        /// <summary>
+        /// <para>The video content-aware configuration.</para>
+        /// </summary>
         [NameInMap("Video")]
         [Validation(Required=false)]
         public VideoInsightsConfig Video { get; set; }

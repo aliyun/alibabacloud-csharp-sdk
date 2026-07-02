@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The array of projects. Returns information about the projects.</para>
+        /// <para>The array of projects. Project information is returned.</para>
         /// </summary>
         [NameInMap("Projects")]
         [Validation(Required=false)]

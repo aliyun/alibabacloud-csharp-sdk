@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class PPTDetails : TeaModel {
         /// <summary>
-        /// <para>The URL of the captured slide image, which is stored in an Object Storage Service (OSS) bucket.</para>
+        /// <para>The image path of the PPT frame capture.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>&quot;ppts/video_snapshots_0.jpg&quot;</para>
         /// </summary>
         [NameInMap("ImagePath")]
         [Validation(Required=false)]
         public string ImagePath { get; set; }
 
         /// <summary>
-        /// <para>The zero-based index of the slide in the sequence of detected slides.</para>
+        /// <para>The index of the PPT frame capture.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("PPTShotIndex")]
         [Validation(Required=false)]
         public long? PPTShotIndex { get; set; }
 
         /// <summary>
-        /// <para>The start time of the slide, in milliseconds, from the beginning of the video.</para>
+        /// <para>The time in the video.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5000</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

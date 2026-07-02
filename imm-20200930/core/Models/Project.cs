@@ -19,10 +19,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string CreateTime { get; set; }
 
-        [NameInMap("DatasetConfig")]
-        [Validation(Required=false)]
-        public DatasetConfig DatasetConfig { get; set; }
-
         /// <summary>
         /// <para>The current number of datasets in the project.</para>
         /// 
@@ -90,7 +86,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? DatasetMaxTotalFileSize { get; set; }
 
         /// <summary>
-        /// <para>The project description.</para>
+        /// <para>The description of the project.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test project</para>
@@ -100,7 +96,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of tasks that the project can process per second. This specifies the maximum number of operators that can run in parallel at the same time across the project. Default value: 100.</para>
+        /// <para>The maximum number of tasks that the project can process per second. This specifies the maximum number of operators across the project that can run in parallel at the same time. Default value: 100.</para>
         /// <list type="bullet">
         /// <item><description><para>Synchronous tasks: if the number of concurrent tasks exceeds this limit, task execution time increases until a timeout occurs.</para>
         /// </description></item>
@@ -173,7 +169,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public List<ProjectTags> Tags { get; set; }
         public class ProjectTags : TeaModel {
             /// <summary>
-            /// <para>标签键。</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -183,7 +179,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public string TagKey { get; set; }
 
             /// <summary>
-            /// <para>标签值。</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>
@@ -217,7 +213,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <summary>
         /// <para>The timestamp when the project was last modified, in RFC3339Nano format.</para>
         /// <remarks>
-        /// <para>If the project has not been updated since creation, this timestamp is the same as the creation timestamp.</para>
+        /// <para>If the project has not been updated since it was created, the modification timestamp is the same as the creation timestamp.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

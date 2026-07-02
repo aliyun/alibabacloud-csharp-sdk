@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class UpdateProjectShrinkRequest : TeaModel {
-        [NameInMap("DatasetConfig")]
-        [Validation(Required=false)]
-        public string DatasetConfigShrink { get; set; }
-
         /// <summary>
         /// <para>The maximum number of bindings for each dataset. Valid values: 1 to 10.</para>
         /// 
@@ -90,7 +86,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? ProjectMaxDatasetCount { get; set; }
 
         /// <summary>
-        /// <para>The project name. For information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</para>
+        /// <para>The project name. For information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

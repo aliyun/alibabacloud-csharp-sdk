@@ -10,20 +10,27 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class DocumentReadSummaryOption : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to generate a summary for each chapter. This setting applies only if the service can identify chapters.</para>
-        /// <para><b>Default value</b>: <c>false</c>.</para>
+        /// <para>Specifies whether to extract the chapter-level summary of the article.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("ChapterSummarize")]
         [Validation(Required=false)]
         public bool? ChapterSummarize { get; set; }
 
+        /// <summary>
+        /// <para>The chapter-level summary options for the article.</para>
+        /// </summary>
         [NameInMap("ChapterSummarizeOption")]
         [Validation(Required=false)]
         public DocumentChapterSummarizeOption ChapterSummarizeOption { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to generate a summary for the entire document.</para>
-        /// <para><b>Default value</b>: <c>false</c>.</para>
+        /// <para>Specifies whether to extract the article summary.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Summarize")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class GetProjectRequest : TeaModel {
         /// <summary>
-        /// <para>The project name. For information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">创建项目</a>.</para>
+        /// <para>The project name. For information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,11 +25,11 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <list type="bullet">
         /// <item><description><para>File statistics are collected. The FileCount and TotalFileSize values in the returned Project struct are valid.</para>
         /// </description></item>
-        /// <item><description><para>File statistics are not collected. The FileCount and TotalFileSize values in the returned Project struct may be inaccurate or both may be 0.</para>
+        /// <item><description><para>File statistics are not collected. The FileCount and TotalFileSize values in the returned Project struct may be inaccurate or zero.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>Notice: Only files in datasets created before December 20, 2025 can be counted..</para>
+        /// <para>Notice: Only files in datasets created before December 20, 2025 can be counted.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

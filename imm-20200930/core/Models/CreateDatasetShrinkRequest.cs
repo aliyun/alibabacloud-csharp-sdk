@@ -10,14 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class CreateDatasetShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The dataset configuration.</para>
-        /// </summary>
-        [NameInMap("DatasetConfig")]
-        [Validation(Required=false)]
-        public string DatasetConfigShrink { get; set; }
-
-        /// <summary>
-        /// <para>The maximum number of bindings for each dataset. Valid values: 1 to 10. The default value is 10.</para>
+        /// <para>The maximum number of bindings per dataset. Valid values: 1 to 10. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -27,7 +20,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? DatasetMaxBindCount { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of metadata entities in each dataset. The default value is 10,000,000,000.</para>
+        /// <para>The maximum number of metadata entities per dataset. Default value: 10000000000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000000000</para>
@@ -37,7 +30,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? DatasetMaxEntityCount { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of files in each dataset. Valid values: 1 to 100,000,000. The default value is 100,000,000.</para>
+        /// <para>The maximum number of files per dataset. Valid values: 1 to 100000000. Default value: 100000000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100000000</para>
@@ -47,7 +40,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? DatasetMaxFileCount { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of metadata relationships in each dataset. The default value is 100,000,000,000.</para>
+        /// <para>The maximum number of metadata relationships per dataset. Default value: 100000000000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100000000000</para>
@@ -57,7 +50,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? DatasetMaxRelationCount { get; set; }
 
         /// <summary>
-        /// <para>The maximum total size of files in each dataset. You cannot add more indexes after exceeding this limit. The default value is 90,000,000,000,000,000 bytes.</para>
+        /// <para>The maximum total file size per dataset, in bytes. After this limit is exceeded, no more indexes can be added. Default value: 90000000000000000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>90000000000000000</para>
@@ -67,14 +60,11 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? DatasetMaxTotalFileSize { get; set; }
 
         /// <summary>
-        /// <para>The dataset name. It must be unique within the same project. Naming conventions are as follows:</para>
+        /// <para>The dataset name. The name must be unique within the same project. The following naming rules apply:</para>
         /// <list type="bullet">
-        /// <item><description><para>Length: 1 to 128 characters.</para>
-        /// </description></item>
-        /// <item><description><para>Only English letters, digits, hyphens (-), and underscores (_) are allowed.</para>
-        /// </description></item>
-        /// <item><description><para>Must start with an English letter or an underscore (_).</para>
-        /// </description></item>
+        /// <item><description>The name must be 1 to 128 characters in length.</description></item>
+        /// <item><description>The name can contain only letters, digits, hyphens (-), and underscores (_).</description></item>
+        /// <item><description>The name must start with a letter or an underscore (_).</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -86,7 +76,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string DatasetName { get; set; }
 
         /// <summary>
-        /// <para>The description of the dataset. Length: 1 to 256 English or Chinese characters. The default value is empty.</para>
+        /// <para>The description of the dataset. The description can be 1 to 256 characters in length. Default value: empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>immtest</para>
@@ -96,7 +86,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The project name. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</para>
+        /// <para>The project name. For information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -107,7 +97,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>The workflow template ID. For more information, see <a href="https://help.aliyun.com/document_detail/466304.html">Workflow Templates and Operators</a>. The default value is empty.</para>
+        /// <para>The workflow template ID. For more information, see <a href="https://help.aliyun.com/document_detail/466304.html">Workflow templates and operators</a>. Default value: empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Official:ImageManagement</para>
@@ -116,11 +106,14 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string TemplateId { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>Invalid parameter.</para>
         /// </summary>
         [NameInMap("WorkflowParameters")]
         [Validation(Required=false)]
+        [Obsolete]
         public string WorkflowParametersShrink { get; set; }
 
     }

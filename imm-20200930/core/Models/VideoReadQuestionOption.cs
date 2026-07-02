@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class VideoReadQuestionOption : TeaModel {
         /// <summary>
-        /// <para>Specifies the maximum number of answers to return when <c>Extract</c> is <c>true</c>. If omitted, the service returns all detected answers.</para>
+        /// <para>The number of keywords. Valid values: 0 to 10.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Count")]
         [Validation(Required=false)]
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to extract answer segments from the video. When <c>true</c>, the service identifies and returns these segments. The default is <c>false</c>.</para>
+        /// <para>Specifies whether to fetch.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Extract")]
         [Validation(Required=false)]

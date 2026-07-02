@@ -10,14 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class UpdateDatasetShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The dataset configuration.</para>
-        /// </summary>
-        [NameInMap("DatasetConfig")]
-        [Validation(Required=false)]
-        public string DatasetConfigShrink { get; set; }
-
-        /// <summary>
-        /// <para>The maximum number of bindings for the dataset. Valid values: 1 to 10.</para>
+        /// <para>The maximum number of bindings for each dataset. Valid values: 1 to 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -27,9 +20,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? DatasetMaxBindCount { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of metadata entities, such as data files, file relationships, and cluster groups, in the dataset. The maximum value is 2^63 - 1.</para>
+        /// <para>The maximum number of metadata entities (including data files, file relationships, and clustering groups) in each dataset. The maximum value is 2^63-1.</para>
         /// <remarks>
-        /// <para>This parameter is reserved and not enforced in practice.</para>
+        /// <para>This is a reserved parameter and is not enforced during use.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -40,7 +33,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? DatasetMaxEntityCount { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of files in the dataset. Valid values: 1 to 100000000.</para>
+        /// <para>The maximum number of files in each dataset. Valid values: 1 to 100000000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100000000</para>
@@ -50,9 +43,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? DatasetMaxFileCount { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of metadata relationships in the dataset. The maximum value is 2^63 - 1.</para>
+        /// <para>The maximum number of metadata relationships in each dataset. The maximum value is 2^63-1.</para>
         /// <remarks>
-        /// <para>This parameter is reserved and not enforced in practice.</para>
+        /// <para>This is a reserved parameter and is not enforced during use.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -63,7 +56,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? DatasetMaxRelationCount { get; set; }
 
         /// <summary>
-        /// <para>The maximum total size of all files in the dataset, in bytes. If this limit is exceeded, you can no longer add new index entries. The maximum value is 2^63 - 1.</para>
+        /// <para>The maximum total file size in each dataset. After this limit is exceeded, no more indexes can be added. The maximum value is 2^63-1. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>90000000000000000</para>
@@ -84,7 +77,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string DatasetName { get; set; }
 
         /// <summary>
-        /// <para>The dataset description.</para>
+        /// <para>The description of the dataset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>immtest</para>
@@ -114,11 +107,14 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string TemplateId { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
-        /// <para>This parameter is invalid.</para>
+        /// <para>Invalid parameter.</para>
         /// </summary>
         [NameInMap("WorkflowParameters")]
         [Validation(Required=false)]
+        [Obsolete]
         public string WorkflowParametersShrink { get; set; }
 
     }

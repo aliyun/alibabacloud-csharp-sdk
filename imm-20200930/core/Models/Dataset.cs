@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class Dataset : TeaModel {
         /// <summary>
-        /// <para>Number of OSS buckets currently attached to the dataset.</para>
+        /// <para>The number of OSS buckets currently bound to the dataset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? BindCount { get; set; }
 
         /// <summary>
-        /// <para>Timestamp of dataset creation in RFC3339Nano format.</para>
+        /// <para>The timestamp when the dataset was created, in RFC3339Nano format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-06-29T14:50:13.011643661+08:00</para>
@@ -30,14 +30,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>Dataset configuration.</para>
-        /// </summary>
-        [NameInMap("DatasetConfig")]
-        [Validation(Required=false)]
-        public DatasetConfig DatasetConfig { get; set; }
-
-        /// <summary>
-        /// <para>Maximum number of bindings per dataset.</para>
+        /// <para>The maximum number of bindings allowed for each dataset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -47,7 +40,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? DatasetMaxBindCount { get; set; }
 
         /// <summary>
-        /// <para>Maximum number of metadata entities in the dataset.</para>
+        /// <para>The maximum number of metadata entities allowed in the dataset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000000000</para>
@@ -57,7 +50,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? DatasetMaxEntityCount { get; set; }
 
         /// <summary>
-        /// <para>Maximum number of files in the dataset.</para>
+        /// <para>The maximum number of files allowed in the dataset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100000000</para>
@@ -67,7 +60,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? DatasetMaxFileCount { get; set; }
 
         /// <summary>
-        /// <para>Maximum number of metadata relations in the dataset.</para>
+        /// <para>The maximum number of metadata relationships allowed in the dataset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100000000000</para>
@@ -77,7 +70,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? DatasetMaxRelationCount { get; set; }
 
         /// <summary>
-        /// <para>Maximum total file size in the dataset, in bytes.</para>
+        /// <para>The maximum total file size allowed in the dataset, in bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>90000000000000000</para>
@@ -87,7 +80,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? DatasetMaxTotalFileSize { get; set; }
 
         /// <summary>
-        /// <para>Dataset name.</para>
+        /// <para>The dataset name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dataset001</para>
@@ -97,7 +90,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string DatasetName { get; set; }
 
         /// <summary>
-        /// <para>Dataset description.</para>
+        /// <para>The description of the dataset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>测试数据集</para>
@@ -107,7 +100,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Current number of files in the dataset.</para>
+        /// <para>The current number of files in the dataset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -117,7 +110,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? FileCount { get; set; }
 
         /// <summary>
-        /// <para>Project name.</para>
+        /// <para>The project name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>immtest</para>
@@ -127,7 +120,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>Workflow template ID.</para>
+        /// <para>The workflow template ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Official:ImageManagement</para>
@@ -137,7 +130,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string TemplateId { get; set; }
 
         /// <summary>
-        /// <para>Total file size in the dataset, in bytes.</para>
+        /// <para>The total file size in the dataset, in bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100000</para>
@@ -147,9 +140,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? TotalFileSize { get; set; }
 
         /// <summary>
-        /// <para>Timestamp of the last dataset update in RFC3339Nano format.</para>
+        /// <para>The timestamp when the dataset was last modified, in RFC3339Nano format.</para>
         /// <remarks>
-        /// <para>If the dataset has never been updated since creation, the update timestamp equals the creation timestamp.</para>
+        /// <para>If the dataset has not been updated since it was created, this timestamp is the same as the creation timestamp.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -159,14 +152,17 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string UpdateTime { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
-        /// <para>Custom parameters.</para>
+        /// <para>The custom parameters.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
         /// </summary>
         [NameInMap("WorkflowParameters")]
         [Validation(Required=false)]
+        [Obsolete]
         public List<WorkflowParameter> WorkflowParameters { get; set; }
 
     }
