@@ -1,3 +1,14 @@
+2026-07-02 Version: 3.4.3
+- Update API CreateSkill: add request parameters SkillDisplayName.
+- Update API GetSkill: add response parameters Body.Locales.
+- Update API GetSkill: add response parameters Body.SkillDisplayName.
+- Update API ListPublicSkills: add response parameters Body.Skills.$.Locales.
+- Update API ListPublicSkills: add response parameters Body.Skills.$.SkillDisplayName.
+- Update API ListSkills: add response parameters Body.Skills.$.Locales.
+- Update API ListSkills: add response parameters Body.Skills.$.SkillDisplayName.
+- Update API UpdateSkill: add request parameters SkillDisplayName.
+
+
 2026-06-12 Version: 3.4.2
 - Update API GenerateServicePolicy: add request parameters Parameters.
 

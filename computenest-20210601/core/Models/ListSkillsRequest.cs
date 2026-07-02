@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class ListSkillsRequest : TeaModel {
         /// <summary>
-        /// <para>The filters for querying Skills.</para>
+        /// <para>The filter.</para>
         /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public List<ListSkillsRequestFilter> Filter { get; set; }
         public class ListSkillsRequestFilter : TeaModel {
             /// <summary>
-            /// <para>The filter name. Valid values:</para>
+            /// <para>The filter name. You can specify one or more names for the query. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>SkillId</c>: The Skill ID. An exact match is performed.</para>
+            /// <item><description><para>SkillId: the skill ID. Exact match.</para>
             /// </description></item>
-            /// <item><description><para><c>SkillSpaceId</c>: The ID of the SkillSpace. An exact match is performed.</para>
+            /// <item><description><para>SkillSpaceId: the SkillSpace ID. Exact match.</para>
             /// </description></item>
-            /// <item><description><para><c>SkillName</c>: The Skill name.</para>
+            /// <item><description><para>SkillName: the skill name.</para>
             /// </description></item>
-            /// <item><description><para><c>MatchType</c>: The match type for <c>SkillName</c>. Valid values: <c>exact</c> (exact match), <c>prefix</c> (prefix match), and <c>fuzzy</c> (fuzzy match).</para>
+            /// <item><description><para>MatchType: the match type that controls how SkillName is matched. Valid values: exact, prefix, and fuzzy.</para>
             /// </description></item>
-            /// <item><description><para><c>SkillType</c>: The Skill type. Valid values: <c>official</c> and <c>custom</c>.</para>
+            /// <item><description><para>SkillType: the skill type. Valid values: official and custom.</para>
             /// </description></item>
-            /// <item><description><para><c>Keyword</c>: The keyword for a fuzzy match on the Skill name or Skill description.</para>
+            /// <item><description><para>Keyword: keyword match for the skill name or skill description. Fuzzy match.</para>
             /// </description></item>
-            /// <item><description><para><c>SkillLabels</c>: The Skill labels. A fuzzy match is performed.</para>
+            /// <item><description><para>SkillLabels: the skill labels. Fuzzy match.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The filter values. You can specify a maximum of 10 values.</para>
+            /// <para>The list of filter values. Valid values of N: 1 to 10.</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries to return per page.</para>
+        /// <para>The maximum number of entries to return in this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return the download URL of the Skill package.</para>
+        /// <para>Specifies whether to include the download URL of the skill package.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public bool? NeedDownloadUrl { get; set; }
 
         /// <summary>
-        /// <para>The token for the next page of results. Leave this parameter empty for the first request. For subsequent requests, use the <c>NextToken</c> value from the previous response.</para>
+        /// <para>NextToken</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAWns8w4MmhzeptXVRG0PUEU=</para>

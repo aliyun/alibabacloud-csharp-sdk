@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class ListPublicSkillsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries returned per page.</para>
+        /// <para>The maximum number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token to retrieve the next page of results.</para>
+        /// <para>The token for the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAZ9FmxgN6wKfeK/GOKRnnjU=</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>3F976EF8-C10A-57DC-917C-BB7BEB508FFB</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of public skills.</para>
+        /// <para>The list of skills.</para>
         /// </summary>
         [NameInMap("Skills")]
         [Validation(Required=false)]
         public List<ListPublicSkillsResponseBodySkills> Skills { get; set; }
         public class ListPublicSkillsResponseBodySkills : TeaModel {
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The time when the skill was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-09-11T02:18:42Z</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The download link for the skill package.</para>
+            /// <para>The download URL of the skill package.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://testts-1.oss-cn-beijing.aliyuncs.com/app/yyb_9.1.1.zip">https://testts-1.oss-cn-beijing.aliyuncs.com/app/yyb_9.1.1.zip</a></para>
@@ -67,7 +67,29 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string DownloadUrl { get; set; }
 
             /// <summary>
-            /// <para>The description of the skill.</para>
+            /// <b>if can be null:</b>
+            /// <c>true</c>
+            /// </summary>
+            [NameInMap("Locales")]
+            [Validation(Required=false)]
+            public List<ListPublicSkillsResponseBodySkillsLocales> Locales { get; set; }
+            public class ListPublicSkillsResponseBodySkillsLocales : TeaModel {
+                [NameInMap("EnValue")]
+                [Validation(Required=false)]
+                public string EnValue { get; set; }
+
+                [NameInMap("OriginalValue")]
+                [Validation(Required=false)]
+                public string OriginalValue { get; set; }
+
+                [NameInMap("ZhValue")]
+                [Validation(Required=false)]
+                public string ZhValue { get; set; }
+
+            }
+
+            /// <summary>
+            /// <para>The skill description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>11111</para>
@@ -76,8 +98,12 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             [Validation(Required=false)]
             public string SkillDescription { get; set; }
 
+            [NameInMap("SkillDisplayName")]
+            [Validation(Required=false)]
+            public string SkillDisplayName { get; set; }
+
             /// <summary>
-            /// <para>The ID of the skill.</para>
+            /// <para>Skill ID</para>
             /// 
             /// <b>Example:</b>
             /// <para>af7e49d9-277f-454a-afc5-1513d41cac31</para>
@@ -87,14 +113,14 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string SkillId { get; set; }
 
             /// <summary>
-            /// <para>The labels attached to the skill.</para>
+            /// <para>The skill label set.</para>
             /// </summary>
             [NameInMap("SkillLabels")]
             [Validation(Required=false)]
             public List<string> SkillLabels { get; set; }
 
             /// <summary>
-            /// <para>The name of the skill.</para>
+            /// <para>The skill name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ziptest</para>
@@ -104,7 +130,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string SkillName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the skill space.</para>
+            /// <para>The ID of the SkillSpace to which the skill belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ss-1111111</para>
@@ -114,7 +140,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string SkillSpaceId { get; set; }
 
             /// <summary>
-            /// <para>The update time.</para>
+            /// <para>The time when the skill was last updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-11-03T22:58:52Z</para>

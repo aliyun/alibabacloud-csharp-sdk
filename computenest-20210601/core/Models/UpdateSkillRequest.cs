@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class UpdateSkillRequest : TeaModel {
         /// <summary>
-        /// <para>A unique, client-generated token to ensure request idempotence. <b>ClientToken</b> can contain only ASCII characters and must not exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The value of <b>ClientToken</b> can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required if <c>SourceType</c> is set to <c>UPLOAD</c>. It specifies the Object Storage Service (OSS) URL of the compressed skill package to upload.</para>
+        /// <para>Required when SourceType is set to UPLOAD. The OSS URL of the skill package to upload.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://embedding-pic.oss-cn-beijing-internal.aliyuncs.com/30516570">https://embedding-pic.oss-cn-beijing-internal.aliyuncs.com/30516570</a></para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string OssUrl { get; set; }
 
         /// <summary>
-        /// <para>The skill description.</para>
+        /// <para>The description of the skill.</para>
         /// 
         /// <b>Example:</b>
         /// <para>11111</para>
@@ -38,6 +38,10 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         [NameInMap("SkillDescription")]
         [Validation(Required=false)]
         public string SkillDescription { get; set; }
+
+        [NameInMap("SkillDisplayName")]
+        [Validation(Required=false)]
+        public string SkillDisplayName { get; set; }
 
         /// <summary>
         /// <para>The ID of the skill to update.</para>
@@ -51,14 +55,14 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string SkillId { get; set; }
 
         /// <summary>
-        /// <para>An array of skill labels.</para>
+        /// <para>The labels of the skill.</para>
         /// </summary>
         [NameInMap("SkillLabels")]
         [Validation(Required=false)]
         public List<string> SkillLabels { get; set; }
 
         /// <summary>
-        /// <para>The skill name.</para>
+        /// <para>The name of the skill.</para>
         /// 
         /// <b>Example:</b>
         /// <para>111111</para>
@@ -68,7 +72,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string SkillName { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required if <c>SourceType</c> is set to <c>COPY</c>. It specifies the ID of the public skill.</para>
+        /// <para>Required when SourceType is set to COPY. The ID of the public skill.</para>
         /// 
         /// <b>Example:</b>
         /// <para>s-111</para>
@@ -78,8 +82,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string SourceSkillId { get; set; }
 
         /// <summary>
-        /// <para>The source type for the skill update.</para>
-        /// <para>This parameter is required.</para>
+        /// <para>The source type for updating the skill.</para>
         /// 
         /// <b>Example:</b>
         /// <para>COPY</para>

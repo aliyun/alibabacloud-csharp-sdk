@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class CreateSkillResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>A17F9930-E2DC-5E87-B6D6-B0BCD2B00834</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Skill.</para>
+        /// <para>Skill ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>s-051j4ot2aerr5dyc4</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class GenerateServicePolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The types of operations for which to generate policy information.</para>
+        /// <para>The operation types for which policy information needs to be generated.</para>
         /// </summary>
         [NameInMap("OperationTypes")]
         [Validation(Required=false)]
@@ -63,11 +63,11 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string TemplateName { get; set; }
 
         /// <summary>
-        /// <para>The trial type. The default value is NotTrial. Valid values:</para>
+        /// <para>The trial type. Default value: NotTrial. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Trial: The service supports trial use.</para>
+        /// <item><description><para>Trial: Trial is supported.</para>
         /// </description></item>
-        /// <item><description><para>NotTrial: The service does not support trial use.</para>
+        /// <item><description><para>NotTrial: Trial is not supported.</para>
         /// </description></item>
         /// </list>
         /// 
