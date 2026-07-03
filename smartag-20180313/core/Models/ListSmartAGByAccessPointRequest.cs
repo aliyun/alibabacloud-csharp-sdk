@@ -71,8 +71,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         /// <summary>
         /// <para>The status of the SAG instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Active</b>: The SAG device is connected to Alibaba Cloud.</description></item>
-        /// <item><description><b>offline</b>: The SAG device is disconnected from Alibaba Cloud.</description></item>
+        /// <item><description><para><b>Active</b>: The SAG device is connected to Alibaba Cloud.</para>
+        /// </description></item>
+        /// <item><description><para><b>offline</b>: The SAG device is disconnected from Alibaba Cloud.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

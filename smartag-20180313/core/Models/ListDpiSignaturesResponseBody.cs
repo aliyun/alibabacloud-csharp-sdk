@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class ListDpiSignaturesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the application.</para>
+        /// <para>A list of applications.</para>
         /// </summary>
         [NameInMap("DpiSignature")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public string DpiGroupId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the application.</para>
+            /// <para>The application ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>235</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public string DpiSignatureId { get; set; }
 
             /// <summary>
-            /// <para>The name of the application.</para>
+            /// <para>The application name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>EdgeCast</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public string DpiSignatureName { get; set; }
 
             /// <summary>
-            /// <para>The earliest version of engine that supports the application.</para>
+            /// <para>The minimum version of the deep packet inspection (DPI) engine that supports the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0-0.0.1</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public string MinEngineVersion { get; set; }
 
             /// <summary>
-            /// <para>The earliest version of signature database that supports the application.</para>
+            /// <para>The minimum version of the signature library that supports the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20201117_1_0-0.0.1</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         }
 
         /// <summary>
-        /// <para>The token returned for the next query.</para>
+        /// <para>The token for the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FFrMV38kR4****</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>63081123-B7C0-4BC9-B9E5-59E77A616EC9</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned on the current page.</para>
+        /// <para>The total number of applications returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

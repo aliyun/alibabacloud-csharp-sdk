@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page when paging is used. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the SAG app instance is deployed.</para>
+        /// <para>The region ID of the Smart Access Gateway app instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the SAG app instance.</para>
+        /// <para>The instance ID of the Smart Access Gateway app.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string SmartAGId { get; set; }
 
         /// <summary>
-        /// <para>The email address of the client account.</para>
+        /// <para>The email address of the client.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="mailto:username@example.com">username@example.com</a></para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string UserMail { get; set; }
 
         /// <summary>
-        /// <para>The username of the client account.</para>
+        /// <para>The username of the client.</para>
         /// 
         /// <b>Example:</b>
         /// <para>username</para>

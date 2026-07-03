@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class DescribeSmartAccessGatewayAttributeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum bandwidth value for application acceleration. Unit: Mbit/s.</para>
+        /// <para>The peak bandwidth of application acceleration for the SAG instance. Unit: Mbit/s.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? AccelerateBandwidth { get; set; }
 
         /// <summary>
-        /// <para>The ID of the access point for the SAG instance.</para>
+        /// <para>The ID of the access point of the SAG instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>238</para>
@@ -40,10 +40,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         }
 
         /// <summary>
-        /// <para>The status of the bandwidth plan for application acceleration. Valid value:</para>
+        /// <para>The status of the application acceleration bandwidth package instance.</para>
         /// <list type="bullet">
-        /// <item><description><b>Abnormal</b>: abnormal</description></item>
-        /// <item><description><b>Normal</b>: normal</description></item>
+        /// <item><description><b>Abnormal</b>: Abnormal.</description></item>
+        /// <item><description><b>Normal</b>: Normal.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string ApplicationBandwidthPackageBussinessStatus { get; set; }
 
         /// <summary>
-        /// <para>The ID of the bandwidth plan for application acceleration that is associated with the SAG instance.</para>
+        /// <para>The ID of the application acceleration bandwidth package associated with the SAG instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abwp-7963l7iqnquyj3****</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string ApplicationBandwidthPackageId { get; set; }
 
         /// <summary>
-        /// <para>The name of the bandwidth plan for application acceleration that is associated with the SAG instance.</para>
+        /// <para>The name of the application acceleration bandwidth package associated with the SAG instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testname</para>
@@ -74,14 +74,14 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string ApplicationBandwidthPackageName { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the bandwidth plan is locked.</para>
+        /// <para>The lock information of the application acceleration bandwidth package instance.</para>
         /// </summary>
         [NameInMap("ApplicationBandwidthPackageOperationLocks")]
         [Validation(Required=false)]
         public DescribeSmartAccessGatewayAttributeResponseBodyApplicationBandwidthPackageOperationLocks ApplicationBandwidthPackageOperationLocks { get; set; }
         public class DescribeSmartAccessGatewayAttributeResponseBodyApplicationBandwidthPackageOperationLocks : TeaModel {
             /// <summary>
-            /// <para>The reason why the instance was locked.</para>
+            /// <para>The reason for the lock.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Message</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public string LockReason { get; set; }
 
             /// <summary>
-            /// <para>The lock mode of the instance. The value is set to <b>FinancialLocked</b>.</para>
+            /// <para>The lock type. Valid value: <b>FinancialLocked</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinancialLocked</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         }
 
         /// <summary>
-        /// <para>The ID of the Cloud Connect Network (CCN) instance with which the SAG instance is associated.</para>
+        /// <para>The ID of the CCN instance associated with the SAG instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ccn-iz26o9zye6lhoo****</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string AssociatedCcnId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Cloud Connect Network (CCN) instance with which the SAG instance is associated.</para>
+        /// <para>The name of the Cloud Connect Network (CCN) instance associated with the SAG instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testname</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string BackupBoxControllerIp { get; set; }
 
         /// <summary>
-        /// <para>The public IP address of the active SAG device.</para>
+        /// <para>The public IP address of the primary SAG device.</para>
         /// 
         /// <b>Example:</b>
         /// <para>112.XX.XX.25</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string BoxControllerIp { get; set; }
 
         /// <summary>
-        /// <para>The private CIDR block of the destination network with which the on-premises network or client needs to communicate.</para>
+        /// <para>The private CIDR block used for communication between the on-premises network or clients and the cloud.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.0.9.0/24</para>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string CidrBlock { get; set; }
 
         /// <summary>
-        /// <para>The ID of the city where the SAG device is deployed.</para>
+        /// <para>The ID of the city where the SAG device is located.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string City { get; set; }
 
         /// <summary>
-        /// <para>The timestamp when the SAG instance was created.</para>
+        /// <para>The creation timestamp of the SAG instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1622617250000</para>
@@ -173,9 +173,9 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The data transfer plan of the SAG instance. Unit: GB.</para>
+        /// <para>The data plan of the SAG instance. Unit: GB.</para>
         /// <remarks>
-        /// <para> Each client account has a data transfer plan free of charge for 5 GB each month.</para>
+        /// <para>Currently, only 5 GB of complimentary data traffic is provided for each account per month.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -240,10 +240,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the transmission optimization feature is enabled.</para>
+        /// <para>Indicates whether the optimized retransmission feature is enabled for the SAG instance.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: yes</description></item>
-        /// <item><description><b>false</b>: no</description></item>
+        /// <item><description><b>true</b>: Enabled.</description></item>
+        /// <item><description><b>false</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -254,10 +254,12 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public bool? EnableOptimization { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the audit log for connections to the SAG app instance is enabled. Valid values:</para>
+        /// <para>Indicates whether connection log auditing is enabled for the SAG APP instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enabled</description></item>
-        /// <item><description><b>false</b>: disabled</description></item>
+        /// <item><description><para><b>true</b>: Connection log auditing is enabled for the SAG APP instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Connection log auditing is disabled for the SAG APP instance.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -268,7 +270,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public bool? EnableSoftwareConnectionAudit { get; set; }
 
         /// <summary>
-        /// <para>The timestamp when the SAG instance expires.</para>
+        /// <para>The expiration timestamp of the SAG instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1628265600000</para>
@@ -298,12 +300,12 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         }
 
         /// <summary>
-        /// <para>The type of the SAG instance. Valid values:</para>
+        /// <para>The type of the SAG instance.</para>
         /// <list type="bullet">
-        /// <item><description><b>sag-1000</b>: indicates an SAG CPE instance and the instance is associated with an SAG-1000 device.</description></item>
-        /// <item><description><b>sag-10wm</b>: indicates an SAG CPE instance and the instance is associated with an SAG-100WM device.</description></item>
-        /// <item><description><b>sag-software</b>: indicates an SAG app instance.</description></item>
-        /// <item><description><b>sag-vcpe</b>: an SAG vCPE instance.</description></item>
+        /// <item><description><b>sag-1000</b>: The instance is a hardware SAG instance with a SAG-1000 device.</description></item>
+        /// <item><description><b>sag-10wm</b>: The instance is a hardware SAG instance with a SAG-100WM device.</description></item>
+        /// <item><description><b>sag-software</b>: The instance is an SAG APP instance.</description></item>
+        /// <item><description><b>sag-vcpe</b>: The instance is an SAG vCPE instance.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -314,10 +316,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The status of the IPsec-VPN connection. Valid values:</para>
+        /// <para>The status of the IPsec-VPN connection.</para>
         /// <list type="bullet">
-        /// <item><description><b>up</b>: normal</description></item>
-        /// <item><description><b>down</b>: abnormal</description></item>
+        /// <item><description><b>up</b>: The IPsec-VPN connection is normal.</description></item>
+        /// <item><description><b>down</b>: The IPsec-VPN connection is abnormal.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -376,7 +378,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         }
 
         /// <summary>
-        /// <para>The maximum bandwidth value of the SAG instance. Unit: Mbit/s.</para>
+        /// <para>The peak bandwidth of the SAG instance. Unit: Mbit/s.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50 M</para>
@@ -396,7 +398,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The transmission optimization type of the SAG instance. If transmission optimization is enabled, the default value is <b>fec</b>.</para>
+        /// <para>The optimized retransmission type of the SAG instance. After the optimized retransmission type is enabled, the default value is <b>fec</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>fec</para>
@@ -406,7 +408,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public bool? OptimizationType { get; set; }
 
         /// <summary>
-        /// <para>The location of the SAG instance.</para>
+        /// <para>The location of the SAG device.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>shanghai</para>
         /// </summary>
         [NameInMap("Position")]
         [Validation(Required=false)]
@@ -423,7 +428,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F02D092B-A0B7-4BA1-BCA7-014B953C5DC7</para>
@@ -433,7 +438,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance provided by the third-party reseller.</para>
+        /// <para>The ID of the reseller instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sag-v0fkpk4akfz5******</para>
@@ -443,7 +448,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string ResellerInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the third-party reseller.</para>
+        /// <para>The ID of the reseller account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1210123456123456</para>
@@ -463,10 +468,12 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The method that the SAG instance uses to advertise routes to Alibaba Cloud.</para>
+        /// <para>The routing synchronization method of the SAG instance.</para>
         /// <list type="bullet">
-        /// <item><description><b>static</b>: static routing</description></item>
-        /// <item><description><b>dynamic</b>: dynamic routing</description></item>
+        /// <item><description><para><b>static</b>: Static routing.</para>
+        /// </description></item>
+        /// <item><description><para><b>dynamic</b>: Dynamic routing.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -477,7 +484,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string RoutingStrategy { get; set; }
 
         /// <summary>
-        /// <para>The time threshold. If the SAG device remains disconnected for the specified period of time, the SAG device is locked.</para>
+        /// <para>The time threshold for locking the SAG device when it goes offline.</para>
         /// <para>Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
@@ -508,15 +515,15 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string SmartAGId { get; set; }
 
         /// <summary>
-        /// <para>The status of the SAG instance. Valid values:</para>
+        /// <para>The status of the SAG instance.</para>
         /// <list type="bullet">
-        /// <item><description><b>Ordered</b>: The order is to be shipped.</description></item>
-        /// <item><description><b>Delivered</b>: The SAG instance is shipped.</description></item>
-        /// <item><description><b>Received</b>: The SAG instance is activated.</description></item>
-        /// <item><description><b>Unconfirmed</b>: The SAG instance is to be confirmed.</description></item>
-        /// <item><description><b>Active</b>: The SAG instance is available.</description></item>
-        /// <item><description><b>Offline</b>: The SAG instance is disconnected.</description></item>
-        /// <item><description><b>Arrearage</b>: The SAG device is locked due to overdue payments.</description></item>
+        /// <item><description><b>Ordered</b>: Pending delivery.</description></item>
+        /// <item><description><b>Delivered</b>: Delivered.</description></item>
+        /// <item><description><b>Received</b>: Activated.</description></item>
+        /// <item><description><b>Unconfirmed</b>: Pending confirmation.</description></item>
+        /// <item><description><b>Active</b>: Available.</description></item>
+        /// <item><description><b>Offline</b>: Offline.</description></item>
+        /// <item><description><b>Arrearage</b>: Locked due to overdue payment.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -527,7 +534,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The serial number of the active SAG device.</para>
+        /// <para>The serial number of the SAG device that is currently responsible for transmitting traffic.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sage6nniq3d****</para>
@@ -537,7 +544,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string TrafficMasterSn { get; set; }
 
         /// <summary>
-        /// <para>The maximum upstream bandwidth of 4G network connections established by the SAG device. Unit: Mbit/s.</para>
+        /// <para>The maximum upstream bandwidth of the 4G public network for the SAG device. Unit: Mbit/s.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -547,7 +554,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public int? UpBandwidth4G { get; set; }
 
         /// <summary>
-        /// <para>The maximum upstream bandwidth of network connections established on the WAN port of the SAG device. Unit: Mbit/s.</para>
+        /// <para>The maximum upstream bandwidth of the WAN port for the SAG device. Unit: Mbit/s.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -557,7 +564,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public int? UpBandwidthWan { get; set; }
 
         /// <summary>
-        /// <para>The number of client accounts on the SAG instance.</para>
+        /// <para>The number of client accounts of the SAG instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -567,10 +574,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public int? UserCount { get; set; }
 
         /// <summary>
-        /// <para>The status of the VPN connection. Valid values:</para>
+        /// <para>The status of the aliVPN connection.</para>
         /// <list type="bullet">
-        /// <item><description><b>up</b>: normal</description></item>
-        /// <item><description><b>down</b>: abnormal</description></item>
+        /// <item><description><b>up</b>: The aliVPN connection is normal.</description></item>
+        /// <item><description><b>down</b>: The aliVPN connection is abnormal.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Remarks</para>
+        /// <para>Message</para>
         /// </summary>
         [NameInMap("BuyerMessage")]
         [Validation(Required=false)]
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>No.XX</para>
+        /// <para>No. XX</para>
         /// </summary>
         [NameInMap("ReceiverAddress")]
         [Validation(Required=false)]
@@ -236,7 +236,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Alice</para>
+        /// <para>John Doe</para>
         /// </summary>
         [NameInMap("ReceiverName")]
         [Validation(Required=false)]
@@ -268,7 +268,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Zhuan Tang</para>
+        /// <para>Zhuantang</para>
         /// </summary>
         [NameInMap("ReceiverTown")]
         [Validation(Required=false)]

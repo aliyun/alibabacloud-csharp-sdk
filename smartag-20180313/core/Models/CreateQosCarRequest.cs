@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class CreateQosCarRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the traffic throttling rule.</para>
+        /// <para>The description of the QoS rate limiting rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Qosdesc</para>
@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The type of the traffic throttling rule. Valid values:</para>
+        /// <para>The type of rate limiting. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Absolute</b>: throttles traffic based on a specific range of bandwidth values.</description></item>
-        /// <item><description><b>Percent</b>: throttles traffic based on a specific range of bandwidth percentage.</description></item>
+        /// <item><description><para><b>Absolute</b>: by bandwidth value.</para>
+        /// </description></item>
+        /// <item><description><para><b>Percent</b>: by percentage.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -36,9 +38,9 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 
         /// <summary>
         /// <para>The maximum bandwidth value. The value must be an integer. Unit: Mbit/s.</para>
-        /// <para>This parameter is returned when <b>LimitType</b> is set to <b>Absolute</b>.</para>
+        /// <para>This parameter is required when <b>LimitType</b> is set to <b>Absolute</b>.</para>
         /// <remarks>
-        /// <para> The maximum bandwidth value must be greater than the minimum bandwidth value.</para>
+        /// <para>The maximum bandwidth value must be greater than the minimum bandwidth value.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -49,10 +51,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public int? MaxBandwidthAbs { get; set; }
 
         /// <summary>
-        /// <para>The maximum bandwidth percentage. Unit: percent (%). Valid values: <b>1 to 100</b>.</para>
-        /// <para>This parameter is required when you set <b>LimitType</b> to <b>Percent</b>.</para>
+        /// <para>The maximum bandwidth percentage. Unit: percent (%). Valid values: <b>1</b> to <b>100</b>.</para>
+        /// <para>This parameter is required when <b>LimitType</b> is set to <b>Percent</b>.</para>
         /// <remarks>
-        /// <para> The maximum bandwidth percentage must be greater than the minimum bandwidth percentage.</para>
+        /// <para>The maximum bandwidth percentage must be greater than the minimum bandwidth percentage.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -64,7 +66,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 
         /// <summary>
         /// <para>The minimum bandwidth value. The value must be an integer. Unit: Mbit/s.</para>
-        /// <para>This parameter is returned when <b>LimitType</b> is set to <b>Absolute</b>.</para>
+        /// <para>This parameter is required when <b>LimitType</b> is set to <b>Absolute</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -74,8 +76,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public int? MinBandwidthAbs { get; set; }
 
         /// <summary>
-        /// <para>The minimum bandwidth percentage. Unit: percent (%). Valid values: <b>1 to 100</b>.</para>
-        /// <para>This parameter is required when you set <b>LimitType</b> to <b>Percent</b>.</para>
+        /// <para>The minimum bandwidth percentage. Unit: percent (%). Valid values: <b>1</b> to <b>100</b>.</para>
+        /// <para>This parameter is required when <b>LimitType</b> is set to <b>Percent</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -85,8 +87,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public int? MinBandwidthPercent { get; set; }
 
         /// <summary>
-        /// <para>The name of the traffic throttling rule.</para>
-        /// <para>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</para>
+        /// <para>The name of the QoS rate limiting rule.</para>
+        /// <para>The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It can contain Chinese characters, letters, digits, periods (.), underscores (_), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>nametest</para>
@@ -104,10 +106,12 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The type of bandwidth when traffic is throttled based on bandwidth percentage. Valid values:</para>
+        /// <para>The bandwidth type when rate limiting by percentage. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>CcnBandwidth</b>: CCN bandwidth</description></item>
-        /// <item><description><b>InternetUpBandwidth</b>: total Internet bandwidth</description></item>
+        /// <item><description><para><b>CcnBandwidth</b>: CCN bandwidth.</para>
+        /// </description></item>
+        /// <item><description><para><b>InternetUpBandwidth</b>: total Internet bandwidth.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -118,8 +122,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string PercentSourceType { get; set; }
 
         /// <summary>
-        /// <para>The priority of the traffic throttling rule.</para>
-        /// <para>Valid values: <b>1</b> to <b>3</b>. A smaller value indicates a higher priority. If rules have the same priority, the one created the earliest is applied.</para>
+        /// <para>The priority of the rate limiting rule. </para>
+        /// <para>Valid values: <b>1</b> to <b>3</b>. A smaller value indicates a higher priority. If two rules have the same priority, the rule that is created first takes effect.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -130,7 +134,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public int? Priority { get; set; }
 
         /// <summary>
-        /// <para>The ID of the QoS policy.</para>
+        /// <para>The instance ID of the QoS policy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -141,8 +145,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string QosId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region to which the QoS policy belongs.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the QoS policy instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

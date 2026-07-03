@@ -18,8 +18,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The description of the QoS policy.</para>
-        /// <para>The description must be 1 to 512 characters in length and can contain letters, digits, underscores (_), and hyphens (-). It must start with a letter.</para>
+        /// <para>The description of the QoS policy instance.</para>
+        /// <para>The description must be 1 to 512 characters in length and must start with a letter or a Chinese character. It can contain digits, underscores (_), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>testdesc</para>
@@ -29,8 +29,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string QosDescription { get; set; }
 
         /// <summary>
-        /// <para>The name of the QoS policy.</para>
-        /// <para>The name must be 2 to 100 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</para>
+        /// <para>The name of the QoS policy instance.</para>
+        /// <para>The name must be 2 to 100 characters in length and must start with a letter or a Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string QosName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the QoS policy is deployed.</para>
+        /// <para>The region ID of the QoS policy instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         /// <para>The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Description</para>
+        /// <para>Ccn description</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -44,8 +44,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         /// <summary>
         /// <para>Specifies whether to allow the SAG instances associated with the same CCN instance to communicate with each other.</para>
         /// <list type="bullet">
-        /// <item><description><b>enable</b>: yes</description></item>
-        /// <item><description><b>disable</b>: no</description></item>
+        /// <item><description><para><b>enable</b>: yes</para>
+        /// </description></item>
+        /// <item><description><para><b>disable</b>: no</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -60,7 +62,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         /// <para>The name must be 2 to 128 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Name</para>
+        /// <para>Ccn name</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

@@ -12,9 +12,12 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         /// <summary>
         /// <para>The authentication type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>NONE</b></description></item>
-        /// <item><description><b>WPA-PSK</b></description></item>
-        /// <item><description><b>WPA2-PSK</b></description></item>
+        /// <item><description><para><b>NONE</b></para>
+        /// </description></item>
+        /// <item><description><para><b>WPA-PSK</b></para>
+        /// </description></item>
+        /// <item><description><para><b>WPA2-PSK</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -27,13 +30,16 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         /// <summary>
         /// <para>The bandwidth of the channel. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Automatic</b></description></item>
-        /// <item><description><b>20 MHz</b></description></item>
-        /// <item><description><b>40 MHz</b></description></item>
+        /// <item><description><para><b>Automatic</b></para>
+        /// </description></item>
+        /// <item><description><para><b>20 MHz</b></para>
+        /// </description></item>
+        /// <item><description><para><b>40 MHz</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>20 MHz</para>
+        /// <para>Automatic</para>
         /// </summary>
         [NameInMap("Bandwidth")]
         [Validation(Required=false)]
@@ -53,9 +59,12 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         /// <summary>
         /// <para>The encryption algorithm. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>AUTO</b>: automatically selects the encryption algorithm.</description></item>
-        /// <item><description><b>TKIP</b>: uses the Temporal Key Integrity Protocol (TKIP).</description></item>
-        /// <item><description><b>AES</b>: uses the Advanced Encryption Standard authorized by Wi-Fi®.</description></item>
+        /// <item><description><para><b>AUTO</b>: automatically selects the encryption algorithm.</para>
+        /// </description></item>
+        /// <item><description><para><b>TKIP</b>: uses the Temporal Key Integrity Protocol (TKIP).</para>
+        /// </description></item>
+        /// <item><description><para><b>AES</b>: uses the Advanced Encryption Standard authorized by Wi-Fi®.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -68,8 +77,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         /// <summary>
         /// <para>Specifies whether wireless security is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enables wireless security.</description></item>
-        /// <item><description><b>False</b>: disables wireless security.</description></item>
+        /// <item><description><para><b>true</b>: enables wireless security.</para>
+        /// </description></item>
+        /// <item><description><para><b>False</b>: disables wireless security.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -82,11 +93,13 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         /// <summary>
         /// <para>Specifies whether broadcast over Wi-Fi is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enables broadcast.</description></item>
-        /// <item><description><b>False</b>: disables broadcast.</description></item>
+        /// <item><description><para><b>true</b>: enables broadcast.</para>
+        /// </description></item>
+        /// <item><description><para><b>False</b>: disables broadcast.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> Only after you enable broadcast, terminals that support wireless connections can search the Wi-Fi network by its SSID and receive Wi-Fi signals.</para>
+        /// <para>Only after you enable broadcast, terminals that support wireless connections can search the Wi-Fi network by its SSID and receive Wi-Fi signals.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -99,8 +112,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         /// <summary>
         /// <para>Specifies whether Wi-Fi is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enables Wi-Fi.</description></item>
-        /// <item><description><b>False</b>: disables Wi-Fi.</description></item>
+        /// <item><description><para><b>true</b>: enables Wi-Fi.</para>
+        /// </description></item>
+        /// <item><description><para><b>False</b>: disables Wi-Fi.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class CreateQosResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the QoS policy.</para>
+        /// <para>The instance ID of the QoS policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm2iu4fnc****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string QosId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AACF5140-783D-48F0-9E4F-E59D716F7D08</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the QoS policy belongs.</para>
+        /// <para>The ID of the resource group to which the QoS policy instance belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>qos-oek3r2cmvk7m8q****</para>

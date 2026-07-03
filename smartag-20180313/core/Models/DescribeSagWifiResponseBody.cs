@@ -12,9 +12,12 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         /// <summary>
         /// <para>The authentication type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>NONE</b>: authentication is disabled.</description></item>
-        /// <item><description><b>WPA-PSK</b>: WPA-PSK authentication is enabled.</description></item>
-        /// <item><description><b>WPA2-PSK</b>: WPA2-PSK authentication is enabled.</description></item>
+        /// <item><description><para><b>NONE</b>: authentication is disabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>WPA-PSK</b>: WPA-PSK authentication is enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>WPA2-PSK</b>: WPA2-PSK authentication is enabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -27,10 +30,16 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         /// <summary>
         /// <para>The bandwidth of the Wi-Fi channel. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Automatic</b></description></item>
-        /// <item><description><b>20 HMz</b></description></item>
-        /// <item><description><b>40 MHz</b></description></item>
+        /// <item><description><para><b>Automatic</b></para>
+        /// </description></item>
+        /// <item><description><para><b>20 HMz</b></para>
+        /// </description></item>
+        /// <item><description><para><b>40 MHz</b></para>
+        /// </description></item>
         /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Automatic</para>
         /// </summary>
         [NameInMap("Bandwidth")]
         [Validation(Required=false)]
@@ -49,9 +58,12 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         /// <summary>
         /// <para>The encryption algorithm.</para>
         /// <list type="bullet">
-        /// <item><description><b>AUTO</b>: automatically selects the encryption algorithm.</description></item>
-        /// <item><description><b>TKIP</b>: uses the Temporal Key Integrity Protocol (TKIP).</description></item>
-        /// <item><description><b>AES</b>: uses the Advanced Encryption Standard authorized by Wi-Fi®.</description></item>
+        /// <item><description><para><b>AUTO</b>: automatically selects the encryption algorithm.</para>
+        /// </description></item>
+        /// <item><description><para><b>TKIP</b>: uses the Temporal Key Integrity Protocol (TKIP).</para>
+        /// </description></item>
+        /// <item><description><para><b>AES</b>: uses the Advanced Encryption Standard authorized by Wi-Fi®.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -64,8 +76,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         /// <summary>
         /// <para>Indicates whether wireless security is enabled.</para>
         /// <list type="bullet">
-        /// <item><description><b>True</b>: wireless security is enabled.</description></item>
-        /// <item><description><b>False</b>: wireless security is disabled.</description></item>
+        /// <item><description><para><b>True</b>: wireless security is enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>False</b>: wireless security is disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -78,8 +92,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         /// <summary>
         /// <para>Indicates whether broadcast over Wi-Fi is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>True</b>: broadcast is enabled.</description></item>
-        /// <item><description><b>False</b>: broadcast is disabled.</description></item>
+        /// <item><description><para><b>True</b>: broadcast is enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>False</b>: broadcast is disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -92,8 +108,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         /// <summary>
         /// <para>Indicates whether wireless connections are enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>True</b>: wireless connections are enabled.</description></item>
-        /// <item><description><b>False</b>: wireless connections are disabled.</description></item>
+        /// <item><description><para><b>True</b>: wireless connections are enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>False</b>: wireless connections are disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -163,15 +181,24 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             /// <summary>
             /// <para>The status of the query task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Initialized</b>: The query task has been initialized.</description></item>
-            /// <item><description><b>Offline</b>: The query task is not dispatched because the SAG device is disconnected from Alibaba Cloud. The task will be dispatched after the SAG device is connected to Alibaba Cloud.</description></item>
-            /// <item><description><b>Succeed</b>: The query task has been dispatched.</description></item>
-            /// <item><description><b>Processing</b>: The query task is being dispatched.</description></item>
-            /// <item><description><b>VersionNotSupport</b>: The current version of the SAG device does not support query tasks.</description></item>
-            /// <item><description><b>BuildRequestError</b>: The SAG control system does not support query tasks.</description></item>
-            /// <item><description><b>HardwareError</b>: The query task failed to be dispatched due to device errors.</description></item>
-            /// <item><description><b>TaskNotExist</b>: The query task does not exist.</description></item>
-            /// <item><description><b>OfflineNotConfiged</b>: The query task is not dispatched because the SAG device is disconnected from Alibaba Cloud. The task will not be dispatched after the device is connected to Alibaba Cloud.</description></item>
+            /// <item><description><para><b>Initialized</b>: The query task has been initialized.</para>
+            /// </description></item>
+            /// <item><description><para><b>Offline</b>: The query task is not dispatched because the SAG device is disconnected from Alibaba Cloud. The task will be dispatched after the SAG device is connected to Alibaba Cloud.</para>
+            /// </description></item>
+            /// <item><description><para><b>Succeed</b>: The query task has been dispatched.</para>
+            /// </description></item>
+            /// <item><description><para><b>Processing</b>: The query task is being dispatched.</para>
+            /// </description></item>
+            /// <item><description><para><b>VersionNotSupport</b>: The current version of the SAG device does not support query tasks.</para>
+            /// </description></item>
+            /// <item><description><para><b>BuildRequestError</b>: The SAG control system does not support query tasks.</para>
+            /// </description></item>
+            /// <item><description><para><b>HardwareError</b>: The query task failed to be dispatched due to device errors.</para>
+            /// </description></item>
+            /// <item><description><para><b>TaskNotExist</b>: The query task does not exist.</para>
+            /// </description></item>
+            /// <item><description><para><b>OfflineNotConfiged</b>: The query task is not dispatched because the SAG device is disconnected from Alibaba Cloud. The task will not be dispatched after the device is connected to Alibaba Cloud.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

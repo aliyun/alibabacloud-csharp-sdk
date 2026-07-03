@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class CreateServiceAddressRequest : TeaModel {
         /// <summary>
-        /// <para>The service address. Example: <b>192.168.1.1</b>.</para>
+        /// <para>The service address of the Smart Access Gateway instance. Example: <b>192.168.1.1</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string Address { get; set; }
 
         /// <summary>
-        /// <para>The type of service address. Set the value to <b>ProbeTask</b>.</para>
+        /// <para>The service address type of the Smart Access Gateway instance. Set the value to <b>ProbeTask</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,8 +32,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string AddressType { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the SAG instance.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the Smart Access Gateway instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the SAG instance.</para>
+        /// <para>The instance ID of the Smart Access Gateway instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string SagId { get; set; }
 
         /// <summary>
-        /// <para>The serial number of the SAG device.</para>
+        /// <para>The serial number of the Smart Access Gateway device.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

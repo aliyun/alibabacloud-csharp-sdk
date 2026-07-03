@@ -20,8 +20,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string CidrBlock { get; set; }
 
         /// <summary>
-        /// <para>The description of the CCN instance.</para>
-        /// <para>The description must be 2 to 128 characters in length and can contain letters, digits, underscores (_), and hyphens (-). The description must start with a letter.</para>
+        /// <para>The description of the Cloud Connect Network (CCN) instance. </para>
+        /// <para>The description must be 2 to 128 characters in length and must start with a letter or a Chinese character. It can contain digits, underscores (_), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>ccndesc</para>
@@ -31,8 +31,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The name of the CCN instance.</para>
-        /// <para>The name must be 2 to 100 characters in length and can contain letters, digits, periods (.), underscores (_),and hyphens (-). The name must start with a letter.</para>
+        /// <para>The name of the Cloud Connect Network (CCN) instance. </para>
+        /// <para>The name must be 2 to 100 characters in length and must start with a letter or a Chinese character. It can contain digits, underscores (_), periods (.), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>ccnname</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the CCN instance is deployed.</para>
+        /// <para>The region ID of the Cloud Connect Network (CCN) instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The private CIDR block used for Source Network Address Translation (SNAT).</para>
+        /// <para>The SNAT private CIDR block.</para>
         /// 
         /// <b>Example:</b>
         /// <para>172.XX.XX.0/25</para>

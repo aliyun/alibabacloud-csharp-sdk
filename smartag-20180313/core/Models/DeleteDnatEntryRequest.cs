@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// <para>cn-shanghai</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>sag-jfh*********</para>
+        /// <para>sag-ntwc9r1a6z3xz0****</para>
         /// </summary>
         [NameInMap("SagId")]
         [Validation(Required=false)]

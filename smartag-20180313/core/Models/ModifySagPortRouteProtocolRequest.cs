@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         /// <summary>
         /// <para>The BGP autonomous system number (ASN) of the peer device.</para>
         /// <remarks>
-        /// <para> You must set this parameter when you enable BGP.</para>
+        /// <para>You must set this parameter when you enable BGP.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         /// <summary>
         /// <para>The IP address of the peer device.</para>
         /// <remarks>
-        /// <para> You must set this parameter when you enable BGP.</para>
+        /// <para>You must set this parameter when you enable BGP.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -76,9 +76,12 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         /// <summary>
         /// <para>The routing protocol. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>STATIC</b>: uses a static routing protocol.</description></item>
-        /// <item><description><b>OSPF</b>: uses the Open Shortest Path First protocol (OSPF).</description></item>
-        /// <item><description><b>BGP</b>: uses the Border Gateway Protocol (BGP).</description></item>
+        /// <item><description><para><b>STATIC</b>: uses a static routing protocol.</para>
+        /// </description></item>
+        /// <item><description><para><b>OSPF</b>: uses the Open Shortest Path First protocol (OSPF).</para>
+        /// </description></item>
+        /// <item><description><para><b>BGP</b>: uses the Border Gateway Protocol (BGP).</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

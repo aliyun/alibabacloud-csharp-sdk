@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class CreateQosPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The description of the traffic classification rule.</para>
+        /// <para>The description of the traffic classification rule for the QoS policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>desctest</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The protocol that applies to the traffic classification rule.</para>
+        /// <para>The protocol type to which the traffic classification rule applies.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TCP</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string IpProtocol { get; set; }
 
         /// <summary>
-        /// <para>The name of the traffic classification rule.</para>
+        /// <para>The name of the traffic classification rule for the QoS policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nametest</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The priority of the traffic throttling policy to which the traffic classification rule belongs.</para>
+        /// <para>The priority of the rate limiting rule to which the traffic classification rule belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public int? Priority { get; set; }
 
         /// <summary>
-        /// <para>The ID of the QoS policy.</para>
+        /// <para>The instance ID of the QoS policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>qos-xitd8690ucu8ro****</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string QosId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the traffic classification rule.</para>
+        /// <para>The instance ID of the traffic classification rule for the QoS policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>qospy-xhwhyuo43l********</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string QosPolicyId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>97862812-2C7E-4D25-B0D5-B26DAC7FA293</para>

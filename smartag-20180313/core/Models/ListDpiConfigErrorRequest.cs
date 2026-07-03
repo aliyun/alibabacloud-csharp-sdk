@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class ListDpiConfigErrorRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the instance for which the DPI feature is configured. Valid values:</para>
+        /// <para>The type of instance for which the DPI feature is configured:</para>
         /// <list type="bullet">
-        /// <item><description><b>acl</b></description></item>
-        /// <item><description><b>qos</b></description></item>
+        /// <item><description><b>acl</b>: a Resource Access Management instance.</description></item>
+        /// <item><description><b>qos</b>: a QoS policy instance.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string DpiConfigType { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return on each page.</para>
+        /// <para>The maximum number of configuration errors to return on each page.</para>
         /// <para>Valid values: <b>1</b> to <b>100</b>.</para>
         /// <para>Default value: <b>10</b>.</para>
         /// 
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that is used to query the next page.</para>
+        /// <para>The token for the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a****</para>
@@ -47,8 +47,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the SAG instance.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The ID of the region where the Smart Access Gateway instance is deployed. You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query the regions and their IDs that Smart Access Gateway supports.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -69,7 +68,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string RuleInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the SAG instance.</para>
+        /// <para>The ID of the Smart Access Gateway instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sag-1e8sgws6b133b8****</para>

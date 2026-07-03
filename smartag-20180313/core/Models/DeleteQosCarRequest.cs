@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the QoS speed limiting rule.</para>
+        /// <para>The instance ID of the QoS bandwidth throttling rule.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string QosId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region to which the QoS policy belongs.</para>
+        /// <para>The region ID of the quality of service (QoS) policy instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The ID of the probe task.</para>
+        /// <para>The ID of the probe task that was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>probe-****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>324223F3-93D3-4CE4-B26F-66C0C3809922</para>

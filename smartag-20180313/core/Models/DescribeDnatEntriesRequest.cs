@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         /// <summary>
         /// <para>The ID of the SAG instance.</para>
         /// <remarks>
-        /// <para> Only SAG customer-premises equipment (CPE) instances are supported.</para>
+        /// <para>Only SAG customer-premises equipment (CPE) instances are supported.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -73,8 +73,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         /// <summary>
         /// <para>The type of the DNAT entry. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Intranet</b>: translates the IP address to a specific internal IP address. This is the default value.</description></item>
-        /// <item><description><b>Internet</b>: translates the IP address to a specific public IP address.</description></item>
+        /// <item><description><para><b>Intranet</b>: translates the IP address to a specific internal IP address. This is the default value.</para>
+        /// </description></item>
+        /// <item><description><para><b>Internet</b>: translates the IP address to a specific public IP address.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

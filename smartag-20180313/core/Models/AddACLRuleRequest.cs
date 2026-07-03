@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 
         /// <summary>
         /// <para>The description of the ACL rule.</para>
-        /// <para>The description must be <b>1 to 512</b> characters in length.</para>
+        /// <para>The description must be 1 to <b>512</b> characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>desctest</para>
@@ -32,8 +32,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The range of the destination IP addresses.</para>
-        /// <para>Specify the value of this parameter in CIDR notation. Example: 192.168.10.0/24.</para>
+        /// <para>The destination CIDR block.</para>
+        /// <para>For example: 192.168.10.0/24.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -45,8 +45,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 
         /// <summary>
         /// <para>The destination port range.</para>
-        /// <para>Valid values: <b>1</b> to <b>65535</b> and <b>-1</b>.</para>
-        /// <para>Set the destination port range in one of the following formats: 1/200 or 80/80. A value of -1/-1 indicates all ports.</para>
+        /// <para>Valid values: <b>-1</b> and <b>1</b> to <b>65535</b>.</para>
+        /// <para>Use the format 1/200 or 80/80. A value of -1/-1 means all ports.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -57,10 +57,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string DestPortRange { get; set; }
 
         /// <summary>
-        /// <para>The direction of traffic in which the ACL rule is applied. Valid values:</para>
+        /// <para>The direction of traffic to which the ACL rule applies. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>in</b>: The ACL rule controls inbound network traffic of the on-premises network that is associated with the Smart Access Gateway (SAG) instance.</description></item>
-        /// <item><description><b>out</b>: The ACL rule controls outbound network traffic of the on-premises network that is associated with the SAG instance.</description></item>
+        /// <item><description><b>in</b>: inbound. Traffic from an external network to the local branch where the SAG instance is deployed.</description></item>
+        /// <item><description><b>out</b>: outbound. Traffic from the local branch where the SAG instance is deployed to an external network.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -72,6 +72,9 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string Direction { get; set; }
 
         /// <summary>
+        /// <para>A list of application group IDs. The ACL rule matches traffic of the specified application groups.</para>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/196754.html">ListDpiGroups</a>. You can specify up to <b>10</b> application group IDs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -80,6 +83,9 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public List<string> DpiGroupIds { get; set; }
 
         /// <summary>
+        /// <para>A list of application IDs. The ACL rule matches traffic of the specified applications.</para>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/196630.html">ListDpiSignatures</a>. You can specify up to <b>10</b> application IDs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -88,8 +94,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public List<string> DpiSignatureIds { get; set; }
 
         /// <summary>
-        /// <para>The protocol used by the ACL rule.</para>
-        /// <para>The protocols that are provided in this topic are for reference only. The protocols available in the SAG console may vary. The value of the parameter is not case-sensitive.</para>
+        /// <para>The protocol to which the ACL rule applies.</para>
+        /// <para>For a list of supported protocols, see the console. The protocol is not case-sensitive.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -101,7 +107,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 
         /// <summary>
         /// <para>The name of the ACL rule.</para>
-        /// <para>The name must be 2 to 100 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</para>
+        /// <para>The name must be 2 to 100 characters in length, start with a letter, and can contain digits, periods (.), underscores (_), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>doctest</para>
@@ -119,10 +125,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The action policy of the ACL rule. Valid values:</para>
+        /// <para>The authorization policy of the ACL rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>accept</b>: allows network traffic.</description></item>
-        /// <item><description><b>drop</b>: blocks the network traffic.</description></item>
+        /// <item><description><b>accept</b>: allows access.</description></item>
+        /// <item><description><b>drop</b>: denies access.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -135,8 +141,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 
         /// <summary>
         /// <para>The priority of the ACL rule.</para>
-        /// <para>A smaller value indicates a higher priority. If rules have the same priority, whichever applied to the SAG devices earlier takes effect.</para>
-        /// <para>Valid values: <b>1 to 100</b>. Default value: <b>1</b>.</para>
+        /// <para>A smaller value indicates a higher priority. If multiple rules have the same priority, the rule that is first delivered to the Smart Access Gateway device takes precedence.</para>
+        /// <para>Valid values: 1 to <b>100</b>. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12</para>
@@ -146,8 +152,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public int? Priority { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the ACL is deployed.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The ID of the region where the access control list (ACL) is located.</para>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -166,8 +172,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The range of the source IP addresses.</para>
-        /// <para>Specify the value of this parameter in CIDR notation. Example: 192.168.1.0/24.</para>
+        /// <para>The source CIDR block.</para>
+        /// <para>For example: 192.168.1.0/24.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -179,8 +185,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 
         /// <summary>
         /// <para>The source port range.</para>
-        /// <para>Valid values: <b>1</b> to <b>65535</b> and <b>-1</b>.</para>
-        /// <para>Set the source port range in one of the following formats: 1/200 or 80/80. A value of -1/-1 indicates all ports.</para>
+        /// <para>Valid values: <b>-1</b> and <b>1</b> to <b>65535</b>.</para>
+        /// <para>Use the format 1/200 or 80/80. A value of -1/-1 means all ports.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -191,10 +197,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string SourcePortRange { get; set; }
 
         /// <summary>
-        /// <para>The type of the ACL rule: Valid values:</para>
+        /// <para>The type of the ACL rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>LAN</b>: The ACL rule controls network traffic transmitted through private IP addresses.</description></item>
-        /// <item><description><b>WAN</b>: The ACL rule controls network traffic transmitted through public IP addresses.</description></item>
+        /// <item><description><b>LAN</b>: (Default) private network. The ACL rule controls traffic on private networks.</description></item>
+        /// <item><description><b>WAN</b>: public network. The ACL rule controls traffic on public networks.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

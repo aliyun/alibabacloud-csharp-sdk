@@ -61,8 +61,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         /// <summary>
         /// <para>Specifies whether to enable SNAT. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ENABLE</b>: enables SNAT.</description></item>
-        /// <item><description><b>DISABLE</b>: disables SNAT.</description></item>
+        /// <item><description><para><b>ENABLE</b>: enables SNAT.</para>
+        /// </description></item>
+        /// <item><description><para><b>DISABLE</b>: disables SNAT.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

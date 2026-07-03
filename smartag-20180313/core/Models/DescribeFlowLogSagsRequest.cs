@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class DescribeFlowLogSagsRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID of the flow log.</para>
+        /// <para>The flow log instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>fl-l934tsa5504yuc****</para>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the SAG instance list. Minimum value: <b>1</b>. Default value: <b>1</b></para>
+        /// <para>The page number of the query list. Minimum value: <b>1</b>. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in the case of a paged query result. Maximum value: <b>50</b>. Default value: <b>10</b></para>
+        /// <para>The number of entries per page in a paged query. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region to which the flow log belongs.</para>
+        /// <para>The region ID of the flow log.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

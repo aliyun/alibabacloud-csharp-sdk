@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class ListDpiConfigErrorResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the configuration errors.</para>
+        /// <para>A list of DPI configuration errors.</para>
         /// </summary>
         [NameInMap("DpiConfigError")]
         [Validation(Required=false)]
         public List<ListDpiConfigErrorResponseBodyDpiConfigError> DpiConfigError { get; set; }
         public class ListDpiConfigErrorResponseBodyDpiConfigError : TeaModel {
             /// <summary>
-            /// <para>The type of the configuration error. Valid values:</para>
+            /// <para>The type of the configuration error.</para>
             /// <list type="bullet">
-            /// <item><description><b>DeviceNotSupported</b>: The SAG instance does not support the DPI feature.</description></item>
-            /// <item><description><b>VersionNotSupported</b>: The version of the DPI feature is outdated.</description></item>
-            /// <item><description><b>NotEnable</b>: The DPI feature is disabled on the SAG instance.</description></item>
+            /// <item><description>DeviceNotSupported: The Smart Access Gateway device does not support the DPI feature.</description></item>
+            /// <item><description>VersionNotSupported: The DPI version of the Smart Access Gateway device is too old.</description></item>
+            /// <item><description><b>NotEnable</b>: The DPI feature is disabled for the Smart Access Gateway device.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -32,33 +32,31 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public string ErrorType { get; set; }
 
             /// <summary>
-            /// <para>The information about the configuration errors.</para>
+            /// <para>A list of rule configuration errors.</para>
             /// </summary>
             [NameInMap("RuleConfigErrorList")]
             [Validation(Required=false)]
             public List<ListDpiConfigErrorResponseBodyDpiConfigErrorRuleConfigErrorList> RuleConfigErrorList { get; set; }
             public class ListDpiConfigErrorResponseBodyDpiConfigErrorRuleConfigErrorList : TeaModel {
                 /// <summary>
-                /// <para>The IDs of the application groups that have configuration errors.</para>
-                /// <para>You can call the <a href="https://help.aliyun.com/document_detail/196754.html">ListDpiGroups</a> operation to query application group IDs and information about the applications.</para>
+                /// <para>A list of IDs of application groups that have configuration errors.</para>
                 /// </summary>
                 [NameInMap("DpiGroupIds")]
                 [Validation(Required=false)]
                 public List<string> DpiGroupIds { get; set; }
 
                 /// <summary>
-                /// <para>The IDs of applications that have configuration errors.</para>
-                /// <para>You can call the <a href="https://help.aliyun.com/document_detail/196630.html">ListDpiSignatures</a> operation to query application IDs and information about the applications.</para>
+                /// <para>A list of IDs of applications that have configuration errors.</para>
                 /// </summary>
                 [NameInMap("DpiSignatureIds")]
                 [Validation(Required=false)]
                 public List<string> DpiSignatureIds { get; set; }
 
                 /// <summary>
-                /// <para>The IDs of rules that are applied to applications with configuration errors.</para>
+                /// <para>The ID of the rule that is associated with the application that has a configuration error.</para>
                 /// <list type="bullet">
-                /// <item><description>If you make the request to query configuration errors of ACLs, the IDs of ACL rules that have configuration errors are returned.</description></item>
-                /// <item><description>If you make the request to query configuration errors of QoS polices, the IDs of the 5-tuples in the QoS polices that have configuration errors are returned.</description></item>
+                /// <item><description>If you query DPI configuration errors for Resource Access Management, this parameter indicates the ID of the Resource Access Management rule instance that has a configuration error.</description></item>
+                /// <item><description>If you query DPI configuration errors for a QoS policy, this parameter indicates the ID of the quintuple rule instance that has a configuration error.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -71,7 +69,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             }
 
             /// <summary>
-            /// <para>The serial number of the SAG instance.</para>
+            /// <para>The serial number of the Smart Access Gateway device.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sag-2160808****</para>
@@ -81,7 +79,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public string SN { get; set; }
 
             /// <summary>
-            /// <para>The ID of the SAG instance.</para>
+            /// <para>The ID of the Smart Access Gateway instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sag-1e8sgws6b133b8****</para>
@@ -93,7 +91,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries returned per page.</para>
+        /// <para>The maximum number of configuration errors to return on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -103,7 +101,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that was used to query the next page.</para>
+        /// <para>The token for the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a****</para>
@@ -113,7 +111,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F47B5293-27B6-48EF-A9C6-E90A41449813</para>
@@ -123,7 +121,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of DPI configuration errors.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

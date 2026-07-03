@@ -23,6 +23,9 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         /// <summary>
         /// <para>The description of the SAG instance.</para>
         /// <para>The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SAG description</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -31,8 +34,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         /// <summary>
         /// <para>Specifies whether to audit the network connection logs of the SAS app instance.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: yes</description></item>
-        /// <item><description><b>false</b>: no</description></item>
+        /// <item><description><para><b>true</b>: yes</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: no</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -63,6 +68,9 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 
         /// <summary>
         /// <para>The location where the SAG instance is deployed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[ { &quot;adcode&quot;:&quot;&quot;, &quot;label&quot;:&quot;Hangzhou, Zhejiang xx zone xx Road xx number&quot;, &quot;value&quot;:&quot;B0FFGxxxx&quot;, &quot;center&quot;:&quot;120.190xxxx, 30.182xxxx&quot;, &quot;_new&quot;:&quot;true&quot; } ]</para>
         /// </summary>
         [NameInMap("Position")]
         [Validation(Required=false)]
@@ -90,8 +98,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         /// <summary>
         /// <para>The policy that is used to advertise routes to Alibaba Cloud. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>static</b>: static routing</description></item>
-        /// <item><description><b>dynamic</b>: dynamic routing</description></item>
+        /// <item><description><para><b>static</b>: static routing</para>
+        /// </description></item>
+        /// <item><description><para><b>dynamic</b>: dynamic routing</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

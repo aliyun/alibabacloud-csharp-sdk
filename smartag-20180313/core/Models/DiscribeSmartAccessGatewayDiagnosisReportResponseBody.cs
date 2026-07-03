@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class DiscribeSmartAccessGatewayDiagnosisReportResponseBody : TeaModel {
         /// <summary>
-        /// <para>The diagnosis report of the SAG device.</para>
+        /// <para>The diagnosis report of the Smart Access Gateway device.</para>
         /// </summary>
         [NameInMap("DiagnoseResult")]
         [Validation(Required=false)]
         public DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResult DiagnoseResult { get; set; }
         public class DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResult : TeaModel {
             /// <summary>
-            /// <para>The model of the SAG device.</para>
+            /// <para>The type of the Smart Access Gateway device.</para>
             /// <list type="bullet">
             /// <item><description><b>sag-1000</b></description></item>
             /// <item><description><b>sag-100WM</b></description></item>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public string BoxType { get; set; }
 
             /// <summary>
-            /// <para>The version of the SAG device.</para>
+            /// <para>The software version that runs on the Smart Access Gateway device.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2.1.0</para>
@@ -41,66 +41,81 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public string BoxVersion { get; set; }
 
             /// <summary>
-            /// <para>The list of diagnoses that are returned.</para>
+            /// <para>The list of diagnosis results.</para>
             /// </summary>
             [NameInMap("Details")]
             [Validation(Required=false)]
             public List<DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultDetails> Details { get; set; }
             public class DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultDetails : TeaModel {
                 /// <summary>
-                /// <para>The list of items diagnosed.</para>
+                /// <para>The list of detailed information about diagnosis items.</para>
                 /// </summary>
                 [NameInMap("Items")]
                 [Validation(Required=false)]
                 public List<DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultDetailsItems> Items { get; set; }
                 public class DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultDetailsItems : TeaModel {
                     /// <summary>
-                    /// <para>The diagnosis report in Chinese.</para>
+                    /// <para>The diagnosis result in Chinese.</para>
                     /// </summary>
                     [NameInMap("CN")]
                     [Validation(Required=false)]
                     public DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultDetailsItemsCN CN { get; set; }
                     public class DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultDetailsItemsCN : TeaModel {
                         /// <summary>
-                        /// <para>The suggestion for the diagnosis.</para>
+                        /// <para>The diagnosis suggestion.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>Check the leased-line port link wiring first, and then go to the local Leased Line Management page for configuration.</para>
                         /// </summary>
                         [NameInMap("Advice")]
                         [Validation(Required=false)]
                         public List<string> Advice { get; set; }
 
                         /// <summary>
-                        /// <para>The diagnosis.</para>
+                        /// <para>The diagnosis result.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>All leased-line ports have link anomalies or missing port IPs: Port 4.</para>
                         /// </summary>
                         [NameInMap("Details")]
                         [Validation(Required=false)]
                         public List<string> Details { get; set; }
 
                         /// <summary>
-                        /// <para>The diagnosis level of the item. Valid values:</para>
+                        /// <para>The severity level of the diagnosis result for the diagnosis item.</para>
                         /// <list type="bullet">
-                        /// <item><description><b>ERROR</b>: indicates that the item has an issue that may affect your services. We recommend that you handle the issue at the earliest opportunity.</description></item>
-                        /// <item><description><b>WARNING</b>: indicates that the item has an issue. You can handle the issue based on your business requirements.</description></item>
-                        /// <item><description><b>INFO</b>: indicates that the item is working as expected. No additional operation is required.</description></item>
+                        /// <item><description><b>严重</b> (Critical): indicates that the issue of the diagnosis item may affect service running. We recommend that you handle the issue at the earliest opportunity.</description></item>
+                        /// <item><description><b>警告</b> (Warning): indicates that the diagnosis item has an issue. Handle the issue based on the suggestion.</description></item>
+                        /// <item><description><b>正常</b> (Normal): indicates that the diagnosis item is running as expected. No action is required.</description></item>
                         /// </list>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>Normal</para>
                         /// </summary>
                         [NameInMap("ItemLevel")]
                         [Validation(Required=false)]
                         public string ItemLevel { get; set; }
 
                         /// <summary>
-                        /// <para>The name of the item.</para>
+                        /// <para>The name of the diagnosis item.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>Leased line port configuration check</para>
                         /// </summary>
                         [NameInMap("ItemName")]
                         [Validation(Required=false)]
                         public string ItemName { get; set; }
 
                         /// <summary>
-                        /// <para>The type of the item. Valid values:</para>
+                        /// <para>The diagnosis type to which the diagnosis item belongs.</para>
                         /// <list type="bullet">
-                        /// <item><description><b>Config</b>: <b>SAG configuration</b></description></item>
-                        /// <item><description><b>Service</b>: <b>service quality</b></description></item>
-                        /// <item><description><b>Internet</b>: <b>quality of connections to the Internet</b></description></item>
+                        /// <item><description><b>配置</b> (Configuration): indicates the <b>SAG configuration</b> type.</description></item>
+                        /// <item><description><b>业务</b> (Service): indicates the <b>service quality</b> type.</description></item>
+                        /// <item><description><b>公网</b> (Internet): indicates the <b>Internet quality</b> type.</description></item>
                         /// </list>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>Configuration</para>
                         /// </summary>
                         [NameInMap("ItemType")]
                         [Validation(Required=false)]
@@ -109,32 +124,32 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
                     }
 
                     /// <summary>
-                    /// <para>The diagnosis report in English.</para>
+                    /// <para>The diagnosis result in English.</para>
                     /// </summary>
                     [NameInMap("EN")]
                     [Validation(Required=false)]
                     public DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultDetailsItemsEN EN { get; set; }
                     public class DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultDetailsItemsEN : TeaModel {
                         /// <summary>
-                        /// <para>The suggestion for the diagnosis.</para>
+                        /// <para>The diagnosis suggestion.</para>
                         /// </summary>
                         [NameInMap("Advice")]
                         [Validation(Required=false)]
                         public List<string> Advice { get; set; }
 
                         /// <summary>
-                        /// <para>The diagnosis.</para>
+                        /// <para>The diagnosis result.</para>
                         /// </summary>
                         [NameInMap("Details")]
                         [Validation(Required=false)]
                         public List<string> Details { get; set; }
 
                         /// <summary>
-                        /// <para>The diagnosis level of the item. Valid values:</para>
+                        /// <para>The severity level of the diagnosis result for the diagnosis item.</para>
                         /// <list type="bullet">
-                        /// <item><description><b>ERROR</b>: indicates that the item has an issue that may affect your services. We recommend that you handle the issue at the earliest opportunity.</description></item>
-                        /// <item><description><b>WARNING</b>: indicates that the item has an issue. You can handle the issue based on your business requirements.</description></item>
-                        /// <item><description><b>INFO</b>: indicates that the item is working as expected. No additional operation is required.</description></item>
+                        /// <item><description><b>ERROR</b>: indicates that the issue of the diagnosis item may affect service running. We recommend that you handle the issue at the earliest opportunity.</description></item>
+                        /// <item><description><b>WARNING</b>: indicates that the diagnosis item has an issue. Handle the issue based on the suggestion.</description></item>
+                        /// <item><description><b>INFO</b>: indicates that the diagnosis item is running as expected. No action is required.</description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -145,7 +160,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
                         public string ItemLevel { get; set; }
 
                         /// <summary>
-                        /// <para>The name of the item.</para>
+                        /// <para>The name of the diagnosis item.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>Express Connect Port Configuration</para>
@@ -155,11 +170,11 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
                         public string ItemName { get; set; }
 
                         /// <summary>
-                        /// <para>The type of the item. Valid values:</para>
+                        /// <para>The diagnosis type to which the diagnosis item belongs.</para>
                         /// <list type="bullet">
-                        /// <item><description><b>Config</b>: <b>SAG configuration</b></description></item>
-                        /// <item><description><b>Service</b>: <b>service quality</b></description></item>
-                        /// <item><description><b>Internet</b>: <b>quality of connections to the Internet</b></description></item>
+                        /// <item><description><b>Config</b>: indicates the <b>SAG configuration</b> type.</description></item>
+                        /// <item><description><b>Service</b>: indicates the <b>service quality</b> type.</description></item>
+                        /// <item><description><b>Internet</b>: indicates the <b>Internet quality</b> type.</description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -172,7 +187,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
                     }
 
                     /// <summary>
-                    /// <para>The timestamp when the system finishes diagnosing the item.</para>
+                    /// <para>The timestamp when the diagnosis of the diagnosis item ended.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1602741570596</para>
@@ -182,7 +197,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
                     public long? EndTime { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the item, which is the unique identifier of the item.</para>
+                    /// <para>The name of the diagnosis item, which is the unique identifier of the diagnosis item.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>eccConfigCheck</para>
@@ -192,11 +207,11 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
                     public string ItemName { get; set; }
 
                     /// <summary>
-                    /// <para>The diagnosis level of the item. Valid values:</para>
+                    /// <para>The severity level of the diagnosis result for the diagnosis item.</para>
                     /// <list type="bullet">
-                    /// <item><description><b>error</b>: severe</description></item>
-                    /// <item><description><b>warning</b>: warning</description></item>
-                    /// <item><description><b>info</b>: normal</description></item>
+                    /// <item><description><b>error</b>: Critical.</description></item>
+                    /// <item><description><b>warning</b>: Warning.</description></item>
+                    /// <item><description><b>info</b>: Normal.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -207,7 +222,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
                     public string Level { get; set; }
 
                     /// <summary>
-                    /// <para>The timestamp when the system starts to diagnose the item.</para>
+                    /// <para>The timestamp when the diagnosis of the diagnosis item started.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1602741570567</para>
@@ -217,11 +232,11 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
                     public long? StartTime { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the item. Valid values:</para>
+                    /// <para>The diagnosis type to which the diagnosis item belongs.</para>
                     /// <list type="bullet">
-                    /// <item><description><b>config</b>: SAG configuration</description></item>
-                    /// <item><description><b>internet</b>: quality of connections to the Internet</description></item>
-                    /// <item><description><b>biz</b>: service quality</description></item>
+                    /// <item><description><b>config</b>: SAG configuration.</description></item>
+                    /// <item><description><b>internet</b>: Internet quality.</description></item>
+                    /// <item><description><b>biz</b>: Service quality.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -234,14 +249,14 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
                 }
 
                 /// <summary>
-                /// <para>The information about items of each diagnosis level for the current diagnosis type.</para>
+                /// <para>The statistics on the severity levels of diagnosis items under the current diagnosis type.</para>
                 /// </summary>
                 [NameInMap("Statistics")]
                 [Validation(Required=false)]
                 public DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultDetailsStatistics Statistics { get; set; }
                 public class DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultDetailsStatistics : TeaModel {
                     /// <summary>
-                    /// <para>The number of items of the <b>ERROR</b> level.</para>
+                    /// <para>The number of diagnosis items with the <b>Error</b> severity level.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>5</para>
@@ -251,7 +266,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
                     public int? Error { get; set; }
 
                     /// <summary>
-                    /// <para>The number of items of the <b>INFO</b> level.</para>
+                    /// <para>The number of diagnosis items with the <b>Info</b> severity level.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>3</para>
@@ -261,7 +276,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
                     public int? Info { get; set; }
 
                     /// <summary>
-                    /// <para>The total number of items for the current diagnosis type.</para>
+                    /// <para>The total number of diagnosis items under the current diagnosis type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10</para>
@@ -271,7 +286,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
                     public int? Total { get; set; }
 
                     /// <summary>
-                    /// <para>The number of items of the <b>WARNING</b> level.</para>
+                    /// <para>The number of diagnosis items with the <b>Warning</b> severity level.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2</para>
@@ -283,11 +298,11 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
                 }
 
                 /// <summary>
-                /// <para>The type of the diagnosis. Valid values:</para>
+                /// <para>The diagnosis type.</para>
                 /// <list type="bullet">
-                /// <item><description><b>config</b>: SAG configuration</description></item>
-                /// <item><description><b>internet</b>: quality of connections to the Internet</description></item>
-                /// <item><description><b>biz</b>: service quality</description></item>
+                /// <item><description><b>config</b>: SAG configuration.</description></item>
+                /// <item><description><b>internet</b>: Internet quality.</description></item>
+                /// <item><description><b>biz</b>: Service quality.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -300,7 +315,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             }
 
             /// <summary>
-            /// <para>The ID of the diagnosis.</para>
+            /// <para>The diagnosis ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dia-sag42c3t703trh02olv5rf****</para>
@@ -310,7 +325,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public string DiagnoseId { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the system finishes diagnosing the item.</para>
+            /// <para>The timestamp when the diagnosis ended.</para>
             /// 
             /// <b>Example:</b>
             /// <para>160274157</para>
@@ -320,7 +335,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public int? EndTime { get; set; }
 
             /// <summary>
-            /// <para>The number of items that are diagnosed.</para>
+            /// <para>The number of completed diagnosis items.</para>
             /// 
             /// <b>Example:</b>
             /// <para>15</para>
@@ -330,7 +345,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public int? FinishedNumber { get; set; }
 
             /// <summary>
-            /// <para>The ID of the SAG instance.</para>
+            /// <para>The ID of the Smart Access Gateway instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sag-0nnteglltw6z4b***</para>
@@ -340,14 +355,14 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The diagnosis level.</para>
+            /// <para>The diagnosis result level.</para>
             /// </summary>
             [NameInMap("Level")]
             [Validation(Required=false)]
             public DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultLevel Level { get; set; }
             public class DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultLevel : TeaModel {
                 /// <summary>
-                /// <para>The diagnosis level of the service quality.</para>
+                /// <para>The diagnosis result level for service quality.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>warning</para>
@@ -357,7 +372,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
                 public string Biz { get; set; }
 
                 /// <summary>
-                /// <para>The diagnosis level of the SAG configuration.</para>
+                /// <para>The diagnosis result level for SAG configuration.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>info</para>
@@ -367,11 +382,11 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
                 public string Configuration { get; set; }
 
                 /// <summary>
-                /// <para>The overall diagnosis level.</para>
+                /// <para>The overall diagnosis result level.</para>
                 /// <list type="bullet">
-                /// <item><description><b>error</b>: severe</description></item>
-                /// <item><description><b>warning</b>: warning</description></item>
-                /// <item><description><b>info</b>: normal</description></item>
+                /// <item><description><b>error</b>: Critical.</description></item>
+                /// <item><description><b>warning</b>: Warning.</description></item>
+                /// <item><description><b>info</b>: Normal.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -384,7 +399,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             }
 
             /// <summary>
-            /// <para>The version of the monitoring feature that is used by the SAG device.</para>
+            /// <para>The monitoring version used by the Smart Access Gateway device.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2.0.2.9</para>
@@ -404,10 +419,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public int? Percent { get; set; }
 
             /// <summary>
-            /// <para>The status of the diagnosis report to be uploaded to Log Service.</para>
+            /// <para>The status of uploading the diagnosis report to SLS.</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: The system failed to upload the report.</description></item>
-            /// <item><description><b>1</b>: The system has uploaded the report to Log Service.</description></item>
+            /// <item><description><b>0</b>: The upload failed.</description></item>
+            /// <item><description><b>1</b>: The upload was successful.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -418,7 +433,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public int? ReportSLSSuccess { get; set; }
 
             /// <summary>
-            /// <para>The serial number of the SAG device.</para>
+            /// <para>The serial number of the Smart Access Gateway device.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sag42c3****</para>
@@ -428,7 +443,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public string SN { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the system starts to diagnose the item.</para>
+            /// <para>The timestamp when the diagnosis started.</para>
             /// 
             /// <b>Example:</b>
             /// <para>160274157</para>
@@ -438,13 +453,13 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public int? StartTime { get; set; }
 
             /// <summary>
-            /// <para>The diagnosis status. Valid values:</para>
+            /// <para>The diagnosis state.</para>
             /// <list type="bullet">
-            /// <item><description><b>processing</b>: The SAG device is being diagnosed.</description></item>
-            /// <item><description><b>finished</b>: The SAG device is diagnosed.</description></item>
-            /// <item><description><b>failed</b>: The system failed to diagnose the SAG device.</description></item>
-            /// <item><description><b>error</b>: A diagnostic error occurred.</description></item>
-            /// <item><description><b>upload_to_sls_fail</b>: The system failed to upload the diagnosis report.</description></item>
+            /// <item><description><b>processing</b>: The diagnosis is in progress.</description></item>
+            /// <item><description><b>finished</b>: The diagnosis is successful.</description></item>
+            /// <item><description><b>failed</b>: The diagnosis failed.</description></item>
+            /// <item><description><b>error</b>: An error occurred during the diagnosis.</description></item>
+            /// <item><description><b>upload_to_sls_fail</b>: The diagnosis report failed to be uploaded.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -455,14 +470,14 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public string State { get; set; }
 
             /// <summary>
-            /// <para>The overall diagnosis level.</para>
+            /// <para>The overall statistics of diagnosis item results.</para>
             /// </summary>
             [NameInMap("Statistics")]
             [Validation(Required=false)]
             public DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultStatistics Statistics { get; set; }
             public class DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultStatistics : TeaModel {
                 /// <summary>
-                /// <para>The number of items of the <b>ERROR</b> level.</para>
+                /// <para>The total number of diagnosis items with the <b>Error</b> severity level.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -472,7 +487,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
                 public int? Error { get; set; }
 
                 /// <summary>
-                /// <para>The number of items of the <b>INFO</b> level.</para>
+                /// <para>The total number of diagnosis items with the <b>Info</b> severity level.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5</para>
@@ -482,7 +497,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
                 public int? Info { get; set; }
 
                 /// <summary>
-                /// <para>The total number of items.</para>
+                /// <para>The total number of all diagnosis items.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -492,7 +507,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
                 public int? Total { get; set; }
 
                 /// <summary>
-                /// <para>The number of items of the <b>WARNING</b> level.</para>
+                /// <para>The total number of diagnosis items with the <b>Warning</b> severity level.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -505,7 +520,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 
             /// <summary>
             /// <para>The storage type.</para>
-            /// <para>The value is set to <b>both</b>, which indicates that the data is stored in the SAG device and Log Service.</para>
+            /// <para>Value: <b>both</b>, which indicates that the diagnosis report is stored on both the Smart Access Gateway device and in Log Service (SLS).</para>
             /// 
             /// <b>Example:</b>
             /// <para>both</para>
@@ -515,7 +530,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public string StoreType { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of diagnosis result entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>15</para>
@@ -525,7 +540,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public int? TotalNumber { get; set; }
 
             /// <summary>
-            /// <para>The user ID (UID) of the Alibaba Cloud account to which the SAG instance belongs.</para>
+            /// <para>The ID of the account to which the Smart Access Gateway instance belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1688000000000000</para>
@@ -535,7 +550,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public string UId { get; set; }
 
             /// <summary>
-            /// <para>The type of user that initiated the diagnostics. The value is set to <b>user</b>.</para>
+            /// <para>The type of user who initiated the diagnosis. Value: <b>user</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user</para>
@@ -547,7 +562,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D7D6E3AB-D41A-42E3-8D4E-97B145F4B7C3</para>

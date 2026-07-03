@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class ModifyQosPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the traffic classification rule.</para>
-        /// <para>The description must be 1 to 512 characters in length, and can contain digits, underscores (_), and hyphens (-). It must start with a letter.</para>
+        /// <para>The description of the stream classification rule.</para>
+        /// <para>The description must be 1 to 512 characters in length. It must start with a letter and can contain digits, underscores (_), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>desctest</para>
@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The range of the destination IP addresses.</para>
-        /// <para>Specify the value of this parameter in CIDR notation. Example: 192.168.10.0/24.</para>
+        /// <para>The destination CIDR block.</para>
+        /// <para>The destination CIDR block must be in CIDR format. Example: 192.168.10.0/24.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.10.20.0/24</para>
@@ -32,13 +32,13 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string DestCidr { get; set; }
 
         /// <summary>
-        /// <para>The range of destination ports.</para>
-        /// <para>Valid values: <b>1</b> to <b>65535</b> and <b>-1</b>.</para>
-        /// <para>Set this parameter in one of the following formats:</para>
+        /// <para>The destination port range.</para>
+        /// <para>Valid values: <b>-1</b> or <b>1</b> to <b>65535</b>.</para>
+        /// <para>Examples of how to specify a port range:</para>
         /// <list type="bullet">
-        /// <item><description><b>1/200</b>: port 1 to port 200</description></item>
-        /// <item><description><b>80/80</b>: port 80</description></item>
-        /// <item><description><b>-1/-1</b>: all ports</description></item>
+        /// <item><description><b>1/200</b>: ports 1 through 200.</description></item>
+        /// <item><description><b>80/80</b>: port 80.</description></item>
+        /// <item><description><b>-1/-1</b>: all ports.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,6 +49,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string DestPortRange { get; set; }
 
         /// <summary>
+        /// <para>The list of application group IDs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -57,6 +59,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public List<string> DpiGroupIds { get; set; }
 
         /// <summary>
+        /// <para>The list of application IDs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -65,8 +69,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public List<string> DpiSignatureIds { get; set; }
 
         /// <summary>
-        /// <para>The time when the traffic classification rule becomes invalid.</para>
-        /// <para>Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss+0800 format. The time must be in UTC+8.</para>
+        /// <para>The time when the stream classification rule expires.</para>
+        /// <para>Specify the time in the ISO 8601 standard. The time must be in UTC+8. Format: YYYY-MM-DDThh:mm:ss+0800.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-09-14T16:41:33+0800</para>
@@ -76,8 +80,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The type of the protocol that applies to the traffic classification rule.</para>
-        /// <para>The supported protocols provided in this topic are for reference only. The actual protocols in the console shall prevail.</para>
+        /// <para>The protocol.</para>
+        /// <para>For a list of supported protocols, see the information in the console.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TCP</para>
@@ -87,8 +91,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string IpProtocol { get; set; }
 
         /// <summary>
-        /// <para>The name of the traffic classification rule.</para>
-        /// <para>The name must be 2 to 100 characters in length, and can contain digits, underscores (_), and hyphens (-). It must start with a letter.</para>
+        /// <para>The name of the stream classification rule.</para>
+        /// <para>The name must be 2 to 100 characters in length. It must start with a letter and can contain digits, underscores (_), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>nametest</para>
@@ -106,8 +110,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The priority of the traffic throttling policy to which the traffic classification rule belongs.</para>
-        /// <para>Valid values: <b>1 to 3</b>. A smaller value indicates a higher priority.</para>
+        /// <para>The priority of the throttling rule to which the stream classification rule belongs.</para>
+        /// <para>Valid values: 1 to <b>3</b>. A smaller value indicates a higher priority.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -128,7 +132,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string QosId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the traffic classification rule.</para>
+        /// <para>The ID of the stream classification rule in the QoS policy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -139,7 +143,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string QosPolicyId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region to which the QoS policy belongs.</para>
+        /// <para>The ID of the region where the QoS policy is created.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -158,8 +162,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The range of the source IP addresses.</para>
-        /// <para>Specify the value of this parameter in CIDR notation. Example: 192.168.1.0/24.</para>
+        /// <para>The source CIDR block.</para>
+        /// <para>The source CIDR block must be in CIDR format. Example: 192.168.1.0/24.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.10.10.0/24</para>
@@ -169,13 +173,13 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string SourceCidr { get; set; }
 
         /// <summary>
-        /// <para>The range of source ports.</para>
-        /// <para>Valid values: <b>1</b> to <b>65535</b> and <b>-1</b>.</para>
-        /// <para>Set this parameter in one of the following formats:</para>
+        /// <para>The source port range.</para>
+        /// <para>Valid values: <b>-1</b> or <b>1</b> to <b>65535</b>.</para>
+        /// <para>Examples of how to specify a port range:</para>
         /// <list type="bullet">
-        /// <item><description><b>1/200</b>: a port range from 1 to 200</description></item>
-        /// <item><description><b>80/80</b>: port 80</description></item>
-        /// <item><description><b>-1/-1</b>: all ports</description></item>
+        /// <item><description><b>1/200</b>: ports 1 through 200.</description></item>
+        /// <item><description><b>80/80</b>: port 80.</description></item>
+        /// <item><description><b>-1/-1</b>: all ports.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -186,8 +190,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string SourcePortRange { get; set; }
 
         /// <summary>
-        /// <para>The time when the traffic classification rule takes effect.</para>
-        /// <para>Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss+0800 format. The time must be in UTC+8.</para>
+        /// <para>The time when the stream classification rule takes effect.</para>
+        /// <para>Specify the time in the ISO 8601 standard. The time must be in UTC+8. Format: YYYY-MM-DDThh:mm:ss+0800.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-07-14T16:41:33+0800</para>

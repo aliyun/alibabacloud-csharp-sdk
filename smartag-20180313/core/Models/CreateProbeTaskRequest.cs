@@ -10,7 +10,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class CreateProbeTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The domain name that is probed by the task. If the protocol of the probe task is ICMP or TCP, set the value to the IP address or domain name of the service that you want to probe. If the protocol of the probe task is HTTP, set the value to the URL of the service that you want to probe.</para>
+        /// <para>The destination domain name of the probe node.
+        /// For ICMP and TCP Protocol Type probes, set this parameter to the IP address or domain name of the destination service. For HTTP Protocol Type probes, set this parameter to the URL of the destination service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -23,8 +24,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         /// <summary>
         /// <para>Specifies whether to enable the probe task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: yes</description></item>
-        /// <item><description><b>false</b>: no</description></item>
+        /// <item><description><b>true</b>: Enabled.</description></item>
+        /// <item><description><b>false</b>: Disabled.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -36,10 +37,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public bool? Enable { get; set; }
 
         /// <summary>
-        /// <para>The number of probe packets transmitted by the probe task per minute.</para>
+        /// <para>The number of packets sent per minute for the probe protocol.</para>
         /// <para>Valid values: <b>1</b> to <b>60</b>.</para>
         /// <remarks>
-        /// <para>This parameter is required if the protocol of the probe task is ICMP. Ignore this parameter if the protocol of the probe task is not ICMP.</para>
+        /// <para>This parameter is required for ICMP Protocol Type probe tasks. Do not specify this parameter for other protocols.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -50,9 +51,9 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public int? PacketNumber { get; set; }
 
         /// <summary>
-        /// <para>The port that is probed by the task.</para>
+        /// <para>The port number of the probe protocol.</para>
         /// <remarks>
-        /// <para>This parameter is required if the protocol of the probe task is TCP. Ignore this parameter if the protocol of the probe task is not TCP.</para>
+        /// <para>This parameter is required for TCP Protocol Type probe tasks. Do not specify this parameter for other protocols.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -63,9 +64,9 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public int? Port { get; set; }
 
         /// <summary>
-        /// <para>The source address of the probe task.</para>
+        /// <para>The source address for the private network probe.</para>
         /// <remarks>
-        /// <para>This parameter is required if the task probes private networks.</para>
+        /// <para>This parameter is required for private network probe tasks.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -78,12 +79,12 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         /// <summary>
         /// <para>The protocol of the probe task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ICMP</b></description></item>
-        /// <item><description><b>TCP</b></description></item>
-        /// <item><description><b>HTTP</b></description></item>
+        /// <item><description><b>ICMP</b>.</description></item>
+        /// <item><description><b>TCP</b>.</description></item>
+        /// <item><description><b>HTTP</b>.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>Tasks that probe private networks support only ICMP and TCP.</para>
+        /// <para>Private network probes support only the ICMP and TCP protocols.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -95,8 +96,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string Protocol { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the SAG instance.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the Smart Access Gateway instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -107,7 +108,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the SAG instance.</para>
+        /// <para>The instance ID of the Smart Access Gateway.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -118,7 +119,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string SagId { get; set; }
 
         /// <summary>
-        /// <para>The serial number of the SAG device.</para>
+        /// <para>The serial number of the Smart Access Gateway device.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -141,8 +142,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         /// <summary>
         /// <para>The type of the probe task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Internet</b>: probes a public network.</description></item>
-        /// <item><description><b>Intranet</b>: probes a private network.</description></item>
+        /// <item><description><para><b>Internet</b>: public network probe.</para>
+        /// </description></item>
+        /// <item><description><para><b>Intranet</b>: private network probe.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -33,8 +33,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         /// <summary>
         /// <para>The connection type of the LAN port. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>DHCP</b>: a dynamic IP address. Uses the Dynamic Host Configuration Protocol (DHCP) to dynamically assign an IP address to a connected device.</description></item>
-        /// <item><description><b>STATIC</b>: a static IP address. Specifies a static IP address for the LAN port.</description></item>
+        /// <item><description><para><b>DHCP</b>: a dynamic IP address. Uses the Dynamic Host Configuration Protocol (DHCP) to dynamically assign an IP address to a connected device.</para>
+        /// </description></item>
+        /// <item><description><para><b>STATIC</b>: a static IP address. Specifies a static IP address for the LAN port.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

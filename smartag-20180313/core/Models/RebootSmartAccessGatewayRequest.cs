@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         /// <para>The serial number of the SAG device.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>a1b2c3d4e5f6g7h8f9</para>
+        /// <para>a1b2c3d4e****</para>
         /// </summary>
         [NameInMap("SerialNumber")]
         [Validation(Required=false)]

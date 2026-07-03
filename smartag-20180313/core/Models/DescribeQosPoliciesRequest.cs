@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class DescribeQosPoliciesRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the 5-tuple.</para>
-        /// <para>The description must be 1 to 512 characters in length, and can contain digits, underscores (_), and hyphens (-). It must start with a letter.</para>
+        /// <para>The description of the quintuple rule instance in the QoS policy.</para>
+        /// <para>The description must be 1 to 512 characters in length, start with a letter or a Chinese character, and can contain digits, underscores (_), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>docdesc</para>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number. The default value is <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -39,8 +39,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
-        /// <para>Default value: <b>10</b>. A maximum of <b>50</b> entries can be returned on each page.</para>
+        /// <para>The number of quintuple rules to return on each page.</para>
+        /// <para>The default value is <b>10</b>. The maximum value is <b>50</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -50,10 +50,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The priority of the traffic throttling rule that is applied to the 5-tuple.</para>
-        /// <para>Valid values: <b>1 to 3</b>. A smaller value indicates a higher priority.</para>
+        /// <para>The priority of the throttling rule to which the quintuple rule in the QoS policy belongs.</para>
+        /// <para>The priority range is 1 to <b>3</b>. A smaller value indicates a higher priority.</para>
         /// <remarks>
-        /// <para> If you have submitted a ticket and created a QoS policy with the priority value 4 by calling the <a href="https://help.aliyun.com/document_detail/131575.html">CreateQosPolicy</a> operation, you can set the value to 4.</para>
+        /// <para>If you have submitted a ticket and created a priority-4 QoS policy by calling the <a href="https://help.aliyun.com/document_detail/131575.html">CreateQosPolicy</a> operation, you can use this operation to query the configurations of quintuple rules for the priority-4 QoS policy.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public int? Priority { get; set; }
 
         /// <summary>
-        /// <para>The ID of the QoS policy.</para>
+        /// <para>The ID of the QoS policy instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string QosId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the 5-tuple.</para>
+        /// <para>The ID of the quintuple rule instance in the QoS policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>qospy-427m9fo6wkh****</para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string QosPolicyId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region to which the QoS policy belongs.</para>
+        /// <para>The ID of the region where the QoS policy instance resides.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

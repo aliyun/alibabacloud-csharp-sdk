@@ -8,12 +8,12 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
-    public class ModifyClientUserDNSResponseBody : TeaModel {
+    public class AttachCcnInstanceToCenResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
-        /// <para>BFE2D0C0-B69F-422D-A8A3-928AD511B471</para>
+        /// <para>551CD836-9E46-4F2C-A167-B4363180A647</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

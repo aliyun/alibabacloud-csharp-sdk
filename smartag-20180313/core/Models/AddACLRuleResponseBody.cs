@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 
         /// <summary>
         /// <para>The destination CIDR block.</para>
-        /// <para>The value of this parameter is specified in CIDR notation. Example: 192.168.10.0/24.</para>
+        /// <para>For example: 192.168.10.0/24.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.10.0/24</para>
@@ -61,10 +61,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string DestPortRange { get; set; }
 
         /// <summary>
-        /// <para>The direction of traffic in which the ACL rule is applied. Valid values:</para>
+        /// <para>The direction of traffic to which the ACL rule applies. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>in</b>: The ACL rule controls inbound network traffic of the on-premises network that is associated with the SAG instance.</description></item>
-        /// <item><description><b>out</b>: The ACL rule controls outbound network traffic of the on-premises network that is associated with the SAG instance.</description></item>
+        /// <item><description><b>in</b>: inbound. Traffic from an external network to the local branch where the SAG instance is deployed.</description></item>
+        /// <item><description><b>out</b>: outbound. Traffic from the local branch where the SAG instance is deployed to an external network.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -95,8 +95,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         }
 
         /// <summary>
-        /// <para>The timestamp when the ACL rule was created.</para>
-        /// <para>The timestamp is of the Long data type. If multiple ACL rules have the same priority, the rule with the earliest timestamp takes effect.</para>
+        /// <para>The UNIX timestamp when the ACL rule was created.</para>
+        /// <para>This value is a long integer. If rules have the same priority, the one with the earlier timestamp takes precedence.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1553766882689</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? GmtCreate { get; set; }
 
         /// <summary>
-        /// <para>The protocol used by the ACL rule.</para>
+        /// <para>The protocol to which the ACL rule applies.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TCP</para>
@@ -126,10 +126,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The action policy of the ACL rule.</para>
+        /// <para>The authorization policy of the ACL rule.</para>
         /// <list type="bullet">
-        /// <item><description><b>accept</b>: allows the network traffic.</description></item>
-        /// <item><description><b>drop</b>: blocks the network traffic.</description></item>
+        /// <item><description><b>accept</b>: allows access.</description></item>
+        /// <item><description><b>drop</b>: denies access.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 
         /// <summary>
         /// <para>The priority of the ACL rule.</para>
-        /// <para>A smaller value indicates a higher priority. If rules have the same priority, whichever applied to the SAG devices earlier takes effect.</para>
+        /// <para>A smaller value indicates a higher priority. If multiple rules have the same priority, the rule that is first delivered to the Smart Access Gateway device takes precedence.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public int? Priority { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>880F84CB-9B54-4413-A8A3-8832C82D1BC4</para>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 
         /// <summary>
         /// <para>The source CIDR block.</para>
-        /// <para>The value of this parameter is specified in CIDR notation. Example: 192.168.1.0/24.</para>
+        /// <para>The source CIDR block is in the CIDR format. For example: 192.168.1.0/24.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.20.0/24</para>
@@ -182,10 +182,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string SourcePortRange { get; set; }
 
         /// <summary>
-        /// <para>The type of the ACL rule:</para>
+        /// <para>The type of the ACL rule.</para>
         /// <list type="bullet">
-        /// <item><description><b>LAN</b>: The ACL rule controls network traffic transmitted through private IP addresses.</description></item>
-        /// <item><description><b>WAN</b>: The ACL rule controls network traffic transmitted through public IP addresses.</description></item>
+        /// <item><description><b>LAN</b>: private network. The ACL rule controls traffic on private networks.</description></item>
+        /// <item><description><b>WAN</b>: public network. The ACL rule controls traffic on public networks.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

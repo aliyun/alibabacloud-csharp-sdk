@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         /// <para>The description must be 2 to 256 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>description</para>
+        /// <para>Health check instance 1</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]

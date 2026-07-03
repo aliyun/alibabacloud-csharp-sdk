@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class DeleteSmartAccessGatewayDnsForwardRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The ID of the DNS forwarding rule.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

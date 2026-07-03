@@ -24,10 +24,12 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public List<GetAdvancedMonitorStateResponseBodyData> Data { get; set; }
         public class GetAdvancedMonitorStateResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the DPI feature is enabled. Valid values:</para>
+            /// <para>Indicates whether the advanced monitoring feature is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: enabled</description></item>
-            /// <item><description><b>false</b>: disabled</description></item>
+            /// <item><description><para><b>true</b>: The feature is enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: The feature is disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -50,7 +52,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>324223F3-93D3-4CE4-B26F-66C0C3809922</para>

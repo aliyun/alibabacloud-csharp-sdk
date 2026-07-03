@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class CreateCloudConnectNetworkResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the CCN instance.</para>
+        /// <para>The instance ID of the Cloud Connect Network (CCN).</para>
         /// 
         /// <b>Example:</b>
         /// <para>ccn-l9340rlu5ens*****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string CidrBlock { get; set; }
 
         /// <summary>
-        /// <para>The description about the CCN instance.</para>
+        /// <para>The description of the Cloud Connect Network (CCN) instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ccndesc</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The name of the CCN instance.</para>
+        /// <para>The name of the Cloud Connect Network (CCN) instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ccnname</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C48E8EB2-37A4-495B-A95C-29CA1FD26C82</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the CCN instance belongs.</para>
+        /// <para>The ID of the resource group to which the Cloud Connect Network (CCN) instance belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm2iu4fnc****</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The private CIDR block used for SNAT.</para>
+        /// <para>The SNAT private CIDR block.</para>
         /// 
         /// <b>Example:</b>
         /// <para>172.XX.XX.0/25</para>
@@ -80,10 +80,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string SnatCidrBlock { get; set; }
 
         /// <summary>
-        /// <para>The status of the CCN instance. Valid values:</para>
+        /// <para>The instance status of the Cloud Connect Network (CCN). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Active</b>: indicates the CNN instance running as expected.</description></item>
-        /// <item><description><b>Pending</b>: indicates the CCN instance is to be created.</description></item>
+        /// <item><description><b>Active</b>: Normal.</description></item>
+        /// <item><description><b>Pending</b>: Pending creation.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

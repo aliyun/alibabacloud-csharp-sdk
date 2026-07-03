@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class ModifyACLRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of ACL.</para>
+        /// <para>The ID of the ACL instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acl-jdc7tir4fkplwr****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string AclId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ACL rule.</para>
+        /// <para>The ID of the access control rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acr-r8hezn2pi39s5a****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string AcrId { get; set; }
 
         /// <summary>
-        /// <para>The description of the ACL rule.</para>
+        /// <para>The description of the access control rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 
         /// <summary>
         /// <para>The destination CIDR block.</para>
-        /// <para>The value of this parameter is in CIDR notation. Example: 192.168.10.0/24.</para>
+        /// <para>The destination CIDR block is in CIDR format. For example: 192.168.10.0/24.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.0.0.0/0</para>
@@ -61,10 +61,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string DestPortRange { get; set; }
 
         /// <summary>
-        /// <para>The direction of traffic in which the ACL rule is applied. Valid values:</para>
+        /// <para>The direction in which the access control rule is applied. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>in</b>: The ACL rule controls inbound network traffic of the on-premises network that is associated with the SAG instance.</description></item>
-        /// <item><description><b>out</b>: The ACL rule controls outbound network traffic of the on-premises network that is associated with the SAG instance.</description></item>
+        /// <item><description><b>in</b>: inbound. This is the direction of traffic from an external network to the on-premises network where the Smart Access Gateway instance is deployed.</description></item>
+        /// <item><description><b>out</b>: outbound. This is the direction of traffic from the on-premises network where the Smart Access Gateway instance is deployed to an external network.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -95,8 +95,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         }
 
         /// <summary>
-        /// <para>The timestamp when the ACL rule was created.</para>
-        /// <para>The timestamp is of the Long data type. If multiple ACL rules have the same priority, the rule with the earliest timestamp takes effect.</para>
+        /// <para>The timestamp that indicates when the access control rule was created.</para>
+        /// <para>The value is a UNIX timestamp. If rules have the same priority, the one with the smaller timestamp takes precedence.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1553777700000</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? GmtCreate { get; set; }
 
         /// <summary>
-        /// <para>The protocol used by the ACL rule.</para>
+        /// <para>The protocol used by the access control rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ALL</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string IpProtocol { get; set; }
 
         /// <summary>
-        /// <para>The name of the ACL rule.</para>
+        /// <para>The name of the access control rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>doctest</para>
@@ -126,10 +126,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The action of the ACL rule.</para>
+        /// <para>The authorization policy of the access control rule.</para>
         /// <list type="bullet">
-        /// <item><description><b>accept</b>: allows network traffic.</description></item>
-        /// <item><description><b>drop</b>: blocks network traffic.</description></item>
+        /// <item><description><b>accept</b>: allows access.</description></item>
+        /// <item><description><b>drop</b>: denies access.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -140,8 +140,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string Policy { get; set; }
 
         /// <summary>
-        /// <para>The priority of the ACL rule.</para>
-        /// <para>A smaller value indicates a higher priority. If multiple rules have the same priority, the rule that is applied earlier takes effect.</para>
+        /// <para>The priority of the access control rule.</para>
+        /// <para>A smaller value indicates a higher priority. If rules have the same priority, the one that is first delivered to the Smart Access Gateway device takes precedence.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public int? Priority { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7F3DD2C1-0F6B-4575-9106-B2D50DF7A711</para>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 
         /// <summary>
         /// <para>The source CIDR block.</para>
-        /// <para>The value of this parameter is in CIDR notation. Example: 192.168.1.0/24.</para>
+        /// <para>The source CIDR block is in CIDR format. For example: 192.168.1.0/24.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.0.0.0/0</para>

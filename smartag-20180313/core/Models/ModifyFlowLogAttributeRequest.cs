@@ -21,6 +21,9 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 
         /// <summary>
         /// <para>The description of the flow log.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Flow log instance 1</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -100,9 +103,12 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         /// <summary>
         /// <para>The location where the flow log is stored. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>sls</b>: The flow log is stored in Log Service.</description></item>
-        /// <item><description><b>netflow</b>: The flow log is stored on a NetFlow collector.</description></item>
-        /// <item><description><b>all</b>: The flow log is stored both in Log Service and on a NetFlow collector.</description></item>
+        /// <item><description><para><b>sls</b>: The flow log is stored in Log Service.</para>
+        /// </description></item>
+        /// <item><description><para><b>netflow</b>: The flow log is stored on a NetFlow collector.</para>
+        /// </description></item>
+        /// <item><description><para><b>all</b>: The flow log is stored both in Log Service and on a NetFlow collector.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

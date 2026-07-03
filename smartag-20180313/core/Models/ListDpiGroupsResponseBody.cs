@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class ListDpiGroupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the application group.</para>
+        /// <para>The list of application groups.</para>
         /// </summary>
         [NameInMap("DpiGroup")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public string DpiGroupName { get; set; }
 
             /// <summary>
-            /// <para>The earliest version of engine that supports the application group.</para>
+            /// <para>The minimum version of the deep packet inspection (DPI) engine that supports the application group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0-0.0.1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public string MinEngineVersion { get; set; }
 
             /// <summary>
-            /// <para>The earliest version of signature database that supports the application group.</para>
+            /// <para>The minimum version of the signature database that supports the application group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20201117_1_0-0.0.1</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         }
 
         /// <summary>
-        /// <para>The token returned for the next query.</para>
+        /// <para>The token for the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FFPSpX59Ebw****</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EC184A86-3C93-49D6-BB34-6C193E14D37F</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of application groups returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>22</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class DeleteHealthCheckRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the health check instance.</para>
+        /// <para>The health check instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the health check instance is deployed.</para>
+        /// <para>The region ID of the health check instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

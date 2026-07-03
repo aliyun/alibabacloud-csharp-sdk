@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class DescribeCloudConnectNetworksRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the CCN instance.</para>
+        /// <para>The ID of the CCN.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ccn-l9340rlu5enst*****</para>
@@ -20,8 +20,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string CcnId { get; set; }
 
         /// <summary>
-        /// <para>The name of the CCN instance.</para>
-        /// <para>The name must be 2 to 100 characters in length and can contain letters, digits, periods (.), underscores (_),and hyphens (-). The name must start with a letter.</para>
+        /// <para>The name of the CCN.</para>
+        /// <para>The name must be 2 to 100 characters long, start with a letter or a Chinese character, and can contain digits, underscores (_), periods (.), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>ccnname</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the CCN instances are deployed.</para>
+        /// <para>The ID of the region where the CCN is located.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -77,12 +77,18 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The tags to filter CCN instances.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DescribeCloudConnectNetworks</para>
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeCloudConnectNetworksRequestTag> Tag { get; set; }
         public class DescribeCloudConnectNetworksRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the tag that is bound to the CCN instance.</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -92,7 +98,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag that is bound to the CCN instance.</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>

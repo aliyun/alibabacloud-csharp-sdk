@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class CreateHealthCheckResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the health check.</para>
+        /// <para>The ID of the health check instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hc-rrqoucina3gmpn****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E38E950D-28A4-4C41-9428-A8908EC6AE5C</para>

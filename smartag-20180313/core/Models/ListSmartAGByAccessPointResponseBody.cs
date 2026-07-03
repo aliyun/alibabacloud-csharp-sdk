@@ -39,8 +39,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             /// <summary>
             /// <para>The model of the SAG device with which the SAG instance is associated. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>sag-1000</b>.</description></item>
-            /// <item><description><b>sag-100WM</b>.</description></item>
+            /// <item><description><para><b>sag-1000</b>.</para>
+            /// </description></item>
+            /// <item><description><para><b>sag-100WM</b>.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -53,8 +55,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             /// <summary>
             /// <para>The method that the SAG instance uses to synchronize Alibaba Cloud-facing routes. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>static</b>: static routing.</description></item>
-            /// <item><description><b>dynamic</b>: dynamic routing.</description></item>
+            /// <item><description><para><b>static</b>: static routing.</para>
+            /// </description></item>
+            /// <item><description><para><b>dynamic</b>: dynamic routing.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -97,8 +101,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             /// <summary>
             /// <para>The status of the SAG instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Active</b>: The SAG device is connected to Alibaba Cloud.</description></item>
-            /// <item><description><b>offline</b>: The SAG device is disconnected from Alibaba Cloud.</description></item>
+            /// <item><description><para><b>Active</b>: The SAG device is connected to Alibaba Cloud.</para>
+            /// </description></item>
+            /// <item><description><para><b>offline</b>: The SAG device is disconnected from Alibaba Cloud.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

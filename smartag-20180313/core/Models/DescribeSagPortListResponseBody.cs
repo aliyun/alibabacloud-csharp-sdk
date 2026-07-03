@@ -39,11 +39,16 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             /// <summary>
             /// <para>Port role:</para>
             /// <list type="bullet">
-            /// <item><description><b>NONE</b>: No role is assigned to the port.</description></item>
-            /// <item><description><b>WAN</b>: The port is used as a WAN port. The WAN port supports a Dynamic Host Configuration Protocol (DHCP) client, PPPoE, or a static IP address to access the Internet.</description></item>
-            /// <item><description><b>LAN</b>: The port is used as a LAN port. The LAN port supports a DHCP server or a static IP address to connect to a local terminal or switch.</description></item>
-            /// <item><description><b>ECC</b>: The port is used as a leased line port to connect to a leased line.</description></item>
-            /// <item><description><b>MGT</b>: The port is used as the management port.</description></item>
+            /// <item><description><para><b>NONE</b>: No role is assigned to the port.</para>
+            /// </description></item>
+            /// <item><description><para><b>WAN</b>: The port is used as a WAN port. The WAN port supports a Dynamic Host Configuration Protocol (DHCP) client, PPPoE, or a static IP address to access the Internet.</para>
+            /// </description></item>
+            /// <item><description><para><b>LAN</b>: The port is used as a LAN port. The LAN port supports a DHCP server or a static IP address to connect to a local terminal or switch.</para>
+            /// </description></item>
+            /// <item><description><para><b>ECC</b>: The port is used as a leased line port to connect to a leased line.</para>
+            /// </description></item>
+            /// <item><description><para><b>MGT</b>: The port is used as the management port.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -56,9 +61,12 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             /// <summary>
             /// <para>Port states:</para>
             /// <list type="bullet">
-            /// <item><description><b>Up</b>: The port is enabled.</description></item>
-            /// <item><description><b>Down</b>: The port is disabled.</description></item>
-            /// <item><description><b>Unavailable</b>: The SAG device is disconnected from Alibaba Cloud.</description></item>
+            /// <item><description><para><b>Up</b>: The port is enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>Down</b>: The port is disabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>Unavailable</b>: The SAG device is disconnected from Alibaba Cloud.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -120,15 +128,24 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             /// <summary>
             /// <para>Asynchronous task states:</para>
             /// <list type="bullet">
-            /// <item><description><b>Initialized</b>: The query task is initialized.</description></item>
-            /// <item><description><b>Offline</b>: The SAG device is disconnected from Alibaba Cloud and Alibaba Cloud has not assigned the query task to the SAG device. When the SAG device is connected to Alibaba Cloud, Alibaba Cloud continues to assign the query task to the SAG device.</description></item>
-            /// <item><description><b>Succeed</b>: Alibaba Cloud has assigned the query task to the SAG device.</description></item>
-            /// <item><description><b>Processing</b>: Alibaba Cloud is assigning the query task to the SAG device.</description></item>
-            /// <item><description><b>VersionNotSupport</b>: not supported by the current version of the SAG device.</description></item>
-            /// <item><description><b>BuildRequestError</b>: not supported by the control and management center in the cloud.</description></item>
-            /// <item><description><b>HardwareError</b>: Alibaba Cloud failed to assign the query task to the SAG device because the SAG device is faulty.</description></item>
-            /// <item><description><b>TaskNotExist</b>: The query task does not exist.</description></item>
-            /// <item><description><b>OfflineNotConfiged</b>: The SAG device is disconnected from Alibaba Cloud and Alibaba Cloud has not assigned the query task to the SAG device. When the SAG device is connected to Alibaba Cloud, Alibaba Cloud does not assign the query task to the SAG device.</description></item>
+            /// <item><description><para><b>Initialized</b>: The query task is initialized.</para>
+            /// </description></item>
+            /// <item><description><para><b>Offline</b>: The SAG device is disconnected from Alibaba Cloud and Alibaba Cloud has not assigned the query task to the SAG device. When the SAG device is connected to Alibaba Cloud, Alibaba Cloud continues to assign the query task to the SAG device.</para>
+            /// </description></item>
+            /// <item><description><para><b>Succeed</b>: Alibaba Cloud has assigned the query task to the SAG device.</para>
+            /// </description></item>
+            /// <item><description><para><b>Processing</b>: Alibaba Cloud is assigning the query task to the SAG device.</para>
+            /// </description></item>
+            /// <item><description><para><b>VersionNotSupport</b>: not supported by the current version of the SAG device.</para>
+            /// </description></item>
+            /// <item><description><para><b>BuildRequestError</b>: not supported by the control and management center in the cloud.</para>
+            /// </description></item>
+            /// <item><description><para><b>HardwareError</b>: Alibaba Cloud failed to assign the query task to the SAG device because the SAG device is faulty.</para>
+            /// </description></item>
+            /// <item><description><para><b>TaskNotExist</b>: The query task does not exist.</para>
+            /// </description></item>
+            /// <item><description><para><b>OfflineNotConfiged</b>: The SAG device is disconnected from Alibaba Cloud and Alibaba Cloud has not assigned the query task to the SAG device. When the SAG device is connected to Alibaba Cloud, Alibaba Cloud does not assign the query task to the SAG device.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

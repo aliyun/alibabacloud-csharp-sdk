@@ -10,13 +10,15 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class ListAvailableServiceAddressRequest : TeaModel {
         /// <summary>
-        /// <para>The type of service address. Valid values:</para>
+        /// <para>The type of the service address for the Smart Access Gateway instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ProbeTask</b>: probes the source IP address.</description></item>
-        /// <item><description><b>RemoteWeb</b>: probes the IP address for remote logon.</description></item>
+        /// <item><description><para><b>ProbeTask</b>: the source IP address for network probes.</para>
+        /// </description></item>
+        /// <item><description><para><b>RemoteWeb</b>: the IP address for remote logon.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you do not specify a value, all service IP addresses are queried.</para>
+        /// <para>If you do not specify this parameter, all types of service addresses are queried.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -27,8 +29,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string AddressType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the SAG instance is deployed.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The ID of the region where the Smart Access Gateway instance is deployed.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to obtain the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -39,7 +41,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the SAG instance.</para>
+        /// <para>The ID of the Smart Access Gateway instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,7 +52,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string SagId { get; set; }
 
         /// <summary>
-        /// <para>The serial number of the SAG device.</para>
+        /// <para>The serial number of the Smart Access Gateway device.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

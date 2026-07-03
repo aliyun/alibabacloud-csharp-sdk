@@ -10,6 +10,12 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class ViewSmartAccessGatewayPortRouteProtocolRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to query only the Smart Access Gateway instances that belong to other accounts. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>false</b> (default): No.</description></item>
+        /// <item><description><b>true</b>: Yes.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -18,6 +24,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public bool? CrossAccount { get; set; }
 
         /// <summary>
+        /// <para>The ID of the region where the Smart Access Gateway instance is deployed.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to obtain the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +36,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the Alibaba Cloud account to which the Smart Access Gateway instance belongs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>109790620697****</para>
         /// </summary>
@@ -36,6 +46,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string ResourceUid { get; set; }
 
         /// <summary>
+        /// <para>The ID of the Smart Access Gateway instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,6 +57,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string SagInsId { get; set; }
 
         /// <summary>
+        /// <para>The serial number (SN) of the Smart Access Gateway device.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

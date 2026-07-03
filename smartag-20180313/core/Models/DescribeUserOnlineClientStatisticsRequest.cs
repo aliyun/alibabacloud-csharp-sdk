@@ -48,6 +48,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string SmartAGId { get; set; }
 
         /// <summary>
+        /// <para>The usernames. You can query up to 50 users at a time. Separate multiple usernames with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
