@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class OpenDeliveryResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the log delivery feature is enabled. Valid values:</para>
+        /// <para>Indicates whether log delivery is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: Enabled</para>
+        /// </description></item>
+        /// <item><description><para>false: Failed</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

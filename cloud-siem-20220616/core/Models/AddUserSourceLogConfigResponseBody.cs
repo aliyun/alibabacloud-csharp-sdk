@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class AddUserSourceLogConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The return value of the request.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public AddUserSourceLogConfigResponseBodyData Data { get; set; }
         public class AddUserSourceLogConfigResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The display details of the Logstore.</para>
+            /// <para>The detailed information about the SLS log.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai.siem-project.siem-logstore</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string DiplayLine { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the details of added logs are returned. Valid values: true false</para>
+            /// <para>Indicates whether the details of the log collection task are returned. Valid values:</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public bool? Displayed { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the logs are added to the threat analysis feature. Valid values: true false</para>
+            /// <para>Indicates whether the log is collected. Valid values:</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public bool? Imported { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account that is used to purchase the threat analysis feature.</para>
+            /// <para>The ID of the Alibaba Cloud account that is used to purchase Threat Analysis.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123XXXXXXXXX</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public long? MainUserId { get; set; }
 
             /// <summary>
-            /// <para>The log code.</para>
+            /// <para>The code of the log.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cloud_siem_aegis_proc</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string SourceLogCode { get; set; }
 
             /// <summary>
-            /// <para>The code of the cloud service.</para>
+            /// <para>The code of the product.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sas</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string SourceProdCode { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account that can be used to perform operations supported by the threat analysis feature.</para>
+            /// <para>The ID of the Alibaba Cloud account for which the logs are collected.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123XXXXXXXX</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public long? SubUserId { get; set; }
 
             /// <summary>
-            /// <para>The username of the Alibaba Cloud account that can be used to perform operations supported by the threat analysis feature.</para>
+            /// <para>The name of the Alibaba Cloud account for which the logs are collected.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sas_account_xxx</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6276D891-*****-55B2-87B9-74D413F7****</para>

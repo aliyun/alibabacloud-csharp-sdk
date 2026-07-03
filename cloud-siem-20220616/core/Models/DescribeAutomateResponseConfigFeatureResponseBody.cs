@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class DescribeAutomateResponseConfigFeatureResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public List<DescribeAutomateResponseConfigFeatureResponseBodyData> Data { get; set; }
         public class DescribeAutomateResponseConfigFeatureResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The data type of the condition field in the automated response rule.</para>
+            /// <para>The data type of the condition field for the automated response rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>varchar</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string DataType { get; set; }
 
             /// <summary>
-            /// <para>The name of the condition field in the automated response rule.</para>
+            /// <para>The name of the condition field for the automated response rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alert_desc</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string Feature { get; set; }
 
             /// <summary>
-            /// <para>The enumerated values of the right operand for the field.</para>
+            /// <para>The enumeration of the right operand that corresponds to the field.</para>
             /// </summary>
             [NameInMap("RightValueEnums")]
             [Validation(Required=false)]
             public List<DescribeAutomateResponseConfigFeatureResponseBodyDataRightValueEnums> RightValueEnums { get; set; }
             public class DescribeAutomateResponseConfigFeatureResponseBodyDataRightValueEnums : TeaModel {
                 /// <summary>
-                /// <para>The enumerated value of the right operand.</para>
+                /// <para>The enumeration value of the right operand.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>serious</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string Value { get; set; }
 
                 /// <summary>
-                /// <para>The internal code of the enumerated value.</para>
+                /// <para>The Medusa code for the enumeration value of the right operand.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>aliyun.siem.automate.feature.alert_level.serious</para>
@@ -79,17 +79,19 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             }
 
             /// <summary>
-            /// <para>The operators that are supported for the condition field.</para>
+            /// <para>The operators that the field supports.</para>
             /// </summary>
             [NameInMap("SupportOperators")]
             [Validation(Required=false)]
             public List<DescribeAutomateResponseConfigFeatureResponseBodyDataSupportOperators> SupportOperators { get; set; }
             public class DescribeAutomateResponseConfigFeatureResponseBodyDataSupportOperators : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether the right operand is required. Valid values:</para>
+                /// <para>Indicates whether a right operand is required. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true</description></item>
-                /// <item><description>false</description></item>
+                /// <item><description><para>true: A right operand is required.</para>
+                /// </description></item>
+                /// <item><description><para>false: A right operand is not required.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -100,7 +102,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public bool? HasRightValue { get; set; }
 
                 /// <summary>
-                /// <para>The position of the operator in the operator list.</para>
+                /// <para>The position of the operator in the list of operators.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -140,7 +142,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string OperatorDescEn { get; set; }
 
                 /// <summary>
-                /// <para>The name of the operator.</para>
+                /// <para>The display name of the operator.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>&lt;=</para>
@@ -150,7 +152,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string OperatorName { get; set; }
 
                 /// <summary>
-                /// <para>The data types that are supported by the operator. The data types are separated by commas (,).</para>
+                /// <para>The data types that the operator supports. Multiple data types are separated by commas.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>varchar</para>
@@ -160,7 +162,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string SupportDataType { get; set; }
 
                 /// <summary>
-                /// <para>The scenarios that are supported by the operator. Multiple scenarios are separated by commas (,), such as aggregation scenarios. By default, this parameter is empty.</para>
+                /// <para>The scenarios that the operator supports. Multiple scenarios are separated by commas, such as aggregation. By default, this parameter is empty.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[AGGREGATE]</para>
@@ -194,10 +196,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: The request is successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

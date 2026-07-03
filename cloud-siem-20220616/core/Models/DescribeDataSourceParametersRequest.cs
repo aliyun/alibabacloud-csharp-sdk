@@ -10,13 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class DescribeDataSourceParametersRequest : TeaModel {
         /// <summary>
-        /// <para>The code of the cloud service provider.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>qcloud</description></item>
-        /// <item><description>hcloud</description></item>
-        /// <item><description>aliyun</description></item>
-        /// </list>
+        /// <para>The code for the multicloud environment.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,9 +23,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// <summary>
         /// <para>The type of the data source. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ckafka</b>: Tencent Cloud TDMQ for CKafka</description></item>
-        /// <item><description><b>obs</b>: Huawei Cloud Object Storage Service (OBS)</description></item>
-        /// <item><description><b>wafApi</b>: download API of Tencent Cloud Web Application Firewall (WAF)</description></item>
+        /// <item><description><para><b>ckafka</b>: Tencent Cloud CKafka.</para>
+        /// </description></item>
+        /// <item><description><para><b>obs</b>: Huawei Cloud OBS.</para>
+        /// </description></item>
+        /// <item><description><para><b>wafApi</b>: Tencent Cloud WAF attack log download API.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -43,10 +40,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string DataSourceType { get; set; }
 
         /// <summary>
-        /// <para>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</para>
+        /// <para>The region where the Data Management center for threat analysis is deployed. Select a region based on the region where your assets are located. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cn-hangzhou: Your assets reside in regions in China.</description></item>
-        /// <item><description>ap-southeast-1: Your assets reside in regions outside China.</description></item>
+        /// <item><description><para>cn-hangzhou: Your assets are in the Chinese mainland or China (Hong Kong).</para>
+        /// </description></item>
+        /// <item><description><para>ap-southeast-1: Your assets are outside China.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

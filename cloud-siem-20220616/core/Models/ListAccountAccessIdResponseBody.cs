@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public List<ListAccountAccessIdResponseBodyData> Data { get; set; }
         public class ListAccountAccessIdResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The AccessKey ID of the cloud account that is added to the threat analysis feature.</para>
+            /// <para>The attached AccessKey ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ABCXXXXXXXX</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string AccessId { get; set; }
 
             /// <summary>
-            /// <para>The MD5 hash value of the AccessKey ID.</para>
+            /// <para>The MD5 value of the multicloud AccessKey ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>abcXXXXXXXX</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string AccessIdMd5 { get; set; }
 
             /// <summary>
-            /// <para>The ID of the cloud account.</para>
+            /// <para>The ID of the Alibaba Cloud account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123xxxxxxx</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string AccountId { get; set; }
 
             /// <summary>
-            /// <para>The information about the cloud account to which the AccessKey ID belongs. The value is in the following format: Alibaba Cloud account ID|Alibaba Cloud account username|AccessKey ID.</para>
+            /// <para>The information of the account to which the multicloud AccessKey ID belongs. The format is: Alibaba Cloud account ID|Alibaba Cloud account name|Multicloud AccessKey ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123xxxxxx|xxxx|ABCXXXXX</para>
@@ -67,10 +67,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string AccountStr { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the cloud account to which the AccessKey ID belongs is added to the threat analysis feature. Valid values:</para>
+            /// <para>Indicates whether the AccessKey ID is attached to threat analysis. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: no</description></item>
-            /// <item><description>1: yes</description></item>
+            /// <item><description><para>0: Not attached.</para>
+            /// </description></item>
+            /// <item><description><para>1: Attached.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -81,7 +83,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public int? Bound { get; set; }
 
             /// <summary>
-            /// <para>The code of the cloud service provider.</para>
+            /// <para>The code for the multicloud environment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hcloud</para>
@@ -91,7 +93,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string CloudCode { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account that is used to add the third-party cloud account.</para>
+            /// <para>The ID of the Alibaba Cloud account that corresponds to the multicloud AccessKey ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ABCXXXXXXXX</para>
@@ -113,7 +115,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6276D891-*****-55B2-87B9-74D413F7****</para>
@@ -125,8 +127,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

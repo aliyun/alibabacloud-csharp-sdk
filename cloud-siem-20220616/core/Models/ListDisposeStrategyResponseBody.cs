@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class ListDisposeStrategyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>Response data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public ListDisposeStrategyResponseBodyData Data { get; set; }
         public class ListDisposeStrategyResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The pagination information.</para>
+            /// <para>Paging information.</para>
             /// </summary>
             [NameInMap("PageInfo")]
             [Validation(Required=false)]
             public ListDisposeStrategyResponseBodyDataPageInfo PageInfo { get; set; }
             public class ListDisposeStrategyResponseBodyDataPageInfo : TeaModel {
                 /// <summary>
-                /// <para>The current page number.</para>
+                /// <para>Current page number.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public int? CurrentPage { get; set; }
 
                 /// <summary>
-                /// <para>The number of entries per page.</para>
+                /// <para>Number of entries returned per page.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public int? PageSize { get; set; }
 
                 /// <summary>
-                /// <para>The total number of entries returned.</para>
+                /// <para>Total number of entries.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -69,14 +69,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             }
 
             /// <summary>
-            /// <para>The detailed data.</para>
+            /// <para>Detailed data.</para>
             /// </summary>
             [NameInMap("ResponseData")]
             [Validation(Required=false)]
             public List<ListDisposeStrategyResponseBodyDataResponseData> ResponseData { get; set; }
             public class ListDisposeStrategyResponseBodyDataResponseData : TeaModel {
                 /// <summary>
-                /// <para>The UUID of the alert.</para>
+                /// <para>Alert UUID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sas_71e24437d2797ce8fc59692905a4****</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string AlertUuid { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the Alibaba Cloud account that is associated with the policy in SIEM.</para>
+                /// <para>SIEM root account ID associated with the strategy.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>127608589417****</para>
@@ -96,10 +96,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public long? Aliuid { get; set; }
 
                 /// <summary>
-                /// <para>The status of the policy. Valid values:</para>
+                /// <para>Strategy status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>0: invalid</description></item>
-                /// <item><description>1: valid</description></item>
+                /// <item><description><para>0: disabled</para>
+                /// </description></item>
+                /// <item><description><para>1: enabled</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -110,7 +112,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public int? EffectiveStatus { get; set; }
 
                 /// <summary>
-                /// <para>The details of the entity. The value is a JSON array.</para>
+                /// <para>Entity details in JSON array format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[{&quot;ip&quot;:&quot;1.1.1.1&quot;}]</para>
@@ -120,7 +122,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public List<object> Entity { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the entity.</para>
+                /// <para>Entity ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123456789</para>
@@ -130,11 +132,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public long? EntityId { get; set; }
 
                 /// <summary>
-                /// <para>The type of the entity. Valid values:</para>
+                /// <para>Entity type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>ip</description></item>
-                /// <item><description>process</description></item>
-                /// <item><description>file</description></item>
+                /// <item><description><para>ip</para>
+                /// </description></item>
+                /// <item><description><para>process</para>
+                /// </description></item>
+                /// <item><description><para>file</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -145,7 +150,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string EntityType { get; set; }
 
                 /// <summary>
-                /// <para>The summary information about the failed task.</para>
+                /// <para>Summary of task failure.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DisposalEntity failed which description is Aegis Quarantine File , return_info failed which description is Check Aegis Process Result , [ERROR DETAIL] *******.php:file not found</para>
@@ -155,7 +160,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string ErrorMessage { get; set; }
 
                 /// <summary>
-                /// <para>The end time of the task.</para>
+                /// <para>Task completion time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-08-10 21:34:07</para>
@@ -165,7 +170,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string FinishTime { get; set; }
 
                 /// <summary>
-                /// <para>The creation time.</para>
+                /// <para>Creation time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-01-06 16:37:29</para>
@@ -175,7 +180,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string GmtCreate { get; set; }
 
                 /// <summary>
-                /// <para>The update time.</para>
+                /// <para>Last modified time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-01-06 16:37:29</para>
@@ -185,7 +190,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the policy.</para>
+                /// <para>Strategy ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123</para>
@@ -195,7 +200,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>The name of the event.</para>
+                /// <para>Event name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Multiple type of alerts, including Miner Network, Command line download and run malicious files, Backdoor Process, etc</para>
@@ -205,7 +210,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string IncidentName { get; set; }
 
                 /// <summary>
-                /// <para>The UUID of the event.</para>
+                /// <para>Global unique UUID of the event.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>85ea4241-798f-4684-a876-65d4f0c3****</para>
@@ -215,7 +220,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string IncidentUuid { get; set; }
 
                 /// <summary>
-                /// <para>The name of the playbook, which is the unique identifier of the playbook.</para>
+                /// <para>Unique name of the playbook.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>WafBlockIP</para>
@@ -225,13 +230,18 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string PlaybookName { get; set; }
 
                 /// <summary>
-                /// <para>The type of the playbook. Valid values:</para>
+                /// <para>Playbook type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>system: user-triggered playbook</description></item>
-                /// <item><description>custom: event-triggered playbook</description></item>
-                /// <item><description>custom_alert: alert-triggered playbook</description></item>
-                /// <item><description>soar-manual: user-run playbook</description></item>
-                /// <item><description>soar-mdr: MDR-run playbook</description></item>
+                /// <item><description><para>system: manual disposal</para>
+                /// </description></item>
+                /// <item><description><para>custom: event-triggered playbook</para>
+                /// </description></item>
+                /// <item><description><para>custom_alert: alert-triggered playbook</para>
+                /// </description></item>
+                /// <item><description><para>soar-manual: manually run playbook</para>
+                /// </description></item>
+                /// <item><description><para>soar-mdr: MDR-run playbook</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -242,7 +252,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string PlaybookType { get; set; }
 
                 /// <summary>
-                /// <para>The UUID of the playbook.</para>
+                /// <para>UUID of the playbook.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>system_aliyun_clb_process_book</para>
@@ -252,7 +262,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string PlaybookUuid { get; set; }
 
                 /// <summary>
-                /// <para>The scope of the policy.</para>
+                /// <para>Disposal scope.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[{ aliUid: 1766185894104675 }]</para>
@@ -262,22 +272,26 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public List<object> Scope { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the SOAR handling policy.</para>
+                /// <para>ID of the security orchestration and automated response disposal strategy.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>577bbf90-a770-44a7-8154-586aa2d318fa</para>
+                /// <para>577bbf90-a770-44a7-8154-586aa2d3****</para>
                 /// </summary>
                 [NameInMap("SophonTaskId")]
                 [Validation(Required=false)]
                 public string SophonTaskId { get; set; }
 
                 /// <summary>
-                /// <para>The running status of the playbook. Valid values:</para>
+                /// <para>Playbook invocation status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>200: successful</description></item>
-                /// <item><description>10: deleted</description></item>
-                /// <item><description>5: failed</description></item>
-                /// <item><description>0: initial</description></item>
+                /// <item><description><para>200: succeeded</para>
+                /// </description></item>
+                /// <item><description><para>10: deleted</para>
+                /// </description></item>
+                /// <item><description><para>5: failed</para>
+                /// </description></item>
+                /// <item><description><para>0: initial state</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -288,7 +302,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public int? Status { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the Alibaba account that is used to configure the policy.</para>
+                /// <para>The Alibaba Cloud account ID associated with the configuration policy.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>176555323***</para>
@@ -298,7 +312,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public long? SubAliuid { get; set; }
 
                 /// <summary>
-                /// <para>The parameters that are used to trigger the playbook. The value is in the JSON format.</para>
+                /// <para>Parameters used to trigger the playbook, in JSON format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{
@@ -338,6 +352,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 [Validation(Required=false)]
                 public string TaskParam { get; set; }
 
+                /// <summary>
+                /// <para>Playbook URL.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{&quot;playbookUuid&quot;:&quot;system_aliyun_aegis_stop_container_book&quot;,&quot;requestUuid&quot;:&quot;e8924356-448b-4301-aee9-*******&quot;}</para>
+                /// </summary>
                 [NameInMap("TaskUrl")]
                 [Validation(Required=false)]
                 public string TaskUrl { get; set; }
@@ -347,7 +367,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>Response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -357,7 +377,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9AAA9ED9-78F4-5021-86DC-D51C7511****</para>
@@ -367,10 +387,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request succeeded. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

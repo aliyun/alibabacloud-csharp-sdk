@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class DescribeEventCountByThreatLevelResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>Response data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>
@@ -29,18 +29,39 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         [Validation(Required=false)]
         public DescribeEventCountByThreatLevelResponseBodyData Data { get; set; }
         public class DescribeEventCountByThreatLevelResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>Daily event statistics.</para>
+            /// </summary>
             [NameInMap("EventDailyNum")]
             [Validation(Required=false)]
             public List<DescribeEventCountByThreatLevelResponseBodyDataEventDailyNum> EventDailyNum { get; set; }
             public class DescribeEventCountByThreatLevelResponseBodyDataEventDailyNum : TeaModel {
+                /// <summary>
+                /// <para>Date.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2025-10-06</para>
+                /// </summary>
                 [NameInMap("Date")]
                 [Validation(Required=false)]
                 public string Date { get; set; }
 
+                /// <summary>
+                /// <para>Total number of security events.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>100</para>
+                /// </summary>
                 [NameInMap("EventNum")]
                 [Validation(Required=false)]
                 public long? EventNum { get; set; }
 
+                /// <summary>
+                /// <para>Number of unhandled security events.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>34</para>
+                /// </summary>
                 [NameInMap("UndealEventNum")]
                 [Validation(Required=false)]
                 public long? UndealEventNum { get; set; }
@@ -48,7 +69,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             }
 
             /// <summary>
-            /// <para>The total number of events.</para>
+            /// <para>Total number of events.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -58,7 +79,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public long? EventNum { get; set; }
 
             /// <summary>
-            /// <para>The number of high-risk events.</para>
+            /// <para>Number of high-risk events.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -67,12 +88,18 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             [Validation(Required=false)]
             public long? HighLevelEventNum { get; set; }
 
+            /// <summary>
+            /// <para>Number of informational events.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("InfoLevelEventNum")]
             [Validation(Required=false)]
             public long? InfoLevelEventNum { get; set; }
 
             /// <summary>
-            /// <para>The number of low-risk events.</para>
+            /// <para>Number of low-risk events.</para>
             /// 
             /// <b>Example:</b>
             /// <para>52</para>
@@ -82,7 +109,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public long? LowLevelEventNum { get; set; }
 
             /// <summary>
-            /// <para>The number of medium-risk events.</para>
+            /// <para>Number of medium-risk events.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -91,12 +118,18 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             [Validation(Required=false)]
             public long? MediumLevelEventNum { get; set; }
 
+            /// <summary>
+            /// <para>Number of critical events.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("SeriousLevelEventNum")]
             [Validation(Required=false)]
             public long? SeriousLevelEventNum { get; set; }
 
             /// <summary>
-            /// <para>The number of unhandled events.</para>
+            /// <para>Number of unhandled events.</para>
             /// 
             /// <b>Example:</b>
             /// <para>75</para>
@@ -108,7 +141,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>Response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -118,7 +151,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9AAA9ED9-78F4-5021-86DC-D51C7511****</para>
@@ -128,10 +161,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request succeeded. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: The request succeeded.</para>
+        /// </description></item>
+        /// <item><description><para>false: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

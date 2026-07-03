@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class SetStorageResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the settings are saved. Valid values:</para>
+        /// <para>Indicates whether the settings were saved. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true:</description></item>
-        /// <item><description>false:</description></item>
+        /// <item><description><para>true: The settings were saved.</para>
+        /// </description></item>
+        /// <item><description><para>false: The settings failed to be saved.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class DescribeWhiteRuleListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The status code of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The return value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public int? CurrentPage { get; set; }
 
                 /// <summary>
-                /// <para>The number of entries per page.</para>
+                /// <para>The number of entries returned per page.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public int? PageSize { get; set; }
 
                 /// <summary>
-                /// <para>The total number of entries returned.</para>
+                /// <para>The total number of entries.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string AlertUuid { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the Alibaba Cloud account that is used to purchase the threat analysis feature.</para>
+                /// <para>The ID of the Alibaba Cloud account that is used to purchase Threat Analysis.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>127608589417****</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public long? Aliuid { get; set; }
 
                 /// <summary>
-                /// <para>The conditions in the rule. The value is a JSON array.</para>
+                /// <para>The rule conditions, which are in the JSON array format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[{&quot;conditions&quot;:[{&quot;isNot&quot;:false,&quot;itemId&quot;:0,&quot;left&quot;:{&quot;value&quot;:&quot;host_uuid.host_name&quot;},&quot;operator&quot;:&quot;containsString&quot;,&quot;right&quot;:{&quot;value&quot;:&quot;Cloud-MCH&quot;}}]}]</para>
@@ -146,17 +146,19 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public DescribeWhiteRuleListResponseBodyDataResponseDataExpression Expression { get; set; }
                 public class DescribeWhiteRuleListResponseBodyDataResponseDataExpression : TeaModel {
                     /// <summary>
-                    /// <para>The rule conditions.</para>
+                    /// <para>The array of rule conditions.</para>
                     /// </summary>
                     [NameInMap("Conditions")]
                     [Validation(Required=false)]
                     public List<DescribeWhiteRuleListResponseBodyDataResponseDataExpressionConditions> Conditions { get; set; }
                     public class DescribeWhiteRuleListResponseBodyDataResponseDataExpressionConditions : TeaModel {
                         /// <summary>
-                        /// <para>Indicates whether the result is inverted. Valid values:</para>
+                        /// <para>Indicates whether to negate the result. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description>true</description></item>
-                        /// <item><description>false</description></item>
+                        /// <item><description><para>true: The result is negated.</para>
+                        /// </description></item>
+                        /// <item><description><para>false: The result is not negated.</para>
+                        /// </description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -167,7 +169,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                         public bool? IsNot { get; set; }
 
                         /// <summary>
-                        /// <para>The ID of the rule condition.</para>
+                        /// <para>The condition ID.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
@@ -177,7 +179,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                         public int? ItemId { get; set; }
 
                         /// <summary>
-                        /// <para>The left operand of the rule condition.</para>
+                        /// <para>The left operand of the condition.</para>
                         /// </summary>
                         [NameInMap("Left")]
                         [Validation(Required=false)]
@@ -186,8 +188,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                             /// <summary>
                             /// <para>Indicates whether the left operand is a variable. Valid values:</para>
                             /// <list type="bullet">
-                            /// <item><description>true: variable.</description></item>
-                            /// <item><description>false: constant.</description></item>
+                            /// <item><description><para>true: variable</para>
+                            /// </description></item>
+                            /// <item><description><para>false: constant</para>
+                            /// </description></item>
                             /// </list>
                             /// 
                             /// <b>Example:</b>
@@ -198,7 +202,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                             public bool? IsVar { get; set; }
 
                             /// <summary>
-                            /// <para>The remarks on the right operand.</para>
+                            /// <para>The remarks.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>length</para>
@@ -208,17 +212,19 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                             public string Modifier { get; set; }
 
                             /// <summary>
-                            /// <para>The key-value pair information of the remarks.</para>
+                            /// <para>The key-value pair for the remarks.</para>
                             /// </summary>
                             [NameInMap("ModifierParam")]
                             [Validation(Required=false)]
                             public Dictionary<string, object> ModifierParam { get; set; }
 
                             /// <summary>
-                            /// <para>Indicates whether the left operand is a constant. Valid values:</para>
+                            /// <para>Specifies whether the value is a constant. Valid values:</para>
                             /// <list type="bullet">
-                            /// <item><description>true</description></item>
-                            /// <item><description>false</description></item>
+                            /// <item><description><para>true: The value is a constant.</para>
+                            /// </description></item>
+                            /// <item><description><para>false: The value is not a constant.</para>
+                            /// </description></item>
                             /// </list>
                             /// 
                             /// <b>Example:</b>
@@ -241,14 +247,20 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                         }
 
                         /// <summary>
-                        /// <para>The logical operator of the rule condition. Valid values:</para>
+                        /// <para>The operator. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description><c>=</c>: equals to.</description></item>
-                        /// <item><description><c>&lt;&gt;</c>: does not equal to.</description></item>
-                        /// <item><description><c>in</c>: contains.</description></item>
-                        /// <item><description><c>not in</c>: does not contain.</description></item>
-                        /// <item><description><c>REGEXP</c>: matches a regular expression.</description></item>
-                        /// <item><description><c>NOT REGEXP</c>: does not match a regular expression.</description></item>
+                        /// <item><description><para><c>=</c>: equals</para>
+                        /// </description></item>
+                        /// <item><description><para><c>&lt;&gt;</c>: does not equal</para>
+                        /// </description></item>
+                        /// <item><description><para><c>in</c>: includes</para>
+                        /// </description></item>
+                        /// <item><description><para><c>not in</c>: does not include</para>
+                        /// </description></item>
+                        /// <item><description><para><c>REGEXP</c>: matches a regular expression</para>
+                        /// </description></item>
+                        /// <item><description><para><c>NOT REGEXP</c>: does not match a regular expression</para>
+                        /// </description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -259,17 +271,19 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                         public string Operator { get; set; }
 
                         /// <summary>
-                        /// <para>The right operand of the rule condition.</para>
+                        /// <para>The right operand.</para>
                         /// </summary>
                         [NameInMap("Right")]
                         [Validation(Required=false)]
                         public DescribeWhiteRuleListResponseBodyDataResponseDataExpressionConditionsRight Right { get; set; }
                         public class DescribeWhiteRuleListResponseBodyDataResponseDataExpressionConditionsRight : TeaModel {
                             /// <summary>
-                            /// <para>Indicates whether the right operand is a constant or a runtime variable that is obtained from the runtime context. Valid values:</para>
+                            /// <para>Specifies whether the right operand is a constant or a runtime variable. A runtime variable obtains a value from the runtime context. Valid values:</para>
                             /// <list type="bullet">
-                            /// <item><description>true: runtime variable.</description></item>
-                            /// <item><description>false: constant.</description></item>
+                            /// <item><description><para>true: runtime variable</para>
+                            /// </description></item>
+                            /// <item><description><para>false: constant</para>
+                            /// </description></item>
                             /// </list>
                             /// 
                             /// <b>Example:</b>
@@ -280,7 +294,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                             public bool? IsVar { get; set; }
 
                             /// <summary>
-                            /// <para>The remarks on the right operand.</para>
+                            /// <para>The remarks.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>length</para>
@@ -290,14 +304,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                             public string Modifier { get; set; }
 
                             /// <summary>
-                            /// <para>The key-value pair information of the remarks.</para>
+                            /// <para>The key-value pair for the remarks.</para>
                             /// </summary>
                             [NameInMap("ModifierParam")]
                             [Validation(Required=false)]
                             public Dictionary<string, object> ModifierParam { get; set; }
 
                             /// <summary>
-                            /// <para>The data type of the right operand.</para>
+                            /// <para>The data type.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>String</para>
@@ -307,7 +321,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                             public string Type { get; set; }
 
                             /// <summary>
-                            /// <para>The right operand.</para>
+                            /// <para>The value of the right operand.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>12345</para>
@@ -321,7 +335,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                     }
 
                     /// <summary>
-                    /// <para>The logical relationships among the rule conditions.</para>
+                    /// <para>The logical relation for the conditions.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>(1&amp;2)|(3&amp;4)</para>
@@ -333,7 +347,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 }
 
                 /// <summary>
-                /// <para>The time when the whitelist rule was created.</para>
+                /// <para>The time when the rule was created.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-01-06 16:37:29</para>
@@ -343,7 +357,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string GmtCreate { get; set; }
 
                 /// <summary>
-                /// <para>The time when the whitelist rule was modified.</para>
+                /// <para>The time when the rule was last modified.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-01-06 16:37:29</para>
@@ -353,7 +367,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the whitelist rule.</para>
+                /// <para>The unique ID of the whitelist rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123456789</para>
@@ -373,10 +387,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string IncidentUuid { get; set; }
 
                 /// <summary>
-                /// <para>The status of the whitelist rule. Valid values:</para>
+                /// <para>The status of the rule. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>1: enabled.</description></item>
-                /// <item><description>0: disabled.</description></item>
+                /// <item><description><para>1: enabled</para>
+                /// </description></item>
+                /// <item><description><para>0: disabled</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -387,7 +403,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public int? Status { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the Alibaba Cloud account that is used to create the whitelist rule.</para>
+                /// <para>The ID of the Alibaba Cloud account that is used to create the rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>176555323***</para>
@@ -423,8 +439,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

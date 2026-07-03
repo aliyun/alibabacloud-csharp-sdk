@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class RestoreCapacityResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the release command has been sent. Valid values:</para>
+        /// <para>Indicates whether the delete command was sent. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The command has been sent and the storage space is being released.</description></item>
-        /// <item><description>false: The command failed to be sent.</description></item>
+        /// <item><description><para>true: The delete command was sent and the cleanup is in progress.</para>
+        /// </description></item>
+        /// <item><description><para>false: The command failed to send.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public bool? Data { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6276D891-58D4-55B2-87B9-74D413F7****</para>

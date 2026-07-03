@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class DescribeAuthResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the SIEM system is granted the required permissions. Valid values:</para>
+        /// <para>Indicates whether the permissions are granted.</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: The permissions are granted.</para>
+        /// </description></item>
+        /// <item><description><para>false: The permissions are not granted.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class AddDataSourceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cloud account.</para>
+        /// <para>The ID of the Alibaba Cloud account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123xxxxxxxx</para>
@@ -20,13 +20,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string AccountId { get; set; }
 
         /// <summary>
-        /// <para>The code of the cloud service provider.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>qcloud</description></item>
-        /// <item><description>hcloud</description></item>
-        /// <item><description>aliyun</description></item>
-        /// </list>
+        /// <para>The code for the multicloud service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,14 +34,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// <para>The name of the data source.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>beijing_waf_kafka</para>
+        /// <para>XX-Beijing-Kafka</para>
         /// </summary>
         [NameInMap("DataSourceInstanceName")]
         [Validation(Required=false)]
         public string DataSourceInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The parameters of the data source. Set this parameter to a JSON array.</para>
+        /// <para>The parameters for the data source. The value must be a JSON array.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;paraCode&quot;:&quot;region_code&quot;,&quot;paraValue&quot;:&quot;ap-guangzhou&quot;}]</para>
@@ -60,7 +54,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// <para>The remarks on the data source.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>waf_alert_log</para>
+        /// <para>XX Cloud Firewall Shanghai instance</para>
         /// </summary>
         [NameInMap("DataSourceInstanceRemark")]
         [Validation(Required=false)]
@@ -69,9 +63,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// <summary>
         /// <para>The type of the data source. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>obs: Huawei Cloud Object Storage Service (OBS)</description></item>
-        /// <item><description>wafApi: download API of Tencent Cloud Web Application Firewall (WAF)</description></item>
-        /// <item><description>ckafka: Tencent Cloud Kafka (CKafka)</description></item>
+        /// <item><description><para>obs: Huawei Cloud Object Storage Service (OBS).</para>
+        /// </description></item>
+        /// <item><description><para>wafApi: Tencent Cloud Web Application Firewall (WAF) download API.</para>
+        /// </description></item>
+        /// <item><description><para>ckafka: Tencent Cloud CKafka.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -82,10 +79,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string DataSourceType { get; set; }
 
         /// <summary>
-        /// <para>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</para>
+        /// <para>The region of the data management center for threat analysis. Select a region based on the location of your assets. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cn-hangzhou: Your assets reside in regions in China.</description></item>
-        /// <item><description>ap-southeast-1: Your assets reside in regions outside China.</description></item>
+        /// <item><description><para>cn-hangzhou: For assets in the Chinese mainland or China (Hong Kong).</para>
+        /// </description></item>
+        /// <item><description><para>ap-southeast-1: For assets in regions outside China.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

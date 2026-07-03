@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public ListDataSourceLogsResponseBodyData Data { get; set; }
         public class ListDataSourceLogsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the cloud account.</para>
+            /// <para>The ID of the Alibaba Cloud account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123xxxxxxx</para>
@@ -27,11 +27,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string AccountId { get; set; }
 
             /// <summary>
-            /// <para>The code that is used for multi-cloud environments. Valid values:</para>
+            /// <para>The code for the cloud service provider. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>qcloud: Tencent Cloud</description></item>
-            /// <item><description>aliyun: Alibaba Cloud</description></item>
-            /// <item><description>hcloud: Huawei Cloud</description></item>
+            /// <item><description><para>qcloud: Tencent Cloud.</para>
+            /// </description></item>
+            /// <item><description><para>aliyun: Alibaba Cloud.</para>
+            /// </description></item>
+            /// <item><description><para>hcloud: Huawei Cloud</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -42,7 +45,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string CloudCode { get; set; }
 
             /// <summary>
-            /// <para>The ID of the data source. The value is obtained after the threat analysis feature calculates the MD5 hash value of a parameter.</para>
+            /// <para>The ID of the data source. This ID is an MD5 hash value that is calculated by threat analysis based on specific parameters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>220ba97c9d1fdb0b9c7e8c7ca328d7ea</para>
@@ -52,7 +55,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string DataSourceInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The logs of the data source.</para>
+            /// <para>The list of logs for the data source.</para>
             /// </summary>
             [NameInMap("DataSourceInstanceLogs")]
             [Validation(Required=false)]
@@ -69,7 +72,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string LogCode { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the log. The value is obtained after the threat analysis feature calculates the MD5 hash value of a parameter.</para>
+                /// <para>The ID of the log. This ID is an MD5 hash value that is calculated by threat analysis based on specific parameters.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>220ba97c9d1fdb0b9c7e8c7ca328d7ea</para>
@@ -89,14 +92,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string LogMdsCode { get; set; }
 
                 /// <summary>
-                /// <para>The parameters of the log.</para>
+                /// <para>The detailed parameters for the log.</para>
                 /// </summary>
                 [NameInMap("LogParams")]
                 [Validation(Required=false)]
                 public List<ListDataSourceLogsResponseBodyDataDataSourceInstanceLogsLogParams> LogParams { get; set; }
                 public class ListDataSourceLogsResponseBodyDataDataSourceInstanceLogsLogParams : TeaModel {
                     /// <summary>
-                    /// <para>The parameter code of the log.</para>
+                    /// <para>The code of the log parameter.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>region_code</para>
@@ -106,7 +109,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                     public string ParaCode { get; set; }
 
                     /// <summary>
-                    /// <para>The parameter value of the log.</para>
+                    /// <para>The value of the log parameter.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>ap-guangzhou</para>
@@ -118,10 +121,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 }
 
                 /// <summary>
-                /// <para>Indicates whether the task for which logs are collected is enabled. Valid values:</para>
+                /// <para>The status of the log collection task. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>1: yes</description></item>
-                /// <item><description>0: no</description></item>
+                /// <item><description><para>1: collected.</para>
+                /// </description></item>
+                /// <item><description><para>0: not collected.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -144,7 +149,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string DataSourceInstanceName { get; set; }
 
             /// <summary>
-            /// <para>The remarks of the data source.</para>
+            /// <para>The remarks on the data source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>waf kafka</para>
@@ -154,7 +159,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string DataSourceInstanceRemark { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account.</para>
+            /// <para>The ID of the Alibaba Cloud account to which the log belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123XXXXXXXX</para>
@@ -166,7 +171,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6276D891-*****-55B2-87B9-74D413F7****</para>

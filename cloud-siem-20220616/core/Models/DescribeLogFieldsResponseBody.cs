@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class DescribeLogFieldsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The request status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public List<DescribeLogFieldsResponseBodyData> Data { get; set; }
         public class DescribeLogFieldsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The type of the log to which the field belongs.</para>
+            /// <para>The log type to which the field belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HTTP_ACTIVITY</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string ActivityName { get; set; }
 
             /// <summary>
-            /// <para>The internal code of the field description.</para>
+            /// <para>The Medusa code for the field description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sas.cloudsiem.prod.activity_name</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string FieldDesc { get; set; }
 
             /// <summary>
-            /// <para>The name of the field.</para>
+            /// <para>The name of the rule field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>activity_name</para>
@@ -62,8 +62,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             /// <summary>
             /// <para>The data type of the field. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>varchar</description></item>
-            /// <item><description>bigint</description></item>
+            /// <item><description><para>varchar: string</para>
+            /// </description></item>
+            /// <item><description><para>bigint: number</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -86,7 +88,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The message returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -108,8 +110,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

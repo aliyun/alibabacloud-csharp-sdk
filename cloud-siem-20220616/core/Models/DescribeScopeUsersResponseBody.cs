@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class DescribeScopeUsersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code that is returned.</para>
+        /// <para>The status code of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public List<DescribeScopeUsersResponseBodyData> Data { get; set; }
         public class DescribeScopeUsersResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the security information and event management (SIEM) user.</para>
+            /// <para>The user ID in Security Information and Event Management (SIEM).</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456789****</para>
@@ -40,10 +40,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public long? AliUid { get; set; }
 
             /// <summary>
-            /// <para>云code。  取值：</para>
+            /// <para>The cloud code. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>qcloud：腾讯云</description></item>
-            /// <item><description>hcloud：华为云</description></item>
+            /// <item><description><para>qcloud: Tencent Cloud</para>
+            /// </description></item>
+            /// <item><description><para>hcloud: Huawei Cloud</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -54,7 +56,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string CloudCode { get; set; }
 
             /// <summary>
-            /// <para>An array consisting of the domain names that are protected by the WAF instance.</para>
+            /// <para>The list of domain names protected by the WAF instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[123.com, 456.com]</para>
@@ -74,7 +76,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>多云用户ID。</para>
+            /// <para>The multicloud user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456789****</para>
@@ -96,7 +98,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The message returned for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -118,8 +120,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

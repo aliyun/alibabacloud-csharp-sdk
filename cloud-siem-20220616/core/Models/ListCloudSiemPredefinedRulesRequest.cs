@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string AlertType { get; set; }
 
         /// <summary>
-        /// <para>The ATT\&amp;CK information.</para>
+        /// <para>The ATT\&amp;CK technique.</para>
         /// 
         /// <b>Example:</b>
         /// <para>T1595.002 Vulnerability Scanning</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string AttCk { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1.</para>
+        /// <para>The page number. The value must be greater than or equal to 1.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Unit: milliseconds.</para>
+        /// <para>The end of the time range to query. This value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1577808000000</para>
@@ -51,11 +51,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The method that is used to generate an event. Valid values:</para>
+        /// <para>The event generation method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>default: built-in method.</description></item>
-        /// <item><description>singleToSingle: The system generates an event for each alert.</description></item>
-        /// <item><description>allToSingle: The system generates an event for alerts within a period of time.</description></item>
+        /// <item><description><para>default: the default built-in method</para>
+        /// </description></item>
+        /// <item><description><para>singleToSingle: An event is generated for each alert.</para>
+        /// </description></item>
+        /// <item><description><para>allToSingle: An event is generated for all alerts in an epoch.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -66,7 +69,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string EventTransferType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the rule.</para>
+        /// <para>The rule ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10223</para>
@@ -79,17 +82,19 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// <para>The log source.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cloud_siem_aegis_sas_alert</para>
+        /// <para>cloud_siem_alb_flow_log</para>
         /// </summary>
         [NameInMap("LogSource")]
         [Validation(Required=false)]
         public string LogSource { get; set; }
 
         /// <summary>
-        /// <para>The sort method. Valid values:</para>
+        /// <para>The sort order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>desc: descending order.</description></item>
-        /// <item><description>asc: ascending order.</description></item>
+        /// <item><description><para>desc: descending</para>
+        /// </description></item>
+        /// <item><description><para>asc: ascending</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -100,10 +105,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The field that is used to sort the rules. Valid values:</para>
+        /// <para>The field to sort the rules by. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>GmtModified: The rules are sorted based on the modification time.</description></item>
-        /// <item><description>Id (default): The rules are sorted based on the rule ID.</description></item>
+        /// <item><description><para>GmtModified: Sorts by modification time.</para>
+        /// </description></item>
+        /// <item><description><para>Id: Sorts by rule ID. This is the default value.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -114,7 +121,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string OrderField { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Maximum value: 100.</para>
+        /// <para>The number of entries per page. The maximum value is 100.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -125,10 +132,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</para>
+        /// <para>The region where the Data Management center of the threat analysis feature is located. Select the region where your assets are located. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cn-hangzhou: Your assets reside in regions in China.</description></item>
-        /// <item><description>ap-southeast-1: Your assets reside in regions outside China.</description></item>
+        /// <item><description><para>cn-hangzhou: assets in the Chinese mainland or China (Hong Kong)</para>
+        /// </description></item>
+        /// <item><description><para>ap-southeast-1: assets outside China</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -139,7 +148,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the destination account to which you switch the view from the management account.</para>
+        /// <para>The user ID that the administrator uses to switch to the perspective of a member.</para>
         /// 
         /// <b>Example:</b>
         /// <para>113091674488****</para>
@@ -149,10 +158,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public long? RoleFor { get; set; }
 
         /// <summary>
-        /// <para>The type of the view.</para>
+        /// <para>The view type.</para>
         /// <list type="bullet">
-        /// <item><description>0: view of the current Alibaba Cloud account.</description></item>
-        /// <item><description>1: view of all accounts for the enterprise.</description></item>
+        /// <item><description><para>0: the view of the current Alibaba Cloud account.</para>
+        /// </description></item>
+        /// <item><description><para>1: the view of all accounts in the enterprise.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -163,7 +174,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? RoleType { get; set; }
 
         /// <summary>
-        /// <para>The name of the rule. The name can contain letters, digits, underscores (_), and periods (.).</para>
+        /// <para>The rule name. The name can contain only letters, digits, underscores (_), and periods (.).</para>
         /// 
         /// <b>Example:</b>
         /// <para>waf_scan</para>
@@ -173,10 +184,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>The type of the rule. Valid values:</para>
+        /// <para>The rule type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>predefine</description></item>
-        /// <item><description>customize</description></item>
+        /// <item><description><para>predefine: predefined</para>
+        /// </description></item>
+        /// <item><description><para>customize: custom</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -187,7 +200,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string RuleType { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Unit: milliseconds.</para>
+        /// <para>The start of the time range to query. This value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1577808000000</para>
@@ -197,13 +210,18 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The status of the rule. Valid values:</para>
+        /// <para>The rule status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: The rule is in the initial state.</description></item>
-        /// <item><description>10: The simulation data is tested.</description></item>
-        /// <item><description>15: The business data is being tested.</description></item>
-        /// <item><description>20: The business data test ends.</description></item>
-        /// <item><description>100: The rule takes effect.</description></item>
+        /// <item><description><para>0: initial</para>
+        /// </description></item>
+        /// <item><description><para>10: testing with simulated data</para>
+        /// </description></item>
+        /// <item><description><para>15: testing with production data</para>
+        /// </description></item>
+        /// <item><description><para>20: testing with production data is complete</para>
+        /// </description></item>
+        /// <item><description><para>100: published</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -214,11 +232,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? Status { get; set; }
 
         /// <summary>
-        /// <para>The risk level. The value is a JSON array. Valid values:</para>
+        /// <para>The threat level. The value is a JSON array. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>serious: high</description></item>
-        /// <item><description>suspicious: medium</description></item>
-        /// <item><description>remind: low</description></item>
+        /// <item><description><para>serious: high</para>
+        /// </description></item>
+        /// <item><description><para>suspicious: medium</para>
+        /// </description></item>
+        /// <item><description><para>remind: low</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

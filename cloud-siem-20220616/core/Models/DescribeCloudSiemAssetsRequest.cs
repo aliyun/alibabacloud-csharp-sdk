@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class DescribeCloudSiemAssetsRequest : TeaModel {
         /// <summary>
+        /// <para>The asset name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test123</para>
         /// </summary>
@@ -18,14 +20,20 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string AssetName { get; set; }
 
         /// <summary>
-        /// <para>The type of the asset. Valid values:</para>
+        /// <para>The asset type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ip</description></item>
-        /// <item><description>domain</description></item>
-        /// <item><description>url</description></item>
-        /// <item><description>process</description></item>
-        /// <item><description>file</description></item>
-        /// <item><description>host</description></item>
+        /// <item><description><para>ip: IP address</para>
+        /// </description></item>
+        /// <item><description><para>domain: domain name</para>
+        /// </description></item>
+        /// <item><description><para>url: URL</para>
+        /// </description></item>
+        /// <item><description><para>process: process</para>
+        /// </description></item>
+        /// <item><description><para>file: file</para>
+        /// </description></item>
+        /// <item><description><para>host: host</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,6 +44,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string AssetType { get; set; }
 
         /// <summary>
+        /// <para>The UUID of the asset.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123456-2222-3333-5555-3435345****</para>
         /// </summary>
@@ -44,7 +54,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string AssetUuid { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1.</para>
+        /// <para>The page number. The value must be greater than or equal to 1.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,7 +75,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string IncidentUuid { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Maximum value: 100.</para>
+        /// <para>The number of entries to return on each page. The maximum value is 100.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -76,10 +86,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</para>
+        /// <para>The region where the Data Management center of Threat Analysis is deployed. Select a region based on the region where your assets are located. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cn-hangzhou: Your assets reside in regions in China.</description></item>
-        /// <item><description>ap-southeast-1: Your assets reside in regions outside China.</description></item>
+        /// <item><description><para>cn-hangzhou: assets in the Chinese mainland or China (Hong Kong)</para>
+        /// </description></item>
+        /// <item><description><para>ap-southeast-1: assets outside China</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -90,7 +102,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the account that you switch from the management account.</para>
+        /// <para>The user ID of the member whose data you want to view. This parameter is available only when an administrator wants to switch to the perspective of a member.</para>
         /// 
         /// <b>Example:</b>
         /// <para>113091674488****</para>
@@ -100,10 +112,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public long? RoleFor { get; set; }
 
         /// <summary>
-        /// <para>The type of the view. Valid values:</para>
+        /// <para>The view type.</para>
         /// <list type="bullet">
-        /// <item><description>0: the current Alibaba Cloud account</description></item>
-        /// <item><description>1: the global account</description></item>
+        /// <item><description><para>0: The view of the current Alibaba Cloud account.</para>
+        /// </description></item>
+        /// <item><description><para>1: The view of all accounts that belong to the enterprise.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

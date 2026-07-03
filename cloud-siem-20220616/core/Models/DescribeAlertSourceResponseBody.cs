@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class DescribeAlertSourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The status code of the response. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The list of alert sources.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>
@@ -29,12 +29,15 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         [Validation(Required=false)]
         public List<DescribeAlertSourceResponseBodyData> Data { get; set; }
         public class DescribeAlertSourceResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The list of modules.</para>
+            /// </summary>
             [NameInMap("Modules")]
             [Validation(Required=false)]
             public List<string> Modules { get; set; }
 
             /// <summary>
-            /// <para>The internal code of the alert data source.</para>
+            /// <para>The internal code for the alert source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aliyun.siem.alert_datasource.sas</para>
@@ -44,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The name of the alert data source.</para>
+            /// <para>The name of the alert source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sas</para>
@@ -56,7 +59,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -78,8 +81,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para><c>true</c>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

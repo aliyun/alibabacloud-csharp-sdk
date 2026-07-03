@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class DescribeAlertsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The status code of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The response data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public DescribeAlertsResponseBodyData Data { get; set; }
         public class DescribeAlertsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The pagination information.</para>
+            /// <para>The paging information.</para>
             /// </summary>
             [NameInMap("PageInfo")]
             [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public int? PageSize { get; set; }
 
                 /// <summary>
-                /// <para>The total number of entries returned.</para>
+                /// <para>The total number of entries.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             }
 
             /// <summary>
-            /// <para>The detailed data.</para>
+            /// <para>A list of alerts.</para>
             /// </summary>
             [NameInMap("ResponseData")]
             [Validation(Required=false)]
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string AlertDesc { get; set; }
 
                 /// <summary>
-                /// <para>The internal code of the alert description.</para>
+                /// <para>The internal code for the alert description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>security_event_config.event_name.webshell</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string AlertDescCode { get; set; }
 
                 /// <summary>
-                /// <para>The description of the alert in English.</para>
+                /// <para>The English description of the alert.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>The detection model found a suspicious Webshell file on your server, which may be a backdoor file implanted to maintain permissions after the attacker successfully invaded the website.</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string AlertDescEn { get; set; }
 
                 /// <summary>
-                /// <para>The details of the alert.</para>
+                /// <para>A JSON string that contains alert details.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;main_user_id&quot;: &quot;165295629792****&quot;;&quot;log_uuid_count&quot;: &quot;99&quot;;&quot;attack_ip&quot;: &quot;21.92.<em>.</em>&quot;}</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string AlertDetail { get; set; }
 
                 /// <summary>
-                /// <para>The displayed details of the alert.</para>
+                /// <para>A list of key-value pairs that contain the detailed properties of the alert.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>aliyun</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public List<DescribeAlertsResponseBodyDataResponseDataAlertInfoList> AlertInfoList { get; set; }
                 public class DescribeAlertsResponseBodyDataResponseDataAlertInfoList : TeaModel {
                     /// <summary>
-                    /// <para>The attribute key.</para>
+                    /// <para>The key of the detailed alert property.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>suspicious.wbd.wb.trojanpath</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                     public string Key { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the key.</para>
+                    /// <para>The display name of the detailed alert property.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Trojan Path</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                     public string KeyName { get; set; }
 
                     /// <summary>
-                    /// <para>The value of the key.</para>
+                    /// <para>The value of the detailed alert property.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>/root/test33.php</para>
@@ -160,9 +160,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 /// <summary>
                 /// <para>The threat level. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>serious: high</description></item>
-                /// <item><description>suspicious: medium</description></item>
-                /// <item><description>remind: low</description></item>
+                /// <item><description><para><c>serious</c>: high</para>
+                /// </description></item>
+                /// <item><description><para><c>suspicious</c>: medium</para>
+                /// </description></item>
+                /// <item><description><para><c>remind</c>: low</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -183,7 +186,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string AlertName { get; set; }
 
                 /// <summary>
-                /// <para>The internal code of the alert name.</para>
+                /// <para>The internal code for the alert name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>security_event_config.event_name.webshell</para>
@@ -193,7 +196,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string AlertNameCode { get; set; }
 
                 /// <summary>
-                /// <para>The name of the alert in English.</para>
+                /// <para>The English name of the alert.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Try SNMP weak password</para>
@@ -203,7 +206,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string AlertNameEn { get; set; }
 
                 /// <summary>
-                /// <para>The service for which the alert associated with the event is generated.</para>
+                /// <para>The product that generated the alert.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sas</para>
@@ -213,7 +216,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string AlertSrcProd { get; set; }
 
                 /// <summary>
-                /// <para>The sub-module of ther alert source.</para>
+                /// <para>The submodule of the product that generated the alert.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>waf</para>
@@ -223,6 +226,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string AlertSrcProdModule { get; set; }
 
                 /// <summary>
+                /// <para>The alert status.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -241,7 +246,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string AlertTitle { get; set; }
 
                 /// <summary>
-                /// <para>The title of the alert in English.</para>
+                /// <para>The English title of the alert.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Scan-Try SNMP weak password</para>
@@ -251,7 +256,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string AlertTitleEn { get; set; }
 
                 /// <summary>
-                /// <para>The alert type.</para>
+                /// <para>The type of the alert.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Scan</para>
@@ -261,7 +266,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string AlertType { get; set; }
 
                 /// <summary>
-                /// <para>The internal code of the alert type.</para>
+                /// <para>The internal code for the alert type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>security_event_config.event_name.webshellName</para>
@@ -271,7 +276,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string AlertTypeCode { get; set; }
 
                 /// <summary>
-                /// <para>The type of the alert in English.</para>
+                /// <para>The English type of the alert.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Scan</para>
@@ -291,7 +296,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string AlertUuid { get; set; }
 
                 /// <summary>
-                /// <para>The details of the asset.</para>
+                /// <para>A JSON string that contains a list of involved assets.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[
@@ -312,7 +317,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string AssetList { get; set; }
 
                 /// <summary>
-                /// <para>The tag of the ATT\&amp;CK attack.</para>
+                /// <para>The ATT\&amp;CK attack technique.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>T1595.002 Vulnerability Scanning</para>
@@ -322,11 +327,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string AttCk { get; set; }
 
                 /// <summary>
-                /// <para>The cloud code. Valid values:</para>
+                /// <para>The cloud provider code. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>aliyun: Alibaba Cloud</description></item>
-                /// <item><description>qcloud: Tencent Cloud</description></item>
-                /// <item><description>hcloud: Huawei Cloud</description></item>
+                /// <item><description><para><c>aliyun</c>: Alibaba Cloud</para>
+                /// </description></item>
+                /// <item><description><para><c>qcloud</c>: Tencent Cloud</para>
+                /// </description></item>
+                /// <item><description><para><c>hcloud</c>: Huawei Cloud</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -336,12 +344,18 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 [Validation(Required=false)]
                 public string CloudCode { get; set; }
 
+                /// <summary>
+                /// <para>The ID of the detection rule.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>dr-48zs4tk7qfd4rjd9****</para>
+                /// </summary>
                 [NameInMap("DetectionRuleId")]
                 [Validation(Required=false)]
                 public string DetectionRuleId { get; set; }
 
                 /// <summary>
-                /// <para>The time when the alert was closed.</para>
+                /// <para>The end time of the alert.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-01-06 16:37:29</para>
@@ -350,16 +364,28 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 [Validation(Required=false)]
                 public string EndTime { get; set; }
 
+                /// <summary>
+                /// <para>A JSON string that contains a list of entities involved in the alert. The entity data is standardized for query and analysis.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>[{&quot;entity_user_id&quot;:&quot;198921674491****&quot;,&quot;entity_account_id&quot;:&quot;N/A&quot;,&quot;entity_uuid&quot;:&quot;6245f979d5dd9ef8dd19bdc72228****&quot;,&quot;entity_type&quot;:&quot;host&quot;,&quot;entity_name&quot;:&quot;zhh-test-20240409&quot;,&quot;is_comprised&quot;:&quot;1&quot;,&quot;os_type&quot;:&quot;linux&quot;,&quot;entity_id&quot;:&quot;a88f44dd-b8d4-4ded-831c-77a4835****&quot;,&quot;host_uuid&quot;:&quot;a88f44dd-b8d4-4ded-831c-77a4835****&quot;,&quot;host_name&quot;:&quot;zhh-test-2024****&quot;}]</para>
+                /// </summary>
                 [NameInMap("EntityList")]
                 [Validation(Required=false)]
                 public string EntityList { get; set; }
 
+                /// <summary>
+                /// <para>Extended information about the alert, in JSON string format.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{&quot;user&quot;:&quot;Member&quot;,&quot;num&quot;:&quot;1&quot;}</para>
+                /// </summary>
                 [NameInMap("ExtendContent")]
                 [Validation(Required=false)]
                 public string ExtendContent { get; set; }
 
                 /// <summary>
-                /// <para>The time when the alert was received.</para>
+                /// <para>The time when the alert was stored in the database.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-01-06 16:37:29</para>
@@ -398,15 +424,23 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 [Validation(Required=false)]
                 public string IncidentUuid { get; set; }
 
+                /// <summary>
+                /// <para>The investigation report for the alert, in JSON string format.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{&quot;agent_attack_confidence&quot;: 90, &quot;agent_judgement_category&quot;: &quot;false_positive&quot;, &quot;reason&quot;: &quot;The command line contains \&quot;mediacenter\&quot; which is a normal startup behavior of Lark (Feishu) client, and the process path is in the standard user installation directory.&quot;, &quot;start_time&quot;: 1774929064, &quot;end_time&quot;: 1774929071}</para>
+                /// </summary>
                 [NameInMap("InvestigationReport")]
                 [Validation(Required=false)]
                 public string InvestigationReport { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether an attack is defended. Valid values:</para>
+                /// <para>Indicates whether the threat was blocked. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>0: detected.</description></item>
-                /// <item><description>1: blocked.</description></item>
+                /// <item><description><para><c>0</c>: detected</para>
+                /// </description></item>
+                /// <item><description><para><c>1</c>: blocked</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -437,7 +471,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string LogUuid { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the Alibaba Cloud account that is associated with the alert in SIEM.</para>
+                /// <para>The ID of the main account associated with the alert.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>127608589417****</para>
@@ -447,7 +481,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public long? MainUserId { get; set; }
 
                 /// <summary>
-                /// <para>The time when the alert is triggered.</para>
+                /// <para>The time when the alert occurred.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-01-06 16:37:29</para>
@@ -456,12 +490,18 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 [Validation(Required=false)]
                 public string OccurTime { get; set; }
 
+                /// <summary>
+                /// <para>The ID of the product.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>alibaba_cloud_sas</para>
+                /// </summary>
                 [NameInMap("ProductId")]
                 [Validation(Required=false)]
                 public string ProductId { get; set; }
 
                 /// <summary>
-                /// <para>The time at which the alert was first generated.</para>
+                /// <para>The time when the alert first occurred.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-01-06 16:37:29</para>
@@ -471,7 +511,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string StartTime { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the Alibaba Cloud account within which the alert is generated.</para>
+                /// <para>The ID of the sub-account that generated the alert.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>176555323***</para>
@@ -481,6 +521,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public long? SubUserId { get; set; }
 
                 /// <summary>
+                /// <para>The name of the sub-account that generated the alert.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>176555323***</para>
                 /// </summary>
@@ -489,6 +531,16 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string SubUserName { get; set; }
 
                 /// <summary>
+                /// <para>The cloud provider code. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para><c>aliyun</c>: Alibaba Cloud</para>
+                /// </description></item>
+                /// <item><description><para><c>qcloud</c>: Tencent Cloud</para>
+                /// </description></item>
+                /// <item><description><para><c>hcloud</c>: Huawei Cloud</para>
+                /// </description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>aliyun</para>
                 /// </summary>
@@ -501,7 +553,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -523,8 +575,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para><c>true</c>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

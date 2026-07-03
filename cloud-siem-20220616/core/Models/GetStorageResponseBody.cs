@@ -10,17 +10,19 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class GetStorageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the storage.</para>
+        /// <para>The details of the storage settings.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetStorageResponseBodyData Data { get; set; }
         public class GetStorageResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the storage region can be changed for once. Default value: false Valid values:</para>
+            /// <para>Indicates whether you can change the storage region. You can change the storage region only once. The default value is false. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description><para>true: You can change the storage region.</para>
+            /// </description></item>
+            /// <item><description><para>false: You cannot change the storage region.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -31,10 +33,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public bool? CanOperate { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the storage region can be changed. Default value: false Valid values:</para>
+            /// <para>Indicates whether you have permission to change the storage region. The default value is false. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description><para>true: You have permission.</para>
+            /// </description></item>
+            /// <item><description><para>false: You do not have permission.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -45,8 +49,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public bool? DisplayRegion { get; set; }
 
             /// <summary>
-            /// <para>The region where the data is stored.</para>
-            /// <para>If the data management center is <b>cn-hangzhou</b>, the default value of <b>Region</b> is cn-shanghai, which specifies the China (Shanghai) region. If the data management center is <b>ap-southeast-1</b>, the default value of <b>Region</b> is ap-southeast-1, which specifies the Singapore region.</para>
+            /// <para>The storage region.</para>
+            /// <para>If the Data Management hub is in the <b>cn-hangzhou</b> region, the default value of <b>Region</b> is \<c>cn-shanghai\\</c>. If the Data Management hub is in the <b>ap-southeast-1</b> region, the default value of <b>Region</b> is \<c>ap-southeast-1\\</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai</para>
@@ -56,7 +60,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// <para>The storage period of logs. Unit: day. Default value: 180. Valid values: 30 to 3000.</para>
+            /// <para>The storage duration in days. The default value is 180. The value must be an integer from 30 to 3000.</para>
             /// 
             /// <b>Example:</b>
             /// <para>180</para>
@@ -68,7 +72,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>97A31C3A-3F9F-5866-8979-5159E3DC****</para>

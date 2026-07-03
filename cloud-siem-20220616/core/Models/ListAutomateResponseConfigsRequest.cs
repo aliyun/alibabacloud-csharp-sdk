@@ -12,9 +12,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// <summary>
         /// <para>The type of the handling action. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>doPlaybook: runs a playbook.</description></item>
-        /// <item><description>changeEventStatus: changes the status of an event.</description></item>
-        /// <item><description>changeThreatLevel: changes the risk level of an event.</description></item>
+        /// <item><description><para><b>doPlaybook</b>: executes a playbook.</para>
+        /// </description></item>
+        /// <item><description><para><b>changeEventStatus</b>: changes the status of an event.</para>
+        /// </description></item>
+        /// <item><description><para><b>changeThreatLevel</b>: changes the threat level of an event.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,10 +28,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string ActionType { get; set; }
 
         /// <summary>
-        /// <para>The type of the automated response rule. Valid values:</para>
+        /// <para>The type of the automated response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>event</description></item>
-        /// <item><description>alert</description></item>
+        /// <item><description><para><b>event</b></para>
+        /// </description></item>
+        /// <item><description><para><b>alert</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -39,7 +44,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string AutoResponseType { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1.</para>
+        /// <para>The page number. The value must be 1 or greater.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -60,7 +65,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Maximum value: 100.</para>
+        /// <para>The number of entries per page. The maximum value is 100.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -71,7 +76,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the playbook.</para>
+        /// <para>The unique identifier of the playbook.</para>
         /// 
         /// <b>Example:</b>
         /// <para>system_aliyun_aegis_kill_quara_book</para>
@@ -81,10 +86,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string PlaybookUuid { get; set; }
 
         /// <summary>
-        /// <para>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</para>
+        /// <para>The region of the Data Management center. Select a region based on the region where your assets are located. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cn-hangzhou: Your assets reside in regions in China.</description></item>
-        /// <item><description>ap-southeast-1: Your assets reside in regions outside China.</description></item>
+        /// <item><description><para><b>cn-hangzhou</b>: your assets are in the Chinese mainland or China (Hong Kong).</para>
+        /// </description></item>
+        /// <item><description><para><b>ap-southeast-1</b>: your assets are in a region outside China.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -94,12 +101,24 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The type of the response rule.</para>
+        /// <list type="bullet">
+        /// <item><description><para>preset: predefined</para>
+        /// </description></item>
+        /// <item><description><para>custom: custom</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>custom</para>
+        /// </summary>
         [NameInMap("ResponseRuleType")]
         [Validation(Required=false)]
         public string ResponseRuleType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the account that you switch from the management account.</para>
+        /// <para>The ID of the member to which the administrator switches.</para>
         /// 
         /// <b>Example:</b>
         /// <para>113091674488****</para>
@@ -109,10 +128,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public long? RoleFor { get; set; }
 
         /// <summary>
-        /// <para>The type of the view. Valid values:</para>
+        /// <para>The view type.</para>
         /// <list type="bullet">
-        /// <item><description>0: the current Alibaba Cloud account</description></item>
-        /// <item><description>1: the global account</description></item>
+        /// <item><description><para>0: the view of the current Alibaba Cloud account.</para>
+        /// </description></item>
+        /// <item><description><para>1: the view of all accounts that belong to the enterprise.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -135,8 +156,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// <summary>
         /// <para>The status of the rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: disabled</description></item>
-        /// <item><description>100: enabled</description></item>
+        /// <item><description><para><b>0</b>: disabled</para>
+        /// </description></item>
+        /// <item><description><para><b>100</b>: enabled</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class DescribeEntityInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The status code of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public long? EntityId { get; set; }
 
             /// <summary>
-            /// <para>The information about the entry.</para>
+            /// <para>The information about the entity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{ location: &quot;xian&quot;, net_connect_dir: &quot;in&quot;, malware_type: &quot;${aliyun.siem.sas.alert_tag.login_unusual_account}&quot; }</para>
@@ -52,12 +52,18 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             /// <summary>
             /// <para>The type of the entity. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ip</description></item>
-            /// <item><description>domain</description></item>
-            /// <item><description>url</description></item>
-            /// <item><description>process</description></item>
-            /// <item><description>file</description></item>
-            /// <item><description>host</description></item>
+            /// <item><description><para>ip: IP address</para>
+            /// </description></item>
+            /// <item><description><para>domain: domain name</para>
+            /// </description></item>
+            /// <item><description><para>url: URL</para>
+            /// </description></item>
+            /// <item><description><para>process: process</para>
+            /// </description></item>
+            /// <item><description><para>file: file</para>
+            /// </description></item>
+            /// <item><description><para>host: host</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -68,7 +74,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string EntityType { get; set; }
 
             /// <summary>
-            /// <para>The information about the risk Intelligence.</para>
+            /// <para>The threat intelligence information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -89,7 +95,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The message returned for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -111,8 +117,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

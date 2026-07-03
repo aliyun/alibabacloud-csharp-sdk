@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public PostCustomizeRuleResponseBodyData Data { get; set; }
         public class PostCustomizeRuleResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The risk type.</para>
+            /// <para>The threat type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>WEBSHELL</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string AlertType { get; set; }
 
             /// <summary>
-            /// <para>The internal code of the risk type.</para>
+            /// <para>The Medusa code of the threat type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>${siem_rule_type_process_abnormal_command}</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string AlertTypeMds { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account that is used to purchase the threat analysis feature.</para>
+            /// <para>The ID of the Alibaba Cloud account that is used to purchase Threat Analysis.</para>
             /// 
             /// <b>Example:</b>
             /// <para>127608589417****</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public long? Aliuid { get; set; }
 
             /// <summary>
-            /// <para>告警附加字段attck</para>
+            /// <para>The ATT\&amp;CK attack technique.</para>
             /// 
             /// <b>Example:</b>
             /// <para>T1595.002 Vulnerability Scanning</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string AttCk { get; set; }
 
             /// <summary>
-            /// <para>自动化响应规则条件字段数据类型。</para>
+            /// <para>The data type of the condition field in the automated response rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>varchar</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public int? DataType { get; set; }
 
             /// <summary>
-            /// <para>The extended information about event generation. If eventTransferType is set to allToSingle, the value of this parameter indicates the length and unit of the alert aggregation window. The HTML escape characters are reversed.</para>
+            /// <para>The extended information for event generation. This parameter is returned only when EventTransferType is set to allToSingle. The value indicates the length and unit of the alert aggregation window. You must unescape the HTML escape characters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;time&quot;:&quot;1&quot;,&quot;unit&quot;:&quot;MINUTE&quot;}</para>
@@ -90,10 +90,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string EventTransferExt { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the system generates an event for the alert. Valid values:</para>
+            /// <para>Indicates whether alerts are converted into events. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: no</description></item>
-            /// <item><description>1: yes</description></item>
+            /// <item><description><para>0: no</para>
+            /// </description></item>
+            /// <item><description><para>1: yes</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -106,9 +108,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             /// <summary>
             /// <para>The event generation method. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>default: The default method is used.</description></item>
-            /// <item><description>singleToSingle: The system generates an event for each alert.</description></item>
-            /// <item><description>allToSingle: The system generates an event for alerts within a period of time.</description></item>
+            /// <item><description><para>default: the default method</para>
+            /// </description></item>
+            /// <item><description><para>singleToSingle: An event is generated for each alert.</para>
+            /// </description></item>
+            /// <item><description><para>allToSingle: An event is generated for all alerts in a period.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -159,7 +164,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string LogSource { get; set; }
 
             /// <summary>
-            /// <para>The internal code of the log source.</para>
+            /// <para>The Medusa code of the log source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>${sas.cloudsiem.prod.cloud_siem_aegis_sas_alert}</para>
@@ -179,7 +184,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string LogType { get; set; }
 
             /// <summary>
-            /// <para>The internal code of the log type.</para>
+            /// <para>The Medusa code of the log type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>${security_event_config.event_name.webshellName_clientav}</para>
@@ -189,7 +194,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string LogTypeMds { get; set; }
 
             /// <summary>
-            /// <para>The window length of the rule. The HTML escape characters are reversed.</para>
+            /// <para>The length of the rule window. You must unescape the HTML escape characters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;time&quot;:&quot;1&quot;,&quot;unit&quot;:&quot;HOUR&quot;}</para>
@@ -199,7 +204,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string QueryCycle { get; set; }
 
             /// <summary>
-            /// <para>The query condition of the rule. The value is in the JSON format. The HTML escape characters are reversed.</para>
+            /// <para>The query condition of the rule in the JSON format. You must unescape the HTML escape characters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[[{&quot;not&quot;:false,&quot;left&quot;:&quot;alert_name&quot;,&quot;operator&quot;:&quot;=&quot;,&quot;right&quot;:&quot;WEBSHELL&quot;}]]</para>
@@ -219,7 +224,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string RuleDesc { get; set; }
 
             /// <summary>
-            /// <para>The log aggregation field of the rule. The value is a JSON string. The HTML escape characters are reversed.</para>
+            /// <para>The fields that are used to group logs. The value is a JSON array. You must unescape the HTML escape characters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[&quot;asset_id&quot;]</para>
@@ -239,7 +244,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string RuleName { get; set; }
 
             /// <summary>
-            /// <para>The threshold configuration of the rule. The value is in the JSON format. The HTML escape characters are reversed.</para>
+            /// <para>The threshold configuration of the rule in the JSON format. You must unescape the HTML escape characters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;aggregateFunction&quot;:&quot;count&quot;,&quot;aggregateFunctionName&quot;:&quot;count&quot;,&quot;field&quot;:&quot;activity_name&quot;,&quot;operator&quot;:&quot;&lt;=&quot;,&quot;value&quot;:1}</para>
@@ -249,10 +254,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string RuleThreshold { get; set; }
 
             /// <summary>
-            /// <para>The type of the rule. Valid values:</para>
+            /// <para>The rule type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>predefine</description></item>
-            /// <item><description>customize</description></item>
+            /// <item><description><para>predefine: predefined</para>
+            /// </description></item>
+            /// <item><description><para>customize: custom</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -263,13 +270,18 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string RuleType { get; set; }
 
             /// <summary>
-            /// <para>The rule status. Valid values:</para>
+            /// <para>The status of the rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: The rule is in the initial state.</description></item>
-            /// <item><description>10: The simulation data is tested.</description></item>
-            /// <item><description>15: The business data is being tested.</description></item>
-            /// <item><description>20: The business data test ends.</description></item>
-            /// <item><description>100: The rule takes effect.</description></item>
+            /// <item><description><para>0: initial</para>
+            /// </description></item>
+            /// <item><description><para>10: testing with simulated data</para>
+            /// </description></item>
+            /// <item><description><para>15: testing with business data</para>
+            /// </description></item>
+            /// <item><description><para>20: test with business data ends</para>
+            /// </description></item>
+            /// <item><description><para>100: published</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -280,11 +292,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// <para>The risk level. Valid values:</para>
+            /// <para>The threat level. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>serious: high</description></item>
-            /// <item><description>suspicious: medium</description></item>
-            /// <item><description>remind: low</description></item>
+            /// <item><description><para>serious: high</para>
+            /// </description></item>
+            /// <item><description><para>suspicious: medium</para>
+            /// </description></item>
+            /// <item><description><para>remind: low</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -319,8 +334,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

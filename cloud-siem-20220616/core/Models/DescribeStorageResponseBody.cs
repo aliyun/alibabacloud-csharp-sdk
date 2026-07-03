@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class DescribeStorageResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the projects and Logstores that are created for the threat analysis feature exist in Simple Log Service. Valid values:</para>
+        /// <para>Indicates whether the project and Logstore created by the threat analysis service exist in your Simple Log Service. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: The project and Logstore exist.</para>
+        /// </description></item>
+        /// <item><description><para>false: The project and Logstore do not exist.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

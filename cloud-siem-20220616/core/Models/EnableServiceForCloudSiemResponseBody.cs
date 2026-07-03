@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class EnableServiceForCloudSiemResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the threat analysis feature is authorized to access the resource directory. Valid values:</para>
+        /// <para>The return value. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: The service is enabled.</para>
+        /// </description></item>
+        /// <item><description><para>false: The service failed to be enabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public AddDataSourceLogResponseBodyData Data { get; set; }
         public class AddDataSourceLogResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The number of logs that are added. The value 1 indicates that the log is added, and a value less than or equal to 0 indicates that the log failed to be added.</para>
+            /// <para>The number of added logs. A value of 1 indicates success. A value of 0 or less indicates failure.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The ID of the log. The ID is an MD5 hash value that is calculated by the threat analysis feature based on specific parameters.</para>
+            /// <para>The ID of the log. Threat Analysis calculates this ID as an MD5 hash value based on specific parameters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ef33097c9d1fdb0b9c7e8c7ca320pkl1</para>

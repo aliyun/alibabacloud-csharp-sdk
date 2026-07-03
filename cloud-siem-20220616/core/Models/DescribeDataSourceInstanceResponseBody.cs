@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public DescribeDataSourceInstanceResponseBodyData Data { get; set; }
         public class DescribeDataSourceInstanceResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the cloud account.</para>
+            /// <para>The ID of the Alibaba Cloud account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123xxxxxxx</para>
@@ -27,11 +27,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string AccountId { get; set; }
 
             /// <summary>
-            /// <para>The code of the cloud service provider. Valid values:</para>
+            /// <para>The code for the multicloud environment. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>qcloud: Tencent Cloud</description></item>
-            /// <item><description>aliyun: Alibaba Cloud</description></item>
-            /// <item><description>hcloud: Huawei Cloud</description></item>
+            /// <item><description><para>qcloud: Tencent Cloud.</para>
+            /// </description></item>
+            /// <item><description><para>aliyun: Alibaba Cloud.</para>
+            /// </description></item>
+            /// <item><description><para>hcloud: Huawei Cloud.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -42,7 +45,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string CloudCode { get; set; }
 
             /// <summary>
-            /// <para>The ID of the data source. The ID is an MD5 hash value that is calculated by the threat analysis feature based on specific parameters.</para>
+            /// <para>The ID of the data source. The threat analysis service generates the ID by calculating the MD5 hash of specific parameters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>220ba97c9d1fdb0b9c7e8c7ca328d7ea</para>
@@ -52,14 +55,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string DataSourceInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The parameters of the data source.</para>
+            /// <para>The list of detailed parameters for the data source.</para>
             /// </summary>
             [NameInMap("DataSourceInstanceParams")]
             [Validation(Required=false)]
             public List<DescribeDataSourceInstanceResponseBodyDataDataSourceInstanceParams> DataSourceInstanceParams { get; set; }
             public class DescribeDataSourceInstanceResponseBodyDataDataSourceInstanceParams : TeaModel {
                 /// <summary>
-                /// <para>The code of the parameter.</para>
+                /// <para>The parameter code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>region_code</para>
@@ -69,7 +72,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string ParaCode { get; set; }
 
                 /// <summary>
-                /// <para>The value of the parameter.</para>
+                /// <para>The parameter value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ap-guangzhou</para>
@@ -83,7 +86,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6276D891-*****-55B2-87B9-74D413F7****</para>

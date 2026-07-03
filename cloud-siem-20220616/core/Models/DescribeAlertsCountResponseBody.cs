@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class DescribeAlertsCountResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The HTTP status code returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -39,6 +39,9 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             [Validation(Required=false)]
             public long? All { get; set; }
 
+            /// <summary>
+            /// <para>The number of alerts for each severity level.</para>
+            /// </summary>
             [NameInMap("CountMap")]
             [Validation(Required=false)]
             public Dictionary<string, long?> CountMap { get; set; }
@@ -74,7 +77,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public long? Medium { get; set; }
 
             /// <summary>
-            /// <para>The number of connected services.</para>
+            /// <para>The number of connected products.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -86,7 +89,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The message returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -108,8 +111,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

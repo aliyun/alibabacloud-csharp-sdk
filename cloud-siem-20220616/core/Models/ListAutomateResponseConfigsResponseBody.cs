@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class ListAutomateResponseConfigsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The request status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public ListAutomateResponseConfigsResponseBodyDataPageInfo PageInfo { get; set; }
             public class ListAutomateResponseConfigsResponseBodyDataPageInfo : TeaModel {
                 /// <summary>
-                /// <para>The current page number.</para>
+                /// <para>The page number of the returned page.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public int? CurrentPage { get; set; }
 
                 /// <summary>
-                /// <para>The number of entries per page.</para>
+                /// <para>The number of entries returned per page.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public int? PageSize { get; set; }
 
                 /// <summary>
-                /// <para>The total number of entries returned.</para>
+                /// <para>The total number of entries.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public List<ListAutomateResponseConfigsResponseBodyDataResponseData> ResponseData { get; set; }
             public class ListAutomateResponseConfigsResponseBodyDataResponseData : TeaModel {
                 /// <summary>
-                /// <para>The configuration of the action that is performed after the automated response rule is hit. The value is in the JSON format.</para>
+                /// <para>The action configuration of the automated response rule. The value is a JSON array.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[
@@ -92,11 +92,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string ActionConfig { get; set; }
 
                 /// <summary>
-                /// <para>The type of the handling action. Multiple types are separated by commas (,). Valid values:</para>
+                /// <para>The handling action. Multiple values are separated by commas. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>doPlaybook</b>: runs the playbook.</description></item>
-                /// <item><description><b>changeEventStatus</b>: changes the event status.</description></item>
-                /// <item><description><b>changeThreatLevel</b>: changes the risk level of the event.</description></item>
+                /// <item><description><para><b>doPlaybook</b>: executes a playbook.</para>
+                /// </description></item>
+                /// <item><description><para><b>changeEventStatus</b>: changes the status of an event.</para>
+                /// </description></item>
+                /// <item><description><para><b>changeThreatLevel</b>: changes the threat level of an event.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -107,7 +110,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string ActionType { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the Alibaba Cloud account that is associated with the rule in SIEM.</para>
+                /// <para>The ID of the Alibaba Cloud account that is associated with the rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>127608589417****</para>
@@ -117,10 +120,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public long? Aliuid { get; set; }
 
                 /// <summary>
-                /// <para>The type of the automated response rule. Valid values:</para>
+                /// <para>The type of the automated response. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>event</b></description></item>
-                /// <item><description><b>alert</b></description></item>
+                /// <item><description><para><b>event</b></para>
+                /// </description></item>
+                /// <item><description><para><b>alert</b></para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -131,12 +136,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string AutoResponseType { get; set; }
 
                 /// <summary>
-                /// <para>The type of the view. Valid values:</para>
-                /// <para>0: the current Alibaba Cloud account
-                /// 1: the global account</para>
+                /// <para>The data type of the condition field in the automated response rule.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>1</para>
+                /// <para>varchar</para>
                 /// </summary>
                 [NameInMap("DataType")]
                 [Validation(Required=false)]
@@ -153,7 +156,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string ExecutionCondition { get; set; }
 
                 /// <summary>
-                /// <para>The creation time.</para>
+                /// <para>The time when the rule was created.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-01-06 16:37:29</para>
@@ -163,7 +166,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string GmtCreate { get; set; }
 
                 /// <summary>
-                /// <para>The update time.</para>
+                /// <para>The time when the rule was last modified.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-01-06 16:37:29</para>
@@ -182,6 +185,18 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 [Validation(Required=false)]
                 public long? Id { get; set; }
 
+                /// <summary>
+                /// <para>The type of the response rule.</para>
+                /// <list type="bullet">
+                /// <item><description><para>preset: predefined</para>
+                /// </description></item>
+                /// <item><description><para>custom: custom</para>
+                /// </description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>custom</para>
+                /// </summary>
                 [NameInMap("ResponseRuleType")]
                 [Validation(Required=false)]
                 public string ResponseRuleType { get; set; }
@@ -199,8 +214,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 /// <summary>
                 /// <para>The status of the rule. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: disabled.</description></item>
-                /// <item><description><b>100</b>: enabled.</description></item>
+                /// <item><description><para><b>0</b>: disabled</para>
+                /// </description></item>
+                /// <item><description><para><b>100</b>: enabled</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -247,8 +264,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para><b>true</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

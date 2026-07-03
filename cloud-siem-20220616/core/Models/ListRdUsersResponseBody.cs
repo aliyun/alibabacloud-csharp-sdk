@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public List<ListRdUsersResponseBodyData> Data { get; set; }
         public class ListRdUsersResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the account can be used to view the logs and alerts within the account.</para>
+            /// <para>Indicates whether the account is delegated to view its own resources.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -27,10 +27,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public bool? DelegatedOrNot { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the account is added to the threat analysis feature for centralized management. Valid values:</para>
+            /// <para>Indicates whether the account is managed by the multi-account control feature of Threat Analysis. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description><para>true: The account is managed.</para>
+            /// </description></item>
+            /// <item><description><para>false: The account is not managed.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,7 +43,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public bool? Joined { get; set; }
 
             /// <summary>
-            /// <para>The time when the account was added to the threat analysis feature.</para>
+            /// <para>The time when the account was added.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2013-10-01 00:00:00</para>
@@ -51,7 +53,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string JoinedTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account that is used to purchase the threat analysis feature.</para>
+            /// <para>The ID of the Alibaba Cloud account that purchased Threat Analysis.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123XXXXXXXXX</para>
@@ -61,7 +63,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public long? MainUserId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account that is used to perform operations supported by the threat analysis feature.</para>
+            /// <para>The ID of the member Alibaba Cloud account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123XXXXXXXX</para>
@@ -71,7 +73,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public long? SubUserId { get; set; }
 
             /// <summary>
-            /// <para>The username of the Alibaba Cloud account that can be used to perform operations supported by the threat analysis feature.</para>
+            /// <para>The name of the member Alibaba Cloud account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sas_account_xxx</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class DescribeOperatorsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The status code of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string Operator { get; set; }
 
             /// <summary>
-            /// <para>The description of the operator in Chinese.</para>
+            /// <para>The Chinese description of the operator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>arger than or equal to</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string OperatorDescCn { get; set; }
 
             /// <summary>
-            /// <para>The description of the operator in English.</para>
+            /// <para>The English description of the operator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>larger than or equal to</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string OperatorDescEn { get; set; }
 
             /// <summary>
-            /// <para>The name of the operator.</para>
+            /// <para>The display name of the operator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>&lt;=</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string OperatorName { get; set; }
 
             /// <summary>
-            /// <para>The data types that are supported by the operator. The data types are separated by commas (,).</para>
+            /// <para>The data types that the operator supports. Multiple data types are separated by commas.</para>
             /// 
             /// <b>Example:</b>
             /// <para>varchar</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string SupportDataType { get; set; }
 
             /// <summary>
-            /// <para>The scenarios that are supported by the operator. Multiple scenarios are separated by commas (,), such as AGGREGATE scenarios. By default, this parameter is empty.</para>
+            /// <para>The scenarios that the operator supports. Multiple scenarios are separated by commas, such as aggregation (AGGREGATE). The default value is empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[AGGREGATE]</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The message returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -124,8 +124,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

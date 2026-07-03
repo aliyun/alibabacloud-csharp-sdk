@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public List<ListBindDataSourcesResponseBodyData> Data { get; set; }
         public class ListBindDataSourcesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the cloud account.</para>
+            /// <para>The ID of the Alibaba Cloud account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123xxxxxxx</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string AccountId { get; set; }
 
             /// <summary>
-            /// <para>The username of the cloud account.</para>
+            /// <para>The name of the multicloud account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sas_tq_account_xxxx</para>
@@ -37,11 +37,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string AccountName { get; set; }
 
             /// <summary>
-            /// <para>The code of the cloud service provider. Valid values:</para>
+            /// <para>The code of the multicloud environment. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>qcloud: Tencent Cloud</description></item>
-            /// <item><description>aliyun: Alibaba Cloud</description></item>
-            /// <item><description>hcloud: Huawei Cloud</description></item>
+            /// <item><description><para>qcloud: Tencent Cloud.</para>
+            /// </description></item>
+            /// <item><description><para>aliyun: Alibaba Cloud.</para>
+            /// </description></item>
+            /// <item><description><para>hcloud: Huawei Cloud.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -52,7 +55,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string CloudCode { get; set; }
 
             /// <summary>
-            /// <para>The ID of the data source. The ID is an MD5 hash value that is calculated by the threat analysis feature based on specific parameters.</para>
+            /// <para>The ID of the data source. This ID is an MD5 hash value that is calculated by Threat Analysis based on specific parameters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>220ba97c9d1fdb0b9c7e8c7ca328d7ea</para>
@@ -72,7 +75,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string DataSourceName { get; set; }
 
             /// <summary>
-            /// <para>The remarks on the data source.</para>
+            /// <para>The remarks of the data source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>waf_kafka</para>
@@ -84,9 +87,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             /// <summary>
             /// <para>The type of the data source. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>obs: Huawei Cloud Object Storage Service (OBS)</description></item>
-            /// <item><description>wafApi: download API of Tencent Cloud Web Application Firewall (WAF)</description></item>
-            /// <item><description>ckafka: Tencent Cloud Kafka (CKafka)</description></item>
+            /// <item><description><para>obs: Huawei Cloud OBS.</para>
+            /// </description></item>
+            /// <item><description><para>wafApi: Tencent Cloud WAF download API.</para>
+            /// </description></item>
+            /// <item><description><para>ckafka: Tencent Cloud CKafka.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -97,7 +103,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string DataSourceType { get; set; }
 
             /// <summary>
-            /// <para>The number of logs that are added within the data source.</para>
+            /// <para>The number of logs added to the data source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -107,7 +113,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public int? LogCount { get; set; }
 
             /// <summary>
-            /// <para>The number of existing tasks that are created to add logs within the data source.</para>
+            /// <para>The number of log collection tasks created for the data source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>

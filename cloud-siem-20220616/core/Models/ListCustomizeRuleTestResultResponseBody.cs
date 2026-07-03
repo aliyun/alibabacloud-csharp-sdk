@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class ListCustomizeRuleTestResultResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The status code of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public int? CurrentPage { get; set; }
 
                 /// <summary>
-                /// <para>The number of entries per page.</para>
+                /// <para>The number of entries returned per page.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public int? PageSize { get; set; }
 
                 /// <summary>
-                /// <para>The total number of entries returned.</para>
+                /// <para>The total number of entries.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -66,6 +66,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 [Validation(Required=false)]
                 public long? TotalCount { get; set; }
 
+                /// <summary>
+                /// <para>The number of alerts that passed the verification.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>30</para>
+                /// </summary>
                 [NameInMap("VerifiedCount")]
                 [Validation(Required=false)]
                 public long? VerifiedCount { get; set; }
@@ -83,14 +89,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 /// <para>The description of the alert.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>The account you logged in this time is not in the legal account category defined by you. Please confirm the legality of the login behavior.</para>
+                /// <para>The account you logged in this time is not in the legal account category defined by you. Please confirm the legality of the login behavior。</para>
                 /// </summary>
                 [NameInMap("AlertDesc")]
                 [Validation(Required=false)]
                 public string AlertDesc { get; set; }
 
                 /// <summary>
-                /// <para>The alert details in the JSON format.</para>
+                /// <para>The details of the alert, in JSON format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;main_user_id&quot;: &quot;165295629792****&quot;;&quot;log_uuid_count&quot;: &quot;99&quot;;&quot;attack_ip&quot;: &quot;218.92.XX.XX&quot;}</para>
@@ -100,7 +106,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string AlertDetail { get; set; }
 
                 /// <summary>
-                /// <para>The source of the alert.</para>
+                /// <para>The source product of the alert that is associated with the event.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sas</para>
@@ -110,7 +116,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string AlertSrcProd { get; set; }
 
                 /// <summary>
-                /// <para>The sub-module of the source.</para>
+                /// <para>The sub-module of the source product of the alert that is associated with the event.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>waf</para>
@@ -120,7 +126,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string AlertSrcProdModule { get; set; }
 
                 /// <summary>
-                /// <para>The tag of the ATT\&amp;CK attack.</para>
+                /// <para>The ATT\&amp;CK attack technique tag.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>T1595.002 Vulnerability Scanning</para>
@@ -130,7 +136,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string AttCk { get; set; }
 
                 /// <summary>
-                /// <para>The name of the alert, which corresponds to the name of the custom rule.</para>
+                /// <para>The name of the alert. This value corresponds to the name of the custom rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>waf_scan</para>
@@ -140,7 +146,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string EventName { get; set; }
 
                 /// <summary>
-                /// <para>The threat type, which indicates the alert type.</para>
+                /// <para>The threat type. This parameter is equivalent to the alert type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>WEBSHELL</para>
@@ -152,9 +158,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 /// <summary>
                 /// <para>The threat level. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>serious: high.</description></item>
-                /// <item><description>suspicious: medium.</description></item>
-                /// <item><description>remind: low.</description></item>
+                /// <item><description><para>serious: high</para>
+                /// </description></item>
+                /// <item><description><para>suspicious: medium</para>
+                /// </description></item>
+                /// <item><description><para>remind: low</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -165,7 +174,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string Level { get; set; }
 
                 /// <summary>
-                /// <para>The log source of the rule.</para>
+                /// <para>The log source that corresponds to the rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cloud_siem_aegis_sas_alert</para>
@@ -178,14 +187,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 /// <para>The time when the alert was recorded.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>2021-01-06 16:37:29</para>
+                /// <para>2023-01-06 16:37:29</para>
                 /// </summary>
                 [NameInMap("LogTime")]
                 [Validation(Required=false)]
                 public string LogTime { get; set; }
 
                 /// <summary>
-                /// <para>The log type of the rule.</para>
+                /// <para>The log type that corresponds to the rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ALERT_ACTIVITY</para>
@@ -195,7 +204,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string LogType { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the Alibaba Cloud account that is associated with the alert in SIEM.</para>
+                /// <para>The ID of the main Alibaba Cloud account for Security Information and Event Management (SIEM) that is associated with the alert.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>127608589417****</para>
@@ -207,8 +216,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 /// <summary>
                 /// <para>The status of the alert data. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>test: business test data.</description></item>
-                /// <item><description>online: online data.</description></item>
+                /// <item><description><para>test: business test</para>
+                /// </description></item>
+                /// <item><description><para>online: published</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -219,7 +230,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string OnlineStatus { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the Alibaba Cloud account within which the alert is generated.</para>
+                /// <para>The ID of the member account that is associated with the alert.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>176555323***</para>
@@ -238,6 +249,18 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 [Validation(Required=false)]
                 public string Uuid { get; set; }
 
+                /// <summary>
+                /// <para>The result of verifying the alert based on the alert template.</para>
+                /// <list type="bullet">
+                /// <item><description><para>true: The verification is passed.</para>
+                /// </description></item>
+                /// <item><description><para>false: The verification failed.</para>
+                /// </description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
                 [NameInMap("VerifyType")]
                 [Validation(Required=false)]
                 public string VerifyType { get; set; }
@@ -247,7 +270,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The message returned for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -269,8 +292,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

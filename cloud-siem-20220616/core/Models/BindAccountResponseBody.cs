@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class BindAccountResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The detailed information returned by the Threat Analysis service.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public BindAccountResponseBodyData Data { get; set; }
         public class BindAccountResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The number of the cloud accounts that are added to the threat analysis feature.</para>
+            /// <para>The number of account bindings that are added.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

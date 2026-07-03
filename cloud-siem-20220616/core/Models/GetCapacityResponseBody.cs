@@ -10,13 +10,15 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class GetCapacityResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the storage capacity.</para>
+        /// <para>Storage capacity details.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetCapacityResponseBodyData Data { get; set; }
         public class GetCapacityResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Purchased quota for Agent-managed instances.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public long? AgentManagedAssetQuota { get; set; }
 
             /// <summary>
+            /// <para>Used quota for Agent-managed instances.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -33,10 +37,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public long? AgentManagedAssetUsed { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the Logstores for the threat analysis feature exist on the user side. Valid values:</para>
+            /// <para>Indicates whether the LogStore for threat analysis exists.</para>
             /// <list type="bullet">
-            /// <item><description>true: The logs are in the normal state. The log analysis feature is available.</description></item>
-            /// <item><description>false: The logs are being cleared. The log analysis feature is unavailable.</description></item>
+            /// <item><description><para>true: Logs are normal and log analysis is available.</para>
+            /// </description></item>
+            /// <item><description><para>false: Logs are being cleaned up and log analysis is unavailable.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -47,7 +53,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public bool? ExistLogStore { get; set; }
 
             /// <summary>
-            /// <para>The purchased storage capacity of the threat analysis feature. Unit: GB.</para>
+            /// <para>Purchased storage capacity for threat analysis, in GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9000</para>
@@ -57,7 +63,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public long? PreservedCapacity { get; set; }
 
             /// <summary>
-            /// <para>The billable storage capacity of the threat analysis feature. Unit: GB.</para>
+            /// <para>Current billable storage usage for threat analysis, in GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -69,7 +75,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>27D27DCB-D76B-5064-8B3B-0900DEF7****</para>

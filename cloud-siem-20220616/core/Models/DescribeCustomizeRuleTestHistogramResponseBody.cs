@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class DescribeCustomizeRuleTestHistogramResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The status code of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The return value for the request.</para>
+        /// <para>The data returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public List<DescribeCustomizeRuleTestHistogramResponseBodyData> Data { get; set; }
         public class DescribeCustomizeRuleTestHistogramResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The number of alerts that are generated in the query time range.</para>
+            /// <para>The number of alerts generated in the subinterval.</para>
             /// 
             /// <b>Example:</b>
             /// <para>125</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public long? Count { get; set; }
 
             /// <summary>
-            /// <para>The start of the time range for querying alerts. The value is a UNIX timestamp. Unit: seconds.</para>
+            /// <para>The start of the time range for the alert. This value is a UNIX timestamp. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1599897188</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public long? From { get; set; }
 
             /// <summary>
-            /// <para>The end of the time range for querying alerts. The value is a UNIX timestamp. Unit: seconds.</para>
+            /// <para>The end of the time range for the alert. This value is a UNIX timestamp. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1599997188</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The message returned for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -84,8 +84,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

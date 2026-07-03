@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public DeleteBindAccountResponseBodyData Data { get; set; }
         public class DeleteBindAccountResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The number of cloud accounts that are removed. The value 1 indicates that cloud account is removed, and a value less than or equal to 0 indicates that the cloud account failed to be removed.</para>
+            /// <para>The number of account bindings that are deleted. A value of 1 indicates that the operation was successful. A value of 0 or less indicates that the operation failed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

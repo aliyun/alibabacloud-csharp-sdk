@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class ListCustomizeRuleTestResultRequest : TeaModel {
         /// <summary>
-        /// <para>The page number. Pages start from page 1.</para>
+        /// <para>The page number. The value must be greater than or equal to 1.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,16 +20,28 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the custom rule. You can obtain the rule ID from the rule list.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dr-53np4nguf5jmh1vc****</para>
+        /// </summary>
         [NameInMap("DetectionRuleId")]
         [Validation(Required=false)]
         public string DetectionRuleId { get; set; }
 
+        /// <summary>
+        /// <para>The end time.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1731797891000</para>
+        /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the rule.</para>
+        /// <para>The ID of the custom rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456789</para>
@@ -39,7 +51,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100.</para>
+        /// <para>The number of entries per page. The maximum value is 100.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,10 +62,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</para>
+        /// <para>The region where the Data Management center of Threat Analysis is located. Select a region based on the region where your assets are deployed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cn-hangzhou: Your assets reside in regions in China.</description></item>
-        /// <item><description>ap-southeast-1: Your assets reside in regions outside China.</description></item>
+        /// <item><description><para>cn-hangzhou: assets in the Chinese mainland and China (Hong Kong)</para>
+        /// </description></item>
+        /// <item><description><para>ap-southeast-1: assets outside China</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -64,7 +78,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the account that you switch from the management account.</para>
+        /// <para>The user ID of a member. This parameter is used by an administrator to switch to the perspective of the member.</para>
         /// 
         /// <b>Example:</b>
         /// <para>113091674488****</para>
@@ -74,10 +88,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public long? RoleFor { get; set; }
 
         /// <summary>
-        /// <para>The type of the view. Valid values:</para>
+        /// <para>The type of the view.</para>
         /// <list type="bullet">
-        /// <item><description>0: the current Alibaba Cloud account</description></item>
-        /// <item><description>1: the global account</description></item>
+        /// <item><description><para>0: the view of the current Alibaba Cloud account.</para>
+        /// </description></item>
+        /// <item><description><para>1: the view of all accounts that belong to the enterprise.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -87,10 +103,28 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         [Validation(Required=false)]
         public int? RoleType { get; set; }
 
+        /// <summary>
+        /// <para>The start time.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1723057091000</para>
+        /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public long? StartTime { get; set; }
 
+        /// <summary>
+        /// <para>The verification result for the accuracy of alert fields based on the alert template.</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: The verification is passed. Alerts that are generated for enabled rules can be synchronized to the product.</para>
+        /// </description></item>
+        /// <item><description><para>false: The verification failed. Alerts cannot be synchronized to the product.</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("VerifyType")]
         [Validation(Required=false)]
         public string VerifyType { get; set; }

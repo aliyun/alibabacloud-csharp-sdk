@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class DescribeAlertTypeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The request status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public List<DescribeAlertTypeResponseBodyData> Data { get; set; }
         public class DescribeAlertTypeResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The type of the risk.</para>
+            /// <para>The threat type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>WEBSHELL</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string AlertType { get; set; }
 
             /// <summary>
-            /// <para>The internal code of the risk type.</para>
+            /// <para>The Medusa code of the threat type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>siem_rule_type_process_abnormal_command</para>
@@ -74,8 +74,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

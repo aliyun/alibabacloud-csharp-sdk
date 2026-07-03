@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class ListDataSourceLogsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cloud account.</para>
+        /// <para>The ID of the Alibaba Cloud account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,11 +21,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string AccountId { get; set; }
 
         /// <summary>
-        /// <para>The code that is used for multi-cloud environments. Valid values:</para>
+        /// <para>The code for the cloud service provider. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>qcloud: Tencent Cloud</description></item>
-        /// <item><description>aliyun: Alibaba Cloud</description></item>
-        /// <item><description>hcloud: Huawei Cloud</description></item>
+        /// <item><description><para>qcloud: Tencent Cloud.</para>
+        /// </description></item>
+        /// <item><description><para>aliyun: Alibaba Cloud.</para>
+        /// </description></item>
+        /// <item><description><para>hcloud: Huawei Cloud.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -37,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string CloudCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data source. The value is obtained after the threat analysis feature calculates the MD5 hash value of a parameter.</para>
+        /// <para>The ID of the data source. This ID is an MD5 hash value that is calculated by threat analysis based on specific parameters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,10 +51,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string DataSourceInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The data management center of the threat analysis feature. Specify this parameter based on the region where your assets reside. Valid values:</para>
+        /// <para>The region where the Data Management hub of threat analysis is deployed. Select a region based on the location of your assets. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cn-hangzhou: Your assets reside in regions inside China.</description></item>
-        /// <item><description>ap-southeast-1: Your assets reside in regions outside China.</description></item>
+        /// <item><description><para>cn-hangzhou: Your assets are in the Chinese mainland or Hong Kong (China).</para>
+        /// </description></item>
+        /// <item><description><para>ap-southeast-1: Your assets are in a region outside China.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

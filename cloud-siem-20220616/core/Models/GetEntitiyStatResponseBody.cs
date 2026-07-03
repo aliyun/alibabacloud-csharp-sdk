@@ -8,9 +8,9 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
-    public class DescribeCustomizeRuleTestResponseBody : TeaModel {
+    public class GetEntitiyStatResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The status code of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,61 +20,49 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The response data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public DescribeCustomizeRuleTestResponseBodyData Data { get; set; }
-        public class DescribeCustomizeRuleTestResponseBodyData : TeaModel {
+        public List<GetEntitiyStatResponseBodyData> Data { get; set; }
+        public class GetEntitiyStatResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the custom rule.</para>
+            /// <para>The number of entities.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>123456789</para>
+            /// <para>3</para>
             /// </summary>
-            [NameInMap("Id")]
+            [NameInMap("EntityNum")]
             [Validation(Required=false)]
-            public long? Id { get; set; }
+            public int? EntityNum { get; set; }
 
             /// <summary>
-            /// <para>The historical data of the simulated test case.</para>
+            /// <para>The entity type.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>[{&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:&quot;value2&quot;,&quot;key3&quot;:&quot;value3&quot;,&quot;key4&quot;:&quot;value4&quot;,&quot;key5&quot;:&quot;value5&quot;}]</para>
+            /// <para>ip</para>
             /// </summary>
-            [NameInMap("SimulateData")]
+            [NameInMap("EntityType")]
             [Validation(Required=false)]
-            public string SimulateData { get; set; }
+            public string EntityType { get; set; }
 
             /// <summary>
-            /// <para>The status of the rule. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>0: initial</para>
-            /// </description></item>
-            /// <item><description><para>10: simulated data test</para>
-            /// </description></item>
-            /// <item><description><para>15: real-time data test in progress</para>
-            /// </description></item>
-            /// <item><description><para>20: real-time data test complete</para>
-            /// </description></item>
-            /// <item><description><para>100: published</para>
-            /// </description></item>
-            /// </list>
+            /// <para>The entity UUID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>0</para>
+            /// <para>5cde2118666ffda40783ebd7cec9a60a</para>
             /// </summary>
-            [NameInMap("Status")]
+            [NameInMap("EntityUuid")]
             [Validation(Required=false)]
-            public int? Status { get; set; }
+            public string EntityUuid { get; set; }
 
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -96,10 +84,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para>false: The request failed.</para>
-        /// </description></item>
+        /// <item><description>true: successful.</description></item>
+        /// <item><description>false: failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

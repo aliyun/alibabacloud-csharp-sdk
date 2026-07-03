@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class DescribeDisposeAndPlaybookRequest : TeaModel {
         /// <summary>
-        /// <para>The page number. Pages start from page 1.</para>
+        /// <para>列表当前页号， 大于等于 1。</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -22,9 +22,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// <summary>
         /// <para>The entity type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ip</description></item>
-        /// <item><description>process</description></item>
-        /// <item><description>file</description></item>
+        /// <item><description><para><c>ip</c>: IP address</para>
+        /// </description></item>
+        /// <item><description><para><c>process</c>: process</para>
+        /// </description></item>
+        /// <item><description><para><c>file</c>: file</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,6 +38,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string EntityType { get; set; }
 
         /// <summary>
+        /// <para>实体 uuid。</para>
+        /// 
         /// <b>Example:</b>
         /// <para>85ea4241-798f-4684-a876-65d4f0c3****</para>
         /// </summary>
@@ -43,7 +48,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string EntityUuid { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the event.</para>
+        /// <para>The incident UUID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>85ea4241-798f-4684-a876-65d4f0c3****</para>
@@ -53,7 +58,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string IncidentUuid { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Maximum value: 100.</para>
+        /// <para>列表每页条数， 最大不超过 100。</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -63,10 +68,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The data management center of the threat analysis feature. Specify this parameter based on the region in which your assets reside. Valid values:</para>
+        /// <para>威胁分析的数据管理中心所在地。您需要根据资产所在地域，选择管理中心所在地。取值：</para>
         /// <list type="bullet">
-        /// <item><description>cn-hangzhou: Your assets reside in regions inside China.</description></item>
-        /// <item><description>ap-southeast-1: Your assets reside in regions outside China.</description></item>
+        /// <item><description><para>cn-hangzhou：资产属于中国内地与中国香港</para>
+        /// </description></item>
+        /// <item><description><para>ap-southeast-1：资产属于海外地域</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -77,7 +84,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the account that you switch from the management account.</para>
+        /// <para>管理员切换成其他成员视角的用户 ID。</para>
         /// 
         /// <b>Example:</b>
         /// <para>113091674488****</para>
@@ -87,10 +94,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public long? RoleFor { get; set; }
 
         /// <summary>
-        /// <para>The type of the view. Valid values:</para>
+        /// <para>视图类型。</para>
         /// <list type="bullet">
-        /// <item><description>0: the current Alibaba Cloud account</description></item>
-        /// <item><description>1: the global account</description></item>
+        /// <item><description><para>0：当前阿里云账号视图。</para>
+        /// </description></item>
+        /// <item><description><para>1：企业下所有账号的视图。</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

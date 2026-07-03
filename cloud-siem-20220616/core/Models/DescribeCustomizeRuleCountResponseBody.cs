@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class DescribeCustomizeRuleCountResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code that is returned.</para>
+        /// <para>The status code of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public DescribeCustomizeRuleCountResponseBodyData Data { get; set; }
         public class DescribeCustomizeRuleCountResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>同类聚合规则数。</para>
+            /// <para>The number of rules for intra-class aggregation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public int? AggregationRuleNum { get; set; }
 
             /// <summary>
-            /// <para>自定义规则数。</para>
+            /// <para>The number of custom rules.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public int? CustomizeRuleNum { get; set; }
 
             /// <summary>
-            /// <para>专家规则数。</para>
+            /// <para>The number of expert rules.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public int? ExpertRuleNum { get; set; }
 
             /// <summary>
-            /// <para>图计算规则数。</para>
+            /// <para>The number of graph computing rules.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public int? GraphComputingRuleNum { get; set; }
 
             /// <summary>
-            /// <para>The number of rules that are used to identify high-risk threats.</para>
+            /// <para>The number of high-risk rules.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public int? HighRuleNum { get; set; }
 
             /// <summary>
-            /// <para>The total number of rules.</para>
+            /// <para>The number of rules in use.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public int? InUseRuleNum { get; set; }
 
             /// <summary>
-            /// <para>The number of rules that are used to identify low-risk threats.</para>
+            /// <para>The number of low-risk rules.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public int? LowRuleNum { get; set; }
 
             /// <summary>
-            /// <para>The number of rules that are used to identify medium-risk threats.</para>
+            /// <para>The number of medium-risk rules.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public int? MediumRuleNum { get; set; }
 
             /// <summary>
-            /// <para>预定义规则数。</para>
+            /// <para>The number of predefined rules.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public int? PredefinedRuleNum { get; set; }
 
             /// <summary>
-            /// <para>告警透传规则数。</para>
+            /// <para>The number of alert pass-through rules.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public int? SingleAlertRuleNum { get; set; }
 
             /// <summary>
-            /// <para>总规则数。</para>
+            /// <para>The total number of rules.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public int? TotalRuleNum { get; set; }
 
             /// <summary>
-            /// <para>不产生事件规则数。</para>
+            /// <para>The number of rules that do not generate events.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The message returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -174,8 +174,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

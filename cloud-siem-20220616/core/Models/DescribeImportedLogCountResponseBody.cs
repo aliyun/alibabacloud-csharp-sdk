@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class DescribeImportedLogCountResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeImportedLogCountResponseBodyData Data { get; set; }
         public class DescribeImportedLogCountResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The number of logs that are added.</para>
+            /// <para>The number of ingested logs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public int? TotalLogCount { get; set; }
 
             /// <summary>
-            /// <para>The number of logs that are not added.</para>
+            /// <para>The number of logs that are not ingested.</para>
             /// 
             /// <b>Example:</b>
             /// <para>49</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6276D891-*****-55B2-87B9-74D413F7****</para>

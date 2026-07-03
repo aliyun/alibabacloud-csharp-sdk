@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class DeleteCustomizeRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The region in which the service is deployed.</para>
+        /// <para>The region where the product is deployed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the account that you switch from the management account.</para>
+        /// <para>The user ID of the member. This parameter is used when an administrator switches to the perspective of a member.</para>
         /// 
         /// <b>Example:</b>
         /// <para>113091674488****</para>
@@ -30,10 +30,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public long? RoleFor { get; set; }
 
         /// <summary>
-        /// <para>The type of the view. Valid values:</para>
+        /// <para>The type of the view.</para>
         /// <list type="bullet">
-        /// <item><description>0: the current Alibaba Cloud account</description></item>
-        /// <item><description>1: the global account</description></item>
+        /// <item><description><para>0: The view of the current Alibaba Cloud account.</para>
+        /// </description></item>
+        /// <item><description><para>1: The view of all accounts in your enterprise.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? RoleType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the rule.</para>
+        /// <para>The ID of the custom rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456789</para>

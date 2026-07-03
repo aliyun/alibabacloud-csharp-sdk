@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public ListAllProdsResponseBodyData Data { get; set; }
         public class ListAllProdsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The current page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The cloud services.</para>
+            /// <para>The list of products.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -47,11 +47,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public List<ListAllProdsResponseBodyDataProdList> ProdList { get; set; }
             public class ListAllProdsResponseBodyDataProdList : TeaModel {
                 /// <summary>
-                /// <para>The code of the cloud service provider. Valid values:</para>
+                /// <para>The multicloud code. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>qcloud: Tencent Cloud.</description></item>
-                /// <item><description>aliyun: Alibaba Cloud.</description></item>
-                /// <item><description>hcloud: Huawei Cloud.</description></item>
+                /// <item><description><para>qcloud: Tencent Cloud.</para>
+                /// </description></item>
+                /// <item><description><para>aliyun: Alibaba Cloud.</para>
+                /// </description></item>
+                /// <item><description><para>hcloud: Huawei Cloud.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -62,7 +65,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string CloudCode { get; set; }
 
                 /// <summary>
-                /// <para>The number of logs within the cloud service that are added to the threat analysis feature.</para>
+                /// <para>The number of ingested logs for the product.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -72,7 +75,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public int? ImportedLogCount { get; set; }
 
                 /// <summary>
-                /// <para>The time when the logs within the cloud service were last added to the threat analysis feature.</para>
+                /// <para>The time when logs were last ingested for the product.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-11-23 12:12:12</para>
@@ -82,7 +85,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string ModifyTime { get; set; }
 
                 /// <summary>
-                /// <para>The code of the cloud service.</para>
+                /// <para>The code of the cloud product.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sas</para>
@@ -92,7 +95,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string ProdCode { get; set; }
 
                 /// <summary>
-                /// <para>The total number of logs within the cloud service.</para>
+                /// <para>The total number of logs for the product.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>19</para>

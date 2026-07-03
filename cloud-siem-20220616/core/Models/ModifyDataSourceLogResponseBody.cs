@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public ModifyDataSourceLogResponseBodyData Data { get; set; }
         public class ModifyDataSourceLogResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The number of logs that are modified. The value 1 indicates that the modification is successful, and a value less than or equal to 0 indicates that the modification failed.</para>
+            /// <para>The number of modified logs. A value of 1 indicates success. A value of 0 or less indicates failure.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The ID of the log. The ID is an MD5 hash value that is calculated by the threat analysis feature based on specific parameters.</para>
+            /// <para>The ID of the log. The threat analysis feature generates this ID by calculating an MD5 hash of the parameters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>220ba97c9d1fdb0b9c7e8c7ca328d7ea</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6276D891-*****-55B2-87B9-74D413F7****</para>

@@ -16,12 +16,18 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         [Validation(Required=false)]
         public DescribeProdCountResponseBodyData Data { get; set; }
         public class DescribeProdCountResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The number of automatically connected Alibaba Cloud products.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
+            /// </summary>
             [NameInMap("AliyunImportedCount")]
             [Validation(Required=false)]
             public int? AliyunImportedCount { get; set; }
 
             /// <summary>
-            /// <para>The number of Alibaba Cloud services.</para>
+            /// <para>The number of Alibaba Cloud products.</para>
             /// 
             /// <b>Example:</b>
             /// <para>19</para>
@@ -30,12 +36,18 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             [Validation(Required=false)]
             public int? AliyunProdCount { get; set; }
 
+            /// <summary>
+            /// <para>The number of automatically connected Huawei Cloud products.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
+            /// </summary>
             [NameInMap("HcloudImportedCount")]
             [Validation(Required=false)]
             public int? HcloudImportedCount { get; set; }
 
             /// <summary>
-            /// <para>The number of Huawei Cloud services.</para>
+            /// <para>The number of Huawei Cloud products.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -44,11 +56,19 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             [Validation(Required=false)]
             public int? HcloudProdCount { get; set; }
 
+            /// <summary>
+            /// <para>The number of automatically connected IDC products.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
+            /// </summary>
             [NameInMap("IdcImportedCount")]
             [Validation(Required=false)]
             public int? IdcImportedCount { get; set; }
 
             /// <summary>
+            /// <para>The number of IDC products.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -56,12 +76,18 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             [Validation(Required=false)]
             public int? IdcProdCount { get; set; }
 
+            /// <summary>
+            /// <para>The number of automatically connected Tencent Cloud products.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
+            /// </summary>
             [NameInMap("QcloudImportedCount")]
             [Validation(Required=false)]
             public int? QcloudImportedCount { get; set; }
 
             /// <summary>
-            /// <para>The number of Tencent Cloud services.</para>
+            /// <para>The number of Tencent Cloud products.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -73,7 +99,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6276D891-*****-55B2-87B9-74D413F7****</para>

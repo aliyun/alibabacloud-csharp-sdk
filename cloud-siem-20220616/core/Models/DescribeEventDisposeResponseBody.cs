@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class DescribeEventDisposeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code that is returned.</para>
+        /// <para>The status code of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public DescribeEventDisposeResponseBodyData Data { get; set; }
         public class DescribeEventDisposeResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>An array consisting of JSON objects that are configured for event handling.</para>
+            /// <para>The JSON object of the event handling configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{ playbookName: &quot;使用安全组封禁入方向IP&quot;, sophonTaskId: &quot;400442a5-4f98-45ed-97db-5ab117eb0b8f&quot;, … }</para>
@@ -40,17 +40,19 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public List<object> EventDispose { get; set; }
 
             /// <summary>
-            /// <para>The JSON object that is configured for an alert recipient.</para>
+            /// <para>The JSON object of the alert recipient configuration.</para>
             /// </summary>
             [NameInMap("ReceiverInfo")]
             [Validation(Required=false)]
             public DescribeEventDisposeResponseBodyDataReceiverInfo ReceiverInfo { get; set; }
             public class DescribeEventDisposeResponseBodyDataReceiverInfo : TeaModel {
                 /// <summary>
-                /// <para>The channel of the contact information. Valid values:</para>
+                /// <para>The channel to send the notification. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>message</description></item>
-                /// <item><description>mail</description></item>
+                /// <item><description><para>message: text message</para>
+                /// </description></item>
+                /// <item><description><para>mail: email</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -61,7 +63,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string Channel { get; set; }
 
                 /// <summary>
-                /// <para>The creation time.</para>
+                /// <para>The time when the record was created.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-01-06 16:37:29</para>
@@ -71,7 +73,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string GmtCreate { get; set; }
 
                 /// <summary>
-                /// <para>The modification time.</para>
+                /// <para>The time when the record was last modified.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-01-06 16:37:29</para>
@@ -81,7 +83,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the recipient who receives the event handling result.</para>
+                /// <para>The record ID of the recipient for the event handling result.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123</para>
@@ -91,7 +93,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>The UUID of the event.</para>
+                /// <para>The globally unique UUID of the event.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>85ea4241-798f-4684-a876-65d4f0c3****</para>
@@ -101,7 +103,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string IncidentUuid { get; set; }
 
                 /// <summary>
-                /// <para>The message title.</para>
+                /// <para>The title of the message.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>siem event dealed message</para>
@@ -121,10 +123,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string Receiver { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the message is sent. Valid values:</para>
+                /// <para>The sending status of the notification. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>0: not sent</description></item>
-                /// <item><description>1: sent</description></item>
+                /// <item><description><para>0: not sent</para>
+                /// </description></item>
+                /// <item><description><para>1: sent</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -137,7 +141,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             }
 
             /// <summary>
-            /// <para>The description of the event.</para>
+            /// <para>The remarks on the event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dealed</para>
@@ -149,10 +153,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             /// <summary>
             /// <para>The status of the event. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: not handled</description></item>
-            /// <item><description>1: handing</description></item>
-            /// <item><description>5: handling failed</description></item>
-            /// <item><description>10: handled</description></item>
+            /// <item><description><para>0: unhandled</para>
+            /// </description></item>
+            /// <item><description><para>1: handling</para>
+            /// </description></item>
+            /// <item><description><para>5: failed</para>
+            /// </description></item>
+            /// <item><description><para>10: handled</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -165,7 +173,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The message returned for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -187,8 +195,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

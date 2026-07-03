@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public DescribeCloudSiemAssetsResponseBodyDataPageInfo PageInfo { get; set; }
             public class DescribeCloudSiemAssetsResponseBodyDataPageInfo : TeaModel {
                 /// <summary>
-                /// <para>The current page number.</para>
+                /// <para>The page number of the returned page.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public int? CurrentPage { get; set; }
 
                 /// <summary>
-                /// <para>The number of entries per page.</para>
+                /// <para>The number of entries returned per page.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public int? PageSize { get; set; }
 
                 /// <summary>
-                /// <para>The total number of entries returned.</para>
+                /// <para>The total number of entries.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public List<DescribeCloudSiemAssetsResponseBodyDataResponseData> ResponseData { get; set; }
             public class DescribeCloudSiemAssetsResponseBodyDataResponseData : TeaModel {
                 /// <summary>
-                /// <para>The UUID of the alert associated with the event.</para>
+                /// <para>The UUID of the alert that is associated with the event.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sas_71e24437d2797ce8fc59692905a4****</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string AlertUuid { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the Alibaba Cloud account in SIEM.</para>
+                /// <para>The ID of the Alibaba Cloud account.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1276085894174392</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string AssetId { get; set; }
 
                 /// <summary>
-                /// <para>The display information of the asset is in the JSON format.</para>
+                /// <para>The asset information, in a JSON array.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[{&quot;KeyName&quot;: &quot;${aliyun.siem.asset.asset_name}&quot;,&quot;Values&quot;: &quot;zsw-agentless-ubuntu20&quot;,&quot;Key&quot;: &quot;asset_name&quot;}]</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public List<DescribeCloudSiemAssetsResponseBodyDataResponseDataAssetInfo> AssetInfo { get; set; }
                 public class DescribeCloudSiemAssetsResponseBodyDataResponseDataAssetInfo : TeaModel {
                     /// <summary>
-                    /// <para>The attribute key.</para>
+                    /// <para>The key of the alert property.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>suspicious.wbd.wb.trojanpath</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                     public string Key { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the key.</para>
+                    /// <para>The name of the alert property.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Trojan Path</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                     public string KeyName { get; set; }
 
                     /// <summary>
-                    /// <para>The value of the key.</para>
+                    /// <para>The value of the alert property.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>/root/test33.php</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 }
 
                 /// <summary>
-                /// <para>The name of the asset.</para>
+                /// <para>The asset name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>zsw-agentless-centos****</para>
@@ -158,14 +158,20 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string AssetName { get; set; }
 
                 /// <summary>
-                /// <para>The type of the asset. Valid values:</para>
+                /// <para>The asset type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>ip</description></item>
-                /// <item><description>domain</description></item>
-                /// <item><description>url</description></item>
-                /// <item><description>process</description></item>
-                /// <item><description>file</description></item>
-                /// <item><description>host</description></item>
+                /// <item><description><para>ip: IP address</para>
+                /// </description></item>
+                /// <item><description><para>domain: domain name</para>
+                /// </description></item>
+                /// <item><description><para>url: URL</para>
+                /// </description></item>
+                /// <item><description><para>process: process</para>
+                /// </description></item>
+                /// <item><description><para>file: file</para>
+                /// </description></item>
+                /// <item><description><para>host: host</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -176,11 +182,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string AssetType { get; set; }
 
                 /// <summary>
-                /// <para>The cloud code of the entity. Valid values:</para>
+                /// <para>The cloud service provider of the entity. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>aliyun: Alibaba Cloud</description></item>
-                /// <item><description>qcloud: Tencent Cloud</description></item>
-                /// <item><description>hcloud: Huawei Cloud</description></item>
+                /// <item><description><para>aliyun: Alibaba Cloud</para>
+                /// </description></item>
+                /// <item><description><para>qcloud: Tencent Cloud</para>
+                /// </description></item>
+                /// <item><description><para>hcloud: Huawei Cloud</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -211,7 +220,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the asset.</para>
+                /// <para>The asset ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123</para>
@@ -231,7 +240,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string IncidentUuid { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the associated account to which the asset belongs.</para>
+                /// <para>The ID of the linked account.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>176555323***</para>
@@ -267,8 +276,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -17,10 +17,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public List<ListImportedLogsByProdResponseBodyData> Data { get; set; }
         public class ListImportedLogsByProdResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the log is automatically added to the threat analysis feature within newly added accounts. Valid values:</para>
+            /// <para>Indicates whether logs are automatically ingested for new accounts. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1: yes.</description></item>
-            /// <item><description>0: no.</description></item>
+            /// <item><description><para>1: Logs are automatically ingested.</para>
+            /// </description></item>
+            /// <item><description><para>0: Logs are not automatically ingested.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -31,11 +33,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public int? AutoImported { get; set; }
 
             /// <summary>
-            /// <para>The code of the cloud service provider. Valid values:</para>
+            /// <para>The multicloud code. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>qcloud: Tencent Cloud.</description></item>
-            /// <item><description>aliyun: Alibaba Cloud.</description></item>
-            /// <item><description>hcloud: Huawei Cloud.</description></item>
+            /// <item><description><para>qcloud: Tencent Cloud.</para>
+            /// </description></item>
+            /// <item><description><para>aliyun: Alibaba Cloud.</para>
+            /// </description></item>
+            /// <item><description><para>hcloud: Huawei Cloud.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -46,10 +51,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string CloudCode { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the log is added to the threat analysis feature. Valid values:</para>
+            /// <para>Indicates whether the log is ingested. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1: yes.</description></item>
-            /// <item><description>0: no.</description></item>
+            /// <item><description><para>1: The log is ingested.</para>
+            /// </description></item>
+            /// <item><description><para>0: The log is not ingested.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -60,7 +67,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public int? Imported { get; set; }
 
             /// <summary>
-            /// <para>The number of users who have added the log.</para>
+            /// <para>The number of users who have ingested the log.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -90,22 +97,23 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string LogMdsCode { get; set; }
 
             /// <summary>
-            /// <para>The type of log. Valid values:</para>
+            /// <para>The log type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1: the log produced by other product</description></item>
-            /// <item><description>2: the predefined log</description></item>
-            /// <item><description>3: the custom log</description></item>
+            /// <item><description><para>1: Ingested on the threat analysis side.</para>
+            /// </description></item>
+            /// <item><description><para>2: Predefined Simple Log Service log. -3: Custom Simple Log Service log.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>1</para>
+            /// <para>2023-11-23 12:30:00</para>
             /// </summary>
             [NameInMap("LogType")]
             [Validation(Required=false)]
             public int? LogType { get; set; }
 
             /// <summary>
-            /// <para>The time when the log was last added.</para>
+            /// <para>The time when the log was last ingested.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-11-23 12:30:00</para>
@@ -115,7 +123,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string ModifyTime { get; set; }
 
             /// <summary>
-            /// <para>The code of the cloud service to which the log belongs.</para>
+            /// <para>The code of the product to which the log belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>qcloud_waf</para>
@@ -125,7 +133,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string ProdCode { get; set; }
 
             /// <summary>
-            /// <para>The total number of users who have the log.</para>
+            /// <para>The total number of users for the log.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -135,7 +143,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public int? TotalUserCount { get; set; }
 
             /// <summary>
-            /// <para>The number of users who have not added the log.</para>
+            /// <para>The number of users who have not ingested the log.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>

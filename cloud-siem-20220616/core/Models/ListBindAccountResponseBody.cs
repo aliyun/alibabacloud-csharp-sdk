@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class ListBindAccountResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The result set.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListBindAccountResponseBodyData> Data { get; set; }
         public class ListBindAccountResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The AccessKey ID of the cloud account.</para>
+            /// <para>The AccessKey ID of the account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ABCXXXXXXXX</para>
@@ -37,17 +37,17 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string AccountId { get; set; }
 
             /// <summary>
-            /// <para>The username of the cloud account.</para>
+            /// <para>The name of the account.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>sas_account_xxx</para>
+            /// <para>XXXX Company</para>
             /// </summary>
             [NameInMap("AccountName")]
             [Validation(Required=false)]
             public string AccountName { get; set; }
 
             /// <summary>
-            /// <para>The ID that is generated when the cloud account is added.</para>
+            /// <para>The binding ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123xxxxxxx</para>
@@ -59,9 +59,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             /// <summary>
             /// <para>The code of the cloud service provider. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>qcloud: Tencent Cloud</description></item>
-            /// <item><description>aliyun: Alibaba Cloud</description></item>
-            /// <item><description>hcloud: Huawei Cloud</description></item>
+            /// <item><description><para>qcloud: Tencent Cloud.</para>
+            /// </description></item>
+            /// <item><description><para>aliyun: Alibaba Cloud.</para>
+            /// </description></item>
+            /// <item><description><para>hcloud: Huawei Cloud.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -72,7 +75,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string CloudCode { get; set; }
 
             /// <summary>
-            /// <para>The ID of the account that is used to add the cloud account.</para>
+            /// <para>The user who bound the account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123xxxxxxx</para>
@@ -82,7 +85,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string CreateUser { get; set; }
 
             /// <summary>
-            /// <para>The number of data sources that are added to the threat analysis feature within the cloud account.</para>
+            /// <para>The number of data sources that are bound to the account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -92,7 +95,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public long? DataSourceCount { get; set; }
 
             /// <summary>
-            /// <para>The modification time.</para>
+            /// <para>The time when the binding was modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-11-10 12:20:35</para>

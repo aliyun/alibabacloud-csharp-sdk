@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public SubmitImportLogTasksResponseBodyData Data { get; set; }
         public class SubmitImportLogTasksResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The number of log collection tasks that are submitted.</para>
+            /// <para>The number of log ingestion tasks that are successfully submitted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>

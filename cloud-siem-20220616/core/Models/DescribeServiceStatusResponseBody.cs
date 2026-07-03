@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class DescribeServiceStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the threat analysis feature is authorized to access the resource directory. Valid values:</para>
+        /// <para>The return value.</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: The authorization is granted.</para>
+        /// </description></item>
+        /// <item><description><para>false: The authorization is not granted.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class ListAccountsByLogResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The return value of the request.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListAccountsByLogResponseBodyData> Data { get; set; }
         public class ListAccountsByLogResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the cloud account.</para>
+            /// <para>The ID of the Alibaba Cloud account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123xxxxxxx</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string AccountId { get; set; }
 
             /// <summary>
-            /// <para>The name of the cloud account.</para>
+            /// <para>The name of the Alibaba Cloud account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sas_account_xxx</para>
@@ -37,7 +37,9 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string AccountName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the account is added. Valid values: -1: yes -0: no</para>
+            /// <para>Indicates whether the account has been added. Valid values:
+            /// -1: The account has been added.
+            /// -0: The account has not been added.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123xxxxxxx</para>
@@ -47,7 +49,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public int? Imported { get; set; }
 
             /// <summary>
-            /// <para>The code of the log.</para>
+            /// <para>The log code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cloud_siem_waf_xxxxx</para>
@@ -57,7 +59,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string LogCode { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account that is used to purchase the threat analysis feature.</para>
+            /// <para>The ID of the Alibaba Cloud account that is used to purchase Threat Analysis.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123XXXXXXXXX</para>
@@ -67,7 +69,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public long? MainUserId { get; set; }
 
             /// <summary>
-            /// <para>The code of the service.</para>
+            /// <para>The code of the product that corresponds to the log.</para>
             /// 
             /// <b>Example:</b>
             /// <para>qcloud_waf</para>
@@ -77,7 +79,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string ProdCode { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account for which the threat analysis feature is enabled.</para>
+            /// <para>The ID of the Alibaba Cloud account that is used for Threat Analysis.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123XXXXXXXX</para>

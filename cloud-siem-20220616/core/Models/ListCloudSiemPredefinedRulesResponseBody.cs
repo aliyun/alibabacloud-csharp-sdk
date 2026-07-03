@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public ListCloudSiemPredefinedRulesResponseBodyDataPageInfo PageInfo { get; set; }
             public class ListCloudSiemPredefinedRulesResponseBodyDataPageInfo : TeaModel {
                 /// <summary>
-                /// <para>The current page number.</para>
+                /// <para>The page number.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public int? CurrentPage { get; set; }
 
                 /// <summary>
-                /// <para>The number of entries per page.</para>
+                /// <para>The number of entries returned per page.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public int? PageSize { get; set; }
 
                 /// <summary>
-                /// <para>The total number of entries returned.</para>
+                /// <para>The total number of entries.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public List<ListCloudSiemPredefinedRulesResponseBodyDataResponseData> ResponseData { get; set; }
             public class ListCloudSiemPredefinedRulesResponseBodyDataResponseData : TeaModel {
                 /// <summary>
-                /// <para>The type of the risk.</para>
+                /// <para>The threat type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>WEBSHELL</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string AlertType { get; set; }
 
                 /// <summary>
-                /// <para>The alert additional field for ATT\&amp;CK.</para>
+                /// <para>The ATT\&amp;CK technique.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>T1595.002 Vulnerability Scanning</para>
@@ -96,11 +96,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string AttCk { get; set; }
 
                 /// <summary>
-                /// <para>The method that is used to generate an event. Valid values:</para>
+                /// <para>The event generation method. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>default: built-in method.</description></item>
-                /// <item><description>singleToSingle: The system generates an event for each alert.</description></item>
-                /// <item><description>allToSingle: The system generates an event for alerts within a period of time.</description></item>
+                /// <item><description><para>default: the default built-in method</para>
+                /// </description></item>
+                /// <item><description><para>singleToSingle: An event is generated for each alert.</para>
+                /// </description></item>
+                /// <item><description><para>allToSingle: An event is generated for all alerts in an epoch.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -121,7 +124,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string GmtCreate { get; set; }
 
                 /// <summary>
-                /// <para>The time when the rule was modified.</para>
+                /// <para>The time when the rule was last modified.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-01-06 16:37:29</para>
@@ -141,7 +144,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>The internal code of the rule description.</para>
+                /// <para>The Medusa code of the rule description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>${siem_rule_description_siem_cfw-attack-count-level-up_cfw-attack}</para>
@@ -151,7 +154,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string RuleDescMds { get; set; }
 
                 /// <summary>
-                /// <para>The name of the rule.</para>
+                /// <para>The rule name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>siem_base64-command-exec_aegis-proc</para>
@@ -161,7 +164,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string RuleName { get; set; }
 
                 /// <summary>
-                /// <para>The rule name in Chinese.</para>
+                /// <para>The Chinese name of the rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>siem_base64-command-exec_aegis-proc</para>
@@ -171,7 +174,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string RuleNameCn { get; set; }
 
                 /// <summary>
-                /// <para>The rule name in English.</para>
+                /// <para>The English name of the rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>siem_base64-command-exec_aegis-proc</para>
@@ -181,7 +184,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string RuleNameEn { get; set; }
 
                 /// <summary>
-                /// <para>The internal code of the rule name.</para>
+                /// <para>The Medusa code of the rule name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>${siem_rule_name_siem_cfw-attack-count-level-up_cfw-attack}</para>
@@ -203,8 +206,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 /// <summary>
                 /// <para>The status of the predefined rule. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>0: The rule is in the initial state.</description></item>
-                /// <item><description>100: The rule takes effect.</description></item>
+                /// <item><description><para>0: initial</para>
+                /// </description></item>
+                /// <item><description><para>100: published</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -215,11 +220,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public int? Status { get; set; }
 
                 /// <summary>
-                /// <para>The risk level. Valid values:</para>
+                /// <para>The threat level. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>serious: high.</description></item>
-                /// <item><description>suspicious: medium.</description></item>
-                /// <item><description>remind: low.</description></item>
+                /// <item><description><para>serious: high</para>
+                /// </description></item>
+                /// <item><description><para>suspicious: medium</para>
+                /// </description></item>
+                /// <item><description><para>remind: low</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -256,8 +264,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

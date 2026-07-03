@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string AssetId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1.</para>
+        /// <para>The page number. The value must be greater than or equal to 1.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Unit: milliseconds.</para>
+        /// <para>The end time of the query. This value is a UNIX timestamp. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1577808000000</para>
@@ -41,6 +41,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public long? EndTime { get; set; }
 
         /// <summary>
+        /// <para>The UUID of the entity that is associated with the event.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6c740667-80b2-476d-8924-2e706feb****</para>
         /// </summary>
@@ -59,7 +61,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string EventName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the event.</para>
+        /// <para>The event ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>85ea4241-798f-4684-a876-65d4f0c3****</para>
@@ -71,8 +73,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// <summary>
         /// <para>The sort order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>desc: descending order</description></item>
-        /// <item><description>asc: ascending order</description></item>
+        /// <item><description><para>desc: descending</para>
+        /// </description></item>
+        /// <item><description><para>asc: ascending</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -83,10 +87,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The sort field. Valid values:</para>
+        /// <para>The field to sort the event list by. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>GmtModified: sorts the events by creation time. This is the default value.</description></item>
-        /// <item><description>ThreatScore: sorts the events by risk score.</description></item>
+        /// <item><description><para>GmtModified: Sorts by modification time. This is the default value.</para>
+        /// </description></item>
+        /// <item><description><para>ThreatScore: Sorts by threat score.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -97,7 +103,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string OrderField { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Maximum value: 100.</para>
+        /// <para>The number of entries per page. The maximum value is 100.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -108,10 +114,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</para>
+        /// <para>The region where the Data Management center of Threat Analysis &amp; Response is located. Select the region based on the region where your assets are located. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cn-hangzhou: Your assets reside in regions in China.</description></item>
-        /// <item><description>ap-southeast-1: Your assets reside in regions outside China.</description></item>
+        /// <item><description><para>cn-hangzhou: Your assets are in the Chinese mainland or China (Hong Kong).</para>
+        /// </description></item>
+        /// <item><description><para>ap-southeast-1: Your assets are in regions outside China.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -122,7 +130,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the account that you switch from the management account.</para>
+        /// <para>The ID of the member. The administrator can use this ID to view the data of the member.</para>
         /// 
         /// <b>Example:</b>
         /// <para>113091674488****</para>
@@ -132,10 +140,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public long? RoleFor { get; set; }
 
         /// <summary>
-        /// <para>The type of the view. Valid values:</para>
+        /// <para>The view type.</para>
         /// <list type="bullet">
-        /// <item><description>0: the current Alibaba Cloud account</description></item>
-        /// <item><description>1: the global account</description></item>
+        /// <item><description><para>0: The view of the current Alibaba Cloud account.</para>
+        /// </description></item>
+        /// <item><description><para>1: The view of all accounts that are managed by the administrator account.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -146,7 +156,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? RoleType { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Unit: milliseconds.</para>
+        /// <para>The start time of the query. This value is a UNIX timestamp. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1577808000000</para>
@@ -158,10 +168,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// <summary>
         /// <para>The status of the event. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: unhandled</description></item>
-        /// <item><description>1: handling</description></item>
-        /// <item><description>5: handling failed</description></item>
-        /// <item><description>10: handled</description></item>
+        /// <item><description><para>0: unhandled</para>
+        /// </description></item>
+        /// <item><description><para>1: in progress</para>
+        /// </description></item>
+        /// <item><description><para>5: failed</para>
+        /// </description></item>
+        /// <item><description><para>10: handled</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -172,11 +186,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? Status { get; set; }
 
         /// <summary>
-        /// <para>The risk levels of the events. The value is a JSON array. Valid values:</para>
+        /// <para>The threat level of the event. The value is a JSON array. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>serious: high</description></item>
-        /// <item><description>suspicious: medium</description></item>
-        /// <item><description>remind: low</description></item>
+        /// <item><description><para>serious: high</para>
+        /// </description></item>
+        /// <item><description><para>suspicious: medium</para>
+        /// </description></item>
+        /// <item><description><para>remind: low</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

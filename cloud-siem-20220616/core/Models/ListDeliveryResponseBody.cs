@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class ListDeliveryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response parameters.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListDeliveryResponseBodyData Data { get; set; }
         public class ListDeliveryResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The URL that is displayed in charts.</para>
+            /// <para>The URL of the dashboard on the log analysis page.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://sls4service.console.aliyun.com/lognext/project/aliyun-cloudsiem-data-127608589417****-cn-shanghai">https://sls4service.console.aliyun.com/lognext/project/aliyun-cloudsiem-data-127608589417****-cn-shanghai</a>
@@ -28,10 +28,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string DashboardUrl { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the log delivery switch is displayed. Default value: true. Valid values:</para>
+            /// <para>Indicates whether to display the delivery switch. The default value is true. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description><para>true: The delivery switch is displayed.</para>
+            /// </description></item>
+            /// <item><description><para>false: The delivery switch is hidden.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -42,7 +44,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public bool? DisplaySwitchOrNot { get; set; }
 
             /// <summary>
-            /// <para>The name of the Logstore for the threat analysis feature on the user side. The value is in the cloud_siem format.</para>
+            /// <para>The name of your LogStore for threat analysis. The format is \<c>cloud_siem\\</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cloud-siem</para>
@@ -52,24 +54,26 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string LogStoreName { get; set; }
 
             /// <summary>
-            /// <para>The cloud services.</para>
+            /// <para>A list of products.</para>
             /// </summary>
             [NameInMap("ProductList")]
             [Validation(Required=false)]
             public List<ListDeliveryResponseBodyDataProductList> ProductList { get; set; }
             public class ListDeliveryResponseBodyDataProductList : TeaModel {
                 /// <summary>
-                /// <para>The logs of the cloud services.</para>
+                /// <para>A list of logs for cloud products that do not have subcategories.</para>
                 /// </summary>
                 [NameInMap("LogList")]
                 [Validation(Required=false)]
                 public List<ListDeliveryResponseBodyDataProductListLogList> LogList { get; set; }
                 public class ListDeliveryResponseBodyDataProductListLogList : TeaModel {
                     /// <summary>
-                    /// <para>Indicates whether the log delivery feature can be enabled or disabled. The feature can be enabled or disabled only by the administrator of the threat analysis feature. Valid values:</para>
+                    /// <para>Indicates whether the log delivery switch can be operated. Only the delegated administrator for threat analysis can operate the switch. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>true</description></item>
-                    /// <item><description>false</description></item>
+                    /// <item><description><para>true: The switch can be operated.</para>
+                    /// </description></item>
+                    /// <item><description><para>false: The switch cannot be operated.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -80,14 +84,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                     public bool? CanOperateOrNot { get; set; }
 
                     /// <summary>
-                    /// <para>The extended parameter.</para>
+                    /// <para>Additional parameters.</para>
                     /// </summary>
                     [NameInMap("ExtraParameters")]
                     [Validation(Required=false)]
                     public List<ListDeliveryResponseBodyDataProductListLogListExtraParameters> ExtraParameters { get; set; }
                     public class ListDeliveryResponseBodyDataProductListLogListExtraParameters : TeaModel {
                         /// <summary>
-                        /// <para>The ID of the extended parameter.</para>
+                        /// <para>The key of the additional parameter.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>flag</para>
@@ -97,7 +101,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// <para>The value of the extended parameter.</para>
+                        /// <para>The value of the additional parameter.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>value</para>
@@ -109,7 +113,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                     }
 
                     /// <summary>
-                    /// <para>The code of the log.</para>
+                    /// <para>The log code.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cloud_siem_config_log</para>
@@ -119,7 +123,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                     public string LogCode { get; set; }
 
                     /// <summary>
-                    /// <para>This parameter is deprecated.</para>
+                    /// <para>This parameter is deprecated. You can ignore it.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>audit log</para>
@@ -129,7 +133,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                     public string LogName { get; set; }
 
                     /// <summary>
-                    /// <para>This parameter is deprecated.</para>
+                    /// <para>This parameter is deprecated. You can ignore it.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>audit log</para>
@@ -139,7 +143,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                     public string LogNameEn { get; set; }
 
                     /// <summary>
-                    /// <para>The language code of the log that is used to indicate the language in which the log is displayed.</para>
+                    /// <para>The language key of the log name. This key is used to display the log name in different languages.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>${sas.cloudsiem.prod.cloud_siem_aegis_crack_from_beaver}</para>
@@ -149,10 +153,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                     public string LogNameKey { get; set; }
 
                     /// <summary>
-                    /// <para>The status of the log delivery. Valid values:</para>
+                    /// <para>The log delivery status. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>true: The logs are being delivered.</description></item>
-                    /// <item><description>false: The log delivery feature is disabled.</description></item>
+                    /// <item><description><para>true: Delivery is in progress.</para>
+                    /// </description></item>
+                    /// <item><description><para>false: Delivery is disabled.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -163,7 +169,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                     public bool? Status { get; set; }
 
                     /// <summary>
-                    /// <para>The topic of the log in the Logstore. The value is an index field in the Logstore that can be used to distinguish different logs.</para>
+                    /// <para>The topic of the log in the LogStore. This parameter is an index field in the LogStore and is used to differentiate logs.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>sas_login_event</para>
@@ -175,38 +181,61 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 }
 
                 /// <summary>
-                /// <para>The log group. For example, in Security Center, the logs of hosts and networks are stored in different groups. Key indicates the group information, and value indicates the logs in the group.</para>
+                /// <para>A list of logs that are categorized. For example, Security Center logs are categorized into groups such as Host and Network. The group is the key, and the logs in the group are the value.</para>
                 /// </summary>
                 [NameInMap("LogMap")]
                 [Validation(Required=false)]
                 public Dictionary<string, List<DataProductListLogMapValue>> LogMap { get; set; }
 
                 /// <summary>
-                /// <para>The code of the cloud service. Valid values:</para>
+                /// <para>The code of the cloud product. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>qcloud_waf</description></item>
-                /// <item><description>qlcoud_cfw</description></item>
-                /// <item><description>hcloud_waf</description></item>
-                /// <item><description>hcloud_cfw</description></item>
-                /// <item><description>ddos</description></item>
-                /// <item><description>sas</description></item>
-                /// <item><description>cfw</description></item>
-                /// <item><description>config</description></item>
-                /// <item><description>csk</description></item>
-                /// <item><description>fc</description></item>
-                /// <item><description>rds</description></item>
-                /// <item><description>nas</description></item>
-                /// <item><description>apigateway</description></item>
-                /// <item><description>cdn</description></item>
-                /// <item><description>mongodb</description></item>
-                /// <item><description>eip</description></item>
-                /// <item><description>slb</description></item>
-                /// <item><description>vpc</description></item>
-                /// <item><description>actiontrail</description></item>
-                /// <item><description>waf</description></item>
-                /// <item><description>bastionhost</description></item>
-                /// <item><description>oss</description></item>
-                /// <item><description>polardb</description></item>
+                /// <item><description><para>qcloud_waf</para>
+                /// </description></item>
+                /// <item><description><para>qcloud_cfw</para>
+                /// </description></item>
+                /// <item><description><para>hcloud_waf</para>
+                /// </description></item>
+                /// <item><description><para>hcloud_cfw</para>
+                /// </description></item>
+                /// <item><description><para>ddos</para>
+                /// </description></item>
+                /// <item><description><para>sas</para>
+                /// </description></item>
+                /// <item><description><para>cfw</para>
+                /// </description></item>
+                /// <item><description><para>config</para>
+                /// </description></item>
+                /// <item><description><para>csk</para>
+                /// </description></item>
+                /// <item><description><para>fc</para>
+                /// </description></item>
+                /// <item><description><para>rds</para>
+                /// </description></item>
+                /// <item><description><para>nas</para>
+                /// </description></item>
+                /// <item><description><para>apigateway</para>
+                /// </description></item>
+                /// <item><description><para>cdn</para>
+                /// </description></item>
+                /// <item><description><para>mongodb</para>
+                /// </description></item>
+                /// <item><description><para>eip</para>
+                /// </description></item>
+                /// <item><description><para>slb</para>
+                /// </description></item>
+                /// <item><description><para>vpc</para>
+                /// </description></item>
+                /// <item><description><para>actiontrail</para>
+                /// </description></item>
+                /// <item><description><para>waf</para>
+                /// </description></item>
+                /// <item><description><para>bastionhost</para>
+                /// </description></item>
+                /// <item><description><para>oss</para>
+                /// </description></item>
+                /// <item><description><para>polardb</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -217,7 +246,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string ProductCode { get; set; }
 
                 /// <summary>
-                /// <para>This parameter is deprecated.</para>
+                /// <para>This parameter is deprecated. You can ignore it.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Security Center</para>
@@ -229,7 +258,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             }
 
             /// <summary>
-            /// <para>The name of the project for the threat analysis feature in Simple Log service on the user side. The value is in the aliyun-cloudsiem-data-${aliUid}-${region} format.</para>
+            /// <para>The name of your Simple Log Service (SLS) project for threat analysis. The format is \<c>aliyun-cloudsiem-data-${aliUid}-${region}\\</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aliyun-cloudsiem-data-127608589417****-cn-shanghai</para>
@@ -239,7 +268,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string ProjectName { get; set; }
 
             /// <summary>
-            /// <para>The URL that is used for log analysis.</para>
+            /// <para>The URL of the Search &amp; Analysis page in the SLS console.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://sls4service.console.aliyun.com/lognext/project/aliyun-cloudsiem-data-127608589417****-cn-shanghai">https://sls4service.console.aliyun.com/lognext/project/aliyun-cloudsiem-data-127608589417****-cn-shanghai</a>

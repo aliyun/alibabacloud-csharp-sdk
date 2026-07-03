@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public List<ListProjectLogStoresResponseBodyData> Data { get; set; }
         public class ListProjectLogStoresResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The endpoint of the Simple Log Service project.</para>
+            /// <para>The endpoint of the SLS project.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou.log.aliyuncs.com</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string EndPoint { get; set; }
 
             /// <summary>
-            /// <para>The name of the region in which the Simple Log Service project resides.</para>
+            /// <para>The name of the region where the SLS project resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hangzhou</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string LocalName { get; set; }
 
             /// <summary>
-            /// <para>The name of the Simple Log Service Logstore.</para>
+            /// <para>The name of the SLS Logstore.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cloud-siem-logstore</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string LogStore { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account that is used to purchase the threat analysis feature.</para>
+            /// <para>The ID of the Alibaba Cloud account that is used to purchase Threat Analysis.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123XXXXXXXXX</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public long? MainUserId { get; set; }
 
             /// <summary>
-            /// <para>The name of the Simple Log Service project.</para>
+            /// <para>The name of the SLS project.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cloud-siem-project</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string Project { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region in which the Simple Log Service project resides.</para>
+            /// <para>The region where the SLS project resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account that can be used to perform operations supported by the threat analysis feature.</para>
+            /// <para>The ID of the member account for which threat analysis is performed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123XXXXXXXX</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public long? SubUserId { get; set; }
 
             /// <summary>
-            /// <para>The username of the Alibaba Cloud account that can be used to perform operations supported by the threat analysis feature.</para>
+            /// <para>The name of the member account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sas_account_xxxx</para>
