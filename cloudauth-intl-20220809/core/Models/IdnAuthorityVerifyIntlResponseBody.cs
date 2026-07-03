@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
-    public class EkycVerifyResponseBody : TeaModel {
+    public class IdnAuthorityVerifyIntlResponseBody : TeaModel {
         /// <summary>
         /// <para>The response code.</para>
         /// 
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
-        /// <para>4EB356FE-BB6A-5DCC-B4C5-E8051787EBA1</para>
+        /// <para>5E63B760-0ECB-5C07-8503-A65C27876968</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -44,48 +44,37 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
-        public EkycVerifyResponseBodyResult Result { get; set; }
-        public class EkycVerifyResponseBodyResult : TeaModel {
+        public IdnAuthorityVerifyIntlResponseBodyResult Result { get; set; }
+        public class IdnAuthorityVerifyIntlResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The face verification result.</para>
+            /// <para>The detailed verification results from the data source are described as follows (using the Indonesian data source as an example):</para>
+            /// <list type="bullet">
+            /// <item><description><b>govId, fullName, dob</b>: A comparison score equal to 1.0 indicates a complete match with the official data source. A score lower than 1.0 indicates a mismatch. </description></item>
+            /// <item><description><b>selfiePhoto</b>: A comparison score greater than 0.8 indicates a match with the official data source. A score equal to or lower than 0.8 indicates a mismatch. </description></item>
+            /// <item><description><b>liveness</b>: A score higher than 0.95 indicates a liveness detection risk. </description></item>
+            /// <item><description><b>imgManipulationScore</b>: A score higher than 0.95 indicates an image tampering risk.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>{
-            /// &quot;faceAttack&quot;: &quot;N&quot;,
-            /// &quot;faceComparisonScore&quot;: 52.57,
-            /// &quot;facePassed&quot;: &quot;N&quot;,
-            /// &quot;authorityComparisonScore&quot;: 80.39
+            ///   &quot;govId&quot;: 1.0,
+            ///   &quot;fullName&quot;: 1.0,
+            ///   &quot;dob&quot;: 0.9,
+            ///   &quot;selfiePhoto&quot;: 0.8777,
+            ///   &quot;liveness&quot;: 0.1152,
+            ///   &quot;imgManipulationScore&quot;: 0.2253
             /// }</para>
             /// </summary>
-            [NameInMap("ExtFaceInfo")]
+            [NameInMap("ExtSourceInfo")]
             [Validation(Required=false)]
-            public string ExtFaceInfo { get; set; }
+            public string ExtSourceInfo { get; set; }
 
             /// <summary>
-            /// <para>The document recognition result. This field is returned only when the API response is successful.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>{
-            ///  &quot;ocrIdInfo&quot;: {
-            ///  &quot;firstName&quot;: &quot;<b>龙&quot;,
-            ///  &quot;lastName&quot;: &quot;</b>&quot;,
-            ///  &quot;countryCode&quot;: &quot;CHN&quot;,
-            ///  &quot;docType&quot;: &quot;01560001&quot;,
-            ///  &quot;dateOfBirth&quot;: &quot;2002-08-04&quot;,
-            ///  &quot;idNumber&quot;: &quot;410************19&quot;
-            ///  },
-            ///  &quot;ocrIdPassed&quot;: &quot;N&quot;,
-            ///  &quot;spoofInfo&quot;: {
-            ///  &quot;spoofResult&quot;: &quot;Y&quot;,
-            ///  }
-            /// }</para>
-            /// </summary>
-            [NameInMap("ExtIdInfo")]
-            [Validation(Required=false)]
-            public string ExtIdInfo { get; set; }
-
-            /// <summary>
-            /// <para>Indicates whether the verification is passed. Valid values: T (passed) and F (not passed).</para>
+            /// <para>Indicates whether the verification is passed. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Y: passed.</description></item>
+            /// <item><description>N: not passed.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Y</para>
@@ -98,17 +87,17 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             /// <para>The sub-result code.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>205</para>
+            /// <para>200</para>
             /// </summary>
             [NameInMap("SubCode")]
             [Validation(Required=false)]
             public string SubCode { get; set; }
 
             /// <summary>
-            /// <para>The unique identifier of the verification request.</para>
+            /// <para>The unique identifier of the authentication request.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>4ab0b***cbde97</para>
+            /// <para>hk573be80f944d95ac812e0*******a8</para>
             /// </summary>
             [NameInMap("TransactionId")]
             [Validation(Required=false)]

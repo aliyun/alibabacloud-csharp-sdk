@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class DocOcrMaxV2ResponseBody : TeaModel {
         /// <summary>
+        /// <para>The response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Id of the request</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5E63B760-0ECB-5C07-8503-A65C27876968</para>
         /// </summary>
@@ -33,11 +39,16 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The returned result.</para>
+        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public DocOcrMaxV2ResponseBodyResult Result { get; set; }
         public class DocOcrMaxV2ResponseBodyResult : TeaModel {
             /// <summary>
+            /// <para>The card and certificate recognition result. This parameter is returned only when the API response is successful.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{
             ///   &quot;ocrIdInfo&quot;: {
@@ -61,6 +72,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string ExtIdInfo { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the verification passed. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Y: passed.</description></item>
+            /// <item><description>N: not passed.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>Y</para>
             /// </summary>
@@ -69,6 +86,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string Passed { get; set; }
 
             /// <summary>
+            /// <para>The sub-result code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>200</para>
             /// </summary>
@@ -77,6 +96,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string SubCode { get; set; }
 
             /// <summary>
+            /// <para>The unique identifier of the verification request.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>08573be80f944d95ac812e019e3655a8</para>
             /// </summary>

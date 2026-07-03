@@ -4149,7 +4149,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>全球证件ocr识别接口</para>
+        /// <para>Recognizes identity documents worldwide through OCR.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4245,7 +4245,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>全球证件ocr识别接口</para>
+        /// <para>Recognizes identity documents worldwide through OCR.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4341,7 +4341,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>全球证件ocr识别接口</para>
+        /// <para>Recognizes identity documents worldwide through OCR.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4359,7 +4359,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>全球证件ocr识别接口</para>
+        /// <para>Recognizes identity documents worldwide through OCR.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5166,6 +5166,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 query["FacePictureUrl"] = request.FacePictureUrl;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceQualityCheck))
+            {
+                query["FaceQualityCheck"] = request.FaceQualityCheck;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdOcrPictureUrl))
             {
                 query["IdOcrPictureUrl"] = request.IdOcrPictureUrl;
@@ -5258,6 +5262,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 query["FacePictureUrl"] = request.FacePictureUrl;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceQualityCheck))
+            {
+                query["FaceQualityCheck"] = request.FaceQualityCheck;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdOcrPictureUrl))
             {
                 query["IdOcrPictureUrl"] = request.IdOcrPictureUrl;
@@ -5345,7 +5353,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Server-side-only eKYC API</para>
+        /// <para>The eKYC solution server-side API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5385,6 +5393,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FacePictureUrl))
             {
                 query["FacePictureUrl"] = request.FacePictureUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceQualityCheck))
+            {
+                query["FaceQualityCheck"] = request.FaceQualityCheck;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdOcrPictureUrl))
             {
@@ -5445,7 +5457,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Server-side-only eKYC API</para>
+        /// <para>The eKYC solution server-side API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5485,6 +5497,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FacePictureUrl))
             {
                 query["FacePictureUrl"] = request.FacePictureUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceQualityCheck))
+            {
+                query["FaceQualityCheck"] = request.FaceQualityCheck;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdOcrPictureUrl))
             {
@@ -5545,7 +5561,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Server-side-only eKYC API</para>
+        /// <para>The eKYC solution server-side API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5563,7 +5579,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Server-side-only eKYC API</para>
+        /// <para>The eKYC solution server-side API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5825,7 +5841,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Compares two face images by using face recognition technology and returns the comparison result and similarity score.</para>
+        /// <para>Uses facial recognition technology to compare and verify two input face images, returning the face comparison result and similarity score.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5893,7 +5909,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Compares two face images by using face recognition technology and returns the comparison result and similarity score.</para>
+        /// <para>Uses facial recognition technology to compare and verify two input face images, returning the face comparison result and similarity score.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5961,7 +5977,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Compares two face images by using face recognition technology and returns the comparison result and similarity score.</para>
+        /// <para>Uses facial recognition technology to compare and verify two input face images, returning the face comparison result and similarity score.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5979,7 +5995,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Compares two face images by using face recognition technology and returns the comparison result and similarity score.</para>
+        /// <para>Uses facial recognition technology to compare and verify two input face images, returning the face comparison result and similarity score.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6633,7 +6649,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>FaceDuplicationCheckIntl is designed for scenarios where SDK integration is not feasible. You can call this API operation to submit facial images and perform the following functions: verify whether the user is a real person, compare the submitted face against a stored face to verify identity, search a face database to check for existing records, and automatically register the face in a specified face database after successful verification.</para>
+        /// <para>Performs face duplication check (FaceDuplicationCheckIntl) for scenarios where SDK integration is not feasible. Submits face images through the API to verify whether a user is a real person, compare the face against a retained face image for identity verification, search a face library to determine whether the face already exists, and automatically register the face in a specified face library after successful verification.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6741,7 +6757,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>FaceDuplicationCheckIntl is designed for scenarios where SDK integration is not feasible. You can call this API operation to submit facial images and perform the following functions: verify whether the user is a real person, compare the submitted face against a stored face to verify identity, search a face database to check for existing records, and automatically register the face in a specified face database after successful verification.</para>
+        /// <para>Performs face duplication check (FaceDuplicationCheckIntl) for scenarios where SDK integration is not feasible. Submits face images through the API to verify whether a user is a real person, compare the face against a retained face image for identity verification, search a face library to determine whether the face already exists, and automatically register the face in a specified face library after successful verification.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6849,7 +6865,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>FaceDuplicationCheckIntl is designed for scenarios where SDK integration is not feasible. You can call this API operation to submit facial images and perform the following functions: verify whether the user is a real person, compare the submitted face against a stored face to verify identity, search a face database to check for existing records, and automatically register the face in a specified face database after successful verification.</para>
+        /// <para>Performs face duplication check (FaceDuplicationCheckIntl) for scenarios where SDK integration is not feasible. Submits face images through the API to verify whether a user is a real person, compare the face against a retained face image for identity verification, search a face library to determine whether the face already exists, and automatically register the face in a specified face library after successful verification.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6867,7 +6883,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>FaceDuplicationCheckIntl is designed for scenarios where SDK integration is not feasible. You can call this API operation to submit facial images and perform the following functions: verify whether the user is a real person, compare the submitted face against a stored face to verify identity, search a face database to check for existing records, and automatically register the face in a specified face database after successful verification.</para>
+        /// <para>Performs face duplication check (FaceDuplicationCheckIntl) for scenarios where SDK integration is not feasible. Submits face images through the API to verify whether a user is a real person, compare the face against a retained face image for identity verification, search a face library to determine whether the face already exists, and automatically register the face in a specified face library after successful verification.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7037,7 +7053,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the server-side API for passive liveness detection.</para>
+        /// <para>Provides the server-side passive liveness detection API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7113,7 +7129,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the server-side API for passive liveness detection.</para>
+        /// <para>Provides the server-side passive liveness detection API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7189,7 +7205,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the server-side API for passive liveness detection.</para>
+        /// <para>Provides the server-side passive liveness detection API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7207,7 +7223,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the server-side API for passive liveness detection.</para>
+        /// <para>Provides the server-side passive liveness detection API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7225,12 +7241,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>人脸活体验证</para>
+        /// <para>Detects whether a face in an image is from a real person by using an API operation. This service combines the Qwen-VL large model for in-depth forgery risk detection to determine face liveness.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>调用FaceLivenessV2接口对人脸图片进行活体检测。</para>
+        /// <para>Calls the FaceLivenessV2 operation to perform liveness detection on a face image.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7298,12 +7314,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>人脸活体验证</para>
+        /// <para>Detects whether a face in an image is from a real person by using an API operation. This service combines the Qwen-VL large model for in-depth forgery risk detection to determine face liveness.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>调用FaceLivenessV2接口对人脸图片进行活体检测。</para>
+        /// <para>Calls the FaceLivenessV2 operation to perform liveness detection on a face image.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7371,12 +7387,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>人脸活体验证</para>
+        /// <para>Detects whether a face in an image is from a real person by using an API operation. This service combines the Qwen-VL large model for in-depth forgery risk detection to determine face liveness.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>调用FaceLivenessV2接口对人脸图片进行活体检测。</para>
+        /// <para>Calls the FaceLivenessV2 operation to perform liveness detection on a face image.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7394,12 +7410,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>人脸活体验证</para>
+        /// <para>Detects whether a face in an image is from a real person by using an API operation. This service combines the Qwen-VL large model for in-depth forgery risk detection to determine face liveness.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>调用FaceLivenessV2接口对人脸图片进行活体检测。</para>
+        /// <para>Calls the FaceLivenessV2 operation to perform liveness detection on a face image.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7609,12 +7625,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>人脸活体验证</para>
+        /// <para>Performs real face detection by using face images obtained in advance through the API operation. The algorithm identifies whether a face is a screen recapture or printed photo to detect basic presentation liveness attacks that render fake faces, and supports comparison with another face image to authenticate whether they belong to the same person.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>调用FaceVerifyIntl接口对人脸图片进行活体检测。</para>
+        /// <para>Calls the FaceVerifyIntl operation to perform liveness detection on face images.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7714,12 +7730,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>人脸活体验证</para>
+        /// <para>Performs real face detection by using face images obtained in advance through the API operation. The algorithm identifies whether a face is a screen recapture or printed photo to detect basic presentation liveness attacks that render fake faces, and supports comparison with another face image to authenticate whether they belong to the same person.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>调用FaceVerifyIntl接口对人脸图片进行活体检测。</para>
+        /// <para>Calls the FaceVerifyIntl operation to perform liveness detection on face images.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7819,12 +7835,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>人脸活体验证</para>
+        /// <para>Performs real face detection by using face images obtained in advance through the API operation. The algorithm identifies whether a face is a screen recapture or printed photo to detect basic presentation liveness attacks that render fake faces, and supports comparison with another face image to authenticate whether they belong to the same person.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>调用FaceVerifyIntl接口对人脸图片进行活体检测。</para>
+        /// <para>Calls the FaceVerifyIntl operation to perform liveness detection on face images.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7842,12 +7858,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>人脸活体验证</para>
+        /// <para>Performs real face detection by using face images obtained in advance through the API operation. The algorithm identifies whether a face is a screen recapture or printed photo to detect basic presentation liveness attacks that render fake faces, and supports comparison with another face image to authenticate whether they belong to the same person.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>调用FaceVerifyIntl接口对人脸图片进行活体检测。</para>
+        /// <para>Calls the FaceVerifyIntl operation to perform liveness detection on face images.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8605,6 +8621,418 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Verifies the identity of an Indonesian user by calling the authoritative source API in a standalone business scenario.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// IdnAuthorityVerifyIntlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// IdnAuthorityVerifyIntlResponse
+        /// </returns>
+        public IdnAuthorityVerifyIntlResponse IdnAuthorityVerifyIntlWithOptions(IdnAuthorityVerifyIntlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BirthDate))
+            {
+                query["BirthDate"] = request.BirthDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Email))
+            {
+                query["Email"] = request.Email;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FullName))
+            {
+                query["FullName"] = request.FullName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdNumber))
+            {
+                query["IdNumber"] = request.IdNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantBizId))
+            {
+                query["MerchantBizId"] = request.MerchantBizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantUserId))
+            {
+                query["MerchantUserId"] = request.MerchantUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mobile))
+            {
+                query["Mobile"] = request.Mobile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneCode))
+            {
+                query["SceneCode"] = request.SceneCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceFacePictureFile))
+            {
+                query["SourceFacePictureFile"] = request.SourceFacePictureFile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceFacePictureUrl))
+            {
+                query["SourceFacePictureUrl"] = request.SourceFacePictureUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timestamp))
+            {
+                query["Timestamp"] = request.Timestamp;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceFacePicture))
+            {
+                body["SourceFacePicture"] = request.SourceFacePicture;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "IdnAuthorityVerifyIntl",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<IdnAuthorityVerifyIntlResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Verifies the identity of an Indonesian user by calling the authoritative source API in a standalone business scenario.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// IdnAuthorityVerifyIntlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// IdnAuthorityVerifyIntlResponse
+        /// </returns>
+        public async Task<IdnAuthorityVerifyIntlResponse> IdnAuthorityVerifyIntlWithOptionsAsync(IdnAuthorityVerifyIntlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BirthDate))
+            {
+                query["BirthDate"] = request.BirthDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Email))
+            {
+                query["Email"] = request.Email;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FullName))
+            {
+                query["FullName"] = request.FullName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdNumber))
+            {
+                query["IdNumber"] = request.IdNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantBizId))
+            {
+                query["MerchantBizId"] = request.MerchantBizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantUserId))
+            {
+                query["MerchantUserId"] = request.MerchantUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mobile))
+            {
+                query["Mobile"] = request.Mobile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneCode))
+            {
+                query["SceneCode"] = request.SceneCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceFacePictureFile))
+            {
+                query["SourceFacePictureFile"] = request.SourceFacePictureFile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceFacePictureUrl))
+            {
+                query["SourceFacePictureUrl"] = request.SourceFacePictureUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timestamp))
+            {
+                query["Timestamp"] = request.Timestamp;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceFacePicture))
+            {
+                body["SourceFacePicture"] = request.SourceFacePicture;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "IdnAuthorityVerifyIntl",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<IdnAuthorityVerifyIntlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Verifies the identity of an Indonesian user by calling the authoritative source API in a standalone business scenario.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// IdnAuthorityVerifyIntlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// IdnAuthorityVerifyIntlResponse
+        /// </returns>
+        public IdnAuthorityVerifyIntlResponse IdnAuthorityVerifyIntl(IdnAuthorityVerifyIntlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return IdnAuthorityVerifyIntlWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Verifies the identity of an Indonesian user by calling the authoritative source API in a standalone business scenario.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// IdnAuthorityVerifyIntlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// IdnAuthorityVerifyIntlResponse
+        /// </returns>
+        public async Task<IdnAuthorityVerifyIntlResponse> IdnAuthorityVerifyIntlAsync(IdnAuthorityVerifyIntlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await IdnAuthorityVerifyIntlWithOptionsAsync(request, runtime);
+        }
+
+        public IdnAuthorityVerifyIntlResponse IdnAuthorityVerifyIntlAdvance(IdnAuthorityVerifyIntlAdvanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            // Step 0: init client
+            Aliyun.Credentials.Models.CredentialModel credentialModel = null;
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_credential))
+            {
+                throw new TeaException(new Dictionary<string, string>
+                {
+                    {"code", "InvalidCredentials"},
+                    {"message", "Please set up the credentials correctly. If you are setting them through environment variables, please ensure that ALIBABA_CLOUD_ACCESS_KEY_ID and ALIBABA_CLOUD_ACCESS_KEY_SECRET are set correctly. See https://help.aliyun.com/zh/sdk/developer-reference/configure-the-alibaba-cloud-accesskey-environment-variable-on-linux-macos-and-windows-systems for more details."},
+                });
+            }
+            credentialModel = this._credential.GetCredential();
+            string accessKeyId = credentialModel.AccessKeyId;
+            string accessKeySecret = credentialModel.AccessKeySecret;
+            string securityToken = credentialModel.SecurityToken;
+            string credentialType = credentialModel.Type;
+            string openPlatformEndpoint = _openPlatformEndpoint;
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
+            {
+                openPlatformEndpoint = "openplatform.aliyuncs.com";
+            }
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(credentialType))
+            {
+                credentialType = "access_key";
+            }
+            AlibabaCloud.OpenApiClient.Models.Config authConfig = new AlibabaCloud.OpenApiClient.Models.Config
+            {
+                AccessKeyId = accessKeyId,
+                AccessKeySecret = accessKeySecret,
+                SecurityToken = securityToken,
+                Type = credentialType,
+                Endpoint = openPlatformEndpoint,
+                Protocol = _protocol,
+                RegionId = _regionId,
+            };
+            AlibabaCloud.OpenApiClient.Client authClient = new AlibabaCloud.OpenApiClient.Client(authConfig);
+            Dictionary<string, string> authRequest = new Dictionary<string, string>
+            {
+                {"Product", "Cloudauth-intl"},
+                {"RegionId", _regionId},
+            };
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest authReq = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(authRequest),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params authParams = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AuthorizeFileUpload",
+                Version = "2019-12-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            Dictionary<string, object> authResponse = new Dictionary<string, object>(){};
+            AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
+            Dictionary<string, object> ossHeader = new Dictionary<string, object>(){};
+            Dictionary<string, object> tmpBody = new Dictionary<string, object>(){};
+            bool? useAccelerate = false;
+            Dictionary<string, string> authResponseBody = new Dictionary<string, string>(){};
+            IdnAuthorityVerifyIntlRequest idnAuthorityVerifyIntlReq = new IdnAuthorityVerifyIntlRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(request, idnAuthorityVerifyIntlReq);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceFacePictureFileObject))
+            {
+                object tmpResp0 = authClient.CallApi(authParams, authReq, runtime);
+                authResponse = AlibabaCloud.TeaUtil.Common.AssertAsMap(tmpResp0);
+                tmpBody = AlibabaCloud.TeaUtil.Common.AssertAsMap(authResponse.Get("body"));
+                useAccelerate = AlibabaCloud.TeaUtil.Common.AssertAsBoolean(tmpBody.Get("UseAccelerate"));
+                authResponseBody = AlibabaCloud.TeaUtil.Common.StringifyMapValue(tmpBody);
+                fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField
+                {
+                    Filename = authResponseBody.Get("ObjectKey"),
+                    Content = request.SourceFacePictureFileObject,
+                    ContentType = "",
+                };
+                ossHeader = new Dictionary<string, object>
+                {
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
+                    {"policy", authResponseBody.Get("EncodedPolicy")},
+                    {"Signature", authResponseBody.Get("Signature")},
+                    {"key", authResponseBody.Get("ObjectKey")},
+                    {"file", fileObj},
+                    {"success_action_status", "201"},
+                };
+                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader, runtime);
+                idnAuthorityVerifyIntlReq.SourceFacePictureFile = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
+            }
+            IdnAuthorityVerifyIntlResponse idnAuthorityVerifyIntlResp = IdnAuthorityVerifyIntlWithOptions(idnAuthorityVerifyIntlReq, runtime);
+            return idnAuthorityVerifyIntlResp;
+        }
+
+        public async Task<IdnAuthorityVerifyIntlResponse> IdnAuthorityVerifyIntlAdvanceAsync(IdnAuthorityVerifyIntlAdvanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            // Step 0: init client
+            Aliyun.Credentials.Models.CredentialModel credentialModel = null;
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_credential))
+            {
+                throw new TeaException(new Dictionary<string, string>
+                {
+                    {"code", "InvalidCredentials"},
+                    {"message", "Please set up the credentials correctly. If you are setting them through environment variables, please ensure that ALIBABA_CLOUD_ACCESS_KEY_ID and ALIBABA_CLOUD_ACCESS_KEY_SECRET are set correctly. See https://help.aliyun.com/zh/sdk/developer-reference/configure-the-alibaba-cloud-accesskey-environment-variable-on-linux-macos-and-windows-systems for more details."},
+                });
+            }
+            credentialModel = await this._credential.GetCredentialAsync();
+            string accessKeyId = credentialModel.AccessKeyId;
+            string accessKeySecret = credentialModel.AccessKeySecret;
+            string securityToken = credentialModel.SecurityToken;
+            string credentialType = credentialModel.Type;
+            string openPlatformEndpoint = _openPlatformEndpoint;
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
+            {
+                openPlatformEndpoint = "openplatform.aliyuncs.com";
+            }
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(credentialType))
+            {
+                credentialType = "access_key";
+            }
+            AlibabaCloud.OpenApiClient.Models.Config authConfig = new AlibabaCloud.OpenApiClient.Models.Config
+            {
+                AccessKeyId = accessKeyId,
+                AccessKeySecret = accessKeySecret,
+                SecurityToken = securityToken,
+                Type = credentialType,
+                Endpoint = openPlatformEndpoint,
+                Protocol = _protocol,
+                RegionId = _regionId,
+            };
+            AlibabaCloud.OpenApiClient.Client authClient = new AlibabaCloud.OpenApiClient.Client(authConfig);
+            Dictionary<string, string> authRequest = new Dictionary<string, string>
+            {
+                {"Product", "Cloudauth-intl"},
+                {"RegionId", _regionId},
+            };
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest authReq = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(authRequest),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params authParams = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AuthorizeFileUpload",
+                Version = "2019-12-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            Dictionary<string, object> authResponse = new Dictionary<string, object>(){};
+            AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
+            Dictionary<string, object> ossHeader = new Dictionary<string, object>(){};
+            Dictionary<string, object> tmpBody = new Dictionary<string, object>(){};
+            bool? useAccelerate = false;
+            Dictionary<string, string> authResponseBody = new Dictionary<string, string>(){};
+            IdnAuthorityVerifyIntlRequest idnAuthorityVerifyIntlReq = new IdnAuthorityVerifyIntlRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(request, idnAuthorityVerifyIntlReq);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceFacePictureFileObject))
+            {
+                object tmpResp0 = await authClient.CallApiAsync(authParams, authReq, runtime);
+                authResponse = AlibabaCloud.TeaUtil.Common.AssertAsMap(tmpResp0);
+                tmpBody = AlibabaCloud.TeaUtil.Common.AssertAsMap(authResponse.Get("body"));
+                useAccelerate = AlibabaCloud.TeaUtil.Common.AssertAsBoolean(tmpBody.Get("UseAccelerate"));
+                authResponseBody = AlibabaCloud.TeaUtil.Common.StringifyMapValue(tmpBody);
+                fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField
+                {
+                    Filename = authResponseBody.Get("ObjectKey"),
+                    Content = request.SourceFacePictureFileObject,
+                    ContentType = "",
+                };
+                ossHeader = new Dictionary<string, object>
+                {
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
+                    {"policy", authResponseBody.Get("EncodedPolicy")},
+                    {"Signature", authResponseBody.Get("Signature")},
+                    {"key", authResponseBody.Get("ObjectKey")},
+                    {"file", fileObj},
+                    {"success_action_status", "201"},
+                };
+                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader, runtime);
+                idnAuthorityVerifyIntlReq.SourceFacePictureFile = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
+            }
+            IdnAuthorityVerifyIntlResponse idnAuthorityVerifyIntlResp = await IdnAuthorityVerifyIntlWithOptionsAsync(idnAuthorityVerifyIntlReq, runtime);
+            return idnAuthorityVerifyIntlResp;
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Initializes an authentication session.</para>
         /// </summary>
         /// 
@@ -9181,7 +9609,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>认证初始化</para>
+        /// <para>Initializes an authentication session.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9459,7 +9887,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>认证初始化</para>
+        /// <para>Initializes an authentication session.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9737,7 +10165,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>认证初始化</para>
+        /// <para>Initializes an authentication session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9755,7 +10183,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>认证初始化</para>
+        /// <para>Initializes an authentication session.</para>
         /// </summary>
         /// 
         /// <param name="request">

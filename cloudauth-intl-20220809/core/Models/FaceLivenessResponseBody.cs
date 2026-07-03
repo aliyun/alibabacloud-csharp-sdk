@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public FaceLivenessResponseBodyResultExtFaceInfo ExtFaceInfo { get; set; }
             public class FaceLivenessResponseBodyResultExtFaceInfo : TeaModel {
                 /// <summary>
-                /// <para>The predicted reference age based on the face. The prediction may fail and return no value.</para>
+                /// <para>The predicted reference age of the face. The prediction may fail and return no value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>18</para>
@@ -73,11 +73,15 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
                 [Validation(Required=false)]
                 public string FaceAttack { get; set; }
 
+                [NameInMap("FaceAttributeInfo")]
+                [Validation(Required=false)]
+                public string FaceAttributeInfo { get; set; }
+
                 /// <summary>
-                /// <para>The predicted gender based on the face photo. The prediction may fail and return no value. Valid values:</para>
+                /// <para>The predicted gender of the face in the photo. The prediction may fail and return no value. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>M: male.</description></item>
-                /// <item><description>F: female.</description></item>
+                /// <item><description>M: Male.</description></item>
+                /// <item><description>F: Female.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -88,7 +92,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
                 public string FaceGender { get; set; }
 
                 /// <summary>
-                /// <para>The face quality score (0 to 100). This value is returned only when the face quality score switch is enabled in the request parameters.</para>
+                /// <para>The face quality score (0 to 100). This parameter is returned only when the face quality score switch is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>87.19</para>
@@ -118,7 +122,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
                 public double? KaOcclusionScore { get; set; }
 
                 /// <summary>
-                /// <para>The occlusion detection result. Valid values: Y (occluded) and N (not occluded). This value is returned only when the occlusion detection switch is enabled.</para>
+                /// <para>The occlusion detection result. Valid values: Y (occluded) and N (not occluded). This parameter is returned only when the occlusion detection switch is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Y</para>
@@ -150,10 +154,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether the authentication passed. Valid values:</para>
+            /// <para>Indicates whether the authentication is passed. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Y: passed.</description></item>
-            /// <item><description>N: not passed.</description></item>
+            /// <item><description>Y: Passed.</description></item>
+            /// <item><description>N: Not passed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class FaceCompareV2ResponseBody : TeaModel {
         /// <summary>
-        /// <para>The return code.</para>
-        /// <para>200: succeeded. Other values: error codes. For more information, see error codes.</para>
+        /// <para>The response code.</para>
+        /// <para>200: success. Other values: error codes. For more information, see error codes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The return message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -104,10 +104,30 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
                 [Validation(Required=false)]
                 public double? SharpnessScore { get; set; }
 
+                [NameInMap("TargetFaceQualityScore")]
+                [Validation(Required=false)]
+                public double? TargetFaceQualityScore { get; set; }
+
+                [NameInMap("TargetIlluminationScore")]
+                [Validation(Required=false)]
+                public double? TargetIlluminationScore { get; set; }
+
+                [NameInMap("TargetKaOcclusionScore")]
+                [Validation(Required=false)]
+                public double? TargetKaOcclusionScore { get; set; }
+
+                [NameInMap("TargetOcclusionScore")]
+                [Validation(Required=false)]
+                public double? TargetOcclusionScore { get; set; }
+
+                [NameInMap("TargetSharpnessScore")]
+                [Validation(Required=false)]
+                public double? TargetSharpnessScore { get; set; }
+
             }
 
             /// <summary>
-            /// <para>The comparison score between the submitted face image and the reference face image during verification. Value range: 0 to 100.</para>
+            /// <para>The comparison score between the submitted face image and the reference face image during the verification process. Valid values: 0 to 100.</para>
             /// 
             /// <b>Example:</b>
             /// <para>98</para>
@@ -117,10 +137,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public double? FaceComparisonScore { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the verification passed. Valid values:</para>
+            /// <para>Indicates whether the verification is passed. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Y: passed.</description></item>
-            /// <item><description>N: not passed.</description></item>
+            /// <item><description>Y: Passed.</description></item>
+            /// <item><description>N: Not passed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

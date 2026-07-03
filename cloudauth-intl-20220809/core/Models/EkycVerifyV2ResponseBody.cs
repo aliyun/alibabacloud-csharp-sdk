@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class EkycVerifyV2ResponseBody : TeaModel {
         /// <summary>
-        /// <para>Return code</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Return message</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return Result</para>
+        /// <para>The response result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public EkycVerifyV2ResponseBodyResult Result { get; set; }
         public class EkycVerifyV2ResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>Face detection result information</para>
+            /// <para>The face verification result information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string ExtFaceInfo { get; set; }
 
             /// <summary>
-            /// <para>Certificate Classification Result. Returned only when the API response Succeeded.</para>
+            /// <para>The document recognition result. This parameter is returned only when the API response is successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string ExtIdInfo { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the verification passed. The value is Y if passed, or N if Failed.</para>
+            /// <para>Indicates whether the verification is passed. Valid values: Y (passed) and N (not passed).</para>
             /// 
             /// <b>Example:</b>
             /// <para>Y</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string Passed { get; set; }
 
             /// <summary>
-            /// <para>Sub-result code</para>
+            /// <para>The sub-result code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>205</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string SubCode { get; set; }
 
             /// <summary>
-            /// <para>The unique id of the request</para>
+            /// <para>The unique identifier of the authentication request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4ab0b***cbde97</para>

@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public FaceDuplicationCheckIntlResponseBodyResult Result { get; set; }
         public class FaceDuplicationCheckIntlResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The face ID and UserID retrieved from the face database when a duplicate face is detected.</para>
+            /// <para>The face ID and UserID retrieved from the face library when a duplicate face is detected.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[
@@ -63,12 +63,16 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string DuplicateFace { get; set; }
 
             /// <summary>
-            /// <para>The additional result information.</para>
+            /// <para>The related result information.</para>
             /// </summary>
             [NameInMap("ExtFaceInfo")]
             [Validation(Required=false)]
             public FaceDuplicationCheckIntlResponseBodyResultExtFaceInfo ExtFaceInfo { get; set; }
             public class FaceDuplicationCheckIntlResponseBodyResultExtFaceInfo : TeaModel {
+                [NameInMap("FaceAttributeInfo")]
+                [Validation(Required=false)]
+                public string FaceAttributeInfo { get; set; }
+
                 /// <summary>
                 /// <para>The overall quality score.</para>
                 /// 
@@ -119,10 +123,30 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
                 [Validation(Required=false)]
                 public double? SharpnessScore { get; set; }
 
+                [NameInMap("TargetFaceQualityScore")]
+                [Validation(Required=false)]
+                public double? TargetFaceQualityScore { get; set; }
+
+                [NameInMap("TargetIlluminationScore")]
+                [Validation(Required=false)]
+                public double? TargetIlluminationScore { get; set; }
+
+                [NameInMap("TargetKaOcclusionScore")]
+                [Validation(Required=false)]
+                public double? TargetKaOcclusionScore { get; set; }
+
+                [NameInMap("TargetOcclusionScore")]
+                [Validation(Required=false)]
+                public double? TargetOcclusionScore { get; set; }
+
+                [NameInMap("TargetSharpnessScore")]
+                [Validation(Required=false)]
+                public double? TargetSharpnessScore { get; set; }
+
             }
 
             /// <summary>
-            /// <para>The estimated age of the face. This value may not be returned if the prediction fails.</para>
+            /// <para>The estimated age of the face. The prediction may fail and no value is returned in some cases.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -132,7 +156,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string FaceAge { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the captured face involves a liveness attack. A value of Y indicates an attack, and a value of N indicates no attack. This field is returned only when passive liveness detection is enabled.</para>
+            /// <para>Indicates whether the captured face involves a liveness attack. Valid values: Y (attack detected) and N (no attack detected). This field is returned when passive liveness detection is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>N</para>
@@ -142,7 +166,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string FaceAttack { get; set; }
 
             /// <summary>
-            /// <para>The probability of a passive liveness detection attack. Value range: 0 to 100. This field is returned only when passive liveness detection is enabled.</para>
+            /// <para>The probability of a passive liveness detection attack. The value ranges from 0 to 100. This field is returned when passive liveness detection is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>99</para>
@@ -152,7 +176,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string FaceAttackScore { get; set; }
 
             /// <summary>
-            /// <para>The 1:1 face comparison score returned when the verification mode is 1 or 2. Value range: 0 to 100.</para>
+            /// <para>The 1:1 face comparison score returned when the verification mode is 1 or 2. The value ranges from 0 to 100.</para>
             /// 
             /// <b>Example:</b>
             /// <para>98</para>
@@ -162,7 +186,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string FaceComparisonScore { get; set; }
 
             /// <summary>
-            /// <para>The predicted gender of the face. This value may not be returned if the prediction fails. Valid values:</para>
+            /// <para>The predicted gender of the face image. The prediction may fail and no value is returned in some cases. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>M: Male.</description></item>
             /// <item><description>F: Female.</description></item>
@@ -190,7 +214,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string FacePassed { get; set; }
 
             /// <summary>
-            /// <para>The FACEID returned only when automatic registration is enabled and the face is registered successfully.</para>
+            /// <para>The FACEID returned only when the customer has enabled automatic registration and the face is registered.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9e792ec84c8f0ca592a</para>
@@ -214,7 +238,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public int? FaceRegistrationResult { get; set; }
 
             /// <summary>
-            /// <para>The description of the verification result. For more information, refer to the ResultObject.SubCode error code description.</para>
+            /// <para>The verification result description. For more information, refer to the ResultObject.SubCode error code description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>

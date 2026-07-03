@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class FaceCompareResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
-        /// <para>200: The request was successful.
-        /// Other values: An error occurred. For more information, see error codes.</para>
+        /// <para>Response code.</para>
+        /// <para>200: Success.
+        /// Other: Error code. For error code details, see Error Codes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>Response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -42,21 +42,21 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>Response result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public FaceCompareResponseBodyResult Result { get; set; }
         public class FaceCompareResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The additional result information.</para>
+            /// <para>Related result information</para>
             /// </summary>
             [NameInMap("ExtFaceInfo")]
             [Validation(Required=false)]
             public FaceCompareResponseBodyResultExtFaceInfo ExtFaceInfo { get; set; }
             public class FaceCompareResponseBodyResultExtFaceInfo : TeaModel {
                 /// <summary>
-                /// <para>The overall quality score.</para>
+                /// <para>Overall quality score</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>39.04</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
                 public double? FaceQualityScore { get; set; }
 
                 /// <summary>
-                /// <para>The illumination score.</para>
+                /// <para>Illumination score</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.02</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
                 public double? IlluminationScore { get; set; }
 
                 /// <summary>
-                /// <para>The key area occlusion score.</para>
+                /// <para>Key area occlusion score</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
                 public double? KaOcclusionScore { get; set; }
 
                 /// <summary>
-                /// <para>The occlusion score.</para>
+                /// <para>Occlusion score</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>50.26</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
                 public double? OcclusionScore { get; set; }
 
                 /// <summary>
-                /// <para>The sharpness score.</para>
+                /// <para>Sharpness score</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>86.47</para>
@@ -105,10 +105,30 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
                 [Validation(Required=false)]
                 public double? SharpnessScore { get; set; }
 
+                [NameInMap("TargetFaceQualityScore")]
+                [Validation(Required=false)]
+                public double? TargetFaceQualityScore { get; set; }
+
+                [NameInMap("TargetIlluminationScore")]
+                [Validation(Required=false)]
+                public double? TargetIlluminationScore { get; set; }
+
+                [NameInMap("TargetKaOcclusionScore")]
+                [Validation(Required=false)]
+                public double? TargetKaOcclusionScore { get; set; }
+
+                [NameInMap("TargetOcclusionScore")]
+                [Validation(Required=false)]
+                public double? TargetOcclusionScore { get; set; }
+
+                [NameInMap("TargetSharpnessScore")]
+                [Validation(Required=false)]
+                public double? TargetSharpnessScore { get; set; }
+
             }
 
             /// <summary>
-            /// <para>The comparison score between the submitted face image and the reference face image during verification. Value range: <b>0</b> to <b>100</b>.</para>
+            /// <para>The comparison score between the submitted face photo and the reference face image during the authentication process. Value range: <b>0</b> to <b>100</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>98</para>
@@ -118,7 +138,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public double? FaceComparisonScore { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the verification passed.</para>
+            /// <para>Whether the authentication passed.</para>
             /// <list type="bullet">
             /// <item><description>Y: Passed.</description></item>
             /// <item><description>N: Not passed.</description></item>
@@ -132,7 +152,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string Passed { get; set; }
 
             /// <summary>
-            /// <para>The unique ID of the verification request.</para>
+            /// <para>The unique identifier of the authentication request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>08573be80f944d95ac812e019e3655a8</para>

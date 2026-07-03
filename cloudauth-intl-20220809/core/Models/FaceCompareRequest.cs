@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class FaceCompareRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable face image quality check.<danger>Deprecated.</danger>.</para>
+        /// <para>Whether to enable quality detection for the input face image&gt;Danger: Deprecated</para>
         /// 
         /// <b>Example:</b>
         /// <para>N</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string FacePictureQualityCheck { get; set; }
 
         /// <summary>
-        /// <para>The face quality check.</para>
+        /// <para>Face quality check</para>
         /// 
         /// <b>Example:</b>
         /// <para>Y</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string FaceQualityCheck { get; set; }
 
         /// <summary>
-        /// <para>The merchant-defined unique business ID used for subsequent troubleshooting. The value can be a combination of letters and digits with a maximum length of 32 characters. Ensure that the value is unique.</para>
+        /// <para>A unique business identifier customized by the merchant, used for subsequent troubleshooting. Supports a combination of letters and numbers with a maximum length of 32 characters. Ensure it is unique.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e0c34a77f5ac40a5aa5e6ed20c353888</para>
@@ -40,14 +40,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string MerchantBizId { get; set; }
 
         /// <summary>
-        /// <para>The Base64-encoded source face image.</para>
-        /// <remarks>
-        /// <para><b>Note</b></para>
+        /// <para>Base64-encoded face photo.</para>
+        /// <para>Note</para>
         /// <list type="bullet">
-        /// <item><description>If you use this method to pass in the image, check the image size and do not pass in an excessively large image.</description></item>
-        /// <item><description>Specify either SourceFacePicture or SourceFacePictureUrl.</description></item>
+        /// <item><description>If you choose this method to pass in the photo, check the photo size and do not pass in an oversized photo.</description></item>
+        /// <item><description>Either SourceFacePicture or SourceFacePictureUrl must be specified.</description></item>
         /// </list>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>base64</para>
@@ -57,7 +55,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string SourceFacePicture { get; set; }
 
         /// <summary>
-        /// <para>The HTTPS or HTTP URL of the source face image.</para>
+        /// <para>The HTTPS or HTTP URL of the face image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>https://***face1.jpeg</para>
@@ -67,14 +65,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string SourceFacePictureUrl { get; set; }
 
         /// <summary>
-        /// <para>The Base64-encoded reference face image.</para>
-        /// <remarks>
-        /// <para><b>Note</b></para>
+        /// <para>Base64-encoded reference photo.</para>
+        /// <para>Note</para>
         /// <list type="bullet">
-        /// <item><description>If you use this method to pass in the image, check the image size and do not pass in an excessively large image.</description></item>
-        /// <item><description>Specify either TargetFacePicture or TargetFacePictureUrl.</description></item>
+        /// <item><description>If you choose this method to pass in the photo, check the photo size and do not pass in an oversized photo.</description></item>
+        /// <item><description>Either TargetFacePicture or TargetFacePictureUrl must be specified.</description></item>
         /// </list>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>base64</para>

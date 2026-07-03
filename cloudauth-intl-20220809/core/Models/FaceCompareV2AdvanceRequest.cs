@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         /// <summary>
         /// <para>Specifies whether to enable quality check for the input face images.</para>
         /// <remarks>
-        /// <para>Danger: Deprecated.</para>
+        /// <para>Danger: Deprecated.</danger>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
