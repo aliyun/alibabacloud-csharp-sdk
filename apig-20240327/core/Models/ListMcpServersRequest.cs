@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListMcpServersRequest : TeaModel {
         /// <summary>
-        /// <para>The type of source to create from.</para>
+        /// <para>The creation source type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ApiGatewayHttpToMCP</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string DeployStatuses { get; set; }
 
         /// <summary>
-        /// <para>The gateway instance ID.</para>
+        /// <para>The gateway ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The name to perform a fuzzy search on the MCP server.</para>
+        /// <para>The fuzzy match keyword for searching MCP servers by API name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string NameLike { get; set; }
 
         /// <summary>
-        /// <para>The page number to return. Pages start from 1. Default value: 1.</para>
+        /// <para>The page number, starting from 1. Default value: 1.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The type of the MCP server.</para>
+        /// <para>The MCP server type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RealMCP</para>

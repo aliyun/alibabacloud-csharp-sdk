@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public GetPluginAttachmentResponseBodyData Data { get; set; }
         public class GetPluginAttachmentResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the plugin attachment is enabled.</para>
+            /// <para>Indicates whether the plugin mount is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -51,14 +51,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public GatewayInfo GatewayInfo { get; set; }
 
             /// <summary>
-            /// <para>The parent attachment resource information.</para>
+            /// <para>The parent mount resource information.</para>
             /// </summary>
             [NameInMap("parentResourceInfo")]
             [Validation(Required=false)]
             public ParentResourceInfo ParentResourceInfo { get; set; }
 
             /// <summary>
-            /// <para>The plugin attachment ID.</para>
+            /// <para>The plugin mount ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pa-d05f1tmm1hku195dd8j0</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string PluginId { get; set; }
 
             /// <summary>
-            /// <para>The list of attachment resource information.</para>
+            /// <para>The list of mount resource information.</para>
             /// </summary>
             [NameInMap("resourceInfos")]
             [Validation(Required=false)]

@@ -18,7 +18,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<string> AttachResourceIds { get; set; }
 
         /// <summary>
-        /// <para>The type of mount point supported by the policy. Valid values:</para>
+        /// <para>The type of mount point supported by the policy.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description>HttpApi: HttpApi.</description></item>
         /// <item><description>Operation: Operation of HttpApi.</description></item>

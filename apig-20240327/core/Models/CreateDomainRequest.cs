@@ -44,8 +44,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ClientCACert { get; set; }
 
         /// <summary>
+        /// <para>The domain name scope.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>Serverless</para>
+        /// <para>Dedicated</para>
         /// </summary>
         [NameInMap("domainScope")]
         [Validation(Required=false)]
@@ -72,7 +74,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayType { get; set; }
 
         /// <summary>
-        /// <para>The HTTP/2 settings.</para>
+        /// <para>The HTTP/2 setting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Open</para>
@@ -100,10 +102,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The protocol type supported by the domain name.</para>
+        /// <para>The protocol type supported by the domain name. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>HTTP: supports only HTTP.</description></item>
-        /// <item><description>HTTPS: supports only HTTPS.</description></item>
+        /// <item><description>HTTP: Only HTTP is supported.</description></item>
+        /// <item><description>HTTPS: Only HTTPS is supported.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which is used to trace the request chain.</para>
+        /// <para>The request ID, which is used to trace the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C61E30D3-579A-5B43-994E-31E02EDC9129</para>

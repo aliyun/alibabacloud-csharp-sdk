@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. If enabled, only validation is performed without the actual import.</para>
+        /// <para>Specifies whether to perform a dry run. If enabled, only validation is performed without importing.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string McpRouteId { get; set; }
 
         /// <summary>
-        /// <para>The name of the imported API. If this parameter is not specified, the name is extracted from the API definition file. If an API with the same name and version configuration already exists, this import updates the existing API definition based on the strategy parameter.</para>
+        /// <para>The name of the imported API. If this parameter is not specified, the name is extracted from the API definition file. If an API with the same name and version configuration already exists, the import updates the existing API definition based on the strategy parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>import-test</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The Base64-encoded API definition. OAS 2.0 and OAS 3.0 specifications are supported in YAML or JSON format. This parameter takes priority over the specFileUrl parameter. If the file size exceeds 10 MB, use the specFileUrl parameter instead.</para>
+        /// <para>The Base64-encoded API definition. OAS 2.0 and OAS 3.0 specifications are supported in YAML and JSON formats. This parameter takes priority over the specFileUrl parameter. If the file size exceeds 10 MB, use the specFileUrl parameter instead.</para>
         /// 
         /// <b>Example:</b>
         /// <para>b3BlbmFwaTogMy4wLjAKaW5mbzoKICAgIHRpdGxlOiBkZW1vCiAgICBkZXNjcmlwdGlvbjogdGhpc2lzZGVtbwogICAgdmVyc2lvbjogIiIKcGF0aHM6CiAgICAvdXNlci97dXNlcklkfToKICAgICAgICBnZXQ6CiAgICAgICAgICAgIHN1bW1hcnk6IOiOt+WPlueUqOaIt+S/oeaBrwogICAgICAgICAgICBkZXNjcmlwdGlvbjog6I635Y+W55So5oi35L+h5oGvCiAgICAgICAgICAgIG9wZXJhdGlvbklkOiBHZXRVc2VySW5mbwogICAgICAgICAgICByZXNwb25zZXM6CiAgICAgICAgICAgICAgICAiMjAwIjoKICAgICAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbjog5oiQ5YqfCiAgICAgICAgICAgICAgICAgICAgY29udGVudDoKICAgICAgICAgICAgICAgICAgICAgICAgYXBwbGljYXRpb24vanNvbjtjaGFyc2V0PXV0Zi04OgogICAgICAgICAgICAgICAgICAgICAgICAgICAgc2NoZW1hOiBudWxsCnNlcnZlcnM6CiAgICAtIHVybDogaHR0cDovL2FwaS5leGFtcGxlLmNvbS92MQo=</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string SpecContentBase64 { get; set; }
 
         /// <summary>
-        /// <para>The download URL of the API definition file. The URL must be accessible over the public network or be an internal network OSS download URL in the same region. The URL must have download permissions. For OSS files that are not publicly readable, see References <a href="https://help.aliyun.com/document_detail/39607.html">Download objects using presigned URLs</a> and provide a URL with download permissions. Only API definition files stored in OSS are supported.</para>
+        /// <para>The download URL of the API definition file. The URL must be accessible over the Internet or be an internal network OSS download URL in the same region. The URL must have download permissions. For OSS files that are not publicly readable, see References <a href="https://help.aliyun.com/document_detail/39607.html">Download objects using pre-signed URLs</a> and provide a URL with download permissions. Only API definition files stored in OSS are supported.</para>
         /// </summary>
         [NameInMap("specFileUrl")]
         [Validation(Required=false)]
@@ -133,9 +133,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The update strategy to use when the imported API has the same name and version management configuration as an existing API. Valid values:</para>
+        /// <para>The update strategy to use when the imported API name and version management match an existing API. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SpecOnly: uses the imported file as the single source of truth.</description></item>
+        /// <item><description>SpecOnly: uses the imported file as the sole source of truth.</description></item>
         /// <item><description>SpecFirst: prioritizes the imported file. New operations are added and existing operations are updated. Operations not mentioned in the file remain unchanged.</description></item>
         /// <item><description>ExistFirst: prioritizes the existing API. Only new operations are added. Existing operations are not updated.</description></item>
         /// </list>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Strategy { get; set; }
 
         /// <summary>
-        /// <para>The ID of the target HTTP API. If this parameter is specified, this import updates the specified API instead of creating a new one or searching for an existing API by name and version management configuration. The target API must be of the REST type.</para>
+        /// <para>If this parameter is specified, the import updates the specified API instead of importing a new one or searching for an existing API by name and version management configuration. The target API must be of the REST type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>api-xxxx</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string TargetHttpApiId { get; set; }
 
         /// <summary>
-        /// <para>The API version configuration. If version configuration is enabled and an API with the same version number and name already exists, this import is treated as an update. If version configuration is not enabled and an API with the same name already exists, this import is treated as an update.</para>
+        /// <para>The API version configuration. If version configuration is enabled and the version number and API name match an existing API, the import is treated as an update. If version configuration is not enabled and the API name matches an existing API, the import is treated as an update.</para>
         /// </summary>
         [NameInMap("versionConfig")]
         [Validation(Required=false)]

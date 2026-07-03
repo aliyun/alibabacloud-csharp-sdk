@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public GetSourceResponseBodyDataK8SSourceInfo K8SSourceInfo { get; set; }
             public class GetSourceResponseBodyDataK8SSourceInfo : TeaModel {
                 /// <summary>
-                /// <para>The container service cluster ID.</para>
+                /// <para>The Container Service cluster ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>c2d290b2d8b5d4935864cace5f0173f31</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>The Microservices Engine (MSE) Nacos source information.</para>
+            /// <para>The MSE Nacos source information.</para>
             /// </summary>
             [NameInMap("nacosSourceInfo")]
             [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class UpdateServiceVersionRequest : TeaModel {
         /// <summary>
-        /// <para>The list of tags.</para>
+        /// <para>The list of labels.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("labels")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<UpdateServiceVersionRequestLabels> Labels { get; set; }
         public class UpdateServiceVersionRequestLabels : TeaModel {
             /// <summary>
-            /// <para>The tag key.</para>
+            /// <para>The label key.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value.</para>
+            /// <para>The label value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-k</para>

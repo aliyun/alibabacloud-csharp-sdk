@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListPoliciesRequest : TeaModel {
         /// <summary>
-        /// <para>The attachment point ID.</para>
+        /// <para>The ID of the attachment point.</para>
         /// 
         /// <b>Example:</b>
         /// <para>api-cq7l5s5lhtgi6qasrdc0</para>
@@ -20,22 +20,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string AttachResourceId { get; set; }
 
         /// <summary>
-        /// <para>The types of attachment points supported by the policy. Valid values:</para>
+        /// <para>The type of attachment point supported by the policy.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>HttpApi</para>
-        /// </description></item>
-        /// <item><description><para>Operation</para>
-        /// </description></item>
-        /// <item><description><para>GatewayRoute</para>
-        /// </description></item>
-        /// <item><description><para>GatewayService</para>
-        /// </description></item>
-        /// <item><description><para>GatewayServicePort</para>
-        /// </description></item>
-        /// <item><description><para>Domain</para>
-        /// </description></item>
-        /// <item><description><para>Gateway</para>
-        /// </description></item>
+        /// <item><description>HttpApi: HTTP API.</description></item>
+        /// <item><description>Operation: Operation of an HTTP API.</description></item>
+        /// <item><description>GatewayRoute: Gateway route.</description></item>
+        /// <item><description>GatewayService: Gateway service.</description></item>
+        /// <item><description>GatewayServicePort: Gateway service port.</description></item>
+        /// <item><description>Domain: Gateway domain name.</description></item>
+        /// <item><description>Gateway: Gateway.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -76,7 +70,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? WithAttachments { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether it is a system policy.</para>
+        /// <para>Specifies whether the policy is a system policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

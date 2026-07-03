@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class UpdateHttpApiRequest : TeaModel {
         /// <summary>
-        /// <para>The list of agent protocols</para>
+        /// <para>The list of Agent protocols.</para>
         /// </summary>
         [NameInMap("agentProtocols")]
         [Validation(Required=false)]
         public List<string> AgentProtocols { get; set; }
 
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>The list of AI protocols.</para>
         /// </summary>
         [NameInMap("aiProtocols")]
         [Validation(Required=false)]
         public List<string> AiProtocols { get; set; }
 
         /// <summary>
-        /// <para>The authentication configuration</para>
+        /// <para>The permission authentication configuration.</para>
         /// </summary>
         [NameInMap("authConfig")]
         [Validation(Required=false)]
         public AuthConfig AuthConfig { get; set; }
 
         /// <summary>
-        /// <para>The list of API deployment configurations.</para>
+        /// <para>The base path of the API. The value must start with a forward slash (/).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,14 +42,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string BasePath { get; set; }
 
         /// <summary>
-        /// <para>The deployment configurations</para>
+        /// <para>The list of API deployment configurations.</para>
         /// </summary>
         [NameInMap("deployConfigs")]
         [Validation(Required=false)]
         public List<HttpApiDeployConfig> DeployConfigs { get; set; }
 
         /// <summary>
-        /// <para>The environment ID.</para>
+        /// <para>The API description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>更新API描述</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Whether authentication is enabled</para>
+        /// <para>Specifies whether to enable permission authentication.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? EnableAuth { get; set; }
 
         /// <summary>
-        /// <para>The first byte timeout in nanoseconds</para>
+        /// <para>The first byte timeout period.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30s</para>
@@ -79,14 +79,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? FirstByteTimeout { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable authentication.</para>
+        /// <para>The configuration of the HTTP Ingress API.</para>
         /// </summary>
         [NameInMap("ingressConfig")]
         [Validation(Required=false)]
         public UpdateHttpApiRequestIngressConfig IngressConfig { get; set; }
         public class UpdateHttpApiRequestIngressConfig : TeaModel {
             /// <summary>
-            /// <para>The authentication configuration.</para>
+            /// <para>The environment ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>env-cr6ql0tlhtgmc****</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string EnvironmentId { get; set; }
 
             /// <summary>
-            /// <para>The response parameters.</para>
+            /// <para>The Ingress Class to listen on.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mse</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string IngressClass { get; set; }
 
             /// <summary>
-            /// <para>The returned message.</para>
+            /// <para>Specifies whether to update the address in the Ingress Status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public bool? OverrideIngressIp { get; set; }
 
             /// <summary>
-            /// <para>json</para>
+            /// <para>The source ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>src-crdddallhtgtr****</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string SourceId { get; set; }
 
             /// <summary>
-            /// <para>The request ID.</para>
+            /// <para>The namespace to listen on.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>Whether to only change configuration without redeployment</para>
+        /// <para>Specifies whether to only modify the configuration. A value of true indicates that only the configuration is modified without triggering redeployment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -148,14 +148,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? OnlyChangeConfig { get; set; }
 
         /// <summary>
-        /// <para>The listened namespace.</para>
+        /// <para>The list of API access protocols.</para>
         /// </summary>
         [NameInMap("protocols")]
         [Validation(Required=false)]
         public List<string> Protocols { get; set; }
 
         /// <summary>
-        /// <para>Whether to remove base path when forwarding</para>
+        /// <para>Specifies whether to remove the base path during forwarding.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? RemoveBasePathOnForward { get; set; }
 
         /// <summary>
-        /// <para>A deployment configuration.</para>
+        /// <para>The API versioning configuration.</para>
         /// </summary>
         [NameInMap("versionConfig")]
         [Validation(Required=false)]

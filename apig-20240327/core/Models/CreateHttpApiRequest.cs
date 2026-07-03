@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <summary>
         /// <para>The AI API protocols. The following protocols are supported:</para>
         /// <list type="bullet">
-        /// <item><description>OpenAI/v1.</description></item>
+        /// <item><description>OpenAI/v1</description></item>
         /// </list>
         /// </summary>
         [NameInMap("aiProtocols")]
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<HttpApiDeployConfig> DeployConfigs { get; set; }
 
         /// <summary>
-        /// <para>The API description.</para>
+        /// <para>The description of the API.</para>
         /// 
         /// <b>Example:</b>
         /// <para>测试专用API。</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run without executing the operation.</para>
+        /// <para>Specifies whether to perform a dry run without actually executing the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? FirstByteTimeout { get; set; }
 
         /// <summary>
-        /// <para>The HTTP Ingress API configuration.</para>
+        /// <para>The configuration of the HTTP Ingress API.</para>
         /// </summary>
         [NameInMap("ingressConfig")]
         [Validation(Required=false)]
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ModelCategory { get; set; }
 
         /// <summary>
-        /// <para>The API name.</para>
+        /// <para>The name of the API.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -241,7 +241,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <item><description>WebSocket</description></item>
         /// <item><description>HttpIngress</description></item>
         /// <item><description>LLM</description></item>
-        /// <item><description>Agent.</description></item>
+        /// <item><description>Agent</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -252,7 +252,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The API versioning configuration.</para>
+        /// <para>The versioning configuration of the API.</para>
         /// </summary>
         [NameInMap("versionConfig")]
         [Validation(Required=false)]

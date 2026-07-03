@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListSecretsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Code of the request</para>
+        /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Data</para>
+        /// <para>The list of key information.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public ListSecretsResponseBodyData Data { get; set; }
         public class ListSecretsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Array of secret details</para>
+            /// <para>The list of key details.</para>
             /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]
             public List<ListSecretsResponseBodyDataItems> Items { get; set; }
             public class ListSecretsResponseBodyDataItems : TeaModel {
                 /// <summary>
-                /// <para>Unix timestamp when the secret was created</para>
+                /// <para>The creation timestamp.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1725617840096</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? CreateTimestamp { get; set; }
 
                 /// <summary>
-                /// <para>Gateway type associated with the secret</para>
+                /// <para>The gateway type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>API</para>
@@ -54,14 +54,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string GatewayType { get; set; }
 
                 /// <summary>
-                /// <para>KMS configuration object</para>
+                /// <para>The KMS configuration information.</para>
                 /// </summary>
                 [NameInMap("kmsConfig")]
                 [Validation(Required=false)]
                 public KMSConfig KmsConfig { get; set; }
 
                 /// <summary>
-                /// <para>Name of the secret</para>
+                /// <para>The key name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>my_secret</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>Number of resources referencing this secret</para>
+                /// <para>The resource count of resources that reference the current key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public int? ReferenceCount { get; set; }
 
                 /// <summary>
-                /// <para>Source of the ID</para>
+                /// <para>The key ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sec-d5e6shmm1hkoxxxxxxxx</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string SecretId { get; set; }
 
                 /// <summary>
-                /// <para>Source of the secret</para>
+                /// <para>The key source.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>KMS</para>
@@ -101,7 +101,12 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string SecretSource { get; set; }
 
                 /// <summary>
-                /// <para>Current status of the secret</para>
+                /// <para>The key status. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>ENABLE: Enabled.</description></item>
+                /// <item><description>DISABLE: Disabled.</description></item>
+                /// <item><description>DELETED: Deleted.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ENABLE</para>
@@ -111,7 +116,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>Unix timestamp when the secret was last updated</para>
+                /// <para>The update timestamp. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1721116090326</para>
@@ -123,7 +128,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>Page number</para>
+            /// <para>The page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -133,7 +138,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>Number of items per page</para>
+            /// <para>The page size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -143,7 +148,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>Total number of records matching the query</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -155,7 +160,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>message</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

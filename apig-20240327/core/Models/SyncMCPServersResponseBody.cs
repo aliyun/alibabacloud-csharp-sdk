@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class SyncMCPServersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public SyncMCPServersResponseBodyData Data { get; set; }
         public class SyncMCPServersResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of MCP servers that failed to synchronize.</para>
+            /// <para>The list of MCP Servers that failed to sync.</para>
             /// </summary>
             [NameInMap("failedMcpServers")]
             [Validation(Required=false)]
             public List<SyncMCPServersResponseBodyDataFailedMcpServers> FailedMcpServers { get; set; }
             public class SyncMCPServersResponseBodyDataFailedMcpServers : TeaModel {
                 /// <summary>
-                /// <para>The name of the MCP server.</para>
+                /// <para>The MCP Server name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>mcp-fail</para>
@@ -53,14 +53,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>The list of MCP servers successfully synchronized.</para>
+            /// <para>The list of MCP Servers that were synced successfully.</para>
             /// </summary>
             [NameInMap("succeedMcpServers")]
             [Validation(Required=false)]
             public List<SyncMCPServersResponseBodyDataSucceedMcpServers> SucceedMcpServers { get; set; }
             public class SyncMCPServersResponseBodyDataSucceedMcpServers : TeaModel {
                 /// <summary>
-                /// <para>The name of the MCP server.</para>
+                /// <para>The MCP Server name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>mcp-success</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string McpServerName { get; set; }
 
                 /// <summary>
-                /// <para>The protocol.</para>
+                /// <para>The protocols.</para>
                 /// </summary>
                 [NameInMap("protocols")]
                 [Validation(Required=false)]
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>2F46B9E7-67EF-5C8A-BA52-D38D5B32AF2C</para>

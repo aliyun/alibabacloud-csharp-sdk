@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListGatewaysResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -20,21 +20,25 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The query result of the gateway list.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public ListGatewaysResponseBodyData Data { get; set; }
         public class ListGatewaysResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The gateway list.</para>
             /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]
             public List<ListGatewaysResponseBodyDataItems> Items { get; set; }
             public class ListGatewaysResponseBodyDataItems : TeaModel {
                 /// <summary>
-                /// <para>The instance name.</para>
+                /// <para>The billing type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>POSTPAY: Pay-as-you-go.</description></item>
+                /// <item><description>PREPAY: Subscription.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>POSTPAY</para>
@@ -44,7 +48,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ChargeType { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the address is the default ingress address of the instance.</para>
+                /// <para>The source from which the gateway was created. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Console: The gateway was created from the console.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Console</para>
@@ -54,7 +61,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string CreateFrom { get; set; }
 
                 /// <summary>
-                /// <para>The load balancer IP address.</para>
+                /// <para>The creation timestamp, in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1719386834548</para>
@@ -64,10 +71,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? CreateTimestamp { get; set; }
 
                 /// <summary>
-                /// <para>The mode in which the load balancer is provided. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>Managed: Cloud-native API Gateway manages and provides the load balancer.</description></item>
-                /// </list>
+                /// <para>The subscription expiration timestamp, in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>172086834548</para>
@@ -77,7 +81,13 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? ExpireTimestamp { get; set; }
 
                 /// <summary>
-                /// <para>The gateway edition</para>
+                /// <para>The gateway instance edition. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para>Professional: Standard instance.</para>
+                /// </description></item>
+                /// <item><description><para>Serverless: Serverless instance.</para>
+                /// </description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Serverless</para>
@@ -87,7 +97,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string GatewayEdition { get; set; }
 
                 /// <summary>
-                /// <para>The information about a gateway.</para>
+                /// <para>The gateway ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>gw-cpv54p5***</para>
@@ -97,18 +107,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string GatewayId { get; set; }
 
                 /// <summary>
-                /// <para>The instance state. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>Running: The instance is running.</description></item>
-                /// <item><description>Creating: The instance is being created.</description></item>
-                /// <item><description>CreateFailed: The instance fails to be created.</description></item>
-                /// <item><description>Upgrading: The instance is being upgraded.</description></item>
-                /// <item><description>UpgradeFailed: The instance fails to be upgraded.</description></item>
-                /// <item><description>Restarting: The instance is being restarted.</description></item>
-                /// <item><description>RestartFailed: The instance fails to be restarted.</description></item>
-                /// <item><description>Deleting: The instance is being released.</description></item>
-                /// <item><description>DeleteFailed: The instance failed to be released.</description></item>
-                /// </list>
+                /// <para>The gateway type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>API</para>
@@ -118,7 +117,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string GatewayType { get; set; }
 
                 /// <summary>
-                /// <para>Whether the gateway is a legacy instance</para>
+                /// <para>Indicates whether the gateway instance was created before the AI gateway feature was launched.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -128,14 +127,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public bool? Legacy { get; set; }
 
                 /// <summary>
-                /// <para>The port number.</para>
+                /// <para>The list of gateway entry addresses.</para>
                 /// </summary>
                 [NameInMap("loadBalancers")]
                 [Validation(Required=false)]
                 public List<ListGatewaysResponseBodyDataItemsLoadBalancers> LoadBalancers { get; set; }
                 public class ListGatewaysResponseBodyDataItemsLoadBalancers : TeaModel {
                     /// <summary>
-                    /// <para>vsw-xxxxx</para>
+                    /// <para>The load balancing address.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>nlb-xoh3pghr***.cn-hangzhou.nlb.aliyuncs.com</para>
@@ -145,7 +144,11 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string Address { get; set; }
 
                     /// <summary>
-                    /// <para>The vSwitch information.</para>
+                    /// <para>The protocol version. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>ipv4: IPv4.</description></item>
+                    /// <item><description>ipv6: IPv6.</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>ipv4</para>
@@ -155,7 +158,11 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string AddressIpVersion { get; set; }
 
                     /// <summary>
-                    /// <para>sg-xxxx</para>
+                    /// <para>The load balancing address type. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>Internet: public network.</description></item>
+                    /// <item><description>Intranet: private network.</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Internet</para>
@@ -165,7 +172,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string AddressType { get; set; }
 
                     /// <summary>
-                    /// <para>vsw-xxxxx</para>
+                    /// <para>Indicates whether this is the default entry address of the gateway.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -175,21 +182,21 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public bool? GatewayDefault { get; set; }
 
                     /// <summary>
-                    /// <para>The IPv4 addresses</para>
+                    /// <para>The list of IPv4 addresses.</para>
                     /// </summary>
                     [NameInMap("ipv4Addresses")]
                     [Validation(Required=false)]
                     public List<string> Ipv4Addresses { get; set; }
 
                     /// <summary>
-                    /// <para>The IPv6 addresses</para>
+                    /// <para>The list of IPv6 addresses.</para>
                     /// </summary>
                     [NameInMap("ipv6Addresses")]
                     [Validation(Required=false)]
                     public List<string> Ipv6Addresses { get; set; }
 
                     /// <summary>
-                    /// <para>The security group ID.</para>
+                    /// <para>The load balancing instance ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>nlb-xqwioje1c91r***</para>
@@ -199,7 +206,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string LoadBalancerId { get; set; }
 
                     /// <summary>
-                    /// <para>The vSwitch ID.</para>
+                    /// <para>The load balancing provisioning pattern of the gateway. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>Managed: Managed by Cloud-native API Gateway.</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Managed</para>
@@ -209,14 +219,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string Mode { get; set; }
 
                     /// <summary>
-                    /// <para>The virtual private cloud (VPC) information of the instance.</para>
+                    /// <para>The list of listening ports.</para>
                     /// </summary>
                     [NameInMap("ports")]
                     [Validation(Required=false)]
                     public List<ListGatewaysResponseBodyDataItemsLoadBalancersPorts> Ports { get; set; }
                     public class ListGatewaysResponseBodyDataItemsLoadBalancersPorts : TeaModel {
                         /// <summary>
-                        /// <para>The resource group ID.</para>
+                        /// <para>The port number.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>443</para>
@@ -226,7 +236,11 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                         public int? Port { get; set; }
 
                         /// <summary>
-                        /// <para>vpc-xxxxx</para>
+                        /// <para>The protocol. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description>TCP</description></item>
+                        /// <item><description>UDP</description></item>
+                        /// </list>
                         /// 
                         /// <b>Example:</b>
                         /// <para>TCP</para>
@@ -238,7 +252,11 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     }
 
                     /// <summary>
-                    /// <para>The vSwitch ID.</para>
+                    /// <para>The load balancing status. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>Ready: Active.</description></item>
+                    /// <item><description>NotCreate: No associated instance.</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Ready</para>
@@ -248,7 +266,11 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string Status { get; set; }
 
                     /// <summary>
-                    /// <para>The zone ID.</para>
+                    /// <para>The load balancing type of the gateway. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>NLB: Network load balancing.</description></item>
+                    /// <item><description>CLB: Classic load balancing.</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>NLB</para>
@@ -260,7 +282,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 }
 
                 /// <summary>
-                /// <para>The instance ID.</para>
+                /// <para>The gateway name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>itemcenter-gateway</para>
@@ -270,11 +292,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The load balancer status. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>Ready: The load balancer is available.</description></item>
-                /// <item><description>NotCreate: The load balancer is not associated with the instance.</description></item>
-                /// </list>
+                /// <para>The number of gateway instance nodes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -284,7 +302,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Replicas { get; set; }
 
                 /// <summary>
-                /// <para>The resource group ID</para>
+                /// <para>The resource group ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rg-xxxx</para>
@@ -294,14 +312,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// <para>rg-xxx</para>
+                /// <para>The security group information of the gateway.</para>
                 /// </summary>
                 [NameInMap("securityGroup")]
                 [Validation(Required=false)]
                 public ListGatewaysResponseBodyDataItemsSecurityGroup SecurityGroup { get; set; }
                 public class ListGatewaysResponseBodyDataItemsSecurityGroup : TeaModel {
                     /// <summary>
-                    /// <para>The tags.</para>
+                    /// <para>The security group ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>sg-bp1apxihjdbt3***</para>
@@ -313,10 +331,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 }
 
                 /// <summary>
-                /// <para>The load balancer type. Valid values:</para>
+                /// <para>The gateway specification. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>NLB: Network Load Balancer</description></item>
-                /// <item><description>CLB: Classic Load Balancer</description></item>
+                /// <item><description>apigw.small.x1: small specification.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -327,7 +344,18 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Spec { get; set; }
 
                 /// <summary>
-                /// <para>The time when the instance was created. This value is a UNIX timestamp. Unit: milliseconds.</para>
+                /// <para>The gateway status. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Running: The gateway is running.</description></item>
+                /// <item><description>Creating: The gateway is being created.</description></item>
+                /// <item><description>CreateFailed: The gateway failed to be created.</description></item>
+                /// <item><description>Upgrading: The gateway is being upgraded.</description></item>
+                /// <item><description>UpgradeFailed: The gateway failed to be upgraded.</description></item>
+                /// <item><description>Restarting: The gateway is being restarted.</description></item>
+                /// <item><description>RestartFailed: The gateway failed to be restarted.</description></item>
+                /// <item><description>Deleting: The gateway is being released.</description></item>
+                /// <item><description>DeleteFailed: The gateway failed to be released.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Running</para>
@@ -337,21 +365,21 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The subdomain information</para>
+                /// <para>The list of second-level domain names.</para>
                 /// </summary>
                 [NameInMap("subDomainInfos")]
                 [Validation(Required=false)]
                 public List<SubDomainInfo> SubDomainInfos { get; set; }
 
                 /// <summary>
-                /// <para>The tags</para>
+                /// <para>The list of tags.</para>
                 /// </summary>
                 [NameInMap("tags")]
                 [Validation(Required=false)]
                 public List<ListGatewaysResponseBodyDataItemsTags> Tags { get; set; }
                 public class ListGatewaysResponseBodyDataItemsTags : TeaModel {
                     /// <summary>
-                    /// <para>The tag key</para>
+                    /// <para>The tag key.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>owner</para>
@@ -361,7 +389,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string Key { get; set; }
 
                     /// <summary>
-                    /// <para>The tag value</para>
+                    /// <para>The tag value.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>zhangsan</para>
@@ -373,11 +401,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 }
 
                 /// <summary>
-                /// <para>The protocol. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>TCP</description></item>
-                /// <item><description>UDP</description></item>
-                /// </list>
+                /// <para>The target version of the gateway. When this value differs from version, a version upgrade can be performed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2.0.2</para>
@@ -387,11 +411,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string TargetVersion { get; set; }
 
                 /// <summary>
-                /// <para>The IP version of the address. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>ipv4: IPv4</description></item>
-                /// <item><description>ipv6: IPv6</description></item>
-                /// </list>
+                /// <para>The update timestamp, in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1719386834548</para>
@@ -401,14 +421,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? UpdateTimestamp { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the gateway instance was created before AI Gateway launch.</para>
+                /// <para>The vSwitch information.</para>
                 /// </summary>
                 [NameInMap("vSwitch")]
                 [Validation(Required=false)]
                 public ListGatewaysResponseBodyDataItemsVSwitch VSwitch { get; set; }
                 public class ListGatewaysResponseBodyDataItemsVSwitch : TeaModel {
                     /// <summary>
-                    /// <para>List Gateways</para>
+                    /// <para>The vSwitch ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>vsw-bp14efv***</para>
@@ -420,7 +440,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 }
 
                 /// <summary>
-                /// <para>The information about the port.</para>
+                /// <para>The gateway version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2.0.2</para>
@@ -430,14 +450,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Version { get; set; }
 
                 /// <summary>
-                /// <para>The VPC information</para>
+                /// <para>The VPC information of the gateway.</para>
                 /// </summary>
                 [NameInMap("vpc")]
                 [Validation(Required=false)]
                 public ListGatewaysResponseBodyDataItemsVpc Vpc { get; set; }
                 public class ListGatewaysResponseBodyDataItemsVpc : TeaModel {
                     /// <summary>
-                    /// <para>The VPC ID</para>
+                    /// <para>The VPC ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>vpc-uf664ny***</para>
@@ -449,21 +469,21 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 }
 
                 /// <summary>
-                /// <para>The tag.</para>
+                /// <para>The zone information of the gateway.</para>
                 /// </summary>
                 [NameInMap("zones")]
                 [Validation(Required=false)]
                 public List<ListGatewaysResponseBodyDataItemsZones> Zones { get; set; }
                 public class ListGatewaysResponseBodyDataItemsZones : TeaModel {
                     /// <summary>
-                    /// <para>The second-level domain names.</para>
+                    /// <para>The vSwitch.</para>
                     /// </summary>
                     [NameInMap("vSwitch")]
                     [Validation(Required=false)]
                     public ListGatewaysResponseBodyDataItemsZonesVSwitch VSwitch { get; set; }
                     public class ListGatewaysResponseBodyDataItemsZonesVSwitch : TeaModel {
                         /// <summary>
-                        /// <para>The second-level domain name.</para>
+                        /// <para>The vSwitch ID.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>vsw-bp14efvkcfbrt4***</para>
@@ -475,7 +495,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     }
 
                     /// <summary>
-                    /// <para>The tag value.</para>
+                    /// <para>The zone ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cn-hangzhou-i</para>
@@ -489,7 +509,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>The gateway list query result.</para>
+            /// <para>The page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -499,7 +519,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -509,7 +529,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The total number of gateways.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6</para>
@@ -521,7 +541,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -531,7 +551,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Schema of Response</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5B626361-070A-56A7-B127-ADAC8F3655DB</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class GetGatewayQuotaRuleSubjectUsageResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The response data.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;usedAmount&quot;:500}</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public GetGatewayQuotaRuleSubjectUsageResponseBodyData Data { get; set; }
         public class GetGatewayQuotaRuleSubjectUsageResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The total cached token consumption.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>20</para>
             /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public long? CachedAmount { get; set; }
 
             /// <summary>
+            /// <para>The paginated consumption details.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{&quot;totalSize&quot;:100}</para>
             /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public GetGatewayQuotaRuleSubjectUsageResponseBodyDataDetails Details { get; set; }
             public class GetGatewayQuotaRuleSubjectUsageResponseBodyDataDetails : TeaModel {
                 /// <summary>
+                /// <para>The list of usage details.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>[{&quot;model&quot;:&quot;qwen-plus&quot;,\&quot;usedAmount\&quot;:210}]</para>
                 /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public List<GetGatewayQuotaRuleSubjectUsageResponseBodyDataDetailsItems> Items { get; set; }
                 public class GetGatewayQuotaRuleSubjectUsageResponseBodyDataDetailsItems : TeaModel {
                     /// <summary>
+                    /// <para>The cached token consumption.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>10</para>
                     /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public long? CachedAmount { get; set; }
 
                     /// <summary>
+                    /// <para>The input token consumption.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>120</para>
                     /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public long? InputAmount { get; set; }
 
                     /// <summary>
+                    /// <para>The model name.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>qwen-plus</para>
                     /// </summary>
@@ -74,6 +90,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string Model { get; set; }
 
                     /// <summary>
+                    /// <para>The output token consumption.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>80</para>
                     /// </summary>
@@ -82,6 +100,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public long? OutputAmount { get; set; }
 
                     /// <summary>
+                    /// <para>The consumption (request) time.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>2026-06-05 13:16:31</para>
                     /// </summary>
@@ -90,6 +110,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string StartTime { get; set; }
 
                     /// <summary>
+                    /// <para>The total consumption.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>210</para>
                     /// </summary>
@@ -100,6 +122,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 }
 
                 /// <summary>
+                /// <para>The current page number.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -108,6 +132,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public int? PageNumber { get; set; }
 
                 /// <summary>
+                /// <para>The current page size.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
                 /// </summary>
@@ -116,6 +142,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public int? PageSize { get; set; }
 
                 /// <summary>
+                /// <para>The total number of records.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
                 /// </summary>
@@ -126,6 +154,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
+            /// <para>The total input token consumption.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>300</para>
             /// </summary>
@@ -134,6 +164,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public long? InputAmount { get; set; }
 
             /// <summary>
+            /// <para>The total output token consumption.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>180</para>
             /// </summary>
@@ -142,6 +174,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public long? OutputAmount { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the quota limit is exceeded.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>
@@ -150,6 +184,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public bool? OverLimit { get; set; }
 
             /// <summary>
+            /// <para>The total quota of the subject.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1000</para>
             /// </summary>
@@ -158,6 +194,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public long? TotalQuota { get; set; }
 
             /// <summary>
+            /// <para>The total used amount of the subject.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>500</para>
             /// </summary>
@@ -168,6 +206,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -176,6 +216,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Id of the request</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1234567890</para>
         /// </summary>

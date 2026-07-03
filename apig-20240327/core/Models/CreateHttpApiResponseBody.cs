@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string HttpApiId { get; set; }
 
             /// <summary>
-            /// <para>The API name.</para>
+            /// <para>The name of the API.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-api</para>

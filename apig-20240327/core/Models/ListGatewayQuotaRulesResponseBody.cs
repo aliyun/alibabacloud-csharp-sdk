@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListGatewayQuotaRulesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The response data.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;totalSize&quot;:100}</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public ListGatewayQuotaRulesResponseBodyData Data { get; set; }
         public class ListGatewayQuotaRulesResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The list of rules.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>[{&quot;ruleId&quot;:&quot;rule-001&quot;}]</para>
             /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<ListGatewayQuotaRulesResponseBodyDataItems> Items { get; set; }
             public class ListGatewayQuotaRulesResponseBodyDataItems : TeaModel {
                 /// <summary>
+                /// <para>The period type.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>week</para>
                 /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string PeriodType { get; set; }
 
                 /// <summary>
+                /// <para>The quota dimension.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>token</para>
                 /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string QuotaDimension { get; set; }
 
                 /// <summary>
+                /// <para>The quota limit.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1000</para>
                 /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? QuotaLimit { get; set; }
 
                 /// <summary>
+                /// <para>The rule ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>qr-xxxxx</para>
                 /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string RuleId { get; set; }
 
                 /// <summary>
+                /// <para>The rule name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>daily-token-limit</para>
                 /// </summary>
@@ -74,6 +90,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string RuleName { get; set; }
 
                 /// <summary>
+                /// <para>The rule status.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>enabled</para>
                 /// </summary>
@@ -82,6 +100,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string RuleStatus { get; set; }
 
                 /// <summary>
+                /// <para>The time zone for the calendar period, in UTC+x format.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>GMT+8</para>
                 /// </summary>
@@ -90,6 +110,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Timezone { get; set; }
 
                 /// <summary>
+                /// <para>The reset period type. Only calendar periods are supported, which means windowAlignment=&quot;calendar&quot;.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>calendar</para>
                 /// </summary>
@@ -100,6 +122,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
+            /// <para>The current page number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -108,6 +132,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
+            /// <para>The current page size.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -116,6 +142,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? PageSize { get; set; }
 
             /// <summary>
+            /// <para>The total number of entries.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -126,6 +154,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
+        /// <para>The maximum number of records to retrieve in a single request. This parameter is not supported.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -134,6 +164,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -142,6 +174,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The pagination token. This parameter is not supported.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>762b1fa4e2434fd3959b1f66481979cf</para>
         /// </summary>
@@ -150,6 +184,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>Id of the request</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1234567890</para>
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ChangeResourceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>Target resource group ID.</para>
+        /// <para>The ID of the destination resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aekzdrfx2xdnaja</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>Resource ID</para>
+        /// <para>The resource ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gw-ct4i14um1hkn0tpqfae0</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// <para>Resource type</para>
+        /// <para>The resource type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gateway</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>Service name, fixed value apig</para>
+        /// <para>The service name. Set this parameter to apig.</para>
         /// 
         /// <b>Example:</b>
         /// <para>apig</para>

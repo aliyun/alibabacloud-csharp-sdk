@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class GetGatewayQuotaRuleResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The response data.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;ruleId&quot;:1001}</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public GetGatewayQuotaRuleResponseBodyData Data { get; set; }
         public class GetGatewayQuotaRuleResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The base timestamp of the period.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1745846400000</para>
             /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public long? BaseTimestamp { get; set; }
 
             /// <summary>
+            /// <para>The number of consumers associated with the rule.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>20</para>
             /// </summary>
@@ -41,14 +49,29 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             [Validation(Required=false)]
             public long? ConsumerCount { get; set; }
 
+            /// <summary>
+            /// <para>The list of principals (consumers) bound to this rule.</para>
+            /// </summary>
             [NameInMap("consumers")]
             [Validation(Required=false)]
             public List<GetGatewayQuotaRuleResponseBodyDataConsumers> Consumers { get; set; }
             public class GetGatewayQuotaRuleResponseBodyDataConsumers : TeaModel {
+                /// <summary>
+                /// <para>The principal (consumer) ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>c-aaa</para>
+                /// </summary>
                 [NameInMap("id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
+                /// <summary>
+                /// <para>The principal (consumer) name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>consumer-a</para>
+                /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
@@ -56,6 +79,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
+            /// <para>The quota period type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>day</para>
             /// </summary>
@@ -64,6 +89,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string PeriodType { get; set; }
 
             /// <summary>
+            /// <para>The quota dimension.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>token</para>
             /// </summary>
@@ -72,6 +99,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string QuotaDimension { get; set; }
 
             /// <summary>
+            /// <para>The quota limit.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1000</para>
             /// </summary>
@@ -80,6 +109,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public long? QuotaLimit { get; set; }
 
             /// <summary>
+            /// <para>The rule ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>qr-d8j7fpmm1hks65xxxxxx</para>
             /// </summary>
@@ -88,6 +119,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string RuleId { get; set; }
 
             /// <summary>
+            /// <para>The rule name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>daily-token-limit</para>
             /// </summary>
@@ -96,6 +129,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string RuleName { get; set; }
 
             /// <summary>
+            /// <para>The rule status.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>enabled</para>
             /// </summary>
@@ -104,6 +139,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string RuleStatus { get; set; }
 
             /// <summary>
+            /// <para>The time zone corresponding to the calendar period, in UTC+x format.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>GMT+8</para>
             /// </summary>
@@ -112,6 +149,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Timezone { get; set; }
 
             /// <summary>
+            /// <para>The reset period type. Currently, only calendar period is supported, which means windowAlignment=&quot;calendar&quot;.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>calendar</para>
             /// </summary>
@@ -122,6 +161,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -130,6 +171,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Id of the request</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1234567890</para>
         /// </summary>

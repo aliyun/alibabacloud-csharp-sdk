@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class UpdateConsumerRequest : TeaModel {
         /// <summary>
-        /// <para>The list of AK/SK authentication configurations.</para>
+        /// <para>The list of AccessKey pair authentication configurations.</para>
         /// </summary>
         [NameInMap("akSkIdentityConfigs")]
         [Validation(Required=false)]
         public List<AkSkIdentityConfig> AkSkIdentityConfigs { get; set; }
 
         /// <summary>
-        /// <para>The API key authentication configurations.</para>
+        /// <para>The API key authentication configuration.</para>
         /// </summary>
         [NameInMap("apikeyIdentityConfig")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies the enablement status.</para>
+        /// <para>Specifies whether to enable the API consumer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

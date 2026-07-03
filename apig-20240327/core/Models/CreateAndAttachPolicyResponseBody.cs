@@ -10,34 +10,34 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class CreateAndAttachPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>Response code.</para>
+        /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Ok</para>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Response data.</para>
+        /// <para>The response struct.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public CreateAndAttachPolicyResponseBodyData Data { get; set; }
         public class CreateAndAttachPolicyResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Attachment information.</para>
+            /// <para>The attachment information.</para>
             /// </summary>
             [NameInMap("attachment")]
             [Validation(Required=false)]
             public Attachment Attachment { get; set; }
 
             /// <summary>
-            /// <para>Policy ID.</para>
+            /// <para>The ID of the newly created policy.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>p-cq7l5s5lhtgi6qasrdc0</para>
+            /// <para>plc-xxx</para>
             /// </summary>
             [NameInMap("policyId")]
             [Validation(Required=false)]
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>Response message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID, used for tracing the API call chain.</para>
+        /// <para>Request ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>585657D2-1C20-5B8A-AF17-D727C6490BE4</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class AddGatewayQuotaRuleResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code or error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200, 404, 500</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The response data.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{\&quot;key\&quot;: \&quot;value\&quot;}</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public AddGatewayQuotaRuleResponseBodyData Data { get; set; }
         public class AddGatewayQuotaRuleResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Indicates whether the write request is accepted by the system. A value of false typically indicates a retryable scenario such as an unconfirmed conflict overwrite.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -33,11 +39,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             [Validation(Required=false)]
             public bool? Accepted { get; set; }
 
+            /// <summary>
+            /// <para>The conflict preview.</para>
+            /// </summary>
             [NameInMap("conflictPreview")]
             [Validation(Required=false)]
             public AddGatewayQuotaRuleResponseBodyDataConflictPreview ConflictPreview { get; set; }
             public class AddGatewayQuotaRuleResponseBodyDataConflictPreview : TeaModel {
                 /// <summary>
+                /// <para>The conflict hash.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>f8f44dc6cf369a017d56b7197eb4fb5ac4bbb6b09a92b9b41999541fxxxxxxxx</para>
                 /// </summary>
@@ -45,19 +56,45 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 [Validation(Required=false)]
                 public string ConflictHash { get; set; }
 
+                /// <summary>
+                /// <para>The list of conflicting principals (consumers).</para>
+                /// </summary>
                 [NameInMap("items")]
                 [Validation(Required=false)]
                 public List<AddGatewayQuotaRuleResponseBodyDataConflictPreviewItems> Items { get; set; }
                 public class AddGatewayQuotaRuleResponseBodyDataConflictPreviewItems : TeaModel {
+                    /// <summary>
+                    /// <para>The period type of the existing conflicting rule on the consumer. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>day: The period of the existing conflicting rule is day.</description></item>
+                    /// <item><description>week: The period of the existing conflicting rule is week.</description></item>
+                    /// <item><description>month: The period of the existing conflicting rule is month.</description></item>
+                    /// </list>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>week</para>
+                    /// </summary>
                     [NameInMap("conflictPeriodType")]
                     [Validation(Required=false)]
                     public string ConflictPeriodType { get; set; }
 
+                    /// <summary>
+                    /// <para>The type of the existing conflicting rule on the consumer. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>calendar: The existing conflicting rule uses a calendar period.</description></item>
+                    /// <item><description>epoch: The existing conflicting rule uses a custom period.</description></item>
+                    /// </list>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>calendar</para>
+                    /// </summary>
                     [NameInMap("conflictType")]
                     [Validation(Required=false)]
                     public string ConflictType { get; set; }
 
                     /// <summary>
+                    /// <para>The consumer ID.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>cs-xxxxxx</para>
                     /// </summary>
@@ -66,6 +103,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string ConsumerId { get; set; }
 
                     /// <summary>
+                    /// <para>The consumer name.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>consumer-a</para>
                     /// </summary>
@@ -76,6 +115,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 }
 
                 /// <summary>
+                /// <para>The total number of conflicts.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
                 /// </summary>
@@ -86,6 +127,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
+            /// <para>Indicates whether the request is a dry run.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>
@@ -94,6 +137,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public bool? DryRun { get; set; }
 
             /// <summary>
+            /// <para>The rule ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>qr-xxxxx</para>
             /// </summary>
@@ -104,6 +149,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
+        /// <para>The message content.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>你好，世界！</para>
         /// </summary>
@@ -112,6 +159,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1234567890</para>
         /// </summary>

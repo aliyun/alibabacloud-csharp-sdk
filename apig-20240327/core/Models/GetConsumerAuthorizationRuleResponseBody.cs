@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public HttpApiApiInfo ApiInfo { get; set; }
 
         /// <summary>
-        /// <para>Filters the API list by a specific consumer authorization rule ID. The API list in the response contains only authorized APIs.</para>
+        /// <para>The consumer authorization rule ID used to filter the API list. The API list in the response contains only authorized APIs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>car-ctgdn8em1hko5krqq03g</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The expiration mode. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>LongTerm</description></item>
-        /// <item><description>ShortTerm.</description></item>
+        /// <item><description>ShortTerm</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

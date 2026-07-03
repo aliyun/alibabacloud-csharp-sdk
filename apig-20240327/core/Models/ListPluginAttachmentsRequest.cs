@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListPluginAttachmentsRequest : TeaModel {
         /// <summary>
-        /// <para>The resource attachment ID.</para>
+        /// <para>The mount resource ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hr-cv2h58em1hkg7c6vt43g</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string AttachResourceId { get; set; }
 
         /// <summary>
-        /// <para>The resource attachment type (not yet in use).</para>
+        /// <para>The plug-in mount point type. This parameter is not yet enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GatewayRoute</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string AttachResourceType { get; set; }
 
         /// <summary>
-        /// <para>The resource attachment types, separated by commas.</para>
+        /// <para>The mount point types. Separate multiple types with commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GatewayRoute</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The page number to return. Pages start from 1. Default value: 1.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 10.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string PluginId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return parent resource attachments.</para>
+        /// <para>Specifies whether to return parent resource mounts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

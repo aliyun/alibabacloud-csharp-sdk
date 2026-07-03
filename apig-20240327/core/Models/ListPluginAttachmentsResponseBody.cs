@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListPluginAttachmentsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -20,33 +20,21 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response payload.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public ListPluginAttachmentsResponseBodyData Data { get; set; }
         public class ListPluginAttachmentsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The details of resource attachments.</para>
+            /// <para>The item details.</para>
             /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]
             public List<ListPluginAttachmentsResponseBodyDataItems> Items { get; set; }
             public class ListPluginAttachmentsResponseBodyDataItems : TeaModel {
                 /// <summary>
-                /// <para>The types of resource attachments.</para>
-                /// <list type="bullet">
-                /// <item><description><para>HttpApi</para>
-                /// </description></item>
-                /// <item><description><para>Operation</para>
-                /// </description></item>
-                /// <item><description><para>GatewayRoute</para>
-                /// </description></item>
-                /// <item><description><para>GatewayDomain</para>
-                /// </description></item>
-                /// <item><description><para>Gateway</para>
-                /// </description></item>
-                /// </list>
+                /// <para>The plug-in mount resource type. Valid values: GatewayRoute, Gateway, GatewayDomain, HttpApi, and Operation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>GatewayRoute</para>
@@ -56,7 +44,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string AttachResourceType { get; set; }
 
                 /// <summary>
-                /// <para>Indicates if enabled.</para>
+                /// <para>Indicates whether the plug-in mount is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -66,21 +54,21 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public bool? Enable { get; set; }
 
                 /// <summary>
-                /// <para>The environment metadata.</para>
+                /// <para>The environment context.</para>
                 /// </summary>
                 [NameInMap("environmentInfo")]
                 [Validation(Required=false)]
                 public EnvironmentInfo EnvironmentInfo { get; set; }
 
                 /// <summary>
-                /// <para>The parent resource metadata.</para>
+                /// <para>The parent resource information.</para>
                 /// </summary>
                 [NameInMap("parentResourceInfo")]
                 [Validation(Required=false)]
                 public ParentResourceInfo ParentResourceInfo { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the resource attachment.</para>
+                /// <para>The plug-in mount ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pa-d0j9t5em1hkncrlo51mg</para>
@@ -90,14 +78,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string PluginAttachmentId { get; set; }
 
                 /// <summary>
-                /// <para>The plug-in type metadata.</para>
+                /// <para>The plug-in type information.</para>
                 /// </summary>
                 [NameInMap("pluginClassInfo")]
                 [Validation(Required=false)]
                 public PluginClassInfo PluginClassInfo { get; set; }
 
                 /// <summary>
-                /// <para>The plug-in configurations (Base64-encoded).</para>
+                /// <para>The Base64-encoded content of the original plug-in configuration.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>bGltaXRfYnlfaGVhZGVyOiB4LWFwaS1rZXkKbGltaXRfa2V5czoKLSBrZXk6IGV4YW1wbGUta2V5LWEKICBxdWVyeV9wZXJfc2Vjb25kOiAxMAotIGtleTogZXhhbXBsZS1rZXktYgogIHF1ZXJ5X3Blcl9zZWNvbmQ6IDEK</para>
@@ -117,7 +105,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string PluginId { get; set; }
 
                 /// <summary>
-                /// <para>The information of resource attachments.</para>
+                /// <para>The mount resource information.</para>
                 /// </summary>
                 [NameInMap("resourceInfos")]
                 [Validation(Required=false)]
@@ -136,7 +124,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The page size.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -146,7 +134,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -158,7 +146,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The status message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -168,7 +156,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>9640D776-794A-5077-9184-A247CA4B45C1</para>

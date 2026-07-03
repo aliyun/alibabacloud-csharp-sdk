@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class UpdateSecretRequest : TeaModel {
         /// <summary>
-        /// <para>The key value.</para>
+        /// <para>The key pair value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>apikey-xxxxxxxx</para>

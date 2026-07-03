@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class GatewayInfo : TeaModel {
         /// <summary>
-        /// <para>The gateway DPI engine database engine version.</para>
+        /// <para>The gateway DPI engine version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2.0.7</para>
@@ -20,6 +20,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string EngineVersion { get; set; }
 
         /// <summary>
+        /// <para>The gateway instance edition. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Professional: standard instance.</description></item>
+        /// <item><description>Serverless: Serverless.</description></item>
+        /// <item><description>MultiTenantServerless: multi-tenant Serverless.</description></item>
+        /// <item><description>Unknown: unknown.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>MultiTenantServerless</para>
         /// </summary>

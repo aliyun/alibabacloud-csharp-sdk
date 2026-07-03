@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string AttachResourceId { get; set; }
 
         /// <summary>
-        /// <para>The type of resource that the policy can be attached to. Valid values:</para>
+        /// <para>The type of the resource to which the policy can be attached. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>HttpApi: HttpApi.</description></item>
         /// <item><description>Operation: an operation of an HttpApi.</description></item>

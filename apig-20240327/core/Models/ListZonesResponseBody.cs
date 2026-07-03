@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListZonesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Response status code.</para>
+        /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public ListZonesResponseBodyData Data { get; set; }
         public class ListZonesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of queried zones.</para>
+            /// <para>The list of zones.</para>
             /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]
             public List<ListZonesResponseBodyDataItems> Items { get; set; }
             public class ListZonesResponseBodyDataItems : TeaModel {
                 /// <summary>
-                /// <para>Whether QAT (Quality Assurance Testing) is supported in this zone</para>
+                /// <para>Indicates whether QuickAssist Technology (QAT) is supported.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string SupportQat { get; set; }
 
                 /// <summary>
-                /// <para>The zone identifier</para>
+                /// <para>The zone ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-shenzhen-c</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>Response message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E8079207-B651-592A-A565-23E9EE5673B0</para>

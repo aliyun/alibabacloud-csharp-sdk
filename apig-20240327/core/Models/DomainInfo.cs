@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class DomainInfo : TeaModel {
         /// <summary>
-        /// <para>The China Security certificate identity.</para>
+        /// <para>The SSL Certificates Service certificate identity.</para>
         /// 
         /// <b>Example:</b>
         /// <para>235556-cn-hangzhou</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ClientCACert { get; set; }
 
         /// <summary>
-        /// <para>The source from which the domain name was created.</para>
+        /// <para>The source from which the domain name is created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Console</para>
@@ -63,6 +63,12 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string DomainId { get; set; }
 
+        /// <summary>
+        /// <para>domainScope</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Dedicated</para>
+        /// </summary>
         [NameInMap("domainScope")]
         [Validation(Required=false)]
         public string DomainScope { get; set; }
@@ -78,7 +84,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? ForceHttps { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable mTLS mutual authentication.</para>
+        /// <para>Indicates whether MTLS mutual authentication is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -98,10 +104,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The protocol type supported by the domain name. Valid values:</para>
+        /// <para>The protocol type supported by the domain name.</para>
         /// <list type="bullet">
-        /// <item><description>HTTP: Only HTTP is supported.</description></item>
-        /// <item><description>HTTPS: Only HTTPS is supported.</description></item>
+        /// <item><description>HTTP: Only the HTTP protocol is supported.</description></item>
+        /// <item><description>HTTP: Only the HTTPS protocol is supported.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

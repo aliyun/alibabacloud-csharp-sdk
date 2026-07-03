@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListGatewaysRequest : TeaModel {
         /// <summary>
-        /// <para>Retrieve the list of created cloud-native gateways</para>
+        /// <para>The gateway ID for exact match query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gw-cpv4sqdl****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The search keyword. A full match is performed. The search is case-insensitive.</para>
+        /// <para>The gateway type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>API</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayType { get; set; }
 
         /// <summary>
-        /// <para>The instance name. If you specify a name, an exact search is performed.</para>
+        /// <para>The keyword for full match search. Case-insensitive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dev</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The gateway name for exact match query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>itemcenter-gateway</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. If you specify an ID, an exact search is performed.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>rg-aekz3wes3hnre5a</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aekzq6bzz5uyg2q</para>
@@ -80,14 +80,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The tags that you want to use for the search.</para>
+        /// <para>The list of tags.</para>
         /// </summary>
         [NameInMap("tag")]
         [Validation(Required=false)]
         public List<ListGatewaysRequestTag> Tag { get; set; }
         public class ListGatewaysRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N.</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>owner</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N.</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>zhangsan</para>

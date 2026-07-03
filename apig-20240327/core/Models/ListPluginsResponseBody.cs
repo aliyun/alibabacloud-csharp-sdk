@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListPluginsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -20,28 +20,28 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response payload.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public ListPluginsResponseBodyData Data { get; set; }
         public class ListPluginsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of plug-in information.</para>
+            /// <para>The plugin list.</para>
             /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]
             public List<ListPluginsResponseBodyDataItems> Items { get; set; }
             public class ListPluginsResponseBodyDataItems : TeaModel {
                 /// <summary>
-                /// <para>The attachment information.</para>
+                /// <para>The plugin attachment information.</para>
                 /// </summary>
                 [NameInMap("attachmentInfo")]
                 [Validation(Required=false)]
                 public ListPluginsResponseBodyDataItemsAttachmentInfo AttachmentInfo { get; set; }
                 public class ListPluginsResponseBodyDataItemsAttachmentInfo : TeaModel {
                     /// <summary>
-                    /// <para>Indicates if enabled.</para>
+                    /// <para>Indicates whether the plugin is enabled.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string Enable { get; set; }
 
                     /// <summary>
-                    /// <para>The attachment ID.</para>
+                    /// <para>The plugin attachment ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>pa-ct2irn6m1hkreaen0t40</para>
@@ -63,14 +63,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 }
 
                 /// <summary>
-                /// <para>The gateway instance information.</para>
+                /// <para>The gateway information.</para>
                 /// </summary>
                 [NameInMap("gatewayInfo")]
                 [Validation(Required=false)]
                 public ListPluginsResponseBodyDataItemsGatewayInfo GatewayInfo { get; set; }
                 public class ListPluginsResponseBodyDataItemsGatewayInfo : TeaModel {
                     /// <summary>
-                    /// <para>The instance ID.</para>
+                    /// <para>The gateway ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>gw-cq7og15lhtxx6qasrj60</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string GatewayId { get; set; }
 
                     /// <summary>
-                    /// <para>The instance name.</para>
+                    /// <para>The gateway name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>apitest-gw</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 }
 
                 /// <summary>
-                /// <para>The plug-in type information.</para>
+                /// <para>The plugin type information.</para>
                 /// </summary>
                 [NameInMap("pluginClassInfo")]
                 [Validation(Required=false)]
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string ExecuteStage { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the plug-in.</para>
+                    /// <para>The plugin name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>key-rate-limit</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The plug-in type ID.</para>
+                    /// <para>The plugin type ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>pls-cqebrgh46ppatmpri</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string PluginClassId { get; set; }
 
                     /// <summary>
-                    /// <para>The source of the plug-in.</para>
+                    /// <para>The plugin source.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>HigressOfficial</para>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string Version { get; set; }
 
                     /// <summary>
-                    /// <para>The description of the version.</para>
+                    /// <para>The version description.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>版本描述</para>
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 }
 
                 /// <summary>
-                /// <para>The plug-in ID.</para>
+                /// <para>The plugin ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pl-cvu6r4um1hko3b3ti0a0</para>
@@ -213,7 +213,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The status message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

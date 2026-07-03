@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class DescribeRegionsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The response status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The list of regions.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<DescribeRegionsResponseBodyData> Data { get; set; }
         public class DescribeRegionsResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The display name of the region.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>China (Beijing)</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string LocalName { get; set; }
 
             /// <summary>
+            /// <para>The region ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
             /// </summary>
@@ -40,6 +49,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -48,6 +59,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The unique ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>E6BD6C79-32B1-5D7E-A89A-93C5A6B7xxxx</para>
         /// </summary>

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public CreatePluginAttachmentResponseBodyData Data { get; set; }
         public class CreatePluginAttachmentResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The plug-in attachment ID.</para>
+            /// <para>The plug-in mount ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pa-cvs7jpmm1hkgihaqv4a0</para>

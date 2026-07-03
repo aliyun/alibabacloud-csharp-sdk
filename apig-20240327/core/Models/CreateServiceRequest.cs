@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<string> Addresses { get; set; }
 
             /// <summary>
-            /// <para>The Agent service configuration. This parameter is required when sourceType is set to AGENT.</para>
+            /// <para>The Agent service configuration. This parameter is required when <c>sourceType</c> is set to <c>AGENT</c>.</para>
             /// </summary>
             [NameInMap("agentServiceConfig")]
             [Validation(Required=false)]
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<string> DnsServers { get; set; }
 
             /// <summary>
-            /// <para>The service expression type that identifies the special type or mode of the service.</para>
+            /// <para>The service expression type. Identifies the special type or mode of the service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Standard</para>
@@ -84,6 +84,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             [Validation(Required=false)]
             public string GroupName { get; set; }
 
+            [NameInMap("modelProviderId")]
+            [Validation(Required=false)]
+            public string ModelProviderId { get; set; }
+
             /// <summary>
             /// <para>The service name.</para>
             /// 
@@ -95,7 +99,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The namespace of the service.</para>
+            /// <para>The namespace of the service:</para>
             /// <list type="bullet">
             /// <item><description>If sourceType is set to K8S, this parameter specifies the namespace of the Kubernetes service.</description></item>
             /// <item><description>If sourceType is set to MSE_NACOS, this parameter specifies the namespace in Nacos.</description></item>
@@ -130,7 +134,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string SourceId { get; set; }
 
             /// <summary>
-            /// <para>The validation options for service verification configuration.</para>
+            /// <para>The validation options. Configuration options related to service validation.</para>
             /// </summary>
             [NameInMap("validationOptions")]
             [Validation(Required=false)]

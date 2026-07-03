@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class GetPolicyAttachmentResponseBody : TeaModel {
         /// <summary>
-        /// <para>Response code.</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Response data.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetPolicyAttachmentResponseBodyData Data { get; set; }
         public class GetPolicyAttachmentResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Attached Resource ID</para>
+            /// <para>The ID of the attached resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>op-csbkd9llhtgqhqua***</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string AttachResourceId { get; set; }
 
             /// <summary>
-            /// <para>Attached resource type, HttpApi, GatewayRoute, Operation, GatewayService, GatewayServicePort, Gateway, Domain</para>
+            /// <para>The type of the attached resource. Valid values: HttpApi, GatewayRoute, Operation, GatewayService, GatewayServicePort, Gateway, and Domain.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Operation</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string AttachResourceType { get; set; }
 
             /// <summary>
-            /// <para>Policy attachment configuration</para>
+            /// <para>The configuration of the attached policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;unitNum&quot;:1,&quot;timeUnit&quot;:&quot;s&quot;,&quot;enable&quot;:true}</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Config { get; set; }
 
             /// <summary>
-            /// <para>Environment ID</para>
+            /// <para>The environment ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>env-cq7l5s5lhtgi6qa***</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string EnvironmentId { get; set; }
 
             /// <summary>
-            /// <para>Gateway Instance ID</para>
+            /// <para>The gateway instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>gw-cq2vundlhtg***</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string GatewayId { get; set; }
 
             /// <summary>
-            /// <para>Policy Attachment ID</para>
+            /// <para>The policy attachment ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pr-cqoojualhtgquuj***</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string PolicyAttachmentId { get; set; }
 
             /// <summary>
-            /// <para>Policy ID</para>
+            /// <para>The policy ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>p-cq7l5s5bblhtgi6qas***</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>Response message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>ID of the request</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>2C3B9A12-3868-5EB9-fBEA-F99E03DD1***</para>

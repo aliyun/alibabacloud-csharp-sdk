@@ -19,10 +19,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <summary>
             /// <para>The backend service scenario. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>SingleService: Single service.</description></item>
-            /// <item><description>MultiServiceByRatio: Multiple services with ratio-based canary release.</description></item>
-            /// <item><description>Mock: Mock service.</description></item>
-            /// <item><description>Redirect: Redirect service.</description></item>
+            /// <item><description>SingleService: single service.</description></item>
+            /// <item><description>MultiServiceByRatio: multiple services with ratio-based canary release.</description></item>
+            /// <item><description>Mock: mock service.</description></item>
+            /// <item><description>Redirect: redirect service.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

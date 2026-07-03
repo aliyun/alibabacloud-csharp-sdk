@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListDomainsRequest : TeaModel {
         /// <summary>
+        /// <para>The domain name scope.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Serverless</para>
         /// </summary>

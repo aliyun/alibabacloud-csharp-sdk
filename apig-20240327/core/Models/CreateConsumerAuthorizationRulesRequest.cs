@@ -17,6 +17,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<CreateConsumerAuthorizationRulesRequestAuthorizationRules> AuthorizationRules { get; set; }
         public class CreateConsumerAuthorizationRulesRequestAuthorizationRules : TeaModel {
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>csg-8c13d2b4f8a1</para>
+            /// </summary>
+            [NameInMap("consumerGroupId")]
+            [Validation(Required=false)]
+            public string ConsumerGroupId { get; set; }
+
+            /// <summary>
             /// <para>The consumer ID.</para>
             /// 
             /// <b>Example:</b>
@@ -45,6 +53,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             [NameInMap("expireTimestamp")]
             [Validation(Required=false)]
             public long? ExpireTimestamp { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>ConsumerGroup</para>
+            /// </summary>
+            [NameInMap("principalType")]
+            [Validation(Required=false)]
+            public string PrincipalType { get; set; }
 
             /// <summary>
             /// <para>The resource identifier, which serves as a unique identifier for non-standard code sources for space reuse.</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The port range.</para>
+        /// <para>The port ranges.</para>
         /// </summary>
         [NameInMap("portRanges")]
         [Validation(Required=false)]

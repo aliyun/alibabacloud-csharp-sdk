@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class UpdateHttpApiRouteRequest : TeaModel {
         /// <summary>
-        /// <para>The configuration of the backend service for the route.</para>
+        /// <para>The backend service configuration of the route.</para>
         /// </summary>
         [NameInMap("backendConfig")]
         [Validation(Required=false)]
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Scene { get; set; }
 
             /// <summary>
-            /// <para>A list of backend services.</para>
+            /// <para>The list of backend services.</para>
             /// </summary>
             [NameInMap("services")]
             [Validation(Required=false)]
             public List<UpdateHttpApiRouteRequestBackendConfigServices> Services { get; set; }
             public class UpdateHttpApiRouteRequestBackendConfigServices : TeaModel {
                 /// <summary>
-                /// <para>The service port. This parameter is not required for dynamic ports.</para>
+                /// <para>The service port. Do not specify this parameter for dynamic ports.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8080</para>
@@ -46,10 +46,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <summary>
                 /// <para>The service protocol. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>HTTP</para>
-                /// </description></item>
-                /// <item><description><para>HTTPS</para>
-                /// </description></item>
+                /// <item><description>HTTP</description></item>
+                /// <item><description>HTTPS</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -80,7 +78,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Version { get; set; }
 
                 /// <summary>
-                /// <para>The percentage of traffic.</para>
+                /// <para>The percentage value of the traffic ratio.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>49</para>
@@ -94,7 +92,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The description of the route.</para>
+        /// <para>The route description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>商品中心服务路由</para>
@@ -104,7 +102,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>A list of domain name IDs.</para>
+        /// <para>The list of domain name IDs.</para>
         /// </summary>
         [NameInMap("domainIds")]
         [Validation(Required=false)]
@@ -121,30 +119,54 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string EnvironmentId { get; set; }
 
         /// <summary>
-        /// <para>The route matching rule.</para>
+        /// <para>The route match rule.</para>
         /// </summary>
         [NameInMap("match")]
         [Validation(Required=false)]
         public HttpRouteMatch Match { get; set; }
 
+        /// <summary>
+        /// <para>The MCP route configuration.</para>
+        /// </summary>
         [NameInMap("mcpRouteConfig")]
         [Validation(Required=false)]
         public UpdateHttpApiRouteRequestMcpRouteConfig McpRouteConfig { get; set; }
         public class UpdateHttpApiRouteRequestMcpRouteConfig : TeaModel {
+            /// <summary>
+            /// <para>The exposed URI path.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>/mcp/chat</para>
+            /// </summary>
             [NameInMap("exposedUriPath")]
             [Validation(Required=false)]
             public string ExposedUriPath { get; set; }
 
+            /// <summary>
+            /// <para>Specifies whether to enable MCP statistics.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("mcpStatisticsEnable")]
             [Validation(Required=false)]
             public bool? McpStatisticsEnable { get; set; }
 
+            /// <summary>
+            /// <para>The MCP protocol.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>SSE</para>
+            /// </summary>
             [NameInMap("protocol")]
             [Validation(Required=false)]
             public string Protocol { get; set; }
 
         }
 
+        /// <summary>
+        /// <para>The route-level policy configurations.</para>
+        /// </summary>
         [NameInMap("policyConfigs")]
         [Validation(Required=false)]
         public List<HttpApiPolicyConfigs> PolicyConfigs { get; set; }

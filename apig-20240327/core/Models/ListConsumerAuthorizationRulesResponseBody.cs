@@ -27,21 +27,21 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public ListConsumerAuthorizationRulesResponseBodyData Data { get; set; }
         public class ListConsumerAuthorizationRulesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>消费者授权信息列表。</para>
+            /// <para>The list of consumer authorization information.</para>
             /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]
             public List<ListConsumerAuthorizationRulesResponseBodyDataItems> Items { get; set; }
             public class ListConsumerAuthorizationRulesResponseBodyDataItems : TeaModel {
                 /// <summary>
-                /// <para>API信息。</para>
+                /// <para>The API information.</para>
                 /// </summary>
                 [NameInMap("apiInfo")]
                 [Validation(Required=false)]
                 public HttpApiApiInfo ApiInfo { get; set; }
 
                 /// <summary>
-                /// <para>消费者授权规则ID。</para>
+                /// <para>The consumer authorization rule ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>car-csgeka5lhtggrjcprok0</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ConsumerAuthorizationRuleId { get; set; }
 
                 /// <summary>
-                /// <para>消费者ID。</para>
+                /// <para>The consumer ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cs-csheiftlhtgmp0j0hp4g</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ConsumerId { get; set; }
 
                 /// <summary>
-                /// <para>创建时间戳。</para>
+                /// <para>The creation timestamp.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1719386834548</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? CreateTimestamp { get; set; }
 
                 /// <summary>
-                /// <para>API在当前环境的发布状态</para>
+                /// <para>The publish status of the API in the current environment.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{}</para>
@@ -81,14 +81,18 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string DeployStatus { get; set; }
 
                 /// <summary>
-                /// <para>环境信息。</para>
+                /// <para>The environment context.</para>
                 /// </summary>
                 [NameInMap("environmentInfo")]
                 [Validation(Required=false)]
                 public EnvironmentInfo EnvironmentInfo { get; set; }
 
                 /// <summary>
-                /// <para>失效模式。LongTerm、ShortTerm，二选一。</para>
+                /// <para>The expiration mode. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>LongTerm</description></item>
+                /// <item><description>ShortTerm</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ShortTerm</para>
@@ -98,7 +102,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ExpireMode { get; set; }
 
                 /// <summary>
-                /// <para>失效状态。</para>
+                /// <para>The expiration status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>InEffect</para>
@@ -108,7 +112,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ExpireStatus { get; set; }
 
                 /// <summary>
-                /// <para>到期时间。</para>
+                /// <para>The expiration time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>172086834548</para>
@@ -118,14 +122,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? ExpireTimestamp { get; set; }
 
                 /// <summary>
-                /// <para>网关信息。</para>
+                /// <para>The gateway information.</para>
                 /// </summary>
                 [NameInMap("gatewayInfo")]
                 [Validation(Required=false)]
                 public GatewayInfo GatewayInfo { get; set; }
 
                 /// <summary>
-                /// <para>资源ID。</para>
+                /// <para>The resource ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2351944</para>
@@ -135,7 +139,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// <para>资源类型。</para>
+                /// <para>The resource type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>HttpApiRoute</para>
@@ -145,7 +149,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ResourceType { get; set; }
 
                 /// <summary>
-                /// <para>更新时间戳。单位: 毫秒。</para>
+                /// <para>The update timestamp. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1721116090326</para>

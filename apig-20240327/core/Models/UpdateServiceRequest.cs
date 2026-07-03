@@ -17,35 +17,35 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<string> Addresses { get; set; }
 
         /// <summary>
-        /// <para>The agent service configurations.</para>
+        /// <para>The agent service configuration.</para>
         /// </summary>
         [NameInMap("agentServiceConfig")]
         [Validation(Required=false)]
         public AgentServiceConfig AgentServiceConfig { get; set; }
 
         /// <summary>
-        /// <para>The AI service configurations.</para>
+        /// <para>The AI service configuration.</para>
         /// </summary>
         [NameInMap("aiServiceConfig")]
         [Validation(Required=false)]
         public AiServiceConfig AiServiceConfig { get; set; }
 
         /// <summary>
-        /// <para>A DNS service address.</para>
+        /// <para>The DNS server addresses.</para>
         /// </summary>
         [NameInMap("dnsServers")]
         [Validation(Required=false)]
         public List<string> DnsServers { get; set; }
 
         /// <summary>
-        /// <para>The health check configurations.</para>
+        /// <para>The health check configuration of the service.</para>
         /// </summary>
         [NameInMap("healthCheckConfig")]
         [Validation(Required=false)]
         public UpdateServiceRequestHealthCheckConfig HealthCheckConfig { get; set; }
         public class UpdateServiceRequestHealthCheckConfig : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to enable health checks.</para>
+            /// <para>Specifies whether to enable health checks for the service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -55,14 +55,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public bool? Enable { get; set; }
 
             /// <summary>
-            /// <para>The normal status codes to be returned. This parameter is required if the health check protocol is HTTP.</para>
+            /// <para>The list of expected HTTP status codes that indicate a healthy response. This parameter is required when the protocol is HTTP.</para>
             /// </summary>
             [NameInMap("expectedStatuses")]
             [Validation(Required=false)]
             public List<string> ExpectedStatuses { get; set; }
 
             /// <summary>
-            /// <para>The healthy threshold.</para>
+            /// <para>The healthy threshold for health checks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? HealthyThreshold { get; set; }
 
             /// <summary>
-            /// <para>The domain name that you want to use for health checks. Optional. This parameter is available if the health check protocol is HTTP.</para>
+            /// <para>The domain name for health checks. This parameter is optional and can be configured when the protocol is HTTP.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dev.itemcener.com</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string HttpHost { get; set; }
 
             /// <summary>
-            /// <para>The request path of health checks. This parameter is required if the health check protocol is HTTP.</para>
+            /// <para>The request path for health checks. This parameter is required when the protocol is HTTP.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/healthz</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string HttpPath { get; set; }
 
             /// <summary>
-            /// <para>The health check interval. Unit: seconds</para>
+            /// <para>The health check interval. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -102,12 +102,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? Interval { get; set; }
 
             /// <summary>
-            /// <para>The protocol over which the system performs health checks.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>TCP</description></item>
-            /// <item><description>HTTP</description></item>
-            /// </list>
+            /// <para>The protocol used for health checks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HTTP</para>
@@ -117,7 +112,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Protocol { get; set; }
 
             /// <summary>
-            /// <para>The timeout period for a health check response. Unit: seconds</para>
+            /// <para>The response timeout period for health checks. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -127,7 +122,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? Timeout { get; set; }
 
             /// <summary>
-            /// <para>The unhealthy threshold.</para>
+            /// <para>The unhealthy threshold for health checks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>22</para>
@@ -148,15 +143,19 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public float? HealthyPanicThreshold { get; set; }
 
+        [NameInMap("modelProviderId")]
+        [Validation(Required=false)]
+        public string ModelProviderId { get; set; }
+
         /// <summary>
-        /// <para>The passive health check configurations.</para>
+        /// <para>The passive health check parameter settings.</para>
         /// </summary>
         [NameInMap("outlierDetectionConfig")]
         [Validation(Required=false)]
         public UpdateServiceRequestOutlierDetectionConfig OutlierDetectionConfig { get; set; }
         public class UpdateServiceRequestOutlierDetectionConfig : TeaModel {
             /// <summary>
-            /// <para>The initial isolation duration after a node is isolated (e.g., 30 seconds). The isolation time is calculated as: k \* base_ejection_time (with k initially set to 1). Each subsequent isolation increases the isolation time (k is incremented by 1), while consecutive healthy checks gradually decrease the isolation time (k is decremented by 1).</para>
+            /// <para>The base ejection time, which is the initial isolation duration after a node is ejected (for example, 30 seconds). The isolation time is calculated by using the following formula: k × base_ejection_time (the initial value of k is 1). Each ejection increases the isolation time (k is incremented by 1). If consecutive checks are healthy, the isolation time is gradually reduced (k is decremented by 1).</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -177,7 +176,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
             /// <summary>
             /// <para>The panic threshold.</para>
-            /// <para>When the proportion of healthy nodes in the service is greater than the panic threshold, health checks take effect normally, and requests are only sent to healthy nodes, not to ejected nodes. When the proportion of healthy nodes in the service is less than or equal to the panic threshold, health checks are effectively disabled, and requests are sent to all nodes, including those that have been ejected nodes.</para>
+            /// <para>When the proportion of healthy nodes in the service is greater than the panic threshold, health checks function normally. Requests are sent only to healthy nodes and not to ejected nodes. When the proportion of healthy nodes in the service is less than or equal to the panic threshold, health checks are effectively disabled. Requests are sent to all nodes, including ejected nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -187,7 +186,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? FailurePercentageMinimumHosts { get; set; }
 
             /// <summary>
-            /// <para>When the request failure rate of a node reaches this threshold, the system triggers the isolation mechanism of the node.</para>
+            /// <para>The failure percentage threshold. When the percentage of failed requests on a node reaches this threshold, the system triggers the ejection mechanism for the node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -226,7 +225,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The port.</para>
+            /// <para>The port number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -248,7 +247,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The service protocol.</para>
+        /// <para>The protocol of the service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>HTTP</para>

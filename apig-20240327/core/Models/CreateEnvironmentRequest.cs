@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class CreateEnvironmentRequest : TeaModel {
         /// <summary>
-        /// <para>The request body.</para>
+        /// <para>The environment alias.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Alias { get; set; }
 
         /// <summary>
-        /// <para>The environment alias.</para>
+        /// <para>The description of the environment. You can specify information such as the purpose and owner of the environment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>这是xxx的xx项目测试环境</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The environment description, such as its purpose and owner.</para>
+        /// <para>The gateway ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>Create environment.</para>
+        /// <para>The environment name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Testing environment for xx project of xxx</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-ahr5uil8raz0rq3b</para>

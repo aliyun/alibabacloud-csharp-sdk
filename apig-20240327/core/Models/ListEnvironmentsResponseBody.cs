@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public ListEnvironmentsResponseBodyData Data { get; set; }
         public class ListEnvironmentsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>环境信息列表。</para>
+            /// <para>The list of environment contexts.</para>
             /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]

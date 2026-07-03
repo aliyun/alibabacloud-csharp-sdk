@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class CreateSecretResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public CreateSecretResponseBodyData Data { get; set; }
         public class CreateSecretResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the key.</para>
+            /// <para>The key ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sec-d5e6shmm1hkoxxxxxxxx</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The error details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Failed to upload data. Please try again</para>

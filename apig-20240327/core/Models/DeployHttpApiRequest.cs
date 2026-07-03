@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The deployment configuration for the REST API. This parameter is required when the HTTP API to be published is a REST API.</para>
+        /// <para>The REST API deployment configuration. Required when the HTTP API being published is a REST API.</para>
         /// </summary>
         [NameInMap("restApiConfig")]
         [Validation(Required=false)]
@@ -226,7 +226,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<string> OperationIds { get; set; }
 
             /// <summary>
-            /// <para>The historical version number. If this parameter is specified, the publish information is based on the historical version.</para>
+            /// <para>The historical version number. If this field is specified, the publish information is based on the historical version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>apr-xxx</para>
@@ -238,7 +238,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The route ID. This parameter is required when you publish a route of an HTTP API.</para>
+        /// <para>The route ID. Required when publishing a route of an HTTP API.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hr-cr82undlhtgrl***</para>

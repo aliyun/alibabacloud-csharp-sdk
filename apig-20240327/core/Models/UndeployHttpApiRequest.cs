@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string EnvironmentId { get; set; }
 
         /// <summary>
-        /// <para>Gateway ID.</para>
+        /// <para>The gateway ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gw-cq7l5s5lhtg***</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string OperationId { get; set; }
 
         /// <summary>
-        /// <para>The route ID. You must specify this parameter when you unpublish the route of an HTTP API.</para>
+        /// <para>The route ID. This parameter is required when you offline a route of an HTTP API.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hr-cr82undlhtgrle***</para>

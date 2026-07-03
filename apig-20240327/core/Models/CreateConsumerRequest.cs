@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class CreateConsumerRequest : TeaModel {
         /// <summary>
-        /// <para>A list of AK/SK identity configurations.</para>
+        /// <para>The list of AK/SK identity configurations.</para>
         /// </summary>
         [NameInMap("akSkIdentityConfigs")]
         [Validation(Required=false)]
         public List<AkSkIdentityConfig> AkSkIdentityConfigs { get; set; }
 
         /// <summary>
-        /// <para>The identity configuration for API key authentication.</para>
+        /// <para>The API key authentication identity configuration.</para>
         /// </summary>
         [NameInMap("apikeyIdentityConfig")]
         [Validation(Required=false)]
@@ -46,10 +46,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <summary>
         /// <para>The gateway type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>API: For a cloud-native API gateway.</para>
-        /// </description></item>
-        /// <item><description><para>AI: For an AI gateway.</para>
-        /// </description></item>
+        /// <item><description>API: a consumer of a cloud-native API gateway.</description></item>
+        /// <item><description>AI: a consumer of an AI gateway.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

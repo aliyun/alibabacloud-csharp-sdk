@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class SyncMCPServersRequest : TeaModel {
         /// <summary>
-        /// <para>The domain ID.</para>
+        /// <para>The domain name IDs.</para>
         /// </summary>
         [NameInMap("domainIds")]
         [Validation(Required=false)]
         public List<string> DomainIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the gateway.</para>
+        /// <para>The gateway ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gw-cq7l5s5lhtg***</para>
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The synchronized Nacos MCP server list. If the synchronized MCP server is included, add the mcpServerId parameter.</para>
+        /// <para>The list of Nacos MCP Servers to sync. If the list contains MCP Servers that have already been synced, include the mcpServerId.</para>
         /// </summary>
         [NameInMap("nacosMcpServers")]
         [Validation(Required=false)]
         public List<SyncMCPServersRequestNacosMcpServers> NacosMcpServers { get; set; }
         public class SyncMCPServersRequestNacosMcpServers : TeaModel {
             /// <summary>
-            /// <para>The exposed URI path. This parameter is required when the protocol parameter is set to SSE or StreamableHTTP and the type parameter is set to RealMCP.</para>
+            /// <para>The exposed URI path. This parameter is required when protocol is SSE or StreamableHTTP and type is RealMCP.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/sse</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The MCP server ID.</para>
+            /// <para>MCP Server ID</para>
             /// 
             /// <b>Example:</b>
             /// <para>mcp-d3s8qo6m1hknegofa3bg</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string McpServerId { get; set; }
 
             /// <summary>
-            /// <para>The name of the MCP server.</para>
+            /// <para>The MCP Server name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string McpServerName { get; set; }
 
             /// <summary>
-            /// <para>The protocol.</para>
+            /// <para>The protocols.</para>
             /// </summary>
             [NameInMap("protocols")]
             [Validation(Required=false)]

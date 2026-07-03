@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class HiMarketApiKeyConfig : TeaModel {
         /// <summary>
-        /// <para>An array of objects, each containing a valid API key and its associated mode.</para>
+        /// <para>The list of credentials.</para>
         /// </summary>
         [NameInMap("credentials")]
         [Validation(Required=false)]
         public List<HiMarketApiKeyConfigCredentials> Credentials { get; set; }
         public class HiMarketApiKeyConfigCredentials : TeaModel {
             /// <summary>
-            /// <para>The value of the API key.</para>
+            /// <para>The API key value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>my-api-key-123</para>
             /// </summary>
             [NameInMap("apiKey")]
             [Validation(Required=false)]
             public string ApiKey { get; set; }
 
             /// <summary>
-            /// <para>The operational mode for the key, such as <c>test</c> or <c>production</c>.</para>
+            /// <para>The generation mode.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Custom</para>
             /// </summary>
             [NameInMap("mode")]
             [Validation(Required=false)]
@@ -33,14 +39,20 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The name of the parameter that holds the API key. For example, if <c>source</c> is <c>HEADER</c>, this is the request header name, such as <c>X-API-Key</c>.</para>
+        /// <para>The name of the location from which the API key is extracted.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Apikey</para>
         /// </summary>
         [NameInMap("key")]
         [Validation(Required=false)]
         public string Key { get; set; }
 
         /// <summary>
-        /// <para>The location of the API key in the request. Valid values are <c>HEADER</c> and <c>QUERY</c>.</para>
+        /// <para>The source type of the API key.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Header</para>
         /// </summary>
         [NameInMap("source")]
         [Validation(Required=false)]

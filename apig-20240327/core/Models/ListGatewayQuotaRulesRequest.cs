@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListGatewayQuotaRulesRequest : TeaModel {
         /// <summary>
+        /// <para>The rule name keyword, used for fuzzy match.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>daily</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Keyword { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of records to retrieve in a single request. This parameter is not supported.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The pagination token. This parameter is not supported.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>C4tM8BlBJwHSNyjWpGaci4/7dKNGp1JMgsKtvCagmtY=</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

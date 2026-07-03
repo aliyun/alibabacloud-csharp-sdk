@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class UpdateEnvironmentRequest : TeaModel {
         /// <summary>
-        /// <para>Schema of Response</para>
+        /// <para>The alias of the environment.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Alias { get; set; }
 
         /// <summary>
-        /// <para>The status code returned.</para>
+        /// <para>The description of the environment. You can specify information such as the purpose and owner of the environment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>这是xx的xx项目测试环境</para>

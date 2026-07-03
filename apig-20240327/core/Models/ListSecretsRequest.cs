@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListSecretsRequest : TeaModel {
         /// <summary>
-        /// <para>Gateway type for filtering secrets of specific gateway type</para>
+        /// <para>The gateway type used to filter results. Valid values: <b>AI</b> and <b>API</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AI</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayType { get; set; }
 
         /// <summary>
-        /// <para>Secret name for fuzzy matching, supports filtering secrets by name</para>
+        /// <para>The key name. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my_secret</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string NameLike { get; set; }
 
         /// <summary>
-        /// <para>Page number</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Number of items per page</para>
+        /// <para>The page size. Valid values: 1 to 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

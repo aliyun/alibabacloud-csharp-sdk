@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class UpdatePolicyRequest : TeaModel {
         /// <summary>
-        /// <para>Policy configuration</para>
+        /// <para>The policy configuration.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Config { get; set; }
 
         /// <summary>
-        /// <para>Description</para>
+        /// <para>The description of the policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>这是一条网关超时策略</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Policy name</para>
+        /// <para>The Policy Name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

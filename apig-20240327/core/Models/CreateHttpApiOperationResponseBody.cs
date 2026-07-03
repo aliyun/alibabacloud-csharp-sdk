@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class CreateHttpApiOperationResponseBody : TeaModel {
         /// <summary>
-        /// <para>Response status code.</para>
+        /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Operation information.</para>
+        /// <para>The operation information.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public CreateHttpApiOperationResponseBodyData Data { get; set; }
         public class CreateHttpApiOperationResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Operation information.</para>
+            /// <para>The operation information.</para>
             /// </summary>
             [NameInMap("operations")]
             [Validation(Required=false)]
             public List<CreateHttpApiOperationResponseBodyDataOperations> Operations { get; set; }
             public class CreateHttpApiOperationResponseBodyDataOperations : TeaModel {
                 /// <summary>
-                /// <para>Operation ID.</para>
+                /// <para>The operation ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>op-xxx</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>Response message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>393E2630-DBE7-5221-AB35-9E740675491A</para>

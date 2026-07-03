@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public List<ResourceStatistic> ResourceStatistics { get; set; }
 
                 /// <summary>
-                /// <para>The total number of entries.</para>
+                /// <para>The total count.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>

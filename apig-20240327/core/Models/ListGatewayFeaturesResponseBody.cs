@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListGatewayFeaturesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public ListGatewayFeaturesResponseBodyData Data { get; set; }
         public class ListGatewayFeaturesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of parameter configurations.</para>
+            /// <para>The list of parameter settings.</para>
             /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public ListGatewayFeaturesResponseBodyDataItemsDefinition Definition { get; set; }
                 public class ListGatewayFeaturesResponseBodyDataItemsDefinition : TeaModel {
                     /// <summary>
-                    /// <para>The default value of the parameter.</para>
+                    /// <para>The default value.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>&quot;true&quot;</para>
@@ -71,10 +71,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string DisplayName { get; set; }
 
                     /// <summary>
-                    /// <para>The parameter group to which the parameter belongs. Valid values:</para>
+                    /// <para>The parameter group. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Telemetry: an observability parameter</description></item>
-                    /// <item><description>Engine: an engine parameter</description></item>
+                    /// <item><description>Telemetry: observability parameter.</description></item>
+                    /// <item><description>Engine: engine parameter.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -87,10 +87,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     /// <summary>
                     /// <para>The input type of the parameter. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Trigger</description></item>
-                    /// <item><description>Input</description></item>
-                    /// <item><description>SingleSelect</description></item>
-                    /// <item><description>MultiSelect</description></item>
+                    /// <item><description>Trigger: toggle.</description></item>
+                    /// <item><description>Input: input.</description></item>
+                    /// <item><description>SingleSelect: single-select.</description></item>
+                    /// <item><description>MultiSelect: multi-select.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string InputType { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum length of the value. This parameter is valid when the value type is string.</para>
+                    /// <para>The maximum length supported by the parameter value. This is valid only when the value type is string.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>64</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public int? MaxLength { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum value of the parameter. This parameter is valid when the value type is int32, int64, or float.</para>
+                    /// <para>The maximum value supported by the parameter. This is valid only when the value type is int32, int64, or float.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>65535</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string MaxValue { get; set; }
 
                     /// <summary>
-                    /// <para>The minimum length of the value. This parameter is valid when the value type is string.</para>
+                    /// <para>The minimum length supported by the parameter value. This is valid only when the value type is string.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>8</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public int? MinLength { get; set; }
 
                     /// <summary>
-                    /// <para>The minimum value of the parameter. This parameter is valid when the value type is int32, int64, or float.</para>
+                    /// <para>The minimum value supported by the parameter. This is valid only when the value type is int32, int64, or float.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>100</para>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public bool? ReadOnly { get; set; }
 
                     /// <summary>
-                    /// <para>The regular expression that the parameter value must fulfill. This parameter is valid when the value type is string.</para>
+                    /// <para>The regular expression that the parameter value must match. This is valid only when the parameter value type is string.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>[a-z].*</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public List<ListGatewayFeaturesResponseBodyDataItemsDefinitionValueOptions> ValueOptions { get; set; }
                     public class ListGatewayFeaturesResponseBodyDataItemsDefinitionValueOptions : TeaModel {
                         /// <summary>
-                        /// <para>The key to pass the parameter.</para>
+                        /// <para>The pass parameter key.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>KEEP_UNCHANGED</para>
@@ -200,15 +200,15 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     }
 
                     /// <summary>
-                    /// <para>The value type of the parameter. Valid values:</para>
+                    /// <para>The type supported by the parameter value. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>bool: boolean</description></item>
-                    /// <item><description>string</description></item>
-                    /// <item><description>int32: integer</description></item>
-                    /// <item><description>int64: long integer</description></item>
-                    /// <item><description>json</description></item>
-                    /// <item><description>array: JSON array</description></item>
-                    /// <item><description>float: floating point</description></item>
+                    /// <item><description>bool: Boolean.</description></item>
+                    /// <item><description>string: String.</description></item>
+                    /// <item><description>int32: Integer.</description></item>
+                    /// <item><description>int64: Long integer.</description></item>
+                    /// <item><description>json: JSON format.</description></item>
+                    /// <item><description>array: JSON array format.</description></item>
+                    /// <item><description>float: Float.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -219,7 +219,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string ValueType { get; set; }
 
                     /// <summary>
-                    /// <para>The value unit.</para>
+                    /// <para>The unit.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>byte</para>
@@ -245,7 +245,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The response message returned.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

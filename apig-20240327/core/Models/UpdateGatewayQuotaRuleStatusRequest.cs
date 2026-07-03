@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class UpdateGatewayQuotaRuleStatusRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to clear historical quota usage when enabling or disabling the rule.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? ClearHistory { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable or disable the rule.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>

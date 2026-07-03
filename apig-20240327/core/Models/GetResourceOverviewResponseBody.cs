@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class GetResourceOverviewResponseBody : TeaModel {
         /// <summary>
-        /// <para>Response status code.</para>
+        /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public GetResourceOverviewResponseBodyData Data { get; set; }
         public class GetResourceOverviewResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>API information.</para>
+            /// <para>The API information.</para>
             /// </summary>
             [NameInMap("api")]
             [Validation(Required=false)]
             public GetResourceOverviewResponseBodyDataApi Api { get; set; }
             public class GetResourceOverviewResponseBodyDataApi : TeaModel {
                 /// <summary>
-                /// <para>Number of published APIs.</para>
+                /// <para>The number of published APIs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? PublishedCount { get; set; }
 
                 /// <summary>
-                /// <para>Number of APIs.</para>
+                /// <para>The total number of APIs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -56,14 +56,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>Gateway information.</para>
+            /// <para>The gateway information.</para>
             /// </summary>
             [NameInMap("gateway")]
             [Validation(Required=false)]
             public GetResourceOverviewResponseBodyDataGateway Gateway { get; set; }
             public class GetResourceOverviewResponseBodyDataGateway : TeaModel {
                 /// <summary>
-                /// <para>Number of running gateways.</para>
+                /// <para>The number of running gateways.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? RunningCount { get; set; }
 
                 /// <summary>
-                /// <para>Number of gateway instances.</para>
+                /// <para>The total number of gateway instances.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<GetResourceOverviewResponseBodyDataRiskOverview> RiskOverview { get; set; }
             public class GetResourceOverviewResponseBodyDataRiskOverview : TeaModel {
                 /// <summary>
-                /// <para>The number of instances at a risk level.</para>
+                /// <para>The number of instances at this risk level.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Count { get; set; }
 
                 /// <summary>
-                /// <para>The risk details list.</para>
+                /// <para>The list of risk details.</para>
                 /// </summary>
                 [NameInMap("riskDetails")]
                 [Validation(Required=false)]
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string RiskLevel { get; set; }
 
                     /// <summary>
-                    /// <para>The risk name list.</para>
+                    /// <para>The list of risk names.</para>
                     /// </summary>
                     [NameInMap("riskNames")]
                     [Validation(Required=false)]
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>Response message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DD19A442-93C5-5C97-AFA0-B9C57EBD781B</para>

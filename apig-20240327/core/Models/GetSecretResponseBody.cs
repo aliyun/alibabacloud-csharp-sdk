@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class GetSecretResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -37,10 +37,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public long? CreateTimestamp { get; set; }
 
             /// <summary>
-            /// <para>The type of the gateway. Valid values:</para>
+            /// <para>The gateway type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>API</description></item>
-            /// <item><description>AI</description></item>
+            /// <item><description>API: API gateway.</description></item>
+            /// <item><description>AI: AI gateway.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? ReferenceCount { get; set; }
 
             /// <summary>
-            /// <para>The ID of the key.</para>
+            /// <para>The key ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sec-d5e6shmm1hkoxxxxxxxx</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string SecretId { get; set; }
 
             /// <summary>
-            /// <para>The source of the key.</para>
+            /// <para>The key source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>KMS</para>
@@ -98,11 +98,11 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string SecretSource { get; set; }
 
             /// <summary>
-            /// <para>The state of the key. Valid values:</para>
+            /// <para>The key status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ENALBE</description></item>
-            /// <item><description>DISABLE</description></item>
-            /// <item><description>DELETED</description></item>
+            /// <item><description>ENALBE: Enabled.</description></item>
+            /// <item><description>DISABLE: Disabled.</description></item>
+            /// <item><description>DELETED: Deleted.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

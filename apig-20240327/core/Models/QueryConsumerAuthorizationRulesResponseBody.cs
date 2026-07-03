@@ -27,21 +27,21 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public QueryConsumerAuthorizationRulesResponseBodyData Data { get; set; }
         public class QueryConsumerAuthorizationRulesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>消费者规则列表。</para>
+            /// <para>The list of consumer rules.</para>
             /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]
             public List<QueryConsumerAuthorizationRulesResponseBodyDataItems> Items { get; set; }
             public class QueryConsumerAuthorizationRulesResponseBodyDataItems : TeaModel {
                 /// <summary>
-                /// <para>API信息详情。</para>
+                /// <para>The API information.</para>
                 /// </summary>
                 [NameInMap("apiInfo")]
                 [Validation(Required=false)]
                 public HttpApiApiInfo ApiInfo { get; set; }
 
                 /// <summary>
-                /// <para>消费者授权规则ID。</para>
+                /// <para>The consumer authorization rule ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>car-csgeka5lhtggrjcprok0</para>
@@ -51,7 +51,19 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ConsumerAuthorizationRuleId { get; set; }
 
                 /// <summary>
-                /// <para>消费者ID。</para>
+                /// <b>Example:</b>
+                /// <para>csg-8c13d2b4f8a1</para>
+                /// </summary>
+                [NameInMap("consumerGroupId")]
+                [Validation(Required=false)]
+                public string ConsumerGroupId { get; set; }
+
+                [NameInMap("consumerGroupInfo")]
+                [Validation(Required=false)]
+                public ConsumerGroupInfo ConsumerGroupInfo { get; set; }
+
+                /// <summary>
+                /// <para>The consumer ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cs-csheiftlhtgmp0j0hp4g</para>
@@ -61,14 +73,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ConsumerId { get; set; }
 
                 /// <summary>
-                /// <para>消费者信息详情。</para>
+                /// <para>The consumer information.</para>
                 /// </summary>
                 [NameInMap("consumerInfo")]
                 [Validation(Required=false)]
                 public ConsumerInfo ConsumerInfo { get; set; }
 
                 /// <summary>
-                /// <para>创建时间戳。单位: 毫秒。</para>
+                /// <para>The creation timestamp. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1719386834548</para>
@@ -78,7 +90,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? CreateTimestamp { get; set; }
 
                 /// <summary>
-                /// <para>API在当前环境的发布状态</para>
+                /// <para>The publish status of the API in the current environment.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{}</para>
@@ -88,14 +100,18 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string DeployStatus { get; set; }
 
                 /// <summary>
-                /// <para>环境信息。</para>
+                /// <para>The environment context.</para>
                 /// </summary>
                 [NameInMap("environmentInfo")]
                 [Validation(Required=false)]
                 public EnvironmentInfo EnvironmentInfo { get; set; }
 
                 /// <summary>
-                /// <para>失效模式。LongTerm、ShortTerm，二选一。</para>
+                /// <para>The expiration mode. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>LongTerm</description></item>
+                /// <item><description>ShortTerm</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ShortTerm</para>
@@ -105,7 +121,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ExpireMode { get; set; }
 
                 /// <summary>
-                /// <para>失效状态。</para>
+                /// <para>The expiration status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>InEffect</para>
@@ -115,7 +131,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ExpireStatus { get; set; }
 
                 /// <summary>
-                /// <para>到期时间。</para>
+                /// <para>The expiration time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>172086834548</para>
@@ -125,14 +141,22 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? ExpireTimestamp { get; set; }
 
                 /// <summary>
-                /// <para>网关信息。</para>
+                /// <para>The gateway information.</para>
                 /// </summary>
                 [NameInMap("gatewayInfo")]
                 [Validation(Required=false)]
                 public GatewayInfo GatewayInfo { get; set; }
 
                 /// <summary>
-                /// <para>资源ID。</para>
+                /// <b>Example:</b>
+                /// <para>ConsumerGroup</para>
+                /// </summary>
+                [NameInMap("principalType")]
+                [Validation(Required=false)]
+                public string PrincipalType { get; set; }
+
+                /// <summary>
+                /// <para>The resource ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2351944</para>
@@ -142,21 +166,21 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// <para>资源信息详情。</para>
+                /// <para>The resource information.</para>
                 /// </summary>
                 [NameInMap("resourceInfo")]
                 [Validation(Required=false)]
                 public QueryConsumerAuthorizationRulesResponseBodyDataItemsResourceInfo ResourceInfo { get; set; }
                 public class QueryConsumerAuthorizationRulesResponseBodyDataItemsResourceInfo : TeaModel {
                     /// <summary>
-                    /// <para>接口信息。</para>
+                    /// <para>The operation information.</para>
                     /// </summary>
                     [NameInMap("operationInfo")]
                     [Validation(Required=false)]
                     public HttpApiOperationInfo OperationInfo { get; set; }
 
                     /// <summary>
-                    /// <para>路由规则。</para>
+                    /// <para>The routing rule.</para>
                     /// </summary>
                     [NameInMap("route")]
                     [Validation(Required=false)]
@@ -165,7 +189,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 }
 
                 /// <summary>
-                /// <para>资源类型。</para>
+                /// <para>The resource type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>HttpApiRoute</para>
@@ -175,7 +199,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ResourceType { get; set; }
 
                 /// <summary>
-                /// <para>更新时间戳。单位: 毫秒。</para>
+                /// <para>The update timestamp. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1719386834548</para>

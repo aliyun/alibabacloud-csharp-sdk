@@ -27,21 +27,59 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public GetConsumerResponseBodyData Data { get; set; }
         public class GetConsumerResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The AK/SK identity authentication configurations.</para>
+            /// <para>The AccessKey pair authentication configuration.</para>
             /// </summary>
             [NameInMap("akSkIdentityConfigs")]
             [Validation(Required=false)]
             public List<AkSkIdentityConfig> AkSkIdentityConfigs { get; set; }
 
             /// <summary>
-            /// <para>The API key identity authentication configuration.</para>
+            /// <para>The API key authentication configuration.</para>
             /// </summary>
             [NameInMap("apiKeyIdentityConfig")]
             [Validation(Required=false)]
             public ApiKeyIdentityConfig ApiKeyIdentityConfig { get; set; }
 
+            [NameInMap("consumerGroups")]
+            [Validation(Required=false)]
+            public List<GetConsumerResponseBodyDataConsumerGroups> ConsumerGroups { get; set; }
+            public class GetConsumerResponseBodyDataConsumerGroups : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>csg-8c13d2b4f8a1</para>
+                /// </summary>
+                [NameInMap("consumerGroupId")]
+                [Validation(Required=false)]
+                public string ConsumerGroupId { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>用于线上 API 调用方分组</para>
+                /// </summary>
+                [NameInMap("description")]
+                [Validation(Required=false)]
+                public string Description { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1715769600000</para>
+                /// </summary>
+                [NameInMap("joinTimestamp")]
+                [Validation(Required=false)]
+                public long? JoinTimestamp { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>api-consumer-group</para>
+                /// </summary>
+                [NameInMap("name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+            }
+
             /// <summary>
-            /// <para>The consumer ID.</para>
+            /// <para>The API consumer ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cs-cvgbtk6m1hkji5sb8dr0</para>
@@ -81,7 +119,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the consumer is enabled.</para>
+            /// <para>Indicates whether the API consumer is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -91,14 +129,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public bool? Enable { get; set; }
 
             /// <summary>
-            /// <para>The JWT identity authentication configuration.</para>
+            /// <para>The JWT authentication configuration.</para>
             /// </summary>
             [NameInMap("jwtIdentityConfig")]
             [Validation(Required=false)]
             public JwtIdentityConfig JwtIdentityConfig { get; set; }
 
             /// <summary>
-            /// <para>The consumer name.</para>
+            /// <para>The API consumer name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>consumer-1</para>

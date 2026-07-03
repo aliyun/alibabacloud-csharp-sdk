@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class TagResourcesRequest : TeaModel {
+        /// <summary>
+        /// <para>The resource IDs. You can specify up to 50 subkeys.</para>
+        /// </summary>
         [NameInMap("resourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
 
         /// <summary>
+        /// <para>The resource type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>gateway</para>
         /// </summary>
@@ -21,11 +26,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
+        /// <summary>
+        /// <para>The list of labels.</para>
+        /// </summary>
         [NameInMap("tag")]
         [Validation(Required=false)]
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
+            /// <para>The label key.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>env</para>
             /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Key { get; set; }
 
             /// <summary>
+            /// <para>The label value.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>prod</para>
             /// </summary>

@@ -62,11 +62,11 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <summary>
         /// <para>The source type of the service. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>MSE_NACOS: The service is from MSE Nacos.</description></item>
-        /// <item><description>K8S: The service is from a Kubernetes cluster in Container Service.</description></item>
-        /// <item><description>FC3: The service is from Function Compute.</description></item>
-        /// <item><description>VIP: The service is from a fixed address.</description></item>
-        /// <item><description>DNS: The service is from a domain name.</description></item>
+        /// <item><description>MSE_NACOS: services from MSE Nacos.</description></item>
+        /// <item><description>K8S: services from a Kubernetes cluster in Container Service.</description></item>
+        /// <item><description>FC3: services from Function Compute.</description></item>
+        /// <item><description>VIP: services with a fixed address.</description></item>
+        /// <item><description>DNS: services with a domain name.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Issuer { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether mTLS mutual authentication is enabled.</para>
+            /// <para>Indicates whether mutual TLS (mTLS) authentication is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -203,10 +203,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
             /// <summary>
             /// <para>The protocol type supported by the domain name.</para>
-            /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>HTTP: Only the HTTP protocol is supported.</description></item>
-            /// <item><description>HTTPS: Only the HTTPS protocol is supported.</description></item>
+            /// <item><description>HTTP: supports only the HTTP protocol.</description></item>
+            /// <item><description>HTTPS: supports only the HTTPS protocol.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

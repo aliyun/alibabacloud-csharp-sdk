@@ -129,11 +129,13 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
         /// <summary>
         /// <para>The creation source type. Valid values:</para>
-        /// <para>ApiGatewayHttpToMCP: gateway-managed HTTP-to-MCP conversion.
-        /// ApiGatewayProxyMcpHosting: gateway-managed direct MCP proxy.
-        /// ApiGatewayAssembly: gateway MCP assembly.
-        /// NacosHttpToMCP: gateway-managed Nacos-synced HTTP-to-MCP conversion.
-        /// NacosMcpHosting: gateway-managed Nacos-synced direct MCP proxy.</para>
+        /// <list type="bullet">
+        /// <item><description>ApiGatewayHttpToMCP: gateway-managed HTTP-to-MCP conversion.</description></item>
+        /// <item><description>ApiGatewayProxyMcpHosting: gateway-managed direct MCP proxy.</description></item>
+        /// <item><description>ApiGatewayAssembly: gateway MCP assembly.</description></item>
+        /// <item><description>NacosHttpToMCP: gateway-managed Nacos-synced HTTP-to-MCP conversion.</description></item>
+        /// <item><description>NacosMcpHosting: gateway-managed Nacos-synced direct MCP proxy.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>ApiGatewayMcpHosting</para>
@@ -181,7 +183,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The canary release route configurations.</para>
+        /// <para>The canary release routing configurations.</para>
         /// </summary>
         [NameInMap("grayMcpServerConfigs")]
         [Validation(Required=false)]
@@ -353,7 +355,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
         /// <summary>
         /// <para>The type. Valid values:</para>
-        /// <para>RealMCP: standard MCP service.</para>
+        /// <list type="bullet">
+        /// <item><description>RealMCP: standard MCP service.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

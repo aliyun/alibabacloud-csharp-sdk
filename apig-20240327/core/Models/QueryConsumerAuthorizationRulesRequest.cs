@@ -20,6 +20,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ApiNameLike { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>csg-8c13d2b4f8a1</para>
+        /// </summary>
+        [NameInMap("consumerGroupId")]
+        [Validation(Required=false)]
+        public string ConsumerGroupId { get; set; }
+
+        /// <summary>
         /// <para>The consumer ID.</para>
         /// 
         /// <b>Example:</b>
@@ -88,6 +96,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [NameInMap("parentResourceId")]
         [Validation(Required=false)]
         public string ParentResourceId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ConsumerGroup</para>
+        /// </summary>
+        [NameInMap("principalType")]
+        [Validation(Required=false)]
+        public string PrincipalType { get; set; }
 
         /// <summary>
         /// <para>The resource ID.</para>
