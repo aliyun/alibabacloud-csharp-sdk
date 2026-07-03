@@ -1582,6 +1582,222 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Creates an accuracy test instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDataAgentAccuracyTestRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataAgentAccuracyTestResponse
+        /// </returns>
+        public CreateDataAgentAccuracyTestResponse CreateDataAgentAccuracyTestWithOptions(CreateDataAgentAccuracyTestRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomAgentId))
+            {
+                query["CustomAgentId"] = request.CustomAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dataset))
+            {
+                query["Dataset"] = request.Dataset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Desc))
+            {
+                query["Desc"] = request.Desc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DmsUnit))
+            {
+                query["DmsUnit"] = request.DmsUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EvaluationPrompt))
+            {
+                query["EvaluationPrompt"] = request.EvaluationPrompt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileId))
+            {
+                query["FileId"] = request.FileId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["Language"] = request.Language;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxConcurrent))
+            {
+                query["MaxConcurrent"] = request.MaxConcurrent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mode))
+            {
+                query["Mode"] = request.Mode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedDelete))
+            {
+                query["NeedDelete"] = request.NeedDelete;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDataAgentAccuracyTest",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDataAgentAccuracyTestResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an accuracy test instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDataAgentAccuracyTestRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataAgentAccuracyTestResponse
+        /// </returns>
+        public async Task<CreateDataAgentAccuracyTestResponse> CreateDataAgentAccuracyTestWithOptionsAsync(CreateDataAgentAccuracyTestRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomAgentId))
+            {
+                query["CustomAgentId"] = request.CustomAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dataset))
+            {
+                query["Dataset"] = request.Dataset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Desc))
+            {
+                query["Desc"] = request.Desc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DmsUnit))
+            {
+                query["DmsUnit"] = request.DmsUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EvaluationPrompt))
+            {
+                query["EvaluationPrompt"] = request.EvaluationPrompt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileId))
+            {
+                query["FileId"] = request.FileId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["Language"] = request.Language;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxConcurrent))
+            {
+                query["MaxConcurrent"] = request.MaxConcurrent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mode))
+            {
+                query["Mode"] = request.Mode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedDelete))
+            {
+                query["NeedDelete"] = request.NeedDelete;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDataAgentAccuracyTest",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDataAgentAccuracyTestResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an accuracy test instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDataAgentAccuracyTestRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataAgentAccuracyTestResponse
+        /// </returns>
+        public CreateDataAgentAccuracyTestResponse CreateDataAgentAccuracyTest(CreateDataAgentAccuracyTestRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateDataAgentAccuracyTestWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an accuracy test instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDataAgentAccuracyTestRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataAgentAccuracyTestResponse
+        /// </returns>
+        public async Task<CreateDataAgentAccuracyTestResponse> CreateDataAgentAccuracyTestAsync(CreateDataAgentAccuracyTestRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateDataAgentAccuracyTestWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates a DataAgent knowledge base. The knowledge base creator has read and write permissions. Other workspace members have permission to use it.</para>
         /// </summary>
         /// 
@@ -3010,6 +3226,170 @@ namespace AlibabaCloud.SDK.Dms20250414
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteCustomAgentWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an accuracy test configuration item.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes an accuracy test item.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteDataAgentAccuracyTestRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataAgentAccuracyTestResponse
+        /// </returns>
+        public DeleteDataAgentAccuracyTestResponse DeleteDataAgentAccuracyTestWithOptions(DeleteDataAgentAccuracyTestRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccuracyTestInsId))
+            {
+                query["AccuracyTestInsId"] = request.AccuracyTestInsId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DmsUnit))
+            {
+                query["DmsUnit"] = request.DmsUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDataAgentAccuracyTest",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDataAgentAccuracyTestResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an accuracy test configuration item.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes an accuracy test item.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteDataAgentAccuracyTestRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataAgentAccuracyTestResponse
+        /// </returns>
+        public async Task<DeleteDataAgentAccuracyTestResponse> DeleteDataAgentAccuracyTestWithOptionsAsync(DeleteDataAgentAccuracyTestRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccuracyTestInsId))
+            {
+                query["AccuracyTestInsId"] = request.AccuracyTestInsId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DmsUnit))
+            {
+                query["DmsUnit"] = request.DmsUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDataAgentAccuracyTest",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDataAgentAccuracyTestResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an accuracy test configuration item.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes an accuracy test item.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteDataAgentAccuracyTestRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataAgentAccuracyTestResponse
+        /// </returns>
+        public DeleteDataAgentAccuracyTestResponse DeleteDataAgentAccuracyTest(DeleteDataAgentAccuracyTestRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteDataAgentAccuracyTestWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an accuracy test configuration item.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes an accuracy test item.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteDataAgentAccuracyTestRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataAgentAccuracyTestResponse
+        /// </returns>
+        public async Task<DeleteDataAgentAccuracyTestResponse> DeleteDataAgentAccuracyTestAsync(DeleteDataAgentAccuracyTestRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteDataAgentAccuracyTestWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -8078,6 +8458,590 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Lists accuracy test configuration items that meet the specified conditions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists accuracy test configuration items that meet the specified conditions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDataAgentAccuracyTestInstancesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataAgentAccuracyTestInstancesResponse
+        /// </returns>
+        public ListDataAgentAccuracyTestInstancesResponse ListDataAgentAccuracyTestInstancesWithOptions(ListDataAgentAccuracyTestInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccuracyTestInsId))
+            {
+                query["AccuracyTestInsId"] = request.AccuracyTestInsId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDataAgentAccuracyTestInstances",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDataAgentAccuracyTestInstancesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists accuracy test configuration items that meet the specified conditions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists accuracy test configuration items that meet the specified conditions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDataAgentAccuracyTestInstancesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataAgentAccuracyTestInstancesResponse
+        /// </returns>
+        public async Task<ListDataAgentAccuracyTestInstancesResponse> ListDataAgentAccuracyTestInstancesWithOptionsAsync(ListDataAgentAccuracyTestInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccuracyTestInsId))
+            {
+                query["AccuracyTestInsId"] = request.AccuracyTestInsId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDataAgentAccuracyTestInstances",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDataAgentAccuracyTestInstancesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists accuracy test configuration items that meet the specified conditions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists accuracy test configuration items that meet the specified conditions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDataAgentAccuracyTestInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataAgentAccuracyTestInstancesResponse
+        /// </returns>
+        public ListDataAgentAccuracyTestInstancesResponse ListDataAgentAccuracyTestInstances(ListDataAgentAccuracyTestInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListDataAgentAccuracyTestInstancesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists accuracy test configuration items that meet the specified conditions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists accuracy test configuration items that meet the specified conditions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDataAgentAccuracyTestInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataAgentAccuracyTestInstancesResponse
+        /// </returns>
+        public async Task<ListDataAgentAccuracyTestInstancesResponse> ListDataAgentAccuracyTestInstancesAsync(ListDataAgentAccuracyTestInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListDataAgentAccuracyTestInstancesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the execution results of a self-test task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the execution results of a self-test task.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDataAgentAccuracyTestResultsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataAgentAccuracyTestResultsResponse
+        /// </returns>
+        public ListDataAgentAccuracyTestResultsResponse ListDataAgentAccuracyTestResultsWithOptions(ListDataAgentAccuracyTestResultsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccuracyTestInsId))
+            {
+                query["AccuracyTestInsId"] = request.AccuracyTestInsId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccuracyTestResultId))
+            {
+                query["AccuracyTestResultId"] = request.AccuracyTestResultId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccuracyTestSubtaskId))
+            {
+                query["AccuracyTestSubtaskId"] = request.AccuracyTestSubtaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccuracyTestTaskId))
+            {
+                query["AccuracyTestTaskId"] = request.AccuracyTestTaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDataAgentAccuracyTestResults",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDataAgentAccuracyTestResultsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the execution results of a self-test task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the execution results of a self-test task.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDataAgentAccuracyTestResultsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataAgentAccuracyTestResultsResponse
+        /// </returns>
+        public async Task<ListDataAgentAccuracyTestResultsResponse> ListDataAgentAccuracyTestResultsWithOptionsAsync(ListDataAgentAccuracyTestResultsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccuracyTestInsId))
+            {
+                query["AccuracyTestInsId"] = request.AccuracyTestInsId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccuracyTestResultId))
+            {
+                query["AccuracyTestResultId"] = request.AccuracyTestResultId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccuracyTestSubtaskId))
+            {
+                query["AccuracyTestSubtaskId"] = request.AccuracyTestSubtaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccuracyTestTaskId))
+            {
+                query["AccuracyTestTaskId"] = request.AccuracyTestTaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDataAgentAccuracyTestResults",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDataAgentAccuracyTestResultsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the execution results of a self-test task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the execution results of a self-test task.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDataAgentAccuracyTestResultsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataAgentAccuracyTestResultsResponse
+        /// </returns>
+        public ListDataAgentAccuracyTestResultsResponse ListDataAgentAccuracyTestResults(ListDataAgentAccuracyTestResultsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListDataAgentAccuracyTestResultsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the execution results of a self-test task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the execution results of a self-test task.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDataAgentAccuracyTestResultsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataAgentAccuracyTestResultsResponse
+        /// </returns>
+        public async Task<ListDataAgentAccuracyTestResultsResponse> ListDataAgentAccuracyTestResultsAsync(ListDataAgentAccuracyTestResultsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListDataAgentAccuracyTestResultsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the running status of self-test tasks by paging.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the running status of self-test tasks by paging.
+        /// If AccuracyTestInsId or AccuracyTestTaskId is empty, all test tasks are queried.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDataAgentAccuracyTestTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataAgentAccuracyTestTasksResponse
+        /// </returns>
+        public ListDataAgentAccuracyTestTasksResponse ListDataAgentAccuracyTestTasksWithOptions(ListDataAgentAccuracyTestTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccuracyTestInsId))
+            {
+                query["AccuracyTestInsId"] = request.AccuracyTestInsId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccuracyTestTaskId))
+            {
+                query["AccuracyTestTaskId"] = request.AccuracyTestTaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDataAgentAccuracyTestTasks",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDataAgentAccuracyTestTasksResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the running status of self-test tasks by paging.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the running status of self-test tasks by paging.
+        /// If AccuracyTestInsId or AccuracyTestTaskId is empty, all test tasks are queried.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDataAgentAccuracyTestTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataAgentAccuracyTestTasksResponse
+        /// </returns>
+        public async Task<ListDataAgentAccuracyTestTasksResponse> ListDataAgentAccuracyTestTasksWithOptionsAsync(ListDataAgentAccuracyTestTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccuracyTestInsId))
+            {
+                query["AccuracyTestInsId"] = request.AccuracyTestInsId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccuracyTestTaskId))
+            {
+                query["AccuracyTestTaskId"] = request.AccuracyTestTaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDataAgentAccuracyTestTasks",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDataAgentAccuracyTestTasksResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the running status of self-test tasks by paging.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the running status of self-test tasks by paging.
+        /// If AccuracyTestInsId or AccuracyTestTaskId is empty, all test tasks are queried.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDataAgentAccuracyTestTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataAgentAccuracyTestTasksResponse
+        /// </returns>
+        public ListDataAgentAccuracyTestTasksResponse ListDataAgentAccuracyTestTasks(ListDataAgentAccuracyTestTasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListDataAgentAccuracyTestTasksWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the running status of self-test tasks by paging.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the running status of self-test tasks by paging.
+        /// If AccuracyTestInsId or AccuracyTestTaskId is empty, all test tasks are queried.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDataAgentAccuracyTestTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataAgentAccuracyTestTasksResponse
+        /// </returns>
+        public async Task<ListDataAgentAccuracyTestTasksResponse> ListDataAgentAccuracyTestTasksAsync(ListDataAgentAccuracyTestTasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListDataAgentAccuracyTestTasksWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Retrieves the list of historical session descriptions for a Data Agent.</para>
         /// </summary>
         /// 
@@ -12427,7 +13391,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>发布工作空间的代码</para>
+        /// <para>Publishes workspace code.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12500,7 +13464,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>发布工作空间的代码</para>
+        /// <para>Publishes workspace code.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12573,7 +13537,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>发布工作空间的代码</para>
+        /// <para>Publishes workspace code.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12596,7 +13560,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>发布工作空间的代码</para>
+        /// <para>Publishes workspace code.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12614,7 +13578,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Send a user message to a specified session or cancel the session.</para>
+        /// <para>Sends a user message to a specified session or cancels a session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12622,11 +13586,11 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description><c>agent_id</c> and <c>session_id</c> are required fields.</description></item>
-        /// <item><description><c>message_type</c> defaults to <c>primary</c>. When you need to append information or cancel a session, set it to <c>additional</c> or <c>cancel</c>.</description></item>
+        /// <item><description><c>message_type</c> defaults to <c>primary</c>. Set it to <c>additional</c> or <c>cancel</c> when you need to append information or cancel a session.</description></item>
         /// <item><description>The <c>reply_to</c> field indicates which Agent message this message is responding to. The default value is <c>0</c>.</description></item>
         /// <item><description>When <c>message_type</c> is <c>additional</c>, the <c>question</c> field is required.</description></item>
-        /// <item><description><c>quoted_message</c> can be used to quote the content of the user\&quot;s previous message.</description></item>
-        /// <item><description>Fields such as <c>data_source</c>, <c>dms_user</c>, <c>db_metadata</c>, and <c>session_config</c> are all optional, but provide more detailed context information.</description></item>
+        /// <item><description><c>quoted_message</c> can be used to quote the content of a previous user message.</description></item>
+        /// <item><description>The <c>data_source</c>, <c>dms_user</c>, <c>db_metadata</c>, and <c>session_config</c> fields are optional but provide more detailed context information.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12714,6 +13678,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             {
                 query["TaskConfig"] = request.TaskConfigShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserOssBucket))
+            {
+                query["UserOssBucket"] = request.UserOssBucket;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
             {
                 query["WorkspaceId"] = request.WorkspaceId;
@@ -12739,7 +13707,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Send a user message to a specified session or cancel the session.</para>
+        /// <para>Sends a user message to a specified session or cancels a session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12747,11 +13715,11 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description><c>agent_id</c> and <c>session_id</c> are required fields.</description></item>
-        /// <item><description><c>message_type</c> defaults to <c>primary</c>. When you need to append information or cancel a session, set it to <c>additional</c> or <c>cancel</c>.</description></item>
+        /// <item><description><c>message_type</c> defaults to <c>primary</c>. Set it to <c>additional</c> or <c>cancel</c> when you need to append information or cancel a session.</description></item>
         /// <item><description>The <c>reply_to</c> field indicates which Agent message this message is responding to. The default value is <c>0</c>.</description></item>
         /// <item><description>When <c>message_type</c> is <c>additional</c>, the <c>question</c> field is required.</description></item>
-        /// <item><description><c>quoted_message</c> can be used to quote the content of the user\&quot;s previous message.</description></item>
-        /// <item><description>Fields such as <c>data_source</c>, <c>dms_user</c>, <c>db_metadata</c>, and <c>session_config</c> are all optional, but provide more detailed context information.</description></item>
+        /// <item><description><c>quoted_message</c> can be used to quote the content of a previous user message.</description></item>
+        /// <item><description>The <c>data_source</c>, <c>dms_user</c>, <c>db_metadata</c>, and <c>session_config</c> fields are optional but provide more detailed context information.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12839,6 +13807,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             {
                 query["TaskConfig"] = request.TaskConfigShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserOssBucket))
+            {
+                query["UserOssBucket"] = request.UserOssBucket;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
             {
                 query["WorkspaceId"] = request.WorkspaceId;
@@ -12864,7 +13836,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Send a user message to a specified session or cancel the session.</para>
+        /// <para>Sends a user message to a specified session or cancels a session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12872,11 +13844,11 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description><c>agent_id</c> and <c>session_id</c> are required fields.</description></item>
-        /// <item><description><c>message_type</c> defaults to <c>primary</c>. When you need to append information or cancel a session, set it to <c>additional</c> or <c>cancel</c>.</description></item>
+        /// <item><description><c>message_type</c> defaults to <c>primary</c>. Set it to <c>additional</c> or <c>cancel</c> when you need to append information or cancel a session.</description></item>
         /// <item><description>The <c>reply_to</c> field indicates which Agent message this message is responding to. The default value is <c>0</c>.</description></item>
         /// <item><description>When <c>message_type</c> is <c>additional</c>, the <c>question</c> field is required.</description></item>
-        /// <item><description><c>quoted_message</c> can be used to quote the content of the user\&quot;s previous message.</description></item>
-        /// <item><description>Fields such as <c>data_source</c>, <c>dms_user</c>, <c>db_metadata</c>, and <c>session_config</c> are all optional, but provide more detailed context information.</description></item>
+        /// <item><description><c>quoted_message</c> can be used to quote the content of a previous user message.</description></item>
+        /// <item><description>The <c>data_source</c>, <c>dms_user</c>, <c>db_metadata</c>, and <c>session_config</c> fields are optional but provide more detailed context information.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12895,7 +13867,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Send a user message to a specified session or cancel the session.</para>
+        /// <para>Sends a user message to a specified session or cancels a session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12903,11 +13875,11 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description><c>agent_id</c> and <c>session_id</c> are required fields.</description></item>
-        /// <item><description><c>message_type</c> defaults to <c>primary</c>. When you need to append information or cancel a session, set it to <c>additional</c> or <c>cancel</c>.</description></item>
+        /// <item><description><c>message_type</c> defaults to <c>primary</c>. Set it to <c>additional</c> or <c>cancel</c> when you need to append information or cancel a session.</description></item>
         /// <item><description>The <c>reply_to</c> field indicates which Agent message this message is responding to. The default value is <c>0</c>.</description></item>
         /// <item><description>When <c>message_type</c> is <c>additional</c>, the <c>question</c> field is required.</description></item>
-        /// <item><description><c>quoted_message</c> can be used to quote the content of the user\&quot;s previous message.</description></item>
-        /// <item><description>Fields such as <c>data_source</c>, <c>dms_user</c>, <c>db_metadata</c>, and <c>session_config</c> are all optional, but provide more detailed context information.</description></item>
+        /// <item><description><c>quoted_message</c> can be used to quote the content of a previous user message.</description></item>
+        /// <item><description>The <c>data_source</c>, <c>dms_user</c>, <c>db_metadata</c>, and <c>session_config</c> fields are optional but provide more detailed context information.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13250,6 +14222,334 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Initiates an accuracy self-test task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Initiates an accuracy self-test task.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StartDataAgentAccuracyTestTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartDataAgentAccuracyTestTaskResponse
+        /// </returns>
+        public StartDataAgentAccuracyTestTaskResponse StartDataAgentAccuracyTestTaskWithOptions(StartDataAgentAccuracyTestTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccuracyTestInsId))
+            {
+                query["AccuracyTestInsId"] = request.AccuracyTestInsId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CsvFile))
+            {
+                query["CsvFile"] = request.CsvFile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DmsUnit))
+            {
+                query["DmsUnit"] = request.DmsUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartDataAgentAccuracyTestTask",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartDataAgentAccuracyTestTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiates an accuracy self-test task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Initiates an accuracy self-test task.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StartDataAgentAccuracyTestTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartDataAgentAccuracyTestTaskResponse
+        /// </returns>
+        public async Task<StartDataAgentAccuracyTestTaskResponse> StartDataAgentAccuracyTestTaskWithOptionsAsync(StartDataAgentAccuracyTestTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccuracyTestInsId))
+            {
+                query["AccuracyTestInsId"] = request.AccuracyTestInsId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CsvFile))
+            {
+                query["CsvFile"] = request.CsvFile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DmsUnit))
+            {
+                query["DmsUnit"] = request.DmsUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartDataAgentAccuracyTestTask",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartDataAgentAccuracyTestTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiates an accuracy self-test task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Initiates an accuracy self-test task.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StartDataAgentAccuracyTestTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartDataAgentAccuracyTestTaskResponse
+        /// </returns>
+        public StartDataAgentAccuracyTestTaskResponse StartDataAgentAccuracyTestTask(StartDataAgentAccuracyTestTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return StartDataAgentAccuracyTestTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiates an accuracy self-test task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Initiates an accuracy self-test task.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StartDataAgentAccuracyTestTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartDataAgentAccuracyTestTaskResponse
+        /// </returns>
+        public async Task<StartDataAgentAccuracyTestTaskResponse> StartDataAgentAccuracyTestTaskAsync(StartDataAgentAccuracyTestTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await StartDataAgentAccuracyTestTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops an accuracy self-test task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Stops an accuracy self-test task.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StopDataAgentAccuracyTestTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopDataAgentAccuracyTestTaskResponse
+        /// </returns>
+        public StopDataAgentAccuracyTestTaskResponse StopDataAgentAccuracyTestTaskWithOptions(StopDataAgentAccuracyTestTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccuracyTestTaskId))
+            {
+                query["AccuracyTestTaskId"] = request.AccuracyTestTaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopDataAgentAccuracyTestTask",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopDataAgentAccuracyTestTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops an accuracy self-test task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Stops an accuracy self-test task.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StopDataAgentAccuracyTestTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopDataAgentAccuracyTestTaskResponse
+        /// </returns>
+        public async Task<StopDataAgentAccuracyTestTaskResponse> StopDataAgentAccuracyTestTaskWithOptionsAsync(StopDataAgentAccuracyTestTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccuracyTestTaskId))
+            {
+                query["AccuracyTestTaskId"] = request.AccuracyTestTaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopDataAgentAccuracyTestTask",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopDataAgentAccuracyTestTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops an accuracy self-test task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Stops an accuracy self-test task.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StopDataAgentAccuracyTestTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopDataAgentAccuracyTestTaskResponse
+        /// </returns>
+        public StopDataAgentAccuracyTestTaskResponse StopDataAgentAccuracyTestTask(StopDataAgentAccuracyTestTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return StopDataAgentAccuracyTestTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops an accuracy self-test task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Stops an accuracy self-test task.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StopDataAgentAccuracyTestTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopDataAgentAccuracyTestTaskResponse
+        /// </returns>
+        public async Task<StopDataAgentAccuracyTestTaskResponse> StopDataAgentAccuracyTestTaskAsync(StopDataAgentAccuracyTestTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await StopDataAgentAccuracyTestTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Updates the properties of an Airflow instance.</para>
         /// </summary>
         /// 
@@ -13482,6 +14782,242 @@ namespace AlibabaCloud.SDK.Dms20250414
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateAirflowWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the content of an accuracy test item.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the content of an accuracy test item.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateDataAgentAccuracyTestRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDataAgentAccuracyTestResponse
+        /// </returns>
+        public UpdateDataAgentAccuracyTestResponse UpdateDataAgentAccuracyTestWithOptions(UpdateDataAgentAccuracyTestRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccuracyTestInsId))
+            {
+                query["AccuracyTestInsId"] = request.AccuracyTestInsId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerAgentId))
+            {
+                query["CustomerAgentId"] = request.CustomerAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dataset))
+            {
+                query["Dataset"] = request.Dataset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Desc))
+            {
+                query["Desc"] = request.Desc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DmsUnit))
+            {
+                query["DmsUnit"] = request.DmsUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EvaluationPrompt))
+            {
+                query["EvaluationPrompt"] = request.EvaluationPrompt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileId))
+            {
+                query["FileId"] = request.FileId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxConcurrent))
+            {
+                query["MaxConcurrent"] = request.MaxConcurrent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mode))
+            {
+                query["Mode"] = request.Mode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedDelete))
+            {
+                query["NeedDelete"] = request.NeedDelete;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDataAgentAccuracyTest",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDataAgentAccuracyTestResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the content of an accuracy test item.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the content of an accuracy test item.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateDataAgentAccuracyTestRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDataAgentAccuracyTestResponse
+        /// </returns>
+        public async Task<UpdateDataAgentAccuracyTestResponse> UpdateDataAgentAccuracyTestWithOptionsAsync(UpdateDataAgentAccuracyTestRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccuracyTestInsId))
+            {
+                query["AccuracyTestInsId"] = request.AccuracyTestInsId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerAgentId))
+            {
+                query["CustomerAgentId"] = request.CustomerAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dataset))
+            {
+                query["Dataset"] = request.Dataset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Desc))
+            {
+                query["Desc"] = request.Desc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DmsUnit))
+            {
+                query["DmsUnit"] = request.DmsUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EvaluationPrompt))
+            {
+                query["EvaluationPrompt"] = request.EvaluationPrompt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileId))
+            {
+                query["FileId"] = request.FileId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxConcurrent))
+            {
+                query["MaxConcurrent"] = request.MaxConcurrent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mode))
+            {
+                query["Mode"] = request.Mode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedDelete))
+            {
+                query["NeedDelete"] = request.NeedDelete;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDataAgentAccuracyTest",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDataAgentAccuracyTestResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the content of an accuracy test item.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the content of an accuracy test item.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateDataAgentAccuracyTestRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDataAgentAccuracyTestResponse
+        /// </returns>
+        public UpdateDataAgentAccuracyTestResponse UpdateDataAgentAccuracyTest(UpdateDataAgentAccuracyTestRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateDataAgentAccuracyTestWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the content of an accuracy test item.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the content of an accuracy test item.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateDataAgentAccuracyTestRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDataAgentAccuracyTestResponse
+        /// </returns>
+        public async Task<UpdateDataAgentAccuracyTestResponse> UpdateDataAgentAccuracyTestAsync(UpdateDataAgentAccuracyTestRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateDataAgentAccuracyTestWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

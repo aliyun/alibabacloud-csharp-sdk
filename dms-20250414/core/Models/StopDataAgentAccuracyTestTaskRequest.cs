@@ -8,32 +8,32 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dms20250414.Models
 {
-    public class DescribeDataAgentSessionRequest : TeaModel {
+    public class StopDataAgentAccuracyTestTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The current Data Management unit.</para>
+        /// <para>The ID of the accuracy test task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>692abb8f-xxxx-xxxx-xxxx-xxxxxxxxxxxx</para>
+        /// </summary>
+        [NameInMap("AccuracyTestTaskId")]
+        [Validation(Required=false)]
+        public string AccuracyTestTaskId { get; set; }
+
+        /// <summary>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
-        [NameInMap("DMSUnit")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string DMSUnit { get; set; }
+        public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The DataAgent session ID. You can obtain this ID by calling CreateDataAgentSession.</para>
+        /// <para>The ID of the workspace.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>c61n7gm******rj</para>
-        /// </summary>
-        [NameInMap("SessionId")]
-        [Validation(Required=false)]
-        public string SessionId { get; set; }
-
-        /// <summary>
-        /// <para>The workspace ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>12****</para>
+        /// <para>8wfig6l33n4f4xxxxxxxxxx</para>
         /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]

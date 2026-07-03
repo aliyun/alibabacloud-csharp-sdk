@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Content { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to forcibly overwrite the file. If set to true, the file is overwritten regardless of whether it has been modified by others.</para>
+        /// <para>Specifies whether to forcibly overwrite the file regardless of whether it has been modified by others.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public bool? Force { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the file is an infrastructure as code template file. Set this parameter to true for YAML configuration files that are edited in the visual editor.</para>
+        /// <para>Specifies whether the file is an infrastructure as code template file. Set this parameter to true for YAML configuration files edited through the visual editor.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public bool? Iac { get; set; }
 
         /// <summary>
-        /// <para>The file modification time. The GetWorkspaceCode operation returns this mtime value. When you call SaveWorkspaceCode, include this mtime value to check whether the file has been changed on the server. If the mtime values do not match, the save operation fails, which indicates that the server-side version has been modified.</para>
+        /// <para>The file modification time. The GetWorkspaceCode operation returns this mtime value. When calling SaveWorkspaceCode, include this mtime to compare against the server-side value. If the mtime does not match, the save fails, indicating that the server-side version has changed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-01-01T10:11:12Z</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Path { get; set; }
 
         /// <summary>
-        /// <para>The repository information. Specify this parameter when creating a git repository directory during the save operation.</para>
+        /// <para>The repository information. Pass this parameter when creating a git repo directory during the save action.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="mailto:git@codeup.aliyun.com">git@codeup.aliyun.com</a>:test/abc.git</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Repo { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID (numeric ID).</para>
+        /// <para>The ID of the workspace to publish (numeric ID).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

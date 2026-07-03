@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string FinishTime { get; set; }
 
                 /// <summary>
-                /// <para>The globally unique artifact ID. If the report is produced by calling SendChatMessage with MessageType set to REPORT, the artifact ID is the same as the MessageId returned by the SendChatMessage operation.</para>
+                /// <para>The globally unique artifact ID. If the report is produced by calling SendChatMessage with MessageType set to REPORT, the artifact ID is the same as the MessageId in the response of the SendChatMessage operation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>bab******33e1</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The artifact name. This is typically a string concatenated by the system. It is aligned with the name field in the ListFileUpload operation. You can use this field to query the download URL of the artifact file.</para>
+                /// <para>The artifact name. This is typically a string concatenated by the system and is aligned with the name field in the ListFileUpload operation. You can use this field to query the download URL of the artifact file.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>report_****_2026****</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The artifact type. Valid values: TextReport and WebReport.</para>
+                /// <para>The artifact type. Valid values: TextReport, WebReport.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>WebReport</para>
@@ -211,7 +211,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether the session is saved to favorites in the workspace by the current user.</para>
+            /// <para>Indicates whether the session is saved as a favorite in the workspace by the current logged-in user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -231,7 +231,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string File { get; set; }
 
             /// <summary>
-            /// <para>The recall results from the knowledge base and memory for this session.</para>
+            /// <para>The recall results from the knowledge base and memory for the current session.</para>
             /// </summary>
             [NameInMap("RecallResults")]
             [Validation(Required=false)]
@@ -258,7 +258,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public double? Score { get; set; }
 
                 /// <summary>
-                /// <para>The type of recalled knowledge.</para>
+                /// <para>The type of the recalled knowledge.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>memory</para>
@@ -270,7 +270,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether the session is saved to favorites by the current user.</para>
+            /// <para>Indicates whether the session is saved as a favorite by the current logged-in user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -299,8 +299,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 /// <summary>
                 /// <para>The stage of the custom agent. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>debug</b>: the debugging stage.</description></item>
-                /// <item><description><b>prod</b>: the production stage.</description></item>
+                /// <item><description><b>debug</b>: test stage.</description></item>
+                /// <item><description><b>prod</b>: production stage.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -321,7 +321,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public bool? EnableSearch { get; set; }
 
                 /// <summary>
-                /// <para>The encryption key for storing artifacts in OSS (including built-in and user-specified OSS). This is typically specified in CreateDataAgentSession.</para>
+                /// <para>The encryption key for storing artifacts in OSS (both built-in and user-specified). This is typically specified in CreateDataAgentSession.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ay***1Te</para>
@@ -331,7 +331,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string EncryptKey { get; set; }
 
                 /// <summary>
-                /// <para>The encryption type for storing artifacts in OSS (including built-in and user-specified OSS).</para>
+                /// <para>The encryption type for storing artifacts in OSS (both built-in and user-specified).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>null</para>
@@ -341,7 +341,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string EncryptType { get; set; }
 
                 /// <summary>
-                /// <para>The list of knowledge base IDs for this session.</para>
+                /// <para>The list of knowledge base IDs for the current session.</para>
                 /// </summary>
                 [NameInMap("KbUuidList")]
                 [Validation(Required=false)]
@@ -371,9 +371,9 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 /// <summary>
                 /// <para>The mode. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>ASK_DATA</b>: the data query mode.</description></item>
-                /// <item><description><b>ANALYSIS</b>: the analysis mode.</description></item>
-                /// <item><description><b>INSIGHT</b>: the insight mode.</description></item>
+                /// <item><description><b>ASK_DATA</b>: ask data mode.</description></item>
+                /// <item><description><b>ANALYSIS</b>: analysis mode.</description></item>
+                /// <item><description><b>INSIGHT</b>: insight mode.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -404,7 +404,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string ReportWaterMark { get; set; }
 
                 /// <summary>
-                /// <para>The name of the user OSS bucket. Analysis process files and report artifacts can be uploaded to the user-specified OSS bucket.</para>
+                /// <para>The name of the user OSS bucket.</para>
+                /// <list type="bullet">
+                /// <item><description>Analysis process files and report artifacts can be uploaded to the user-specified OSS bucket.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>user-oss-bucket</para>
@@ -468,7 +471,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the call failed.</para>
+        /// <para>The error message returned when the call fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UnknownError</para>
@@ -490,8 +493,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         /// <summary>
         /// <para>The return value. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The operation was successful.</description></item>
-        /// <item><description><b>false</b>: The operation failed.</description></item>
+        /// <item><description><b>true</b>: Succeeded.</description></item>
+        /// <item><description><b>false</b>: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
