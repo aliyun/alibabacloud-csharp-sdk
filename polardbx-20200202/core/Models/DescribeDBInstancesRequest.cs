@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values:</para>
+        /// <para>The page size. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>30</description></item>
         /// <item><description>50</description></item>

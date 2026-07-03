@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class CreateSubCNInstanceResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateSubCNInstanceResponseBodyData Data { get; set; }
         public class CreateSubCNInstanceResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The task ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2209883</para>
             /// </summary>
@@ -24,6 +29,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
+        /// <para>Id of the request</para>
+        /// 
         /// <b>Example:</b>
         /// <para>D6A4256F-7B83-5BD7-9AC0-72E1FAC05330</para>
         /// </summary>

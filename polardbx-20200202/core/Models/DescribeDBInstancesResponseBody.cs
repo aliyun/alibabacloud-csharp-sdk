@@ -29,17 +29,17 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <summary>
             /// <para>The CN node specifications. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>polarx.x4.medium.2e</b>: 2 cores, 8 GB memory</description></item>
-            /// <item><description><b>polarx.x4.large.2e</b>: 4 cores, 16 GB memory</description></item>
-            /// <item><description><b>polarx.x8.large.2e</b>: 4 cores, 32 GB memory</description></item>
-            /// <item><description><b>polarx.x4.xlarge.2e</b>: 8 cores, 32 GB memory</description></item>
-            /// <item><description><b>polarx.x8.xlarge.2e</b>: 8 cores, 64 GB memory</description></item>
-            /// <item><description><b>polarx.x4.2xlarge.2e</b>: 16 cores, 64 GB memory</description></item>
-            /// <item><description><b>polarx.x8.2xlarge.2e</b>: 16 cores, 128 GB memory</description></item>
-            /// <item><description><b>polarx.x4.4xlarge.2e</b>: 32 cores, 128 GB memory</description></item>
-            /// <item><description><b>polarx.x8.4xlarge.2e</b>: 32 cores, 256 GB memory</description></item>
-            /// <item><description><b>polarx.st.8xlarge.2e</b>: 60 cores, 470 GB memory</description></item>
-            /// <item><description><b>polarx.st.12xlarge.2e</b>: 90 cores, 720 GB memory.</description></item>
+            /// <item><description><b>polarx.x4.medium.2e</b>: 2 cores, 8 GB</description></item>
+            /// <item><description><b>polarx.x4.large.2e</b>: 4 cores, 16 GB</description></item>
+            /// <item><description><b>polarx.x8.large.2e</b>: 4 cores, 32 GB</description></item>
+            /// <item><description><b>polarx.x4.xlarge.2e</b>: 8 cores, 32 GB</description></item>
+            /// <item><description><b>polarx.x8.xlarge.2e</b>: 8 cores, 64 GB</description></item>
+            /// <item><description><b>polarx.x4.2xlarge.2e</b>: 16 cores, 64 GB</description></item>
+            /// <item><description><b>polarx.x8.2xlarge.2e</b>: 16 cores, 128 GB</description></item>
+            /// <item><description><b>polarx.x4.4xlarge.2e</b>: 32 cores, 128 GB</description></item>
+            /// <item><description><b>polarx.x8.4xlarge.2e</b>: 32 cores, 256 GB</description></item>
+            /// <item><description><b>polarx.st.8xlarge.2e</b>: 60 cores, 470 GB</description></item>
+            /// <item><description><b>polarx.st.12xlarge.2e</b>: 90 cores, 720 GB.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the database instance.</para>
+            /// <para>The database instance name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pxc-xxxxx</para>
@@ -157,21 +157,21 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <summary>
             /// <para>The DN node specifications. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>mysql.n2.medium.25</b>: 2 cores, 4 GB memory</description></item>
-            /// <item><description><b>mysql.n4.medium.25</b>: 2 cores, 8 GB memory</description></item>
-            /// <item><description><b>mysql.x8.medium.25</b>: 2 cores, 16 GB memory</description></item>
-            /// <item><description><b>mysql.n2.large.25</b>: 4 cores, 8 GB memory</description></item>
-            /// <item><description><b>mysql.n4.large.25</b>: 4 cores, 16 GB memory</description></item>
-            /// <item><description><b>mysql.x8.large.25</b>: 4 cores, 32 GB memory</description></item>
-            /// <item><description><b>mysql.n2.xlarge.25</b>: 8 cores, 16 GB memory</description></item>
-            /// <item><description><b>mysql.n4.xlarge.25</b>: 8 cores, 32 GB memory</description></item>
-            /// <item><description><b>mysql.x8.xlarge.25</b>: 8 cores, 64 GB memory</description></item>
-            /// <item><description><b>mysql.n4.2xlarge.25</b>: 16 cores, 64 GB memory</description></item>
-            /// <item><description><b>mysql.x8.2xlarge.25</b>: 16 cores, 128 GB memory</description></item>
-            /// <item><description><b>mysql.x4.4xlarge.25</b>: 32 cores, 128 GB memory</description></item>
-            /// <item><description><b>mysql.x8.4xlarge.25</b>: 32 cores, 256 GB memory</description></item>
-            /// <item><description><b>mysql.st.8xlarge.25</b>: 60 cores, 470 GB memory</description></item>
-            /// <item><description><b>mysql.st.12xlarge.25</b>: 90 cores, 720 GB memory.</description></item>
+            /// <item><description><b>mysql.n2.medium.25</b>: 2 cores, 4 GB</description></item>
+            /// <item><description><b>mysql.n4.medium.25</b>: 2 cores, 8 GB</description></item>
+            /// <item><description><b>mysql.x8.medium.25</b>: 2 cores, 16 GB</description></item>
+            /// <item><description><b>mysql.n2.large.25</b>: 4 cores, 8 GB</description></item>
+            /// <item><description><b>mysql.n4.large.25</b>: 4 cores, 16 GB</description></item>
+            /// <item><description><b>mysql.x8.large.25</b>: 4 cores, 32 GB</description></item>
+            /// <item><description><b>mysql.n2.xlarge.25</b>: 8 cores, 16 GB</description></item>
+            /// <item><description><b>mysql.n4.xlarge.25</b>: 8 cores, 32 GB</description></item>
+            /// <item><description><b>mysql.x8.xlarge.25</b>: 8 cores, 64 GB</description></item>
+            /// <item><description><b>mysql.n4.2xlarge.25</b>: 16 cores, 64 GB</description></item>
+            /// <item><description><b>mysql.x8.2xlarge.25</b>: 16 cores, 128 GB</description></item>
+            /// <item><description><b>mysql.x4.4xlarge.25</b>: 32 cores, 128 GB</description></item>
+            /// <item><description><b>mysql.x8.4xlarge.25</b>: 32 cores, 256 GB</description></item>
+            /// <item><description><b>mysql.st.8xlarge.25</b>: 60 cores, 470 GB</description></item>
+            /// <item><description><b>mysql.st.12xlarge.25</b>: 90 cores, 720 GB.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -246,7 +246,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string LockMode { get; set; }
 
             /// <summary>
-            /// <para>The reason why the instance is locked.</para>
+            /// <para>The lock reason.</para>
             /// 
             /// <b>Example:</b>
             /// <para>欠费</para>
