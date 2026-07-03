@@ -10,16 +10,20 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class CreateNormalizationRuleResponseBody : TeaModel {
         /// <summary>
+        /// <para>The normalization rule ID.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>nr-z0b2ssjteut85uoh9nzp。</para>
+        /// <para>nr-z0b2ssjteut85uoh9nzp</para>
         /// </summary>
         [NameInMap("NormalizationRuleId")]
         [Validation(Required=false)]
         public string NormalizationRuleId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>6276D891-*****-55B2-87B9-74D413F7****。</para>
+        /// <para>6276D891-*****-55B2-87B9-74D413F7****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

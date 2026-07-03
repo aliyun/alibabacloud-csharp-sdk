@@ -10,16 +10,20 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class CreateDataIngestionResponseBody : TeaModel {
         /// <summary>
+        /// <para>The data ingestion ID.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>di-yxtm3l2rwa7fr5uvxtc7。</para>
+        /// <para>di-yxtm3l2rwa7fr5uvxtc7</para>
         /// </summary>
         [NameInMap("DataIngestionId")]
         [Validation(Required=false)]
         public string DataIngestionId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>6276D891-*****-55B2-87B9-74D413F7****。</para>
+        /// <para>6276D891-*****-55B2-87B9-74D413F7****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,16 +10,20 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class CreateVendorResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>6276D891-*****-55B2-87B9-74D413F7****。</para>
+        /// <para>6276D891-*****-55B2-87B9-74D413F7****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The vendor ID.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>vd-qlsw5eocx94w9。</para>
+        /// <para>vd-qlsw5eocx94w9</para>
         /// </summary>
         [NameInMap("VendorId")]
         [Validation(Required=false)]

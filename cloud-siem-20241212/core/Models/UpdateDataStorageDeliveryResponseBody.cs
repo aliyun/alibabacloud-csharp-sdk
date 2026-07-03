@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class UpdateDataStorageDeliveryResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6D7FBF4A-5B95-5760-8B5A-BF8983D4****</para>
         /// </summary>

@@ -10,16 +10,20 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class CreateDataSourceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the data source.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>ds-jl67vixpe1scwysgyu3x。</para>
+        /// <para>ds-jl67vixpe1scwysgyu3x</para>
         /// </summary>
         [NameInMap("DataSourceId")]
         [Validation(Required=false)]
         public string DataSourceId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>6276D891-*****-55B2-87B9-74D413F7****。</para>
+        /// <para>6276D891-*****-55B2-87B9-74D413F7****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

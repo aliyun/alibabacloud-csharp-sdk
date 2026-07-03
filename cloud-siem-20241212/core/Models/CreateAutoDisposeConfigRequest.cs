@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class CreateAutoDisposeConfigRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to enable automated analysis. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>enabled: Enables automated analysis.</para>
+        /// </description></item>
+        /// <item><description><para>disabled: Disables automated analysis.</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +27,13 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string AutoDecisionStatus { get; set; }
 
         /// <summary>
+        /// <para>The language of the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>zh</b> (default): Chinese.</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English.</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +44,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string Lang { get; set; }
 
         /// <summary>
+        /// <para>The code of the cloud product.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

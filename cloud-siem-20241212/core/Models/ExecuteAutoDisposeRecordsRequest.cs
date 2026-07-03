@@ -10,6 +10,11 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class ExecuteAutoDisposeRecordsRequest : TeaModel {
         /// <summary>
+        /// <para>The language of the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b> (default): Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -19,11 +24,16 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        /// <summary>
+        /// <para>The list of entities selected for manual handling.</para>
+        /// </summary>
         [NameInMap("SelectedEntityList")]
         [Validation(Required=false)]
         public List<ExecuteAutoDisposeRecordsRequestSelectedEntityList> SelectedEntityList { get; set; }
         public class ExecuteAutoDisposeRecordsRequestSelectedEntityList : TeaModel {
             /// <summary>
+            /// <para>The unique ID of the investigation record.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0000089b040b8935fed2e24ca2ec8335</para>
             /// </summary>
@@ -32,6 +42,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string AutoDisposeRecordId { get; set; }
 
             /// <summary>
+            /// <para>The UUID of the entity.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>9938fc2708ddc7b7651f3a19e4f09962</para>
             /// </summary>
@@ -41,11 +53,16 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 
         }
 
+        /// <summary>
+        /// <para>The list of entities not selected for manual handling.</para>
+        /// </summary>
         [NameInMap("UnSelectedEntityList")]
         [Validation(Required=false)]
         public List<ExecuteAutoDisposeRecordsRequestUnSelectedEntityList> UnSelectedEntityList { get; set; }
         public class ExecuteAutoDisposeRecordsRequestUnSelectedEntityList : TeaModel {
             /// <summary>
+            /// <para>The unique ID of the investigation record.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0000089b040b8935fed2e24ca2ec8335</para>
             /// </summary>
@@ -54,6 +71,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string AutoDisposeRecordId { get; set; }
 
             /// <summary>
+            /// <para>The UUID of the entity.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ae6ac3e1c9ada174eb8dadd029a2e9d1</para>
             /// </summary>

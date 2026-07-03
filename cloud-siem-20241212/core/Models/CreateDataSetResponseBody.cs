@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class CreateDataSetResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The result returned after the dataset is created.</para>
+        /// </summary>
         [NameInMap("DataSetRecordStatistic")]
         [Validation(Required=false)]
         public CreateDataSetResponseBodyDataSetRecordStatistic DataSetRecordStatistic { get; set; }
         public class CreateDataSetResponseBodyDataSetRecordStatistic : TeaModel {
             /// <summary>
+            /// <para>The dataset ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>dataset-qt0n8246gs9nackg****</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string DataSetId { get; set; }
 
             /// <summary>
+            /// <para>The number of new records in the dataset.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>6</para>
             /// </summary>
@@ -32,6 +39,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9AAA9ED9-78F4-5021-86DC-D51C7511****</para>
         /// </summary>

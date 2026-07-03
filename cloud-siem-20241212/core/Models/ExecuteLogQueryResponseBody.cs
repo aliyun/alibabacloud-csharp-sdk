@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class ExecuteLogQueryResponseBody : TeaModel {
         /// <summary>
+        /// <para>The query result.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[]。</para>
         /// </summary>
@@ -18,8 +20,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public List<object> QueryResult { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>6276D891-*****-55B2-87B9-74D413F7****。</para>
+        /// <para>6276D891-*****-55B2-87B9-74D413F7****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

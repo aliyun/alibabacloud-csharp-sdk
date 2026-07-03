@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class UpdateDetectionRuleResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>B88A2D41-87B8-537E-A7D3-3416A39F****</para>
         /// </summary>

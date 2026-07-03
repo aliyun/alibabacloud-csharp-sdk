@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class CreateExportTaskRequest : TeaModel {
         /// <summary>
+        /// <para>The parameters for the export task. The value is a JSON string that is generated based on the query conditions.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{
         ///     &quot;IncidentName&quot;: &quot;name&quot;,
@@ -23,6 +25,11 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string ExportTaskParameter { get; set; }
 
         /// <summary>
+        /// <para>The type of data to export. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>incident_list: event list.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>incident_list</para>
         /// </summary>
@@ -31,6 +38,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string ExportTaskType { get; set; }
 
         /// <summary>
+        /// <para>The language of the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>zh</b> (default): Chinese.</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -39,6 +54,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string Lang { get; set; }
 
         /// <summary>
+        /// <para>The region of the Data Management center. Select a region based on where your assets are located. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>cn-hangzhou: The Chinese mainland.</para>
+        /// </description></item>
+        /// <item><description><para>ap-southeast-1: Regions outside China.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -47,6 +70,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The user ID of a member. An administrator can use this parameter to switch to the perspective of a member.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>113091674488****</para>
         /// </summary>

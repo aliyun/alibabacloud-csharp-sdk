@@ -9,11 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class ListAutoDisposeEntitiesRequest : TeaModel {
+        /// <summary>
+        /// <para>The IDs of automated disposal records.</para>
+        /// </summary>
         [NameInMap("AutoDisposeRecordIds")]
         [Validation(Required=false)]
         public List<string> AutoDisposeRecordIds { get; set; }
 
         /// <summary>
+        /// <para>The page number. The value must be 1 or greater.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +28,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string CurrentPage { get; set; }
 
         /// <summary>
+        /// <para>The type of the data source.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,6 +39,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string DataSourceType { get; set; }
 
         /// <summary>
+        /// <para>The language of the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>zh</b> (default): Chinese.</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -42,6 +55,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string Lang { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of entries to return.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>50</para>
         /// </summary>
@@ -50,6 +65,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The token that is used to retrieve the next page of results. You can obtain this token from the response to a previous call.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AAAAAUqcj6VO4E3ECWIrFczs****</para>
         /// </summary>
@@ -58,6 +75,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The number of entries to return on each page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -68,6 +86,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string PageSize { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier of the playbook.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>b2491e39-ddf2-478a-8c07-*****</para>
         /// </summary>

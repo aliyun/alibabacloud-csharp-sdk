@@ -9,13 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class ListLogRegionsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>A list of log storage region IDs.</para>
+        /// </summary>
         [NameInMap("LogRegions")]
         [Validation(Required=false)]
         public List<string> LogRegions { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>6276D891-*****-55B2-87B9-74D413F7****。</para>
+        /// <para>6276D891-*****-55B2-87B9-74D413F7****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

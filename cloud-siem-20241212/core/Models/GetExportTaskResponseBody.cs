@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class GetExportTaskResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status of the task. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>success: The task is successful.</para>
+        /// </description></item>
+        /// <item><description><para>exporting: The task is in progress.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -18,6 +26,11 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string ExportStatus { get; set; }
 
         /// <summary>
+        /// <para>The type of the export task. Valid value:</para>
+        /// <list type="bullet">
+        /// <item><description>incident_list: event list.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>incident_list</para>
         /// </summary>
@@ -26,6 +39,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string ExportType { get; set; }
 
         /// <summary>
+        /// <para>The name of the file.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>event_1193842352994186_17344888****.xlsx</para>
         /// </summary>
@@ -34,6 +49,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string FileName { get; set; }
 
         /// <summary>
+        /// <para>The time when the task was created.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1605076118000</para>
         /// </summary>
@@ -42,6 +59,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string GmtCreate { get; set; }
 
         /// <summary>
+        /// <para>The ID of the export task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>400185</para>
         /// </summary>
@@ -50,6 +69,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public long? Id { get; set; }
 
         /// <summary>
+        /// <para>The download link for the exported Excel file.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="https://cloud-siem-user-dataset.oss-cn-shanghai.aliyuncs.com/export_file/17661858******5/event_17661858******5_175748****.xlsx">https://cloud-siem-user-dataset.oss-cn-shanghai.aliyuncs.com/export_file/17661858******5/event_17661858******5_175748****.xlsx</a></para>
         /// </summary>
@@ -58,6 +79,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string Link { get; set; }
 
         /// <summary>
+        /// <para>The progress of the export task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>66</para>
         /// </summary>
@@ -66,6 +89,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? Progress { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9AAA9ED9-78F4-5021-86DC-D51C7511****</para>
         /// </summary>

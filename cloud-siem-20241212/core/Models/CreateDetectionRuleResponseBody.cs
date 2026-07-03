@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class CreateDetectionRuleResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the detection rule.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>dr-ha1i09ob3zmqrs85****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string DetectionRuleId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5CC09D0C-1CD7-54BD-A853-DCB2D945****</para>
         /// </summary>

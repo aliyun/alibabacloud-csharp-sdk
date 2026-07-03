@@ -10,16 +10,20 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class GetLogTicketResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ticket for Simple Log Service.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>*******。</para>
+        /// <hr>
         /// </summary>
         [NameInMap("LogTicket")]
         [Validation(Required=false)]
         public string LogTicket { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>173326*******。</para>
+        /// <para>173326*******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
