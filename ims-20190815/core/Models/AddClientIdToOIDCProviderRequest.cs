@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class AddClientIdToOIDCProviderRequest : TeaModel {
         /// <summary>
-        /// <para>The client ID that you want to add.</para>
-        /// <para>The client ID can contain letters, digits, and special characters and cannot start with the special characters. The special characters are <c>periods, (.), hyphens (-), underscores (_), colons (:), and forward slashes (/)</c>.``</para>
-        /// <para>The client ID can be up to 128 characters in length.</para>
+        /// <para>The specified client ID.</para>
+        /// <para>Format: letters, digits, and the special characters <c>.-_:/</c> are allowed. The value cannot start with the special characters <c>.-_:/</c>.</para>
+        /// <para>Length: up to 128 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>598469743454717****</para>

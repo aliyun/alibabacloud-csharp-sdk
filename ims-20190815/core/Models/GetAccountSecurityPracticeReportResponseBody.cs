@@ -26,8 +26,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                 /// <summary>
                 /// <para>Indicates whether multi-factor authentication (MFA) is enabled. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true</description></item>
-                /// <item><description>false</description></item>
+                /// <item><description><para>true</para>
+                /// </description></item>
+                /// <item><description><para>false</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -80,9 +82,12 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                 /// <summary>
                 /// <para>The complexity level of the password for the RAM user. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>low</description></item>
-                /// <item><description>mid</description></item>
-                /// <item><description>high</description></item>
+                /// <item><description><para>low</para>
+                /// </description></item>
+                /// <item><description><para>mid</para>
+                /// </description></item>
+                /// <item><description><para>high</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

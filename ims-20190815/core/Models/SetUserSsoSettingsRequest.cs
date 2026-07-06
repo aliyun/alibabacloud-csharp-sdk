@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class SetUserSsoSettingsRequest : TeaModel {
+        /// <summary>
+        /// <para>The supported signature algorithm. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>rsa-sha256</para>
+        /// </description></item>
+        /// <item><description><para>rsa-sha1 (default)</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rsa-sha1</para>
+        /// </summary>
         [NameInMap("AuthnSignAlgo")]
         [Validation(Required=false)]
         public string AuthnSignAlgo { get; set; }
@@ -37,8 +49,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         /// <summary>
         /// <para>Specifies whether to enable SSO for the RAM user. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false (default)</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false (default)</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,12 +63,14 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public bool? SsoEnabled { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the SAML SSO requires a domain name in the <c>&lt;saml:NameID&gt;</c> element of the SAML response. If yes, the username specified by the IdP for SSO must have a domain name as the suffix.</para>
+        /// <para>Specifies whether the SAML SSO requires a domain name in the <c>&lt;saml:NameID&gt;</c> element of the SAML response. If yes, the username specified by the IdP for SSO must have a domain name as the suffix.</para>
         /// <list type="bullet">
-        /// <item><description>If the value of the parameter is <c>true</c>, the <c>&lt;saml:NameID&gt;</c> element <b>must</b> be in the <c>username@domain</c> format. You can set <c>domain</c> to the default domain name or the configured domain alias.</description></item>
-        /// <item><description>If the value of the parameter is <c>false</c>, the <c>&lt;saml:NameID&gt;</c> element <b>must</b> be in the <c>username</c> format and <b>cannot</b> contain the <c>domain</c> suffix.</description></item>
+        /// <item><description><para>If the value of the parameter is <c>true</c>, the <c>&lt;saml:NameID&gt;</c> element <b>must</b> be in the <c>username@domain</c> format. You can set <c>domain</c> to the default domain name or the configured domain alias.</para>
+        /// </description></item>
+        /// <item><description><para>If the value of the parameter is <c>false</c>, the <c>&lt;saml:NameID&gt;</c> element <b>must</b> be in the <c>username</c> format and <b>cannot</b> contain the <c>domain</c> suffix.</para>
+        /// </description></item>
         /// </list>
-        /// <para>Set the value to the default <c>true</c>.</para>
+        /// <para>The default value is <c>true</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -20,24 +20,26 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The details of security preferences.</para>
+        /// <para>The security preferences.</para>
         /// </summary>
         [NameInMap("SecurityPreference")]
         [Validation(Required=false)]
         public GetSecurityPreferenceResponseBodySecurityPreference SecurityPreference { get; set; }
         public class GetSecurityPreferenceResponseBodySecurityPreference : TeaModel {
             /// <summary>
-            /// <para>The AccessKey pair preference.</para>
+            /// <para>The AccessKey preferences.</para>
             /// </summary>
             [NameInMap("AccessKeyPreference")]
             [Validation(Required=false)]
             public GetSecurityPreferenceResponseBodySecurityPreferenceAccessKeyPreference AccessKeyPreference { get; set; }
             public class GetSecurityPreferenceResponseBodySecurityPreferenceAccessKeyPreference : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether RAM users can manage their AccessKey pairs. Valid values:</para>
+                /// <para>Specifies whether RAM users can manage their own AccessKey pairs. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true</description></item>
-                /// <item><description>false</description></item>
+                /// <item><description><para>true: Allowed.</para>
+                /// </description></item>
+                /// <item><description><para>false: Not allowed.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -47,6 +49,18 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                 [Validation(Required=false)]
                 public bool? AllowUserToManageAccessKeys { get; set; }
 
+                /// <summary>
+                /// <para>Specifies whether RAM users can manage their own API keys. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para>true: Allowed.</para>
+                /// </description></item>
+                /// <item><description><para>false: Not allowed.</para>
+                /// </description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
+                /// </summary>
                 [NameInMap("AllowUserToManageServiceCredentials")]
                 [Validation(Required=false)]
                 public bool? AllowUserToManageServiceCredentials { get; set; }
@@ -54,17 +68,19 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             }
 
             /// <summary>
-            /// <para>The logon preference.</para>
+            /// <para>The login preferences.</para>
             /// </summary>
             [NameInMap("LoginProfilePreference")]
             [Validation(Required=false)]
             public GetSecurityPreferenceResponseBodySecurityPreferenceLoginProfilePreference LoginProfilePreference { get; set; }
             public class GetSecurityPreferenceResponseBodySecurityPreferenceLoginProfilePreference : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether RAM users can change their passwords. Valid values:</para>
+                /// <para>Specifies whether RAM users can manage their own passwords. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true</description></item>
-                /// <item><description>false</description></item>
+                /// <item><description><para>true: Allowed.</para>
+                /// </description></item>
+                /// <item><description><para>false: Not allowed.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -75,10 +91,12 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                 public bool? AllowUserToChangePassword { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether a RAM user can use a passkey for logon. Valid values:</para>
+                /// <para>Specifies whether RAM users can log in with passkeys. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true</description></item>
-                /// <item><description>false</description></item>
+                /// <item><description><para>true: Allowed.</para>
+                /// </description></item>
+                /// <item><description><para>false: Not allowed.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -89,10 +107,12 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                 public bool? AllowUserToLoginWithPasskey { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether RAM users can remember the multi-factor authentication (MFA) devices for seven days. Valid values:</para>
+                /// <para>Specifies whether to save the multi-factor authentication (MFA) status for 7 days after a RAM user passes MFA. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true</description></item>
-                /// <item><description>false</description></item>
+                /// <item><description><para>true: Allowed.</para>
+                /// </description></item>
+                /// <item><description><para>false: Not allowed.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -103,7 +123,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                 public bool? EnableSaveMFATicket { get; set; }
 
                 /// <summary>
-                /// <para>The subnet mask.</para>
+                /// <para>The login network mask.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10.0.0.0/8</para>
@@ -113,7 +133,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                 public string LoginNetworkMasks { get; set; }
 
                 /// <summary>
-                /// <para>The validity period of the logon session of RAM users. Unit: hours.</para>
+                /// <para>The login session duration for RAM users, in hours.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>6</para>
@@ -123,11 +143,14 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                 public int? LoginSessionDuration { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether MFA is required for all RAM users when they log on to the Alibaba Cloud Management Console. Valid values:</para>
+                /// <para>Specifies whether MFA is required for logon. This parameter replaces <c>EnforceMFAForLogin</c>. Although <c>EnforceMFAForLogin</c> is still supported, using this new parameter is recommended. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>mandatory: MFA is required for all RAM users. If you use EnforceMFAForLogin, set the value to true.</description></item>
-                /// <item><description>independent (default): User-specific settings are applied. If you use EnforceMFAForLogin, set the value to false.</description></item>
-                /// <item><description>adaptive: MFA is required only for RAM users who initiated unusual logons.</description></item>
+                /// <item><description><para>mandatory: MFA is required for all RAM users. This value corresponds to <c>true</c> for the <c>EnforceMFAForLogin</c> parameter.</para>
+                /// </description></item>
+                /// <item><description><para>independent (default): The MFA setting for each RAM user is applied independently. This value corresponds to <c>false</c> for the <c>EnforceMFAForLogin</c> parameter.</para>
+                /// </description></item>
+                /// <item><description><para>adaptive: MFA is required only for risky logons.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -140,10 +163,12 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                 /// <term><b>Obsolete</b></term>
                 /// 
                 /// <summary>
-                /// <para>Indicates whether to enable MFA for RAM users who initiated unusual logons. Valid values:</para>
+                /// <para>Specifies whether to require multi-factor authentication (MFA) for secondary authentication during a risky logon. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>autonomous (default): yes. MFA is prompted for RAM users who initiated unusual logons. However, the RAM users are allowed to skip MFA.</description></item>
-                /// <item><description>enforceVerify: MFA is prompted for RAM users who initiated unusual logons and the RAM users cannot skip MFA.</description></item>
+                /// <item><description><para>autonomous (default): Secondary authentication is optional, and MFA device binding is not enforced.</para>
+                /// </description></item>
+                /// <item><description><para>enforceVerify: Secondary authentication is enforced.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -157,17 +182,19 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             }
 
             /// <summary>
-            /// <para>The MFA preference.</para>
+            /// <para>The MFA preferences.</para>
             /// </summary>
             [NameInMap("MFAPreference")]
             [Validation(Required=false)]
             public GetSecurityPreferenceResponseBodySecurityPreferenceMFAPreference MFAPreference { get; set; }
             public class GetSecurityPreferenceResponseBodySecurityPreferenceMFAPreference : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether RAM users can manage their MFA devices. Valid values:</para>
+                /// <para>Specifies whether RAM users can manage their own MFA devices. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true</description></item>
-                /// <item><description>false</description></item>
+                /// <item><description><para>true: Allowed.</para>
+                /// </description></item>
+                /// <item><description><para>false: Not allowed.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -180,14 +207,14 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             }
 
             /// <summary>
-            /// <para>The maximum idle periods. Unit: days.</para>
+            /// <para>The settings for the maximum idle period, in days.</para>
             /// </summary>
             [NameInMap("MaxIdleDays")]
             [Validation(Required=false)]
             public GetSecurityPreferenceResponseBodySecurityPreferenceMaxIdleDays MaxIdleDays { get; set; }
             public class GetSecurityPreferenceResponseBodySecurityPreferenceMaxIdleDays : TeaModel {
                 /// <summary>
-                /// <para>The maximum number of days that the AccessKey pair of a RAM user can stay unused. If an AccessKey pair is not used in the previous specified number of days, the AccessKey pair is automatically disabled on the next day. The default value is 730. You cannot change the value.</para>
+                /// <para>The maximum idle period, in days, for a RAM user\&quot;s AccessKey. If an AccessKey remains unused for this period, it is automatically disabled on the following day. The default value is 730.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>730</para>
@@ -197,7 +224,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                 public int? MaxIdleDaysForAccessKeys { get; set; }
 
                 /// <summary>
-                /// <para>The maximum number of days that a RAM user can stay idle. If a RAM user for whom console logon is enabled does not log on to the console in the previous specified number of days, console logon is automatically disabled for the RAM user on the next day. Single sign-on (SSO) is not involved. The default value is 730. You cannot change the value.</para>
+                /// <para>The maximum idle period (in days) for RAM users. If a RAM user with console login enabled remains inactive (does not log in, excluding SSO logins) for this period, their console login access is automatically disabled on the following day. The default value is 730.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>730</para>
@@ -209,17 +236,19 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             }
 
             /// <summary>
-            /// <para>The personal information preference.</para>
+            /// <para>The personal information preferences.</para>
             /// </summary>
             [NameInMap("PersonalInfoPreference")]
             [Validation(Required=false)]
             public GetSecurityPreferenceResponseBodySecurityPreferencePersonalInfoPreference PersonalInfoPreference { get; set; }
             public class GetSecurityPreferenceResponseBodySecurityPreferencePersonalInfoPreference : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether RAM users can manage their personal DingTalk accounts, such as binding and unbinding of the accounts. Valid values:</para>
+                /// <para>Specifies whether RAM users can bind or unbind their personal DingTalk accounts. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true</description></item>
-                /// <item><description>false</description></item>
+                /// <item><description><para>true: Allowed.</para>
+                /// </description></item>
+                /// <item><description><para>false: Not allowed.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -232,7 +261,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             }
 
             /// <summary>
-            /// <para>The MFA method preference.</para>
+            /// <para>The preferences for MFA methods.</para>
             /// </summary>
             [NameInMap("VerificationPreference")]
             [Validation(Required=false)]

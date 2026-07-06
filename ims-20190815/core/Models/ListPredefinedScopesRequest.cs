@@ -12,9 +12,12 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         /// <summary>
         /// <para>The type of the application. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>WebApp</description></item>
-        /// <item><description>NativeApp</description></item>
-        /// <item><description>ServerApp</description></item>
+        /// <item><description><para>WebApp</para>
+        /// </description></item>
+        /// <item><description><para>NativeApp</para>
+        /// </description></item>
+        /// <item><description><para>ServerApp</para>
+        /// </description></item>
         /// </list>
         /// <para>If this parameter is empty, the permissions on all types of applications are queried.</para>
         /// 

@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         /// <summary>
         /// <para>The AccessKey ID of the RAM user.</para>
         /// <remarks>
-        /// <para> You must specify only one of the following parameters: <c>UserId</c> and <c>UserAccessKeyId</c>.</para>
+        /// <para>You must specify only one of the following parameters: <c>UserId</c> and <c>UserAccessKeyId</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         /// <summary>
         /// <para>The ID of the RAM user.</para>
         /// <remarks>
-        /// <para> You must specify only one of the following parameters: <c>UserId</c> and <c>UserAccessKeyId</c>.</para>
+        /// <para>You must specify only one of the following parameters: <c>UserId</c> and <c>UserAccessKeyId</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

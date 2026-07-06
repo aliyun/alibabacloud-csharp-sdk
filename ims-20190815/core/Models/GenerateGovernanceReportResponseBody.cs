@@ -22,9 +22,12 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         /// <summary>
         /// <para>The report generation status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Started: The system starts to generate a governance report.</description></item>
-        /// <item><description>Progressing: The system is generating a governance report.</description></item>
-        /// <item><description>Completed: A governance report is generated.</description></item>
+        /// <item><description><para>Started: The system starts to generate a governance report.</para>
+        /// </description></item>
+        /// <item><description><para>Progressing: The system is generating a governance report.</para>
+        /// </description></item>
+        /// <item><description><para>Completed: A governance report is generated.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

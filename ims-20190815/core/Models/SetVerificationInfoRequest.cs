@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         /// <summary>
         /// <para>The email address.</para>
         /// <remarks>
-        /// <para> If you set <c>VerifyType</c> to <c>email</c>, you must specify this parameter.</para>
+        /// <para>If you set <c>VerifyType</c> to <c>email</c>, you must specify this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         /// <summary>
         /// <para>The mobile phone number.</para>
         /// <remarks>
-        /// <para> If you set <c>VerifyType</c> to <c>sms</c>, you must specify this parameter.</para>
+        /// <para>If you set <c>VerifyType</c> to <c>sms</c>, you must specify this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -48,8 +48,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         /// <summary>
         /// <para>The multi-factor authentication (MFA) method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>sms: mobile phone.</description></item>
-        /// <item><description>email: email.</description></item>
+        /// <item><description><para>sms: mobile phone.</para>
+        /// </description></item>
+        /// <item><description><para>email: email.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

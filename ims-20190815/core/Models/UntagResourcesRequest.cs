@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         /// <summary>
         /// <para>Specifies whether to remove all tags from the resource. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: remove all tags from the resources.</description></item>
-        /// <item><description>false (default): does not remove all tags from the resources.</description></item>
+        /// <item><description><para>true: remove all tags from the resources.</para>
+        /// </description></item>
+        /// <item><description><para>false (default): does not remove all tags from the resources.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// <para>This parameter takes effect only when TagKey.N is not set in the request.</para>

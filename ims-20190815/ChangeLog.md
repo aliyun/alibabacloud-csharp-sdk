@@ -1,3 +1,13 @@
+2026-07-06 Version: 2.4.0
+- Support API CreateServiceCredential.
+- Support API DeleteServiceCredential.
+- Support API GetAccessKeyPolicy.
+- Support API GetServiceCredential.
+- Support API ListServiceCredentials.
+- Support API SetAccessKeyPolicy.
+- Support API UpdateServiceCredential.
+
+
 2026-05-25 Version: 2.3.6
 - Update API GetAccountSummary: add response parameters Body.SummaryMap.ServiceCredentialsPerUserPerServiceQuota.
 - Update API GetSecurityPreference: add response parameters Body.SecurityPreference.AccessKeyPreference.AllowUserToManageServiceCredentials.

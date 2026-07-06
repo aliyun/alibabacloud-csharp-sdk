@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         /// <summary>
         /// <para>The status of the AccessKey pair. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Active</description></item>
-        /// <item><description>Inactive</description></item>
+        /// <item><description><para>Active</para>
+        /// </description></item>
+        /// <item><description><para>Inactive</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

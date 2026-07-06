@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class UpdateApplicationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the application.</para>
+        /// <para>The application information.</para>
         /// </summary>
         [NameInMap("Application")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string AccountId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the application.</para>
+            /// <para>The application ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>472457090344041****</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string AppType { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The time when the application was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-10-23T08:06:57Z</para>
@@ -83,6 +83,9 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             [Validation(Required=false)]
             public UpdateApplicationResponseBodyApplicationDelegatedScope DelegatedScope { get; set; }
             public class UpdateApplicationResponseBodyApplicationDelegatedScope : TeaModel {
+                /// <summary>
+                /// <para>The information about the permissions that are granted on the application.</para>
+                /// </summary>
                 [NameInMap("PredefinedScopes")]
                 [Validation(Required=false)]
                 public UpdateApplicationResponseBodyApplicationDelegatedScopePredefinedScopes PredefinedScopes { get; set; }
@@ -129,10 +132,25 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             [Validation(Required=false)]
             public bool? IsMultiTenant { get; set; }
 
+            /// <summary>
+            /// <para>The OAuth protocol version of the application. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><c>2.0</c>: OAuth 2.0</para>
+            /// </description></item>
+            /// <item><description><para><c>2.1</c>: OAuth 2.1</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2.0</para>
+            /// </summary>
             [NameInMap("ProtocolVersion")]
             [Validation(Required=false)]
             public string ProtocolVersion { get; set; }
 
+            /// <summary>
+            /// <para>The redirect URLs.</para>
+            /// </summary>
             [NameInMap("RedirectUris")]
             [Validation(Required=false)]
             public UpdateApplicationResponseBodyApplicationRedirectUris RedirectUris { get; set; }
@@ -164,7 +182,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public bool? SecretRequired { get; set; }
 
             /// <summary>
-            /// <para>The update time.</para>
+            /// <para>The time when the application was updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-10-23T08:06:57Z</para>

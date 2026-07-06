@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class GetSAMLProviderRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the IdP.</para>
+        /// <para>The name of the IdP whose information you want to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

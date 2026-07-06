@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Test-Team</para>
+            /// <para>测试团队</para>
             /// </summary>
             [NameInMap("Comments")]
             [Validation(Required=false)]

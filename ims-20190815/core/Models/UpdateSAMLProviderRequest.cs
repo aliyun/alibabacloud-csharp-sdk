@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class UpdateSAMLProviderRequest : TeaModel {
+        /// <summary>
+        /// <para>The signature algorithm supported by the Alibaba Cloud service provider (SP). Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>rsa-sha256</para>
+        /// </description></item>
+        /// <item><description><para>rsa-sha1</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rsa-sha1</para>
+        /// </summary>
         [NameInMap("AuthnSignAlgo")]
         [Validation(Required=false)]
         public string AuthnSignAlgo { get; set; }
@@ -16,7 +28,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         /// <summary>
         /// <para>The new description.</para>
         /// <remarks>
-        /// <para> You must specify at least one of the <c>NewDescription</c> and <c>NewEncodedSAMLMetadataDocument</c> parameters.</para>
+        /// <para>Specify at least one of the <c>NewDescription</c> and <c>NewEncodedSAMLMetadataDocument</c> parameters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -29,7 +41,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         /// <summary>
         /// <para>The new metadata file.</para>
         /// <remarks>
-        /// <para> You must specify at least one of the <c>NewDescription</c> and <c>NewEncodedSAMLMetadataDocument</c> parameters.</para>
+        /// <para>Specify at least one of the <c>NewDescription</c> and <c>NewEncodedSAMLMetadataDocument</c> parameters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -40,7 +52,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public string NewEncodedSAMLMetadataDocument { get; set; }
 
         /// <summary>
-        /// <para>The name of the IdP whose information you want to modify.</para>
+        /// <para>The name of the identity provider to modify.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

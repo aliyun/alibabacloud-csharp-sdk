@@ -18,7 +18,11 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "central";
+            this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"cn-hangzhou", "ims.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("ims", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -39,8 +43,14 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a client ID to an OpenID Connect (OIDC) identity provider (IdP).</para>
+        /// <para>Calls AddClientIdToOIDCProvider to add a specified client ID to an OIDC IdP.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This topic provides an example on how to add client ID <c>598469743454717****</c> to the OIDC IdP named <c>TestOIDCProvider</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddClientIdToOIDCProviderRequest
@@ -85,8 +95,14 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a client ID to an OpenID Connect (OIDC) identity provider (IdP).</para>
+        /// <para>Calls AddClientIdToOIDCProvider to add a specified client ID to an OIDC IdP.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This topic provides an example on how to add client ID <c>598469743454717****</c> to the OIDC IdP named <c>TestOIDCProvider</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddClientIdToOIDCProviderRequest
@@ -131,8 +147,14 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a client ID to an OpenID Connect (OIDC) identity provider (IdP).</para>
+        /// <para>Calls AddClientIdToOIDCProvider to add a specified client ID to an OIDC IdP.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This topic provides an example on how to add client ID <c>598469743454717****</c> to the OIDC IdP named <c>TestOIDCProvider</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddClientIdToOIDCProviderRequest
@@ -149,8 +171,14 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a client ID to an OpenID Connect (OIDC) identity provider (IdP).</para>
+        /// <para>Calls AddClientIdToOIDCProvider to add a specified client ID to an OIDC IdP.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This topic provides an example on how to add client ID <c>598469743454717****</c> to the OIDC IdP named <c>TestOIDCProvider</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddClientIdToOIDCProviderRequest
@@ -597,7 +625,7 @@ namespace AlibabaCloud.SDK.Ims20190815
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> This operation is available only for RAM users. Before you call this operation, make sure that <c>AllowUserToChangePassword</c> in <a href="https://help.aliyun.com/document_detail/43765.html">SetSecurityPreference</a> is set to <c>True</c>. The value True indicates that RAM users can manage their passwords.</para>
+        /// <para>This operation is available only for RAM users. Before you call this operation, make sure that <c>AllowUserToChangePassword</c> in <a href="https://help.aliyun.com/document_detail/43765.html">SetSecurityPreference</a> is set to <c>True</c>. The value True indicates that RAM users can manage their passwords.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -650,7 +678,7 @@ namespace AlibabaCloud.SDK.Ims20190815
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> This operation is available only for RAM users. Before you call this operation, make sure that <c>AllowUserToChangePassword</c> in <a href="https://help.aliyun.com/document_detail/43765.html">SetSecurityPreference</a> is set to <c>True</c>. The value True indicates that RAM users can manage their passwords.</para>
+        /// <para>This operation is available only for RAM users. Before you call this operation, make sure that <c>AllowUserToChangePassword</c> in <a href="https://help.aliyun.com/document_detail/43765.html">SetSecurityPreference</a> is set to <c>True</c>. The value True indicates that RAM users can manage their passwords.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -703,7 +731,7 @@ namespace AlibabaCloud.SDK.Ims20190815
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> This operation is available only for RAM users. Before you call this operation, make sure that <c>AllowUserToChangePassword</c> in <a href="https://help.aliyun.com/document_detail/43765.html">SetSecurityPreference</a> is set to <c>True</c>. The value True indicates that RAM users can manage their passwords.</para>
+        /// <para>This operation is available only for RAM users. Before you call this operation, make sure that <c>AllowUserToChangePassword</c> in <a href="https://help.aliyun.com/document_detail/43765.html">SetSecurityPreference</a> is set to <c>True</c>. The value True indicates that RAM users can manage their passwords.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -728,7 +756,7 @@ namespace AlibabaCloud.SDK.Ims20190815
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> This operation is available only for RAM users. Before you call this operation, make sure that <c>AllowUserToChangePassword</c> in <a href="https://help.aliyun.com/document_detail/43765.html">SetSecurityPreference</a> is set to <c>True</c>. The value True indicates that RAM users can manage their passwords.</para>
+        /// <para>This operation is available only for RAM users. Before you call this operation, make sure that <c>AllowUserToChangePassword</c> in <a href="https://help.aliyun.com/document_detail/43765.html">SetSecurityPreference</a> is set to <c>True</c>. The value True indicates that RAM users can manage their passwords.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -1323,7 +1351,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables logon to the console for a Resource Access Management (RAM) user.</para>
+        /// <para>Creates a logon configuration for a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1381,7 +1409,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables logon to the console for a Resource Access Management (RAM) user.</para>
+        /// <para>Creates a logon configuration for a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1439,7 +1467,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables logon to the console for a Resource Access Management (RAM) user.</para>
+        /// <para>Creates a logon configuration for a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1457,7 +1485,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables logon to the console for a Resource Access Management (RAM) user.</para>
+        /// <para>Creates a logon configuration for a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1831,6 +1859,150 @@ namespace AlibabaCloud.SDK.Ims20190815
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateSAMLProviderWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a service credential for a Resource Access Management (RAM) user in a specified cloud service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateServiceCredentialRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateServiceCredentialResponse
+        /// </returns>
+        public CreateServiceCredentialResponse CreateServiceCredentialWithOptions(CreateServiceCredentialRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialAgeDays))
+            {
+                query["CredentialAgeDays"] = request.CredentialAgeDays;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceCredentialName))
+            {
+                query["ServiceCredentialName"] = request.ServiceCredentialName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceName))
+            {
+                query["ServiceName"] = request.ServiceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserPrincipalName))
+            {
+                query["UserPrincipalName"] = request.UserPrincipalName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateServiceCredential",
+                Version = "2019-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateServiceCredentialResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a service credential for a Resource Access Management (RAM) user in a specified cloud service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateServiceCredentialRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateServiceCredentialResponse
+        /// </returns>
+        public async Task<CreateServiceCredentialResponse> CreateServiceCredentialWithOptionsAsync(CreateServiceCredentialRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialAgeDays))
+            {
+                query["CredentialAgeDays"] = request.CredentialAgeDays;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceCredentialName))
+            {
+                query["ServiceCredentialName"] = request.ServiceCredentialName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceName))
+            {
+                query["ServiceName"] = request.ServiceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserPrincipalName))
+            {
+                query["UserPrincipalName"] = request.UserPrincipalName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateServiceCredential",
+                Version = "2019-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateServiceCredentialResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a service credential for a Resource Access Management (RAM) user in a specified cloud service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateServiceCredentialRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateServiceCredentialResponse
+        /// </returns>
+        public CreateServiceCredentialResponse CreateServiceCredential(CreateServiceCredentialRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateServiceCredentialWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a service credential for a Resource Access Management (RAM) user in a specified cloud service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateServiceCredentialRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateServiceCredentialResponse
+        /// </returns>
+        public async Task<CreateServiceCredentialResponse> CreateServiceCredentialAsync(CreateServiceCredentialRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateServiceCredentialWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3291,6 +3463,134 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Deletes a service credential of a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteServiceCredentialRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteServiceCredentialResponse
+        /// </returns>
+        public DeleteServiceCredentialResponse DeleteServiceCredentialWithOptions(DeleteServiceCredentialRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceCredentialId))
+            {
+                query["ServiceCredentialId"] = request.ServiceCredentialId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserPrincipalName))
+            {
+                query["UserPrincipalName"] = request.UserPrincipalName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteServiceCredential",
+                Version = "2019-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteServiceCredentialResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a service credential of a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteServiceCredentialRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteServiceCredentialResponse
+        /// </returns>
+        public async Task<DeleteServiceCredentialResponse> DeleteServiceCredentialWithOptionsAsync(DeleteServiceCredentialRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceCredentialId))
+            {
+                query["ServiceCredentialId"] = request.ServiceCredentialId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserPrincipalName))
+            {
+                query["UserPrincipalName"] = request.UserPrincipalName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteServiceCredential",
+                Version = "2019-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteServiceCredentialResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a service credential of a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteServiceCredentialRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteServiceCredentialResponse
+        /// </returns>
+        public DeleteServiceCredentialResponse DeleteServiceCredential(DeleteServiceCredentialRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteServiceCredentialWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a service credential of a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteServiceCredentialRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteServiceCredentialResponse
+        /// </returns>
+        public async Task<DeleteServiceCredentialResponse> DeleteServiceCredentialAsync(DeleteServiceCredentialRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteServiceCredentialWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
@@ -3666,7 +3966,7 @@ namespace AlibabaCloud.SDK.Ims20190815
         /// <description>
         /// <para>If you want to call this operation to uninstall an internal application, the type of the internal application must be <b>ServerApp</b>. Otherwise, an error occurs when you call this operation.</para>
         /// <remarks>
-        /// <para> For <b>internal applications</b>, only internal applications of the ServerApp type need to be <b>installed or provisioned</b>. Therefore, only internal applications of the ServerApp type <b>can be uninstalled</b>. Internal applications of the WebApp and NativeApp types <b>do not need to and cannot be uninstalled</b>.</para>
+        /// <para>For <b>internal applications</b>, only internal applications of the ServerApp type need to be <b>installed or provisioned</b>. Therefore, only internal applications of the ServerApp type <b>can be uninstalled</b>. Internal applications of the WebApp and NativeApp types <b>do not need to and cannot be uninstalled</b>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -3716,7 +4016,7 @@ namespace AlibabaCloud.SDK.Ims20190815
         /// <description>
         /// <para>If you want to call this operation to uninstall an internal application, the type of the internal application must be <b>ServerApp</b>. Otherwise, an error occurs when you call this operation.</para>
         /// <remarks>
-        /// <para> For <b>internal applications</b>, only internal applications of the ServerApp type need to be <b>installed or provisioned</b>. Therefore, only internal applications of the ServerApp type <b>can be uninstalled</b>. Internal applications of the WebApp and NativeApp types <b>do not need to and cannot be uninstalled</b>.</para>
+        /// <para>For <b>internal applications</b>, only internal applications of the ServerApp type need to be <b>installed or provisioned</b>. Therefore, only internal applications of the ServerApp type <b>can be uninstalled</b>. Internal applications of the WebApp and NativeApp types <b>do not need to and cannot be uninstalled</b>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -3766,7 +4066,7 @@ namespace AlibabaCloud.SDK.Ims20190815
         /// <description>
         /// <para>If you want to call this operation to uninstall an internal application, the type of the internal application must be <b>ServerApp</b>. Otherwise, an error occurs when you call this operation.</para>
         /// <remarks>
-        /// <para> For <b>internal applications</b>, only internal applications of the ServerApp type need to be <b>installed or provisioned</b>. Therefore, only internal applications of the ServerApp type <b>can be uninstalled</b>. Internal applications of the WebApp and NativeApp types <b>do not need to and cannot be uninstalled</b>.</para>
+        /// <para>For <b>internal applications</b>, only internal applications of the ServerApp type need to be <b>installed or provisioned</b>. Therefore, only internal applications of the ServerApp type <b>can be uninstalled</b>. Internal applications of the WebApp and NativeApp types <b>do not need to and cannot be uninstalled</b>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -3792,7 +4092,7 @@ namespace AlibabaCloud.SDK.Ims20190815
         /// <description>
         /// <para>If you want to call this operation to uninstall an internal application, the type of the internal application must be <b>ServerApp</b>. Otherwise, an error occurs when you call this operation.</para>
         /// <remarks>
-        /// <para> For <b>internal applications</b>, only internal applications of the ServerApp type need to be <b>installed or provisioned</b>. Therefore, only internal applications of the ServerApp type <b>can be uninstalled</b>. Internal applications of the WebApp and NativeApp types <b>do not need to and cannot be uninstalled</b>.</para>
+        /// <para>For <b>internal applications</b>, only internal applications of the ServerApp type need to be <b>installed or provisioned</b>. Therefore, only internal applications of the ServerApp type <b>can be uninstalled</b>. Internal applications of the WebApp and NativeApp types <b>do not need to and cannot be uninstalled</b>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -4475,6 +4775,134 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the network access restriction policy of an access key for an Alibaba Cloud account or a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAccessKeyPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAccessKeyPolicyResponse
+        /// </returns>
+        public GetAccessKeyPolicyResponse GetAccessKeyPolicyWithOptions(GetAccessKeyPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserAccessKeyId))
+            {
+                query["UserAccessKeyId"] = request.UserAccessKeyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserPrincipalName))
+            {
+                query["UserPrincipalName"] = request.UserPrincipalName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAccessKeyPolicy",
+                Version = "2019-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAccessKeyPolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the network access restriction policy of an access key for an Alibaba Cloud account or a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAccessKeyPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAccessKeyPolicyResponse
+        /// </returns>
+        public async Task<GetAccessKeyPolicyResponse> GetAccessKeyPolicyWithOptionsAsync(GetAccessKeyPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserAccessKeyId))
+            {
+                query["UserAccessKeyId"] = request.UserAccessKeyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserPrincipalName))
+            {
+                query["UserPrincipalName"] = request.UserPrincipalName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAccessKeyPolicy",
+                Version = "2019-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAccessKeyPolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the network access restriction policy of an access key for an Alibaba Cloud account or a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAccessKeyPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAccessKeyPolicyResponse
+        /// </returns>
+        public GetAccessKeyPolicyResponse GetAccessKeyPolicy(GetAccessKeyPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAccessKeyPolicyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the network access restriction policy of an access key for an Alibaba Cloud account or a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAccessKeyPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAccessKeyPolicyResponse
+        /// </returns>
+        public async Task<GetAccessKeyPolicyResponse> GetAccessKeyPolicyAsync(GetAccessKeyPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAccessKeyPolicyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries information about the multi-factor authentication (MFA) devices of an Alibaba Cloud account.</para>
         /// </summary>
         /// 
@@ -4651,7 +5079,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the overview information about an Alibaba Cloud account.</para>
+        /// <para>Retrieves the overview for an Alibaba Cloud account (root account).</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -4681,7 +5109,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the overview information about an Alibaba Cloud account.</para>
+        /// <para>Retrieves the overview for an Alibaba Cloud account (root account).</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -4711,7 +5139,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the overview information about an Alibaba Cloud account.</para>
+        /// <para>Retrieves the overview for an Alibaba Cloud account (root account).</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4725,7 +5153,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the overview information about an Alibaba Cloud account.</para>
+        /// <para>Retrieves the overview for an Alibaba Cloud account (root account).</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4867,12 +5295,12 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration information about an application.</para>
+        /// <para>Queries the configuration information of an application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the configurations of an application named <c>472457090344041****</c>.</para>
+        /// <para>This topic provides an example on how to query the configurations of an application named <c>472457090344041****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4914,12 +5342,12 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration information about an application.</para>
+        /// <para>Queries the configuration information of an application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the configurations of an application named <c>472457090344041****</c>.</para>
+        /// <para>This topic provides an example on how to query the configurations of an application named <c>472457090344041****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4961,12 +5389,12 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration information about an application.</para>
+        /// <para>Queries the configuration information of an application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the configurations of an application named <c>472457090344041****</c>.</para>
+        /// <para>This topic provides an example on how to query the configurations of an application named <c>472457090344041****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4984,12 +5412,12 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration information about an application.</para>
+        /// <para>Queries the configuration information of an application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the configurations of an application named <c>472457090344041****</c>.</para>
+        /// <para>This topic provides an example on how to query the configurations of an application named <c>472457090344041****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5463,7 +5891,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户的单项ram治理报告</para>
+        /// <para>Queries the details of a specific check item in an identity and access governance report.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5513,7 +5941,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户的单项ram治理报告</para>
+        /// <para>Queries the details of a specific check item in an identity and access governance report.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5563,7 +5991,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户的单项ram治理报告</para>
+        /// <para>Queries the details of a specific check item in an identity and access governance report.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5581,7 +6009,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户的单项ram治理报告</para>
+        /// <para>Queries the details of a specific check item in an identity and access governance report.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5599,7 +6027,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询成熟度报告状态</para>
+        /// <para>Retrieves the current generation status of an identity and access governance report.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -5629,7 +6057,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询成熟度报告状态</para>
+        /// <para>Retrieves the current generation status of an identity and access governance report.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -5659,7 +6087,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询成熟度报告状态</para>
+        /// <para>Retrieves the current generation status of an identity and access governance report.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -5673,7 +6101,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询成熟度报告状态</para>
+        /// <para>Retrieves the current generation status of an identity and access governance report.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -5807,7 +6235,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the logon configurations of a Resource Access Management (RAM) user.</para>
+        /// <para>Queries the console logon settings for a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5849,7 +6277,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the logon configurations of a Resource Access Management (RAM) user.</para>
+        /// <para>Queries the console logon settings for a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5891,7 +6319,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the logon configurations of a Resource Access Management (RAM) user.</para>
+        /// <para>Queries the console logon settings for a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5909,7 +6337,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the logon configurations of a Resource Access Management (RAM) user.</para>
+        /// <para>Queries the console logon settings for a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6071,7 +6499,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of the password policy for RAM users.</para>
+        /// <para>Queries the password policy for Resource Access Management (RAM) users.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -6101,7 +6529,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of the password policy for RAM users.</para>
+        /// <para>Queries the password policy for Resource Access Management (RAM) users.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -6131,7 +6559,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of the password policy for RAM users.</para>
+        /// <para>Queries the password policy for Resource Access Management (RAM) users.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6145,7 +6573,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of the password policy for RAM users.</para>
+        /// <para>Queries the password policy for Resource Access Management (RAM) users.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6279,7 +6707,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the security preferences for RAM users.</para>
+        /// <para>Use <c>GetSecurityPreference</c> to query the global security preferences of a RAM user.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -6309,7 +6737,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the security preferences for RAM users.</para>
+        /// <para>Use <c>GetSecurityPreference</c> to query the global security preferences of a RAM user.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -6339,7 +6767,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the security preferences for RAM users.</para>
+        /// <para>Use <c>GetSecurityPreference</c> to query the global security preferences of a RAM user.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6353,7 +6781,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the security preferences for RAM users.</para>
+        /// <para>Use <c>GetSecurityPreference</c> to query the global security preferences of a RAM user.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6363,6 +6791,134 @@ namespace AlibabaCloud.SDK.Ims20190815
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetSecurityPreferenceWithOptionsAsync(runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a specific service credential of a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetServiceCredentialRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceCredentialResponse
+        /// </returns>
+        public GetServiceCredentialResponse GetServiceCredentialWithOptions(GetServiceCredentialRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceCredentialId))
+            {
+                query["ServiceCredentialId"] = request.ServiceCredentialId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserPrincipalName))
+            {
+                query["UserPrincipalName"] = request.UserPrincipalName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetServiceCredential",
+                Version = "2019-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetServiceCredentialResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a specific service credential of a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetServiceCredentialRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceCredentialResponse
+        /// </returns>
+        public async Task<GetServiceCredentialResponse> GetServiceCredentialWithOptionsAsync(GetServiceCredentialRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceCredentialId))
+            {
+                query["ServiceCredentialId"] = request.ServiceCredentialId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserPrincipalName))
+            {
+                query["UserPrincipalName"] = request.UserPrincipalName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetServiceCredential",
+                Version = "2019-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetServiceCredentialResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a specific service credential of a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetServiceCredentialRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceCredentialResponse
+        /// </returns>
+        public GetServiceCredentialResponse GetServiceCredential(GetServiceCredentialRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetServiceCredentialWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a specific service credential of a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetServiceCredentialRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceCredentialResponse
+        /// </returns>
+        public async Task<GetServiceCredentialResponse> GetServiceCredentialAsync(GetServiceCredentialRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetServiceCredentialWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -7439,12 +7995,12 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the created applications.</para>
+        /// <para>Lists the applications that you have created.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the applications within the current account. The returned result shows that only one application named <c>myapp</c> belongs to the current account.</para>
+        /// <para>This topic provides an example of how to query the applications in your Alibaba Cloud account. The response shows that only one application, named <c>myapp</c>, exists in the account.</para>
         /// </description>
         /// 
         /// <param name="runtime">
@@ -7474,12 +8030,12 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the created applications.</para>
+        /// <para>Lists the applications that you have created.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the applications within the current account. The returned result shows that only one application named <c>myapp</c> belongs to the current account.</para>
+        /// <para>This topic provides an example of how to query the applications in your Alibaba Cloud account. The response shows that only one application, named <c>myapp</c>, exists in the account.</para>
         /// </description>
         /// 
         /// <param name="runtime">
@@ -7509,12 +8065,12 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the created applications.</para>
+        /// <para>Lists the applications that you have created.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the applications within the current account. The returned result shows that only one application named <c>myapp</c> belongs to the current account.</para>
+        /// <para>This topic provides an example of how to query the applications in your Alibaba Cloud account. The response shows that only one application, named <c>myapp</c>, exists in the account.</para>
         /// </description>
         /// 
         /// <returns>
@@ -7528,12 +8084,12 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the created applications.</para>
+        /// <para>Lists the applications that you have created.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the applications within the current account. The returned result shows that only one application named <c>myapp</c> belongs to the current account.</para>
+        /// <para>This topic provides an example of how to query the applications in your Alibaba Cloud account. The response shows that only one application, named <c>myapp</c>, exists in the account.</para>
         /// </description>
         /// 
         /// <returns>
@@ -8487,6 +9043,158 @@ namespace AlibabaCloud.SDK.Ims20190815
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListSAMLProvidersWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the list of service credentials for a Resource Access Management (RAM) user or all RAM users under an Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListServiceCredentialsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListServiceCredentialsResponse
+        /// </returns>
+        public ListServiceCredentialsResponse ListServiceCredentialsWithOptions(ListServiceCredentialsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllUsers))
+            {
+                query["AllUsers"] = request.AllUsers;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceName))
+            {
+                query["ServiceName"] = request.ServiceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserPrincipalName))
+            {
+                query["UserPrincipalName"] = request.UserPrincipalName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListServiceCredentials",
+                Version = "2019-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListServiceCredentialsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the list of service credentials for a Resource Access Management (RAM) user or all RAM users under an Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListServiceCredentialsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListServiceCredentialsResponse
+        /// </returns>
+        public async Task<ListServiceCredentialsResponse> ListServiceCredentialsWithOptionsAsync(ListServiceCredentialsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllUsers))
+            {
+                query["AllUsers"] = request.AllUsers;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceName))
+            {
+                query["ServiceName"] = request.ServiceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserPrincipalName))
+            {
+                query["UserPrincipalName"] = request.UserPrincipalName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListServiceCredentials",
+                Version = "2019-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListServiceCredentialsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the list of service credentials for a Resource Access Management (RAM) user or all RAM users under an Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListServiceCredentialsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListServiceCredentialsResponse
+        /// </returns>
+        public ListServiceCredentialsResponse ListServiceCredentials(ListServiceCredentialsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListServiceCredentialsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the list of service credentials for a Resource Access Management (RAM) user or all RAM users under an Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListServiceCredentialsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListServiceCredentialsResponse
+        /// </returns>
+        public async Task<ListServiceCredentialsResponse> ListServiceCredentialsAsync(ListServiceCredentialsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListServiceCredentialsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -10395,6 +11103,142 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Settings the network access restriction policy for an AccessKey pair of an Alibaba Cloud account or a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetAccessKeyPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetAccessKeyPolicyResponse
+        /// </returns>
+        public SetAccessKeyPolicyResponse SetAccessKeyPolicyWithOptions(SetAccessKeyPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessKeyPolicy))
+            {
+                query["AccessKeyPolicy"] = request.AccessKeyPolicy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserAccessKeyId))
+            {
+                query["UserAccessKeyId"] = request.UserAccessKeyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserPrincipalName))
+            {
+                query["UserPrincipalName"] = request.UserPrincipalName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetAccessKeyPolicy",
+                Version = "2019-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetAccessKeyPolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Settings the network access restriction policy for an AccessKey pair of an Alibaba Cloud account or a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetAccessKeyPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetAccessKeyPolicyResponse
+        /// </returns>
+        public async Task<SetAccessKeyPolicyResponse> SetAccessKeyPolicyWithOptionsAsync(SetAccessKeyPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessKeyPolicy))
+            {
+                query["AccessKeyPolicy"] = request.AccessKeyPolicy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserAccessKeyId))
+            {
+                query["UserAccessKeyId"] = request.UserAccessKeyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserPrincipalName))
+            {
+                query["UserPrincipalName"] = request.UserPrincipalName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetAccessKeyPolicy",
+                Version = "2019-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetAccessKeyPolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Settings the network access restriction policy for an AccessKey pair of an Alibaba Cloud account or a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetAccessKeyPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetAccessKeyPolicyResponse
+        /// </returns>
+        public SetAccessKeyPolicyResponse SetAccessKeyPolicy(SetAccessKeyPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SetAccessKeyPolicyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Settings the network access restriction policy for an AccessKey pair of an Alibaba Cloud account or a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetAccessKeyPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetAccessKeyPolicyResponse
+        /// </returns>
+        public async Task<SetAccessKeyPolicyResponse> SetAccessKeyPolicyAsync(SetAccessKeyPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SetAccessKeyPolicyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Configures the default domain name for an Alibaba Cloud account.</para>
         /// </summary>
         /// 
@@ -10515,7 +11359,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures the password policy for Resource Access Management (RAM) users.</para>
+        /// <para>Set the password policy for Resource Access Management (RAM) users.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10605,7 +11449,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures the password policy for Resource Access Management (RAM) users.</para>
+        /// <para>Set the password policy for Resource Access Management (RAM) users.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10695,7 +11539,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures the password policy for Resource Access Management (RAM) users.</para>
+        /// <para>Set the password policy for Resource Access Management (RAM) users.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10713,7 +11557,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures the password policy for Resource Access Management (RAM) users.</para>
+        /// <para>Set the password policy for Resource Access Management (RAM) users.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10731,14 +11575,8 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures security preferences for a RAM user.</para>
+        /// <para>Configure the global security preferences for a RAM user.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h3></h3>
-        /// <para>This topic provides an example on how to enable multi-factor authentication (MFA) only for RAM users who initiated unusual logons.</para>
-        /// </description>
         /// 
         /// <param name="tmpReq">
         /// SetSecurityPreferenceRequest
@@ -10837,14 +11675,8 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures security preferences for a RAM user.</para>
+        /// <para>Configure the global security preferences for a RAM user.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h3></h3>
-        /// <para>This topic provides an example on how to enable multi-factor authentication (MFA) only for RAM users who initiated unusual logons.</para>
-        /// </description>
         /// 
         /// <param name="tmpReq">
         /// SetSecurityPreferenceRequest
@@ -10943,14 +11775,8 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures security preferences for a RAM user.</para>
+        /// <para>Configure the global security preferences for a RAM user.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h3></h3>
-        /// <para>This topic provides an example on how to enable multi-factor authentication (MFA) only for RAM users who initiated unusual logons.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// SetSecurityPreferenceRequest
@@ -10967,14 +11793,8 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures security preferences for a RAM user.</para>
+        /// <para>Configure the global security preferences for a RAM user.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h3></h3>
-        /// <para>This topic provides an example on how to enable multi-factor authentication (MFA) only for RAM users who initiated unusual logons.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// SetSecurityPreferenceRequest
@@ -11983,7 +12803,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about a specified application.</para>
+        /// <para>Modifies the configuration information of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12057,7 +12877,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about a specified application.</para>
+        /// <para>Modifies the configuration information of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12131,7 +12951,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about a specified application.</para>
+        /// <para>Modifies the configuration information of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12149,7 +12969,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about a specified application.</para>
+        /// <para>Modifies the configuration information of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12311,7 +13131,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the console logon configurations of a Resource Access Management (RAM) user.</para>
+        /// <para>Modifies the console logon settings for a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12369,7 +13189,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the console logon configurations of a Resource Access Management (RAM) user.</para>
+        /// <para>Modifies the console logon settings for a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12427,7 +13247,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the console logon configurations of a Resource Access Management (RAM) user.</para>
+        /// <para>Modifies the console logon settings for a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12445,7 +13265,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the console logon configurations of a Resource Access Management (RAM) user.</para>
+        /// <para>Modifies the console logon settings for a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12767,12 +13587,12 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies information about an identity provider (IdP) for role-based single sign-on (SSO).</para>
+        /// <para>Updates the information about a specified identity provider for role-based single sign-on (SSO).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to change the description of an IdP named <c>test-provider</c> to <c>This is a new provider.</c></para>
+        /// <para>This example shows how to change the description of the identity provider <c>test-provider</c> to <c>This is a new provider.</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12826,12 +13646,12 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies information about an identity provider (IdP) for role-based single sign-on (SSO).</para>
+        /// <para>Updates the information about a specified identity provider for role-based single sign-on (SSO).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to change the description of an IdP named <c>test-provider</c> to <c>This is a new provider.</c></para>
+        /// <para>This example shows how to change the description of the identity provider <c>test-provider</c> to <c>This is a new provider.</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12885,12 +13705,12 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies information about an identity provider (IdP) for role-based single sign-on (SSO).</para>
+        /// <para>Updates the information about a specified identity provider for role-based single sign-on (SSO).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to change the description of an IdP named <c>test-provider</c> to <c>This is a new provider.</c></para>
+        /// <para>This example shows how to change the description of the identity provider <c>test-provider</c> to <c>This is a new provider.</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12908,12 +13728,12 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies information about an identity provider (IdP) for role-based single sign-on (SSO).</para>
+        /// <para>Updates the information about a specified identity provider for role-based single sign-on (SSO).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to change the description of an IdP named <c>test-provider</c> to <c>This is a new provider.</c></para>
+        /// <para>This example shows how to change the description of the identity provider <c>test-provider</c> to <c>This is a new provider.</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12927,6 +13747,150 @@ namespace AlibabaCloud.SDK.Ims20190815
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateSAMLProviderWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the status or name of a service credential for a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateServiceCredentialRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateServiceCredentialResponse
+        /// </returns>
+        public UpdateServiceCredentialResponse UpdateServiceCredentialWithOptions(UpdateServiceCredentialRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceCredentialId))
+            {
+                query["ServiceCredentialId"] = request.ServiceCredentialId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceCredentialName))
+            {
+                query["ServiceCredentialName"] = request.ServiceCredentialName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserPrincipalName))
+            {
+                query["UserPrincipalName"] = request.UserPrincipalName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateServiceCredential",
+                Version = "2019-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateServiceCredentialResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the status or name of a service credential for a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateServiceCredentialRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateServiceCredentialResponse
+        /// </returns>
+        public async Task<UpdateServiceCredentialResponse> UpdateServiceCredentialWithOptionsAsync(UpdateServiceCredentialRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceCredentialId))
+            {
+                query["ServiceCredentialId"] = request.ServiceCredentialId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceCredentialName))
+            {
+                query["ServiceCredentialName"] = request.ServiceCredentialName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserPrincipalName))
+            {
+                query["UserPrincipalName"] = request.UserPrincipalName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateServiceCredential",
+                Version = "2019-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateServiceCredentialResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the status or name of a service credential for a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateServiceCredentialRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateServiceCredentialResponse
+        /// </returns>
+        public UpdateServiceCredentialResponse UpdateServiceCredential(UpdateServiceCredentialRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateServiceCredentialWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the status or name of a service credential for a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateServiceCredentialRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateServiceCredentialResponse
+        /// </returns>
+        public async Task<UpdateServiceCredentialResponse> UpdateServiceCredentialAsync(UpdateServiceCredentialRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateServiceCredentialWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

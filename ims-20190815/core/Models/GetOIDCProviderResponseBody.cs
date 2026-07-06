@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             /// <para>The URL of the issuer.</para>
             /// 
             /// <b>Example:</b>
-            /// <para><a href="https://dev-xxxxxx.okta.com">https://dev-xxxxxx.okta.com</a></para>
+            /// <para><a href="https://xxxxxx.example.com">https://xxxxxx.example.com</a></para>
             /// </summary>
             [NameInMap("IssuerUrl")]
             [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class GetPasswordPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the password policy.</para>
+        /// <para>Details of the password policy.</para>
         /// </summary>
         [NameInMap("PasswordPolicy")]
         [Validation(Required=false)]
         public GetPasswordPolicyResponseBodyPasswordPolicy PasswordPolicy { get; set; }
         public class GetPasswordPolicyResponseBodyPasswordPolicy : TeaModel {
             /// <summary>
-            /// <para>Indicates whether to disable logon after the password expires.</para>
+            /// <para>Indicates whether logon is blocked after the password expires.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -26,16 +26,35 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             [Validation(Required=false)]
             public bool? HardExpire { get; set; }
 
+            /// <summary>
+            /// <para>The validity period of the initial password.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>14</para>
+            /// </summary>
             [NameInMap("InitialPasswordAge")]
             [Validation(Required=false)]
             public int? InitialPasswordAge { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether threat passwords are blocked when set using APIs.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>true</para>
+            /// </description></item>
+            /// <item><description><para>false (default)</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("InterceptRiskPasswordOnApi")]
             [Validation(Required=false)]
             public bool? InterceptRiskPasswordOnApi { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of password retries.</para>
+            /// <para>Maximum number of failed password attempts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -45,7 +64,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public int? MaxLoginAttemps { get; set; }
 
             /// <summary>
-            /// <para>The validity period of the password.</para>
+            /// <para>The password validity period.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -55,7 +74,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public int? MaxPasswordAge { get; set; }
 
             /// <summary>
-            /// <para>The minimum number of unique characters in the password.</para>
+            /// <para>The minimum number of different characters in the password.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -65,7 +84,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public int? MinimumPasswordDifferentCharacter { get; set; }
 
             /// <summary>
-            /// <para>The minimum required number of characters in a password.</para>
+            /// <para>The minimum password length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8</para>
@@ -75,7 +94,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public int? MinimumPasswordLength { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether to exclude the username from the password.</para>
+            /// <para>Indicates whether the password must not contain the user name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -85,7 +104,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public bool? PasswordNotContainUserName { get; set; }
 
             /// <summary>
-            /// <para>The policy for password history check.</para>
+            /// <para>The password reuse prevention policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -105,7 +124,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public bool? RequireLowercaseCharacters { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the password must contain digits.</para>
+            /// <para>Indicates whether the password must contain numbers.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>

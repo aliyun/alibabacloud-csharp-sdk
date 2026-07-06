@@ -39,8 +39,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             /// <summary>
             /// <para>The status of the email. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>active: The email is activated.</description></item>
-            /// <item><description>pending: The email is pending for activation.</description></item>
+            /// <item><description><para>active: The email is activated.</para>
+            /// </description></item>
+            /// <item><description><para>pending: The email is pending for activation.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -82,8 +84,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             /// <summary>
             /// <para>The status of the mobile phone. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>active: The mobile phone is activated.</description></item>
-            /// <item><description>pending: The mobile phone is pending for activation.</description></item>
+            /// <item><description><para>active: The mobile phone is activated.</para>
+            /// </description></item>
+            /// <item><description><para>pending: The mobile phone is pending for activation.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

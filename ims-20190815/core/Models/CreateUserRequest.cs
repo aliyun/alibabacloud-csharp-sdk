@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></para>
+        /// <para><a href="mailto:Test@example.onaliyun.com">Test@example.onaliyun.com</a></para>
         /// </summary>
         [NameInMap("UserPrincipalName")]
         [Validation(Required=false)]

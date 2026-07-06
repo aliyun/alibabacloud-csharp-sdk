@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>452392483381546****</para>
+        /// <para>407342493648015****</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]

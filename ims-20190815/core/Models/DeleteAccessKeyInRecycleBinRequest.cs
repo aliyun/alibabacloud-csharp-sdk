@@ -23,8 +23,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         /// <para>The ID of the RAM user.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>If you use an Alibaba Cloud account to call the operation, you must specify the parameter.</description></item>
-        /// <item><description>If you use a RAM user to call the operation, you can leave the parameter empty. In this case, the ID of the RAM user is used by default.</description></item>
+        /// <item><description><para>If you use an Alibaba Cloud account to call the operation, you must specify the parameter.</para>
+        /// </description></item>
+        /// <item><description><para>If you use a RAM user to call the operation, you can leave the parameter empty. In this case, the ID of the RAM user is used by default.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// 

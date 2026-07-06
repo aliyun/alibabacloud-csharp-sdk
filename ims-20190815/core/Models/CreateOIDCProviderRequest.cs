@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
     public class CreateOIDCProviderRequest : TeaModel {
         /// <summary>
         /// <para>The ID of the client, which is provided by the external IdP. If you want to specify multiple client IDs, separate the client IDs with commas (,).</para>
-        /// <para>The client ID can contain letters, digits, and special characters and cannot start with the special characters. The special characters are <c>periods (.), hyphens (-), underscores (_), colons (:), and forward slashes (/)</c>.``</para>
+        /// <para>The client ID can contain letters, digits, and special characters and cannot start with the special characters. The special characters are <c>periods (.), hyphens (-), underscores (_), colons (:), and forward slashes (/)</c>.\<c>\\</c></para>
         /// <para>The client ID can be up to 128 characters in length.</para>
         /// 
         /// <b>Example:</b>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         /// <para>The URL can be up to 255 characters in length.</para>
         /// 
         /// <b>Example:</b>
-        /// <para><a href="https://dev-xxxxxx.okta.com">https://dev-xxxxxx.okta.com</a></para>
+        /// <para><a href="https://xxxxxx.example.com">https://xxxxxx.example.com</a></para>
         /// </summary>
         [NameInMap("IssuerUrl")]
         [Validation(Required=false)]
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 
         /// <summary>
         /// <para>The name of the OIDC IdP.</para>
-        /// <para>The name can contain letters, digits, and special characters and cannot start or end with the special characters. The special characters are <c>periods, (.), hyphens (-), and underscores (_)</c>.``</para>
+        /// <para>The name can contain letters, digits, and special characters and cannot start or end with the special characters. The special characters are <c>periods, (.), hyphens (-), and underscores (_)</c>.\<c>\\</c></para>
         /// <para>The name can be up to 128 characters in length.</para>
         /// 
         /// <b>Example:</b>

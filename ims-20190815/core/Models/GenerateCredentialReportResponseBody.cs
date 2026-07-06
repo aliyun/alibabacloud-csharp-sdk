@@ -22,9 +22,12 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         /// <summary>
         /// <para>The generation status of the user credential report. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>STARTED: The system starts to generate the user credential report.</description></item>
-        /// <item><description>INPROGRESS: The user credential report is being generated.</description></item>
-        /// <item><description>COMPLETED: The user credential report is generated.</description></item>
+        /// <item><description><para>STARTED: The system starts to generate the user credential report.</para>
+        /// </description></item>
+        /// <item><description><para>INPROGRESS: The user credential report is being generated.</para>
+        /// </description></item>
+        /// <item><description><para>COMPLETED: The user credential report is generated.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

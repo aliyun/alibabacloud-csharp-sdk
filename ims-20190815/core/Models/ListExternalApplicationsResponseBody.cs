@@ -74,8 +74,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         /// <summary>
         /// <para>Indicates whether the response is truncated. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -88,7 +90,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         /// <summary>
         /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
         /// <remarks>
-        /// <para> This parameter is returned only when <c>IsTruncated</c> is <c>true</c>.</para>
+        /// <para>This parameter is returned only when <c>IsTruncated</c> is <c>true</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

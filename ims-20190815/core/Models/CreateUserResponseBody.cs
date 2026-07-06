@@ -95,9 +95,12 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             /// <summary>
             /// <para>The source of the RAM user. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Manual: The RAM user is manually created in the RAM console.</description></item>
-            /// <item><description>SCIM: The RAM user is mapped by using System for Cross-domain Identity Management (SCIM).</description></item>
-            /// <item><description>CloudSSO: The RAM user is mapped from a CloudSSO user.</description></item>
+            /// <item><description><para>Manual: The RAM user is manually created in the RAM console.</para>
+            /// </description></item>
+            /// <item><description><para>SCIM: The RAM user is mapped by using System for Cross-domain Identity Management (SCIM).</para>
+            /// </description></item>
+            /// <item><description><para>CloudSSO: The RAM user is mapped from a CloudSSO user.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

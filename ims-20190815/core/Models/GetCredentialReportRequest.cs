@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public string MaxItems { get; set; }
 
         /// <summary>
-        /// <para>The token that is used to initiate the next request if the response of the current request is truncated. You can use the token to initiate another request and obtain the remaining records.``</para>
+        /// <para>The token that is used to initiate the next request if the response of the current request is truncated. You can use the token to initiate another request and obtain the remaining records.\<c>\\</c></para>
         /// 
         /// <b>Example:</b>
         /// <para>EXAMPLE</para>

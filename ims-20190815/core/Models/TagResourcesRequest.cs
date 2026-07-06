@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         /// <para>The ID of resource N.</para>
         /// <para>Valid values of N: 1 to 50. If the ResourceType parameter is set to user, the resource ID is the ID of the RAM user.</para>
         /// <remarks>
-        /// <para> You must specify only one of the following parameters: <c>ResourceId</c> and <c>ResourcePrincipalName</c>.</para>
+        /// <para>You must specify only one of the following parameters: <c>ResourceId</c> and <c>ResourcePrincipalName</c>.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("ResourceId")]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         /// <para>The name of resource N.</para>
         /// <para>Valid values of N: 1 to 50. If the ResourceType parameter is set to user, the resource name is the name of the RAM user.</para>
         /// <remarks>
-        /// <para> You must specify only one of the following parameters: <c>ResourceId</c> and <c>ResourcePrincipalName</c>.</para>
+        /// <para>You must specify only one of the following parameters: <c>ResourceId</c> and <c>ResourcePrincipalName</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

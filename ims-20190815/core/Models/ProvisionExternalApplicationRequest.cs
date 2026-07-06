@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         /// <summary>
         /// <para>The permissions that are granted to the application. Separate multiple permissions with a semicolon (;).</para>
         /// <remarks>
-        /// <para> For more information about the supported permissions, see <a href="https://help.aliyun.com/document_detail/93693.html">Overview</a>.</para>
+        /// <para>For more information about the supported permissions, see <a href="https://help.aliyun.com/document_detail/93693.html">Overview</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
