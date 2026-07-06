@@ -1,3 +1,7 @@
+2026-07-06 Version: 2.56.0
+- Support API SignOutOrgAccount.
+
+
 2026-07-06 Version: 2.55.2
 - Generated csharp 2023-04-26 for aliding.
 
