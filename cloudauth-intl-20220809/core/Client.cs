@@ -3573,6 +3573,134 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Deletes a face record.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteFaceRecordV2Request
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFaceRecordV2Response
+        /// </returns>
+        public DeleteFaceRecordV2Response DeleteFaceRecordV2WithOptions(DeleteFaceRecordV2Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceGroupCode))
+            {
+                query["FaceGroupCode"] = request.FaceGroupCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantUserId))
+            {
+                query["MerchantUserId"] = request.MerchantUserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteFaceRecordV2",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteFaceRecordV2Response>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a face record.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteFaceRecordV2Request
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFaceRecordV2Response
+        /// </returns>
+        public async Task<DeleteFaceRecordV2Response> DeleteFaceRecordV2WithOptionsAsync(DeleteFaceRecordV2Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceGroupCode))
+            {
+                query["FaceGroupCode"] = request.FaceGroupCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantUserId))
+            {
+                query["MerchantUserId"] = request.MerchantUserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteFaceRecordV2",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteFaceRecordV2Response>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a face record.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteFaceRecordV2Request
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFaceRecordV2Response
+        /// </returns>
+        public DeleteFaceRecordV2Response DeleteFaceRecordV2(DeleteFaceRecordV2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteFaceRecordV2WithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a face record.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteFaceRecordV2Request
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFaceRecordV2Response
+        /// </returns>
+        public async Task<DeleteFaceRecordV2Response> DeleteFaceRecordV2Async(DeleteFaceRecordV2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteFaceRecordV2WithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes data related to a user authentication record.</para>
         /// </summary>
         /// 
