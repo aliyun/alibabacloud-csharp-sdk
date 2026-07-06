@@ -8196,6 +8196,258 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries collectors by paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListDataConnectorsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataConnectorsResponse
+        /// </returns>
+        public ListDataConnectorsResponse ListDataConnectorsWithOptions(ListDataConnectorsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListDataConnectorsShrinkRequest request = new ListDataConnectorsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DataConnectorIds))
+            {
+                request.DataConnectorIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DataConnectorIds, "DataConnectorIds", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataConnectorIdsShrink))
+            {
+                body["DataConnectorIds"] = request.DataConnectorIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataConnectorName))
+            {
+                body["DataConnectorName"] = request.DataConnectorName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataConnectorStatus))
+            {
+                body["DataConnectorStatus"] = request.DataConnectorStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataConnectorType))
+            {
+                body["DataConnectorType"] = request.DataConnectorType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestDataSourceId))
+            {
+                body["DestDataSourceId"] = request.DestDataSourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                body["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderField))
+            {
+                body["OrderField"] = request.OrderField;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderType))
+            {
+                body["OrderType"] = request.OrderType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SlsIngestionJobName))
+            {
+                body["SlsIngestionJobName"] = request.SlsIngestionJobName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcDataType))
+            {
+                body["SrcDataType"] = request.SrcDataType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDataConnectors",
+                Version = "2024-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDataConnectorsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries collectors by paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListDataConnectorsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataConnectorsResponse
+        /// </returns>
+        public async Task<ListDataConnectorsResponse> ListDataConnectorsWithOptionsAsync(ListDataConnectorsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListDataConnectorsShrinkRequest request = new ListDataConnectorsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DataConnectorIds))
+            {
+                request.DataConnectorIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DataConnectorIds, "DataConnectorIds", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataConnectorIdsShrink))
+            {
+                body["DataConnectorIds"] = request.DataConnectorIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataConnectorName))
+            {
+                body["DataConnectorName"] = request.DataConnectorName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataConnectorStatus))
+            {
+                body["DataConnectorStatus"] = request.DataConnectorStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataConnectorType))
+            {
+                body["DataConnectorType"] = request.DataConnectorType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestDataSourceId))
+            {
+                body["DestDataSourceId"] = request.DestDataSourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                body["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderField))
+            {
+                body["OrderField"] = request.OrderField;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderType))
+            {
+                body["OrderType"] = request.OrderType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SlsIngestionJobName))
+            {
+                body["SlsIngestionJobName"] = request.SlsIngestionJobName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcDataType))
+            {
+                body["SrcDataType"] = request.SrcDataType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDataConnectors",
+                Version = "2024-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDataConnectorsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries collectors by paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDataConnectorsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataConnectorsResponse
+        /// </returns>
+        public ListDataConnectorsResponse ListDataConnectors(ListDataConnectorsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListDataConnectorsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries collectors by paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDataConnectorsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataConnectorsResponse
+        /// </returns>
+        public async Task<ListDataConnectorsResponse> ListDataConnectorsAsync(ListDataConnectorsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListDataConnectorsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries data ingestion templates.</para>
         /// </summary>
         /// 
@@ -14268,6 +14520,190 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SetDefaultNormalizationRuleVersionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates an alert.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Notifications are subject to frequency and time restrictions.
+        /// Each user receives a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateAlertRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAlertResponse
+        /// </returns>
+        public UpdateAlertResponse UpdateAlertWithOptions(UpdateAlertRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertStatus))
+            {
+                body["AlertStatus"] = request.AlertStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertUuid))
+            {
+                body["AlertUuid"] = request.AlertUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                body["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAlert",
+                Version = "2024-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAlertResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates an alert.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Notifications are subject to frequency and time restrictions.
+        /// Each user receives a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateAlertRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAlertResponse
+        /// </returns>
+        public async Task<UpdateAlertResponse> UpdateAlertWithOptionsAsync(UpdateAlertRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertStatus))
+            {
+                body["AlertStatus"] = request.AlertStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertUuid))
+            {
+                body["AlertUuid"] = request.AlertUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                body["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAlert",
+                Version = "2024-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAlertResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates an alert.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Notifications are subject to frequency and time restrictions.
+        /// Each user receives a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateAlertRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAlertResponse
+        /// </returns>
+        public UpdateAlertResponse UpdateAlert(UpdateAlertRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateAlertWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates an alert.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Notifications are subject to frequency and time restrictions.
+        /// Each user receives a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateAlertRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAlertResponse
+        /// </returns>
+        public async Task<UpdateAlertResponse> UpdateAlertAsync(UpdateAlertRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateAlertWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
