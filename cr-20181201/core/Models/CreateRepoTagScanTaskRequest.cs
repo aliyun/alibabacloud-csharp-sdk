@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class CreateRepoTagScanTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The digest of the image.</para>
+        /// <para>The image digest.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sha256:815386ebbe9a3490f38785ab11bda34ec8dacf4634af77b8912832d4f85dca04</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Digest { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Container Registry instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the image repository.</para>
+        /// <para>The image repository ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,10 +42,12 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RepoId { get; set; }
 
         /// <summary>
-        /// <para>The type of the scanning engine.</para>
+        /// <para>The scan engine type:</para>
         /// <list type="bullet">
-        /// <item><description><c>SAS_SCAN_SERVICE</c>: Security Center scan engine (paid service)</description></item>
-        /// <item><description><c>ACR_SCAN_SERVICE</c>: Container Registry scan engine</description></item>
+        /// <item><description><para><c>SAS_SCAN_SERVICE</c>: The cloud security scan engine. This is a paid service.</para>
+        /// </description></item>
+        /// <item><description><para><c>ACR_SCAN_SERVICE</c>: The ACR scan engine.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -60,7 +62,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string ScanType { get; set; }
 
         /// <summary>
-        /// <para>The image version.</para>
+        /// <para>The image tag.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             /// <para>The type of the malicious file.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Suspected to contain Webshell code</para>
+            /// <para>疑似含有Webshell代码</para>
             /// </summary>
             [NameInMap("MaliciousName")]
             [Validation(Required=false)]

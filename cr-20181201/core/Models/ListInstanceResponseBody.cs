@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The queried instances.</para>
+        /// <para>The instance information.</para>
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
         public List<ListInstanceResponseBodyInstances> Instances { get; set; }
         public class ListInstanceResponseBodyInstances : TeaModel {
             /// <summary>
-            /// <para>The time when the instance was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1562849679000</para>
@@ -47,17 +47,21 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The issue occurs on the instance.</para>
+            /// <para>The instance issue.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>oss bucket already exists</para>
+            /// <para>实例问题，取值：
+            /// OSS_TOO_MANY_BUCKETS：OSS Bucket 数量超限</para>
+            /// <para>OSS_BUCKET_ALREADY_EXISTS：同名 OSS Bucket 已存在</para>
+            /// <para>OSS_SERVICE_ROLE_UNAUTHORIZED：OSS 权限未授权</para>
+            /// <para>USER_NOT_REGISTERED_BY_REAL_NAME：国际站账号在购买中国站 OSS Bucket 时未进行实名认证</para>
             /// </summary>
             [NameInMap("InstanceIssue")]
             [Validation(Required=false)]
             public string InstanceIssue { get; set; }
 
             /// <summary>
-            /// <para>The name of the instance.</para>
+            /// <para>The instance name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -67,7 +71,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// <para>The edition of the Container Registry Enterprise Edition instance.</para>
+            /// <para>The Enterprise Edition specification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Enterprise_Basic</para>
@@ -77,7 +81,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string InstanceSpecification { get; set; }
 
             /// <summary>
-            /// <para>The status of the instance.</para>
+            /// <para>The instance status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RUNNING</para>
@@ -87,7 +91,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string InstanceStatus { get; set; }
 
             /// <summary>
-            /// <para>The time when the instance was last modified.</para>
+            /// <para>The last modification time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1562849760000</para>
@@ -97,7 +101,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string ModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the instance.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai</para>
@@ -107,7 +111,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource group to which the instance belongs.</para>
+            /// <para>The resource group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-aek2h3aexpy****</para>
@@ -148,7 +152,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the operation is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -168,7 +172,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 30.</para>
+        /// <para>The page size. Default value: 30.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -188,7 +192,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of returned results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12121</para>

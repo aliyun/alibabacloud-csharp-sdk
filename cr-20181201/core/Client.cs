@@ -19,6 +19,52 @@ namespace AlibabaCloud.SDK.Cr20181201
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"us-west-1", "cr.us-west-1.aliyuncs.com"},
+                {"us-southeast-1", "cr.us-southeast-1.aliyuncs.com"},
+                {"us-east-1", "cr.us-east-1.aliyuncs.com"},
+                {"na-south-1", "cr.na-south-1.aliyuncs.com"},
+                {"me-east-1", "cr.me-east-1.aliyuncs.com"},
+                {"me-central-1", "cr.me-central-1.aliyuncs.com"},
+                {"eu-west-2", "cr.eu-west-2.aliyuncs.com"},
+                {"eu-west-1", "cr.eu-west-1.aliyuncs.com"},
+                {"eu-central-1", "cr.eu-central-1.aliyuncs.com"},
+                {"cn-zhongwei", "cr.cn-zhongwei.aliyuncs.com"},
+                {"cn-zhengzhou-jva", "cr.cn-zhengzhou-jva.aliyuncs.com"},
+                {"cn-zhangjiakou", "cr.cn-zhangjiakou.aliyuncs.com"},
+                {"cn-wulanchabu-gic-1", "cr.cn-wulanchabu-gic-1.aliyuncs.com"},
+                {"cn-wulanchabu", "cr.cn-wulanchabu.aliyuncs.com"},
+                {"cn-wuhan-lr", "cr.cn-wuhan-lr.aliyuncs.com"},
+                {"cn-shenzhen-finance-1", "cr.cn-shenzhen-finance-1.aliyuncs.com"},
+                {"cn-shenzhen", "cr.cn-shenzhen.aliyuncs.com"},
+                {"cn-shanghai-finance-1", "cr.cn-shanghai-finance-1.aliyuncs.com"},
+                {"cn-shanghai", "cr.cn-shanghai.aliyuncs.com"},
+                {"cn-qingdao", "cr.cn-qingdao.aliyuncs.com"},
+                {"cn-north-2-gov-1", "cr.cn-north-2-gov-1.aliyuncs.com"},
+                {"cn-nanjing", "cr.cn-nanjing.aliyuncs.com"},
+                {"cn-huhehaote", "cr.cn-huhehaote.aliyuncs.com"},
+                {"cn-hongkong", "cr.cn-hongkong.aliyuncs.com"},
+                {"cn-heyuan-acdr-1", "cr.cn-heyuan-acdr-1.aliyuncs.com"},
+                {"cn-heyuan", "cr.cn-heyuan.aliyuncs.com"},
+                {"cn-hangzhou-finance", "cr.cn-hangzhou-finance.aliyuncs.com"},
+                {"cn-hangzhou", "cr.cn-hangzhou.aliyuncs.com"},
+                {"cn-guangzhou", "cr.cn-guangzhou.aliyuncs.com"},
+                {"cn-fuzhou", "cr.cn-fuzhou.aliyuncs.com"},
+                {"cn-chengdu", "cr.cn-chengdu.aliyuncs.com"},
+                {"cn-beijing-finance-1", "cr.cn-beijing-finance-1.aliyuncs.com"},
+                {"cn-beijing", "cr.cn-beijing.aliyuncs.com"},
+                {"ap-southeast-8", "cr.ap-southeast-8.aliyuncs.com"},
+                {"ap-southeast-7", "cr.ap-southeast-7.aliyuncs.com"},
+                {"ap-southeast-6", "cr.ap-southeast-6.aliyuncs.com"},
+                {"ap-southeast-5", "cr.ap-southeast-5.aliyuncs.com"},
+                {"ap-southeast-3", "cr.ap-southeast-3.aliyuncs.com"},
+                {"ap-southeast-2", "cr.ap-southeast-2.aliyuncs.com"},
+                {"ap-southeast-1", "cr.ap-southeast-1.aliyuncs.com"},
+                {"ap-south-1", "cr.ap-south-1.aliyuncs.com"},
+                {"ap-northeast-2", "cr.ap-northeast-2.aliyuncs.com"},
+                {"ap-northeast-1", "cr.ap-northeast-1.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("cr", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -2003,10 +2049,10 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a whitelist policy for the public endpoint of the instance.</para>
+        /// <para>Creates a whitelist policy for an instance access endpoint (public network only).</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// CreateInstanceEndpointAclPolicyRequest
         /// </param>
         /// <param name="runtime">
@@ -2016,9 +2062,15 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// <returns>
         /// CreateInstanceEndpointAclPolicyResponse
         /// </returns>
-        public CreateInstanceEndpointAclPolicyResponse CreateInstanceEndpointAclPolicyWithOptions(CreateInstanceEndpointAclPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreateInstanceEndpointAclPolicyResponse CreateInstanceEndpointAclPolicyWithOptions(CreateInstanceEndpointAclPolicyRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateInstanceEndpointAclPolicyShrinkRequest request = new CreateInstanceEndpointAclPolicyShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Entries))
+            {
+                request.EntriesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Entries, "Entries", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Comment))
             {
@@ -2027,6 +2079,10 @@ namespace AlibabaCloud.SDK.Cr20181201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointType))
             {
                 query["EndpointType"] = request.EndpointType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntriesShrink))
+            {
+                query["Entries"] = request.EntriesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Entry))
             {
@@ -2061,10 +2117,10 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a whitelist policy for the public endpoint of the instance.</para>
+        /// <para>Creates a whitelist policy for an instance access endpoint (public network only).</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// CreateInstanceEndpointAclPolicyRequest
         /// </param>
         /// <param name="runtime">
@@ -2074,9 +2130,15 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// <returns>
         /// CreateInstanceEndpointAclPolicyResponse
         /// </returns>
-        public async Task<CreateInstanceEndpointAclPolicyResponse> CreateInstanceEndpointAclPolicyWithOptionsAsync(CreateInstanceEndpointAclPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreateInstanceEndpointAclPolicyResponse> CreateInstanceEndpointAclPolicyWithOptionsAsync(CreateInstanceEndpointAclPolicyRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateInstanceEndpointAclPolicyShrinkRequest request = new CreateInstanceEndpointAclPolicyShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Entries))
+            {
+                request.EntriesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Entries, "Entries", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Comment))
             {
@@ -2085,6 +2147,10 @@ namespace AlibabaCloud.SDK.Cr20181201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointType))
             {
                 query["EndpointType"] = request.EndpointType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntriesShrink))
+            {
+                query["Entries"] = request.EntriesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Entry))
             {
@@ -2119,7 +2185,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a whitelist policy for the public endpoint of the instance.</para>
+        /// <para>Creates a whitelist policy for an instance access endpoint (public network only).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2137,7 +2203,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a whitelist policy for the public endpoint of the instance.</para>
+        /// <para>Creates a whitelist policy for an instance access endpoint (public network only).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2327,7 +2393,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a namespace of image repositories.</para>
+        /// <para>Creates a repository namespace.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2391,7 +2457,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a namespace of image repositories.</para>
+        /// <para>Creates a repository namespace.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2455,7 +2521,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a namespace of image repositories.</para>
+        /// <para>Creates a repository namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2473,7 +2539,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a namespace of image repositories.</para>
+        /// <para>Creates a repository namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3075,7 +3141,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Manually creates an image synchronization task.</para>
+        /// <para>Manually create a sync task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3153,7 +3219,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Manually creates an image synchronization task.</para>
+        /// <para>Manually create a sync task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3231,7 +3297,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Manually creates an image synchronization task.</para>
+        /// <para>Manually create a sync task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3249,7 +3315,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Manually creates an image synchronization task.</para>
+        /// <para>Manually create a sync task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3563,7 +3629,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an image scan task.</para>
+        /// <para>Creates a security scan task for an image.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3625,7 +3691,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an image scan task.</para>
+        /// <para>Creates a security scan task for an image.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3687,7 +3753,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an image scan task.</para>
+        /// <para>Creates a security scan task for an image.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3705,7 +3771,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an image scan task.</para>
+        /// <para>Creates a security scan task for an image.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4272,7 +4338,7 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</para>
+        /// <para>此API白名单开放，请<a href="https://smartservice.console.aliyun.com/service/create-ticket">提交工单</a>获取支持。</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -4329,7 +4395,7 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</para>
+        /// <para>此API白名单开放，请<a href="https://smartservice.console.aliyun.com/service/create-ticket">提交工单</a>获取支持。</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -4386,7 +4452,7 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</para>
+        /// <para>此API白名单开放，请<a href="https://smartservice.console.aliyun.com/service/create-ticket">提交工单</a>获取支持。</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4409,7 +4475,7 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</para>
+        /// <para>此API白名单开放，请<a href="https://smartservice.console.aliyun.com/service/create-ticket">提交工单</a>获取支持。</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5119,7 +5185,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a chart repository from an instance.</para>
+        /// <para>Deletes a chart repository.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5169,7 +5235,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a chart repository from an instance.</para>
+        /// <para>Deletes a chart repository.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5219,7 +5285,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a chart repository from an instance.</para>
+        /// <para>Deletes a chart repository.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5237,7 +5303,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a chart repository from an instance.</para>
+        /// <para>Deletes a chart repository.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5383,10 +5449,10 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a whitelist policy for the public endpoint of an instance.</para>
+        /// <para>Deletes a whitelist policy from the public access endpoint of an instance.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// DeleteInstanceEndpointAclPolicyRequest
         /// </param>
         /// <param name="runtime">
@@ -5396,13 +5462,23 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// <returns>
         /// DeleteInstanceEndpointAclPolicyResponse
         /// </returns>
-        public DeleteInstanceEndpointAclPolicyResponse DeleteInstanceEndpointAclPolicyWithOptions(DeleteInstanceEndpointAclPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeleteInstanceEndpointAclPolicyResponse DeleteInstanceEndpointAclPolicyWithOptions(DeleteInstanceEndpointAclPolicyRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteInstanceEndpointAclPolicyShrinkRequest request = new DeleteInstanceEndpointAclPolicyShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Entries))
+            {
+                request.EntriesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Entries, "Entries", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointType))
             {
                 query["EndpointType"] = request.EndpointType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntriesShrink))
+            {
+                query["Entries"] = request.EntriesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Entry))
             {
@@ -5437,10 +5513,10 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a whitelist policy for the public endpoint of an instance.</para>
+        /// <para>Deletes a whitelist policy from the public access endpoint of an instance.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// DeleteInstanceEndpointAclPolicyRequest
         /// </param>
         /// <param name="runtime">
@@ -5450,13 +5526,23 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// <returns>
         /// DeleteInstanceEndpointAclPolicyResponse
         /// </returns>
-        public async Task<DeleteInstanceEndpointAclPolicyResponse> DeleteInstanceEndpointAclPolicyWithOptionsAsync(DeleteInstanceEndpointAclPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DeleteInstanceEndpointAclPolicyResponse> DeleteInstanceEndpointAclPolicyWithOptionsAsync(DeleteInstanceEndpointAclPolicyRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteInstanceEndpointAclPolicyShrinkRequest request = new DeleteInstanceEndpointAclPolicyShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Entries))
+            {
+                request.EntriesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Entries, "Entries", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointType))
             {
                 query["EndpointType"] = request.EndpointType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntriesShrink))
+            {
+                query["Entries"] = request.EntriesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Entry))
             {
@@ -5491,7 +5577,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a whitelist policy for the public endpoint of an instance.</para>
+        /// <para>Deletes a whitelist policy from the public access endpoint of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5509,7 +5595,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a whitelist policy for the public endpoint of an instance.</para>
+        /// <para>Deletes a whitelist policy from the public access endpoint of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6532,7 +6618,7 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Deletes a scan rule.</para>
+        /// <para>删除扫描规则。</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6583,7 +6669,7 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Deletes a scan rule.</para>
+        /// <para>删除扫描规则。</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6634,7 +6720,7 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Deletes a scan rule.</para>
+        /// <para>删除扫描规则。</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6657,7 +6743,7 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Deletes a scan rule.</para>
+        /// <para>删除扫描规则。</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6680,7 +6766,7 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</para>
+        /// <para>此API白名单开放，请<a href="https://smartservice.console.aliyun.com/service/create-ticket">提交工单</a>获取支持。</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6731,7 +6817,7 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</para>
+        /// <para>此API白名单开放，请<a href="https://smartservice.console.aliyun.com/service/create-ticket">提交工单</a>获取支持。</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6782,7 +6868,7 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</para>
+        /// <para>此API白名单开放，请<a href="https://smartservice.console.aliyun.com/service/create-ticket">提交工单</a>获取支持。</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6805,7 +6891,7 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</para>
+        /// <para>此API白名单开放，请<a href="https://smartservice.console.aliyun.com/service/create-ticket">提交工单</a>获取支持。</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6935,7 +7021,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an artifact building task.</para>
+        /// <para>Retrieves the details of an artifact build task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6973,7 +7059,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an artifact building task.</para>
+        /// <para>Retrieves the details of an artifact build task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7011,7 +7097,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an artifact building task.</para>
+        /// <para>Retrieves the details of an artifact build task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7029,7 +7115,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an artifact building task.</para>
+        /// <para>Retrieves the details of an artifact build task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7047,7 +7133,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the lifecycle management rules of an artifact.</para>
+        /// <para>Lists artifact lifecycle management rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7085,7 +7171,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the lifecycle management rules of an artifact.</para>
+        /// <para>Lists artifact lifecycle management rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7123,7 +7209,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the lifecycle management rules of an artifact.</para>
+        /// <para>Lists artifact lifecycle management rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7141,7 +7227,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the lifecycle management rules of an artifact.</para>
+        /// <para>Lists artifact lifecycle management rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7159,7 +7245,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an artifact subscription rule.</para>
+        /// <para>Retrieves the details of an artifact subscription rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7197,7 +7283,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an artifact subscription rule.</para>
+        /// <para>Retrieves the details of an artifact subscription rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7235,7 +7321,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an artifact subscription rule.</para>
+        /// <para>Retrieves the details of an artifact subscription rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7253,7 +7339,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an artifact subscription rule.</para>
+        /// <para>Retrieves the details of an artifact subscription rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7495,16 +7581,16 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a pair of temporary username and password that you use to log on to a Container Registry instance.</para>
+        /// <para>Retrieves a temporary account and temporary password for logging on to an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The validity period of the temporary password is 1 hour. If you use STS to request a token, the validity period of the temporary password is the same as the validity period of the STS token.</para>
+        /// <para>The temporary password is valid for 1 hour. If you use STS to make the request, the validity period of the temporary password is the same as that of the STS token used in the request.</para>
         /// <list type="bullet">
-        /// <item><description>If you log on to an instance by using the temporary password obtained through an Alibaba Cloud account, you have the same permissions on resources as the user of the Alibaba Cloud account.</description></item>
-        /// <item><description>If you log on to an instance by using the temporary password obtained through a RAM user, you have the same permissions as the RAM user.</description></item>
-        /// <item><description>If you log on to an instance by using the temporary password obtained through STS, you have the same permissions as the STS token.</description></item>
+        /// <item><description>The permissions granted by a temporary token obtained through an Alibaba Cloud account are the same as the permissions granted when you log on to the instance with the username and password of the Alibaba Cloud account.</description></item>
+        /// <item><description>The permissions granted by a temporary token obtained through a RAM user are the same as the permissions granted when you log on to the instance with the username and password of the RAM user.</description></item>
+        /// <item><description>The permissions granted by a temporary token obtained through STS are the same as the permissions of the STS token.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7547,16 +7633,16 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a pair of temporary username and password that you use to log on to a Container Registry instance.</para>
+        /// <para>Retrieves a temporary account and temporary password for logging on to an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The validity period of the temporary password is 1 hour. If you use STS to request a token, the validity period of the temporary password is the same as the validity period of the STS token.</para>
+        /// <para>The temporary password is valid for 1 hour. If you use STS to make the request, the validity period of the temporary password is the same as that of the STS token used in the request.</para>
         /// <list type="bullet">
-        /// <item><description>If you log on to an instance by using the temporary password obtained through an Alibaba Cloud account, you have the same permissions on resources as the user of the Alibaba Cloud account.</description></item>
-        /// <item><description>If you log on to an instance by using the temporary password obtained through a RAM user, you have the same permissions as the RAM user.</description></item>
-        /// <item><description>If you log on to an instance by using the temporary password obtained through STS, you have the same permissions as the STS token.</description></item>
+        /// <item><description>The permissions granted by a temporary token obtained through an Alibaba Cloud account are the same as the permissions granted when you log on to the instance with the username and password of the Alibaba Cloud account.</description></item>
+        /// <item><description>The permissions granted by a temporary token obtained through a RAM user are the same as the permissions granted when you log on to the instance with the username and password of the RAM user.</description></item>
+        /// <item><description>The permissions granted by a temporary token obtained through STS are the same as the permissions of the STS token.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7599,16 +7685,16 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a pair of temporary username and password that you use to log on to a Container Registry instance.</para>
+        /// <para>Retrieves a temporary account and temporary password for logging on to an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The validity period of the temporary password is 1 hour. If you use STS to request a token, the validity period of the temporary password is the same as the validity period of the STS token.</para>
+        /// <para>The temporary password is valid for 1 hour. If you use STS to make the request, the validity period of the temporary password is the same as that of the STS token used in the request.</para>
         /// <list type="bullet">
-        /// <item><description>If you log on to an instance by using the temporary password obtained through an Alibaba Cloud account, you have the same permissions on resources as the user of the Alibaba Cloud account.</description></item>
-        /// <item><description>If you log on to an instance by using the temporary password obtained through a RAM user, you have the same permissions as the RAM user.</description></item>
-        /// <item><description>If you log on to an instance by using the temporary password obtained through STS, you have the same permissions as the STS token.</description></item>
+        /// <item><description>The permissions granted by a temporary token obtained through an Alibaba Cloud account are the same as the permissions granted when you log on to the instance with the username and password of the Alibaba Cloud account.</description></item>
+        /// <item><description>The permissions granted by a temporary token obtained through a RAM user are the same as the permissions granted when you log on to the instance with the username and password of the RAM user.</description></item>
+        /// <item><description>The permissions granted by a temporary token obtained through STS are the same as the permissions of the STS token.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7627,16 +7713,16 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a pair of temporary username and password that you use to log on to a Container Registry instance.</para>
+        /// <para>Retrieves a temporary account and temporary password for logging on to an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The validity period of the temporary password is 1 hour. If you use STS to request a token, the validity period of the temporary password is the same as the validity period of the STS token.</para>
+        /// <para>The temporary password is valid for 1 hour. If you use STS to make the request, the validity period of the temporary password is the same as that of the STS token used in the request.</para>
         /// <list type="bullet">
-        /// <item><description>If you log on to an instance by using the temporary password obtained through an Alibaba Cloud account, you have the same permissions on resources as the user of the Alibaba Cloud account.</description></item>
-        /// <item><description>If you log on to an instance by using the temporary password obtained through a RAM user, you have the same permissions as the RAM user.</description></item>
-        /// <item><description>If you log on to an instance by using the temporary password obtained through STS, you have the same permissions as the STS token.</description></item>
+        /// <item><description>The permissions granted by a temporary token obtained through an Alibaba Cloud account are the same as the permissions granted when you log on to the instance with the username and password of the Alibaba Cloud account.</description></item>
+        /// <item><description>The permissions granted by a temporary token obtained through a RAM user are the same as the permissions granted when you log on to the instance with the username and password of the RAM user.</description></item>
+        /// <item><description>The permissions granted by a temporary token obtained through STS are the same as the permissions of the STS token.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7655,7 +7741,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the information of a delivery chain to understand the node execution sequence of the delivery chain.</para>
+        /// <para>Obtain the delivery chain definition to understand the execution order of edge zones in the delivery chain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7701,7 +7787,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the information of a delivery chain to understand the node execution sequence of the delivery chain.</para>
+        /// <para>Obtain the delivery chain definition to understand the execution order of edge zones in the delivery chain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7747,7 +7833,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the information of a delivery chain to understand the node execution sequence of the delivery chain.</para>
+        /// <para>Obtain the delivery chain definition to understand the execution order of edge zones in the delivery chain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7765,7 +7851,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the information of a delivery chain to understand the node execution sequence of the delivery chain.</para>
+        /// <para>Obtain the delivery chain definition to understand the execution order of edge zones in the delivery chain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8047,7 +8133,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ID of the resource group to which the instance belongs.</para>
+        /// <para>Query instance information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8089,7 +8175,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ID of the resource group to which the instance belongs.</para>
+        /// <para>Query instance information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8131,7 +8217,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ID of the resource group to which the instance belongs.</para>
+        /// <para>Query instance information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8149,7 +8235,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ID of the resource group to which the instance belongs.</para>
+        /// <para>Query instance information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8167,7 +8253,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of instances.</para>
+        /// <para>Queries the number of instances of a user.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -8197,7 +8283,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of instances.</para>
+        /// <para>Queries the number of instances of a user.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -8227,7 +8313,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of instances.</para>
+        /// <para>Queries the number of instances of a user.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -8241,7 +8327,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of instances.</para>
+        /// <para>Queries the number of instances of a user.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -8639,7 +8725,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a namespace.</para>
+        /// <para>Retrieves information about a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8689,7 +8775,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a namespace.</para>
+        /// <para>Retrieves information about a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8739,7 +8825,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a namespace.</para>
+        /// <para>Retrieves information about a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8757,7 +8843,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a namespace.</para>
+        /// <para>Retrieves information about a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9315,7 +9401,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an image tag.</para>
+        /// <para>Retrieve information about a single image tag.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9353,7 +9439,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an image tag.</para>
+        /// <para>Retrieve information about a single image tag.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9391,7 +9477,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an image tag.</para>
+        /// <para>Retrieve information about a single image tag.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9409,7 +9495,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an image tag.</para>
+        /// <para>Retrieve information about a single image tag.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9427,7 +9513,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the scanning status of an image tag.</para>
+        /// <para>Retrieves the scan status of a specific image tag.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9489,7 +9575,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the scanning status of an image tag.</para>
+        /// <para>Retrieves the scan status of a specific image tag.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9551,7 +9637,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the scanning status of an image tag.</para>
+        /// <para>Retrieves the scan status of a specific image tag.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9569,7 +9655,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the scanning status of an image tag.</para>
+        /// <para>Retrieves the scan status of a specific image tag.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9587,7 +9673,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of vulnerabilities for each severity level. These vulnerabilities are detected in a security scan that is created for an image version.</para>
+        /// <para>Obtain the number of scan results for an image version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9645,7 +9731,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of vulnerabilities for each severity level. These vulnerabilities are detected in a security scan that is created for an image version.</para>
+        /// <para>Obtain the number of scan results for an image version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9703,7 +9789,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of vulnerabilities for each severity level. These vulnerabilities are detected in a security scan that is created for an image version.</para>
+        /// <para>Obtain the number of scan results for an image version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9721,7 +9807,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of vulnerabilities for each severity level. These vulnerabilities are detected in a security scan that is created for an image version.</para>
+        /// <para>Obtain the number of scan results for an image version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9883,12 +9969,12 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a scan rule.</para>
+        /// <para>Retrieves a scan rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Get scan rule.</para>
+        /// <para>Retrieves a scan rule.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9934,12 +10020,12 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a scan rule.</para>
+        /// <para>Retrieves a scan rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Get scan rule.</para>
+        /// <para>Retrieves a scan rule.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9985,12 +10071,12 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a scan rule.</para>
+        /// <para>Retrieves a scan rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Get scan rule.</para>
+        /// <para>Retrieves a scan rule.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10008,12 +10094,12 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a scan rule.</para>
+        /// <para>Retrieves a scan rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Get scan rule.</para>
+        /// <para>Retrieves a scan rule.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10031,12 +10117,12 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries instance storage domain routing rules</para>
+        /// <para>Retrieves the instance storage domain name routing list.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is open to a whitelist. Please <a href="https://smartservice.console.aliyun.com/service/create-ticket">submit a ticket</a> for support.</para>
+        /// <para>This API is available through whitelist access. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a> to obtain support.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10082,12 +10168,12 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries instance storage domain routing rules</para>
+        /// <para>Retrieves the instance storage domain name routing list.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is open to a whitelist. Please <a href="https://smartservice.console.aliyun.com/service/create-ticket">submit a ticket</a> for support.</para>
+        /// <para>This API is available through whitelist access. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a> to obtain support.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10133,12 +10219,12 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries instance storage domain routing rules</para>
+        /// <para>Retrieves the instance storage domain name routing list.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is open to a whitelist. Please <a href="https://smartservice.console.aliyun.com/service/create-ticket">submit a ticket</a> for support.</para>
+        /// <para>This API is available through whitelist access. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a> to obtain support.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10156,12 +10242,12 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries instance storage domain routing rules</para>
+        /// <para>Retrieves the instance storage domain name routing list.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is open to a whitelist. Please <a href="https://smartservice.console.aliyun.com/service/create-ticket">submit a ticket</a> for support.</para>
+        /// <para>This API is available through whitelist access. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a> to obtain support.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10291,7 +10377,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the lifecycle management rules of an artifact.</para>
+        /// <para>Lists artifact lifecycle management rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10329,7 +10415,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the lifecycle management rules of an artifact.</para>
+        /// <para>Lists artifact lifecycle management rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10367,7 +10453,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the lifecycle management rules of an artifact.</para>
+        /// <para>Lists artifact lifecycle management rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10385,7 +10471,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the lifecycle management rules of an artifact.</para>
+        /// <para>Lists artifact lifecycle management rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10403,7 +10489,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the subscription rules of artifacts.</para>
+        /// <para>List artifact subscription rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10441,7 +10527,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the subscription rules of artifacts.</para>
+        /// <para>List artifact subscription rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10479,7 +10565,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the subscription rules of artifacts.</para>
+        /// <para>List artifact subscription rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10497,7 +10583,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the subscription rules of artifacts.</para>
+        /// <para>List artifact subscription rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10779,7 +10865,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries execution records of delivery chains.</para>
+        /// <para>Queries the execution records of a delivery chain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10837,7 +10923,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries execution records of delivery chains.</para>
+        /// <para>Queries the execution records of a delivery chain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10895,7 +10981,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries execution records of delivery chains.</para>
+        /// <para>Queries the execution records of a delivery chain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10913,7 +10999,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries execution records of delivery chains.</para>
+        /// <para>Queries the execution records of a delivery chain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11627,7 +11713,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Container Registry instances.</para>
+        /// <para>Queries a list of instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11685,7 +11771,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Container Registry instances.</para>
+        /// <para>Queries a list of instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11743,7 +11829,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Container Registry instances.</para>
+        /// <para>Queries a list of instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11761,7 +11847,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Container Registry instances.</para>
+        /// <para>Queries a list of instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12035,7 +12121,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries namespaces in a Container Registry instance.</para>
+        /// <para>Lists namespaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12093,7 +12179,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries namespaces in a Container Registry instance.</para>
+        /// <para>Lists namespaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12151,7 +12237,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries namespaces in a Container Registry instance.</para>
+        /// <para>Lists namespaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12169,7 +12255,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries namespaces in a Container Registry instance.</para>
+        /// <para>Lists namespaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12475,7 +12561,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries image building rules of a repository.</para>
+        /// <para>Lists the build rules of an image repository.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12529,7 +12615,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries image building rules of a repository.</para>
+        /// <para>Lists the build rules of an image repository.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12583,7 +12669,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries image building rules of a repository.</para>
+        /// <para>Lists the build rules of an image repository.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12601,7 +12687,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries image building rules of a repository.</para>
+        /// <para>Lists the build rules of an image repository.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12619,7 +12705,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries image synchronization rules of a repository.</para>
+        /// <para>Returns a list of repository synchronization rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12685,7 +12771,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries image synchronization rules of a repository.</para>
+        /// <para>Returns a list of repository synchronization rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12751,7 +12837,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries image synchronization rules of a repository.</para>
+        /// <para>Returns a list of repository synchronization rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12769,7 +12855,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries image synchronization rules of a repository.</para>
+        /// <para>Returns a list of repository synchronization rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12787,7 +12873,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries image synchronization tasks in an image repository.</para>
+        /// <para>Lists repository synchronization tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12853,7 +12939,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries image synchronization tasks in an image repository.</para>
+        /// <para>Lists repository synchronization tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12919,7 +13005,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries image synchronization tasks in an image repository.</para>
+        /// <para>Lists repository synchronization tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12937,7 +13023,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries image synchronization tasks in an image repository.</para>
+        /// <para>Lists repository synchronization tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13427,7 +13513,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries image repositories.</para>
+        /// <para>Query the image repository list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13489,7 +13575,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries image repositories.</para>
+        /// <para>Query the image repository list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13551,7 +13637,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries image repositories.</para>
+        /// <para>Query the image repository list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13569,7 +13655,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries image repositories.</para>
+        /// <para>Query the image repository list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13856,7 +13942,7 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Lists the scan rules.</para>
+        /// <para>列举扫描规则。</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13899,7 +13985,7 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Lists the scan rules.</para>
+        /// <para>列举扫描规则。</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13942,7 +14028,7 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Lists the scan rules.</para>
+        /// <para>列举扫描规则。</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13965,7 +14051,7 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Lists the scan rules.</para>
+        /// <para>列举扫描规则。</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13985,6 +14071,15 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// <summary>
         /// <para>Queries the tags that are added to cloud resources. Instance resources are supported.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>请求中ResourceId.N 及 (Tag.N.Key,Tag.N.Value) 至少存在一个，以确定检索对象。</description></item>
+        /// <item><description>Tag.N是资源的标签，由一个键值对组成。仅指定Tag.N.Key时，则返回该标签键关联的所有标签值。仅指定Tag.N.Value会报错。</description></item>
+        /// <item><description>ResourceId.N需满足所有输入的键值对。当输入多个键值对，查询结果为资源中包含指定多个键值对的资源。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTagResourcesRequest
@@ -14044,6 +14139,15 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// <para>Queries the tags that are added to cloud resources. Instance resources are supported.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>请求中ResourceId.N 及 (Tag.N.Key,Tag.N.Value) 至少存在一个，以确定检索对象。</description></item>
+        /// <item><description>Tag.N是资源的标签，由一个键值对组成。仅指定Tag.N.Key时，则返回该标签键关联的所有标签值。仅指定Tag.N.Value会报错。</description></item>
+        /// <item><description>ResourceId.N需满足所有输入的键值对。当输入多个键值对，查询结果为资源中包含指定多个键值对的资源。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListTagResourcesRequest
         /// </param>
@@ -14102,6 +14206,15 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// <para>Queries the tags that are added to cloud resources. Instance resources are supported.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>请求中ResourceId.N 及 (Tag.N.Key,Tag.N.Value) 至少存在一个，以确定检索对象。</description></item>
+        /// <item><description>Tag.N是资源的标签，由一个键值对组成。仅指定Tag.N.Key时，则返回该标签键关联的所有标签值。仅指定Tag.N.Value会报错。</description></item>
+        /// <item><description>ResourceId.N需满足所有输入的键值对。当输入多个键值对，查询结果为资源中包含指定多个键值对的资源。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListTagResourcesRequest
         /// </param>
@@ -14119,6 +14232,15 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// <summary>
         /// <para>Queries the tags that are added to cloud resources. Instance resources are supported.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>请求中ResourceId.N 及 (Tag.N.Key,Tag.N.Value) 至少存在一个，以确定检索对象。</description></item>
+        /// <item><description>Tag.N是资源的标签，由一个键值对组成。仅指定Tag.N.Key时，则返回该标签键关联的所有标签值。仅指定Tag.N.Value会报错。</description></item>
+        /// <item><description>ResourceId.N需满足所有输入的键值对。当输入多个键值对，查询结果为资源中包含指定多个键值对的资源。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTagResourcesRequest
@@ -14266,6 +14388,11 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// <para>Adds tags to resources. Instance resources are supported.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>单个实例最多可绑定 20 条标签。绑定标签前，阿里云会校验资源已有标签数量，超过限制值会返回报错信息。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TagResourcesRequest
         /// </param>
@@ -14319,6 +14446,11 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// <summary>
         /// <para>Adds tags to resources. Instance resources are supported.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>单个实例最多可绑定 20 条标签。绑定标签前，阿里云会校验资源已有标签数量，超过限制值会返回报错信息。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// TagResourcesRequest
@@ -14374,6 +14506,11 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// <para>Adds tags to resources. Instance resources are supported.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>单个实例最多可绑定 20 条标签。绑定标签前，阿里云会校验资源已有标签数量，超过限制值会返回报错信息。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TagResourcesRequest
         /// </param>
@@ -14391,6 +14528,11 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// <summary>
         /// <para>Adds tags to resources. Instance resources are supported.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>单个实例最多可绑定 20 条标签。绑定标签前，阿里云会校验资源已有标签数量，超过限制值会返回报错信息。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// TagResourcesRequest
@@ -16479,7 +16621,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Updates repository information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16549,7 +16691,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Updates repository information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16619,7 +16761,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Updates repository information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16637,7 +16779,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Updates repository information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16660,7 +16802,7 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</para>
+        /// <para>This API is available through whitelist access. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a> to request access.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -16745,7 +16887,7 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</para>
+        /// <para>This API is available through whitelist access. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a> to request access.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -16830,7 +16972,7 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</para>
+        /// <para>This API is available through whitelist access. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a> to request access.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16853,7 +16995,7 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</para>
+        /// <para>This API is available through whitelist access. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a> to request access.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16876,7 +17018,7 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</para>
+        /// <para>此API白名单开放，请<a href="https://smartservice.console.aliyun.com/service/create-ticket">提交工单</a>获取支持。</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -16937,7 +17079,7 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</para>
+        /// <para>此API白名单开放，请<a href="https://smartservice.console.aliyun.com/service/create-ticket">提交工单</a>获取支持。</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -16998,7 +17140,7 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</para>
+        /// <para>此API白名单开放，请<a href="https://smartservice.console.aliyun.com/service/create-ticket">提交工单</a>获取支持。</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17021,7 +17163,7 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</para>
+        /// <para>此API白名单开放，请<a href="https://smartservice.console.aliyun.com/service/create-ticket">提交工单</a>获取支持。</para>
         /// </description>
         /// 
         /// <param name="request">

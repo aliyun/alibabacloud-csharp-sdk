@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class GetAuthorizationTokenResponseBody : TeaModel {
         /// <summary>
-        /// <para>The password that you use to log on to the registry.</para>
+        /// <para>The password used to log on to the Registry.</para>
         /// 
         /// <b>Example:</b>
         /// <para>shaunadadakks:uuczxnjcyeyhdjadkkajsjdjadhyucb</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string AuthorizationToken { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The timestamp when the temporary token expired. Unit: milliseconds.</para>
+        /// <para>The expiration timestamp of the temporary token, in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1571242083000</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public bool? IsSuccess { get; set; }
 
         /// <summary>
-        /// <para>The request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E069EB86-E6AD-4A98-ADDE-0E993390239A</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The username that you use to log on to the registry.</para>
+        /// <para>The username used to log on to the Registry.</para>
         /// 
         /// <b>Example:</b>
         /// <para>temp_user_cr</para>

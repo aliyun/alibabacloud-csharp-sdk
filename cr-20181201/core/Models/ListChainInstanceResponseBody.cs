@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class ListChainInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The list of delivery chain execution records.</para>
         /// </summary>
         [NameInMap("ChainInstances")]
         [Validation(Required=false)]
         public List<ListChainInstanceResponseBodyChainInstances> ChainInstances { get; set; }
         public class ListChainInstanceResponseBodyChainInstances : TeaModel {
             /// <summary>
-            /// <para>The name of the namespace.</para>
+            /// <para>The delivery chain execution record.</para>
             /// </summary>
             [NameInMap("Chain")]
             [Validation(Required=false)]
             public ListChainInstanceResponseBodyChainInstancesChain Chain { get; set; }
             public class ListChainInstanceResponseBodyChainInstancesChain : TeaModel {
                 /// <summary>
-                /// <para>The name of the namespace.</para>
+                /// <para>The delivery chain ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>chi-m42gbku0****</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
                 public string ChainId { get; set; }
 
                 /// <summary>
-                /// <para>The number of entries returned on each page.</para>
+                /// <para>The delivery chain name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test-chain</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
                 public string ChainName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the request.</para>
+                /// <para>The delivery chain version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             }
 
             /// <summary>
-            /// <para>1</para>
+            /// <para>The delivery chain instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>F4CF4DDB-BEF2-5575-<b><b>-</b></b>***</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string ChainInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Container Registry instance.</para>
+            /// <para>The end time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1636685856000</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the delivery chain.</para>
+            /// <para>The repository name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-repo</para>
@@ -86,13 +86,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string RepoName { get; set; }
 
             /// <summary>
-            /// <para>The execution result of the delivery chain. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><c>SUCCESS</c></description></item>
-            /// <item><description><c>FAILED</c></description></item>
-            /// <item><description><c>CANCELED</c></description></item>
-            /// <item><description><c>DENIED</c></description></item>
-            /// </list>
+            /// <para>The namespace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-ns</para>
@@ -102,7 +96,13 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string RepoNamespaceName { get; set; }
 
             /// <summary>
-            /// <para>The list of the execution records of delivery chains.</para>
+            /// <para>The execution result of the delivery chain. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><c>SUCCESS</c>: Succeeded.</description></item>
+            /// <item><description><c>FAILED</c>: Failed.</description></item>
+            /// <item><description><c>CANCELED</c>: Canceled.</description></item>
+            /// <item><description><c>DENIED</c>: Denied.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>SUCCESS</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string Result { get; set; }
 
             /// <summary>
-            /// <para>test-repo</para>
+            /// <para>The start time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1636685776000</para>
@@ -122,12 +122,12 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public long? StartTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the delivery chain. Valid values:</para>
+            /// <para>The execution status of the delivery chain. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>RUNNING</c></description></item>
-            /// <item><description><c>COMPLETE</c></description></item>
-            /// <item><description><c>CANCELING</c></description></item>
-            /// <item><description><c>CANCELED</c></description></item>
+            /// <item><description><c>RUNNING</c>: Running.</description></item>
+            /// <item><description><c>COMPLETE</c>: Complete.</description></item>
+            /// <item><description><c>CANCELING</c>: Canceling.</description></item>
+            /// <item><description><c>CANCELED</c>: Canceled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         }
 
         /// <summary>
-        /// <para>The version of the delivery chain.</para>
+        /// <para>The return value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The page number of the page to return.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cri-kmsiwlxxdcva****</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The execution record of the delivery chain.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public bool? IsSuccess { get; set; }
 
         /// <summary>
-        /// <para>30</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation is successful.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Container Registry instance.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>838D1602-6D8F-47FB-B60A-656645D2****</para>
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The name of the repository.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -61,6 +61,18 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RepoNamespaceName { get; set; }
 
         /// <summary>
+        /// <para>Repository status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>NORMAL</c>: Normal.</para>
+        /// </description></item>
+        /// <item><description><para><c>DELETING</c>: Deleting.</para>
+        /// </description></item>
+        /// <item><description><para><c>DELETED</c>: Deleted.</para>
+        /// </description></item>
+        /// <item><description><para><c>ALL</c>: All repository statuses.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>ALL</para>
         /// </summary>

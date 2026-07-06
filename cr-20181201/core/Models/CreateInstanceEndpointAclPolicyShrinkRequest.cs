@@ -8,7 +8,20 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cr20181201.Models
 {
-    public class DeleteInstanceEndpointAclPolicyRequest : TeaModel {
+    public class CreateInstanceEndpointAclPolicyShrinkRequest : TeaModel {
+        /// <term><b>Obsolete</b></term>
+        /// 
+        /// <summary>
+        /// <para>The description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
+        /// </summary>
+        [NameInMap("Comment")]
+        [Validation(Required=false)]
+        [Obsolete]
+        public string Comment { get; set; }
+
         /// <summary>
         /// <para>The endpoint type. Only Internet is supported.</para>
         /// <para>This parameter is required.</para>
@@ -22,15 +35,15 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 
         [NameInMap("Entries")]
         [Validation(Required=false)]
-        public List<AccessControlEntry> Entries { get; set; }
+        public string EntriesShrink { get; set; }
 
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The IP CIDR block.</para>
+        /// <para>The IP address range that is allowed to access the instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>127.0.0.1/32</para>
+        /// <para>192.168.1.1/32</para>
         /// </summary>
         [NameInMap("Entry")]
         [Validation(Required=false)]
@@ -49,16 +62,16 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The module for which the access policy is set. Valid values:</para>
+        /// <para>The module for which you want to set the access policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>Registry</c>: access to the image repository</para>
+        /// <item><description><para><c>Registry</c>: access the image repository</para>
         /// </description></item>
-        /// <item><description><para><c>Chart</c>: access to Helm Chart</para>
+        /// <item><description><para><c>Chart</c>: access Helm Chart</para>
         /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>Chart</para>
+        /// <para>Registry</para>
         /// </summary>
         [NameInMap("ModuleName")]
         [Validation(Required=false)]

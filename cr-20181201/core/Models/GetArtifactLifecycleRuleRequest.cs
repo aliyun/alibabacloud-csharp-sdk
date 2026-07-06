@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class GetArtifactLifecycleRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The rule ID.</para>
+        /// <para>The ID of the rule.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

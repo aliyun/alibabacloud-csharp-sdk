@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class CreateScanRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned HTTP or HTTPS status code.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

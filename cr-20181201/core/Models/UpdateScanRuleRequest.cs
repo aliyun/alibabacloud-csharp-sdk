@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The list of namespaces.</para>
+        /// <para>The collection of namespaces.</para>
         /// <list type="bullet">
-        /// <item><description>When the scan scope is NAMESPACE, this parameter cannot be empty.</description></item>
-        /// <item><description>If the scan scope is REPO, you must specify a unique Namespace for this parameter.</description></item>
+        /// <item><description>If the scan scope is set to NAMESPACE, this parameter is required.</description></item>
+        /// <item><description>If the scan scope is set to REPO, specify exactly one namespace for this parameter.</description></item>
         /// </list>
         /// 
         /// <b>if can be null:</b>
@@ -37,8 +37,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         /// <summary>
         /// <para>The list of repositories.</para>
         /// <list type="bullet">
-        /// <item><description>When the scan scope is NAMESPACE, this parameter must be empty.</description></item>
-        /// <item><description>When the scan scope is REPO, this parameter cannot be empty.</description></item>
+        /// <item><description>If the scan scope is set to NAMESPACE, this parameter must be empty.</description></item>
+        /// <item><description>If the scan scope is set to REPO, this parameter is required.</description></item>
         /// </list>
         /// 
         /// <b>if can be null:</b>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public List<string> RepoNames { get; set; }
 
         /// <summary>
-        /// <para>The tag filtering rules.</para>
+        /// <para>The tag filtering rule.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -82,10 +82,9 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string ScanRuleId { get; set; }
 
         /// <summary>
-        /// <para>The scan scope.</para>
-        /// <para>Valid values:</para>
+        /// <para>The scan scope. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>NAMESPACE: namespace.</description></item>
+        /// <item><description>NAMESPACE: namespace</description></item>
         /// <item><description>REPO: repository.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -98,11 +97,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string ScanScope { get; set; }
 
         /// <summary>
-        /// <para>The trigger type.</para>
-        /// <para>Valid values:</para>
+        /// <para>The trigger type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>AUTO: automatically triggers.</description></item>
-        /// <item><description>MANUAL: manually triggers.</description></item>
+        /// <item><description>AUTO: Automatically triggered upon push.</description></item>
+        /// <item><description>MANUAL: Manually triggered.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

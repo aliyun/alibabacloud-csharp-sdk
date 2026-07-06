@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class ListArtifactSubscriptionRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The return value.</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c></description></item>
-        /// <item><description><c>false</c></description></item>
+        /// <item><description><para><c>true</c>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -64,14 +66,14 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The queried artifact subscription rules.</para>
+        /// <para>The subscription rules.</para>
         /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]
         public List<ListArtifactSubscriptionRuleResponseBodyRules> Rules { get; set; }
         public class ListArtifactSubscriptionRuleResponseBodyRules : TeaModel {
             /// <summary>
-            /// <para>Indicates whether an acceleration link is enabled for image subscription. The subscription acceleration feature is in public preview. The feature is optimized based on scheduling policies and network links to accelerate image subscription.</para>
+            /// <para>Indicates whether to enable the accelerated subscription channel. This feature is in public preview. Based on an optimized scheduling policy and network link, the speed of image subscription is improved.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -81,7 +83,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public bool? Accelerate { get; set; }
 
             /// <summary>
-            /// <para>The time when the subscription rule was created.</para>
+            /// <para>The time when the rule was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1638187989000</para>
@@ -101,7 +103,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The time when the subscription rule was modified.</para>
+            /// <para>The time when the rule was last modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1678341923385</para>
@@ -111,7 +113,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public long? ModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the source namespace.</para>
+            /// <para>The name of the namespace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-ns</para>
@@ -121,7 +123,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string NamespaceName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the original image is overwritten.</para>
+            /// <para>Indicates whether to overwrite the image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -131,14 +133,14 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public bool? Override { get; set; }
 
             /// <summary>
-            /// <para>The operating system and architecture. If the source repository contains a multi-arch image, only the images with the specified operating system and architecture are subscribed to the destination repository of the Enterprise Edition instance.</para>
+            /// <para>The operating system and architecture. If the source repository contains a multi-architecture image, only images that have a specified operating system and architecture are subscribed to the destination repository of the Enterprise Edition instance.</para>
             /// </summary>
             [NameInMap("Platform")]
             [Validation(Required=false)]
             public List<string> Platform { get; set; }
 
             /// <summary>
-            /// <para>The name of the source repository.</para>
+            /// <para>The name of the repository.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-repo</para>
@@ -172,13 +174,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string SourceNamespaceName { get; set; }
 
             /// <summary>
-            /// <para>The source of the artifact.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>DOCKER_HUB: Docker Hub</description></item>
-            /// <item><description>GCR: GCR</description></item>
-            /// <item><description>QUAY: Quay.io</description></item>
-            /// </list>
+            /// <para>The source of the artifact. Valid values:</para>
             /// 
             /// <b>Example:</b>
             /// <para>DOCKER_HUB</para>
@@ -208,7 +204,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public long? TagCount { get; set; }
 
             /// <summary>
-            /// <para>The image tag in the subscription source repository. Regular expressions are supported.</para>
+            /// <para>The regular expression that is used to subscribe to the source repository.</para>
             /// 
             /// <b>Example:</b>
             /// <para>release.*</para>
@@ -220,7 +216,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>13</para>

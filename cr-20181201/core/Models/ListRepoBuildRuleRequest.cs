@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries to return per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>

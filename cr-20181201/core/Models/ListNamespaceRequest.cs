@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class ListNamespaceRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The ID of the Container Registry (ACR) instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The namespace name.</para>
+        /// <para>The name of the namespace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-namespace</para>
@@ -33,8 +33,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         /// <summary>
         /// <para>The status of the namespace. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>NORMAL</c></description></item>
-        /// <item><description><c>DELETING</c></description></item>
+        /// <item><description><para><c>NORMAL</c>: The namespace is normal.</para>
+        /// </description></item>
+        /// <item><description><para><c>DELETING</c>: The namespace is being deleted.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -55,7 +57,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries to return on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>

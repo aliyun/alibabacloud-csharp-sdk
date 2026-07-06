@@ -33,6 +33,12 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string BuildRuleId { get; set; }
 
         /// <summary>
+        /// <para>The API return code:</para>
+        /// <list type="bullet">
+        /// <item><description><b>200</b>: Indicates success.</description></item>
+        /// <item><description>Others: Indicate error codes.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>

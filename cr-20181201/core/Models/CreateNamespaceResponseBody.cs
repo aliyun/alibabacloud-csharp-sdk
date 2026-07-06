@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class CreateNamespaceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The return value.</para>
+        /// <para>The response code. The value <c>success</c> indicates that the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public bool? IsSuccess { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BC648259-91A7-4502-BED3-EDF64361FA83</para>

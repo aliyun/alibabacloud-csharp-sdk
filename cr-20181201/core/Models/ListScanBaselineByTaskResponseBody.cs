@@ -72,6 +72,9 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public class ListScanBaselineByTaskResponseBodyScanBaselines : TeaModel {
             /// <summary>
             /// <para>The category to which the baseline risk belongs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>服务配置</para>
             /// </summary>
             [NameInMap("BaselineClassAlias")]
             [Validation(Required=false)]
@@ -79,6 +82,9 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 
             /// <summary>
             /// <para>Suggestions about how to fix the baseline risk.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>建议对ak混淆加密，避免被利用</para>
             /// </summary>
             [NameInMap("BaselineDetailAdvice")]
             [Validation(Required=false)]
@@ -86,6 +92,9 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 
             /// <summary>
             /// <para>The description of the baseline risk.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Access Key明文存储</para>
             /// </summary>
             [NameInMap("BaselineDetailDescription")]
             [Validation(Required=false)]
@@ -113,6 +122,9 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 
             /// <summary>
             /// <para>The name of the baseline risk.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>服务配置</para>
             /// </summary>
             [NameInMap("BaselineNameAlias")]
             [Validation(Required=false)]

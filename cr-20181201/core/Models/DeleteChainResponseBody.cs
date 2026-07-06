@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class DeleteChainResponseBody : TeaModel {
         /// <summary>
-        /// <para>The return value.</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public bool? IsSuccess { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DB1809A8-E1C8-5707-BAF8-D4FC1C11****</para>

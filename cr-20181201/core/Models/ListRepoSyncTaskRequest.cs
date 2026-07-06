@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RepoName { get; set; }
 
         /// <summary>
-        /// <para>The name of the namespace to which the repository belongs.</para>
+        /// <para>The name of the repository namespace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ns</para>
@@ -61,13 +61,13 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RepoNamespaceName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the synchronization task record, which is the same as SyncBatchTaskId in the response.</para>
+        /// <para>The ID of the sync task. This ID is also the <c>SyncBatchTaskId</c> returned in the response, which identifies the image\&quot;s sync batch task.</para>
         /// <remarks>
-        /// <para> If an image meets multiple synchronization rules and multiple synchronization tasks are generated for the image, these synchronization tasks use the same SyncBatchTaskId.</para>
+        /// <para>An image that matches multiple sync rules generates multiple sync tasks, each with the same <c>SyncBatchTaskId</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>crsr-7lph66uloi6h****</para>
+        /// <para>9d8ac4f6-8138-4c15-a2e3-60624ad3****</para>
         /// </summary>
         [NameInMap("SyncRecordId")]
         [Validation(Required=false)]

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Digest { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the image repository.</para>
+        /// <para>The ID of the repository.</para>
         /// 
         /// <b>Example:</b>
         /// <para>crr-uf082u9dg8do****</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class GetInstanceCountResponseBody : TeaModel {
         /// <summary>
-        /// <para>Return value</para>
+        /// <para>The return value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Number of instances</para>
+        /// <para>The number of instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -30,10 +30,12 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API call was successful. Values:</para>
+        /// <para>Indicates whether the API call is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The API call was successful. </description></item>
-        /// <item><description><c>false</c>: The API call failed.</description></item>
+        /// <item><description><para><c>true</c>: The API call is successful.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The API call fails.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public bool? IsSuccess { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BC648259-91A7-4502-BED3-EDF64361FA83</para>

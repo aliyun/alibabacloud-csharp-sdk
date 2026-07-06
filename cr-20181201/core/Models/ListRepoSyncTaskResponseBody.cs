@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class ListRepoSyncTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -60,14 +60,14 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The queried synchronization tasks.</para>
+        /// <para>A list of sync tasks.</para>
         /// </summary>
         [NameInMap("SyncTasks")]
         [Validation(Required=false)]
         public List<ListRepoSyncTaskResponseBodySyncTasks> SyncTasks { get; set; }
         public class ListRepoSyncTaskResponseBodySyncTasks : TeaModel {
             /// <summary>
-            /// <para>The time when the synchronization task was created.</para>
+            /// <para>The creation time of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1572839126000</para>
@@ -77,12 +77,14 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the synchronization task is performed across Alibaba Cloud accounts. Valid values:</para>
+            /// <para>Whether the image is synchronized across accounts. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>true</c>: The image synchronization task is performed across accounts.</description></item>
-            /// <item><description><c>false</c>: The image synchronization task is performed within the same account.</description></item>
+            /// <item><description><para><c>true</c>: The image is synchronized across accounts.</para>
+            /// </description></item>
+            /// <item><description><para><c>false</c>: The image is synchronized within the same account.</para>
+            /// </description></item>
             /// </list>
-            /// <para>Default value: <c>false</c>.</para>
+            /// <para>Default value: <c>false</c></para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -92,7 +94,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public bool? CrossUser { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether a custom synchronization link is used.</para>
+            /// <para>Whether a custom sync link is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -102,7 +104,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public bool? CustomLink { get; set; }
 
             /// <summary>
-            /// <para>The information about the source image.</para>
+            /// <para>The source image.</para>
             /// </summary>
             [NameInMap("ImageFrom")]
             [Validation(Required=false)]
@@ -119,7 +121,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
                 public string ImageTag { get; set; }
 
                 /// <summary>
-                /// <para>The instance ID.</para>
+                /// <para>The ID of the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cri-kmsiwlxxdcva****</para>
@@ -129,7 +131,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The region ID.</para>
+                /// <para>The ID of the region.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-shanghai</para>
@@ -149,7 +151,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
                 public string RepoName { get; set; }
 
                 /// <summary>
-                /// <para>The namespace to which the repository belongs.</para>
+                /// <para>The repository namespace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -161,7 +163,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             }
 
             /// <summary>
-            /// <para>The information about the destination image.</para>
+            /// <para>The destination image.</para>
             /// </summary>
             [NameInMap("ImageTo")]
             [Validation(Required=false)]
@@ -178,7 +180,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
                 public string ImageTag { get; set; }
 
                 /// <summary>
-                /// <para>The instance ID.</para>
+                /// <para>The ID of the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cri-k77rd2eo9zttneqo</para>
@@ -188,7 +190,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The region ID.</para>
+                /// <para>The ID of the region.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-shenzhen</para>
@@ -208,7 +210,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
                 public string RepoName { get; set; }
 
                 /// <summary>
-                /// <para>The namespace to which the repository belongs.</para>
+                /// <para>The repository namespace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -219,6 +221,9 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 
             }
 
+            /// <summary>
+            /// <para>The ID of the custom sync link.</para>
+            /// </summary>
             [NameInMap("LinkId")]
             [Validation(Required=false)]
             public string LinkId { get; set; }
@@ -226,7 +231,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The time when the synchronization task was last modified.</para>
+            /// <para>This parameter is deprecated due to a typo. Use <c>ModifiedTime</c> instead.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1572839133000</para>
@@ -236,25 +241,28 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             [Obsolete]
             public long? ModifedTime { get; set; }
 
+            /// <summary>
+            /// <para>The modification time of the task.</para>
+            /// </summary>
             [NameInMap("ModifiedTime")]
             [Validation(Required=false)]
             public long? ModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the image synchronization batch tasks, which is the same as the value of SyncRecordId in the request.</para>
+            /// <para>The ID of the batch sync task. This ID is the same as the sync record ID (<c>SyncRecordId</c>).</para>
             /// <remarks>
-            /// <para> If an image meets multiple synchronization rules and multiple synchronization tasks are generated for the image, these synchronization tasks use the same SyncBatchTaskId.</para>
+            /// <para>If an image matches multiple sync rules, multiple sync tasks are generated. These tasks share the same <c>SyncBatchTaskId</c>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>15DEEB56-9271-4FDD-AC4D-C3A5CC2C****</para>
+            /// <para>9d8ac4f6-8138-4c15-a2e3-60624ad3****</para>
             /// </summary>
             [NameInMap("SyncBatchTaskId")]
             [Validation(Required=false)]
             public string SyncBatchTaskId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the synchronization rule.</para>
+            /// <para>The ID of the sync rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>crsr-7lph66uloi6h****</para>
@@ -264,7 +272,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string SyncRuleId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the synchronization task.</para>
+            /// <para>The ID of the sync task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rst-4kfd7fk6pohk****</para>
@@ -274,7 +282,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string SyncTaskId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the synchronization transfer acceleration feature is enabled for the synchronization task.</para>
+            /// <para>Whether transfer acceleration is enabled for the sync task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -284,19 +292,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public bool? SyncTransAccelerate { get; set; }
 
             /// <summary>
-            /// <para>The error message that is returned if the synchronization task fails.</para>
+            /// <para>The task failure information.</para>
             /// <remarks>
-            /// <para> The system uses this parameter to return an error message if the synchronization task fails.</para>
+            /// <para>If the sync task fails, this field returns details about the failure.</para>
             /// </remarks>
-            /// <para>Valid value:</para>
-            /// <list type="bullet">
-            /// <item><description>OSS_POLICY_UNAUTHORIZED: Container Registry is not granted permissions to access Object Storage Service (OSS).</description></item>
-            /// <item><description>TAG_CONFLICT: The destination repository contains an image that has the same tag as the source image, and image tag immutability is enabled for the destination repository.</description></item>
-            /// <item><description>UNSUPPORTED_FORMAT: The manifest or config format of the image to be synchronized is not supported.</description></item>
-            /// <item><description>INTERNAL_ERROR: The synchronization task failed due to internal issues on the server.</description></item>
-            /// <item><description>NETWORK_ERROR: The synchronization task failed due to unstable network connection.</description></item>
-            /// <item><description>DATA_LENGTH_EXCEEDED: The manifest or config of the image is oversized.</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>NETWORK_ERROR</para>
@@ -306,22 +305,24 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string TaskIssue { get; set; }
 
             /// <summary>
-            /// <para>The status of the synchronization task.</para>
+            /// <para>The task status.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>SUCCESS</para>
+            /// <para>ERROR</para>
             /// </summary>
             [NameInMap("TaskStatus")]
             [Validation(Required=false)]
             public string TaskStatus { get; set; }
 
             /// <summary>
-            /// <para>The policy that is configured to trigger the synchronization task. Valid values:</para>
+            /// <para>The trigger policy. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>PASSIVE</c>: automatically triggers the synchronization task.</description></item>
-            /// <item><description><c>INITIATIVE</c>: manually triggers the synchronization task.</description></item>
+            /// <item><description><para><c>PASSIVE</c>: The sync task is automatically triggered.</para>
+            /// </description></item>
+            /// <item><description><para><c>INITIATIVE</c>: The sync task is manually triggered.</para>
+            /// </description></item>
             /// </list>
-            /// <para>Default value: <c>PASSIVE</c>.</para>
+            /// <para>Default value: <c>PASSIVE</c></para>
             /// 
             /// <b>Example:</b>
             /// <para>PASSIVE</para>
@@ -333,7 +334,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         }
 
         /// <summary>
-        /// <para>The total number of the queried synchronization tasks.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

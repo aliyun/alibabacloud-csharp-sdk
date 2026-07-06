@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Maximum value: 100. If you specify a value greater than 100 for this parameter, the system reports a parameter error or uses 100 as the maximum value.</para>
+        /// <para>The number of entries to return on each page. The maximum value is 100. If you specify a value greater than 100, the system either caps the page size at 100 or returns a parameter error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>

@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RepoName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the destination instance.</para>
+        /// <para>The ID of the target instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cri-k77rd2eo9ztt****</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string TargetInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the destination instance.</para>
+        /// <para>The ID of the target region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shenzhen</para>

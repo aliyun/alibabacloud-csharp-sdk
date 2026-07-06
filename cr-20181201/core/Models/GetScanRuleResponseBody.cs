@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class GetScanRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>Return value</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API call was successful, valid values:</para>
+        /// <para>Indicates whether the API call is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>true</c>: The API call was successful</para>
+        /// <item><description><para><c>true</c>: The API call is successful.</para>
         /// </description></item>
-        /// <item><description><para><c>false</c>: The API call failed</para>
+        /// <item><description><para><c>false</c>: The API call failed.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -73,21 +73,21 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>Names of namespaces where the event is effective.</para>
+            /// <para>The namespace names for which the event takes effect.</para>
             /// </summary>
             [NameInMap("Namespaces")]
             [Validation(Required=false)]
             public List<string> Namespaces { get; set; }
 
             /// <summary>
-            /// <para>Names of repositories where the event is effective.</para>
+            /// <para>The repository names for which the event takes effect.</para>
             /// </summary>
             [NameInMap("RepoNames")]
             [Validation(Required=false)]
             public List<string> RepoNames { get; set; }
 
             /// <summary>
-            /// <para>Tag filter pattern for event triggering.</para>
+            /// <para>The tag filtering rule that triggers the event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>.*</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string RepoTagFilterPattern { get; set; }
 
             /// <summary>
-            /// <para>The event rule name.</para>
+            /// <para>The name of the event rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>protection</para>
@@ -127,11 +127,11 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string ScanScope { get; set; }
 
             /// <summary>
-            /// <para>The vulnerability type: </para>
+            /// <para>The vulnerability type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>cve</c>: System vulnerability</para>
+            /// <item><description><para><c>cve</c>: system vulnerability</para>
             /// </description></item>
-            /// <item><description><para><c>sca</c>: Application vulnerability</para>
+            /// <item><description><para><c>sca</c>: application vulnerability</para>
             /// </description></item>
             /// </list>
             /// 
@@ -143,13 +143,13 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string ScanType { get; set; }
 
             /// <summary>
-            /// <para>The trigger type, valid values:</para>
+            /// <para>The trigger type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>ALL</c>: All triggers</para>
+            /// <item><description><para><c>ALL</c>: all triggers</para>
             /// </description></item>
-            /// <item><description><para><c>TAG_LISTTAG</c>: Trigger</para>
+            /// <item><description><para><c>TAG_LISTTAG</c>: tag trigger</para>
             /// </description></item>
-            /// <item><description><para><c>TAG_REG_EXP</c>: Expression trigger</para>
+            /// <item><description><para><c>TAG_REG_EXP</c>: expression trigger</para>
             /// </description></item>
             /// </list>
             /// 

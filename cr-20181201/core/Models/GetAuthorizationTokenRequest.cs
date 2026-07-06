@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class GetAuthorizationTokenRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The repository instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

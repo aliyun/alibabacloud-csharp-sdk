@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class GetArtifactBuildTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The type of the artifact building task. Valid values:</para>
+        /// <para>The artifact build type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>IMAGE_TO_ACCELERATED_IMAGE</c>: builds accelerated images for Container Service for Kubernetes (ACK) clusters.</description></item>
-        /// <item><description><c>IMAGE_TO_ECI_ACCELERATED_IMAGE</c>: builds accelerated images for elastic container instances.</description></item>
+        /// <item><description><para><c>IMAGE_TO_ACCELERATED_IMAGE</c>: an accelerated image for ACK.</para>
+        /// </description></item>
+        /// <item><description><para><c>IMAGE_TO_ECI_ACCELERATED_IMAGE</c>: an accelerated image for ECI.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string ArtifactBuildType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the artifact building task.</para>
+        /// <para>The ID of the artifact build task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i2a-1yu****</para>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string BuildTaskId { get; set; }
 
         /// <summary>
-        /// <para>The return value.</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -44,10 +46,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The time when the artifact building task ends.</para>
+        /// <para>The Unix timestamp in seconds when the task ended.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>156871880</para>
+        /// <para>1685415871</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -58,7 +60,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public List<string> Instructions { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -78,14 +80,14 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the source artifact.</para>
+        /// <para>The source artifact.</para>
         /// </summary>
         [NameInMap("SourceArtifact")]
         [Validation(Required=false)]
         public GetArtifactBuildTaskResponseBodySourceArtifact SourceArtifact { get; set; }
         public class GetArtifactBuildTaskResponseBodySourceArtifact : TeaModel {
             /// <summary>
-            /// <para>The type of the artifact that is built in the task. The value can only be IMAGE.</para>
+            /// <para>The artifact type. Currently, only <c>IMAGE</c> is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IMAGE</para>
@@ -95,7 +97,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string ArtifactType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the repository to which the source artifact belongs. The repository can only be an image repository.</para>
+            /// <para>The repository ID. Currently, only image repositories are supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cri-shac42yvqzvq****</para>
@@ -105,7 +107,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string RepoId { get; set; }
 
             /// <summary>
-            /// <para>The version of the artifact. The artifact can only be an image.</para>
+            /// <para>The artifact version. Currently, only image versions are supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>latest</para>
@@ -117,24 +119,24 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         }
 
         /// <summary>
-        /// <para>The time when the artifact building task starts.</para>
+        /// <para>The Unix timestamp in seconds when the task started.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>156871881</para>
+        /// <para>1685437471</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public int? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The artifact that is built in the task.</para>
+        /// <para>The target artifact.</para>
         /// </summary>
         [NameInMap("TargetArtifact")]
         [Validation(Required=false)]
         public GetArtifactBuildTaskResponseBodyTargetArtifact TargetArtifact { get; set; }
         public class GetArtifactBuildTaskResponseBodyTargetArtifact : TeaModel {
             /// <summary>
-            /// <para>The type of the artifact that is built in the task. The value can only be IMAGE.</para>
+            /// <para>The artifact type. Currently, only <c>IMAGE</c> is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IMAGE</para>
@@ -144,7 +146,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string ArtifactType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the repository to which the artifact that is built in the task belongs. The repository can only be an image repository. The value is the same as the ID of the repository to which the source artifact belongs.</para>
+            /// <para>The repository ID. It must be the same as the repository ID of the source artifact. Only image repositories are supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>crr-1234567</para>
@@ -154,7 +156,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string RepoId { get; set; }
 
             /// <summary>
-            /// <para>The version of the artifact that is built in the task. The artifact can only be an image.</para>
+            /// <para>The artifact version. Currently, only image versions are supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>latest_accelerated</para>
@@ -166,12 +168,16 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         }
 
         /// <summary>
-        /// <para>The status of the artifact that is built in the task. Valid values:</para>
+        /// <para>The status of the artifact build task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>PENDING</c>: The artifact is being scheduled.</description></item>
-        /// <item><description><c>BUILDING</c>: The artifact is being built.</description></item>
-        /// <item><description><c>SUCCESS</c>: The artifact is built.</description></item>
-        /// <item><description><c>FAILED</c>: The artifact fails to be built.</description></item>
+        /// <item><description><para><c>PENDING</c>: The task is being scheduled.</para>
+        /// </description></item>
+        /// <item><description><para><c>BUILDING</c>: The task is in progress.</para>
+        /// </description></item>
+        /// <item><description><para><c>SUCCESS</c>: The task is successful.</para>
+        /// </description></item>
+        /// <item><description><para><c>FAILED</c>: The task failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

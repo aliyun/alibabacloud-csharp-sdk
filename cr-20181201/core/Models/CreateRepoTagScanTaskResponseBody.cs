@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class CreateRepoTagScanTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The return value.</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API request is successful. Valid values:</para>
+        /// <para>Indicates whether the API call succeeded. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request is successful.</description></item>
-        /// <item><description><c>false</c>: The request fails.</description></item>
+        /// <item><description><para><c>true</c>: The API call succeeded.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The API call failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

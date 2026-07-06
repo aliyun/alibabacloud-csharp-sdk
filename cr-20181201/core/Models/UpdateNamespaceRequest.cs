@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class UpdateNamespaceRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to automatically create a repository when an image is pushed to the namespace.</para>
+        /// <para>Whether to automatically create a repository when an image is pushed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -19,6 +19,9 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public bool? AutoCreateRepo { get; set; }
 
+        /// <summary>
+        /// <para>The default configuration for automatically created repositories.</para>
+        /// </summary>
         [NameInMap("DefaultRepoConfiguration")]
         [Validation(Required=false)]
         public RepoConfiguration DefaultRepoConfiguration { get; set; }
@@ -26,10 +29,12 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The default type of the repository. Valid values:</para>
+        /// <para>The default type for automatically created repositories. This parameter applies only if <c>AutoCreateRepo</c> is set to <c>true</c>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>PUBLIC</c>: The repository is a public repository.</description></item>
-        /// <item><description><c>PRIVATE</c>: The repository is a private repository.</description></item>
+        /// <item><description><para><c>PUBLIC</c>: a public repository</para>
+        /// </description></item>
+        /// <item><description><para><c>PRIVATE</c>: a private repository</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -41,7 +46,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string DefaultRepoType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class ListRepoBuildRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of image building rules.</para>
+        /// <para>The build rules.</para>
         /// </summary>
         [NameInMap("BuildRules")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public List<string> BuildArgs { get; set; }
 
             /// <summary>
-            /// <para>The ID of the image building rule.</para>
+            /// <para>The ID of the build rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>crbr-khys0nd3asbe****</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string DockerfileLocation { get; set; }
 
             /// <summary>
-            /// <para>The name of the Dockerfile.</para>
+            /// <para>Dockerfile name</para>
             /// 
             /// <b>Example:</b>
             /// <para>Dockerfile</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string DockerfileName { get; set; }
 
             /// <summary>
-            /// <para>The tag of the image.</para>
+            /// <para>Image Tag</para>
             /// 
             /// <b>Example:</b>
             /// <para>v0.1</para>
@@ -64,12 +64,15 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             [Validation(Required=false)]
             public string ImageTag { get; set; }
 
+            /// <summary>
+            /// <para>Image operating system and platform</para>
+            /// </summary>
             [NameInMap("Platforms")]
             [Validation(Required=false)]
             public List<string> Platforms { get; set; }
 
             /// <summary>
-            /// <para>The name of the push that triggers the building rule.</para>
+            /// <para>Code push-triggered build name</para>
             /// 
             /// <b>Example:</b>
             /// <para>v0.1</para>
@@ -79,10 +82,12 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string PushName { get; set; }
 
             /// <summary>
-            /// <para>The type of the push that triggers the image building rule. Valid values:</para>
+            /// <para>The type of the event that triggers the build rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>GIT_BRANCH: branch push</description></item>
-            /// <item><description>GIT_TAG: tag push</description></item>
+            /// <item><description><para><c>GIT_BRANCH</c>: A code branch is pushed.</para>
+            /// </description></item>
+            /// <item><description><para>GIT_TAG: Push source code from a tag.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -95,7 +100,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         }
 
         /// <summary>
-        /// <para>The return value.</para>
+        /// <para>The response code. A value of <c>success</c> indicates that the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -105,10 +110,12 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request is successful.</description></item>
-        /// <item><description><c>false</c>: The request fails.</description></item>
+        /// <item><description><para><c>true</c>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -119,7 +126,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public bool? IsSuccess { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -139,7 +146,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>42D782C8-E8F6-4A32-BEA0-6A6AC854C22A</para>
@@ -149,7 +156,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned entries.</para>
+        /// <para>The total number of build rules.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

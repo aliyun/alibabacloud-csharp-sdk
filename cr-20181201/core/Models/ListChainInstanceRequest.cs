@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class ListChainInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The operation that you want to perform. Set this parameter to <b>ListChainInstance</b>.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The time when the delivery chain started.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The name of the image repository.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The time when the delivery chain is completed.</para>
+        /// <para>The image repository name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-repo</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RepoName { get; set; }
 
         /// <summary>
-        /// <para>The name of the delivery chain.</para>
+        /// <para>The namespace name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-namespace</para>

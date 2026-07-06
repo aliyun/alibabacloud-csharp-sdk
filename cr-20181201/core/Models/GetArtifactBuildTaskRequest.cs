@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class GetArtifactBuildTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the artifact building task.</para>
+        /// <para>The ID of the artifact build task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

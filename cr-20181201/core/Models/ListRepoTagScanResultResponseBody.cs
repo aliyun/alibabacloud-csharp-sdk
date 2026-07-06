@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             /// <para>The name of the vulnerability.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Vulnerability</para>
+            /// <para>漏洞</para>
             /// </summary>
             [NameInMap("AliasName")]
             [Validation(Required=false)]

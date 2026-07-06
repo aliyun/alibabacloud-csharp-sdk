@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class GetRepoTagScanStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <para>Specifies whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request is successful.</description></item>
-        /// <item><description><c>false</c>: The request fails.</description></item>
+        /// <item><description><para><c>true</c>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,10 +46,12 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The type of the scanning engine.</para>
+        /// <para>The scan engine type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>ACR_SCAN_SERVICE</c>: Trivy scan engine provided by Container Registry</description></item>
-        /// <item><description><c>SAS_SCAN_SERVICE</c>: Security Center scan engine</description></item>
+        /// <item><description><para><c>ACR_SCAN_SERVICE</c>: the ACR Trivy scan engine.</para>
+        /// </description></item>
+        /// <item><description><para><c>SAS_SCAN_SERVICE</c>: the Cloud Security scan engine.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,12 +62,16 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string ScanService { get; set; }
 
         /// <summary>
-        /// <para>The scanning status of the image tag. Valid values:</para>
+        /// <para>The scan status of the image. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>SCANNING</c>: The image tag is being scanned.</description></item>
-        /// <item><description><c>COMPLETE</c>: The scanning of the image tag is complete.</description></item>
-        /// <item><description><c>FAILED</c>: The image tag failed to be scanned.</description></item>
-        /// <item><description><c>RETRYING</c>: The system is retrying to scan the image tag.</description></item>
+        /// <item><description><para><c>SCANNING</c>: The image is being scanned.</para>
+        /// </description></item>
+        /// <item><description><para><c>COMPLETE</c>: The scan is complete.</para>
+        /// </description></item>
+        /// <item><description><para><c>FAILED</c>: The scan failed.</para>
+        /// </description></item>
+        /// <item><description><para><c>RETRYING</c>: The scan is being retried.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

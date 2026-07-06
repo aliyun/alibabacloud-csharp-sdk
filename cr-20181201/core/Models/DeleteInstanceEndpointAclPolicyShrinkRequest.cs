@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cr20181201.Models
 {
-    public class DeleteInstanceEndpointAclPolicyRequest : TeaModel {
+    public class DeleteInstanceEndpointAclPolicyShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The endpoint type. Only Internet is supported.</para>
         /// <para>This parameter is required.</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 
         [NameInMap("Entries")]
         [Validation(Required=false)]
-        public List<AccessControlEntry> Entries { get; set; }
+        public string EntriesShrink { get; set; }
 
         /// <term><b>Obsolete</b></term>
         /// 

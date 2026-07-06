@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>TAG_LIST</para>
+        /// <para>ALL</para>
         /// </summary>
         [NameInMap("TriggerType")]
         [Validation(Required=false)]

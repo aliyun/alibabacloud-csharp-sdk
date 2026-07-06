@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>Chart</para>
+        /// <para>Registry</para>
         /// </summary>
         [NameInMap("ModuleName")]
         [Validation(Required=false)]

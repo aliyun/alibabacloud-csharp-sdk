@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class ListNamespaceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -22,8 +22,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         /// <summary>
         /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request is successful.</description></item>
-        /// <item><description><c>false</c>: The request fails.</description></item>
+        /// <item><description><para><c>true</c>: The request is successful.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The request fails.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,14 +36,14 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public bool? IsSuccess { get; set; }
 
         /// <summary>
-        /// <para>The queried namespaces.</para>
+        /// <para>The list of namespaces.</para>
         /// </summary>
         [NameInMap("Namespaces")]
         [Validation(Required=false)]
         public List<ListNamespaceResponseBodyNamespaces> Namespaces { get; set; }
         public class ListNamespaceResponseBodyNamespaces : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the automatically creating repositories feature is enabled for the namespace.</para>
+            /// <para>Indicates whether a repository is automatically created when an image is pushed to the namespace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -57,10 +59,12 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The default type of repositories in the namespace. Valid values:</para>
+            /// <para>The default type of the repository. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>PUBLIC</c>: public repositories.</description></item>
-            /// <item><description><c>PRIVATE</c>: private repositories.</description></item>
+            /// <item><description><para><c>PUBLIC</c>: public</para>
+            /// </description></item>
+            /// <item><description><para><c>PRIVATE</c>: private</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -72,7 +76,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string DefaultRepoType { get; set; }
 
             /// <summary>
-            /// <para>The instance ID.</para>
+            /// <para>The ID of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cri-94klsruryslx****</para>
@@ -82,7 +86,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The namespace ID.</para>
+            /// <para>The ID of the namespace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>crn-tiw8t3f8i5lt****</para>
@@ -92,7 +96,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string NamespaceId { get; set; }
 
             /// <summary>
-            /// <para>The namespace name.</para>
+            /// <para>The name of the namespace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -104,8 +108,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             /// <summary>
             /// <para>The status of the namespace. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>NORMAL</c>: The namespace is normal.</description></item>
-            /// <item><description><c>DELETING</c>: The namespace is being deleted.</description></item>
+            /// <item><description><para><c>NORMAL</c>: The namespace is normal.</para>
+            /// </description></item>
+            /// <item><description><para><c>DELETING</c>: The namespace is being deleted.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -116,7 +122,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string NamespaceStatus { get; set; }
 
             /// <summary>
-            /// <para>The resource group ID.</para>
+            /// <para>The ID of the resource group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-acfm4n5kzyf2fbi</para>
@@ -138,7 +144,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -148,7 +154,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B7E5FCA5-55ED-451C-9649-0BB2B93387D0</para>
@@ -158,7 +164,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of the queried namespaces.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

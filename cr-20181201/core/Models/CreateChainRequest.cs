@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class CreateChainRequest : TeaModel {
         /// <summary>
-        /// <para>The configuration of the delivery chain in the JSON format.</para>
+        /// <para>The JSON-serialized entity object that describes the delivery chain.</para>
         /// 
         /// <b>Example:</b>
         /// <para>chainconfig</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The name of the repository.</para>
+        /// <para>The repository name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>repo1</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RepoName { get; set; }
 
         /// <summary>
-        /// <para>The name of the namespace.</para>
+        /// <para>The namespace name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ns1</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RepoNamespaceName { get; set; }
 
         /// <summary>
-        /// <para>Repositories in which the delivery chain does not take effect.</para>
+        /// <para>The collection of repositories excluded from the delivery chain execution.</para>
         /// </summary>
         [NameInMap("ScopeExclude")]
         [Validation(Required=false)]

@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>ALL</para>
+        /// <para>NORMAL</para>
         /// </summary>
         [NameInMap("RepoStatus")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class ListArtifactLifecycleRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The return value.</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <para>Indicates whether the request succeeded. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request is successful.</description></item>
-        /// <item><description><c>false</c>: The request fails.</description></item>
+        /// <item><description><para><c>true</c>: The request succeeded.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries returned on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -64,14 +66,14 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>_</para>
+        /// <para>The list of lifecycle management rules.</para>
         /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]
         public List<ListArtifactLifecycleRuleResponseBodyRules> Rules { get; set; }
         public class ListArtifactLifecycleRuleResponseBodyRules : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the lifecycle management rule is automatically executed.</para>
+            /// <para>Indicates whether the rule runs automatically.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -81,7 +83,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public bool? Auto { get; set; }
 
             /// <summary>
-            /// <para>The time when the lifecycle management rule was created.</para>
+            /// <para>The creation time of the rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1638187989000</para>
@@ -91,7 +93,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether lifecycle management is enabled for the artifact.</para>
+            /// <para>Indicates whether the rule is configured to delete tags.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -111,7 +113,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The time when the lifecycle management rule was last modified.</para>
+            /// <para>The last modification time of the rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1678341923385</para>
@@ -121,7 +123,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public long? ModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the namespace.</para>
+            /// <para>The namespace name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-ns</para>
@@ -131,7 +133,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string NamespaceName { get; set; }
 
             /// <summary>
-            /// <para>The time when the lifecycle management rule is next executed.</para>
+            /// <para>The next execution time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1638187989000</para>
@@ -179,7 +181,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             }
 
             /// <summary>
-            /// <para>The name of the image repository.</para>
+            /// <para>The repository name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test_1</para>
@@ -189,7 +191,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string RepoName { get; set; }
 
             /// <summary>
-            /// <para>The number of retained images.</para>
+            /// <para>The number of image tags to retain.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -209,7 +211,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string RuleId { get; set; }
 
             /// <summary>
-            /// <para>The execution cycle of the lifecycle management rule.</para>
+            /// <para>The execution schedule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>WEEK</para>
@@ -219,7 +221,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string ScheduleTime { get; set; }
 
             /// <summary>
-            /// <para>The deletion scope of artifacts.</para>
+            /// <para>The scope of the rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>INSTANCE</para>
@@ -229,7 +231,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string Scope { get; set; }
 
             /// <summary>
-            /// <para>The regular expression that indicates which image tags are retained.</para>
+            /// <para>The regular expression that matches image tags to retain.</para>
             /// 
             /// <b>Example:</b>
             /// <para>.*-alpine</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class ListArtifactLifecycleRuleRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable lifecycle management for the artifact.</para>
+        /// <para>Indicates whether automatic tag deletion is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public bool? EnableDeleteTag { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Container Registry Enterprise Edition instance.</para>
+        /// <para>The ID of the Enterprise Edition instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Maximum value: 100. If you specify a value greater than 100 for this parameter, the system reports a parameter error or uses 100 as the maximum value.</para>
+        /// <para>The number of entries to return per page. The maximum value is 100. If you specify a value greater than 100, the system may return a parameter error or use a page size of 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

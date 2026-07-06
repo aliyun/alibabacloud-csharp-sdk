@@ -336,7 +336,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         /// <para>The policy that is used to trigger the synchronization task.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>null</para>
+        /// <para>PASSIVE</para>
         /// </summary>
         [NameInMap("TaskTrigger")]
         [Validation(Required=false)]

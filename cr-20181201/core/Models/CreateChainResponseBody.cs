@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class CreateChainResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the delivery chain.</para>
+        /// <para>The delivery chain ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>chi-02ymhtwl3cq8****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string ChainId { get; set; }
 
         /// <summary>
-        /// <para>The return value.</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the operation is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public bool? IsSuccess { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4BC03B36-E515-5806-99AC-268AE3C0****</para>

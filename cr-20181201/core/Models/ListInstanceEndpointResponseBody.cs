@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
                 /// <para>The information about the ACL.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>null</para>
+                /// <para>127.0.0.1</para>
                 /// </summary>
                 [NameInMap("Entry")]
                 [Validation(Required=false)]
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
                 /// <para>VPC ID</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>null</para>
+                /// <para>vpc-bp1b1xjllp3ve5yze****</para>
                 /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]

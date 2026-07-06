@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class DeleteChainRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the delivery pipeline.</para>
+        /// <para>The delivery chain ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string ChainId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

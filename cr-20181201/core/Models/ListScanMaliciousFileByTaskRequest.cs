@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         /// <para>The severity of the malicious file.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>High</para>
+        /// <para>serious、suspicious、remind</para>
         /// </summary>
         [NameInMap("Level")]
         [Validation(Required=false)]

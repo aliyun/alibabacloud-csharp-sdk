@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             /// <para>The name of the region.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>China (Shenzhen)</para>
+            /// <para>华南1（深圳）</para>
             /// </summary>
             [NameInMap("LocalName")]
             [Validation(Required=false)]

@@ -40,6 +40,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public long? ImageCreate { get; set; }
 
         /// <summary>
+        /// <para>Image ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>45023655bf39c382e26a8607d057c27871dee163c1ecf48cc1ebf2a1****</para>
         /// </summary>

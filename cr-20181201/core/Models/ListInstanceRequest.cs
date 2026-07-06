@@ -23,16 +23,24 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The status of the instance. Valid values:</para>
+        /// <para>The instance status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>PENDING</c>: The instance is being initialized.</description></item>
-        /// <item><description><c>INIT_ERROR</c>: The initialization of the instance fails.</description></item>
-        /// <item><description><c>STARTING</c>: The instance is being started.</description></item>
-        /// <item><description><c>RUNNING</c>: The instance is running.</description></item>
-        /// <item><description><c>STOPPING</c>: The instance is being stopped.</description></item>
-        /// <item><description><c>STOPPED</c>: The instance is stopped.</description></item>
-        /// <item><description><c>DELETING</c>: The instance is being deleted.</description></item>
-        /// <item><description><c>DELETED</c>: The instance is deleted.</description></item>
+        /// <item><description><para><c>PENDING</c>: Initializing.</para>
+        /// </description></item>
+        /// <item><description><para><c>INIT_ERROR</c>: Initialization failed.</para>
+        /// </description></item>
+        /// <item><description><para><c>STARTING</c>: Starting.</para>
+        /// </description></item>
+        /// <item><description><para><c>RUNNING</c>: Running.</para>
+        /// </description></item>
+        /// <item><description><para><c>STOPPING</c>: Stopping.</para>
+        /// </description></item>
+        /// <item><description><para><c>STOPPED</c>: Stopped.</para>
+        /// </description></item>
+        /// <item><description><para><c>DELETING</c>: Deleting.</para>
+        /// </description></item>
+        /// <item><description><para><c>DELETED</c>: Deleted.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -53,7 +61,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -63,7 +71,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the instance belongs.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmv36i4is****</para>

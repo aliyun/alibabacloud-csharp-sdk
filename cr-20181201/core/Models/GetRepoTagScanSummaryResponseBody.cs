@@ -40,6 +40,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public bool? IsSuccess { get; set; }
 
         /// <summary>
+        /// <para>Number of low-severity vulnerabilities</para>
+        /// 
         /// <b>Example:</b>
         /// <para>89</para>
         /// </summary>
