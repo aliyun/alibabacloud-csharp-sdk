@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Arguments { get; set; }
 
             /// <summary>
-            /// <para>The analysis failure log.</para>
+            /// <para>The failure log of the analysis.</para>
             /// 
             /// <b>Example:</b>
             /// <para>机器i-wz9dej066kii4goqpnze分析失败, 失败原因: Not get GPU trace data for \&quot;e59ce870-dbd4-4c44-a814-174ac6ab5bcf\&quot; \&quot;[\&quot;118534\&quot;]\&quot;!</para>

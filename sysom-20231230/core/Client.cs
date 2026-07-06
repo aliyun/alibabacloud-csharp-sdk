@@ -10767,6 +10767,180 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>卸载 SysOM Agent</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用本接口卸载 Agent 是异步的，调用接口后会返回一个 task_id，可以凭借该 ID 调用 GetAgentTask 接口获取任务的执行情况。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UninstallAgentWithTypeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UninstallAgentWithTypeResponse
+        /// </returns>
+        public UninstallAgentWithTypeResponse UninstallAgentWithTypeWithOptions(UninstallAgentWithTypeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
+            {
+                body["agentId"] = request.AgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentVersion))
+            {
+                body["agentVersion"] = request.AgentVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                body["instanceType"] = request.InstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Instances))
+            {
+                body["instances"] = request.Instances;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UninstallAgentWithType",
+                Version = "2023-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/am/agent/uninstallAgent",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UninstallAgentWithTypeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>卸载 SysOM Agent</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用本接口卸载 Agent 是异步的，调用接口后会返回一个 task_id，可以凭借该 ID 调用 GetAgentTask 接口获取任务的执行情况。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UninstallAgentWithTypeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UninstallAgentWithTypeResponse
+        /// </returns>
+        public async Task<UninstallAgentWithTypeResponse> UninstallAgentWithTypeWithOptionsAsync(UninstallAgentWithTypeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
+            {
+                body["agentId"] = request.AgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentVersion))
+            {
+                body["agentVersion"] = request.AgentVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                body["instanceType"] = request.InstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Instances))
+            {
+                body["instances"] = request.Instances;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UninstallAgentWithType",
+                Version = "2023-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/am/agent/uninstallAgent",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UninstallAgentWithTypeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>卸载 SysOM Agent</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用本接口卸载 Agent 是异步的，调用接口后会返回一个 task_id，可以凭借该 ID 调用 GetAgentTask 接口获取任务的执行情况。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UninstallAgentWithTypeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UninstallAgentWithTypeResponse
+        /// </returns>
+        public UninstallAgentWithTypeResponse UninstallAgentWithType(UninstallAgentWithTypeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UninstallAgentWithTypeWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>卸载 SysOM Agent</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用本接口卸载 Agent 是异步的，调用接口后会返回一个 task_id，可以凭借该 ID 调用 GetAgentTask 接口获取任务的执行情况。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UninstallAgentWithTypeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UninstallAgentWithTypeResponse
+        /// </returns>
+        public async Task<UninstallAgentWithTypeResponse> UninstallAgentWithTypeAsync(UninstallAgentWithTypeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UninstallAgentWithTypeWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Updates an alert contact.</para>
         /// </summary>
         /// 
@@ -11893,6 +12067,180 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpgradeAgentForClusterWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新 SysOM Agent</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用本接口更新 Agent 是异步的，调用接口后会返回一个 task_id，可以凭借该 ID 调用 GetAgentTask 接口获取任务的执行情况。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpgradeAgentWithTypeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeAgentWithTypeResponse
+        /// </returns>
+        public UpgradeAgentWithTypeResponse UpgradeAgentWithTypeWithOptions(UpgradeAgentWithTypeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
+            {
+                body["agentId"] = request.AgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentVersion))
+            {
+                body["agentVersion"] = request.AgentVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                body["instanceType"] = request.InstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Instances))
+            {
+                body["instances"] = request.Instances;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpgradeAgentWithType",
+                Version = "2023-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/am/agent/upgradeAgent",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpgradeAgentWithTypeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新 SysOM Agent</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用本接口更新 Agent 是异步的，调用接口后会返回一个 task_id，可以凭借该 ID 调用 GetAgentTask 接口获取任务的执行情况。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpgradeAgentWithTypeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeAgentWithTypeResponse
+        /// </returns>
+        public async Task<UpgradeAgentWithTypeResponse> UpgradeAgentWithTypeWithOptionsAsync(UpgradeAgentWithTypeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
+            {
+                body["agentId"] = request.AgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentVersion))
+            {
+                body["agentVersion"] = request.AgentVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                body["instanceType"] = request.InstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Instances))
+            {
+                body["instances"] = request.Instances;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpgradeAgentWithType",
+                Version = "2023-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/am/agent/upgradeAgent",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpgradeAgentWithTypeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新 SysOM Agent</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用本接口更新 Agent 是异步的，调用接口后会返回一个 task_id，可以凭借该 ID 调用 GetAgentTask 接口获取任务的执行情况。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpgradeAgentWithTypeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeAgentWithTypeResponse
+        /// </returns>
+        public UpgradeAgentWithTypeResponse UpgradeAgentWithType(UpgradeAgentWithTypeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpgradeAgentWithTypeWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新 SysOM Agent</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用本接口更新 Agent 是异步的，调用接口后会返回一个 task_id，可以凭借该 ID 调用 GetAgentTask 接口获取任务的执行情况。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpgradeAgentWithTypeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeAgentWithTypeResponse
+        /// </returns>
+        public async Task<UpgradeAgentWithTypeResponse> UpgradeAgentWithTypeAsync(UpgradeAgentWithTypeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpgradeAgentWithTypeWithOptionsAsync(request, headers, runtime);
         }
 
     }
