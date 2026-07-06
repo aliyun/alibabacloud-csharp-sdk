@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
 {
     public class DeleteAgentStorageResponseBody : TeaModel {
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID, which can be used to troubleshoot and locate issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E734979F-5A44-5993-9CE5-C23103576923</para>

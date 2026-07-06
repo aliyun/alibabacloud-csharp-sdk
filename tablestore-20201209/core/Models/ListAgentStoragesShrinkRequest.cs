@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
 {
     public class ListAgentStoragesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>agent storage name</para>
+        /// <para>The name of the agent storage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>agent-test</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
         public string AgentStorageName { get; set; }
 
         /// <summary>
-        /// <para>The list of agent storage names, used to query multiple specified agent storages in a batch.</para>
+        /// <para>The list of agent storage names. Use this parameter to query multiple specified agent storages in a batch.</para>
         /// </summary>
         [NameInMap("AgentStorageNameList")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token used to retrieve the next page of results when the total number of tag resources exceeds the value of MaxResults. This parameter has a value only when not all tag resources are returned.</para>
+        /// <para>The pagination token for querying subsequent pages. This parameter has a value only when not all tag resources are returned. If the total number of expected tag resources exceeds the MaxResults value, use this token to retrieve the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CAESCG15aC1xxxxx</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. You can query this ID in the resource group console.</para>
+        /// <para>The ID of the resource group. You can query the ID in the Resource Group console.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmxh4em5jncda</para>

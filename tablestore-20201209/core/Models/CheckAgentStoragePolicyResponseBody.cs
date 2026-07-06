@@ -8,12 +8,12 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Tablestore20201209.Models
 {
-    public class CreateAgentStorageResponseBody : TeaModel {
+    public class CheckAgentStoragePolicyResponseBody : TeaModel {
         /// <summary>
         /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>200</para>
+        /// <para>OK</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
         /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>success</para>
+        /// <para>Verification passed.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
         /// <para>The request ID, which can be used for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>18DD77BF-F967-576D-80D1-79121399AB53</para>
+        /// <para>E734979F-5A44-5993-9CE5-C23103576923</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
 {
     public class GetAgentStorageRequest : TeaModel {
         /// <summary>
-        /// <para>agent storage name</para>
+        /// <para>The name of the agent storage.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

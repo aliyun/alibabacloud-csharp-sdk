@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
         public List<ListAgentStoragesResponseBodyAgentStorages> AgentStorages { get; set; }
         public class ListAgentStoragesResponseBodyAgentStorages : TeaModel {
             /// <summary>
-            /// <para>agent storage description</para>
+            /// <para>The description of the agent storage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>description for agent storage</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
             public string AgentStorageDescription { get; set; }
 
             /// <summary>
-            /// <para>The agent storage name, which is a unique key.</para>
+            /// <para>The name of the agent storage, which is a unique key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>agent-test</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
             public string AgentStorageName { get; set; }
 
             /// <summary>
-            /// <para>The specifications of the agent storage.</para>
+            /// <para>The specification of the agent storage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SSD</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
             public string AliasName { get; set; }
 
             /// <summary>
-            /// <para>The creation time of the agent storage.</para>
+            /// <para>The time when the agent storage was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-04-16T06:02:59Z</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
         }
 
         /// <summary>
-        /// <para>The token used to retrieve the next page of results when the total number of tag resources exceeds the value of MaxResults. This parameter has a value only when not all tag resources are returned.</para>
+        /// <para>The pagination token for querying subsequent pages. This parameter has a value only when not all tag resources are returned. If the total number of expected tag resources exceeds the MaxResults value, use this token to retrieve the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CAESCG15aC1xxxxx</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID, which can be used for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>39871ED2-62C0-578F-A32E-B88072D5582F</para>

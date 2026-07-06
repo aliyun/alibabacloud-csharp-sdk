@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
 {
     public class CreateAgentStorageRequest : TeaModel {
         /// <summary>
-        /// <para>agent storage description</para>
+        /// <para>The description of the agent storage. The description must be 3 to 256 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>description for agent storage</para>
@@ -20,18 +20,26 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
         public string AgentStorageDescription { get; set; }
 
         /// <summary>
-        /// <para>agent storage name</para>
+        /// <para>The name of the agent storage. The naming conventions are as follows:</para>
+        /// <list type="bullet">
+        /// <item><description>The name can contain only letters, digits, and hyphens (-).</description></item>
+        /// <item><description>The name must start with a letter.</description></item>
+        /// <item><description>The name cannot end with a hyphen (-).</description></item>
+        /// <item><description>The name is case-insensitive.</description></item>
+        /// <item><description>The name must be 3 to 16 characters in length.</description></item>
+        /// <item><description>The name cannot contain the following words: ali, ay, ots, taobao, or admin.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>first-ins</para>
+        /// <para>first-agent</para>
         /// </summary>
         [NameInMap("AgentStorageName")]
         [Validation(Required=false)]
         public string AgentStorageName { get; set; }
 
         /// <summary>
-        /// <para>（已弃用）智能体存储网络类型。NORMAL, VPC_CONSOLE。默认为NORMAL。</para>
+        /// <para>(Deprecated) The network type of the agent storage. Valid values: NORMAL and VPC_CONSOLE. Default value: NORMAL.</para>
         /// 
         /// <b>Example:</b>
         /// <para>VPC</para>
@@ -41,21 +49,29 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
         public string Network { get; set; }
 
         /// <summary>
-        /// <para>The list of network sources allowed for the agent storage instance. By default, all network sources are allowed. Valid values: TRUST_PROXY: console.</para>
+        /// <para>The list of allowed network sources for the agent storage. All sources are allowed by default. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>TRUST_PROXY: console.</description></item>
+        /// </list>
         /// </summary>
         [NameInMap("NetworkSourceACL")]
         [Validation(Required=false)]
         public List<string> NetworkSourceACL { get; set; }
 
         /// <summary>
-        /// <para>The list of network types allowed for the agent storage instance. By default, all network types are allowed. Valid values: CLASSIC: classic network. INTERNET: Internet. VPC: VPC.</para>
+        /// <para>The list of allowed network types for the agent storage. All types are allowed by default. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>CLASSIC: classic network.</description></item>
+        /// <item><description>INTERNET: public network.</description></item>
+        /// <item><description>VPC: VPC network.</description></item>
+        /// </list>
         /// </summary>
         [NameInMap("NetworkTypeACL")]
         [Validation(Required=false)]
         public List<string> NetworkTypeACL { get; set; }
 
         /// <summary>
-        /// <para>The access control policy of the agent storage instance in JSON format. For the policy syntax, see <a href="https://www.alibabacloud.com/help/en/ram/user-guide/policy-structure-and-syntax">https://www.alibabacloud.com/help/en/ram/user-guide/policy-structure-and-syntax</a>.</para>
+        /// <para>The access control policy for the agent storage in JSON format. For the syntax, see <a href="https://www.alibabacloud.com/help/en/ram/user-guide/policy-structure-and-syntax">https://www.alibabacloud.com/help/en/ram/user-guide/policy-structure-and-syntax</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -94,7 +110,7 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
         public string Policy { get; set; }
 
         /// <summary>
-        /// <para>resource group id</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmxh4em5jnbcd</para>
@@ -104,15 +120,14 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>tag</para>
+        /// <para>The list of tags.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<CreateAgentStorageRequestTags> Tags { get; set; }
         public class CreateAgentStorageRequestTags : TeaModel {
             /// <summary>
-            /// <para>The key of the tag.
-            /// The key can be up to 64 characters in length.</para>
+            /// <para>The key of the tag. The key can be up to 64 characters in length.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -123,8 +138,7 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag.
-            /// The value can be up to 64 characters in length.</para>
+            /// <para>The value of the tag. The value can be up to 64 characters in length.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

@@ -8,17 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Tablestore20201209.Models
 {
-    public class DeleteAgentStorageRequest : TeaModel {
+    public class UnbindAgentStorage2VpcResponseBody : TeaModel {
         /// <summary>
-        /// <para>The name of the agent storage.</para>
-        /// <para>This parameter is required.</para>
+        /// <para>The request ID, which can be used to troubleshoot and locate issues.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>agent-test</para>
+        /// <para>18DD77BF-F967-576D-80D1-79121399AB53</para>
         /// </summary>
-        [NameInMap("AgentStorageName")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string AgentStorageName { get; set; }
+        public string RequestId { get; set; }
 
     }
 

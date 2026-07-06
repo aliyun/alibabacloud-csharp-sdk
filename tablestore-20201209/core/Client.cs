@@ -68,6 +68,160 @@ namespace AlibabaCloud.SDK.Tablestore20201209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Binds agent storage to a VPC.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BindAgentStorage2VpcRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BindAgentStorage2VpcResponse
+        /// </returns>
+        public BindAgentStorage2VpcResponse BindAgentStorage2VpcWithOptions(BindAgentStorage2VpcRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentStorageName))
+            {
+                body["AgentStorageName"] = request.AgentStorageName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentStorageVpcName))
+            {
+                body["AgentStorageVpcName"] = request.AgentStorageVpcName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VirtualSwitchId))
+            {
+                body["VirtualSwitchId"] = request.VirtualSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                body["VpcId"] = request.VpcId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BindAgentStorage2Vpc",
+                Version = "2020-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/v2/openapi/bindagentstorage2vpc",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BindAgentStorage2VpcResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds agent storage to a VPC.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BindAgentStorage2VpcRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BindAgentStorage2VpcResponse
+        /// </returns>
+        public async Task<BindAgentStorage2VpcResponse> BindAgentStorage2VpcWithOptionsAsync(BindAgentStorage2VpcRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentStorageName))
+            {
+                body["AgentStorageName"] = request.AgentStorageName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentStorageVpcName))
+            {
+                body["AgentStorageVpcName"] = request.AgentStorageVpcName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VirtualSwitchId))
+            {
+                body["VirtualSwitchId"] = request.VirtualSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                body["VpcId"] = request.VpcId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BindAgentStorage2Vpc",
+                Version = "2020-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/v2/openapi/bindagentstorage2vpc",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BindAgentStorage2VpcResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds agent storage to a VPC.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BindAgentStorage2VpcRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BindAgentStorage2VpcResponse
+        /// </returns>
+        public BindAgentStorage2VpcResponse BindAgentStorage2Vpc(BindAgentStorage2VpcRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return BindAgentStorage2VpcWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds agent storage to a VPC.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BindAgentStorage2VpcRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BindAgentStorage2VpcResponse
+        /// </returns>
+        public async Task<BindAgentStorage2VpcResponse> BindAgentStorage2VpcAsync(BindAgentStorage2VpcRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await BindAgentStorage2VpcWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Binds an instance to a VPC.</para>
         /// </summary>
         /// 
@@ -360,6 +514,144 @@ namespace AlibabaCloud.SDK.Tablestore20201209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Checks the validity of an agent storage access control policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckAgentStoragePolicyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckAgentStoragePolicyResponse
+        /// </returns>
+        public CheckAgentStoragePolicyResponse CheckAgentStoragePolicyWithOptions(CheckAgentStoragePolicyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentStorageName))
+            {
+                body["AgentStorageName"] = request.AgentStorageName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Policy))
+            {
+                body["Policy"] = request.Policy;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CheckAgentStoragePolicy",
+                Version = "2020-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/v2/openapi/checkagentstoragepolicy",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CheckAgentStoragePolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks the validity of an agent storage access control policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckAgentStoragePolicyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckAgentStoragePolicyResponse
+        /// </returns>
+        public async Task<CheckAgentStoragePolicyResponse> CheckAgentStoragePolicyWithOptionsAsync(CheckAgentStoragePolicyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentStorageName))
+            {
+                body["AgentStorageName"] = request.AgentStorageName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Policy))
+            {
+                body["Policy"] = request.Policy;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CheckAgentStoragePolicy",
+                Version = "2020-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/v2/openapi/checkagentstoragepolicy",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CheckAgentStoragePolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks the validity of an agent storage access control policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckAgentStoragePolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckAgentStoragePolicyResponse
+        /// </returns>
+        public CheckAgentStoragePolicyResponse CheckAgentStoragePolicy(CheckAgentStoragePolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CheckAgentStoragePolicyWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks the validity of an agent storage access control policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckAgentStoragePolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckAgentStoragePolicyResponse
+        /// </returns>
+        public async Task<CheckAgentStoragePolicyResponse> CheckAgentStoragePolicyAsync(CheckAgentStoragePolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CheckAgentStoragePolicyWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Checks the validity of a Resource Access Management (RAM) policy for an instance.</para>
         /// </summary>
         /// 
@@ -498,16 +790,14 @@ namespace AlibabaCloud.SDK.Tablestore20201209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an agent storage instance.</para>
+        /// <para>Creates an agent storage.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing of Tablestore. For more information, see <a href="https://help.aliyun.com/document_detail/27291.html">Billing overview</a>.</b></description></item>
-        /// <item><description>You can create up to 10 agent storage instances within a single Alibaba Cloud account. Agent storage instance names must be unique within the same region.
-        /// <a href="Deprecated">_single.params.body.props.Network.title</a> The network type of the instance. Valid values: NORMAL, VPC_CONSOLE. Default value: NORMAL.
-        /// <a href="Deprecated">_single.params.body.props.Network.desc</a> The network type of the agent storage instance. Valid values: NORMAL, VPC_CONSOLE. Default value: NORMAL.</description></item>
+        /// <item><description><b>Before you use this operation, make sure that you fully understand the billing of Tablestore. For more information, see <a href="https://help.aliyun.com/document_detail/27291.html">Billing overview</a>.</b></description></item>
+        /// <item><description>You can create up to 10 agent storages for a single Alibaba Cloud account. Agent storage names must be unique within the same region.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -582,16 +872,14 @@ namespace AlibabaCloud.SDK.Tablestore20201209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an agent storage instance.</para>
+        /// <para>Creates an agent storage.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing of Tablestore. For more information, see <a href="https://help.aliyun.com/document_detail/27291.html">Billing overview</a>.</b></description></item>
-        /// <item><description>You can create up to 10 agent storage instances within a single Alibaba Cloud account. Agent storage instance names must be unique within the same region.
-        /// <a href="Deprecated">_single.params.body.props.Network.title</a> The network type of the instance. Valid values: NORMAL, VPC_CONSOLE. Default value: NORMAL.
-        /// <a href="Deprecated">_single.params.body.props.Network.desc</a> The network type of the agent storage instance. Valid values: NORMAL, VPC_CONSOLE. Default value: NORMAL.</description></item>
+        /// <item><description><b>Before you use this operation, make sure that you fully understand the billing of Tablestore. For more information, see <a href="https://help.aliyun.com/document_detail/27291.html">Billing overview</a>.</b></description></item>
+        /// <item><description>You can create up to 10 agent storages for a single Alibaba Cloud account. Agent storage names must be unique within the same region.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -666,16 +954,14 @@ namespace AlibabaCloud.SDK.Tablestore20201209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an agent storage instance.</para>
+        /// <para>Creates an agent storage.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing of Tablestore. For more information, see <a href="https://help.aliyun.com/document_detail/27291.html">Billing overview</a>.</b></description></item>
-        /// <item><description>You can create up to 10 agent storage instances within a single Alibaba Cloud account. Agent storage instance names must be unique within the same region.
-        /// <a href="Deprecated">_single.params.body.props.Network.title</a> The network type of the instance. Valid values: NORMAL, VPC_CONSOLE. Default value: NORMAL.
-        /// <a href="Deprecated">_single.params.body.props.Network.desc</a> The network type of the agent storage instance. Valid values: NORMAL, VPC_CONSOLE. Default value: NORMAL.</description></item>
+        /// <item><description><b>Before you use this operation, make sure that you fully understand the billing of Tablestore. For more information, see <a href="https://help.aliyun.com/document_detail/27291.html">Billing overview</a>.</b></description></item>
+        /// <item><description>You can create up to 10 agent storages for a single Alibaba Cloud account. Agent storage names must be unique within the same region.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -695,16 +981,14 @@ namespace AlibabaCloud.SDK.Tablestore20201209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an agent storage instance.</para>
+        /// <para>Creates an agent storage.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing of Tablestore. For more information, see <a href="https://help.aliyun.com/document_detail/27291.html">Billing overview</a>.</b></description></item>
-        /// <item><description>You can create up to 10 agent storage instances within a single Alibaba Cloud account. Agent storage instance names must be unique within the same region.
-        /// <a href="Deprecated">_single.params.body.props.Network.title</a> The network type of the instance. Valid values: NORMAL, VPC_CONSOLE. Default value: NORMAL.
-        /// <a href="Deprecated">_single.params.body.props.Network.desc</a> The network type of the agent storage instance. Valid values: NORMAL, VPC_CONSOLE. Default value: NORMAL.</description></item>
+        /// <item><description><b>Before you use this operation, make sure that you fully understand the billing of Tablestore. For more information, see <a href="https://help.aliyun.com/document_detail/27291.html">Billing overview</a>.</b></description></item>
+        /// <item><description>You can create up to 10 agent storages for a single Alibaba Cloud account. Agent storage names must be unique within the same region.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1208,14 +1492,14 @@ namespace AlibabaCloud.SDK.Tablestore20201209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an agent store.</para>
+        /// <para>Deletes an agent storage.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>To avoid conflicts, do not create an agent store with the same name as the agent store being deleted during the deletion process.</description></item>
-        /// <item><description>After an agent store is deleted, the agent store becomes unavailable, and the tables, table data, and related indexes in the agent store cannot be recovered. Proceed with caution.</description></item>
+        /// <item><description>To avoid conflicts, do not create an agent storage with the same name as the agent storage being deleted during the deletion process.</description></item>
+        /// <item><description>After an agent storage is deleted, the agent storage becomes unavailable, and the tables, table data, and related indexes in the agent storage cannot be recovered. Proceed with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1262,14 +1546,14 @@ namespace AlibabaCloud.SDK.Tablestore20201209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an agent store.</para>
+        /// <para>Deletes an agent storage.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>To avoid conflicts, do not create an agent store with the same name as the agent store being deleted during the deletion process.</description></item>
-        /// <item><description>After an agent store is deleted, the agent store becomes unavailable, and the tables, table data, and related indexes in the agent store cannot be recovered. Proceed with caution.</description></item>
+        /// <item><description>To avoid conflicts, do not create an agent storage with the same name as the agent storage being deleted during the deletion process.</description></item>
+        /// <item><description>After an agent storage is deleted, the agent storage becomes unavailable, and the tables, table data, and related indexes in the agent storage cannot be recovered. Proceed with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1316,14 +1600,14 @@ namespace AlibabaCloud.SDK.Tablestore20201209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an agent store.</para>
+        /// <para>Deletes an agent storage.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>To avoid conflicts, do not create an agent store with the same name as the agent store being deleted during the deletion process.</description></item>
-        /// <item><description>After an agent store is deleted, the agent store becomes unavailable, and the tables, table data, and related indexes in the agent store cannot be recovered. Proceed with caution.</description></item>
+        /// <item><description>To avoid conflicts, do not create an agent storage with the same name as the agent storage being deleted during the deletion process.</description></item>
+        /// <item><description>After an agent storage is deleted, the agent storage becomes unavailable, and the tables, table data, and related indexes in the agent storage cannot be recovered. Proceed with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1343,14 +1627,14 @@ namespace AlibabaCloud.SDK.Tablestore20201209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an agent store.</para>
+        /// <para>Deletes an agent storage.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>To avoid conflicts, do not create an agent store with the same name as the agent store being deleted during the deletion process.</description></item>
-        /// <item><description>After an agent store is deleted, the agent store becomes unavailable, and the tables, table data, and related indexes in the agent store cannot be recovered. Proceed with caution.</description></item>
+        /// <item><description>To avoid conflicts, do not create an agent storage with the same name as the agent storage being deleted during the deletion process.</description></item>
+        /// <item><description>After an agent storage is deleted, the agent storage becomes unavailable, and the tables, table data, and related indexes in the agent storage cannot be recovered. Proceed with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1366,6 +1650,176 @@ namespace AlibabaCloud.SDK.Tablestore20201209
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DeleteAgentStorageWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an access control policy for agent storage.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>After an agent storage policy is deleted, it cannot be recovered. Proceed with caution.</description></item>
+        /// <item><description>After an agent storage policy is deleted, the corresponding permission controls become ineffective. Make sure the agent storage is in a secure environment.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAgentStoragePolicyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgentStoragePolicyResponse
+        /// </returns>
+        public DeleteAgentStoragePolicyResponse DeleteAgentStoragePolicyWithOptions(DeleteAgentStoragePolicyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentStorageName))
+            {
+                body["AgentStorageName"] = request.AgentStorageName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyVersion))
+            {
+                body["PolicyVersion"] = request.PolicyVersion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAgentStoragePolicy",
+                Version = "2020-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/v2/openapi/deleteagentstoragepolicy",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAgentStoragePolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an access control policy for agent storage.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>After an agent storage policy is deleted, it cannot be recovered. Proceed with caution.</description></item>
+        /// <item><description>After an agent storage policy is deleted, the corresponding permission controls become ineffective. Make sure the agent storage is in a secure environment.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAgentStoragePolicyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgentStoragePolicyResponse
+        /// </returns>
+        public async Task<DeleteAgentStoragePolicyResponse> DeleteAgentStoragePolicyWithOptionsAsync(DeleteAgentStoragePolicyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentStorageName))
+            {
+                body["AgentStorageName"] = request.AgentStorageName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyVersion))
+            {
+                body["PolicyVersion"] = request.PolicyVersion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAgentStoragePolicy",
+                Version = "2020-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/v2/openapi/deleteagentstoragepolicy",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAgentStoragePolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an access control policy for agent storage.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>After an agent storage policy is deleted, it cannot be recovered. Proceed with caution.</description></item>
+        /// <item><description>After an agent storage policy is deleted, the corresponding permission controls become ineffective. Make sure the agent storage is in a secure environment.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAgentStoragePolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgentStoragePolicyResponse
+        /// </returns>
+        public DeleteAgentStoragePolicyResponse DeleteAgentStoragePolicy(DeleteAgentStoragePolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteAgentStoragePolicyWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an access control policy for agent storage.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>After an agent storage policy is deleted, it cannot be recovered. Proceed with caution.</description></item>
+        /// <item><description>After an agent storage policy is deleted, the corresponding permission controls become ineffective. Make sure the agent storage is in a secure environment.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAgentStoragePolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgentStoragePolicyResponse
+        /// </returns>
+        public async Task<DeleteAgentStoragePolicyResponse> DeleteAgentStoragePolicyAsync(DeleteAgentStoragePolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteAgentStoragePolicyWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2906,6 +3360,152 @@ namespace AlibabaCloud.SDK.Tablestore20201209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Retrieves the list of VPC information stored in an agent storage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVpcInfoByAgentStorageRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVpcInfoByAgentStorageResponse
+        /// </returns>
+        public ListVpcInfoByAgentStorageResponse ListVpcInfoByAgentStorageWithOptions(ListVpcInfoByAgentStorageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentStorageName))
+            {
+                query["AgentStorageName"] = request.AgentStorageName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListVpcInfoByAgentStorage",
+                Version = "2020-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/v2/openapi/listvpcinfobyagentstorage",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListVpcInfoByAgentStorageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the list of VPC information stored in an agent storage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVpcInfoByAgentStorageRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVpcInfoByAgentStorageResponse
+        /// </returns>
+        public async Task<ListVpcInfoByAgentStorageResponse> ListVpcInfoByAgentStorageWithOptionsAsync(ListVpcInfoByAgentStorageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentStorageName))
+            {
+                query["AgentStorageName"] = request.AgentStorageName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListVpcInfoByAgentStorage",
+                Version = "2020-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/v2/openapi/listvpcinfobyagentstorage",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListVpcInfoByAgentStorageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the list of VPC information stored in an agent storage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVpcInfoByAgentStorageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVpcInfoByAgentStorageResponse
+        /// </returns>
+        public ListVpcInfoByAgentStorageResponse ListVpcInfoByAgentStorage(ListVpcInfoByAgentStorageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListVpcInfoByAgentStorageWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the list of VPC information stored in an agent storage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVpcInfoByAgentStorageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVpcInfoByAgentStorageResponse
+        /// </returns>
+        public async Task<ListVpcInfoByAgentStorageResponse> ListVpcInfoByAgentStorageAsync(ListVpcInfoByAgentStorageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListVpcInfoByAgentStorageWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Retrieves a list of VPC information for an instance.</para>
         /// </summary>
         /// 
@@ -3340,6 +3940,144 @@ namespace AlibabaCloud.SDK.Tablestore20201209
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await TagResourcesWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates agent storage from a VPC.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnbindAgentStorage2VpcRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnbindAgentStorage2VpcResponse
+        /// </returns>
+        public UnbindAgentStorage2VpcResponse UnbindAgentStorage2VpcWithOptions(UnbindAgentStorage2VpcRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentStorageName))
+            {
+                body["AgentStorageName"] = request.AgentStorageName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentStorageVpcName))
+            {
+                body["AgentStorageVpcName"] = request.AgentStorageVpcName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UnbindAgentStorage2Vpc",
+                Version = "2020-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/v2/openapi/unbindagentstorage2vpc",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UnbindAgentStorage2VpcResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates agent storage from a VPC.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnbindAgentStorage2VpcRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnbindAgentStorage2VpcResponse
+        /// </returns>
+        public async Task<UnbindAgentStorage2VpcResponse> UnbindAgentStorage2VpcWithOptionsAsync(UnbindAgentStorage2VpcRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentStorageName))
+            {
+                body["AgentStorageName"] = request.AgentStorageName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentStorageVpcName))
+            {
+                body["AgentStorageVpcName"] = request.AgentStorageVpcName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UnbindAgentStorage2Vpc",
+                Version = "2020-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/v2/openapi/unbindagentstorage2vpc",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UnbindAgentStorage2VpcResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates agent storage from a VPC.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnbindAgentStorage2VpcRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnbindAgentStorage2VpcResponse
+        /// </returns>
+        public UnbindAgentStorage2VpcResponse UnbindAgentStorage2Vpc(UnbindAgentStorage2VpcRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UnbindAgentStorage2VpcWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates agent storage from a VPC.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnbindAgentStorage2VpcRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnbindAgentStorage2VpcResponse
+        /// </returns>
+        public async Task<UnbindAgentStorage2VpcResponse> UnbindAgentStorage2VpcAsync(UnbindAgentStorage2VpcRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UnbindAgentStorage2VpcWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3822,6 +4560,152 @@ namespace AlibabaCloud.SDK.Tablestore20201209
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateAgentStorageWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the access control policy of agent storage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAgentStoragePolicyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAgentStoragePolicyResponse
+        /// </returns>
+        public UpdateAgentStoragePolicyResponse UpdateAgentStoragePolicyWithOptions(UpdateAgentStoragePolicyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentStorageName))
+            {
+                body["AgentStorageName"] = request.AgentStorageName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Policy))
+            {
+                body["Policy"] = request.Policy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyVersion))
+            {
+                body["PolicyVersion"] = request.PolicyVersion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAgentStoragePolicy",
+                Version = "2020-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/v2/openapi/updateagentstoragepolicy",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAgentStoragePolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the access control policy of agent storage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAgentStoragePolicyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAgentStoragePolicyResponse
+        /// </returns>
+        public async Task<UpdateAgentStoragePolicyResponse> UpdateAgentStoragePolicyWithOptionsAsync(UpdateAgentStoragePolicyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentStorageName))
+            {
+                body["AgentStorageName"] = request.AgentStorageName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Policy))
+            {
+                body["Policy"] = request.Policy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyVersion))
+            {
+                body["PolicyVersion"] = request.PolicyVersion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAgentStoragePolicy",
+                Version = "2020-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/v2/openapi/updateagentstoragepolicy",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAgentStoragePolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the access control policy of agent storage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAgentStoragePolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAgentStoragePolicyResponse
+        /// </returns>
+        public UpdateAgentStoragePolicyResponse UpdateAgentStoragePolicy(UpdateAgentStoragePolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateAgentStoragePolicyWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the access control policy of agent storage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAgentStoragePolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAgentStoragePolicyResponse
+        /// </returns>
+        public async Task<UpdateAgentStoragePolicyResponse> UpdateAgentStoragePolicyAsync(UpdateAgentStoragePolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateAgentStoragePolicyWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

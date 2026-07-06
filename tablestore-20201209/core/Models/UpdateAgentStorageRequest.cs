@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
 {
     public class UpdateAgentStorageRequest : TeaModel {
         /// <summary>
-        /// <para>agent storage description</para>
+        /// <para>The description of the agent storage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>description for agent storage</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
         public string AgentStorageDescription { get; set; }
 
         /// <summary>
-        /// <para>agent storage name</para>
+        /// <para>The name of the agent storage.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,17 +51,14 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
         public string Network { get; set; }
 
         /// <summary>
-        /// <para>The list of network sources allowed for the agent storage. All sources are allowed by default. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>TRUST_PROXY: console.</description></item>
-        /// </list>
+        /// <para>The list of allowed network sources for the agent storage. All sources are allowed by default. Must be used with TRUST_PROXY (console).</para>
         /// </summary>
         [NameInMap("NetworkSourceACL")]
         [Validation(Required=false)]
         public List<string> NetworkSourceACL { get; set; }
 
         /// <summary>
-        /// <para>The list of network types allowed for the agent storage. All types are allowed by default. Valid values:</para>
+        /// <para>The list of allowed network types for the agent storage. All types are allowed by default. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>CLASSIC: classic network.</description></item>
         /// <item><description>INTERNET: public network.</description></item>

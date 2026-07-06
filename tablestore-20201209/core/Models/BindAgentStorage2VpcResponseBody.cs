@@ -8,32 +8,32 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Tablestore20201209.Models
 {
-    public class CreateAgentStorageResponseBody : TeaModel {
+    public class BindAgentStorage2VpcResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response status code.</para>
+        /// <para>The domain name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>200</para>
+        /// <para>remua-agent-test.cn-beijing.vpc.ots.aliyuncs.com</para>
         /// </summary>
-        [NameInMap("Code")]
+        [NameInMap("Domain")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public string Domain { get; set; }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The endpoint of the instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>success</para>
+        /// <para>172.<b>.</b>*.34</para>
         /// </summary>
-        [NameInMap("Message")]
+        [NameInMap("Endpoint")]
         [Validation(Required=false)]
-        public string Message { get; set; }
+        public string Endpoint { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which can be used for troubleshooting.</para>
+        /// <para>The request ID, which can be used to troubleshoot and locate issues.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>18DD77BF-F967-576D-80D1-79121399AB53</para>
+        /// <para>39871ED2-62C0-578F-A32E-B88072D5582F</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

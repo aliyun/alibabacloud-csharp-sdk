@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
 {
     public class GetAgentStorageResponseBody : TeaModel {
         /// <summary>
-        /// <para>agent storage description</para>
+        /// <para>The description of the agent storage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>description for agent storage</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
         public string AgentStorageDescription { get; set; }
 
         /// <summary>
-        /// <para>agent storage name</para>
+        /// <para>The name of the agent storage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>agent-test</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
         public string AgentStorageName { get; set; }
 
         /// <summary>
-        /// <para>The specification of the agent storage.</para>
+        /// <para>The specifications of the agent storage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SSD</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
         public List<string> NetworkSourceACL { get; set; }
 
         /// <summary>
-        /// <para>The list of network types allowed for the agent storage. CLASSIC: classic network. INTERNET: Internet. VPC: VPC network.</para>
+        /// <para>The list of network types allowed for the agent storage. CLASSIC: classic network. INTERNET: public network. VPC: VPC network.</para>
         /// </summary>
         [NameInMap("NetworkTypeACL")]
         [Validation(Required=false)]
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
         public string Policy { get; set; }
 
         /// <summary>
-        /// <para>The version of the agent storage policy.</para>
+        /// <para>The version of the access control policy for the agent storage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -112,14 +112,14 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
         /// <para>The region ID of the agent storage.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-chengdu</para>
+        /// <para>cn-beijing</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID, which can be used for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3104C83E-6E82-57FB-BB88-8C64CCFDEF89</para>

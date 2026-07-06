@@ -8,9 +8,9 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Tablestore20201209.Models
 {
-    public class DeleteAgentStorageRequest : TeaModel {
+    public class UnbindAgentStorage2VpcRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the agent storage.</para>
+        /// <para>The agent storage name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -19,6 +19,17 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
         [NameInMap("AgentStorageName")]
         [Validation(Required=false)]
         public string AgentStorageName { get; set; }
+
+        /// <summary>
+        /// <para>The VPC name.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>remua</para>
+        /// </summary>
+        [NameInMap("AgentStorageVpcName")]
+        [Validation(Required=false)]
+        public string AgentStorageVpcName { get; set; }
 
     }
 
