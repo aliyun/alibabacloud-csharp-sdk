@@ -2,6 +2,10 @@
 - Support API DeleteFaceRecordV2.
 
 
+2026-07-06 Version: 3.19.0
+- Support API DeleteFaceRecordV2.
+
+
 2026-07-03 Version: 3.18.0
 - Support API IdnAuthorityVerifyIntl.
 - Update API EkycVerify: add request parameters FaceQualityCheck.
