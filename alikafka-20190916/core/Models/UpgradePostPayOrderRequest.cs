@@ -10,13 +10,15 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class UpgradePostPayOrderRequest : TeaModel {
         /// <summary>
-        /// <para>The disk size. Unit: GB.</para>
+        /// <para>The disk capacity. Unit: GB.</para>
         /// <list type="bullet">
-        /// <item><description>The disk size that you specify must be greater than or equal to the current disk size of the instance.</description></item>
-        /// <item><description>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</description></item>
+        /// <item><description><para>The disk capacity that you specify must be greater than or equal to the current disk capacity of the instance.</para>
+        /// </description></item>
+        /// <item><description><para>For the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If the instance is a serverless ApsaraMQ for Kafka instance, you do not need to configure this parameter.</para>
+        /// <para>If the instance is a serverless instance, you do not need to specify this parameter. This parameter is required for pay-as-you-go instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -27,21 +29,18 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public int? DiskSize { get; set; }
 
         /// <summary>
-        /// <para>The maximum Internet traffic of the instance.</para>
+        /// <para>The Internet traffic.</para>
         /// <list type="bullet">
         /// <item><description>The Internet traffic that you specify must be greater than or equal to the current Internet traffic of the instance.</description></item>
-        /// <item><description>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</description></item>
+        /// <item><description>For the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</description></item>
         /// </list>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>If you set <b>EipModel</b> to <b>true</b>, set <b>EipMax</b> to a value that is greater than 0.</para>
-        /// </description></item>
-        /// <item><description><para>If you set <b>EipModel</b> to <b>false</b>, set <b>EipMax</b> to <b>0</b>.</para>
-        /// </description></item>
-        /// <item><description><para>If the instance is a serverless ApsaraMQ for Kafka instance, you do not need to configure this parameter.</para>
-        /// </description></item>
+        /// <item><description>If EipModel is set to true, the value of EipMax must be greater than 0.</description></item>
+        /// <item><description>If EipModel is set to false, the value of EipMax must be 0.</description></item>
+        /// <item><description>If the instance is a serverless instance, you do not need to specify this parameter.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -51,10 +50,15 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public int? EipMax { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable Internet access for the instance. Valid values:</para>
+        /// <para>Specifies whether the instance requires Internet access. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: enables Internet access.</description></item>
-        /// <item><description>false: disables Internet access.</description></item>
+        /// <item><description><para>true: Internet access is required.</para>
+        /// </description></item>
+        /// <item><description><para>false: Internet access is not required.</para>
+        /// <remarks>
+        /// <para>This parameter is optional for pay-as-you-go instances. This parameter is required for serverless instances.</para>
+        /// </remarks>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -76,15 +80,18 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The maximum traffic of the instance. We recommend that you do not configure this parameter.</para>
+        /// <para>The peak traffic (not recommended).</para>
         /// <list type="bullet">
-        /// <item><description>The maximum traffic that you specify must be greater than or equal to the current maximum traffic of the instance.</description></item>
-        /// <item><description>You must configure at least one of IoMax and IoMaxSpec. If you configure both parameters, the value of IoMaxSpec takes effect. We recommend that you configure only IoMaxSpec.</description></item>
-        /// <item><description>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</description></item>
-        /// </list>
+        /// <item><description><para>The peak traffic that you specify must be greater than or equal to the current peak traffic of the instance.</para>
+        /// </description></item>
+        /// <item><description><para>You must specify either the peak traffic or the traffic specification. If you specify both, the traffic specification takes precedence. Specify only the traffic specification.</para>
+        /// </description></item>
+        /// <item><description><para>For the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</para>
         /// <remarks>
-        /// <para> If the instance is a serverless ApsaraMQ for Kafka instance, you do not need to configure this parameter.</para>
+        /// <para>If the instance is a serverless instance, you do not need to specify this parameter.</para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>
@@ -94,15 +101,18 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public int? IoMax { get; set; }
 
         /// <summary>
-        /// <para>The traffic specification of the instance. We recommend that you configure this parameter.</para>
+        /// <para>The traffic specification (recommended).</para>
         /// <list type="bullet">
-        /// <item><description>The traffic specification that you specify must be greater than or equal to the current traffic specification of the instance.</description></item>
-        /// <item><description>You must configure at least one of IoMax and IoMaxSpec. If you configure both parameters, the value of IoMaxSpec takes effect. We recommend that you configure only IoMaxSpec.</description></item>
-        /// <item><description>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</description></item>
-        /// </list>
+        /// <item><description><para>The traffic specification that you specify must be greater than or equal to the current traffic specification of the instance.</para>
+        /// </description></item>
+        /// <item><description><para>You must specify either the peak traffic or the traffic specification. If you specify both, the traffic specification takes precedence. Specify only the traffic specification.</para>
+        /// </description></item>
+        /// <item><description><para>For the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</para>
         /// <remarks>
-        /// <para> If the instance is a serverless ApsaraMQ for Kafka instance, you do not need to configure this parameter.</para>
+        /// <para>If the instance is a serverless instance, you do not need to specify this parameter. This parameter is required for pay-as-you-go instances.</para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>alikafka.hw.6xlarge</para>
@@ -112,15 +122,18 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string IoMaxSpec { get; set; }
 
         /// <summary>
-        /// <para>The number of partitions. We recommend that you configure this parameter.</para>
+        /// <para>The number of partitions (recommended).</para>
         /// <list type="bullet">
-        /// <item><description>You must configure one of PartitionNum and TopicQuota. We recommend that you configure only PartitionNum.</description></item>
-        /// <item><description>If you configure PartitionNum and TopicQuota at the same time, the system verifies whether the price of the partitions equals the price of the topics based on the previous topic-based selling mode. If the price of the partitions does not equal the price of the topics, an error is returned. If the price of the partitions equals the price of the topics, the instance is purchased based on the partition number.</description></item>
-        /// <item><description>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</description></item>
-        /// </list>
+        /// <item><description><para>You must specify either the number of partitions or the topic specification. Specify only the number of partitions.</para>
+        /// </description></item>
+        /// <item><description><para>If you specify both the number of partitions and the topic specification, the system validates whether the number of partitions and the topic specification are equivalent based on the legacy topic sales model. If they are not equivalent, an error is returned. If they are equivalent, the purchase is made based on the number of partitions.</para>
+        /// </description></item>
+        /// <item><description><para>For the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</para>
         /// <remarks>
-        /// <para> If the instance is a serverless ApsaraMQ for Kafka instance, you do not need to configure this parameter.</para>
+        /// <para>If the instance is a serverless instance, you do not need to specify this parameter. This parameter is required for pay-as-you-go instances.</para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>80</para>
@@ -141,33 +154,33 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The parameters that are configured for the serverless instance. These parameters are required only when you create a serverless instance.</para>
+        /// <para>The settings of the serverless instance. This parameter is required when you change the specifications of a serverless instance.</para>
         /// </summary>
         [NameInMap("ServerlessConfig")]
         [Validation(Required=false)]
         public UpgradePostPayOrderRequestServerlessConfig ServerlessConfig { get; set; }
         public class UpgradePostPayOrderRequestServerlessConfig : TeaModel {
             /// <summary>
-            /// <para>The reserved capacity for publishing messages. You can specify only an integer for this parameter. Minimum value: 60.</para>
+            /// <para>The reserved publish traffic specification. Only integers are supported. The minimum value is 60. This parameter is required for serverless instances.</para>
             /// <remarks>
-            /// <para> The maximum capacity that you can reserve for an instance varies based on available resources in a region. The reserved capacity range displayed on the buy page shall prevail.</para>
+            /// <para>The actual upper limit is subject to the inventory in the current region. Refer to the purchase page for the available range.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>50</para>
+            /// <para>60</para>
             /// </summary>
             [NameInMap("ReservedPublishCapacity")]
             [Validation(Required=false)]
             public long? ReservedPublishCapacity { get; set; }
 
             /// <summary>
-            /// <para>The reserved capacity for subscribing to messages. You can specify only an integer for this parameter. Minimum value: 50.</para>
+            /// <para>The reserved subscribe traffic specification. Only integers are supported. The minimum value is 20. This parameter is required for serverless instances.</para>
             /// <remarks>
-            /// <para> The maximum capacity that you can reserve for an instance varies based on available resources in a region. The reserved capacity range displayed on the buy page shall prevail.</para>
+            /// <para>The actual upper limit is subject to the inventory in the current region. Refer to the purchase page for the available range.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>50</para>
+            /// <para>60</para>
             /// </summary>
             [NameInMap("ReservedSubscribeCapacity")]
             [Validation(Required=false)]
@@ -176,14 +189,14 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         }
 
         /// <summary>
-        /// <para>The instance edition.</para>
-        /// <para>Valid values for this parameter if you set PaidType to 1:</para>
+        /// <para>The specification type.</para>
+        /// <para>If the PaidType of the instance is 1 (pay-as-you-go), valid values:</para>
         /// <list type="bullet">
-        /// <item><description>normal: Standard Edition (High Write)</description></item>
-        /// <item><description>professional: Professional Edition (High Write)</description></item>
-        /// <item><description>professionalForHighRead: Professional Edition (High Read)</description></item>
+        /// <item><description>normal: Standard Edition (shared throughput)</description></item>
+        /// <item><description>professional: Professional Edition (shared throughput)</description></item>
+        /// <item><description>professionalForHighRead: Professional Edition (shared read throughput)</description></item>
         /// </list>
-        /// <para>Valid values for this parameter if you set PaidType to 3:</para>
+        /// <para>If the PaidType of the instance is 3 (reserved specification pay-as-you-go + serverless elastic scaling pay-as-you-go), valid values:</para>
         /// <list type="bullet">
         /// <item><description>normal: Serverless Standard Edition</description></item>
         /// </list>
@@ -197,16 +210,20 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string SpecType { get; set; }
 
         /// <summary>
-        /// <para>The number of topics. We recommend that you do not configure this parameter.</para>
+        /// <para>The number of topics (not recommended).</para>
         /// <list type="bullet">
-        /// <item><description>You must configure one of PartitionNum and TopicQuota. We recommend that you configure only PartitionNum.</description></item>
-        /// <item><description>If you configure PartitionNum and TopicQuota at the same time, the system verifies whether the price of the partitions equals the price of the topics based on the previous topic-based selling mode. If the price of the partitions does not equal the price of the topics, an error is returned. If the price of the partitions equals the price of the topics, the instance is purchased based on the partition number.</description></item>
-        /// <item><description>The default value of TopicQuota varies based on the value of IoMaxSpec. If the number of topics that you use exceeds the default value, you are charged additional fees.</description></item>
-        /// <item><description>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</description></item>
-        /// </list>
+        /// <item><description><para>You must specify either the number of partitions or the topic specification. Specify only the number of partitions.</para>
+        /// </description></item>
+        /// <item><description><para>If you specify both the number of partitions and the topic specification, the system validates whether the number of partitions and the topic specification are equivalent based on the legacy topic sales model. If they are not equivalent, an error is returned. If they are equivalent, the purchase is made based on the number of partitions.</para>
+        /// </description></item>
+        /// <item><description><para>The default value varies based on the traffic specification. Additional fees are charged if the value exceeds the default value.</para>
+        /// </description></item>
+        /// <item><description><para>For the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</para>
         /// <remarks>
-        /// <para> If the instance is a serverless ApsaraMQ for Kafka instance, you do not need to configure this parameter.</para>
+        /// <para>If the instance is a serverless instance, you do not need to specify this parameter.</para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>80</para>

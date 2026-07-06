@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class DescribeAclResourceNameRequest : TeaModel {
         /// <summary>
+        /// <para>Matching pattern. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>LITERAL: exact match</para>
+        /// </description></item>
+        /// <item><description><para>PREFIXED: prefix match</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +27,17 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string AclResourcePatternType { get; set; }
 
         /// <summary>
+        /// <para>Resource type.</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>Topic</b>: message topic.</para>
+        /// </description></item>
+        /// <item><description><para><b>Group</b>: consumer group.</para>
+        /// </description></item>
+        /// <item><description><para><b>Cluster</b>: instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>TransactionalId</b>: transaction ID.</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +48,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string AclResourceType { get; set; }
 
         /// <summary>
+        /// <para>Instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +59,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

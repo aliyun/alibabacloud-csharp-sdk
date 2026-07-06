@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class GetKafkaClientIpResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned status code. The status code 200 indicates that the request was successful.</para>
+        /// <para>Return code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,16 +20,16 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public long? Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetKafkaClientIpResponseBodyData Data { get; set; }
         public class GetKafkaClientIpResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The value true indicates that the broker is not of the latest minor version.</para>
+            /// <para>If this value is true, it indicates that the minor version is not the latest version.</para>
             /// <remarks>
-            /// <para> If the broker is not of the latest minor version, the sampled logs may not be accurate. This may cause inaccurate IP information. Therefore, we recommend that you update your broker to the latest version at the earliest opportunity.</para>
+            /// <para>If your server minor version is not the latest version, the sampling logs may not be accurate enough, resulting in less precise IP information statistics. Therefore, it is recommended that you upgrade the server minor version as soon as possible.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             }
 
             /// <summary>
-            /// <para>The end of the date range within which data is queried.</para>
+            /// <para>End time</para>
             /// 
             /// <b>Example:</b>
             /// <para>1716343502000</para>
@@ -86,9 +86,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public long? EndDate { get; set; }
 
             /// <summary>
-            /// <para>The time range within which the client IP addresses are queried.</para>
+            /// <para>The time range for querying client IPs.</para>
             /// <remarks>
-            /// <para> The valid value is 1 hour. If the beginning of the time range to query and the end of the time range to query exceeds 1 hour, only data within 1 hour is returned.</para>
+            /// <para>This range is 1 hour. If the start time and end time you enter exceed 1 hour, only data within 1 hour will be queried.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public int? SearchTimeRange { get; set; }
 
             /// <summary>
-            /// <para>The beginning of the date range within which data is queried.</para>
+            /// <para>Start time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1716343501000</para>
@@ -109,9 +109,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public long? StartDate { get; set; }
 
             /// <summary>
-            /// <para>The date range within which the client IP addresses are queried.</para>
+            /// <para>The date range for querying client IPs.</para>
             /// <remarks>
-            /// <para> The valid value is 7 days. If the beginning of the date range to query and the end of the date range to query exceeds 7 days, only data within 7 days is returned.</para>
+            /// <para>This range is 7 days. If the start time and end time you enter exceed 7 days, only data within 7 days will be queried.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The prompt message for the result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>operation success.</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E57A8862-DF68-4055-8E55-B80CB4****</para>

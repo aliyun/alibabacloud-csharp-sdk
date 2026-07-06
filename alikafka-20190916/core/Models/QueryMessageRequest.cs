@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class QueryMessageRequest : TeaModel {
         /// <summary>
-        /// <para>The beginning of the time range to query. The value of this parameter is a UNIX timestamp in milliseconds.</para>
+        /// <para>The start timestamp of the query range. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1672410180000</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The consumer offset of the partition.</para>
+        /// <para>The partition offset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -53,8 +53,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <summary>
         /// <para>The query type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>byOffset: queries messages by offset. If you select this value, you must configure Partition and Offset.</description></item>
-        /// <item><description>byTimestamp: queries messages by time. If you select this value, you must configure BeginTime.</description></item>
+        /// <item><description><para>byOffset: Query by offset. When selecting offset query, you need to fill in the partition ID and partition offset parameters.</para>
+        /// </description></item>
+        /// <item><description><para>byTimestamp: Query by time. When selecting time query, you need to fill in the BeginTime parameter.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -66,7 +68,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string QueryType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the resource resides.</para>
+        /// <para>The region ID of the resource.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

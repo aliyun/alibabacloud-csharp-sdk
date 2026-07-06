@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class GetTopicSubscribeStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>HTTP return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>Return message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>operation success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>06084011-E093-46F3-A51F-4B19A8AD****</para>
@@ -50,21 +50,21 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The subscription details.</para>
+        /// <para>Subscription details</para>
         /// </summary>
         [NameInMap("TopicSubscribeStatus")]
         [Validation(Required=false)]
         public GetTopicSubscribeStatusResponseBodyTopicSubscribeStatus TopicSubscribeStatus { get; set; }
         public class GetTopicSubscribeStatusResponseBodyTopicSubscribeStatus : TeaModel {
             /// <summary>
-            /// <para>The groups that subscribe to the topic.</para>
+            /// <para>List of Groups that subscribe to this topic.</para>
             /// </summary>
             [NameInMap("ConsumerGroups")]
             [Validation(Required=false)]
             public List<string> ConsumerGroups { get; set; }
 
             /// <summary>
-            /// <para>The topic name.</para>
+            /// <para>Topic name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>topic_api_1681624879908</para>

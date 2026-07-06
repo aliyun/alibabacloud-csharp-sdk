@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class UpdateTopicConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code. If the request is successful, 200 is returned.</para>
+        /// <para>The status code. A value of 200 indicates that the call was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>0178A3A7-E87B-5E50-A16F-3E62F534****</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class DescribeAclResourceNameResponseBody : TeaModel {
         /// <summary>
+        /// <para>Return code. A value of 200 indicates success.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         }
 
         /// <summary>
+        /// <para>Return message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>operation success.</para>
         /// </summary>
@@ -36,6 +40,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ABA4A7FD-E10F-45C7-9774-A5236015A***</para>
         /// </summary>
@@ -44,6 +50,14 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the call was successful.</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b>: The call was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The call failed.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

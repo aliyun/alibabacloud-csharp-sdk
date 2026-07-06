@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class DeleteAclResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</para>
+        /// <para>Status code. A return value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>Return message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>operation success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B0740227-AA9A-4E14-8E9F-36ED665****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

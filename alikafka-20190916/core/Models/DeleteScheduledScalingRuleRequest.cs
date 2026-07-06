@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the instance resides.</para>
+        /// <para>The region ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,9 +32,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the scheduled scaling rule.</para>
+        /// <para>The policy name.</para>
         /// <remarks>
-        /// <para> You can delete only rules that are disabled and rules that are scheduled only once and have been executed.</para>
+        /// <para>Only policies that are disabled or one-time policies that have been executed can be deleted.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

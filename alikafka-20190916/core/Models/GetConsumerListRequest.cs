@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class GetConsumerListRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the consumer group. If you do not configure this parameter, all consumer groups are queried.</para>
+        /// <para>The ID of the consumer group. If you do not specify this parameter, information about all consumer groups is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>kafka-test</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string ConsumerId { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The number of the page to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to be returned per page.</para>
+        /// <para>The number of consumer groups to return on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

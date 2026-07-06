@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class GetConsumerListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</para>
+        /// <para>The return code. A value of 200 indicates that the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         }
 
         /// <summary>
-        /// <para>The number of the page to return. Pages start from page 1.</para>
+        /// <para>The page number of the returned page. The minimum value is 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>808F042B-CB9A-4FBC-9009-00E7DDB6****</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12</para>

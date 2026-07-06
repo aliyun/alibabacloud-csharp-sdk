@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class GetQuotaTipResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</para>
+        /// <para>Status code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The additional message. This message is typically used to describe API call failures for troubleshooting.</para>
+        /// <para>Additional information. In typical scenarios, it provides a brief description of failed calls to help the caller locate the problem</para>
         /// 
         /// <b>Example:</b>
         /// <para>operation success.</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The quota.</para>
+        /// <para>Quota information.</para>
         /// </summary>
         [NameInMap("QuotaData")]
         [Validation(Required=false)]
         public GetQuotaTipResponseBodyQuotaData QuotaData { get; set; }
         public class GetQuotaTipResponseBodyQuotaData : TeaModel {
             /// <summary>
-            /// <para>The number of available groups.</para>
+            /// <para>Remaining Group quota.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public int? GroupLeft { get; set; }
 
             /// <summary>
-            /// <para>The number of used groups.</para>
+            /// <para>Used Group quota.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -57,10 +57,12 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public int? GroupUsed { get; set; }
 
             /// <summary>
-            /// <para>The method that you use to purchase partitions. Valid values:</para>
+            /// <para>Partition purchase method distinction, with the following values:</para>
             /// <list type="bullet">
-            /// <item><description>0: indicates that the instance is purchased based on topics.</description></item>
-            /// <item><description>1: indicates that the instance is purchased based on partitions.</description></item>
+            /// <item><description><para>0: indicates that the instance uses the topic model for purchase.</para>
+            /// </description></item>
+            /// <item><description><para>1: indicates partition model purchase.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -71,7 +73,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public int? IsPartitionBuy { get; set; }
 
             /// <summary>
-            /// <para>The number of available partitions.</para>
+            /// <para>Remaining partition quota.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1050</para>
@@ -81,7 +83,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public int? PartitionLeft { get; set; }
 
             /// <summary>
-            /// <para>The number of purchased partitions.</para>
+            /// <para>Number of purchased partitions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -91,7 +93,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public int? PartitionNumOfBuy { get; set; }
 
             /// <summary>
-            /// <para>The quota of partitions.</para>
+            /// <para>Partition quota.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1100</para>
@@ -101,7 +103,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public int? PartitionQuota { get; set; }
 
             /// <summary>
-            /// <para>The number of used partitions.</para>
+            /// <para>Used partition quota.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -111,7 +113,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public int? PartitionUsed { get; set; }
 
             /// <summary>
-            /// <para>The number of available topics.</para>
+            /// <para>Remaining topic quota.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -121,7 +123,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public int? TopicLeft { get; set; }
 
             /// <summary>
-            /// <para>The number of purchased topics.</para>
+            /// <para>Number of purchased topics.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -131,7 +133,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public int? TopicNumOfBuy { get; set; }
 
             /// <summary>
-            /// <para>The quota of topics.</para>
+            /// <para>Topic quota.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -141,7 +143,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public int? TopicQuota { get; set; }
 
             /// <summary>
-            /// <para>The number of used topics.</para>
+            /// <para>Used topic quota.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -153,7 +155,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0178A3A7-E87B-5E50-A16F-3E62F534****</para>

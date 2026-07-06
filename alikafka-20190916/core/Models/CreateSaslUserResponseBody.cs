@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class CreateSaslUserResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code. The HTTP status code 200 indicates that the request was successful.</para>
+        /// <para>The status code. A value of 200 indicates that the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C5CA600C-7D5A-45B5-B6DB-44FAC2C****</para>

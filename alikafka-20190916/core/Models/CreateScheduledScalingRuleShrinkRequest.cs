@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class CreateScheduledScalingRuleShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The duration of each scheduled scaling task. Unit: minutes.</para>
+        /// <para>The duration (unit: minutes) of a scheduled elastic task.</para>
         /// <remarks>
-        /// <para> The value of this parameter must be greater than or equal to 15.</para>
+        /// <para>The parameter value must be at least 15 minutes.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public int? DurationMinutes { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the scheduled scaling rule. Valid values:</para>
+        /// <para>Enables or disables the scheduled task policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: Enables the policy.</description></item>
+        /// <item><description><b>false</b>: Disables the policy.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,11 +38,14 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public bool? Enable { get; set; }
 
         /// <summary>
-        /// <para>The time when the scheduled scaling task is executed.</para>
-        /// <para>If you set ScheduleType to at, make sure that the value of this parameter is at least 30 minutes later than the current point in time.</para>
+        /// <para>The time when the scheduled policy starts to execute.</para>
+        /// <para>For a one-time scheduling policy type, the start execution time must be more than 30 minutes later than the current time.</para>
         /// <remarks>
-        /// <para>Notice: To prevent the broker from repeatedly executing instance upgrade and downgrade tasks, make sure that the interval between two consecutive scheduled scaling tasks is at least 60 minutes.</para>
+        /// <para>Notice: </para>
         /// </remarks>
+        /// <para>To avoid the service from continuously executing upgrade and downgrade tasks, the time interval between different scheduled tasks must be at least 60 minutes.</para>
+        /// </notice>
+        /// 
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,7 +67,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the instance resides.</para>
+        /// <para>The region ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -75,11 +78,11 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The frequency to execute the scheduled scaling task. This parameter is required only if you set ScheduleType to repeat. Valid values:</para>
+        /// <para>When ScheduleType is set to repeat, you need to fill in this parameter. Enumeration values are:</para>
         /// <list type="bullet">
-        /// <item><description><para>Daily: The scheduled scaling task is executed every day.</para>
+        /// <item><description><para>Daily: Daily scheduled task.</para>
         /// </description></item>
-        /// <item><description><para>Weekly: The scheduled scaling task is executed every week.</para>
+        /// <item><description><para>Weekly: Weekly scheduled task.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -91,9 +94,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string RepeatType { get; set; }
 
         /// <summary>
-        /// <para>The reserved production capacity for scheduled scaling. Unit: MB/s.</para>
+        /// <para>The scheduled elastic reserved production specification (unit: MB/s).</para>
         /// <remarks>
-        /// <para> You must specify a higher value than the instance specification for at least one of ReservedPubFlow and ReservedSubFlow.</para>
+        /// <para>At least one of the ReservedPubFlow and ReservedSubFlow parameters must be higher than the current specification.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -105,9 +108,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public int? ReservedPubFlow { get; set; }
 
         /// <summary>
-        /// <para>The reserved consumption capacity for scheduled scaling. Unit: MB/s.</para>
+        /// <para>The scheduled elastic reserved consumption specification (unit: MB/s).</para>
         /// <remarks>
-        /// <para> You must specify a higher value than the instance specification for at least one of ReservedPubFlow and ReservedSubFlow.</para>
+        /// <para>At least one of the ReservedSubFlow and ReservedPubFlow parameters must be higher than the current specification.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -119,9 +122,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public int? ReservedSubFlow { get; set; }
 
         /// <summary>
-        /// <para>The name of the scheduled scaling rule.</para>
+        /// <para>The name of the scheduled policy rule.</para>
         /// <remarks>
-        /// <para> The name of the scheduled scaling rule cannot be the same as the names of other rules for the instance.</para>
+        /// <para>The name cannot be the same as other rule names for the same instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -133,10 +136,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>The type of the scheduled scaling task. Valid values:</para>
+        /// <para>The schedule type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>at: The scheduled scaling task is executed only once.</description></item>
-        /// <item><description>repeat: The scheduled scaling task is repeatedly executed.</description></item>
+        /// <item><description>at: Scheduled only once.</description></item>
+        /// <item><description>repeat: Scheduled repeatedly.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -148,7 +151,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string ScheduleType { get; set; }
 
         /// <summary>
-        /// <para>The time zone in Coordinated Universal Time (UTC).</para>
+        /// <para>The time zone (Coordinated Universal Time).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -159,7 +162,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string TimeZone { get; set; }
 
         /// <summary>
-        /// <para>The day on which the scheduled scaling task is executed every week. You can specify multiple days.</para>
+        /// <para>The weekly types. Supports execution on multiple days.</para>
         /// </summary>
         [NameInMap("WeeklyTypes")]
         [Validation(Required=false)]

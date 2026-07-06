@@ -10,17 +10,21 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class CreatePrePayOrderRequest : TeaModel {
         /// <summary>
-        /// <para>The configurations of Confluent.</para>
+        /// <para>The configuration of Confluent components.</para>
         /// <remarks>
-        /// <para> When you create an ApsaraMQ for Confluent instance, you must configure this parameter.</para>
+        /// <para>This parameter is required when you create a Confluent series instance.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("ConfluentConfig")]
         [Validation(Required=false)]
         public CreatePrePayOrderRequestConfluentConfig ConfluentConfig { get; set; }
         public class CreatePrePayOrderRequestConfluentConfig : TeaModel {
+            [NameInMap("ConfluentVersion")]
+            [Validation(Required=false)]
+            public string ConfluentVersion { get; set; }
+
             /// <summary>
-            /// <para>The number of CPU cores of Connect.</para>
+            /// <para>The number of CPU cores for Connect component.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -30,7 +34,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public int? ConnectCU { get; set; }
 
             /// <summary>
-            /// <para>The number of replicas of Connect.</para>
+            /// <para>The number of replicas for Connect component.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -40,7 +44,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public int? ConnectReplica { get; set; }
 
             /// <summary>
-            /// <para>The number of CPU cores of Control Center.</para>
+            /// <para>The number of CPU cores for ControlCenter component.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -50,7 +54,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public int? ControlCenterCU { get; set; }
 
             /// <summary>
-            /// <para>The number of replicas of Control Center.</para>
+            /// <para>The number of replicas for ControlCenter component.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -60,7 +64,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public int? ControlCenterReplica { get; set; }
 
             /// <summary>
-            /// <para>The disk capacity of Control Center. Unit: GB</para>
+            /// <para>The disk capacity of ControlCenter component. Unit: GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>300</para>
@@ -70,7 +74,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public int? ControlCenterStorage { get; set; }
 
             /// <summary>
-            /// <para>The number of CPU cores of the Kafka broker.</para>
+            /// <para>The number of CPU cores for Kafka broker.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -80,7 +84,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public int? KafkaCU { get; set; }
 
             /// <summary>
-            /// <para>The number of replicas of the Kafka broker.</para>
+            /// <para>The number of replicas for Kafka broker.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -90,7 +94,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public int? KafkaReplica { get; set; }
 
             /// <summary>
-            /// <para>The number of CPU cores of Kafka Rest Proxy.</para>
+            /// <para>The number of CPU cores for KafkaRestProxy component.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -100,7 +104,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public int? KafkaRestProxyCU { get; set; }
 
             /// <summary>
-            /// <para>The number of replicas of Kafka Rest Proxy.</para>
+            /// <para>The number of replicas for KafkaRestProxy component.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -110,7 +114,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public int? KafkaRestProxyReplica { get; set; }
 
             /// <summary>
-            /// <para>The disk capacity of the Kafka broker. Unit: GB</para>
+            /// <para>The disk capacity of Kafka broker. Unit: GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>800</para>
@@ -119,8 +123,20 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             [Validation(Required=false)]
             public int? KafkaStorage { get; set; }
 
+            [NameInMap("KraftControllerCU")]
+            [Validation(Required=false)]
+            public int? KraftControllerCU { get; set; }
+
+            [NameInMap("KraftControllerReplica")]
+            [Validation(Required=false)]
+            public int? KraftControllerReplica { get; set; }
+
+            [NameInMap("KraftControllerStorage")]
+            [Validation(Required=false)]
+            public int? KraftControllerStorage { get; set; }
+
             /// <summary>
-            /// <para>The number of CPU cores of ksqIDB.</para>
+            /// <para>The number of CPU cores for KsqlDB component.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -156,7 +172,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             }
 
             /// <summary>
-            /// <para>The number of replicas of ksqlDB.</para>
+            /// <para>The number of replicas for KsqlDB component.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -166,7 +182,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public int? KsqlReplica { get; set; }
 
             /// <summary>
-            /// <para>The disk capacity of ksqlDB. Unit: GB</para>
+            /// <para>The disk capacity of KsqlDB component. Unit: GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -176,7 +192,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public int? KsqlStorage { get; set; }
 
             /// <summary>
-            /// <para>The number of CPU cores of Schema Registry.</para>
+            /// <para>The number of CPU cores for SchemaRegistry component.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -186,7 +202,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public int? SchemaRegistryCU { get; set; }
 
             /// <summary>
-            /// <para>The number of replicas of Schema Registry.</para>
+            /// <para>The number of replicas for SchemaRegistry component.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -196,7 +212,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public int? SchemaRegistryReplica { get; set; }
 
             /// <summary>
-            /// <para>The number of CPU cores of ZooKeeper.</para>
+            /// <para>The number of CPU cores for ZooKeeper component.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -206,7 +222,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public int? ZooKeeperCU { get; set; }
 
             /// <summary>
-            /// <para>The number of replicas of ZooKeeper.</para>
+            /// <para>The number of replicas for ZooKeeper component.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -216,7 +232,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public int? ZooKeeperReplica { get; set; }
 
             /// <summary>
-            /// <para>The disk capacity of ZooKeeper. Unit: GB</para>
+            /// <para>The disk capacity of ZooKeeper component. Unit: GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -228,13 +244,15 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         }
 
         /// <summary>
-        /// <para>The type of the network in which the instance is deployed. Valid values:</para>
+        /// <para>The deployment type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>4</b>: Internet and virtual private cloud (VPC)</description></item>
-        /// <item><description><b>5</b>: VPC</description></item>
+        /// <item><description><para><b>4</b>: Internet/VPC instance</para>
+        /// </description></item>
+        /// <item><description><para><b>5</b>: VPC instance</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you create an ApsaraMQ for Confluent instance, set the value to 5. After the instance is created, you can specify whether to enable each component.</para>
+        /// <para>If you are creating a Confluent series instance, you cannot select the deployment type. You can only set the value to 5. After the purchase, you can adjust whether each component is open to the Internet.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -245,10 +263,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public int? DeployType { get; set; }
 
         /// <summary>
-        /// <para>The disk size. Unit: GB</para>
-        /// <para>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</para>
+        /// <para>The disk capacity. Unit: GB.</para>
+        /// <para>For the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</para>
         /// <remarks>
-        /// <para> If you create an ApsaraMQ for Confluent instance, you do not need to configure this parameter.</para>
+        /// <para>If you are creating a Confluent series instance, you do not need to pass this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -261,11 +279,13 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <summary>
         /// <para>The disk type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: ultra disk</description></item>
-        /// <item><description><b>1</b>: standard SSD</description></item>
+        /// <item><description><para><b>0</b>: ultra disk</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: SSD</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you create an ApsaraMQ for Confluent instance, you do not need to configure this parameter.</para>
+        /// <para>If you are creating a Confluent series instance, you do not need to pass this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -276,9 +296,12 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string DiskType { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration. Unit: months. Default value: 1. Valid values:</para>
+        /// <para>The subscription duration. Unit: month. Default value: 1. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1 to 12</b></description></item>
+        /// <item><description><para><b>Confluent instances: 1 or 12</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Kafka instances: 1</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -289,13 +312,15 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public int? Duration { get; set; }
 
         /// <summary>
-        /// <para>The maximum Internet traffic in the instance.</para>
+        /// <para>The Internet traffic.</para>
         /// <list type="bullet">
-        /// <item><description>If you set <b>DeployType</b> to <b>4</b>, you must configure this parameter.</description></item>
-        /// <item><description>For information about the valid values, see <a href="https://help.aliyun.com/document_detail/72142.html">Pay-as-you-go</a>.</description></item>
+        /// <item><description><para>If <b>DeployType</b> is set to <b>4</b>, you must specify this parameter.</para>
+        /// </description></item>
+        /// <item><description><para>For the valid values, see <a href="https://help.aliyun.com/document_detail/72142.html">pay-as-you-go</a>.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you create an ApsaraMQ for Confluent instance, you do not need to configure this parameter.</para>
+        /// <para>If you are creating a Confluent series instance, you do not need to pass this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -306,13 +331,15 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public int? EipMax { get; set; }
 
         /// <summary>
-        /// <para>The maximum traffic in the instance. We recommend that you do not configure this parameter.</para>
+        /// <para>The traffic peak (not recommended).</para>
         /// <list type="bullet">
-        /// <item><description>You must set one of <b>IoMax</b> and <b>IoMaxSpec</b>. If both parameters are configured, the value of <b>IoMaxSpec</b> is used. We recommend that you configure only <b>IoMaxSpec</b>.</description></item>
-        /// <item><description>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</description></item>
+        /// <item><description><para>You must specify either <b>IoMax</b> or <b>IoMaxSpec</b>. If you specify both parameters, <b>IoMaxSpec</b> takes precedence. We recommend that you specify only <b>IoMaxSpec</b>.</para>
+        /// </description></item>
+        /// <item><description><para>For the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you create an ApsaraMQ for Confluent instance, you do not need to configure this parameter.</para>
+        /// <para>If you are creating a Confluent series instance, you do not need to pass this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -323,13 +350,15 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public int? IoMax { get; set; }
 
         /// <summary>
-        /// <para>The traffic specification of the instance. We recommend that you configure this parameter.</para>
+        /// <para>The traffic specification (recommended).</para>
         /// <list type="bullet">
-        /// <item><description>You must configure one of <b>IoMax</b> and <b>IoMaxSpec</b>. If both parameters are configured, the value of <b>IoMaxSpec</b> is used. We recommend that you configure only <b>IoMaxSpec</b>.</description></item>
-        /// <item><description>For more information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</description></item>
+        /// <item><description><para>You must specify either <b>IoMax</b> or <b>IoMaxSpec</b>. If you specify both parameters, <b>IoMaxSpec</b> takes precedence. We recommend that you specify only <b>IoMaxSpec</b>.</para>
+        /// </description></item>
+        /// <item><description><para>For the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you create an ApsaraMQ for Confluent instance, you do not need to configure this parameter.</para>
+        /// <para>If you are creating a Confluent series instance, you do not need to pass this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -340,28 +369,33 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string IoMaxSpec { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the instance. Valid values:</para>
+        /// <para>The billing method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: the subscription billing method</description></item>
-        /// <item><description><b>4</b>: the subscription billing method for ApsaraMQ for Confluent instances</description></item>
+        /// <item><description><para><b>0</b>: subscription</para>
+        /// </description></item>
+        /// <item><description><para><b>4</b>: Confluent series subscription</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("PaidType")]
         [Validation(Required=false)]
         public int? PaidType { get; set; }
 
         /// <summary>
-        /// <para>The number of partitions. We recommend that you configure this parameter.</para>
+        /// <para>The number of partitions (recommended).</para>
         /// <list type="bullet">
-        /// <item><description>You must configure one of PartitionNum and TopicQuota. We recommend that you configure only PartitionNum.</description></item>
-        /// <item><description>If you configure PartitionNum and TopicQuota at the same time, the system verifies whether the price of the partitions equals the price of the topics based on the previous topic-based selling mode. If the price of the partitions does not equal the price of the topics, an error is returned. If the price of the partitions equals the price of the topics, the instance is purchased based on the partition number.</description></item>
-        /// <item><description>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</description></item>
+        /// <item><description><para>You must specify either the number of partitions or the topic specification. We recommend that you specify only the number of partitions.</para>
+        /// </description></item>
+        /// <item><description><para>If you specify both the number of partitions and the topic specification, the system verifies whether the number of partitions is equivalent to the topic specification based on the old topic sales model. If they are not equivalent, the system returns a failure. If they are equivalent, the system makes the purchase based on the number of partitions.</para>
+        /// </description></item>
+        /// <item><description><para>For the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you create an ApsaraMQ for Confluent instance, you do not need to configure this parameter.</para>
+        /// <para>If you are creating a Confluent series instance, you do not need to pass this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -383,8 +417,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
-        /// <para>If this parameter is left empty, the default resource group is used. You can view the resource group ID on the Resource Group page in the Resource Management console.</para>
+        /// <para>The resource group ID.</para>
+        /// <para>If you do not specify this parameter, the instance is added to the default resource group. You can view the resource group ID in the Resource Group console.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-ac***********7q</para>
@@ -394,16 +428,24 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The instance edition. Valid values:</para>
+        /// <para>The specification type.</para>
+        /// <para>Valid values for Kafka instances:</para>
         /// <list type="bullet">
-        /// <item><description><b>normal</b>: Standard Edition (High Write)</description></item>
-        /// <item><description><b>professional</b>: Professional Edition (High Write)</description></item>
-        /// <item><description><b>professionalForHighRead</b>: Professional Edition (High Read)</description></item>
+        /// <item><description><para><b>normal</b>: Standard Edition (high write)</para>
+        /// </description></item>
+        /// <item><description><para><b>professional</b>: Professional Edition (high write)</para>
+        /// </description></item>
+        /// <item><description><para><b>professionalForHighRead</b>: Professional Edition (high read)</para>
+        /// </description></item>
+        /// </list>
+        /// <para>Valid values for Confluent instances:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>professional</b>: Professional Edition</para>
+        /// </description></item>
+        /// <item><description><para><b>enterprise</b>: Enterprise Edition</para>
+        /// </description></item>
         /// </list>
         /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</para>
-        /// <remarks>
-        /// <para> If you create an ApsaraMQ for Confluent instance, you do not need to configure this parameter.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>normal</para>
@@ -413,18 +455,21 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string SpecType { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The list of tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreatePrePayOrderRequestTag> Tag { get; set; }
         public class CreatePrePayOrderRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N.</para>
+            /// <para>The tag key of the resource.</para>
             /// <list type="bullet">
-            /// <item><description>Valid values of N: 1 to 20.</description></item>
-            /// <item><description>If this parameter is left empty, the keys of all tags are matched.</description></item>
-            /// <item><description>The tag key can be up to 128 characters in length and cannot start with acs: or aliyun or contain <a href="http://https://%E3%80%82">http:// or https://.</a></description></item>
+            /// <item><description><para>N ranges from 1 to 20.</para>
+            /// </description></item>
+            /// <item><description><para>If this parameter is empty, all tag keys are matched.</para>
+            /// </description></item>
+            /// <item><description><para>The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http\:// or https\://.</para>
+            /// </description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -436,11 +481,14 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N.</para>
+            /// <para>The tag value of the resource.</para>
             /// <list type="bullet">
-            /// <item><description>Valid values of N: 1 to 20.</description></item>
-            /// <item><description>This parameter can be left empty.</description></item>
-            /// <item><description>The tag value can be 1 to 128 characters in length and cannot start with acs: or aliyun or contain <a href="http://https://%E3%80%82">http:// or https://.</a></description></item>
+            /// <item><description><para>N ranges from 1 to 20.</para>
+            /// </description></item>
+            /// <item><description><para>This parameter can be empty.</para>
+            /// </description></item>
+            /// <item><description><para>The tag value can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http\:// or https\://.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -453,15 +501,19 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         }
 
         /// <summary>
-        /// <para>The number of topics. We recommend that you do not configure this parameter.</para>
+        /// <para>The number of topics (not recommended).</para>
         /// <list type="bullet">
-        /// <item><description>You must configure one of PartitionNum and TopicQuota. We recommend that you configure only PartitionNum.</description></item>
-        /// <item><description>If you configure PartitionNum and TopicQuota at the same time, the system verifies whether the price of the partitions equals the price of the topics based on the previous topic-based selling mode. If the price of the partitions does not equal the price of the topics, an error is returned. If the price of the partitions equals the price of the topics, the instance is purchased based on the partition number.</description></item>
-        /// <item><description>The default value of TopicQuota varies based on the value of IoMaxSpec. If the number of topics that you use exceeds the default value, you are charged additional fees.</description></item>
-        /// <item><description>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</description></item>
+        /// <item><description><para>You must specify either the number of partitions or the topic specification. We recommend that you specify only the number of partitions.</para>
+        /// </description></item>
+        /// <item><description><para>If you specify both the number of partitions and the topic specification, the system verifies whether the number of partitions is equivalent to the topic specification based on the old topic sales model. If they are not equivalent, the system returns a failure. If they are equivalent, the system makes the purchase based on the number of partitions.</para>
+        /// </description></item>
+        /// <item><description><para>The default value varies based on the traffic specification. Additional fees are charged if the value exceeds the default value.</para>
+        /// </description></item>
+        /// <item><description><para>For the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you create an ApsaraMQ for Confluent instance, you do not need to configure this parameter.</para>
+        /// <para>If you are creating a Confluent series instance, you do not need to pass this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

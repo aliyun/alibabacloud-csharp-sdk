@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class UpdateInstanceConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The configurations that you want to update for the ApsaraMQ for Kafka instance. The value must be a valid JSON string.</para>
+        /// <para>The configuration of ApsaraMQ for Kafka that needs to be updated. The configuration information must be a valid JSON string.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string Config { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

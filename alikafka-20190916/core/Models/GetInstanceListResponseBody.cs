@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class GetInstanceListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code returned. The HTTP status code 200 indicates that the call is successful.</para>
+        /// <para>The status code. A value of 200 indicates that the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -402,7 +402,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>operation success.</para>
@@ -412,7 +412,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4B6D821D-7F67-4CAA-9E13-A5A997C3****</para>
@@ -422,7 +422,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful.</para>
+        /// <para>Indicates if the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

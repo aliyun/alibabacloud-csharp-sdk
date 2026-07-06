@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class ChangeResourceGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</para>
+        /// <para>The status code. A value of 200 indicates that the call was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the new resource group. You can view the available resource groups in the Resource Management console.</para>
+        /// <para>The new resource group ID. You can view available resource groups in the resource group console.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-ac***********7q</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string NewResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C5CA600C-7D5A-45B5-B6DB-44FAC2C****</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class UntagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to detach all tags from the resource. This parameter only takes effect when the TagKey.N parameter is not configured. Default value: <b>false</b>.</para>
+        /// <para>Specifies whether to detach all tags from the resource. This parameter takes effect when TagKey.N is empty. The default value is <b>false</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public bool? All { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the resource is deployed.</para>
+        /// <para>The region ID of the resource.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the resources from which you want to detach tags.</para>
+        /// <para>The IDs of resources from which you want to detach tags.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,14 +42,17 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resources. Valid values:</para>
+        /// <para>The resource type. Enumeration type, currently supported resource types:</para>
         /// <list type="bullet">
-        /// <item><description><b>INSTANCE</b></description></item>
-        /// <item><description><b>TOPIC</b></description></item>
-        /// <item><description><b>CONSUMERGROUP</b></description></item>
+        /// <item><description><para><b>INSTANCE</b></para>
+        /// </description></item>
+        /// <item><description><para><b>TOPIC</b></para>
+        /// </description></item>
+        /// <item><description><para><b>CONSUMERGROUP</b></para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> The value of this parameter is not case-sensitive.</para>
+        /// <para>Case-insensitive.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -61,7 +64,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The key of the resource tag.</para>
+        /// <para>The tag keys of the resource.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FinanceDept</para>

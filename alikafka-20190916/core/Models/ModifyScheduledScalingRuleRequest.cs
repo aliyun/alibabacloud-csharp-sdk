@@ -10,13 +10,15 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class ModifyScheduledScalingRuleRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable the scheduled scaling rule. Valid values:</para>
+        /// <para>Enable or disable the scheduled task policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: Enable.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Disable.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If the scaling task is scheduled to execute only once and you want to enable the scheduled scaling rule, make sure that the value of this parameter is at least 30 minutes later than the current point in time.</para>
+        /// <para>For a one-time scheduling policy type, the start execution time must be more than 30 minutes later than the current time for the policy to be enabled.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -39,7 +41,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the instance resides.</para>
+        /// <para>The region ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,7 +52,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the scheduled scaling rule.</para>
+        /// <para>The policy name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

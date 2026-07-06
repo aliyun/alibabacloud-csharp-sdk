@@ -10,11 +10,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class CreateConsumerGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the consumer group.</para>
+        /// <para>Group name.</para>
         /// <list type="bullet">
-        /// <item><description>The value can contain only letters, digits, hyphens (-), and underscores (_), and the value must contain at least one letter or digit.</description></item>
-        /// <item><description>The value must be 3 to 128 characters in length. If the value that you specify contains more than 128 characters, the system automatically truncates the value to 128 characters.</description></item>
-        /// <item><description>After a consumer group is created, you cannot change the name of the consumer group.</description></item>
+        /// <item><description>Reserved instance: Supports uppercase and lowercase letters, numbers, underscores (_), hyphens (-), and periods (.), limited to 3-64 characters.</description></item>
+        /// <item><description>Serverless instance: Can only contain letters, numbers, and special characters &quot;@._\*$#^!&amp;-&quot;, limited to 1-249 characters.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -26,7 +25,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string ConsumerId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>Instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,7 +36,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance.</para>
+        /// <para>Region ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,7 +47,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The description of the consumer group.</para>
+        /// <para>Remarks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -58,17 +57,18 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>Tag list.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateConsumerGroupRequestTag> Tag { get; set; }
         public class CreateConsumerGroupRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key.</para>
+            /// <para>The tag key of the resource.</para>
             /// <list type="bullet">
-            /// <item><description>You must specify this parameter.</description></item>
-            /// <item><description>The tag key can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain <c>http://</c> or <c>https://</c>.</description></item>
+            /// <item><description>N ranges from 1 to 20.</description></item>
+            /// <item><description>Cannot be empty.</description></item>
+            /// <item><description>Supports up to 128 characters, cannot start with aliyun or acs:, and cannot contain <c>http://</c> or <c>https://</c>.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -80,10 +80,11 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value.</para>
+            /// <para>The tag value of the resource.</para>
             /// <list type="bullet">
-            /// <item><description>You can leave this parameter empty.</description></item>
-            /// <item><description>The tag value can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain <c>http://</c> or <c>https://</c>.</description></item>
+            /// <item><description>N ranges from 1 to 20.</description></item>
+            /// <item><description>Can be empty.</description></item>
+            /// <item><description>Supports up to 128 characters, cannot start with aliyun or acs:, and cannot contain <c>http://</c> or <c>https://</c>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

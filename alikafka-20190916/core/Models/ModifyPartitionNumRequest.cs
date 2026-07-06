@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class ModifyPartitionNumRequest : TeaModel {
         /// <summary>
-        /// <para>The number of partitions that you want to add to the topic.</para>
+        /// <para>Number of partitions to add.</para>
         /// <list type="bullet">
-        /// <item><description>The value must be an integer that is greater than 0.</description></item>
-        /// <item><description>To reduce the risk of data skew, we recommend that you set the value to a multiple of 6.</description></item>
-        /// <item><description>The number of total partitions ranges from 1 to 360.</description></item>
+        /// <item><description><para>Must be greater than 0.</para>
+        /// </description></item>
+        /// <item><description><para>It is recommended that the number of partitions is a multiple of 6 to reduce the risk of data skew.</para>
+        /// </description></item>
+        /// <item><description><para>The total number of partitions is limited to 1-360.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -26,7 +29,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public int? AddPartitionNum { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>Instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,7 +40,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance.</para>
+        /// <para>Region ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,7 +51,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The topic name.</para>
+        /// <para>Topic name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

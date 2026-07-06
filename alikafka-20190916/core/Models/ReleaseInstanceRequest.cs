@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <summary>
         /// <para>Specifies whether to immediately release the physical resources of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The physical resources of the instance are immediately released.</description></item>
-        /// <item><description><b>false</b>: The physical resources of the instance are retained for a period of time before they are released.</description></item>
+        /// <item><description><para><b>true</b>: Immediately releases the physical resources of the instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The physical resources of the instance are retained for a period of time before they are released.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public bool? ForceDeleteInstance { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

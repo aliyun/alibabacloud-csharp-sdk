@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class DeleteSaslUserRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>Instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,13 +21,15 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The encryption method. Valid values:</para>
+        /// <para>Encryption method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SCRAM-SHA-512. This is the default value.</description></item>
-        /// <item><description>SCRAM-SHA-256</description></item>
+        /// <item><description><para>SCRAM-SHA-512 (selected by default)</para>
+        /// </description></item>
+        /// <item><description><para>SCRAM-SHA-256</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is available only for serverless ApsaraMQ for Kafka instances.</para>
+        /// <para>This parameter is only supported for Serverless instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -38,7 +40,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string Mechanism { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>Region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,11 +51,14 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The type of the Simple Authentication and Security Layer (SASL) user. Valid values:</para>
+        /// <para>Type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>plain</b>: a simple mechanism that uses usernames and passwords to verify user identities. ApsaraMQ for Kafka provides an improved PLAIN mechanism that allows you to dynamically add SASL users without the need to restart an instance.</description></item>
-        /// <item><description><b>SCRAM</b>: a mechanism that uses usernames and passwords to verify user identities. Compared with the PLAIN mechanism, this mechanism provides better security protection. ApsaraMQ for Kafka uses the SCRAM-SHA-256 algorithm.</description></item>
-        /// <item><description><b>LDAP</b>: This value is available only for the SASL users of ApsaraMQ for Confluent instances.</description></item>
+        /// <item><description><para><b>plain</b>: A simple username and password verification mechanism. MSMQ optimizes the PLAIN mechanism to support adding SASL users dynamically without restarting the instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>scram</b>: A username and password verification mechanism with higher security than PLAIN. MSMQ uses SCRAM-SHA-256.</para>
+        /// </description></item>
+        /// <item><description><para><b>LDAP</b>: Only applicable for deleting Confluent instance users.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: <b>plain</b>.</para>
         /// 
@@ -65,7 +70,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The name of the user.</para>
+        /// <para>Username.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

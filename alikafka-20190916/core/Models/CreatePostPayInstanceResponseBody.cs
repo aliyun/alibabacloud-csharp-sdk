@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class CreatePostPayInstanceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code. A value of 200 indicates that the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         [Validation(Required=false)]
         public int? Code { get; set; }
 
+        /// <summary>
+        /// <para>The returned results.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreatePostPayInstanceResponseBodyData Data { get; set; }
         public class CreatePostPayInstanceResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>alikafka_pre-cn-pe333xxxxxx</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public string InstanceId { get; set; }
 
             /// <summary>
+            /// <para>The ID of the order.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>236972661580636</para>
             /// </summary>
@@ -40,6 +49,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         }
 
         /// <summary>
+        /// <para>The returned message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>operation success.</para>
         /// </summary>
@@ -48,6 +59,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ABA4A7FD-E10F-45C7-9774-A5236015A***</para>
         /// </summary>
@@ -56,6 +69,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

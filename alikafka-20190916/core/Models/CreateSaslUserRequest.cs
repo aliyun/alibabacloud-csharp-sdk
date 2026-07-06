@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class CreateSaslUserRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -23,11 +23,13 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <summary>
         /// <para>The encryption method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SCRAM-SHA-512 (default)</description></item>
-        /// <item><description>SCRAM-SHA-256</description></item>
+        /// <item><description><para>SCRAM-SHA-512 (default)</para>
+        /// </description></item>
+        /// <item><description><para>SCRAM-SHA-256</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is available only for ApsaraMQ for Kafka serverless instances.</para>
+        /// <para>This parameter is supported only for Serverless instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -38,7 +40,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string Mechanism { get; set; }
 
         /// <summary>
-        /// <para>The password of the SASL user.</para>
+        /// <para>The password.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,7 +51,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string Password { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
+        /// <para>The ID of the region.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -60,13 +62,16 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The type of the Simple Authentication and Security Layer (SASL) user. Valid values:</para>
+        /// <para>The SASL mechanism. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>plain</b>: a simple mechanism that uses usernames and passwords to verify user identities. ApsaraMQ for Kafka provides an improved PLAIN mechanism that allows you to dynamically add SASL users without the need to restart an instance.</description></item>
-        /// <item><description><b>SCRAM</b>: a mechanism that uses usernames and passwords to verify user identities. Compared with the PLAIN mechanism, this mechanism provides better security protection. ApsaraMQ for Kafka uses the SCRAM-SHA-256 algorithm.</description></item>
-        /// <item><description><b>LDAP</b>: This value is available only for the SASL users of ApsaraMQ for Confluent instances.</description></item>
+        /// <item><description><para>plain: a simple username and password authentication mechanism. Message Queue for Apache Kafka optimizes the PLAIN mechanism to support the dynamic creation of SASL users without the need to restart the instance.</para>
+        /// </description></item>
+        /// <item><description><para>scram: a username and password authentication mechanism that provides higher security than the PLAIN mechanism. Message Queue for Apache Kafka uses Salted Challenge Response Authentication Mechanism (SCRAM)-SHA-256.</para>
+        /// </description></item>
+        /// <item><description><para>LDAP: This value is applicable only when you create users for Confluent instances.</para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: <b>plain</b>.</para>
+        /// <para>Default value: plain.</para>
         /// 
         /// <b>Example:</b>
         /// <para>plain</para>
@@ -76,7 +81,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The name of the SASL user.</para>
+        /// <para>The username.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

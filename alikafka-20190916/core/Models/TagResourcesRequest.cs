@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class TagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Message Queue for Apache RocketMQ instance which contains the resource to which you want to attach tags.</para>
+        /// <para>The ID of the instance that contains the specified resources.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alikafka_post-cn-v0h1fgs2****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the resource is deployed.</para>
+        /// <para>The region ID of the resources.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource IDs.</para>
+        /// <para>A list of resource IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,14 +42,17 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resources. The value is an enumerated value. Valid values:</para>
+        /// <para>The resource type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>INSTANCE</b></description></item>
-        /// <item><description><b>TOPIC</b></description></item>
-        /// <item><description><b>CONSUMERGROUP</b></description></item>
+        /// <item><description><para><b>INSTANCE</b></para>
+        /// </description></item>
+        /// <item><description><para><b>TOPIC</b></para>
+        /// </description></item>
+        /// <item><description><para><b>CONSUMERGROUP</b></para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> The value of this parameter is not case-sensitive.</para>
+        /// <para>The value is case-insensitive.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -61,7 +64,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>A list of tags.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tag")]
@@ -71,8 +74,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             /// <summary>
             /// <para>The tag key.</para>
             /// <list type="bullet">
-            /// <item><description>You must specify this parameter.</description></item>
-            /// <item><description>The tag key can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>acs:</c> or <c>aliyun</c>.</description></item>
+            /// <item><description><para>The tag key cannot be an empty string.</para>
+            /// </description></item>
+            /// <item><description><para>The tag key can be up to 128 characters long. It cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// </description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -86,8 +91,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             /// <summary>
             /// <para>The tag value.</para>
             /// <list type="bullet">
-            /// <item><description>You can leave this parameter empty.</description></item>
-            /// <item><description>The tag value can be up to 128 characters in length and cannot contain http:// or https://. The tag value cannot start with acs: or aliyun.</description></item>
+            /// <item><description><para>The tag value can be an empty string.</para>
+            /// </description></item>
+            /// <item><description><para>The tag value can be up to 128 characters long. It cannot start with aliyun or acs: and cannot contain http\:// or https\://.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

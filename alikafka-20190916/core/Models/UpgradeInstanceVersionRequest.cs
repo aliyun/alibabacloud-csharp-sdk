@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the instance resides.</para>
+        /// <para>The region ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,12 +32,14 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The major version to be upgraded to. Valid values:</para>
+        /// <para>The target open source version. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0.10.2</b></description></item>
-        /// <item><description><b>2.2.0</b></description></item>
+        /// <item><description><para><b>0.10.2</b></para>
+        /// </description></item>
+        /// <item><description><para><b>2.2.0</b></para>
+        /// </description></item>
         /// </list>
-        /// <para>If you set this parameter to the current major version, the system upgrades the instance to the latest minor version.</para>
+        /// <para>If the value is the same as the current version, a minor version update will be triggered.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

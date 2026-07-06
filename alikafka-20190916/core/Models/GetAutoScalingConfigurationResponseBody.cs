@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class GetAutoScalingConfigurationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. The value 200 indicates that the request was successful.</para>
+        /// <para>Status code. A return value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public long? Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>Return result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>Return message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>operation success.</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>B7A39AE5-0B36-4442-A304-E0885265***</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Whether the call was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

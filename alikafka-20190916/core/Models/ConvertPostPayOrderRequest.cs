@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class ConvertPostPayOrderRequest : TeaModel {
         /// <summary>
-        /// <para>The subscription duration. Unit: months. Valid values:</para>
+        /// <para>The subscription duration in months. The default value is 1. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1~12</b></description></item>
-        /// <item><description><b>24</b></description></item>
-        /// <item><description><b>36</b></description></item>
+        /// <item><description><para>1 to <b>12</b></para>
+        /// </description></item>
+        /// <item><description><para><b>24</b></para>
+        /// </description></item>
+        /// <item><description><para><b>36</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,6 +38,18 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The billing method. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>0</b>: subscription</para>
+        /// </description></item>
+        /// <item><description><para><b>4</b>: Confluent series subscription</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("PaidType")]
         [Validation(Required=false)]
         public int? PaidType { get; set; }

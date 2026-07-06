@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class GetInstanceListRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of instances.</para>
+        /// <para>A list of instance IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alikafka_post-cn-mp91gnw0p***</para>
@@ -20,7 +20,11 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public List<string> InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the order. You can obtain the order ID on the <a href="https://usercenter2-intl.aliyun.com/order/list?pageIndex=1%5C&pageSize=20%5C&spm=5176.12818093.top-nav.ditem-ord.36f016d0OQFmJa">Orders</a> page in Alibaba Cloud User Center.</para>
+        /// <para>The order ID. You can find the order ID on the &lt;props=&quot;china&quot;&gt;<a href="https://usercenter2.aliyun.com/order/list?pageIndex=1%5C&pageSize=20">Orders</a> page in the Billing Management console.
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://usercenter2-intl.aliyun.com/order/list?pageIndex=1%5C&pageSize=20%5C&spm=5176.12818093.top-nav.ditem-ord.36f016d0OQFmJa">Orders</a> page in the Billing Management console.</para>
+        /// <remarks>
+        /// <para>Notice: You cannot use an order ID to query Serverless instances.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>6072673****</para>
@@ -30,7 +34,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the instance resides.</para>
+        /// <para>The ID of the region where the instance is located.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +45,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group. You can obtain this ID on the Resource Group page in the Resource Management console.</para>
+        /// <para>The ID of the resource group. You can view the resource group ID in the Resource Group console.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-ac***********7q</para>
@@ -51,11 +55,14 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The instance version. You can use instance versions to filter different versions of instances. Valid values:</para>
+        /// <para>The instance series. You can use this parameter to filter instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>v2</description></item>
-        /// <item><description>v3</description></item>
-        /// <item><description>confluent</description></item>
+        /// <item><description><para>v2</para>
+        /// </description></item>
+        /// <item><description><para>v3</para>
+        /// </description></item>
+        /// <item><description><para>confluent</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -66,7 +73,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string Series { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>A list of tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -75,8 +82,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             /// <summary>
             /// <para>The tag key.</para>
             /// <list type="bullet">
-            /// <item><description>If you leave this parameter empty, the keys of all tags are matched.</description></item>
-            /// <item><description>The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain <c>http://</c> or <c>https://</c>.</description></item>
+            /// <item><description><para>If you do not specify this parameter, all tag keys are matched.</para>
+            /// </description></item>
+            /// <item><description><para>The tag key can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -89,8 +98,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             /// <summary>
             /// <para>The tag value.</para>
             /// <list type="bullet">
-            /// <item><description>If you leave Key empty, you must also leave this parameter empty. If you leave this parameter empty, the values of all tags are matched.</description></item>
-            /// <item><description>The tag value can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain <c>http://</c> or <c>https://</c>.</description></item>
+            /// <item><description><para>If you do not specify the <c>Key</c> parameter, you do not need to specify this parameter. If you leave this parameter empty, all tag values are matched.</para>
+            /// </description></item>
+            /// <item><description><para>The tag value can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class UpdateConsumerOffsetResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code that is returned. The status code <b>200</b> indicates that the request is successful.</para>
+        /// <para>Return code. A return value of <b>200</b> indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>Return message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>operation success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>56729737-C428-4E1B-AC68-7A8C2D5****</para>

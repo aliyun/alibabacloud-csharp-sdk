@@ -10,17 +10,19 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class DescribeAclsRequest : TeaModel {
         /// <summary>
-        /// <para>The types of operations allowed by the ACL. Separate multiple operation types with commas (,).</para>
+        /// <para>The operation type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Valid values:</description></item>
-        /// <item><description>Write</description></item>
-        /// <item><description>Read</description></item>
-        /// <item><description>Describe: reads of transactional IDs.</description></item>
-        /// <item><description>IdempotentWrite: idempotent data writes to clusters.</description></item>
-        /// <item><description>IDEMPOTENT_WRITE: idempotent data writes to clusters. This value is available only for ApsaraMQ for Kafka V3 instances.</description></item>
-        /// <item><description>DESCRIBE_CONFIGS: queries of configurations. This value is available only for ApsaraMQ for Kafka V3 instances.<remarks>
-        /// <para>This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.</para>
-        /// </remarks>
+        /// <item><description><para><b>Write</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Read</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Describe</b>: reads a transactional ID.</para>
+        /// </description></item>
+        /// <item><description><para><b>IdempotentWrite</b>: performs an idempotent write to a cluster. This value is not supported by Serverless instances. For Serverless instances, use IDEMPOTENT_WRITE.</para>
+        /// </description></item>
+        /// <item><description><para><b>IDEMPOTENT_WRITE</b>: performs an idempotent write to a cluster. This value is available only for Serverless instances.</para>
+        /// </description></item>
+        /// <item><description><para><b>DESCRIBE_CONFIGS</b>: queries configurations. This value is available only for Serverless instances.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -34,12 +36,14 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <summary>
         /// <para>The authorization method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DENY</description></item>
-        /// <item><description>ALLOW<remarks>
-        /// <para>This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.</para>
-        /// </remarks>
+        /// <item><description><para>DENY</para>
+        /// </description></item>
+        /// <item><description><para>ALLOW</para>
         /// </description></item>
         /// </list>
+        /// <remarks>
+        /// <para>This parameter is available only for Serverless instances.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>DENY</para>
@@ -49,13 +53,17 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string AclPermissionType { get; set; }
 
         /// <summary>
-        /// <para>The resource name.</para>
+        /// <para>The name of the resource.</para>
         /// <list type="bullet">
-        /// <item><description>The value can be the name of a topic or consumer group.</description></item>
-        /// <item><description>You can use an asterisk (\*) to specify the names of all topics or consumer groups.</description></item>
+        /// <item><description><para>The name can be a topic name or a group name.</para>
+        /// </description></item>
+        /// <item><description><para>You can use an asterisk (\*) to represent all topic names or group names.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>You can query the resources on which permissions are granted only after you grant the user the required permissions on all resources.</para>
+        /// <list type="bullet">
+        /// <item><description>You can use an asterisk (\*) only after you grant permissions to all resources.</description></item>
+        /// </list>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -69,8 +77,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <summary>
         /// <para>The match mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>LITERAL: full-name match</description></item>
-        /// <item><description>PREFIXED: prefix match</description></item>
+        /// <item><description><para>LITERAL: an exact match</para>
+        /// </description></item>
+        /// <item><description><para>PREFIXED: a prefix match</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -81,10 +91,16 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string AclResourcePatternType { get; set; }
 
         /// <summary>
-        /// <para>The resource type. Valid values:</para>
+        /// <para>The type of the resource. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Topic</b></description></item>
-        /// <item><description><b>Group</b></description></item>
+        /// <item><description><para><b>Topic</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Group</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Cluster</b></para>
+        /// </description></item>
+        /// <item><description><para><b>TransactionalId</b></para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -99,8 +115,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <para>The source IP address.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>You can specify only a specific IP address or use the asterisk (*) wildcard character to specify all IP addresses. CIDR blocks are not supported.</description></item>
-        /// <item><description>This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.</description></item>
+        /// <item><description><para>You can set this parameter to a specific IP address or an asterisk (\<em>). An asterisk (\</em>) indicates all IP addresses. CIDR blocks are not supported.</para>
+        /// </description></item>
+        /// <item><description><para>This parameter is available only for Serverless instances.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -138,10 +156,12 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <summary>
         /// <para>The username.</para>
         /// <list type="bullet">
-        /// <item><description>You can use an asterisk (\*) to specify all users.</description></item>
+        /// <item><description>An asterisk (\*) can be used to represent all users.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>You can use an asterisk (\*) to query the authorized users only after you grant the required permissions to all users.</para>
+        /// <list type="bullet">
+        /// <item><description>A query with an asterisk (\*) returns authorizations only if authorization has been granted to all users.</description></item>
+        /// </list>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

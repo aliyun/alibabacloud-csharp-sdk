@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class ModifyScheduledScalingRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
-        /// <para>The value <b>200</b> indicates that the request was successful.</para>
+        /// <para>The return code.</para>
+        /// <para>A value of <b>200</b> indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public long? Code { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The prompt message of the return result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>operation success.</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>DB6F1BEA-903B-4FD8-8809-46E7E9CE***</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

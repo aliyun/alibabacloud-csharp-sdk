@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class QueryMessageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned HTTP status code. If the request is successful, 200 is returned.</para>
+        /// <para>The return code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The return message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>operation success.</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The messages.</para>
+        /// <para>The query message results.</para>
         /// </summary>
         [NameInMap("MessageList")]
         [Validation(Required=false)]
         public List<QueryMessageResponseBodyMessageList> MessageList { get; set; }
         public class QueryMessageResponseBodyMessageList : TeaModel {
             /// <summary>
-            /// <para>The check value of the chaincode.</para>
+            /// <para>The chaincode checksum.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public bool? KeyTruncated { get; set; }
 
             /// <summary>
-            /// <para>The consumer offset of the partition.</para>
+            /// <para>The partition offset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public long? Partition { get; set; }
 
             /// <summary>
-            /// <para>The size of the key after serialization. Unit: bytes.</para>
+            /// <para>The size of the serialized key. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>11</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public int? SerializedKeySize { get; set; }
 
             /// <summary>
-            /// <para>The size of the value after serialization. Unit: bytes.</para>
+            /// <para>The size of the serialized value. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public int? SerializedValueSize { get; set; }
 
             /// <summary>
-            /// <para>The time when the message was created. The value of this parameter is a UNIX timestamp in milliseconds.</para>
+            /// <para>The message creation time. Represented as a UNIX timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1705482172640</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public long? Timestamp { get; set; }
 
             /// <summary>
-            /// <para>The time type.</para>
+            /// <para>The timestamp type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CreateTime</para>
@@ -137,9 +137,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public string Topic { get; set; }
 
             /// <summary>
-            /// <para>The truncated size of the message key. Unit: bytes.</para>
+            /// <para>The size of the truncated key message. Value: bytes.</para>
             /// <remarks>
-            /// <para> A maximum of 1 KB of content can be displayed for each message. Content that exceeds 1 KB is automatically truncated. For more information, see <a href="https://help.aliyun.com/document_detail/113172.html">Query messages</a>.</para>
+            /// <para>Each queried message displays up to 1 KB of content; content exceeding this limit will be automatically truncated. <a href="https://help.aliyun.com/document_detail/113172.html">Learn more</a>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -150,9 +150,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public int? TruncatedKeySize { get; set; }
 
             /// <summary>
-            /// <para>The truncated size of the message value. Unit: bytes.</para>
+            /// <para>The size of the truncated value message. Unit: bytes.</para>
             /// <remarks>
-            /// <para> A maximum of 1 KB of content can be displayed for each message. Content that exceeds 1 KB is automatically truncated. For more information, see <a href="https://help.aliyun.com/document_detail/113172.html">Query messages</a>.</para>
+            /// <para>Each queried message displays up to 1 KB of content; content exceeding this limit will be automatically truncated. <a href="https://help.aliyun.com/document_detail/113172.html">Learn more</a>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -195,10 +195,12 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: The call was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The call failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

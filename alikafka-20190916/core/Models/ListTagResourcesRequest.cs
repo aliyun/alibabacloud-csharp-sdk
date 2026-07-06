@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class ListTagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The token that determines the start point of the next query.</para>
+        /// <para>The token for the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the resource is deployed.</para>
+        /// <para>The region ID of the resource.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,15 +31,18 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource whose tags you want to query. The resource ID follows the following rules:</para>
+        /// <para>The ID of the resource to be tagged. Resource ID rules:</para>
         /// <list type="bullet">
-        /// <item><description>Instance ID: instanceId</description></item>
-        /// <item><description>Topic ID: Kafka_alikafka_instanceId_topic</description></item>
-        /// <item><description>Group ID: Kafka_alikafka_instanceId_consumerGroup</description></item>
+        /// <item><description><para>Instance: instanceId</para>
+        /// </description></item>
+        /// <item><description><para>Topic: Kafka_alikafka_instanceId_topic</para>
+        /// </description></item>
+        /// <item><description><para>Group: Kafka_alikafka_instanceId_consumerGroup</para>
+        /// </description></item>
         /// </list>
-        /// <para>For example, if the instance ID is alikafka_post-cn-v0h1fgs2xxxx, the topic name is test-topic, and the group name is test-consumer-group, the resource IDs are alikafka_post-cn-v0h1fgs2xxxx, Kafka_alikafka_post-cn-v0h1fgs2xxxx_test-topic, and Kafka_alikafka_post-cn-v0h1fgs2xxxx_test-consumer-group, respectively.</para>
+        /// <para>For example: If the instance ID is alikafka_post-cn-v0h1fgs2xxxx, the Topic name is test-topic, and the Group name is test-consumer-group, the resource IDs are alikafka_post-cn-v0h1fgs2xxxx, Kafka_alikafka_post-cn-v0h1fgs2xxxx_test-topic, and Kafka_alikafka_post-cn-v0h1fgs2xxxx_test-consumer-group respectively.</para>
         /// <remarks>
-        /// <para> You must configure one of <b>ResourceId</b> and <b>Tag</b> to query the tags that are bound to a resource. Otherwise, the request fails.</para>
+        /// <para>Either the <b>ResourceId</b> or <b>Tag</b> parameter must be configured to query the tag list bound to resources. Otherwise, the API call fails.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -50,11 +53,14 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource whose tags you want to query. The value is an enumerated value. Valid values:</para>
+        /// <para>The resource type. Enumeration type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>INSTANCE</b></description></item>
-        /// <item><description><b>TOPIC</b></description></item>
-        /// <item><description><b>CONSUMERGROUP</b></description></item>
+        /// <item><description><para><b>INSTANCE</b>: instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>TOPIC</b>: topic.</para>
+        /// </description></item>
+        /// <item><description><para><b>CONSUMERGROUP</b>: consumer group.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -66,17 +72,19 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The tag list.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListTagResourcesRequestTag> Tag { get; set; }
         public class ListTagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the resource tag.</para>
+            /// <para>The tag key of the resource.</para>
             /// <list type="bullet">
-            /// <item><description>If you leave this parameter empty, the keys of all tags are matched.</description></item>
-            /// <item><description>The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</description></item>
+            /// <item><description><para>If this parameter is empty, all tag keys are matched.</para>
+            /// </description></item>
+            /// <item><description><para>The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http\:// or https\://.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -87,10 +95,12 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the resource tag.</para>
+            /// <para>The tag value of the resource.</para>
             /// <list type="bullet">
-            /// <item><description>If you leave Key empty, you must also leave this parameter empty. If you leave this parameter empty, the values of all tags are matched.</description></item>
-            /// <item><description>The tag value can be up to 128 characters in length and cannot contain http:// or https://. The tag value cannot start with acs: or aliyun.</description></item>
+            /// <item><description><para>If the tag key is empty, this parameter must be empty. If this parameter is empty, all tag values are matched.</para>
+            /// </description></item>
+            /// <item><description><para>The tag value can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http\:// or https\://.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class GetTopicStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</para>
+        /// <para>Status code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>Response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>operation success.</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E475C7E2-8C35-46EF-BE7D-5D2A9F5D****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The status information about messages in the topic.</para>
+        /// <para>Topic status.</para>
         /// </summary>
         [NameInMap("TopicStatus")]
         [Validation(Required=false)]
         public GetTopicStatusResponseBodyTopicStatus TopicStatus { get; set; }
         public class GetTopicStatusResponseBodyTopicStatus : TeaModel {
             /// <summary>
-            /// <para>The time when the last consumed message was generated.</para>
+            /// <para>Generation time of the last consumed message. Unit: ms.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1566470063575</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             }
 
             /// <summary>
-            /// <para>The number of messages in the topic.</para>
+            /// <para>Total number of messages.</para>
             /// 
             /// <b>Example:</b>
             /// <para>423</para>

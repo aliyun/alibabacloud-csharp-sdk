@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class GetConsumerProgressResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned HTTP status code. If the request is successful, 200 is returned.</para>
+        /// <para>The status code. A value of 200 indicates that the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,17 +20,25 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The consumer progress of the consumer group.</para>
+        /// <para>The consumption status.</para>
         /// </summary>
         [NameInMap("ConsumerProgress")]
         [Validation(Required=false)]
         public GetConsumerProgressResponseBodyConsumerProgress ConsumerProgress { get; set; }
         public class GetConsumerProgressResponseBodyConsumerProgress : TeaModel {
             /// <summary>
-            /// <para>The time when the last message consumed by the consumer group was generated.</para>
+            /// <para>The latest time when a message was stored. This time is calculated based on the consumer offsets of all topics in the consumer group.</para>
+            /// <remarks>
+            /// <list type="bullet">
+            /// <item><description><para>This parameter is not supported for topics on Serverless instances or topics that use local storage on provisioned instances. In these cases, -1 is returned.</para>
+            /// </description></item>
+            /// <item><description><para>For topics that use cloud storage on provisioned instances, this parameter returns the message creation timestamp. This happens only after you submit the consumer offset for a consumer group that was created in the console or by an API call. If the message has no creation timestamp, -1 is returned.</para>
+            /// </description></item>
+            /// </list>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>1566874931671</para>
+            /// <para>1566874931649</para>
             /// </summary>
             [NameInMap("LastTimestamp")]
             [Validation(Required=false)]
@@ -141,7 +149,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             }
 
             /// <summary>
-            /// <para>The total number of unconsumed messages in all topics to which the consumer group subscribes.</para>
+            /// <para>The total number of unconsumed messages in all topics. This value is the message accumulation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -150,6 +158,26 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             [Validation(Required=false)]
             public long? TotalDiff { get; set; }
 
+            /// <summary>
+            /// <para>The status of the consumer group:</para>
+            /// <list type="bullet">
+            /// <item><description><para>UNKNOWN</para>
+            /// </description></item>
+            /// <item><description><para>PREPARING_REBALANCE</para>
+            /// </description></item>
+            /// <item><description><para>COMPLETING_REBALANCE</para>
+            /// </description></item>
+            /// <item><description><para>STABLE</para>
+            /// </description></item>
+            /// <item><description><para>DEAD</para>
+            /// </description></item>
+            /// <item><description><para>EMPTY</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>STABLE</para>
+            /// </summary>
             [NameInMap("state")]
             [Validation(Required=false)]
             public string State { get; set; }
@@ -177,7 +205,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

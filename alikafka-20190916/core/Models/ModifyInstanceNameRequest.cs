@@ -21,10 +21,12 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The instance name. Valid values:</para>
+        /// <para>The name of the instance. The value must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>The name can contain only letters, digits, hyphens (-), and underscores (_).</description></item>
-        /// <item><description>The name must be 3 to 64 characters in length. A name that contains more than 64 characters is automatically truncated.</description></item>
+        /// <item><description><para>The name can contain only letters, digits, underscores (_), and hyphens (-).</para>
+        /// </description></item>
+        /// <item><description><para>The name must be 3 to 64 characters in length. If the name contains more than 64 characters, the name is automatically truncated.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

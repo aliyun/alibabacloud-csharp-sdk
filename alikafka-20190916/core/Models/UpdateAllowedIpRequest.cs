@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class UpdateAllowedIpRequest : TeaModel {
         /// <summary>
-        /// <para>The IP addresses that you want to manage. You can specify a CIDR block. Example: <b>192.168.0.0/16</b>.</para>
+        /// <para>The IP list. It can be a CIDR block, for example: <b>192.168.0.0/16</b>.</para>
         /// <list type="bullet">
-        /// <item><description>If the <b>UpdateType</b> parameter is set to <b>add</b>, specify one or more IP addresses for this parameter. Separate multiple IP addresses with commas (,).</description></item>
-        /// <item><description>If the <b>UpdateType</b> parameter is set to <b>delete</b>, specify only one IP address.</description></item>
-        /// <item><description>Exercise caution when you delete IP addresses.</description></item>
+        /// <item><description>When <b>UpdateType</b> is set to <b>add</b>, you can specify multiple items separated by commas (,).</description></item>
+        /// <item><description>When <b>UpdateType</b> is set to <b>delete</b>, you can specify only one item at a time.</description></item>
+        /// <item><description>Exercise caution when deleting.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -28,8 +28,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <summary>
         /// <para>The type of the whitelist. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>vpc</b>: a whitelist for access from a VPC.</description></item>
-        /// <item><description><b>internet</b>: a whitelist for access from the Internet.</description></item>
+        /// <item><description><b>vpc</b>: virtual private cloud (VPC).</description></item>
+        /// <item><description><b>internet</b>: Internet.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,10 +64,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <summary>
         /// <para>The port range. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>9092/9092</b>: Messages are transmitted in a virtual private cloud (VPC) by using the PLAINTEXT protocol.</description></item>
-        /// <item><description><b>9093/9093</b>: Messages are transmitted over the Internet by using the SASL_SSL protocol.</description></item>
-        /// <item><description><b>9094/9094</b>: Messages are transmitted in a VPC by using the SASL_PLAINTEXT protocol.</description></item>
-        /// <item><description><b>9095/9095</b>: Messages are transmitted in a VPC by using the SASL_SSL protocol.</description></item>
+        /// <item><description><b>9092/9092</b>: virtual private cloud (VPC) - PLAINTEXT protocol.</description></item>
+        /// <item><description><b>9093/9093</b>: Internet - SASL_SSL protocol.</description></item>
+        /// <item><description><b>9094/9094</b>: virtual private cloud (VPC) - SASL_PLAINTEXT protocol.</description></item>
+        /// <item><description><b>9095/9095</b>: virtual private cloud (VPC) - SASL_SSL protocol.</description></item>
         /// </list>
         /// <para>This parameter must correspond to <b>AllowdedListType</b>.</para>
         /// <para>This parameter is required.</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string PortRange { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the instance resides.</para>
+        /// <para>The region ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -91,10 +91,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The type of configuration change. Valid values:</para>
+        /// <para>The update type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>add</b></description></item>
-        /// <item><description><b>delete</b></description></item>
+        /// <item><description><b>add</b>: add.</description></item>
+        /// <item><description><b>delete</b>: delete.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

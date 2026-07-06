@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class UpdateConsumerOffsetShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the consumer group.</para>
+        /// <para>Consumer Group name.</para>
         /// <list type="bullet">
-        /// <item><description>The name can contain letters, digits, hyphens (-), and underscores (_).</description></item>
-        /// <item><description>The name must be <b>3 to 64</b> characters in length. If a name contains more than <b>64</b> characters, the name is automatically truncated.</description></item>
-        /// <item><description>The name of a consumer group cannot be changed after the consumer group is created.</description></item>
+        /// <item><description><para>Can only contain letters, numbers, hyphens (-), and underscores (_).</para>
+        /// </description></item>
+        /// <item><description><para>Length must be <b>3-64</b> characters. If more than <b>64</b> characters are provided, they will be automatically truncated.</para>
+        /// </description></item>
+        /// <item><description><para>Cannot be modified once created.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -26,7 +29,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string ConsumerId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>Instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,7 +40,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>If you set resetType to offset, you can use this parameter to reset the consumer offset of each partition of a specific topic in the consumer group.</para>
+        /// <para>When resetType is offset, this parameter is used to set the consumer offset for each partition of a topic for the consumer group.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -47,7 +50,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string OffsetsShrink { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance to which the consumer group belongs.</para>
+        /// <para>Region ID of the instance to which the Group belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,10 +61,12 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The method that is used to reset the consumer offsets of the subscribed topics of a consumer group. Valid values:</para>
+        /// <para>Type of consumer group offset reset, supporting the following two types:</para>
         /// <list type="bullet">
-        /// <item><description><b>timestamp</b> (default)</description></item>
-        /// <item><description><b>offset</b></description></item>
+        /// <item><description><para><b>timestamp</b> (default)</para>
+        /// </description></item>
+        /// <item><description><para><b>offset</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -72,10 +77,13 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string ResetType { get; set; }
 
         /// <summary>
-        /// <para>The point in time when message consumption starts. The value of this parameter is a UNIX timestamp in milliseconds. The value of this parameter must be <b>less than 0</b> or <b>within the retention period of the consumer offset</b>. This parameter takes effect only if you set resetType to timestamp.</para>
+        /// <para>Time parameter in Unix timestamp format, in milliseconds.
+        /// The parameter range should be <b>less than 0</b> or <b>within the retention period of the consumer offset</b>. This parameter only takes effect when resetType is timestamp.</para>
         /// <list type="bullet">
-        /// <item><description>If you want to reset the consumer offset to the latest offset, set this parameter to -1.</description></item>
-        /// <item><description>If you want to reset the consumer offset to the earliest offset, set this parameter to -2.</description></item>
+        /// <item><description><para>To reset to the latest consumer offset, pass -1.</para>
+        /// </description></item>
+        /// <item><description><para>To reset to the earliest consumer offset, pass -2.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -86,13 +94,16 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string Time { get; set; }
 
         /// <summary>
-        /// <para>The topic name.</para>
+        /// <para>Topic name.</para>
         /// <list type="bullet">
-        /// <item><description>The name can contain letters, digits, underscores (_), and hyphens (-).</description></item>
-        /// <item><description>The name must be <b>3 to 64</b> characters in length. If a name contains more than <b>64</b> characters, the name is automatically truncated.</description></item>
-        /// <item><description>The name of a topic cannot be changed after the topic is created.</description></item>
+        /// <item><description><para>Can only contain letters, numbers, underscores (_), and hyphens (-).</para>
+        /// </description></item>
+        /// <item><description><para>Length must be <b>3-64</b> characters. If more than <b>64</b> characters are provided, they will be automatically truncated.</para>
+        /// </description></item>
+        /// <item><description><para>Cannot be modified once created.</para>
+        /// </description></item>
         /// </list>
-        /// <para><b>If you want to reset the consumer offsets of all topics to which the consumer subscribes, specify an empty string.</b></para>
+        /// <para><b>To set the consumer offset for all topics subscribed by the current consumer, pass an empty string.</b></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

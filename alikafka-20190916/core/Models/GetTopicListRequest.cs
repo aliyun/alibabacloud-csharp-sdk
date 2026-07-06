@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class GetTopicListRequest : TeaModel {
         /// <summary>
-        /// <para>The page number. Default value: 1</para>
+        /// <para>The number of the page to return. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The ID of the instance to which the topic belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance to which the topics that you want to query belong.</para>
+        /// <para>The ID of the region where the instance resides.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the topic that you want to query.</para>
+        /// <para>The name of the topic whose information you want to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>topic_name</para>

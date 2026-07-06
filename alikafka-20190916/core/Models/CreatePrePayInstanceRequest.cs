@@ -9,11 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class CreatePrePayInstanceRequest : TeaModel {
+        /// <summary>
+        /// <para>The configurations of the Confluent components.</para>
+        /// <remarks>
+        /// <para>This parameter is required if you create a Confluent instance.</para>
+        /// </remarks>
+        /// </summary>
         [NameInMap("ConfluentConfig")]
         [Validation(Required=false)]
         public CreatePrePayInstanceRequestConfluentConfig ConfluentConfig { get; set; }
         public class CreatePrePayInstanceRequestConfluentConfig : TeaModel {
             /// <summary>
+            /// <para>The number of CPU cores for Connect.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>4</para>
             /// </summary>
@@ -22,6 +30,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public int? ConnectCU { get; set; }
 
             /// <summary>
+            /// <para>The number of replicas for Connect.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -30,6 +40,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public int? ConnectReplica { get; set; }
 
             /// <summary>
+            /// <para>The number of CPU cores for Control Center.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>4</para>
             /// </summary>
@@ -38,6 +50,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public int? ControlCenterCU { get; set; }
 
             /// <summary>
+            /// <para>The number of replicas for Control Center.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -46,6 +60,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public int? ControlCenterReplica { get; set; }
 
             /// <summary>
+            /// <para>The disk capacity for Control Center, in GB.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>300</para>
             /// </summary>
@@ -54,6 +70,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public int? ControlCenterStorage { get; set; }
 
             /// <summary>
+            /// <para>The number of CPU cores for the Kafka broker.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>4</para>
             /// </summary>
@@ -62,6 +80,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public int? KafkaCU { get; set; }
 
             /// <summary>
+            /// <para>The number of replicas for the Kafka broker.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3</para>
             /// </summary>
@@ -70,6 +90,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public int? KafkaReplica { get; set; }
 
             /// <summary>
+            /// <para>The number of CPU cores for Kafka REST Proxy.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>4</para>
             /// </summary>
@@ -78,6 +100,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public int? KafkaRestProxyCU { get; set; }
 
             /// <summary>
+            /// <para>The number of replicas for Kafka REST Proxy.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -86,6 +110,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public int? KafkaRestProxyReplica { get; set; }
 
             /// <summary>
+            /// <para>The disk capacity for the Kafka broker, in GB.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>800</para>
             /// </summary>
@@ -94,6 +120,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public int? KafkaStorage { get; set; }
 
             /// <summary>
+            /// <para>The number of CPU cores for ksqlDB.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>4</para>
             /// </summary>
@@ -128,6 +156,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             }
 
             /// <summary>
+            /// <para>The number of replicas for ksqlDB.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -136,6 +166,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public int? KsqlReplica { get; set; }
 
             /// <summary>
+            /// <para>The disk capacity for ksqlDB, in GB.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -144,6 +176,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public int? KsqlStorage { get; set; }
 
             /// <summary>
+            /// <para>The number of CPU cores for Schema Registry.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -152,6 +186,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public int? SchemaRegistryCU { get; set; }
 
             /// <summary>
+            /// <para>The number of replicas for Schema Registry.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -160,6 +196,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public int? SchemaRegistryReplica { get; set; }
 
             /// <summary>
+            /// <para>The number of CPU cores for ZooKeeper.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -168,6 +206,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public int? ZooKeeperCU { get; set; }
 
             /// <summary>
+            /// <para>The number of replicas for ZooKeeper.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3</para>
             /// </summary>
@@ -176,6 +216,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public int? ZooKeeperReplica { get; set; }
 
             /// <summary>
+            /// <para>The disk capacity for ZooKeeper, in GB.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -186,6 +228,17 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         }
 
         /// <summary>
+        /// <para>The deployment type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>4</b>: an instance accessible from the internet and a VPC</para>
+        /// </description></item>
+        /// <item><description><para><b>5</b>: an instance accessible from a VPC only</para>
+        /// </description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>If you create a Confluent instance, you cannot specify the deployment type and must set this parameter to 5. After the instance is created, you can configure internet access for each component.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>5</para>
         /// </summary>
@@ -194,6 +247,12 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public int? DeployType { get; set; }
 
         /// <summary>
+        /// <para>The disk capacity, in GB.</para>
+        /// <para>For the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</para>
+        /// <remarks>
+        /// <para>This parameter is not required if you create a Confluent instance.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>500</para>
         /// </summary>
@@ -202,6 +261,17 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public int? DiskSize { get; set; }
 
         /// <summary>
+        /// <para>The disk type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>0</b>: ultra disk</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: SSD</para>
+        /// </description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>This parameter is not required if you create a Confluent instance.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -210,6 +280,14 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string DiskType { get; set; }
 
         /// <summary>
+        /// <para>The subscription duration, in months. Default value: 1. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>Confluent instances: <b>1</b> and <b>12</b></para>
+        /// </description></item>
+        /// <item><description><para>Kafka instances: <b>1</b></para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -218,6 +296,17 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public int? Duration { get; set; }
 
         /// <summary>
+        /// <para>The peak internet bandwidth.</para>
+        /// <list type="bullet">
+        /// <item><description><para>This parameter is required if you set <b>DeployType</b> to <b>4</b>.</para>
+        /// </description></item>
+        /// <item><description><para>For the value range, see <a href="https://help.aliyun.com/document_detail/72142.html">pay-as-you-go</a>.</para>
+        /// </description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>This parameter is not required if you create a Confluent instance.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
@@ -226,6 +315,14 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public int? EipMax { get; set; }
 
         /// <summary>
+        /// <para>The I/O specification.</para>
+        /// <list type="bullet">
+        /// <item><description>For the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>This parameter is not required if you create a Confluent instance.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>alikafka.hw.2xlarge</para>
         /// </summary>
@@ -234,6 +331,14 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string IoMaxSpec { get; set; }
 
         /// <summary>
+        /// <para>The billing method. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>0</b>: subscription</para>
+        /// </description></item>
+        /// <item><description><para><b>4</b>: subscription for Confluent instances</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -242,6 +347,14 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public int? PaidType { get; set; }
 
         /// <summary>
+        /// <para>The number of partitions.</para>
+        /// <list type="bullet">
+        /// <item><description>For the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>This parameter is not required if you create a Confluent instance.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>1000</para>
         /// </summary>
@@ -250,6 +363,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public int? PartitionNum { get; set; }
 
         /// <summary>
+        /// <para>The region ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -260,6 +374,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the resource group.</para>
+        /// <para>If you do not specify this parameter, the instance is placed in the default resource group. You can find the resource group ID in the Resource Group console.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rg-ac***********7q</para>
         /// </summary>
@@ -268,6 +385,25 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
+        /// <para>The specification type.</para>
+        /// <para>Valid values for Kafka instances:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>normal</b>: Standard Edition (High-write)</para>
+        /// </description></item>
+        /// <item><description><para><b>professional</b>: Professional Edition (High-write)</para>
+        /// </description></item>
+        /// <item><description><para><b>professionalForHighRead</b>: Professional Edition (High-read)</para>
+        /// </description></item>
+        /// </list>
+        /// <para>Valid values for Confluent instances:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>professional</b>: Professional Edition</para>
+        /// </description></item>
+        /// <item><description><para><b>enterprise</b>: Enterprise Edition</para>
+        /// </description></item>
+        /// </list>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>professional</para>
         /// </summary>
@@ -275,11 +411,21 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         [Validation(Required=false)]
         public string SpecType { get; set; }
 
+        /// <summary>
+        /// <para>The tags to attach to the instance. You can specify up to 20 tags.</para>
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreatePrePayInstanceRequestTag> Tag { get; set; }
         public class CreatePrePayInstanceRequestTag : TeaModel {
             /// <summary>
+            /// <para>The tag key.</para>
+            /// <list type="bullet">
+            /// <item><description></description></item>
+            /// <item><description></description></item>
+            /// <item><description><para>The key must be 1 to 128 characters long. It cannot start with aliyun or acs:, nor can it contain http\:// or https\://.</para>
+            /// </description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -290,6 +436,14 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public string Key { get; set; }
 
             /// <summary>
+            /// <para>The tag value.</para>
+            /// <list type="bullet">
+            /// <item><description></description></item>
+            /// <item><description></description></item>
+            /// <item><description><para>The value can be 0 to 128 characters long. It cannot start with aliyun or acs:, nor can it contain http\:// or https\://.</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>

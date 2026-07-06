@@ -12,15 +12,19 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <summary>
         /// <para>The key of the topic configuration.</para>
         /// <list type="bullet">
-        /// <item><description>For reserved instances, you can modify only the configurations of the topics that use local storage.</description></item>
-        /// <item><description>For serverless instances, you can modify the configurations of all topics.</description></item>
-        /// <item><description>Reserved instances whose topics use local storage support the following keys: retention.ms, max.message.bytes, replications, message.timestamp.type, and message.timestamp.difference.max.ms.``</description></item>
-        /// <item><description>Serverless instances support the following keys: retention.hours, max.message.bytes, message.timestamp.type, message.timestamp.difference.max.ms.</description></item>
+        /// <item><description><para>You can modify the configurations only for topics that use the local storage engine on reserved instances. You cannot modify the configurations for topics that use the cloud storage engine.</para>
+        /// </description></item>
+        /// <item><description><para>You can modify the configurations of topics for Serverless instances.</para>
+        /// </description></item>
+        /// <item><description><para>For <c>local topics</c> on reserved instances, the supported keys are \<c>retention.ms\\</c>, \<c>max.message.bytes\\</c>, \<c>message.timestamp.type\\</c>, and \<c>message.timestamp.difference.max.ms\\</c>.</para>
+        /// </description></item>
+        /// <item><description><para>For Serverless instances, the supported keys are \<c>retention.hours\\</c>, \<c>max.message.bytes\\</c>, \<c>message.timestamp.type\\</c>, and \<c>message.timestamp.difference.max.ms\\</c>.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>replications</para>
+        /// <para>retention.ms</para>
         /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
@@ -38,7 +42,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the instance resides.</para>
+        /// <para>The region ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,28 +66,35 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <summary>
         /// <para>The value of the topic configuration.</para>
         /// <list type="bullet">
-        /// <item><description><para>Serverless instances support the following values:</para>
+        /// <item><description><para>The following configurations are supported for Serverless instances:</para>
         /// <list type="bullet">
-        /// <item><description><c>retention.hours</c>: the message retention period. Value type: string. Valid values: 24 to 8760.</description></item>
-        /// <item><description><c>max.message.bytes</c>: the maximum size of a sent message. Value type: string. Valid values: 1048576 to 10485760.</description></item>
-        /// <item><description><c>message.timestamp.type</c>: the timestamp type of a message. Valid values: CreateTime and LogAppendTime. The value CreateTime specifies the timestamp that is specified by the producer when the message is sent. The value LogAppendTime specifies the time when the broker appends the message to its log. If you do not specify this parameter, the time when the message is created on the client is used.</description></item>
-        /// <item><description><c>message.timestamp.difference.max.ms</c>: the maximum positive or negative difference allowed between the timestamp when the broker receives a message and the timestamp specified in the message. If you set message.timestamp.type to CreateTime, <b>a message is rejected</b> if the difference in timestamp exceeds the threshold. If you set message.timestamp.type to LogAppendTime, this configuration does not take effect.</description></item>
+        /// <item><description><para><c>retention.hours</c> specifies the message retention period. The value must be a string. The value must be in the range of 24 to 8,760.</para>
+        /// </description></item>
+        /// <item><description><para><c>max.message.bytes</c> specifies the maximum message size. The value must be a string. The value must be in the range of 1,048,576 to 10,485,760.</para>
+        /// </description></item>
+        /// <item><description><para><c>message.timestamp.type</c> specifies the message timestamp type. \<c>CreateTime\\</c> indicates the timestamp that is specified by the producer when the message is sent. If no timestamp is specified, the time when the message is created on the client is used. \<c>LogAppendTime\\</c> indicates the time when the message is stored on the server. Valid values: \<c>CreateTime\\</c> and \<c>LogAppendTime\\</c>.</para>
+        /// </description></item>
+        /// <item><description><para><c>message.timestamp.difference.max.ms</c> specifies the maximum allowed difference between the timestamp of the server that receives the message and the timestamp specified in the message. If \<c>message.timestamp.type\\</c> is set to \<c>CreateTime\\</c> and the time difference exceeds this threshold, <b>the message is rejected</b>. This configuration does not take effect if \<c>message.timestamp.type\\</c> is set to \<c>LogAppendTime\\</c>.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>Reserved instances support the following values:</para>
+        /// <item><description><para>The following configurations are supported for reserved instances:</para>
         /// <list type="bullet">
-        /// <item><description><c>retention.ms</c>: the message retention period. Value type: string. Valid values: 3600000 to 31536000000.</description></item>
-        /// <item><description><c>max.message.bytes</c>: the maximum size of a sent message. Value type: string. Valid values: 1048576 to 10485760.</description></item>
-        /// <item><description><c>replications</c>: the number of replicas. Value type: string. Valid values: 1 to 3.</description></item>
-        /// <item><description><c>message.timestamp.type</c>: the timestamp type of a message. Valid values: CreateTime and LogAppendTime. The value CreateTime specifies the timestamp that is specified by the producer when the message is sent. The value LogAppendTime specifies the time when the broker appends the message to its log. If you do not specify this parameter, the time when the message is created on the client is used.</description></item>
-        /// <item><description><c>message.timestamp.difference.max.ms</c>: the maximum positive or negative difference allowed between the timestamp when the broker receives a message and the timestamp specified in the message. If you set message.timestamp.type to CreateTime, <b>a message is rejected</b> if the difference in timestamp exceeds the threshold. If you set message.timestamp.type to LogAppendTime, this configuration does not take effect.</description></item>
+        /// <item><description><para><c>retention.ms</c> specifies the message retention period. The value must be a string. The value must be in the range of 3,600,000 to 31,536,000,000.</para>
+        /// </description></item>
+        /// <item><description><para><c>max.message.bytes</c> specifies the maximum message size. The value must be a string. The value must be in the range of 1,048,576 to 10,485,760.</para>
+        /// </description></item>
+        /// <item><description><para><c>message.timestamp.type</c> specifies the message timestamp type. \<c>CreateTime\\</c> indicates the timestamp that is specified by the producer when the message is sent. If no timestamp is specified, the time when the message is created on the client is used. \<c>LogAppendTime\\</c> indicates the time when the message is stored on the server. Valid values: \<c>CreateTime\\</c> and \<c>LogAppendTime\\</c>.</para>
+        /// </description></item>
+        /// <item><description><para><c>message.timestamp.difference.max.ms</c> specifies the maximum allowed difference between the timestamp of the server that receives the message and the timestamp specified in the message. If \<c>message.timestamp.type\\</c> is set to \<c>CreateTime\\</c> and the time difference exceeds this threshold, <b>the message is rejected</b>. This configuration does not take effect if \<c>message.timestamp.type\\</c> is set to \<c>LogAppendTime\\</c>.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>3</para>
+        /// <para>3600000</para>
         /// </summary>
         [NameInMap("Value")]
         [Validation(Required=false)]
