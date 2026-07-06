@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListColumnsRequest : TeaModel {
         /// <summary>
-        /// <para>The column comment. Supports fuzzy match.</para>
+        /// <para>The comment. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test comment</para>
@@ -19,8 +19,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public string Comment { get; set; }
 
+        [NameInMap("IncludeExtendedProperties")]
+        [Validation(Required=false)]
+        public bool? IncludeExtendedProperties { get; set; }
+
         /// <summary>
-        /// <para>The column name. Supports fuzzy match.</para>
+        /// <para>The name. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_table</para>
@@ -30,12 +34,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The sort order. Default: Asc. Valid values:</para>
+        /// <para>The sort order. Default value: Asc. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Asc</para>
-        /// </description></item>
-        /// <item><description><para>Desc</para>
-        /// </description></item>
+        /// <item><description>Asc: ascending order</description></item>
+        /// <item><description>Desc: descending order</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,7 +48,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default: 1.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -56,7 +58,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page size. Default: 10. Maximum: 100.</para>
+        /// <para>The number of entries per page. Default value: 10. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -66,12 +68,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The sort field. Default: Position. Valid values:</para>
+        /// <para>The sort field. Default value: Position. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Name</para>
-        /// </description></item>
-        /// <item><description><para>Position</para>
-        /// </description></item>
+        /// <item><description>Name: name</description></item>
+        /// <item><description>Position: position</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The table ID. Call the ListTables operation or refer to <a href="https://help.aliyun.com/document_detail/2880092.html">Concepts related to metadata entities</a> to obtain this value.</para>
+        /// <para>The ID of the data table. You can obtain the ID from the response of the ListTables operation. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Metadata entity concepts</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

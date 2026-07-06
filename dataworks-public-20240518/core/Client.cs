@@ -9004,14 +9004,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a deployment process for entities in the Data Studio (new version).</para>
+        /// <para>Creates a publish process for an entity in the new-version DataStudio.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: This API does not support batch operations. If you specify multiple entities to be published, all entities except the first one are ignored.
-        /// Notice: This API may not be available in earlier versions of the SDK. In that case, use the CreateDeployment API, which accepts the same parameters.</para>
+        /// <para>Notice: This operation does not support batch operations. If you specify multiple publish entities in the parameters, all entities except the first one are ignored.
+        /// Notice: This operation may not be available in earlier versions of the SDK. In this case, use the CreateDeployment operation. The parameters are the same as those described in this topic.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -9035,6 +9035,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
                 request.ObjectIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectIds, "ObjectIds", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRunUntilStage))
+            {
+                body["AutoRunUntilStage"] = request.AutoRunUntilStage;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["Description"] = request.Description;
@@ -9046,6 +9050,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
             {
                 body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunMode))
+            {
+                body["RunMode"] = request.RunMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
@@ -9072,14 +9080,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a deployment process for entities in the Data Studio (new version).</para>
+        /// <para>Creates a publish process for an entity in the new-version DataStudio.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: This API does not support batch operations. If you specify multiple entities to be published, all entities except the first one are ignored.
-        /// Notice: This API may not be available in earlier versions of the SDK. In that case, use the CreateDeployment API, which accepts the same parameters.</para>
+        /// <para>Notice: This operation does not support batch operations. If you specify multiple publish entities in the parameters, all entities except the first one are ignored.
+        /// Notice: This operation may not be available in earlier versions of the SDK. In this case, use the CreateDeployment operation. The parameters are the same as those described in this topic.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -9103,6 +9111,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
                 request.ObjectIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectIds, "ObjectIds", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRunUntilStage))
+            {
+                body["AutoRunUntilStage"] = request.AutoRunUntilStage;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["Description"] = request.Description;
@@ -9114,6 +9126,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
             {
                 body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunMode))
+            {
+                body["RunMode"] = request.RunMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
@@ -9140,14 +9156,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a deployment process for entities in the Data Studio (new version).</para>
+        /// <para>Creates a publish process for an entity in the new-version DataStudio.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: This API does not support batch operations. If you specify multiple entities to be published, all entities except the first one are ignored.
-        /// Notice: This API may not be available in earlier versions of the SDK. In that case, use the CreateDeployment API, which accepts the same parameters.</para>
+        /// <para>Notice: This operation does not support batch operations. If you specify multiple publish entities in the parameters, all entities except the first one are ignored.
+        /// Notice: This operation may not be available in earlier versions of the SDK. In this case, use the CreateDeployment operation. The parameters are the same as those described in this topic.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -9166,14 +9182,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a deployment process for entities in the Data Studio (new version).</para>
+        /// <para>Creates a publish process for an entity in the new-version DataStudio.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: This API does not support batch operations. If you specify multiple entities to be published, all entities except the first one are ignored.
-        /// Notice: This API may not be available in earlier versions of the SDK. In that case, use the CreateDeployment API, which accepts the same parameters.</para>
+        /// <para>Notice: This operation does not support batch operations. If you specify multiple publish entities in the parameters, all entities except the first one are ignored.
+        /// Notice: This operation may not be available in earlier versions of the SDK. In this case, use the CreateDeployment operation. The parameters are the same as those described in this topic.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -21348,13 +21364,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a specific field of a table in Data Map.</para>
+        /// <para>Retrieves the details of a specified column in a Data Map table.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>DataWorks Basic Edition or a higher edition is required.</description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -21393,13 +21409,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a specific field of a table in Data Map.</para>
+        /// <para>Retrieves the details of a specified column in a Data Map table.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>DataWorks Basic Edition or a higher edition is required.</description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -21438,13 +21454,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a specific field of a table in Data Map.</para>
+        /// <para>Retrieves the details of a specified column in a Data Map table.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>DataWorks Basic Edition or a higher edition is required.</description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -21463,13 +21479,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a specific field of a table in Data Map.</para>
+        /// <para>Retrieves the details of a specified column in a Data Map table.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>DataWorks Basic Edition or a higher edition is required.</description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -28336,13 +28352,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a specific table in Data Map.</para>
+        /// <para>Retrieves the details of a specified data table in DataWorks Data Map. You can specify whether to return business metadata.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>DataWorks Basic Edition or a higher edition is required.</description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -28381,13 +28397,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a specific table in Data Map.</para>
+        /// <para>Retrieves the details of a specified data table in DataWorks Data Map. You can specify whether to return business metadata.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>DataWorks Basic Edition or a higher edition is required.</description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -28426,13 +28442,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a specific table in Data Map.</para>
+        /// <para>Retrieves the details of a specified data table in DataWorks Data Map. You can specify whether to return business metadata.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>DataWorks Basic Edition or a higher edition is required.</description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -28451,13 +28467,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a specific table in Data Map.</para>
+        /// <para>Retrieves the details of a specified data table in DataWorks Data Map. You can specify whether to return business metadata.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>DataWorks Basic Edition or a higher edition is required.</description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -29764,7 +29780,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports a workflow and its child nodes that are specified by the FlowSpec field to DataStudio.</para>
+        /// <para>Imports a workflow node defined by FlowSpec and its child nodes into DataStudio.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -29773,8 +29789,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <para>Notice: </para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>This API does not support importing multiple workflow definitions. If you define more than one workflow definition in the FlowSpec, all workflow definitions except the first one are ignored.</description></item>
-        /// <item><description>This is an asynchronous API. Calling this API returns an asynchronous task object. You must call the GetJobStatus API to query the execution status of the task.</description></item>
+        /// <item><description>This operation does not support importing multiple workflows. If more than one workflow is defined in the FlowSpec, all workflows except the first one are ignored.</description></item>
+        /// <item><description>This is an asynchronous operation. The response returns an asynchronous task object. Call GetJobStatus to query the execution status of the task.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -29792,6 +29808,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                body["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
             {
                 body["ProjectId"] = request.ProjectId;
@@ -29821,7 +29841,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports a workflow and its child nodes that are specified by the FlowSpec field to DataStudio.</para>
+        /// <para>Imports a workflow node defined by FlowSpec and its child nodes into DataStudio.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -29830,8 +29850,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <para>Notice: </para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>This API does not support importing multiple workflow definitions. If you define more than one workflow definition in the FlowSpec, all workflow definitions except the first one are ignored.</description></item>
-        /// <item><description>This is an asynchronous API. Calling this API returns an asynchronous task object. You must call the GetJobStatus API to query the execution status of the task.</description></item>
+        /// <item><description>This operation does not support importing multiple workflows. If more than one workflow is defined in the FlowSpec, all workflows except the first one are ignored.</description></item>
+        /// <item><description>This is an asynchronous operation. The response returns an asynchronous task object. Call GetJobStatus to query the execution status of the task.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -29849,6 +29869,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                body["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
             {
                 body["ProjectId"] = request.ProjectId;
@@ -29878,7 +29902,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports a workflow and its child nodes that are specified by the FlowSpec field to DataStudio.</para>
+        /// <para>Imports a workflow node defined by FlowSpec and its child nodes into DataStudio.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -29887,8 +29911,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <para>Notice: </para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>This API does not support importing multiple workflow definitions. If you define more than one workflow definition in the FlowSpec, all workflow definitions except the first one are ignored.</description></item>
-        /// <item><description>This is an asynchronous API. Calling this API returns an asynchronous task object. You must call the GetJobStatus API to query the execution status of the task.</description></item>
+        /// <item><description>This operation does not support importing multiple workflows. If more than one workflow is defined in the FlowSpec, all workflows except the first one are ignored.</description></item>
+        /// <item><description>This is an asynchronous operation. The response returns an asynchronous task object. Call GetJobStatus to query the execution status of the task.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -29907,7 +29931,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports a workflow and its child nodes that are specified by the FlowSpec field to DataStudio.</para>
+        /// <para>Imports a workflow node defined by FlowSpec and its child nodes into DataStudio.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -29916,8 +29940,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <para>Notice: </para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>This API does not support importing multiple workflow definitions. If you define more than one workflow definition in the FlowSpec, all workflow definitions except the first one are ignored.</description></item>
-        /// <item><description>This is an asynchronous API. Calling this API returns an asynchronous task object. You must call the GetJobStatus API to query the execution status of the task.</description></item>
+        /// <item><description>This operation does not support importing multiple workflows. If more than one workflow is defined in the FlowSpec, all workflows except the first one are ignored.</description></item>
+        /// <item><description>This is an asynchronous operation. The response returns an asynchronous task object. Call GetJobStatus to query the execution status of the task.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -31140,13 +31164,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the column list of a specified table in Data Map.</para>
+        /// <para>Queries the column list of a specified data table in DataWorks Data Map.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>DataWorks Basic Edition or a higher edition is required.</description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -31185,13 +31209,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the column list of a specified table in Data Map.</para>
+        /// <para>Queries the column list of a specified data table in DataWorks Data Map.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>DataWorks Basic Edition or a higher edition is required.</description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -31230,13 +31254,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the column list of a specified table in Data Map.</para>
+        /// <para>Queries the column list of a specified data table in DataWorks Data Map.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>DataWorks Basic Edition or a higher edition is required.</description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -31255,13 +31279,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the column list of a specified table in Data Map.</para>
+        /// <para>Queries the column list of a specified data table in DataWorks Data Map.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>DataWorks Basic Edition or a higher edition is required.</description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -42636,13 +42660,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of tables in the data map. For data source types that do not support schemas, this operation queries tables within a specified database. For data source types that support schemas, you can query tables within a specified database, MaxCompute project, or schema. The response includes basic table information, technical metadata, and business metadata.</para>
+        /// <para>Queries the list of data tables in DataWorks Data Map. For types that do not support the schema level, you can query data tables under a specified database. For types that support the schema level, you can query data tables under a specified database, MaxCompute project, or schema. The response contains only basic table information and does not include technical metadata or business metadata.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</description></item>
+        /// <item><description>DataWorks Basic Edition or a higher edition is required.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -42687,13 +42711,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of tables in the data map. For data source types that do not support schemas, this operation queries tables within a specified database. For data source types that support schemas, you can query tables within a specified database, MaxCompute project, or schema. The response includes basic table information, technical metadata, and business metadata.</para>
+        /// <para>Queries the list of data tables in DataWorks Data Map. For types that do not support the schema level, you can query data tables under a specified database. For types that support the schema level, you can query data tables under a specified database, MaxCompute project, or schema. The response contains only basic table information and does not include technical metadata or business metadata.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</description></item>
+        /// <item><description>DataWorks Basic Edition or a higher edition is required.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -42738,13 +42762,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of tables in the data map. For data source types that do not support schemas, this operation queries tables within a specified database. For data source types that support schemas, you can query tables within a specified database, MaxCompute project, or schema. The response includes basic table information, technical metadata, and business metadata.</para>
+        /// <para>Queries the list of data tables in DataWorks Data Map. For types that do not support the schema level, you can query data tables under a specified database. For types that support the schema level, you can query data tables under a specified database, MaxCompute project, or schema. The response contains only basic table information and does not include technical metadata or business metadata.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</description></item>
+        /// <item><description>DataWorks Basic Edition or a higher edition is required.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -42763,13 +42787,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of tables in the data map. For data source types that do not support schemas, this operation queries tables within a specified database. For data source types that support schemas, you can query tables within a specified database, MaxCompute project, or schema. The response includes basic table information, technical metadata, and business metadata.</para>
+        /// <para>Queries the list of data tables in DataWorks Data Map. For types that do not support the schema level, you can query data tables under a specified database. For types that support the schema level, you can query data tables under a specified database, MaxCompute project, or schema. The response contains only basic table information and does not include technical metadata or business metadata.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</description></item>
+        /// <item><description>DataWorks Basic Edition or a higher edition is required.</description></item>
         /// </ol>
         /// </description>
         /// 

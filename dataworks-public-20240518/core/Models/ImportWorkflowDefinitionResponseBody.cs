@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ImportWorkflowDefinitionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status information of the asynchronous task.</para>
+        /// <para>The asynchronous task status information.</para>
         /// </summary>
         [NameInMap("AsyncJob")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public bool? Completed { get; set; }
 
             /// <summary>
-            /// <para>The time when the asynchronous task was created. This value is a UNIX timestamp.</para>
+            /// <para>The timestamp when the asynchronous task was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1706581425000</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The error message returned if the asynchronous task fails.</para>
+            /// <para>The error message returned when the asynchronous task fails.</para>
             /// 
             /// <b>Example:</b>
             /// <para>target folder already exists: XXXX</para>
@@ -67,9 +67,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? Progress { get; set; }
 
             /// <summary>
-            /// <para>The response.</para>
+            /// <para>The content that the asynchronous task is expected to return.</para>
             /// <remarks>
-            /// <para>The workflow ID is returned.</para>
+            /// <para>This field currently contains the ID of the workflow created by the asynchronous task.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -83,14 +83,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <para>The status of the asynchronous task.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Running: The asynchronous task is running.</para>
-            /// </description></item>
-            /// <item><description><para>Success: The asynchronous task is complete.</para>
-            /// </description></item>
-            /// <item><description><para>Fail: The asynchronous task fails.</para>
-            /// </description></item>
-            /// <item><description><para>Cancel: The asynchronous task is canceled.</para>
-            /// </description></item>
+            /// <item><description>Running: The task is running.</description></item>
+            /// <item><description>Success: The task succeeded.</description></item>
+            /// <item><description>Fail: The task failed.</description></item>
+            /// <item><description>Cancel: The task was canceled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -101,13 +97,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The type of the asynchronous task.</para>
+            /// <para>The operation type of the asynchronous task.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Create: The asynchronous task is used to create an object.</para>
-            /// </description></item>
-            /// <item><description><para>Cancel: The asynchronous task is used to cancel an operation.</para>
-            /// </description></item>
+            /// <item><description>Create: creates a resource. </description></item>
+            /// <item><description>Cancel: cancels a creation job.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -120,7 +114,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7C352CB7-CD88-50CF-9D0D-E81BDF020E7F</para>

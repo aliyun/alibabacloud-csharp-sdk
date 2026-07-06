@@ -10,8 +10,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ImportWorkflowDefinitionRequest : TeaModel {
         /// <summary>
-        /// <para>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</para>
-        /// <para>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</para>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the DataWorks workspace. You can logon to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace management page to obtain the ID.</para>
+        /// <para>This parameter specifies the DataWorks workspace for this API invoke.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,15 +30,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The FlowSpec information for this workflow. For more information, see <a href="https://github.com/aliyun/alibabacloud-dataworks-tool-dflow/">FlowSpec</a>.</para>
+        /// <para>The FlowSpec information that describes the workflow. For the specification details, see <a href="https://github.com/aliyun/alibabacloud-dataworks-tool-dflow/">FlowSpec</a>.</para>
         /// <remarks>
-        /// <para>How to quickly obtain a FlowSpec template?</para>
-        /// </remarks>
+        /// <para>How do I quickly obtain a FlowSpec template?</para>
         /// <list type="bullet">
-        /// <item><description>Open a workflow in Data Studio, then click &quot;Show Spec&quot; in the top-right corner to retrieve the FlowSpec description for the current workflow. You can use this FlowSpec description to quickly build a template that meets your requirements.</description></item>
+        /// <item><description>Open a workflow in DataStudio, and then click <b>Show Spec</b> in the upper-right corner to obtain the FlowSpec description of the current workflow. You can use this FlowSpec description to quickly build a template that meets your requirements.</description></item>
         /// </list>
+        /// </remarks>
         /// <remarks>
-        /// <para>This interface supports creating both the workflow and its internal nodes simultaneously. Therefore, please pay close attention to the ID specified in the FlowSpec. If the provided ID already exists, the operation will be treated as an update. A create operation is performed only if the ID is omitted or does not exist.</para>
+        /// <para>Notice: This operation supports creating a workflow and its internal nodes at the same time. Pay attention to the IDs specified in the FlowSpec. If an ID already exists, the operation becomes an update. The operation becomes a create only when no ID is specified or the ID does not exist.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

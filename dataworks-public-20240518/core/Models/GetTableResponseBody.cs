@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request succeeded.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>Detailed information about the table.</para>
+        /// <para>The details of the data table.</para>
         /// </summary>
         [NameInMap("Table")]
         [Validation(Required=false)]
