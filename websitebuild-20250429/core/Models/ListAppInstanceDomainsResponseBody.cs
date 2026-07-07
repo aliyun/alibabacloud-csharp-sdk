@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ListAppInstanceDomainsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial.</para>
+        /// <para>The detailed reason why access was denied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether a retry is allowed.</para>
+        /// <para>Indicates whether retry is allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -50,9 +50,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic error message, which is used to replace the <c>%s</c> placeholder in the <b>ErrMessage</b> response parameter.</para>
+        /// <para>The dynamic error message, which is used to replace the <c>%s</c> in the <b>ErrMessage</b> return parameter.</para>
         /// <remarks>
-        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, the value of the <b>DtsJobId</b> request parameter is invalid.</para>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, the request parameter <b>DtsJobId</b> is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -63,14 +63,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error parameters.</para>
+        /// <para>The error parameters returned.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return per query.</para>
+        /// <para>The maximum number of entries per query.</para>
         /// <para>Valid values: 10 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
@@ -98,21 +98,21 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? CurrentPageNum { get; set; }
 
             /// <summary>
-            /// <para>The query results.</para>
+            /// <para>The request results.</para>
             /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
             public List<ListAppInstanceDomainsResponseBodyModuleData> Data { get; set; }
             public class ListAppInstanceDomainsResponseBodyModuleData : TeaModel {
                 /// <summary>
-                /// <para>The SSL certificate information of the domain name.</para>
+                /// <para>The domain name SSL certificate information.</para>
                 /// </summary>
                 [NameInMap("Certificate")]
                 [Validation(Required=false)]
                 public ListAppInstanceDomainsResponseBodyModuleDataCertificate Certificate { get; set; }
                 public class ListAppInstanceDomainsResponseBodyModuleDataCertificate : TeaModel {
                     /// <summary>
-                    /// <para>The certificate name.</para>
+                    /// <para>The name of the certificate.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2024</para>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string CertificateName { get; set; }
 
                     /// <summary>
-                    /// <para>The certificate status.</para>
+                    /// <para>The status of the certificate.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>ACTIVE</para>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string CertificateStatus { get; set; }
 
                     /// <summary>
-                    /// <para>The certificate type.</para>
+                    /// <para>The type of the certificate.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>self-signed</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 }
 
                 /// <summary>
-                /// <para>The time when the instance was created. Format: yyyy-MM-dd HH:mm:ss.</para>
+                /// <para>The instance creation time. Format: yyyy-MM-dd HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1683256054000</para>
@@ -162,6 +162,46 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
+
+                [NameInMap("DnsConflict")]
+                [Validation(Required=false)]
+                public ListAppInstanceDomainsResponseBodyModuleDataDnsConflict DnsConflict { get; set; }
+                public class ListAppInstanceDomainsResponseBodyModuleDataDnsConflict : TeaModel {
+                    [NameInMap("CanAutoResolve")]
+                    [Validation(Required=false)]
+                    public bool? CanAutoResolve { get; set; }
+
+                    [NameInMap("HasConflict")]
+                    [Validation(Required=false)]
+                    public bool? HasConflict { get; set; }
+
+                    [NameInMap("Message")]
+                    [Validation(Required=false)]
+                    public string Message { get; set; }
+
+                    [NameInMap("Records")]
+                    [Validation(Required=false)]
+                    public List<ListAppInstanceDomainsResponseBodyModuleDataDnsConflictRecords> Records { get; set; }
+                    public class ListAppInstanceDomainsResponseBodyModuleDataDnsConflictRecords : TeaModel {
+                        [NameInMap("Host")]
+                        [Validation(Required=false)]
+                        public string Host { get; set; }
+
+                        [NameInMap("RecordType")]
+                        [Validation(Required=false)]
+                        public string RecordType { get; set; }
+
+                        [NameInMap("Status")]
+                        [Validation(Required=false)]
+                        public string Status { get; set; }
+
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                    }
+
+                }
 
                 /// <summary>
                 /// <para>The domain name.</para>
@@ -172,6 +212,20 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 [NameInMap("DomainName")]
                 [Validation(Required=false)]
                 public string DomainName { get; set; }
+
+                [NameInMap("Migration")]
+                [Validation(Required=false)]
+                public ListAppInstanceDomainsResponseBodyModuleDataMigration Migration { get; set; }
+                public class ListAppInstanceDomainsResponseBodyModuleDataMigration : TeaModel {
+                    [NameInMap("MigrationStatus")]
+                    [Validation(Required=false)]
+                    public string MigrationStatus { get; set; }
+
+                    [NameInMap("PreviousDomain")]
+                    [Validation(Required=false)]
+                    public object PreviousDomain { get; set; }
+
+                }
 
                 /// <summary>
                 /// <para>The overall binding status.</para>
@@ -408,14 +462,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public ListAppInstanceDomainsResponseBodyModuleNext Next { get; set; }
             public class ListAppInstanceDomainsResponseBodyModuleNext : TeaModel {
                 /// <summary>
-                /// <para>The SSL certificate information of the domain name.</para>
+                /// <para>The domain name SSL certificate information.</para>
                 /// </summary>
                 [NameInMap("Certificate")]
                 [Validation(Required=false)]
                 public ListAppInstanceDomainsResponseBodyModuleNextCertificate Certificate { get; set; }
                 public class ListAppInstanceDomainsResponseBodyModuleNextCertificate : TeaModel {
                     /// <summary>
-                    /// <para>The certificate name.</para>
+                    /// <para>The name of the certificate.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>jfztkg202502</para>
@@ -425,7 +479,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string CertificateName { get; set; }
 
                     /// <summary>
-                    /// <para>The certificate status.</para>
+                    /// <para>The status of the certificate.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>ACTIVE</para>
@@ -435,7 +489,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string CertificateStatus { get; set; }
 
                     /// <summary>
-                    /// <para>The certificate type.</para>
+                    /// <para>The type of the certificate.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Server</para>
@@ -457,7 +511,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 }
 
                 /// <summary>
-                /// <para>The time when the instance was created. Format: yyyy-MM-dd HH:mm:ss.</para>
+                /// <para>The instance creation time. Format: yyyy-MM-dd HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1741572465000</para>
@@ -465,6 +519,42 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
+
+                [NameInMap("DnsConflict")]
+                [Validation(Required=false)]
+                public ListAppInstanceDomainsResponseBodyModuleNextDnsConflict DnsConflict { get; set; }
+                public class ListAppInstanceDomainsResponseBodyModuleNextDnsConflict : TeaModel {
+                    [NameInMap("CanAutoResolve")]
+                    [Validation(Required=false)]
+                    public bool? CanAutoResolve { get; set; }
+
+                    [NameInMap("HasConflict")]
+                    [Validation(Required=false)]
+                    public bool? HasConflict { get; set; }
+
+                    [NameInMap("Message")]
+                    [Validation(Required=false)]
+                    public string Message { get; set; }
+
+                    [NameInMap("Records")]
+                    [Validation(Required=false)]
+                    public List<ListAppInstanceDomainsResponseBodyModuleNextDnsConflictRecords> Records { get; set; }
+                    public class ListAppInstanceDomainsResponseBodyModuleNextDnsConflictRecords : TeaModel {
+                        [NameInMap("Host")]
+                        [Validation(Required=false)]
+                        public string Host { get; set; }
+
+                        [NameInMap("RecordType")]
+                        [Validation(Required=false)]
+                        public string RecordType { get; set; }
+
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                    }
+
+                }
 
                 /// <summary>
                 /// <para>The domain name.</para>
@@ -475,6 +565,20 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 [NameInMap("DomainName")]
                 [Validation(Required=false)]
                 public string DomainName { get; set; }
+
+                [NameInMap("Migration")]
+                [Validation(Required=false)]
+                public ListAppInstanceDomainsResponseBodyModuleNextMigration Migration { get; set; }
+                public class ListAppInstanceDomainsResponseBodyModuleNextMigration : TeaModel {
+                    [NameInMap("MigrationStatus")]
+                    [Validation(Required=false)]
+                    public string MigrationStatus { get; set; }
+
+                    [NameInMap("PreviousDomain")]
+                    [Validation(Required=false)]
+                    public object PreviousDomain { get; set; }
+
+                }
 
                 /// <summary>
                 /// <para>The overall binding status.</para>
@@ -512,6 +616,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     [NameInMap("Provider")]
                     [Validation(Required=false)]
                     public string Provider { get; set; }
+
+                    [NameInMap("RootDomain")]
+                    [Validation(Required=false)]
+                    public string RootDomain { get; set; }
 
                 }
 
@@ -679,6 +787,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     [Validation(Required=false)]
                     public string VerificationStatus { get; set; }
 
+                    [NameInMap("VerificationStatusCode")]
+                    [Validation(Required=false)]
+                    public string VerificationStatusCode { get; set; }
+
                 }
 
             }
@@ -708,7 +820,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public bool? PrePage { get; set; }
 
             /// <summary>
-            /// <para>In addition to pagination limits, the server processes up to 1,000 recent records per query. If the results exceed 1,000 records, <b>ResultLimit</b> is <b>true</b>. In this case, narrow the time range and search again. Otherwise, <b>ResultLimit</b> is <b>false</b>.</para>
+            /// <para>The server processes up to 1000 recent records beyond the pagination limit. If the results exceed 1000 entries, <b>ResultLimit</b> is <b>true</b>, and you must narrow the time range and search again. Otherwise, <b>ResultLimit</b> is <b>false</b>.</para>
             /// </summary>
             [NameInMap("ResultLimit")]
             [Validation(Required=false)]
@@ -737,7 +849,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         }
 
         /// <summary>
-        /// <para>The token for the next query. This parameter is empty if there are no more results.</para>
+        /// <para>The token for the next query. This parameter is empty if no more results exist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dw+qdTi1EjVSWX/INJdYNw==</para>
@@ -767,7 +879,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>系统异常</para>

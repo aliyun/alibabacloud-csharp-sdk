@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <summary>
         /// <para>The dynamic error message, which is used to replace the <b>%s</b> placeholder in the <b>ErrMessage</b> response element.</para>
         /// <remarks>
-        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, the request parameter <b>DtsJobId</b> is invalid.</para>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, the value of the <b>DtsJobId</b> request parameter is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -70,13 +70,13 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>The data table module.</para>
+        /// <para>The data table module. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>ABTest: experiment data table</para>
         /// </description></item>
         /// <item><description><para>ExperimentTool: experiment tool table</para>
         /// </description></item>
-        /// <item><description><para>DataDiagnosis: data modeling diagnostics.</para>
+        /// <item><description><para>DataDiagnosis: data modeling diagnostics</para>
         /// </description></item>
         /// </list>
         /// </summary>
@@ -84,6 +84,46 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public BindAppDomainResponseBodyModule Module { get; set; }
         public class BindAppDomainResponseBodyModule : TeaModel {
+            [NameInMap("DnsConflict")]
+            [Validation(Required=false)]
+            public BindAppDomainResponseBodyModuleDnsConflict DnsConflict { get; set; }
+            public class BindAppDomainResponseBodyModuleDnsConflict : TeaModel {
+                [NameInMap("CanAutoResolve")]
+                [Validation(Required=false)]
+                public bool? CanAutoResolve { get; set; }
+
+                [NameInMap("HasConflict")]
+                [Validation(Required=false)]
+                public bool? HasConflict { get; set; }
+
+                [NameInMap("Message")]
+                [Validation(Required=false)]
+                public string Message { get; set; }
+
+                [NameInMap("Records")]
+                [Validation(Required=false)]
+                public List<BindAppDomainResponseBodyModuleDnsConflictRecords> Records { get; set; }
+                public class BindAppDomainResponseBodyModuleDnsConflictRecords : TeaModel {
+                    [NameInMap("Host")]
+                    [Validation(Required=false)]
+                    public string Host { get; set; }
+
+                    [NameInMap("RecordType")]
+                    [Validation(Required=false)]
+                    public string RecordType { get; set; }
+
+                    [NameInMap("Status")]
+                    [Validation(Required=false)]
+                    public string Status { get; set; }
+
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                }
+
+            }
+
             /// <summary>
             /// <para>Indicates whether the request is successful.</para>
             /// 

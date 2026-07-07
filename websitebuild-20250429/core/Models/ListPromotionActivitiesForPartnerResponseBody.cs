@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ListPromotionActivitiesForPartnerResponseBody : TeaModel {
         /// <summary>
-        /// <para>The access denied detail.</para>
+        /// <para>The access denied details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The creator.</para>
+                /// <para>The user who created the activity.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>onlinehoztestrolebasicallow1755461756261068111(300216315676902267)</para>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string CreatedBy { get; set; }
 
                 /// <summary>
-                /// <para>The eligibility configuration (JSON).</para>
+                /// <para>The eligibility configuration in JSON format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{}</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string EndDate { get; set; }
 
                 /// <summary>
-                /// <para>The offer configuration (JSON).</para>
+                /// <para>The offer configuration in JSON format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{}</para>
@@ -232,7 +232,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public long? TotalQuota { get; set; }
 
                 /// <summary>
-                /// <para>The touchpoint configuration (JSON).</para>
+                /// <para>The touchpoint configuration in JSON format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{}</para>
@@ -274,7 +274,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             }
 
             /// <summary>
-            /// <para>The total count.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
