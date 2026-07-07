@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class RefundFeeData : TeaModel {
         /// <summary>
+        /// <para>Maximum amount (cents)</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public long? MaxRefundFee { get; set; }
 
         /// <summary>
+        /// <para>Minimum amount (cents)</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

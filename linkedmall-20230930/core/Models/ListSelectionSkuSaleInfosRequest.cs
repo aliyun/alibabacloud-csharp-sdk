@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class ListSelectionSkuSaleInfosRequest : TeaModel {
         /// <summary>
+        /// <para>Parameters for querying SKU sales information in batch</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]

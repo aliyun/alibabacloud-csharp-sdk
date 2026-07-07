@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class SplitPurchaseOrderRequest : TeaModel {
+        /// <summary>
+        /// <para>Input parameters for splitting and rendering a purchase order</para>
+        /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public PurchaseOrderRenderQuery Body { get; set; }

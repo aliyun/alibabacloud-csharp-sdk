@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class QueryOrdersRequest : TeaModel {
         /// <summary>
+        /// <para>Contains the query parameters to retrieve a list of main orders.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]

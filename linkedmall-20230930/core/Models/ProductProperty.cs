@@ -9,10 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class ProductProperty : TeaModel {
+        /// <summary>
+        /// <para>The text of the property.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>颜色</para>
+        /// </summary>
         [NameInMap("text")]
         [Validation(Required=false)]
         public string Text { get; set; }
 
+        /// <summary>
+        /// <para>A collection of property values.</para>
+        /// </summary>
         [NameInMap("values")]
         [Validation(Required=false)]
         public List<string> Values { get; set; }

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class CreateRefundOrderRequest : TeaModel {
         /// <summary>
+        /// <para>Create a return order</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]

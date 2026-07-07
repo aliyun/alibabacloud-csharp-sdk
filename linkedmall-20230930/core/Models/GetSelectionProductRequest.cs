@@ -10,18 +10,21 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class GetSelectionProductRequest : TeaModel {
         /// <summary>
+        /// <para>Region code (use a five-level township or subdistrict address code)</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>110000</para>
+        /// <para>330106109</para>
         /// </summary>
         [NameInMap("divisionCode")]
         [Validation(Required=false)]
         public string DivisionCode { get; set; }
 
         /// <summary>
+        /// <para>Purchaser ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>56****2304</para>
+        /// <para>PID22000009</para>
         /// </summary>
         [NameInMap("purchaserId")]
         [Validation(Required=false)]

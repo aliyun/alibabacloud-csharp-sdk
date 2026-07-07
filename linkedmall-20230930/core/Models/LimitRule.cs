@@ -10,6 +10,11 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class LimitRule : TeaModel {
         /// <summary>
+        /// <para>Start time of validity</para>
+        /// <remarks>
+        /// <para>UNIX timestamp in milliseconds</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>1724947200000</para>
         /// </summary>
@@ -18,6 +23,11 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public long? BeginTime { get; set; }
 
         /// <summary>
+        /// <para>Period condition</para>
+        /// <remarks>
+        /// <para>This field applies only when ruleType is UpperNumberPerUserPeriod.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>day</para>
         /// </summary>
@@ -26,6 +36,11 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string Condcase { get; set; }
 
         /// <summary>
+        /// <para>End time of validity</para>
+        /// <remarks>
+        /// <para>UNIX timestamp in milliseconds</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>1724947200000</para>
         /// </summary>
@@ -34,6 +49,11 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public long? EndTime { get; set; }
 
         /// <summary>
+        /// <para>Purchase limit quantity</para>
+        /// <remarks>
+        /// <para>If multiple purchase limit rules are active at the same time, the final limit is the minimum value.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -42,6 +62,8 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public int? LimitNum { get; set; }
 
         /// <summary>
+        /// <para>Purchase limit type</para>
+        /// 
         /// <b>Example:</b>
         /// <para>UpperNumberPerUser</para>
         /// </summary>

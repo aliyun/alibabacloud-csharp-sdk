@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class ListPurchaserShopsRequest : TeaModel {
         /// <summary>
+        /// <para>Page number of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>Number of items per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class ProductSaleInfoQuery : TeaModel {
         /// <summary>
+        /// <para>Distributor shop ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string DistributorShopId { get; set; }
 
         /// <summary>
+        /// <para>Area code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>110000</para>
         /// </summary>

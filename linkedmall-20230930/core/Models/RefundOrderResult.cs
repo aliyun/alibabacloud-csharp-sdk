@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class RefundOrderResult : TeaModel {
         /// <summary>
+        /// <para>Dispute ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6693****4352</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string DisputeId { get; set; }
 
         /// <summary>
+        /// <para>Status of the reverse operation<br>1 – Return pending<br>2 – Awaiting buyer return<br>3 – Awaiting merchant receipt<br>4 – Refund closed<br>5 – Refund succeeded<br>6 – Refund denied<br>17 – Canceling refund</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public int? DisputeStatus { get; set; }
 
         /// <summary>
+        /// <para>Sub-distribution order ID for which the reverse operation was initiated</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6692****5458</para>
         /// </summary>
@@ -34,8 +40,10 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string OrderLineId { get; set; }
 
         /// <summary>
+        /// <para>API request ID</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>3239281273464326823</para>
+        /// <para>841471F6-5D61-1331-8C38-2****B55</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]

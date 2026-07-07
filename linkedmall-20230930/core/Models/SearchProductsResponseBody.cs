@@ -9,19 +9,36 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class SearchProductsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Product collection</para>
+        /// </summary>
         [NameInMap("products")]
         [Validation(Required=false)]
         public List<SearchProductsResponseBodyProducts> Products { get; set; }
         public class SearchProductsResponseBodyProducts : TeaModel {
+            /// <summary>
+            /// <para>Brand name</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>绿植</para>
+            /// </summary>
             [NameInMap("bandName")]
             [Validation(Required=false)]
             public string BandName { get; set; }
 
+            /// <summary>
+            /// <para>Reason for unsellable status</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>库存不足</para>
+            /// </summary>
             [NameInMap("canNotSellReason")]
             [Validation(Required=false)]
             public string CanNotSellReason { get; set; }
 
             /// <summary>
+            /// <para>Whether the product is sellable (calculated value)</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -29,11 +46,16 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
             [Validation(Required=false)]
             public bool? CanSell { get; set; }
 
+            /// <summary>
+            /// <para>Category</para>
+            /// </summary>
             [NameInMap("categoryChain")]
             [Validation(Required=false)]
             public List<SearchProductsResponseBodyProductsCategoryChain> CategoryChain { get; set; }
             public class SearchProductsResponseBodyProductsCategoryChain : TeaModel {
                 /// <summary>
+                /// <para>Category ID</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>201792301</para>
                 /// </summary>
@@ -41,11 +63,19 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
                 [Validation(Required=false)]
                 public long? CategoryId { get; set; }
 
+                /// <summary>
+                /// <para>Is leaf node</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
+                /// </summary>
                 [NameInMap("isLeaf")]
                 [Validation(Required=false)]
                 public bool? IsLeaf { get; set; }
 
                 /// <summary>
+                /// <para>Level</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -53,11 +83,19 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
                 [Validation(Required=false)]
                 public int? Level { get; set; }
 
+                /// <summary>
+                /// <para>Category name</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>名称测试</para>
+                /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
+                /// <para>Parent class ID</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
@@ -67,11 +105,16 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 
             }
 
+            /// <summary>
+            /// <para>Billing cycle</para>
+            /// </summary>
             [NameInMap("credit")]
             [Validation(Required=false)]
             public List<string> Credit { get; set; }
 
             /// <summary>
+            /// <para>Price difference range</para>
+            /// 
             /// <b>Example:</b>
             /// <para>￥-9998.95 ~ ￥-9977.90</para>
             /// </summary>
@@ -80,6 +123,8 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
             public string DiffPrice { get; set; }
 
             /// <summary>
+            /// <para>Distribution purchase price range</para>
+            /// 
             /// <b>Example:</b>
             /// <para>￥0.05 ~ ￥21.10</para>
             /// </summary>
@@ -88,6 +133,8 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
             public string DistributionPrice { get; set; }
 
             /// <summary>
+            /// <para>Distribution premium rate range</para>
+            /// 
             /// <b>Example:</b>
             /// <para>-100.00% ~ -99.79%</para>
             /// </summary>
@@ -96,14 +143,20 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
             public string DistributionPriceRatio { get; set; }
 
             /// <summary>
+            /// <para>Source platform</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>Taobao</para>
+            /// <para>Taobao（来源淘宝）
+            /// Tmall（来源天猫）
+            /// Cbu（来源1688分销货盘）</para>
             /// </summary>
             [NameInMap("externalPlatformType")]
             [Validation(Required=false)]
             public string ExternalPlatformType { get; set; }
 
             /// <summary>
+            /// <para>Creation time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2025-01-02 12:23:34
             /// (yyyy-MM-dd HH:mm:ss)</para>
@@ -113,6 +166,8 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
+            /// <para>Last modified time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2025-01-02 12:23:34
             /// (yyyy-MM-dd HH:mm:ss)</para>
@@ -122,6 +177,8 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
             public string GmtModified { get; set; }
 
             /// <summary>
+            /// <para>Whether the product is in inventory</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -130,6 +187,8 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
             public bool? InGroup { get; set; }
 
             /// <summary>
+            /// <para>Inventory time</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2025-01-02 12:23:34
             /// (yyyy-MM-dd HH:mm:ss)</para>
@@ -139,6 +198,8 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
             public string InGroupTime { get; set; }
 
             /// <summary>
+            /// <para>Inventory risk level</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Low</para>
             /// </summary>
@@ -147,6 +208,8 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
             public string InventoryRiskLevel { get; set; }
 
             /// <summary>
+            /// <para>Invoice type</para>
+            /// 
             /// <b>Example:</b>
             /// <para>HasInvoice</para>
             /// </summary>
@@ -155,6 +218,8 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
             public string InvoiceType { get; set; }
 
             /// <summary>
+            /// <para>LM product ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxx-xxxxx</para>
             /// </summary>
@@ -163,6 +228,8 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
             public string LmItemId { get; set; }
 
             /// <summary>
+            /// <para>Product main image URL</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="https://img.alicdn.com/xxx.jpg">https://img.alicdn.com/xxx.jpg</a></para>
             /// </summary>
@@ -171,6 +238,8 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
             public string PicUrl { get; set; }
 
             /// <summary>
+            /// <para>Suggested retail price range</para>
+            /// 
             /// <b>Example:</b>
             /// <para>￥9999.00 ~ ￥9999.00</para>
             /// </summary>
@@ -179,6 +248,8 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
             public string PlatformPrice { get; set; }
 
             /// <summary>
+            /// <para>Strikethrough price range</para>
+            /// 
             /// <b>Example:</b>
             /// <para>￥9999.00 ~ ￥9999.00</para>
             /// </summary>
@@ -187,6 +258,8 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
             public string PlatformReservePrice { get; set; }
 
             /// <summary>
+            /// <para>Product ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxxxx</para>
             /// </summary>
@@ -194,11 +267,19 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
             [Validation(Required=false)]
             public string ProductId { get; set; }
 
+            /// <summary>
+            /// <para>Product name</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>绿植</para>
+            /// </summary>
             [NameInMap("productName")]
             [Validation(Required=false)]
             public string ProductName { get; set; }
 
             /// <summary>
+            /// <para>Channel store name</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
             /// </summary>
@@ -207,6 +288,8 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
             public string ShopName { get; set; }
 
             /// <summary>
+            /// <para>Accumulated sales volume</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -215,6 +298,8 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
             public string SoldQuantity { get; set; }
 
             /// <summary>
+            /// <para>Tax code</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3040203000000000000</para>
             /// </summary>
@@ -222,11 +307,20 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
             [Validation(Required=false)]
             public string TaxCode { get; set; }
 
+            /// <summary>
+            /// <para>Tax rate</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>600（6%）
+            /// -100（免税）</para>
+            /// </summary>
             [NameInMap("taxRate")]
             [Validation(Required=false)]
             public long? TaxRate { get; set; }
 
             /// <summary>
+            /// <para>Sales pattern</para>
+            /// 
             /// <b>Example:</b>
             /// <para>JingXiao</para>
             /// </summary>
@@ -237,6 +331,8 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         }
 
         /// <summary>
+        /// <para>Total quantity</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>

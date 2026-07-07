@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class ProductDTO : TeaModel {
         /// <summary>
+        /// <para>Product price (unit: cent)&gt;Notice: It is recommended to include this field.</notice></para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public long? Price { get; set; }
 
         /// <summary>
+        /// <para>Product ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string ProductId { get; set; }
 
         /// <summary>
+        /// <para>Purchaser ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string PurchaserId { get; set; }
 
         /// <summary>
+        /// <para>Quantity</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

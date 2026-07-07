@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class OrderRenderProductDTO : TeaModel {
         /// <summary>
+        /// <para>Product ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,16 +21,18 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string ProductId { get; set; }
 
         /// <summary>
+        /// <para>Purchaser ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>56****2304</para>
+        /// <para>PID56****2304</para>
         /// </summary>
         [NameInMap("purchaserId")]
         [Validation(Required=false)]
         public string PurchaserId { get; set; }
 
         /// <summary>
+        /// <para>Quantity</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

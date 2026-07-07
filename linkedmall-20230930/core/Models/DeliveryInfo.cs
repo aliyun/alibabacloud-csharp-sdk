@@ -9,11 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class DeliveryInfo : TeaModel {
+        /// <summary>
+        /// <para>Display name</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>快递 免邮</para>
+        /// </summary>
         [NameInMap("displayName")]
         [Validation(Required=false)]
         public string DisplayName { get; set; }
 
         /// <summary>
+        /// <para>Unique ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -22,6 +30,8 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string Id { get; set; }
 
         /// <summary>
+        /// <para>Shipping fee amount</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>

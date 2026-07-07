@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class ProductPrice : TeaModel {
         /// <summary>
+        /// <para>Amount payable</para>
+        /// 
         /// <b>Example:</b>
         /// <para>120</para>
         /// </summary>

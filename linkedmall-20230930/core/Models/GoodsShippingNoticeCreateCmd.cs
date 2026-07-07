@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class GoodsShippingNoticeCreateCmd : TeaModel {
         /// <summary>
+        /// <para>Company code</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string CpCode { get; set; }
 
         /// <summary>
+        /// <para>Dispute ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,10 +32,11 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string DisputeId { get; set; }
 
         /// <summary>
+        /// <para>Logistics tracking number</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>SF145****4351</para>
+        /// <para>SF145****4353</para>
         /// </summary>
         [NameInMap("logisticsNo")]
         [Validation(Required=false)]

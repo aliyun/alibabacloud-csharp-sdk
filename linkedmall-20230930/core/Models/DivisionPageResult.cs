@@ -9,13 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class DivisionPageResult : TeaModel {
+        /// <summary>
+        /// <para>Collection of regions</para>
+        /// </summary>
         [NameInMap("divisionList")]
         [Validation(Required=false)]
         public List<Division> DivisionList { get; set; }
 
         /// <summary>
+        /// <para>API request ID</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>3239281273464326823</para>
+        /// <para>841471F6-5D61-1331-8C38-2****B55</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]

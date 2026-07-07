@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class QueryChildDivisionCodeRequest : TeaModel {
         /// <summary>
+        /// <para>The parameters for querying child division codes.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]

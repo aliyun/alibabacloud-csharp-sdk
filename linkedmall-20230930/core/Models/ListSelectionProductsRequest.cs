@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class ListSelectionProductsRequest : TeaModel {
         /// <summary>
+        /// <para>The page number. The value must be 1 or greater.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Valid values: 1 to 20.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,10 +32,11 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The ID of the purchaser.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>56****2304</para>
+        /// <para>PID22000009</para>
         /// </summary>
         [NameInMap("purchaserId")]
         [Validation(Required=false)]

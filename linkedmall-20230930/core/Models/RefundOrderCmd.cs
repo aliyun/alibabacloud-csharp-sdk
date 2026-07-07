@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class RefundOrderCmd : TeaModel {
         /// <summary>
+        /// <para>Refund reason ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -19,11 +20,18 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public long? ApplyReasonTextId { get; set; }
 
+        /// <summary>
+        /// <para>Refund reason text</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>不想要了</para>
+        /// </summary>
         [NameInMap("applyReasonTips")]
         [Validation(Required=false)]
         public string ApplyReasonTips { get; set; }
 
         /// <summary>
+        /// <para>Number of items to return</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,6 +42,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public int? ApplyRefundCount { get; set; }
 
         /// <summary>
+        /// <para>Refund amount in cents</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,6 +53,9 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public long? ApplyRefundFee { get; set; }
 
         /// <summary>
+        /// <para>Refund type
+        /// 1: Refund only
+        /// 3: Return and refund</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,6 +66,10 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public int? BizClaimType { get; set; }
 
         /// <summary>
+        /// <para>Item status
+        /// 4: Not shipped
+        /// 1: Not received
+        /// 2: Received</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,15 +79,25 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public int? GoodsStatus { get; set; }
 
+        /// <summary>
+        /// <para>Customer message</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>不想要了</para>
+        /// </summary>
         [NameInMap("leaveMessage")]
         [Validation(Required=false)]
         public string LeaveMessage { get; set; }
 
+        /// <summary>
+        /// <para>Collection of images</para>
+        /// </summary>
         [NameInMap("leavePictureLists")]
         [Validation(Required=false)]
         public List<LeavePictureList> LeavePictureLists { get; set; }
 
         /// <summary>
+        /// <para>Sub-distribution order ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

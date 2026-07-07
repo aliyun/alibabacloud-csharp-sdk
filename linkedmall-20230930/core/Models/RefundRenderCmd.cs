@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class RefundRenderCmd : TeaModel {
         /// <summary>
+        /// <para>Refund Type: 1 for refund only, 3 for return and refund</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public int? BizClaimType { get; set; }
 
         /// <summary>
+        /// <para>Goods Status: 4 for not shipped, 1 for not received, 2 for received</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public int? GoodsStatus { get; set; }
 
         /// <summary>
+        /// <para>Sub-distribution order ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

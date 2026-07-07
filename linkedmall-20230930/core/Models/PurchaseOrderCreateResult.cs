@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class PurchaseOrderCreateResult : TeaModel {
         /// <summary>
+        /// <para>Purchase Order ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6692****5696</para>
         /// </summary>
@@ -18,8 +20,10 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string PurchaseOrderId { get; set; }
 
         /// <summary>
+        /// <para>API Request requestId</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>3239281273464326823</para>
+        /// <para>841471F6-5D61-1331-8C38-2****B55</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]

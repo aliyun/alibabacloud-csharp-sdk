@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class Division : TeaModel {
         /// <summary>
+        /// <para>Address encoding</para>
+        /// 
         /// <b>Example:</b>
         /// <para>310000</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public long? DivisionCode { get; set; }
 
         /// <summary>
+        /// <para>Address Level</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -25,11 +29,19 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public long? DivisionLevel { get; set; }
 
+        /// <summary>
+        /// <para>Address Name</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>上海</para>
+        /// </summary>
         [NameInMap("divisionName")]
         [Validation(Required=false)]
         public string DivisionName { get; set; }
 
         /// <summary>
+        /// <para>Parent ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -38,6 +50,8 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public long? ParentId { get; set; }
 
         /// <summary>
+        /// <para>Address pinyin</para>
+        /// 
         /// <b>Example:</b>
         /// <para>shang hai</para>
         /// </summary>

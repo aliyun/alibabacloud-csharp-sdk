@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class CreatePurchaseOrderRequest : TeaModel {
         /// <summary>
+        /// <para>Creates a purchase order.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]

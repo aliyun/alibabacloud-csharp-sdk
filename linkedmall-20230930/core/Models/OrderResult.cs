@@ -10,14 +10,18 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class OrderResult : TeaModel {
         /// <summary>
+        /// <para>The order creation time.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>2023-09-01T12:00:00.000Z</para>
+        /// <para>2023-09-11T12:22:24.000+08:00</para>
         /// </summary>
         [NameInMap("createDate")]
         [Validation(Required=false)]
         public string CreateDate { get; set; }
 
         /// <summary>
+        /// <para>The distributor ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>12****01</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string DistributorId { get; set; }
 
         /// <summary>
+        /// <para>The logistics status. Valid values: 1 (Awaiting Seller\&quot;s Shipment), 2 (Awaiting Buyer\&quot;s Confirmation), 3 (Received), 4 (Returned), 5 (Partially Received), 6 (Partially Shipped), and 8 (Logistics Order Not Created).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string LogisticsStatus { get; set; }
 
         /// <summary>
+        /// <para>The order amount, in cents.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public long? OrderAmount { get; set; }
 
         /// <summary>
+        /// <para>The reason the order was closed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>系统关单</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string OrderClosedReason { get; set; }
 
         /// <summary>
+        /// <para>The ID of the main order.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6692****5457</para>
         /// </summary>
@@ -57,11 +69,16 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public string OrderId { get; set; }
 
+        /// <summary>
+        /// <para>The list of sub-orders.</para>
+        /// </summary>
         [NameInMap("orderLineList")]
         [Validation(Required=false)]
         public List<OrderLineResult> OrderLineList { get; set; }
 
         /// <summary>
+        /// <para>The order status. Valid values: 1 (Pending Payment), 2 (Paid), 4 (Closed with Refund), 6 (Transaction Successful), and 8 (Closed).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -70,8 +87,10 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string OrderStatus { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier for the request.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>D12***111</para>
+        /// <para>841471F6-5D61-1331-8C38-2****B55</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]

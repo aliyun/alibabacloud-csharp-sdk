@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class ApplyReason : TeaModel {
         /// <summary>
+        /// <para>The reason ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>403769</para>
         /// </summary>
@@ -17,6 +19,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public long? ReasonTextId { get; set; }
 
+        /// <summary>
+        /// <para>The reason text.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>不想要了</para>
+        /// </summary>
         [NameInMap("reasonTips")]
         [Validation(Required=false)]
         public string ReasonTips { get; set; }

@@ -9,11 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class OrderPageQuery : TeaModel {
+        /// <summary>
+        /// <para>Collection of primary order IDs</para>
+        /// </summary>
         [NameInMap("orderIdList")]
         [Validation(Required=false)]
         public List<string> OrderIdList { get; set; }
 
         /// <summary>
+        /// <para>Page number</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +28,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>Quantity per page</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,6 +39,8 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Purchase order ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6692****5696</para>
         /// </summary>

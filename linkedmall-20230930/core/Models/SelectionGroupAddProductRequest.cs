@@ -10,6 +10,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class SelectionGroupAddProductRequest : TeaModel {
         /// <summary>
+        /// <para>Collection of product IDs to add</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>You can add up to 30 products per call.</description></item>
+        /// </list>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("productIds")]
@@ -17,6 +23,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public List<string> ProductIds { get; set; }
 
         /// <summary>
+        /// <para>Purchaser ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
