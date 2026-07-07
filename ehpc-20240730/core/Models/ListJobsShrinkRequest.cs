@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
     public class ListJobsShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The cluster ID.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> to query the cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,10 +29,10 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string JobFilterShrink { get; set; }
 
         /// <summary>
-        /// <para>The page number of the page to return.</para>
+        /// <para>The page number of the list.</para>
         /// <list type="bullet">
-        /// <item><description>Pages start from page 1.</description></item>
-        /// <item><description>Default value: 1</description></item>
+        /// <item><description>Minimum value: 1.</description></item>
+        /// <item><description>Default value: 1.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -43,10 +43,10 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page when using paged query. Paging is applied to the results.</para>
         /// <list type="bullet">
         /// <item><description>Maximum value: 50.</description></item>
-        /// <item><description>Default value: 10</description></item>
+        /// <item><description>Default value: 10.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

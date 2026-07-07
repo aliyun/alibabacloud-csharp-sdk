@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
 {
     public class ListJobsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The jobs.</para>
+        /// <para>The job list.</para>
         /// </summary>
         [NameInMap("Jobs")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
             public string JobName { get; set; }
 
             /// <summary>
-            /// <para>The job configurations.</para>
+            /// <para>The job configuration.</para>
             /// </summary>
             [NameInMap("JobSpec")]
             [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
                 public string ArrayJobId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the job in the array.</para>
+                /// <para>The array sub-job ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -54,10 +54,10 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
                 public string ArrayJobSubId { get; set; }
 
                 /// <summary>
-                /// <para>The queue format of the job.</para>
+                /// <para>The array job format.</para>
                 /// <list type="bullet">
-                /// <item><description>If the job is not in a queue, the output is empty.</description></item>
-                /// <item><description>The format is X-Y:Z. X indicates the first index, Y indicates the final index, and Z indicates the step size. For example, 2-7:2 indicates three sub-jobs numbered 2, 4, and 6.</description></item>
+                /// <item><description>If the job is not an array job, the output is empty.</description></item>
+                /// <item><description>The format is X-Y:Z, where X is the first index, Y is the last index, and Z is the step size. For example, 2-7:2 indicates that the array job contains three sub-jobs numbered 2, 4, and 6.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The queue name.</para>
+                /// <para>The name of the queue that runs the job.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>comp</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
                 public string JobQueue { get; set; }
 
                 /// <summary>
-                /// <para>The time when the job was last updated.</para>
+                /// <para>The last update time of the job.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1724123085</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
                 public string LastModifyTime { get; set; }
 
                 /// <summary>
-                /// <para>The compute nodes that were used to run the job.</para>
+                /// <para>The list of compute nodes that run the job.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>compute[002,005,003]</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
                 public string NodeList { get; set; }
 
                 /// <summary>
-                /// <para>The job priority. Valid values: 0 to 9. A larger value indicates a higher priority.</para>
+                /// <para>The priority of the job. Valid values: 0 to 9. A larger value indicates a higher priority.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -128,14 +128,14 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
                 public string Priority { get; set; }
 
                 /// <summary>
-                /// <para>The information about the resources required to run the job.</para>
+                /// <para>The resource information required to run the job.</para>
                 /// </summary>
                 [NameInMap("Resources")]
                 [Validation(Required=false)]
                 public ListJobsResponseBodyJobsJobSpecResources Resources { get; set; }
                 public class ListJobsResponseBodyJobsJobSpecResources : TeaModel {
                     /// <summary>
-                    /// <para>The number of vCPUs that were used to run the job.</para>
+                    /// <para>The number of CPU cores used to run the job.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>6</para>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
                     public string Cores { get; set; }
 
                     /// <summary>
-                    /// <para>The number of GPUs that were used to run the job.</para>
+                    /// <para>The number of GPUs used to run the job.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
                     public string Gpus { get; set; }
 
                     /// <summary>
-                    /// <para>The size of memory that was used to run the job.</para>
+                    /// <para>The memory size used to run the job.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1536MB</para>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
                     public string Memory { get; set; }
 
                     /// <summary>
-                    /// <para>The number of compute nodes that were used to run the job.</para>
+                    /// <para>The number of compute nodes that run the job.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>3</para>
@@ -177,14 +177,14 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
                 }
 
                 /// <summary>
-                /// <para>Actual resource usage of the job program</para>
+                /// <para>The resources actually occupied by the job.</para>
                 /// </summary>
                 [NameInMap("ResourcesActualOccupied")]
                 [Validation(Required=false)]
                 public ListJobsResponseBodyJobsJobSpecResourcesActualOccupied ResourcesActualOccupied { get; set; }
                 public class ListJobsResponseBodyJobsJobSpecResourcesActualOccupied : TeaModel {
                     /// <summary>
-                    /// <para>Number of CPU cores.</para>
+                    /// <para>The number of CPU cores.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>4</para>
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
                     public string Cores { get; set; }
 
                     /// <summary>
-                    /// <para>Number of CPUs</para>
+                    /// <para>The number of GPUs.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
                     public string Gpus { get; set; }
 
                     /// <summary>
-                    /// <para>Number of memory.</para>
+                    /// <para>The memory size.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>982MB</para>
@@ -214,7 +214,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
                     public string Memory { get; set; }
 
                     /// <summary>
-                    /// <para>Number of compute nodes.</para>
+                    /// <para>The number of compute nodes.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2</para>
@@ -226,7 +226,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
                 }
 
                 /// <summary>
-                /// <para>The user that ran the job.</para>
+                /// <para>The username of the user who runs the job.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>testuser1</para>
@@ -236,7 +236,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
                 public string RunasUser { get; set; }
 
                 /// <summary>
-                /// <para>Job start time.</para>
+                /// <para>The start time of the job.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1724122486</para>
@@ -246,12 +246,12 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
                 public string StartTime { get; set; }
 
                 /// <summary>
-                /// <para>The job state. Valid values: (PBS cluster and Slurm cluster)</para>
+                /// <para>The job status. Valid values: (PBS cluster/Slurm cluster)</para>
                 /// <list type="bullet">
-                /// <item><description>FINISHED/Completed</description></item>
-                /// <item><description>RUNNING/Running</description></item>
-                /// <item><description>QUEUED/Pending</description></item>
-                /// <item><description>FAILED/Failed</description></item>
+                /// <item><description>FINISHED/Completed: completed.</description></item>
+                /// <item><description>RUNNING/Running: running.</description></item>
+                /// <item><description>QUEUED/Pending: queued and waiting.</description></item>
+                /// <item><description>FAILED/Failed: failed.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -262,7 +262,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
                 public string State { get; set; }
 
                 /// <summary>
-                /// <para>The error output path.</para>
+                /// <para>The standard error output path.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>./Temp</para>
@@ -282,7 +282,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
                 public string StdoutPath { get; set; }
 
                 /// <summary>
-                /// <para>The time when the job was submitted.</para>
+                /// <para>The submission time of the job.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1724122486</para>
@@ -292,7 +292,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
                 public string SubmitTime { get; set; }
 
                 /// <summary>
-                /// <para>The variables of the job.</para>
+                /// <para>The list of job variables.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;PBS_O_SHELL&quot;:&quot;/bin/bash&quot;, 	&quot;PBS_O_HOST&quot;:&quot;manager&quot;, 	&quot;PBS_O_SYSTEM&quot;:&quot;Linux&quot;, 	&quot;PBS_O_LANG&quot;:&quot;en_US.UTF-8&quot;, 	&quot;PBS_O_QUEUE&quot;:&quot;workq&quot;}</para>
@@ -306,7 +306,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         }
 
         /// <summary>
-        /// <para>The page number. Default value: 1</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -316,7 +316,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 10</para>
+        /// <para>The number of entries per page set for the paged query. Paging settings apply. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -336,10 +336,10 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the command was run and the result was obtained. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The request was successful.</description></item>
-        /// <item><description>false: The request failed.</description></item>
+        /// <item><description>true: Succeeded.</description></item>
+        /// <item><description>false: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -19,6 +19,27 @@ namespace AlibabaCloud.SDK.EHPC20240730
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"eu-central-1", "ehpc.eu-central-1.aliyuncs.com"},
+                {"cn-zhangjiakou", "ehpc.cn-zhangjiakou.aliyuncs.com"},
+                {"cn-wulanchabu", "ehpc.cn-wulanchabu.aliyuncs.com"},
+                {"cn-wuhan-lr", "ehpc.cn-wuhan-lr.aliyuncs.com"},
+                {"cn-shenzhen", "ehpc.cn-shenzhen.aliyuncs.com"},
+                {"cn-shanghai", "ehpc.cn-shanghai.aliyuncs.com"},
+                {"cn-qingdao", "ehpc.cn-qingdao.aliyuncs.com"},
+                {"cn-huhehaote", "ehpc.cn-huhehaote.aliyuncs.com"},
+                {"cn-hongkong", "ehpc.cn-hongkong.aliyuncs.com"},
+                {"cn-heyuan", "ehpc.cn-heyuan.aliyuncs.com"},
+                {"cn-hangzhou", "ehpc.cn-hangzhou.aliyuncs.com"},
+                {"cn-guangzhou", "ehpc.cn-guangzhou.aliyuncs.com"},
+                {"cn-chengdu", "ehpc.cn-chengdu.aliyuncs.com"},
+                {"cn-beijing", "ehpc.cn-beijing.aliyuncs.com"},
+                {"ap-southeast-5", "ehpc.ap-southeast-5.aliyuncs.com"},
+                {"ap-southeast-2", "ehpc.ap-southeast-2.aliyuncs.com"},
+                {"ap-southeast-1", "ehpc.ap-southeast-1.aliyuncs.com"},
+                {"ap-northeast-1", "ehpc.ap-northeast-1.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("ehpc", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -983,7 +1004,7 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a batch of compute nodes for an E-HPC cluster.</para>
+        /// <para>Creates compute nodes for an Elastic High Performance Computing (E-HPC) cluster in a batch.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1087,7 +1108,7 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a batch of compute nodes for an E-HPC cluster.</para>
+        /// <para>Creates compute nodes for an Elastic High Performance Computing (E-HPC) cluster in a batch.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1191,7 +1212,7 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a batch of compute nodes for an E-HPC cluster.</para>
+        /// <para>Creates compute nodes for an Elastic High Performance Computing (E-HPC) cluster in a batch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1209,7 +1230,7 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a batch of compute nodes for an E-HPC cluster.</para>
+        /// <para>Creates compute nodes for an Elastic High Performance Computing (E-HPC) cluster in a batch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4475,7 +4496,7 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all clusters of a user in each region.</para>
+        /// <para>Queries the list of all clusters in each region under your account.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4539,7 +4560,7 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all clusters of a user in each region.</para>
+        /// <para>Queries the list of all clusters in each region under your account.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4603,7 +4624,7 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all clusters of a user in each region.</para>
+        /// <para>Queries the list of all clusters in each region under your account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4621,7 +4642,7 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all clusters of a user in each region.</para>
+        /// <para>Queries the list of all clusters in each region under your account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4971,7 +4992,7 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the jobs in a cluster.</para>
+        /// <para>Queries the list of jobs in a specified cluster.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5031,7 +5052,7 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the jobs in a cluster.</para>
+        /// <para>Queries the list of jobs in a specified cluster.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5091,7 +5112,7 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the jobs in a cluster.</para>
+        /// <para>Queries the list of jobs in a specified cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5109,7 +5130,7 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the jobs in a cluster.</para>
+        /// <para>Queries the list of jobs in a specified cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">

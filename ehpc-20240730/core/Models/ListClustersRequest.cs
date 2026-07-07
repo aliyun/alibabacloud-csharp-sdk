@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
 {
     public class ListClustersRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster IDs. You can specify up to 20 IDs.</para>
+        /// <para>The IDs of the clusters to query. Valid values of N: 0 to 20.</para>
         /// </summary>
         [NameInMap("ClusterIds")]
         [Validation(Required=false)]
         public List<string> ClusterIds { get; set; }
 
         /// <summary>
-        /// <para>The cluster names. You can specify up to 20 names.</para>
+        /// <para>The names of the clusters to query. Valid values of N: 0 to 20.</para>
         /// </summary>
         [NameInMap("ClusterNames")]
         [Validation(Required=false)]
         public List<string> ClusterNames { get; set; }
 
         /// <summary>
-        /// <para>The page number of the page to return. Default value: 1.</para>
+        /// <para>The page number of the list. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 10 to 100. Default value: 10</para>
+        /// <para>The number of entries per page in a paged query. Settings the number of rows per page for paging. Valid values: 10 to 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

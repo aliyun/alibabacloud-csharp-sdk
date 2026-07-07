@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
 {
     public class CreateNodesResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of instance IDs for the created compute nodes.</para>
+        /// <para>The list of compute nodes to be created.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
@@ -29,10 +29,8 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         /// <summary>
         /// <para>Indicates whether the operation was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The operation was successful.</para>
-        /// </description></item>
-        /// <item><description><para>false: The operation failed.</para>
-        /// </description></item>
+        /// <item><description>true: Successful.</description></item>
+        /// <item><description>false: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
