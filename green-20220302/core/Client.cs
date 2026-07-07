@@ -3746,7 +3746,7 @@ namespace AlibabaCloud.SDK.Green20220302
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is not billed. Set the query interval to 30 seconds (that is, query the results 30 seconds after submitting the asynchronous moderation task). The maximum query window is 24 hours. After 24 hours, the results are automatically deleted.</para>
+        /// <para>This operation is not billed. Set the polling interval to 30 seconds (query results 30 seconds after submitting the asynchronous moderation task). The maximum query window is 24 hours. After that, results are automatically deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3797,7 +3797,7 @@ namespace AlibabaCloud.SDK.Green20220302
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is not billed. Set the query interval to 30 seconds (that is, query the results 30 seconds after submitting the asynchronous moderation task). The maximum query window is 24 hours. After 24 hours, the results are automatically deleted.</para>
+        /// <para>This operation is not billed. Set the polling interval to 30 seconds (query results 30 seconds after submitting the asynchronous moderation task). The maximum query window is 24 hours. After that, results are automatically deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3848,7 +3848,7 @@ namespace AlibabaCloud.SDK.Green20220302
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is not billed. Set the query interval to 30 seconds (that is, query the results 30 seconds after submitting the asynchronous moderation task). The maximum query window is 24 hours. After 24 hours, the results are automatically deleted.</para>
+        /// <para>This operation is not billed. Set the polling interval to 30 seconds (query results 30 seconds after submitting the asynchronous moderation task). The maximum query window is 24 hours. After that, results are automatically deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3871,7 +3871,7 @@ namespace AlibabaCloud.SDK.Green20220302
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is not billed. Set the query interval to 30 seconds (that is, query the results 30 seconds after submitting the asynchronous moderation task). The maximum query window is 24 hours. After 24 hours, the results are automatically deleted.</para>
+        /// <para>This operation is not billed. Set the polling interval to 30 seconds (query results 30 seconds after submitting the asynchronous moderation task). The maximum query window is 24 hours. After that, results are automatically deleted.</para>
         /// </description>
         /// 
         /// <param name="request">

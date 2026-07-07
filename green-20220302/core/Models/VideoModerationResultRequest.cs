@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 {
     public class VideoModerationResultRequest : TeaModel {
         /// <summary>
-        /// <para>The service code for video moderation.</para>
+        /// <para>The ServiceCode for video moderation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>videoDetection</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         public string Service { get; set; }
 
         /// <summary>
-        /// <para>The parameter set required by the moderation service. taskId specifies the task ID of the moderation task to query. Only one taskId can be specified per request.</para>
+        /// <para>The parameter set required by the moderation service. taskId specifies the taskId of the moderation task to query. Only one taskId can be specified per request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;taskId&quot;:&quot;au_f_8PoWiZKoLbczp5HRn69VdT-1y8@U5&quot;}</para>
