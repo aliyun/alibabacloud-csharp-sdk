@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetWafRulesetResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the WAF ruleset. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2878359.html">ListWafRulesets</a> operation.</para>
+        /// <para>The ID of the WAF ruleset. You can call the <a href="https://help.aliyun.com/document_detail/2878359.html">ListWafRulesets</a> operation to obtain the ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000001</para>
@@ -31,24 +31,16 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The execution phase of the WAF ruleset. Valid values:</para>
+        /// <para>The WAF rule execution phase. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>http_whitelist</c>: A whitelist rule</para>
-        /// </description></item>
-        /// <item><description><para><c>http_custom</c>: A custom rule</para>
-        /// </description></item>
-        /// <item><description><para><c>http_managed</c>: A managed rule</para>
-        /// </description></item>
-        /// <item><description><para><c>http_anti_scan</c>: A scan protection rule</para>
-        /// </description></item>
-        /// <item><description><para><c>http_ratelimit</c>: A rate limit rule</para>
-        /// </description></item>
-        /// <item><description><para><c>ip_access_rule</c>: An IP access rule</para>
-        /// </description></item>
-        /// <item><description><para><c>http_bot</c>: A bot rule</para>
-        /// </description></item>
-        /// <item><description><para><c>http_security_level_rule</c>: A security rule</para>
-        /// </description></item>
+        /// <item><description>http_whitelist: whitelist rules</description></item>
+        /// <item><description>http_custom: custom rules</description></item>
+        /// <item><description>http_managed: managed rules</description></item>
+        /// <item><description>http_anti_scan: scan protection rules</description></item>
+        /// <item><description>http_ratelimit: rate limiting rules</description></item>
+        /// <item><description>ip_access_rule: IP access rules</description></item>
+        /// <item><description>http_bot: advanced mode bots</description></item>
+        /// <item><description>http_security_level_rule: security rules</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -77,7 +69,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public List<WafRuleConfig> Rules { get; set; }
 
         /// <summary>
-        /// <para>The shared configuration for rules within the ruleset.</para>
+        /// <para>The shared configuration of rules in the ruleset.</para>
         /// </summary>
         [NameInMap("Shared")]
         [Validation(Required=false)]
@@ -94,7 +86,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The time when the ruleset was last updated.</para>
+        /// <para>The last modification time of the ruleset.</para>
+        /// <para>Format: RFC 3339 / ISO 8601, UTC time zone (ending with Z).</para>
+        /// <para>Example: 2026-06-10T14:23:45Z</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-01-01T00:00:00Z</para>

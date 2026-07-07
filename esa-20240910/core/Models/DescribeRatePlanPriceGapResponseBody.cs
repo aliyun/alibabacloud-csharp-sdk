@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Currency { get; set; }
 
             /// <summary>
-            /// <para>The order discount amount.</para>
+            /// <para>The discount amount of the order.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

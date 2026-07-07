@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public WafRuleConfig Config { get; set; }
 
         /// <summary>
-        /// <para>The ID of the WAF rule. You can get this ID by calling the <a href="https://help.aliyun.com/document_detail/2878257.html">ListWafRules</a> operation.</para>
+        /// <para>The ID of the WAF rule. You can call the <a href="https://help.aliyun.com/document_detail/2878257.html">ListWafRules</a> operation to obtain the ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2000001</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The name of the rule.</para>
+        /// <para>The rule name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,24 +38,16 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The execution phase of the WAF rule.</para>
+        /// <para>The phase in which the WAF rule runs. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>http_whitelist</c>: A whitelist rule</para>
-        /// </description></item>
-        /// <item><description><para><c>http_custom</c>: A custom rule</para>
-        /// </description></item>
-        /// <item><description><para><c>http_managed</c>: A managed rule</para>
-        /// </description></item>
-        /// <item><description><para><c>http_anti_scan</c>: A scan protection rule</para>
-        /// </description></item>
-        /// <item><description><para><c>http_ratelimit</c>: A rate limiting rule</para>
-        /// </description></item>
-        /// <item><description><para><c>ip_access_rule</c>: An IP access rule</para>
-        /// </description></item>
-        /// <item><description><para><c>http_bot</c>: A bot management rule</para>
-        /// </description></item>
-        /// <item><description><para><c>http_security_level_rule</c>: A security rule</para>
-        /// </description></item>
+        /// <item><description>http_whitelist: whitelist rule</description></item>
+        /// <item><description>http_custom: custom rule</description></item>
+        /// <item><description>http_managed: managed rule</description></item>
+        /// <item><description>http_anti_scan: scan protection rule</description></item>
+        /// <item><description>http_ratelimit: frequency control rule</description></item>
+        /// <item><description>ip_access_rule: IP access rule</description></item>
+        /// <item><description>http_bot: advanced mode bots</description></item>
+        /// <item><description>http_security_level_rule: security rule</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -87,14 +79,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the WAF ruleset. You can get this ID by calling the <a href="https://help.aliyun.com/document_detail/2878359.html">ListWafRulesets</a> operation.</para>
+        /// <para>The ID of the WAF ruleset. You can call the <a href="https://help.aliyun.com/document_detail/2878359.html">ListWafRulesets</a> operation to obtain the ID.</para>
         /// </summary>
         [NameInMap("RulesetId")]
         [Validation(Required=false)]
         public long? RulesetId { get; set; }
 
         /// <summary>
-        /// <para>The status of the rule.</para>
+        /// <para>The rule status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>on</para>
@@ -104,7 +96,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The time the rule was last updated.</para>
+        /// <para>The time when the rule was last modified.</para>
+        /// <para>Format: RFC 3339 / ISO 8601, UTC time zone (ending with Z).</para>
+        /// <para>Example: 2026-06-10T14:23:45Z</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-01-01T00:00:00Z</para>

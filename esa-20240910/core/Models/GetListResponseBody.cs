@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the custom list.<a href="~~2850217~~"></a></para>
+        /// <para>The ID of the custom list. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/2850217.html">ListLists</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>40000001</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The items in the custom list, which are displayed as an array.</para>
+        /// <para>The items of the custom list, displayed as an array.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<string> Items { get; set; }
 
         /// <summary>
-        /// <para>The type of the custom list.</para>
+        /// <para>The kind of the custom list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ip</para>
@@ -68,7 +68,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The time when the custom list was last modified.</para>
+        /// <para>The last update time of the custom list.</para>
+        /// <para>Format: RFC 3339 / ISO 8601, UTC time zone (ending with Z).</para>
+        /// <para>Example: 2026-06-10T14:23:45Z</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-01-01T00:00:00Z</para>

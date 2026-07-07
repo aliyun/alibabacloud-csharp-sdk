@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>The creation time, in ISO 8601 format (for example, 2024-01-01T00:00:00+Z).</para>
+            /// <para>The creation time in ISO 8601 format (for example, 2024-01-01T00:00:00+Z).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-07-26T01:56:15Z</para>
@@ -87,13 +87,13 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Process { get; set; }
 
             /// <summary>
-            /// <para>The task status. Valid values:</para>
+            /// <para>The status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Complete</b>: The task is complete.</para>
+            /// <item><description><para><b>Complete</b>: Completed.</para>
             /// </description></item>
-            /// <item><description><para><b>Refreshing</b>: The task is in progress.</para>
+            /// <item><description><para><b>Refreshing</b>: Refreshing.</para>
             /// </description></item>
-            /// <item><description><para><b>Failed</b>: The task failed.</para>
+            /// <item><description><para><b>Failed</b>: Refresh failed.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -120,9 +120,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <item><description><b>file</b> (default): file refresh.</description></item>
             /// <item><description><b>cachetag</b>: cache tag refresh.</description></item>
             /// <item><description><b>directory</b>: directory refresh.</description></item>
-            /// <item><description><b>ignoreParams</b>: parameter-stripped refresh.</description></item>
+            /// <item><description><b>ignoreParams</b>: ignore parameters refresh.</description></item>
             /// <item><description><b>hostname</b>: hostname refresh.</description></item>
-            /// <item><description><b>purgeall</b>: refresh all cached content of the site.</description></item>
+            /// <item><description><b>purgeall</b>: purge all cache under the site.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UploadClientCaCertificateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The Common Name of the certificate.</para>
+        /// <para>The common name of the certificate.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://www.example.com">www.example.com</a></para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The CA that issued the certificate.</para>
+        /// <para>The certification authority.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GlobalSign nv-sa</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Issuer { get; set; }
 
         /// <summary>
-        /// <para>The time when the certificate expires.</para>
+        /// <para>The end time of the certificate validity period.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-12-01T02:13:07Z</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string NotAfter { get; set; }
 
         /// <summary>
-        /// <para>The time when the certificate takes effect.</para>
+        /// <para>The start time of the certificate validity period.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-12-01T02:13:07Z</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The serial number of the certificate.</para>
+        /// <para>The certificate serial number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>babab9db65ee5efcca9f3d41d4b50d66</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SignatureAlgorithm { get; set; }
 
         /// <summary>
-        /// <para>The status of the certificate.</para>
+        /// <para>The certificate status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The validity period of the certificate. Unit: day.</para>
+        /// <para>The number of days the certificate is valid.</para>
         /// 
         /// <b>Example:</b>
         /// <para>300</para>

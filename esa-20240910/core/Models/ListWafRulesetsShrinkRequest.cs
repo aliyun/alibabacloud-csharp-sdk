@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListWafRulesetsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The page number for pagination.</para>
+        /// <para>The page number. Specifies the current page number for paging queries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size. Specifies the number of records per page for paging queries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,24 +30,16 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The execution phase for WAF rules.</para>
+        /// <para>The WAF rule execution phase. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>http_whitelist</c>: whitelist rule</para>
-        /// </description></item>
-        /// <item><description><para><c>http_custom</c>: custom rule</para>
-        /// </description></item>
-        /// <item><description><para><c>http_managed</c>: managed rule</para>
-        /// </description></item>
-        /// <item><description><para><c>http_anti_scan</c>: scan protection rule</para>
-        /// </description></item>
-        /// <item><description><para><c>http_ratelimit</c>: rate-limiting rule</para>
-        /// </description></item>
-        /// <item><description><para><c>ip_access_rule</c>: IP access rule</para>
-        /// </description></item>
-        /// <item><description><para><c>http_bot</c>: bot rule</para>
-        /// </description></item>
-        /// <item><description><para><c>http_security_level_rule</c>: security rule</para>
-        /// </description></item>
+        /// <item><description>http_whitelist: whitelist rules</description></item>
+        /// <item><description>http_custom: custom rules</description></item>
+        /// <item><description>http_managed: managed rules</description></item>
+        /// <item><description>http_anti_scan: scan protection rules</description></item>
+        /// <item><description>http_ratelimit: frequency control rules</description></item>
+        /// <item><description>ip_access_rule: IP access rules</description></item>
+        /// <item><description>http_bot: advanced mode bots</description></item>
+        /// <item><description>http_security_level_rule: security rules</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,7 +50,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Phase { get; set; }
 
         /// <summary>
-        /// <para>A JSON object containing query parameters for filtering.</para>
+        /// <para>The query parameters, passed in JSON format, including various filter conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>http_bot</para>
@@ -68,7 +60,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string QueryArgsShrink { get; set; }
 
         /// <summary>
-        /// <para>The ID of the site. Get this ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</para>
+        /// <para>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -78,7 +70,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The site\&quot;s configuration version. For sites with configuration version management enabled, use this parameter to specify the version. The default is 0.</para>
+        /// <para>The version number of the site configuration. For sites with configuration version management enabled, you can use this parameter to specify the site version for which the configuration takes effect. Default value: 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

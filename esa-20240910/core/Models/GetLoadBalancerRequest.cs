@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetLoadBalancerRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the load balancer. This ID is returned when the load balancer is created. You can also call <a href="https://help.aliyun.com/document_detail/2868897.html">ListLoadBalancers</a> to get the IDs of all load balancers in a site.</para>
+        /// <para>The load balancer ID, which uniquely identifies the load balancer to query. This ID is returned when the load balancer is created. You can also call the <a href="https://help.aliyun.com/document_detail/2868897.html">ListLoadBalancers</a> operation to obtain all load balancers under a site.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The ID of the site. Call <a href="~~ListSites~~">ListSites</a> to get this ID.</para>
+        /// <para>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

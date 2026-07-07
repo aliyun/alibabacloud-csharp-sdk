@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class PurchaseCacheReserveResponseBody : TeaModel {
         /// <summary>
-        /// <para>Instance ID.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xcdn-ad*****s11w</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Order ID.</para>
+        /// <para>The order ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>31223****11</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30423A7F-A83D-1E24-B80E-86DD25790758</para>

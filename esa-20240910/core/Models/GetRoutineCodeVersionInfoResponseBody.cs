@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The time when the code version was created.</para>
+        /// <para>The time when the code version was created. The time follows the RFC 3339 standard in the UTC time zone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-08-04T01:54:19Z</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The additional information about the code version. The value is in JSON string format.</para>
+        /// <para>The extra information of the code version. The value is in JSON string format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string ExtraInfo { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the code version contains asset files.</para>
+        /// <para>Indicates whether the code version contains Assets files.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

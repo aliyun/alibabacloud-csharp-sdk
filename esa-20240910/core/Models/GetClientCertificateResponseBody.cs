@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Detailed certificate information.</para>
+        /// <para>The certificate information.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CACertificateId { get; set; }
 
             /// <summary>
-            /// <para>The certificate\&quot;s common name.</para>
+            /// <para>The common name of the certificate.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://www.example.com">www.example.com</a></para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CommonName { get; set; }
 
             /// <summary>
-            /// <para>The time the certificate was created.</para>
+            /// <para>The creation time. Format: YYYY-MM-DD HH:MM:SS, in the UTC/GMT time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-06-24 07:48:51</para>
@@ -67,7 +67,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The certificate\&quot;s SHA-256 fingerprint.</para>
+            /// <para>The SHA-256 fingerprint of the certificate.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1dc5fc9af4eead2570c70d94b416130baeb6d4429b51fd3557379588456a****</para>
             /// </summary>
             [NameInMap("FingerprintSha256")]
             [Validation(Required=false)]
@@ -84,7 +87,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The certificate\&quot;s issuer.</para>
+            /// <para>The certification authority that issued the certificate.</para>
             /// 
             /// <b>Example:</b>
             /// <para>GlobalSign nv-sa</para>
@@ -104,7 +107,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The time the certificate expires.</para>
+            /// <para>The end time of the certificate validity period. Format: YYYY-MM-DD HH:MM:SS, in the UTC/GMT time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-03-31 02:08:00</para>
@@ -114,7 +117,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string NotAfter { get; set; }
 
             /// <summary>
-            /// <para>The time the certificate becomes valid.</para>
+            /// <para>The start time of the certificate validity period. Format: YYYY-MM-DD HH:MM:SS, in the UTC/GMT time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-03-31 02:08:00</para>
@@ -124,7 +127,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string NotBefore { get; set; }
 
             /// <summary>
-            /// <para>The certificate\&quot;s public key algorithm.</para>
+            /// <para>The public key algorithm of the certificate.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RSA</para>
@@ -134,7 +137,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string PubkeyAlgorithm { get; set; }
 
             /// <summary>
-            /// <para>The certificate\&quot;s subject alternative name.</para>
+            /// <para>The Subject Alternative Name (SAN) of the certificate.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://www.example.com,*.example.com">www.example.com,*.example.com</a></para>
@@ -144,14 +147,17 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string SAN { get; set; }
 
             /// <summary>
-            /// <para>The certificate\&quot;s serial number.</para>
+            /// <para>The certificate serial number.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>babaded901474b9693acf530e0fb1d**</para>
             /// </summary>
             [NameInMap("SerialNumber")]
             [Validation(Required=false)]
             public string SerialNumber { get; set; }
 
             /// <summary>
-            /// <para>The certificate\&quot;s signature algorithm.</para>
+            /// <para>The signature algorithm of the certificate.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SHA256-RSA</para>
@@ -181,7 +187,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The time the certificate was last updated.</para>
+            /// <para>The update time. Format: YYYY-MM-DD HH:MM:SS, in the UTC/GMT time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-09-22 05:33:13</para>

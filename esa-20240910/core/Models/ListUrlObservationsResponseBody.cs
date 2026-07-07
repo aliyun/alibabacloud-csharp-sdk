@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListUrlObservationsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The configurations of the feature.</para>
+        /// <para>The configuration data.</para>
         /// </summary>
         [NameInMap("Configs")]
         [Validation(Required=false)]
@@ -27,10 +27,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? ConfigId { get; set; }
 
             /// <summary>
-            /// <para>SDK integration. Valid values:</para>
+            /// <para>The SDK integration method. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>automatic</b></description></item>
-            /// <item><description><b>manual</b></description></item>
+            /// <item><description><b>automatic</b>: Automatic integration.</description></item>
+            /// <item><description><b>manual</b>: Manual integration.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The number of the returned page.</para>
+        /// <para>The current page number, which is the same as the PageNumber request parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15C66C7B-671A-4297-9187-2C4477247A74</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The total number of pages returned.</para>
+        /// <para>The total number of pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

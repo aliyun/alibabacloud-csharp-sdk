@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateClientCertificateRequest : TeaModel {
         /// <summary>
-        /// <para>The certificate signing request (CSR).</para>
+        /// <para>The certificate signing request (CSR) content.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN CERTIFICATE REQUEST-----</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CSR { get; set; }
 
         /// <summary>
-        /// <para>The type of the private key algorithm.</para>
+        /// <para>The private key algorithm type. This parameter is required if CSR is not provided.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RSA</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string PkeyType { get; set; }
 
         /// <summary>
-        /// <para>The website ID.</para>
+        /// <para>The site ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The validity period of the certificate. Unit: day.</para>
+        /// <para>The validity period of the certificate. Unit: days.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

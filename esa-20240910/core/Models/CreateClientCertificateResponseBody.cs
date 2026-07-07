@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateClientCertificateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the CA certificate.</para>
+        /// <para>The CA certificate ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>babaded901474b9693acf530e0fb1dbb</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Certificate { get; set; }
 
         /// <summary>
-        /// <para>The Common Name of the certificate.</para>
+        /// <para>The common name of the certificate.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://www.example.com">www.example.com</a></para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string FingerprintSha256 { get; set; }
 
         /// <summary>
-        /// <para>The certificate ID on ESA.</para>
+        /// <para>The certificate ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>babaded901474b9693acf530e0fb1d95</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The CA that issued the certificate.</para>
+        /// <para>The certification authority that issued the certificate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ESA CA</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Issuer { get; set; }
 
         /// <summary>
-        /// <para>The time when the certificate expires.</para>
+        /// <para>The end time of the certificate validity period.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-12-01T02:12:49Z</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string NotAfter { get; set; }
 
         /// <summary>
-        /// <para>The time when the certificate takes effect.</para>
+        /// <para>The start time of the certificate validity period.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-12-01T02:12:49Z</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The serial number of the certificate.</para>
+        /// <para>The certificate serial number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>babaded901474b9693acf530e0fb1daa</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SignatureAlgorithm { get; set; }
 
         /// <summary>
-        /// <para>The status of the certificate.</para>
+        /// <para>The certificate status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>active</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The validity period of the certificate. Unit: day.</para>
+        /// <para>The validity period of the certificate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>365</para>

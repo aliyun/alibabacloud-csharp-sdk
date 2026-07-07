@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the custom list.<a href="~~2850217~~"></a></para>
+        /// <para>The ID of the custom list. You can obtain this value by calling the <a href="https://help.aliyun.com/document_detail/2850217.html">ListLists</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>40000001</para>

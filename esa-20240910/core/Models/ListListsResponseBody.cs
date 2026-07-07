@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListListsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The total number of items across all lists.</para>
+        /// <para>The total item usage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5000</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? ItemsUsage { get; set; }
 
         /// <summary>
-        /// <para>A paginated array of lists.</para>
+        /// <para>The array of list information, which contains the paginated list data.</para>
         /// </summary>
         [NameInMap("Lists")]
         [Validation(Required=false)]
         public List<ListListsResponseBodyLists> Lists { get; set; }
         public class ListListsResponseBodyLists : TeaModel {
             /// <summary>
-            /// <para>The description of the list.</para>
+            /// <para>The list description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a custom list</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the custom list. To get this ID, call the <a href="https://help.aliyun.com/document_detail/2850217.html">ListLists</a> operation.</para>
+            /// <para>The ID of the custom list. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/2850217.html">ListLists</a> operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>40000001</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Kind { get; set; }
 
             /// <summary>
-            /// <para>The number of items in the list.</para>
+            /// <para>The length of the list content array, which indicates the number of items in the list.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? Length { get; set; }
 
             /// <summary>
-            /// <para>The name of the list.</para>
+            /// <para>The list name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>
@@ -77,7 +77,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The time when the list was last updated.</para>
+            /// <para>The time when the list was last modified.</para>
+            /// <para>Format: RFC 3339 / ISO 8601, UTC time zone (ending with Z).</para>
+            /// <para>Example: 2026-06-10T14:23:45Z</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-01-01T00:00:00Z</para>
@@ -99,7 +101,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -119,7 +121,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of filtered records.</para>
+        /// <para>The total number of records after filtering.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -129,7 +131,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The number of lists used by the account.</para>
+        /// <para>The amount of usage consumed by the user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

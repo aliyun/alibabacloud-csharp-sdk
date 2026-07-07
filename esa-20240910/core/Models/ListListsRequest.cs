@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListListsRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies the page number for paginated results.</para>
+        /// <para>The page number for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Specifies the number of results to return per page.</para>
+        /// <para>The number of entries per page for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>A JSON object containing query parameters to filter the results.</para>
+        /// <para>The query parameters passed in JSON format, which contain various filter conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ListLists</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public ListListsRequestQueryArgs QueryArgs { get; set; }
         public class ListListsRequestQueryArgs : TeaModel {
             /// <summary>
-            /// <para>If true, sorts the results in descending order.</para>
+            /// <para>Specifies whether to sort the results in descending order.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public bool? Desc { get; set; }
 
             /// <summary>
-            /// <para>Filters by a partial match on the list description.</para>
+            /// <para>The value used to fuzzy match list descriptions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a custom list</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string DescriptionLike { get; set; }
 
             /// <summary>
-            /// <para>Filters by a partial match on the list ID.</para>
+            /// <para>The value used to fuzzy match list IDs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>40000001</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string IdLike { get; set; }
 
             /// <summary>
-            /// <para>Filters by a partial match on a list item.</para>
+            /// <para>The value used to fuzzy match list content.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.1.1.1</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string ItemLike { get; set; }
 
             /// <summary>
-            /// <para>Filters by the list kind.</para>
+            /// <para>The kind of the custom list.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ip</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Kind { get; set; }
 
             /// <summary>
-            /// <para>Filters by a partial match on both the list name and list items.</para>
+            /// <para>The value used to fuzzy match both list content and list names simultaneously.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.1.1.1</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string NameItemLike { get; set; }
 
             /// <summary>
-            /// <para>Filters by a partial match on the list name.</para>
+            /// <para>The value used to fuzzy match list names.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string NameLike { get; set; }
 
             /// <summary>
-            /// <para>Specifies the sort field.</para>
+            /// <para>The column by which to sort the results.</para>
             /// 
             /// <b>Example:</b>
             /// <para>id</para>

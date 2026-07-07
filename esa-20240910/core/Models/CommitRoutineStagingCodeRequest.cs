@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CodeDescription { get; set; }
 
         /// <summary>
-        /// <para>The deployment environment whose environment variable configuration is used. If you do not specify this parameter, environment variables are not used.</para>
+        /// <para>The deployment environment. The environment variable configuration of the specified environment is used. If you do not specify this parameter, environment variables are not used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>production</para>

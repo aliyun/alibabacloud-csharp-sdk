@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of records per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The site ID. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
+        /// <para>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

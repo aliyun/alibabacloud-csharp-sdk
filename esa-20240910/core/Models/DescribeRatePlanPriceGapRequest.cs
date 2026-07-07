@@ -34,14 +34,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string OrderType { get; set; }
 
         /// <summary>
-        /// <para>The specification change type. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>DOWNGRADE: downgrade.</description></item>
-        /// <item><description>UPGRADE: upgrade.</description></item>
-        /// </list>
+        /// <para>The code of the target plan for the specification change.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>UPGRADE</para>
+        /// <para>standardplan</para>
         /// </summary>
         [NameInMap("TargetPlanCode")]
         [Validation(Required=false)]

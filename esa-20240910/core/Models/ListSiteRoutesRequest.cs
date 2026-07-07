@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? ConfigId { get; set; }
 
         /// <summary>
-        /// <para>The configuration type. Use this parameter to query global or feature-specific configurations. This parameter takes effect only if the <c>functionName</c> parameter is also specified.</para>
+        /// <para>The configuration type. You can use this parameter to query global or feature configurations. This parameter takes effect only when functionName is specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>global</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string ConfigType { get; set; }
 
         /// <summary>
-        /// <para>The page number. The default is 1.</para>
+        /// <para>The page number for a paged query. The value must be greater than or equal to 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page, with a maximum of 500. The default is 500.</para>
+        /// <para>The number of entries per page for a paged query. Valid values: 1 to 500.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The route name. Use this parameter to find a route by its name. This parameter takes effect only if the <c>functionName</c> parameter is also specified.</para>
+        /// <para>The route name. You can use this parameter to query the rule whose name matches the specified value. This parameter takes effect only when functionName is specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_route</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RouteName { get; set; }
 
         /// <summary>
-        /// <para>The site ID. Call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain this ID.</para>
+        /// <para>The site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

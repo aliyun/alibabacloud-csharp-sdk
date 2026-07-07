@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class BatchCreateWafRulesResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array of IDs for the newly created WAF rules. You can call the <a href="https://help.aliyun.com/document_detail/2878257.html">ListWafRules</a> operation to obtain the details of a specific rule.</para>
+        /// <para>The IDs of the WAF rules. You can call the <a href="https://help.aliyun.com/document_detail/2878257.html">ListWafRules</a> operation to obtain the rule IDs.</para>
         /// </summary>
         [NameInMap("Ids")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the WAF ruleset. You can call the <a href="https://help.aliyun.com/document_detail/2878359.html">ListWafRulesets</a> operation to obtain this ID.</para>
+        /// <para>The ID of the WAF ruleset. You can call the <a href="https://help.aliyun.com/document_detail/2878359.html">ListWafRulesets</a> operation to obtain the ruleset ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000001</para>

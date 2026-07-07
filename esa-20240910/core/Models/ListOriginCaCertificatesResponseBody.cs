@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>An array of certificate objects that match the query.</para>
+        /// <para>The result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CommonName { get; set; }
 
             /// <summary>
-            /// <para>The time when the certificate was created.</para>
+            /// <para>The creation time. Format: YYYY-MM-DD HH:MM:SS, in the UTC/GMT time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-06-24 07:48:51</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The issuer of the certificate.</para>
+            /// <para>The certification authority.</para>
             /// 
             /// <b>Example:</b>
             /// <para>GlobalSign nv-sa</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The expiration date of the certificate.</para>
+            /// <para>The end time of the certificate validity period. Format: YYYY-MM-DD HH:MM:SS, in the UTC/GMT time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-03-31 02:08:00</para>
@@ -117,10 +117,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string NotAfter { get; set; }
 
             /// <summary>
-            /// <para>The validity start date of the certificate.</para>
+            /// <para>The start time of the certificate validity period. Format: YYYY-MM-DD HH:MM:SS, in the UTC/GMT time zone.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2023-11-26T16:00:00Z</para>
+            /// <para>2023-11-26 16:00:00</para>
             /// </summary>
             [NameInMap("NotBefore")]
             [Validation(Required=false)]
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string SAN { get; set; }
 
             /// <summary>
-            /// <para>The serial number of the certificate.</para>
+            /// <para>The certificate serial number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>babaded901474b9693acf530e0fb1d**</para>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The time when the certificate was last updated.</para>
+            /// <para>The update time. Format: YYYY-MM-DD HH:MM:SS, in the UTC/GMT time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-07-20 06:18:42</para>
@@ -219,7 +219,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SiteName { get; set; }
 
         /// <summary>
-        /// <para>The total number of certificates that match the query.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

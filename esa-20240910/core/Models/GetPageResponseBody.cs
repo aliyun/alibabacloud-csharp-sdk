@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetPageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The Base64-encoded content of the custom response page.</para>
+        /// <para>The Base64-encoded response page content corresponding to the Content-Type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Content { get; set; }
 
         /// <summary>
-        /// <para>The value for the page\&quot;s Content-Type HTTP header.</para>
+        /// <para>The Content-Type field in the HTTP header.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the custom response page.</para>
+        /// <para>The ID of the custom response page. You can obtain this value by calling the <a href="https://help.aliyun.com/document_detail/2850223.html">ListPages</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50000001</para>
@@ -83,14 +83,16 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The sites to which the page is applied.</para>
+        /// <para>The list of associated site IDs.</para>
         /// </summary>
         [NameInMap("SiteIds")]
         [Validation(Required=false)]
         public List<long?> SiteIds { get; set; }
 
         /// <summary>
-        /// <para>The time the custom response page was last modified.</para>
+        /// <para>The last modification time of the custom response page.</para>
+        /// <para>Format: RFC 3339 / ISO 8601, UTC time zone (ending with Z).</para>
+        /// <para>Example: 2026-06-10T14:23:45Z</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-01-01T00:00:00Z</para>

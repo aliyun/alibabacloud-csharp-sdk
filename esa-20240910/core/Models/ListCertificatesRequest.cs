@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The page number to return.</para>
+        /// <para>The page number of the data to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of records per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The site ID. To get this ID, call the <a href="~~ListSites~~">ListSites</a> API.</para>
+        /// <para>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to query the site ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <para>Specifies whether to return only valid certificates.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("ValidOnly")]
         [Validation(Required=false)]

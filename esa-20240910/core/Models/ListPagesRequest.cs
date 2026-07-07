@@ -30,14 +30,18 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The query filters, specified as a JSON object.</para>
+        /// <para>The query parameters passed in JSON format, which contain various filter conditions.</para>
         /// </summary>
         [NameInMap("QueryArgs")]
         [Validation(Required=false)]
         public ListPagesRequestQueryArgs QueryArgs { get; set; }
         public class ListPagesRequestQueryArgs : TeaModel {
             /// <summary>
-            /// <para>Filters the custom response pages by content type.</para>
+            /// <para>The Content-Type field in the HTTP header. Example values:</para>
+            /// <list type="bullet">
+            /// <item><description>text/html</description></item>
+            /// <item><description>application/json</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>application/json</para>
@@ -47,7 +51,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string ContentType { get; set; }
 
             /// <summary>
-            /// <para>A keyword for a fuzzy search on the name or description of custom response pages.</para>
+            /// <para>The keyword used for fuzzy matching against the name or description of custom pages.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>

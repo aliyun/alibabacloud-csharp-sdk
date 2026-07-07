@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetKeylessServerResponseBody : TeaModel {
         /// <summary>
-        /// <para>The CA certificate used to verify the server certificate of the keyless server. This parameter applies only when Verify is set to true.</para>
+        /// <para>The CA certificate used to verify the Keyless server certificate. This parameter takes effect only when Verify is set to true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN CERTIFICATE-----****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CaCertificate { get; set; }
 
         /// <summary>
-        /// <para>The client certificate. Must be provided as a pair with the client private key.</para>
+        /// <para>The client certificate. This parameter must be used together with the client private key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN CERTIFICATE-----****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string ClientCertificate { get; set; }
 
         /// <summary>
-        /// <para>The client private key. Must be provided as a pair with the client certificate.</para>
+        /// <para>The client private key. This parameter must be used together with the client certificate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN RSA PRIVATE KEY-----****</para>
@@ -40,17 +40,17 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string ClientPrivateKey { get; set; }
 
         /// <summary>
-        /// <para>The creation time.</para>
+        /// <para>The creation time. The time follows the format YYYY-MM-DDTHH:MM:SS+08:00 in the UTC/GMT time zone.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2024-03-11T01:23:21Z</para>
+        /// <para>2025-07-18T20:33:31+08:00</para>
         /// </summary>
         [NameInMap("CreateTime")]
         [Validation(Required=false)]
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The hostname of the keyless server.</para>
+        /// <para>The Keyless server hostname.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.com</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Host { get; set; }
 
         /// <summary>
-        /// <para>The keyless server ID.</para>
+        /// <para>Keyless server ID。</para>
         /// 
         /// <b>Example:</b>
         /// <para>baba39055622c008b90285a8838e****</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The keyless server name.</para>
+        /// <para>The Keyless server name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The port of the keyless server. Valid values: <b>1</b> to <b>65535</b>.</para>
+        /// <para>The Keyless server port. Valid values: <b>1</b> to <b>65535</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>443</para>
@@ -120,17 +120,17 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SiteName { get; set; }
 
         /// <summary>
-        /// <para>The update time.</para>
+        /// <para>The modification time. The time follows the format YYYY-MM-DDTHH:MM:SS+08:00 in the UTC/GMT time zone.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2025-03-13T02:13:28Z</para>
+        /// <para>2025-07-18T20:33:31+08:00</para>
         /// </summary>
         [NameInMap("UpdateTime")]
         [Validation(Required=false)]
         public string UpdateTime { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether to verify the server certificate of the keyless server. The default value is false.</para>
+        /// <para>Indicates whether to verify the Keyless server certificate. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

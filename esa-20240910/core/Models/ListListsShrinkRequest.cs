@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListListsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies the page number for paginated results.</para>
+        /// <para>The page number for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Specifies the number of results to return per page.</para>
+        /// <para>The number of entries per page for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>A JSON object containing query parameters to filter the results.</para>
+        /// <para>The query parameters passed in JSON format, which contain various filter conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ListLists</para>

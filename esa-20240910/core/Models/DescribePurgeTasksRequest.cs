@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Content { get; set; }
 
         /// <summary>
-        /// <para>The end time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The end time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</para>
         /// <remarks>
         /// <para>The end time must be later than the start time.</para>
         /// </remarks>
@@ -54,6 +54,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         /// <summary>
         /// <para>The site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
+        /// <remarks>
+        /// <para>Notice: You must always specify SiteId. An error is reported if SiteId is not specified.</notice></para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>123456789****</para>
@@ -63,7 +66,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The start time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The start time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-11-16T05:33:00Z</para>
@@ -75,9 +78,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The task execution status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Complete</b>: The task is complete.</description></item>
-        /// <item><description><b>Refreshing</b>: The task is in progress.</description></item>
-        /// <item><description><b>Failed</b>: The task failed.</description></item>
+        /// <item><description><b>Complete</b>: Completed.</description></item>
+        /// <item><description><b>Refreshing</b>: Refreshing.</description></item>
+        /// <item><description><b>Failed</b>: Refresh failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -93,9 +96,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <item><description><b>file</b> (default): file refresh.</description></item>
         /// <item><description><b>cachetag</b>: cache tag refresh.</description></item>
         /// <item><description><b>directory</b>: directory refresh.</description></item>
-        /// <item><description><b>ignoreParams</b>: parameter-stripped refresh.</description></item>
+        /// <item><description><b>ignoreParams</b>: ignore parameters refresh.</description></item>
         /// <item><description><b>hostname</b>: hostname refresh.</description></item>
-        /// <item><description><b>purgeall</b>: refresh all cached content of the site.</description></item>
+        /// <item><description><b>purgeall</b>: purge all cache under the site.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetSiteOriginClientCertificateRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the client certificate.</para>
+        /// <para>The certificate ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The ID of the site.</para>
+        /// <para>The site ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

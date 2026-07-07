@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The query filters, specified as a JSON object.</para>
+        /// <para>The query parameters passed in JSON format, which contain various filter conditions.</para>
         /// </summary>
         [NameInMap("QueryArgs")]
         [Validation(Required=false)]

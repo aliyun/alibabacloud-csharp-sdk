@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetPageRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the custom response page. To obtain this ID, call the <a href="https://help.aliyun.com/document_detail/2850223.html">ListPages</a> API.</para>
+        /// <para>The ID of the custom response page. You can obtain this value by calling the <a href="https://help.aliyun.com/document_detail/2850223.html">ListPages</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50000001</para>

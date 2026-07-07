@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListRoutineRoutesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The configuration list in the response body.</para>
+        /// <para>The configuration information.</para>
         /// </summary>
         [NameInMap("Configs")]
         [Validation(Required=false)]
@@ -19,8 +19,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The bypass mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>on: Enabled.</description></item>
-            /// <item><description>off: Disabled.</description></item>
+            /// <item><description>on: enabled.</description></item>
+            /// <item><description>off: disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,10 +41,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? ConfigId { get; set; }
 
             /// <summary>
-            /// <para>The configuration type. You can use this parameter to query global or rule configurations. Valid values:</para>
+            /// <para>The configuration type. You can use this parameter to query global configurations or rule configurations. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>global: global configuration.</description></item>
-            /// <item><description>rule: rule configuration.</description></item>
+            /// <item><description>global: queries global configurations.</description></item>
+            /// <item><description>rule: queries rule configurations.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -55,10 +55,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string ConfigType { get; set; }
 
             /// <summary>
-            /// <para>The fallback-to-origin switch. When enabled, if the function encounters an exception such as CPU usage exceeding the limit, the request is forwarded to the origin server. Valid values:</para>
+            /// <para>The fallback-to-origin switch. After this switch is enabled, requests are sent to the origin server if the function encounters an exception such as CPU usage exceeding the limit. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>on: Enabled.</description></item>
-            /// <item><description>off: Disabled.</description></item>
+            /// <item><description>on: enabled.</description></item>
+            /// <item><description>off: disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -83,10 +83,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Mode { get; set; }
 
             /// <summary>
-            /// <para>The route switch status. Valid values:</para>
+            /// <para>The route switch. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>on: Enabled.</description></item>
-            /// <item><description>off: Disabled.</description></item>
+            /// <item><description>on: enabled.</description></item>
+            /// <item><description>off: disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Rule { get; set; }
 
             /// <summary>
-            /// <para>The execution order of the rule.</para>
+            /// <para>The rule execution order.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public int? SiteVersion { get; set; }
 
             /// <summary>
-            /// <para>The Edge Routine timeout period. Valid values: 5 to 60.</para>
+            /// <para>The ER timeout period. Valid values: 5 to 60. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>

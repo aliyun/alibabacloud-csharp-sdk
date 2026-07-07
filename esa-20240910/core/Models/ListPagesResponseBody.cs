@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned on the current page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>A list of custom response pages.</para>
+        /// <para>The array of custom response pages. Each object in the array contains the details of a page.</para>
         /// </summary>
         [NameInMap("Pages")]
         [Validation(Required=false)]
         public List<ListPagesResponseBodyPages> Pages { get; set; }
         public class ListPagesResponseBodyPages : TeaModel {
             /// <summary>
-            /// <para>The Base64-encoded content of the custom response page.</para>
+            /// <para>The Base64-encoded response page content corresponding to the Content-Type.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>The value of the Content-Type header in the HTTP response.</para>
+            /// <para>The Content-Type field in the HTTP header.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string ContentType { get; set; }
 
             /// <summary>
-            /// <para>A custom description for the response page.</para>
+            /// <para>The description of the custom response page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a custom deny page</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the custom response page.<a href="~~2850223~~"></a></para>
+            /// <para>The ID of the custom response page. You can call the <a href="https://help.aliyun.com/document_detail/2850223.html">ListPages</a> operation to obtain the ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50000001</para>
@@ -99,7 +99,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The time the custom response page was last updated.</para>
+            /// <para>The time when the custom response page was last modified.</para>
+            /// <para>Format: RFC 3339 / ISO 8601, UTC time zone (ending with Z).</para>
+            /// <para>Example: 2026-06-10T14:23:45Z</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-01-01T00:00:00Z</para>
@@ -121,7 +123,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of custom response pages that match the filter criteria.</para>
+        /// <para>The number of custom response pages after filtering.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -131,7 +133,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The number of custom response pages that you have created.</para>
+        /// <para>The number of custom response pages created by the user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

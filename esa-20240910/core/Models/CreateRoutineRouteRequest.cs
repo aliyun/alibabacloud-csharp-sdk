@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <para>The bypass mode. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>on: enabled</description></item>
-        /// <item><description>off: disabled.</description></item>
+        /// <item><description>off: disabled</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Bypass { get; set; }
 
         /// <summary>
-        /// <para>The fallback-to-origin switch. When enabled, if the function encounters an exception such as CPU usage exceeding the limit, the request is forwarded to the origin server. Valid values:</para>
+        /// <para>The back-to-origin on exception switch. When enabled, if the function encounters an exception such as CPU usage exceeding the limit, the request falls back to the origin server. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>on: Enabled.</description></item>
         /// <item><description>off: Disabled.</description></item>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <para>The route switch. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>on: enabled</description></item>
-        /// <item><description>off: disabled.</description></item>
+        /// <item><description>off: disabled</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The Edge Routine timeout period. Valid values: 5 to 60.</para>
+        /// <para>The Edge Routine timeout period. Valid values: 5 to 60. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

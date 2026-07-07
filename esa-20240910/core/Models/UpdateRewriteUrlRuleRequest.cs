@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateRewriteUrlRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The configuration ID. You can get this ID by calling the <a href="https://help.aliyun.com/document_detail/2867480.html">ListRewriteUrlRules</a> API.</para>
+        /// <para>The configuration ID. You can call the <a href="https://help.aliyun.com/document_detail/2867480.html">ListRewriteUrlRules</a> operation to obtain the configuration ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? ConfigId { get; set; }
 
         /// <summary>
-        /// <para>The query string after the rewrite.</para>
+        /// <para>The query string after rewriting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example=123</para>
@@ -31,12 +31,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string QueryString { get; set; }
 
         /// <summary>
-        /// <para>The query string rewrite type. Valid values:</para>
+        /// <para>The query character string rewrite type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>static: Static Mode.</para>
-        /// </description></item>
-        /// <item><description><para>dynamic: Dynamic Mode.</para>
-        /// </description></item>
+        /// <item><description>static: static pattern.</description></item>
+        /// <item><description>dynamic: dynamic pattern.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -47,12 +45,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RewriteQueryStringType { get; set; }
 
         /// <summary>
-        /// <para>The URI rewrite type. Valid values:</para>
+        /// <para>The path rewrite type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>static: Static Mode.</para>
-        /// </description></item>
-        /// <item><description><para>dynamic: Dynamic Mode.</para>
-        /// </description></item>
+        /// <item><description>static: static pattern.</description></item>
+        /// <item><description>dynamic: dynamic pattern.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -66,12 +62,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RewriteUriType { get; set; }
 
         /// <summary>
-        /// <para>The content of the rule, a conditional expression that matches user requests. This parameter is not required for a Global Configuration. Two use cases are supported:</para>
+        /// <para>The rule content. A conditional expression is used to match user requests. This parameter is not required when you add a global configuration. Two scenarios are supported:</para>
         /// <list type="bullet">
-        /// <item><description><para>To match all incoming requests, set the value to true.</para>
-        /// </description></item>
-        /// <item><description><para>To match specific requests, set the value to a custom expression, for example, (http.host eq &quot;video.example.com&quot;).</para>
-        /// </description></item>
+        /// <item><description>Match all incoming requests: Set the value to true.</description></item>
+        /// <item><description>Match specified requests: Set the value to a custom expression, for example, (http.host eq \&quot;video.example.com\&quot;).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -82,12 +76,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Rule { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the rule is enabled. This parameter is not required for a Global Configuration. Valid values:</para>
+        /// <para>The rule switch. This parameter is not required when you add a global configuration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>on: The rule is enabled.</para>
-        /// </description></item>
-        /// <item><description><para>off: The rule is disabled.</para>
-        /// </description></item>
+        /// <item><description>on: Enabled.</description></item>
+        /// <item><description>off: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -98,7 +90,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleEnable { get; set; }
 
         /// <summary>
-        /// <para>The rule name. This parameter is not required for a Global Configuration.</para>
+        /// <para>The rule name. This parameter is not required when you add a global configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example=123</para>
@@ -108,7 +100,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>The execution priority of the rule. A smaller value indicates a higher priority.</para>
+        /// <para>The rule execution order. A smaller value indicates a higher priority.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -118,7 +110,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? Sequence { get; set; }
 
         /// <summary>
-        /// <para>The site ID. You can get this ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</para>
+        /// <para>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -129,7 +121,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The destination URI after the rewrite.</para>
+        /// <para>The target URI after rewriting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/image/example.jpg</para>

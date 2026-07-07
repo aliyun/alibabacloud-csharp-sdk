@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetRoutineRouteRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the configuration. Call the <a href="https://help.aliyun.com/document_detail/2879631.html">ListSiteRoutes</a> operation to get the ID.</para>
+        /// <para>The configuration ID. You can call the <a href="https://help.aliyun.com/document_detail/2879631.html">ListSiteRoutes</a> operation to obtain the ConfigId.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? ConfigId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the site. Call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to get the ID.</para>
+        /// <para>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

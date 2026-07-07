@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListWafRulesetsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of WAF rulesets used by the instance in this WAF phase.</para>
+        /// <para>The number of WAF rulesets used by the instance in this WAF execution phase.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -50,21 +50,21 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>A list of rulesets.</para>
+        /// <para>The list of rulesets, including detailed information about each ruleset.</para>
         /// </summary>
         [NameInMap("Rulesets")]
         [Validation(Required=false)]
         public List<ListWafRulesetsResponseBodyRulesets> Rulesets { get; set; }
         public class ListWafRulesetsResponseBodyRulesets : TeaModel {
             /// <summary>
-            /// <para>A list of match fields.</para>
+            /// <para>The list of match objects.</para>
             /// </summary>
             [NameInMap("Fields")]
             [Validation(Required=false)]
             public List<string> Fields { get; set; }
 
             /// <summary>
-            /// <para>The ID of the WAF ruleset. This value is returned by the <a href="https://help.aliyun.com/document_detail/2878359.html">ListWafRulesets</a> operation.</para>
+            /// <para>The ID of the WAF ruleset. You can call the <a href="https://help.aliyun.com/document_detail/2878359.html">ListWafRulesets</a> operation to obtain the ruleset ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10000001</para>
@@ -84,24 +84,16 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The execution phase of the ruleset. Valid values are:</para>
+            /// <para>The WAF rule execution phase. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>http_whitelist</c>: whitelist rule</para>
-            /// </description></item>
-            /// <item><description><para><c>http_custom</c>: custom rule</para>
-            /// </description></item>
-            /// <item><description><para><c>http_managed</c>: managed rule</para>
-            /// </description></item>
-            /// <item><description><para><c>http_anti_scan</c>: scan protection rule</para>
-            /// </description></item>
-            /// <item><description><para><c>http_ratelimit</c>: rate limiting rule</para>
-            /// </description></item>
-            /// <item><description><para><c>ip_access_rule</c>: IP access rule</para>
-            /// </description></item>
-            /// <item><description><para><c>http_bot</c>: advanced bot protection</para>
-            /// </description></item>
-            /// <item><description><para><c>http_security_level_rule</c>: security rule</para>
-            /// </description></item>
+            /// <item><description>http_whitelist: whitelist rules</description></item>
+            /// <item><description>http_custom: custom rules</description></item>
+            /// <item><description>http_managed: managed rules</description></item>
+            /// <item><description>http_anti_scan: scan protection rules</description></item>
+            /// <item><description>http_ratelimit: frequency control rules</description></item>
+            /// <item><description>ip_access_rule: IP access rules</description></item>
+            /// <item><description>http_bot: advanced mode bots</description></item>
+            /// <item><description>http_security_level_rule: security rules</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -122,7 +114,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The protection target for the \&quot;http_bot\&quot; phase.</para>
+            /// <para>The protection target type in http_bot.</para>
             /// 
             /// <b>Example:</b>
             /// <para>web</para>
@@ -132,14 +124,16 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Target { get; set; }
 
             /// <summary>
-            /// <para>A list of rule types.</para>
+            /// <para>The list of rule types.</para>
             /// </summary>
             [NameInMap("Types")]
             [Validation(Required=false)]
             public List<string> Types { get; set; }
 
             /// <summary>
-            /// <para>The time the ruleset was last modified.</para>
+            /// <para>The last modification time of the ruleset.</para>
+            /// <para>Format: RFC 3339 / ISO 8601, UTC time zone (ending with Z).</para>
+            /// <para>Example: 2026-06-10T14:23:45Z</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-01-01T00:00:00Z</para>
@@ -151,7 +145,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The number of WAF rulesets used by the site in this WAF phase.</para>
+        /// <para>The number of WAF rulesets used by the site in this WAF execution phase.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -161,7 +155,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteUsage { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned after filtering.</para>
+        /// <para>The total number of records after filtering.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

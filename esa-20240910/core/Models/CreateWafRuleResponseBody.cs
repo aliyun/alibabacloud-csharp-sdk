@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateWafRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the newly created WAF rule.</para>
+        /// <para>The ID of the WAF rule. You can call the <a href="https://help.aliyun.com/document_detail/2878257.html">ListWafRules</a> operation to obtain the rule ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20000001</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ruleset to which the new rule belongs.</para>
+        /// <para>The ID of the WAF ruleset. You can call the <a href="https://help.aliyun.com/document_detail/2878359.html">ListWafRulesets</a> operation to obtain the ruleset ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000001</para>

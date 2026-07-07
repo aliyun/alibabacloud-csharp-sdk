@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class PurchaseCacheReserveRequest : TeaModel {
         /// <summary>
-        /// <para>Whether to automatically pay. The default value is false.</para>
+        /// <para>Specifies whether to enable automatic payment. Default value: false. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Automatically pay.</description></item>
-        /// <item><description>false: Do not automatically pay.</description></item>
+        /// <item><description>true: Enables automatic payment.</description></item>
+        /// <item><description>false: Disables automatic payment.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>Whether to auto-renew:</para>
+        /// <para>Specifies whether to enable auto-renewal. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Auto-renew.</description></item>
-        /// <item><description>false: Do not auto-renew.</description></item>
+        /// <item><description>true: Enables auto-renewal.</description></item>
+        /// <item><description>false: Disables auto-renewal.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,10 +38,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>Billing type</para>
+        /// <para>The billing type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PREPAY: Prepaid.</description></item>
-        /// <item><description>POSTPAY: Postpaid.</description></item>
+        /// <item><description>PREPAY: upfront.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,10 +51,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>Cache retention region</para>
+        /// <para>The cache reserve region.</para>
         /// <list type="bullet">
-        /// <item><description>HK: Hong Kong, China</description></item>
-        /// <item><description>CN-beijing: Mainland China - Beijing</description></item>
+        /// <item><description>HK: Hong Kong (China)</description></item>
+        /// <item><description>CN-beijing: Chinese mainland - Beijing</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -66,7 +65,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CrRegion { get; set; }
 
         /// <summary>
-        /// <para>Purchase period (unit: month).</para>
+        /// <para>The purchase period. Unit: months.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -76,7 +75,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>Cache retention specification (unit: GB).</para>
+        /// <para>The cache reserve specification. Unit: GB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>512000</para>

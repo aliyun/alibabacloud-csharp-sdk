@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListSiteOriginClientCertificatesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number. The default value is 1.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1024</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CommonName { get; set; }
 
             /// <summary>
-            /// <para>The time when the certificate was created.</para>
+            /// <para>The creation time. The time is in the YYYY-MM-DD HH:MM:SS format in the UTC/GMT time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-06-24 07:48:51</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The end time of the certificate validity period.</para>
+            /// <para>The end time of the certificate validity period. The time is in the YYYY-MM-DD HH:MM:SS format in the UTC/GMT time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-03-31 02:08:00</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string NotAfter { get; set; }
 
             /// <summary>
-            /// <para>The start time of the certificate validity period.</para>
+            /// <para>The start time of the certificate validity period. The time is in the YYYY-MM-DD HH:MM:SS format in the UTC/GMT time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-03-31 02:08:00</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string NotBefore { get; set; }
 
             /// <summary>
-            /// <para>The public-key algorithm of the certificate.</para>
+            /// <para>The public key algorithm of the certificate.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RSA</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string PubkeyAlgorithm { get; set; }
 
             /// <summary>
-            /// <para>The subject alternative name (SAN) of the certificate.</para>
+            /// <para>The Subject Alternative Name (SAN) of the certificate.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://www.example.com,*.example.com">www.example.com,*.example.com</a></para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string SAN { get; set; }
 
             /// <summary>
-            /// <para>The certificate serial number.</para>
+            /// <para>The sequence number of the certificate.</para>
             /// 
             /// <b>Example:</b>
             /// <para>babaded901474b9693acf530e0fb1d**</para>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The time when the certificate was last updated.</para>
+            /// <para>The update time. The time is in the YYYY-MM-DD HH:MM:SS format in the UTC/GMT time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-09-22 05:33:13</para>
