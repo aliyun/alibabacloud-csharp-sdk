@@ -790,6 +790,10 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
             {
                 body["OAuth2ProviderConfig"] = request.OAuth2ProviderConfigShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OAuthType))
+            {
+                body["OAuthType"] = request.OAuthType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TokenVaultName))
             {
                 body["TokenVaultName"] = request.TokenVaultName;
@@ -857,6 +861,10 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OAuth2ProviderConfigShrink))
             {
                 body["OAuth2ProviderConfig"] = request.OAuth2ProviderConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OAuthType))
+            {
+                body["OAuthType"] = request.OAuthType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TokenVaultName))
             {
@@ -5728,9 +5736,17 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["UserId"] = request.UserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
             {
                 body["UserName"] = request.UserName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserPoolId))
+            {
+                body["UserPoolId"] = request.UserPoolId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserPoolName))
             {
@@ -5774,9 +5790,17 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["UserId"] = request.UserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
             {
                 body["UserName"] = request.UserName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserPoolId))
+            {
+                body["UserPoolId"] = request.UserPoolId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserPoolName))
             {
