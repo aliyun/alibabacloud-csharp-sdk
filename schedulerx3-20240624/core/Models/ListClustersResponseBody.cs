@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of records per page.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -50,8 +50,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 /// <summary>
                 /// <para>The billing method. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>PREPAY: Subscription.</description></item>
-                /// <item><description>POSTPAY: Pay-as-you-go.</description></item>
+                /// <item><description>PREPAY: subscription.</description></item>
+                /// <item><description>POSTPAY: pay-as-you-go.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string ClusterName { get; set; }
 
                 /// <summary>
-                /// <para>The instance specification.</para>
+                /// <para>The instance specifications.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>scx.small.x2</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string EngineType { get; set; }
 
                 /// <summary>
-                /// <para>The engine version.</para>
+                /// <para>The DPI engine version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2.0.0</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 /// <summary>
                 /// <para>The public domain name.</para>
                 /// <remarks>
-                /// <para>Currently not supported.</para>
+                /// <para>Not supported currently.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string IntranetDomain { get; set; }
 
                 /// <summary>
-                /// <para>The product version.</para>
+                /// <para>The product edition. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>1: Developer Edition.</description></item>
                 /// <item><description>2: Professional Edition.</description></item>
@@ -192,12 +192,12 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string SpInstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The cluster status.</para>
+                /// <para>The cluster status. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>1: Creating.</description></item>
                 /// <item><description>2: Running.</description></item>
                 /// <item><description>3: Restarting.</description></item>
-                /// <item><description>4: Destroying.</description></item>
+                /// <item><description>4: Deleting.</description></item>
                 /// <item><description>5: Creation failed.</description></item>
                 /// <item><description>6: Stopped.</description></item>
                 /// <item><description>99: Deleted.</description></item>
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public Dictionary<string, object> Tags { get; set; }
 
                 /// <summary>
-                /// <para>The availability zone and vSwitch information.</para>
+                /// <para>The zone and vSwitch information.</para>
                 /// </summary>
                 [NameInMap("VSwitches")]
                 [Validation(Required=false)]
@@ -232,7 +232,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                     public string VSwitchId { get; set; }
 
                     /// <summary>
-                    /// <para>The availability zone.</para>
+                    /// <para>The zone.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cn-hangzhou-h</para>
@@ -248,7 +248,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string VersionLifecycle { get; set; }
 
                 /// <summary>
-                /// <para>The VPC ID.</para>
+                /// <para>VPC ID。</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc-bp1fxort6ag5h9752i305</para>
@@ -283,7 +283,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of this request, which is a unique identifier generated by Alibaba Cloud for this request. It can be used for troubleshooting.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>39938688-0BAB-5AD8-BF02-F4910FAC7589</para>

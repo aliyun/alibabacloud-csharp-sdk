@@ -618,6 +618,162 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建通知联系人</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>创建自定义联系人</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateContactRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateContactResponse
+        /// </returns>
+        public CreateContactResponse CreateContactWithOptions(CreateContactRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                body["Config"] = request.Config;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactName))
+            {
+                body["ContactName"] = request.ContactName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateContact",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateContactResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建通知联系人</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>创建自定义联系人</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateContactRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateContactResponse
+        /// </returns>
+        public async Task<CreateContactResponse> CreateContactWithOptionsAsync(CreateContactRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                body["Config"] = request.Config;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactName))
+            {
+                body["ContactName"] = request.ContactName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateContact",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateContactResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建通知联系人</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>创建自定义联系人</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateContactRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateContactResponse
+        /// </returns>
+        public CreateContactResponse CreateContact(CreateContactRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateContactWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建通知联系人</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>创建自定义联系人</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateContactRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateContactResponse
+        /// </returns>
+        public async Task<CreateContactResponse> CreateContactAsync(CreateContactRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateContactWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Create a data source</para>
         /// </summary>
         /// 
@@ -2122,6 +2278,146 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteClusterWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除通知联系人</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>删除自定义联系人</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteContactRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteContactResponse
+        /// </returns>
+        public DeleteContactResponse DeleteContactWithOptions(DeleteContactRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactName))
+            {
+                body["ContactName"] = request.ContactName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteContact",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteContactResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除通知联系人</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>删除自定义联系人</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteContactRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteContactResponse
+        /// </returns>
+        public async Task<DeleteContactResponse> DeleteContactWithOptionsAsync(DeleteContactRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactName))
+            {
+                body["ContactName"] = request.ContactName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteContact",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteContactResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除通知联系人</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>删除自定义联系人</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteContactRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteContactResponse
+        /// </returns>
+        public DeleteContactResponse DeleteContact(DeleteContactRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteContactWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除通知联系人</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>删除自定义联系人</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteContactRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteContactResponse
+        /// </returns>
+        public async Task<DeleteContactResponse> DeleteContactAsync(DeleteContactRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteContactWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6270,7 +6566,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of instances.</para>
+        /// <para>Queries a list of instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6308,7 +6604,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of instances.</para>
+        /// <para>Queries a list of instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6346,7 +6642,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of instances.</para>
+        /// <para>Queries a list of instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6364,7 +6660,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of instances.</para>
+        /// <para>Queries a list of instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6378,6 +6674,162 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListClustersWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询通知联系人列表</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>查看联系人</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContactsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContactsResponse
+        /// </returns>
+        public ListContactsResponse ListContactsWithOptions(ListContactsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactName))
+            {
+                query["ContactName"] = request.ContactName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListContacts",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListContactsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询通知联系人列表</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>查看联系人</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContactsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContactsResponse
+        /// </returns>
+        public async Task<ListContactsResponse> ListContactsWithOptionsAsync(ListContactsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactName))
+            {
+                query["ContactName"] = request.ContactName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListContacts",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListContactsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询通知联系人列表</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>查看联系人</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContactsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContactsResponse
+        /// </returns>
+        public ListContactsResponse ListContacts(ListContactsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListContactsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询通知联系人列表</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>查看联系人</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContactsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContactsResponse
+        /// </returns>
+        public async Task<ListContactsResponse> ListContactsAsync(ListContactsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListContactsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -12534,6 +12986,170 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>更新通知联系人</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>更新通知联系人</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateContactRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContactResponse
+        /// </returns>
+        public UpdateContactResponse UpdateContactWithOptions(UpdateContactRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                body["Config"] = request.Config;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactName))
+            {
+                body["ContactName"] = request.ContactName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
+            {
+                body["Enabled"] = request.Enabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateContact",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateContactResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新通知联系人</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>更新通知联系人</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateContactRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContactResponse
+        /// </returns>
+        public async Task<UpdateContactResponse> UpdateContactWithOptionsAsync(UpdateContactRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                body["Config"] = request.Config;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactName))
+            {
+                body["ContactName"] = request.ContactName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
+            {
+                body["Enabled"] = request.Enabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateContact",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateContactResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新通知联系人</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>更新通知联系人</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateContactRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContactResponse
+        /// </returns>
+        public UpdateContactResponse UpdateContact(UpdateContactRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateContactWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新通知联系人</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>更新通知联系人</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateContactRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContactResponse
+        /// </returns>
+        public async Task<UpdateContactResponse> UpdateContactAsync(UpdateContactRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateContactWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Update data source</para>
         /// </summary>
         /// 
@@ -13118,7 +13734,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update task details.</para>
+        /// <para>Updates node information.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13270,7 +13886,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update task details.</para>
+        /// <para>Updates node information.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13422,7 +14038,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update task details.</para>
+        /// <para>Updates node information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13440,7 +14056,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update task details.</para>
+        /// <para>Updates node information.</para>
         /// </summary>
         /// 
         /// <param name="request">

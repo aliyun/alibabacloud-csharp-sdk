@@ -8,10 +8,8 @@ using Tea;
 
 namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
-    public class UpdateJobResponseBody : TeaModel {
+    public class UpdateContactResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -20,32 +18,22 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>Parameter error: content is null.</para>
+        /// <para>not support query script history, please upgrade engine version to 2.2.2+</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use the request ID to troubleshoot issues.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>3808cf26-dde2-4286-8503-b0a2cd4065a7</para>
+        /// <para>F131C3E0-3FAA-5FA4-A6F3-E974D69EF3C5</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: The call was successful.</description></item>
-        /// <item><description>false: The call failed.</description></item>
-        /// </list>
-        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

@@ -8,10 +8,8 @@ using Tea;
 
 namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
-    public class CreateJobResponseBody : TeaModel {
+    public class CreateContactResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -19,30 +17,23 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         [Validation(Required=false)]
         public int? Code { get; set; }
 
-        /// <summary>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
-        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public CreateJobResponseBodyData Data { get; set; }
-        public class CreateJobResponseBodyData : TeaModel {
+        public CreateContactResponseBodyData Data { get; set; }
+        public class CreateContactResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The node ID.</para>
+            /// <para>新建联系人的 id，后续 Update/Delete 时使用</para>
             /// 
             /// <b>Example:</b>
-            /// <para>74</para>
+            /// <para>5000</para>
             /// </summary>
-            [NameInMap("JobId")]
+            [NameInMap("ContactId")]
             [Validation(Required=false)]
-            public long? JobId { get; set; }
+            public long? ContactId { get; set; }
 
         }
 
         /// <summary>
-        /// <para>The error message.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>Parameter error: content is null.</para>
         /// </summary>
@@ -51,22 +42,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>3835AA29-2298-5434-BC53-9CC377CDFD2C</para>
+        /// <para>2C3E52FF-CBE9-5C0E-8252-37ACFF1F5EFF</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: The call was successful.</description></item>
-        /// <item><description>false: The call failed.</description></item>
-        /// </list>
-        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

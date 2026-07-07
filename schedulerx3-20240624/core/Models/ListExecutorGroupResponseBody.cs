@@ -87,6 +87,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 [Validation(Required=false)]
                 public string CmsWorkspaceId { get; set; }
 
+                [NameInMap("CurrentJobs")]
+                [Validation(Required=false)]
+                public int? CurrentJobs { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>my first workflow</para>
@@ -98,6 +102,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 [NameInMap("IntegrationType")]
                 [Validation(Required=false)]
                 public string IntegrationType { get; set; }
+
+                [NameInMap("MaxJobs")]
+                [Validation(Required=false)]
+                public int? MaxJobs { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
