@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of execution steps for the task to prevent infinite loops. Valid values: 30 to 1000. Default value: 1000.</para>
+        /// <para>The maximum number of execution steps for the task. This prevents infinite loops. Valid values: 30 to 1000. Default value: 1000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -36,30 +36,57 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public int? MaxSteps { get; set; }
 
+        /// <summary>
+        /// <para>The scheduling plan ID. When specified, execution records are associated with the corresponding scheduled node, which facilitates aggregation query by scheduling dimension.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sch-260625-pbj2****</para>
+        /// </summary>
         [NameInMap("ScheduleId")]
         [Validation(Required=false)]
         public string ScheduleId { get; set; }
 
+        /// <summary>
+        /// <para>The array of target objects. Each element contains an InstanceId and a SessionId.</para>
+        /// </summary>
         [NameInMap("Targets")]
         [Validation(Required=false)]
         public List<RunAgentTaskRequestTargets> Targets { get; set; }
         public class RunAgentTaskRequestTargets : TeaModel {
+            /// <summary>
+            /// <para>The Mobile node ID, such as acp-xxx.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>acp-5hh4a31emkt6u****</para>
+            /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
+            /// <summary>
+            /// <para>The session ID. Tasks with the same session ID share context, such as ses-260702-21b****.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ses-260702-21bh****。</para>
+            /// </summary>
             [NameInMap("SessionId")]
             [Validation(Required=false)]
             public string SessionId { get; set; }
 
         }
 
+        /// <summary>
+        /// <para>The task configuration ID used to trigger a task with the specified configuration.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>tsk-260625-49be****</para>
+        /// </summary>
         [NameInMap("TaskConfigId")]
         [Validation(Required=false)]
         public string TaskConfigId { get; set; }
 
         /// <summary>
-        /// <para>The task timeout period in seconds. Valid values: 300 to 3600. Default value: 3600.</para>
+        /// <para>The timeout period of the task, in seconds. Valid values: 300 to 3600. Default value: 3600.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3600</para>
@@ -72,7 +99,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         /// <para>The user instruction in natural language. The Agent performs operations based on this instruction.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Download DingTalk from App Store</para>
+        /// <para>去应用宝下载钉钉</para>
         /// </summary>
         [NameInMap("UserPrompt")]
         [Validation(Required=false)]

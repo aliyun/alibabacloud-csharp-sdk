@@ -44,6 +44,150 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Activates an edge agent device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ActivateEdgeMobileAgentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ActivateEdgeMobileAgentResponse
+        /// </returns>
+        public ActivateEdgeMobileAgentResponse ActivateEdgeMobileAgentWithOptions(ActivateEdgeMobileAgentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceClass))
+            {
+                query["DeviceClass"] = request.DeviceClass;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceId))
+            {
+                query["DeviceId"] = request.DeviceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceMeta))
+            {
+                query["DeviceMeta"] = request.DeviceMeta;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LicenseKey))
+            {
+                query["LicenseKey"] = request.LicenseKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ActivateEdgeMobileAgent",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ActivateEdgeMobileAgentResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Activates an edge agent device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ActivateEdgeMobileAgentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ActivateEdgeMobileAgentResponse
+        /// </returns>
+        public async Task<ActivateEdgeMobileAgentResponse> ActivateEdgeMobileAgentWithOptionsAsync(ActivateEdgeMobileAgentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceClass))
+            {
+                query["DeviceClass"] = request.DeviceClass;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceId))
+            {
+                query["DeviceId"] = request.DeviceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceMeta))
+            {
+                query["DeviceMeta"] = request.DeviceMeta;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LicenseKey))
+            {
+                query["LicenseKey"] = request.LicenseKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ActivateEdgeMobileAgent",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ActivateEdgeMobileAgentResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Activates an edge agent device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ActivateEdgeMobileAgentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ActivateEdgeMobileAgentResponse
+        /// </returns>
+        public ActivateEdgeMobileAgentResponse ActivateEdgeMobileAgent(ActivateEdgeMobileAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ActivateEdgeMobileAgentWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Activates an edge agent device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ActivateEdgeMobileAgentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ActivateEdgeMobileAgentResponse
+        /// </returns>
+        public async Task<ActivateEdgeMobileAgentResponse> ActivateEdgeMobileAgentAsync(ActivateEdgeMobileAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ActivateEdgeMobileAgentWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Attaches an Android Debug Bridge (ADB) key pair to one or more cloud phone instances.</para>
         /// </summary>
         /// 
@@ -3052,6 +3196,210 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateCustomImageWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Places an order to purchase an edge smart gateway agent package.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation involves billing. Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of the Cloud Phone product.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateEdgeMobileAgentPackageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateEdgeMobileAgentPackageResponse
+        /// </returns>
+        public CreateEdgeMobileAgentPackageResponse CreateEdgeMobileAgentPackageWithOptions(CreateEdgeMobileAgentPackageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
+            {
+                query["AutoPay"] = request.AutoPay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
+            {
+                query["AutoRenew"] = request.AutoRenew;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
+            {
+                query["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceClass))
+            {
+                query["DeviceClass"] = request.DeviceClass;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodUnit))
+            {
+                query["PeriodUnit"] = request.PeriodUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionId))
+            {
+                query["PromotionId"] = request.PromotionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Quantity))
+            {
+                query["Quantity"] = request.Quantity;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateEdgeMobileAgentPackage",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateEdgeMobileAgentPackageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Places an order to purchase an edge smart gateway agent package.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation involves billing. Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of the Cloud Phone product.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateEdgeMobileAgentPackageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateEdgeMobileAgentPackageResponse
+        /// </returns>
+        public async Task<CreateEdgeMobileAgentPackageResponse> CreateEdgeMobileAgentPackageWithOptionsAsync(CreateEdgeMobileAgentPackageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
+            {
+                query["AutoPay"] = request.AutoPay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
+            {
+                query["AutoRenew"] = request.AutoRenew;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
+            {
+                query["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceClass))
+            {
+                query["DeviceClass"] = request.DeviceClass;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodUnit))
+            {
+                query["PeriodUnit"] = request.PeriodUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionId))
+            {
+                query["PromotionId"] = request.PromotionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Quantity))
+            {
+                query["Quantity"] = request.Quantity;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateEdgeMobileAgentPackage",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateEdgeMobileAgentPackageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Places an order to purchase an edge smart gateway agent package.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation involves billing. Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of the Cloud Phone product.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateEdgeMobileAgentPackageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateEdgeMobileAgentPackageResponse
+        /// </returns>
+        public CreateEdgeMobileAgentPackageResponse CreateEdgeMobileAgentPackage(CreateEdgeMobileAgentPackageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateEdgeMobileAgentPackageWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Places an order to purchase an edge smart gateway agent package.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation involves billing. Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of the Cloud Phone product.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateEdgeMobileAgentPackageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateEdgeMobileAgentPackageResponse
+        /// </returns>
+        public async Task<CreateEdgeMobileAgentPackageResponse> CreateEdgeMobileAgentPackageAsync(CreateEdgeMobileAgentPackageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateEdgeMobileAgentPackageWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -7012,6 +7360,166 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDisplayConfigWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of edge agent packages.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeEdgeMobileAgentPackagesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeEdgeMobileAgentPackagesResponse
+        /// </returns>
+        public DescribeEdgeMobileAgentPackagesResponse DescribeEdgeMobileAgentPackagesWithOptions(DescribeEdgeMobileAgentPackagesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceClass))
+            {
+                query["DeviceClass"] = request.DeviceClass;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LicenseKeys))
+            {
+                query["LicenseKeys"] = request.LicenseKeys;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PackageIds))
+            {
+                query["PackageIds"] = request.PackageIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeEdgeMobileAgentPackages",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeEdgeMobileAgentPackagesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of edge agent packages.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeEdgeMobileAgentPackagesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeEdgeMobileAgentPackagesResponse
+        /// </returns>
+        public async Task<DescribeEdgeMobileAgentPackagesResponse> DescribeEdgeMobileAgentPackagesWithOptionsAsync(DescribeEdgeMobileAgentPackagesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceClass))
+            {
+                query["DeviceClass"] = request.DeviceClass;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LicenseKeys))
+            {
+                query["LicenseKeys"] = request.LicenseKeys;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PackageIds))
+            {
+                query["PackageIds"] = request.PackageIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeEdgeMobileAgentPackages",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeEdgeMobileAgentPackagesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of edge agent packages.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeEdgeMobileAgentPackagesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeEdgeMobileAgentPackagesResponse
+        /// </returns>
+        public DescribeEdgeMobileAgentPackagesResponse DescribeEdgeMobileAgentPackages(DescribeEdgeMobileAgentPackagesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeEdgeMobileAgentPackagesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of edge agent packages.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeEdgeMobileAgentPackagesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeEdgeMobileAgentPackagesResponse
+        /// </returns>
+        public async Task<DescribeEdgeMobileAgentPackagesResponse> DescribeEdgeMobileAgentPackagesAsync(DescribeEdgeMobileAgentPackagesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeEdgeMobileAgentPackagesWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -14576,6 +15084,142 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Refreshes model authentication tokens.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RefreshAuthTokensRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RefreshAuthTokensResponse
+        /// </returns>
+        public RefreshAuthTokensResponse RefreshAuthTokensWithOptions(RefreshAuthTokensRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireSeconds))
+            {
+                query["ExpireSeconds"] = request.ExpireSeconds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
+            {
+                query["InstanceIds"] = request.InstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LicenseKeys))
+            {
+                query["LicenseKeys"] = request.LicenseKeys;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RefreshAuthTokens",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RefreshAuthTokensResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Refreshes model authentication tokens.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RefreshAuthTokensRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RefreshAuthTokensResponse
+        /// </returns>
+        public async Task<RefreshAuthTokensResponse> RefreshAuthTokensWithOptionsAsync(RefreshAuthTokensRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireSeconds))
+            {
+                query["ExpireSeconds"] = request.ExpireSeconds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
+            {
+                query["InstanceIds"] = request.InstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LicenseKeys))
+            {
+                query["LicenseKeys"] = request.LicenseKeys;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RefreshAuthTokens",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RefreshAuthTokensResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Refreshes model authentication tokens.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RefreshAuthTokensRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RefreshAuthTokensResponse
+        /// </returns>
+        public RefreshAuthTokensResponse RefreshAuthTokens(RefreshAuthTokensRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RefreshAuthTokensWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Refreshes model authentication tokens.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RefreshAuthTokensRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RefreshAuthTokensResponse
+        /// </returns>
+        public async Task<RefreshAuthTokensResponse> RefreshAuthTokensAsync(RefreshAuthTokensRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RefreshAuthTokensWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Renews subscription Cloud Phone instance groups. If a subscription instance group expires, the system automatically deletes the instance group and its instances after 15 days. You cannot recover deleted resources. Renew your instance groups promptly to prevent resource loss.</para>
         /// </summary>
         /// 
@@ -15368,7 +16012,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Triggers an Agent on Mobile nodes to execute an AI automation task.</para>
+        /// <para>Triggers an Agent to execute an AI automation task on Mobile nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15438,7 +16082,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Triggers an Agent on Mobile nodes to execute an AI automation task.</para>
+        /// <para>Triggers an Agent to execute an AI automation task on Mobile nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15508,7 +16152,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Triggers an Agent on Mobile nodes to execute an AI automation task.</para>
+        /// <para>Triggers an Agent to execute an AI automation task on Mobile nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15526,7 +16170,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Triggers an Agent on Mobile nodes to execute an AI automation task.</para>
+        /// <para>Triggers an Agent to execute an AI automation task on Mobile nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">

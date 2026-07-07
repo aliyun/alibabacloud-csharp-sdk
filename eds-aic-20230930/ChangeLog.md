@@ -1,3 +1,10 @@
+2026-07-07 Version: 4.27.0
+- Support API ActivateEdgeMobileAgent.
+- Support API CreateEdgeMobileAgentPackage.
+- Support API DescribeEdgeMobileAgentPackages.
+- Support API RefreshAuthTokens.
+
+
 2026-07-02 Version: 4.26.1
 - Update API RunAgentTask: add request parameters Targets.
 - Update API RunAgentTask: add response parameters Body.Tasks.$.SessionId.
