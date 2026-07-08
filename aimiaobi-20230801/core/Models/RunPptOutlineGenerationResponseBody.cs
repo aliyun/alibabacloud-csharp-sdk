@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class RunPptOutlineGenerationResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The response header.</para>
+        /// </summary>
         [NameInMap("Header")]
         [Validation(Required=false)]
         public RunPptOutlineGenerationResponseBodyHeader Header { get; set; }
         public class RunPptOutlineGenerationResponseBodyHeader : TeaModel {
             /// <summary>
+            /// <para>The error code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Success</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string ErrorCode { get; set; }
 
             /// <summary>
+            /// <para>The error message.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
+            /// <para>The SSE event. \<c>task-started\\</c>: The task starts. \<c>task-finished\\</c>: The task is complete. \<c>task-failed\\</c>: The task failed.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>task-started</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string Event { get; set; }
 
             /// <summary>
+            /// <para>The session ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1a3d7c9f-3a6d-4e49-b176-2d8721a27397</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string SessionId { get; set; }
 
             /// <summary>
+            /// <para>The status code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>200</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public int? StatusCode { get; set; }
 
             /// <summary>
+            /// <para>The task ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>8996314ce5514867943c71935e6a45af</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string TaskId { get; set; }
 
             /// <summary>
+            /// <para>The trace ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0bc1ec3a17435601877224179ecc8a</para>
             /// </summary>
@@ -80,6 +99,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -88,6 +109,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -95,14 +118,26 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>The response body.</para>
+        /// </summary>
         [NameInMap("Payload")]
         [Validation(Required=false)]
         public RunPptOutlineGenerationResponseBodyPayload Payload { get; set; }
         public class RunPptOutlineGenerationResponseBodyPayload : TeaModel {
+            /// <summary>
+            /// <para>The output.</para>
+            /// </summary>
             [NameInMap("Output")]
             [Validation(Required=false)]
             public RunPptOutlineGenerationResponseBodyPayloadOutput Output { get; set; }
             public class RunPptOutlineGenerationResponseBodyPayloadOutput : TeaModel {
+                /// <summary>
+                /// <para>The output content.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>文本生成结果</para>
+                /// </summary>
                 [NameInMap("Text")]
                 [Validation(Required=false)]
                 public string Text { get; set; }
@@ -112,6 +147,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         }
 
         /// <summary>
+        /// <para>The unique ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>F2F366D6-E9FE-1006-BB70-2C650896AAB5</para>
         /// </summary>
@@ -120,6 +157,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. \<c>true\\</c>: The request was successful. \<c>false\\</c>: The request failed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

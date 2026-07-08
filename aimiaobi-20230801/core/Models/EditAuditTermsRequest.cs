@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class EditAuditTermsRequest : TeaModel {
+        /// <summary>
+        /// <para>Exception statements</para>
+        /// </summary>
         [NameInMap("ExceptionWord")]
         [Validation(Required=false)]
         public List<string> ExceptionWord { get; set; }
 
         /// <summary>
+        /// <para>Primary key ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20103</para>
         /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string Id { get; set; }
 
         /// <summary>
+        /// <para>Keyword</para>
+        /// 
         /// <b>Example:</b>
         /// <para>龘</para>
         /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string Keyword { get; set; }
 
         /// <summary>
+        /// <para>Suggested word</para>
+        /// 
         /// <b>Example:</b>
         /// <para>龘(dá)</para>
         /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string SuggestWord { get; set; }
 
         /// <summary>
+        /// <para>Audit rationale</para>
+        /// 
         /// <b>Example:</b>
         /// <para>龙行龘龘出自四库本《玉篇》23龙部第8字，文字释义为群龙腾飞的样子，昂扬而热烈。</para>
         /// </summary>
@@ -46,6 +57,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string TermsDesc { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier of your Alibaba Cloud Model Studio workspace. Get your <a href="https://help.aliyun.com/document_detail/2782167.html">workspace ID</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

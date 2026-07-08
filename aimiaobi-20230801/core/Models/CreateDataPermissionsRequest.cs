@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class CreateDataPermissionsRequest : TeaModel {
         /// <summary>
+        /// <para>A unique identifier for the permission.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string DataId { get; set; }
 
         /// <summary>
+        /// <para>The permission type. Currently, only \<c>dataset\\</c> is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string DataType { get; set; }
 
         /// <summary>
+        /// <para>The users to whom you want to assign permissions.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("PermissionUserInfos")]
@@ -37,6 +40,13 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public List<CreateDataPermissionsRequestPermissionUserInfos> PermissionUserInfos { get; set; }
         public class CreateDataPermissionsRequestPermissionUserInfos : TeaModel {
             /// <summary>
+            /// <para>The user ID.</para>
+            /// <list type="bullet">
+            /// <item><description><para>For a RAM user: The ID of the RAM user.</para>
+            /// </description></item>
+            /// <item><description><para>For a role user: The user identity in the format AssumedRoleUser${roleId}.</para>
+            /// </description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -47,6 +57,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string PermissionUserId { get; set; }
 
             /// <summary>
+            /// <para>The username.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
             /// </summary>
@@ -57,6 +69,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         }
 
         /// <summary>
+        /// <para>The unique identifier of the Alibaba Cloud Model Studio workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2587495.html">Get workspaceId</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

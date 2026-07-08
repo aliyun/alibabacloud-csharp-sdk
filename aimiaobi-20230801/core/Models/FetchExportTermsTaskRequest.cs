@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class FetchExportTermsTaskRequest : TeaModel {
         /// <summary>
+        /// <para>The task ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string TaskId { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier of your Alibaba Cloud Model Studio workspace. To get your <a href="https://help.aliyun.com/document_detail/2782167.html">Workspace ID</a>, see the referenced document.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

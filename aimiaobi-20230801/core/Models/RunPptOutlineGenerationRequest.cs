@@ -18,13 +18,18 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string ExternalUserId { get; set; }
 
         /// <summary>
+        /// <para>The user\&quot;s prompt.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>帮我生成一个消防安全主题的PPT</para>
         /// </summary>
         [NameInMap("Prompt")]
         [Validation(Required=false)]
         public string Prompt { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier of the Alibaba Cloud Model Studio workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2782167.html">Get a Workspace ID</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

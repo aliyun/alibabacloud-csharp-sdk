@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string ExternalUserId { get; set; }
 
         /// <summary>
+        /// <para><a href="https://help.aliyun.com/document_detail/2782167.html">Workspace ID</a></para>
+        /// 
         /// <b>Example:</b>
         /// <para>llm-az2gglkjauwnnhpq</para>
         /// </summary>

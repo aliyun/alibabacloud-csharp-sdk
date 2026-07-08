@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class QueryAuditTaskRequest : TeaModel {
         /// <summary>
+        /// <para>Article ID (Choose either task ID or article ID)</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxx</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string ArticleId { get; set; }
 
         /// <summary>
+        /// <para>Audit task ID (Choose either task ID or article ID)</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string ContentAuditTaskId { get; set; }
 
         /// <summary>
+        /// <para><a href="https://help.aliyun.com/document_detail/2782167.html">workspace ID</a></para>
+        /// 
         /// <b>Example:</b>
         /// <para>llm-xxxx</para>
         /// </summary>

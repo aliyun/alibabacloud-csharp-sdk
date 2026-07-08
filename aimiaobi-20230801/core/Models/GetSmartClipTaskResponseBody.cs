@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class GetSmartClipTaskResponseBody : TeaModel {
         /// <summary>
+        /// <para>Status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>NoData</para>
         /// </summary>
@@ -17,15 +19,31 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Task response</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetSmartClipTaskResponseBodyData Data { get; set; }
         public class GetSmartClipTaskResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>Error message</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>错误信息</para>
+            /// </summary>
             [NameInMap("ErrorMessage")]
             [Validation(Required=false)]
             public string ErrorMessage { get; set; }
 
             /// <summary>
+            /// <para>Task status:
+            /// PENDING: Pending
+            /// RUNNING: Running
+            /// SUCCESSED: Succeeded
+            /// FAILED: Failed
+            /// CANCELED: Canceled</para>
+            /// 
             /// <b>Example:</b>
             /// <para>RUNNING</para>
             /// </summary>
@@ -33,23 +51,33 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            /// <summary>
+            /// <para>List of subtasks</para>
+            /// </summary>
             [NameInMap("SubJobs")]
             [Validation(Required=false)]
             public List<GetSmartClipTaskResponseBodyDataSubJobs> SubJobs { get; set; }
             public class GetSmartClipTaskResponseBodyDataSubJobs : TeaModel {
                 /// <summary>
+                /// <para>Error message</para>
+                /// 
                 /// <b>Example:</b>
-                /// <para>x\&quot;x\&quot;x\&quot;x</para>
+                /// <para>文件名错误</para>
                 /// </summary>
                 [NameInMap("ErrorMessage")]
                 [Validation(Required=false)]
                 public string ErrorMessage { get; set; }
 
+                /// <summary>
+                /// <para>File attributes</para>
+                /// </summary>
                 [NameInMap("FileAttr")]
                 [Validation(Required=false)]
                 public GetSmartClipTaskResponseBodyDataSubJobsFileAttr FileAttr { get; set; }
                 public class GetSmartClipTaskResponseBodyDataSubJobsFileAttr : TeaModel {
                     /// <summary>
+                    /// <para>Video duration in seconds</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>120</para>
                     /// </summary>
@@ -58,6 +86,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                     public double? Duration { get; set; }
 
                     /// <summary>
+                    /// <para>Video file size</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>290804</para>
                     /// </summary>
@@ -66,6 +96,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                     public string FileLength { get; set; }
 
                     /// <summary>
+                    /// <para>Video file name</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>2024-12-12.mp4</para>
                     /// </summary>
@@ -74,6 +106,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                     public string FileName { get; set; }
 
                     /// <summary>
+                    /// <para>Video height</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1080</para>
                     /// </summary>
@@ -82,6 +116,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                     public int? Height { get; set; }
 
                     /// <summary>
+                    /// <para>Temporary URL to access the video file. Expires in one hour.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para><a href="http://www.example.com/tmp.mp4">http://www.example.com/tmp.mp4</a></para>
                     /// </summary>
@@ -90,6 +126,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                     public string TmpUrl { get; set; }
 
                     /// <summary>
+                    /// <para>Video width</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1920</para>
                     /// </summary>
@@ -100,6 +138,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 }
 
                 /// <summary>
+                /// <para>File key</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>oss://default/bucket-name/path-xxx/xxx-1.mp4</para>
                 /// </summary>
@@ -108,6 +148,13 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 public string FileKey { get; set; }
 
                 /// <summary>
+                /// <para>Subtask status:
+                /// PENDING: Pending
+                /// RUNNING: Running
+                /// SUCCESSED: Succeeded
+                /// FAILED: Failed
+                /// CANCELED: Canceled</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>RUNNING</para>
                 /// </summary>
@@ -116,6 +163,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 public string Status { get; set; }
 
                 /// <summary>
+                /// <para>Subtask ID</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>xxxxx</para>
                 /// </summary>
@@ -128,6 +177,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         }
 
         /// <summary>
+        /// <para>HTTP status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -136,6 +187,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Error description</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -144,6 +197,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Unique identifier of the request</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1813ceee-7fe5-41b4-87e5-982a4d18cca5</para>
         /// </summary>
@@ -152,6 +207,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the operation succeeded. true indicates success. false indicates failure.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

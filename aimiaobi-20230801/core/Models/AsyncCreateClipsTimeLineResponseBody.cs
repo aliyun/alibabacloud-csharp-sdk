@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class AsyncCreateClipsTimeLineResponseBody : TeaModel {
         /// <summary>
+        /// <para>Status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Business data</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public AsyncCreateClipsTimeLineResponseBodyData Data { get; set; }
         public class AsyncCreateClipsTimeLineResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Task ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3f7045e099474ba28ceca1b4eb6d6e21</para>
             /// </summary>
@@ -31,16 +38,28 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
         }
 
+        /// <summary>
+        /// <para>HTTP status code</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
+        /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
+        /// <summary>
+        /// <para>Error message</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>Request ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>1813ceee-7fe5-41b4-87e5-982a4d18cca5</para>
@@ -49,6 +68,12 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Operation result: true indicates success. false indicates failure.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

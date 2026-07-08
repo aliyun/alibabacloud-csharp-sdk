@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class FetchExportWordTaskRequest : TeaModel {
         /// <summary>
+        /// <para>The unique identifier of the workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string AgentKey { get; set; }
 
         /// <summary>
+        /// <para>The task ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2e27abb32cb64f80a0c6e829b6c87a09</para>
         /// </summary>

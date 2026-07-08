@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class RunKeywordsExtractionGenerationResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Response header.</para>
+        /// </summary>
         [NameInMap("Header")]
         [Validation(Required=false)]
         public RunKeywordsExtractionGenerationResponseBodyHeader Header { get; set; }
         public class RunKeywordsExtractionGenerationResponseBodyHeader : TeaModel {
             /// <summary>
+            /// <para>Error code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>AccessForbid</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string ErrorCode { get; set; }
 
             /// <summary>
+            /// <para>Error message.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xx</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
+            /// <para>SSE event.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>task-failed</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string Event { get; set; }
 
             /// <summary>
+            /// <para>Session ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1a3d7c9f-3a6d-4e49-b176-2d8721a27397</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string SessionId { get; set; }
 
             /// <summary>
+            /// <para>Task ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>8d55b429d7c6d321fcff54823e8d317b</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string TaskId { get; set; }
 
             /// <summary>
+            /// <para>Trace ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>210bc4e817219607963985396de8bd</para>
             /// </summary>
@@ -63,15 +78,23 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
         }
 
+        /// <summary>
+        /// <para>Response body.</para>
+        /// </summary>
         [NameInMap("Payload")]
         [Validation(Required=false)]
         public RunKeywordsExtractionGenerationResponseBodyPayload Payload { get; set; }
         public class RunKeywordsExtractionGenerationResponseBodyPayload : TeaModel {
+            /// <summary>
+            /// <para>Outputs.</para>
+            /// </summary>
             [NameInMap("Output")]
             [Validation(Required=false)]
             public RunKeywordsExtractionGenerationResponseBodyPayloadOutput Output { get; set; }
             public class RunKeywordsExtractionGenerationResponseBodyPayloadOutput : TeaModel {
                 /// <summary>
+                /// <para>Text generation result.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>xxx</para>
                 /// </summary>
@@ -81,11 +104,16 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
             }
 
+            /// <summary>
+            /// <para>Token usage.</para>
+            /// </summary>
             [NameInMap("Usage")]
             [Validation(Required=false)]
             public RunKeywordsExtractionGenerationResponseBodyPayloadUsage Usage { get; set; }
             public class RunKeywordsExtractionGenerationResponseBodyPayloadUsage : TeaModel {
                 /// <summary>
+                /// <para>Number of input tokens used.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -94,6 +122,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 public long? InputTokens { get; set; }
 
                 /// <summary>
+                /// <para>Number of output tokens used.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -102,6 +132,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 public long? OutputTokens { get; set; }
 
                 /// <summary>
+                /// <para>Total number of tokens used in this call.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
                 /// </summary>
@@ -114,6 +146,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         }
 
         /// <summary>
+        /// <para>Unique request identifier.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>419F3FBE-5C8D-5949-AC29-E9615235D15A</para>
         /// </summary>

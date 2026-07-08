@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class ListAutoClipsTaskResponseBody : TeaModel {
         /// <summary>
+        /// <para>Status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>Page number</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -25,11 +29,16 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public int? Current { get; set; }
 
+        /// <summary>
+        /// <para>Business data</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListAutoClipsTaskResponseBodyData> Data { get; set; }
         public class ListAutoClipsTaskResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Start time of task creation</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2023-03-18 02:00:00</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string CreateTimeStart { get; set; }
 
             /// <summary>
+            /// <para>Task ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3f7045e099474ba28ceca1b4eb6d6e21</para>
             /// </summary>
@@ -45,11 +56,19 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public string TaskId { get; set; }
 
+            /// <summary>
+            /// <para>Task name</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>任务名称</para>
+            /// </summary>
             [NameInMap("TaskName")]
             [Validation(Required=false)]
             public string TaskName { get; set; }
 
             /// <summary>
+            /// <para>Task status</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -70,6 +89,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string TaskStep { get; set; }
 
             /// <summary>
+            /// <para>Task type</para>
+            /// 
             /// <b>Example:</b>
             /// <para>type001</para>
             /// </summary>
@@ -80,6 +101,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         }
 
         /// <summary>
+        /// <para>HTTP status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -88,6 +111,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Deprecated</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -96,6 +121,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>Error message</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -104,6 +131,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Deprecated</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -112,7 +141,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>Request ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>1813ceee-7fe5-41b4-87e5-982a4d18cca5</para>
@@ -122,6 +151,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Number of items per page</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -130,6 +161,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? Size { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request succeeded. true means success. false means failure.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -138,6 +171,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>Total number of records</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -146,6 +181,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? Total { get; set; }
 
         /// <summary>
+        /// <para>Deprecated</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class GetFactAuditUrlRequest : TeaModel {
         /// <summary>
+        /// <para>The unique identifier of the Alibaba Cloud Model Studio workspace. Get the <a href="https://help.aliyun.com/document_detail/2782167.html">Workspace ID</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

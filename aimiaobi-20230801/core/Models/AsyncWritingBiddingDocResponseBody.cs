@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class AsyncWritingBiddingDocResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The business data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public AsyncWritingBiddingDocResponseBodyData Data { get; set; }
         public class AsyncWritingBiddingDocResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The ID of the task.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3f7045e099474ba28ceca1b4eb6d6e21</para>
             /// </summary>
@@ -32,6 +39,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -40,6 +49,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -58,6 +69,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

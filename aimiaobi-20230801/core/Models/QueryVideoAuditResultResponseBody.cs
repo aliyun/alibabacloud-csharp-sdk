@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class QueryVideoAuditResultResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务处理结果状态码</para>
+        /// <para>Business status code</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>视频审校的详细结果</para>
+        /// <para>Video audit result data</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public QueryVideoAuditResultResponseBodyData Data { get; set; }
         public class QueryVideoAuditResultResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>视频总时长（秒）</para>
+            /// <para>Video duration</para>
             /// 
             /// <b>Example:</b>
             /// <para>120.5</para>
@@ -37,14 +37,17 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public double? Duration { get; set; }
 
             /// <summary>
-            /// <para>任务执行失败时的错误信息</para>
+            /// <para>Error message</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>错误信息</para>
             /// </summary>
             [NameInMap("ErrorMessage")]
             [Validation(Required=false)]
             public string ErrorMessage { get; set; }
 
             /// <summary>
-            /// <para>视频帧率（FPS）</para>
+            /// <para>Video frame rate</para>
             /// 
             /// <b>Example:</b>
             /// <para>30.0</para>
@@ -54,7 +57,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public double? Fps { get; set; }
 
             /// <summary>
-            /// <para>已经完成审核的帧数</para>
+            /// <para>Frames audited</para>
             /// 
             /// <b>Example:</b>
             /// <para>120</para>
@@ -64,7 +67,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public int? FrameAudited { get; set; }
 
             /// <summary>
-            /// <para>视频高度（像素）</para>
+            /// <para>Video height</para>
             /// 
             /// <b>Example:</b>
             /// <para>1080</para>
@@ -74,14 +77,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public int? Height { get; set; }
 
             /// <summary>
-            /// <para>抽取的图片URL列表</para>
+            /// <para>Image URL list</para>
             /// </summary>
             [NameInMap("ImageUrls")]
             [Validation(Required=false)]
             public List<QueryVideoAuditResultResponseBodyDataImageUrls> ImageUrls { get; set; }
             public class QueryVideoAuditResultResponseBodyDataImageUrls : TeaModel {
                 /// <summary>
-                /// <para>图片ID，与AliyunImageAuditResult中的dataId对应</para>
+                /// <para>Image ID (Associate with Results[].DataId to get audit result information)</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>img001</para>
@@ -91,6 +94,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 public string Id { get; set; }
 
                 /// <summary>
+                /// <para>Timestamp (milliseconds)</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1000</para>
                 /// </summary>
@@ -99,6 +104,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 public double? Timestamp { get; set; }
 
                 /// <summary>
+                /// <para>Image URL</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://example.com/image1.jpg">https://example.com/image1.jpg</a></para>
                 /// </summary>
@@ -109,14 +116,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             }
 
             /// <summary>
-            /// <para>图片审核结果详情</para>
+            /// <para>Audit results list</para>
             /// </summary>
             [NameInMap("Results")]
             [Validation(Required=false)]
             public List<QueryVideoAuditResultResponseBodyDataResults> Results { get; set; }
             public class QueryVideoAuditResultResponseBodyDataResults : TeaModel {
                 /// <summary>
-                /// <para>对应图片的ID，与ImageUrl中的id字段对应</para>
+                /// <para>Image ID (Associate with ImageUrls[].Id to get image information)</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>d411ed15e8fc154fd0ef5addabfee04b</para>
@@ -126,7 +133,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 public string DataId { get; set; }
 
                 /// <summary>
-                /// <para>审核请求ID</para>
+                /// <para>Request ID</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>B5D1CF9E-0404-51E3-A28E-A5C7D95B6C71</para>
@@ -136,14 +143,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 public string ReqId { get; set; }
 
                 /// <summary>
-                /// <para>图片检测的风险标签、置信分等参数结果</para>
+                /// <para>Detection results</para>
                 /// </summary>
                 [NameInMap("Result")]
                 [Validation(Required=false)]
                 public List<QueryVideoAuditResultResponseBodyDataResultsResult> Result { get; set; }
                 public class QueryVideoAuditResultResponseBodyDataResultsResult : TeaModel {
                     /// <summary>
-                    /// <para>0到100分，保留到小数点后2位，部分标签无置信分</para>
+                    /// <para>From 0 to 100, retained to 2 decimal places. Some labels do not have a confidence score.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>99.5</para>
@@ -153,7 +160,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                     public float? Confidence { get; set; }
 
                     /// <summary>
-                    /// <para>Label字段的解释说明</para>
+                    /// <para>Explanation of the Label field</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>未检测出风险</para>
@@ -163,7 +170,13 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// <para>图片内容检测运算后返回的标签，如：nonLabel（未检测出风险）</para>
+                    /// <para>Risk label</para>
+                    /// <para>The label of the image content review result. For example: nonLabel (no risk detected).</para>
+                    /// <para>The label can also be a risk level that is determined by the high-risk and low-risk thresholds that you set. Valid return values are:
+                    /// ● high: high risk
+                    /// ● medium: medium risk
+                    /// ● low: low risk
+                    /// ● none: no risk detected</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>nonLabel</para>
@@ -175,7 +188,17 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 }
 
                 /// <summary>
-                /// <para>风险等级：high(高风险)、medium(中风险)、low(低风险)、none(未检测到风险)</para>
+                /// <para>Risk level</para>
+                /// <list type="bullet">
+                /// <item><description><para>high: High risk</para>
+                /// </description></item>
+                /// <item><description><para>medium: Medium risk</para>
+                /// </description></item>
+                /// <item><description><para>low: Low risk</para>
+                /// </description></item>
+                /// <item><description><para>none: No risk</para>
+                /// </description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>none</para>
@@ -187,7 +210,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             }
 
             /// <summary>
-            /// <para>任务状态：PENDING(待执行)、RUNNING(执行中)、SUCCESSED(成功)、FAILED(失败)、CANCELED(取消)</para>
+            /// <para>Task status (PENDING: Queued, RUNNING: In progress, SUCCESSED: Successful, FAILED: Failed, CANCELED: Task canceled)</para>
             /// 
             /// <b>Example:</b>
             /// <para>SUCCESSED</para>
@@ -197,7 +220,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>视频审校的文本结果</para>
+            /// <para>Reviewed text</para>
             /// 
             /// <b>Example:</b>
             /// <para>视频审核完成</para>
@@ -207,7 +230,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string Text { get; set; }
 
             /// <summary>
-            /// <para>需要审核的视频帧总数</para>
+            /// <para>Frames to audit</para>
             /// 
             /// <b>Example:</b>
             /// <para>120</para>
@@ -217,7 +240,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public int? TotalFrameAudit { get; set; }
 
             /// <summary>
-            /// <para>视频总帧数</para>
+            /// <para>Total frames</para>
             /// 
             /// <b>Example:</b>
             /// <para>3615</para>
@@ -227,7 +250,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public int? TotalFrames { get; set; }
 
             /// <summary>
-            /// <para>检测到的视频分镜总数</para>
+            /// <para>Total shots</para>
             /// 
             /// <b>Example:</b>
             /// <para>15</para>
@@ -237,7 +260,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public int? TotalShots { get; set; }
 
             /// <summary>
-            /// <para>被审核的视频文件Key</para>
+            /// <para>Video FileKey</para>
             /// 
             /// <b>Example:</b>
             /// <para>video/test.mp4</para>
@@ -247,7 +270,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string VideoFileKey { get; set; }
 
             /// <summary>
-            /// <para>被审核的视频URL地址</para>
+            /// <para>Video URL</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://example.com/video.mp4">https://example.com/video.mp4</a></para>
@@ -257,7 +280,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string VideoUrl { get; set; }
 
             /// <summary>
-            /// <para>视频宽度（像素）</para>
+            /// <para>Video width</para>
             /// 
             /// <b>Example:</b>
             /// <para>1920</para>
@@ -269,7 +292,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         }
 
         /// <summary>
-        /// <para>HTTP响应状态码</para>
+        /// <para>HTTP status code</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -279,7 +302,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>业务处理结果描述信息</para>
+        /// <para>Return message</para>
         /// 
         /// <b>Example:</b>
         /// <para>查询成功</para>
@@ -289,7 +312,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>本次API请求的唯一标识</para>
+        /// <para>Request ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>1813ceee-7fe5-41b4-87e5-982a4d18cca5</para>
@@ -299,7 +322,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>请求是否处理成功</para>
+        /// <para>Is successful</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

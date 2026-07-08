@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class GetPptArtifactExportResultRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the export task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>15aeb61b-cdeb-4b70-94d7-99518040647e</para>
         /// </summary>
@@ -26,6 +28,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string ExternalUserId { get; set; }
 
         /// <summary>
+        /// <para>The workspace ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>llm-xxxx</para>
         /// </summary>

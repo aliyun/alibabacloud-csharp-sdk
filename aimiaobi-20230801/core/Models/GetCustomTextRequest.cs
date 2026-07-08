@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class GetCustomTextRequest : TeaModel {
         /// <summary>
+        /// <para>Workspace unique identifier: <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string AgentKey { get; set; }
 
         /// <summary>
+        /// <para>Product code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>商品code</para>
         /// </summary>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string CommodityCode { get; set; }
 
         /// <summary>
+        /// <para>Primary key ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

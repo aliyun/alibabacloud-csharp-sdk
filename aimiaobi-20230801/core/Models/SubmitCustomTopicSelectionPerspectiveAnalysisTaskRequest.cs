@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class SubmitCustomTopicSelectionPerspectiveAnalysisTaskRequest : TeaModel {
         /// <summary>
+        /// <para>The unique identifier of the workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -19,11 +20,16 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string AgentKey { get; set; }
 
+        /// <summary>
+        /// <para>The list of documents to be analyzed.</para>
+        /// </summary>
         [NameInMap("Documents")]
         [Validation(Required=false)]
         public List<SubmitCustomTopicSelectionPerspectiveAnalysisTaskRequestDocuments> Documents { get; set; }
         public class SubmitCustomTopicSelectionPerspectiveAnalysisTaskRequestDocuments : TeaModel {
             /// <summary>
+            /// <para>The author.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>作者</para>
             /// </summary>
@@ -32,6 +38,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string Author { get; set; }
 
             /// <summary>
+            /// <para>The content.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -42,6 +49,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string Content { get; set; }
 
             /// <summary>
+            /// <para>The publication time. Format: YYYY-MM-dd HH:mm:ss</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-01-22 10:29:00</para>
             /// </summary>
@@ -50,6 +59,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string PubTime { get; set; }
 
             /// <summary>
+            /// <para>The source of the article.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>新浪</para>
             /// </summary>
@@ -58,6 +69,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string Source { get; set; }
 
             /// <summary>
+            /// <para>The summary.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>文章摘要</para>
             /// </summary>
@@ -66,6 +79,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string Summary { get; set; }
 
             /// <summary>
+            /// <para>The title.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>文章标题</para>
             /// </summary>
@@ -74,6 +89,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string Title { get; set; }
 
             /// <summary>
+            /// <para>The URL of the article.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="https://www.example.com/aaa.docx">https://www.example.com/aaa.docx</a></para>
             /// </summary>
@@ -84,6 +101,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         }
 
         /// <summary>
+        /// <para>The input prompt for custom perspectives.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -94,6 +112,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string Prompt { get; set; }
 
         /// <summary>
+        /// <para>The name of the topic to be analyzed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>待分析的主题名（documents与topic二者至少传一个）</para>
         /// </summary>

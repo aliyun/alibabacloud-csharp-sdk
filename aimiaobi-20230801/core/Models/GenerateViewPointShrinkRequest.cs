@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class GenerateViewPointShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The unique identifier of the workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -19,6 +20,9 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string AgentKey { get; set; }
 
+        /// <summary>
+        /// <para>The context data.</para>
+        /// </summary>
         [NameInMap("ReferenceData")]
         [Validation(Required=false)]
         public string ReferenceDataShrink { get; set; }

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class GetDocInfoResponseBody : TeaModel {
         /// <summary>
+        /// <para>The internal error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The response data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetDocInfoResponseBodyData Data { get; set; }
         public class GetDocInfoResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The category where the document is stored.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>default</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string CategoryId { get; set; }
 
             /// <summary>
+            /// <para>The document name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>電視廣播2020年報</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string DocName { get; set; }
 
             /// <summary>
+            /// <para>The document type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>pdf</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string DocType { get; set; }
 
             /// <summary>
+            /// <para>The URL of the document.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="http://xxx/xxx.pdf">http://xxx/xxx.pdf</a></para>
             /// </summary>
@@ -76,14 +89,18 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             }
 
             /// <summary>
+            /// <para>The task status.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>0</para>
+            /// <para>1和0，当状态为1时 表示获取文档成功，用户可进行生成文档摘要、生脑图等操作</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public int? Status { get; set; }
 
             /// <summary>
+            /// <para>The status message.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>导入成功</para>
             /// </summary>
@@ -91,6 +108,9 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public string StatusMessage { get; set; }
 
+            /// <summary>
+            /// <para>Text transcripts from the video\&quot;s audio.</para>
+            /// </summary>
             [NameInMap("VideoContents")]
             [Validation(Required=false)]
             public List<string> VideoContents { get; set; }
@@ -98,6 +118,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -106,6 +128,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -114,6 +138,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1813ceee-7fe5-41b4-87e5-982a4d18cca5</para>
         /// </summary>
@@ -122,6 +148,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. A value of <c>true</c> indicates success, and <c>false</c> indicates failure.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

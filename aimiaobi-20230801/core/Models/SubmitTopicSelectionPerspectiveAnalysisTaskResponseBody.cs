@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class SubmitTopicSelectionPerspectiveAnalysisTaskResponseBody : TeaModel {
         /// <summary>
+        /// <para>Status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>NoData</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Business data</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public SubmitTopicSelectionPerspectiveAnalysisTaskResponseBodyData Data { get; set; }
         public class SubmitTopicSelectionPerspectiveAnalysisTaskResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Unique task ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3f7045e099474ba28ceca1b4eb6d6e21</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string TaskId { get; set; }
 
             /// <summary>
+            /// <para>Task name</para>
+            /// 
             /// <b>Example:</b>
             /// <para>任务名称</para>
             /// </summary>
@@ -40,6 +49,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         }
 
         /// <summary>
+        /// <para>HTTP status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -48,6 +59,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Error message</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -56,6 +69,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Unique request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1813ceee-7fe5-41b4-87e5-982a4d18cca5</para>
         /// </summary>
@@ -64,6 +79,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Success or failure: true for success, false for failure</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

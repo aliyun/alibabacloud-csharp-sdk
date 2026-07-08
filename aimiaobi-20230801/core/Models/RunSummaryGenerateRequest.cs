@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class RunSummaryGenerateRequest : TeaModel {
         /// <summary>
+        /// <para>Content to summarize.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string Content { get; set; }
 
         /// <summary>
+        /// <para>Custom prompt for summary generation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>请为上述内容生成一段摘要，字数在100~200字以内。</para>
         /// </summary>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string Prompt { get; set; }
 
         /// <summary>
+        /// <para>Unique identifier of the Alibaba Cloud Model Studio workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2782167.html">workspace ID</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

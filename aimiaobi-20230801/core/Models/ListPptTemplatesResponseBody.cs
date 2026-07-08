@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class ListPptTemplatesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>NoData</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The current page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -25,11 +29,16 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public int? Current { get; set; }
 
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListPptTemplatesResponseBodyData> Data { get; set; }
         public class ListPptTemplatesResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The template thumbnail.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="http://xxx.com/a.png">http://xxx.com/a.png</a></para>
             /// </summary>
@@ -38,7 +47,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string CoverImg { get; set; }
 
             /// <summary>
-            /// <para>ID</para>
+            /// <para>The ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -50,6 +59,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -58,6 +69,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of results returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -66,6 +79,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -74,6 +89,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The token used to retrieve the next page of results.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>+CBOXvu2YLxC6DOua8Qupg==</para>
         /// </summary>
@@ -82,6 +99,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The unique ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1813ceee-7fe5-41b4-87e5-982a4d18cca5</para>
         /// </summary>
@@ -90,6 +109,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. The default value is 10.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -98,6 +119,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? Size { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. A value of \<c>true\\</c> indicates success and \<c>false\\</c> indicates failure.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -106,6 +129,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>The total number of records.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>

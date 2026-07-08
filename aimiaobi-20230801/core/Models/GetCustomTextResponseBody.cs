@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class GetCustomTextResponseBody : TeaModel {
         /// <summary>
+        /// <para>Status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>NoData</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Business data</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetCustomTextResponseBodyData Data { get; set; }
         public class GetCustomTextResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Content</para>
+            /// 
             /// <b>Example:</b>
             /// <para>内容</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string Content { get; set; }
 
             /// <summary>
+            /// <para>Creation time</para>
+            /// 
             /// <b>Example:</b>
             /// <para>创建时间</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>Created by</para>
+            /// 
             /// <b>Example:</b>
             /// <para>创建用户</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string CreateUser { get; set; }
 
             /// <summary>
+            /// <para>Primary key ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>34</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public long? Id { get; set; }
 
             /// <summary>
+            /// <para>Title</para>
+            /// 
             /// <b>Example:</b>
             /// <para>标题</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string Title { get; set; }
 
             /// <summary>
+            /// <para>Update time</para>
+            /// 
             /// <b>Example:</b>
             /// <para>修改时间</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string UpdateTime { get; set; }
 
             /// <summary>
+            /// <para>Update user</para>
+            /// 
             /// <b>Example:</b>
             /// <para>修改用户</para>
             /// </summary>
@@ -80,6 +99,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         }
 
         /// <summary>
+        /// <para>HTTP status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -88,6 +109,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Fault description</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -96,6 +119,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Unique request identifier</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1813ceee-7fe5-41b4-87e5-982a4d18cca5</para>
         /// </summary>
@@ -104,6 +129,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Is successful: true for success, false for failure</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

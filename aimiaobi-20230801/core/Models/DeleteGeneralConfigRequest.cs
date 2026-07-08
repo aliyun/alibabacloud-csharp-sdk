@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class DeleteGeneralConfigRequest : TeaModel {
         /// <summary>
+        /// <para>Unique identifier of the configuration.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string ConfigKey { get; set; }
 
         /// <summary>
+        /// <para>Unique identifier of the Model Studio workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2782167.html">Get the workspace ID</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

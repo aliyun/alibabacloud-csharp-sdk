@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class ListAnalysisTagDetailByTaskIdResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>NoData</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>A list of classification details from the tag mining task.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListAnalysisTagDetailByTaskIdResponseBodyData> Data { get; set; }
         public class ListAnalysisTagDetailByTaskIdResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The content of the tag.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
             /// </summary>
@@ -29,11 +36,16 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public string Content { get; set; }
 
+            /// <summary>
+            /// <para>A list of tags applied to the content.</para>
+            /// </summary>
             [NameInMap("ContentTags")]
             [Validation(Required=false)]
             public List<ListAnalysisTagDetailByTaskIdResponseBodyDataContentTags> ContentTags { get; set; }
             public class ListAnalysisTagDetailByTaskIdResponseBodyDataContentTags : TeaModel {
                 /// <summary>
+                /// <para>The summary.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>xxx</para>
                 /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 public string SummaryOverview { get; set; }
 
                 /// <summary>
+                /// <para>The name of the tag.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>xxx</para>
                 /// </summary>
@@ -49,6 +63,9 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 [Validation(Required=false)]
                 public string TagName { get; set; }
 
+                /// <summary>
+                /// <para>A list of tag values.</para>
+                /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public List<string> Tags { get; set; }
@@ -56,6 +73,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             }
 
             /// <summary>
+            /// <para>The primary key ID of the data.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>112</para>
             /// </summary>
@@ -64,6 +83,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public long? Id { get; set; }
 
             /// <summary>
+            /// <para>The type of the tag mining task. Valid values: \<c>singleTagValue\\</c>, \<c>multiTagValues\\</c>, and \<c>summaryAndOverview\\</c>.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>summaryAndOverview</para>
             /// </summary>
@@ -72,6 +93,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string TagTaskType { get; set; }
 
             /// <summary>
+            /// <para>The task ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
             /// </summary>
@@ -82,6 +105,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -90,6 +115,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of entries returned on each page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -98,6 +125,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -106,6 +135,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The token for the next page of results.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>token-xxxx</para>
         /// </summary>
@@ -114,6 +145,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The unique ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1813ceee-7fe5-41b4-87e5-982a4d18cca5</para>
         /// </summary>
@@ -122,6 +155,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. A value of true indicates success. A value of false indicates failure.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -130,6 +165,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

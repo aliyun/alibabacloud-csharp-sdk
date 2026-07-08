@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class AsyncCreateClipsTimeLineShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>Supplementary material information to help generate the voiceover script</para>
+        /// 
         /// <b>Example:</b>
         /// <para>素材附加信息</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string AdditionalContent { get; set; }
 
         /// <summary>
+        /// <para>Custom voiceover content</para>
+        /// 
         /// <b>Example:</b>
         /// <para>自定义口播内容</para>
         /// </summary>
@@ -30,6 +34,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string HighLightConfigShrink { get; set; }
 
         /// <summary>
+        /// <para>Enable mimicry capability</para>
+        /// 
         /// <b>Example:</b>
         /// <para>默认开启</para>
         /// </summary>
@@ -38,6 +44,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public bool? NoRefVideo { get; set; }
 
         /// <summary>
+        /// <para>Prompt for processing</para>
+        /// 
         /// <b>Example:</b>
         /// <para>口播内容是乌镇旅游宣传广告，口播内容时长约为1分钟，开头要描述乌镇是千年文化传承的江南水乡，之后要体现乌镇的传统手工艺、美食和美景，最后要号召大家来乌镇旅游</para>
         /// </summary>
@@ -54,6 +62,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public bool? RecommendAudio { get; set; }
 
         /// <summary>
+        /// <para>Unique task ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -74,6 +83,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? TimelineScene { get; set; }
 
         /// <summary>
+        /// <para><a href="https://help.aliyun.com/document_detail/2782167.html">Model Studio workspace ID</a></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

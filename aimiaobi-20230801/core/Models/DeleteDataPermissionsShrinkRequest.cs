@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class DeleteDataPermissionsShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The permission IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Ids")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string IdsShrink { get; set; }
 
         /// <summary>
+        /// <para>The unique ID of the Alibaba Cloud Model Studio workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2587495.html">Get a workspace ID</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

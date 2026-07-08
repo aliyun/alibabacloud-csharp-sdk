@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class RunStepByStepWritingResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The response header.</para>
+        /// </summary>
         [NameInMap("Header")]
         [Validation(Required=false)]
         public RunStepByStepWritingResponseBodyHeader Header { get; set; }
         public class RunStepByStepWritingResponseBodyHeader : TeaModel {
             /// <summary>
+            /// <para>The error code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>错误码</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string ErrorCode { get; set; }
 
             /// <summary>
+            /// <para>The error message.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>错误信息</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
+            /// <para>The Server-Sent Events (SSE) event. \<c>task-started\\</c>: The task begins. \<c>task-finished\\</c>: The task is complete. \<c>task-failed\\</c>: The task failed.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>task-started</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string Event { get; set; }
 
             /// <summary>
+            /// <para>The parent session ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3f7045e099474ba28ceca1b4eb6d6e21</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string OriginSessionId { get; set; }
 
             /// <summary>
+            /// <para>The session ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3f7045e099474ba28ceca1b4eb6d6e21</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string SessionId { get; set; }
 
             /// <summary>
+            /// <para>The task ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3f7045e099474ba28ceca1b4eb6d6e21</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string TaskId { get; set; }
 
             /// <summary>
+            /// <para>The full-link trace ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>全链路ID</para>
             /// </summary>
@@ -71,19 +88,30 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
         }
 
+        /// <summary>
+        /// <para>The response body.</para>
+        /// </summary>
         [NameInMap("Payload")]
         [Validation(Required=false)]
         public RunStepByStepWritingResponseBodyPayload Payload { get; set; }
         public class RunStepByStepWritingResponseBodyPayload : TeaModel {
+            /// <summary>
+            /// <para>The output.</para>
+            /// </summary>
             [NameInMap("Output")]
             [Validation(Required=false)]
             public RunStepByStepWritingResponseBodyPayloadOutput Output { get; set; }
             public class RunStepByStepWritingResponseBodyPayloadOutput : TeaModel {
+                /// <summary>
+                /// <para>The reference articles.</para>
+                /// </summary>
                 [NameInMap("Articles")]
                 [Validation(Required=false)]
                 public List<RunStepByStepWritingResponseBodyPayloadOutputArticles> Articles { get; set; }
                 public class RunStepByStepWritingResponseBodyPayloadOutputArticles : TeaModel {
                     /// <summary>
+                    /// <para>The author.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>作者</para>
                     /// </summary>
@@ -92,6 +120,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                     public string Author { get; set; }
 
                     /// <summary>
+                    /// <para>The content.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>文章内容</para>
                     /// </summary>
@@ -100,6 +130,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                     public string Content { get; set; }
 
                     /// <summary>
+                    /// <para>The custom unique ID of the document.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>文档-自定义的唯一ID</para>
                     /// </summary>
@@ -108,6 +140,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                     public string DocId { get; set; }
 
                     /// <summary>
+                    /// <para>The internal unique ID of the document.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>f1da53894e784759946d22e2cb2b522a</para>
                     /// </summary>
@@ -116,6 +150,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                     public string DocUuid { get; set; }
 
                     /// <summary>
+                    /// <para>The URL of the original material.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para><a href="http://www.example.com">http://www.example.com</a></para>
                     /// </summary>
@@ -124,6 +160,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                     public string MediaUrl { get; set; }
 
                     /// <summary>
+                    /// <para>The publication time.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>2024-09-10 14:17:53</para>
                     /// </summary>
@@ -132,6 +170,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                     public string PubTime { get; set; }
 
                     /// <summary>
+                    /// <para>The source.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>央视网</para>
                     /// </summary>
@@ -140,6 +180,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                     public string Source { get; set; }
 
                     /// <summary>
+                    /// <para>The article summary.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>文章摘要</para>
                     /// </summary>
@@ -148,6 +190,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                     public string Summary { get; set; }
 
                     /// <summary>
+                    /// <para>The tag.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>文章标签</para>
                     /// </summary>
@@ -156,6 +200,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                     public string Tag { get; set; }
 
                     /// <summary>
+                    /// <para>The title.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>文章标题</para>
                     /// </summary>
@@ -164,6 +210,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                     public string Title { get; set; }
 
                     /// <summary>
+                    /// <para>The URL of the article.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para><a href="https://www.example.com/aaa.docx">https://www.example.com/aaa.docx</a></para>
                     /// </summary>
@@ -173,10 +221,16 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
                 }
 
+                /// <summary>
+                /// <para>Extra output fields.</para>
+                /// </summary>
                 [NameInMap("ExtraOutput")]
                 [Validation(Required=false)]
                 public RunStepByStepWritingResponseBodyPayloadOutputExtraOutput ExtraOutput { get; set; }
                 public class RunStepByStepWritingResponseBodyPayloadOutputExtraOutput : TeaModel {
+                    /// <summary>
+                    /// <para>The list of summaries. This field is returned when summaries are generated step-by-step.</para>
+                    /// </summary>
                     [NameInMap("summarization")]
                     [Validation(Required=false)]
                     public List<string> Summarization { get; set; }
@@ -184,6 +238,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 }
 
                 /// <summary>
+                /// <para>A list of segments after the article layout has been optimized.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>文章精排之后的片段</para>
                 /// </summary>
@@ -192,6 +248,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 public List<string> MiniDoc { get; set; }
 
                 /// <summary>
+                /// <para>The rewritten query.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>大模型改变世界</para>
                 /// </summary>
@@ -200,6 +258,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 public string SearchQuery { get; set; }
 
                 /// <summary>
+                /// <para>The text generation result.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>文本生成结果</para>
                 /// </summary>
@@ -209,11 +269,16 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
             }
 
+            /// <summary>
+            /// <para>Information about token usage.</para>
+            /// </summary>
             [NameInMap("Usage")]
             [Validation(Required=false)]
             public RunStepByStepWritingResponseBodyPayloadUsage Usage { get; set; }
             public class RunStepByStepWritingResponseBodyPayloadUsage : TeaModel {
                 /// <summary>
+                /// <para>The number of input tokens.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>65</para>
                 /// </summary>
@@ -222,6 +287,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 public long? InputTokens { get; set; }
 
                 /// <summary>
+                /// <para>The number of output tokens.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>80</para>
                 /// </summary>
@@ -230,6 +297,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 public long? OutputTokens { get; set; }
 
                 /// <summary>
+                /// <para>The total number of tokens.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>32</para>
                 /// </summary>
@@ -242,6 +311,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         }
 
         /// <summary>
+        /// <para>The unique request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3f7045e099474ba28ceca1b4eb6d6e21</para>
         /// </summary>

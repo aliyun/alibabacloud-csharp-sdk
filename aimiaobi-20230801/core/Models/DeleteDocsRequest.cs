@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class DeleteDocsRequest : TeaModel {
         /// <summary>
+        /// <para>Document ID array.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DocIds")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public List<string> DocIds { get; set; }
 
         /// <summary>
+        /// <para>Unique identifier for the Alibaba Cloud Model Studio workspace. Get the <a href="https://help.aliyun.com/document_detail/2782167.html">workspace ID</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

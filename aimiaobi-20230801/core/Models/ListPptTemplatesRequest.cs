@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class ListPptTemplatesRequest : TeaModel {
         /// <summary>
+        /// <para>The career ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? CareerId { get; set; }
 
         /// <summary>
+        /// <para>The color ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -25,11 +29,19 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public int? ColourId { get; set; }
 
+        /// <summary>
+        /// <para>The maximum number of results to return.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>暂不支持修改，固定为10</para>
+        /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The token used to retrieve the next page of results.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>+CBOXvu2YLxC6DOua8Qupg==</para>
         /// </summary>
@@ -38,6 +50,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The template scenario ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7</para>
         /// </summary>
@@ -46,6 +60,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? SceneId { get; set; }
 
         /// <summary>
+        /// <para>The style ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -54,6 +70,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? StyleId { get; set; }
 
         /// <summary>
+        /// <para>The workspace ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>llm-xx</para>
         /// </summary>

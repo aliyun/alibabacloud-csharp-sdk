@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class GetGeneratedContentResponseBody : TeaModel {
         /// <summary>
+        /// <para>Status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>NoData</para>
         /// </summary>
@@ -17,15 +19,26 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Business data</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetGeneratedContentResponseBodyData Data { get; set; }
         public class GetGeneratedContentResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>Rich text content</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>杭州亚运会</para>
+            /// </summary>
             [NameInMap("Content")]
             [Validation(Required=false)]
             public string Content { get; set; }
 
             /// <summary>
+            /// <para>Content generation domain. Valid values: media (news) and government (government services)</para>
+            /// 
             /// <b>Example:</b>
             /// <para>media</para>
             /// </summary>
@@ -33,11 +46,19 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public string ContentDomain { get; set; }
 
+            /// <summary>
+            /// <para>Plain text content</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>杭州亚运会</para>
+            /// </summary>
             [NameInMap("ContentText")]
             [Validation(Required=false)]
             public string ContentText { get; set; }
 
             /// <summary>
+            /// <para>Creation time</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-01-04 11:46:07</para>
             /// </summary>
@@ -46,14 +67,18 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>Creator</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>1</para>
+            /// <para>&quot;1&quot;</para>
             /// </summary>
             [NameInMap("CreateUser")]
             [Validation(Required=false)]
             public string CreateUser { get; set; }
 
             /// <summary>
+            /// <para>Device ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
             /// </summary>
@@ -62,6 +87,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string DeviceId { get; set; }
 
             /// <summary>
+            /// <para>Document ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>86</para>
             /// </summary>
@@ -69,23 +96,46 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public long? Id { get; set; }
 
+            /// <summary>
+            /// <para>List of words to ignore during content audit (JSON string)</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>&quot;[{}]&quot;</para>
+            /// </summary>
             [NameInMap("IgnoreContentAuditWords")]
             [Validation(Required=false)]
             public string IgnoreContentAuditWords { get; set; }
 
+            /// <summary>
+            /// <para>Keywords</para>
+            /// </summary>
             [NameInMap("KeywordList")]
             [Validation(Required=false)]
             public List<string> KeywordList { get; set; }
 
+            /// <summary>
+            /// <para>Keywords (string format)</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>[\&quot;教师\&quot;,\&quot;乡村\&quot;]</para>
+            /// </summary>
             [NameInMap("Keywords")]
             [Validation(Required=false)]
             public string Keywords { get; set; }
 
+            /// <summary>
+            /// <para>Last prompt used to generate this content</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>创作xxx文章</para>
+            /// </summary>
             [NameInMap("Prompt")]
             [Validation(Required=false)]
             public string Prompt { get; set; }
 
             /// <summary>
+            /// <para>Session task ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3f7045e099474ba28ceca1b4eb6d6e21</para>
             /// </summary>
@@ -93,11 +143,19 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public string TaskId { get; set; }
 
+            /// <summary>
+            /// <para>Title</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>杭州亚运会</para>
+            /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]
             public string Title { get; set; }
 
             /// <summary>
+            /// <para>Update time</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-01-04 11:46:07</para>
             /// </summary>
@@ -106,14 +164,18 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string UpdateTime { get; set; }
 
             /// <summary>
+            /// <para>Updater</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>1</para>
+            /// <para>&quot;1&quot;</para>
             /// </summary>
             [NameInMap("UpdateUser")]
             [Validation(Required=false)]
             public string UpdateUser { get; set; }
 
             /// <summary>
+            /// <para>UUID for traceability</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0961a514-2e26-4aa6-b22b-f592d145fe47</para>
             /// </summary>
@@ -124,6 +186,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         }
 
         /// <summary>
+        /// <para>HTTP status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -132,6 +196,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Error message</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -140,6 +206,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1813ceee-7fe5-41b4-87e5-982a4d18cca5</para>
         /// </summary>
@@ -148,6 +216,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request succeeded. true indicates success. false indicates failure.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

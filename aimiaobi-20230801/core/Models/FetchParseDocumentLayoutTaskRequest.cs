@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class FetchParseDocumentLayoutTaskRequest : TeaModel {
         /// <summary>
+        /// <para>Content to be formatted</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string TaskId { get; set; }
 
         /// <summary>
+        /// <para>Unique identifier of the Alibaba Cloud Model Studio workspace: <a href="https://help.aliyun.com/document_detail/2782167.html">Get workspaceId</a></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class GetInterveneImportTaskInfoResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -17,6 +19,9 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetInterveneImportTaskInfoResponseBodyData Data { get; set; }
@@ -25,11 +30,16 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public int? Code { get; set; }
 
+            /// <summary>
+            /// <para>The status information of the task.</para>
+            /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public GetInterveneImportTaskInfoResponseBodyDataStatus Status { get; set; }
             public class GetInterveneImportTaskInfoResponseBodyDataStatus : TeaModel {
                 /// <summary>
+                /// <para>The information about the task.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>success</para>
                 /// </summary>
@@ -38,6 +48,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 public string Msg { get; set; }
 
                 /// <summary>
+                /// <para>The completion percentage.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>80</para>
                 /// </summary>
@@ -46,6 +58,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 public int? Percentage { get; set; }
 
                 /// <summary>
+                /// <para>The status of the task.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
@@ -54,6 +68,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 public int? Status { get; set; }
 
                 /// <summary>
+                /// <para>The task ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>41405255</para>
                 /// </summary>
@@ -62,6 +78,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 public string TaskId { get; set; }
 
                 /// <summary>
+                /// <para>The name of the task.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>ft-task-20190101m8rnK</para>
                 /// </summary>
@@ -74,6 +92,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -82,6 +102,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -90,6 +112,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The unique ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1813ceee-7fe5-41b4-87e5-982a4d18cca5</para>
         /// </summary>
@@ -98,6 +122,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. A value of \<c>true\\</c> indicates success, and a value of \<c>false\\</c> indicates failure.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

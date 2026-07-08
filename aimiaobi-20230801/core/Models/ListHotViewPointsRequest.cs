@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class ListHotViewPointsRequest : TeaModel {
         /// <summary>
+        /// <para>UUID of the workspace: AgentKey</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string AgentKey { get; set; }
 
         /// <summary>
+        /// <para>Maximum number of returned results</para>
+        /// 
         /// <b>Example:</b>
         /// <para>56</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>Token for the next page</para>
+        /// 
         /// <b>Example:</b>
         /// <para>下一页的token</para>
         /// </summary>
@@ -36,6 +41,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>Hot topic subject</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,6 +52,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string Topic { get; set; }
 
         /// <summary>
+        /// <para>Hotlist source</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

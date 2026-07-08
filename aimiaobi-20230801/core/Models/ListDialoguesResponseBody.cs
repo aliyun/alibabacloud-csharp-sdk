@@ -10,14 +10,18 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class ListDialoguesResponseBody : TeaModel {
         /// <summary>
+        /// <para>Status code.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>NoData</para>
+        /// <para>successful</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>Page number of the current page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -25,11 +29,16 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public int? Current { get; set; }
 
+        /// <summary>
+        /// <para>List of generation history records.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListDialoguesResponseBodyData> Data { get; set; }
         public class ListDialoguesResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Model output.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xx</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string Bot { get; set; }
 
             /// <summary>
+            /// <para>Creation time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-01-04 11:46:07</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>Creator.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xx</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string CreateUser { get; set; }
 
             /// <summary>
+            /// <para>Generation type. Valid values: 1 (creation) and 2 (intelligent search). Default value: 2.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public int? DialogueType { get; set; }
 
             /// <summary>
+            /// <para>Task ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xx</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string TaskId { get; set; }
 
             /// <summary>
+            /// <para>User input.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>x</para>
             /// </summary>
@@ -80,6 +99,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         }
 
         /// <summary>
+        /// <para>HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -88,14 +109,18 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Error message.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>success</para>
+        /// <para>successful</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Unique identifier for the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1813ceee-7fe5-41b4-87e5-982a4d18cca5</para>
         /// </summary>
@@ -104,6 +129,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Number of items per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -112,6 +139,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? Size { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the operation succeeded. A value of true indicates success. A value of false indicates failure.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -120,6 +149,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>Total number of records.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>

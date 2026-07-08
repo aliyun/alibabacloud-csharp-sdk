@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class ExportPptArtifactRequest : TeaModel {
         /// <summary>
+        /// <para>Indicates if the exported artifact is editable.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public bool? Edit { get; set; }
 
         /// <summary>
+        /// <para>The export file type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ppt</para>
         /// </summary>
@@ -34,6 +38,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string ExternalUserId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the PPT artifact.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,6 +49,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public long? PptArtifactId { get; set; }
 
         /// <summary>
+        /// <para>The workspace ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>llm-xxxx</para>
         /// </summary>
@@ -52,6 +59,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string WorkspaceId { get; set; }
 
         /// <summary>
+        /// <para>Indicates if the exported file is compressed into a ZIP package.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

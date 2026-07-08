@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class ListAuditTermsResponseBody : TeaModel {
         /// <summary>
+        /// <para>Status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>DataNotExists</para>
         /// </summary>
@@ -17,15 +19,23 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Business data</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListAuditTermsResponseBodyData> Data { get; set; }
         public class ListAuditTermsResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>Exception statements</para>
+            /// </summary>
             [NameInMap("ExceptionWord")]
             [Validation(Required=false)]
             public List<string> ExceptionWord { get; set; }
 
             /// <summary>
+            /// <para>Task primary key ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string Id { get; set; }
 
             /// <summary>
+            /// <para>Keyword</para>
+            /// 
             /// <b>Example:</b>
             /// <para>龘</para>
             /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string Keyword { get; set; }
 
             /// <summary>
+            /// <para>Suggested word</para>
+            /// 
             /// <b>Example:</b>
             /// <para>龘(dá)</para>
             /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string SuggestWord { get; set; }
 
             /// <summary>
+            /// <para>Audit basis</para>
+            /// 
             /// <b>Example:</b>
             /// <para>龙行龘龘出自四库本《玉篇》23龙部第8字，文字释义为群龙腾飞的样子，昂扬而热烈。</para>
             /// </summary>
@@ -57,6 +73,9 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public string TermsDesc { get; set; }
 
+            /// <summary>
+            /// <para>Dictionary name</para>
+            /// </summary>
             [NameInMap("TermsName")]
             [Validation(Required=false)]
             public string TermsName { get; set; }
@@ -64,6 +83,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         }
 
         /// <summary>
+        /// <para>HTTP status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -72,6 +93,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Maximum number of results returned</para>
+        /// 
         /// <b>Example:</b>
         /// <para>77</para>
         /// </summary>
@@ -80,6 +103,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>Error description</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -88,6 +113,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Token for the next page</para>
+        /// 
         /// <b>Example:</b>
         /// <para>x\&quot;x\&quot;x</para>
         /// </summary>
@@ -106,6 +133,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request succeeded.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -114,6 +143,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>Total count</para>
+        /// 
         /// <b>Example:</b>
         /// <para>58</para>
         /// </summary>

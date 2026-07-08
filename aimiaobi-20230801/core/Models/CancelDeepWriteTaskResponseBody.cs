@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class CancelDeepWriteTaskResponseBody : TeaModel {
         /// <summary>
+        /// <para>Error code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>DataNotExists</para>
         /// </summary>
@@ -17,15 +19,26 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Task response object</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CancelDeepWriteTaskResponseBodyData Data { get; set; }
         public class CancelDeepWriteTaskResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>User query</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>北京2025年新能源汽车发展趋势</para>
+            /// </summary>
             [NameInMap("Input")]
             [Validation(Required=false)]
             public string Input { get; set; }
 
             /// <summary>
+            /// <para>Task status</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cancelled</para>
             /// </summary>
@@ -34,6 +47,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>Task ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xbabac91-fdad-44d6-95ce-******</para>
             /// </summary>
@@ -44,6 +59,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         }
 
         /// <summary>
+        /// <para>HTTP status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>400</para>
         /// </summary>
@@ -52,6 +69,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Error message</para>
+        /// 
         /// <b>Example:</b>
         /// <para>错误消息</para>
         /// </summary>
@@ -60,7 +79,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>Request ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxxx</para>
@@ -70,6 +89,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request succeeded</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

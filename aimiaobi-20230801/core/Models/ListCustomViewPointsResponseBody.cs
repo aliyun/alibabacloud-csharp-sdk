@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class ListCustomViewPointsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>NoData</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The business data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListCustomViewPointsResponseBodyData> Data { get; set; }
         public class ListCustomViewPointsResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The ID of the asynchronous task that analyzes the custom viewpoint.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2323ac73e174428a98c91097a59c67e0</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string AsyncTaskId { get; set; }
 
             /// <summary>
+            /// <para>The viewpoint.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>观点</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string Attitude { get; set; }
 
             /// <summary>
+            /// <para>The time when the viewpoint was created.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-08-15 16:18:59</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The ID of the user who created the viewpoint.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string CreateUser { get; set; }
 
             /// <summary>
+            /// <para>The ID of the custom viewpoint.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>709806dd051042d5ab9de8bdbb3a64ca</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string Id { get; set; }
 
             /// <summary>
+            /// <para>The task execution status. Valid values: PENDING, RUNNING, SUCCEEDED, SUSPENDED, FAILED, and CANCELED.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>RUNNING</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>The error message for the task execution.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>参数校验失败</para>
             /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string TaskErrorMessage { get; set; }
 
             /// <summary>
+            /// <para>The task execution status. 0: PENDING, 1: RUNNING, 2: SUCCEEDED, 3: PAUSED, 4: FAILED (retriable), 5: FAILED (non-retriable), 6: CANCELED.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -85,15 +106,23 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public int? TaskStatus { get; set; }
 
+            /// <summary>
+            /// <para>A list of topic selection viewpoints.</para>
+            /// </summary>
             [NameInMap("ViewPoints")]
             [Validation(Required=false)]
             public List<ListCustomViewPointsResponseBodyDataViewPoints> ViewPoints { get; set; }
             public class ListCustomViewPointsResponseBodyDataViewPoints : TeaModel {
+                /// <summary>
+                /// <para>The outline.</para>
+                /// </summary>
                 [NameInMap("Outlines")]
                 [Validation(Required=false)]
                 public List<ListCustomViewPointsResponseBodyDataViewPointsOutlines> Outlines { get; set; }
                 public class ListCustomViewPointsResponseBodyDataViewPointsOutlines : TeaModel {
                     /// <summary>
+                    /// <para>The outline.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>大纲</para>
                     /// </summary>
@@ -102,6 +131,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                     public string Outline { get; set; }
 
                     /// <summary>
+                    /// <para>The summary of the outline.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>大纲摘要</para>
                     /// </summary>
@@ -112,6 +143,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 }
 
                 /// <summary>
+                /// <para>The generated viewpoint.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>视角</para>
                 /// </summary>
@@ -120,6 +153,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 public string Point { get; set; }
 
                 /// <summary>
+                /// <para>The summary.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>摘要</para>
                 /// </summary>
@@ -132,6 +167,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -140,6 +177,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of results returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>60</para>
         /// </summary>
@@ -148,6 +187,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The error description.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -156,6 +197,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The token for the next page of results.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>下一页的token</para>
         /// </summary>
@@ -164,6 +207,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1813ceee-7fe5-41b4-87e5-982a4d18cca5</para>
         /// </summary>
@@ -172,6 +217,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. \<c>true\\</c>: The request was successful. \<c>false\\</c>: The request failed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -180,6 +227,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>73</para>
         /// </summary>

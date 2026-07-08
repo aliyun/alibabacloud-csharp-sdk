@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class QueryAuditTaskResponseBody : TeaModel {
         /// <summary>
+        /// <para>error code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>DataNotExists</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Asynchronous task object</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public QueryAuditTaskResponseBodyData Data { get; set; }
         public class QueryAuditTaskResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Audit time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2025-05-13 12:12:12</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string AuditTime { get; set; }
 
             /// <summary>
+            /// <para>Original text at the time of audit.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>审核时的原文</para>
             /// </summary>
@@ -37,19 +46,33 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public string Content { get; set; }
 
+            /// <summary>
+            /// <para>Formatted content at the time of audit.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>格式化的审核时的内容</para>
+            /// </summary>
             [NameInMap("HtmlContent")]
             [Validation(Required=false)]
             public string HtmlContent { get; set; }
 
+            /// <summary>
+            /// <para>Audit results.</para>
+            /// </summary>
             [NameInMap("Response")]
             [Validation(Required=false)]
             public QueryAuditTaskResponseBodyDataResponse Response { get; set; }
             public class QueryAuditTaskResponseBodyDataResponse : TeaModel {
+                /// <summary>
+                /// <para>Audit response header</para>
+                /// </summary>
                 [NameInMap("Header")]
                 [Validation(Required=false)]
                 public QueryAuditTaskResponseBodyDataResponseHeader Header { get; set; }
                 public class QueryAuditTaskResponseBodyDataResponseHeader : TeaModel {
                     /// <summary>
+                    /// <para>error code</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>DataNotExists</para>
                     /// </summary>
@@ -58,6 +81,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                     public string ErrorCode { get; set; }
 
                     /// <summary>
+                    /// <para>error message</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>数据不存在</para>
                     /// </summary>
@@ -66,6 +91,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                     public string ErrorMessage { get; set; }
 
                     /// <summary>
+                    /// <para>Event</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>task-failed</para>
                     /// </summary>
@@ -74,6 +101,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                     public string Event { get; set; }
 
                     /// <summary>
+                    /// <para>Unique conversation ID.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>49eab783-9172-487a-b9df-c6372c47392c</para>
                     /// </summary>
@@ -82,6 +111,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                     public string SessionId { get; set; }
 
                     /// <summary>
+                    /// <para>Unique multi-turn conversation ID.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>896b733535274d28b1a61c78bc145217</para>
                     /// </summary>
@@ -91,15 +122,23 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
                 }
 
+                /// <summary>
+                /// <para>response body</para>
+                /// </summary>
                 [NameInMap("Payload")]
                 [Validation(Required=false)]
                 public QueryAuditTaskResponseBodyDataResponsePayload Payload { get; set; }
                 public class QueryAuditTaskResponseBodyDataResponsePayload : TeaModel {
+                    /// <summary>
+                    /// <para>response body</para>
+                    /// </summary>
                     [NameInMap("Output")]
                     [Validation(Required=false)]
                     public QueryAuditTaskResponseBodyDataResponsePayloadOutput Output { get; set; }
                     public class QueryAuditTaskResponseBodyDataResponsePayloadOutput : TeaModel {
                         /// <summary>
+                        /// <para>Final response result (JSON array structure)</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>x\&quot;x\&quot;x</para>
                         /// </summary>
@@ -109,11 +148,16 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
                     }
 
+                    /// <summary>
+                    /// <para>usage</para>
+                    /// </summary>
                     [NameInMap("Usage")]
                     [Validation(Required=false)]
                     public QueryAuditTaskResponseBodyDataResponsePayloadUsage Usage { get; set; }
                     public class QueryAuditTaskResponseBodyDataResponsePayloadUsage : TeaModel {
                         /// <summary>
+                        /// <para>Input tokens.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>200</para>
                         /// </summary>
@@ -122,6 +166,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                         public int? InputTokens { get; set; }
 
                         /// <summary>
+                        /// <para>Output tokens.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>100</para>
                         /// </summary>
@@ -130,6 +176,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                         public int? OutputTokens { get; set; }
 
                         /// <summary>
+                        /// <para>Total tokens.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>300</para>
                         /// </summary>
@@ -144,6 +192,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             }
 
             /// <summary>
+            /// <para>Task execution status: PENDING: pending, RUNNING: running, SUCCESSED: successful, SUSPENDED: paused, FAILED: failed, CANCELLED: canceled</para>
+            /// 
             /// <b>Example:</b>
             /// <para>RUNNING</para>
             /// </summary>
@@ -152,6 +202,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>Task execution status: 0: pending, 1: running, 2: successful, 3: paused, 4: failed, 6: canceled</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -159,6 +211,12 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public int? TaskStatus { get; set; }
 
+            /// <summary>
+            /// <para>Content title</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>内容标题</para>
+            /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]
             public string Title { get; set; }
@@ -166,6 +224,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         }
 
         /// <summary>
+        /// <para>HTTP error code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>400</para>
         /// </summary>
@@ -174,6 +234,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>error message</para>
+        /// 
         /// <b>Example:</b>
         /// <para>错误消息</para>
         /// </summary>
@@ -192,6 +254,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

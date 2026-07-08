@@ -18,7 +18,11 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"cn-beijing", "aimiaobi.cn-beijing.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("aimiaobi", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -39,7 +43,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加审核自定义词库记录</para>
+        /// <para>Add a custom term to the audit dictionary.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -107,7 +111,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加审核自定义词库记录</para>
+        /// <para>Add a custom term to the audit dictionary.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -175,7 +179,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加审核自定义词库记录</para>
+        /// <para>Add a custom term to the audit dictionary.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -193,7 +197,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加审核自定义词库记录</para>
+        /// <para>Add a custom term to the audit dictionary.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -211,7 +215,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加文档到数据集</para>
+        /// <para>Adds a document to a data source.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -271,7 +275,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加文档到数据集</para>
+        /// <para>Adds a document to a data source.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -331,7 +335,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加文档到数据集</para>
+        /// <para>Adds a document to a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -349,7 +353,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加文档到数据集</para>
+        /// <para>Adds a document to a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -367,7 +371,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成剪辑视频任务</para>
+        /// <para>Generates a video clip.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -398,6 +402,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
                 request.StickersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Stickers, "Stickers", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdaptMode))
+            {
+                body["AdaptMode"] = request.AdaptMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Alignment))
+            {
+                body["Alignment"] = request.Alignment;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloseMusic))
             {
                 body["CloseMusic"] = request.CloseMusic;
@@ -473,6 +485,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
             {
                 body["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TextWidth))
+            {
+                body["TextWidth"] = request.TextWidth;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VoiceStyle))
             {
@@ -511,7 +527,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成剪辑视频任务</para>
+        /// <para>Generates a video clip.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -542,6 +558,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
                 request.StickersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Stickers, "Stickers", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdaptMode))
+            {
+                body["AdaptMode"] = request.AdaptMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Alignment))
+            {
+                body["Alignment"] = request.Alignment;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloseMusic))
             {
                 body["CloseMusic"] = request.CloseMusic;
@@ -618,6 +642,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             {
                 body["TaskId"] = request.TaskId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TextWidth))
+            {
+                body["TextWidth"] = request.TextWidth;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VoiceStyle))
             {
                 body["VoiceStyle"] = request.VoiceStyle;
@@ -655,7 +683,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成剪辑视频任务</para>
+        /// <para>Generates a video clip.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -673,7 +701,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成剪辑视频任务</para>
+        /// <para>Generates a video clip.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -691,7 +719,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>智能剪辑timeline</para>
+        /// <para>Creates a timeline for smart video editing.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -771,7 +799,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>智能剪辑timeline</para>
+        /// <para>Creates a timeline for smart video editing.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -851,7 +879,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>智能剪辑timeline</para>
+        /// <para>Creates a timeline for smart video editing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -869,7 +897,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>智能剪辑timeline</para>
+        /// <para>Creates a timeline for smart video editing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -887,7 +915,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑剪辑任务的timeline</para>
+        /// <para>Edits the timeline of a video editing task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -947,7 +975,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑剪辑任务的timeline</para>
+        /// <para>Edits the timeline of a video editing task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1007,7 +1035,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑剪辑任务的timeline</para>
+        /// <para>Edits the timeline of a video editing task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1025,7 +1053,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑剪辑任务的timeline</para>
+        /// <para>Edits the timeline of a video editing task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1043,7 +1071,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传招标书文件</para>
+        /// <para>Upload a tender document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1093,7 +1121,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传招标书文件</para>
+        /// <para>Upload a tender document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1143,7 +1171,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传招标书文件</para>
+        /// <para>Upload a tender document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1161,7 +1189,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传招标书文件</para>
+        /// <para>Upload a tender document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1179,7 +1207,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传剪辑素材</para>
+        /// <para>Uploads video assets for editing.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1279,7 +1307,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传剪辑素材</para>
+        /// <para>Uploads video assets for editing.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1379,7 +1407,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传剪辑素材</para>
+        /// <para>Uploads video assets for editing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1397,7 +1425,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传剪辑素材</para>
+        /// <para>Uploads video assets for editing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1415,7 +1443,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标书写作接口</para>
+        /// <para>An API for writing bidding documents.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1469,7 +1497,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标书写作接口</para>
+        /// <para>An API for writing bidding documents.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1523,7 +1551,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标书写作接口</para>
+        /// <para>An API for writing bidding documents.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1541,7 +1569,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标书写作接口</para>
+        /// <para>An API for writing bidding documents.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1559,7 +1587,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定PPT作品信息</para>
+        /// <para>Binds a PowerPoint (PPT) artifact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1613,7 +1641,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定PPT作品信息</para>
+        /// <para>Binds a PowerPoint (PPT) artifact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1667,7 +1695,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定PPT作品信息</para>
+        /// <para>Binds a PowerPoint (PPT) artifact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1685,7 +1713,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定PPT作品信息</para>
+        /// <para>Binds a PowerPoint (PPT) artifact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1703,7 +1731,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消异步任务</para>
+        /// <para>Cancels pending asynchronous tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1751,7 +1779,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消异步任务</para>
+        /// <para>Cancels pending asynchronous tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1799,7 +1827,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消异步任务</para>
+        /// <para>Cancels pending asynchronous tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1817,7 +1845,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消异步任务</para>
+        /// <para>Cancels pending asynchronous tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1835,7 +1863,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消审核任务</para>
+        /// <para>Cancel an audit task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1885,7 +1913,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消审核任务</para>
+        /// <para>Cancel an audit task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1935,7 +1963,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消审核任务</para>
+        /// <para>Cancel an audit task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1953,7 +1981,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消审核任务</para>
+        /// <para>Cancel an audit task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1971,7 +1999,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消深度写作任务</para>
+        /// <para>Cancels a deep writing task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2017,7 +2045,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消深度写作任务</para>
+        /// <para>Cancels a deep writing task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2063,7 +2091,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消深度写作任务</para>
+        /// <para>Cancels a deep writing task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2081,7 +2109,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消深度写作任务</para>
+        /// <para>Cancels a deep writing task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2099,7 +2127,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>清除所有干预内容</para>
+        /// <para>Clears all intervention content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2141,7 +2169,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>清除所有干预内容</para>
+        /// <para>Clears all intervention content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2183,7 +2211,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>清除所有干预内容</para>
+        /// <para>Clears all intervention content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2201,7 +2229,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>清除所有干预内容</para>
+        /// <para>Clears all intervention content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2219,7 +2247,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>是否将本次提交自定义规则库得到的解析结果用于审核任务。由于解析结果可能不满足用户需求，因此我们为您提供了该接口用于二次确认。如果对提交的规则库解析满意，则可以直接将本次提交任务的 TaskId 作为入参，系统会对您上传的规则库做后处理，使它可以被用于审核。反之，您可以重新调用 SubmitAuditNote 接口上传修改之后的规则库。</para>
+        /// <para>This interface confirms whether the parsing results from your custom rule library submission are used for audit tasks. Because parsing results may not meet your requirements, use this interface to perform a second confirmation. If you are satisfied with the parsing of your submitted rule library, provide the TaskId from that submission as an input parameter. The system then post-processes your uploaded rule library and makes it available for auditing. Otherwise, invoke the SubmitAuditNote interface again to upload the modified rule library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2265,7 +2293,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>是否将本次提交自定义规则库得到的解析结果用于审核任务。由于解析结果可能不满足用户需求，因此我们为您提供了该接口用于二次确认。如果对提交的规则库解析满意，则可以直接将本次提交任务的 TaskId 作为入参，系统会对您上传的规则库做后处理，使它可以被用于审核。反之，您可以重新调用 SubmitAuditNote 接口上传修改之后的规则库。</para>
+        /// <para>This interface confirms whether the parsing results from your custom rule library submission are used for audit tasks. Because parsing results may not meet your requirements, use this interface to perform a second confirmation. If you are satisfied with the parsing of your submitted rule library, provide the TaskId from that submission as an input parameter. The system then post-processes your uploaded rule library and makes it available for auditing. Otherwise, invoke the SubmitAuditNote interface again to upload the modified rule library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2311,7 +2339,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>是否将本次提交自定义规则库得到的解析结果用于审核任务。由于解析结果可能不满足用户需求，因此我们为您提供了该接口用于二次确认。如果对提交的规则库解析满意，则可以直接将本次提交任务的 TaskId 作为入参，系统会对您上传的规则库做后处理，使它可以被用于审核。反之，您可以重新调用 SubmitAuditNote 接口上传修改之后的规则库。</para>
+        /// <para>This interface confirms whether the parsing results from your custom rule library submission are used for audit tasks. Because parsing results may not meet your requirements, use this interface to perform a second confirmation. If you are satisfied with the parsing of your submitted rule library, provide the TaskId from that submission as an input parameter. The system then post-processes your uploaded rule library and makes it available for auditing. Otherwise, invoke the SubmitAuditNote interface again to upload the modified rule library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2329,7 +2357,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>是否将本次提交自定义规则库得到的解析结果用于审核任务。由于解析结果可能不满足用户需求，因此我们为您提供了该接口用于二次确认。如果对提交的规则库解析满意，则可以直接将本次提交任务的 TaskId 作为入参，系统会对您上传的规则库做后处理，使它可以被用于审核。反之，您可以重新调用 SubmitAuditNote 接口上传修改之后的规则库。</para>
+        /// <para>This interface confirms whether the parsing results from your custom rule library submission are used for audit tasks. Because parsing results may not meet your requirements, use this interface to perform a second confirmation. If you are satisfied with the parsing of your submitted rule library, provide the TaskId from that submission as an input parameter. The system then post-processes your uploaded rule library and makes it available for auditing. Otherwise, invoke the SubmitAuditNote interface again to upload the modified rule library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2347,7 +2375,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户数据集权限-批量添加</para>
+        /// <para>Batch add permissions:\
+        /// \- Dataset permissions\</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2407,7 +2436,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户数据集权限-批量添加</para>
+        /// <para>Batch add permissions:\
+        /// \- Dataset permissions\</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2467,7 +2497,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户数据集权限-批量添加</para>
+        /// <para>Batch add permissions:\
+        /// \- Dataset permissions\</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2485,7 +2516,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户数据集权限-批量添加</para>
+        /// <para>Batch add permissions:\
+        /// \- Dataset permissions\</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2503,7 +2535,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>数据集管理-创建</para>
+        /// <para>Creates a dataset.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2587,7 +2619,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>数据集管理-创建</para>
+        /// <para>Creates a dataset.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2671,7 +2703,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>数据集管理-创建</para>
+        /// <para>Creates a dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2689,7 +2721,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>数据集管理-创建</para>
+        /// <para>Creates a dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2707,7 +2739,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通用配置-创建</para>
+        /// <para>General configurations — Create</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2757,7 +2789,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通用配置-创建</para>
+        /// <para>General configurations — Create</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2807,7 +2839,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通用配置-创建</para>
+        /// <para>General configurations — Create</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2825,7 +2857,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通用配置-创建</para>
+        /// <para>General configurations — Create</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2843,7 +2875,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文档管理-创建</para>
+        /// <para>Saves an article created in Miaobi. This operation supports rich text.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2925,7 +2957,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文档管理-创建</para>
+        /// <para>Saves an article created in Miaobi. This operation supports rich text.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3007,7 +3039,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文档管理-创建</para>
+        /// <para>Saves an article created in Miaobi. This operation supports rich text.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3025,7 +3057,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文档管理-创建</para>
+        /// <para>Saves an article created in Miaobi. This operation supports rich text.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3043,7 +3075,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取授权token</para>
+        /// <para>Creates a temporary token for the online inference API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3085,7 +3117,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取授权token</para>
+        /// <para>Creates a temporary token for the online inference API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3127,7 +3159,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取授权token</para>
+        /// <para>Creates a temporary token for the online inference API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3145,7 +3177,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取授权token</para>
+        /// <para>Creates a temporary token for the online inference API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3163,7 +3195,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除用户账户下所有可供审核使用的自定义规则库。删除后无法找回，如果您有对规则库存档的需求，请预先使用 DownloadAuditNote 接口保存需要的规则库。</para>
+        /// <para>Deletes all custom rule libraries available for audit under the user account. This operation is irreversible. To archive rule libraries, use the DownloadAuditNote API to save them before deletion.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3209,7 +3241,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除用户账户下所有可供审核使用的自定义规则库。删除后无法找回，如果您有对规则库存档的需求，请预先使用 DownloadAuditNote 接口保存需要的规则库。</para>
+        /// <para>Deletes all custom rule libraries available for audit under the user account. This operation is irreversible. To archive rule libraries, use the DownloadAuditNote API to save them before deletion.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3255,7 +3287,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除用户账户下所有可供审核使用的自定义规则库。删除后无法找回，如果您有对规则库存档的需求，请预先使用 DownloadAuditNote 接口保存需要的规则库。</para>
+        /// <para>Deletes all custom rule libraries available for audit under the user account. This operation is irreversible. To archive rule libraries, use the DownloadAuditNote API to save them before deletion.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3273,7 +3305,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除用户账户下所有可供审核使用的自定义规则库。删除后无法找回，如果您有对规则库存档的需求，请预先使用 DownloadAuditNote 接口保存需要的规则库。</para>
+        /// <para>Deletes all custom rule libraries available for audit under the user account. This operation is irreversible. To archive rule libraries, use the DownloadAuditNote API to save them before deletion.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3291,7 +3323,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指定的词库记录</para>
+        /// <para>Deletes specified term records.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3343,7 +3375,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指定的词库记录</para>
+        /// <para>Deletes specified term records.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3395,7 +3427,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指定的词库记录</para>
+        /// <para>Deletes specified term records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3413,7 +3445,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指定的词库记录</para>
+        /// <para>Deletes specified term records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3431,7 +3463,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义文本</para>
+        /// <para>Deletes a custom text.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3483,7 +3515,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义文本</para>
+        /// <para>Deletes a custom text.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3535,7 +3567,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义文本</para>
+        /// <para>Deletes a custom text.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3553,7 +3585,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义文本</para>
+        /// <para>Deletes a custom text.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3571,7 +3603,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据主题删除自定义主题事件</para>
+        /// <para>Delete a custom hot spot event by topic name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3619,7 +3651,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据主题删除自定义主题事件</para>
+        /// <para>Delete a custom hot spot event by topic name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3667,7 +3699,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据主题删除自定义主题事件</para>
+        /// <para>Delete a custom hot spot event by topic name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3685,7 +3717,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据主题删除自定义主题事件</para>
+        /// <para>Delete a custom hot spot event by topic name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3703,7 +3735,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据自定义观点ID删除自定义观点</para>
+        /// <para>Deletes a custom topic viewpoint by its ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3751,7 +3783,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据自定义观点ID删除自定义观点</para>
+        /// <para>Deletes a custom topic viewpoint by its ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3799,7 +3831,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据自定义观点ID删除自定义观点</para>
+        /// <para>Deletes a custom topic viewpoint by its ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3817,7 +3849,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据自定义观点ID删除自定义观点</para>
+        /// <para>Deletes a custom topic viewpoint by its ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3835,7 +3867,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户数据集权限-批量删除</para>
+        /// <para>Batch delete dataset permissions</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3887,7 +3919,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户数据集权限-批量删除</para>
+        /// <para>Batch delete dataset permissions</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3939,7 +3971,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户数据集权限-批量删除</para>
+        /// <para>Batch delete dataset permissions</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3957,7 +3989,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户数据集权限-批量删除</para>
+        /// <para>Batch delete dataset permissions</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3975,7 +4007,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>数据集管理-删除</para>
+        /// <para>Deletes a dataset from the data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4021,7 +4053,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>数据集管理-删除</para>
+        /// <para>Deletes a dataset from the data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4067,7 +4099,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>数据集管理-删除</para>
+        /// <para>Deletes a dataset from the data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4085,7 +4117,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>数据集管理-删除</para>
+        /// <para>Deletes a dataset from the data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4103,7 +4135,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据集文档</para>
+        /// <para>Delete source documents.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4161,7 +4193,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据集文档</para>
+        /// <para>Delete source documents.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4219,7 +4251,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据集文档</para>
+        /// <para>Delete source documents.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4237,7 +4269,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据集文档</para>
+        /// <para>Delete source documents.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4255,7 +4287,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读删除多个文档</para>
+        /// <para>Deletes multiple documents.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4307,7 +4339,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读删除多个文档</para>
+        /// <para>Deletes multiple documents.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4359,7 +4391,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读删除多个文档</para>
+        /// <para>Deletes multiple documents.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4377,7 +4409,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读删除多个文档</para>
+        /// <para>Deletes multiple documents.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4395,7 +4427,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指定的用于事实性审核的 URL。</para>
+        /// <para>Deletes the specified URL used for factuality audit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4441,7 +4473,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指定的用于事实性审核的 URL。</para>
+        /// <para>Deletes the specified URL used for factuality audit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4487,7 +4519,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指定的用于事实性审核的 URL。</para>
+        /// <para>Deletes the specified URL used for factuality audit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4505,7 +4537,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指定的用于事实性审核的 URL。</para>
+        /// <para>Deletes the specified URL used for factuality audit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4523,7 +4555,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通用配置-删除</para>
+        /// <para>Deletes general configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4569,7 +4601,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通用配置-删除</para>
+        /// <para>Deletes general configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4615,7 +4647,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通用配置-删除</para>
+        /// <para>Deletes general configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4633,7 +4665,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通用配置-删除</para>
+        /// <para>Deletes general configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4651,7 +4683,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文档管理-删除。</para>
+        /// <para>Deletes an article created in MiaoBi.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4703,7 +4735,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文档管理-删除。</para>
+        /// <para>Deletes an article created in MiaoBi.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4755,7 +4787,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文档管理-删除。</para>
+        /// <para>Deletes an article created in MiaoBi.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4773,7 +4805,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文档管理-删除。</para>
+        /// <para>Deletes an article created in MiaoBi.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4791,7 +4823,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除干预规则</para>
+        /// <para>Deletes an intervention rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4839,7 +4871,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除干预规则</para>
+        /// <para>Deletes an intervention rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4887,7 +4919,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除干预规则</para>
+        /// <para>Deletes an intervention rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4905,7 +4937,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除干预规则</para>
+        /// <para>Deletes an intervention rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4923,7 +4955,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据ID删除素材</para>
+        /// <para>Deletes a material from the material library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4971,7 +5003,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据ID删除素材</para>
+        /// <para>Deletes a material from the material library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5019,7 +5051,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据ID删除素材</para>
+        /// <para>Deletes a material from the material library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5037,7 +5069,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据ID删除素材</para>
+        /// <para>Deletes a material from the material library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5055,8 +5087,17 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除PPT作品</para>
+        /// <para>Delete a PPT work</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This API operation uses the HTTP Server-Sent Events (SSE) protocol.</description></item>
+        /// <item><description>The OpenAPI portal is not compatible with the SSE inference protocol. You cannot directly test this API operation in the portal. For more information about how to call this API operation using the software development kit (SDK) for Java or Python, see <a href="https://help.aliyun.com/zh/model-studio/ppt-generation-best-practices">PPT Generation Best practices</a>.</description></item>
+        /// <item><description>To obtain the latest version of the asynchronous Java SDK, see <a href="https://api.aliyun.com/api-tools/sdk/AiMiaoBi?spm=a2c4g.11186623.0.0.4cd3170d7rccDC%5C&version=2023-08-01%5C&language=java-async-tea%5C&tab=primer-doc">this link</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeletePptArtifactRequest
@@ -5105,8 +5146,17 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除PPT作品</para>
+        /// <para>Delete a PPT work</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This API operation uses the HTTP Server-Sent Events (SSE) protocol.</description></item>
+        /// <item><description>The OpenAPI portal is not compatible with the SSE inference protocol. You cannot directly test this API operation in the portal. For more information about how to call this API operation using the software development kit (SDK) for Java or Python, see <a href="https://help.aliyun.com/zh/model-studio/ppt-generation-best-practices">PPT Generation Best practices</a>.</description></item>
+        /// <item><description>To obtain the latest version of the asynchronous Java SDK, see <a href="https://api.aliyun.com/api-tools/sdk/AiMiaoBi?spm=a2c4g.11186623.0.0.4cd3170d7rccDC%5C&version=2023-08-01%5C&language=java-async-tea%5C&tab=primer-doc">this link</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeletePptArtifactRequest
@@ -5155,8 +5205,17 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除PPT作品</para>
+        /// <para>Delete a PPT work</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This API operation uses the HTTP Server-Sent Events (SSE) protocol.</description></item>
+        /// <item><description>The OpenAPI portal is not compatible with the SSE inference protocol. You cannot directly test this API operation in the portal. For more information about how to call this API operation using the software development kit (SDK) for Java or Python, see <a href="https://help.aliyun.com/zh/model-studio/ppt-generation-best-practices">PPT Generation Best practices</a>.</description></item>
+        /// <item><description>To obtain the latest version of the asynchronous Java SDK, see <a href="https://api.aliyun.com/api-tools/sdk/AiMiaoBi?spm=a2c4g.11186623.0.0.4cd3170d7rccDC%5C&version=2023-08-01%5C&language=java-async-tea%5C&tab=primer-doc">this link</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeletePptArtifactRequest
@@ -5173,8 +5232,17 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除PPT作品</para>
+        /// <para>Delete a PPT work</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This API operation uses the HTTP Server-Sent Events (SSE) protocol.</description></item>
+        /// <item><description>The OpenAPI portal is not compatible with the SSE inference protocol. You cannot directly test this API operation in the portal. For more information about how to call this API operation using the software development kit (SDK) for Java or Python, see <a href="https://help.aliyun.com/zh/model-studio/ppt-generation-best-practices">PPT Generation Best practices</a>.</description></item>
+        /// <item><description>To obtain the latest version of the asynchronous Java SDK, see <a href="https://api.aliyun.com/api-tools/sdk/AiMiaoBi?spm=a2c4g.11186623.0.0.4cd3170d7rccDC%5C&version=2023-08-01%5C&language=java-async-tea%5C&tab=primer-doc">this link</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeletePptArtifactRequest
@@ -5191,7 +5259,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指定自定义文体</para>
+        /// <para>Deletes a specified custom style.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5239,7 +5307,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指定自定义文体</para>
+        /// <para>Deletes a specified custom style.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5287,7 +5355,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指定自定义文体</para>
+        /// <para>Deletes a specified custom style.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5305,7 +5373,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指定自定义文体</para>
+        /// <para>Deletes a specified custom style.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5323,7 +5391,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>从链接中提取文档内容</para>
+        /// <para>Extracts the content of documents from URLs.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5377,7 +5445,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>从链接中提取文档内容</para>
+        /// <para>Extracts the content of documents from URLs.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5431,7 +5499,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>从链接中提取文档内容</para>
+        /// <para>Extracts the content of documents from URLs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5449,7 +5517,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>从链接中提取文档内容</para>
+        /// <para>Extracts the content of documents from URLs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5467,7 +5535,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>您可以通过调用该接口下载结构化后的规则库，供您进行进一步处理。该接口同时拥有两个功能：下载未后处理的结构化规则库，或下载当前可用于审核的结构化规则库。具体使用方法，请参考入参说明。</para>
+        /// <para>Call this API to download the structured rule library for further processing. You can use this API to download either the structured rule library before post-processing or the structured rule library currently available for auditing. For specific usage, see the input parameter descriptions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5517,7 +5585,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>您可以通过调用该接口下载结构化后的规则库，供您进行进一步处理。该接口同时拥有两个功能：下载未后处理的结构化规则库，或下载当前可用于审核的结构化规则库。具体使用方法，请参考入参说明。</para>
+        /// <para>Call this API to download the structured rule library for further processing. You can use this API to download either the structured rule library before post-processing or the structured rule library currently available for auditing. For specific usage, see the input parameter descriptions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5567,7 +5635,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>您可以通过调用该接口下载结构化后的规则库，供您进行进一步处理。该接口同时拥有两个功能：下载未后处理的结构化规则库，或下载当前可用于审核的结构化规则库。具体使用方法，请参考入参说明。</para>
+        /// <para>Call this API to download the structured rule library for further processing. You can use this API to download either the structured rule library before post-processing or the structured rule library currently available for auditing. For specific usage, see the input parameter descriptions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5585,7 +5653,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>您可以通过调用该接口下载结构化后的规则库，供您进行进一步处理。该接口同时拥有两个功能：下载未后处理的结构化规则库，或下载当前可用于审核的结构化规则库。具体使用方法，请参考入参说明。</para>
+        /// <para>Call this API to download the structured rule library for further processing. You can use this API to download either the structured rule library before post-processing or the structured rule library currently available for auditing. For specific usage, see the input parameter descriptions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5603,7 +5671,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标书下载接口</para>
+        /// <para>API for downloading bidding documents</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5649,7 +5717,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标书下载接口</para>
+        /// <para>API for downloading bidding documents</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5695,7 +5763,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标书下载接口</para>
+        /// <para>API for downloading bidding documents</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5713,7 +5781,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标书下载接口</para>
+        /// <para>API for downloading bidding documents</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5731,7 +5799,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑审核自定义词库记录</para>
+        /// <para>Edit custom audit term records.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5799,7 +5867,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑审核自定义词库记录</para>
+        /// <para>Edit custom audit term records.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5867,7 +5935,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑审核自定义词库记录</para>
+        /// <para>Edit custom audit term records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5885,7 +5953,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑审核自定义词库记录</para>
+        /// <para>Edit custom audit term records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5903,7 +5971,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑标书内容接口</para>
+        /// <para>Edits the content of a bidding document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5961,7 +6029,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑标书内容接口</para>
+        /// <para>Edits the content of a bidding document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6019,7 +6087,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑标书内容接口</para>
+        /// <para>Edits the content of a bidding document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6037,7 +6105,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑标书内容接口</para>
+        /// <para>Edits the content of a bidding document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6055,7 +6123,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出企业VOC分析任务明细列表</para>
+        /// <para>Exports the tag details for a specified enterprise VOC analysis task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6111,7 +6179,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出企业VOC分析任务明细列表</para>
+        /// <para>Exports the tag details for a specified enterprise VOC analysis task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6167,7 +6235,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出企业VOC分析任务明细列表</para>
+        /// <para>Exports the tag details for a specified enterprise VOC analysis task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6185,7 +6253,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出企业VOC分析任务明细列表</para>
+        /// <para>Exports the tag details for a specified enterprise VOC analysis task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6203,7 +6271,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出智能审核报告</para>
+        /// <para>Exports an automated review report.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6249,7 +6317,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出智能审核报告</para>
+        /// <para>Exports an automated review report.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6295,7 +6363,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出智能审核报告</para>
+        /// <para>Exports an automated review report.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6313,7 +6381,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出智能审核报告</para>
+        /// <para>Exports an automated review report.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6331,7 +6399,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出-自定义数据源-选题视角分析任务结果</para>
+        /// <para>Exports custom data source topic perspective analysis task results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6381,7 +6449,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出-自定义数据源-选题视角分析任务结果</para>
+        /// <para>Exports custom data source topic perspective analysis task results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6431,7 +6499,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出-自定义数据源-选题视角分析任务结果</para>
+        /// <para>Exports custom data source topic perspective analysis task results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6449,7 +6517,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出-自定义数据源-选题视角分析任务结果</para>
+        /// <para>Exports custom data source topic perspective analysis task results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6467,7 +6535,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文档管理-导出。</para>
+        /// <para>Exports the history of articles created in MiaoBi.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6515,7 +6583,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文档管理-导出。</para>
+        /// <para>Exports the history of articles created in MiaoBi.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6563,7 +6631,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文档管理-导出。</para>
+        /// <para>Exports the history of articles created in MiaoBi.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6581,7 +6649,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文档管理-导出。</para>
+        /// <para>Exports the history of articles created in MiaoBi.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6599,7 +6667,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出选题策划文档，响应为一个可公开访问的URL。一小时后失效</para>
+        /// <para>Exports topic planning documents and provides a publicly accessible URL that expires in one hour.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6677,7 +6745,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出选题策划文档，响应为一个可公开访问的URL。一小时后失效</para>
+        /// <para>Exports topic planning documents and provides a publicly accessible URL that expires in one hour.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6755,7 +6823,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出选题策划文档，响应为一个可公开访问的URL。一小时后失效</para>
+        /// <para>Exports topic planning documents and provides a publicly accessible URL that expires in one hour.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6773,7 +6841,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出选题策划文档，响应为一个可公开访问的URL。一小时后失效</para>
+        /// <para>Exports topic planning documents and provides a publicly accessible URL that expires in one hour.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6791,7 +6859,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出所有干预内容</para>
+        /// <para>Exports all interventions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6833,7 +6901,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出所有干预内容</para>
+        /// <para>Exports all interventions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6875,7 +6943,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出所有干预内容</para>
+        /// <para>Exports all interventions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6893,7 +6961,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出所有干预内容</para>
+        /// <para>Exports all interventions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6911,7 +6979,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出PPT作品</para>
+        /// <para>Exports a PPT artifact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6973,7 +7041,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出PPT作品</para>
+        /// <para>Exports a PPT artifact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7035,7 +7103,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出PPT作品</para>
+        /// <para>Exports a PPT artifact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7053,7 +7121,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出PPT作品</para>
+        /// <para>Exports a PPT artifact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7071,7 +7139,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>反馈某次生成的结果</para>
+        /// <para>Provides feedback on the quality of the content that the model generates.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7149,7 +7217,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>反馈某次生成的结果</para>
+        /// <para>Provides feedback on the quality of the content that the model generates.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7227,7 +7295,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>反馈某次生成的结果</para>
+        /// <para>Provides feedback on the quality of the content that the model generates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7245,7 +7313,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>反馈某次生成的结果</para>
+        /// <para>Provides feedback on the quality of the content that the model generates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7263,7 +7331,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取词库导出任务结果</para>
+        /// <para>Retrieves the results of a term library export task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7309,7 +7377,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取词库导出任务结果</para>
+        /// <para>Retrieves the results of a term library export task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7355,7 +7423,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取词库导出任务结果</para>
+        /// <para>Retrieves the results of a term library export task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7373,7 +7441,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取词库导出任务结果</para>
+        /// <para>Retrieves the results of a term library export task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7391,7 +7459,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取异步导出文档任务结果</para>
+        /// <para>Fetches the result of an asynchronous document export task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7439,7 +7507,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取异步导出文档任务结果</para>
+        /// <para>Fetches the result of an asynchronous document export task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7487,7 +7555,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取异步导出文档任务结果</para>
+        /// <para>Fetches the result of an asynchronous document export task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7505,7 +7573,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取异步导出文档任务结果</para>
+        /// <para>Fetches the result of an asynchronous document export task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7523,7 +7591,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取图片任务执行结果</para>
+        /// <para>Retrieve the results of image generation tasks.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7581,7 +7649,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取图片任务执行结果</para>
+        /// <para>Retrieve the results of image generation tasks.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7639,7 +7707,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取图片任务执行结果</para>
+        /// <para>Retrieve the results of image generation tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7657,7 +7725,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取图片任务执行结果</para>
+        /// <para>Retrieve the results of image generation tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7675,7 +7743,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取导入词库任务结果</para>
+        /// <para>Retrieves the result of a term import task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7721,7 +7789,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取导入词库任务结果</para>
+        /// <para>Retrieves the result of a term import task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7767,7 +7835,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取导入词库任务结果</para>
+        /// <para>Retrieves the result of a term import task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7785,7 +7853,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取导入词库任务结果</para>
+        /// <para>Retrieves the result of a term import task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7803,7 +7871,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取排版任务结果</para>
+        /// <para>Retrieve the layout task result.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7849,7 +7917,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取排版任务结果</para>
+        /// <para>Retrieve the layout task result.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7895,7 +7963,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取排版任务结果</para>
+        /// <para>Retrieve the layout task result.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7913,7 +7981,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取排版任务结果</para>
+        /// <para>Retrieve the layout task result.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7931,8 +7999,13 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成内容导出文档任务</para>
+        /// <para>Start a task to export content as a Word document.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The Quanmiao product supports iframe embedding. For details, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer Integration: Quanmiao Public Cloud iframe Customization Guide</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GenerateExportWordTaskRequest
@@ -7979,8 +8052,13 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成内容导出文档任务</para>
+        /// <para>Start a task to export content as a Word document.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The Quanmiao product supports iframe embedding. For details, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer Integration: Quanmiao Public Cloud iframe Customization Guide</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GenerateExportWordTaskRequest
@@ -8027,8 +8105,13 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成内容导出文档任务</para>
+        /// <para>Start a task to export content as a Word document.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The Quanmiao product supports iframe embedding. For details, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer Integration: Quanmiao Public Cloud iframe Customization Guide</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GenerateExportWordTaskRequest
@@ -8045,8 +8128,13 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成内容导出文档任务</para>
+        /// <para>Start a task to export content as a Word document.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The Quanmiao product supports iframe embedding. For details, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer Integration: Quanmiao Public Cloud iframe Customization Guide</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GenerateExportWordTaskRequest
@@ -8063,7 +8151,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成临时可访问的公开url</para>
+        /// <para>Generate a temporary public URL.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8115,7 +8203,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成临时可访问的公开url</para>
+        /// <para>Generate a temporary public URL.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8167,7 +8255,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成临时可访问的公开url</para>
+        /// <para>Generate a temporary public URL.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8185,7 +8273,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成临时可访问的公开url</para>
+        /// <para>Generate a temporary public URL.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8203,7 +8291,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>智能配图，图片生成任务</para>
+        /// <para>Asynchronously generates an image from text.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8269,7 +8357,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>智能配图，图片生成任务</para>
+        /// <para>Asynchronously generates an image from text.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8335,7 +8423,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>智能配图，图片生成任务</para>
+        /// <para>Asynchronously generates an image from text.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8353,7 +8441,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>智能配图，图片生成任务</para>
+        /// <para>Asynchronously generates an image from text.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8371,8 +8459,16 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成上传配置</para>
+        /// <para>Generates a file upload configuration.
+        /// 1\. Call this API to obtain the upload configuration. The API returns the <c>PostUrl</c> (an internal OSS address for AI Writing Assistant), temporary OSS authentication information (<c>key</c>, <c>OSSAccessKeyId</c>, <c>Signature</c>, and <c>policy</c>), and the unique file identifier <c>fileKey</c>.
+        /// 2\. The client uses the <c>PostUrl</c> and the temporary authentication information (<c>key</c>, <c>OSSAccessKeyId</c>, <c>Signature</c>, and <c>policy</c>) to upload the file.
+        /// 3\. Use the <c>fileKey</c> to call subsequent APIs that require a <c>fileKey</c>, such as <c>GenerateFileUrlByKey</c>.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API returns the address and credentials for file uploads. For more information, see <a href="https://help.aliyun.com/zh/oss/user-guide/form-upload?scm=20140722.H_31849._.OR_help-T_cn~zh-V_1">OSS Form Upload</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GenerateUploadConfigRequest
@@ -8423,8 +8519,16 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成上传配置</para>
+        /// <para>Generates a file upload configuration.
+        /// 1\. Call this API to obtain the upload configuration. The API returns the <c>PostUrl</c> (an internal OSS address for AI Writing Assistant), temporary OSS authentication information (<c>key</c>, <c>OSSAccessKeyId</c>, <c>Signature</c>, and <c>policy</c>), and the unique file identifier <c>fileKey</c>.
+        /// 2\. The client uses the <c>PostUrl</c> and the temporary authentication information (<c>key</c>, <c>OSSAccessKeyId</c>, <c>Signature</c>, and <c>policy</c>) to upload the file.
+        /// 3\. Use the <c>fileKey</c> to call subsequent APIs that require a <c>fileKey</c>, such as <c>GenerateFileUrlByKey</c>.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API returns the address and credentials for file uploads. For more information, see <a href="https://help.aliyun.com/zh/oss/user-guide/form-upload?scm=20140722.H_31849._.OR_help-T_cn~zh-V_1">OSS Form Upload</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GenerateUploadConfigRequest
@@ -8475,8 +8579,16 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成上传配置</para>
+        /// <para>Generates a file upload configuration.
+        /// 1\. Call this API to obtain the upload configuration. The API returns the <c>PostUrl</c> (an internal OSS address for AI Writing Assistant), temporary OSS authentication information (<c>key</c>, <c>OSSAccessKeyId</c>, <c>Signature</c>, and <c>policy</c>), and the unique file identifier <c>fileKey</c>.
+        /// 2\. The client uses the <c>PostUrl</c> and the temporary authentication information (<c>key</c>, <c>OSSAccessKeyId</c>, <c>Signature</c>, and <c>policy</c>) to upload the file.
+        /// 3\. Use the <c>fileKey</c> to call subsequent APIs that require a <c>fileKey</c>, such as <c>GenerateFileUrlByKey</c>.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API returns the address and credentials for file uploads. For more information, see <a href="https://help.aliyun.com/zh/oss/user-guide/form-upload?scm=20140722.H_31849._.OR_help-T_cn~zh-V_1">OSS Form Upload</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GenerateUploadConfigRequest
@@ -8493,8 +8605,16 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成上传配置</para>
+        /// <para>Generates a file upload configuration.
+        /// 1\. Call this API to obtain the upload configuration. The API returns the <c>PostUrl</c> (an internal OSS address for AI Writing Assistant), temporary OSS authentication information (<c>key</c>, <c>OSSAccessKeyId</c>, <c>Signature</c>, and <c>policy</c>), and the unique file identifier <c>fileKey</c>.
+        /// 2\. The client uses the <c>PostUrl</c> and the temporary authentication information (<c>key</c>, <c>OSSAccessKeyId</c>, <c>Signature</c>, and <c>policy</c>) to upload the file.
+        /// 3\. Use the <c>fileKey</c> to call subsequent APIs that require a <c>fileKey</c>, such as <c>GenerateFileUrlByKey</c>.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API returns the address and credentials for file uploads. For more information, see <a href="https://help.aliyun.com/zh/oss/user-guide/form-upload?scm=20140722.H_31849._.OR_help-T_cn~zh-V_1">OSS Form Upload</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GenerateUploadConfigRequest
@@ -8511,7 +8631,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>视角生成</para>
+        /// <para>Generates viewpoints from article snippets.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8565,7 +8685,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>视角生成</para>
+        /// <para>Generates viewpoints from article snippets.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8619,7 +8739,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>视角生成</para>
+        /// <para>Generates viewpoints from article snippets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8637,7 +8757,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>视角生成</para>
+        /// <para>Generates viewpoints from article snippets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8655,7 +8775,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询规则库后处理的进度。与 ConfirmAndPostProcessAuditNote 接口配合使用，供您查询当前后处理任务的状态。</para>
+        /// <para>Queries the progress of a post-processing task for a rule library. Use this operation together with the ConfirmAndPostProcessAuditNote operation to check the status of the current post-processing task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8701,7 +8821,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询规则库后处理的进度。与 ConfirmAndPostProcessAuditNote 接口配合使用，供您查询当前后处理任务的状态。</para>
+        /// <para>Queries the progress of a post-processing task for a rule library. Use this operation together with the ConfirmAndPostProcessAuditNote operation to check the status of the current post-processing task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8747,7 +8867,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询规则库后处理的进度。与 ConfirmAndPostProcessAuditNote 接口配合使用，供您查询当前后处理任务的状态。</para>
+        /// <para>Queries the progress of a post-processing task for a rule library. Use this operation together with the ConfirmAndPostProcessAuditNote operation to check the status of the current post-processing task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8765,7 +8885,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询规则库后处理的进度。与 ConfirmAndPostProcessAuditNote 接口配合使用，供您查询当前后处理任务的状态。</para>
+        /// <para>Queries the progress of a post-processing task for a rule library. Use this operation together with the ConfirmAndPostProcessAuditNote operation to check the status of the current post-processing task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8783,7 +8903,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户上传规则库的处理状态。通过该接口，用户可以查询到当前规则库上传任务的状态，并获取到解析后的规则库文件大小、存储路径等信息。</para>
+        /// <para>Checks the processing status of an uploaded rule library. This operation returns the current status of the upload task, the size of the parsed rule library file, and its storage path.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8829,7 +8949,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户上传规则库的处理状态。通过该接口，用户可以查询到当前规则库上传任务的状态，并获取到解析后的规则库文件大小、存储路径等信息。</para>
+        /// <para>Checks the processing status of an uploaded rule library. This operation returns the current status of the upload task, the size of the parsed rule library file, and its storage path.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8875,7 +8995,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户上传规则库的处理状态。通过该接口，用户可以查询到当前规则库上传任务的状态，并获取到解析后的规则库文件大小、存储路径等信息。</para>
+        /// <para>Checks the processing status of an uploaded rule library. This operation returns the current status of the upload task, the size of the parsed rule library file, and its storage path.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8893,7 +9013,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户上传规则库的处理状态。通过该接口，用户可以查询到当前规则库上传任务的状态，并获取到解析后的规则库文件大小、存储路径等信息。</para>
+        /// <para>Checks the processing status of an uploaded rule library. This operation returns the current status of the upload task, the size of the parsed rule library file, and its storage path.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8911,7 +9031,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得剪辑任务状态</para>
+        /// <para>Retrieves the status of a video editing task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8965,7 +9085,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得剪辑任务状态</para>
+        /// <para>Retrieves the status of a video editing task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9019,7 +9139,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得剪辑任务状态</para>
+        /// <para>Retrieves the status of a video editing task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9037,7 +9157,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得剪辑任务状态</para>
+        /// <para>Retrieves the status of a video editing task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9055,7 +9175,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户当前可供审核的规则库信息，只能查询到当前可用于审核的规则库。如果您想看到自定义规则库的具体内容，请使用 DownloadAuditNote 接口。</para>
+        /// <para>Query the rule libraries that are currently available for audit. This operation returns only rule libraries that are active for auditing. To view the contents of a custom rule library, use the DownloadAuditNote API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9101,7 +9221,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户当前可供审核的规则库信息，只能查询到当前可用于审核的规则库。如果您想看到自定义规则库的具体内容，请使用 DownloadAuditNote 接口。</para>
+        /// <para>Query the rule libraries that are currently available for audit. This operation returns only rule libraries that are active for auditing. To view the contents of a custom rule library, use the DownloadAuditNote API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9147,7 +9267,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户当前可供审核的规则库信息，只能查询到当前可用于审核的规则库。如果您想看到自定义规则库的具体内容，请使用 DownloadAuditNote 接口。</para>
+        /// <para>Query the rule libraries that are currently available for audit. This operation returns only rule libraries that are active for auditing. To view the contents of a custom rule library, use the DownloadAuditNote API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9165,7 +9285,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户当前可供审核的规则库信息，只能查询到当前可用于审核的规则库。如果您想看到自定义规则库的具体内容，请使用 DownloadAuditNote 接口。</para>
+        /// <para>Query the rule libraries that are currently available for audit. This operation returns only rule libraries that are active for auditing. To view the contents of a custom rule library, use the DownloadAuditNote API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9183,7 +9303,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得标书写作结果接口</para>
+        /// <para>Retrieves the generation results of a bidding document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9229,7 +9349,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得标书写作结果接口</para>
+        /// <para>Retrieves the generation results of a bidding document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9275,7 +9395,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得标书写作结果接口</para>
+        /// <para>Retrieves the generation results of a bidding document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9293,7 +9413,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得标书写作结果接口</para>
+        /// <para>Retrieves the generation results of a bidding document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9311,7 +9431,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得标书功能剩余额度</para>
+        /// <para>Retrieve the remaining limit for the bidding feature.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9357,7 +9477,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得标书功能剩余额度</para>
+        /// <para>Retrieve the remaining limit for the bidding feature.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9403,7 +9523,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得标书功能剩余额度</para>
+        /// <para>Retrieve the remaining limit for the bidding feature.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9421,7 +9541,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得标书功能剩余额度</para>
+        /// <para>Retrieve the remaining limit for the bidding feature.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9439,7 +9559,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取某次标签挖掘结果分类</para>
+        /// <para>Retrieves the classifications from a tag mining task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9485,7 +9605,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取某次标签挖掘结果分类</para>
+        /// <para>Retrieves the classifications from a tag mining task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9531,7 +9651,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取某次标签挖掘结果分类</para>
+        /// <para>Retrieves the classifications from a tag mining task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9549,7 +9669,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取某次标签挖掘结果分类</para>
+        /// <para>Retrieves the classifications from a tag mining task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9567,7 +9687,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得智能混剪内置资源</para>
+        /// <para>Retrieves the built-in resources for smart clipping.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9613,7 +9733,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得智能混剪内置资源</para>
+        /// <para>Retrieves the built-in resources for smart clipping.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9659,7 +9779,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得智能混剪内置资源</para>
+        /// <para>Retrieves the built-in resources for smart clipping.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9677,7 +9797,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得智能混剪内置资源</para>
+        /// <para>Retrieves the built-in resources for smart clipping.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9695,7 +9815,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取自定义播报单任务结果</para>
+        /// <para>Retrieves the result of a custom hot topic broadcast job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9741,7 +9861,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取自定义播报单任务结果</para>
+        /// <para>Retrieves the result of a custom hot topic broadcast job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9787,7 +9907,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取自定义播报单任务结果</para>
+        /// <para>Retrieves the result of a custom hot topic broadcast job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9805,7 +9925,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取自定义播报单任务结果</para>
+        /// <para>Retrieves the result of a custom hot topic broadcast job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9823,7 +9943,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取自定义数据源-选题视角分析任务结果</para>
+        /// <para>Retrieves the results of a topic analysis task for a custom data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9869,7 +9989,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取自定义数据源-选题视角分析任务结果</para>
+        /// <para>Retrieves the results of a topic analysis task for a custom data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9915,7 +10035,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取自定义数据源-选题视角分析任务结果</para>
+        /// <para>Retrieves the results of a topic analysis task for a custom data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9933,7 +10053,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取自定义数据源-选题视角分析任务结果</para>
+        /// <para>Retrieves the results of a topic analysis task for a custom data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9951,7 +10071,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取自定义文本</para>
+        /// <para>Retrieve custom text.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10003,7 +10123,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取自定义文本</para>
+        /// <para>Retrieve custom text.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10055,7 +10175,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取自定义文本</para>
+        /// <para>Retrieve custom text.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10073,7 +10193,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取自定义文本</para>
+        /// <para>Retrieve custom text.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10091,7 +10211,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取自定义选题视角分析任务结果</para>
+        /// <para>Retrieve the result of a custom topic selection perspective analysis task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10139,7 +10259,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取自定义选题视角分析任务结果</para>
+        /// <para>Retrieve the result of a custom topic selection perspective analysis task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10187,7 +10307,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取自定义选题视角分析任务结果</para>
+        /// <para>Retrieve the result of a custom topic selection perspective analysis task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10205,7 +10325,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取自定义选题视角分析任务结果</para>
+        /// <para>Retrieve the result of a custom topic selection perspective analysis task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10223,7 +10343,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取系统数据源配置和个人配置</para>
+        /// <para>Retrieves configuration information for write data sources and general search data sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10275,7 +10395,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取系统数据源配置和个人配置</para>
+        /// <para>Retrieves configuration information for write data sources and general search data sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10327,7 +10447,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取系统数据源配置和个人配置</para>
+        /// <para>Retrieves configuration information for write data sources and general search data sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10345,7 +10465,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取系统数据源配置和个人配置</para>
+        /// <para>Retrieves configuration information for write data sources and general search data sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10363,7 +10483,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>数据集管理-详情</para>
+        /// <para>Data source management details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10413,7 +10533,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>数据集管理-详情</para>
+        /// <para>Data source management details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10463,7 +10583,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>数据集管理-详情</para>
+        /// <para>Data source management details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10481,7 +10601,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>数据集管理-详情</para>
+        /// <para>Data source management details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10499,7 +10619,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据集文档</para>
+        /// <para>Retrieve the data source document.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -10567,7 +10687,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据集文档</para>
+        /// <para>Retrieve the data source document.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -10635,7 +10755,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据集文档</para>
+        /// <para>Retrieve the data source document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10653,7 +10773,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据集文档</para>
+        /// <para>Retrieve the data source document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10671,7 +10791,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询深度写作任务</para>
+        /// <para>Queries deep writing tasks. You can use it to check the running status of a specific task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10717,7 +10837,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询深度写作任务</para>
+        /// <para>Queries deep writing tasks. You can use it to check the running status of a specific task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10763,7 +10883,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询深度写作任务</para>
+        /// <para>Queries deep writing tasks. You can use it to check the running status of a specific task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10781,7 +10901,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询深度写作任务</para>
+        /// <para>Queries deep writing tasks. You can use it to check the running status of a specific task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10799,7 +10919,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询深度写作任务的结果</para>
+        /// <para>Queries the result of a deep writing task. If the task is not complete, the operation returns its current status—such as queued, running, failed, or canceled. If the task is complete, the operation returns a URL that points to a compressed package of the task output that you can download.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10845,7 +10965,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询深度写作任务的结果</para>
+        /// <para>Queries the result of a deep writing task. If the task is not complete, the operation returns its current status—such as queued, running, failed, or canceled. If the task is complete, the operation returns a URL that points to a compressed package of the task output that you can download.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10891,7 +11011,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询深度写作任务的结果</para>
+        /// <para>Queries the result of a deep writing task. If the task is not complete, the operation returns its current status—such as queued, running, failed, or canceled. If the task is complete, the operation returns a URL that points to a compressed package of the task output that you can download.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10909,7 +11029,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询深度写作任务的结果</para>
+        /// <para>Queries the result of a deep writing task. If the task is not complete, the operation returns its current status—such as queued, running, failed, or canceled. If the task is complete, the operation returns a URL that points to a compressed package of the task output that you can download.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10927,7 +11047,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取文档聚合任务结果</para>
+        /// <para>Retrieves the result of a content aggregation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10975,7 +11095,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取文档聚合任务结果</para>
+        /// <para>Retrieves the result of a content aggregation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11023,7 +11143,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取文档聚合任务结果</para>
+        /// <para>Retrieves the result of a content aggregation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11041,7 +11161,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取文档聚合任务结果</para>
+        /// <para>Retrieves the result of a content aggregation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11059,7 +11179,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读获取文档信息</para>
+        /// <para>Retrieves information about a document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11109,7 +11229,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读获取文档信息</para>
+        /// <para>Retrieves information about a document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11159,7 +11279,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读获取文档信息</para>
+        /// <para>Retrieves information about a document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11177,7 +11297,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读获取文档信息</para>
+        /// <para>Retrieves information about a document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11195,7 +11315,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取企业VOC分析任务结果</para>
+        /// <para>Retrieves the result of an enterprise Voice of the Customer (VOC) analysis task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11241,7 +11361,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取企业VOC分析任务结果</para>
+        /// <para>Retrieves the result of an enterprise Voice of the Customer (VOC) analysis task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11287,7 +11407,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取企业VOC分析任务结果</para>
+        /// <para>Retrieves the result of an enterprise Voice of the Customer (VOC) analysis task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11305,7 +11425,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取企业VOC分析任务结果</para>
+        /// <para>Retrieves the result of an enterprise Voice of the Customer (VOC) analysis task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11323,7 +11443,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取当前正用于事实性审核的信源 URL。</para>
+        /// <para>Retrieves the source URL that is currently used for factuality audit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11365,7 +11485,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取当前正用于事实性审核的信源 URL。</para>
+        /// <para>Retrieves the source URL that is currently used for factuality audit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11407,7 +11527,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取当前正用于事实性审核的信源 URL。</para>
+        /// <para>Retrieves the source URL that is currently used for factuality audit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11425,7 +11545,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取当前正用于事实性审核的信源 URL。</para>
+        /// <para>Retrieves the source URL that is currently used for factuality audit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11443,7 +11563,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读获得文档字数</para>
+        /// <para>MiaoRead calculates the word count for a document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11493,7 +11613,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读获得文档字数</para>
+        /// <para>MiaoRead calculates the word count for a document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11543,7 +11663,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读获得文档字数</para>
+        /// <para>MiaoRead calculates the word count for a document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11561,7 +11681,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读获得文档字数</para>
+        /// <para>MiaoRead calculates the word count for a document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11579,7 +11699,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通用配置-查询</para>
+        /// <para>Queries general configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11625,7 +11745,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通用配置-查询</para>
+        /// <para>Queries general configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11671,7 +11791,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通用配置-查询</para>
+        /// <para>Queries general configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11689,7 +11809,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通用配置-查询</para>
+        /// <para>Queries general configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11707,7 +11827,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文档管理-查询详情。</para>
+        /// <para>Get generated content. Queries the history of articles generated in MiaoBi.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11755,7 +11875,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文档管理-查询详情。</para>
+        /// <para>Get generated content. Queries the history of articles generated in MiaoBi.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11803,7 +11923,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文档管理-查询详情。</para>
+        /// <para>Get generated content. Queries the history of articles generated in MiaoBi.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11821,7 +11941,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文档管理-查询详情。</para>
+        /// <para>Get generated content. Queries the history of articles generated in MiaoBi.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11839,7 +11959,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询新闻播报单</para>
+        /// <para>Query news broadcast orders.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11943,7 +12063,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询新闻播报单</para>
+        /// <para>Query news broadcast orders.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12047,7 +12167,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询新闻播报单</para>
+        /// <para>Query news broadcast orders.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12065,7 +12185,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询新闻播报单</para>
+        /// <para>Query news broadcast orders.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12083,7 +12203,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得干预全局回复</para>
+        /// <para>Retrieve the global intervention reply.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12125,7 +12245,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得干预全局回复</para>
+        /// <para>Retrieve the global intervention reply.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12167,7 +12287,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得干预全局回复</para>
+        /// <para>Retrieve the global intervention reply.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12185,7 +12305,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得干预全局回复</para>
+        /// <para>Retrieve the global intervention reply.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12203,7 +12323,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得导入任务信息</para>
+        /// <para>Gets information about an import task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12251,7 +12371,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得导入任务信息</para>
+        /// <para>Gets information about an import task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12299,7 +12419,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得导入任务信息</para>
+        /// <para>Gets information about an import task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12317,7 +12437,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得导入任务信息</para>
+        /// <para>Gets information about an import task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12335,7 +12455,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得干预项规则详情</para>
+        /// <para>Retrieves the details of an intervention rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12383,7 +12503,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得干预项规则详情</para>
+        /// <para>Retrieves the details of an intervention rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12431,7 +12551,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得干预项规则详情</para>
+        /// <para>Retrieves the details of an intervention rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12449,7 +12569,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得干预项规则详情</para>
+        /// <para>Retrieves the details of an intervention rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12467,7 +12587,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得干预导入模版文件下载地址</para>
+        /// <para>Retrieves the download URL for the intervention import template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12509,7 +12629,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得干预导入模版文件下载地址</para>
+        /// <para>Retrieves the download URL for the intervention import template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12551,7 +12671,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得干预导入模版文件下载地址</para>
+        /// <para>Retrieves the download URL for the intervention import template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12569,7 +12689,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得干预导入模版文件下载地址</para>
+        /// <para>Retrieves the download URL for the intervention import template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12587,7 +12707,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据ID获取素材内容</para>
+        /// <para>Retrieves detailed information about a material from the Material Library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12635,7 +12755,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据ID获取素材内容</para>
+        /// <para>Retrieves detailed information about a material from the Material Library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12683,7 +12803,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据ID获取素材内容</para>
+        /// <para>Retrieves detailed information about a material from the Material Library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12701,7 +12821,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据ID获取素材内容</para>
+        /// <para>Retrieves detailed information about a material from the Material Library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12719,8 +12839,18 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询PPT作品信息</para>
+        /// <para>Queries information about a PPT artifact.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Usage notes:</para>
+        /// <list type="bullet">
+        /// <item><description>This API uses the HTTP Server-Sent Events (SSE) protocol.</description></item>
+        /// <item><description>The OpenAPI portal is not compatible with the SSE protocol and cannot be used for direct debugging. For examples of how to call the API using an SDK for Java or Python, see <a href="https://help.aliyun.com/zh/model-studio/ppt-generation-best-practices">PPT Generation Best practices</a>.</description></item>
+        /// <item><description>To obtain the latest version of the asynchronous Java SDK, <a href="https://api.aliyun.com/api-tools/sdk/AiMiaoBi?spm=a2c4g.11186623.0.0.4cd3170d7rccDC%5C&version=2023-08-01%5C&language=java-async-tea%5C&tab=primer-doc">download it from the API portal</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetPptArtifactRequest
@@ -12769,8 +12899,18 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询PPT作品信息</para>
+        /// <para>Queries information about a PPT artifact.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Usage notes:</para>
+        /// <list type="bullet">
+        /// <item><description>This API uses the HTTP Server-Sent Events (SSE) protocol.</description></item>
+        /// <item><description>The OpenAPI portal is not compatible with the SSE protocol and cannot be used for direct debugging. For examples of how to call the API using an SDK for Java or Python, see <a href="https://help.aliyun.com/zh/model-studio/ppt-generation-best-practices">PPT Generation Best practices</a>.</description></item>
+        /// <item><description>To obtain the latest version of the asynchronous Java SDK, <a href="https://api.aliyun.com/api-tools/sdk/AiMiaoBi?spm=a2c4g.11186623.0.0.4cd3170d7rccDC%5C&version=2023-08-01%5C&language=java-async-tea%5C&tab=primer-doc">download it from the API portal</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetPptArtifactRequest
@@ -12819,8 +12959,18 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询PPT作品信息</para>
+        /// <para>Queries information about a PPT artifact.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Usage notes:</para>
+        /// <list type="bullet">
+        /// <item><description>This API uses the HTTP Server-Sent Events (SSE) protocol.</description></item>
+        /// <item><description>The OpenAPI portal is not compatible with the SSE protocol and cannot be used for direct debugging. For examples of how to call the API using an SDK for Java or Python, see <a href="https://help.aliyun.com/zh/model-studio/ppt-generation-best-practices">PPT Generation Best practices</a>.</description></item>
+        /// <item><description>To obtain the latest version of the asynchronous Java SDK, <a href="https://api.aliyun.com/api-tools/sdk/AiMiaoBi?spm=a2c4g.11186623.0.0.4cd3170d7rccDC%5C&version=2023-08-01%5C&language=java-async-tea%5C&tab=primer-doc">download it from the API portal</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetPptArtifactRequest
@@ -12837,8 +12987,18 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询PPT作品信息</para>
+        /// <para>Queries information about a PPT artifact.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Usage notes:</para>
+        /// <list type="bullet">
+        /// <item><description>This API uses the HTTP Server-Sent Events (SSE) protocol.</description></item>
+        /// <item><description>The OpenAPI portal is not compatible with the SSE protocol and cannot be used for direct debugging. For examples of how to call the API using an SDK for Java or Python, see <a href="https://help.aliyun.com/zh/model-studio/ppt-generation-best-practices">PPT Generation Best practices</a>.</description></item>
+        /// <item><description>To obtain the latest version of the asynchronous Java SDK, <a href="https://api.aliyun.com/api-tools/sdk/AiMiaoBi?spm=a2c4g.11186623.0.0.4cd3170d7rccDC%5C&version=2023-08-01%5C&language=java-async-tea%5C&tab=primer-doc">download it from the API portal</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetPptArtifactRequest
@@ -12855,7 +13015,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询PPT导出任务的结果</para>
+        /// <para>Retrieves the result of a PPT export task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12905,7 +13065,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询PPT导出任务的结果</para>
+        /// <para>Retrieves the result of a PPT export task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12955,7 +13115,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询PPT导出任务的结果</para>
+        /// <para>Retrieves the result of a PPT export task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12973,7 +13133,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询PPT导出任务的结果</para>
+        /// <para>Retrieves the result of a PPT export task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12991,7 +13151,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取PPT组件的配置</para>
+        /// <para>Retrieves the configuration of a PPT component.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13037,7 +13197,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取PPT组件的配置</para>
+        /// <para>Retrieves the configuration of a PPT component.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13083,7 +13243,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取PPT组件的配置</para>
+        /// <para>Retrieves the configuration of a PPT component.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13101,7 +13261,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取PPT组件的配置</para>
+        /// <para>Retrieves the configuration of a PPT component.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13119,7 +13279,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询PPT任务信息</para>
+        /// <para>Gets information about a PPT task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13169,7 +13329,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询PPT任务信息</para>
+        /// <para>Gets information about a PPT task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13219,7 +13379,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询PPT任务信息</para>
+        /// <para>Gets information about a PPT task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13237,7 +13397,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询PPT任务信息</para>
+        /// <para>Gets information about a PPT task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13255,7 +13415,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询PPT模板筛选器</para>
+        /// <para>Retrieves the filters for PowerPoint (PPT) templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13297,7 +13457,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询PPT模板筛选器</para>
+        /// <para>Retrieves the filters for PowerPoint (PPT) templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13339,7 +13499,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询PPT模板筛选器</para>
+        /// <para>Retrieves the filters for PowerPoint (PPT) templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13357,7 +13517,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询PPT模板筛选器</para>
+        /// <para>Retrieves the filters for PowerPoint (PPT) templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13375,7 +13535,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取当前用户的配置</para>
+        /// <para>Retrieves configuration information, such as intelligent configuration styles and inference-related metadata configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13417,7 +13577,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取当前用户的配置</para>
+        /// <para>Retrieves configuration information, such as intelligent configuration styles and inference-related metadata configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13459,7 +13619,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取当前用户的配置</para>
+        /// <para>Retrieves configuration information, such as intelligent configuration styles and inference-related metadata configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13477,7 +13637,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取当前用户的配置</para>
+        /// <para>Retrieves configuration information, such as intelligent configuration styles and inference-related metadata configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13495,7 +13655,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询智能审核结果</para>
+        /// <para>Queries the result of an automated review.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13541,7 +13701,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询智能审核结果</para>
+        /// <para>Queries the result of an automated review.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13587,7 +13747,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询智能审核结果</para>
+        /// <para>Queries the result of an automated review.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13605,7 +13765,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询智能审核结果</para>
+        /// <para>Queries the result of an automated review.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13623,7 +13783,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询一键成片剪辑任务</para>
+        /// <para>Queries a one-click video editing task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13669,7 +13829,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询一键成片剪辑任务</para>
+        /// <para>Queries a one-click video editing task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13715,7 +13875,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询一键成片剪辑任务</para>
+        /// <para>Queries a one-click video editing task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13733,7 +13893,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询一键成片剪辑任务</para>
+        /// <para>Queries a one-click video editing task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13751,7 +13911,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取文体学习分析结果</para>
+        /// <para>Retrieves the analysis result of a style learning task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13799,7 +13959,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取文体学习分析结果</para>
+        /// <para>Retrieves the analysis result of a style learning task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13847,7 +14007,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取文体学习分析结果</para>
+        /// <para>Retrieves the analysis result of a style learning task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13865,7 +14025,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取文体学习分析结果</para>
+        /// <para>Retrieves the analysis result of a style learning task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13883,7 +14043,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据ID获取热点事件信息</para>
+        /// <para>Retrieve hot topic event information by ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13931,7 +14091,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据ID获取热点事件信息</para>
+        /// <para>Retrieve hot topic event information by ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13979,7 +14139,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据ID获取热点事件信息</para>
+        /// <para>Retrieve hot topic event information by ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13997,7 +14157,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据ID获取热点事件信息</para>
+        /// <para>Retrieve hot topic event information by ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14015,7 +14175,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取选题视角分析任务结果</para>
+        /// <para>Retrieves the result of a topic selection perspective analysis task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14063,7 +14223,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取选题视角分析任务结果</para>
+        /// <para>Retrieves the result of a topic selection perspective analysis task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14111,7 +14271,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取选题视角分析任务结果</para>
+        /// <para>Retrieves the result of a topic selection perspective analysis task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14129,7 +14289,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取选题视角分析任务结果</para>
+        /// <para>Retrieves the result of a topic selection perspective analysis task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14147,7 +14307,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入干预文件</para>
+        /// <para>Imports an intervention file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14203,7 +14363,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入干预文件</para>
+        /// <para>Imports an intervention file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14259,7 +14419,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入干预文件</para>
+        /// <para>Imports an intervention file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14277,7 +14437,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入干预文件</para>
+        /// <para>Imports an intervention file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14295,7 +14455,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>异步导入干预文件</para>
+        /// <para>Asynchronously import an intervention file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14351,7 +14511,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>异步导入干预文件</para>
+        /// <para>Asynchronously import an intervention file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14407,7 +14567,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>异步导入干预文件</para>
+        /// <para>Asynchronously import an intervention file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14425,7 +14585,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>异步导入干预文件</para>
+        /// <para>Asynchronously import an intervention file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14443,7 +14603,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>初始化PPT创建操作</para>
+        /// <para>Important: This is a billable API operation.
+        /// This API performs two operations:
+        /// 1\. Returns the initialization code for the &quot;PPT Generation&quot; frontend component.
+        /// 2\. Performs billing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14497,7 +14660,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>初始化PPT创建操作</para>
+        /// <para>Important: This is a billable API operation.
+        /// This API performs two operations:
+        /// 1\. Returns the initialization code for the &quot;PPT Generation&quot; frontend component.
+        /// 2\. Performs billing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14551,7 +14717,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>初始化PPT创建操作</para>
+        /// <para>Important: This is a billable API operation.
+        /// This API performs two operations:
+        /// 1\. Returns the initialization code for the &quot;PPT Generation&quot; frontend component.
+        /// 2\. Performs billing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14569,7 +14738,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>初始化PPT创建操作</para>
+        /// <para>Important: This is a billable API operation.
+        /// This API performs two operations:
+        /// 1\. Returns the initialization code for the &quot;PPT Generation&quot; frontend component.
+        /// 2\. Performs billing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14587,7 +14759,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>初始化PPT创建操作V2</para>
+        /// <para>Starts a task to create a presentation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14661,7 +14833,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>初始化PPT创建操作V2</para>
+        /// <para>Starts a task to create a presentation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14735,7 +14907,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>初始化PPT创建操作V2</para>
+        /// <para>Starts a task to create a presentation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14753,7 +14925,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>初始化PPT创建操作V2</para>
+        /// <para>Starts a task to create a presentation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14771,7 +14943,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置干预全局回复</para>
+        /// <para>Sets global intervention replies.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -14825,7 +14997,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置干预全局回复</para>
+        /// <para>Sets global intervention replies.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -14879,7 +15051,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置干预全局回复</para>
+        /// <para>Sets global intervention replies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14897,7 +15069,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置干预全局回复</para>
+        /// <para>Sets global intervention replies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14915,7 +15087,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>插入干预规则</para>
+        /// <para>Insert an intervention rule.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -14969,7 +15141,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>插入干预规则</para>
+        /// <para>Insert an intervention rule.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -15023,7 +15195,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>插入干预规则</para>
+        /// <para>Insert an intervention rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15041,7 +15213,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>插入干预规则</para>
+        /// <para>Insert an intervention rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15059,7 +15231,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页获取企业VOC分析任务明细列表</para>
+        /// <para>Retrieves a paginated list of details for an enterprise Voice of the Customer (VOC) analysis task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -15131,7 +15303,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页获取企业VOC分析任务明细列表</para>
+        /// <para>Retrieves a paginated list of details for an enterprise Voice of the Customer (VOC) analysis task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -15203,7 +15375,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页获取企业VOC分析任务明细列表</para>
+        /// <para>Retrieves a paginated list of details for an enterprise Voice of the Customer (VOC) analysis task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15221,7 +15393,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页获取企业VOC分析任务明细列表</para>
+        /// <para>Retrieves a paginated list of details for an enterprise Voice of the Customer (VOC) analysis task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15239,7 +15411,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询任务列表</para>
+        /// <para>Retrieves a list of asynchronous tasks.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -15333,7 +15505,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询任务列表</para>
+        /// <para>Retrieves a list of asynchronous tasks.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -15427,7 +15599,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询任务列表</para>
+        /// <para>Retrieves a list of asynchronous tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15445,7 +15617,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询任务列表</para>
+        /// <para>Retrieves a list of asynchronous tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15463,7 +15635,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取审核维度列表</para>
+        /// <para>Retrieves a list of audit dimensions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15513,7 +15685,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取审核维度列表</para>
+        /// <para>Retrieves a list of audit dimensions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15563,7 +15735,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取审核维度列表</para>
+        /// <para>Retrieves a list of audit dimensions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15581,7 +15753,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取审核维度列表</para>
+        /// <para>Retrieves a list of audit dimensions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15599,7 +15771,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取词库列表</para>
+        /// <para>Retrieve a list of term libraries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15653,7 +15825,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取词库列表</para>
+        /// <para>Retrieve a list of term libraries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15707,7 +15879,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取词库列表</para>
+        /// <para>Retrieve a list of term libraries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15725,7 +15897,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取词库列表</para>
+        /// <para>Retrieve a list of term libraries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15743,7 +15915,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出智能混剪任务列表</para>
+        /// <para>Lists smart video editing tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15825,7 +15997,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出智能混剪任务列表</para>
+        /// <para>Lists smart video editing tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15907,7 +16079,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出智能混剪任务列表</para>
+        /// <para>Lists smart video editing tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15925,7 +16097,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出智能混剪任务列表</para>
+        /// <para>Lists smart video editing tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15943,7 +16115,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得标书写作任务列表</para>
+        /// <para>Retrieves the list of bidding document writing tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16021,7 +16193,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得标书写作任务列表</para>
+        /// <para>Retrieves the list of bidding document writing tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16099,7 +16271,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得标书写作任务列表</para>
+        /// <para>Retrieves the list of bidding document writing tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16117,7 +16289,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得标书写作任务列表</para>
+        /// <para>Retrieves the list of bidding document writing tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16135,7 +16307,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取系统自定义预设</para>
+        /// <para>Retrieves the system-defined presets for the Generate Content workflow. These presets include options such as writing style, article length, output language, and the number of articles to generate.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16187,7 +16359,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取系统自定义预设</para>
+        /// <para>Retrieves the system-defined presets for the Generate Content workflow. These presets include options such as writing style, article length, output language, and the number of articles to generate.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16239,7 +16411,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取系统自定义预设</para>
+        /// <para>Retrieves the system-defined presets for the Generate Content workflow. These presets include options such as writing style, article length, output language, and the number of articles to generate.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16257,7 +16429,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取系统自定义预设</para>
+        /// <para>Retrieves the system-defined presets for the Generate Content workflow. These presets include options such as writing style, article length, output language, and the number of articles to generate.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16275,7 +16447,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>自定义文本列表</para>
+        /// <para>Retrieve a list of custom texts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16323,7 +16495,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>自定义文本列表</para>
+        /// <para>Retrieve a list of custom texts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16371,7 +16543,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>自定义文本列表</para>
+        /// <para>Retrieve a list of custom texts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16389,7 +16561,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>自定义文本列表</para>
+        /// <para>Retrieve a list of custom texts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16407,7 +16579,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>自定义视角列表</para>
+        /// <para>Lists custom viewpoints.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -16493,7 +16665,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>自定义视角列表</para>
+        /// <para>Lists custom viewpoints.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -16579,7 +16751,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>自定义视角列表</para>
+        /// <para>Lists custom viewpoints.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16597,7 +16769,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>自定义视角列表</para>
+        /// <para>Lists custom viewpoints.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16615,7 +16787,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户数据集权限-列表</para>
+        /// <para>Permission to list datasets</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16673,7 +16845,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户数据集权限-列表</para>
+        /// <para>Permission to list datasets</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16731,7 +16903,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户数据集权限-列表</para>
+        /// <para>Permission to list datasets</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16749,7 +16921,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户数据集权限-列表</para>
+        /// <para>Permission to list datasets</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16767,7 +16939,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据集文档列表</para>
+        /// <para>Lists data source documents.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -16927,7 +17099,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据集文档列表</para>
+        /// <para>Lists data source documents.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -17087,7 +17259,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据集文档列表</para>
+        /// <para>Lists data source documents.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17105,7 +17277,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据集文档列表</para>
+        /// <para>Lists data source documents.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17123,7 +17295,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>数据集管理-查询</para>
+        /// <para>Data source management - query</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17205,7 +17377,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>数据集管理-查询</para>
+        /// <para>Data source management - query</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17287,7 +17459,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>数据集管理-查询</para>
+        /// <para>Data source management - query</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17305,7 +17477,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>数据集管理-查询</para>
+        /// <para>Data source management - query</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17323,7 +17495,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成历史列表</para>
+        /// <para>History of online inference scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17391,7 +17563,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成历史列表</para>
+        /// <para>History of online inference scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17459,7 +17631,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成历史列表</para>
+        /// <para>History of online inference scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17477,7 +17649,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成历史列表</para>
+        /// <para>History of online inference scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17495,7 +17667,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读获取文档列表</para>
+        /// <para>Miàodú retrieves the list of documents.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -17571,7 +17743,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读获取文档列表</para>
+        /// <para>Miàodú retrieves the list of documents.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -17647,7 +17819,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读获取文档列表</para>
+        /// <para>Miàodú retrieves the list of documents.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17665,7 +17837,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读获取文档列表</para>
+        /// <para>Miàodú retrieves the list of documents.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17683,8 +17855,13 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>公文检索</para>
+        /// <para>Searches government document libraries based on complex conditions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The Quanmiao product supports iframe embedding. For more information, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer Integration: Quanmiao Public Cloud iframe Customization Plan</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDocumentRetrieveRequest
@@ -17777,8 +17954,13 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>公文检索</para>
+        /// <para>Searches government document libraries based on complex conditions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The Quanmiao product supports iframe embedding. For more information, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer Integration: Quanmiao Public Cloud iframe Customization Plan</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDocumentRetrieveRequest
@@ -17871,8 +18053,13 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>公文检索</para>
+        /// <para>Searches government document libraries based on complex conditions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The Quanmiao product supports iframe embedding. For more information, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer Integration: Quanmiao Public Cloud iframe Customization Plan</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDocumentRetrieveRequest
@@ -17889,8 +18076,13 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>公文检索</para>
+        /// <para>Searches government document libraries based on complex conditions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The Quanmiao product supports iframe embedding. For more information, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer Integration: Quanmiao Public Cloud iframe Customization Plan</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDocumentRetrieveRequest
@@ -17907,8 +18099,13 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询PPT模板列表</para>
+        /// <para>Lists the enterprise-specific PPT templates.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Quanmiao supports iframe integration. For details, see the <a href="https://help.aliyun.com/document_detail/3000990.html">Quanmiao Public Cloud iframe Customization Guide</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListEnterprisePptTemplatesRequest
@@ -17963,8 +18160,13 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询PPT模板列表</para>
+        /// <para>Lists the enterprise-specific PPT templates.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Quanmiao supports iframe integration. For details, see the <a href="https://help.aliyun.com/document_detail/3000990.html">Quanmiao Public Cloud iframe Customization Guide</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListEnterprisePptTemplatesRequest
@@ -18019,8 +18221,13 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询PPT模板列表</para>
+        /// <para>Lists the enterprise-specific PPT templates.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Quanmiao supports iframe integration. For details, see the <a href="https://help.aliyun.com/document_detail/3000990.html">Quanmiao Public Cloud iframe Customization Guide</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListEnterprisePptTemplatesRequest
@@ -18037,8 +18244,13 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询PPT模板列表</para>
+        /// <para>Lists the enterprise-specific PPT templates.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Quanmiao supports iframe integration. For details, see the <a href="https://help.aliyun.com/document_detail/3000990.html">Quanmiao Public Cloud iframe Customization Guide</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListEnterprisePptTemplatesRequest
@@ -18055,7 +18267,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新颖视角列表</para>
+        /// <para>List of novel perspectives.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18115,7 +18327,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新颖视角列表</para>
+        /// <para>List of novel perspectives.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18175,7 +18387,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新颖视角列表</para>
+        /// <para>List of novel perspectives.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18193,7 +18405,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新颖视角列表</para>
+        /// <para>List of novel perspectives.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18211,7 +18423,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通用配置-列表</para>
+        /// <para>Lists the general configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18261,7 +18473,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通用配置-列表</para>
+        /// <para>Lists the general configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18311,7 +18523,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通用配置-列表</para>
+        /// <para>Lists the general configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18329,7 +18541,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通用配置-列表</para>
+        /// <para>Lists the general configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18347,7 +18559,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文档管理-列表。</para>
+        /// <para>Retrieve a list of documents: Query the history of articles created in MiaoBi.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18427,7 +18639,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文档管理-列表。</para>
+        /// <para>Retrieve a list of documents: Query the history of articles created in MiaoBi.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18507,7 +18719,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文档管理-列表。</para>
+        /// <para>Retrieve a list of documents: Query the history of articles created in MiaoBi.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18525,7 +18737,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文档管理-列表。</para>
+        /// <para>Retrieve a list of documents: Query the history of articles created in MiaoBi.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18543,7 +18755,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取分类的热点新闻</para>
+        /// <para>Retrieves the list of trending topic hotspots.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -18609,7 +18821,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取分类的热点新闻</para>
+        /// <para>Retrieves the list of trending topic hotspots.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -18675,7 +18887,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取分类的热点新闻</para>
+        /// <para>Retrieves the list of trending topic hotspots.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18693,7 +18905,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取分类的热点新闻</para>
+        /// <para>Retrieves the list of trending topic hotspots.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18711,7 +18923,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取所有平台热榜源列表</para>
+        /// <para>Retrieve the list of hot ranking sources for all platforms.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18763,7 +18975,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取所有平台热榜源列表</para>
+        /// <para>Retrieve the list of hot ranking sources for all platforms.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18815,7 +19027,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取所有平台热榜源列表</para>
+        /// <para>Retrieve the list of hot ranking sources for all platforms.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18833,7 +19045,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取所有平台热榜源列表</para>
+        /// <para>Retrieve the list of hot ranking sources for all platforms.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18851,7 +19063,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取热点事件列表</para>
+        /// <para>Retrieves a list of trending topics.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -18949,7 +19161,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取热点事件列表</para>
+        /// <para>Retrieves a list of trending topics.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -19047,7 +19259,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取热点事件列表</para>
+        /// <para>Retrieves a list of trending topics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19065,7 +19277,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取热点事件列表</para>
+        /// <para>Retrieves a list of trending topics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19083,7 +19295,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>热门视角列表</para>
+        /// <para>List of popular viewpoints.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19143,7 +19355,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>热门视角列表</para>
+        /// <para>List of popular viewpoints.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19203,7 +19415,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>热门视角列表</para>
+        /// <para>List of popular viewpoints.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19221,7 +19433,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>热门视角列表</para>
+        /// <para>List of popular viewpoints.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19239,7 +19451,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得干预项目数量列表</para>
+        /// <para>Lists the number of intervention projects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19291,7 +19503,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得干预项目数量列表</para>
+        /// <para>Lists the number of intervention projects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19343,7 +19555,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得干预项目数量列表</para>
+        /// <para>Lists the number of intervention projects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19361,7 +19573,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得干预项目数量列表</para>
+        /// <para>Lists the number of intervention projects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19379,7 +19591,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得导入任务列表</para>
+        /// <para>Retrieve a list of import tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19431,7 +19643,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得导入任务列表</para>
+        /// <para>Retrieve a list of import tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19483,7 +19695,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得导入任务列表</para>
+        /// <para>Retrieve a list of import tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19501,7 +19713,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得导入任务列表</para>
+        /// <para>Retrieve a list of import tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19519,7 +19731,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得干预规则列表</para>
+        /// <para>Retrieves a list of intervention rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19571,7 +19783,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得干预规则列表</para>
+        /// <para>Retrieves a list of intervention rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19623,7 +19835,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得干预规则列表</para>
+        /// <para>Retrieves a list of intervention rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19641,7 +19853,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得干预规则列表</para>
+        /// <para>Retrieves a list of intervention rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19659,7 +19871,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得干预项列表</para>
+        /// <para>Retrieves the list of intervention items.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19723,7 +19935,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得干预项列表</para>
+        /// <para>Retrieves the list of intervention items.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19787,7 +19999,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得干预项列表</para>
+        /// <para>Retrieves the list of intervention items.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19805,7 +20017,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得干预项列表</para>
+        /// <para>Retrieves the list of intervention items.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19823,7 +20035,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询素材列表</para>
+        /// <para>Retrieve the list of materials from the Material Library.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -19937,7 +20149,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询素材列表</para>
+        /// <para>Retrieve the list of materials from the Material Library.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -20051,7 +20263,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询素材列表</para>
+        /// <para>Retrieve the list of materials from the Material Library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20069,7 +20281,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询素材列表</para>
+        /// <para>Retrieve the list of materials from the Material Library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20087,7 +20299,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取选题策划列表</para>
+        /// <para>Retrieves a list of planning proposals.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -20177,7 +20389,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取选题策划列表</para>
+        /// <para>Retrieves a list of planning proposals.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -20267,7 +20479,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取选题策划列表</para>
+        /// <para>Retrieves a list of planning proposals.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20285,7 +20497,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取选题策划列表</para>
+        /// <para>Retrieves a list of planning proposals.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20303,7 +20515,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>PPT作品-列表</para>
+        /// <para>Queries a list of PPT artifacts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20363,7 +20575,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>PPT作品-列表</para>
+        /// <para>Queries a list of PPT artifacts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20423,7 +20635,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>PPT作品-列表</para>
+        /// <para>Queries a list of PPT artifacts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20441,7 +20653,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>PPT作品-列表</para>
+        /// <para>Queries a list of PPT artifacts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20459,7 +20671,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询PPT模板列表</para>
+        /// <para>Queries a list of PowerPoint templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20527,7 +20739,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询PPT模板列表</para>
+        /// <para>Queries a list of PowerPoint templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20595,7 +20807,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询PPT模板列表</para>
+        /// <para>Queries a list of PowerPoint templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20613,7 +20825,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询PPT模板列表</para>
+        /// <para>Queries a list of PowerPoint templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20631,7 +20843,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询搜索生成任务对话详情中数据列表</para>
+        /// <para>Lists the dialogue data for a search generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20713,7 +20925,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询搜索生成任务对话详情中数据列表</para>
+        /// <para>Lists the dialogue data for a search generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20795,7 +21007,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询搜索生成任务对话详情中数据列表</para>
+        /// <para>Lists the dialogue data for a search generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20813,7 +21025,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询搜索生成任务对话详情中数据列表</para>
+        /// <para>Lists the dialogue data for a search generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20831,7 +21043,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询妙搜搜索生成任务详情列表</para>
+        /// <para>Retrieves the task details for MiaoSou search generation tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20885,7 +21097,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询妙搜搜索生成任务详情列表</para>
+        /// <para>Retrieves the task details for MiaoSou search generation tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20939,7 +21151,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询妙搜搜索生成任务详情列表</para>
+        /// <para>Retrieves the task details for MiaoSou search generation tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20957,7 +21169,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询妙搜搜索生成任务详情列表</para>
+        /// <para>Retrieves the task details for MiaoSou search generation tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20975,7 +21187,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询妙搜搜索生成历史任务列表</para>
+        /// <para>Queries the list of historical tasks generated by Miaosou Search.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -21035,7 +21247,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询妙搜搜索生成历史任务列表</para>
+        /// <para>Queries the list of historical tasks generated by Miaosou Search.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -21095,7 +21307,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询妙搜搜索生成历史任务列表</para>
+        /// <para>Queries the list of historical tasks generated by Miaosou Search.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21113,7 +21325,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询妙搜搜索生成历史任务列表</para>
+        /// <para>Queries the list of historical tasks generated by Miaosou Search.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21131,8 +21343,13 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取文体学习分析结果列表</para>
+        /// <para>Retrieves the list of style learning analysis results.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The Quanmiao product supports iframe embedding. For details, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer Integration: Quanmiao Public Cloud iframe Customization Plan</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListStyleLearningResultRequest
@@ -21183,8 +21400,13 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取文体学习分析结果列表</para>
+        /// <para>Retrieves the list of style learning analysis results.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The Quanmiao product supports iframe embedding. For details, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer Integration: Quanmiao Public Cloud iframe Customization Plan</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListStyleLearningResultRequest
@@ -21235,8 +21457,13 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取文体学习分析结果列表</para>
+        /// <para>Retrieves the list of style learning analysis results.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The Quanmiao product supports iframe embedding. For details, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer Integration: Quanmiao Public Cloud iframe Customization Plan</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListStyleLearningResultRequest
@@ -21253,8 +21480,13 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取文体学习分析结果列表</para>
+        /// <para>Retrieves the list of style learning analysis results.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The Quanmiao product supports iframe embedding. For details, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer Integration: Quanmiao Public Cloud iframe Customization Plan</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListStyleLearningResultRequest
@@ -21271,7 +21503,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>时效性视角列表</para>
+        /// <para>List of timeliness perspectives.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21331,7 +21563,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>时效性视角列表</para>
+        /// <para>List of timeliness perspectives.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21391,7 +21623,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>时效性视角列表</para>
+        /// <para>List of timeliness perspectives.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21409,7 +21641,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>时效性视角列表</para>
+        /// <para>List of timeliness perspectives.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21427,7 +21659,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取热点推荐事件</para>
+        /// <para>Retrieve hot spot recommendation events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21479,7 +21711,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取热点推荐事件</para>
+        /// <para>Retrieve hot spot recommendation events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21531,7 +21763,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取热点推荐事件</para>
+        /// <para>Retrieve hot spot recommendation events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21549,7 +21781,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取热点推荐事件</para>
+        /// <para>Retrieve hot spot recommendation events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21567,7 +21799,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取主题事件推荐观点列表</para>
+        /// <para>Retrieves recommended viewpoints for hot spot events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21623,7 +21855,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取主题事件推荐观点列表</para>
+        /// <para>Retrieves recommended viewpoints for hot spot events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21679,7 +21911,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取主题事件推荐观点列表</para>
+        /// <para>Retrieves recommended viewpoints for hot spot events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21697,7 +21929,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取主题事件推荐观点列表</para>
+        /// <para>Retrieves recommended viewpoints for hot spot events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21715,7 +21947,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取系统所有实例信息</para>
+        /// <para>Retrieve version information for your purchased services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21757,7 +21989,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取系统所有实例信息</para>
+        /// <para>Retrieve version information for your purchased services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21799,7 +22031,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取系统所有实例信息</para>
+        /// <para>Retrieve version information for your purchased services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21817,7 +22049,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取系统所有实例信息</para>
+        /// <para>Retrieve version information for your purchased services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21835,7 +22067,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>网友视角列表</para>
+        /// <para>List of viewpoints from netizens.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21895,7 +22127,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>网友视角列表</para>
+        /// <para>List of viewpoints from netizens.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21955,7 +22187,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>网友视角列表</para>
+        /// <para>List of viewpoints from netizens.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21973,7 +22205,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>网友视角列表</para>
+        /// <para>List of viewpoints from netizens.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21991,7 +22223,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取文体列表</para>
+        /// <para>Retrieves the list of writing styles.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22047,7 +22279,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取文体列表</para>
+        /// <para>Retrieves the list of writing styles.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22103,7 +22335,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取文体列表</para>
+        /// <para>Retrieves the list of writing styles.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22121,7 +22353,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取文体列表</para>
+        /// <para>Retrieves the list of writing styles.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22139,7 +22371,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据taskId查询异步任务状态</para>
+        /// <para>Queries the details of submitted asynchronous task executions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22187,7 +22419,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据taskId查询异步任务状态</para>
+        /// <para>Queries the details of submitted asynchronous task executions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22235,7 +22467,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据taskId查询异步任务状态</para>
+        /// <para>Queries the details of submitted asynchronous task executions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22253,7 +22485,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据taskId查询异步任务状态</para>
+        /// <para>Queries the details of submitted asynchronous task executions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22271,7 +22503,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询审核结果</para>
+        /// <para>Queries the results of an audit task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22321,7 +22553,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询审核结果</para>
+        /// <para>Queries the results of an audit task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22371,7 +22603,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询审核结果</para>
+        /// <para>Queries the results of an audit task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22389,7 +22621,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询审核结果</para>
+        /// <para>Queries the results of an audit task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22407,12 +22639,12 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询视频审校结果</para>
+        /// <para>Queries video audit results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>根据任务ID查询视频审校结果，包含视频信息、分镜信息和审核结果</para>
+        /// <para>Queries video audit results by task ID. The response includes video information, shot information, and audit results.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22458,12 +22690,12 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询视频审校结果</para>
+        /// <para>Queries video audit results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>根据任务ID查询视频审校结果，包含视频信息、分镜信息和审核结果</para>
+        /// <para>Queries video audit results by task ID. The response includes video information, shot information, and audit results.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22509,12 +22741,12 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询视频审校结果</para>
+        /// <para>Queries video audit results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>根据任务ID查询视频审校结果，包含视频信息、分镜信息和审核结果</para>
+        /// <para>Queries video audit results by task ID. The response includes video information, shot information, and audit results.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22532,12 +22764,12 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询视频审校结果</para>
+        /// <para>Queries video audit results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>根据任务ID查询视频审校结果，包含视频信息、分镜信息和审核结果</para>
+        /// <para>Queries video audit results by task ID. The response includes video information, shot information, and audit results.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22555,7 +22787,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>内容缩写</para>
+        /// <para>Abbreviates the specified content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22605,7 +22837,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>内容缩写</para>
+        /// <para>Abbreviates the specified content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22655,7 +22887,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>内容缩写</para>
+        /// <para>Abbreviates the specified content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22673,7 +22905,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>内容缩写</para>
+        /// <para>Abbreviates the specified content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22691,8 +22923,13 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙笔：AI助手写作</para>
+        /// <para>MiaoBi: AI-assisted writing</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>QuanMiao products support iframe embedding. For more information, see <a href="https://help.aliyun.com/document_detail/3000990.html">QuanMiao Public Cloud iframe Customization for Customer Onboarding</a>.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// RunAiHelperWritingRequest
@@ -22763,8 +23000,13 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙笔：AI助手写作</para>
+        /// <para>MiaoBi: AI-assisted writing</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>QuanMiao products support iframe embedding. For more information, see <a href="https://help.aliyun.com/document_detail/3000990.html">QuanMiao Public Cloud iframe Customization for Customer Onboarding</a>.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// RunAiHelperWritingRequest
@@ -22835,8 +23077,13 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙笔：AI助手写作</para>
+        /// <para>MiaoBi: AI-assisted writing</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>QuanMiao products support iframe embedding. For more information, see <a href="https://help.aliyun.com/document_detail/3000990.html">QuanMiao Public Cloud iframe Customization for Customer Onboarding</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RunAiHelperWritingRequest
@@ -22853,8 +23100,13 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙笔：AI助手写作</para>
+        /// <para>MiaoBi: AI-assisted writing</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>QuanMiao products support iframe embedding. For more information, see <a href="https://help.aliyun.com/document_detail/3000990.html">QuanMiao Public Cloud iframe Customization for Customer Onboarding</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RunAiHelperWritingRequest
@@ -22871,7 +23123,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读生成书籍脑图</para>
+        /// <para>Miaodu generates mind maps of books.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22941,7 +23193,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读生成书籍脑图</para>
+        /// <para>Miaodu generates mind maps of books.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23011,7 +23263,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读生成书籍脑图</para>
+        /// <para>Miaodu generates mind maps of books.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23029,7 +23281,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读生成书籍脑图</para>
+        /// <para>Miaodu generates mind maps of books.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23047,7 +23299,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>书籍导读接口</para>
+        /// <para>Extracts a summary, structured selling points, and hotwords from a book.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23109,7 +23361,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>书籍导读接口</para>
+        /// <para>Extracts a summary, structured selling points, and hotwords from a book.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23171,7 +23423,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>书籍导读接口</para>
+        /// <para>Extracts a summary, structured selling points, and hotwords from a book.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23189,7 +23441,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>书籍导读接口</para>
+        /// <para>Extracts a summary, structured selling points, and hotwords from a book.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23207,7 +23459,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>书籍智能卡片接口</para>
+        /// <para>A smart card interface for books.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23257,7 +23509,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>书籍智能卡片接口</para>
+        /// <para>A smart card interface for books.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23307,7 +23559,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>书籍智能卡片接口</para>
+        /// <para>A smart card interface for books.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23325,7 +23577,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>书籍智能卡片接口</para>
+        /// <para>A smart card interface for books.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23343,7 +23595,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>客户之声预测</para>
+        /// <para>Predicts user comments for a specified article.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -23443,7 +23695,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>客户之声预测</para>
+        /// <para>Predicts user comments for a specified article.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -23543,7 +23795,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>客户之声预测</para>
+        /// <para>Predicts user comments for a specified article.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23561,7 +23813,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>客户之声预测</para>
+        /// <para>Predicts user comments for a specified article.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23579,7 +23831,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>内容续写</para>
+        /// <para>Continues generating content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23625,7 +23877,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>内容续写</para>
+        /// <para>Continues generating content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23671,7 +23923,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>内容续写</para>
+        /// <para>Continues generating content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23689,7 +23941,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>内容续写</para>
+        /// <para>Continues generating content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23707,7 +23959,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>自定义热点话题分析</para>
+        /// <para>Analyzes custom hot topics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23773,7 +24025,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>自定义热点话题分析</para>
+        /// <para>Analyzes custom hot topics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23839,7 +24091,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>自定义热点话题分析</para>
+        /// <para>Analyzes custom hot topics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23857,7 +24109,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>自定义热点话题分析</para>
+        /// <para>Analyzes custom hot topics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23875,7 +24127,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>自定义选题视角分析</para>
+        /// <para>Perspective analysis of custom topics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23953,7 +24205,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>自定义选题视角分析</para>
+        /// <para>Perspective analysis of custom topics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24031,7 +24283,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>自定义选题视角分析</para>
+        /// <para>Perspective analysis of custom topics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24049,7 +24301,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>自定义选题视角分析</para>
+        /// <para>Perspective analysis of custom topics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24067,7 +24319,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>流式输出深度写作事件</para>
+        /// <para>Queries deep writing events. The system returns detailed information about the task execution as a stream of Server-Sent Events (SSE).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24117,7 +24369,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>流式输出深度写作事件</para>
+        /// <para>Queries deep writing events. The system returns detailed information about the task execution as a stream of Server-Sent Events (SSE).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24167,7 +24419,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>流式输出深度写作事件</para>
+        /// <para>Queries deep writing events. The system returns detailed information about the task execution as a stream of Server-Sent Events (SSE).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24185,7 +24437,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>流式输出深度写作事件</para>
+        /// <para>Queries deep writing events. The system returns detailed information about the task execution as a stream of Server-Sent Events (SSE).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24203,7 +24455,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读脑图生成接口</para>
+        /// <para>Generate a three-level, multilingual mind map from an article or a book, with control over the number of second-level nodes and the word count of leaf nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24281,7 +24533,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读脑图生成接口</para>
+        /// <para>Generate a three-level, multilingual mind map from an article or a book, with control over the number of second-level nodes and the word count of leaf nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24359,7 +24611,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读脑图生成接口</para>
+        /// <para>Generate a three-level, multilingual mind map from an article or a book, with control over the number of second-level nodes and the word count of leaf nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24377,7 +24629,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读脑图生成接口</para>
+        /// <para>Generate a three-level, multilingual mind map from an article or a book, with control over the number of second-level nodes and the word count of leaf nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24395,7 +24647,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读文档导读接口</para>
+        /// <para>Generates a summary for an article, video, or URL, including a full-text summary, key points, and a chapter overview (i.e., segmented content with summaries and abstracts for each segment). It also supports multilingual input and output. If the user only requires a full-text summary of an article, they can use the RunDocSummary API. For details, see <a href="https://help.aliyun.com/zh/model-studio/api-aimiaobi-2023-08-01-rundocsummary">https://help.aliyun.com/zh/model-studio/api-aimiaobi-2023-08-01-rundocsummary</a>.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24469,7 +24721,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读文档导读接口</para>
+        /// <para>Generates a summary for an article, video, or URL, including a full-text summary, key points, and a chapter overview (i.e., segmented content with summaries and abstracts for each segment). It also supports multilingual input and output. If the user only requires a full-text summary of an article, they can use the RunDocSummary API. For details, see <a href="https://help.aliyun.com/zh/model-studio/api-aimiaobi-2023-08-01-rundocsummary">https://help.aliyun.com/zh/model-studio/api-aimiaobi-2023-08-01-rundocsummary</a>.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24543,7 +24795,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读文档导读接口</para>
+        /// <para>Generates a summary for an article, video, or URL, including a full-text summary, key points, and a chapter overview (i.e., segmented content with summaries and abstracts for each segment). It also supports multilingual input and output. If the user only requires a full-text summary of an article, they can use the RunDocSummary API. For details, see <a href="https://help.aliyun.com/zh/model-studio/api-aimiaobi-2023-08-01-rundocsummary">https://help.aliyun.com/zh/model-studio/api-aimiaobi-2023-08-01-rundocsummary</a>.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24561,7 +24813,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读文档导读接口</para>
+        /// <para>Generates a summary for an article, video, or URL, including a full-text summary, key points, and a chapter overview (i.e., segmented content with summaries and abstracts for each segment). It also supports multilingual input and output. If the user only requires a full-text summary of an article, they can use the RunDocSummary API. For details, see <a href="https://help.aliyun.com/zh/model-studio/api-aimiaobi-2023-08-01-rundocsummary">https://help.aliyun.com/zh/model-studio/api-aimiaobi-2023-08-01-rundocsummary</a>.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24579,7 +24831,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读问答接口</para>
+        /// <para>Article Q&amp;A: For a natural language query, provide a textual answer within the specified article scope (accompanied by images if available) and display source attribution information.<br>Multimodal File Q&amp;A: For a natural language query, provide a textual answer within the specified multimodal file scope, along with relevant images, video segments, or text, and display source attribution information.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -24667,7 +24919,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读问答接口</para>
+        /// <para>Article Q&amp;A: For a natural language query, provide a textual answer within the specified article scope (accompanied by images if available) and display source attribution information.<br>Multimodal File Q&amp;A: For a natural language query, provide a textual answer within the specified multimodal file scope, along with relevant images, video segments, or text, and display source attribution information.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -24755,7 +25007,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读问答接口</para>
+        /// <para>Article Q&amp;A: For a natural language query, provide a textual answer within the specified article scope (accompanied by images if available) and display source attribution information.<br>Multimodal File Q&amp;A: For a natural language query, provide a textual answer within the specified multimodal file scope, along with relevant images, video segments, or text, and display source attribution information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24773,7 +25025,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读问答接口</para>
+        /// <para>Article Q&amp;A: For a natural language query, provide a textual answer within the specified article scope (accompanied by images if available) and display source attribution information.<br>Multimodal File Q&amp;A: For a natural language query, provide a textual answer within the specified multimodal file scope, along with relevant images, video segments, or text, and display source attribution information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24791,7 +25043,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文档智能卡片接口</para>
+        /// <para>Automatically adds tags to selected text or a specified chat and generates a smart card note.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24849,7 +25101,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文档智能卡片接口</para>
+        /// <para>Automatically adds tags to selected text or a specified chat and generates a smart card note.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24907,7 +25159,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文档智能卡片接口</para>
+        /// <para>Automatically adds tags to selected text or a specified chat and generates a smart card note.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24925,7 +25177,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文档智能卡片接口</para>
+        /// <para>Automatically adds tags to selected text or a specified chat and generates a smart card note.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24943,7 +25195,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读文档总结摘要接口</para>
+        /// <para>Generates a summary of an article, video, or URL—that is, a concise overview of the entire content. It also supports multilingual input and output.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25009,7 +25261,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读文档总结摘要接口</para>
+        /// <para>Generates a summary of an article, video, or URL—that is, a concise overview of the entire content. It also supports multilingual input and output.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25075,7 +25327,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读文档总结摘要接口</para>
+        /// <para>Generates a summary of an article, video, or URL—that is, a concise overview of the entire content. It also supports multilingual input and output.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25093,7 +25345,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读文档总结摘要接口</para>
+        /// <para>Generates a summary of an article, video, or URL—that is, a concise overview of the entire content. It also supports multilingual input and output.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25111,7 +25363,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读文档翻译接口</para>
+        /// <para>An API for document translation between English and Chinese.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25177,7 +25429,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读文档翻译接口</para>
+        /// <para>An API for document translation between English and Chinese.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25243,7 +25495,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读文档翻译接口</para>
+        /// <para>An API for document translation between English and Chinese.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25261,7 +25513,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读文档翻译接口</para>
+        /// <para>An API for document translation between English and Chinese.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25279,7 +25531,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文档改写</para>
+        /// <para>Rewrites an article in a specified style.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25353,7 +25605,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文档改写</para>
+        /// <para>Rewrites an article in a specified style.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25427,7 +25679,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文档改写</para>
+        /// <para>Rewrites an article in a specified style.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25445,7 +25697,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文档改写</para>
+        /// <para>Rewrites an article in a specified style.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25463,7 +25715,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>内容扩写</para>
+        /// <para>Expands content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25513,7 +25765,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>内容扩写</para>
+        /// <para>Expands content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25563,7 +25815,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>内容扩写</para>
+        /// <para>Expands content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25581,7 +25833,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>内容扩写</para>
+        /// <para>Expands content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25599,7 +25851,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读猜你想问接口</para>
+        /// <para>Submits a query and returns several related queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25657,7 +25909,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读猜你想问接口</para>
+        /// <para>Submits a query and returns several related queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25715,7 +25967,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读猜你想问接口</para>
+        /// <para>Submits a query and returns several related queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25733,7 +25985,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读猜你想问接口</para>
+        /// <para>Submits a query and returns several related queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25751,7 +26003,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读文档关键词抽取接口</para>
+        /// <para>Extract keywords from a specified document. Keywords are domain-specific professional terms or concepts that represent and identify a particular industry or field. They accurately describe and summarize the core content, key people, major events, or technical terms in that domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25813,7 +26065,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读文档关键词抽取接口</para>
+        /// <para>Extract keywords from a specified document. Keywords are domain-specific professional terms or concepts that represent and identify a particular industry or field. They accurately describe and summarize the core content, key people, major events, or technical terms in that domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25875,7 +26127,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读文档关键词抽取接口</para>
+        /// <para>Extract keywords from a specified document. Keywords are domain-specific professional terms or concepts that represent and identify a particular industry or field. They accurately describe and summarize the core content, key people, major events, or technical terms in that domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25893,7 +26145,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读文档关键词抽取接口</para>
+        /// <para>Extract keywords from a specified document. Keywords are domain-specific professional terms or concepts that represent and identify a particular industry or field. They accurately describe and summarize the core content, key people, major events, or technical terms in that domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25911,7 +26163,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AI妙笔-创作-抽取关键词</para>
+        /// <para>Extracts and generates keywords using AMB.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -25971,7 +26223,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AI妙笔-创作-抽取关键词</para>
+        /// <para>Extracts and generates keywords using AMB.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -26031,7 +26283,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AI妙笔-创作-抽取关键词</para>
+        /// <para>Extracts and generates keywords using AMB.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26049,7 +26301,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AI妙笔-创作-抽取关键词</para>
+        /// <para>Extracts and generates keywords using AMB.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26067,7 +26319,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文档批量导读</para>
+        /// <para>Generate an outline-style summary for multiple documents, videos, or URLs. The summary includes a consolidated overview and key points. This operation supports multiple input and output languages.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -26135,7 +26387,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文档批量导读</para>
+        /// <para>Generate an outline-style summary for multiple documents, videos, or URLs. The summary includes a consolidated overview and key points. This operation supports multiple input and output languages.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -26203,7 +26455,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文档批量导读</para>
+        /// <para>Generate an outline-style summary for multiple documents, videos, or URLs. The summary includes a consolidated overview and key points. This operation supports multiple input and output languages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26221,7 +26473,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文档批量导读</para>
+        /// <para>Generate an outline-style summary for multiple documents, videos, or URLs. The summary includes a consolidated overview and key points. This operation supports multiple input and output languages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26239,8 +26491,18 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>流式输出PPT大纲</para>
+        /// <para>Generates a PowerPoint outline.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Instructions:</para>
+        /// <list type="bullet">
+        /// <item><description>This API uses the HTTP Server-Sent Events (SSE) protocol.</description></item>
+        /// <item><description>You cannot test this API directly in the OpenAPI Portal because the portal is not compatible with the SSE inference protocol. For examples of how to call the API using the SDK for Java or Python, see <a href="https://help.aliyun.com/en/model-studio/ppt-generation-best-practices">PPT Generation Best practices</a>.</description></item>
+        /// <item><description>To obtain the latest version of the asynchronous Java SDK, <a href="https://api.aliyun.com/api-tools/sdk/AiMiaoBi?spm=a2c4g.11186623.0.0.4cd3170d7rccDC%5C&version=2023-08-01%5C&language=java-async-tea%5C&tab=primer-doc">click this link</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// RunPptOutlineGenerationRequest
@@ -26289,8 +26551,18 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>流式输出PPT大纲</para>
+        /// <para>Generates a PowerPoint outline.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Instructions:</para>
+        /// <list type="bullet">
+        /// <item><description>This API uses the HTTP Server-Sent Events (SSE) protocol.</description></item>
+        /// <item><description>You cannot test this API directly in the OpenAPI Portal because the portal is not compatible with the SSE inference protocol. For examples of how to call the API using the SDK for Java or Python, see <a href="https://help.aliyun.com/en/model-studio/ppt-generation-best-practices">PPT Generation Best practices</a>.</description></item>
+        /// <item><description>To obtain the latest version of the asynchronous Java SDK, <a href="https://api.aliyun.com/api-tools/sdk/AiMiaoBi?spm=a2c4g.11186623.0.0.4cd3170d7rccDC%5C&version=2023-08-01%5C&language=java-async-tea%5C&tab=primer-doc">click this link</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// RunPptOutlineGenerationRequest
@@ -26339,8 +26611,18 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>流式输出PPT大纲</para>
+        /// <para>Generates a PowerPoint outline.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Instructions:</para>
+        /// <list type="bullet">
+        /// <item><description>This API uses the HTTP Server-Sent Events (SSE) protocol.</description></item>
+        /// <item><description>You cannot test this API directly in the OpenAPI Portal because the portal is not compatible with the SSE inference protocol. For examples of how to call the API using the SDK for Java or Python, see <a href="https://help.aliyun.com/en/model-studio/ppt-generation-best-practices">PPT Generation Best practices</a>.</description></item>
+        /// <item><description>To obtain the latest version of the asynchronous Java SDK, <a href="https://api.aliyun.com/api-tools/sdk/AiMiaoBi?spm=a2c4g.11186623.0.0.4cd3170d7rccDC%5C&version=2023-08-01%5C&language=java-async-tea%5C&tab=primer-doc">click this link</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// RunPptOutlineGenerationRequest
@@ -26357,8 +26639,18 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>流式输出PPT大纲</para>
+        /// <para>Generates a PowerPoint outline.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Instructions:</para>
+        /// <list type="bullet">
+        /// <item><description>This API uses the HTTP Server-Sent Events (SSE) protocol.</description></item>
+        /// <item><description>You cannot test this API directly in the OpenAPI Portal because the portal is not compatible with the SSE inference protocol. For examples of how to call the API using the SDK for Java or Python, see <a href="https://help.aliyun.com/en/model-studio/ppt-generation-best-practices">PPT Generation Best practices</a>.</description></item>
+        /// <item><description>To obtain the latest version of the asynchronous Java SDK, <a href="https://api.aliyun.com/api-tools/sdk/AiMiaoBi?spm=a2c4g.11186623.0.0.4cd3170d7rccDC%5C&version=2023-08-01%5C&language=java-async-tea%5C&tab=primer-doc">click this link</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// RunPptOutlineGenerationRequest
@@ -26375,8 +26667,17 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>快速写作</para>
+        /// <para>Enter writing instructions to quickly generate content.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Access Instructions:</h3>
+        /// <list type="bullet">
+        /// <item><description>The OpenAPI portal is incompatible with the Server-Sent Events (SSE) inference protocol. Therefore, you cannot directly debug this operation. For an example of how to call the API using an SDK, see <a href="https://help.aliyun.com/zh/model-studio/best-practices-for-miaobi-api?spm=a2c4g.11186623.help-menu-2400256.d_1_12_6_2_1_0.39892421FntuI2%5C&scm=20140722.H_2844289._.OR_help-T_cn~zh-V_1">Miaobi Best Practices</a>.</description></item>
+        /// <item><description>Click this <a href="https://api.aliyun.com/api-tools/sdk/AiMiaoBi?version=2023-08-01%5C&language=java-async-tea%5C&tab=primer-doc">link</a> to download the latest version of the Java asynchronous SDK.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// RunQuickWritingRequest
@@ -26443,8 +26744,17 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>快速写作</para>
+        /// <para>Enter writing instructions to quickly generate content.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Access Instructions:</h3>
+        /// <list type="bullet">
+        /// <item><description>The OpenAPI portal is incompatible with the Server-Sent Events (SSE) inference protocol. Therefore, you cannot directly debug this operation. For an example of how to call the API using an SDK, see <a href="https://help.aliyun.com/zh/model-studio/best-practices-for-miaobi-api?spm=a2c4g.11186623.help-menu-2400256.d_1_12_6_2_1_0.39892421FntuI2%5C&scm=20140722.H_2844289._.OR_help-T_cn~zh-V_1">Miaobi Best Practices</a>.</description></item>
+        /// <item><description>Click this <a href="https://api.aliyun.com/api-tools/sdk/AiMiaoBi?version=2023-08-01%5C&language=java-async-tea%5C&tab=primer-doc">link</a> to download the latest version of the Java asynchronous SDK.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// RunQuickWritingRequest
@@ -26511,8 +26821,17 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>快速写作</para>
+        /// <para>Enter writing instructions to quickly generate content.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Access Instructions:</h3>
+        /// <list type="bullet">
+        /// <item><description>The OpenAPI portal is incompatible with the Server-Sent Events (SSE) inference protocol. Therefore, you cannot directly debug this operation. For an example of how to call the API using an SDK, see <a href="https://help.aliyun.com/zh/model-studio/best-practices-for-miaobi-api?spm=a2c4g.11186623.help-menu-2400256.d_1_12_6_2_1_0.39892421FntuI2%5C&scm=20140722.H_2844289._.OR_help-T_cn~zh-V_1">Miaobi Best Practices</a>.</description></item>
+        /// <item><description>Click this <a href="https://api.aliyun.com/api-tools/sdk/AiMiaoBi?version=2023-08-01%5C&language=java-async-tea%5C&tab=primer-doc">link</a> to download the latest version of the Java asynchronous SDK.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// RunQuickWritingRequest
@@ -26529,8 +26848,17 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>快速写作</para>
+        /// <para>Enter writing instructions to quickly generate content.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Access Instructions:</h3>
+        /// <list type="bullet">
+        /// <item><description>The OpenAPI portal is incompatible with the Server-Sent Events (SSE) inference protocol. Therefore, you cannot directly debug this operation. For an example of how to call the API using an SDK, see <a href="https://help.aliyun.com/zh/model-studio/best-practices-for-miaobi-api?spm=a2c4g.11186623.help-menu-2400256.d_1_12_6_2_1_0.39892421FntuI2%5C&scm=20140722.H_2844289._.OR_help-T_cn~zh-V_1">Miaobi Best Practices</a>.</description></item>
+        /// <item><description>Click this <a href="https://api.aliyun.com/api-tools/sdk/AiMiaoBi?version=2023-08-01%5C&language=java-async-tea%5C&tab=primer-doc">link</a> to download the latest version of the Java asynchronous SDK.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// RunQuickWritingRequest
@@ -26547,8 +26875,27 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AI妙搜-智能搜索生成</para>
+        /// <para>AI Miaosou – Intelligent Search Generation: This API delivers the search and generation capabilities of the Miaosou homepage. It supports general search and media asset search, along with features such as user query clarification, multimodal knowledge search, and multi-agent generation.
+        /// – General Search: Performs semantic retrieval on centralized knowledge data and applies multi-agent post-processing to the results, such as summary generation, abstracting, and timeline summarization.
+        /// – Media Asset Search: Conducts an exhaustive full-text search to retrieve highly relevant knowledge and supports multi-agent post-processing, such as clustering and news extraction.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Integration notes:</h3>
+        /// <list type="bullet">
+        /// <item><description>This API uses the HTTP Server-Sent Events (SSE) protocol.</description></item>
+        /// <item><description>The OpenAPI console does not support SSE inference protocols and cannot be used for direct testing. For SDK-based integration examples (Java and Python), see the <a href="https://help.aliyun.com/zh/model-studio/user-guide/best-practices-for-miaosou-api/?spm=a2c4g.11186623.help-menu-2400256.d_1_3_3_2_1_2.42a64a34eIyBhn">Miaosou Best Practices</a> documentation.</description></item>
+        /// <item><description>To obtain the latest version of the Java asynchronous SDK, click <a href="https://api.aliyun.com/api-tools/sdk/AiMiaoBi?version=2023-08-01%5C&language=java-async-tea%5C&tab=primer-doc">this link</a>.</description></item>
+        /// </list>
+        /// <h3>Data sources for search:</h3>
+        /// <para>Supports three dataset types. See the <a href="https://help.aliyun.com/zh/model-studio/user-guide/best-practices-for-miaosou-api/?spm=a2c4g.11186623.help-menu-2400256.d_1_3_3_2_1_2.42a64a34eIyBhn">Miaosou Best Practices</a> documentation for details.</para>
+        /// <list type="bullet">
+        /// <item><description>Built-in “Internet search” dataset: Supports open-domain text, images, and video (video is not yet available) from the Internet.</description></item>
+        /// <item><description>Semantic (RAG) dataset: Manages enterprise private knowledge bases and supports text, images, video, and voice (voice is not yet available).</description></item>
+        /// <item><description>Third-party API dataset: Integrates directly with your own enterprise search APIs.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// RunSearchGenerationRequest
@@ -26627,8 +26974,27 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AI妙搜-智能搜索生成</para>
+        /// <para>AI Miaosou – Intelligent Search Generation: This API delivers the search and generation capabilities of the Miaosou homepage. It supports general search and media asset search, along with features such as user query clarification, multimodal knowledge search, and multi-agent generation.
+        /// – General Search: Performs semantic retrieval on centralized knowledge data and applies multi-agent post-processing to the results, such as summary generation, abstracting, and timeline summarization.
+        /// – Media Asset Search: Conducts an exhaustive full-text search to retrieve highly relevant knowledge and supports multi-agent post-processing, such as clustering and news extraction.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Integration notes:</h3>
+        /// <list type="bullet">
+        /// <item><description>This API uses the HTTP Server-Sent Events (SSE) protocol.</description></item>
+        /// <item><description>The OpenAPI console does not support SSE inference protocols and cannot be used for direct testing. For SDK-based integration examples (Java and Python), see the <a href="https://help.aliyun.com/zh/model-studio/user-guide/best-practices-for-miaosou-api/?spm=a2c4g.11186623.help-menu-2400256.d_1_3_3_2_1_2.42a64a34eIyBhn">Miaosou Best Practices</a> documentation.</description></item>
+        /// <item><description>To obtain the latest version of the Java asynchronous SDK, click <a href="https://api.aliyun.com/api-tools/sdk/AiMiaoBi?version=2023-08-01%5C&language=java-async-tea%5C&tab=primer-doc">this link</a>.</description></item>
+        /// </list>
+        /// <h3>Data sources for search:</h3>
+        /// <para>Supports three dataset types. See the <a href="https://help.aliyun.com/zh/model-studio/user-guide/best-practices-for-miaosou-api/?spm=a2c4g.11186623.help-menu-2400256.d_1_3_3_2_1_2.42a64a34eIyBhn">Miaosou Best Practices</a> documentation for details.</para>
+        /// <list type="bullet">
+        /// <item><description>Built-in “Internet search” dataset: Supports open-domain text, images, and video (video is not yet available) from the Internet.</description></item>
+        /// <item><description>Semantic (RAG) dataset: Manages enterprise private knowledge bases and supports text, images, video, and voice (voice is not yet available).</description></item>
+        /// <item><description>Third-party API dataset: Integrates directly with your own enterprise search APIs.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// RunSearchGenerationRequest
@@ -26707,8 +27073,27 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AI妙搜-智能搜索生成</para>
+        /// <para>AI Miaosou – Intelligent Search Generation: This API delivers the search and generation capabilities of the Miaosou homepage. It supports general search and media asset search, along with features such as user query clarification, multimodal knowledge search, and multi-agent generation.
+        /// – General Search: Performs semantic retrieval on centralized knowledge data and applies multi-agent post-processing to the results, such as summary generation, abstracting, and timeline summarization.
+        /// – Media Asset Search: Conducts an exhaustive full-text search to retrieve highly relevant knowledge and supports multi-agent post-processing, such as clustering and news extraction.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Integration notes:</h3>
+        /// <list type="bullet">
+        /// <item><description>This API uses the HTTP Server-Sent Events (SSE) protocol.</description></item>
+        /// <item><description>The OpenAPI console does not support SSE inference protocols and cannot be used for direct testing. For SDK-based integration examples (Java and Python), see the <a href="https://help.aliyun.com/zh/model-studio/user-guide/best-practices-for-miaosou-api/?spm=a2c4g.11186623.help-menu-2400256.d_1_3_3_2_1_2.42a64a34eIyBhn">Miaosou Best Practices</a> documentation.</description></item>
+        /// <item><description>To obtain the latest version of the Java asynchronous SDK, click <a href="https://api.aliyun.com/api-tools/sdk/AiMiaoBi?version=2023-08-01%5C&language=java-async-tea%5C&tab=primer-doc">this link</a>.</description></item>
+        /// </list>
+        /// <h3>Data sources for search:</h3>
+        /// <para>Supports three dataset types. See the <a href="https://help.aliyun.com/zh/model-studio/user-guide/best-practices-for-miaosou-api/?spm=a2c4g.11186623.help-menu-2400256.d_1_3_3_2_1_2.42a64a34eIyBhn">Miaosou Best Practices</a> documentation for details.</para>
+        /// <list type="bullet">
+        /// <item><description>Built-in “Internet search” dataset: Supports open-domain text, images, and video (video is not yet available) from the Internet.</description></item>
+        /// <item><description>Semantic (RAG) dataset: Manages enterprise private knowledge bases and supports text, images, video, and voice (voice is not yet available).</description></item>
+        /// <item><description>Third-party API dataset: Integrates directly with your own enterprise search APIs.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// RunSearchGenerationRequest
@@ -26725,8 +27110,27 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AI妙搜-智能搜索生成</para>
+        /// <para>AI Miaosou – Intelligent Search Generation: This API delivers the search and generation capabilities of the Miaosou homepage. It supports general search and media asset search, along with features such as user query clarification, multimodal knowledge search, and multi-agent generation.
+        /// – General Search: Performs semantic retrieval on centralized knowledge data and applies multi-agent post-processing to the results, such as summary generation, abstracting, and timeline summarization.
+        /// – Media Asset Search: Conducts an exhaustive full-text search to retrieve highly relevant knowledge and supports multi-agent post-processing, such as clustering and news extraction.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Integration notes:</h3>
+        /// <list type="bullet">
+        /// <item><description>This API uses the HTTP Server-Sent Events (SSE) protocol.</description></item>
+        /// <item><description>The OpenAPI console does not support SSE inference protocols and cannot be used for direct testing. For SDK-based integration examples (Java and Python), see the <a href="https://help.aliyun.com/zh/model-studio/user-guide/best-practices-for-miaosou-api/?spm=a2c4g.11186623.help-menu-2400256.d_1_3_3_2_1_2.42a64a34eIyBhn">Miaosou Best Practices</a> documentation.</description></item>
+        /// <item><description>To obtain the latest version of the Java asynchronous SDK, click <a href="https://api.aliyun.com/api-tools/sdk/AiMiaoBi?version=2023-08-01%5C&language=java-async-tea%5C&tab=primer-doc">this link</a>.</description></item>
+        /// </list>
+        /// <h3>Data sources for search:</h3>
+        /// <para>Supports three dataset types. See the <a href="https://help.aliyun.com/zh/model-studio/user-guide/best-practices-for-miaosou-api/?spm=a2c4g.11186623.help-menu-2400256.d_1_3_3_2_1_2.42a64a34eIyBhn">Miaosou Best Practices</a> documentation for details.</para>
+        /// <list type="bullet">
+        /// <item><description>Built-in “Internet search” dataset: Supports open-domain text, images, and video (video is not yet available) from the Internet.</description></item>
+        /// <item><description>Semantic (RAG) dataset: Manages enterprise private knowledge bases and supports text, images, video, and voice (voice is not yet available).</description></item>
+        /// <item><description>Third-party API dataset: Integrates directly with your own enterprise search APIs.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// RunSearchGenerationRequest
@@ -26743,7 +27147,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙搜-文搜文</para>
+        /// <para>Miao Search enables text-to-text search.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -26807,7 +27211,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙搜-文搜文</para>
+        /// <para>Miao Search enables text-to-text search.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -26871,7 +27275,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙搜-文搜文</para>
+        /// <para>Miao Search enables text-to-text search.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26889,7 +27293,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙搜-文搜文</para>
+        /// <para>Miao Search enables text-to-text search.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26907,8 +27311,13 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创作-分步骤写作</para>
+        /// <para>Writes content in a step-by-step pattern using an outline and summaries.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The Quanmiao product supports iframe embedding. For more information, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer Onboarding: Quanmiao Public Cloud iframe Customization</a>.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// RunStepByStepWritingRequest
@@ -26983,8 +27392,13 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创作-分步骤写作</para>
+        /// <para>Writes content in a step-by-step pattern using an outline and summaries.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The Quanmiao product supports iframe embedding. For more information, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer Onboarding: Quanmiao Public Cloud iframe Customization</a>.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// RunStepByStepWritingRequest
@@ -27059,8 +27473,13 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创作-分步骤写作</para>
+        /// <para>Writes content in a step-by-step pattern using an outline and summaries.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The Quanmiao product supports iframe embedding. For more information, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer Onboarding: Quanmiao Public Cloud iframe Customization</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RunStepByStepWritingRequest
@@ -27077,8 +27496,13 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创作-分步骤写作</para>
+        /// <para>Writes content in a step-by-step pattern using an outline and summaries.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The Quanmiao product supports iframe embedding. For more information, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer Onboarding: Quanmiao Public Cloud iframe Customization</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RunStepByStepWritingRequest
@@ -27095,8 +27519,13 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>内容特点分析</para>
+        /// <para>Analyzes the stylistic features of content.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Quanmiao products support iframe embedding. For more information, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer Integration: Quanmiao Public Cloud iframe Customization Solution</a>.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// RunStyleFeatureAnalysisRequest
@@ -27155,8 +27584,13 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>内容特点分析</para>
+        /// <para>Analyzes the stylistic features of content.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Quanmiao products support iframe embedding. For more information, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer Integration: Quanmiao Public Cloud iframe Customization Solution</a>.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// RunStyleFeatureAnalysisRequest
@@ -27215,8 +27649,13 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>内容特点分析</para>
+        /// <para>Analyzes the stylistic features of content.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Quanmiao products support iframe embedding. For more information, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer Integration: Quanmiao Public Cloud iframe Customization Solution</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RunStyleFeatureAnalysisRequest
@@ -27233,8 +27672,13 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>内容特点分析</para>
+        /// <para>Analyzes the stylistic features of content.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Quanmiao products support iframe embedding. For more information, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer Integration: Quanmiao Public Cloud iframe Customization Solution</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RunStyleFeatureAnalysisRequest
@@ -27251,7 +27695,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>内容摘要生成</para>
+        /// <para>Generates a summary of content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27301,7 +27745,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>内容摘要生成</para>
+        /// <para>Generates a summary of content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27351,7 +27795,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>内容摘要生成</para>
+        /// <para>Generates a summary of content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27369,7 +27813,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>内容摘要生成</para>
+        /// <para>Generates a summary of content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27387,7 +27831,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创作-文本润色</para>
+        /// <para>Polishes the specified text.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27445,7 +27889,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创作-文本润色</para>
+        /// <para>Polishes the specified text.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27503,7 +27947,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创作-文本润色</para>
+        /// <para>Polishes the specified text.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27521,7 +27965,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创作-文本润色</para>
+        /// <para>Polishes the specified text.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27539,7 +27983,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙笔：标题生成</para>
+        /// <para>Miaobi generates titles.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -27607,7 +28051,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙笔：标题生成</para>
+        /// <para>Miaobi generates titles.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -27675,7 +28119,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙笔：标题生成</para>
+        /// <para>Miaobi generates titles.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27693,7 +28137,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙笔：标题生成</para>
+        /// <para>Miaobi generates titles.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27711,8 +28155,13 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙策选题策划聚合</para>
+        /// <para>Selects and aggregates topics for MiaoCe.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>All Miao products support iframe embedding. For more information, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer Integration: Miao Public Cloud iFrame Customization Plan</a>.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// RunTopicSelectionMergeRequest
@@ -27767,8 +28216,13 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙策选题策划聚合</para>
+        /// <para>Selects and aggregates topics for MiaoCe.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>All Miao products support iframe embedding. For more information, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer Integration: Miao Public Cloud iFrame Customization Plan</a>.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// RunTopicSelectionMergeRequest
@@ -27823,8 +28277,13 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙策选题策划聚合</para>
+        /// <para>Selects and aggregates topics for MiaoCe.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>All Miao products support iframe embedding. For more information, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer Integration: Miao Public Cloud iFrame Customization Plan</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RunTopicSelectionMergeRequest
@@ -27841,8 +28300,13 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙策选题策划聚合</para>
+        /// <para>Selects and aggregates topics for MiaoCe.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>All Miao products support iframe embedding. For more information, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer Integration: Miao Public Cloud iFrame Customization Plan</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RunTopicSelectionMergeRequest
@@ -27859,7 +28323,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AI妙笔-创作-中英文翻译</para>
+        /// <para>Translates text for content creation using AMB.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -27919,7 +28383,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AI妙笔-创作-中英文翻译</para>
+        /// <para>Translates text for content creation using AMB.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -27979,7 +28443,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AI妙笔-创作-中英文翻译</para>
+        /// <para>Translates text for content creation using AMB.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27997,7 +28461,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AI妙笔-创作-中英文翻译</para>
+        /// <para>Translates text for content creation using AMB.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28015,7 +28479,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AI生成视频剪辑脚本</para>
+        /// <para>Generates video clip scripts using AI.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28077,7 +28541,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AI生成视频剪辑脚本</para>
+        /// <para>Generates video clip scripts using AI.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28139,7 +28603,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AI生成视频剪辑脚本</para>
+        /// <para>Generates video clip scripts using AI.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28157,7 +28621,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AI生成视频剪辑脚本</para>
+        /// <para>Generates video clip scripts using AI.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28175,7 +28639,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AI妙笔-创作-文风改写</para>
+        /// <para>Calls AMB to rewrite text in a new tone.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -28235,7 +28699,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AI妙笔-创作-文风改写</para>
+        /// <para>Calls AMB to rewrite text in a new tone.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -28295,7 +28759,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AI妙笔-创作-文风改写</para>
+        /// <para>Calls AMB to rewrite text in a new tone.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28313,7 +28777,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AI妙笔-创作-文风改写</para>
+        /// <para>Calls AMB to rewrite text in a new tone.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28331,8 +28795,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>直接写作</para>
+        /// <para>Direct writing.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API is deprecated. For more information, see <a href="https://help.aliyun.com/document_detail/2922606.html">RunWritingV2</a>.
+        /// The Quanmiao product supports iframe embedding. For more information, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer integration: Quanmiao Public Cloud iframe customization</a>.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// RunWritingRequest
@@ -28407,8 +28877,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>直接写作</para>
+        /// <para>Direct writing.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API is deprecated. For more information, see <a href="https://help.aliyun.com/document_detail/2922606.html">RunWritingV2</a>.
+        /// The Quanmiao product supports iframe embedding. For more information, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer integration: Quanmiao Public Cloud iframe customization</a>.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// RunWritingRequest
@@ -28483,8 +28959,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>直接写作</para>
+        /// <para>Direct writing.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API is deprecated. For more information, see <a href="https://help.aliyun.com/document_detail/2922606.html">RunWritingV2</a>.
+        /// The Quanmiao product supports iframe embedding. For more information, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer integration: Quanmiao Public Cloud iframe customization</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RunWritingRequest
@@ -28501,8 +28983,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>直接写作</para>
+        /// <para>Direct writing.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API is deprecated. For more information, see <a href="https://help.aliyun.com/document_detail/2922606.html">RunWritingV2</a>.
+        /// The Quanmiao product supports iframe embedding. For more information, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer integration: Quanmiao Public Cloud iframe customization</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RunWritingRequest
@@ -28519,8 +29007,13 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>直接写作</para>
+        /// <para>AI writing</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For instructions on embedding Quanmiao products using an iframe, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer integration_Quanmiao public cloud iframe customized solution</a>.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// RunWritingV2Request
@@ -28679,8 +29172,13 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>直接写作</para>
+        /// <para>AI writing</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For instructions on embedding Quanmiao products using an iframe, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer integration_Quanmiao public cloud iframe customized solution</a>.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// RunWritingV2Request
@@ -28839,8 +29337,13 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>直接写作</para>
+        /// <para>AI writing</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For instructions on embedding Quanmiao products using an iframe, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer integration_Quanmiao public cloud iframe customized solution</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RunWritingV2Request
@@ -28857,8 +29360,13 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>直接写作</para>
+        /// <para>AI writing</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For instructions on embedding Quanmiao products using an iframe, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer integration_Quanmiao public cloud iframe customized solution</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RunWritingV2Request
@@ -28875,7 +29383,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存自定义文本</para>
+        /// <para>Saves custom text.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28931,7 +29439,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存自定义文本</para>
+        /// <para>Saves custom text.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28987,7 +29495,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存自定义文本</para>
+        /// <para>Saves custom text.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29005,7 +29513,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存自定义文本</para>
+        /// <para>Saves custom text.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29023,7 +29531,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存用户的信源配置</para>
+        /// <para>Saves the data source configuration for content creation and general search.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -29085,7 +29593,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存用户的信源配置</para>
+        /// <para>Saves the data source configuration for content creation and general search.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -29147,7 +29655,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存用户的信源配置</para>
+        /// <para>Saves the data source configuration for content creation and general search.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29165,7 +29673,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存用户的信源配置</para>
+        /// <para>Saves the data source configuration for content creation and general search.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29183,7 +29691,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存素材</para>
+        /// <para>Save material: Save material to the Material Library.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -29285,7 +29793,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存素材</para>
+        /// <para>Save material: Save material to the Material Library.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -29387,7 +29895,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存素材</para>
+        /// <para>Save material: Save material to the Material Library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29405,7 +29913,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存素材</para>
+        /// <para>Save material: Save material to the Material Library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29423,7 +29931,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置oss访问参数</para>
+        /// <para>Configuration: Cloud storage parameter settings</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29473,7 +29981,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置oss访问参数</para>
+        /// <para>Configuration: Cloud storage parameter settings</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29523,7 +30031,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置oss访问参数</para>
+        /// <para>Configuration: Cloud storage parameter settings</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29541,7 +30049,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置oss访问参数</para>
+        /// <para>Configuration: Cloud storage parameter settings</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29559,7 +30067,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存自定义文体</para>
+        /// <para>Saves a custom writing style.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -29635,7 +30143,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存自定义文体</para>
+        /// <para>Saves a custom writing style.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -29711,7 +30219,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存自定义文体</para>
+        /// <para>Saves a custom writing style.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29729,7 +30237,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存自定义文体</para>
+        /// <para>Saves a custom writing style.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29747,7 +30255,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>搜索数据集文档</para>
+        /// <para>Searches documents in a data source.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -29883,7 +30391,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>搜索数据集文档</para>
+        /// <para>Searches documents in a data source.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -30019,7 +30527,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>搜索数据集文档</para>
+        /// <para>Searches documents in a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30037,7 +30545,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>搜索数据集文档</para>
+        /// <para>Searches documents in a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30055,7 +30563,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新闻检索</para>
+        /// <para>Searches for news based on your input. This feature is currently limited to web search.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -30129,7 +30637,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新闻检索</para>
+        /// <para>Searches for news based on your input. This feature is currently limited to web search.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -30203,7 +30711,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新闻检索</para>
+        /// <para>Searches for news based on your input. This feature is currently limited to web search.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30221,7 +30729,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新闻检索</para>
+        /// <para>Searches for news based on your input. This feature is currently limited to web search.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30239,7 +30747,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交异步任务</para>
+        /// <para>Executes predefined asynchronous tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30299,7 +30807,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交异步任务</para>
+        /// <para>Executes predefined asynchronous tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30359,7 +30867,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交异步任务</para>
+        /// <para>Executes predefined asynchronous tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30377,7 +30885,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交异步任务</para>
+        /// <para>Executes predefined asynchronous tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30395,8 +30903,13 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙笔为您提供了与公有云“智能审校”模块中相同的上传自定义规则库的功能。由于鉴权限制，用户需要开通阿里云 OSS 服务后，将自定义规则库文件上传到 OSS 中，再使用该文件的 fileKey 作为入参才能顺利调用本接口。该接口在被调用后，会对用户的自定义规则库进行结构化处理，并生成一个 xlsx 格式的结构化解析结果。您可以调用 GetAuditNoteProcessingStatus 接口查询结构化处理状态，也可以调用 DownloadAuditNote 接口获取结构化之后的规则库。接口功能正在迭代中，预计会在未来使用可访问的文件 URL 作为入参。</para>
+        /// <para>Model Studio provides the same feature as the Intelligent Proofreading module in Alibaba Cloud public cloud: uploading a custom rule library. Due to authentication restrictions, you must pass the file key (FileKey) of your custom rule library file as an input parameter to successfully call this API. After you call this API, Model Studio processes your custom rule library and returns a structured result in XLSX format. You can call GetAuditNoteProcessingStatus to check the processing status or call DownloadAuditNote to download the processed rule library. This API is under active development and will eventually accept a publicly accessible file URL instead of a FileKey.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>All Model Studio products support iframe embedding. For details, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer Integration: Model Studio Public Cloud iFrame Customization Guide</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitAuditNoteRequest
@@ -30445,8 +30958,13 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙笔为您提供了与公有云“智能审校”模块中相同的上传自定义规则库的功能。由于鉴权限制，用户需要开通阿里云 OSS 服务后，将自定义规则库文件上传到 OSS 中，再使用该文件的 fileKey 作为入参才能顺利调用本接口。该接口在被调用后，会对用户的自定义规则库进行结构化处理，并生成一个 xlsx 格式的结构化解析结果。您可以调用 GetAuditNoteProcessingStatus 接口查询结构化处理状态，也可以调用 DownloadAuditNote 接口获取结构化之后的规则库。接口功能正在迭代中，预计会在未来使用可访问的文件 URL 作为入参。</para>
+        /// <para>Model Studio provides the same feature as the Intelligent Proofreading module in Alibaba Cloud public cloud: uploading a custom rule library. Due to authentication restrictions, you must pass the file key (FileKey) of your custom rule library file as an input parameter to successfully call this API. After you call this API, Model Studio processes your custom rule library and returns a structured result in XLSX format. You can call GetAuditNoteProcessingStatus to check the processing status or call DownloadAuditNote to download the processed rule library. This API is under active development and will eventually accept a publicly accessible file URL instead of a FileKey.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>All Model Studio products support iframe embedding. For details, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer Integration: Model Studio Public Cloud iFrame Customization Guide</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitAuditNoteRequest
@@ -30495,8 +31013,13 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙笔为您提供了与公有云“智能审校”模块中相同的上传自定义规则库的功能。由于鉴权限制，用户需要开通阿里云 OSS 服务后，将自定义规则库文件上传到 OSS 中，再使用该文件的 fileKey 作为入参才能顺利调用本接口。该接口在被调用后，会对用户的自定义规则库进行结构化处理，并生成一个 xlsx 格式的结构化解析结果。您可以调用 GetAuditNoteProcessingStatus 接口查询结构化处理状态，也可以调用 DownloadAuditNote 接口获取结构化之后的规则库。接口功能正在迭代中，预计会在未来使用可访问的文件 URL 作为入参。</para>
+        /// <para>Model Studio provides the same feature as the Intelligent Proofreading module in Alibaba Cloud public cloud: uploading a custom rule library. Due to authentication restrictions, you must pass the file key (FileKey) of your custom rule library file as an input parameter to successfully call this API. After you call this API, Model Studio processes your custom rule library and returns a structured result in XLSX format. You can call GetAuditNoteProcessingStatus to check the processing status or call DownloadAuditNote to download the processed rule library. This API is under active development and will eventually accept a publicly accessible file URL instead of a FileKey.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>All Model Studio products support iframe embedding. For details, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer Integration: Model Studio Public Cloud iFrame Customization Guide</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitAuditNoteRequest
@@ -30513,8 +31036,13 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙笔为您提供了与公有云“智能审校”模块中相同的上传自定义规则库的功能。由于鉴权限制，用户需要开通阿里云 OSS 服务后，将自定义规则库文件上传到 OSS 中，再使用该文件的 fileKey 作为入参才能顺利调用本接口。该接口在被调用后，会对用户的自定义规则库进行结构化处理，并生成一个 xlsx 格式的结构化解析结果。您可以调用 GetAuditNoteProcessingStatus 接口查询结构化处理状态，也可以调用 DownloadAuditNote 接口获取结构化之后的规则库。接口功能正在迭代中，预计会在未来使用可访问的文件 URL 作为入参。</para>
+        /// <para>Model Studio provides the same feature as the Intelligent Proofreading module in Alibaba Cloud public cloud: uploading a custom rule library. Due to authentication restrictions, you must pass the file key (FileKey) of your custom rule library file as an input parameter to successfully call this API. After you call this API, Model Studio processes your custom rule library and returns a structured result in XLSX format. You can call GetAuditNoteProcessingStatus to check the processing status or call DownloadAuditNote to download the processed rule library. This API is under active development and will eventually accept a publicly accessible file URL instead of a FileKey.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>All Model Studio products support iframe embedding. For details, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer Integration: Model Studio Public Cloud iFrame Customization Guide</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitAuditNoteRequest
@@ -30531,8 +31059,13 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交审核任务</para>
+        /// <para>Submits an audit task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The Quanmiao product supports iframe embedding. For more information, see <a href="https://alidocs.dingtalk.com/i/nodes/m9bN7RYPWdyrPBREcyM6jDQ2VZd1wyK0?cid=116617178%3A898142682%5C&utm_source=im%5C&utm_scene=team_space%5C&iframeQuery=utm_medium%3Dim_card%26utm_source%3Dim%5C&utm_medium=im_card%5C&corpId=dingd8e1123006514592">Customer Integration: Quanmiao Public Cloud iframe Customization Plan</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitAuditTaskRequest
@@ -30589,8 +31122,13 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交审核任务</para>
+        /// <para>Submits an audit task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The Quanmiao product supports iframe embedding. For more information, see <a href="https://alidocs.dingtalk.com/i/nodes/m9bN7RYPWdyrPBREcyM6jDQ2VZd1wyK0?cid=116617178%3A898142682%5C&utm_source=im%5C&utm_scene=team_space%5C&iframeQuery=utm_medium%3Dim_card%26utm_source%3Dim%5C&utm_medium=im_card%5C&corpId=dingd8e1123006514592">Customer Integration: Quanmiao Public Cloud iframe Customization Plan</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitAuditTaskRequest
@@ -30647,8 +31185,13 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交审核任务</para>
+        /// <para>Submits an audit task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The Quanmiao product supports iframe embedding. For more information, see <a href="https://alidocs.dingtalk.com/i/nodes/m9bN7RYPWdyrPBREcyM6jDQ2VZd1wyK0?cid=116617178%3A898142682%5C&utm_source=im%5C&utm_scene=team_space%5C&iframeQuery=utm_medium%3Dim_card%26utm_source%3Dim%5C&utm_medium=im_card%5C&corpId=dingd8e1123006514592">Customer Integration: Quanmiao Public Cloud iframe Customization Plan</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitAuditTaskRequest
@@ -30665,8 +31208,13 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交审核任务</para>
+        /// <para>Submits an audit task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The Quanmiao product supports iframe embedding. For more information, see <a href="https://alidocs.dingtalk.com/i/nodes/m9bN7RYPWdyrPBREcyM6jDQ2VZd1wyK0?cid=116617178%3A898142682%5C&utm_source=im%5C&utm_scene=team_space%5C&iframeQuery=utm_medium%3Dim_card%26utm_source%3Dim%5C&utm_medium=im_card%5C&corpId=dingd8e1123006514592">Customer Integration: Quanmiao Public Cloud iframe Customization Plan</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitAuditTaskRequest
@@ -30683,7 +31231,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交自定义播报单任务</para>
+        /// <para>You can submit a custom broadcast list job.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -30747,7 +31295,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交自定义播报单任务</para>
+        /// <para>You can submit a custom broadcast list job.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -30811,7 +31359,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交自定义播报单任务</para>
+        /// <para>You can submit a custom broadcast list job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30829,7 +31377,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交自定义播报单任务</para>
+        /// <para>You can submit a custom broadcast list job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30847,7 +31395,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>从自定义数据源提交选题热点分析</para>
+        /// <para>Submit topic trend analysis using a custom data source</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -30931,7 +31479,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>从自定义数据源提交选题热点分析</para>
+        /// <para>Submit topic trend analysis using a custom data source</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -31015,7 +31563,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>从自定义数据源提交选题热点分析</para>
+        /// <para>Submit topic trend analysis using a custom data source</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31033,7 +31581,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>从自定义数据源提交选题热点分析</para>
+        /// <para>Submit topic trend analysis using a custom data source</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31051,7 +31599,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交自定义热点选题视角分析任务</para>
+        /// <para>Submits a custom analysis task to analyze hot topic perspectives.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -31113,7 +31661,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交自定义热点选题视角分析任务</para>
+        /// <para>Submits a custom analysis task to analyze hot topic perspectives.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -31175,7 +31723,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交自定义热点选题视角分析任务</para>
+        /// <para>Submits a custom analysis task to analyze hot topic perspectives.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31193,7 +31741,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交自定义热点选题视角分析任务</para>
+        /// <para>Submits a custom analysis task to analyze hot topic perspectives.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31211,7 +31759,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交深度写作任务</para>
+        /// <para>You can submit a deep writing task. You can provide information such as questions, instructions, and attachments, based on the topic you want to research or analyze. The system schedules and executes this task in the background.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -31281,7 +31829,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交深度写作任务</para>
+        /// <para>You can submit a deep writing task. You can provide information such as questions, instructions, and attachments, based on the topic you want to research or analyze. The system schedules and executes this task in the background.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -31351,7 +31899,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交深度写作任务</para>
+        /// <para>You can submit a deep writing task. You can provide information such as questions, instructions, and attachments, based on the topic you want to research or analyze. The system schedules and executes this task in the background.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31369,7 +31917,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交深度写作任务</para>
+        /// <para>You can submit a deep writing task. You can provide information such as questions, instructions, and attachments, based on the topic you want to research or analyze. The system schedules and executes this task in the background.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31387,7 +31935,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交文档聚合任务</para>
+        /// <para>Submits a content clustering task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -31453,7 +32001,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交文档聚合任务</para>
+        /// <para>Submits a content clustering task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -31519,7 +32067,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交文档聚合任务</para>
+        /// <para>Submits a content clustering task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31537,7 +32085,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交文档聚合任务</para>
+        /// <para>Submits a content clustering task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31555,7 +32103,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交VOC异步任务</para>
+        /// <para>Submits a Voice of the Customer (VOC) asynchronous task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -31651,7 +32199,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交VOC异步任务</para>
+        /// <para>Submits a Voice of the Customer (VOC) asynchronous task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -31747,7 +32295,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交VOC异步任务</para>
+        /// <para>Submits a Voice of the Customer (VOC) asynchronous task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31765,7 +32313,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交VOC异步任务</para>
+        /// <para>Submits a Voice of the Customer (VOC) asynchronous task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31783,7 +32331,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出词库任务</para>
+        /// <para>Export task for a thesaurus</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31829,7 +32377,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出词库任务</para>
+        /// <para>Export task for a thesaurus</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31875,7 +32423,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出词库任务</para>
+        /// <para>Export task for a thesaurus</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31893,7 +32441,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出词库任务</para>
+        /// <para>Export task for a thesaurus</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31911,7 +32459,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙笔为您提供了新的事实性审核能力，在联网搜索并判断正误的前提下，还支持用户自定义配置搜索来源 URL。</para>
+        /// <para>MiaoBi provides a factuality audit capability that verifies facts using web search and supports custom configuration of search source URLs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31957,7 +32505,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙笔为您提供了新的事实性审核能力，在联网搜索并判断正误的前提下，还支持用户自定义配置搜索来源 URL。</para>
+        /// <para>MiaoBi provides a factuality audit capability that verifies facts using web search and supports custom configuration of search source URLs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32003,7 +32551,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙笔为您提供了新的事实性审核能力，在联网搜索并判断正误的前提下，还支持用户自定义配置搜索来源 URL。</para>
+        /// <para>MiaoBi provides a factuality audit capability that verifies facts using web search and supports custom configuration of search source URLs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32021,7 +32569,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙笔为您提供了新的事实性审核能力，在联网搜索并判断正误的前提下，还支持用户自定义配置搜索来源 URL。</para>
+        /// <para>MiaoBi provides a factuality audit capability that verifies facts using web search and supports custom configuration of search source URLs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32039,7 +32587,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交导入自定义词库任务</para>
+        /// <para>Submit a custom dictionary import task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32089,7 +32637,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交导入自定义词库任务</para>
+        /// <para>Submit a custom dictionary import task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32139,7 +32687,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交导入自定义词库任务</para>
+        /// <para>Submit a custom dictionary import task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32157,7 +32705,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交导入自定义词库任务</para>
+        /// <para>Submit a custom dictionary import task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32307,8 +32855,373 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交智能审核</para>
+        /// <para>Submit a smart audit request.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The Quanmiao product supports iframe embedding. For more information, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer integration: Quanmiao public cloud iframe customization guide</a>.</para>
+        /// <h1>Supported audit types</h1>
+        /// <h2>Audit category overview</h2>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Audit category</th>
+        /// <th>Description</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Content accuracy</td>
+        /// <td>Errors due to phonetic or visual similarity; punctuation errors; misuse of Chinese structural particles (的/地/得); inappropriate word choice or syntax errors; incorrect personal names; incorrect place names; incorrect references; errors in proper nouns or terminology</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Formatting issues</td>
+        /// <td>Inconsistent capitalization; numeric errors; nonstandard units of measurement; use of traditional Chinese characters</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Content structure issues</td>
+        /// <td>Redundant text; repeated segments; logical contradictions; unfilled placeholders</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Political sensitivity issues</td>
+        /// <td>Sensitive content or directional risks; name or sorting errors; conventional phrasing errors; nonstandard institutional names; misquoting important speeches; references to disgraced officials; mismatched name-title pairings; incorrect title expressions</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Security and compliance issues</td>
+        /// <td>Violence or terrorism; pornography; prohibited content; insults; disgraced celebrities; personal privacy violations; reporting standard violations</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Legal errors</td>
+        /// <td>Incorrect citation of laws and regulations; errors in legal provisions</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Other domain-specific errors</td>
+        /// <td>Violations of advertising law; financial information errors; scientific or technical term errors</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Factuality check</td>
+        /// <td>Factuality verification: correct or incorrect items</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Image audit</td>
+        /// <td>Image content moderation</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Custom word library</td>
+        /// <td>Custom word library audit</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Rule library audit</td>
+        /// <td>Rule library audit</td>
+        /// </tr>
+        /// <tr>
+        /// <td>English proofreading</td>
+        /// <td>Terminology standardization; verb tense accuracy; punctuation and quotation marks; spelling and language variants; sentence structure and clarity; numeric and percentage formatting; standardized phrasing</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <hr>
+        /// <h2>Sub-audit code values</h2>
+        /// <h3>1. Content accuracy</h3>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Description</th>
+        /// <th>Code</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Phonetic or visual similarity errors</td>
+        /// <td>PhoneticSimilarError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Punctuation errors</td>
+        /// <td>PunctuationError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Misuse of Chinese structural particles (的/地/得)</td>
+        /// <td>ParticleUsageError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Inappropriate word choice or syntax errors</td>
+        /// <td>WordError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Incorrect personal names</td>
+        /// <td>PersonNameError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Incorrect place names</td>
+        /// <td>LocationError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Incorrect references</td>
+        /// <td>ReferenceError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Errors in proper nouns or terminology</td>
+        /// <td>NounItemError</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h3>2. Formatting issues</h3>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Description</th>
+        /// <th>Code</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Inconsistent capitalization</td>
+        /// <td>CapitalizationError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Numeric errors</td>
+        /// <td>NumberError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Nonstandard units of measurement</td>
+        /// <td>UnitError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Use of traditional Chinese characters</td>
+        /// <td>TraditionalChineseError</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h3>3. Content structure issues</h3>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Description</th>
+        /// <th>Code</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Redundant text</td>
+        /// <td>WordRedundancy</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Repeated segments</td>
+        /// <td>DuplicateError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Logical contradictions</td>
+        /// <td>LogicContradiction</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Unfilled placeholders</td>
+        /// <td>PlaceholderNotFilled</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h3>4. Political sensitivity issues</h3>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Description</th>
+        /// <th>Code</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Sensitive content or directional risks</td>
+        /// <td>SensitiveContentRisk</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Name or sorting errors</td>
+        /// <td>NameOrderError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Conventional phrasing errors</td>
+        /// <td>ConventionalExpressionError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Nonstandard institutional names</td>
+        /// <td>DepartmentNameError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Misquoting important speeches</td>
+        /// <td>ImportantSpeechError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>References to disgraced officials</td>
+        /// <td>FallenOfficialError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Mismatched name-title pairings</td>
+        /// <td>LeaderTitleMatchError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Incorrect title expressions</td>
+        /// <td>TitleError</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h3>5. Security and compliance issues</h3>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Description</th>
+        /// <th>Code</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Violence or terrorism</td>
+        /// <td>ViolenceTerrorismError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Pornography</td>
+        /// <td>PornographyError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Prohibited content</td>
+        /// <td>ProhibitedContentError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Insults</td>
+        /// <td>InsultError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Disgraced celebrities</td>
+        /// <td>DisgracedArtistError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Personal privacy violations</td>
+        /// <td>PersonalPrivacyError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Reporting standard violations</td>
+        /// <td>ReportingStandardError</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h3>6. Legal errors</h3>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Description</th>
+        /// <th>Code</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Incorrect citation of laws and regulations</td>
+        /// <td>LegalReferenceError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Errors in legal provisions</td>
+        /// <td>LegalProvisionsError</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h3>7. Other domain-specific errors</h3>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Description</th>
+        /// <th>Code</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Violations of advertising law</td>
+        /// <td>AdvertisingProhibitedWordsError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Financial information errors</td>
+        /// <td>FinancialInformationError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Scientific or technical term errors</td>
+        /// <td>TechnicalTermError</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h3>8. Factuality check</h3>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Description</th>
+        /// <th>Code</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Factuality verification – correct item</td>
+        /// <td>CorrectFact</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Factuality verification – incorrect item</td>
+        /// <td>WrongFactError</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h3>9. Image audit</h3>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Description</th>
+        /// <th>Code</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Image audit</td>
+        /// <td>ImageAudit</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h3>10. Custom word library</h3>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Description</th>
+        /// <th>Code</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Custom word library</td>
+        /// <td>WordLibrary</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h3>11. Rule library audit</h3>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Description</th>
+        /// <th>Code</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Rule library audit</td>
+        /// <td>WrongQuestionBook</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h3>12. English proofreading</h3>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Description</th>
+        /// <th>Code</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Terminology standardization</td>
+        /// <td>TerminologyNormalisation</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Verb tense accuracy</td>
+        /// <td>VerbTenseAccuracy</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Punctuation and quotation marks</td>
+        /// <td>PunctuationAndQuotationMarks</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Spelling and language variants</td>
+        /// <td>SpellingAndLanguageVariety</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Sentence structure and clarity</td>
+        /// <td>SentenceStructureAndClarity</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Numeric and percentage formatting</td>
+        /// <td>NumericAndPercentageStyle</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Other standardized phrasing</td>
+        /// <td>Others</td>
+        /// </tr>
+        /// </tbody></table>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// SubmitSmartAuditRequest
@@ -32387,8 +33300,373 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交智能审核</para>
+        /// <para>Submit a smart audit request.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The Quanmiao product supports iframe embedding. For more information, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer integration: Quanmiao public cloud iframe customization guide</a>.</para>
+        /// <h1>Supported audit types</h1>
+        /// <h2>Audit category overview</h2>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Audit category</th>
+        /// <th>Description</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Content accuracy</td>
+        /// <td>Errors due to phonetic or visual similarity; punctuation errors; misuse of Chinese structural particles (的/地/得); inappropriate word choice or syntax errors; incorrect personal names; incorrect place names; incorrect references; errors in proper nouns or terminology</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Formatting issues</td>
+        /// <td>Inconsistent capitalization; numeric errors; nonstandard units of measurement; use of traditional Chinese characters</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Content structure issues</td>
+        /// <td>Redundant text; repeated segments; logical contradictions; unfilled placeholders</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Political sensitivity issues</td>
+        /// <td>Sensitive content or directional risks; name or sorting errors; conventional phrasing errors; nonstandard institutional names; misquoting important speeches; references to disgraced officials; mismatched name-title pairings; incorrect title expressions</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Security and compliance issues</td>
+        /// <td>Violence or terrorism; pornography; prohibited content; insults; disgraced celebrities; personal privacy violations; reporting standard violations</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Legal errors</td>
+        /// <td>Incorrect citation of laws and regulations; errors in legal provisions</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Other domain-specific errors</td>
+        /// <td>Violations of advertising law; financial information errors; scientific or technical term errors</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Factuality check</td>
+        /// <td>Factuality verification: correct or incorrect items</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Image audit</td>
+        /// <td>Image content moderation</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Custom word library</td>
+        /// <td>Custom word library audit</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Rule library audit</td>
+        /// <td>Rule library audit</td>
+        /// </tr>
+        /// <tr>
+        /// <td>English proofreading</td>
+        /// <td>Terminology standardization; verb tense accuracy; punctuation and quotation marks; spelling and language variants; sentence structure and clarity; numeric and percentage formatting; standardized phrasing</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <hr>
+        /// <h2>Sub-audit code values</h2>
+        /// <h3>1. Content accuracy</h3>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Description</th>
+        /// <th>Code</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Phonetic or visual similarity errors</td>
+        /// <td>PhoneticSimilarError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Punctuation errors</td>
+        /// <td>PunctuationError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Misuse of Chinese structural particles (的/地/得)</td>
+        /// <td>ParticleUsageError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Inappropriate word choice or syntax errors</td>
+        /// <td>WordError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Incorrect personal names</td>
+        /// <td>PersonNameError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Incorrect place names</td>
+        /// <td>LocationError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Incorrect references</td>
+        /// <td>ReferenceError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Errors in proper nouns or terminology</td>
+        /// <td>NounItemError</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h3>2. Formatting issues</h3>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Description</th>
+        /// <th>Code</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Inconsistent capitalization</td>
+        /// <td>CapitalizationError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Numeric errors</td>
+        /// <td>NumberError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Nonstandard units of measurement</td>
+        /// <td>UnitError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Use of traditional Chinese characters</td>
+        /// <td>TraditionalChineseError</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h3>3. Content structure issues</h3>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Description</th>
+        /// <th>Code</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Redundant text</td>
+        /// <td>WordRedundancy</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Repeated segments</td>
+        /// <td>DuplicateError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Logical contradictions</td>
+        /// <td>LogicContradiction</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Unfilled placeholders</td>
+        /// <td>PlaceholderNotFilled</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h3>4. Political sensitivity issues</h3>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Description</th>
+        /// <th>Code</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Sensitive content or directional risks</td>
+        /// <td>SensitiveContentRisk</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Name or sorting errors</td>
+        /// <td>NameOrderError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Conventional phrasing errors</td>
+        /// <td>ConventionalExpressionError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Nonstandard institutional names</td>
+        /// <td>DepartmentNameError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Misquoting important speeches</td>
+        /// <td>ImportantSpeechError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>References to disgraced officials</td>
+        /// <td>FallenOfficialError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Mismatched name-title pairings</td>
+        /// <td>LeaderTitleMatchError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Incorrect title expressions</td>
+        /// <td>TitleError</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h3>5. Security and compliance issues</h3>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Description</th>
+        /// <th>Code</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Violence or terrorism</td>
+        /// <td>ViolenceTerrorismError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Pornography</td>
+        /// <td>PornographyError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Prohibited content</td>
+        /// <td>ProhibitedContentError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Insults</td>
+        /// <td>InsultError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Disgraced celebrities</td>
+        /// <td>DisgracedArtistError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Personal privacy violations</td>
+        /// <td>PersonalPrivacyError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Reporting standard violations</td>
+        /// <td>ReportingStandardError</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h3>6. Legal errors</h3>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Description</th>
+        /// <th>Code</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Incorrect citation of laws and regulations</td>
+        /// <td>LegalReferenceError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Errors in legal provisions</td>
+        /// <td>LegalProvisionsError</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h3>7. Other domain-specific errors</h3>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Description</th>
+        /// <th>Code</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Violations of advertising law</td>
+        /// <td>AdvertisingProhibitedWordsError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Financial information errors</td>
+        /// <td>FinancialInformationError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Scientific or technical term errors</td>
+        /// <td>TechnicalTermError</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h3>8. Factuality check</h3>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Description</th>
+        /// <th>Code</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Factuality verification – correct item</td>
+        /// <td>CorrectFact</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Factuality verification – incorrect item</td>
+        /// <td>WrongFactError</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h3>9. Image audit</h3>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Description</th>
+        /// <th>Code</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Image audit</td>
+        /// <td>ImageAudit</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h3>10. Custom word library</h3>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Description</th>
+        /// <th>Code</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Custom word library</td>
+        /// <td>WordLibrary</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h3>11. Rule library audit</h3>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Description</th>
+        /// <th>Code</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Rule library audit</td>
+        /// <td>WrongQuestionBook</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h3>12. English proofreading</h3>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Description</th>
+        /// <th>Code</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Terminology standardization</td>
+        /// <td>TerminologyNormalisation</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Verb tense accuracy</td>
+        /// <td>VerbTenseAccuracy</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Punctuation and quotation marks</td>
+        /// <td>PunctuationAndQuotationMarks</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Spelling and language variants</td>
+        /// <td>SpellingAndLanguageVariety</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Sentence structure and clarity</td>
+        /// <td>SentenceStructureAndClarity</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Numeric and percentage formatting</td>
+        /// <td>NumericAndPercentageStyle</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Other standardized phrasing</td>
+        /// <td>Others</td>
+        /// </tr>
+        /// </tbody></table>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// SubmitSmartAuditRequest
@@ -32467,8 +33745,373 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交智能审核</para>
+        /// <para>Submit a smart audit request.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The Quanmiao product supports iframe embedding. For more information, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer integration: Quanmiao public cloud iframe customization guide</a>.</para>
+        /// <h1>Supported audit types</h1>
+        /// <h2>Audit category overview</h2>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Audit category</th>
+        /// <th>Description</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Content accuracy</td>
+        /// <td>Errors due to phonetic or visual similarity; punctuation errors; misuse of Chinese structural particles (的/地/得); inappropriate word choice or syntax errors; incorrect personal names; incorrect place names; incorrect references; errors in proper nouns or terminology</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Formatting issues</td>
+        /// <td>Inconsistent capitalization; numeric errors; nonstandard units of measurement; use of traditional Chinese characters</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Content structure issues</td>
+        /// <td>Redundant text; repeated segments; logical contradictions; unfilled placeholders</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Political sensitivity issues</td>
+        /// <td>Sensitive content or directional risks; name or sorting errors; conventional phrasing errors; nonstandard institutional names; misquoting important speeches; references to disgraced officials; mismatched name-title pairings; incorrect title expressions</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Security and compliance issues</td>
+        /// <td>Violence or terrorism; pornography; prohibited content; insults; disgraced celebrities; personal privacy violations; reporting standard violations</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Legal errors</td>
+        /// <td>Incorrect citation of laws and regulations; errors in legal provisions</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Other domain-specific errors</td>
+        /// <td>Violations of advertising law; financial information errors; scientific or technical term errors</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Factuality check</td>
+        /// <td>Factuality verification: correct or incorrect items</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Image audit</td>
+        /// <td>Image content moderation</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Custom word library</td>
+        /// <td>Custom word library audit</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Rule library audit</td>
+        /// <td>Rule library audit</td>
+        /// </tr>
+        /// <tr>
+        /// <td>English proofreading</td>
+        /// <td>Terminology standardization; verb tense accuracy; punctuation and quotation marks; spelling and language variants; sentence structure and clarity; numeric and percentage formatting; standardized phrasing</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <hr>
+        /// <h2>Sub-audit code values</h2>
+        /// <h3>1. Content accuracy</h3>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Description</th>
+        /// <th>Code</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Phonetic or visual similarity errors</td>
+        /// <td>PhoneticSimilarError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Punctuation errors</td>
+        /// <td>PunctuationError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Misuse of Chinese structural particles (的/地/得)</td>
+        /// <td>ParticleUsageError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Inappropriate word choice or syntax errors</td>
+        /// <td>WordError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Incorrect personal names</td>
+        /// <td>PersonNameError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Incorrect place names</td>
+        /// <td>LocationError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Incorrect references</td>
+        /// <td>ReferenceError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Errors in proper nouns or terminology</td>
+        /// <td>NounItemError</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h3>2. Formatting issues</h3>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Description</th>
+        /// <th>Code</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Inconsistent capitalization</td>
+        /// <td>CapitalizationError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Numeric errors</td>
+        /// <td>NumberError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Nonstandard units of measurement</td>
+        /// <td>UnitError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Use of traditional Chinese characters</td>
+        /// <td>TraditionalChineseError</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h3>3. Content structure issues</h3>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Description</th>
+        /// <th>Code</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Redundant text</td>
+        /// <td>WordRedundancy</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Repeated segments</td>
+        /// <td>DuplicateError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Logical contradictions</td>
+        /// <td>LogicContradiction</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Unfilled placeholders</td>
+        /// <td>PlaceholderNotFilled</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h3>4. Political sensitivity issues</h3>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Description</th>
+        /// <th>Code</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Sensitive content or directional risks</td>
+        /// <td>SensitiveContentRisk</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Name or sorting errors</td>
+        /// <td>NameOrderError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Conventional phrasing errors</td>
+        /// <td>ConventionalExpressionError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Nonstandard institutional names</td>
+        /// <td>DepartmentNameError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Misquoting important speeches</td>
+        /// <td>ImportantSpeechError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>References to disgraced officials</td>
+        /// <td>FallenOfficialError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Mismatched name-title pairings</td>
+        /// <td>LeaderTitleMatchError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Incorrect title expressions</td>
+        /// <td>TitleError</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h3>5. Security and compliance issues</h3>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Description</th>
+        /// <th>Code</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Violence or terrorism</td>
+        /// <td>ViolenceTerrorismError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Pornography</td>
+        /// <td>PornographyError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Prohibited content</td>
+        /// <td>ProhibitedContentError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Insults</td>
+        /// <td>InsultError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Disgraced celebrities</td>
+        /// <td>DisgracedArtistError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Personal privacy violations</td>
+        /// <td>PersonalPrivacyError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Reporting standard violations</td>
+        /// <td>ReportingStandardError</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h3>6. Legal errors</h3>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Description</th>
+        /// <th>Code</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Incorrect citation of laws and regulations</td>
+        /// <td>LegalReferenceError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Errors in legal provisions</td>
+        /// <td>LegalProvisionsError</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h3>7. Other domain-specific errors</h3>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Description</th>
+        /// <th>Code</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Violations of advertising law</td>
+        /// <td>AdvertisingProhibitedWordsError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Financial information errors</td>
+        /// <td>FinancialInformationError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Scientific or technical term errors</td>
+        /// <td>TechnicalTermError</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h3>8. Factuality check</h3>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Description</th>
+        /// <th>Code</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Factuality verification – correct item</td>
+        /// <td>CorrectFact</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Factuality verification – incorrect item</td>
+        /// <td>WrongFactError</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h3>9. Image audit</h3>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Description</th>
+        /// <th>Code</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Image audit</td>
+        /// <td>ImageAudit</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h3>10. Custom word library</h3>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Description</th>
+        /// <th>Code</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Custom word library</td>
+        /// <td>WordLibrary</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h3>11. Rule library audit</h3>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Description</th>
+        /// <th>Code</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Rule library audit</td>
+        /// <td>WrongQuestionBook</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h3>12. English proofreading</h3>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Description</th>
+        /// <th>Code</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Terminology standardization</td>
+        /// <td>TerminologyNormalisation</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Verb tense accuracy</td>
+        /// <td>VerbTenseAccuracy</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Punctuation and quotation marks</td>
+        /// <td>PunctuationAndQuotationMarks</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Spelling and language variants</td>
+        /// <td>SpellingAndLanguageVariety</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Sentence structure and clarity</td>
+        /// <td>SentenceStructureAndClarity</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Numeric and percentage formatting</td>
+        /// <td>NumericAndPercentageStyle</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Other standardized phrasing</td>
+        /// <td>Others</td>
+        /// </tr>
+        /// </tbody></table>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitSmartAuditRequest
@@ -32485,8 +34128,373 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交智能审核</para>
+        /// <para>Submit a smart audit request.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The Quanmiao product supports iframe embedding. For more information, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer integration: Quanmiao public cloud iframe customization guide</a>.</para>
+        /// <h1>Supported audit types</h1>
+        /// <h2>Audit category overview</h2>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Audit category</th>
+        /// <th>Description</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Content accuracy</td>
+        /// <td>Errors due to phonetic or visual similarity; punctuation errors; misuse of Chinese structural particles (的/地/得); inappropriate word choice or syntax errors; incorrect personal names; incorrect place names; incorrect references; errors in proper nouns or terminology</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Formatting issues</td>
+        /// <td>Inconsistent capitalization; numeric errors; nonstandard units of measurement; use of traditional Chinese characters</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Content structure issues</td>
+        /// <td>Redundant text; repeated segments; logical contradictions; unfilled placeholders</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Political sensitivity issues</td>
+        /// <td>Sensitive content or directional risks; name or sorting errors; conventional phrasing errors; nonstandard institutional names; misquoting important speeches; references to disgraced officials; mismatched name-title pairings; incorrect title expressions</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Security and compliance issues</td>
+        /// <td>Violence or terrorism; pornography; prohibited content; insults; disgraced celebrities; personal privacy violations; reporting standard violations</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Legal errors</td>
+        /// <td>Incorrect citation of laws and regulations; errors in legal provisions</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Other domain-specific errors</td>
+        /// <td>Violations of advertising law; financial information errors; scientific or technical term errors</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Factuality check</td>
+        /// <td>Factuality verification: correct or incorrect items</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Image audit</td>
+        /// <td>Image content moderation</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Custom word library</td>
+        /// <td>Custom word library audit</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Rule library audit</td>
+        /// <td>Rule library audit</td>
+        /// </tr>
+        /// <tr>
+        /// <td>English proofreading</td>
+        /// <td>Terminology standardization; verb tense accuracy; punctuation and quotation marks; spelling and language variants; sentence structure and clarity; numeric and percentage formatting; standardized phrasing</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <hr>
+        /// <h2>Sub-audit code values</h2>
+        /// <h3>1. Content accuracy</h3>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Description</th>
+        /// <th>Code</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Phonetic or visual similarity errors</td>
+        /// <td>PhoneticSimilarError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Punctuation errors</td>
+        /// <td>PunctuationError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Misuse of Chinese structural particles (的/地/得)</td>
+        /// <td>ParticleUsageError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Inappropriate word choice or syntax errors</td>
+        /// <td>WordError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Incorrect personal names</td>
+        /// <td>PersonNameError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Incorrect place names</td>
+        /// <td>LocationError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Incorrect references</td>
+        /// <td>ReferenceError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Errors in proper nouns or terminology</td>
+        /// <td>NounItemError</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h3>2. Formatting issues</h3>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Description</th>
+        /// <th>Code</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Inconsistent capitalization</td>
+        /// <td>CapitalizationError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Numeric errors</td>
+        /// <td>NumberError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Nonstandard units of measurement</td>
+        /// <td>UnitError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Use of traditional Chinese characters</td>
+        /// <td>TraditionalChineseError</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h3>3. Content structure issues</h3>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Description</th>
+        /// <th>Code</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Redundant text</td>
+        /// <td>WordRedundancy</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Repeated segments</td>
+        /// <td>DuplicateError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Logical contradictions</td>
+        /// <td>LogicContradiction</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Unfilled placeholders</td>
+        /// <td>PlaceholderNotFilled</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h3>4. Political sensitivity issues</h3>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Description</th>
+        /// <th>Code</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Sensitive content or directional risks</td>
+        /// <td>SensitiveContentRisk</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Name or sorting errors</td>
+        /// <td>NameOrderError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Conventional phrasing errors</td>
+        /// <td>ConventionalExpressionError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Nonstandard institutional names</td>
+        /// <td>DepartmentNameError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Misquoting important speeches</td>
+        /// <td>ImportantSpeechError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>References to disgraced officials</td>
+        /// <td>FallenOfficialError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Mismatched name-title pairings</td>
+        /// <td>LeaderTitleMatchError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Incorrect title expressions</td>
+        /// <td>TitleError</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h3>5. Security and compliance issues</h3>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Description</th>
+        /// <th>Code</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Violence or terrorism</td>
+        /// <td>ViolenceTerrorismError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Pornography</td>
+        /// <td>PornographyError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Prohibited content</td>
+        /// <td>ProhibitedContentError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Insults</td>
+        /// <td>InsultError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Disgraced celebrities</td>
+        /// <td>DisgracedArtistError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Personal privacy violations</td>
+        /// <td>PersonalPrivacyError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Reporting standard violations</td>
+        /// <td>ReportingStandardError</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h3>6. Legal errors</h3>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Description</th>
+        /// <th>Code</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Incorrect citation of laws and regulations</td>
+        /// <td>LegalReferenceError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Errors in legal provisions</td>
+        /// <td>LegalProvisionsError</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h3>7. Other domain-specific errors</h3>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Description</th>
+        /// <th>Code</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Violations of advertising law</td>
+        /// <td>AdvertisingProhibitedWordsError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Financial information errors</td>
+        /// <td>FinancialInformationError</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Scientific or technical term errors</td>
+        /// <td>TechnicalTermError</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h3>8. Factuality check</h3>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Description</th>
+        /// <th>Code</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Factuality verification – correct item</td>
+        /// <td>CorrectFact</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Factuality verification – incorrect item</td>
+        /// <td>WrongFactError</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h3>9. Image audit</h3>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Description</th>
+        /// <th>Code</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Image audit</td>
+        /// <td>ImageAudit</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h3>10. Custom word library</h3>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Description</th>
+        /// <th>Code</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Custom word library</td>
+        /// <td>WordLibrary</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h3>11. Rule library audit</h3>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Description</th>
+        /// <th>Code</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Rule library audit</td>
+        /// <td>WrongQuestionBook</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h3>12. English proofreading</h3>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Description</th>
+        /// <th>Code</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Terminology standardization</td>
+        /// <td>TerminologyNormalisation</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Verb tense accuracy</td>
+        /// <td>VerbTenseAccuracy</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Punctuation and quotation marks</td>
+        /// <td>PunctuationAndQuotationMarks</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Spelling and language variants</td>
+        /// <td>SpellingAndLanguageVariety</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Sentence structure and clarity</td>
+        /// <td>SentenceStructureAndClarity</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Numeric and percentage formatting</td>
+        /// <td>NumericAndPercentageStyle</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Other standardized phrasing</td>
+        /// <td>Others</td>
+        /// </tr>
+        /// </tbody></table>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitSmartAuditRequest
@@ -32503,7 +34511,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交一键成片剪辑任务</para>
+        /// <para>Submits a one-click video editing task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -32575,7 +34583,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交一键成片剪辑任务</para>
+        /// <para>Submits a one-click video editing task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -32647,7 +34655,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交一键成片剪辑任务</para>
+        /// <para>Submits a one-click video editing task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32665,7 +34673,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交一键成片剪辑任务</para>
+        /// <para>Submits a one-click video editing task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32683,7 +34691,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交选题热点分析任务</para>
+        /// <para>Submits a hot spot analysis task for topic selection.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -32749,7 +34757,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交选题热点分析任务</para>
+        /// <para>Submits a hot spot analysis task for topic selection.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -32815,7 +34823,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交选题热点分析任务</para>
+        /// <para>Submits a hot spot analysis task for topic selection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32833,7 +34841,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交选题热点分析任务</para>
+        /// <para>Submits a hot spot analysis task for topic selection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32851,12 +34859,12 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交视频审校</para>
+        /// <para>Submits a video for review.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>提交视频审校任务，支持传入fileKey或url，系统会对视频进行分镜检测、抽帧审核，返回任务ID</para>
+        /// <para>Quanmiao products support iframe embedding. For more information, see <a href="https://alidocs.dingtalk.com/i/nodes/m9bN7RYPWdyrPBREcyM6jDQ2VZd1wyK0?cid=116617178%3A898142682%5C&utm_source=im%5C&utm_scene=team_space%5C&iframeQuery=utm_medium%3Dim_card%26utm_source%3Dim%5C&utm_medium=im_card%5C&corpId=dingd8e1123006514592">Customer Integration_Quanmiao Public Cloud iframe Customization Solution</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -32914,12 +34922,12 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交视频审校</para>
+        /// <para>Submits a video for review.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>提交视频审校任务，支持传入fileKey或url，系统会对视频进行分镜检测、抽帧审核，返回任务ID</para>
+        /// <para>Quanmiao products support iframe embedding. For more information, see <a href="https://alidocs.dingtalk.com/i/nodes/m9bN7RYPWdyrPBREcyM6jDQ2VZd1wyK0?cid=116617178%3A898142682%5C&utm_source=im%5C&utm_scene=team_space%5C&iframeQuery=utm_medium%3Dim_card%26utm_source%3Dim%5C&utm_medium=im_card%5C&corpId=dingd8e1123006514592">Customer Integration_Quanmiao Public Cloud iframe Customization Solution</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -32977,12 +34985,12 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交视频审校</para>
+        /// <para>Submits a video for review.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>提交视频审校任务，支持传入fileKey或url，系统会对视频进行分镜检测、抽帧审核，返回任务ID</para>
+        /// <para>Quanmiao products support iframe embedding. For more information, see <a href="https://alidocs.dingtalk.com/i/nodes/m9bN7RYPWdyrPBREcyM6jDQ2VZd1wyK0?cid=116617178%3A898142682%5C&utm_source=im%5C&utm_scene=team_space%5C&iframeQuery=utm_medium%3Dim_card%26utm_source%3Dim%5C&utm_medium=im_card%5C&corpId=dingd8e1123006514592">Customer Integration_Quanmiao Public Cloud iframe Customization Solution</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -33000,12 +35008,12 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交视频审校</para>
+        /// <para>Submits a video for review.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>提交视频审校任务，支持传入fileKey或url，系统会对视频进行分镜检测、抽帧审核，返回任务ID</para>
+        /// <para>Quanmiao products support iframe embedding. For more information, see <a href="https://alidocs.dingtalk.com/i/nodes/m9bN7RYPWdyrPBREcyM6jDQ2VZd1wyK0?cid=116617178%3A898142682%5C&utm_source=im%5C&utm_scene=team_space%5C&iframeQuery=utm_medium%3Dim_card%26utm_source%3Dim%5C&utm_medium=im_card%5C&corpId=dingd8e1123006514592">Customer Integration_Quanmiao Public Cloud iframe Customization Solution</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -33023,7 +35031,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新自定义文本</para>
+        /// <para>Updates custom text.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33083,7 +35091,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新自定义文本</para>
+        /// <para>Updates custom text.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33143,7 +35151,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新自定义文本</para>
+        /// <para>Updates custom text.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33161,7 +35169,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新自定义文本</para>
+        /// <para>Updates custom text.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33179,7 +35187,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>数据集管理-更新</para>
+        /// <para>This operation updates a data source.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -33247,7 +35255,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>数据集管理-更新</para>
+        /// <para>This operation updates a data source.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -33315,7 +35323,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>数据集管理-更新</para>
+        /// <para>This operation updates a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33333,7 +35341,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>数据集管理-更新</para>
+        /// <para>This operation updates a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33351,7 +35359,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改数据集文档</para>
+        /// <para>Updates a document in a dataset.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -33411,7 +35419,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改数据集文档</para>
+        /// <para>Updates a document in a dataset.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -33471,7 +35479,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改数据集文档</para>
+        /// <para>Updates a document in a dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33489,7 +35497,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改数据集文档</para>
+        /// <para>Updates a document in a dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33507,7 +35515,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通用配置-更新</para>
+        /// <para>Updates general configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33557,7 +35565,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通用配置-更新</para>
+        /// <para>Updates general configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33607,7 +35615,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通用配置-更新</para>
+        /// <para>Updates general configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33625,7 +35633,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通用配置-更新</para>
+        /// <para>Updates general configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33643,7 +35651,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文档管理-更新。</para>
+        /// <para>Updates the history of an article created in AiMiaoBi.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -33717,7 +35725,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文档管理-更新。</para>
+        /// <para>Updates the history of an article created in AiMiaoBi.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -33791,7 +35799,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文档管理-更新。</para>
+        /// <para>Updates the history of an article created in AiMiaoBi.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33809,7 +35817,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文档管理-更新。</para>
+        /// <para>Updates the history of an article created in AiMiaoBi.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33827,7 +35835,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据ID更新素材</para>
+        /// <para>Update a material in the Material Library.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -33933,7 +35941,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据ID更新素材</para>
+        /// <para>Update a material in the Material Library.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -34039,7 +36047,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据ID更新素材</para>
+        /// <para>Update a material in the Material Library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34057,7 +36065,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据ID更新素材</para>
+        /// <para>Update a material in the Material Library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34075,7 +36083,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读上传书籍</para>
+        /// <para>Use MiaoDu to upload books.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -34131,7 +36139,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读上传书籍</para>
+        /// <para>Use MiaoDu to upload books.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -34187,7 +36195,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读上传书籍</para>
+        /// <para>Use MiaoDu to upload books.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34205,7 +36213,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读上传书籍</para>
+        /// <para>Use MiaoDu to upload books.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34223,8 +36231,13 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读上传文档接口</para>
+        /// <para>Upload document API for Miaodu.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Document upload is implemented through asynchronous invocation. After the invocation, you must use the getDocInfo API to periodically check the document status. Only when the document status becomes 1 can you proceed with subsequent operations such as generating a document summary, creating a full-text mind map, summarizing Q&amp;A content, extracting keywords, or rewriting.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UploadDocRequest
@@ -34279,8 +36292,13 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读上传文档接口</para>
+        /// <para>Upload document API for Miaodu.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Document upload is implemented through asynchronous invocation. After the invocation, you must use the getDocInfo API to periodically check the document status. Only when the document status becomes 1 can you proceed with subsequent operations such as generating a document summary, creating a full-text mind map, summarizing Q&amp;A content, extracting keywords, or rewriting.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UploadDocRequest
@@ -34335,8 +36353,13 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读上传文档接口</para>
+        /// <para>Upload document API for Miaodu.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Document upload is implemented through asynchronous invocation. After the invocation, you must use the getDocInfo API to periodically check the document status. Only when the document status becomes 1 can you proceed with subsequent operations such as generating a document summary, creating a full-text mind map, summarizing Q&amp;A content, extracting keywords, or rewriting.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UploadDocRequest
@@ -34353,8 +36376,13 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>妙读上传文档接口</para>
+        /// <para>Upload document API for Miaodu.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Document upload is implemented through asynchronous invocation. After the invocation, you must use the getDocInfo API to periodically check the document status. Only when the document status becomes 1 can you proceed with subsequent operations such as generating a document summary, creating a full-text mind map, summarizing Q&amp;A content, extracting keywords, or rewriting.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UploadDocRequest
@@ -34371,7 +36399,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>校验企业VOC上传模板</para>
+        /// <para>Validates an enterprise VOC upload template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34425,7 +36453,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>校验企业VOC上传模板</para>
+        /// <para>Validates an enterprise VOC upload template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34479,7 +36507,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>校验企业VOC上传模板</para>
+        /// <para>Validates an enterprise VOC upload template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34497,7 +36525,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>校验企业VOC上传模板</para>
+        /// <para>Validates an enterprise VOC upload template.</para>
         /// </summary>
         /// 
         /// <param name="request">

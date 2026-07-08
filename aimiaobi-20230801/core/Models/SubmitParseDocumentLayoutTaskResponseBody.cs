@@ -48,8 +48,6 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
-        /// 
         /// <b>Example:</b>
         /// <para>3f7045e099474ba28ceca1b4eb6d6e21</para>
         /// </summary>

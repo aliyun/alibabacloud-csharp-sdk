@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class UploadDocResponseBody : TeaModel {
         /// <summary>
+        /// <para>Internal error code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -17,14 +19,23 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Document information</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public UploadDocResponseBodyData Data { get; set; }
         public class UploadDocResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>Array of successfully uploaded document IDs</para>
+            /// </summary>
             [NameInMap("DocIds")]
             [Validation(Required=false)]
             public List<string> DocIds { get; set; }
 
+            /// <summary>
+            /// <para>Document IDs that could not be uploaded because they already exist</para>
+            /// </summary>
             [NameInMap("ExistedIds")]
             [Validation(Required=false)]
             public List<string> ExistedIds { get; set; }
@@ -32,6 +43,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         }
 
         /// <summary>
+        /// <para>HTTP status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -40,6 +53,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Error description</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -58,6 +73,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the operation succeeded</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

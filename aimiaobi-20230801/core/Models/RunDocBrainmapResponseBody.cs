@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class RunDocBrainmapResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Response header.</para>
+        /// </summary>
         [NameInMap("Header")]
         [Validation(Required=false)]
         public RunDocBrainmapResponseBodyHeader Header { get; set; }
         public class RunDocBrainmapResponseBodyHeader : TeaModel {
             /// <summary>
+            /// <para>Error code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>success</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string ErrorCode { get; set; }
 
             /// <summary>
+            /// <para>Error message.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>success</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
+            /// <para>Event type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>task-failed</para>
             /// </summary>
@@ -37,11 +46,19 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public string Event { get; set; }
 
+            /// <summary>
+            /// <para>Event description.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>模型生成事件</para>
+            /// </summary>
             [NameInMap("EventInfo")]
             [Validation(Required=false)]
             public string EventInfo { get; set; }
 
             /// <summary>
+            /// <para>Session ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>07181f55-2311-48af-8048-132a77dee020</para>
             /// </summary>
@@ -50,6 +67,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string SessionId { get; set; }
 
             /// <summary>
+            /// <para>Task ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>161816</para>
             /// </summary>
@@ -58,6 +77,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string TaskId { get; set; }
 
             /// <summary>
+            /// <para>Trace ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>6427cdf4-2ffe-4d05-b0ef-c4adceea90f4</para>
             /// </summary>
@@ -67,15 +88,23 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
         }
 
+        /// <summary>
+        /// <para>Response payload.</para>
+        /// </summary>
         [NameInMap("Payload")]
         [Validation(Required=false)]
         public RunDocBrainmapResponseBodyPayload Payload { get; set; }
         public class RunDocBrainmapResponseBodyPayload : TeaModel {
+            /// <summary>
+            /// <para>Output data.</para>
+            /// </summary>
             [NameInMap("Output")]
             [Validation(Required=false)]
             public RunDocBrainmapResponseBodyPayloadOutput Output { get; set; }
             public class RunDocBrainmapResponseBodyPayloadOutput : TeaModel {
                 /// <summary>
+                /// <para>Mind map content in JSON format.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;xxxx&quot;:&quot;xxx&quot;}</para>
                 /// </summary>
@@ -85,11 +114,16 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
             }
 
+            /// <summary>
+            /// <para>Token usage statistics.</para>
+            /// </summary>
             [NameInMap("Usage")]
             [Validation(Required=false)]
             public RunDocBrainmapResponseBodyPayloadUsage Usage { get; set; }
             public class RunDocBrainmapResponseBodyPayloadUsage : TeaModel {
                 /// <summary>
+                /// <para>Number of input tokens.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>65</para>
                 /// </summary>
@@ -98,6 +132,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 public long? InputTokens { get; set; }
 
                 /// <summary>
+                /// <para>Number of output tokens.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
                 /// </summary>
@@ -106,6 +142,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 public long? OutputTokens { get; set; }
 
                 /// <summary>
+                /// <para>Total number of tokens.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>165</para>
                 /// </summary>
@@ -118,6 +156,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1813ceee-7fe5-41b4-87e5-982a4d18cca5</para>
         /// </summary>

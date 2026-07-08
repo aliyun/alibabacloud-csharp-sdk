@@ -9,11 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class RunKeywordsExtractionGenerationRequest : TeaModel {
+        /// <summary>
+        /// <para>Custom prompt.</para>
+        /// </summary>
         [NameInMap("Prompt")]
         [Validation(Required=false)]
         public string Prompt { get; set; }
 
         /// <summary>
+        /// <para>Data required for generation.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ReferenceData")]
@@ -21,6 +25,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public RunKeywordsExtractionGenerationRequestReferenceData ReferenceData { get; set; }
         public class RunKeywordsExtractionGenerationRequestReferenceData : TeaModel {
             /// <summary>
+            /// <para>List of content.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("Contents")]
@@ -30,6 +35,11 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         }
 
         /// <summary>
+        /// <para>The unique identifier for the associated creation article.</para>
+        /// <remarks>
+        /// <para>TaskId is not required by default; the system automatically generates it. If subsequent tasks use the same TaskId, they belong to the same conversation group.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
         /// </summary>
@@ -38,6 +48,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string TaskId { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier for the Alibaba Cloud Model Studio workspace. Obtain the <a href="https://help.aliyun.com/document_detail/2782167.html">Workspace ID</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

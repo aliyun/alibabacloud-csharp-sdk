@@ -9,11 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class DeleteAuditTermsRequest : TeaModel {
+        /// <summary>
+        /// <para>List of rule IDs for user logon audit terms to delete.</para>
+        /// </summary>
         [NameInMap("IdList")]
         [Validation(Required=false)]
         public List<long?> IdList { get; set; }
 
         /// <summary>
+        /// <para>Unique identifier for the Alibaba Cloud Model Studio workspace. Get the <a href="https://help.aliyun.com/document_detail/2782167.html">Workspace ID</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

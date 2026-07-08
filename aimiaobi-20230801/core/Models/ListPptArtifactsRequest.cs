@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string ExternalUserId { get; set; }
 
         /// <summary>
+        /// <para>The number of data entries to query in this request (deprecated).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -26,6 +28,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The token for the next page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cEoBWREAXdxaOyjq/cqAbg==</para>
         /// </summary>
@@ -33,11 +37,19 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// <para>The search keyword for the work name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>数字时代的营销策划与文案创作</para>
+        /// </summary>
         [NameInMap("Query")]
         [Validation(Required=false)]
         public string Query { get; set; }
 
         /// <summary>
+        /// <para>The workspace ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>llm-az2xxxx</para>
         /// </summary>

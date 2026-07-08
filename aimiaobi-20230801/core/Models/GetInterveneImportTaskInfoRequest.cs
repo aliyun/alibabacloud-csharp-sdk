@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class GetInterveneImportTaskInfoRequest : TeaModel {
         /// <summary>
+        /// <para>The unique identifier of the workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,11 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string AgentKey { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier of the task.</para>
+        /// <remarks>
+        /// <para>This parameter is optional. The system automatically generates a task ID if you do not specify this parameter. Tasks that have the same \<c>TaskId\\</c> belong to the same conversation group.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>19162157</para>
         /// </summary>

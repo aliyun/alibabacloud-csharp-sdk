@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class GetAuditNotePostProcessingStatusResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The returned data.</para>
+        /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public GetAuditNotePostProcessingStatusResponseBodyData Data { get; set; }
         public class GetAuditNotePostProcessingStatusResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The time when the post-processing task was completed. The format is YYYY-MM-DD HH:mm:ss.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1970-01-01 23:34:45</para>
             /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string CompletionTime { get; set; }
 
             /// <summary>
+            /// <para>The time when the post-processing task was created. The format is YYYY-MM-DD HH:mm:ss.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1970-01-01 12:34:56</para>
             /// </summary>
@@ -44,6 +51,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The error message. This is returned only when the post-processing task fails.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>error</para>
             /// </summary>
@@ -52,6 +61,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
+            /// <para>The ID of the rule library. The default value in the current version is &quot;Default&quot;.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Default</para>
             /// </summary>
@@ -60,6 +71,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string NoteId { get; set; }
 
             /// <summary>
+            /// <para>The number of lines that have been post-processed.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>233</para>
             /// </summary>
@@ -68,6 +81,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public int? ProcessedLines { get; set; }
 
             /// <summary>
+            /// <para>The status of the post-processing task. Valid values: PENDING, RUNNING, SUCCEEDED, and FAILED.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>RUNNING</para>
             /// </summary>
@@ -76,6 +91,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>The total number of lines in the structured rule library.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>666</para>
             /// </summary>
@@ -86,6 +103,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -94,6 +113,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The error details.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -115,6 +135,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

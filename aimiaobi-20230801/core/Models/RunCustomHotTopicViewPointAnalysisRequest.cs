@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class RunCustomHotTopicViewPointAnalysisRequest : TeaModel {
         /// <summary>
+        /// <para>Model follow-up question</para>
+        /// 
         /// <b>Example:</b>
         /// <para>模型反问</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string AskUser { get; set; }
 
         /// <summary>
+        /// <para>Prompt for custom hot topic viewpoint analysis</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string Prompt { get; set; }
 
         /// <summary>
+        /// <para>Rewritten query</para>
+        /// 
         /// <b>Example:</b>
         /// <para>改写后的Query</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string SearchQuery { get; set; }
 
         /// <summary>
+        /// <para>Set to true to skip the follow-up question</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -44,6 +51,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public bool? SkipAskUser { get; set; }
 
         /// <summary>
+        /// <para>The hot topic for analysis</para>
+        /// 
         /// <b>Example:</b>
         /// <para>热点主题</para>
         /// </summary>
@@ -52,6 +61,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string Topic { get; set; }
 
         /// <summary>
+        /// <para>Hot topic ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>热点主题ID</para>
         /// </summary>
@@ -60,6 +71,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string TopicId { get; set; }
 
         /// <summary>
+        /// <para>Hot topic source</para>
+        /// 
         /// <b>Example:</b>
         /// <para>热点主题来源</para>
         /// </summary>
@@ -68,6 +81,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string TopicSource { get; set; }
 
         /// <summary>
+        /// <para>Hot topic version</para>
+        /// 
         /// <b>Example:</b>
         /// <para>热点主题版本</para>
         /// </summary>
@@ -76,6 +91,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string TopicVersion { get; set; }
 
         /// <summary>
+        /// <para>User feedback</para>
+        /// 
         /// <b>Example:</b>
         /// <para>用户反馈</para>
         /// </summary>
@@ -84,6 +101,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string UserBack { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier of the Alibaba Cloud Model Studio workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2782167.html">Get the Workspace ID</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

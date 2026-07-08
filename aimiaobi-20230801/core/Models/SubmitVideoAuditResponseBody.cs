@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class SubmitVideoAuditResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务处理结果状态码</para>
+        /// <para>Business status code</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>视频审校任务提交后的返回数据</para>
+        /// <para>Submitted task result data</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public SubmitVideoAuditResponseBodyData Data { get; set; }
         public class SubmitVideoAuditResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>视频审校任务的唯一标识，可用于后续查询任务状态和结果</para>
+            /// <para>Task ID</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         }
 
         /// <summary>
-        /// <para>HTTP响应状态码</para>
+        /// <para>HTTP status code</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>业务处理结果描述信息</para>
+        /// <para>Return message</para>
         /// 
         /// <b>Example:</b>
         /// <para>任务提交成功</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>本次API请求的唯一标识</para>
+        /// <para>Request ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>1813ceee-7fe5-41b4-87e5-982a4d18cca5</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>请求是否处理成功</para>
+        /// <para>Is successful</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class DeleteStyleLearningResultRequest : TeaModel {
         /// <summary>
+        /// <para>Unique identity of the workspace: AgentKey</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string AgentKey { get; set; }
 
         /// <summary>
+        /// <para>Style learning ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

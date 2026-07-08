@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class RunBookBrainmapRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to clear the cache. The default is <c>false</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public bool? CleanCache { get; set; }
 
         /// <summary>
+        /// <para>The document ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string DocId { get; set; }
 
         /// <summary>
+        /// <para>The number of nodes on the second level of the mind map.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? NodeNumber { get; set; }
 
         /// <summary>
+        /// <para>A prompt with additional instructions.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>按英文输出</para>
         /// </summary>
@@ -52,6 +59,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? ResponseFormat { get; set; }
 
         /// <summary>
+        /// <para>The session ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,6 +70,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string SessionId { get; set; }
 
         /// <summary>
+        /// <para>The number of words per node.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -70,6 +80,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? WordNumber { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier for the Model Studio workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2782167.html">Workspace ID</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

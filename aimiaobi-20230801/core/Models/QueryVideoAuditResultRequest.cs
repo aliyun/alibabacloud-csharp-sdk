@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class QueryVideoAuditResultRequest : TeaModel {
         /// <summary>
-        /// <para>视频审校任务的唯一标识，长度固定32位</para>
+        /// <para>Task ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,6 +21,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string TaskId { get; set; }
 
         /// <summary>
+        /// <para>Workspace ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

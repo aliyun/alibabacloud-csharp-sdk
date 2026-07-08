@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class BindPptArtifactRequest : TeaModel {
         /// <summary>
+        /// <para>The artifact ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +29,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string ExternalUserId { get; set; }
 
         /// <summary>
+        /// <para>The task ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,6 +43,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string TaskId { get; set; }
 
         /// <summary>
+        /// <para><a href="https://help.aliyun.com/document_detail/2782167.html">The workspace ID.</a></para>
+        /// 
         /// <b>Example:</b>
         /// <para>llm-xgpt3m25qdosdjr3</para>
         /// </summary>

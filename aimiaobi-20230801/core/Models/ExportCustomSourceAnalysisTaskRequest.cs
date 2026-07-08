@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class ExportCustomSourceAnalysisTaskRequest : TeaModel {
         /// <summary>
+        /// <para>Export format type. Default is jsonLine. jsonline: Exports in jsonLine format. excel: Exports in Excel format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>jsonLine</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string ExportType { get; set; }
 
         /// <summary>
+        /// <para>Unique ID for the task</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string TaskId { get; set; }
 
         /// <summary>
+        /// <para>Unique identifier for the workspace: AgentKey</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -9,11 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class UploadBookShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>Folder ID</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>default</para>
+        /// </summary>
         [NameInMap("CategoryId")]
         [Validation(Required=false)]
         public string CategoryId { get; set; }
 
         /// <summary>
+        /// <para>Documents</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Docs")]
@@ -21,6 +28,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string DocsShrink { get; set; }
 
         /// <summary>
+        /// <para>Unique identifier of your Alibaba Cloud Model Studio workspace. <a href="https://help.aliyun.com/document_detail/2782167.html">Get your workspace ID</a></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

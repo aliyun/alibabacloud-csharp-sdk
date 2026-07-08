@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class GetCustomSourceTopicAnalysisTaskRequest : TeaModel {
         /// <summary>
+        /// <para>The unique ID of the task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string TaskId { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier of the workspace. It is the AgentKey.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

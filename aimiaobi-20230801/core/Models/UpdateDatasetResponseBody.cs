@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class UpdateDatasetResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>NoData</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The business data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public UpdateDatasetResponseBodyData Data { get; set; }
         public class UpdateDatasetResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The creation time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-11-12 21:46:24</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The creator.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string CreateUser { get; set; }
 
             /// <summary>
+            /// <para>The display name of the dataset.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string DatasetDescription { get; set; }
 
             /// <summary>
+            /// <para>The dataset ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public long? DatasetId { get; set; }
 
             /// <summary>
+            /// <para>The dataset name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string DatasetName { get; set; }
 
             /// <summary>
+            /// <para>The dataset type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>CustomSemanticSearch</para>
             /// </summary>
@@ -69,11 +86,16 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public string DatasetType { get; set; }
 
+            /// <summary>
+            /// <para>The list of articles.</para>
+            /// </summary>
             [NameInMap("NewsArticleResults")]
             [Validation(Required=false)]
             public List<UpdateDatasetResponseBodyDataNewsArticleResults> NewsArticleResults { get; set; }
             public class UpdateDatasetResponseBodyDataNewsArticleResults : TeaModel {
                 /// <summary>
+                /// <para>The status code.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>NoData</para>
                 /// </summary>
@@ -82,6 +104,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 public string Code { get; set; }
 
                 /// <summary>
+                /// <para>The current page number.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -89,11 +113,16 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 [Validation(Required=false)]
                 public int? Current { get; set; }
 
+                /// <summary>
+                /// <para>The list of articles.</para>
+                /// </summary>
                 [NameInMap("Data")]
                 [Validation(Required=false)]
                 public List<UpdateDatasetResponseBodyDataNewsArticleResultsData> Data { get; set; }
                 public class UpdateDatasetResponseBodyDataNewsArticleResultsData : TeaModel {
                     /// <summary>
+                    /// <para>The content.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>文章内容</para>
                     /// </summary>
@@ -102,6 +131,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                     public string Content { get; set; }
 
                     /// <summary>
+                    /// <para>The publishing time.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>2024-11-12 15:12:14</para>
                     /// </summary>
@@ -110,6 +141,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                     public string PubTime { get; set; }
 
                     /// <summary>
+                    /// <para>The source.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>央视网</para>
                     /// </summary>
@@ -118,6 +151,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                     public string Source { get; set; }
 
                     /// <summary>
+                    /// <para>The article summary.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>文章摘要</para>
                     /// </summary>
@@ -126,6 +161,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                     public string Summary { get; set; }
 
                     /// <summary>
+                    /// <para>The title.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>文章标题</para>
                     /// </summary>
@@ -134,6 +171,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                     public string Title { get; set; }
 
                     /// <summary>
+                    /// <para>The article URL.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para><a href="https://www.example.com/aaa.docx">https://www.example.com/aaa.docx</a></para>
                     /// </summary>
@@ -144,6 +183,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 }
 
                 /// <summary>
+                /// <para>The error message.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>success</para>
                 /// </summary>
@@ -152,6 +193,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 public string Message { get; set; }
 
                 /// <summary>
+                /// <para>The number of records per page.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
                 /// </summary>
@@ -160,6 +203,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 public int? Size { get; set; }
 
                 /// <summary>
+                /// <para>The total number of records.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
                 /// </summary>
@@ -170,6 +215,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             }
 
             /// <summary>
+            /// <para>Indicates whether search is enabled for the dataset.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -180,6 +227,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -188,6 +237,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -196,6 +247,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The unique request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1813ceee-7fe5-41b4-87e5-982a4d18cca5</para>
         /// </summary>
@@ -204,6 +257,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. A value of true indicates success. A value of false indicates failure.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

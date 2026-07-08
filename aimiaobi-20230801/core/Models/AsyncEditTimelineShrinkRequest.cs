@@ -9,11 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class AsyncEditTimelineShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>Enable automatic clip adjustment</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("AutoClips")]
         [Validation(Required=false)]
         public bool? AutoClips { get; set; }
 
         /// <summary>
+        /// <para>Unique identifier of the task</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +31,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string TaskId { get; set; }
 
         /// <summary>
+        /// <para>Array structure of video editing timelines</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Timelines")]
@@ -31,6 +39,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string TimelinesShrink { get; set; }
 
         /// <summary>
+        /// <para><a href="https://help.aliyun.com/document_detail/2782167.html">Model Studio workspace ID</a></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

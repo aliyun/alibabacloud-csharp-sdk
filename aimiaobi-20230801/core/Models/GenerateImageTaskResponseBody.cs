@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class GenerateImageTaskResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -17,15 +19,23 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The business data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GenerateImageTaskResponseBodyData Data { get; set; }
         public class GenerateImageTaskResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The information about the paragraph tasks. The tasks are associated based on the input paragraph IDs.</para>
+            /// </summary>
             [NameInMap("TaskList")]
             [Validation(Required=false)]
             public List<GenerateImageTaskResponseBodyDataTaskList> TaskList { get; set; }
             public class GenerateImageTaskResponseBodyDataTaskList : TeaModel {
                 /// <summary>
+                /// <para>The content of the paragraph.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>一直忧伤的猫</para>
                 /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 public string Content { get; set; }
 
                 /// <summary>
+                /// <para>The paragraph ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 public long? Id { get; set; }
 
                 /// <summary>
+                /// <para>The unique ID of the task.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>e1be065b-adc3-435e-bd01-1c18c5ed75d3</para>
                 /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 public string TaskId { get; set; }
 
                 /// <summary>
+                /// <para>The current status of the task. Valid values: SUCCEEDED, FAILED, CANCELED, PENDING, SUSPENDED, and RUNNING.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>SUCCESSED</para>
                 /// </summary>
@@ -62,6 +78,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -70,6 +88,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The error description.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -78,6 +98,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The unique ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>F2F366D6-E9FE-1006-BB70-2C650896AAB5</para>
         /// </summary>
@@ -86,6 +108,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. true: The request was successful. false: The request failed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

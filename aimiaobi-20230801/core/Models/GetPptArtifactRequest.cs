@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string ExternalUserId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the PPT artifact.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5232136</para>
         /// </summary>
@@ -26,6 +28,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? PptArtifactId { get; set; }
 
         /// <summary>
+        /// <para>The workspace ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>llm-az2gglxxxx</para>
         /// </summary>

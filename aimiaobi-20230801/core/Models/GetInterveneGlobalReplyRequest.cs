@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class GetInterveneGlobalReplyRequest : TeaModel {
         /// <summary>
+        /// <para>Unique identity of the workspace: <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

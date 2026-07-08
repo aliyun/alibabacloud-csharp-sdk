@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class AsyncUploadTenderDocRequest : TeaModel {
         /// <summary>
+        /// <para>File OSS key</para>
+        /// 
         /// <b>Example:</b>
         /// <para>oss://default/aimiaobi-service-prod/aimiaobi/materialDocument/1601892701595700_10169811/208757545922605632_yst-test_9eb7d7e1deb543d88e2d6f1c9df456ef.docx</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string FileKey { get; set; }
 
         /// <summary>
+        /// <para>Tender document name</para>
+        /// 
         /// <b>Example:</b>
         /// <para>tender.pdf</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string TenderDocName { get; set; }
 
         /// <summary>
+        /// <para><a href="https://help.aliyun.com/document_detail/2782167.html">Workspace ID</a>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>llm-az2gglkjauwnnhpq</para>
         /// </summary>

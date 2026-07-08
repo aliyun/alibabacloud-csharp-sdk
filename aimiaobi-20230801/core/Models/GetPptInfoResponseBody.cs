@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class GetPptInfoResponseBody : TeaModel {
         /// <summary>
+        /// <para>The error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>DataNotExists</para>
         /// </summary>
@@ -17,15 +19,23 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The response data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetPptInfoResponseBodyData Data { get; set; }
         public class GetPptInfoResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>Download links for the exported files.</para>
+            /// </summary>
             [NameInMap("ExportFileLink")]
             [Validation(Required=false)]
             public List<string> ExportFileLink { get; set; }
 
             /// <summary>
+            /// <para>The ID of the export task.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxx-xxx-xx</para>
             /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string ExportTaskId { get; set; }
 
             /// <summary>
+            /// <para>The URL of the cover image for the PPT artifact.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="http://a.com/xxx.jpeg">http://a.com/xxx.jpeg</a></para>
             /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string PptArtifactCover { get; set; }
 
             /// <summary>
+            /// <para>The ID of the PPT artifact.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>5423431</para>
             /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string PptArtifactId { get; set; }
 
             /// <summary>
+            /// <para>The ID of the PPT process.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>11231232</para>
             /// </summary>
@@ -58,6 +74,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string PptProcessId { get; set; }
 
             /// <summary>
+            /// <para>The query for the PPT task.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>关于班会主题的PPT</para>
             /// </summary>
@@ -66,6 +84,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string Query { get; set; }
 
             /// <summary>
+            /// <para>The ID of the task.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxx-xxx-xx</para>
             /// </summary>
@@ -76,6 +96,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>400</para>
         /// </summary>
@@ -84,6 +106,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>错误消息</para>
         /// </summary>
@@ -92,7 +116,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxxx</para>
@@ -102,6 +126,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

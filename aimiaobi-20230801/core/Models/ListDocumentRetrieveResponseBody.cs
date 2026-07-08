@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class ListDocumentRetrieveResponseBody : TeaModel {
         /// <summary>
+        /// <para>Status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>Business data.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>data</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public List<ListDocumentRetrieveResponseBodyData> Data { get; set; }
         public class ListDocumentRetrieveResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Main text.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>文章正文</para>
             /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string Essay { get; set; }
 
             /// <summary>
+            /// <para>Issuing agency.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>发布机构</para>
             /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string IssuingAuthority { get; set; }
 
             /// <summary>
+            /// <para>URL.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>文章链接</para>
             /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string Link { get; set; }
 
             /// <summary>
+            /// <para>Publication date.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2023-02-01</para>
             /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string PublicationDate { get; set; }
 
             /// <summary>
+            /// <para>Title.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>文章标题</para>
             /// </summary>
@@ -68,6 +82,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         }
 
         /// <summary>
+        /// <para>HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -76,6 +92,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Maximum number of records returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>71</para>
         /// </summary>
@@ -84,6 +102,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>Error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -92,6 +112,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Token for the next page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cEoBWREAXdxaOyjq/cqAbg==</para>
         /// </summary>
@@ -100,7 +122,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F2F366D6-E9FE-1006-BB70-2C650896AAB5</para>
@@ -110,6 +132,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the operation succeeded. A value of true indicates success. A value of false indicates failure.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -118,6 +142,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>Total count.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>

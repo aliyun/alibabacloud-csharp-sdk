@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class ListIntervenesRequest : TeaModel {
         /// <summary>
+        /// <para>The unique identity of the workspace. For more information, see <a href="">AgentKey</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -19,11 +20,19 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string AgentKey { get; set; }
 
+        /// <summary>
+        /// <para>The intervention type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>干预类型</para>
+        /// </summary>
         [NameInMap("InterveneType")]
         [Validation(Required=false)]
         public int? InterveneType { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -32,6 +41,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? PageIndex { get; set; }
 
         /// <summary>
+        /// <para>The page size.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -39,11 +50,19 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>小猫</para>
+        /// </summary>
         [NameInMap("Query")]
         [Validation(Required=false)]
         public string Query { get; set; }
 
         /// <summary>
+        /// <para>The rule ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>mqtt_outRule_1679019634514</para>
         /// </summary>

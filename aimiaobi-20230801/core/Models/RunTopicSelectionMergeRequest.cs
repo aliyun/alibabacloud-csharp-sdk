@@ -9,11 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class RunTopicSelectionMergeRequest : TeaModel {
+        /// <summary>
+        /// <para>Custom merge prompt</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>请从xxxx的角度，分析xxxx事件</para>
+        /// </summary>
         [NameInMap("Prompt")]
         [Validation(Required=false)]
         public string Prompt { get; set; }
 
         /// <summary>
+        /// <para>List of topic perspectives to merge</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Topics")]
@@ -21,6 +28,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public List<TopicSelection> Topics { get; set; }
 
         /// <summary>
+        /// <para><a href="https://help.aliyun.com/document_detail/2782167.html">Workspace ID</a></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -18,6 +18,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public bool? CleanCache { get; set; }
 
         /// <summary>
+        /// <para>The document ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +29,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string DocId { get; set; }
 
         /// <summary>
+        /// <para>A custom prompt for extracting key points.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>用英文输出</para>
         /// </summary>
@@ -36,6 +39,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string KeyPointPrompt { get; set; }
 
         /// <summary>
+        /// <para>The session ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,6 +50,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string SessionId { get; set; }
 
         /// <summary>
+        /// <para>A custom prompt for generating the summary.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>用英文输出</para>
         /// </summary>
@@ -54,6 +60,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string SummaryPrompt { get; set; }
 
         /// <summary>
+        /// <para>The unique ID of the workspace in Model Studio (Bailian). For more information, see <a href="https://help.aliyun.com/document_detail/2782167.html">Get your workspace ID</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class ListSearchTasksRequest : TeaModel {
         /// <summary>
+        /// <para>Task type</para>
+        /// 
         /// <b>Example:</b>
         /// <para>24</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public List<int?> DialogueTypes { get; set; }
 
         /// <summary>
+        /// <para>Current page number</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>Number of items per page. Default is 10.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -34,6 +40,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier of the Alibaba Cloud Model Studio workspace. For more information, see <a href="">Obtain workspaceId</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

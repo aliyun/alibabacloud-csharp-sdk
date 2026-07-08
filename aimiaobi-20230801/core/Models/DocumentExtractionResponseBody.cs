@@ -10,18 +10,25 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class DocumentExtractionResponseBody : TeaModel {
         /// <summary>
+        /// <para>Status code</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>NoData</para>
+        /// <para>successful</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Business data</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DocumentExtractionResponseBodyData> Data { get; set; }
         public class DocumentExtractionResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Author</para>
+            /// 
             /// <b>Example:</b>
             /// <para>作者</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string Author { get; set; }
 
             /// <summary>
+            /// <para>Content</para>
+            /// 
             /// <b>Example:</b>
             /// <para>文章内容</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string Content { get; set; }
 
             /// <summary>
+            /// <para>Custom unique ID for the document</para>
+            /// 
             /// <b>Example:</b>
             /// <para>文档-自定义的唯一ID</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string DocId { get; set; }
 
             /// <summary>
+            /// <para>Internal unique identifier for the document</para>
+            /// 
             /// <b>Example:</b>
             /// <para>8df2d69d63a247b6b52ff455b2d426b6</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string DocUuid { get; set; }
 
             /// <summary>
+            /// <para>Publication time</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-05-14 08:54:33</para>
             /// </summary>
@@ -62,14 +77,18 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string PubTime { get; set; }
 
             /// <summary>
+            /// <para>Source</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>央视网</para>
+            /// <para>新闻来源</para>
             /// </summary>
             [NameInMap("Source")]
             [Validation(Required=false)]
             public string Source { get; set; }
 
             /// <summary>
+            /// <para>Article summary</para>
+            /// 
             /// <b>Example:</b>
             /// <para>文章摘要</para>
             /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string Summary { get; set; }
 
             /// <summary>
+            /// <para>Tag</para>
+            /// 
             /// <b>Example:</b>
             /// <para>文章标签</para>
             /// </summary>
@@ -86,6 +107,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string Tag { get; set; }
 
             /// <summary>
+            /// <para>Title</para>
+            /// 
             /// <b>Example:</b>
             /// <para>文章标题</para>
             /// </summary>
@@ -94,6 +117,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string Title { get; set; }
 
             /// <summary>
+            /// <para>Article URL</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="https://www.example.com/aaa.docx">https://www.example.com/aaa.docx</a></para>
             /// </summary>
@@ -104,6 +129,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         }
 
         /// <summary>
+        /// <para>HTTP status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -112,14 +139,18 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Error message</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>success</para>
+        /// <para>successful</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Unique request identifier</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1813ceee-7fe5-41b4-87e5-982a4d18cca5</para>
         /// </summary>
@@ -128,6 +159,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates success: true for success, false for failure</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

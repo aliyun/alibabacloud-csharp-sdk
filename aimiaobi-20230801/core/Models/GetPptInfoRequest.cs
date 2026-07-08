@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string ExternalUserId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1f178f22-ec52-467d-8489-eef4468x0240</para>
         /// </summary>
@@ -26,6 +28,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string TaskId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the workspace.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>llm-2setzb9xb8mx6vss</para>
         /// </summary>

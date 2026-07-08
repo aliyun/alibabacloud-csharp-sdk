@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class ListTimedViewAttitudeRequest : TeaModel {
         /// <summary>
+        /// <para>UUID of the workspace: AgentKey</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string AgentKey { get; set; }
 
         /// <summary>
+        /// <para>Maximum number of Return Results</para>
+        /// 
         /// <b>Example:</b>
         /// <para>53</para>
         /// </summary>
@@ -28,14 +31,17 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>Token for the next page</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>下一页的token</para>
+        /// <para>下一页的Token</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>Hotlist topic</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,6 +52,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string Topic { get; set; }
 
         /// <summary>
+        /// <para>Hotlist source</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

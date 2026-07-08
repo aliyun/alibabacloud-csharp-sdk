@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class GetCustomHotTopicBroadcastJobResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>NoData</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The business data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetCustomHotTopicBroadcastJobResponseBodyData Data { get; set; }
         public class GetCustomHotTopicBroadcastJobResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The error message.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>错误信息</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
+            /// <para>The version number of the hot topic.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>热点话题版本号标识</para>
             /// </summary>
@@ -38,6 +47,22 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string HotTopicVersion { get; set; }
 
             /// <summary>
+            /// <para>The status of the task.</para>
+            /// <list type="bullet">
+            /// <item><description><para>PENDING: The task is pending.</para>
+            /// </description></item>
+            /// <item><description><para>RUNNING: The task is running.</para>
+            /// </description></item>
+            /// <item><description><para>SUCCESSED: The task is successful.</para>
+            /// </description></item>
+            /// <item><description><para>SUSPENDED: The task is paused.</para>
+            /// </description></item>
+            /// <item><description><para>FAILED: The task failed.</para>
+            /// </description></item>
+            /// <item><description><para>CANCELED: The task is canceled.</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>RUNNING</para>
             /// </summary>
@@ -48,6 +73,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -56,6 +83,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The error details.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -64,6 +93,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The unique ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1813ceee-7fe5-41b4-87e5-982a4d18cca5</para>
         /// </summary>
@@ -72,6 +103,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. Valid values: true and false.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

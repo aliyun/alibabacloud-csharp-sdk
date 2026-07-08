@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class FeedbackDialogueShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The unique ID of the workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string AgentKey { get; set; }
 
         /// <summary>
+        /// <para>The feedback.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string CustomerResponse { get; set; }
 
         /// <summary>
+        /// <para>The generated content that is considered good.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string GoodText { get; set; }
 
         /// <summary>
+        /// <para>The modified generated result.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -44,6 +51,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string ModifiedResponse { get; set; }
 
         /// <summary>
+        /// <para>thumbsDown: Dislike, thumbsUp: Like</para>
+        /// 
         /// <b>Example:</b>
         /// <para>thumbsDown</para>
         /// </summary>
@@ -51,11 +60,15 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string Rating { get; set; }
 
+        /// <summary>
+        /// <para>The tags.</para>
+        /// </summary>
         [NameInMap("RatingTags")]
         [Validation(Required=false)]
         public string RatingTagsShrink { get; set; }
 
         /// <summary>
+        /// <para>The ID of a single-turn conversation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,6 +79,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string SessionId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3f7045e099474ba28ceca1b4eb6d6e21</para>
         /// </summary>

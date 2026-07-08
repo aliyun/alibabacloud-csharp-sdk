@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class ListDatasetsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>NoData</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Configuration and usage details for custom semantic search datasets that use uploaded files as data sources.</para>
+        /// </summary>
         [NameInMap("CustomSemanticSearchConfig")]
         [Validation(Required=false)]
         public ListDatasetsResponseBodyCustomSemanticSearchConfig CustomSemanticSearchConfig { get; set; }
         public class ListDatasetsResponseBodyCustomSemanticSearchConfig : TeaModel {
             /// <summary>
+            /// <para>The dataset quota.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public int? DatasetQuota { get; set; }
 
             /// <summary>
+            /// <para>The number of datasets created.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public int? DatasetUsedQuota { get; set; }
 
             /// <summary>
+            /// <para>The document quota.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1000</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public long? DocQuota { get; set; }
 
             /// <summary>
+            /// <para>The used document quota.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -55,11 +68,16 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
         }
 
+        /// <summary>
+        /// <para>An array of dataset objects.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListDatasetsResponseBodyData> Data { get; set; }
         public class ListDatasetsResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The dataset access level.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>private</para>
             /// </summary>
@@ -67,11 +85,16 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public string AccessLevel { get; set; }
 
+            /// <summary>
+            /// <para>The administrators of the dataset.</para>
+            /// </summary>
             [NameInMap("Administrators")]
             [Validation(Required=false)]
             public List<ListDatasetsResponseBodyDataAdministrators> Administrators { get; set; }
             public class ListDatasetsResponseBodyDataAdministrators : TeaModel {
                 /// <summary>
+                /// <para>The administrator user ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>xx</para>
                 /// </summary>
@@ -80,6 +103,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 public string UserId { get; set; }
 
                 /// <summary>
+                /// <para>The administrator username.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>xx</para>
                 /// </summary>
@@ -90,6 +115,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             }
 
             /// <summary>
+            /// <para>The creation time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-11-12 21:46:24</para>
             /// </summary>
@@ -98,6 +125,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The creator of the dataset.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
             /// </summary>
@@ -106,6 +135,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string CreateUser { get; set; }
 
             /// <summary>
+            /// <para>The dataset description.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
             /// </summary>
@@ -114,6 +145,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string DatasetDescription { get; set; }
 
             /// <summary>
+            /// <para>The dataset ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -122,6 +155,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public long? DatasetId { get; set; }
 
             /// <summary>
+            /// <para>The dataset name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
             /// </summary>
@@ -130,6 +165,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string DatasetName { get; set; }
 
             /// <summary>
+            /// <para>The dataset type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>CustomSemanticSearch</para>
             /// </summary>
@@ -138,6 +175,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string DatasetType { get; set; }
 
             /// <summary>
+            /// <para>The number of documents uploaded to the dataset.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -146,6 +185,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public long? DocUsedQuota { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether search is enabled for the dataset.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -156,6 +197,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -164,6 +207,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -172,6 +217,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -180,6 +227,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The page size.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -188,6 +237,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The unique request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1813ceee-7fe5-41b4-87e5-982a4d18cca5</para>
         /// </summary>
@@ -196,6 +247,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. Valid values: <c>true</c> (success) and <c>false</c> (failure).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -203,11 +256,16 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
+        /// <summary>
+        /// <para>Configuration and usage details for API-integrated datasets.</para>
+        /// </summary>
         [NameInMap("ThirdSearchConfig")]
         [Validation(Required=false)]
         public ListDatasetsResponseBodyThirdSearchConfig ThirdSearchConfig { get; set; }
         public class ListDatasetsResponseBodyThirdSearchConfig : TeaModel {
             /// <summary>
+            /// <para>The dataset quota.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -216,6 +274,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public int? DatasetQuota { get; set; }
 
             /// <summary>
+            /// <para>The number of datasets created.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -226,6 +286,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         }
 
         /// <summary>
+        /// <para>The total number of datasets.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>

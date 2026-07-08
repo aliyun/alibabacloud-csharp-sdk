@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class ListBiddingDocRequest : TeaModel {
         /// <summary>
+        /// <para>End creation time, in timestamp format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2023-03-18 02:00:00</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string CreateTimeEnd { get; set; }
 
         /// <summary>
+        /// <para>Start creation time, in timestamp format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2023-02-19 07:28:11</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string CreateTimeStart { get; set; }
 
         /// <summary>
+        /// <para>Current page number</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? Current { get; set; }
 
         /// <summary>
+        /// <para>Deprecated</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>Deprecated</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>Number of items per page. Default is 10.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? Size { get; set; }
 
         /// <summary>
+        /// <para>Deprecated</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -65,11 +79,19 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public int? Skip { get; set; }
 
+        /// <summary>
+        /// <para>Defines the task name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>任务名称</para>
+        /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]
         public string TaskName { get; set; }
 
         /// <summary>
+        /// <para>Task status</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0-waiting、1-running、2-success、3-pause、4-fail</para>
         /// </summary>
@@ -78,6 +100,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? TaskStatus { get; set; }
 
         /// <summary>
+        /// <para><a href="https://help.aliyun.com/document_detail/2782167.html">Workspace ID</a></para>
+        /// 
         /// <b>Example:</b>
         /// <para>llm-xx</para>
         /// </summary>

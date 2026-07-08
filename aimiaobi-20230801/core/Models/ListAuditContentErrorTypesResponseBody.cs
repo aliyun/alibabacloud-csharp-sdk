@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class ListAuditContentErrorTypesResponseBody : TeaModel {
         /// <summary>
+        /// <para>Error code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>DataNotExists</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>List of audit dimensions</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListAuditContentErrorTypesResponseBodyData> Data { get; set; }
         public class ListAuditContentErrorTypesResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Main audit dimension code</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ContentAccuracy</para>
             /// </summary>
@@ -29,15 +36,26 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public string MajorClassCode { get; set; }
 
+            /// <summary>
+            /// <para>Sub-audit dimension name</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>内容准确性</para>
+            /// </summary>
             [NameInMap("MajorClassName")]
             [Validation(Required=false)]
             public string MajorClassName { get; set; }
 
+            /// <summary>
+            /// <para>List of sub-audit dimensions</para>
+            /// </summary>
             [NameInMap("SubClasses")]
             [Validation(Required=false)]
             public List<ListAuditContentErrorTypesResponseBodyDataSubClasses> SubClasses { get; set; }
             public class ListAuditContentErrorTypesResponseBodyDataSubClasses : TeaModel {
                 /// <summary>
+                /// <para>Sub-audit dimension code</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>PunctuationError</para>
                 /// </summary>
@@ -45,6 +63,12 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 [Validation(Required=false)]
                 public string ClassCode { get; set; }
 
+                /// <summary>
+                /// <para>Sub-audit dimension name</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>标点符号错误</para>
+                /// </summary>
                 [NameInMap("ClassName")]
                 [Validation(Required=false)]
                 public string ClassName { get; set; }
@@ -54,6 +78,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         }
 
         /// <summary>
+        /// <para>HTTP status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -62,6 +88,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Maximum number of records returned in this response</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -70,6 +98,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>Error message</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -77,6 +107,12 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>Token for the next page</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>下一页的token</para>
+        /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
@@ -92,6 +128,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request succeeded</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -100,6 +138,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>Total number of records</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>

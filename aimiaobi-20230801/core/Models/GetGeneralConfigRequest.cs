@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class GetGeneralConfigRequest : TeaModel {
         /// <summary>
+        /// <para>The unique identifier of the configuration.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string ConfigKey { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier of the Model Studio workspace. For more information, see <a href="">Get workspaceId</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

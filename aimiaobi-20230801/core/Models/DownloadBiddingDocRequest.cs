@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class DownloadBiddingDocRequest : TeaModel {
         /// <summary>
+        /// <para>Task ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7AA2AE16-D873-5C5F-9708-15396C382EB1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string TaskId { get; set; }
 
         /// <summary>
+        /// <para><a href="https://help.aliyun.com/document_detail/2782167.html">Workspace ID</a></para>
+        /// 
         /// <b>Example:</b>
         /// <para>llm-az2gglkjauwnnhpq</para>
         /// </summary>

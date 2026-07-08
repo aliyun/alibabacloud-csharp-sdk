@@ -10,14 +10,18 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class AsyncUploadVideoRequest : TeaModel {
         /// <summary>
+        /// <para>Shot segmentation threshold. A smaller value increases sensitivity. Valid range is 1 to 10. Default value is 3.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>3</para>
+        /// <para>3.0</para>
         /// </summary>
         [NameInMap("AdaptiveThreshold")]
         [Validation(Required=false)]
         public float? AdaptiveThreshold { get; set; }
 
         /// <summary>
+        /// <para>The prompt for video understanding.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>重点理解视频中的风景信息</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string AnlysisPrompt { get; set; }
 
         /// <summary>
+        /// <para>The similarity threshold for character recognition.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0.7</para>
         /// </summary>
@@ -33,11 +39,16 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public double? FaceIdentitySimilarityMinScore { get; set; }
 
+        /// <summary>
+        /// <para>Information about the reference video.</para>
+        /// </summary>
         [NameInMap("ReferenceVideo")]
         [Validation(Required=false)]
         public AsyncUploadVideoRequestReferenceVideo ReferenceVideo { get; set; }
         public class AsyncUploadVideoRequestReferenceVideo : TeaModel {
             /// <summary>
+            /// <para>Additional information for video understanding.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>手机cpu采用3纳米技术</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string VideoExtraInfo { get; set; }
 
             /// <summary>
+            /// <para>The name of the reference video.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>refvideo.mp4</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string VideoName { get; set; }
 
             /// <summary>
+            /// <para>The URL of the video.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="http://viapi-customer-pop.oss-cn-shanghai.aliyuncs.com/d71e_208334498220521996_51298e0a909d457693166eb883768c7a">http://viapi-customer-pop.oss-cn-shanghai.aliyuncs.com/d71e_208334498220521996_51298e0a909d457693166eb883768c7a</a></para>
             /// </summary>
@@ -63,11 +78,15 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
         }
 
+        /// <summary>
+        /// <para>Removes captions from the material.</para>
+        /// </summary>
         [NameInMap("RemoveSubtitle")]
         [Validation(Required=false)]
         public bool? RemoveSubtitle { get; set; }
 
         /// <summary>
+        /// <para>The structure of the video editing materials.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("SourceVideos")]
@@ -75,6 +94,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public List<AsyncUploadVideoRequestSourceVideos> SourceVideos { get; set; }
         public class AsyncUploadVideoRequestSourceVideos : TeaModel {
             /// <summary>
+            /// <para>Additional description of the video.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>视频中有一个房子</para>
             /// </summary>
@@ -83,6 +104,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string VideoExtraInfo { get; set; }
 
             /// <summary>
+            /// <para>The name of the video.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -93,6 +115,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string VideoName { get; set; }
 
             /// <summary>
+            /// <para>The URL of the video.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -106,6 +129,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         }
 
         /// <summary>
+        /// <para>The time interval for video understanding shots.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>默认1</para>
         /// </summary>
@@ -114,6 +139,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? SplitInterval { get; set; }
 
         /// <summary>
+        /// <para>Job name</para>
+        /// 
         /// <b>Example:</b>
         /// <para>task001</para>
         /// </summary>
@@ -122,6 +149,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string TaskName { get; set; }
 
         /// <summary>
+        /// <para>Task Type</para>
+        /// 
         /// <b>Example:</b>
         /// <para>type001</para>
         /// </summary>
@@ -129,11 +158,16 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string TaskType { get; set; }
 
+        /// <summary>
+        /// <para>Face information of the roles.</para>
+        /// </summary>
         [NameInMap("VideoRoles")]
         [Validation(Required=false)]
         public List<AsyncUploadVideoRequestVideoRoles> VideoRoles { get; set; }
         public class AsyncUploadVideoRequestVideoRoles : TeaModel {
             /// <summary>
+            /// <para>Information about the role.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>李晓明是一位警察</para>
             /// </summary>
@@ -142,6 +176,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string RoleInfo { get; set; }
 
             /// <summary>
+            /// <para>The name of the role.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>李晓明</para>
             /// </summary>
@@ -149,11 +185,16 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public string RoleName { get; set; }
 
+            /// <summary>
+            /// <para>The URLs of the role photos.</para>
+            /// </summary>
             [NameInMap("RoleUrls")]
             [Validation(Required=false)]
             public List<AsyncUploadVideoRequestVideoRolesRoleUrls> RoleUrls { get; set; }
             public class AsyncUploadVideoRequestVideoRolesRoleUrls : TeaModel {
                 /// <summary>
+                /// <para>The file name of the role\&quot;s facial image.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>王小明.jpeg</para>
                 /// </summary>
@@ -162,6 +203,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 public string RoleFileName { get; set; }
 
                 /// <summary>
+                /// <para>The public URL of the role\&quot;s facial image.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://xxx/xxx.jpeg">http://xxx/xxx.jpeg</a></para>
                 /// </summary>
@@ -174,6 +217,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         }
 
         /// <summary>
+        /// <para>The number of frames sampled from a single shot for character matching.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -182,6 +227,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? VideoShotFaceIdentityCount { get; set; }
 
         /// <summary>
+        /// <para><a href="https://help.aliyun.com/document_detail/2782167.html">The ID of the Alibaba Cloud Model Studio workspace.</a></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

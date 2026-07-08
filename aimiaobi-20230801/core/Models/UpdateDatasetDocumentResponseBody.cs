@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class UpdateDatasetDocumentResponseBody : TeaModel {
         /// <summary>
+        /// <para>Status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>NoData</para>
         /// </summary>
@@ -17,15 +19,26 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Business data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public UpdateDatasetDocumentResponseBodyData Data { get; set; }
         public class UpdateDatasetDocumentResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>Category UUID</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>xx</para>
+            /// </summary>
             [NameInMap("CategoryUuid")]
             [Validation(Required=false)]
             public string CategoryUuid { get; set; }
 
             /// <summary>
+            /// <para>User-defined unique ID for the document.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>用户指定的文档唯一ID</para>
             /// </summary>
@@ -34,6 +47,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string DocId { get; set; }
 
             /// <summary>
+            /// <para>Internal unique ID of the document.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>内部文档唯一ID</para>
             /// </summary>
@@ -41,22 +56,49 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public string DocUuid { get; set; }
 
+            /// <summary>
+            /// <para>Extension field 1</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>xx</para>
+            /// </summary>
             [NameInMap("Extend1")]
             [Validation(Required=false)]
             public string Extend1 { get; set; }
 
+            /// <summary>
+            /// <para>Extension field 2</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>xx</para>
+            /// </summary>
             [NameInMap("Extend2")]
             [Validation(Required=false)]
             public string Extend2 { get; set; }
 
+            /// <summary>
+            /// <para>Extension field 3</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>xx</para>
+            /// </summary>
             [NameInMap("Extend3")]
             [Validation(Required=false)]
             public string Extend3 { get; set; }
 
+            /// <summary>
+            /// <para>Tags.</para>
+            /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<string> Tags { get; set; }
 
+            /// <summary>
+            /// <para>Document title.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>文章标题</para>
+            /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]
             public string Title { get; set; }
@@ -64,6 +106,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         }
 
         /// <summary>
+        /// <para>HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -72,6 +116,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -80,6 +126,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Unique ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1813ceee-7fe5-41b4-87e5-982a4d18cca5</para>
         /// </summary>
@@ -88,6 +136,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the operation succeeded. A value of true indicates success. A value of false indicates failure.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

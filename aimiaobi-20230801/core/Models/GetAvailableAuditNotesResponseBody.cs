@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class GetAvailableAuditNotesResponseBody : TeaModel {
         /// <summary>
+        /// <para>Status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>DataNotExists</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Response data</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetAvailableAuditNotesResponseBodyData Data { get; set; }
         public class GetAvailableAuditNotesResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Rule library file size in bytes.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>23333</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public long? FileSize { get; set; }
 
             /// <summary>
+            /// <para>Primary ID of the rule library storage.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string Id { get; set; }
 
             /// <summary>
+            /// <para>Rule library ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Default</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string NoteId { get; set; }
 
             /// <summary>
+            /// <para>Parsed rule library name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>错题本2025-07-07_解析结果</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string NoteName { get; set; }
 
             /// <summary>
+            /// <para>Rule library update time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2025-07-07 11:56:30</para>
             /// </summary>
@@ -64,6 +79,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         }
 
         /// <summary>
+        /// <para>HTTP status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -72,6 +89,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Error message</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -90,6 +109,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request succeeded.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class GetBiddingDocInfoResponseBody : TeaModel {
         /// <summary>
+        /// <para>Status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -17,15 +19,26 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Business data</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetBiddingDocInfoResponseBodyData Data { get; set; }
         public class GetBiddingDocInfoResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>Bidding document content</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>文章内容</para>
+            /// </summary>
             [NameInMap("Content")]
             [Validation(Required=false)]
             public string Content { get; set; }
 
             /// <summary>
+            /// <para>Format</para>
+            /// 
             /// <b>Example:</b>
             /// <para>markdown
             /// html</para>
@@ -35,6 +48,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string ContentFormat { get; set; }
 
             /// <summary>
+            /// <para>File type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>outline
             /// bidding</para>
@@ -44,6 +59,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string ContentType { get; set; }
 
             /// <summary>
+            /// <para>Task status</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0-waiting、1-running、2-success、3-pause、4-fail</para>
             /// </summary>
@@ -52,6 +69,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public int? Status { get; set; }
 
             /// <summary>
+            /// <para>Current status</para>
+            /// 
             /// <b>Example:</b>
             /// <para>analysis
             /// writing</para>
@@ -61,6 +80,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string Step { get; set; }
 
             /// <summary>
+            /// <para>Task ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3f7045e099474ba28ceca1b4eb6d6e21</para>
             /// </summary>
@@ -69,6 +90,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string TaskId { get; set; }
 
             /// <summary>
+            /// <para>Tender document URL</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="http://xxx">http://xxx</a></para>
             /// </summary>
@@ -77,6 +100,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string TenderDocUrl { get; set; }
 
             /// <summary>
+            /// <para>Tender document file type</para>
+            /// 
             /// <b>Example:</b>
             /// <para>pdf
             /// docx</para>
@@ -88,6 +113,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         }
 
         /// <summary>
+        /// <para>HTTP status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -96,6 +123,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Error description</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -114,6 +143,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

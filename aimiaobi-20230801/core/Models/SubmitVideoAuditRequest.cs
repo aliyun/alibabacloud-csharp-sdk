@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class SubmitVideoAuditRequest : TeaModel {
         /// <summary>
-        /// <para>扩展参数JSON字符串</para>
+        /// <para>Extension parameters</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string Ext { get; set; }
 
         /// <summary>
-        /// <para>OSS文件Key，与url参数二选一</para>
+        /// <para>Unique file identity within the Miaobi system (choose either FileKey or URL)</para>
         /// 
         /// <b>Example:</b>
-        /// <para>video/test.mp4</para>
+        /// <para>oss://default/xxx/video/test.mp4</para>
         /// </summary>
         [NameInMap("FileKey")]
         [Validation(Required=false)]
         public string FileKey { get; set; }
 
         /// <summary>
-        /// <para>抽帧间隔时间（秒）</para>
+        /// <para>Snapshot interval</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.0</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public double? SnapshotInterval { get; set; }
 
         /// <summary>
-        /// <para>视频URL地址，与fileKey参数二选一</para>
+        /// <para>Video URL (choose either FileKey or URL)</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://example.com/video.mp4">https://example.com/video.mp4</a></para>
@@ -50,6 +50,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string Url { get; set; }
 
         /// <summary>
+        /// <para>Workspace ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

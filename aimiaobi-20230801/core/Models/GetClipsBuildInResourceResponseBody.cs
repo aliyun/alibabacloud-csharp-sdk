@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class GetClipsBuildInResourceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -17,14 +19,27 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The response data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetClipsBuildInResourceResponseBodyData Data { get; set; }
         public class GetClipsBuildInResourceResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The list of resources.</para>
+            /// </summary>
             [NameInMap("ResourceList")]
             [Validation(Required=false)]
             public List<string> ResourceList { get; set; }
 
+            /// <summary>
+            /// <para>The resource type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0 - 音色
+            /// 1- 背景音</para>
+            /// </summary>
             [NameInMap("ResourceType")]
             [Validation(Required=false)]
             public int? ResourceType { get; set; }
@@ -32,6 +47,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -40,6 +57,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The message returned for the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -58,6 +77,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. A value of true means the request was successful. A value of false means the request failed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

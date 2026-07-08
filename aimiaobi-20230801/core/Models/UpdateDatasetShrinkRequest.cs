@@ -17,11 +17,16 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string AccessLevel { get; set; }
 
+        /// <summary>
+        /// <para>The configurations for a third-party search dataset.</para>
+        /// </summary>
         [NameInMap("DatasetConfig")]
         [Validation(Required=false)]
         public string DatasetConfigShrink { get; set; }
 
         /// <summary>
+        /// <para>The description of the dataset.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>企业自定义数据集</para>
         /// </summary>
@@ -30,6 +35,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string DatasetDescription { get; set; }
 
         /// <summary>
+        /// <para>The dataset ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -38,6 +45,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public long? DatasetId { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable search for the dataset.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
@@ -46,6 +55,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? SearchDatasetEnable { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier of the Alibaba Cloud Model Studio workspace. For more information, see <a href="">Get a workspaceId</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

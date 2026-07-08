@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class ListFreshViewPointsResponseBody : TeaModel {
         /// <summary>
+        /// <para>Status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>NoData</para>
         /// </summary>
@@ -17,15 +19,23 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Business Data</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListFreshViewPointsResponseBodyData> Data { get; set; }
         public class ListFreshViewPointsResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>Outlines</para>
+            /// </summary>
             [NameInMap("Outlines")]
             [Validation(Required=false)]
             public List<ListFreshViewPointsResponseBodyDataOutlines> Outlines { get; set; }
             public class ListFreshViewPointsResponseBodyDataOutlines : TeaModel {
                 /// <summary>
+                /// <para>Outline</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>大纲</para>
                 /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 public string Outline { get; set; }
 
                 /// <summary>
+                /// <para>Outline summary</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>大纲摘要</para>
                 /// </summary>
@@ -44,6 +56,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             }
 
             /// <summary>
+            /// <para>Generated perspective</para>
+            /// 
             /// <b>Example:</b>
             /// <para>视角</para>
             /// </summary>
@@ -52,6 +66,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string Point { get; set; }
 
             /// <summary>
+            /// <para>Summary</para>
+            /// 
             /// <b>Example:</b>
             /// <para>摘要</para>
             /// </summary>
@@ -62,6 +78,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         }
 
         /// <summary>
+        /// <para>HTTP status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -70,6 +88,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Maximum number of return results</para>
+        /// 
         /// <b>Example:</b>
         /// <para>94</para>
         /// </summary>
@@ -78,6 +98,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>Fault description</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -86,6 +108,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Token for the next page</para>
+        /// 
         /// <b>Example:</b>
         /// <para>下一页的token</para>
         /// </summary>
@@ -94,6 +118,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>Request UUID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1813ceee-7fe5-41b4-87e5-982a4d18cca5</para>
         /// </summary>
@@ -102,6 +128,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the operation succeeded: true for success, false for failure</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -110,6 +138,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>Total count</para>
+        /// 
         /// <b>Example:</b>
         /// <para>26</para>
         /// </summary>

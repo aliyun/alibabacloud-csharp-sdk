@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class UpdateCustomTextRequest : TeaModel {
         /// <summary>
+        /// <para>Workspace unique identifier: AgentKey</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string AgentKey { get; set; }
 
         /// <summary>
+        /// <para>Commodity code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>商品code</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string CommodityCode { get; set; }
 
         /// <summary>
+        /// <para>Content</para>
+        /// 
         /// <b>Example:</b>
         /// <para>内容</para>
         /// </summary>
@@ -36,6 +41,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string Content { get; set; }
 
         /// <summary>
+        /// <para>Primary key ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,6 +52,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public long? Id { get; set; }
 
         /// <summary>
+        /// <para>Title</para>
+        /// 
         /// <b>Example:</b>
         /// <para>标题</para>
         /// </summary>

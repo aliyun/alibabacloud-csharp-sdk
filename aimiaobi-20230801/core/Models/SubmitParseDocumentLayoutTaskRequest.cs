@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
     public class SubmitParseDocumentLayoutTaskRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>正文</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]

@@ -10,22 +10,35 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class ListInterveneImportTasksResponseBody : TeaModel {
         /// <summary>
+        /// <para>Status code</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>DataNotExists</para>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Business data</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListInterveneImportTasksResponseBodyData Data { get; set; }
         public class ListInterveneImportTasksResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>Status code returned by the intervention service</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>200</para>
+            /// </summary>
             [NameInMap("Code")]
             [Validation(Required=false)]
             public int? Code { get; set; }
 
             /// <summary>
+            /// <para>Page number</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -34,6 +47,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public int? PageIndex { get; set; }
 
             /// <summary>
+            /// <para>Page size</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -41,11 +56,16 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
+            /// <summary>
+            /// <para>Task status information</para>
+            /// </summary>
             [NameInMap("StatusList")]
             [Validation(Required=false)]
             public List<ListInterveneImportTasksResponseBodyDataStatusList> StatusList { get; set; }
             public class ListInterveneImportTasksResponseBodyDataStatusList : TeaModel {
                 /// <summary>
+                /// <para>Task message</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Success</para>
                 /// </summary>
@@ -54,6 +74,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 public string Msg { get; set; }
 
                 /// <summary>
+                /// <para>Completion percentage</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>5</para>
                 /// </summary>
@@ -62,6 +84,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 public int? Percentage { get; set; }
 
                 /// <summary>
+                /// <para>Task status</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Success</para>
                 /// </summary>
@@ -70,6 +94,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 public int? Status { get; set; }
 
                 /// <summary>
+                /// <para>Task ID</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>4854</para>
                 /// </summary>
@@ -78,6 +104,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 public string TaskId { get; set; }
 
                 /// <summary>
+                /// <para>Task name</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>12344454</para>
                 /// </summary>
@@ -88,6 +116,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             }
 
             /// <summary>
+            /// <para>Total number of pages</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -98,6 +128,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         }
 
         /// <summary>
+        /// <para>HTTP status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -106,6 +138,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Error description</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -114,6 +148,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Unique request identifier</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3f7045e099474ba28ceca1b4eb6d6e21</para>
         /// </summary>
@@ -122,6 +158,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request succeeded: true for success, false for failure</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

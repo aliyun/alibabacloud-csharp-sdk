@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class SubmitImportTermsTaskRequest : TeaModel {
         /// <summary>
+        /// <para>File Key.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -19,11 +20,15 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string FileKey { get; set; }
 
+        /// <summary>
+        /// <para>Dictionary name. Optional. If not specified, the default is Default.</para>
+        /// </summary>
         [NameInMap("TermsName")]
         [Validation(Required=false)]
         public string TermsName { get; set; }
 
         /// <summary>
+        /// <para>Alibaba Cloud Model Studio unique workspace identifier: For more information, see <a href="https://help.aliyun.com/document_detail/2782167.html">Workspace ID</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

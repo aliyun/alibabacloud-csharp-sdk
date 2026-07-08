@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class GetAuditNoteProcessingStatusResponseBody : TeaModel {
         /// <summary>
+        /// <para>Status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>DataNotExists</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Response data</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetAuditNoteProcessingStatusResponseBodyData Data { get; set; }
         public class GetAuditNoteProcessingStatusResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>OSS path where the parsed rule library is stored</para>
+            /// 
             /// <b>Example:</b>
             /// <para>oss://default/path/to/audit/note</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string FileKey { get; set; }
 
             /// <summary>
+            /// <para>Size of the rule library file, in bytes</para>
+            /// 
             /// <b>Example:</b>
             /// <para>504</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public long? FileSize { get; set; }
 
             /// <summary>
+            /// <para>Name of the parsed rule library</para>
+            /// 
             /// <b>Example:</b>
             /// <para>错题本2025-07-07_解析结果</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string NoteName { get; set; }
 
             /// <summary>
+            /// <para>Task status. Valid values: PENDING, RUNNING, SUCCESSED, or FAILED</para>
+            /// 
             /// <b>Example:</b>
             /// <para>SUCCESSED</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>Task ID. Unique identifier for this task.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>111_Default_20250708142918</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string TaskId { get; set; }
 
             /// <summary>
+            /// <para>Update time</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-11-25 11:40:50</para>
             /// </summary>
@@ -72,6 +89,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         }
 
         /// <summary>
+        /// <para>HTTP status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -80,6 +99,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Error message</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -88,7 +109,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>Request ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>F2F366D6-E9FE-1006-BB70-2C650896AAB5</para>
@@ -98,6 +119,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request succeeded</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

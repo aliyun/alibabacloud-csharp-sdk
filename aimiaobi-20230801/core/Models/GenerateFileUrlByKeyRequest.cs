@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class GenerateFileUrlByKeyRequest : TeaModel {
         /// <summary>
+        /// <para>Unique workspace identity: <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string AgentKey { get; set; }
 
         /// <summary>
+        /// <para>File key. Format: protocol://serverInstance/bucketPath/fileKey</para>
+        /// 
         /// <b>Example:</b>
         /// <para>oss://default/oss-bucket-name/aimiaobi/2021/07/01/1625126400000/1.docx</para>
         /// </summary>
@@ -27,6 +30,12 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string FileKey { get; set; }
 
+        /// <summary>
+        /// <para>File name</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test.docx</para>
+        /// </summary>
         [NameInMap("FileName")]
         [Validation(Required=false)]
         public string FileName { get; set; }

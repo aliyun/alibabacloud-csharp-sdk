@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class RunStepByStepWritingRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the original conversation when regenerating content.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3f7045e099474ba28ceca1b4eb6d6e21</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string OriginSessionId { get; set; }
 
         /// <summary>
+        /// <para>The prompt.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -27,15 +30,23 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string Prompt { get; set; }
 
+        /// <summary>
+        /// <para>The reference article data for writing.</para>
+        /// </summary>
         [NameInMap("ReferenceData")]
         [Validation(Required=false)]
         public RunStepByStepWritingRequestReferenceData ReferenceData { get; set; }
         public class RunStepByStepWritingRequestReferenceData : TeaModel {
+            /// <summary>
+            /// <para>The reference article data for writing.</para>
+            /// </summary>
             [NameInMap("Articles")]
             [Validation(Required=false)]
             public List<RunStepByStepWritingRequestReferenceDataArticles> Articles { get; set; }
             public class RunStepByStepWritingRequestReferenceDataArticles : TeaModel {
                 /// <summary>
+                /// <para>The author.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>作者</para>
                 /// </summary>
@@ -44,6 +55,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 public string Author { get; set; }
 
                 /// <summary>
+                /// <para>The content.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>文章内容</para>
                 /// </summary>
@@ -52,6 +65,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 public string Content { get; set; }
 
                 /// <summary>
+                /// <para>The custom unique ID of the document.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>文档-自定义的唯一ID</para>
                 /// </summary>
@@ -60,6 +75,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 public string DocId { get; set; }
 
                 /// <summary>
+                /// <para>The internal unique ID of the document.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>8a20e007a6174522af4d6a2657d5526f</para>
                 /// </summary>
@@ -68,6 +85,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 public string DocUuid { get; set; }
 
                 /// <summary>
+                /// <para>The URL of the original material.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://www.example.com">http://www.example.com</a></para>
                 /// </summary>
@@ -76,6 +95,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 public string MediaUrl { get; set; }
 
                 /// <summary>
+                /// <para>The publication time.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2024-09-10 14:17:54</para>
                 /// </summary>
@@ -84,6 +105,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 public string PubTime { get; set; }
 
                 /// <summary>
+                /// <para>The source.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>央视网</para>
                 /// </summary>
@@ -92,6 +115,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 public string Source { get; set; }
 
                 /// <summary>
+                /// <para>The article summary.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>文章摘要</para>
                 /// </summary>
@@ -100,6 +125,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 public string Summary { get; set; }
 
                 /// <summary>
+                /// <para>The tag.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>文章标签</para>
                 /// </summary>
@@ -108,6 +135,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 public string Tag { get; set; }
 
                 /// <summary>
+                /// <para>The title.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>文章标题</para>
                 /// </summary>
@@ -116,6 +145,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 public string Title { get; set; }
 
                 /// <summary>
+                /// <para>The URL of the article.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://www.example.com/aaa.docx">https://www.example.com/aaa.docx</a></para>
                 /// </summary>
@@ -125,19 +156,30 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
             }
 
+            /// <summary>
+            /// <para>The ranked article segments for subsequent model generation.</para>
+            /// </summary>
             [NameInMap("MiniDoc")]
             [Validation(Required=false)]
             public List<string> MiniDoc { get; set; }
 
+            /// <summary>
+            /// <para>The outline. You can specify a data source to generate the outline.</para>
+            /// </summary>
             [NameInMap("Outlines")]
             [Validation(Required=false)]
             public List<RunStepByStepWritingRequestReferenceDataOutlines> Outlines { get; set; }
             public class RunStepByStepWritingRequestReferenceDataOutlines : TeaModel {
+                /// <summary>
+                /// <para>The specified data source for the outline.</para>
+                /// </summary>
                 [NameInMap("Articles")]
                 [Validation(Required=false)]
                 public List<RunStepByStepWritingRequestReferenceDataOutlinesArticles> Articles { get; set; }
                 public class RunStepByStepWritingRequestReferenceDataOutlinesArticles : TeaModel {
                     /// <summary>
+                    /// <para>The article content.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>文章内容</para>
                     /// </summary>
@@ -146,6 +188,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                     public string Content { get; set; }
 
                     /// <summary>
+                    /// <para>The article title.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>文章标题</para>
                     /// </summary>
@@ -154,6 +198,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                     public string Title { get; set; }
 
                     /// <summary>
+                    /// <para>The article URL.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>文章链接</para>
                     /// </summary>
@@ -164,6 +210,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 }
 
                 /// <summary>
+                /// <para>The outline.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>大纲</para>
                 /// </summary>
@@ -173,6 +221,9 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
             }
 
+            /// <summary>
+            /// <para>The summary result from the Large Language Model (LLM).</para>
+            /// </summary>
             [NameInMap("Summarization")]
             [Validation(Required=false)]
             public List<string> Summarization { get; set; }
@@ -180,6 +231,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         }
 
         /// <summary>
+        /// <para>The ID of a single-turn conversation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3f7045e099474ba28ceca1b4eb6d6e21</para>
         /// </summary>
@@ -188,6 +241,11 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string SessionId { get; set; }
 
         /// <summary>
+        /// <para>The task ID. You can reuse the same task ID for a multi-turn conversation.</para>
+        /// <remarks>
+        /// <para>By default, you do not need to specify this parameter. The system automatically generates a task ID. If you specify the same TaskId for subsequent tasks, the tasks are considered part of the same conversation group.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>3f7045e099474ba28ceca1b4eb6d6e21</para>
         /// </summary>
@@ -196,6 +254,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string TaskId { get; set; }
 
         /// <summary>
+        /// <para>The unique ID of the Alibaba Cloud Model Studio workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2782167.html">Obtain a Workspace ID</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -205,11 +264,22 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string WorkspaceId { get; set; }
 
+        /// <summary>
+        /// <para>The writing configuration.</para>
+        /// </summary>
         [NameInMap("WritingConfig")]
         [Validation(Required=false)]
         public RunStepByStepWritingRequestWritingConfig WritingConfig { get; set; }
         public class RunStepByStepWritingRequestWritingConfig : TeaModel {
             /// <summary>
+            /// <para>The writing domain.</para>
+            /// <list type="bullet">
+            /// <item><description><para>media (default): Media writing.</para>
+            /// </description></item>
+            /// <item><description><para>government: Official document writing.</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>media</para>
             /// </summary>
@@ -217,15 +287,23 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public string Domain { get; set; }
 
+            /// <summary>
+            /// <para>The keywords. This affects article retrieval.</para>
+            /// </summary>
             [NameInMap("Keywords")]
             [Validation(Required=false)]
             public List<string> Keywords { get; set; }
 
+            /// <summary>
+            /// <para>The prompt assistant.</para>
+            /// </summary>
             [NameInMap("PromptTag")]
             [Validation(Required=false)]
             public RunStepByStepWritingRequestWritingConfigPromptTag PromptTag { get; set; }
             public class RunStepByStepWritingRequestWritingConfigPromptTag : TeaModel {
                 /// <summary>
+                /// <para>Necessary tips.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>必要提示</para>
                 /// </summary>
@@ -234,6 +312,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 public string NecessaryTips { get; set; }
 
                 /// <summary>
+                /// <para>The position or stance.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>立场</para>
                 /// </summary>
@@ -242,6 +322,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 public string Position { get; set; }
 
                 /// <summary>
+                /// <para>Reverse the words.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>反向词</para>
                 /// </summary>
@@ -250,6 +332,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 public string ReverseWords { get; set; }
 
                 /// <summary>
+                /// <para>The theme.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>主题</para>
                 /// </summary>
@@ -260,14 +344,32 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             }
 
             /// <summary>
+            /// <para>The step-by-step writing scenario.</para>
+            /// <list type="bullet">
+            /// <item><description><para>Scenarios supported for media writing: News Writing (default), News Commentary, and General Style.</para>
+            /// </description></item>
+            /// <item><description><para>Scenarios supported for official document writing: Notification (default), Announcement, Bulletin, Request for Instruction, Decision, Letter, and General Style.</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
-            /// <para>分步骤写作场景，传媒写作支持的写作场景:新闻写作(默认),新闻评论,通用文体，公文写作支持的写作场景:通知(默认),通告,通报,请示,决定,函,通用文体</para>
+            /// <para>新闻写作</para>
             /// </summary>
             [NameInMap("Scene")]
             [Validation(Required=false)]
             public string Scene { get; set; }
 
             /// <summary>
+            /// <para>The writing step.</para>
+            /// <list type="bullet">
+            /// <item><description><para>Generate outline: OutlineGenerate</para>
+            /// </description></item>
+            /// <item><description><para>Generate summary: MiniDocSummary</para>
+            /// </description></item>
+            /// <item><description><para>Writing (default): Generate article</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>Writing</para>
             /// </summary>
@@ -275,15 +377,40 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public string Step { get; set; }
 
+            /// <summary>
+            /// <para>The return type of the summary result.<br></para>
+            /// <list type="bullet">
+            /// <item><description><para>Structure:
+            /// Returns a JSON string in payload.output.text. Example format: <c>{&quot;event&quot;:&quot;{outline}&quot;,&quot;message&quot;:&quot;{message}&quot;}</c></para>
+            /// </description></item>
+            /// <item><description><para>Content: Returns only the plain text summary content in payload.output.text. Example format:
+            /// `Outline: {outline}</para>
+            /// </description></item>
+            /// </list>
+            /// <para>{message}</para>
+            /// <para> Outline: {outline}</para>
+            /// <para>{message}`</para>
+            /// <list type="bullet">
+            /// <item><description>Event: Returns only the outline content itself in payload.output.text each time an outline is completed. Typically, six describes are returned.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Structure</para>
+            /// </summary>
             [NameInMap("SummaryReturnType")]
             [Validation(Required=false)]
             public string SummaryReturnType { get; set; }
 
+            /// <summary>
+            /// <para>Control parameters for writing, such as style, length, and output language.</para>
+            /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<RunStepByStepWritingRequestWritingConfigTags> Tags { get; set; }
             public class RunStepByStepWritingRequestWritingConfigTags : TeaModel {
                 /// <summary>
+                /// <para>The value of the option.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
                 /// </summary>
@@ -292,6 +419,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 public string Keyword { get; set; }
 
                 /// <summary>
+                /// <para>The tag of the option. For example, gcNumberSizeTag=10.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>gcNumberSizeTag</para>
                 /// </summary>
@@ -302,6 +431,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             }
 
             /// <summary>
+            /// <para>Specifies whether to automatically supplement materials.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>

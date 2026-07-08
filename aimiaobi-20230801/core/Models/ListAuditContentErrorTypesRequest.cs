@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class ListAuditContentErrorTypesRequest : TeaModel {
         /// <summary>
+        /// <para>Maximum number of records</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>Token for the next page</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cEoBWREAXdxaOyjq/cqAbg==</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para><a href="https://help.aliyun.com/document_detail/2782167.html">Workspace ID</a></para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxx</para>
         /// </summary>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class SubmitDocClusterTaskShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The unique ID of the workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string AgentKey { get; set; }
 
         /// <summary>
+        /// <para>A list of documents.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Documents")]
@@ -27,6 +29,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string DocumentsShrink { get; set; }
 
         /// <summary>
+        /// <para>The character limit for the generated cluster summary.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>49</para>
         /// </summary>
@@ -35,6 +39,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? SummaryLength { get; set; }
 
         /// <summary>
+        /// <para>The character limit for the generated cluster title.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>69</para>
         /// </summary>
@@ -43,6 +49,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? TitleLength { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of clusters.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>15</para>
         /// </summary>

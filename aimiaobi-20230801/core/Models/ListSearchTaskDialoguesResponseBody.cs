@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class ListSearchTaskDialoguesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>NoData</para>
         /// </summary>
@@ -17,15 +19,23 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The data returned.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListSearchTaskDialoguesResponseBodyData> Data { get; set; }
         public class ListSearchTaskDialoguesResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The configuration.</para>
+            /// </summary>
             [NameInMap("ChatConfig")]
             [Validation(Required=false)]
             public ListSearchTaskDialoguesResponseBodyDataChatConfig ChatConfig { get; set; }
             public class ListSearchTaskDialoguesResponseBodyDataChatConfig : TeaModel {
                 /// <summary>
+                /// <para>The request type.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>24</para>
                 /// </summary>
@@ -33,11 +43,16 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 [Validation(Required=false)]
                 public int? DialogueType { get; set; }
 
+                /// <summary>
+                /// <para>Indicates whether the process is end-to-end.</para>
+                /// </summary>
                 [NameInMap("EndToEnd")]
                 [Validation(Required=false)]
                 public bool? EndToEnd { get; set; }
 
                 /// <summary>
+                /// <para>The generation level.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>concise</para>
                 /// </summary>
@@ -46,6 +61,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 public string GenerateLevel { get; set; }
 
                 /// <summary>
+                /// <para>The type of content generation.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>copilotReference</para>
                 /// </summary>
@@ -53,6 +70,9 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 [Validation(Required=false)]
                 public string GenerateTechnology { get; set; }
 
+                /// <summary>
+                /// <para>The search type.</para>
+                /// </summary>
                 [NameInMap("SearchModels")]
                 [Validation(Required=false)]
                 public List<string> SearchModels { get; set; }
@@ -69,11 +89,16 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                     [Validation(Required=false)]
                     public List<string> MultimodalSearchTypes { get; set; }
 
+                    /// <summary>
+                    /// <para>The search sources.</para>
+                    /// </summary>
                     [NameInMap("SearchSources")]
                     [Validation(Required=false)]
                     public List<ListSearchTaskDialoguesResponseBodyDataChatConfigSearchParamSearchSources> SearchSources { get; set; }
                     public class ListSearchTaskDialoguesResponseBodyDataChatConfigSearchParamSearchSources : TeaModel {
                         /// <summary>
+                        /// <para>The type.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>x\&quot;x</para>
                         /// </summary>
@@ -82,6 +107,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                         public string Code { get; set; }
 
                         /// <summary>
+                        /// <para>The unique ID.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>xx</para>
                         /// </summary>
@@ -90,6 +117,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                         public string DatasetName { get; set; }
 
                         /// <summary>
+                        /// <para>The description.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>x</para>
                         /// </summary>
@@ -108,6 +137,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             }
 
             /// <summary>
+            /// <para>The time when the task was created.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-11-25 13:33:01</para>
             /// </summary>
@@ -116,6 +147,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The type of generation.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>24</para>
             /// </summary>
@@ -124,6 +157,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public int? DialogueType { get; set; }
 
             /// <summary>
+            /// <para>The generated content that the customer rated as good.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
             /// </summary>
@@ -132,6 +167,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string GoodText { get; set; }
 
             /// <summary>
+            /// <para>The original session ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxxx</para>
             /// </summary>
@@ -140,6 +177,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string OriginSessionId { get; set; }
 
             /// <summary>
+            /// <para>The input prompt.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
             /// </summary>
@@ -148,6 +187,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string Prompt { get; set; }
 
             /// <summary>
+            /// <para>The rating of the content, which can be Like or Dislike.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>thumbsUp</para>
             /// </summary>
@@ -156,6 +197,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string Rating { get; set; }
 
             /// <summary>
+            /// <para>The response body as a string.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{}</para>
             /// </summary>
@@ -164,6 +207,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string ResponseBodyStr { get; set; }
 
             /// <summary>
+            /// <para>The unique ID of a single-turn conversation.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxxx</para>
             /// </summary>
@@ -171,11 +216,16 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public string SessionId { get; set; }
 
+            /// <summary>
+            /// <para>The tags.</para>
+            /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<string> Tags { get; set; }
 
             /// <summary>
+            /// <para>The unique ID of the task.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxxx</para>
             /// </summary>
@@ -184,6 +234,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string TaskId { get; set; }
 
             /// <summary>
+            /// <para>The customer feedback.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
             /// </summary>
@@ -194,6 +246,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -202,6 +256,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -210,6 +266,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The number of the page returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -218,6 +276,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries returned per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -226,6 +286,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The unique ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1813ceee-7fe5-41b4-87e5-982a4d18cca5</para>
         /// </summary>
@@ -234,6 +296,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. \<c>true\\</c> indicates success. \<c>false\\</c> indicates failure.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -242,6 +306,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>

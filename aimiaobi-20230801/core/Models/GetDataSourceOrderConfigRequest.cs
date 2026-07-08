@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class GetDataSourceOrderConfigRequest : TeaModel {
         /// <summary>
+        /// <para>Unique identifier for the workspace: <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,15 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string AgentKey { get; set; }
 
         /// <summary>
+        /// <para>When productCode=miaosou, this corresponds to Miaosou: generation technology. Possible values:</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>copilotPrecise</para>
+        /// </description></item>
+        /// <item><description><para>copilotReference</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>copilotPrecise</para>
         /// </summary>
@@ -28,6 +38,13 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string GenerateTechnology { get; set; }
 
         /// <summary>
+        /// <para>Configuration type. Possible values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>miaobi</para>
+        /// </description></item>
+        /// <item><description><para>miaosou</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class RunAiHelperWritingRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to generate the text step by step.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public bool? DistributeWriting { get; set; }
 
         /// <summary>
+        /// <para>The prompt, which specifies the subject for the AI to write about.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string Prompt { get; set; }
 
         /// <summary>
+        /// <para>The prompt pattern. For example, PE indicates the advanced pattern and Template indicates the template pattern.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Template</para>
         /// </summary>
@@ -36,6 +41,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string PromptMode { get; set; }
 
         /// <summary>
+        /// <para>The <a href="https://help.aliyun.com/document_detail/2782167.html">workspace</a> ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,6 +52,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string WorkspaceId { get; set; }
 
         /// <summary>
+        /// <para>The writing parameters from the previous form, specified as key-value pairs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;wordCount&quot;: &quot;1000&quot;, &quot;tone&quot;: &quot;formal&quot;}</para>
         /// </summary>
@@ -54,7 +62,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public Dictionary<string, string> WritingParams { get; set; }
 
         /// <summary>
-        /// <para>写作场景：government(政务)、media(传媒)、market(营销)、office(办公)、custom(自定义)</para>
+        /// <para>The writing scenario. Valid values: government, media, market, office, and custom.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,11 +73,11 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string WritingScene { get; set; }
 
         /// <summary>
-        /// <para>写作文体唯一标识KEY，可通过ListWritingStyles接口获取对应写作场景下的文体列表</para>
+        /// <para>The unique key for the writing style. Call the <a href="https://help.aliyun.com/document_detail/2922609.html">ListWritingStyles</a> operation to get a list of styles for the specified scenario.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>news_article</para>
+        /// <para>通知</para>
         /// </summary>
         [NameInMap("WritingStyle")]
         [Validation(Required=false)]

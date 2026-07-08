@@ -10,18 +10,25 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class GenerateUploadConfigResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>NoData</para>
+        /// <para>successful</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The business data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GenerateUploadConfigResponseBodyData Data { get; set; }
         public class GenerateUploadConfigResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The unique identifier of the file. You can use this value as a URL for AI Writing Assistant.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>oss://default/oss-bucket-name/aimiaobi/2021/07/01/1625126400000/1.docx</para>
             /// </summary>
@@ -29,13 +36,26 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public string FileKey { get; set; }
 
+            /// <summary>
+            /// <para>The credentials for uploading the file to OSS.</para>
+            /// <pre><code class="language-json">{
+            ///   &quot;OSSAccessKeyId&quot;: &quot;xxx&quot;,
+            ///   &quot;Signature&quot;: &quot;xxx+xxx=&quot;,
+            ///   &quot;MaxSize&quot;: 31457280,
+            ///   &quot;key&quot;: &quot;aimiaobi/dataset/2_2/xx.txt&quot;,
+            ///   &quot;policy&quot;: &quot;xxx==&quot;
+            /// }
+            /// </c></pre>
+            /// </summary>
             [NameInMap("FormDatas")]
             [Validation(Required=false)]
             public Dictionary<string, string> FormDatas { get; set; }
 
             /// <summary>
+            /// <para>The address for uploading the file to OSS. This is a dedicated OSS domain name for AI Writing Assistant. The value is fixed to \<c>https\\://aimiaobi-service-prod.oss-cn-beijing.aliyuncs.com/\\</c>.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para><a href="https://bucket-name.oss-cn-hangzhou.aliyuncs.com">https://bucket-name.oss-cn-hangzhou.aliyuncs.com</a></para>
+            /// <para><a href="https://aimiaobi-service-prod.oss-cn-beijing.aliyuncs.com/">https://aimiaobi-service-prod.oss-cn-beijing.aliyuncs.com/</a></para>
             /// </summary>
             [NameInMap("PostUrl")]
             [Validation(Required=false)]
@@ -44,6 +64,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -52,14 +74,18 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>success</para>
+        /// <para>successful</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The unique ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1813ceee-7fe5-41b4-87e5-982a4d18cca5</para>
         /// </summary>
@@ -68,6 +94,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. \<c>true\\</c> indicates success. \<c>false\\</c> indicates failure.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

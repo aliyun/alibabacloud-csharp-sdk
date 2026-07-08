@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class InsertInterveneRuleShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>Unique identifier of the workspace: <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -19,6 +20,9 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string AgentKey { get; set; }
 
+        /// <summary>
+        /// <para>Intervention rule configuration</para>
+        /// </summary>
         [NameInMap("InterveneRuleConfig")]
         [Validation(Required=false)]
         public string InterveneRuleConfigShrink { get; set; }

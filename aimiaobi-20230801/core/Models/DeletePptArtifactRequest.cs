@@ -17,11 +17,19 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string ExternalUserId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the PPT work.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>53245</para>
+        /// </summary>
         [NameInMap("PptArtifactId")]
         [Validation(Required=false)]
         public string PptArtifactId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the workspace.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>llm-xx</para>
         /// </summary>

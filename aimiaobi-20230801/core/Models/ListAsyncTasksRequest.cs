@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class ListAsyncTasksRequest : TeaModel {
         /// <summary>
+        /// <para>The unique identifier of the workspace: <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string AgentKey { get; set; }
 
         /// <summary>
+        /// <para>The end of the time range to query task creation times. Format: YYYY-MM-DD HH:mm:ss.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2023-03-18 02:00:00</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string CreateTimeEnd { get; set; }
 
         /// <summary>
+        /// <para>The start of the time range to query task creation times. Format: YYYY-MM-DD HH:mm:ss.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2023-02-19 07:28:11</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string CreateTimeStart { get; set; }
 
         /// <summary>
+        /// <para>The current page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -44,6 +51,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? Current { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Default value: 10.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -52,6 +61,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public int? Size { get; set; }
 
         /// <summary>
+        /// <para>A term query for the task code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>MaterialDocumentUpload</para>
         /// </summary>
@@ -59,11 +70,19 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string TaskCode { get; set; }
 
+        /// <summary>
+        /// <para>A term query for the task name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>任务名称</para>
+        /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]
         public string TaskName { get; set; }
 
         /// <summary>
+        /// <para>A term query for the task status. Valid values: 0 (Pending), 1 (Running), 2 (Succeeded), 3 (Paused), 4 (Failed and retriable), 5 (Failed and not retriable), and 6 (Canceled).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -71,14 +90,26 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public int? TaskStatus { get; set; }
 
+        /// <summary>
+        /// <para>A term query for a list of task statuses. Valid values: 0 (Pending), 1 (Running), 2 (Succeeded), 3 (Paused), 4 (Failed and retriable), 5 (Failed and not retriable), and 6 (Canceled).</para>
+        /// </summary>
         [NameInMap("TaskStatusList")]
         [Validation(Required=false)]
         public List<int?> TaskStatusList { get; set; }
 
+        /// <summary>
+        /// <para>A term query for the task type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>暂无</para>
+        /// </summary>
         [NameInMap("TaskType")]
         [Validation(Required=false)]
         public string TaskType { get; set; }
 
+        /// <summary>
+        /// <para>A term query for a list of task types.</para>
+        /// </summary>
         [NameInMap("TaskTypeList")]
         [Validation(Required=false)]
         public List<string> TaskTypeList { get; set; }

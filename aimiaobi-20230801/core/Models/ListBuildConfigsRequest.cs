@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class ListBuildConfigsRequest : TeaModel {
         /// <summary>
+        /// <para>Unique identifier of the workspace: <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +25,8 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>Content category. Valid values: media or government.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>media</para>
         /// </summary>

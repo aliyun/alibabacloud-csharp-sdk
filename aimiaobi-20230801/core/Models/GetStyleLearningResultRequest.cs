@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class GetStyleLearningResultRequest : TeaModel {
         /// <summary>
+        /// <para>The unique identifier of the workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string AgentKey { get; set; }
 
         /// <summary>
+        /// <para>The ID of the style learning task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
