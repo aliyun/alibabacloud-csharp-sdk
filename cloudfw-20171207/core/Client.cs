@@ -212,17 +212,17 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create an address book, including IPv4 address book, ECS tag address book, IPv6 address book, domain address book, and ACK address book.</para>
+        /// <para>Creates an address book, including IPv4 address books, ECS tag-based address books, IPv6 address books, domain name address books, and ACK address books.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API operation is used to create an address book, including IPv4 address book, ECS tag address book, IPv6 address book, domain address book, and ACK address book.</para>
-        /// <h2>QPS Limit</h2>
-        /// <para>The single-user QPS limit for this API operation is 10 calls per second. If the limit is exceeded, API calls will be throttled, which may affect your business. Please make calls appropriately.</para>
+        /// <para>This operation creates an address book, including IPv4 address books, ECS tag-based address books, IPv6 address books, domain name address books, and ACK address books.</para>
+        /// <h2>Rate limit</h2>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// AddAddressBookRequest
         /// </param>
         /// <param name="runtime">
@@ -232,9 +232,19 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// <returns>
         /// AddAddressBookResponse
         /// </returns>
-        public AddAddressBookResponse AddAddressBookWithOptions(AddAddressBookRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public AddAddressBookResponse AddAddressBookWithOptions(AddAddressBookRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AddAddressBookShrinkRequest request = new AddAddressBookShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AssetMemberUids))
+            {
+                request.AssetMemberUidsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AssetMemberUids, "AssetMemberUids", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AssetRegionResourceTypes))
+            {
+                request.AssetRegionResourceTypesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AssetRegionResourceTypes, "AssetRegionResourceTypes", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AckClusterConnectorId))
             {
@@ -251,6 +261,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddressList))
             {
                 query["AddressList"] = request.AddressList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssetMemberUidsShrink))
+            {
+                query["AssetMemberUids"] = request.AssetMemberUidsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssetRegionResourceTypesShrink))
+            {
+                query["AssetRegionResourceTypes"] = request.AssetRegionResourceTypesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoAddTagEcs))
             {
@@ -305,17 +323,17 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create an address book, including IPv4 address book, ECS tag address book, IPv6 address book, domain address book, and ACK address book.</para>
+        /// <para>Creates an address book, including IPv4 address books, ECS tag-based address books, IPv6 address books, domain name address books, and ACK address books.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API operation is used to create an address book, including IPv4 address book, ECS tag address book, IPv6 address book, domain address book, and ACK address book.</para>
-        /// <h2>QPS Limit</h2>
-        /// <para>The single-user QPS limit for this API operation is 10 calls per second. If the limit is exceeded, API calls will be throttled, which may affect your business. Please make calls appropriately.</para>
+        /// <para>This operation creates an address book, including IPv4 address books, ECS tag-based address books, IPv6 address books, domain name address books, and ACK address books.</para>
+        /// <h2>Rate limit</h2>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// AddAddressBookRequest
         /// </param>
         /// <param name="runtime">
@@ -325,9 +343,19 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// <returns>
         /// AddAddressBookResponse
         /// </returns>
-        public async Task<AddAddressBookResponse> AddAddressBookWithOptionsAsync(AddAddressBookRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<AddAddressBookResponse> AddAddressBookWithOptionsAsync(AddAddressBookRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AddAddressBookShrinkRequest request = new AddAddressBookShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AssetMemberUids))
+            {
+                request.AssetMemberUidsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AssetMemberUids, "AssetMemberUids", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AssetRegionResourceTypes))
+            {
+                request.AssetRegionResourceTypesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AssetRegionResourceTypes, "AssetRegionResourceTypes", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AckClusterConnectorId))
             {
@@ -344,6 +372,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddressList))
             {
                 query["AddressList"] = request.AddressList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssetMemberUidsShrink))
+            {
+                query["AssetMemberUids"] = request.AssetMemberUidsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssetRegionResourceTypesShrink))
+            {
+                query["AssetRegionResourceTypes"] = request.AssetRegionResourceTypesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoAddTagEcs))
             {
@@ -398,14 +434,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create an address book, including IPv4 address book, ECS tag address book, IPv6 address book, domain address book, and ACK address book.</para>
+        /// <para>Creates an address book, including IPv4 address books, ECS tag-based address books, IPv6 address books, domain name address books, and ACK address books.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API operation is used to create an address book, including IPv4 address book, ECS tag address book, IPv6 address book, domain address book, and ACK address book.</para>
-        /// <h2>QPS Limit</h2>
-        /// <para>The single-user QPS limit for this API operation is 10 calls per second. If the limit is exceeded, API calls will be throttled, which may affect your business. Please make calls appropriately.</para>
+        /// <para>This operation creates an address book, including IPv4 address books, ECS tag-based address books, IPv6 address books, domain name address books, and ACK address books.</para>
+        /// <h2>Rate limit</h2>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -423,14 +459,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create an address book, including IPv4 address book, ECS tag address book, IPv6 address book, domain address book, and ACK address book.</para>
+        /// <para>Creates an address book, including IPv4 address books, ECS tag-based address books, IPv6 address books, domain name address books, and ACK address books.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API operation is used to create an address book, including IPv4 address book, ECS tag address book, IPv6 address book, domain address book, and ACK address book.</para>
-        /// <h2>QPS Limit</h2>
-        /// <para>The single-user QPS limit for this API operation is 10 calls per second. If the limit is exceeded, API calls will be throttled, which may affect your business. Please make calls appropriately.</para>
+        /// <para>This operation creates an address book, including IPv4 address books, ECS tag-based address books, IPv6 address books, domain name address books, and ACK address books.</para>
+        /// <h2>Rate limit</h2>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11096,13 +11132,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Access Control List (ACL) whitelist.</para>
+        /// <para>Retrieves the ACL whitelist.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for this API is 10 for each user. If you exceed this limit, API calls are throttled, which may affect your business. We recommend that you call the API at a reasonable rate.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11148,13 +11184,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Access Control List (ACL) whitelist.</para>
+        /// <para>Retrieves the ACL whitelist.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for this API is 10 for each user. If you exceed this limit, API calls are throttled, which may affect your business. We recommend that you call the API at a reasonable rate.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11200,13 +11236,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Access Control List (ACL) whitelist.</para>
+        /// <para>Retrieves the ACL whitelist.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for this API is 10 for each user. If you exceed this limit, API calls are throttled, which may affect your business. We recommend that you call the API at a reasonable rate.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11224,13 +11260,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Access Control List (ACL) whitelist.</para>
+        /// <para>Retrieves the ACL whitelist.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for this API is 10 for each user. If you exceed this limit, API calls are throttled, which may affect your business. We recommend that you call the API at a reasonable rate.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11248,17 +11284,17 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries address books in a batch.</para>
+        /// <para>Queries address books in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Use this API to query the details of an access control policy address book.</para>
+        /// <para>This operation is used to query the details of access control policy address books.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The per-user QPS limit for this API is 10. Exceeding this limit throttles your API calls and may impact your business. Plan your calls accordingly.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// DescribeAddressBookRequest
         /// </param>
         /// <param name="runtime">
@@ -11268,10 +11304,20 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// <returns>
         /// DescribeAddressBookResponse
         /// </returns>
-        public DescribeAddressBookResponse DescribeAddressBookWithOptions(DescribeAddressBookRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeAddressBookResponse DescribeAddressBookWithOptions(DescribeAddressBookRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DescribeAddressBookShrinkRequest request = new DescribeAddressBookShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AssetMemberUids))
+            {
+                request.AssetMemberUidsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AssetMemberUids, "AssetMemberUids", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssetMemberUidsShrink))
+            {
+                query["AssetMemberUids"] = request.AssetMemberUidsShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContainPort))
             {
                 query["ContainPort"] = request.ContainPort;
@@ -11321,17 +11367,17 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries address books in a batch.</para>
+        /// <para>Queries address books in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Use this API to query the details of an access control policy address book.</para>
+        /// <para>This operation is used to query the details of access control policy address books.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The per-user QPS limit for this API is 10. Exceeding this limit throttles your API calls and may impact your business. Plan your calls accordingly.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// DescribeAddressBookRequest
         /// </param>
         /// <param name="runtime">
@@ -11341,10 +11387,20 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// <returns>
         /// DescribeAddressBookResponse
         /// </returns>
-        public async Task<DescribeAddressBookResponse> DescribeAddressBookWithOptionsAsync(DescribeAddressBookRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeAddressBookResponse> DescribeAddressBookWithOptionsAsync(DescribeAddressBookRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DescribeAddressBookShrinkRequest request = new DescribeAddressBookShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AssetMemberUids))
+            {
+                request.AssetMemberUidsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AssetMemberUids, "AssetMemberUids", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssetMemberUidsShrink))
+            {
+                query["AssetMemberUids"] = request.AssetMemberUidsShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContainPort))
             {
                 query["ContainPort"] = request.ContainPort;
@@ -11394,14 +11450,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries address books in a batch.</para>
+        /// <para>Queries address books in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Use this API to query the details of an access control policy address book.</para>
+        /// <para>This operation is used to query the details of access control policy address books.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The per-user QPS limit for this API is 10. Exceeding this limit throttles your API calls and may impact your business. Plan your calls accordingly.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11419,14 +11475,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries address books in a batch.</para>
+        /// <para>Queries address books in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Use this API to query the details of an access control policy address book.</para>
+        /// <para>This operation is used to query the details of access control policy address books.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The per-user QPS limit for this API is 10. Exceeding this limit throttles your API calls and may impact your business. Plan your calls accordingly.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14776,7 +14832,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取总流量趋势</para>
+        /// <para>Queries the traffic trend of a firewall.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14826,7 +14882,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取总流量趋势</para>
+        /// <para>Queries the traffic trend of a firewall.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14876,7 +14932,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取总流量趋势</para>
+        /// <para>Queries the traffic trend of a firewall.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14894,7 +14950,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取总流量趋势</para>
+        /// <para>Queries the traffic trend of a firewall.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38104,17 +38160,17 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify an address book.</para>
+        /// <para>Modifies an address book.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is used to modify an address book.</para>
-        /// <h2>QPS Limit</h2>
-        /// <para>The single-user QPS limit for this API is 10 requests per second. Exceeding this limit will result in API throttling, which may affect your business. Please make calls responsibly.</para>
+        /// <para>This operation is used to modify an address book.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation appropriately.</para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ModifyAddressBookRequest
         /// </param>
         /// <param name="runtime">
@@ -38124,9 +38180,19 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// <returns>
         /// ModifyAddressBookResponse
         /// </returns>
-        public ModifyAddressBookResponse ModifyAddressBookWithOptions(ModifyAddressBookRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ModifyAddressBookResponse ModifyAddressBookWithOptions(ModifyAddressBookRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ModifyAddressBookShrinkRequest request = new ModifyAddressBookShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AssetMemberUids))
+            {
+                request.AssetMemberUidsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AssetMemberUids, "AssetMemberUids", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AssetRegionResourceTypes))
+            {
+                request.AssetRegionResourceTypesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AssetRegionResourceTypes, "AssetRegionResourceTypes", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AckLabels))
             {
@@ -38139,6 +38205,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddressList))
             {
                 query["AddressList"] = request.AddressList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssetMemberUidsShrink))
+            {
+                query["AssetMemberUids"] = request.AssetMemberUidsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssetRegionResourceTypesShrink))
+            {
+                query["AssetRegionResourceTypes"] = request.AssetRegionResourceTypesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoAddTagEcs))
             {
@@ -38197,17 +38271,17 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify an address book.</para>
+        /// <para>Modifies an address book.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is used to modify an address book.</para>
-        /// <h2>QPS Limit</h2>
-        /// <para>The single-user QPS limit for this API is 10 requests per second. Exceeding this limit will result in API throttling, which may affect your business. Please make calls responsibly.</para>
+        /// <para>This operation is used to modify an address book.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation appropriately.</para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ModifyAddressBookRequest
         /// </param>
         /// <param name="runtime">
@@ -38217,9 +38291,19 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// <returns>
         /// ModifyAddressBookResponse
         /// </returns>
-        public async Task<ModifyAddressBookResponse> ModifyAddressBookWithOptionsAsync(ModifyAddressBookRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ModifyAddressBookResponse> ModifyAddressBookWithOptionsAsync(ModifyAddressBookRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ModifyAddressBookShrinkRequest request = new ModifyAddressBookShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AssetMemberUids))
+            {
+                request.AssetMemberUidsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AssetMemberUids, "AssetMemberUids", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AssetRegionResourceTypes))
+            {
+                request.AssetRegionResourceTypesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AssetRegionResourceTypes, "AssetRegionResourceTypes", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AckLabels))
             {
@@ -38232,6 +38316,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddressList))
             {
                 query["AddressList"] = request.AddressList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssetMemberUidsShrink))
+            {
+                query["AssetMemberUids"] = request.AssetMemberUidsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssetRegionResourceTypesShrink))
+            {
+                query["AssetRegionResourceTypes"] = request.AssetRegionResourceTypesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoAddTagEcs))
             {
@@ -38290,14 +38382,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify an address book.</para>
+        /// <para>Modifies an address book.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is used to modify an address book.</para>
-        /// <h2>QPS Limit</h2>
-        /// <para>The single-user QPS limit for this API is 10 requests per second. Exceeding this limit will result in API throttling, which may affect your business. Please make calls responsibly.</para>
+        /// <para>This operation is used to modify an address book.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -38315,14 +38407,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify an address book.</para>
+        /// <para>Modifies an address book.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is used to modify an address book.</para>
-        /// <h2>QPS Limit</h2>
-        /// <para>The single-user QPS limit for this API is 10 requests per second. Exceeding this limit will result in API throttling, which may affect your business. Please make calls responsibly.</para>
+        /// <para>This operation is used to modify an address book.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">

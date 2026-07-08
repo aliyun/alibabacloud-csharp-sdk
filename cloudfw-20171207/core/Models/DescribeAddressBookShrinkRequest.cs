@@ -8,13 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
-    public class DescribeAddressBookRequest : TeaModel {
+    public class DescribeAddressBookShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The list of member accounts for the asset address book.</para>
         /// </summary>
         [NameInMap("AssetMemberUids")]
         [Validation(Required=false)]
-        public List<long?> AssetMemberUids { get; set; }
+        public string AssetMemberUidsShrink { get; set; }
 
         /// <summary>
         /// <para>Queries address books that contain the specified port. This parameter takes effect only when the <b>GroupType</b> parameter is set to <b>port</b>.</para>

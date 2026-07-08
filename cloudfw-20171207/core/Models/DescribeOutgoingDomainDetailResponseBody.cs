@@ -221,7 +221,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string ClassId { get; set; }
 
                 /// <summary>
-                /// <para>The risk level.</para>
+                /// <para>The risk level. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>0</b>: no risk.</description></item>
+                /// <item><description><b>1</b>: low risk.</description></item>
+                /// <item><description><b>2</b>: medium risk.</description></item>
+                /// <item><description><b>3</b>: high risk.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -273,7 +279,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string TotalBytes { get; set; }
 
             /// <summary>
-            /// <para>The instance ID of the VPC.</para>
+            /// <para>The VPC instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-9dp16jgwgyvn****</para>

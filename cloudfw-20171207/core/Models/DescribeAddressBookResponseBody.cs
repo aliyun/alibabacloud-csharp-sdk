@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeAddressBookResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of address books.</para>
+        /// <para>The list of address books.</para>
         /// </summary>
         [NameInMap("Acls")]
         [Validation(Required=false)]
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string AckClusterConnectorName { get; set; }
 
             /// <summary>
-            /// <para>A list of ACK pod labels.</para>
+            /// <para>The list of pod labels in the ACK cluster.</para>
             /// </summary>
             [NameInMap("AckLabels")]
             [Validation(Required=false)]
             public List<DescribeAddressBookResponseBodyAclsAckLabels> AckLabels { get; set; }
             public class DescribeAddressBookResponseBodyAclsAckLabels : TeaModel {
                 /// <summary>
-                /// <para>The key of the ACK pod label.</para>
+                /// <para>The key of the pod label in the ACK cluster.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>app</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The value of the ACK pod label.</para>
+                /// <para>The value of the pod label in the ACK cluster.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>storage-operator</para>
@@ -66,14 +66,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             }
 
             /// <summary>
-            /// <para>A list of ACK namespaces.</para>
+            /// <para>The list of pod namespaces in the ACK cluster.</para>
             /// </summary>
             [NameInMap("AckNamespaces")]
             [Validation(Required=false)]
             public List<string> AckNamespaces { get; set; }
 
             /// <summary>
-            /// <para>A list of CIDR blocks in the address book.</para>
+            /// <para>The address list of the address book.</para>
             /// </summary>
             [NameInMap("AddressList")]
             [Validation(Required=false)]
@@ -90,14 +90,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? AddressListCount { get; set; }
 
             /// <summary>
-            /// <para>A list of addresses, each with a description.</para>
+            /// <para>The address list of the address book that includes descriptions for individual addresses.</para>
             /// </summary>
             [NameInMap("Addresses")]
             [Validation(Required=false)]
             public List<DescribeAddressBookResponseBodyAclsAddresses> Addresses { get; set; }
             public class DescribeAddressBookResponseBodyAclsAddresses : TeaModel {
                 /// <summary>
-                /// <para>The IP address or CIDR block.</para>
+                /// <para>The address information of the address book.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>192.168.0.1/32</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string Address { get; set; }
 
                 /// <summary>
-                /// <para>The note for the address.</para>
+                /// <para>The description of the individual address.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Single Address Description</para>
@@ -119,7 +119,314 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether to automatically add the public IPs of tagged ECS instances to the address book. This applies to newly purchased instances and existing instances whose tags are modified to match.</para>
+            /// <para>The list of member accounts for the asset address book.</para>
+            /// </summary>
+            [NameInMap("AssetMemberUids")]
+            [Validation(Required=false)]
+            public List<long?> AssetMemberUids { get; set; }
+
+            /// <summary>
+            /// <para>The list of regions and resource types for the asset address book.</para>
+            /// </summary>
+            [NameInMap("AssetRegionResourceTypes")]
+            [Validation(Required=false)]
+            public List<DescribeAddressBookResponseBodyAclsAssetRegionResourceTypes> AssetRegionResourceTypes { get; set; }
+            public class DescribeAddressBookResponseBodyAclsAssetRegionResourceTypes : TeaModel {
+                /// <summary>
+                /// <para>The region ID of the asset.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>all</para>
+                /// </summary>
+                [NameInMap("AssetRegionId")]
+                [Validation(Required=false)]
+                public string AssetRegionId { get; set; }
+
+                /// <summary>
+                /// <para>The asset type.</para>
+                /// </summary>
+                [NameInMap("ResourceType")]
+                [Validation(Required=false)]
+                public DescribeAddressBookResponseBodyAclsAssetRegionResourceTypesResourceType ResourceType { get; set; }
+                public class DescribeAddressBookResponseBodyAclsAssetRegionResourceTypesResourceType : TeaModel {
+                    /// <summary>
+                    /// <para>The IPv4 asset type.</para>
+                    /// </summary>
+                    [NameInMap("Ipv4")]
+                    [Validation(Required=false)]
+                    public DescribeAddressBookResponseBodyAclsAssetRegionResourceTypesResourceTypeIpv4 Ipv4 { get; set; }
+                    public class DescribeAddressBookResponseBodyAclsAssetRegionResourceTypesResourceTypeIpv4 : TeaModel {
+                        /// <summary>
+                        /// <para>The asset type: AIGatewayEIP.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>false</para>
+                        /// </summary>
+                        [NameInMap("AiGatewayEIP")]
+                        [Validation(Required=false)]
+                        public bool? AiGatewayEIP { get; set; }
+
+                        /// <summary>
+                        /// <para>The asset type: AlbEIP.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>false</para>
+                        /// </summary>
+                        [NameInMap("AlbEIP")]
+                        [Validation(Required=false)]
+                        public bool? AlbEIP { get; set; }
+
+                        /// <summary>
+                        /// <para>The asset type: ApigEIP.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>false</para>
+                        /// </summary>
+                        [NameInMap("ApiGatewayEIP")]
+                        [Validation(Required=false)]
+                        public bool? ApiGatewayEIP { get; set; }
+
+                        /// <summary>
+                        /// <para>The asset type: BastionHostEgressIP.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>false</para>
+                        /// </summary>
+                        [NameInMap("BastionHostEgressIP")]
+                        [Validation(Required=false)]
+                        public bool? BastionHostEgressIP { get; set; }
+
+                        /// <summary>
+                        /// <para>The asset type: BastionHostIP.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>false</para>
+                        /// </summary>
+                        [NameInMap("BastionHostIP")]
+                        [Validation(Required=false)]
+                        public bool? BastionHostIP { get; set; }
+
+                        /// <summary>
+                        /// <para>The asset type: BastionHostIngressIP.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>false</para>
+                        /// </summary>
+                        [NameInMap("BastionHostIngressIP")]
+                        [Validation(Required=false)]
+                        public bool? BastionHostIngressIP { get; set; }
+
+                        /// <summary>
+                        /// <para>The asset type: EIP.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>false</para>
+                        /// </summary>
+                        [NameInMap("EIP")]
+                        [Validation(Required=false)]
+                        public bool? EIP { get; set; }
+
+                        /// <summary>
+                        /// <para>The asset type: EcsEIP.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>false</para>
+                        /// </summary>
+                        [NameInMap("EcsEIP")]
+                        [Validation(Required=false)]
+                        public bool? EcsEIP { get; set; }
+
+                        /// <summary>
+                        /// <para>The asset type: EcsPublicIP.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>false</para>
+                        /// </summary>
+                        [NameInMap("EcsPublicIP")]
+                        [Validation(Required=false)]
+                        public bool? EcsPublicIP { get; set; }
+
+                        /// <summary>
+                        /// <para>The asset type: EniEIP.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>false</para>
+                        /// </summary>
+                        [NameInMap("EniEIP")]
+                        [Validation(Required=false)]
+                        public bool? EniEIP { get; set; }
+
+                        /// <summary>
+                        /// <para>The asset type: GaEIP.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>false</para>
+                        /// </summary>
+                        [NameInMap("GaEIP")]
+                        [Validation(Required=false)]
+                        public bool? GaEIP { get; set; }
+
+                        /// <summary>
+                        /// <para>The asset type: HAVIP.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>false</para>
+                        /// </summary>
+                        [NameInMap("HAVIP")]
+                        [Validation(Required=false)]
+                        public bool? HAVIP { get; set; }
+
+                        /// <summary>
+                        /// <para>The asset type: NatEIP.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>false</para>
+                        /// </summary>
+                        [NameInMap("NatEIP")]
+                        [Validation(Required=false)]
+                        public bool? NatEIP { get; set; }
+
+                        /// <summary>
+                        /// <para>The asset type: NatPublicIP.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>false</para>
+                        /// </summary>
+                        [NameInMap("NatPublicIP")]
+                        [Validation(Required=false)]
+                        public bool? NatPublicIP { get; set; }
+
+                        /// <summary>
+                        /// <para>The asset type: NlbEIP.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>false</para>
+                        /// </summary>
+                        [NameInMap("NlbEIP")]
+                        [Validation(Required=false)]
+                        public bool? NlbEIP { get; set; }
+
+                        /// <summary>
+                        /// <para>The asset type: SlbEIP.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>true</para>
+                        /// </summary>
+                        [NameInMap("SlbEIP")]
+                        [Validation(Required=false)]
+                        public bool? SlbEIP { get; set; }
+
+                        /// <summary>
+                        /// <para>The asset type: SlbPublicIP.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>false</para>
+                        /// </summary>
+                        [NameInMap("SlbPublicIP")]
+                        [Validation(Required=false)]
+                        public bool? SlbPublicIP { get; set; }
+
+                    }
+
+                    /// <summary>
+                    /// <para>The IPv6 asset type.</para>
+                    /// </summary>
+                    [NameInMap("Ipv6")]
+                    [Validation(Required=false)]
+                    public DescribeAddressBookResponseBodyAclsAssetRegionResourceTypesResourceTypeIpv6 Ipv6 { get; set; }
+                    public class DescribeAddressBookResponseBodyAclsAssetRegionResourceTypesResourceTypeIpv6 : TeaModel {
+                        /// <summary>
+                        /// <para>The asset type: AIGatewayEIPv6.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>false</para>
+                        /// </summary>
+                        [NameInMap("AiGatewayEIPv6")]
+                        [Validation(Required=false)]
+                        public bool? AiGatewayEIPv6 { get; set; }
+
+                        /// <summary>
+                        /// <para>The asset type: AlbIPv6.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>false</para>
+                        /// </summary>
+                        [NameInMap("AlbIPv6")]
+                        [Validation(Required=false)]
+                        public bool? AlbIPv6 { get; set; }
+
+                        /// <summary>
+                        /// <para>The asset type: ApigEIPv6.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>false</para>
+                        /// </summary>
+                        [NameInMap("ApiGatewayEIPv6")]
+                        [Validation(Required=false)]
+                        public bool? ApiGatewayEIPv6 { get; set; }
+
+                        /// <summary>
+                        /// <para>The asset type: EcsIPv6.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>false</para>
+                        /// </summary>
+                        [NameInMap("EcsIPv6")]
+                        [Validation(Required=false)]
+                        public bool? EcsIPv6 { get; set; }
+
+                        /// <summary>
+                        /// <para>The asset type: EniEIPv6.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>false</para>
+                        /// </summary>
+                        [NameInMap("EniEIPv6")]
+                        [Validation(Required=false)]
+                        public bool? EniEIPv6 { get; set; }
+
+                        /// <summary>
+                        /// <para>The asset type: GaEIPv6.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>false</para>
+                        /// </summary>
+                        [NameInMap("GaEIPv6")]
+                        [Validation(Required=false)]
+                        public bool? GaEIPv6 { get; set; }
+
+                        /// <summary>
+                        /// <para>The asset type: NlbIPv6.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>false</para>
+                        /// </summary>
+                        [NameInMap("NlbIPv6")]
+                        [Validation(Required=false)]
+                        public bool? NlbIPv6 { get; set; }
+
+                        /// <summary>
+                        /// <para>The asset type: SlbIPv6.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>false</para>
+                        /// </summary>
+                        [NameInMap("SlbIPv6")]
+                        [Validation(Required=false)]
+                        public bool? SlbIPv6 { get; set; }
+
+                    }
+
+                }
+
+            }
+
+            /// <summary>
+            /// <para>Indicates whether the public IP addresses of ECS instances that match new tags are automatically added to the address book. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: The public IP addresses are not automatically added.</description></item>
+            /// <item><description><b>1</b>: The public IP addresses are automatically added.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -149,7 +456,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string GroupName { get; set; }
 
             /// <summary>
-            /// <para>The type of the address book. Valid values:</para>
+            /// <para>The type of the address book.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ip</para>
@@ -159,7 +466,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string GroupType { get; set; }
 
             /// <summary>
-            /// <para>The UUID of the address book.</para>
+            /// <para>The unique ID of the address book.</para>
             /// 
             /// <b>Example:</b>
             /// <para>f04ac7ce-628b-4cb7-be61-310222b7****</para>
@@ -179,7 +486,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? ReferenceCount { get; set; }
 
             /// <summary>
-            /// <para>The region where the ACK cluster connector is deployed. This parameter is returned only when the GroupType parameter is &quot;ack&quot;.</para>
+            /// <para>The region of the ACK cluster connector to which the address book belongs when GroupType is an ACK address book.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-beijing</para>
@@ -189,14 +496,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string RegionNo { get; set; }
 
             /// <summary>
-            /// <para>A list of ECS tags.</para>
+            /// <para>The list of ECS tags.</para>
             /// </summary>
             [NameInMap("TagList")]
             [Validation(Required=false)]
             public List<DescribeAddressBookResponseBodyAclsTagList> TagList { get; set; }
             public class DescribeAddressBookResponseBodyAclsTagList : TeaModel {
                 /// <summary>
-                /// <para>The key of the tag.</para>
+                /// <para>The key of the ECS tag.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>company</para>
@@ -206,7 +513,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string TagKey { get; set; }
 
                 /// <summary>
-                /// <para>The value of the tag.</para>
+                /// <para>The value of the ECS tag.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ALL VALUE</para>
@@ -218,7 +525,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             }
 
             /// <summary>
-            /// <para>The logical relationship among multiple ECS tags. Valid values:</para>
+            /// <para>The relationship between multiple ECS tags. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>or</b>: The relationship between multiple tags is OR. The public IP address of an ECS instance that matches any tag is added to the address book.</description></item>
+            /// <item><description><b>and</b>: The relationship between multiple tags is AND. The public IP address of an ECS instance that matches all tags is added to the address book.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>and</para>
@@ -230,7 +541,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The current page number.</para>
+        /// <para>The page number of the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -240,7 +551,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of address books returned per page.</para>
+        /// <para>The number of address books on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
