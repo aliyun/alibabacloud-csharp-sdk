@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentExplorer20260317.Models
 {
     public class ListCategoriesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The returned category list</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<Category> Data { get; set; }
 
         /// <summary>
+        /// <para>Response message</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.AgentExplorer20260317.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>099A671E-FA21-5A36-8A73-918572DDEF53</para>
         /// </summary>

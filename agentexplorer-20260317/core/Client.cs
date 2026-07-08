@@ -18,7 +18,12 @@ namespace AlibabaCloud.SDK.AgentExplorer20260317
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"public", "agentexplorer.aliyuncs.com"},
+                {"cn-hangzhou", "agentexplorer.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("agentexplorer", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -39,7 +44,7 @@ namespace AlibabaCloud.SDK.AgentExplorer20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取阿里云 Agent Skill 内容</para>
+        /// <para>Get the SKILL.md file content of the specified Agent Skill</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -79,7 +84,7 @@ namespace AlibabaCloud.SDK.AgentExplorer20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取阿里云 Agent Skill 内容</para>
+        /// <para>Get the SKILL.md file content of the specified Agent Skill</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -119,7 +124,7 @@ namespace AlibabaCloud.SDK.AgentExplorer20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取阿里云 Agent Skill 内容</para>
+        /// <para>Get the SKILL.md file content of the specified Agent Skill</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -138,7 +143,7 @@ namespace AlibabaCloud.SDK.AgentExplorer20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取阿里云 Agent Skill 内容</para>
+        /// <para>Get the SKILL.md file content of the specified Agent Skill</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -157,7 +162,7 @@ namespace AlibabaCloud.SDK.AgentExplorer20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举所有的阿里云 Skills 类目</para>
+        /// <para>List all Alibaba Cloud Skills categories.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -197,7 +202,7 @@ namespace AlibabaCloud.SDK.AgentExplorer20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举所有的阿里云 Skills 类目</para>
+        /// <para>List all Alibaba Cloud Skills categories.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -237,7 +242,7 @@ namespace AlibabaCloud.SDK.AgentExplorer20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举所有的阿里云 Skills 类目</para>
+        /// <para>List all Alibaba Cloud Skills categories.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -256,7 +261,7 @@ namespace AlibabaCloud.SDK.AgentExplorer20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举所有的阿里云 Skills 类目</para>
+        /// <para>List all Alibaba Cloud Skills categories.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -275,7 +280,7 @@ namespace AlibabaCloud.SDK.AgentExplorer20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过关键词、类目搜索阿里云 Agent Skills</para>
+        /// <para>Searches for Alibaba Cloud Agent Skills by keyword or category.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -311,6 +316,10 @@ namespace AlibabaCloud.SDK.AgentExplorer20260317
             {
                 query["nextToken"] = request.NextToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchMode))
+            {
+                query["searchMode"] = request.SearchMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Skip))
             {
                 query["skip"] = request.Skip;
@@ -337,7 +346,7 @@ namespace AlibabaCloud.SDK.AgentExplorer20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过关键词、类目搜索阿里云 Agent Skills</para>
+        /// <para>Searches for Alibaba Cloud Agent Skills by keyword or category.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -373,6 +382,10 @@ namespace AlibabaCloud.SDK.AgentExplorer20260317
             {
                 query["nextToken"] = request.NextToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchMode))
+            {
+                query["searchMode"] = request.SearchMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Skip))
             {
                 query["skip"] = request.Skip;
@@ -399,7 +412,7 @@ namespace AlibabaCloud.SDK.AgentExplorer20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过关键词、类目搜索阿里云 Agent Skills</para>
+        /// <para>Searches for Alibaba Cloud Agent Skills by keyword or category.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -418,7 +431,7 @@ namespace AlibabaCloud.SDK.AgentExplorer20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过关键词、类目搜索阿里云 Agent Skills</para>
+        /// <para>Searches for Alibaba Cloud Agent Skills by keyword or category.</para>
         /// </summary>
         /// 
         /// <param name="request">

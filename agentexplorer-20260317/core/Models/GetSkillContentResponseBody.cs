@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AgentExplorer20260317.Models
 {
     public class GetSkillContentResponseBody : TeaModel {
         /// <summary>
+        /// <para>SKILL.md file content</para>
+        /// 
         /// <b>Example:</b>
         /// <hr>
         /// <h2>name: alibabacloud-find-skills

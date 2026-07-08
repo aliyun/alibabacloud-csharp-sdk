@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentExplorer20260317.Models
 {
     public class SearchSkillsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of skills returned.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<Skill> Data { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of entries per page for a paged query. Maximum value: 100. Default value: 20.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.AgentExplorer20260317.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The NextToken value, which is used to retrieve more results.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AAAAAZjtYxxxxxxxx</para>
         /// </summary>
@@ -40,6 +47,8 @@ namespace AlibabaCloud.SDK.AgentExplorer20260317.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of records.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>22</para>
         /// </summary>
