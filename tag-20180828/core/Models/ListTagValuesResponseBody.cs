@@ -33,9 +33,6 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The information of the tag values.</para>
-        /// </summary>
         [NameInMap("Values")]
         [Validation(Required=false)]
         public ListTagValuesResponseBodyValues Values { get; set; }

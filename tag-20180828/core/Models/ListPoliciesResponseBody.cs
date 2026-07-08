@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         /// <summary>
         /// <para>Indicates whether the next query is required.</para>
         /// <list type="bullet">
-        /// <item><description>If the value of this parameter is empty (<c>&quot;NextToken&quot;: &quot;&quot;</c>), all results are returned, and the next query is not required.</description></item>
-        /// <item><description>If the value of this parameter is not empty, the next query is required, and the value is the token used to start the next query.</description></item>
+        /// <item><description><para>If the value of this parameter is empty (<c>&quot;NextToken&quot;: &quot;&quot;</c>), all results are returned, and the next query is not required.</para>
+        /// </description></item>
+        /// <item><description><para>If the value of this parameter is not empty, the next query is required, and the value is the token used to start the next query.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -73,8 +75,10 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
             /// <summary>
             /// <para>The mode of the Tag Policy feature. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>USER: single-account mode</description></item>
-            /// <item><description>RD: multi-account mode</description></item>
+            /// <item><description><para>USER: single-account mode</para>
+            /// </description></item>
+            /// <item><description><para>RD: multi-account mode</para>
+            /// </description></item>
             /// </list>
             /// <para>For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.</para>
             /// 

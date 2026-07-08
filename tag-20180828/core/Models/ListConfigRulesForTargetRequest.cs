@@ -41,8 +41,10 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         /// <summary>
         /// <para>The use scenario of the tag policy. This parameter specifies a filter condition for the query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>tags: enables tags with specified tag values to be added to resources.</description></item>
-        /// <item><description>rg_inherit: enables resources in a resource group to automatically inherit tags from the resource group.</description></item>
+        /// <item><description><para>tags: enables tags with specified tag values to be added to resources.</para>
+        /// </description></item>
+        /// <item><description><para>rg_inherit: enables resources in a resource group to automatically inherit tags from the resource group.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -89,13 +91,17 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         /// <summary>
         /// <para>The type of the object. This parameter specifies a filter condition for the query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>USER: the current logon account. This value is available if you use the Tag Policy feature in single-account mode.</description></item>
-        /// <item><description>ROOT: the Root folder in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</description></item>
-        /// <item><description>FOLDER: a folder other than the Root folder in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</description></item>
-        /// <item><description>ACCOUNT: a member in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</description></item>
+        /// <item><description><para>USER: the current logon account. This value is available if you use the Tag Policy feature in single-account mode.</para>
+        /// </description></item>
+        /// <item><description><para>ROOT: the Root folder in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</para>
+        /// </description></item>
+        /// <item><description><para>FOLDER: a folder other than the Root folder in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</para>
+        /// </description></item>
+        /// <item><description><para>ACCOUNT: a member in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> The value of this parameter is not case-sensitive.</para>
+        /// <para>The value of this parameter is not case-sensitive.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -108,12 +114,14 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         /// <summary>
         /// <para>The mode of the Tag Policy feature. This parameter specifies a filter condition for the query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>USER: single-account mode</description></item>
-        /// <item><description>RD: multi-account mode</description></item>
+        /// <item><description><para>USER: single-account mode</para>
+        /// </description></item>
+        /// <item><description><para>RD: multi-account mode</para>
+        /// </description></item>
         /// </list>
         /// <para>For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.</para>
         /// <remarks>
-        /// <para> The value of this parameter is not case-sensitive.</para>
+        /// <para>The value of this parameter is not case-sensitive.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

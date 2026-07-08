@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. Set the value to cn-shanghai.</para>
+        /// <para>The region ID. Only <c>cn-shanghai</c> is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -36,9 +36,9 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         public List<string> TagKeys { get; set; }
 
         /// <summary>
-        /// <para>The ID of the object.</para>
+        /// <para>The ID of the target object.</para>
         /// <remarks>
-        /// <para> If you use the Tag Policy feature in single-account mode, this parameter is optional. If you use the Tag Policy feature in multi-account mode, this feature is required.</para>
+        /// <para>This parameter is optional in Single-Account Mode and required in Multi-Account Mode.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -49,15 +49,19 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         public string TargetId { get; set; }
 
         /// <summary>
-        /// <para>The type of the object. Valid values:</para>
+        /// <para>The type of the target object. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>USER: the current logon account. This value is available if you use the Tag Policy feature in single-account mode.</description></item>
-        /// <item><description>ROOT: the Root folder in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</description></item>
-        /// <item><description>FOLDER: a folder other than the Root folder in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</description></item>
-        /// <item><description>ACCOUNT: a member in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</description></item>
+        /// <item><description><para>USER: queries the effective policy for the current logon account. This value applies only to Single-Account Mode.</para>
+        /// </description></item>
+        /// <item><description><para>ROOT: queries the effective policy for the Root Folder in a Resource Directory. This value applies only to Multi-Account Mode.</para>
+        /// </description></item>
+        /// <item><description><para>FOLDER: queries the effective policy for a Folder in a Resource Directory. This value applies only to Multi-Account Mode.</para>
+        /// </description></item>
+        /// <item><description><para>ACCOUNT: queries the effective policy for a Member in a Resource Directory. This value applies only to Multi-Account Mode.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you use the Tag Policy feature in single-account mode, this parameter is optional. If you use the Tag Policy feature in multi-account mode, this feature is required. The value of this parameter is not case-sensitive.</para>
+        /// <para>This parameter is optional in Single-Account Mode and required in Multi-Account Mode. The value is case-insensitive.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

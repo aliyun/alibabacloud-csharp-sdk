@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>AAAAAYws9fJ0Ur4MGm****</para>
+        /// <para>AAAAAYws9fJ0Ur4MGm</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]

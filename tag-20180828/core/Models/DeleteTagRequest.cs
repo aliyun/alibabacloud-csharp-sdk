@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         /// <summary>
         /// <para>The region ID.</para>
         /// <remarks>
-        /// <para> Only <c>cn-hangzhou</c> is supported.</para>
+        /// <para>Only <c>cn-hangzhou</c> is supported.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Tag20180828.Models
 {
     public class DescribeRegionsResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The information of the regions.</para>
-        /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
         public DescribeRegionsResponseBodyRegions Regions { get; set; }
@@ -20,32 +17,14 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
             [Validation(Required=false)]
             public List<DescribeRegionsResponseBodyRegionsRegion> Region { get; set; }
             public class DescribeRegionsResponseBodyRegionsRegion : TeaModel {
-                /// <summary>
-                /// <para>The name of the region.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>China (Hangzhou)</para>
-                /// </summary>
                 [NameInMap("LocalName")]
                 [Validation(Required=false)]
                 public string LocalName { get; set; }
 
-                /// <summary>
-                /// <para>The endpoint of the Tag service in the region.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>tag.aliyuncs.com</para>
-                /// </summary>
                 [NameInMap("RegionEndpoint")]
                 [Validation(Required=false)]
                 public string RegionEndpoint { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the region.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-hangzhou</para>
-                /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }

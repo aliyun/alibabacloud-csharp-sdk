@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
 {
     public class ListAssociatedResourceRulesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Determine if there is a token for the next query based on <c>NextToken</c>. Values:</para>
+        /// <para>You can use the <c>NextToken</c> parameter to determine whether there is a token that can be used to start the next query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <c>NextToken</c> is empty, it indicates there is no next query.</description></item>
-        /// <item><description>If <c>NextToken</c> has a value, that value is the token for the next query start.</description></item>
+        /// <item><description><para>If <c>NextToken</c> is empty, no next query is performed.</para>
+        /// </description></item>
+        /// <item><description><para>If a value is returned for <c>NextToken</c>, the value is the token that is used for the next query.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,7 +27,7 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6E27F22C-EDA3-132E-A53F-77DE3BC2343D</para>
@@ -35,7 +37,7 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>List of associated resource tag rules.</para>
+        /// <para>A list of associated resource rules.</para>
         /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]
@@ -46,7 +48,7 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
             public string ExistingStatus { get; set; }
 
             /// <summary>
-            /// <para>Setting name of the associated resource tag rule.</para>
+            /// <para>The name of the associated resource rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rule:UpdateLoadBalancerZones-UpdateLoadBalancerAddressTypeConfig-TagAlb:Alb-LoadBalancer:Vpc-Eip</para>
@@ -56,11 +58,7 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
             public string SettingName { get; set; }
 
             /// <summary>
-            /// <para>Whether the associated resource tag rule is enabled. Values:</para>
-            /// <list type="bullet">
-            /// <item><description>Enable: Enabled.</description></item>
-            /// <item><description>Disable: Disabled.</description></item>
-            /// </list>
+            /// <para>The status of the associated resource rule. Valid values: <c>Enable</c> and <c>Disable</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Disable/Enable</para>
@@ -70,7 +68,7 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>List of tag keys for the associated resource tag rule.</para>
+            /// <para>The Tag Keys to which the rule applies.</para>
             /// </summary>
             [NameInMap("TagKeys")]
             [Validation(Required=false)]

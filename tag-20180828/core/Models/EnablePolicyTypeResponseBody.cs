@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
 {
     public class EnablePolicyTypeResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6E27F22C-EDA3-132E-A53F-77DE3BC2343D</para>
         /// </summary>

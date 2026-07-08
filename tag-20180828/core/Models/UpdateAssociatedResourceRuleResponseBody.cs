@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
 {
     public class UpdateAssociatedResourceRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>94E16BB6-3FB6-1297-B5B2-ED2250F437CD</para>

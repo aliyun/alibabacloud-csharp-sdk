@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the region where the instance resides.</para>
+        /// <para>Set the value to cn-shanghai.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

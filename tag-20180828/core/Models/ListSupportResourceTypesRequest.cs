@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         /// <para>The token that is used to start the next query.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>AAAAAYws9fJ0Ur4MGm/5OkDoW/Y3wDNwUdssyKODK****</para>
+        /// <para>AAAAAYws9fJ0Ur4MGm/5OkDoW/Y3wDNwUdssyKODK+myOlBL</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]

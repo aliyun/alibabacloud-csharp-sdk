@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
+        /// <para>The ID of the region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -36,8 +36,8 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// <para>The setting name of the associated resource tag rule.</para>
-        /// <para>For specific values, see the <b>Rule Setting Name</b> column in <a href="https://help.aliyun.com/document_detail/2586330.html">Resources that Support Associated Resource Tag Settings</a>.</para>
+        /// <para>The name of the Associated Resource Tag Rule setting.</para>
+        /// <para>For valid values, see the <b>Setting Name</b> column in <a href="https://help.aliyun.com/document_detail/2586330.html">Resources that support the Associated Resource Tag Rule feature</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,10 +48,12 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         public string SettingName { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether to enable the associated resource tag rule. Values:</para>
+        /// <para>The status of the Associated Resource Tag Rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Enable: Enabled.</description></item>
-        /// <item><description>Disable: Disabled.</description></item>
+        /// <item><description><para>Enable: The rule is enabled.</para>
+        /// </description></item>
+        /// <item><description><para>Disable: The rule is disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -62,7 +64,7 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>List of tag keys affected by the associated resource tag rule.</para>
+        /// <para>A list of tag keys for the Associated Resource Tag Rule.</para>
         /// </summary>
         [NameInMap("TagKeys")]
         [Validation(Required=false)]

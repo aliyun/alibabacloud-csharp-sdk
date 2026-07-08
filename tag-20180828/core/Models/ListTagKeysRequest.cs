@@ -29,12 +29,15 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         /// <summary>
         /// <para>The type of the resource tags. This parameter specifies a filter condition for the query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>all (default value)</description></item>
-        /// <item><description>custom</description></item>
-        /// <item><description>system</description></item>
+        /// <item><description><para>all (default value)</para>
+        /// </description></item>
+        /// <item><description><para>custom</para>
+        /// </description></item>
+        /// <item><description><para>system</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> The value of this parameter is not case-sensitive.</para>
+        /// <para>The value of this parameter is not case-sensitive.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -47,8 +50,10 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         /// <summary>
         /// <para>The type of the query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>EQUAL (default): exact match</description></item>
-        /// <item><description>PREFIX: prefix-based fuzzy match</description></item>
+        /// <item><description><para>EQUAL (default): exact match</para>
+        /// </description></item>
+        /// <item><description><para>PREFIX: prefix-based fuzzy match</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -90,11 +95,13 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         /// <summary>
         /// <para>The category of the tags. This parameter specifies a filter condition for the query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ResourceTag: resource tags, including custom and system tags. This is the default value.</description></item>
-        /// <item><description>MetaTag: preset tags.</description></item>
+        /// <item><description><para>ResourceTag: resource tags, including custom and system tags. This is the default value.</para>
+        /// </description></item>
+        /// <item><description><para>MetaTag: preset tags.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> The value of this parameter is not case-sensitive.</para>
+        /// <para>The value of this parameter is not case-sensitive.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -124,8 +131,10 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         /// <para>The resource type. This parameter specifies a filter condition for the query.</para>
         /// <para>Format: <c>ALIYUN::${ProductCode}::${ResourceType}</c>. All letters in the value of this parameter must be in uppercase.</para>
         /// <list type="bullet">
-        /// <item><description><c>ProductCode</c>: the service code. You can set this field to a value obtained from the response of the <a href="https://help.aliyun.com/document_detail/2330915.html">ListSupportResourceTypes</a> operation.</description></item>
-        /// <item><description><c>ResourceType</c>: the resource type. You can set this field to a value obtained from the response of the <a href="https://help.aliyun.com/document_detail/2330915.html">ListSupportResourceTypes</a> operation.</description></item>
+        /// <item><description><para><c>ProductCode</c>: the service code. You can set this field to a value obtained from the response of the <a href="https://help.aliyun.com/document_detail/2330915.html">ListSupportResourceTypes</a> operation.</para>
+        /// </description></item>
+        /// <item><description><para><c>ResourceType</c>: the resource type. You can set this field to a value obtained from the response of the <a href="https://help.aliyun.com/document_detail/2330915.html">ListSupportResourceTypes</a> operation.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

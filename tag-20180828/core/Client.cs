@@ -54,6 +54,35 @@ namespace AlibabaCloud.SDK.Tag20180828
                 {"cn-zhengzhou-nebula-1", "tag.cn-qingdao-nebula.aliyuncs.com"},
                 {"eu-west-1-oxs", "tag.cn-shenzhen-cloudstone.aliyuncs.com"},
                 {"rus-west-1-pop", "tag.aliyuncs.com"},
+                {"us-east-1", "tag.us-east-1.aliyuncs.com"},
+                {"me-east-1", "tag.me-east-1.aliyuncs.com"},
+                {"me-central-1", "tag.me-central-1.aliyuncs.com"},
+                {"eu-west-1", "tag.eu-west-1.aliyuncs.com"},
+                {"eu-central-1", "tag.eu-central-1.aliyuncs.com"},
+                {"cn-zhengzhou-jva", "tag.cn-zhengzhou-jva.aliyuncs.com"},
+                {"cn-zhangjiakou", "tag.cn-zhangjiakou.aliyuncs.com"},
+                {"cn-wulanchabu", "tag.cn-wulanchabu.aliyuncs.com"},
+                {"cn-shenzhen-finance-1", "tag.cn-shenzhen-finance-1.aliyuncs.com"},
+                {"cn-shenzhen", "tag.cn-shenzhen.aliyuncs.com"},
+                {"cn-shanghai", "tag.cn-shanghai.aliyuncs.com"},
+                {"cn-qingdao", "tag.cn-qingdao.aliyuncs.com"},
+                {"cn-nanjing", "tag.cn-nanjing.aliyuncs.com"},
+                {"cn-huhehaote", "tag.cn-huhehaote.aliyuncs.com"},
+                {"cn-hongkong", "tag.cn-hongkong.aliyuncs.com"},
+                {"cn-heyuan", "tag.cn-heyuan.aliyuncs.com"},
+                {"cn-hangzhou", "tag.cn-hangzhou.aliyuncs.com"},
+                {"cn-guangzhou", "tag.cn-guangzhou.aliyuncs.com"},
+                {"cn-fuzhou", "tag.cn-fuzhou.aliyuncs.com"},
+                {"cn-chengdu", "tag.cn-chengdu.aliyuncs.com"},
+                {"cn-beijing-finance-1", "tag.cn-beijing-finance-1.aliyuncs.com"},
+                {"cn-beijing", "tag.cn-beijing.aliyuncs.com"},
+                {"ap-southeast-7", "tag.ap-southeast-7.aliyuncs.com"},
+                {"ap-southeast-6", "tag.ap-southeast-6.aliyuncs.com"},
+                {"ap-southeast-5", "tag.ap-southeast-5.aliyuncs.com"},
+                {"ap-southeast-3", "tag.ap-southeast-3.aliyuncs.com"},
+                {"ap-southeast-1", "tag.ap-southeast-1.aliyuncs.com"},
+                {"ap-northeast-2", "tag.ap-northeast-2.aliyuncs.com"},
+                {"ap-northeast-1", "tag.ap-northeast-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("tag", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -75,7 +104,7 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定策略</para>
+        /// <para>Attaches a tag policy to an object.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -147,7 +176,7 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定策略</para>
+        /// <para>Attaches a tag policy to an object.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -219,7 +248,7 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定策略</para>
+        /// <para>Attaches a tag policy to an object.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -243,7 +272,7 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定策略</para>
+        /// <para>Attaches a tag policy to an object.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -267,7 +296,7 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>校验CreatedBy开通状态</para>
+        /// <para>Checks whether the createdby tag is enabled.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -325,7 +354,7 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>校验CreatedBy开通状态</para>
+        /// <para>Checks whether the createdby tag is enabled.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -383,7 +412,7 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>校验CreatedBy开通状态</para>
+        /// <para>Checks whether the createdby tag is enabled.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -401,7 +430,7 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>校验CreatedBy开通状态</para>
+        /// <para>Checks whether the createdby tag is enabled.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -419,7 +448,7 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭CreatedBy服务</para>
+        /// <para>Disables createdby tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -477,7 +506,7 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭CreatedBy服务</para>
+        /// <para>Disables createdby tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -535,7 +564,7 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭CreatedBy服务</para>
+        /// <para>Disables createdby tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -553,7 +582,7 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭CreatedBy服务</para>
+        /// <para>Disables createdby tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -571,7 +600,7 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates associated resource tagging rules.</para>
+        /// <para>Creates associated resource tag rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -629,7 +658,7 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates associated resource tagging rules.</para>
+        /// <para>Creates associated resource tag rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -687,7 +716,7 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates associated resource tagging rules.</para>
+        /// <para>Creates associated resource tag rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -705,7 +734,7 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates associated resource tagging rules.</para>
+        /// <para>Creates associated resource tag rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1975,8 +2004,14 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭策略</para>
+        /// <para>Disables a control policy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>After you disable a tag policy, all bound tag policies are automatically unbound.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DisablePolicyTypeRequest
@@ -2041,8 +2076,14 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭策略</para>
+        /// <para>Disables a control policy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>After you disable a tag policy, all bound tag policies are automatically unbound.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DisablePolicyTypeRequest
@@ -2107,8 +2148,14 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭策略</para>
+        /// <para>Disables a control policy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>After you disable a tag policy, all bound tag policies are automatically unbound.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DisablePolicyTypeRequest
@@ -2125,8 +2172,14 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭策略</para>
+        /// <para>Disables a control policy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>After you disable a tag policy, all bound tag policies are automatically unbound.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DisablePolicyTypeRequest
@@ -2143,8 +2196,21 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开通策略</para>
+        /// <para>Enables the tag policy feature.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>You can enable the single-account mode or multi-account mode for tag policies:</para>
+        /// <list type="bullet">
+        /// <item><description>Single-account mode: If the current logon account is an independent Alibaba Cloud account, the single-account mode for tag policies is enabled to manage resources within the scope of the single account.</description></item>
+        /// <item><description>Multi-account mode: If the current logon account is the management account of a resource directory, the multi-account mode for tag policies is enabled to manage resources within the scope of the resource directory.<remarks>
+        /// <para>Members of a resource directory cannot enable the tag policy feature.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnablePolicyTypeRequest
@@ -2209,8 +2275,21 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开通策略</para>
+        /// <para>Enables the tag policy feature.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>You can enable the single-account mode or multi-account mode for tag policies:</para>
+        /// <list type="bullet">
+        /// <item><description>Single-account mode: If the current logon account is an independent Alibaba Cloud account, the single-account mode for tag policies is enabled to manage resources within the scope of the single account.</description></item>
+        /// <item><description>Multi-account mode: If the current logon account is the management account of a resource directory, the multi-account mode for tag policies is enabled to manage resources within the scope of the resource directory.<remarks>
+        /// <para>Members of a resource directory cannot enable the tag policy feature.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnablePolicyTypeRequest
@@ -2275,8 +2354,21 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开通策略</para>
+        /// <para>Enables the tag policy feature.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>You can enable the single-account mode or multi-account mode for tag policies:</para>
+        /// <list type="bullet">
+        /// <item><description>Single-account mode: If the current logon account is an independent Alibaba Cloud account, the single-account mode for tag policies is enabled to manage resources within the scope of the single account.</description></item>
+        /// <item><description>Multi-account mode: If the current logon account is the management account of a resource directory, the multi-account mode for tag policies is enabled to manage resources within the scope of the resource directory.<remarks>
+        /// <para>Members of a resource directory cannot enable the tag policy feature.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnablePolicyTypeRequest
@@ -2293,8 +2385,21 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开通策略</para>
+        /// <para>Enables the tag policy feature.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>You can enable the single-account mode or multi-account mode for tag policies:</para>
+        /// <list type="bullet">
+        /// <item><description>Single-account mode: If the current logon account is an independent Alibaba Cloud account, the single-account mode for tag policies is enabled to manage resources within the scope of the single account.</description></item>
+        /// <item><description>Multi-account mode: If the current logon account is the management account of a resource directory, the multi-account mode for tag policies is enabled to manage resources within the scope of the resource directory.<remarks>
+        /// <para>Members of a resource directory cannot enable the tag policy feature.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnablePolicyTypeRequest
@@ -2311,7 +2416,7 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成规则检测报告</para>
+        /// <para>Generates a resource non-compliance report.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2383,7 +2488,7 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成规则检测报告</para>
+        /// <para>Generates a resource non-compliance report.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2455,7 +2560,7 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成规则检测报告</para>
+        /// <para>Generates a resource non-compliance report.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2479,7 +2584,7 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成规则检测报告</para>
+        /// <para>Generates a resource non-compliance report.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2503,7 +2608,7 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information of the resource non-compliance report that is last generated.</para>
+        /// <para>Queries the basic information about the latest resource non-compliance report.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2575,7 +2680,7 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information of the resource non-compliance report that is last generated.</para>
+        /// <para>Queries the basic information about the latest resource non-compliance report.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2647,7 +2752,7 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information of the resource non-compliance report that is last generated.</para>
+        /// <para>Queries the basic information about the latest resource non-compliance report.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2671,7 +2776,7 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information of the resource non-compliance report that is last generated.</para>
+        /// <para>Queries the basic information about the latest resource non-compliance report.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2695,14 +2800,15 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the effective policy.</para>
+        /// <para>Retrieves the effective policy for a specified object.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query the effective tag policy for the account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query the effective tag policy for the Root folder, a folder other than the Root folder, or a member in the resource directory. You can also use a member of a resource directory to call this API operation to query the effective tag policy for the member. For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.
-        /// An effective tag policy is obtained based on tag policy inheritance. For more information, see <a href="https://help.aliyun.com/document_detail/417435.html">Inheritance of a tag policy and calculation of an effective tag policy</a>.
-        /// This topic provides an example on how to call the API operation to query the effective tag policy for the current logon account. In this example, the Tag Policy feature in single-account mode is used.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>In Single-Account Mode, the current logon account can query its own effective policy. In Multi-Account Mode, the Management Account of a Resource Directory can query the effective policy for the Root Folder, a Folder, or a Member. A Member can also query its own effective policy. For more information about tag policy modes, see <a href="https://help.aliyun.com/document_detail/417434.html">Tag policy modes</a>.
+        /// Tag policy inheritance determines the effective policy. For more information, see <a href="https://help.aliyun.com/document_detail/417435.html">Tag policy inheritance and effective policy calculation</a>.
+        /// This topic provides an example of how to query the effective policy for the current logon account in Single-Account Mode.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2768,14 +2874,15 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the effective policy.</para>
+        /// <para>Retrieves the effective policy for a specified object.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query the effective tag policy for the account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query the effective tag policy for the Root folder, a folder other than the Root folder, or a member in the resource directory. You can also use a member of a resource directory to call this API operation to query the effective tag policy for the member. For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.
-        /// An effective tag policy is obtained based on tag policy inheritance. For more information, see <a href="https://help.aliyun.com/document_detail/417435.html">Inheritance of a tag policy and calculation of an effective tag policy</a>.
-        /// This topic provides an example on how to call the API operation to query the effective tag policy for the current logon account. In this example, the Tag Policy feature in single-account mode is used.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>In Single-Account Mode, the current logon account can query its own effective policy. In Multi-Account Mode, the Management Account of a Resource Directory can query the effective policy for the Root Folder, a Folder, or a Member. A Member can also query its own effective policy. For more information about tag policy modes, see <a href="https://help.aliyun.com/document_detail/417434.html">Tag policy modes</a>.
+        /// Tag policy inheritance determines the effective policy. For more information, see <a href="https://help.aliyun.com/document_detail/417435.html">Tag policy inheritance and effective policy calculation</a>.
+        /// This topic provides an example of how to query the effective policy for the current logon account in Single-Account Mode.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2841,14 +2948,15 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the effective policy.</para>
+        /// <para>Retrieves the effective policy for a specified object.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query the effective tag policy for the account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query the effective tag policy for the Root folder, a folder other than the Root folder, or a member in the resource directory. You can also use a member of a resource directory to call this API operation to query the effective tag policy for the member. For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.
-        /// An effective tag policy is obtained based on tag policy inheritance. For more information, see <a href="https://help.aliyun.com/document_detail/417435.html">Inheritance of a tag policy and calculation of an effective tag policy</a>.
-        /// This topic provides an example on how to call the API operation to query the effective tag policy for the current logon account. In this example, the Tag Policy feature in single-account mode is used.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>In Single-Account Mode, the current logon account can query its own effective policy. In Multi-Account Mode, the Management Account of a Resource Directory can query the effective policy for the Root Folder, a Folder, or a Member. A Member can also query its own effective policy. For more information about tag policy modes, see <a href="https://help.aliyun.com/document_detail/417434.html">Tag policy modes</a>.
+        /// Tag policy inheritance determines the effective policy. For more information, see <a href="https://help.aliyun.com/document_detail/417435.html">Tag policy inheritance and effective policy calculation</a>.
+        /// This topic provides an example of how to query the effective policy for the current logon account in Single-Account Mode.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2866,14 +2974,15 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the effective policy.</para>
+        /// <para>Retrieves the effective policy for a specified object.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query the effective tag policy for the account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query the effective tag policy for the Root folder, a folder other than the Root folder, or a member in the resource directory. You can also use a member of a resource directory to call this API operation to query the effective tag policy for the member. For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.
-        /// An effective tag policy is obtained based on tag policy inheritance. For more information, see <a href="https://help.aliyun.com/document_detail/417435.html">Inheritance of a tag policy and calculation of an effective tag policy</a>.
-        /// This topic provides an example on how to call the API operation to query the effective tag policy for the current logon account. In this example, the Tag Policy feature in single-account mode is used.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>In Single-Account Mode, the current logon account can query its own effective policy. In Multi-Account Mode, the Management Account of a Resource Directory can query the effective policy for the Root Folder, a Folder, or a Member. A Member can also query its own effective policy. For more information about tag policy modes, see <a href="https://help.aliyun.com/document_detail/417434.html">Tag policy modes</a>.
+        /// Tag policy inheritance determines the effective policy. For more information, see <a href="https://help.aliyun.com/document_detail/417435.html">Tag policy inheritance and effective policy calculation</a>.
+        /// This topic provides an example of how to query the effective policy for the current logon account in Single-Account Mode.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3251,7 +3360,7 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Search the rules for associated resources that the user has set up.</para>
+        /// <para>Retrieves a list of associated resource rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3321,7 +3430,7 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Search the rules for associated resources that the user has set up.</para>
+        /// <para>Retrieves a list of associated resource rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3391,7 +3500,7 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Search the rules for associated resources that the user has set up.</para>
+        /// <para>Retrieves a list of associated resource rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3409,7 +3518,7 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Search the rules for associated resources that the user has set up.</para>
+        /// <para>Retrieves a list of associated resource rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3651,7 +3760,7 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries tag policies.</para>
+        /// <para>Queries a list of tag policies.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3731,7 +3840,7 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries tag policies.</para>
+        /// <para>Queries a list of tag policies.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3811,7 +3920,7 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries tag policies.</para>
+        /// <para>Queries a list of tag policies.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3835,7 +3944,7 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries tag policies.</para>
+        /// <para>Queries a list of tag policies.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3859,7 +3968,7 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tag policies that are attached to an object.</para>
+        /// <para>Queries a list of tag policies that are attached to an object.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3935,7 +4044,7 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tag policies that are attached to an object.</para>
+        /// <para>Queries a list of tag policies that are attached to an object.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4011,7 +4120,7 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tag policies that are attached to an object.</para>
+        /// <para>Queries a list of tag policies that are attached to an object.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4035,7 +4144,7 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tag policies that are attached to an object.</para>
+        /// <para>Queries a list of tag policies that are attached to an object.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6135,7 +6244,7 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update the rule for tagging associated resources.</para>
+        /// <para>Updates an Associated Resource Tag Rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6205,7 +6314,7 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update the rule for tagging associated resources.</para>
+        /// <para>Updates an Associated Resource Tag Rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6275,7 +6384,7 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update the rule for tagging associated resources.</para>
+        /// <para>Updates an Associated Resource Tag Rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6293,7 +6402,7 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update the rule for tagging associated resources.</para>
+        /// <para>Updates an Associated Resource Tag Rule.</para>
         /// </summary>
         /// 
         /// <param name="request">

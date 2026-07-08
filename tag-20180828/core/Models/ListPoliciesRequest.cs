@@ -69,12 +69,14 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         /// <summary>
         /// <para>The mode of the Tag Policy feature. This parameter specifies a filter condition for the query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>USER: single-account mode</description></item>
-        /// <item><description>RD: multi-account mode</description></item>
+        /// <item><description><para>USER: single-account mode</para>
+        /// </description></item>
+        /// <item><description><para>RD: multi-account mode</para>
+        /// </description></item>
         /// </list>
         /// <para>For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.</para>
         /// <remarks>
-        /// <para> The value of this parameter is not case-sensitive.</para>
+        /// <para>The value of this parameter is not case-sensitive.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

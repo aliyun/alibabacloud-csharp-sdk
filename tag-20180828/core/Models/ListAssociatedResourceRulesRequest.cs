@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
 {
     public class ListAssociatedResourceRulesRequest : TeaModel {
         /// <summary>
-        /// <para>Number of data entries to display per page during pagination.</para>
-        /// <para>Default value: 50. Maximum value: 100.</para>
+        /// <para>The number of entries to return on each page.</para>
+        /// <para>Default Value: 50. Maximum Value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         public int? MaxResult { get; set; }
 
         /// <summary>
-        /// <para>Token for the next query start.</para>
+        /// <para>The token returned from a previous call to retrieve the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a****</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Region ID.</para>
+        /// <para>The Region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -53,17 +53,19 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// <para>Setting name of the associated resource tag rule.</para>
+        /// <para>The names of the associated resource rules.</para>
         /// </summary>
         [NameInMap("SettingName")]
         [Validation(Required=false)]
         public List<string> SettingName { get; set; }
 
         /// <summary>
-        /// <para>Whether the associated resource tag rule is enabled. Values:</para>
+        /// <para>The status of the associated resource rules to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Enable: Enabled.</description></item>
-        /// <item><description>Disable: Disabled.</description></item>
+        /// <item><description><para>Enable: The rule is enabled.</para>
+        /// </description></item>
+        /// <item><description><para>Disable: The rule is disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -65,13 +65,17 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         /// <summary>
         /// <para>The type of the object. This parameter specifies a filter condition for the query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>USER: the current logon account. This value is available if you use the Tag Policy feature in single-account mode.</description></item>
-        /// <item><description>ROOT: the Root folder in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</description></item>
-        /// <item><description>FOLDER: a folder other than the Root folder in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</description></item>
-        /// <item><description>ACCOUNT: a member in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</description></item>
+        /// <item><description><para>USER: the current logon account. This value is available if you use the Tag Policy feature in single-account mode.</para>
+        /// </description></item>
+        /// <item><description><para>ROOT: the Root folder in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</para>
+        /// </description></item>
+        /// <item><description><para>FOLDER: a folder other than the Root folder in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</para>
+        /// </description></item>
+        /// <item><description><para>ACCOUNT: a member in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> The value of this parameter is not case-sensitive.</para>
+        /// <para>The value of this parameter is not case-sensitive.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

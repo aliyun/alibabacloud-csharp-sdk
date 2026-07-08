@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Tag20180828.Models
 {
     public class ListTagKeysResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The information of the tag keys.</para>
-        /// </summary>
         [NameInMap("Keys")]
         [Validation(Required=false)]
         public ListTagKeysResponseBodyKeys Keys { get; set; }
@@ -20,36 +17,14 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
             [Validation(Required=false)]
             public List<ListTagKeysResponseBodyKeysKey> Key { get; set; }
             public class ListTagKeysResponseBodyKeysKey : TeaModel {
-                /// <summary>
-                /// <para>The type of the resource tag. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>custom</description></item>
-                /// <item><description>system</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>custom</para>
-                /// </summary>
                 [NameInMap("Category")]
                 [Validation(Required=false)]
                 public string Category { get; set; }
 
-                /// <summary>
-                /// <para>The description of the tag key.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Business team</para>
-                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
-                /// <summary>
-                /// <para>The tag key.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>team</para>
-                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
@@ -61,8 +36,10 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         /// <summary>
         /// <para>Indicates whether the next query is required. The value of this parameter may be empty.</para>
         /// <list type="bullet">
-        /// <item><description>If the value of this parameter is empty (<c>&quot;NextToken&quot;: &quot;&quot;</c>), all results are returned, and the next query is not required.</description></item>
-        /// <item><description>If the value of this parameter is not empty, the next query is required, and the value is the token used to start the next query.</description></item>
+        /// <item><description><para>If the value of this parameter is empty (<c>&quot;NextToken&quot;: &quot;&quot;</c>), all results are returned, and the next query is not required.</para>
+        /// </description></item>
+        /// <item><description><para>If the value of this parameter is not empty, the next query is required, and the value is the token used to start the next query.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

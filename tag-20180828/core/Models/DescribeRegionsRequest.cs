@@ -12,9 +12,12 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         /// <summary>
         /// <para>The supported natural language. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh-CN: Chinese (default value)</description></item>
-        /// <item><description>en-US: English</description></item>
-        /// <item><description>ja: Japanese</description></item>
+        /// <item><description><para>zh-CN: Chinese (default value)</para>
+        /// </description></item>
+        /// <item><description><para>en-US: English</para>
+        /// </description></item>
+        /// <item><description><para>ja: Japanese</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

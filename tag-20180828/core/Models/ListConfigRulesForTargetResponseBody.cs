@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
             /// <para>The ID of the account group.</para>
             /// <para>You can use the ID to query the content of the related resource non-compliance report in Cloud Config.</para>
             /// <remarks>
-            /// <para> This parameter is returned only if you use the Tag Policy feature in multi-account mode.</para>
+            /// <para>This parameter is returned only if you use the Tag Policy feature in multi-account mode.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -43,8 +43,10 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
             /// <summary>
             /// <para>The use scenario of the tag policy. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>tags: enables tags with specified tag values to be added to resources.</description></item>
-            /// <item><description>rg_inherit: enables resources in a resource group to automatically inherit tags from the resource group.</description></item>
+            /// <item><description><para>tags: enables tags with specified tag values to be added to resources.</para>
+            /// </description></item>
+            /// <item><description><para>rg_inherit: enables resources in a resource group to automatically inherit tags from the resource group.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -57,8 +59,10 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
             /// <summary>
             /// <para>Indicates whether automatic remediation is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description><para>true</para>
+            /// </description></item>
+            /// <item><description><para>false</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -101,10 +105,14 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
             /// <summary>
             /// <para>The type of the object. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>USER: the current logon account. This value is available if you use the Tag Policy feature in single-account mode.</description></item>
-            /// <item><description>ROOT: the Root folder in the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</description></item>
-            /// <item><description>FOLDER: a folder other than the Root folder in the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</description></item>
-            /// <item><description>ACCOUNT: a member in the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</description></item>
+            /// <item><description><para>USER: the current logon account. This value is available if you use the Tag Policy feature in single-account mode.</para>
+            /// </description></item>
+            /// <item><description><para>ROOT: the Root folder in the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</para>
+            /// </description></item>
+            /// <item><description><para>FOLDER: a folder other than the Root folder in the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</para>
+            /// </description></item>
+            /// <item><description><para>ACCOUNT: a member in the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -119,8 +127,10 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         /// <summary>
         /// <para>Indicates whether the next query is required.</para>
         /// <list type="bullet">
-        /// <item><description>If the value of this parameter is empty (<c>&quot;NextToken&quot;: &quot;&quot;</c>), all results are returned, and the next query is not required.</description></item>
-        /// <item><description>If the value of this parameter is not empty, the next query is required, and the value is the token used to start the next query.</description></item>
+        /// <item><description><para>If the value of this parameter is empty (<c>&quot;NextToken&quot;: &quot;&quot;</c>), all results are returned, and the next query is not required.</para>
+        /// </description></item>
+        /// <item><description><para>If the value of this parameter is not empty, the next query is required, and the value is the token used to start the next query.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
