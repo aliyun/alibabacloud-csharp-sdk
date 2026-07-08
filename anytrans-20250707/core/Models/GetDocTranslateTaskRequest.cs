@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
 {
     public class GetDocTranslateTaskRequest : TeaModel {
         /// <summary>
+        /// <para>The document translation task ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
         public string TaskId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the Model Studio workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

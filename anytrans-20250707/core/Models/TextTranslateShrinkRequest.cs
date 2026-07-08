@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.AnyTrans20250707.Models
 {
     public class TextTranslateShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>Extended parameters to control translation behavior</para>
+        /// </summary>
         [NameInMap("ext")]
         [Validation(Required=false)]
         public string ExtShrink { get; set; }
 
         /// <summary>
+        /// <para>text format</para>
+        /// 
         /// <b>Example:</b>
         /// <para>text</para>
         /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
         public string Format { get; set; }
 
         /// <summary>
+        /// <para>Model type</para>
+        /// 
         /// <b>Example:</b>
         /// <para>mt-turbo</para>
         /// </summary>
@@ -30,6 +37,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
         public string Scene { get; set; }
 
         /// <summary>
+        /// <para>Source language code</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +48,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
         public string SourceLanguage { get; set; }
 
         /// <summary>
+        /// <para>Target Language Code</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,13 +59,18 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
         public string TargetLanguage { get; set; }
 
         /// <summary>
+        /// <para>Text to be translated</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>今天天气怎么样</para>
         /// </summary>
         [NameInMap("text")]
         [Validation(Required=false)]
         public string Text { get; set; }
 
         /// <summary>
+        /// <para>Workspace ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

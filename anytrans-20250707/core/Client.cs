@@ -18,7 +18,11 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"cn-beijing", "anytrans.cn-beijing.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("anytrans", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -39,7 +43,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通义多模态翻译批量翻译</para>
+        /// <para>Tongyi Multimodal Translation: Batch Translation</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -123,7 +127,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通义多模态翻译批量翻译</para>
+        /// <para>Tongyi Multimodal Translation: Batch Translation</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -207,7 +211,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通义多模态翻译批量翻译</para>
+        /// <para>Tongyi Multimodal Translation: Batch Translation</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -226,7 +230,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通义多模态翻译批量翻译</para>
+        /// <para>Tongyi Multimodal Translation: Batch Translation</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -451,8 +455,13 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通义多模态翻译获文档翻译任务</para>
+        /// <para>Gets the results of a document translation task from Tongyi Multimodal Translation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Gets the results of a document translation task.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDocTranslateTaskRequest
@@ -501,8 +510,13 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通义多模态翻译获文档翻译任务</para>
+        /// <para>Gets the results of a document translation task from Tongyi Multimodal Translation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Gets the results of a document translation task.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDocTranslateTaskRequest
@@ -551,8 +565,13 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通义多模态翻译获文档翻译任务</para>
+        /// <para>Gets the results of a document translation task from Tongyi Multimodal Translation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Gets the results of a document translation task.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDocTranslateTaskRequest
@@ -570,8 +589,13 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通义多模态翻译获文档翻译任务</para>
+        /// <para>Gets the results of a document translation task from Tongyi Multimodal Translation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Gets the results of a document translation task.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDocTranslateTaskRequest
@@ -589,7 +613,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通义多模态翻译获取html翻译结果</para>
+        /// <para>Retrieves the result of an HTML translation task from Tongyi Multimodal Translation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -639,7 +663,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通义多模态翻译获取html翻译结果</para>
+        /// <para>Retrieves the result of an HTML translation task from Tongyi Multimodal Translation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -689,7 +713,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通义多模态翻译获取html翻译结果</para>
+        /// <para>Retrieves the result of an HTML translation task from Tongyi Multimodal Translation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -708,7 +732,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通义多模态翻译获取html翻译结果</para>
+        /// <para>Retrieves the result of an HTML translation task from Tongyi Multimodal Translation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -727,7 +751,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通义多模态翻译获取图片翻译任务</para>
+        /// <para>Tongyi Multimodal Translation: Getting image translation results</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -777,7 +801,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通义多模态翻译获取图片翻译任务</para>
+        /// <para>Tongyi Multimodal Translation: Getting image translation results</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -827,7 +851,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通义多模态翻译获取图片翻译任务</para>
+        /// <para>Tongyi Multimodal Translation: Getting image translation results</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -846,7 +870,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通义多模态翻译获取图片翻译任务</para>
+        /// <para>Tongyi Multimodal Translation: Getting image translation results</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -865,7 +889,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通义多模态翻译获取长文翻译结果</para>
+        /// <para>Get document translations from Tongyi Multimodal Translation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -915,7 +939,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通义多模态翻译获取长文翻译结果</para>
+        /// <para>Get document translations from Tongyi Multimodal Translation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -965,7 +989,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通义多模态翻译获取长文翻译结果</para>
+        /// <para>Get document translations from Tongyi Multimodal Translation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -984,7 +1008,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通义多模态翻译获取长文翻译结果</para>
+        /// <para>Get document translations from Tongyi Multimodal Translation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1003,7 +1027,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通义多模态翻译提交文档翻译任务</para>
+        /// <para>Submit a document translation task to Tongyi Multimodal Translation.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1079,7 +1103,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通义多模态翻译提交文档翻译任务</para>
+        /// <para>Submit a document translation task to Tongyi Multimodal Translation.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1155,7 +1179,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通义多模态翻译提交文档翻译任务</para>
+        /// <para>Submit a document translation task to Tongyi Multimodal Translation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1174,7 +1198,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通义多模态翻译提交文档翻译任务</para>
+        /// <para>Submit a document translation task to Tongyi Multimodal Translation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1193,7 +1217,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通义多模态翻译提交html翻译任务</para>
+        /// <para>Submitting an HTML translation task with Tongyi Multimodal Translation</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1269,7 +1293,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通义多模态翻译提交html翻译任务</para>
+        /// <para>Submitting an HTML translation task with Tongyi Multimodal Translation</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1345,7 +1369,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通义多模态翻译提交html翻译任务</para>
+        /// <para>Submitting an HTML translation task with Tongyi Multimodal Translation</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1364,7 +1388,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通义多模态翻译提交html翻译任务</para>
+        /// <para>Submitting an HTML translation task with Tongyi Multimodal Translation</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1383,7 +1407,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通义多模态翻译提交图片翻译任务</para>
+        /// <para>Use Tongyi multimodal translation to submit an image for translation.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1463,7 +1487,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通义多模态翻译提交图片翻译任务</para>
+        /// <para>Use Tongyi multimodal translation to submit an image for translation.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1543,7 +1567,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通义多模态翻译提交图片翻译任务</para>
+        /// <para>Use Tongyi multimodal translation to submit an image for translation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1562,7 +1586,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通义多模态翻译提交图片翻译任务</para>
+        /// <para>Use Tongyi multimodal translation to submit an image for translation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1581,7 +1605,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通义多模态翻译提交长文翻译任务</para>
+        /// <para>Submitting a long text translation task using Translate Multimodal.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1657,7 +1681,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通义多模态翻译提交长文翻译任务</para>
+        /// <para>Submitting a long text translation task using Translate Multimodal.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1733,7 +1757,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通义多模态翻译提交长文翻译任务</para>
+        /// <para>Submitting a long text translation task using Translate Multimodal.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1752,7 +1776,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通义多模态翻译提交长文翻译任务</para>
+        /// <para>Submitting a long text translation task using Translate Multimodal.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1771,7 +1795,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通义多模态翻译术语编辑</para>
+        /// <para>Editing the Tongyi Multimodal Translation termbase</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1843,7 +1867,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通义多模态翻译术语编辑</para>
+        /// <para>Editing the Tongyi Multimodal Translation termbase</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1915,7 +1939,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通义多模态翻译术语编辑</para>
+        /// <para>Editing the Tongyi Multimodal Translation termbase</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1934,7 +1958,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通义多模态翻译术语编辑</para>
+        /// <para>Editing the Tongyi Multimodal Translation termbase</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1953,7 +1977,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通义多模态翻译术语查询</para>
+        /// <para>Queries the Tongyi Multimodal Translation termbase for intervention terms.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2025,7 +2049,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通义多模态翻译术语查询</para>
+        /// <para>Queries the Tongyi Multimodal Translation termbase for intervention terms.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2097,7 +2121,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通义多模态翻译术语查询</para>
+        /// <para>Queries the Tongyi Multimodal Translation termbase for intervention terms.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2116,7 +2140,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通义多模态翻译术语查询</para>
+        /// <para>Queries the Tongyi Multimodal Translation termbase for intervention terms.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2135,7 +2159,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通义多模态翻译文本翻译</para>
+        /// <para>Tongyi Multimodal Translation: Text Translation</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2211,7 +2235,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通义多模态翻译文本翻译</para>
+        /// <para>Tongyi Multimodal Translation: Text Translation</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2287,7 +2311,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通义多模态翻译文本翻译</para>
+        /// <para>Tongyi Multimodal Translation: Text Translation</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2306,7 +2330,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通义多模态翻译文本翻译</para>
+        /// <para>Tongyi Multimodal Translation: Text Translation</para>
         /// </summary>
         /// 
         /// <param name="request">

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
 {
     public class TermEditShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The action type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
         public string Action { get; set; }
 
         /// <summary>
+        /// <para>The extended parameters.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ext")]
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
         public string ExtShrink { get; set; }
 
         /// <summary>
+        /// <para>The model type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,6 +40,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
         public string Scene { get; set; }
 
         /// <summary>
+        /// <para>The source language. The value must be a valid BCP-47 language code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,6 +51,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
         public string SourceLanguage { get; set; }
 
         /// <summary>
+        /// <para>The target language. The value must be a valid BCP-47 language code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -57,6 +62,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
         public string TargetLanguage { get; set; }
 
         /// <summary>
+        /// <para>The ID of the Model Studio workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

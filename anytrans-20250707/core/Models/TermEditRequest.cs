@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
 {
     public class TermEditRequest : TeaModel {
         /// <summary>
+        /// <para>The action type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,17 +21,25 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
         public string Action { get; set; }
 
         /// <summary>
+        /// <para>The extended parameters.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ext")]
         [Validation(Required=false)]
         public TermEditRequestExt Ext { get; set; }
         public class TermEditRequestExt : TeaModel {
+            /// <summary>
+            /// <para>The extended parameter configuration.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;bizUserld&quot;:&quot;123456&quot;,&quot;bizType&quot;:session&quot;}</para>
+            /// </summary>
             [NameInMap("paramMap")]
             [Validation(Required=false)]
             public object ParamMap { get; set; }
 
             /// <summary>
+            /// <para>The intervention term list.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("terms")]
@@ -38,13 +47,19 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
             public List<TermEditRequestExtTerms> Terms { get; set; }
             public class TermEditRequestExtTerms : TeaModel {
                 /// <summary>
+                /// <para>The source text.</para>
                 /// <para>This parameter is required.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>大模型</para>
                 /// </summary>
                 [NameInMap("src")]
                 [Validation(Required=false)]
                 public string Src { get; set; }
 
                 /// <summary>
+                /// <para>The intervention term ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>92669964</para>
                 /// </summary>
@@ -53,6 +68,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
                 public string TermId { get; set; }
 
                 /// <summary>
+                /// <para>The post-intervention translation.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -67,6 +83,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
         }
 
         /// <summary>
+        /// <para>The model type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -77,6 +94,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
         public string Scene { get; set; }
 
         /// <summary>
+        /// <para>The source language. The value must be a valid BCP-47 language code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -87,6 +105,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
         public string SourceLanguage { get; set; }
 
         /// <summary>
+        /// <para>The target language. The value must be a valid BCP-47 language code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -97,6 +116,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
         public string TargetLanguage { get; set; }
 
         /// <summary>
+        /// <para>The ID of the Model Studio workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

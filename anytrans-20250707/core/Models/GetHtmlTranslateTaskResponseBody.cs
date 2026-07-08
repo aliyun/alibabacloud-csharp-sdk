@@ -10,18 +10,25 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
 {
     public class GetHtmlTranslateTaskResponseBody : TeaModel {
         /// <summary>
+        /// <para>The operation status code.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>200</para>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The response data.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetHtmlTranslateTaskResponseBodyData Data { get; set; }
         public class GetHtmlTranslateTaskResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Translation Result</para>
+            /// 
             /// <b>Example:</b>
             /// <!DOCTYPE html>
             /// 
@@ -43,29 +50,38 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
             [Validation(Required=false)]
             public string Translation { get; set; }
 
+            /// <summary>
+            /// <para>Details about token usage.</para>
+            /// </summary>
             [NameInMap("usage")]
             [Validation(Required=false)]
             public GetHtmlTranslateTaskResponseBodyDataUsage Usage { get; set; }
             public class GetHtmlTranslateTaskResponseBodyDataUsage : TeaModel {
                 /// <summary>
+                /// <para>The number of tokens in the input.</para>
+                /// 
                 /// <b>Example:</b>
-                /// <para>495</para>
+                /// <para>22</para>
                 /// </summary>
                 [NameInMap("inputTokens")]
                 [Validation(Required=false)]
                 public long? InputTokens { get; set; }
 
                 /// <summary>
+                /// <para>The number of tokens in the output.</para>
+                /// 
                 /// <b>Example:</b>
-                /// <para>444</para>
+                /// <para>19</para>
                 /// </summary>
                 [NameInMap("outputTokens")]
                 [Validation(Required=false)]
                 public long? OutputTokens { get; set; }
 
                 /// <summary>
+                /// <para>The total number of tokens for the request.</para>
+                /// 
                 /// <b>Example:</b>
-                /// <para>939</para>
+                /// <para>41</para>
                 /// </summary>
                 [NameInMap("totalTokens")]
                 [Validation(Required=false)]
@@ -76,6 +92,8 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code returned by the server.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -84,6 +102,8 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -92,14 +112,18 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request. Use this ID to trace the request.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>64191A87-C480-53AD-AEA2-2E847D4DFA66</para>
+        /// <para>04B53310-CB1A-14B4-AC85-26C154D8366A</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request succeeded.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

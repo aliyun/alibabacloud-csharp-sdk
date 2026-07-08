@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
 {
     public class GetImageTranslateTaskRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the image translation task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
         public string TaskId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

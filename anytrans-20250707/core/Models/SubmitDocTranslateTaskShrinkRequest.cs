@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.AnyTrans20250707.Models
 {
     public class SubmitDocTranslateTaskShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>Extension parameters that control translation features.</para>
+        /// </summary>
         [NameInMap("ext")]
         [Validation(Required=false)]
         public string ExtShrink { get; set; }
 
         /// <summary>
+        /// <para>The format for the translation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>text</para>
         /// </summary>
@@ -22,16 +27,18 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
         public string Format { get; set; }
 
         /// <summary>
+        /// <para>The translation model.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>spoke-llm</para>
+        /// <para>mt-turbo</para>
         /// </summary>
         [NameInMap("scene")]
         [Validation(Required=false)]
         public string Scene { get; set; }
 
         /// <summary>
+        /// <para>The source language code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,6 +49,8 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
         public string SourceLanguage { get; set; }
 
         /// <summary>
+        /// <para>The target language code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>en</para>
         /// </summary>
@@ -50,6 +59,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
         public string TargetLanguage { get; set; }
 
         /// <summary>
+        /// <para>The URL of the document to translate.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -60,6 +70,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
         public string Text { get; set; }
 
         /// <summary>
+        /// <para>The ID of the Model Studio workspace for the current request.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

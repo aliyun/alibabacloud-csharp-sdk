@@ -9,11 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.AnyTrans20250707.Models
 {
     public class TermQueryShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>Extended parameters.</para>
+        /// </summary>
         [NameInMap("ext")]
         [Validation(Required=false)]
         public string ExtShrink { get; set; }
 
         /// <summary>
+        /// <para>The translation model.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +28,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
         public string Scene { get; set; }
 
         /// <summary>
+        /// <para>The source language.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,6 +39,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
         public string SourceLanguage { get; set; }
 
         /// <summary>
+        /// <para>The target language.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,11 +49,18 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
         [Validation(Required=false)]
         public string TargetLanguage { get; set; }
 
+        /// <summary>
+        /// <para>The source text to search for intervention terms.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>今天的天气非常不错，我准备去跟我的好朋友去学习一些大模型相关和应用接口的知识。</para>
+        /// </summary>
         [NameInMap("text")]
         [Validation(Required=false)]
         public string Text { get; set; }
 
         /// <summary>
+        /// <para>The ID of the Model Studio workspace used for the request.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
